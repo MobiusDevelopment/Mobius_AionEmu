@@ -27,6 +27,7 @@ Changes:
 -Removed obsolete chat server.
 -Enabling events by simple date change.
 -Added config for bonus service buffs.
+-Addition of launcher files.
 
 TODO:
 -Fix all code warnings.
