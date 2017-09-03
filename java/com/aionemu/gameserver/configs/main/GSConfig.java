@@ -40,8 +40,6 @@ public class GSConfig
 	
 	@Property(key = "gameserver.timezone", defaultValue = "")
 	public static String TIME_ZONE_ID = Calendar.getInstance().getTimeZone().getID();
-	@Property(key = "gameserver.revisiondisplay.enable", defaultValue = "false")
-	public static boolean SERVER_MOTD_DISPLAYREV;
 	@Property(key = "gameserver.character.creation.mode", defaultValue = "0")
 	public static int CHARACTER_CREATION_MODE;
 	@Property(key = "gameserver.character.limit.count", defaultValue = "8")
