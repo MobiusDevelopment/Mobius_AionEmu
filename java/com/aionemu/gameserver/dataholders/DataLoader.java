@@ -30,7 +30,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * This class is responsible for loading data from static .txt files.<br>
- * It's used as base class of {@link NpcData} and {@link SpawnData}.<br>
+ * It's used as base class of {@link NpcData} and {@link SpawnsData2}.<br>
  * <br>
  * <font color="red">NOTICE: </font> This class is used temporarily and later will be removed and npc and spawn data will be loaded with xml loader.<br>
  * <br>
@@ -39,7 +39,6 @@ import org.slf4j.LoggerFactory;
  */
 abstract class DataLoader
 {
-	
 	/** The logger used for <tt>DataLoader</tt> and its subclasses */
 	protected Logger log = LoggerFactory.getLogger(getClass().getName());
 	
@@ -125,7 +124,7 @@ abstract class DataLoader
 	protected abstract void parse(String dataEntry);
 	
 	/**
-	 * Saves data to the file. Used only by {@link SpawnData}.
+	 * Saves data to the file. Used only by {@link SpawnsData2}.
 	 * @return true if the data was successfully saved, false - if some error occurred.
 	 */
 	public boolean saveData()
@@ -168,7 +167,7 @@ abstract class DataLoader
 	
 	/**
 	 * Name of the file which is used to store data in.<br>
-	 * This method must be overriden in sublass if we want to be able to store its data. It's used only in {@link SpawnData} and should not be used anywhere else.
+	 * This method must be overriden in sublass if we want to be able to store its data. It's used only in {@link SpawnsData2} and should not be used anywhere else.
 	 * @return name of the file
 	 */
 	protected abstract String getSaveFile();
@@ -176,11 +175,9 @@ abstract class DataLoader
 	/**
 	 * This method must be overriden in subclass which we want to be able to save data. It's responsibility is basicly to put data into given FileWriter instance.
 	 * @param fileWriter
-	 * @throws Exception
 	 */
-	protected void saveEntries(FileWriter fileWriter) throws Exception
+	protected void saveEntries(FileWriter fileWriter)
 	{
 		// TODO Auto-generated method stub
-		
 	}
 }

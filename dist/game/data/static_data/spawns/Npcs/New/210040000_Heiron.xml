@@ -4,12 +4,6 @@
         <spawn custom="true" respawn_time="295" npc_id="810060" difficult_id="0">
             <spot h="90" z="315.26978" y="2496.7786" x="1933.2021"/>
         </spawn>
-        <spawn custom="true" respawn_time="295" npc_id="831026" difficult_id="0">
-            <spot h="85" z="315.29166" y="2497.1511" x="1932.0619"/>
-        </spawn>
-        <spawn custom="true" respawn_time="295" npc_id="831031" difficult_id="0">
-            <spot h="96" z="240.28143" y="2292.4204" x="1262.4398"/>
-        </spawn>
         <spawn custom="true" respawn_time="295" npc_id="810046" difficult_id="0">
             <spot h="105" z="240.332" y="2291.8552" x="1261.3821"/>
         </spawn>

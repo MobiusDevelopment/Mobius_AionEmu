@@ -24,6 +24,8 @@ Changes:
 -Replaced Base64 class with Java 8 import/version.
 -Fixed package path on many classes.
 -Code format/cleanup.
+-Removed obsolete chat server.
+-Enabling events by simple date change.
 
 TODO:
 -Fix all code warnings.

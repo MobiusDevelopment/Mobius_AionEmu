@@ -96,8 +96,7 @@ import org.xml.sax.helpers.DefaultHandler;
  */
 public class XmlMerger
 {
-	
-	private static final Logger logger = LoggerFactory.getLogger(XmlMerger.class);
+	static final Logger logger = LoggerFactory.getLogger(XmlMerger.class);
 	
 	private final File baseDir;
 	
@@ -139,6 +138,7 @@ public class XmlMerger
 	/**
 	 * This method creates a result document if it is missing, or updates existing one if the source file has modification.<br />
 	 * If there are no changes - nothing happens.
+	 * @throws Exception
 	 * @throws FileNotFoundException when source file doesn't exists.
 	 * @throws XMLStreamException when XML processing error was occurred.
 	 */
@@ -192,6 +192,7 @@ public class XmlMerger
 	/**
 	 * Check for modifications of included files.
 	 * @return <code>true</code> if at least one of included files has modifications.
+	 * @throws Exception
 	 * @throws IOException IO Error.
 	 * @throws SAXException Document parsing error.
 	 * @throws ParserConfigurationException if a SAX parser cannot be created which satisfies the requested configuration.
@@ -310,17 +311,21 @@ public class XmlMerger
 		return "import".equals(name.getLocalPart());
 	}
 	
-	private static final QName qNameFile = new QName("file");
+	static final QName qNameFile = new QName("file");
 	private static final QName qNameSkipRoot = new QName("skipRoot");
 	
 	/**
 	 * If this option is enabled you import the directory, and all its subdirectories. Default is 'true'.
 	 */
-	private static final QName qNameRecursiveImport = new QName("recursiveImport");
+	static final QName qNameRecursiveImport = new QName("recursiveImport");
 	
 	/**
 	 * This method processes the 'import' element, replacing it by the data from the relevant files.
+	 * @param element
+	 * @param writer
+	 * @param metadata
 	 * @throws XMLStreamException on event writing error.
+	 * @throws IOException
 	 * @throws FileNotFoundException of imported file was not found.
 	 */
 	private void processImportElement(StartElement element, XMLEventWriter writer, Properties metadata) throws XMLStreamException, IOException
@@ -352,10 +357,9 @@ public class XmlMerger
 		}
 	}
 	
-	private static Collection<File> listFiles(File root, boolean recursive)
+	static Collection<File> listFiles(File root, boolean recursive)
 	{
 		final IOFileFilter dirFilter = recursive ? makeSVNAware(HiddenFileFilter.VISIBLE) : null;
-		
 		return FileUtils.listFiles(root, FileFilterUtils.andFileFilter(FileFilterUtils.andFileFilter(FileFilterUtils.notFileFilter(FileFilterUtils.prefixFileFilter("new")), FileFilterUtils.suffixFileFilter(".xml")), HiddenFileFilter.VISIBLE), dirFilter);
 	}
 	
@@ -390,7 +394,9 @@ public class XmlMerger
 	 * @param file File to import
 	 * @param skipRoot Skip-root flag
 	 * @param writer Destenation writer
+	 * @param metadata
 	 * @throws XMLStreamException On event reading/writing error.
+	 * @throws IOException
 	 * @throws FileNotFoundException if the reading file does not exist, is a directory rather than a regular file, or for some other reason cannot be opened for reading.
 	 */
 	private void importFile(File file, boolean skipRoot, XMLEventWriter writer, Properties metadata) throws XMLStreamException, IOException
@@ -438,12 +444,8 @@ public class XmlMerger
 					{
 						continue;
 					}
-					else
-					{
-						final StartElement old = event.asStartElement();
-						
-						event = eventFactory.createStartElement(old.getName(), old.getAttributes(), null);
-					}
+					final StartElement old = event.asStartElement();
+					event = eventFactory.createStartElement(old.getName(), old.getAttributes(), null);
 				}
 				
 				// if root was skipped - skip root end too.
@@ -481,7 +483,7 @@ public class XmlMerger
 		
 		private Locator locator;
 		
-		private TimeCheckerHandler(File basedir, Properties metadata)
+		TimeCheckerHandler(File basedir, Properties metadata)
 		{
 			this.basedir = basedir;
 			this.metadata = metadata;
@@ -627,7 +629,7 @@ public class XmlMerger
 	 * @return String identifier
 	 * @throws IOException if an IO error occurs reading the file
 	 */
-	private static String makeHash(File file) throws IOException
+	static String makeHash(File file) throws IOException
 	{
 		return String.valueOf(FileUtils.checksumCRC32(file));
 	}

@@ -38,7 +38,6 @@ import com.aionemu.gameserver.dataholders.StaticData;
  */
 public class XmlDataLoader
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(XmlDataLoader.class);
 	
 	/** File containing xml schema declaration */

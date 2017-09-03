@@ -38,7 +38,6 @@ import org.slf4j.LoggerFactory;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.dataholders.SpawnsData2;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.Guides.GuideTemplate;
 import com.aionemu.gameserver.model.templates.spawns.Spawn;
 import com.aionemu.gameserver.model.templates.spawns.SpawnMap;
@@ -49,7 +48,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.gametime.DateTimeUtil;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rolandas
@@ -59,7 +57,6 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 @XmlType(name = "EventTemplate")
 public class EventTemplate
 {
-	
 	private static Logger log = LoggerFactory.getLogger(EventTemplate.class);
 	
 	@XmlElement(name = "event_drops", required = false)
@@ -199,26 +196,13 @@ public class EventTemplate
 		
 		if (inventoryDrop != null)
 		{
-			invDropTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+			invDropTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> World.getInstance().doOnAllPlayers(player ->
 			{
-				
-				@Override
-				public void run()
+				if (player.getCommonData().getLevel() >= inventoryDrop.getStartLevel())
 				{
-					World.getInstance().doOnAllPlayers(new Visitor<Player>()
-					{
-						
-						@Override
-						public void visit(Player player)
-						{
-							if (player.getCommonData().getLevel() >= inventoryDrop.getStartLevel())
-							{
-								ItemService.dropItemToInventory(player, inventoryDrop.getDropItem());
-							}
-						}
-					});
+					ItemService.dropItemToInventory(player, inventoryDrop.getDropItem());
 				}
-			}, inventoryDrop.getInterval() * 60000, inventoryDrop.getInterval() * 60000);
+			}), inventoryDrop.getInterval() * 60000, inventoryDrop.getInterval() * 60000);
 		}
 		
 		if (surveys != null)

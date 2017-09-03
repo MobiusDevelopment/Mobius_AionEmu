@@ -17,10 +17,7 @@
 package com.aionemu.gameserver.dataholders;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -29,7 +26,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
-import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.templates.event.EventTemplate;
 
@@ -46,7 +42,6 @@ import gnu.trove.map.hash.THashMap;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="active" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="event" maxOccurs="unbounded" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
@@ -62,21 +57,15 @@ import gnu.trove.map.hash.THashMap;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "EventData", propOrder =
-{
-	"active",
-	"events"
-})
 @XmlRootElement(name = "events_config")
 public class EventData
 {
-	
-	@XmlElement(required = true)
-	protected String active;
-	
 	@XmlElementWrapper(name = "events")
 	@XmlElement(name = "event")
 	protected List<EventTemplate> events;
+	
+	@XmlTransient
+	protected String active;
 	
 	@XmlTransient
 	private final THashMap<String, EventTemplate> activeEvents = new THashMap<>();
@@ -89,7 +78,7 @@ public class EventData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		if ((active == null) || (events == null))
+		if (events == null)
 		{
 			return;
 		}
@@ -98,22 +87,24 @@ public class EventData
 		allEvents.clear();
 		activeEvents.clear();
 		
-		final Set<String> ae = new HashSet<>();
-		Collections.addAll(ae, active.split(";"));
-		
 		for (EventTemplate ev : events)
 		{
-			if (ae.contains(ev.getName()) && ev.isActive())
+			if (ev.isActive())
 			{
 				activeEvents.put(ev.getName(), ev);
+				active += ev.getName() + ", ";
 				counter++;
 			}
 			allEvents.put(ev.getName(), ev);
 		}
+		if ((active != null) && !active.isEmpty())
+		{
+			active = active.substring(0, active.lastIndexOf(", "));
+			active += ".";
+		}
 		
 		events.clear();
 		events = null;
-		active = null;
 	}
 	
 	public int size()
@@ -144,7 +135,6 @@ public class EventData
 			events = new ArrayList<>();
 		}
 		this.events = events;
-		this.active = active;
 		
 		for (EventTemplate et : this.events)
 		{
@@ -175,5 +165,4 @@ public class EventData
 	{
 		return activeEvents.containsKey(eventName);
 	}
-	
 }

@@ -47,7 +47,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class EventService
 {
-	
 	Logger log = LoggerFactory.getLogger(EventService.class);
 	
 	private final int CHECK_TIME_PERIOD = 1000 * 60 * 5;
@@ -73,7 +72,7 @@ public class EventService
 		return SingletonHolder.instance;
 	}
 	
-	private EventService()
+	EventService()
 	{
 		activeEvents = Collections.synchronizedList(DataManager.EVENT_DATA.getActiveEvents());
 		updateQuestMap();
@@ -83,6 +82,7 @@ public class EventService
 	 * This method is called just after player logged in to the game.<br>
 	 * <br>
 	 * <b><font color='red'>NOTICE: </font>This method must not be called from anywhere else.</b>
+	 * @param player
 	 */
 	public void onPlayerLogin(Player player)
 	{
@@ -229,18 +229,8 @@ public class EventService
 		{
 			checkTask.cancel(false);
 		}
-		
 		isStarted = true;
-		
-		checkTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				checkEvents();
-			}
-		}, 0, CHECK_TIME_PERIOD);
+		checkTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> checkEvents(), 0, CHECK_TIME_PERIOD);
 	}
 	
 	public void stop()
@@ -253,7 +243,7 @@ public class EventService
 		isStarted = false;
 	}
 	
-	private void checkEvents()
+	void checkEvents()
 	{
 		final List<EventTemplate> newEvents = new ArrayList<>();
 		final List<EventTemplate> allEvents = DataManager.EVENT_DATA.getAllEvents();

@@ -26,11 +26,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("npc_support")
 public class Npc_SupportAI2 extends GeneralNpcAI2
 {
@@ -48,8 +46,8 @@ public class Npc_SupportAI2 extends GeneralNpcAI2
 			case 831026: // Rikanellie.
 			case 831027: // Karzanke.
 			case 831028: // Erdat.
-			case 831029:
-			{ // Edandos.
+			case 831029: // Edandos.
+			{
 				super.handleDialogStart(player);
 				break;
 			}

@@ -4,9 +4,8 @@
     Event 3.9/4.5/4.7.5/4.8/4.9/5.1
 	Make & Remake By Encom
  -->
-	<active>The Fortune Fayre;Doppelgangers;Festival Winter;Halloween Day;Daru Days;Ascension Energy Inventory;Ascension Energy;Ardent Heat Inventory;Ardent Heat;Valentine's Day Event;Event Growth;Daeva Day Inventory;Event Daeva Day;October Fest;Patron Mark Inventory;Event Maid Promotion;Pink Petal Inventory;Pink Petal Event;Pumpkin Cookie Inventory;Pumpkin Cookie Event;Fluffy Snow Crystal Inventory;Fluffy Snow Event;Gift Giver Inventory;Gift Giver Event;Love Is In The Air Event;Celebrate Solorius Event;New Year Event;Guardian General Event;Mega Kinah Event;Code Red: Atreia;Captain Harlock Inventory;Captain Harlock Event;Frozen Magic Inventory;Frozen Magic Event;Summer Block Party Inventory;Summer Block Party Event;The Alchemist Event;Flower Day Event;Joker Wild Event;White Day Inventory;Blue Scale Inventory;Yellow Scale Inventory;Red Scale Inventory;Rainbow Snake Festival;Wishing Fountain Inventory;Wishing Fountain Event;Black Star Event;6th Anniversary Inventory;6th Anniversary Event;Dreaming Nether Weapon Event;Prestige Pack Inventory;Prestige Pack Event;GoldStar Event;Luna Event;Wings With Stars Event;Holy Water Event;Mongsil Event;Enemy Land Event;Buff Event</active>
-  	<events>
-		<event name="The Fortune Fayre" start="2017-12-19T00:00:00+00:00" end="2018-01-12T00:00:00+00:00">
+	<events>
+		<event name="The Fortune Fayre" start="2015-12-19T00:00:00+00:00" end="2016-01-12T00:00:00+00:00">
 			<quests>
 				<maintainable>80028;80029;80030;80031;80032;80033;80034;80035;80036;80037;80038;80039</maintainable>
 			</quests>
@@ -35,7 +34,7 @@
 		        </spawn_map>
 			</spawns>
 		</event>
-		<event name="Doppelgangers" start="2017-12-30T00:00:00+00:00" end="2018-01-30T00:00:00+00:00">
+		<event name="Doppelgangers" start="2015-12-30T00:00:00+00:00" end="2016-01-30T00:00:00+00:00">
 			<spawns>
 				<!-- Poeta -->
 				<spawn_map map_id="210010000">
@@ -215,10 +214,10 @@
                 </spawn_map>
 			</spawns>
 		</event>
-		<event name="Ascension Energy Inventory" start="2017-09-23T00:00:00+00:00" end="2017-10-23T00:00:00+00:00">
+		<event name="Ascension Energy Inventory" start="2015-09-23T00:00:00+00:00" end="2015-10-23T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="15">186000127</inventory_drop>
 		</event>
-		<event name="Ascension Energy" start="2017-09-23T00:00:00+00:00" end="2017-10-23T00:00:00+00:00">
+		<event name="Ascension Energy" start="2015-09-23T00:00:00+00:00" end="2015-10-23T00:00:00+00:00">
 			<spawns>
 				<!-- Sanctum -->
 				<spawn_map map_id="110010000">
@@ -308,7 +307,7 @@
                 </spawn_map>
 			</spawns>
 		</event>
-		<event name="Festival Winter" start="2017-12-21T00:00:00+00:00" end="2018-01-04T00:00:00+00:00" theme="christmas">
+		<event name="Festival Winter" start="2015-12-21T00:00:00+00:00" end="2016-01-04T00:00:00+00:00" theme="christmas">
 			<quests>
 				<maintainable>80112;80113;80114;80115;80116;80117;80118;80119;80128;80120;80121;80122;80123;80124;80125;80126;80127;80129</maintainable>
 			</quests>
@@ -542,7 +541,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Halloween Day" start="2017-10-30T00:00:00+00:00" end="2017-11-07T00:00:00+00:00" theme="halloween">
+		<event name="Halloween Day" start="2015-10-30T00:00:00+00:00" end="2015-11-07T00:00:00+00:00" theme="halloween">
 			<event_drops>
 				<event_drop item_id="162001009" count="1" chance="5" minDiff="10" maxDiff="83"/>
 			</event_drops>
@@ -955,7 +954,7 @@
                 </spawn_map>
 			</spawns>
 		</event>
-		<event name="Daru Days" start="2017-11-23T00:00:00+00:00" end="2017-11-30T00:00:00+00:00">
+		<event name="Daru Days" start="2015-11-23T00:00:00+00:00" end="2015-11-30T00:00:00+00:00">
 			<event_drops>
 				<event_drop item_id="188051331" count="1" chance="5" minDiff="10" maxDiff="83"/>
 				<event_drop item_id="160005028" count="1" chance="5" minDiff="10" maxDiff="83"/>
@@ -1011,10 +1010,10 @@
                 </spawn_map>
 			</spawns>
 		</event>
-		<event name="Ardent Heat Inventory" start="2017-08-01T00:00:00+00:00" end="2017-08-31T00:00:00+00:00">
+		<event name="Ardent Heat Inventory" start="2015-08-01T00:00:00+00:00" end="2015-08-31T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="20">186000111</inventory_drop>
 		</event>
-		<event name="Ardent Heat" start="2017-08-01T00:00:00+00:00" end="2017-08-31T00:00:00+00:00">
+		<event name="Ardent Heat" start="2015-08-01T00:00:00+00:00" end="2015-08-31T00:00:00+00:00">
 			<spawns>
 				<!-- Pandaemonium -->
 				<spawn_map map_id="120010000">
@@ -1104,7 +1103,7 @@
                 </spawn_map>
 			</spawns>
 		</event>
-		<event name="Valentine's Day Event" start="2018-02-14T00:00:00+00:00" end="2018-02-28T00:00:00+00:00" theme="valentine">
+		<event name="Valentine's Day Event" start="2016-02-14T00:00:00+00:00" end="2016-02-28T00:00:00+00:00" theme="valentine">
 		    <event_drops>
 				<event_drop item_id="186000167" count="1" chance="5" minDiff="10" maxDiff="83"/>
 			</event_drops>
@@ -1230,7 +1229,7 @@
                 </spawn_map>
 			</spawns>
 		</event>
-		<event name="Event Growth" start="2012-12-28T00:00:00+00:00" end="2020-12-31T00:00:00+00:00">
+		<event name="Event Growth" start="2012-12-28T00:00:00+00:00" end="2013-12-31T00:00:00+00:00">
 			<quests>
 				<maintainable>80212;80213;80214;80215;80216;80217;80218;80219;80220;80221;80222;80223;80224;80225;80226;80227;80228;80229</maintainable>
 			</quests>
@@ -1439,10 +1438,10 @@
  		        </spawn_map>
 			</spawns>
 		</event>
-		<event name="Daeva Day Inventory" start="2017-01-05T00:00:00+00:00" end="2017-01-31T00:00:00+00:00">
+		<event name="Daeva Day Inventory" start="2015-01-05T00:00:00+00:00" end="2015-01-31T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="60">186000189</inventory_drop>
 		</event>
-		<event name="Event Daeva Day" start="2017-01-05T00:00:00+00:00" end="2017-01-31T00:00:00+00:00">
+		<event name="Event Daeva Day" start="2015-01-05T00:00:00+00:00" end="2015-01-31T00:00:00+00:00">
 			<quests>
 				<maintainable>80255;802556;80257;80258;80259;80260;80261;80262;80263;80264;80265;80266;80272;80273</maintainable>
 			</quests>
@@ -1507,7 +1506,7 @@
                 </spawn_map>
 			</spawns>
 		</event>
-		<event name="October Fest" start="2017-10-01T00:00:00+00:00" end="2017-10-31T00:00:00+00:00">
+		<event name="October Fest" start="2015-10-01T00:00:00+00:00" end="2015-10-31T00:00:00+00:00">
 			<quests>
 				<maintainable>80284;80285</maintainable>
 			</quests>
@@ -1732,10 +1731,10 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Patron Mark Inventory" start="2017-05-01T00:00:00+00:00" end="2017-05-31T00:00:00+00:00">
+		<event name="Patron Mark Inventory" start="2015-05-01T00:00:00+00:00" end="2015-05-31T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="30">186000187</inventory_drop>
 		</event>
-		<event name="Event Maid Promotion" start="2017-05-01T00:00:00+00:00" end="2017-05-31T00:00:00+00:00" theme="braxcafe">
+		<event name="Event Maid Promotion" start="2015-05-01T00:00:00+00:00" end="2015-05-31T00:00:00+00:00" theme="braxcafe">
 			<quests>
 				<maintainable>80268;80269;80270;80271</maintainable>
 			</quests>
@@ -1796,10 +1795,10 @@
                 </spawn_map>
 			</spawns>
 		</event>
-		<event name="Pink Petal Inventory" start="2017-04-01T00:00:00+00:00" end="2017-04-30T00:00:00+00:00">
+		<event name="Pink Petal Inventory" start="2015-04-01T00:00:00+00:00" end="2015-04-30T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="30">186000168</inventory_drop>
 		</event>
-		<event name="Pink Petal Event" start="2017-04-01T00:00:00+00:00" end="2017-04-30T00:00:00+00:00">
+		<event name="Pink Petal Event" start="2015-04-01T00:00:00+00:00" end="2015-04-30T00:00:00+00:00">
 			<spawns>
 				<!-- Sanctum -->
 				<spawn_map map_id="110010000">
@@ -1825,10 +1824,10 @@
                 </spawn_map>
 			</spawns>
 		</event>
-		<event name="Pumpkin Cookie Inventory" start="2017-10-30T00:00:00+00:00" end="2017-11-07T00:00:00+00:00">
+		<event name="Pumpkin Cookie Inventory" start="2015-10-30T00:00:00+00:00" end="2015-11-07T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="60">186000169</inventory_drop>
 		</event>
-		<event name="Pumpkin Cookie Event" start="2017-10-30T00:00:00+00:00" end="2017-11-07T00:00:00+00:00">
+		<event name="Pumpkin Cookie Event" start="2015-10-30T00:00:00+00:00" end="2015-11-07T00:00:00+00:00">
 			<spawns>
 				<!-- Sanctum -->
 				<spawn_map map_id="110010000">
@@ -1854,10 +1853,10 @@
                 </spawn_map>
 			</spawns>
 		</event>
-		<event name="Fluffy Snow Crystal Inventory" start="2017-01-05T00:00:00+00:00" end="2017-01-31T00:00:00+00:00">
+		<event name="Fluffy Snow Crystal Inventory" start="2015-01-05T00:00:00+00:00" end="2015-01-31T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="60">186000170</inventory_drop>
 		</event>
-		<event name="Fluffy Snow Event" start="2017-01-05T00:00:00+00:00" end="2017-01-31T00:00:00+00:00">
+		<event name="Fluffy Snow Event" start="2015-01-05T00:00:00+00:00" end="2015-01-31T00:00:00+00:00">
 			<spawns>
 				<!-- Sanctum -->
 				<spawn_map map_id="110010000">
@@ -1883,10 +1882,10 @@
                 </spawn_map>
 			</spawns>
 		</event>
-		<event name="Gift Giver Inventory" start="2017-01-05T00:00:00+00:00" end="2017-01-31T00:00:00+00:00">
+		<event name="Gift Giver Inventory" start="2015-01-05T00:00:00+00:00" end="2015-01-31T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="60">186000171</inventory_drop>
 		</event>
-		<event name="Gift Giver Event" start="2017-01-05T00:00:00+00:00" end="2017-01-31T00:00:00+00:00">
+		<event name="Gift Giver Event" start="2015-01-05T00:00:00+00:00" end="2015-01-31T00:00:00+00:00">
 		    <quests>
 				<maintainable>80162;80163;80164;80165;80166;80167;80168;80169</maintainable>
 			</quests>
@@ -1946,7 +1945,7 @@
                 </spawn_map>
 			</spawns>
 		</event>
-		<event name="Love Is In The Air Event" start="2018-02-14T00:00:00+00:00" end="2018-02-28T00:00:00+00:00">
+		<event name="Love Is In The Air Event" start="2016-02-14T00:00:00+00:00" end="2016-02-28T00:00:00+00:00">
 			<quests>
 				<maintainable>80298;80299;80300;80301;80302;80303;80304;80305;80305;80306;80307;80308;80309</maintainable>
 			</quests>
@@ -2309,7 +2308,7 @@
 		        </spawn_map>
 			</spawns>
 		</event>
-		<event name="Celebrate Solorius Event" start="2017-12-15T00:00:00+00:00" end="2018-01-05T00:00:00+00:00">
+		<event name="Celebrate Solorius Event" start="2015-12-15T00:00:00+00:00" end="2016-01-05T00:00:00+00:00">
 			<quests>
 				<maintainable>50007;50009;50011;50012;51007;51009;51011;51012</maintainable>
 			</quests>
@@ -2439,7 +2438,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="New Year Event" start="2018-12-31T00:00:00+00:00" end="2018-01-15T00:00:00+00:00">
+		<event name="New Year Event" start="2016-12-31T00:00:00+00:00" end="2016-01-15T00:00:00+00:00">
 			<event_drops>
 				<event_drop item_id="188051115" count="1" chance="5" minDiff="10" maxDiff="83"/>
 			</event_drops>
@@ -2463,7 +2462,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Guardian General Event" start="2017-07-01T00:00:00+00:00" end="2017-07-19T00:00:00+00:00">
+		<event name="Guardian General Event" start="2015-07-01T00:00:00+00:00" end="2015-07-19T00:00:00+00:00">
 			<quests>
 				<maintainable>80330;80331</maintainable>
 			</quests>
@@ -2578,7 +2577,7 @@
  		        </spawn_map>
 			</spawns>
 		</event>
-		<event name="Mega Kinah Event" start="2017-07-01T00:00:00+00:00" end="2017-07-31T00:00:00+00:00">
+		<event name="Mega Kinah Event" start="2015-07-01T00:00:00+00:00" end="2015-07-31T00:00:00+00:00">
 			<quests>
 				<maintainable>80345;80346;80347;80348;80349;80457;80458;80459;80460;80461;80462;80463;80464;80465;80466</maintainable>
 			</quests>
@@ -2699,7 +2698,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Code Red: Atreia" start="2017-07-01T00:00:00+00:00" end="2017-07-31T00:00:00+00:00">
+		<event name="Code Red: Atreia" start="2015-07-01T00:00:00+00:00" end="2015-07-31T00:00:00+00:00">
 			<quests>
 				<maintainable>80324;80325;80326;80327</maintainable>
 			</quests>
@@ -3263,10 +3262,10 @@
 				 </spawn_map>
 			</spawns>
 		</event>
-		<event name="Captain Harlock Inventory" start="2017-06-21T00:00:00+00:00" end="2017-06-26T00:00:00+00:00">
+		<event name="Captain Harlock Inventory" start="2015-06-21T00:00:00+00:00" end="2015-06-26T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="60">186000350</inventory_drop>
 		</event>
-		<event name="Captain Harlock Event" start="2017-06-21T00:00:00+00:00" end="2017-06-26T00:00:00+00:00">
+		<event name="Captain Harlock Event" start="2015-06-21T00:00:00+00:00" end="2015-06-26T00:00:00+00:00">
 			<quests>
 				<maintainable>80541;80542;80543;80544</maintainable>
 			</quests>
@@ -3287,10 +3286,10 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Frozen Magic Inventory" start="2017-12-15T00:00:00+00:00" end="2018-01-05T00:00:00+00:00">
+		<event name="Frozen Magic Inventory" start="2015-12-15T00:00:00+00:00" end="2016-01-05T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="120">188100149</inventory_drop>
 		</event>
-		<event name="Frozen Magic Event" start="2017-12-15T00:00:00+00:00" end="2018-01-05T00:00:00+00:00">
+		<event name="Frozen Magic Event" start="2015-12-15T00:00:00+00:00" end="2016-01-05T00:00:00+00:00">
 			<quests>
 				<maintainable>80575;80576;80577;80578;80579;80580</maintainable>
 			</quests>
@@ -3335,10 +3334,10 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Summer Block Party Inventory" start="2017-07-01T00:00:00+00:00" end="2017-09-04T00:00:00+00:00">
+		<event name="Summer Block Party Inventory" start="2015-07-01T00:00:00+00:00" end="2015-09-04T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="120">188100125</inventory_drop>
 		</event>
-		<event name="Summer Block Party Event" start="2017-07-01T00:00:00+00:00" end="2017-09-04T00:00:00+00:00">
+		<event name="Summer Block Party Event" start="2015-07-01T00:00:00+00:00" end="2015-09-04T00:00:00+00:00">
 			<quests>
 				<maintainable>80351;80352;80353;80354;80355;80356;80357;80358;80359;80360;80361;80362;80363;80364;80365;80366;80367;80368</maintainable>
 			</quests>
@@ -3460,11 +3459,11 @@
 			</spawns>
 		</event>
 		<!-- //http://www.ncsoft.jp/aion/news/notice/view?bbsNo=2701&articleNo=1726 -->
-		<event name="White Day Inventory" start="2018-03-01T00:00:00+00:00" end="2018-03-31T00:00:00+00:00">
+		<event name="White Day Inventory" start="2016-03-01T00:00:00+00:00" end="2016-03-31T00:00:00+00:00">
 			<inventory_drop startlevel="51" interval="60">166030007</inventory_drop>
 		</event>
 		<!-- //http://event2.ncsoft.jp/1.0/aion/1508poker/ -->
-		<event name="Joker Wild Event" start="2018-01-31T00:00:00+00:00" end="2018-02-28T00:00:00+00:00">
+		<event name="Joker Wild Event" start="2016-01-31T00:00:00+00:00" end="2016-02-28T00:00:00+00:00">
 			<quests>
 				<maintainable>80623;80624;80625;80626;80627;80628;80629;80630;80631;80632;80633;80634</maintainable>
 			</quests>
@@ -3525,7 +3524,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="The Alchemist Event" start="2012-12-28T00:00:00+00:00" end="2020-01-31T00:00:00+00:00">
+		<event name="The Alchemist Event" start="2012-12-28T00:00:00+00:00" end="2013-01-31T00:00:00+00:00">
 			<quests>
 				<maintainable>80344</maintainable>
 			</quests>
@@ -3570,7 +3569,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Flower Day Event" start="2017-03-21T00:00:00+00:00" end="2017-04-07T00:00:00+00:00">
+		<event name="Flower Day Event" start="2015-03-21T00:00:00+00:00" end="2015-04-07T00:00:00+00:00">
 			<quests>
 				<maintainable>80545;80546;80547;80548;80549;80550;80551;80552</maintainable>
 			</quests>
@@ -3600,16 +3599,16 @@
 			</spawns>
 		</event>
 		<!-- http://na.aiononline.com/en/news/events/04012015-rainbow-snake-festival.php -->
-		<event name="Blue Scale Inventory" start="2018-03-01T00:00:00+00:00" end="2018-04-30T00:00:00+00:00">
+		<event name="Blue Scale Inventory" start="2016-03-01T00:00:00+00:00" end="2016-04-30T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="60">188100257</inventory_drop>
 		</event>
-		<event name="Yellow Scale Inventory" start="2018-03-01T00:00:00+00:00" end="2018-04-30T00:00:00+00:00">
+		<event name="Yellow Scale Inventory" start="2016-03-01T00:00:00+00:00" end="2016-04-30T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="120">188100258</inventory_drop>
 		</event>
-		<event name="Red Scale Inventory" start="2018-03-01T00:00:00+00:00" end="2018-04-30T00:00:00+00:00">
+		<event name="Red Scale Inventory" start="2016-03-01T00:00:00+00:00" end="2016-04-30T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="180">188100259</inventory_drop>
 		</event>
-		<event name="Rainbow Snake Festival" start="2018-03-01T00:00:00+00:00" end="2018-04-30T00:00:00+00:00">
+		<event name="Rainbow Snake Festival" start="2016-03-01T00:00:00+00:00" end="2016-04-30T00:00:00+00:00">
 			<quests>
 				<maintainable>80683;80684;80685;80686;80687;80688</maintainable>
 			</quests>
@@ -3673,10 +3672,10 @@
 			</spawns>
 		</event>
 		<!-- http://na.aiononline.com/en/news/events/07012015-wishing-fountain-event.php -->
-		<event name="Wishing Fountain Inventory" start="2017-08-01T00:00:00+00:00" end="2017-08-31T00:00:00+00:00">
+		<event name="Wishing Fountain Inventory" start="2015-08-01T00:00:00+00:00" end="2015-08-31T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="120">188100260</inventory_drop>
 		</event>
-		<event name="Wishing Fountain Event" start="2017-08-01T00:00:00+00:00" end="2017-08-31T00:00:00+00:00">
+		<event name="Wishing Fountain Event" start="2015-08-01T00:00:00+00:00" end="2015-08-31T00:00:00+00:00">
 			<quests>
 				<maintainable>80707;80708;80709;80710;80711;80712;80713;80714</maintainable>
 			</quests>
@@ -3881,7 +3880,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Black Star Event" start="2017-09-01T00:00:00+00:00" end="2017-09-30T00:00:00+00:00">
+		<event name="Black Star Event" start="2015-09-01T00:00:00+00:00" end="2015-09-30T00:00:00+00:00">
 			<quests>
 				<maintainable>80721;80722;80723;80724;80725;80726;80727;80728;80729;80730;80731;80732;80733;80734;80735;80736</maintainable>
 			</quests>
@@ -3943,10 +3942,10 @@
 			</spawns>
 		</event>
 		<!-- http://na.aiononline.com/en/news/events/09162015-6th-anniversary-events.php -->
-		<event name="6th Anniversary Inventory" start="2017-10-01T00:00:00+00:00" end="2017-10-31T00:00:00+00:00">
+		<event name="6th Anniversary Inventory" start="2015-10-01T00:00:00+00:00" end="2015-10-31T00:00:00+00:00">
 			<inventory_drop startlevel="30" interval="120">186000188</inventory_drop>
 		</event>
-		<event name="6th Anniversary Event" start="2017-10-01T00:00:00+00:00" end="2017-10-31T00:00:00+00:00">
+		<event name="6th Anniversary Event" start="2015-10-01T00:00:00+00:00" end="2015-10-31T00:00:00+00:00">
 			<spawns>
 				<!-- Sanctum -->
 				<spawn_map map_id="110010000">
@@ -3964,7 +3963,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Dreaming Nether Weapon Event" start="2017-01-01T00:00:00+00:00" end="2018-01-31T00:00:00+00:00">
+		<event name="Dreaming Nether Weapon Event" start="2015-01-01T00:00:00+00:00" end="2016-01-31T00:00:00+00:00">
 			<spawns>
 				<!-- Sanctum -->
 				<spawn_map map_id="110010000">
@@ -3984,10 +3983,10 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Prestige Pack Inventory" start="2017-12-01T00:00:00+00:00" end="2018-01-01T00:00:00+00:00">
+		<event name="Prestige Pack Inventory" start="2015-12-01T00:00:00+00:00" end="2016-01-01T00:00:00+00:00">
 			<inventory_drop startlevel="10" interval="30">186000344</inventory_drop>
 		</event>
-		<event name="Prestige Pack Event" start="2017-12-01T00:00:00+00:00" end="2018-01-01T00:00:00+00:00">
+		<event name="Prestige Pack Event" start="2015-12-01T00:00:00+00:00" end="2016-01-01T00:00:00+00:00">
 			<quests>
 				<maintainable>80834;80835;80836;80837</maintainable>
 			</quests>
@@ -4036,7 +4035,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="GoldStar Event" start="2012-12-28T00:00:00+00:00" end="2020-12-31T00:00:00+00:00">
+		<event name="GoldStar Event" start="2012-12-28T00:00:00+00:00" end="2013-12-31T00:00:00+00:00">
 			<quests>
 				<maintainable>50052;50053;50054;50055;50056;50057</maintainable>
 			</quests>
@@ -4087,7 +4086,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Luna Event" start="2012-12-28T00:00:00+00:00" end="2020-12-31T00:00:00+00:00">
+		<event name="Luna Event" start="2012-12-28T00:00:00+00:00" end="2013-12-31T00:00:00+00:00">
 			<quests>
 				<maintainable>80868;80870;80871;80872;80874;80875;80876;80877;80878;80881</maintainable>
 			</quests>
@@ -4117,7 +4116,7 @@
 			</spawns>
 		</event>
 		<!-- http://aion.power.plaync.com/wiki/%EB%B4%84%EA%B8%B0%EC%9A%B4%EC%97%90+%EC%8C%8D%EB%A3%A1%EC%9D%B4+%EB%82%98%EB%A5%B4%EC%83%A4 -->
-		<event name="Wings With Stars Event" start="2018-01-01T00:00:00+00:00" end="2018-01-31T00:00:00+00:00">
+		<event name="Wings With Stars Event" start="2016-01-01T00:00:00+00:00" end="2016-01-31T00:00:00+00:00">
 			<spawns>
 				<!-- Sanctum -->
 				<spawn_map map_id="110010000">
@@ -4135,7 +4134,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Holy Water Event" start="2018-01-01T00:00:00+00:00" end="2018-01-31T00:00:00+00:00">
+		<event name="Holy Water Event" start="2016-01-01T00:00:00+00:00" end="2016-01-31T00:00:00+00:00">
 			<quests>
 				<maintainable>80645;80646;80647;80648;80649;80650;80651;80652;80653;80654;80655;80656;80657;80658;80659;80660;80661;80662;80663;80664;80665;80666;80667;80668;80838;80839;80840;80841</maintainable>
 			</quests>
@@ -4171,7 +4170,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Mongsil Event" start="2018-01-01T00:00:00+00:00" end="2018-01-31T00:00:00+00:00">
+		<event name="Mongsil Event" start="2016-01-01T00:00:00+00:00" end="2016-01-31T00:00:00+00:00">
 			<quests>
 				<maintainable>80787;80788;80789;80790;80791;80792;80793;80794</maintainable>
 			</quests>
@@ -4200,7 +4199,7 @@
 				</spawn_map>
 			</spawns>
 		</event>
-		<event name="Enemy Land Event" start="2012-12-28T00:00:00+00:00" end="2020-12-31T00:00:00+00:00">
+		<event name="Enemy Land Event" start="2012-12-28T00:00:00+00:00" end="2013-12-31T00:00:00+00:00">
 			<quests>
 				<maintainable>80927;80928;80929;80930;80931;80932;80933;80934;80935;80936;80937;80938</maintainable>
 			</quests>
@@ -4234,7 +4233,7 @@
 			</spawns>
 		</event>
 		<!-- [Event Custom] -->
-		<event name="Buff Event" start="2012-12-28T00:00:00+00:00" end="2020-12-31T00:00:00+00:00">
+		<event name="Buff Event" start="2012-12-28T00:00:00+00:00" end="2013-12-31T00:00:00+00:00">
 			<spawns>
 				<!-- Sanctum -->
 				<spawn_map map_id="110010000">

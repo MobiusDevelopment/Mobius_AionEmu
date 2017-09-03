@@ -1462,10 +1462,6 @@
 	    <spawn npc_id="800453" respawn_time="295">
 	        <spot x="1140.4181" y="1366.3094" z="210.02248" h="15"/>
 	    </spawn>
-		<!-- Edandos (NPC Normal lvl:60) -->
-		<spawn npc_id="831029" respawn_time="295">
-            <spot x="1460.7893" y="1384.2224" z="177.52625" h="113"/>
-        </spawn>
 		<!-- Wymia (NPC Normal lvl:60) -->
         <spawn npc_id="831388" respawn_time="295">
             <spot x="1475.082" y="1466.3678" z="177.8163" h="89"/>

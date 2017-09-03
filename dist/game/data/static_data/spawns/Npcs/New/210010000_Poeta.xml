@@ -2,9 +2,5 @@
 <spawns>
     <spawn_map map_id="210010000">
         <spawn custom="true" respawn_time="295" npc_id="801033" difficult_id="0"/>
-        <spawn custom="true" respawn_time="295" npc_id="831025" difficult_id="0"/>
-        <spawn custom="true" respawn_time="295" npc_id="831031" difficult_id="0">
-            <spot h="22" z="118.51676" y="1219.7246" x="830.1341"/>
-        </spawn>
     </spawn_map>
 </spawns>
