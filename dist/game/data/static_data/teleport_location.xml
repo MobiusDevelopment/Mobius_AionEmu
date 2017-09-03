@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-	Teleport Location 5.0
-	Made By Encom
- -->
 <teleport_location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="teleport_location.xsd">
 	<teleloc_template loc_id="2" mapid="110010000" name="Sanctum" name_id="400489" posX="1313.25" posY="1512.011" posZ="568.107" heading="0"/>
 	<teleloc_template loc_id="3" mapid="210010000" name="Poeta" name_id="400490" posX="805.9061" posY="1242.6946" posZ="118.75" heading="100"/>
@@ -99,6 +95,10 @@
 	<teleloc_template loc_id="104" mapid="220070000" name="Subterranea Observation Post" name_id="401551"/>
 	<teleloc_template loc_id="105" mapid="110010000" name="Outer Dock" name_id="401552" posX="1817.1605" posY="2154.2178" posZ="527.9301" heading="83"/>
 	<teleloc_template loc_id="106" mapid="120010000" name="Crandale District" name_id="401553" posX="1175.7998" posY="1167.0049" posZ="207.97896" heading="20"/>
+	<teleloc_template loc_id="107" mapid="110010000" name="Sanctum Gate" name_id="401554" posX="1322.1704" posY="1512.1475" posZ="567.8929" heading="0"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="108" mapid="110020000" name="Seraphim Gate" name_id="401555" posX="2154.8271" posY="1577.7524" posZ="1204.897" heading="8"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="109" mapid="120010000" name="Pandaemonium Entrance" name_id="401556" posX="1685.7" posY="1400.5" posZ="195.48618" heading="60"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="110" mapid="120020000" name="Shedim Gate" name_id="401557" posX="1559.9552" posY="1422.363" posZ="265.71" heading="68"/> <!-- new teleport 4.3 NA -->
 	<teleloc_template loc_id="111" mapid="210030000" name="Tolbas Village" name_id="401640"/>
 	<teleloc_template loc_id="112" mapid="210030000" name="Ardus Shrine" name_id="401641"/>
 	<teleloc_template loc_id="113" mapid="210020000" name="Novan's Crossing" name_id="401642"/>
@@ -119,9 +119,14 @@
 	<teleloc_template loc_id="128" mapid="220050000" name="Iollu Overlook" name_id="401657"/>
 	<teleloc_template loc_id="129" mapid="220040000" name="Kidorun's Campsite" name_id="401658"/>
 	<teleloc_template loc_id="130" mapid="220040000" name="Camp Kistenian" name_id="401659"/>
-	<teleloc_template loc_id="131" mapid="220040000" name="Hoarfrost Shelter" name_id="401660"/>
-	<teleloc_template loc_id="132" mapid="110010000" name="Path Of Glory" name_id="404675" posX="1363.1033" posY="1481.7102" posZ="569.0385" heading="16"/>
-	<teleloc_template loc_id="133" mapid="120010000" name="Path Of Gold" name_id="404676" posX="1314.9084" posY="1426.8268" posZ="209.09084" heading="69"/>
+	<teleloc_template loc_id="131" mapid="220040000" name="Hoarfrost Shelter" name_id="401660"/> <!-- flying -->
+	<teleloc_template loc_id="132" mapid="600020000" name="Kamar" name_id="402102"/> <!-- flying -->
+	<teleloc_template loc_id="133" mapid="600020000" name="Western Guardian's Seal" name_id="402103"/> <!-- flying -->
+	<teleloc_template loc_id="134" mapid="600020000" name="Eastern Guardian's Seal" name_id="402104"/> <!-- flying -->
+	<teleloc_template loc_id="135" mapid="600020000" name="Hushblade Garrison" name_id="402105"/> <!-- flying -->
+	<teleloc_template loc_id="136" mapid="600020000" name="Fatebound Garrison" name_id="402106"/> <!-- flying -->
+	<teleloc_template loc_id="137" mapid="600020000" name="Griffoen" name_id="402107" posX="1219.1166" posY="1361.548" posZ="1358.9019" heading="10"/> <!-- teleport -->
+	<teleloc_template loc_id="138" mapid="600020000" name="Habrok" name_id="402108" posX="1511.9075" posY="1559.2152" posZ="1359.1228" heading="70"/> <!-- teleport -->
 	<!-- Oriel Village -->
 	<teleloc_template loc_id="139" mapid="700010000" name="Oriel Plaza" name_id="402109" posX="1260" posY="1837" posZ="97.625" heading="6"/>
 	<teleloc_template loc_id="140" mapid="700010000" name="Prosperity's Light Village" name_id="402110" posX="684.418" posY="2271.943" posZ="162.25377" heading="91"/>
@@ -178,18 +183,120 @@
 	<teleloc_template loc_id="190" mapid="710010000" name="Alpindell Village" name_id="402202" posX="370.3637" posY="2669.6338" posZ="210.25" heading="100"/>
 	<teleloc_template loc_id="191" mapid="700010000" name="Oriel" name_id="403254" posX="1259.6345" posY="1837.169" posZ="97.64784" heading="12"/>
 	<teleloc_template loc_id="192" mapid="710010000" name="Pernon" name_id="403255" posX="1071.561" posY="1538.3507" posZ="97.99502" heading="55"/>
+	<teleloc_template loc_id="193" mapid="600020000" name="Nalotia's Cabin" name_id="403263"/> <!-- flying -->
+	<teleloc_template loc_id="194" mapid="600030000" name="Rancora Fortress" name_id="403264"/> <!-- flying -->
+	<teleloc_template loc_id="195" mapid="600030000" name="Rancora Fortress" name_id="403265"/> <!-- flying -->
+	<teleloc_template loc_id="196" mapid="600030000" name="Notus Outpost" name_id="403266"/> <!-- flying -->
+	<teleloc_template loc_id="197" mapid="600030000" name="Cindercone Outpost" name_id="403267"/> <!-- flying -->
+	<teleloc_template loc_id="198" mapid="600030000" name="Petro Outpost" name_id="403268"/> <!-- flying -->
+	<teleloc_template loc_id="199" mapid="600030000" name="Gurrik Tree" name_id="403269"/> <!-- flying -->
+	<teleloc_template loc_id="200" mapid="600030000" name="Black Cloud Camp" name_id="403270"/> <!-- flying -->
+	<teleloc_template loc_id="201" mapid="600030000" name="Tiamaranta" name_id="403272" posX="142.80214" posY="1593.751" posZ="295.70828" heading="1"/> <!-- teleport -->
+	<teleloc_template loc_id="202" mapid="600030000" name="Tiamaranta" name_id="403271" posX="148.58093" posY="1879.1094" posZ="295.04648" heading="1"/> <!-- teleport -->
 	<teleloc_template loc_id="203" mapid="700010000" name="Oriel" name_id="403254" posX="1259.6345" posY="1837.169" posZ="97.64784" heading="12"/>
 	<teleloc_template loc_id="204" mapid="710010000" name="Pernon" name_id="403255" posX="1071.561" posY="1538.3507" posZ="97.99502" heading="55"/>
-	<!-- -->
+	<teleloc_template loc_id="205" mapid="600020000" name="Garldar Village" name_id="403506"/> <!-- flying -->
+	<teleloc_template loc_id="206" mapid="600020000" name="Elementis Forest Entrance" name_id="403507"/> <!-- flying -->
+	<teleloc_template loc_id="207" mapid="600020000" name="Jotun Research Expedition" name_id="403508"/> <!-- flying -->
+	<teleloc_template loc_id="208" mapid="600020000" name="Twisted Land Outpost" name_id="403509"/> <!-- flying -->
+	<!-- New 4.3 -->
+	<teleloc_template loc_id="209" mapid="600050000" name="Danuar Spire" name_id="403575" posX="361.1056" posY="382.9898" posZ="281.8735" heading="12"/>
+	<teleloc_template loc_id="210" mapid="600050000" name="Adumbral Forest Enclave" name_id="403576"/> <!-- new flying 4.3 NA -->
+	<teleloc_template loc_id="211" mapid="600050000" name="Kaisinel's Beacon" name_id="403577" posX="402.3673" posY="2715.1897" posZ="142.3280" heading="49"/>
+	<teleloc_template loc_id="212" mapid="600050000" name="Pantager Base" name_id="403578"/> <!-- new flying 4.3 NA -->
+	<teleloc_template loc_id="213" mapid="600050000" name="Mairinerk's League Office" name_id="403579" posX="2867.1047" posY="286.15884" posZ="295.58215" heading="113"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="214" mapid="600050000" name="Mairinerk's League Office" name_id="403580" posX="2867.1047" posY="286.15884" posZ="295.58215" heading="113"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="215" mapid="600050000" name="Crerunerk League Office" name_id="403581" posX="2790.8457" posY="2580.2017" posZ="259.125" heading="74"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="216" mapid="600050000" name="Crerunerk League Office" name_id="403582" posX="2790.8457" posY="2580.2017" posZ="259.125" heading="74"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="219" mapid="600050000" name="Broken Cliff Camp" name_id="403585" posX="1498.7839" posY="1506.8325" posZ="119.22277" heading="91"/> <!-- 75 base asmo -->
+	<teleloc_template loc_id="220" mapid="600050000" name="Broken Cliff Camp" name_id="403586" posX="1530.3022" posY="1623.7926" posZ="124.43731" heading="91"/> <!-- 75 base ely -->
+	<teleloc_template loc_id="223" mapid="600050000" name="Irigani Keep" name_id="403589" posX="1622.2485" posY="802.76501" posZ="156.96838" heading="26"/> <!-- 76 base asmo -->
+	<teleloc_template loc_id="226" mapid="600050000" name="Crumbling Redoubt" name_id="403592" posX="1748.4063" posY="2324.8262" posZ="175.7225" heading="60"/> <!-- 76 base ely -->
+	<teleloc_template loc_id="229" mapid="600050000" name="Windswept Camp" name_id="403595" posX="1977.2903" posY="1147.7001" posZ="254.24609" heading="101"/> <!-- 78 base asmo -->
+	<teleloc_template loc_id="230" mapid="600050000" name="Windswept Camp" name_id="403596" posX="2081.4089" posY="1218.2599" posZ="244.14314" heading="101"/> <!-- 78 base ely -->
+	<teleloc_template loc_id="233" mapid="600050000" name="Sillus Pass Watchpost" name_id="403599" posX="2555.4692" posY="2050.6658" posZ="347.00046" heading="79"/> <!-- 79 base asmo -->
+	<teleloc_template loc_id="234" mapid="600050000" name="Sillus Pass Watchpost" name_id="403600" posX="2433.9414" posY="2065.7131" posZ="287.60703" heading="79"/> <!-- 79 base ely-->
+	<teleloc_template loc_id="235" mapid="600050000" name="STR_LDF5a_DynAirport_SUB_D_5011" name_id="403601" posX="1976" posY="1934" posZ="336" heading="90"/>
+	<teleloc_template loc_id="236" mapid="600050000" name="STR_LDF5a_DynAirport_SUB_L_5011" name_id="403602" posX="1976" posY="1934" posZ="336" heading="90"/>
+	<teleloc_template loc_id="237" mapid="600050000" name="Sillus Fortress" name_id="403603" posX="1977.78" posY="1932.18" posZ="334.62" heading="45"/>
+	<teleloc_template loc_id="238" mapid="600050000" name="Sillus Fortress" name_id="403604" posX="1967.85" posY="1924.51" posZ="334.62" heading="45"/>
+	<teleloc_template loc_id="239" mapid="600050000" name="Danuar Spire" name_id="403605"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="240" mapid="600050000" name="Kaisinel's Beacon" name_id="403606"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="241" mapid="600050000" name="Battlegroup Outpost" name_id="403607" posX="2956.3433" posY="1492.8019" posZ="420.19656" heading="23"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="242" mapid="600050000" name="Detachment Outpost" name_id="403608" posX="2909.2332" posY="1877.988" posZ="395.82782" heading="110"/> <!-- new teleport 4.3 NA -->
 	<teleloc_template loc_id="243" mapid="210060000" name="Latheron Coast Base Camp" name_id="403615"/>
 	<teleloc_template loc_id="244" mapid="210060000" name="Hongras Campsite" name_id="403616"/>
 	<teleloc_template loc_id="245" mapid="210040000" name="Coast Watchers Post" name_id="403617"/>
 	<teleloc_template loc_id="246" mapid="210040000" name="Reaper Outpost" name_id="403618"/>
 	<teleloc_template loc_id="247" mapid="220050000" name="Kamstow's Barracks" name_id="403619"/>
 	<teleloc_template loc_id="248" mapid="220020000" name="Chaikata's Hideout" name_id="403723" posX="2292.6716" posY="1512.6804" posZ="120.875" heading="119"/>
-	<!-- -->
+	<teleloc_template loc_id="249" mapid="600060000" name="Hadrianerk's Field Office" name_id="403826"/> <!-- new flying 4.3 NA -->
+	<teleloc_template loc_id="250" mapid="600060000" name="Kaberinrinerk's Field Office" name_id="403827"/> <!-- new flying 4.3 NA -->
+	<teleloc_template loc_id="251" mapid="600060000" name="Battlegroup Outpost" name_id="403828"/> <!-- new flying 4.3 NA -->
+	<teleloc_template loc_id="252" mapid="600060000" name="Detachment Outpost" name_id="403829" posX="63.0" posY="1927.0" posZ="519.125" heading="52"/> <!-- new flying 4.3 NA -->
+	<teleloc_template loc_id="253" mapid="600060000" name="Battlegroup Encampment" name_id="403830"/> <!-- new flying 4.3 NA -->
+	<teleloc_template loc_id="254" mapid="600060000" name="Battlegroup Encampment" name_id="403831" posX="831.91656" posY="264.61197" posZ="465.125" heading="4"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="255" mapid="600060000" name="Beritra's Bane Encampment" name_id="403832"/> <!-- new flying 4.3 NA -->
+	<teleloc_template loc_id="256" mapid="600060000" name="Beritra's Bane Encampment" name_id="403833" posX="986.78253" posY="2772.462" posZ="298.125" heading="47"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="257" mapid="600060000" name="Desolation's Edge" name_id="403834" posX="980.34094" posY="1156.5989" posZ="375.75177" heading="0"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="258" mapid="600060000" name="Desolation's Edge" name_id="403835" posX="980.34094" posY="1156.5989" posZ="375.75177" heading="0"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="259" mapid="600060000" name="Desolation's Edge" name_id="403836" posX="842.40247" posY="1289.7197" posZ="405.06366" heading="0"/> <!-- 80 base asmo-->
+	<teleloc_template loc_id="260" mapid="600060000" name="Desolation's Edge" name_id="403837" posX="852.45251" posY="1119.9851" posZ="385.80038" heading="0"/> <!-- 80 base ely-->
+	<teleloc_template loc_id="261" mapid="600060000" name="Starlit Grove" name_id="403838" posX="1060.7607" posY="2245.9561" posZ="278.60022" heading="100"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="262" mapid="600060000" name="Starlit Grove" name_id="403839" posX="1060.7607" posY="2245.9561" posZ="278.60022" heading="100"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="263" mapid="600060000" name="Starlit Grove" name_id="403840" posX="936.10504" posY="2329.082" posZ="270.77719" heading="100"/> <!-- 82 base asmo-->
+	<teleloc_template loc_id="264" mapid="600060000" name="Starlit Grove" name_id="403841" posX="1041.9504" posY="2367.6084" posZ="270.28729" heading="100"/> <!-- 82 base ely-->
+	<teleloc_template loc_id="265" mapid="600060000" name="Soaring Archways Rampart" name_id="403842" posX="2786.7383" posY="604.25519" posZ="280.4838" heading="100"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="266" mapid="600060000" name="Soaring Archways Rampart" name_id="403843" posX="2786.7383" posY="604.25519" posZ="280.4838" heading="100"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="267" mapid="600060000" name="Sauro Mountains" name_id="403844" posX="2633.72" posY="345.86" posZ="232" heading="90"/> <!-- new flying 4.3 NA -->
+	<teleloc_template loc_id="268" mapid="600060000" name="Sauro Mountains" name_id="403845" posX="2735.46" posY="371.5" posZ="251" heading="90"/> <!-- new flying 4.3 NA -->
+	<teleloc_template loc_id="269" mapid="600060000" name="Earthshaped Promontory" name_id="403846" posX="1826.632" posY="816.13519" posZ="154.97774" heading="0"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="270" mapid="600060000" name="Earthshaped Promontory" name_id="403847" posX="1826.632" posY="816.13519" posZ="154.97774" heading="0"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="271" mapid="600060000" name="Earthshaped Promontory" name_id="403848" posX="1797.8793" posY="752.25177" posZ="78.528595" heading="0"/> <!-- 85 base asmo -->
+	<teleloc_template loc_id="272" mapid="600060000" name="Earthshaped Promontory" name_id="403849" posX="1770.533" posY="855.50909" posZ="82.760429" heading="0"/> <!-- 85 base aely -->
+	<teleloc_template loc_id="273" mapid="600060000" name="Silona Cascade Overlook" name_id="403850" posX="1502.3663" posY="1136.0703" posZ="94.792313" heading="44"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="274" mapid="600060000" name="Silona Cascade Overlook" name_id="403851" posX="1502.3663" posY="1136.0703" posZ="94.792313" heading="44"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="275" mapid="600060000" name="Silona Cascade Overlook" name_id="403852" posX="1478.7701" posY="1026.3394" posZ="61.241848" heading="44"/> <!-- 86 base asmo -->
+	<teleloc_template loc_id="276" mapid="600060000" name="Silona Cascade Overlook" name_id="403853" posX="1579.7994" posY="1047.3607" posZ="65.37944" heading="44"/> <!-- 86 base ely -->
+	<teleloc_template loc_id="277" mapid="600060000" name="Stonewatch Rampart" name_id="403854" posX="1325.5386" posY="2343.165" posZ="185.94781" heading="44"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="278" mapid="600060000" name="Stonewatch Rampart" name_id="403855" posX="1325.5386" posY="2343.165" posZ="185.94781" heading="44"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="279" mapid="600060000" name="Stonewatch Rampart" name_id="403856" posX="1313.8102" posY="2182.1584" posZ="222.58368" heading="30"/> <!-- 87 base asmo -->
+	<teleloc_template loc_id="280" mapid="600060000" name="Stonewatch Rampart" name_id="403857" posX="1425.2773" posY="2216.8352" posZ="170.89221" heading="30"/> <!-- 87 base elyos -->
+	<teleloc_template loc_id="281" mapid="600060000" name="Two Vigils Outpost" name_id="403858" posX="2120.5962" posY="2486.0486" posZ="271.68903" heading="30"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="282" mapid="600060000" name="Two Vigils Outpost" name_id="403859" posX="2120.5962" posY="2486.0486" posZ="271.68903" heading="30"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="283" mapid="600060000" name="Two Vigils Outpost" name_id="403860" posX="2128.845" posY="2397.8123" posZ="275.11859" heading="56"/> <!-- 88 base asmo -->
+	<teleloc_template loc_id="284" mapid="600060000" name="Two Vigils Outpost" name_id="403861" posX="2163.2427" posY="2552.1611" posZ="270.61786" heading="56"/> <!-- 88 base elyos -->
+	<teleloc_template loc_id="285" mapid="600060000" name="Emerald Meadow" name_id="403862" posX="2605.8708" posY="2190.384" posZ="253.47171" heading="56"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="286" mapid="600060000" name="Emerald Meadow" name_id="403863" posX="2605.8708" posY="2190.384" posZ="253.47171" heading="56"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="287" mapid="600060000" name="Emerald Meadow" name_id="403864" posX="2554.2771" posY="2179.554" posZ="251.62337" heading="102"/> <!-- 89 base asmo -->
+	<teleloc_template loc_id="288" mapid="600060000" name="Emerald Meadow" name_id="403865" posX="2645.4756" posY="2259.4763" posZ="248.23021" heading="102"/> <!-- 89 base elyos -->
+	<teleloc_template loc_id="289" mapid="600060000" name="Silona Fortress" name_id="403866" posX="1433" posY="688" posZ="125" heading="30"/>
+	<teleloc_template loc_id="290" mapid="600060000" name="Silona Fortress" name_id="403867" posX="1433" posY="688" posZ="125" heading="30"/>
+	<teleloc_template loc_id="291" mapid="600060000" name="Pradeth Fortress" name_id="403868" posX="2656" posY="2647" posZ="256" heading="30"/>
+	<teleloc_template loc_id="292" mapid="600060000" name="Pradeth Fortress" name_id="403869" posX="2656" posY="2647" posZ="256" heading="30"/>
+	<teleloc_template loc_id="293" mapid="600060000" name="Pandarunerk's Delve" name_id="403870" posX="2445.74" posY="1347.55" posZ="60" heading="15"/>
+	<teleloc_template loc_id="294" mapid="600060000" name="Pandarunerk's Delve" name_id="403871" posX="2411" posY="1351.7" posZ="59" heading="30"/>
+	<teleloc_template loc_id="295" mapid="600060000" name="Silona Fortress" name_id="403872" posX="1425.4442" posY="675.61316" posZ="123.81284" heading="75"/>
+	<teleloc_template loc_id="296" mapid="600060000" name="Silona Fortress" name_id="403873" posX="1425.4442" posY="675.61316" posZ="123.81284" heading="75"/>
+	<teleloc_template loc_id="297" mapid="600060000" name="Pradeth Fortress" name_id="403874" posX="2640.7654" posY="2653.2471" posZ="257.73901" heading="30"/>
+	<teleloc_template loc_id="298" mapid="600060000" name="Pradeth Fortress" name_id="403875" posX="2640.7654" posY="2653.2471" posZ="257.73901" heading="30"/>
+	<teleloc_template loc_id="299" mapid="600050000" name="Katalam" name_id="403933" posX="403.6666" posY="2714.1113" posZ="142.45523" heading="109"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="300" mapid="600050000" name="Katalam" name_id="403934" posX="359.55963" posY="381.9126" posZ="282.00433" heading="72"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="301" mapid="600060000" name="Danaria" name_id="403935" posX="2543.2195" posY="1698.4609" posZ="141.10408" heading="69"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="302" mapid="600060000" name="Danaria" name_id="403936" posX="2543.2195" posY="1698.4609" posZ="141.10408" heading="69"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="303" mapid="600050000" name="Danuar Spire" name_id="403575"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="304" mapid="600050000" name="Kaisinel's Beacon" name_id="403577"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="305" mapid="600050000" name="Mairinerk's League Office" name_id="403579"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="306" mapid="600050000" name="Crerunerk League Office" name_id="403582"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="307" mapid="600060000" name="Battlegroup Encampment" name_id="403830"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="308" mapid="600060000" name="Beritra's Bane Encampment" name_id="403832"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="309" mapid="600060000" name="Battlegroup Encampment" name_id="403831" posX="838.23907" posY="272.06876" posZ="467.43848" heading="69"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="310" mapid="600060000" name="Beritra's Bane Encampment" name_id="403833" posX="977.62561" posY="2776.9089" posZ="301.45325" heading="69"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="311" mapid="600060000" name="Battlegroup Encampment" name_id="403831" posX="838.23907" posY="272.06876" posZ="467.43848" heading="69"/> <!-- new teleport 4.3 NA -->
+	<teleloc_template loc_id="312" mapid="600060000" name="Beritra's Bane Encampment" name_id="403833" posX="977.62561" posY="2776.9089" posZ="301.45325" heading="69"/> <!-- new teleport 4.3 NA -->
 	<teleloc_template loc_id="313" mapid="210050000" name="Outer Port Of Inggison" name_id="403989" posX="1369.6293" posY="360.29944" posZ="589.57605" heading="17"/>
 	<teleloc_template loc_id="314" mapid="220070000" name="Gelkmaros Airship Dock" name_id="403990" posX="1888.2524" posY="2847.2727" posZ="554.9964" heading="98"/>
+	<teleloc_template loc_id="315" mapid="600020000" name="Sarpan" name_id="403991" posX="1367.4615" posY="1464.0637" posZ="599.5006" heading="42"/> <!-- new teleport 4.3 NA -->
 	<!-- Kaldor 4.7 -->
 	<teleloc_template loc_id="316" mapid="600090000" name="Hero's Fall (Elyos)" name_id="404261" posX="863.2553" posY="804.6878" posZ="164.80492" heading="94"/>
 	<teleloc_template loc_id="317" mapid="600090000" name="Hero's Fall (Asmodians)" name_id="404262" posX="863.2553" posY="804.6878" posZ="164.80492" heading="94"/>
@@ -205,6 +312,18 @@
 	<teleloc_template loc_id="327" mapid="600090000" name="Splitwood 2 (Asmodians)" name_id="404272" posX="1208.5062" posY="1164.5486" posZ="173.43425" heading="53"/>
 	<teleloc_template loc_id="328" mapid="600090000" name="Rubirinerk's Settlement" name_id="404273" posX="408.1886" posY="1359.2572" posZ="163.51178" heading="96"/>
 	<teleloc_template loc_id="329" mapid="600090000" name="Saparinerk's Settlement" name_id="404274" posX="1302.5714" posY="1315.4507" posZ="199.75026" heading="97"/>
+	<teleloc_template loc_id="330" mapid="600050000" name="Rubirinerk Farm" name_id="404275"/> <!-- todo -->
+	<teleloc_template loc_id="331" mapid="600050000" name="Saparinerk Farm" name_id="404276"/> <!-- todo -->
+	<teleloc_template loc_id="332" mapid="600100000" name="Gerha" name_id="404277" posX="106.437335" posY="124.41569" posZ="347.25" heading="96"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="333" mapid="600100000" name="Gerha" name_id="404278" posX="1847.6895" posY="1782.4664" posZ="305.3556" heading="108"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="334" mapid="600100000" name="Gerha" name_id="404279" posX="331.05" posY="1414.74" posZ="244.78" heading="42"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="335" mapid="600100000" name="Gerha" name_id="404280" posX="1433.33" posY="249.75" posZ="262.36" heading="42"/> <!-- new 4.7 TODO -->
+	<teleloc_template loc_id="336" mapid="600100000" name="Gerha" name_id="404281" posX="1433.33" posY="249.75" posZ="262.36" heading="42"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="337" mapid="600100000" name="Gerha" name_id="404282" posX="1433.33" posY="249.75" posZ="262.36" heading="42"/> <!-- new 4.7 TODO -->
+	<teleloc_template loc_id="338" mapid="600100000" name="Gerha" name_id="404283" posX="1073.46" posY="1494.23" posZ="273.16" heading="60"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="339" mapid="600100000" name="Gerha" name_id="404289" posX="950.5" posY="686.43" posZ="285" heading="90"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="340" mapid="600100000" name="Flameberth Downs" name_id="404285"/> <!-- todo -->
+	<teleloc_template loc_id="341" mapid="600100000" name="Flameberth Downs" name_id="404286"/> <!-- todo -->
 	<teleloc_template loc_id="358" mapid="600090000" name="Wealhtheow's Keep (Elyos)" name_id="404267" posX="755.8279" posY="274.5816" posZ="155.6706" heading="68"/>
 	<teleloc_template loc_id="359" mapid="600090000" name="Wealhtheow's Keep (Asmodians)" name_id="404268" posX="755.8279" posY="274.5816" posZ="155.6706" heading="68"/>
 	<teleloc_template loc_id="364" mapid="600090000" name="Shatterbark Wood 1 (Elyos)" name_id="404407" posX="340.27243" posY="1069.663" posZ="124.05519" heading="54"/>
@@ -246,6 +365,30 @@
 	<teleloc_template loc_id="355" mapid="400060000" name="Disilveir Redoubt" name_id="404303" posX="175.95262" posY="1838.0282" posZ="1489.4702" heading="4"/>
 	<teleloc_template loc_id="356" mapid="400060000" name="Disiltroll Redoubt" name_id="404304" posX="1844.2397" posY="1868.1226" posZ="1489.5593" heading="102"/>
 	<teleloc_template loc_id="357" mapid="400060000" name="Disilheim Redoubt" name_id="404305" posX="1875.5597" posY="202.80507" posZ="1489.649" heading="69"/>
+	<teleloc_template loc_id="358" mapid="600090000" name="Wealhtheow Keep L" name_id="404267" posX="755.8279" posY="274.5816" posZ="155.6706" heading="68"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="359" mapid="600090000" name="Wealhtheow Keep D" name_id="404268" posX="755.8279" posY="274.5816" posZ="155.6706" heading="68"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="360" mapid="600060000" name="Danaria Ely" name_id="403871" posX="2560.2988" posY="1489.4193" posZ="91.759834" heading="91"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="361" mapid="600060000" name="Danaria Asmo" name_id="403870" posX="2522.8193" posY="1503.1909" posZ="87.045845" heading="57"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="362" mapid="600060000" name="Beritra's Bane Encampment" name_id="403832" posX="983.3579" posY="2777.7236" posZ="298.0" heading="31"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="363" mapid="600060000" name="Battlegroup Encampment" name_id="403830" posX="841.92554" posY="267.43423" posZ="465.125" heading="8"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="364" mapid="600090000" name="Stonereach Outpost L" name_id="404407" posX="457" posY="1267" posZ="131" heading="0"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="365" mapid="600090000" name="Stonereach Outpost D" name_id="404408" posX="339" posY="1070" posZ="125" heading="0"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="366" mapid="600090000" name="Flamecrest Outpost L" name_id="404409" posX="1208" posY="1163" posZ="174" heading="0"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="367" mapid="600090000" name="Flamecrest Outpost D" name_id="404410" posX="1098" posY="1251" posZ="178" heading="0"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="368" mapid="600090000" name="Hero Fall L" name_id="404411" posX="596" posY="862" posZ="168" heading="0"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="369" mapid="600090000" name="Hero Fall D" name_id="404412" posX="596" posY="862" posZ="168" heading="0"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="370" mapid="600090000" name="Ashen Glade L" name_id="404413" posX="450" posY="406" posZ="153" heading="60"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="371" mapid="600090000" name="Ashen Glade D" name_id="404414" posX="450" posY="406" posZ="153" heading="60"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="372" mapid="600090000" name="Molten Cliffs L" name_id="404415" posX="1188" posY="225" posZ="136" heading="90"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="373" mapid="600090000" name="Molten Cliffs D" name_id="404416" posX="1188" posY="225" posZ="136" heading="90"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="374" mapid="600060000" name="Battlegroup Encampment (Base Asmodians)" name_id="403844" posX="841.92554" posY="267.43423" posZ="465.125" heading="8"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="375" mapid="600060000" name="Beritra's Bane Encampment (Base Elyos)" name_id="403845" posX="983.3579" posY="2777.7236" posZ="298.0" heading="31"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="376" mapid="600100000" name="Gerha" name_id="404429" posX="106.437335" posY="124.41569" posZ="347.25" heading="96"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="377" mapid="600100000" name="Gerha" name_id="404430" posX="1847.6895" posY="1782.4664" posZ="305.3556" heading="108"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="378" mapid="600050000" name="Beritran Foothold (Base Asmodians)" name_id="404431" posX="1072" posY="341" posZ="186.4" heading="60"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="379" mapid="600050000" name="Primeval Ruin (Base Asmodians)" name_id="404432" posX="775.2" posY="2613.9" posZ="215.1" heading="0"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="380" mapid="600050000" name="Beritran Foothold (Base Elyos)" name_id="404433" posX="969.33" posY="387.88" posZ="187.2" heading="60"/> <!-- new 4.7 -->
+	<teleloc_template loc_id="381" mapid="600050000" name="Primeval Ruin (Base Elyos)" name_id="404434" posX="971.2" posY="2785.9" posZ="205.3" heading="0"/> <!-- new 4.7 -->
 	<!-- Cygnea 4.8 -->
 	<teleloc_template loc_id="400" mapid="210070000" name="Aequis Expedition Headquarters" name_id="404568" posX="2938.8386" posY="850.36816" posZ="571.088" heading="69"/>
 	<teleloc_template loc_id="401" mapid="210070000" name="Aequis Expedition Headquarters" name_id="404569"/>

@@ -30,7 +30,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TeleLocIdData
 {
-	
 	@XmlElement(name = "telelocation")
 	private List<TeleportLocation> locids;
 	
@@ -46,7 +45,7 @@ public class TeleLocIdData
 	{
 		for (TeleportLocation t : locids)
 		{
-			if ((t != null) && (t.getLocId() == value))
+			if (t.getLocId() == value)
 			{
 				return t;
 			}

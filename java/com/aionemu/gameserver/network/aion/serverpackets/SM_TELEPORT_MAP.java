@@ -28,38 +28,37 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 
 /**
- * @author alexa026 , orz
+ * @author alexa026, orz
  */
 public class SM_TELEPORT_MAP extends AionServerPacket
 {
-	
-	private final int targetObjectId;
-	private final Player player;
-	private final TeleporterTemplate teleport;
-	public Npc npc;
+	private final int _targetObjectId;
+	private final Player _player;
+	private final TeleporterTemplate _teleportTemplate;
+	public Npc _npc;
 	
 	private static final Logger log = LoggerFactory.getLogger(SM_TELEPORT_MAP.class);
 	
 	public SM_TELEPORT_MAP(Player player, int targetObjectId, TeleporterTemplate teleport)
 	{
-		this.player = player;
-		this.targetObjectId = targetObjectId;
-		npc = (Npc) World.getInstance().findVisibleObject(targetObjectId);
-		this.teleport = teleport;
+		_player = player;
+		_targetObjectId = targetObjectId;
+		_npc = (Npc) World.getInstance().findVisibleObject(targetObjectId);
+		_teleportTemplate = teleport;
 	}
 	
 	@Override
 	protected void writeImpl(AionConnection con)
 	{
-		if ((teleport != null) && (teleport.getTeleportId() != 0))
+		if (_teleportTemplate != null)
 		{
-			writeD(targetObjectId);
-			writeH(teleport.getTeleportId());
+			writeD(_targetObjectId);
+			writeH(_teleportTemplate.getTeleportId());
 		}
-		else if (player.isGM())
+		else if (_player.isGM())
 		{
-			PacketSendUtility.sendMessage(player, "Missing info at npc_teleporter.xml with npcid: " + npc.getNpcId());
-			log.info(String.format("Missing teleport info with npcid: %d", npc.getNpcId()));
+			PacketSendUtility.sendMessage(_player, "Missing info at npc_teleporter.xml with npcid: " + _npc.getNpcId());
+			log.info(String.format("Missing teleport info with npcid: %d", _npc.getNpcId()));
 		}
 	}
 }

@@ -27,7 +27,8 @@ Changes:
 -Removed obsolete chat server.
 -Enabling events by simple date change.
 -Added config for bonus service buffs.
--Addition of launcher files.
+-Addition of eclipse launcher files.
+-Fixed fly and teleport issues.
 
 TODO:
 -Fix all code warnings.

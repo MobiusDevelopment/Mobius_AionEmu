@@ -122,8 +122,8 @@ public class TeleportService2
 			if (player.isGM())
 			{
 				PacketSendUtility.sendMessage(player, "Missing info at teleport_location.xml with locId: " + locId);
-				return;
 			}
+			return;
 		}
 		if (location.getRequiredQuest() > 0)
 		{
@@ -201,17 +201,13 @@ public class TeleportService2
 		playerTransformation(player);
 		instanceTransformation(player);
 		archdaevaTransformation(player);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (player.getLifeStats().isAlreadyDead() || !player.isSpawned())
 			{
-				if (player.getLifeStats().isAlreadyDead() || !player.isSpawned())
-				{
-					return;
-				}
-				TeleportService2.changePosition(player, mapId, instanceId, x, y, z, h, animation);
+				return;
 			}
+			TeleportService2.changePosition(player, mapId, instanceId, x, y, z, h, animation);
 		}, 2200);
 	}
 	
@@ -428,14 +424,7 @@ public class TeleportService2
 			archdaevaTransformation(player);
 			if (player.isUseRobot() || (player.getRobotId() != 0))
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						PacketSendUtility.sendPacket(player, new SM_USE_ROBOT(player, getRobotInfo(player).getRobotId()));
-					}
-				}, 3000);
+				ThreadPoolManager.getInstance().schedule(() -> PacketSendUtility.sendPacket(player, new SM_USE_ROBOT(player, getRobotInfo(player).getRobotId())), 3000);
 			}
 		}
 		if (player.isLegionMember())
@@ -715,10 +704,11 @@ public class TeleportService2
 	
 	/**
 	 * Archdaeva Transformation 5.1 If a player is under one of the following effects, and uses a "Teleport/Fly/Hotspot/Return Scroll" or use admin command "goto/movetoplayer/movetonpc" Then, the "Skill Panel" linked to this effect, never disappear !!!
+	 * @param player
 	 */
 	public static void archdaevaTransformation(Player player)
 	{
-		if (!player.isInGroup2() || (player != null))
+		if (!player.isInGroup2())
 		{
 			if (player.getEffectController().hasAbnormalEffect(4752))
 			{
@@ -797,10 +787,11 @@ public class TeleportService2
 	
 	/**
 	 * Instance + Event Transformation If a player is under one of the following effects, and uses a "Teleport/Fly/Hotspot/Return Scroll" or use admin command "goto/movetoplayer/movetonpc" Then, the "Skill Panel" linked to this effect, never disappear !!!
+	 * @param player
 	 */
 	public static void instanceTransformation(Player player)
 	{
-		if (!player.isInGroup2() || (player != null))
+		if (!player.isInGroup2())
 		{
 			// [PvP] Arena
 			if (player.getEffectController().hasAbnormalEffect(10405))

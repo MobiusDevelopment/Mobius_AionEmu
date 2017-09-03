@@ -29,16 +29,16 @@ public class TeleportLocation
 	private int locId;
 	
 	@XmlAttribute(name = "teleportid")
-	private final int teleportid = 0;
+	private int teleportid;
 	
 	@XmlAttribute(name = "price", required = true)
-	private final int price = 0;
+	private int price;
 	
 	@XmlAttribute(name = "pricePvp")
-	private final int pricePvp = 0;
+	private int pricePvp;
 	
 	@XmlAttribute(name = "requiredQuest")
-	private final int requiredQuest = 0;
+	private int requiredQuest;
 	
 	@XmlAttribute(name = "type", required = true)
 	private TeleportType type;

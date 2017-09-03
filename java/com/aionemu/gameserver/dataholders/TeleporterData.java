@@ -18,7 +18,6 @@ package com.aionemu.gameserver.dataholders;
 
 import java.util.List;
 
-import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -27,8 +26,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.model.templates.teleport.TeleporterTemplate;
-
-import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
  * This is a container holding and serving all {@link NpcTemplate} instances.<br>
@@ -39,31 +36,19 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TeleporterData
 {
-	
 	@XmlElement(name = "teleporter_template")
-	private List<TeleporterTemplate> tlist;
-	
-	/** A map containing all trade list templates */
-	private final TIntObjectHashMap<TeleporterTemplate> npctlistData = new TIntObjectHashMap<>();
-	
-	void afterUnmarshal(Unmarshaller u, Object parent)
-	{
-		for (TeleporterTemplate template : tlist)
-		{
-			npctlistData.put(template.getTeleportId(), template);
-		}
-	}
+	private List<TeleporterTemplate> teleporterTemplates;
 	
 	public int size()
 	{
-		return npctlistData.size();
+		return teleporterTemplates.size();
 	}
 	
 	public TeleporterTemplate getTeleporterTemplateByNpcId(int npcId)
 	{
-		for (TeleporterTemplate template : npctlistData.valueCollection())
+		for (TeleporterTemplate template : teleporterTemplates)
 		{
-			if (template.containNpc(npcId))
+			if (template.getNpcIds().contains(npcId))
 			{
 				return template;
 			}
@@ -73,11 +58,18 @@ public class TeleporterData
 	
 	/**
 	 * Returns an {@link NpcTemplate} object with given id.
-	 * @param id id of NPC
+	 * @param teleportId id of NPC
 	 * @return NpcTemplate object containing data about NPC with that id.
 	 */
 	public TeleporterTemplate getTeleporterTemplateByTeleportId(int teleportId)
 	{
-		return npctlistData.get(teleportId);
+		for (TeleporterTemplate template : teleporterTemplates)
+		{
+			if (template.getTeleportId() == teleportId)
+			{
+				return template;
+			}
+		}
+		return null;
 	}
 }

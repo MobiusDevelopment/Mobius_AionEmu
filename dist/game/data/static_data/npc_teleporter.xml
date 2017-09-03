@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-	Npc Teleporter 5.0
-	Made By Encom
- -->
 <npc_teleporter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_teleporter.xsd">
 	<teleporter_template npc_ids="203726" teleportId="1">
 		<locations>
@@ -70,6 +66,34 @@
 			<telelocation loc_id="400" price="8613" pricePvp="8613" type="REGULAR"/>
 		</locations>
 	</teleporter_template>
+	<teleporter_template npc_ids="205825" teleportId="12">
+		<locations>
+			<telelocation loc_id="313" price="14600" pricePvp="14600" type="REGULAR"/>
+			<telelocation loc_id="315" price="8200" pricePvp="8200" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="205806 205796" teleportId="11">
+		<locations>
+			<telelocation loc_id="313" price="6400" pricePvp="6400" type="REGULAR"/>
+			<telelocation loc_id="201" price="8200" pricePvp="8200" type="REGULAR"/>
+			<telelocation loc_id="2" price="13240" pricePvp="13240" type="REGULAR"/>
+			<telelocation loc_id="299" price="26000" pricePvp="26000" type="REGULAR"/>
+			<telelocation loc_id="301" price="29500" pricePvp="29500" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801667" teleportId="13">
+		<locations>
+			<telelocation loc_id="2" price="32800" pricePvp="32800" type="REGULAR"/>
+			<telelocation loc_id="315" price="26000" pricePvp="26000" type="REGULAR"/>
+			<telelocation loc_id="376" price="10608" pricePvp="10608" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801669" teleportId="14">
+		<locations>
+			<telelocation loc_id="2" price="37100" pricePvp="37100" type="REGULAR"/>
+			<telelocation loc_id="315" price="29500" pricePvp="29500" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
 	<teleporter_template npc_ids="204191" teleportId="50">
 		<locations>
 			<telelocation loc_id="8" price="100" pricePvp="100" type="REGULAR"/>
@@ -134,6 +158,34 @@
 		<locations>
 			<telelocation loc_id="7" price="9300" pricePvp="9300" type="REGULAR"/>
 			<telelocation loc_id="415" price="10000" pricePvp="10000" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="205846" teleportId="61">
+		<locations>
+			<telelocation loc_id="314" price="14600" pricePvp="14600" type="REGULAR"/>
+			<telelocation loc_id="315" price="8200" pricePvp="8200" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="205807 800056" teleportId="60">
+		<locations>
+			<telelocation loc_id="314" price="6400" pricePvp="6400" type="REGULAR"/>
+			<telelocation loc_id="202" price="8200" pricePvp="8200" type="REGULAR"/>
+			<telelocation loc_id="7" price="13240" pricePvp="13240" type="REGULAR"/>
+			<telelocation loc_id="300" price="26000" pricePvp="26000" type="REGULAR"/>
+			<telelocation loc_id="302" price="29500" pricePvp="29500" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801668" teleportId="62">
+		<locations>
+			<telelocation loc_id="7" price="32800" pricePvp="32800" type="REGULAR"/>
+			<telelocation loc_id="315" price="26000" pricePvp="26000" type="REGULAR"/>
+			<telelocation loc_id="377" price="10608" pricePvp="10608" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801670" teleportId="63">
+		<locations>
+			<telelocation loc_id="7" price="37100" pricePvp="37100" type="REGULAR"/>
+			<telelocation loc_id="315" price="29500" pricePvp="29500" type="REGULAR"/>
 		</locations>
 	</teleporter_template>
 	<teleporter_template npc_ids="730015" teleportId="101">
@@ -524,14 +576,16 @@
 			<telelocation loc_id="106" price="979" pricePvp="979" type="REGULAR"/>
 		</locations>
 	</teleporter_template>
-	<teleporter_template npc_ids="278505 278506" teleportId="500">
+	<teleporter_template npc_ids="262789 262788 262800 278506" teleportId="500">
 		<locations>
 			<telelocation loc_id="36" price="2300" pricePvp="6900" type="REGULAR"/>
 			<telelocation loc_id="37" price="3000" pricePvp="9000" type="REGULAR"/>
 			<telelocation loc_id="39" price="3000" pricePvp="9000" type="REGULAR"/>
-			<telelocation loc_id="45" price="9600" pricePvp="28800" type="REGULAR"/>
-			<telelocation loc_id="46" price="9900" pricePvp="29700" type="REGULAR"/>
-			<telelocation loc_id="47" price="9900" pricePvp="29700" type="REGULAR"/>
+			<telelocation loc_id="44" price="4500" pricePvp="13500" type="REGULAR"/>
+			<telelocation loc_id="45" price="5200" pricePvp="15600" type="REGULAR"/>
+			<telelocation loc_id="46" price="6000" pricePvp="18000" type="REGULAR"/>
+			<telelocation loc_id="47" price="6000" pricePvp="18000" type="REGULAR"/>
+			<telelocation loc_id="48" price="7500" pricePvp="22500" type="REGULAR"/>
 			<telelocation loc_id="42" price="1500" pricePvp="4500" type="REGULAR"/>
 			<telelocation loc_id="40" price="4500" pricePvp="13500" type="REGULAR"/>
 		</locations>
@@ -546,14 +600,16 @@
 			<telelocation loc_id="35" price="3000" pricePvp="9000" type="REGULAR"/>
 		</locations>
 	</teleporter_template>
-	<teleporter_template npc_ids="278005 278006" teleportId="503">
+	<teleporter_template npc_ids="262801 262802 262803 278006" teleportId="503">
 		<locations>
 			<telelocation loc_id="54" price="3800" pricePvp="11400" type="REGULAR"/>
 			<telelocation loc_id="55" price="3000" pricePvp="9000" type="REGULAR"/>
 			<telelocation loc_id="56" price="3000" pricePvp="9000" type="REGULAR"/>
-			<telelocation loc_id="57" price="9900" pricePvp="29700" type="REGULAR"/>
-			<telelocation loc_id="58" price="9900" pricePvp="29700" type="REGULAR"/>
-			<telelocation loc_id="59" price="9600" pricePvp="28800" type="REGULAR"/>
+			<telelocation loc_id="62" price="7500" pricePvp="22500" type="REGULAR"/>
+			<telelocation loc_id="57" price="6000" pricePvp="18000" type="REGULAR"/>
+			<telelocation loc_id="58" price="6000" pricePvp="18000" type="REGULAR"/>
+			<telelocation loc_id="59" price="5200" pricePvp="15600" type="REGULAR"/>
+			<telelocation loc_id="60" price="4500" pricePvp="13500" type="REGULAR"/>
 			<telelocation loc_id="50" price="1500" pricePvp="4500" type="REGULAR"/>
 			<telelocation loc_id="52" price="4500" pricePvp="13500" type="REGULAR"/>
 		</locations>
@@ -773,6 +829,551 @@
 			<telelocation loc_id="94" price="1000" pricePvp="1000" type="REGULAR"/>
 		</locations>
 	</teleporter_template>
+	<teleporter_template npc_ids="800006" teleportId="650">
+		<locations>
+			<telelocation loc_id="133" teleportid="182001" price="7180" pricePvp="7180" type="FLIGHT"/>
+			<telelocation loc_id="134" teleportid="184001" price="4578" pricePvp="4578" type="FLIGHT"/>
+			<telelocation loc_id="135" teleportid="186001" price="4578" pricePvp="4578" type="FLIGHT"/>
+			<telelocation loc_id="136" teleportid="188001" price="4578" pricePvp="4578" type="FLIGHT"/>
+			<telelocation loc_id="193" teleportid="190001" price="7180" pricePvp="7180" type="FLIGHT"/>
+			<telelocation loc_id="205" teleportid="195001" price="3589" pricePvp="3589" type="FLIGHT"/>
+			<telelocation loc_id="207" teleportid="197001" price="3480" pricePvp="3480" type="FLIGHT"/>
+			<telelocation loc_id="208" teleportid="201001" price="4480" pricePvp="4480" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="800007" teleportId="651">
+		<locations>
+			<telelocation loc_id="132" teleportid="183001" price="6402" pricePvp="6402" type="FLIGHT"/>
+			<telelocation loc_id="134" teleportid="192001" price="6402" pricePvp="6402" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="800008" teleportId="652">
+		<locations>
+			<telelocation loc_id="132" teleportid="185001" price="6400" pricePvp="6400" type="FLIGHT"/>
+			<telelocation loc_id="133" teleportid="193001" price="6400" pricePvp="6400" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="800059" teleportId="653">
+		<locations>
+			<telelocation loc_id="132" teleportid="187001" price="6420" pricePvp="6420" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="800060" teleportId="654">
+		<locations>
+			<telelocation loc_id="132" teleportid="189001" price="6420" pricePvp="6420" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="800111" teleportId="655">
+		<locations>
+			<telelocation loc_id="132" teleportid="191001" price="3279" pricePvp="3279" type="FLIGHT"/>
+			<telelocation loc_id="206" teleportid="199001" price="7000" pricePvp="7000" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730580" teleportId="656">
+		<locations>
+			<telelocation loc_id="132" teleportid="196001" price="3589" pricePvp="3589" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730581" teleportId="657">
+		<locations>
+			<telelocation loc_id="193" teleportid="200001" price="7000" pricePvp="7000" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730582" teleportId="658">
+		<locations>
+			<telelocation loc_id="132" teleportid="198001" price="3480" pricePvp="3480" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730583" teleportId="659">
+		<locations>
+			<telelocation loc_id="132" teleportid="202001" price="4480" pricePvp="4480" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="205976" teleportId="700">
+		<locations>
+			<telelocation loc_id="196" teleportid="166001" price="8008" pricePvp="8008" type="FLIGHT"/>
+			<telelocation loc_id="197" teleportid="170001" price="7030" pricePvp="7030" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="205977" teleportId="702">
+		<locations>
+			<telelocation loc_id="194" teleportid="167001" price="7700" pricePvp="7700" type="FLIGHT"/>
+			<telelocation loc_id="195" teleportid="169001" price="7700" pricePvp="7700" type="FLIGHT"/>
+			<telelocation loc_id="198" teleportid="174001" price="4558" pricePvp="4558" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="205978" teleportId="703">
+		<locations>
+			<telelocation loc_id="194" teleportid="171001" price="5700" pricePvp="5700" type="FLIGHT"/>
+			<telelocation loc_id="195" teleportid="173001" price="5700" pricePvp="5700" type="FLIGHT"/>
+			<telelocation loc_id="198" teleportid="176001" price="6313" pricePvp="6313" type="FLIGHT"/>
+			<telelocation loc_id="199" teleportid="180001" price="2780" pricePvp="2780" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="205979" teleportId="704">
+		<locations>
+			<telelocation loc_id="196" teleportid="175001" price="4430" pricePvp="4430" type="FLIGHT"/>
+			<telelocation loc_id="197" teleportid="177001" price="6136" pricePvp="6136" type="FLIGHT"/>
+			<telelocation loc_id="200" teleportid="178001" price="2012" pricePvp="2012" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="205980" teleportId="705">
+		<locations>
+			<telelocation loc_id="197" teleportid="181001" price="2891" pricePvp="2891" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="205981" teleportId="706">
+		<locations>
+			<telelocation loc_id="198" teleportid="179001" price="2012" pricePvp="2012" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730646" teleportId="800">
+		<locations>
+			<telelocation loc_id="210" teleportid="252001" price="17750" pricePvp="17750" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730648" teleportId="801">
+		<locations>
+			<telelocation loc_id="209" teleportid="253001" price="17750" pricePvp="17750" type="FLIGHT"/>
+			<telelocation loc_id="213" teleportid="254001" price="12070" pricePvp="12070" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730647" teleportId="802">
+		<locations>
+			<telelocation loc_id="212" teleportid="248001" price="17750" pricePvp="17750" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730649" teleportId="803">
+		<locations>
+			<telelocation loc_id="211" teleportid="249001" price="17750" pricePvp="17750" type="FLIGHT"/>
+			<telelocation loc_id="216" teleportid="250001" price="12070" pricePvp="12070" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730650" teleportId="804">
+		<locations>
+			<telelocation loc_id="210" teleportid="255001" price="12070" pricePvp="12070" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730651" teleportId="805">
+		<locations>
+			<telelocation loc_id="230" price="13490" pricePvp="13490" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730652" teleportId="806">
+		<locations>
+			<telelocation loc_id="233" price="13490" pricePvp="13490" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730653" teleportId="807">
+		<locations>
+			<telelocation loc_id="212" teleportid="251001" price="12070" pricePvp="12070" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730654" teleportId="808">
+		<locations>
+			<telelocation loc_id="241" price="19170" pricePvp="19170" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730655" teleportId="809">
+		<locations>
+			<telelocation loc_id="242" price="19170" pricePvp="19170" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730681" teleportId="810">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="730682" teleportId="811">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="730656" teleportId="812">
+		<locations>
+			<telelocation loc_id="209" price="14200" pricePvp="14200" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730683" teleportId="813">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="730684" teleportId="814">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="730685" teleportId="815">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="730657" teleportId="816">
+		<locations>
+			<telelocation loc_id="211" price="14200" pricePvp="14200" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730686" teleportId="817">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="730658" teleportId="818">
+		<locations>
+			<telelocation loc_id="235" price="6390" pricePvp="6390" type="REGULAR"/>
+			<telelocation loc_id="213" price="13490" pricePvp="13490" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730659" teleportId="819">
+		<locations>
+			<telelocation loc_id="236" price="6390" pricePvp="6390" type="REGULAR"/>
+			<telelocation loc_id="214" price="13490" pricePvp="13490" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730687" teleportId="820">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="730688" teleportId="821">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="730660" teleportId="822">
+		<locations>
+			<telelocation loc_id="235" price="6390" pricePvp="6390" type="REGULAR"/>
+			<telelocation loc_id="215" price="13490" pricePvp="13490" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730661" teleportId="823">
+		<locations>
+			<telelocation loc_id="236" price="6390" pricePvp="6390" type="REGULAR"/>
+			<telelocation loc_id="216" price="13490" pricePvp="13490" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730689" teleportId="824">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="730690" teleportId="825">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="258265" teleportId="826">
+		<locations>
+			<telelocation loc_id="229" price="7030" pricePvp="7030" type="REGULAR"/>
+			<telelocation loc_id="233" price="7030" pricePvp="7030" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="258266" teleportId="827">
+		<locations>
+			<telelocation loc_id="230" price="7030" pricePvp="7030" type="REGULAR"/>
+			<telelocation loc_id="234" price="7030" pricePvp="7030" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730664" teleportId="828">
+		<locations>
+			<telelocation loc_id="209" price="22650" pricePvp="22650" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730665" teleportId="829">
+		<locations>
+			<telelocation loc_id="211" price="22650" pricePvp="22650" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730666" teleportId="830">
+		<locations>
+			<telelocation loc_id="237" price="22650" pricePvp="22650" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730667" teleportId="831">
+		<locations>
+			<telelocation loc_id="238" price="22650" pricePvp="22650" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730662" teleportId="832">
+		<locations>
+			<telelocation loc_id="219" price="19170" pricePvp="19170" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730663" teleportId="833">
+		<locations>
+			<telelocation loc_id="220" price="19170" pricePvp="19170" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801698" teleportId="900">
+		<locations>
+			<telelocation loc_id="253" teleportid="261001" price="9800" pricePvp="9800" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801702" teleportId="901">
+		<locations>
+			<!-- for 4.6 -->
+			<telelocation loc_id="249" teleportid="262001" price="9800" pricePvp="9800" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801740" teleportId="902">
+		<locations>
+			<telelocation loc_id="295" price="6630" pricePvp="6630" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801699" teleportId="903">
+		<locations>
+			<telelocation loc_id="255" teleportid="256001" price="9800" pricePvp="9800" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801703" teleportId="904">
+		<locations>
+			<!-- v4.7.5.2 -->
+			<telelocation loc_id="250" teleportid="257001" price="9800" pricePvp="9800" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801741" teleportId="905">
+		<locations>
+			<telelocation loc_id="296" price="33150" pricePvp="33150" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801700" teleportId="906">
+		<locations>
+			<telelocation loc_id="293" price="18840" pricePvp="18840" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801701" teleportId="907">
+		<locations>
+			<telelocation loc_id="294" price="18840" pricePvp="18840" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801704" teleportId="908">
+		<locations>
+			<telelocation loc_id="279" price="12810" pricePvp="12810" type="REGULAR"/>
+			<telelocation loc_id="283" price="21850" pricePvp="21850" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801705" teleportId="909">
+		<locations>
+			<telelocation loc_id="280" price="12810" pricePvp="12810" type="REGULAR"/>
+			<telelocation loc_id="284" price="21850" pricePvp="21850" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801724" teleportId="910">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="801725" teleportId="911">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="801706" teleportId="912">
+		<locations>
+			<telelocation loc_id="271" price="20340" pricePvp="20340" type="REGULAR"/>
+			<telelocation loc_id="279" price="5280" pricePvp="5280" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801707" teleportId="913">
+		<locations>
+			<telelocation loc_id="272" price="20340" pricePvp="20340" type="REGULAR"/>
+			<telelocation loc_id="280" price="5280" pricePvp="5280" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801726" teleportId="914">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="801727" teleportId="915">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="801712" teleportId="916">
+		<locations>
+			<telelocation loc_id="289" price="6030" pricePvp="6030" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801713" teleportId="917">
+		<locations>
+			<telelocation loc_id="290" price="6030" pricePvp="6030" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801728" teleportId="918">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="801729" teleportId="919">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="258268" teleportId="920">
+		<locations>
+			<telelocation loc_id="271" price="6630" pricePvp="6630" type="REGULAR"/>
+			<telelocation loc_id="275" price="6630" pricePvp="6630" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801742" teleportId="921">
+		<locations>
+			<telelocation loc_id="254" price="6630" pricePvp="6630" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="258269" teleportId="922">
+		<locations>
+			<telelocation loc_id="272" price="6630" pricePvp="6630" type="REGULAR"/>
+			<telelocation loc_id="276" price="6630" pricePvp="6630" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801743" teleportId="923">
+		<locations>
+			<telelocation loc_id="256" price="33150" pricePvp="33150" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801714" teleportId="924">
+		<locations>
+			<telelocation loc_id="259" price="12810" pricePvp="12810" type="REGULAR"/>
+			<telelocation loc_id="263" price="5280" pricePvp="5280" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801715" teleportId="925">
+		<locations>
+			<telelocation loc_id="260" price="12810" pricePvp="12810" type="REGULAR"/>
+			<telelocation loc_id="264" price="5280" pricePvp="5280" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801730" teleportId="926">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="801731" teleportId="927">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="801710" teleportId="928">
+		<locations>
+			<telelocation loc_id="289" price="6030" pricePvp="6030" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801711" teleportId="929">
+		<locations>
+			<telelocation loc_id="290" price="6030" pricePvp="6030" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801732" teleportId="930">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="801733" teleportId="931">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="801708" teleportId="932">
+		<locations>
+			<telelocation loc_id="275" price="16580" pricePvp="16580" type="REGULAR"/>
+			<telelocation loc_id="293" price="12810" pricePvp="12810" type="REGULAR"/>
+			<telelocation loc_id="287" price="21100" pricePvp="21100" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801709" teleportId="933">
+		<locations>
+			<telelocation loc_id="362" price="32400" pricePvp="32400" type="REGULAR"/>
+			<telelocation loc_id="276" price="16580" pricePvp="16580" type="REGULAR"/>
+			<telelocation loc_id="294" price="12810" pricePvp="12810" type="REGULAR"/>
+			<telelocation loc_id="288" price="21100" pricePvp="21100" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801734" teleportId="934">
+		<locations>
+			<telelocation loc_id="253" teleportid="264001" price="19590" pricePvp="19590" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801735" teleportId="935">
+		<locations>
+			<telelocation loc_id="255" teleportid="259001" price="32400" pricePvp="32400" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801720" teleportId="936">
+		<locations>
+			<telelocation loc_id="251" teleportid="267001" price="18840" pricePvp="18840" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801721" teleportId="937">
+		<locations>
+			<telelocation loc_id="252" teleportid="266001" price="18840" pricePvp="18840" type="FLIGHT"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801716" teleportId="938">
+		<locations>
+			<telelocation loc_id="291" price="6030" pricePvp="6030" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801717" teleportId="939">
+		<locations>
+			<telelocation loc_id="292" price="6030" pricePvp="6030" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801736" teleportId="940">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="801737" teleportId="941">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="801718" teleportId="942">
+		<locations>
+			<telelocation loc_id="291" price="6030" pricePvp="6030" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801719" teleportId="943">
+		<locations>
+			<telelocation loc_id="292" price="6030" pricePvp="6030" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801738" teleportId="944">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="801739" teleportId="945">
+		<locations/>
+	</teleporter_template>
+	<teleporter_template npc_ids="258271" teleportId="946">
+		<locations>
+			<telelocation loc_id="283" price="6630" pricePvp="6630" type="REGULAR"/>
+			<telelocation loc_id="287" price="6630" pricePvp="6630" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801744" teleportId="947">
+		<locations>
+			<telelocation loc_id="254" price="33150" pricePvp="33150" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="258272" teleportId="948">
+		<locations>
+			<telelocation loc_id="284" price="6630" pricePvp="6630" type="REGULAR"/>
+			<telelocation loc_id="288" price="6630" pricePvp="6630" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801745" teleportId="949">
+		<locations>
+			<telelocation loc_id="256" price="19890" pricePvp="19890" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730829" teleportId="950">
+		<locations>
+			<telelocation loc_id="223" price="14200" pricePvp="14200" type="REGULAR"/>
+			<telelocation loc_id="378" price="7979" pricePvp="7979" type="REGULAR"/>
+			<telelocation loc_id="379" price="25756" pricePvp="25756" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730830" teleportId="951">
+		<locations>
+			<telelocation loc_id="226" price="14200" pricePvp="14200" type="REGULAR"/>
+			<telelocation loc_id="380" price="25767" pricePvp="25767" type="REGULAR"/>
+			<telelocation loc_id="381" price="5962" pricePvp="5962" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730831" teleportId="952">
+		<locations>
+			<telelocation loc_id="229" price="13490" pricePvp="13490" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730832" teleportId="953">
+		<locations>
+			<telelocation loc_id="234" price="13490" pricePvp="13490" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730833" teleportId="954">
+		<locations>
+			<telelocation loc_id="259" price="10550" pricePvp="10550" type="REGULAR"/>
+			<telelocation loc_id="263" price="21850" pricePvp="21850" type="REGULAR"/>
+			<telelocation loc_id="267" price="19470" pricePvp="19470" type="REGULAR"/>
+			<telelocation loc_id="361" price="21344" pricePvp="21344" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="730834" teleportId="955">
+		<locations>
+			<telelocation loc_id="260" price="21850" pricePvp="21850" type="REGULAR"/>
+			<telelocation loc_id="264" price="7540" pricePvp="7540" type="REGULAR"/>
+			<telelocation loc_id="268" price="30550" pricePvp="30550" type="REGULAR"/>
+			<telelocation loc_id="360" price="21344" pricePvp="21344" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801756" teleportId="956">
+		<locations>
+			<telelocation loc_id="297" price="33150" pricePvp="33150" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="801757" teleportId="957">
+		<locations>
+			<telelocation loc_id="298" price="19890" pricePvp="19890" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
 	<teleporter_template npc_ids="802443" teleportId="958">
 		<locations>
 			<telelocation loc_id="324" price="10793" pricePvp="10793" type="REGULAR"/>
@@ -792,7 +1393,7 @@
 	</teleporter_template>
 	<teleporter_template npc_ids="802446" teleportId="961">
 		<locations>
-			<telelocation loc_id="323" price="17894" pricePvp="17894" type="REGULAR"/>
+			<telelocation loc_id="323" price="18351" pricePvp="18351" type="REGULAR"/>
 		</locations>
 	</teleporter_template>
 	<teleporter_template npc_ids="802447" teleportId="962">
@@ -857,7 +1458,6 @@
 			<telelocation loc_id="333" price="10000" pricePvp="10000" type="REGULAR"/>
 		</locations>
 	</teleporter_template>
-	
 	<!-- PANESTERRA -->
 	<!-- Belus -->
 	<teleporter_template npc_ids="731466 731470 731474" teleportId="976">
@@ -960,7 +1560,6 @@
 		</locations>
 	</teleporter_template>
 	<!-- PANESTERRA END -->
-	
 	<teleporter_template npc_ids="804486" teleportId="992">
 		<locations>
 			<telelocation loc_id="324" price="18193" pricePvp="18193" type="REGULAR"/>
@@ -1003,6 +1602,17 @@
 			<telelocation loc_id="371" price="19195" pricePvp="19195" type="REGULAR"/>
 			<telelocation loc_id="373" price="16171" pricePvp="16171" type="REGULAR"/>
 			<telelocation loc_id="323" price="17894" pricePvp="17894" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<!-- Teleporter 4.7 End -->
+	<teleporter_template npc_ids="832803" teleportId="998">
+		<locations>
+			<telelocation loc_id="363" price="19470" pricePvp="19470" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="832804" teleportId="999">
+		<locations>
+			<telelocation loc_id="362" price="30550" pricePvp="30550" type="REGULAR"/>
 		</locations>
 	</teleporter_template>
 	<teleporter_template npc_ids="830000" teleportId="1001">
@@ -1583,6 +2193,20 @@
 			<telelocation loc_id="435" price="4896" pricePvp="4896" type="REGULAR"/>
 			<telelocation loc_id="436" price="2518" pricePvp="2518" type="REGULAR"/>
 			<telelocation loc_id="437" price="7414" pricePvp="7414" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="832745" teleportId="1131">
+		<locations>
+			<telelocation loc_id="362" price="21344" pricePvp="21344" type="REGULAR"/>
+			<telelocation loc_id="252" price="18840" pricePvp="18840" type="REGULAR"/>
+			<telelocation loc_id="267" price="21344" pricePvp="21344" type="REGULAR"/>
+		</locations>
+	</teleporter_template>
+	<teleporter_template npc_ids="832746" teleportId="1132">
+		<locations>
+			<telelocation loc_id="363" price="21344" pricePvp="21344" type="REGULAR"/>
+			<telelocation loc_id="251" price="18840" pricePvp="18840" type="REGULAR"/>
+			<telelocation loc_id="268" price="21344" pricePvp="21344" type="REGULAR"/>
 		</locations>
 	</teleporter_template>
 	<!-- 5.0 -->

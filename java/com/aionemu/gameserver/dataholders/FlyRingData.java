@@ -34,7 +34,6 @@ import com.aionemu.gameserver.model.templates.flyring.FlyRingTemplate;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FlyRingData
 {
-	
 	@XmlElement(name = "fly_ring")
 	private List<FlyRingTemplate> flyRingTemplates;
 	

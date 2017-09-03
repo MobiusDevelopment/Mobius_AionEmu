@@ -28,15 +28,14 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author orz
  */
 @XmlRootElement(name = "teleporter_template")
-@XmlAccessorType(XmlAccessType.NONE)
+@XmlAccessorType(XmlAccessType.FIELD)
 public class TeleporterTemplate
 {
-	
 	@XmlAttribute(name = "npc_ids")
 	private List<Integer> npcIds;
 	
 	@XmlAttribute(name = "teleportId", required = true)
-	private final int teleportId = 0;
+	private int teleportId;
 	
 	@XmlElement(name = "locations")
 	private TeleLocIdData teleLocIdData;
@@ -47,14 +46,6 @@ public class TeleporterTemplate
 	public List<Integer> getNpcIds()
 	{
 		return npcIds;
-	}
-	
-	/**
-	 * @return the name of npc
-	 */
-	public boolean containNpc(int npcId)
-	{
-		return npcIds.contains(npcId);
 	}
 	
 	/**
