@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Raw extends AdminCommand
 {
-	
 	private static final File ROOT = new File("data/packets/");
 	
 	private static final Logger logger = LoggerFactory.getLogger(Raw.class);
@@ -86,7 +85,7 @@ public class Raw extends AdminCommand
 							init = true;
 						}
 					}
-					else if ((r > 0) || (i > 4))
+					else if ((packet != null) && ((r > 0) || (i > 4)))
 					{
 						packet.addElement(PacketElementType.C, "0x" + tokens[i]);
 					}

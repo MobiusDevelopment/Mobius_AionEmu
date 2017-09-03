@@ -26,7 +26,6 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.database.DB;
 import com.aionemu.commons.database.DatabaseFactory;
-import com.aionemu.commons.database.IUStH;
 import com.aionemu.commons.database.ParamReadStH;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
@@ -43,10 +42,9 @@ import ch.qos.logback.classic.Logger;
  */
 public class Bk extends AdminCommand
 {
-	
 	ArrayList<Bookmark> bookmarks = new ArrayList<>();
 	private static final Logger log = (Logger) LoggerFactory.getLogger(Bk.class);
-	private String bookmark_name = "";
+	String bookmark_name = "";
 	
 	public Bk()
 	{
@@ -69,7 +67,7 @@ public class Bk extends AdminCommand
 				bookmark_name = params[1].toLowerCase();
 				if (isBookmarkExists(bookmark_name, player.getObjectId()))
 				{
-					PacketSendUtility.sendMessage(player, "Bookmark " + bookmark_name + " already exists !");
+					PacketSendUtility.sendMessage(player, "Bookmark " + bookmark_name + " already exists!");
 					return;
 				}
 				
@@ -79,20 +77,15 @@ public class Bk extends AdminCommand
 				final int char_id = player.getObjectId();
 				final int world_id = player.getWorldId();
 				
-				DB.insertUpdate("INSERT INTO bookmark (" + "`name`,`char_id`, `x`, `y`, `z`,`world_id` )" + " VALUES " + "(?, ?, ?, ?, ?, ?)", new IUStH()
+				DB.insertUpdate("INSERT INTO bookmark (" + "`name`,`char_id`, `x`, `y`, `z`,`world_id` )" + " VALUES " + "(?, ?, ?, ?, ?, ?)", ps ->
 				{
-					
-					@Override
-					public void handleInsertUpdate(PreparedStatement ps) throws SQLException
-					{
-						ps.setString(1, bookmark_name);
-						ps.setInt(2, char_id);
-						ps.setFloat(3, x);
-						ps.setFloat(4, y);
-						ps.setFloat(5, z);
-						ps.setInt(6, world_id);
-						ps.execute();
-					}
+					ps.setString(1, bookmark_name);
+					ps.setInt(2, char_id);
+					ps.setFloat(3, x);
+					ps.setFloat(4, y);
+					ps.setFloat(5, z);
+					ps.setInt(6, world_id);
+					ps.execute();
 				});
 				
 				PacketSendUtility.sendMessage(player, "Bookmark " + bookmark_name + " sucessfully added to your bookmark list!");
@@ -179,6 +172,7 @@ public class Bk extends AdminCommand
 	
 	/**
 	 * Reload bookmark list from db
+	 * @param objId
 	 */
 	public void updateInfo(final int objId)
 	{
@@ -227,6 +221,7 @@ public class Bk extends AdminCommand
 	
 	/**
 	 * @param bk_name - bookmark name
+	 * @param objId
 	 * @return true if bookmark exists
 	 */
 	public boolean isBookmarkExists(final String bk_name, final int objId)

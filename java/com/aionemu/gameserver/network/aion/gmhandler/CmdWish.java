@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CmdWish extends AbstractGMHandler
 {
-	
 	public CmdWish(Player admin, String params)
 	{
 		super(admin, params);

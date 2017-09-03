@@ -37,12 +37,8 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Stat extends AdminCommand
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(Stat.class);
 	
-	/**
-	 * @param alias
-	 */
 	public Stat()
 	{
 		super("stat");
@@ -108,7 +104,5 @@ public class Stat extends AdminCommand
 	public void onFail(Player player, String message)
 	{
 		// TODO Auto-generated method stub
-		
 	}
-	
 }

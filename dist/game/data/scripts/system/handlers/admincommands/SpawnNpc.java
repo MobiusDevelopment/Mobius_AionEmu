@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class SpawnNpc extends AdminCommand
 {
-	
 	public SpawnNpc()
 	{
 		super("spawn");
@@ -87,8 +86,11 @@ public class SpawnNpc extends AdminCommand
 			}
 		}
 		
-		final String objectName = visibleObject.getObjectTemplate().getName();
-		PacketSendUtility.sendMessage(admin, objectName + " spawned");
+		if (visibleObject != null)
+		{
+			final String objectName = visibleObject.getObjectTemplate().getName();
+			PacketSendUtility.sendMessage(admin, objectName + " spawned");
+		}
 	}
 	
 	@Override

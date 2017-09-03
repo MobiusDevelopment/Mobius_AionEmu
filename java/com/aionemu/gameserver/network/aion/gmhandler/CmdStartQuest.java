@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class CmdStartQuest extends AbstractGMHandler
 {
-	
 	public CmdStartQuest(Player admin, String params)
 	{
 		super(admin, params);
@@ -54,7 +53,7 @@ public class CmdStartQuest extends AbstractGMHandler
 		}
 		
 		DataManager.getInstance();
-		@SuppressWarnings("static-access")
+		
 		final QuestTemplate qt = DataManager.QUEST_DATA.getQuestById(questID);
 		if (qt == null)
 		{
@@ -65,5 +64,4 @@ public class CmdStartQuest extends AbstractGMHandler
 		final QuestEnv env = new QuestEnv(null, t, questID, 0);
 		QuestService.startQuest(env);
 	}
-	
 }

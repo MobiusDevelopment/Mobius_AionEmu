@@ -25,14 +25,11 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CmdLevelUpDown extends AbstractGMHandler
 {
-	
 	public enum LevelUpDownState
 	{
 		UP,
 		DOWN
 	}
-	
-	;
 	
 	private final LevelUpDownState state;
 	
@@ -73,5 +70,4 @@ public class CmdLevelUpDown extends AbstractGMHandler
 			}
 		}
 	}
-	
 }

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 
 public class FixZ extends AdminCommand
 {
-	
 	public FixZ()
 	{
 		super("fixz");
@@ -90,8 +89,11 @@ public class FixZ extends AdminCommand
 					}
 				}
 				
-				final String objectName = visibleObject.getObjectTemplate().getName();
-				PacketSendUtility.sendMessage(admin, objectName + "FixZ");
+				if (visibleObject != null)
+				{
+					final String objectName = visibleObject.getObjectTemplate().getName();
+					PacketSendUtility.sendMessage(admin, objectName + "FixZ");
+				}
 			}
 			
 		}
@@ -106,5 +108,4 @@ public class FixZ extends AdminCommand
 		final SpawnTemplate template = SpawnEngine.addNewSpawn(mapId, npcId, x, y, z, heading, respawnTime);
 		return SpawnEngine.spawnObject(template, instanceId);
 	}
-	
 }

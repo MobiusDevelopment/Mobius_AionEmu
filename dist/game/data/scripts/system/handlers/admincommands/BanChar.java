@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class BanChar extends AdminCommand
 {
-	
 	public BanChar()
 	{
 		super("banchar");
@@ -76,15 +75,15 @@ public class BanChar extends AdminCommand
 		}
 		catch (final NumberFormatException e)
 		{
-			PacketSendUtility.sendMessage(admin, "Second parameter is not an int");
+			PacketSendUtility.sendMessage(admin, "Second parameter is not an integer.");
 			sendInfo(admin, true);
 			return;
 		}
 		
 		if (dayCount < 0)
 		{
-			PacketSendUtility.sendMessage(admin, "Second parameter has to be a positive daycount or 0 for infinity");
-			sendInfo(admin, true);;
+			PacketSendUtility.sendMessage(admin, "Second parameter has to be a positive daycount or 0 for infinity.");
+			sendInfo(admin, true);
 			return;
 		}
 		

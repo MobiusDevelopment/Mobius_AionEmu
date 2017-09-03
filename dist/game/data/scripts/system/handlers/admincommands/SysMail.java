@@ -41,7 +41,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class SysMail extends AdminCommand
 {
-	
 	public SysMail()
 	{
 		super("sysmail");
@@ -260,10 +259,7 @@ public class SysMail extends AdminCommand
 					wordCount++;
 					break;
 				}
-				else
-				{
-					titleWords.add(word);
-				}
+				titleWords.add(word);
 			}
 			
 			outText[0] = StringUtils.join(titleWords.toArray(new String[0]), ' ');
@@ -370,5 +366,4 @@ public class SysMail extends AdminCommand
 	{
 		PacketSendUtility.sendMessage(player, "No parameters detected.\n" + "Please use //sysmail [%|$$<Sender>] <Recipient> <Regular|Blackcloud|Express> <Item> <Count> <Kinah> [|Title|] [|Message|]\n" + "Sender name must start with % or $$. Can be ommitted.\n" + "Regular mail type is 0, Express mail type is 1, Blackcloud type is 2.\n" + "If parameters (Item, Count) = 0 than the item will not be send\n" + "If parameters (Kinah) = 0 not send Kinah\n" + "Recipient = Player name, @all, @elyos or @asmodians\n" + "Optional Title and Message must be enclosed within pipe chars");
 	}
-	
 }

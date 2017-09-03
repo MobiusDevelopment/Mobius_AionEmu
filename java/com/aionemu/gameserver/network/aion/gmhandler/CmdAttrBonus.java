@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class CmdAttrBonus extends AbstractGMHandler implements StatOwner
 {
-	
 	public CmdAttrBonus(Player admin, String params)
 	{
 		super(admin, params);
@@ -577,5 +576,4 @@ public class CmdAttrBonus extends AbstractGMHandler implements StatOwner
 			return 60;
 		}
 	}
-	
 }

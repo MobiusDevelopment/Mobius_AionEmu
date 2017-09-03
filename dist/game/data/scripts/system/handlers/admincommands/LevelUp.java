@@ -27,10 +27,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class LevelUp extends AdminCommand
 {
-	
-	/**
-	 * @param alias
-	 */
 	public LevelUp()
 	{
 		super("levelup");
@@ -90,5 +86,4 @@ public class LevelUp extends AdminCommand
 		PacketSendUtility.sendMessage(player, "syntax //levelup <target> <level>");
 		PacketSendUtility.sendMessage(player, "The value of <level> will plus calculated to the current player level!");
 	}
-	
 }

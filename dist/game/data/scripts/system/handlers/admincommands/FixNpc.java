@@ -38,14 +38,13 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 public class FixNpc extends AdminCommand
 {
-	private static final Logger log = LoggerFactory.getLogger(FixNpc.class);
-	private Npc npc = null;
+	static final Logger log = LoggerFactory.getLogger(FixNpc.class);
+	Npc npc = null;
 	private int numofspawns = 0;
-	private int spawned = 0;
+	int spawned = 0;
 	private Future<?> task = null;
 	
 	public FixNpc()
@@ -72,27 +71,23 @@ public class FixNpc extends AdminCommand
 				PacketSendUtility.sendMessage(admin, "spawnId: " + spawnId);
 				if (spawnId != null)
 				{
-				}
-				for (final SpawnGroup2 spawn : spawnId)
-				{
-					final StringBuilder comment = new StringBuilder();
-					comment.append(target.getObjectTemplate().getName()).append(" (");
-					final int isObject = target.getSpawn().getEntityId();
-					if (isObject > 0)
+					for (final SpawnGroup2 spawn : spawnId)
 					{
-						comment.append("Object");
-					}
-					else
-					{
-						comment.append("NPC");
-					}
-					comment.append(" ").append(target.getObjectTemplate().getRank().name()).append(" ");
-					comment.append("lvl:").append(target.getLevel()).append(")");
-					final int time = 9000;
-					task = ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
+						final StringBuilder comment = new StringBuilder();
+						comment.append(target.getObjectTemplate().getName()).append(" (");
+						final int isObject = target.getSpawn().getEntityId();
+						if (isObject > 0)
+						{
+							comment.append("Object");
+						}
+						else
+						{
+							comment.append("NPC");
+						}
+						comment.append(" ").append(target.getObjectTemplate().getRank().name()).append(" ");
+						comment.append("lvl:").append(target.getLevel()).append(")");
+						final int time = 9000;
+						task = ThreadPoolManager.getInstance().schedule(() ->
 						{
 							target.getController().delete();
 							final SpawnTemplate spawn2 = SpawnEngine.addNewSpawn(admin.getWorldId(), spawn.getNpcId(), temp.getX(), temp.getY(), adminZ, temp.getHeading(), temp.getRespawnTime());
@@ -106,9 +101,9 @@ public class FixNpc extends AdminCommand
 								e.printStackTrace();
 								PacketSendUtility.sendMessage(admin, "Could not save spawn");
 							}
-						}
-					}, time);
-					PacketSendUtility.sendMessage(admin, comment.toString() + " [SPAWNED] ");
+						}, time);
+						PacketSendUtility.sendMessage(admin, comment.toString() + " [SPAWNED] ");
+					}
 				}
 			}
 			else
@@ -149,85 +144,69 @@ public class FixNpc extends AdminCommand
 				}
 				++counter;
 				time += 3000;
-				task = ThreadPoolManager.getInstance().schedule(new Runnable()
+				task = ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
+					TeleportService2.teleportTo(admin2, template.getWorldId(), template.getX(), template.getY(), template.getZ(), (byte) 0);
+					admin2.getKnownList().doOnAllNpcs(n ->
 					{
-						TeleportService2.teleportTo(admin2, template.getWorldId(), template.getX(), template.getY(), template.getZ(), (byte) 0);
-						admin2.getKnownList().doOnAllNpcs(new Visitor<Npc>()
+						if (MathUtil.getDistance((int) n.getX(), (int) n.getY(), (int) admin2.getX(), (int) admin2.getY()) < 3)
 						{
-							@Override
-							public void visit(Npc n)
-							{
-								if (MathUtil.getDistance((int) n.getX(), (int) n.getY(), (int) admin2.getX(), (int) admin2.getY()) < 3)
-								{
-									npc = n;
-									return;
-								}
-							}
-						});
-					}
-				}, time);
-				time += 3000;
-				task = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						if (npc != null)
-						{
-							PacketSendUtility.broadcastPacketAndReceive(admin2, new SM_FORCED_MOVE(npc, admin2));
+							npc = n;
+							return;
 						}
+					});
+				}, time);
+				time += 3000;
+				task = ThreadPoolManager.getInstance().schedule(() ->
+				{
+					if (npc != null)
+					{
+						PacketSendUtility.broadcastPacketAndReceive(admin2, new SM_FORCED_MOVE(npc, admin2));
 					}
 				}, time);
 				time += 3000;
-				task = ThreadPoolManager.getInstance().schedule(new Runnable()
+				task = ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
+					if (npc != null)
 					{
-						if (npc != null)
+						final StringBuilder comment = new StringBuilder();
+						comment.append(npc.getObjectTemplate().getName()).append(" (");
+						final int isObject = npc.getSpawn().getEntityId();
+						if (isObject != 0)
 						{
-							final StringBuilder comment = new StringBuilder();
-							comment.append(npc.getObjectTemplate().getName()).append(" (");
-							final int isObject = npc.getSpawn().getEntityId();
-							if (isObject != 0)
-							{
-								comment.append("Object");
-							}
-							else
-							{
-								comment.append("NPC");
-							}
-							comment.append(" ").append(npc.getObjectTemplate().getRank().name()).append(" ");
-							comment.append("lvl:").append(npc.getLevel()).append(")");
-							final Spawn spawnId = DataManager.SPAWNS_DATA2.getSpawnsForNpc(admin.getWorldId(), npc.getNpcId());
-							if (spawnId != null)
-							{
-								log.info("[AUDIT] Deleted npc id=" + template.getNpcId() + ": //moveto " + template.getWorldId() + " " + template.getX() + " " + template.getY() + " " + template.getZ());
-							}
-							final SpawnTemplate spawn2 = SpawnEngine.addNewSpawn(template.getWorldId(), template.getNpcId(), template.getX(), template.getY(), admin2.getZ(), template.getHeading(), template.getRespawnTime());
-							final VisibleObject visibleObject = SpawnEngine.spawnObject(spawn2, admin.getInstanceId());
-							try
-							{
-								DataManager.SPAWNS_DATA2.saveSpawn(admin, visibleObject, false);
-							}
-							catch (final IOException e)
-							{
-								e.printStackTrace();
-								PacketSendUtility.sendMessage(admin, "Could not save spawn");
-							}
-							++spawned;
-							PacketSendUtility.sendMessage(admin2, spawned + ". " + comment.toString() + " spawned");
-							npc = null;
+							comment.append("Object");
 						}
 						else
 						{
-							if (template != null)
-							{
-								log.info("[AUDIT] Missing npc id=" + template.getNpcId() + ": //moveto " + template.getWorldId() + " " + template.getX() + " " + template.getY() + " " + template.getZ());
-							}
+							comment.append("NPC");
+						}
+						comment.append(" ").append(npc.getObjectTemplate().getRank().name()).append(" ");
+						comment.append("lvl:").append(npc.getLevel()).append(")");
+						final Spawn spawnId = DataManager.SPAWNS_DATA2.getSpawnsForNpc(admin.getWorldId(), npc.getNpcId());
+						if (spawnId != null)
+						{
+							log.info("[AUDIT] Deleted npc id=" + template.getNpcId() + ": //moveto " + template.getWorldId() + " " + template.getX() + " " + template.getY() + " " + template.getZ());
+						}
+						final SpawnTemplate spawn2 = SpawnEngine.addNewSpawn(template.getWorldId(), template.getNpcId(), template.getX(), template.getY(), admin2.getZ(), template.getHeading(), template.getRespawnTime());
+						final VisibleObject visibleObject = SpawnEngine.spawnObject(spawn2, admin.getInstanceId());
+						try
+						{
+							DataManager.SPAWNS_DATA2.saveSpawn(admin, visibleObject, false);
+						}
+						catch (final IOException e)
+						{
+							e.printStackTrace();
+							PacketSendUtility.sendMessage(admin, "Could not save spawn");
+						}
+						++spawned;
+						PacketSendUtility.sendMessage(admin2, spawned + ". " + comment.toString() + " spawned");
+						npc = null;
+					}
+					else
+					{
+						if (template != null)
+						{
+							log.info("[AUDIT] Missing npc id=" + template.getNpcId() + ": //moveto " + template.getWorldId() + " " + template.getX() + " " + template.getY() + " " + template.getZ());
 						}
 					}
 				}, time);

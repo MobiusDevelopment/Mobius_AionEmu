@@ -36,7 +36,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Add extends AdminCommand
 {
-	
 	public Add()
 	{
 		super("add");
@@ -2940,12 +2939,8 @@ public class Add extends AdminCommand
 				PacketSendUtility.sendMessage(player, "Item ( [item:" + itemId + "] ) is a blocked item!!");
 				return;
 			}
-			else
-			{
-				PacketSendUtility.sendMessage(player, "Item ( [item:" + itemId + "] ) is available to add!!");
-				return;
-			}
-			
+			PacketSendUtility.sendMessage(player, "Item ( [item:" + itemId + "] ) is available to add!!");
+			return;
 		}
 		
 		if (params[0].equalsIgnoreCase("kinah"))
@@ -3146,7 +3141,7 @@ public class Add extends AdminCommand
 			{
 				if (player.getAccessLevel() > 1)
 				{
-					final long count = ItemService.addItem(receiver, itemId, itemCount);
+					ItemService.addItem(receiver, itemId, itemCount);
 					PacketSendUtility.sendMessage(player, "You successfully gave " + itemCount + " x [item:" + itemId + "] to " + receiver.getName() + ".");
 					PacketSendUtility.sendMessage(receiver, "You successfully received " + itemCount + " x [item:" + itemId + "] from " + player.getName() + ".");
 				}
@@ -3159,7 +3154,7 @@ public class Add extends AdminCommand
 			{
 				if (player.getAccessLevel() > 1)
 				{
-					final long count = ItemService.addItem(receiver, itemId, itemCount);
+					ItemService.addItem(receiver, itemId, itemCount);
 					PacketSendUtility.sendMessage(player, "You successfully received " + itemCount + " x [item:" + itemId + "]");
 				}
 				else
@@ -3169,11 +3164,8 @@ public class Add extends AdminCommand
 						PacketSendUtility.sendMessage(player, "This items is blocked items, you can't add using command, contact Game Master for Info!");
 						return;
 					}
-					else
-					{
-						final long count = ItemService.addItem(receiver, itemId, itemCount);
-						PacketSendUtility.sendMessage(player, "You successfully received " + itemCount + " x [item:" + itemId + "]");
-					}
+					ItemService.addItem(receiver, itemId, itemCount);
+					PacketSendUtility.sendMessage(player, "You successfully received " + itemCount + " x [item:" + itemId + "]");
 				}
 			}
 		}

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public abstract class AbstractGMHandler
 {
-	
 	protected String params;
 	protected Player admin;
 	protected Player target;
@@ -42,7 +41,7 @@ public abstract class AbstractGMHandler
 		final VisibleObject t = admin.getTarget();
 		if (t instanceof Player)
 		{
-			target = target;
+			target = (Player) t;
 			return;
 		}
 		target = null;
@@ -54,8 +53,7 @@ public abstract class AbstractGMHandler
 		{
 			return true;
 		}
-		PacketSendUtility.sendMessage(admin, "Target not found or target is not an player");
+		PacketSendUtility.sendMessage(admin, "Target not found or target is not a player.");
 		return false;
 	}
-	
 }

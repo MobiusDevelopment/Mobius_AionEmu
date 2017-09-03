@@ -32,7 +32,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
  */
 public class Warp extends AdminCommand
 {
-	
 	public Warp()
 	{
 		super("warp");
@@ -62,6 +61,7 @@ public class Warp extends AdminCommand
 			LocS = "";
 			int mapL = 0;
 			int layerI = -1;
+			@SuppressWarnings("unused")
 			int race;
 			
 			first = params[0];
@@ -99,11 +99,9 @@ public class Warp extends AdminCommand
 				TeleportService2.teleportTo(player, mapL, x, y, z);
 				PacketSendUtility.sendMessage(player, "You have successfully warped to this location --- > " + LocS);
 			}
-			
 		}
 		catch (final NumberFormatException e)
 		{
-			
 			// [pos:Location;120010000 1304.7 1423.1 0.0 0] <-- uses this format of Location
 			
 			if (params.length < 5)

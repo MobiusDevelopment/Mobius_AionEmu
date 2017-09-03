@@ -26,10 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class LevelDown extends AdminCommand
 {
-	
-	/**
-	 * @param alias
-	 */
 	public LevelDown()
 	{
 		super("leveldown");
@@ -89,5 +85,4 @@ public class LevelDown extends AdminCommand
 		PacketSendUtility.sendMessage(player, "syntax //leveldown <target> <level>");
 		PacketSendUtility.sendMessage(player, "The value of <level> will minus calculated to the current player level!");
 	}
-	
 }

@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Assault extends AdminCommand
 {
-	
 	public Assault()
 	{
 		super("assault");
@@ -193,17 +192,13 @@ public class Assault extends AdminCommand
 				PacketSendUtility.sendMessage(admin, "There is no npc: " + templateId);
 				return;
 			}
-			else
+			visibleObject = SpawnEngine.spawnObject(spawn, 1);
+			if (despawnTime > 0)
 			{
-				visibleObject = SpawnEngine.spawnObject(spawn, 1);
-				
-				if (despawnTime > 0)
-				{
-					despawnList.add(visibleObject);
-				}
-				
-				spawnCount++;
+				despawnList.add(visibleObject);
 			}
+			
+			spawnCount++;
 		}
 		
 		if (despawnTime > 0)
@@ -217,22 +212,18 @@ public class Assault extends AdminCommand
 	
 	private void despawnThem(final Player admin, final List<VisibleObject> despawnList, final int despawnTime)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			int despawnCount = 0;
+			for (final VisibleObject visObj : despawnList)
 			{
-				int despawnCount = 0;
-				for (final VisibleObject visObj : despawnList)
+				if ((visObj != null) && visObj.isSpawned())
 				{
-					if ((visObj != null) && visObj.isSpawned())
-					{
-						visObj.getController().delete();
-						despawnCount++;
-					}
+					visObj.getController().delete();
+					despawnCount++;
 				}
-				PacketSendUtility.sendMessage(admin, despawnCount + " npc have been deleted.");
 			}
+			PacketSendUtility.sendMessage(admin, despawnCount + " npc have been deleted.");
 		}, despawnTime * 1000);
 	}
 	

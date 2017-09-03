@@ -35,7 +35,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CmdDeleteQuest extends AbstractGMHandler
 {
-	
 	public CmdDeleteQuest(Player admin, String params)
 	{
 		super(admin, params);
@@ -48,7 +47,7 @@ public class CmdDeleteQuest extends AbstractGMHandler
 		
 		if (admin.getClientConnection().getAccount().getAccessLevel() <= PanelConfig.DELQUEST_PANEL_LEVEL)
 		{
-			PacketSendUtility.sendMessage(admin, "You haven't access this panel commands");
+			PacketSendUtility.sendMessage(admin, "You haven't access to this panel commands.");
 			return;
 		}
 		
@@ -64,18 +63,17 @@ public class CmdDeleteQuest extends AbstractGMHandler
 		}
 		
 		DataManager.getInstance();
-		@SuppressWarnings("static-access")
 		final QuestTemplate qt = DataManager.QUEST_DATA.getQuestById(questID);
 		if (qt == null)
 		{
-			PacketSendUtility.sendMessage(admin, "Quest with ID: " + questID + " was not found");
+			PacketSendUtility.sendMessage(admin, "Quest with ID: " + questID + " was not found.");
 			return;
 		}
 		
 		final QuestStateList list = t.getQuestStateList();
 		if ((list == null) || (list.getQuestState(questID) == null))
 		{
-			PacketSendUtility.sendMessage(admin, "Quest not deleted for target " + t.getName());
+			PacketSendUtility.sendMessage(admin, "Quest not deleted for target " + t.getName() + ".");
 			return;
 		}
 		
@@ -97,5 +95,4 @@ public class CmdDeleteQuest extends AbstractGMHandler
 		PacketSendUtility.sendPacket(t, new SM_QUEST_COMPLETED_LIST(t.getQuestStateList().getAllFinishedQuests()));
 		t.getController().updateNearbyQuests();
 	}
-	
 }

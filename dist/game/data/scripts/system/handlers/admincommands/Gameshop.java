@@ -39,7 +39,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Gameshop extends AdminCommand
 {
-	
 	public Gameshop()
 	{
 		super("gameshop");
@@ -257,7 +256,7 @@ public class Gameshop extends AdminCommand
 					player = (Player) target;
 				}
 				
-				if (LoginServer.getInstance().sendPacket(new SM_ACCOUNT_TOLL_INFO(toll, 0, player.getAcountName())))
+				if ((player != null) && LoginServer.getInstance().sendPacket(new SM_ACCOUNT_TOLL_INFO(toll, 0, player.getAcountName())))
 				{
 					player.getClientConnection().getAccount().setToll(toll);
 					PacketSendUtility.sendPacket(player, new SM_TOLL_INFO(toll));
@@ -325,8 +324,11 @@ public class Gameshop extends AdminCommand
 					player = (Player) target;
 				}
 				
-				PacketSendUtility.sendMessage(admin, "You added " + toll + " tolls to Player: " + player.getName());
-				InGameShopEn.getInstance().addToll(player, toll);
+				if (player != null)
+				{
+					PacketSendUtility.sendMessage(admin, "You added " + toll + " tolls to Player: " + player.getName());
+					InGameShopEn.getInstance().addToll(player, toll);
+				}
 			}
 		}
 		else

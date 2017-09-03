@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class AddExp extends AdminCommand
 {
-	
 	public AddExp()
 	{
 		super("addexp");
@@ -44,9 +43,17 @@ public class AddExp extends AdminCommand
 		Player target = null;
 		final VisibleObject creature = player.getTarget();
 		
-		if (player.getTarget() instanceof Player)
+		if (creature == null)
+		{
+			target = player;
+		}
+		else if (creature instanceof Player)
 		{
 			target = (Player) creature;
+		}
+		else
+		{
+			return;
 		}
 		
 		final String paramValue = params[0];

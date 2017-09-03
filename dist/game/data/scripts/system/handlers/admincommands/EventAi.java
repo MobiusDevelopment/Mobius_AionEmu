@@ -38,19 +38,18 @@ import com.aionemu.gameserver.utils.Util;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.geo.GeoService;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * Created by Ataba Editor by Ghostfur
  */
 public class EventAi extends AdminCommand
 {
+	static final Logger log = LoggerFactory.getLogger("GM_MONITOR_LOG");
+	
 	public EventAi()
 	{
 		super("eventai");
 	}
-	
-	private static final Logger log = LoggerFactory.getLogger("GM_MONITOR_LOG");
 	
 	@Override
 	public void execute(final Player admin, String... params)
@@ -121,38 +120,34 @@ public class EventAi extends AdminCommand
 				@Override
 				public void acceptRequest(Creature requester, Player responder)
 				{
-					World.getInstance().doOnAllPlayers(new Visitor<Player>()
+					World.getInstance().doOnAllPlayers(player ->
 					{
-						@Override
-						public void visit(Player player)
+						if (MathUtil.isInRange(admin, player, range))
 						{
-							if (MathUtil.isInRange(admin, player, range))
+							if (admin != player)
 							{
-								if (admin != player)
+								if (TS != 0)
 								{
-									if (TS != 0)
-									{
-										ItemService.addItem(player, 166030005, TS);
-									}
-									if (Omega != 0)
-									{
-										ItemService.addItem(player, 166020000, Omega);
-										
-									}
-									if (GP != 0)
-									{
-										// AbyssPointsService.addGp(player, 0, GP);
-										// AbyssPointsService.addGp(player, rewardAmount);
-										PacketSendUtility.sendMessage(player, "You Received " + GP + " Glory Point(s) from Event!");
-									}
-									if (toll != 0)
-									{
-										InGameShopEn.getInstance().addToll(player, toll);
-										PacketSendUtility.sendMessage(player, "You Received " + toll + " Toll Point(s) from Event!");
-									}
-									PacketSendUtility.sendWhiteMessage(admin, "Player: \uE020" + player.getName() + "\uE020 Has Been Successfully Rewarded!");
-									PacketSendUtility.sendWhiteMessage(player, "\uE020Thanks for Registering To " + admin.getName() + "'s Event, Have a Great Time Playing InsaneAion \uE020 ");
+									ItemService.addItem(player, 166030005, TS);
 								}
+								if (Omega != 0)
+								{
+									ItemService.addItem(player, 166020000, Omega);
+									
+								}
+								if (GP != 0)
+								{
+									// AbyssPointsService.addGp(player, 0, GP);
+									// AbyssPointsService.addGp(player, rewardAmount);
+									PacketSendUtility.sendMessage(player, "You Received " + GP + " Glory Point(s) from Event!");
+								}
+								if (toll != 0)
+								{
+									InGameShopEn.getInstance().addToll(player, toll);
+									PacketSendUtility.sendMessage(player, "You Received " + toll + " Toll Point(s) from Event!");
+								}
+								PacketSendUtility.sendWhiteMessage(admin, "Player: \uE020" + player.getName() + "\uE020 Has Been Successfully Rewarded!");
+								PacketSendUtility.sendWhiteMessage(player, "\uE020Thanks for Registering To " + admin.getName() + "'s Event, Have a Great Time Playing InsaneAion \uE020 ");
 							}
 						}
 					});
@@ -353,11 +348,10 @@ public class EventAi extends AdminCommand
 			}
 			else
 			{
-				
 				final VisibleObject target = admin.getTarget();
 				final VisibleObject targetsTarget = target.getTarget();
 				
-				if ((target == null) || !(target instanceof Creature))
+				if (!(target instanceof Creature))
 				{
 					PacketSendUtility.sendMessage(admin, "You must select a target!");
 					return;
@@ -417,5 +411,4 @@ public class EventAi extends AdminCommand
 		PacketSendUtility.sendMessage(admin, "\n[Type1 Info]\n[info] You need to type the reward type you're giving, GP or AP and after that you need to type the value amount\n" + "[type1 example] //eventai rewardall_inzone gp 100\n" + "[type7 example] //eventai stop 0 <--- will paralyze the player you're targeting and the targets target.\n" + "[type7 example] //eventai stop all <--- will paralyze everyone in the map!\n" + "[type4 and type5 info]\n" + "[info] You need to give the announce type and the message. \n" + "[example] //eventai announce_inzone 1-on-1 This will be the message.");
 		PacketSendUtility.sendMessage(admin, "==== New ===\n" + "[type8] //eventai reward_range [TS] [Omega] [GP] [TOLL] [Range]\n " + "[type8] [TS] = Value of Tempering Solution (DONT NEED ID JUST HOW MANY U WANT TO GIVE)\n" + "[type8] [Omega] = Value of Omega Stone\n" + "[type8] [GP] = how many GP u want to give\n" + "[type8] [TOLL] = Number of Toll.\n" + "[type8] [Range] = The range the people gets the reward");
 	}
-	
 }

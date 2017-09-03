@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CmdTeleportToNamed extends AbstractGMHandler
 {
-	
 	public CmdTeleportToNamed(Player admin, String params)
 	{
 		super(admin, params);
@@ -77,6 +76,7 @@ public class CmdTeleportToNamed extends AbstractGMHandler
 	}
 	
 	/**
+	 * @param admin
 	 * @param message
 	 */
 	public void onFail(Player admin, String message)
