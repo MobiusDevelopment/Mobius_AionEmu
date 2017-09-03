@@ -559,50 +559,55 @@ public final class PlayerEnterWorldService
 					PacketSendUtility.sendMessage(player, "Today PvP Map: Levinshor");
 				}
 			}
-			// Service Security Buff.
-			if (player.getMembership() >= 0)
+			
+			if (CustomConfig.ENABLE_BONUS_SERVICE)
 			{
-				serviceBuff = new ServiceBuff(2);
-				serviceBuff.applyEffect(player, 2);
-			}
-			// Eminence Of The Beaver.
-			if ((player.getLevel() >= 66) && (player.getLevel() <= 83))
-			{
-				playersBonus = new PlayersBonus(10);
-				playersBonus.applyEffect(player, 10);
-				player.setPlayersBonusId(10);
-			}
-			// PC Cafe Login Benefits.
-			if ((player.getClientConnection().getAccount().getMembership() == 2) && (player.getLevel() >= 66) && (player.getLevel() <= 83))
-			{
-				serviceBuff = new ServiceBuff(4);
-				serviceBuff.applyEffect(player, 4);
-				PacketSendUtility.sendBrightYellowMessageOnCenter(player, "Your account vip ! You get extra service!");
-			}
-			// Ascension Boost.
-			if ((player.getLevel() >= 1) && (player.getLevel() <= 34))
-			{
-				playersBonus = new PlayersBonus(2);
-				playersBonus.applyEffect(player, 2);
-				player.setPlayersBonusId(2);
-			}
-			// Veteran Boost.
-			else if ((player.getLevel() >= 35) && (player.getLevel() <= 65))
-			{
-				playersBonus = new PlayersBonus(3);
-				playersBonus.applyEffect(player, 3);
-				player.setPlayersBonusId(3);
-			}
-			// Member Boost.
-			else if ((player.getMembership() >= 0) && (player.getLevel() >= 55))
-			{
-				playersBonus = new PlayersBonus(2000001);
-				playersBonus.applyEffect(player, 2000001);
-			}
-			else
-			{
-				playersBonus = new PlayersBonus(1);
-				playersBonus.endEffect(player, 1);
+				// Service Security Buff.
+				if (player.getMembership() >= 0)
+				{
+					serviceBuff = new ServiceBuff(2);
+					serviceBuff.applyEffect(player, 2);
+				}
+				// Eminence Of The Beaver.
+				if ((player.getLevel() >= 66) && (player.getLevel() <= 83))
+				{
+					playersBonus = new PlayersBonus(10);
+					playersBonus.applyEffect(player, 10);
+					player.setPlayersBonusId(10);
+				}
+				// PC Cafe Login Benefits.
+				if ((player.getClientConnection().getAccount().getMembership() == 2) && (player.getLevel() >= 66) && (player.getLevel() <= 83))
+				{
+					serviceBuff = new ServiceBuff(4);
+					serviceBuff.applyEffect(player, 4);
+					PacketSendUtility.sendBrightYellowMessageOnCenter(player, "Your account vip ! You get extra service!");
+				}
+				// Ascension Boost.
+				if ((player.getLevel() >= 1) && (player.getLevel() <= 34))
+				{
+					playersBonus = new PlayersBonus(2);
+					playersBonus.applyEffect(player, 2);
+					player.setPlayersBonusId(2);
+				}
+				// Veteran Boost.
+				else if ((player.getLevel() >= 35) && (player.getLevel() <= 65))
+				{
+					playersBonus = new PlayersBonus(3);
+					playersBonus.applyEffect(player, 3);
+					player.setPlayersBonusId(3);
+				}
+				// Member Boost.
+				else if ((player.getMembership() >= 0) && (player.getLevel() >= 55))
+				{
+					playersBonus = new PlayersBonus(2000001);
+					playersBonus.applyEffect(player, 2000001);
+				}
+				else
+				{
+					playersBonus = new PlayersBonus(1);
+					playersBonus.endEffect(player, 1);
+				}
+				client.sendPacket(new SM_BOOST_EVENTS());
 			}
 			// Abyss Logon 4.9
 			if (player.getRace() == Race.ELYOS)
@@ -613,7 +618,6 @@ public final class PlayerEnterWorldService
 			{
 				abyssDarkLogon(player);
 			}
-			client.sendPacket(new SM_BOOST_EVENTS());
 			// LoginServerInfo(player);
 			GloryPointLoseMsg(player);
 			F2pService.getInstance().onEnterWorld(player);

@@ -26,6 +26,7 @@ Changes:
 -Code format/cleanup.
 -Removed obsolete chat server.
 -Enabling events by simple date change.
+-Added config for bonus service buffs.
 
 TODO:
 -Fix all code warnings.

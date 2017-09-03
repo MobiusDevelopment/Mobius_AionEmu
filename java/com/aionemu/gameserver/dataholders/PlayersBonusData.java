@@ -33,7 +33,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 /**
  * @author Ranastic (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =
 {

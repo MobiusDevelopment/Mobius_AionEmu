@@ -19,9 +19,6 @@ package com.aionemu.gameserver.model.bonus_service;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.stats.calc.StatOwner;
@@ -38,7 +35,7 @@ import com.aionemu.gameserver.skillengine.change.Func;
 
 public class PlayersBonus implements StatOwner
 {
-	private static final Logger log = LoggerFactory.getLogger(PlayersBonus.class);
+	// private static final Logger log = LoggerFactory.getLogger(PlayersBonus.class);
 	private final List<IStatFunction> functions = new ArrayList<>();
 	private final PlayersBonusServiceAttr playersServiceBonusattr;
 	

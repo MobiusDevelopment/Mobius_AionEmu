@@ -22,6 +22,8 @@ public class CustomConfig
 {
 	@Property(key = "gameserver.premium.notify", defaultValue = "false")
 	public static boolean PREMIUM_NOTIFY;
+	@Property(key = "gameserver.enable.bonus.service", defaultValue = "false")
+	public static boolean ENABLE_BONUS_SERVICE;
 	@Property(key = "gameserver.enchant.announce.enable", defaultValue = "true")
 	public static boolean ENABLE_ENCHANT_ANNOUNCE;
 	@Property(key = "gameserver.chat.factions.enable", defaultValue = "false")
