@@ -1513,7 +1513,7 @@ public class Player extends Creature
 	private boolean isInDisablePvPZone()
 	{
 		final List<ZoneInstance> zones = getPosition().getMapRegion().getZones(this);
-		for (final ZoneInstance zone : zones)
+		for (ZoneInstance zone : zones)
 		{
 			if (!zone.isPvpAllowed())
 			{
@@ -1526,7 +1526,7 @@ public class Player extends Creature
 	private boolean isInPvPZone()
 	{
 		final List<ZoneInstance> zones = getPosition().getMapRegion().getZones(this);
-		for (final ZoneInstance zone : zones)
+		for (ZoneInstance zone : zones)
 		{
 			if (!zone.isPvpAllowed())
 			{
@@ -2531,9 +2531,9 @@ public class Player extends Creature
 		
 		// Store the effect info.
 		final List<Effect> effects = getEffectController().getAbnormalEffects();
-		for (final Effect effect : effects)
+		for (Effect effect : effects)
 		{
-			for (final EffectTemplate template : effect.getEffectTemplates())
+			for (EffectTemplate template : effect.getEffectTemplates())
 			{
 				if ((template.getEffectid() == 160) && (template instanceof RebirthEffect))
 				{
@@ -2550,9 +2550,9 @@ public class Player extends Creature
 	public boolean hasResurrectBase()
 	{
 		final List<Effect> effects = getEffectController().getAbnormalEffects();
-		for (final Effect effect : effects)
+		for (Effect effect : effects)
 		{
-			for (final EffectTemplate template : effect.getEffectTemplates())
+			for (EffectTemplate template : effect.getEffectTemplates())
 			{
 				if ((template.getEffectid() == 160) && (template instanceof ResurrectBaseEffect))
 				{
@@ -2894,7 +2894,7 @@ public class Player extends Creature
 	
 	public House getActiveHouse()
 	{
-		for (final House house : getHouses())
+		for (House house : getHouses())
 		{
 			if ((house.getStatus() == HouseStatus.ACTIVE) || (house.getStatus() == HouseStatus.SELL_WAIT))
 			{

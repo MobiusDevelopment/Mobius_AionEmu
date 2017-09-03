@@ -63,7 +63,7 @@ public class UpgradeArcadeService
 		PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(2));
 	}
 	
-	public void upgradeTypeThree(final Player player)
+	public void upgradeTypeThree(Player player)
 	{
 		final int getCurrentFrenzyMeterFromDB = playerDAO.getFrenzyMeterByObjId(player.getObjectId());
 		final int getCurrentUpgradeLvlFromDB = playerDAO.getUpgradeLvlByObjId(player.getObjectId());

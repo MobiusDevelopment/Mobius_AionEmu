@@ -31,9 +31,9 @@ public abstract class PlayerRecipesDAO implements DAO
 		return PlayerRecipesDAO.class.getName();
 	}
 	
-	public abstract RecipeList load(final int playerId);
+	public abstract RecipeList load(int playerId);
 	
-	public abstract boolean addRecipe(final int playerId, final int recipeId);
+	public abstract boolean addRecipe(int playerId, int recipeId);
 	
-	public abstract boolean delRecipe(final int playerId, final int recipeId);
+	public abstract boolean delRecipe(int playerId, int recipeId);
 }

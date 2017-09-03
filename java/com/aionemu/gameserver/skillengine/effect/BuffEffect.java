@@ -106,7 +106,7 @@ public abstract class BuffEffect extends EffectTemplate
 		
 		final List<IStatFunction> modifiers = new ArrayList<>();
 		
-		for (final Change changeItem : change)
+		for (Change changeItem : change)
 		{
 			if (changeItem.getStat() == null)
 			{

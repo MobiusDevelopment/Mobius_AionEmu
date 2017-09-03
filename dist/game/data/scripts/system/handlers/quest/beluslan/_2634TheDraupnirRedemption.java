@@ -53,7 +53,7 @@ public class _2634TheDraupnirRedemption extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(204828).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

@@ -50,11 +50,11 @@ public class _1347Raiding_Klaw extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(203965).addOnQuestStart(questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

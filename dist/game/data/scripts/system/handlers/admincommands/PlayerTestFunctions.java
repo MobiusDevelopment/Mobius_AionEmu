@@ -145,7 +145,7 @@ public class PlayerTestFunctions extends AdminCommand
 			final int size2 = player.getWardrobe().size();
 			for (int i = 0; i < size2; i++)
 			{
-				for (final PlayerWardrobeEntry ce : player.getWardrobe().getAllWardrobe())
+				for (PlayerWardrobeEntry ce : player.getWardrobe().getAllWardrobe())
 				{
 					PacketSendUtility.sendMessage(player, "wardrobe size " + size + " id " + ce.getItemId() + " slot " + ce.getSlot());
 				}

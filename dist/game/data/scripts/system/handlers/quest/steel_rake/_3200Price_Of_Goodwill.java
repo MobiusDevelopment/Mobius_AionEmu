@@ -65,14 +65,14 @@ public class _3200Price_Of_Goodwill extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(204658).addOnQuestStart(questId); // Roikinerk.
 		qe.registerQuestItem(182209082, questId); // Teleport Scroll.
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

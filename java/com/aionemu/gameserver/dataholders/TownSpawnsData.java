@@ -40,7 +40,7 @@ public class TownSpawnsData
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
 		spawnMapsData.clear();
-		for (final TownSpawnMap map : spawnMap)
+		for (TownSpawnMap map : spawnMap)
 		{
 			spawnMapsData.put(map.getMapId(), map);
 		}
@@ -51,11 +51,11 @@ public class TownSpawnsData
 	public int getSpawnsCount()
 	{
 		int counter = 0;
-		for (final TownSpawnMap spawnMap : spawnMapsData.valueCollection())
+		for (TownSpawnMap spawnMap : spawnMapsData.valueCollection())
 		{
-			for (final TownSpawn townSpawn : spawnMap.getTownSpawns())
+			for (TownSpawn townSpawn : spawnMap.getTownSpawns())
 			{
-				for (final TownLevel townLevel : townSpawn.getTownLevels())
+				for (TownLevel townLevel : townSpawn.getTownLevels())
 				{
 					counter += townLevel.getSpawns().size();
 				}
@@ -66,7 +66,7 @@ public class TownSpawnsData
 	
 	public List<Spawn> getSpawns(int townId, int townLevel)
 	{
-		for (final TownSpawnMap spawnMap : spawnMapsData.valueCollection())
+		for (TownSpawnMap spawnMap : spawnMapsData.valueCollection())
 		{
 			if (spawnMap.getTownSpawn(townId) != null)
 			{
@@ -79,7 +79,7 @@ public class TownSpawnsData
 	
 	public int getWorldIdForTown(int townId)
 	{
-		for (final TownSpawnMap spawnMap : spawnMapsData.valueCollection())
+		for (TownSpawnMap spawnMap : spawnMapsData.valueCollection())
 		{
 			if (spawnMap.getTownSpawn(townId) != null)
 			{

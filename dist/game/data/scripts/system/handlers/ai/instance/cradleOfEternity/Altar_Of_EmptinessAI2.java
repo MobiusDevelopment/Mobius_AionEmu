@@ -57,7 +57,7 @@ public class Altar_Of_EmptinessAI2 extends NpcAI2
 	}
 	
 	@Override
-	public boolean onDialogSelect(final Player player, int dialogId, int questId, int extendedRewardIndex)
+	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(182215992, 1))
 		{ // Completed Records Of Life.
@@ -74,7 +74,7 @@ public class Altar_Of_EmptinessAI2 extends NpcAI2
 		return true;
 	}
 	
-	protected void handleUseItemStart(final Player player)
+	protected void handleUseItemStart(Player player)
 	{
 		final int delay = getTalkDelay();
 		if (delay != 0)

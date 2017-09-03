@@ -91,7 +91,7 @@ public class _14050Orders_From_Heiron_Fortress extends QuestHandler
 					14053,
 					14054
 				};
-				for (final int id : ids)
+				for (int id : ids)
 				{
 					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), id, env.getDialogId()));
 				}

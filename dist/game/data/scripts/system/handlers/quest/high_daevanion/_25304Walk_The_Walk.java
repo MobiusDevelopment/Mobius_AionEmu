@@ -62,7 +62,7 @@ public class _25304Walk_The_Walk extends QuestHandler
 		qe.registerQuestNpc(805339).addOnQuestStart(questId);
 		qe.registerQuestNpc(805339).addOnTalkEvent(questId);
 		qe.registerQuestNpc(805340).addOnTalkEvent(questId);
-		for (final int mob : Ab1NewMobs)
+		for (int mob : Ab1NewMobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

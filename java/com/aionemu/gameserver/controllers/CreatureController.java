@@ -182,7 +182,7 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 	/**
 	 * Perform tasks when Creature was attacked //TODO may be pass only Skill object - but need to add properties in it
 	 */
-	public void onAttack(final Creature attacker, int skillId, TYPE type, int damage, boolean notifyAttack, LOG log)
+	public void onAttack(Creature attacker, int skillId, TYPE type, int damage, boolean notifyAttack, LOG log)
 	{
 		if ((damage != 0) && !((getOwner() instanceof Npc) && ((Npc) getOwner()).isBoss()))
 		{
@@ -276,12 +276,12 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 	/**
 	 * Perform tasks when Creature was attacked
 	 */
-	public final void onAttack(Creature creature, int skillId, final int damage, boolean notifyAttack)
+	public final void onAttack(Creature creature, int skillId, int damage, boolean notifyAttack)
 	{
 		this.onAttack(creature, skillId, TYPE.REGULAR, damage, notifyAttack, LOG.REGULAR);
 	}
 	
-	public final void onAttack(Creature creature, final int damage, boolean notifyAttack)
+	public final void onAttack(Creature creature, int damage, boolean notifyAttack)
 	{
 		this.onAttack(creature, 0, TYPE.REGULAR, damage, notifyAttack, LOG.REGULAR);
 	}
@@ -345,7 +345,7 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 	 * @param target
 	 * @param time
 	 */
-	public void attackTarget(final Creature target, int time)
+	public void attackTarget(Creature target, int time)
 	{
 		boolean addAttackObservers = true;
 		/**
@@ -380,7 +380,7 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 		}
 		
 		int damage = 0;
-		for (final AttackResult result : attackResult)
+		for (AttackResult result : attackResult)
 		{
 			if ((result.getAttackStatus() == AttackStatus.RESIST) || (result.getAttackStatus() == AttackStatus.DODGE))
 			{
@@ -486,7 +486,7 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 	 */
 	public void cancelAllTasks()
 	{
-		for (final int i : tasks.keySet())
+		for (int i : tasks.keySet())
 		{
 			final Future<?> task = tasks.get(i);
 			if ((task != null) && (i != TaskId.RESPAWN.ordinal()))
@@ -536,7 +536,7 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 				return skill.useSkill();
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Exception during skill use: " + skillId, ex);
 		}
@@ -549,7 +549,7 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 	 */
 	public void broadcastHate(int value)
 	{
-		for (final VisibleObject visibleObject : getOwner().getKnownList().getKnownObjects().values())
+		for (VisibleObject visibleObject : getOwner().getKnownList().getKnownObjects().values())
 		{
 			if (visibleObject instanceof Creature)
 			{

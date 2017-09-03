@@ -35,7 +35,7 @@ public class cometome extends WeddingCommand
 	}
 	
 	@Override
-	public void execute(final Player player, String... params)
+	public void execute(Player player, String... params)
 	{
 		
 		final Player partner = player.findPartner();

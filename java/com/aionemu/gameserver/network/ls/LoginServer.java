@@ -114,7 +114,7 @@ public class LoginServer
 				
 				return loginServer;
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.info("Cant connect to LoginServer: " + e.getMessage());
 			}
@@ -125,7 +125,7 @@ public class LoginServer
 				 */
 				Thread.sleep(10 * 1000);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 			}
 		}
@@ -144,7 +144,7 @@ public class LoginServer
 			/**
 			 * We lost connection for LoginServer so client pending authentication should be disconnected [cuz authentication will never ends]
 			 */
-			for (final AionConnection client : loginRequests.values())
+			for (AionConnection client : loginRequests.values())
 			{
 				// TODO! somme error packet!
 				client.close(/* closePacket, */true);
@@ -267,7 +267,7 @@ public class LoginServer
 	 */
 	private boolean validateAccount(Account account)
 	{
-		for (final PlayerAccountData accountData : account)
+		for (PlayerAccountData accountData : account)
 		{
 			if (accountData.getPlayerCommonData().isOnline())
 			{
@@ -345,7 +345,7 @@ public class LoginServer
 		}
 	}
 	
-	private void closeClientWithCheck(AionConnection client, final int accountId)
+	private void closeClientWithCheck(AionConnection client, int accountId)
 	{
 		log.info("Closing client connection " + accountId);
 		client.close(/* closePacket, */false);
@@ -382,7 +382,7 @@ public class LoginServer
 			/**
 			 * GameServer shutting down, must close all pending login requests
 			 */
-			for (final AionConnection client : loginRequests.values())
+			for (AionConnection client : loginRequests.values())
 			{
 				// TODO! somme error packet!
 				client.close(/* closePacket, */true);

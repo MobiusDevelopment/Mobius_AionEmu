@@ -169,7 +169,7 @@ public class Equipment
 					break;
 			}
 			final ItemSlot[] possibleSlots = ItemSlot.getSlotsFor(itemSlotMask);
-			for (final ItemSlot possibleSlot : possibleSlots)
+			for (ItemSlot possibleSlot : possibleSlots)
 			{
 				final long slotId = possibleSlot.getSlotIdMask();
 				if ((equipment.get(slotId) == null) || markedFreeSlots.contains(slotId))
@@ -246,7 +246,7 @@ public class Equipment
 				}
 				else
 				{
-					for (final ItemSlot slot : allSlots)
+					for (ItemSlot slot : allSlots)
 					{
 						unEquip(slot.getSlotIdMask());
 					}
@@ -272,7 +272,7 @@ public class Equipment
 			}
 			
 			// equip target item
-			for (final ItemSlot slot : allSlots)
+			for (ItemSlot slot : allSlots)
 			{
 				equipment.put(slot.getSlotIdMask(), item);
 			}
@@ -331,7 +331,7 @@ public class Equipment
 		{
 			Item itemToUnequip = null;
 			
-			for (final Item item : equipment.values())
+			for (Item item : equipment.values())
 			{
 				if (item.getObjectId() == itemUniqueId)
 				{
@@ -597,7 +597,7 @@ public class Equipment
 			return true;
 		}
 		
-		for (final int skill : requiredSkills)
+		for (int skill : requiredSkills)
 		{
 			if (owner.getSkillList().isSkillPresent(skill))
 			{
@@ -667,7 +667,7 @@ public class Equipment
 	{
 		synchronized (equipment)
 		{
-			for (final Item item : equipment.values())
+			for (Item item : equipment.values())
 			{
 				if (item.getObjectId() == value)
 				{
@@ -688,7 +688,7 @@ public class Equipment
 		final List<Item> equippedItemsById = new ArrayList<>();
 		synchronized (equipment)
 		{
-			for (final Item item : equipment.values())
+			for (Item item : equipment.values())
 			{
 				if (item.getItemTemplate().getTemplateId() == value)
 				{
@@ -718,7 +718,7 @@ public class Equipment
 	public List<Integer> getEquippedItemIds()
 	{
 		final HashSet<Integer> equippedIds = new HashSet<>();
-		for (final Item i : equipment.values())
+		for (Item i : equipment.values())
 		{
 			equippedIds.add(i.getItemId());
 		}
@@ -732,7 +732,7 @@ public class Equipment
 	{
 		final FastList<Item> equippedItems = FastList.newInstance();
 		Item twoHanded = null;
-		for (final Item item : equipment.values())
+		for (Item item : equipment.values())
 		{
 			if (!ItemSlot.isStigma(item.getEquipmentSlot()))
 			{
@@ -755,7 +755,7 @@ public class Equipment
 		final FastList<Item> equippedItems = FastList.newInstance();
 		Item twoHanded = null;
 		Item offTwoHanded = null;
-		for (final Item item : equipment.values())
+		for (Item item : equipment.values())
 		{
 			if (!ItemSlot.isStigma(item.getEquipmentSlot()))
 			{
@@ -791,7 +791,7 @@ public class Equipment
 	{
 		final FastList<Item> equippedItems = FastList.newInstance();
 		Item twoHanded = null;
-		for (final Item item : equipment.values())
+		for (Item item : equipment.values())
 		{
 			final long slot = item.getEquipmentSlot();
 			if (!ItemSlot.isStigma(slot))
@@ -820,7 +820,7 @@ public class Equipment
 	public List<Item> getEquippedItemsAllStigma()
 	{
 		final List<Item> equippedItems = new ArrayList<>();
-		for (final Item item : equipment.values())
+		for (Item item : equipment.values())
 		{
 			if (ItemSlot.isStigma(item.getEquipmentSlot()))
 			{
@@ -833,7 +833,7 @@ public class Equipment
 	public List<Integer> getEquippedItemsAllStigmaIds()
 	{
 		final List<Integer> equippedItemIds = new ArrayList<>();
-		for (final Item item : equipment.values())
+		for (Item item : equipment.values())
 		{
 			if (ItemSlot.isStigma(item.getEquipmentSlot()))
 			{
@@ -849,7 +849,7 @@ public class Equipment
 	public List<Item> getEquippedItemsRegularStigma()
 	{
 		final List<Item> equippedItems = new ArrayList<>();
-		for (final Item item : equipment.values())
+		for (Item item : equipment.values())
 		{
 			if (ItemSlot.isRegularStigma(item.getEquipmentSlot()))
 			{
@@ -867,7 +867,7 @@ public class Equipment
 		int number = 0;
 		Item twoHanded = null;
 		
-		for (final Item item : equipment.values())
+		for (Item item : equipment.values())
 		{
 			if (((item.getEquipmentSlot() & ItemSlot.MAIN_OFF_HAND.getSlotIdMask()) != 0) || ((item.getEquipmentSlot() & ItemSlot.SUB_OFF_HAND.getSlotIdMask()) != 0))
 			{
@@ -937,7 +937,7 @@ public class Equipment
 				}
 				oldSlots = ItemSlot.getSlotsFor(item.getEquipmentSlot());
 			}
-			for (final ItemSlot sl : oldSlots)
+			for (ItemSlot sl : oldSlots)
 			{
 				if (equipment.containsKey(sl.getSlotIdMask()))
 				{
@@ -973,7 +973,7 @@ public class Equipment
 	public void onLoadApplyEquipmentStats()
 	{
 		Item twoHanded = null;
-		for (final Item item : equipment.values())
+		for (Item item : equipment.values())
 		{
 			if (((item.getEquipmentSlot() & ItemSlot.MAIN_OFF_HAND.getSlotIdMask()) == 0) && ((item.getEquipmentSlot() & ItemSlot.SUB_OFF_HAND.getSlotIdMask()) == 0))
 			{
@@ -1022,7 +1022,7 @@ public class Equipment
 	 */
 	public boolean isArmorTypeEquipped(ArmorType type)
 	{
-		for (final Item item : equipment.values())
+		for (Item item : equipment.values())
 		{
 			if ((item == null) || (item.getItemTemplate().getWeaponType() != null))
 			{
@@ -1198,12 +1198,12 @@ public class Equipment
 			equippedWeapon.add(subOffHandItem);
 		}
 		
-		for (final Item item : equippedWeapon)
+		for (Item item : equippedWeapon)
 		{
 			if (item.getItemTemplate().isTwoHandWeapon())
 			{
 				final ItemSlot[] slots = ItemSlot.getSlotsFor(item.getEquipmentSlot());
-				for (final ItemSlot slot : slots)
+				for (ItemSlot slot : slots)
 				{
 					equipment.remove(slot.getSlotIdMask());
 				}
@@ -1223,7 +1223,7 @@ public class Equipment
 			}
 		}
 		
-		for (final Item item : equippedWeapon)
+		for (Item item : equippedWeapon)
 		{
 			long oldSlots = item.getEquipmentSlot();
 			if ((oldSlots & ItemSlot.RIGHT_HAND.getSlotIdMask()) != 0)
@@ -1237,12 +1237,12 @@ public class Equipment
 			item.setEquipmentSlot(oldSlots);
 		}
 		
-		for (final Item item : equippedWeapon)
+		for (Item item : equippedWeapon)
 		{
 			if (item.getItemTemplate().isTwoHandWeapon())
 			{
 				final ItemSlot[] slots = ItemSlot.getSlotsFor(item.getEquipmentSlot());
-				for (final ItemSlot slot : slots)
+				for (ItemSlot slot : slots)
 				{
 					equipment.put(slot.getSlotIdMask(), item);
 				}
@@ -1257,7 +1257,7 @@ public class Equipment
 		
 		if (owner.getGameStats() != null)
 		{
-			for (final Item item : equippedWeapon)
+			for (Item item : equippedWeapon)
 			{
 				if (((item.getEquipmentSlot() & ItemSlot.MAIN_HAND.getSlotIdMask()) != 0) || ((item.getEquipmentSlot() & ItemSlot.SUB_HAND.getSlotIdMask()) != 0))
 				{
@@ -1306,7 +1306,7 @@ public class Equipment
 		{
 			return false;
 		}
-		for (final ItemSlot s : slotValues)
+		for (ItemSlot s : slotValues)
 		{
 			final Item weapon = equipment.get(s.getSlotIdMask());
 			if ((weapon == null) || weapon.getItemTemplate().isTwoHandWeapon())
@@ -1330,7 +1330,7 @@ public class Equipment
 		{
 			return false;
 		}
-		for (final long slot : ARMOR_SLOTS)
+		for (long slot : ARMOR_SLOTS)
 		{
 			if ((equipment.get(slot) != null) && (equipment.get(slot).getItemTemplate().getArmorType() == armorType))
 			{
@@ -1394,7 +1394,7 @@ public class Equipment
 	 * @param item
 	 * @return
 	 */
-	private boolean soulBindItem(final Player player, final Item item, final long slot)
+	private boolean soulBindItem(Player player, Item item, long slot)
 	{
 		if ((player.getInventory().getItemByObjId(item.getObjectId()) == null) || player.isInState(CreatureState.GLIDING))
 		{
@@ -1500,7 +1500,7 @@ public class Equipment
 	
 	public void checkRankLimitItems()
 	{
-		for (final Item item : getEquippedItems())
+		for (Item item : getEquippedItems())
 		{
 			if (!verifyRankLimits(item))
 			{

@@ -753,7 +753,7 @@ public class ForkJoinPool extends AbstractExecutorService
 				}
 				ASHIFT = 31 - Integer.numberOfLeadingZeros(scale);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				throw new Error(e);
 			}
@@ -955,13 +955,13 @@ public class ForkJoinPool extends AbstractExecutorService
 						{
 							wait();
 						}
-						catch (final InterruptedException ie)
+						catch (InterruptedException ie)
 						{
 							try
 							{
 								Thread.currentThread().interrupt();
 							}
-							catch (final SecurityException ignore)
+							catch (SecurityException ignore)
 							{
 							}
 						}
@@ -1011,7 +1011,7 @@ public class ForkJoinPool extends AbstractExecutorService
 						break;
 					}
 				}
-				catch (final Throwable e)
+				catch (Throwable e)
 				{
 					ex = e;
 				}
@@ -1689,7 +1689,7 @@ public class ForkJoinPool extends AbstractExecutorService
 					v = ws[h = (j.hint | 1) & m];
 					if ((v == null) || (v.currentSteal != subtask))
 					{
-						for (final int origin = h;;)
+						for (int origin = h;;)
 						{ // find stealer
 							h = (h + 2) & m;
 							if (((h & 15) == 1) && ((subtask.status < 0) || (j.currentJoin != subtask)))
@@ -1853,7 +1853,7 @@ public class ForkJoinPool extends AbstractExecutorService
 							return true;
 						}
 					}
-					catch (final Throwable rex)
+					catch (Throwable rex)
 					{
 						ex = rex;
 					}
@@ -1909,7 +1909,7 @@ public class ForkJoinPool extends AbstractExecutorService
 									{ // see ForkJoinTask
 										task.wait(); // for explanation
 									}
-									catch (final InterruptedException ie)
+									catch (InterruptedException ie)
 									{
 									}
 								}
@@ -2225,7 +2225,7 @@ public class ForkJoinPool extends AbstractExecutorService
 											{
 												wt.interrupt();
 											}
-											catch (final Throwable ignore)
+											catch (Throwable ignore)
 											{
 											}
 										}
@@ -2625,7 +2625,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		boolean done = false;
 		try
 		{
-			for (final Callable<T> t : tasks)
+			for (Callable<T> t : tasks)
 			{
 				final ForkJoinTask<T> f = new ForkJoinTask.AdaptedCallable<>(t);
 				futures.add(f);
@@ -2886,7 +2886,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		ws = workQueues;
 		if (ws != null)
 		{
-			for (final WorkQueue element : ws)
+			for (WorkQueue element : ws)
 			{
 				w = element;
 				if (w != null)
@@ -3342,7 +3342,7 @@ public class ForkJoinPool extends AbstractExecutorService
 			}
 			ASHIFT = 31 - Integer.numberOfLeadingZeros(scale);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new Error(e);
 		}
@@ -3374,7 +3374,7 @@ public class ForkJoinPool extends AbstractExecutorService
 				par = Integer.parseInt(pp);
 			}
 		}
-		catch (final Exception ignore)
+		catch (Exception ignore)
 		{
 		}
 		
@@ -3403,7 +3403,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		{
 			return sun.misc.Unsafe.getUnsafe();
 		}
-		catch (final SecurityException tryReflectionInstead)
+		catch (SecurityException tryReflectionInstead)
 		{
 		}
 		try
@@ -3414,7 +3414,7 @@ public class ForkJoinPool extends AbstractExecutorService
 				public sun.misc.Unsafe run() throws Exception
 				{
 					final Class<sun.misc.Unsafe> k = sun.misc.Unsafe.class;
-					for (final java.lang.reflect.Field f : k.getDeclaredFields())
+					for (java.lang.reflect.Field f : k.getDeclaredFields())
 					{
 						f.setAccessible(true);
 						final Object x = f.get(null);
@@ -3427,7 +3427,7 @@ public class ForkJoinPool extends AbstractExecutorService
 				}
 			});
 		}
-		catch (final java.security.PrivilegedActionException e)
+		catch (java.security.PrivilegedActionException e)
 		{
 			throw new RuntimeException("Could not initialize intrinsics", e.getCause());
 		}

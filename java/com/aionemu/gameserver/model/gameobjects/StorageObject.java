@@ -43,7 +43,7 @@ public final class StorageObject extends HouseObject<HousingStorage>
 		PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_HOUSING_OBJECT_USE(getObjectTemplate().getNameId()));
 		PacketSendUtility.sendPacket(player, new SM_OBJECT_USE_UPDATE(player.getObjectId(), 0, 0, this));
 		
-		for (final HouseObject<?> ho : getOwnerHouse().getRegistry().getSpawnedObjects())
+		for (HouseObject<?> ho : getOwnerHouse().getRegistry().getSpawnedObjects())
 		{
 			if (ho instanceof StorageObject)
 			{

@@ -46,7 +46,7 @@ public class FixPath extends AdminCommand
 	}
 	
 	@Override
-	public void execute(final Player admin, String... params)
+	public void execute(Player admin, String... params)
 	{
 		if ((params == null) || (params.length < 1))
 		{
@@ -85,7 +85,7 @@ public class FixPath extends AdminCommand
 				jumpHeight = Float.parseFloat(params[1]);
 			}
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(admin, "Only numbers please!!!");
 		}
@@ -118,7 +118,7 @@ public class FixPath extends AdminCommand
 				try
 				{
 					int i = 1;
-					for (final RouteStep step : template.getRouteSteps())
+					for (RouteStep step : template.getRouteSteps())
 					{
 						if (canceled || admin.isInState(CreatureState.DEAD))
 						{
@@ -172,7 +172,7 @@ public class FixPath extends AdminCommand
 					
 					PacketSendUtility.sendMessage(admin, "Done.");
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 				}
 				finally

@@ -236,7 +236,7 @@ public class CM_CREATE_CHARACTER extends AionClientPacket
 		}
 		if (GSConfig.CHARACTER_CREATION_MODE == 0)
 		{
-			for (final PlayerAccountData data : account.getSortedAccountsList())
+			for (PlayerAccountData data : account.getSortedAccountsList())
 			{
 				if (data.getPlayerCommonData().getRace() != playerCommonData.getRace())
 				{

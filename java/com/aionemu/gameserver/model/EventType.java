@@ -45,7 +45,7 @@ public enum EventType
 	
 	public static EventType getEventType(String theme)
 	{
-		for (final EventType type : values())
+		for (EventType type : values())
 		{
 			if (theme.equals(type.getTheme()))
 			{

@@ -267,28 +267,28 @@ public class ItemGroupsData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final CraftItem item : craftMaterials.getItems())
+		for (CraftItem item : craftMaterials.getItems())
 		{
 			MapCraftReward(craftMaterialsBySkill, item);
 		}
 		count += craftMaterials.getItems().size();
 		craftMaterials.getItems().clear();
 		craftMaterials.setDataHolder(craftMaterialsBySkill);
-		for (final CraftItem item : craftShop.getItems())
+		for (CraftItem item : craftShop.getItems())
 		{
 			MapCraftReward(craftShopBySkill, item);
 		}
 		count += craftShop.getItems().size();
 		craftShop.getItems().clear();
 		craftShop.setDataHolder(craftShopBySkill);
-		for (final CraftRecipe recipe : craftBundles.getItems())
+		for (CraftRecipe recipe : craftBundles.getItems())
 		{
 			MapCraftReward(craftBundlesBySkill, recipe);
 		}
 		count += craftBundles.getItems().size();
 		craftBundles.getItems().clear();
 		craftBundles.setDataHolder(craftBundlesBySkill);
-		for (final CraftRecipe recipe : craftRecipes.getItems())
+		for (CraftRecipe recipe : craftRecipes.getItems())
 		{
 			MapCraftReward(craftRecipesBySkill, recipe);
 		}
@@ -348,7 +348,7 @@ public class ItemGroupsData
 		{
 			boss
 		};
-		for (final FoodType foodType : FoodType.values())
+		for (FoodType foodType : FoodType.values())
 		{
 			final List<ItemRaceEntry> food = getPetFood(foodType);
 			if (food != null)
@@ -415,7 +415,7 @@ public class ItemGroupsData
 			return Collections.emptyList();
 		}
 		final List<CraftReward> result = new ArrayList<>();
-		for (final List<CraftReward> items : craftMaterialsBySkill.get(skillId).values())
+		for (List<CraftReward> items : craftMaterialsBySkill.get(skillId).values())
 		{
 			result.addAll(items);
 		}
@@ -434,7 +434,7 @@ public class ItemGroupsData
 			return Collections.emptyList();
 		}
 		final List<CraftReward> result = new ArrayList<>();
-		for (final List<CraftReward> items : craftShopBySkill.get(skillId).values())
+		for (List<CraftReward> items : craftShopBySkill.get(skillId).values())
 		{
 			result.addAll(items);
 		}
@@ -453,7 +453,7 @@ public class ItemGroupsData
 			return Collections.emptyList();
 		}
 		final List<CraftReward> result = new ArrayList<>();
-		for (final List<CraftReward> items : craftBundlesBySkill.get(skillId).values())
+		for (List<CraftReward> items : craftBundlesBySkill.get(skillId).values())
 		{
 			result.addAll(items);
 		}
@@ -472,7 +472,7 @@ public class ItemGroupsData
 			return Collections.emptyList();
 		}
 		final List<CraftReward> result = new ArrayList<>();
-		for (final List<CraftReward> items : craftRecipesBySkill.get(skillId).values())
+		for (List<CraftReward> items : craftRecipesBySkill.get(skillId).values())
 		{
 			result.addAll(items);
 		}

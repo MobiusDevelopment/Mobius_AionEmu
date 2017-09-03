@@ -45,7 +45,7 @@ public class BaseData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final BaseTemplate template : baseTemplates)
+		for (BaseTemplate template : baseTemplates)
 		{
 			base.put(template.getId(), new BaseLocation(template));
 		}

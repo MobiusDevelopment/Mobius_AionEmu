@@ -49,7 +49,7 @@ public class _1170Headless_Stone_Statue extends QuestHandler
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final int targetId = env.getTargetId();

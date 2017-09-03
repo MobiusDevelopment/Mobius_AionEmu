@@ -61,7 +61,7 @@ public class MoltenusService
 		if (CustomConfig.MOLTENUS_ENABLED)
 		{
 			moltenus = DataManager.MOLTENUS_DATA.getMoltenusLocations();
-			for (final MoltenusLocation loc : getMoltenusLocations().values())
+			for (MoltenusLocation loc : getMoltenusLocations().values())
 			{
 				spawn(loc, MoltenusStateType.PEACE);
 			}
@@ -77,9 +77,9 @@ public class MoltenusService
 		if (CustomConfig.MOLTENUS_ENABLED)
 		{
 			moltenusSchedule = MoltenusSchedule.load();
-			for (final Moltenus moltenus : moltenusSchedule.getMoltenussList())
+			for (Moltenus moltenus : moltenusSchedule.getMoltenussList())
 			{
-				for (final String fightTime : moltenus.getFightTimes())
+				for (String fightTime : moltenus.getFightTimes())
 				{
 					CronService.getInstance().schedule(new MoltenusStartRunnable(moltenus.getId()), fightTime);
 				}
@@ -87,7 +87,7 @@ public class MoltenusService
 		}
 	}
 	
-	public void startMoltenus(final int id)
+	public void startMoltenus(int id)
 	{
 		final MoltenusFight<?> boss;
 		synchronized (this)
@@ -135,9 +135,9 @@ public class MoltenusService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getMoltenusSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final MoltenusSpawnTemplate moltenustemplate = (MoltenusSpawnTemplate) st;
 				if (moltenustemplate.getMStateType().equals(mstate))
@@ -169,7 +169,7 @@ public class MoltenusService
 	
 	public void despawn(MoltenusLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

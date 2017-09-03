@@ -51,12 +51,12 @@ public class ItemSetData
 		sets = new TIntObjectHashMap<>();
 		setItems = new TIntObjectHashMap<>();
 		
-		for (final ItemSetTemplate set : itemsetList)
+		for (ItemSetTemplate set : itemsetList)
 		{
 			sets.put(set.getId(), set);
 			
 			// Add reference to the ItemSetTemplate from
-			for (final ItemPart part : set.getItempart())
+			for (ItemPart part : set.getItempart())
 			{
 				setItems.put(part.getItemid(), set);
 			}

@@ -55,7 +55,7 @@ public class EnumTransformer implements PropertyTransformer<Enum<?>>
 		{
 			return Enum.valueOf(clazz, value);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new TransformationException(e);
 		}

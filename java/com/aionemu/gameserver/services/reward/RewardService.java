@@ -53,7 +53,7 @@ public class RewardService
 			return;
 		}
 		final FastList<Integer> rewarded = FastList.newInstance();
-		for (final RewardEntryItem item : list)
+		for (RewardEntryItem item : list)
 		{
 			if (DataManager.ITEM_DATA.getItemTemplate(item.id) == null)
 			{
@@ -69,7 +69,7 @@ public class RewardService
 				log.info("[RewardController][" + item.unique + "] player " + player.getName() + " has received (" + item.count + ")" + item.id + ".");
 				rewarded.add(item.unique);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.error("[RewardController][" + item.unique + "] failed to add item (" + item.count + ")" + item.id + " to " + player.getObjectId(), e);
 				continue;

@@ -183,7 +183,7 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		if (!containPlayer(player.getObjectId()))
 		{
@@ -192,7 +192,7 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		sendEnterPacket(player);
 	}
 	
-	private void sendEnterPacket(final Player player)
+	private void sendEnterPacket(Player player)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -277,7 +277,7 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		final int ElyosPoints = getPointsByRace(Race.ELYOS).intValue();
 		final int AsmoPvPKills = getPvpKillsByRace(Race.ASMODIANS).intValue();
 		final int AsmoPoints = getPointsByRace(Race.ASMODIANS).intValue();
-		for (final Player player : instance.getPlayersInside())
+		for (Player player : instance.getPlayersInside())
 		{
 			if (CreatureActions.isAlreadyDead(player))
 			{
@@ -322,7 +322,7 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 			AbyssPointsService.addGp(player, gloryPoint);
 			player.getCommonData().addExp(expPoint, RewardType.HUNTING);
 		}
-		for (final Npc npc : instance.getNpcs())
+		for (Npc npc : instance.getNpcs())
 		{
 			npc.getController().onDelete();
 		}
@@ -333,7 +333,7 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 			{
 				if (!isInstanceDestroyed)
 				{
-					for (final Player player : instance.getPlayersInside())
+					for (Player player : instance.getPlayersInside())
 					{
 						onExitInstance(player);
 					}
@@ -436,7 +436,7 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		final List<Player> playersToGainScore = new ArrayList<>();
 		if ((target != null) && player.isInGroup2())
 		{
-			for (final Player member : player.getPlayerGroup2().getOnlineMembers())
+			for (Player member : player.getPlayerGroup2().getOnlineMembers())
 			{
 				if (member.getLifeStats().isAlreadyDead())
 				{
@@ -452,7 +452,7 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		{
 			playersToGainScore.add(player);
 		}
-		for (final Player playerToGainScore : playersToGainScore)
+		for (Player playerToGainScore : playersToGainScore)
 		{
 			addPointToPlayer(playerToGainScore, points / playersToGainScore.size());
 			if (target instanceof Npc)
@@ -639,17 +639,17 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time)
+	protected void sp(int npcId, float x, float y, float z, byte h, int time)
 	{
 		sp(npcId, x, y, z, h, 0, time, 0, null);
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time, final int msg, final Race race)
+	protected void sp(int npcId, float x, float y, float z, byte h, int time, int msg, Race race)
 	{
 		sp(npcId, x, y, z, h, 0, time, msg, race);
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int entityId, final int time, final int msg, final Race race)
+	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
 		landMarkTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -668,7 +668,7 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		}, time));
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time, final String walkerId)
+	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
 		landMarkTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -685,7 +685,7 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		}, time));
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		landMarkTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -707,7 +707,7 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		}, time));
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -755,7 +755,7 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 	
 	private void clearLandMarkDebuffs(Player player)
 	{
-		for (final Effect ef : player.getEffectController().getAbnormalEffects())
+		for (Effect ef : player.getEffectController().getAbnormalEffects())
 		{
 			final DispelCategoryType category = ef.getSkillTemplate().getDispelCategory();
 			if ((category == DispelCategoryType.DEBUFF) || (category == DispelCategoryType.DEBUFF_MENTAL) || (category == DispelCategoryType.DEBUFF_PHYSICAL) || (category == DispelCategoryType.ALL))

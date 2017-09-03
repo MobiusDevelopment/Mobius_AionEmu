@@ -63,7 +63,7 @@ public class RechargerAI2 extends ActionItemNpcAI2
 		if (player.getSkillCoolDowns() != null)
 		{
 			final long currentTime = System.currentTimeMillis();
-			for (final Map.Entry<Integer, Long> en : player.getSkillCoolDowns().entrySet())
+			for (Map.Entry<Integer, Long> en : player.getSkillCoolDowns().entrySet())
 			{
 				delayIds.add(en.getKey());
 				if (delayIds.contains(11885) || delayIds.contains(11886) || delayIds.contains(11887) || delayIds.contains(11888) || delayIds.contains(11889) || delayIds.contains(11890) || delayIds.contains(11891) || delayIds.contains(11892) || delayIds.contains(11893) || delayIds.contains(11894))
@@ -72,7 +72,7 @@ public class RechargerAI2 extends ActionItemNpcAI2
 				}
 			}
 			
-			for (final Integer delayId : delayIds)
+			for (Integer delayId : delayIds)
 			{
 				player.setSkillCoolDown(delayId, currentTime);
 			}

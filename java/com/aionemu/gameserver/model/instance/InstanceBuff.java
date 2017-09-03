@@ -59,7 +59,7 @@ public class InstanceBuff implements StatOwner
 			task = ThreadPoolManager.getInstance().schedule(new InstanceBuffTask(player), time);
 		}
 		startTime = System.currentTimeMillis();
-		for (final InstancePenaltyAttr instancePenaltyAttr : instanceBonusAttr.getPenaltyAttr())
+		for (InstancePenaltyAttr instancePenaltyAttr : instanceBonusAttr.getPenaltyAttr())
 		{
 			final StatEnum stat = instancePenaltyAttr.getStat();
 			final int statToModified = player.getGameStats().getStat(stat, 0).getBase();
@@ -91,7 +91,7 @@ public class InstanceBuff implements StatOwner
 		{
 			return;
 		}
-		for (final InstancePenaltyAttr instancePenaltyAttr : instanceBonusAttr.getPenaltyAttr())
+		for (InstancePenaltyAttr instancePenaltyAttr : instanceBonusAttr.getPenaltyAttr())
 		{
 			if (instancePenaltyAttr.getFunc().equals(Func.PERCENT))
 			{
@@ -134,7 +134,7 @@ public class InstanceBuff implements StatOwner
 			task = ThreadPoolManager.getInstance().schedule(new InstanceBuffTask(player), time);
 		}
 		startTime = System.currentTimeMillis();
-		for (final InstancePenaltyAttr instancePenaltyAttr : instanceBonusAttr.getPenaltyAttr())
+		for (InstancePenaltyAttr instancePenaltyAttr : instanceBonusAttr.getPenaltyAttr())
 		{
 			if (instancePenaltyAttr.getFunc().equals(Func.PERCENT))
 			{

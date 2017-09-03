@@ -32,7 +32,7 @@ public class RandomStats
 		rndBonusEffect = new RandomBonusEffect(StatBonusType.INVENTORY, setId, setNumber);
 	}
 	
-	public void onEquip(final Player player)
+	public void onEquip(Player player)
 	{
 		rndBonusEffect.applyEffect(player);
 	}

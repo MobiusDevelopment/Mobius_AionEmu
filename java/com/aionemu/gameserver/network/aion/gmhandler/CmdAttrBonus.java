@@ -63,7 +63,7 @@ public class CmdAttrBonus extends AbstractGMHandler implements StatOwner
 		{
 			a = AttrBonusAction.valueOf(func);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			e.printStackTrace();
 			return;
@@ -201,7 +201,7 @@ public class CmdAttrBonus extends AbstractGMHandler implements StatOwner
 		
 		AttrBonusAction(String value) throws IllegalArgumentException
 		{
-			for (final AttrBonusAction t : AttrBonusAction.values())
+			for (AttrBonusAction t : AttrBonusAction.values())
 			{
 				if (t.getValue() == value)
 				{

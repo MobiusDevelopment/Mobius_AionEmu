@@ -656,7 +656,7 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 		}, 120000);
 	}
 	
-	private void raksangRaid(final Npc npc)
+	private void raksangRaid(Npc npc)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -665,7 +665,7 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 			{
 				if (!isInstanceDestroyed)
 				{
-					for (final Player player : instance.getPlayersInside())
+					for (Player player : instance.getPlayersInside())
 					{
 						npc.setTarget(player);
 						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
@@ -678,7 +678,7 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 		}, 1000);
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -690,7 +690,7 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -721,7 +721,7 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

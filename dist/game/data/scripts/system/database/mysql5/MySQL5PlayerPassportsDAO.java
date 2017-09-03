@@ -89,7 +89,7 @@ public class MySQL5PlayerPassportsDAO extends PlayerPassportsDAO
 			}
 			rset.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore completed passport data for player: " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -128,7 +128,7 @@ public class MySQL5PlayerPassportsDAO extends PlayerPassportsDAO
 				updatePassports(con, player.getObjectId(), pList, player.getCommonData());
 			}
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't save passports for player " + player.getObjectId(), e);
 		}
@@ -151,7 +151,7 @@ public class MySQL5PlayerPassportsDAO extends PlayerPassportsDAO
 		{
 			ps = con.prepareStatement(INSERT_QUERY);
 			
-			for (final AtreianPassport pp : atp)
+			for (AtreianPassport pp : atp)
 			{
 				ps.setInt(1, playerId);
 				ps.setInt(2, pp.getId());
@@ -184,7 +184,7 @@ public class MySQL5PlayerPassportsDAO extends PlayerPassportsDAO
 		{
 			ps = con.prepareStatement(UPDATE_QUERY);
 			
-			for (final AtreianPassport pp : atp)
+			for (AtreianPassport pp : atp)
 			{
 				ps.setInt(1, pcd.getPassportReward());
 				ps.setInt(2, playerId);

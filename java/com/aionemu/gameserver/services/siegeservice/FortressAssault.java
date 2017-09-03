@@ -172,9 +172,9 @@ public class FortressAssault extends Assault<FortressSiege>
 	{
 		spawnLocations = new ArrayList<>();
 		final List<SpawnGroup2> siegeSpawns = DataManager.SPAWNS_DATA2.getSiegeSpawnsByLocId(locationId);
-		for (final SpawnGroup2 spawnGroup : siegeSpawns)
+		for (SpawnGroup2 spawnGroup : siegeSpawns)
 		{
-			for (final SpawnTemplate spawnTemplate : spawnGroup.getSpawnTemplates())
+			for (SpawnTemplate spawnTemplate : spawnGroup.getSpawnTemplates())
 			{
 				final SiegeSpawnTemplate temp = (SiegeSpawnTemplate) spawnTemplate;
 				final AbyssNpcType type = DataManager.NPC_DATA.getNpcTemplate(temp.getNpcId()).getAbyssNpcType();

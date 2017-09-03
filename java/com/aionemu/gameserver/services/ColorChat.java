@@ -32,7 +32,7 @@ public class ColorChat
 		final StringBuilder sb = new StringBuilder();
 		int index = 0;
 		int start = 0;
-		for (final char ch : message.toCharArray())
+		for (char ch : message.toCharArray())
 		{
 			if ((index % 3) == 0)
 			{

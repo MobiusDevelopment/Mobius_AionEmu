@@ -60,7 +60,7 @@ public class _29667Protect_The_Morninglight_Plains extends QuestHandler
 		qe.registerQuestNpc(806244).addOnQuestStart(questId);
 		qe.registerQuestNpc(806244).addOnTalkEvent(questId);
 		qe.registerQuestNpc(806101).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

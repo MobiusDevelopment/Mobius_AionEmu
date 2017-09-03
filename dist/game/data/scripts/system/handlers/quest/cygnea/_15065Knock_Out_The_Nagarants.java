@@ -49,7 +49,7 @@ public class _15065Knock_Out_The_Nagarants extends QuestHandler
 	{
 		qe.registerQuestNpc(804707).addOnQuestStart(questId);
 		qe.registerQuestNpc(804707).addOnTalkEvent(questId);
-		for (final int mob : LF5FNagaWarrior60An)
+		for (int mob : LF5FNagaWarrior60An)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

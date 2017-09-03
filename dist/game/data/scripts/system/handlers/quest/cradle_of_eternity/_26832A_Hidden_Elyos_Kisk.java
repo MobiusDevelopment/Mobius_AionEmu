@@ -48,11 +48,11 @@ public class _26832A_Hidden_Elyos_Kisk extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : IDEternity02DEventStartLi)
+		for (int mob : IDEternity02DEventStartLi)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

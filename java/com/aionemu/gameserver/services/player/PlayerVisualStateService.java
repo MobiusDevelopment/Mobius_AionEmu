@@ -22,7 +22,7 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 public class PlayerVisualStateService
 {
 	
-	public static void hideValidate(final Player hiden)
+	public static void hideValidate(Player hiden)
 	{
 		hiden.getKnownList().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -45,7 +45,7 @@ public class PlayerVisualStateService
 		});
 	}
 	
-	public static void seeValidate(final Player search)
+	public static void seeValidate(Player search)
 	{
 		search.getKnownList().doOnAllPlayers(new Visitor<Player>()
 		{

@@ -61,7 +61,7 @@ public class DropLists
 			final Element root = document.createElement("npc_drops");
 			document.appendChild(root);
 			final Collection<NpcTemplate> tm = DataManager.NPC_DATA.getNpcData().valueCollection();
-			for (final NpcTemplate npc : tm)
+			for (NpcTemplate npc : tm)
 			{
 				if (npc == null)
 				{
@@ -150,7 +150,7 @@ public class DropLists
 			transFormer.transform(domSource, xmlResult);
 			System.out.println(file.getAbsolutePath());
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			e.printStackTrace();
 		}

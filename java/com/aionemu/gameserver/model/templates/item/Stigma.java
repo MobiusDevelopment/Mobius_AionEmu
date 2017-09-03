@@ -45,7 +45,7 @@ public class Stigma
 	public List<StigmaSkill> getSkills()
 	{
 		final List<StigmaSkill> list = new ArrayList<>();
-		for (final String st : skill)
+		for (String st : skill)
 		{
 			final String[] array = st.split(":");
 			list.add(new StigmaSkill(Integer.parseInt(array[0]), Integer.parseInt(array[1])));
@@ -97,7 +97,7 @@ public class Stigma
 		if (skill.size() != 1)
 		{ // Dual Skills like Exhausting Wave
 			String[] tempArray = new String[0];
-			for (final String parts : skill)
+			for (String parts : skill)
 			{ // loops each of the 1:534 and 1:4342
 				tempArray = parts.split(":");
 				ids.add(Integer.parseInt(tempArray[1]));
@@ -106,7 +106,7 @@ public class Stigma
 		}
 		
 		// Single 1 Skill
-		for (final String st : this.skill)
+		for (String st : this.skill)
 		{
 			final String[] array = st.split(":");
 			ids.add(Integer.parseInt(array[1]));

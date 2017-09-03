@@ -49,7 +49,7 @@ public class _16808Archives_Of_Eternity_Protector extends QuestHandler
 	{
 		qe.registerOnEnterWorld(questId);
 		qe.registerQuestNpc(806148).addOnTalkEvent(questId);
-		for (final int mob : IDEternity01Boss)
+		for (int mob : IDEternity01Boss)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

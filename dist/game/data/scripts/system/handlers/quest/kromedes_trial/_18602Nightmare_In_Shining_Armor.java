@@ -64,12 +64,12 @@ public class _18602Nightmare_In_Shining_Armor extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerOnEnterWorld(questId);
 		qe.registerOnMovieEndQuest(454, questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 			qe.registerQuestNpc(205229).addOnQuestStart(questId);
 		}
-		for (final int mob : kaliga)
+		for (int mob : kaliga)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

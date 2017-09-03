@@ -34,7 +34,7 @@ public class ScheduledTaskClassListener implements ClassListener
 	})
 	public void postLoad(Class<?>[] classes)
 	{
-		for (final Class<?> clazz : classes)
+		for (Class<?> clazz : classes)
 		{
 			if (isValidClass(clazz))
 			{
@@ -50,7 +50,7 @@ public class ScheduledTaskClassListener implements ClassListener
 	})
 	public void preUnload(Class<?>[] classes)
 	{
-		for (final Class<?> clazz : classes)
+		for (Class<?> clazz : classes)
 		{
 			if (isValidClass(clazz))
 			{
@@ -106,7 +106,7 @@ public class ScheduledTaskClassListener implements ClassListener
 		{
 			if (metadata.instancePerCronExpression())
 			{
-				for (final String s : metadata.value())
+				for (String s : metadata.value())
 				{
 					getCronService().schedule(clazz.newInstance(), s, metadata.longRunningTask());
 				}
@@ -114,13 +114,13 @@ public class ScheduledTaskClassListener implements ClassListener
 			else
 			{
 				final Runnable r = clazz.newInstance();
-				for (final String s : metadata.value())
+				for (String s : metadata.value())
 				{
 					getCronService().schedule(r, s, metadata.longRunningTask());
 				}
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to schedule runnable " + clazz.getName(), e);
 		}
@@ -129,7 +129,7 @@ public class ScheduledTaskClassListener implements ClassListener
 	protected void unScheduleClass(Class<? extends Runnable> clazz)
 	{
 		final Map<Runnable, JobDetail> map = getCronService().getRunnables();
-		for (final Map.Entry<Runnable, JobDetail> entry : map.entrySet())
+		for (Map.Entry<Runnable, JobDetail> entry : map.entrySet())
 		{
 			if (entry.getKey().getClass() == clazz)
 			{

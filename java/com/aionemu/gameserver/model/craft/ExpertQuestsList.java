@@ -170,7 +170,7 @@ public enum ExpertQuestsList
 	
 	public static int[] getSkillsIds(int craftSkillId, Race race)
 	{
-		for (final ExpertQuestsList eql : values())
+		for (ExpertQuestsList eql : values())
 		{
 			if ((race.equals(eql.getRace())) && (craftSkillId == eql.getCraftSkillId()))
 			{

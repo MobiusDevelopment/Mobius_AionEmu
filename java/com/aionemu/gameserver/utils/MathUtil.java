@@ -148,7 +148,7 @@ public class MathUtil
 		return (((dx * dx) + (dy * dy) + (dz * dz)) > (minRange * minRange)) && (((dx * dx) + (dy * dy) + (dz * dz)) < (maxRange * maxRange));
 	}
 	
-	public static boolean isIn3dRange(final float obj1X, final float obj1Y, final float obj1Z, final float obj2X, final float obj2Y, final float obj2Z, float range)
+	public static boolean isIn3dRange(float obj1X, float obj1Y, float obj1Z, float obj2X, float obj2Y, float obj2Z, float range)
 	{
 		final float dx = (obj2X - obj1X);
 		final float dy = (obj2Y - obj1Y);
@@ -156,7 +156,7 @@ public class MathUtil
 		return ((dx * dx) + (dy * dy) + (dz * dz)) < (range * range);
 	}
 	
-	public static boolean isInSphere(final VisibleObject obj, final float centerX, final float centerY, final float centerZ, final float radius)
+	public static boolean isInSphere(VisibleObject obj, float centerX, float centerY, float centerZ, float radius)
 	{
 		final float dx = (obj.getX() - centerX);
 		final float dy = (obj.getY() - centerY);
@@ -293,7 +293,7 @@ public class MathUtil
 		return new Point((int) X, (int) Y);
 	}
 	
-	public static boolean isInAnnulus(final VisibleObject obj, Point3D Center, float Radius1, float Radius2)
+	public static boolean isInAnnulus(VisibleObject obj, Point3D Center, float Radius1, float Radius2)
 	{
 		if (!isInSphere(obj, Center.getX(), Center.getY(), Center.getZ(), Radius2))
 		{

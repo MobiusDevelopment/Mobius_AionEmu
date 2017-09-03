@@ -39,7 +39,7 @@ public class PanelSkillsData
 	
 	void afterUnmarshal(Unmarshaller unmarshaller, Object parent)
 	{
-		for (final SkillPanel panel : templates)
+		for (SkillPanel panel : templates)
 		{
 			skillPanels.put(panel.getPanelId(), panel);
 		}

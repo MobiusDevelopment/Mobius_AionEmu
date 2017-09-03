@@ -51,7 +51,7 @@ public class SM_SERVER_LIST extends AionServerPacket
 		
 		writeC(servers.size());// servers
 		writeC(con.getAccount().getLastServer());// last server
-		for (final GameServerInfo gsi : servers)
+		for (GameServerInfo gsi : servers)
 		{
 			if (gsi.getId() > maxId)
 			{

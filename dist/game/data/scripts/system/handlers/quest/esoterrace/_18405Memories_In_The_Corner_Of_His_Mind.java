@@ -102,7 +102,7 @@ public class _18405Memories_In_The_Corner_Of_His_Mind extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		final Player player = env.getPlayer();
 		final int id = item.getItemTemplate().getTemplateId();

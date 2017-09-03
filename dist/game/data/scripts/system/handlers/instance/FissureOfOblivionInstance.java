@@ -1235,7 +1235,7 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 		return 0;
 	}
 	
-	private void sendPacket(final int nameId, final int point)
+	private void sendPacket(int nameId, int point)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -1315,7 +1315,7 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		if (!instanceReward.containPlayer(player.getObjectId()))
 		{
@@ -19599,17 +19599,17 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 		effectController.removeEffect(4836); // Ancient High Daeva’s Memory.
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time)
+	protected void sp(int npcId, float x, float y, float z, byte h, int time)
 	{
 		sp(npcId, x, y, z, h, 0, time, 0, null);
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time, final int msg, final Race race)
+	protected void sp(int npcId, float x, float y, float z, byte h, int time, int msg, Race race)
 	{
 		sp(npcId, x, y, z, h, 0, time, msg, race);
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int entityId, final int time, final int msg, final Race race)
+	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
 		oblivionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -19628,7 +19628,7 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 		}, time));
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time, final String walkerId)
+	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
 		oblivionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -19645,7 +19645,7 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 		}, time));
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -19657,7 +19657,7 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -19680,7 +19680,7 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

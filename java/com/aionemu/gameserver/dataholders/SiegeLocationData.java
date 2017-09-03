@@ -61,7 +61,7 @@ public class SiegeLocationData
 		fortressLocations.clear();
 		outpostLocations.clear();
 		siegeLocations.clear();
-		for (final SiegeLocationTemplate template : siegeLocationTemplates)
+		for (SiegeLocationTemplate template : siegeLocationTemplates)
 		{
 			switch (template.getType())
 			{

@@ -49,7 +49,7 @@ public class ActionItemUseOperation extends QuestOperation
 	 * @seecom.aionemu.gameserver.questEngine.handlers.models.xmlQuest.operations.QuestOperation#doOperate(com.aionemu. gameserver.services.QuestService, com.aionemu.gameserver.questEngine.model.QuestEnv)
 	 */
 	@Override
-	public void doOperate(final QuestEnv env)
+	public void doOperate(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final Npc npc;

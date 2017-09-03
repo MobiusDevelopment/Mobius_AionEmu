@@ -91,7 +91,7 @@ public class MacunbelloAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void rushMacunbello(final Npc npc, float x, float y, float z, boolean despawn)
+	private void rushMacunbello(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);

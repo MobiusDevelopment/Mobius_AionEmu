@@ -77,7 +77,7 @@ public class PrivateStore
 		if (items.containsKey(itemObjId))
 		{
 			final LinkedHashMap<Integer, TradePSItem> newItems = new LinkedHashMap<>();
-			for (final int itemObjIds : items.keySet())
+			for (int itemObjIds : items.keySet())
 			{
 				if (itemObjId != itemObjIds)
 				{

@@ -49,11 +49,11 @@ public class CmdItemCoolTime extends AbstractGMHandler
 		if (playerT.getSkillCoolDowns() != null)
 		{
 			final long currentTime = System.currentTimeMillis();
-			for (final Entry<Integer, Long> en : playerT.getSkillCoolDowns().entrySet())
+			for (Entry<Integer, Long> en : playerT.getSkillCoolDowns().entrySet())
 			{
 				delayIds.add(en.getKey());
 			}
-			for (final Integer delayId : delayIds)
+			for (Integer delayId : delayIds)
 			{
 				playerT.setSkillCoolDown(delayId, currentTime);
 			}
@@ -63,11 +63,11 @@ public class CmdItemCoolTime extends AbstractGMHandler
 		
 		if (playerT.getItemCoolDowns() != null)
 		{
-			for (final Entry<Integer, ItemCooldown> en : playerT.getItemCoolDowns().entrySet())
+			for (Entry<Integer, ItemCooldown> en : playerT.getItemCoolDowns().entrySet())
 			{
 				delayIds.add(en.getKey());
 			}
-			for (final Integer delayId : delayIds)
+			for (Integer delayId : delayIds)
 			{
 				playerT.addItemCoolDown(delayId, 0, 0);
 			}

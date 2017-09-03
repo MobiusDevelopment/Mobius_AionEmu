@@ -48,7 +48,7 @@ public class _30751Death_To_The_Dragon_Lord extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(804869).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

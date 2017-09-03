@@ -40,7 +40,7 @@ public class SM_RECIPE_LIST extends AionServerPacket
 	protected void writeImpl(AionConnection con)
 	{
 		writeH(count);
-		for (final int id : recipeIds)
+		for (int id : recipeIds)
 		{
 			writeD(id);
 			writeC(0);

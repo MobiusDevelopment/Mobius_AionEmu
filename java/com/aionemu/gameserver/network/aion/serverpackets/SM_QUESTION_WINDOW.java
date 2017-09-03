@@ -201,7 +201,7 @@ public class SM_QUESTION_WINDOW extends AionServerPacket
 			writeH(0x30);
 			writeH(0x00);
 		}
-		for (final Object param : params)
+		for (Object param : params)
 		{
 			if (param instanceof DescriptionId)
 			{

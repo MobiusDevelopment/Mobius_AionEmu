@@ -50,7 +50,7 @@ public class QuestsData
 	{
 		questData.clear();
 		sortedByFactionId.clear();
-		for (final QuestTemplate quest : questsData)
+		for (QuestTemplate quest : questsData)
 		{
 			questData.put(quest.getId(), quest);
 			final int npcFactionId = quest.getNpcFactionId();
@@ -81,7 +81,7 @@ public class QuestsData
 		final List<QuestTemplate> factionQuests = sortedByFactionId.get(npcFactionId);
 		final List<QuestTemplate> quests = new ArrayList<>();
 		final QuestEnv questEnv = new QuestEnv(null, player, 0, 0);
-		for (final QuestTemplate questTemplate : factionQuests)
+		for (QuestTemplate questTemplate : factionQuests)
 		{
 			if (!QuestEngine.getInstance().isHaveHandler(questTemplate.getId()))
 			{

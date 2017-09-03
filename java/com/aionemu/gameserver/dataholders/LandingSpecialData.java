@@ -42,7 +42,7 @@ public class LandingSpecialData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final LandingSpecialTemplate template : landingSpecialTemplates)
+		for (LandingSpecialTemplate template : landingSpecialTemplates)
 		{
 			landingSpecial.put(template.getId(), new LandingSpecialLocation(template));
 		}

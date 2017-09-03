@@ -215,7 +215,7 @@ public class IronWallWarfrontReward extends InstanceReward<IronWallWarfrontPlaye
 		return (IronWallWarfrontPlayerReward) super.getPlayerReward(object);
 	}
 	
-	public void sendPacket(final int type, final Integer object)
+	public void sendPacket(int type, Integer object)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{

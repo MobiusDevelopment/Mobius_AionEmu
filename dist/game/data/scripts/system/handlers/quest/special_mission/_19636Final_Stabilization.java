@@ -51,7 +51,7 @@ public class _19636Final_Stabilization extends QuestHandler
 		qe.registerQuestNpc(205304).addOnQuestStart(questId);
 		qe.registerQuestNpc(205304).addOnTalkEvent(questId);
 		qe.registerQuestNpc(798155).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

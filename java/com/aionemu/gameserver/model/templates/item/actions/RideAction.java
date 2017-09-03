@@ -62,7 +62,7 @@ public class RideAction extends AbstractItemAction
 		}
 		if (CustomConfig.ENABLE_RIDE_RESTRICTION)
 		{
-			for (final ZoneInstance zone : player.getPosition().getMapRegion().getZones(player))
+			for (ZoneInstance zone : player.getPosition().getMapRegion().getZones(player))
 			{
 				if (!zone.canRide())
 				{
@@ -77,7 +77,7 @@ public class RideAction extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, final Item parentItem, Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 		player.getController().cancelUseItem();
 		if (player.isInPlayerMode(PlayerMode.RIDE))

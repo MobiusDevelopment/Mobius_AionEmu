@@ -44,7 +44,7 @@ public class SkillData
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
 		skillData.clear();
-		for (final SkillTemplate st : skillTemplates)
+		for (SkillTemplate st : skillTemplates)
 		{
 			skillData.put(st.getSkillId(), st);
 		}
@@ -74,7 +74,7 @@ public class SkillData
 	public void initializeCooldownGroups()
 	{
 		cooldownGroups = new HashMap<>();
-		for (final SkillTemplate skillTemplate : skillTemplates)
+		for (SkillTemplate skillTemplate : skillTemplates)
 		{
 			final int delayId = skillTemplate.getDelayId();
 			if (!cooldownGroups.containsKey(delayId))

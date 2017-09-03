@@ -73,7 +73,7 @@ public class _24026A_Hand_From_Each_Side extends QuestHandler
 		qe.registerQuestNpc(204301).addOnTalkEvent(questId); // Aegir.
 		qe.registerQuestNpc(204403).addOnTalkEvent(questId); // Taisan.
 		qe.registerQuestNpc(204432).addOnTalkEvent(questId); // Kargate.
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
@@ -271,7 +271,7 @@ public class _24026A_Hand_From_Each_Side extends QuestHandler
 		final Npc spawn = (Npc) QuestService.spawnQuestNpc(320040000, player.getInstanceId(), mobToSpawn, x, y, z, (byte) 95);
 		final Collection<Npc> allNpcs = World.getInstance().getNpcs();
 		Npc target = null;
-		for (final Npc npc : allNpcs)
+		for (Npc npc : allNpcs)
 		{
 			if (npc.getNpcId() == 204432)
 			{ // Kargate.

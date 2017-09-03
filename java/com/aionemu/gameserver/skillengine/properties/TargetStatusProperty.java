@@ -39,7 +39,7 @@ public class TargetStatusProperty
 	 * @param properties
 	 * @return
 	 */
-	public static boolean set(final Skill skill, Properties properties)
+	public static boolean set(Skill skill, Properties properties)
 	{
 		if (skill.getEffectedList().size() != 1)
 		{
@@ -51,7 +51,7 @@ public class TargetStatusProperty
 		final Creature effected = skill.getFirstTarget();
 		boolean result = false;
 		
-		for (final String status : targetStatus)
+		for (String status : targetStatus)
 		{
 			if (effected.getEffectController().isAbnormalSet(AbnormalState.valueOf(status)))
 			{

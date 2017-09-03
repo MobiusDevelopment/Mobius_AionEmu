@@ -60,7 +60,7 @@ public class AbyssService
 	
 	public static boolean isOnPvpMap(Player player)
 	{
-		for (final int i : abyssMapList)
+		for (int i : abyssMapList)
 		{
 			if (i == player.getWorldId())
 			{
@@ -74,7 +74,7 @@ public class AbyssService
 		return false;
 	}
 	
-	public static void rankedKillAnnounce(final Player victim)
+	public static void rankedKillAnnounce(Player victim)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -89,7 +89,7 @@ public class AbyssService
 		});
 	}
 	
-	public static void rankerSkillAnnounce(final Player player, final int nameId)
+	public static void rankerSkillAnnounce(Player player, int nameId)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{

@@ -114,7 +114,7 @@ public class PlayerContainer implements Iterable<Player>
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Exception when running visitor on all players" + ex);
 		}

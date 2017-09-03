@@ -40,7 +40,7 @@ public class TribeRelationsData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final Tribe tribe : tribeList)
+		for (Tribe tribe : tribeList)
 		{
 			tribeNameMap.put(tribe.getName(), tribe);
 		}
@@ -195,7 +195,7 @@ public class TribeRelationsData
 		{
 			return false;
 		}
-		for (final TribeClass tribe2 : tribeNameMap.keySet())
+		for (TribeClass tribe2 : tribeNameMap.keySet())
 		{
 			if (isSupportRelation(tribe2, tribeName))
 			{

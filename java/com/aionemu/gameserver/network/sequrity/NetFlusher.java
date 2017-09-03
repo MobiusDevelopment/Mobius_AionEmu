@@ -26,7 +26,7 @@ public final class NetFlusher
 {
 	private static final Timer _timer = new Timer(NetFlusher.class.getName(), true);
 	
-	public static void add(final Runnable runnable, long interval)
+	public static void add(Runnable runnable, long interval)
 	{
 		_timer.scheduleAtFixedRate(new TimerTask()
 		{
@@ -37,7 +37,7 @@ public final class NetFlusher
 				{
 					runnable.run();
 				}
-				catch (final RuntimeException e)
+				catch (RuntimeException e)
 				{
 					e.printStackTrace();
 				}

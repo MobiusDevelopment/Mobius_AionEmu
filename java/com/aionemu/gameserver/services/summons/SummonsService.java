@@ -82,7 +82,7 @@ public class SummonsService
 		summon.setReleaseTask(ThreadPoolManager.getInstance().schedule(new ReleaseSummonTask(summon, unsummonType, isAttacked), 5000));
 	}
 	
-	public static void restMode(final Summon summon)
+	public static void restMode(Summon summon)
 	{
 		summon.getController().cancelCurrentSkill();
 		summon.setMode(SummonMode.REST);
@@ -92,14 +92,14 @@ public class SummonsService
 		summon.getLifeStats().triggerRestoreTask();
 	}
 	
-	public static void setUnkMode(final Summon summon)
+	public static void setUnkMode(Summon summon)
 	{
 		summon.setMode(SummonMode.UNK);
 		final Player master = summon.getMaster();
 		PacketSendUtility.sendPacket(master, new SM_SUMMON_UPDATE(summon));
 	}
 	
-	public static void guardMode(final Summon summon)
+	public static void guardMode(Summon summon)
 	{
 		summon.getController().cancelCurrentSkill();
 		summon.setMode(SummonMode.GUARD);
@@ -109,7 +109,7 @@ public class SummonsService
 		summon.getLifeStats().triggerRestoreTask();
 	}
 	
-	public static void attackMode(final Summon summon)
+	public static void attackMode(Summon summon)
 	{
 		summon.setMode(SummonMode.ATTACK);
 		final Player master = summon.getMaster();

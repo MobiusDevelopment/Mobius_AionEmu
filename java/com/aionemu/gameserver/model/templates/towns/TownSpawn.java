@@ -47,7 +47,7 @@ public class TownSpawn
 	{
 		townLevelsData.clear();
 		
-		for (final TownLevel level : townLevels)
+		for (TownLevel level : townLevels)
 		{
 			townLevelsData.put(level.getLevel(), level);
 		}

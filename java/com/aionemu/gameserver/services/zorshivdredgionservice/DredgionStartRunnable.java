@@ -42,7 +42,7 @@ public class DredgionStartRunnable implements Runnable
 		// The Balaur Dredgion has appeared at inggison.
 		ZorshivDredgionService.getInstance().inggisonMsg(id);
 		final Map<Integer, ZorshivDredgionLocation> locations = ZorshivDredgionService.getInstance().getZorshivDredgionLocations();
-		for (final ZorshivDredgionLocation loc : locations.values())
+		for (ZorshivDredgionLocation loc : locations.values())
 		{
 			if (loc.getId() == id)
 			{

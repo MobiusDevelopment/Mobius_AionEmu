@@ -55,7 +55,7 @@ public class _2042The_Last_Checkpoint extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(204301).addOnTalkEvent(questId);
 		qe.registerQuestNpc(204319).addOnTalkEvent(questId);
-		for (final String ring : rings)
+		for (String ring : rings)
 		{
 			qe.registerOnPassFlyingRings(ring, questId);
 		}

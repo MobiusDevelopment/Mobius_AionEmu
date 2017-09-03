@@ -97,7 +97,7 @@ public class MovementNotifyTask extends AbstractFIFOPeriodicTaskManager<Creature
 	{
 		final List<String> lines = new ArrayList<>();
 		lines.add("------- Movement broadcast counts -------");
-		for (final Entry<Integer, int[]> entry : moveBroadcastCounts.entrySet())
+		for (Entry<Integer, int[]> entry : moveBroadcastCounts.entrySet())
 		{
 			lines.add("WorldId=" + entry.getKey() + ": " + entry.getValue()[0] + " (NpcId " + entry.getValue()[1] + ")");
 		}

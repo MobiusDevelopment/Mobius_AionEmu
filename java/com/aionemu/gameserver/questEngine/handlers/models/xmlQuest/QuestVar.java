@@ -52,7 +52,7 @@ public class QuestVar
 		{
 			return false;
 		}
-		for (final QuestNpc questNpc : npc)
+		for (QuestNpc questNpc : npc)
 		{
 			if (questNpc.operate(env, qs))
 			{

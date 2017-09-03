@@ -54,7 +54,7 @@ public class _26803Approaching_The_Final_Archive extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerQuestNpc(806149).addOnTalkEvent(questId);
-		for (final int mob : IDEternity01Mobs)
+		for (int mob : IDEternity01Mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

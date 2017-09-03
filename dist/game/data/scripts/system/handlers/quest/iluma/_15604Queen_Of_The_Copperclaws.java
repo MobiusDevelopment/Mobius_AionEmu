@@ -54,7 +54,7 @@ public class _15604Queen_Of_The_Copperclaws extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(806161).addOnQuestStart(questId); // Cyclon.
 		qe.registerQuestNpc(806161).addOnTalkEvent(questId); // Cyclon.
-		for (final int boss : LF6EEnvironmentOctaside66An)
+		for (int boss : LF6EEnvironmentOctaside66An)
 		{
 			qe.registerQuestNpc(boss).addOnKillEvent(questId);
 		}

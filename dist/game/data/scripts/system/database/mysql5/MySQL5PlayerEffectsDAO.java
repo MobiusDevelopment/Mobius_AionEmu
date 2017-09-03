@@ -60,7 +60,7 @@ public class MySQL5PlayerEffectsDAO extends PlayerEffectsDAO
 	};
 	
 	@Override
-	public void loadPlayerEffects(final Player player)
+	public void loadPlayerEffects(Player player)
 	{
 		DB.select(SELECT_QUERY, new ParamReadStH()
 		{
@@ -92,7 +92,7 @@ public class MySQL5PlayerEffectsDAO extends PlayerEffectsDAO
 	}
 	
 	@Override
-	public void storePlayerEffects(final Player player)
+	public void storePlayerEffects(Player player)
 	{
 		deletePlayerEffects(player);
 		
@@ -126,7 +126,7 @@ public class MySQL5PlayerEffectsDAO extends PlayerEffectsDAO
 			ps.executeBatch();
 			con.commit();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Exception while saving effects of player " + player.getObjectId(), e);
 		}
@@ -136,7 +136,7 @@ public class MySQL5PlayerEffectsDAO extends PlayerEffectsDAO
 		}
 	}
 	
-	private void deletePlayerEffects(final Player player)
+	private void deletePlayerEffects(Player player)
 	{
 		DB.insertUpdate(DELETE_QUERY, new IUStH()
 		{

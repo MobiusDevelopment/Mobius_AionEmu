@@ -204,7 +204,7 @@ public class Misc extends AdminCommand
 		return msg;
 	}
 	
-	public void startTask(final Player player, final AbnormalState state, final int delay)
+	public void startTask(Player player, AbnormalState state, int delay)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

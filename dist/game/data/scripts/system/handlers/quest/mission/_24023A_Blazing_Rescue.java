@@ -53,7 +53,7 @@ public class _24023A_Blazing_Rescue extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerOnEnterWorld(questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

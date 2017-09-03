@@ -84,7 +84,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 215281: // Calindi Flamelord.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -96,7 +96,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 215282: // Vanuka Infernus.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -110,7 +110,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 			case 215283: // Asaratu Bloodshade.
 			case 215284: // Chramati Firetail.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166500000, 1)); // Amplification Stone.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -121,7 +121,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 				break;
 			case 214864: // Noah's Furious Shade.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166500000, 1)); // Amplification Stone.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -130,7 +130,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 214904: // Brigade General Anuhart.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -149,7 +149,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 215389: // Spaller Dhatra.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -168,7 +168,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 			case 214849: // Marabata Of Strength.
 			case 214850: // Marabata Of Aether.
 			case 214851: // Marabata Of Poisoning.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -185,7 +185,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 215280: // Tahabata Pyrelord.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -221,7 +221,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 				break;
 			case 237372: // Enraged Inferno Demon.
 			case 237373: // Inferno Demon.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -548,7 +548,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 		return 0;
 	}
 	
-	private void sendPacket(final int nameId, final int point)
+	private void sendPacket(int nameId, int point)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -613,7 +613,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		if (instanceTimer == null)
 		{
@@ -664,7 +664,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 	
 	protected void despawnNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			npc.getController().onDelete();
 		}
@@ -762,14 +762,14 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));
 		return true;
 	}
 	
-	private void toScheduleMarbataController(final int npcId)
+	private void toScheduleMarbataController(int npcId)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -869,7 +869,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -881,7 +881,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

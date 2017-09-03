@@ -160,7 +160,7 @@ public class PortalDialogAI2 extends PortalAI2
 		boolean playerCanStartQuest = false;
 		if (!relatedQuests.isEmpty())
 		{
-			for (final int questId : relatedQuests)
+			for (int questId : relatedQuests)
 			{
 				final QuestState qs = player.getQuestStateList().getQuestState(questId);
 				if ((qs != null) && ((qs.getStatus() == QuestStatus.START) || (qs.getStatus() == QuestStatus.REWARD)))
@@ -181,7 +181,7 @@ public class PortalDialogAI2 extends PortalAI2
 		if (playerHasQuest)
 		{
 			boolean isRewardStep = false;
-			for (final int questId : relatedQuests)
+			for (int questId : relatedQuests)
 			{
 				final QuestState qs = player.getQuestStateList().getQuestState(questId);
 				if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))

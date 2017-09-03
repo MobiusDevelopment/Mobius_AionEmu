@@ -193,7 +193,7 @@ public class MotionLoggingService
 		
 		// create results
 		final TreeMap<String, List<WeaponTime>> results = new TreeMap<>();
-		for (final Entry<String, MotionLog> entry : motionsMap.entrySet())
+		for (Entry<String, MotionLog> entry : motionsMap.entrySet())
 		{
 			final WeaponTime weaponTimeAm = new WeaponTime(Race.ASMODIANS, Gender.MALE);
 			final WeaponTime weaponTimeAf = new WeaponTime(Race.ASMODIANS, Gender.FEMALE);
@@ -204,7 +204,7 @@ public class MotionLoggingService
 				continue;
 			}
 			// loop through weaponType
-			for (final Entry<WeaponTypeWrapper, List<SkillTime>> entry2 : entry.getValue().getMotionLog().entrySet())
+			for (Entry<WeaponTypeWrapper, List<SkillTime>> entry2 : entry.getValue().getMotionLog().entrySet())
 			{
 				final WeaponTypeWrapper weapon = entry2.getKey();
 				
@@ -212,7 +212,7 @@ public class MotionLoggingService
 				{
 					continue;
 				}
-				for (final SkillTime st : entry2.getValue())
+				for (SkillTime st : entry2.getValue())
 				{
 					switch (st.getRace())
 					{
@@ -248,7 +248,7 @@ public class MotionLoggingService
 			}
 		}
 		
-		for (final Entry<String, List<WeaponTime>> entry : results.entrySet())
+		for (Entry<String, List<WeaponTime>> entry : results.entrySet())
 		{
 			final Set<WeaponTypeWrapper> listofWeapons = new TreeSet<>();
 			listofWeapons.add(new WeaponTypeWrapper(WeaponType.BOOK_2H, null));
@@ -272,7 +272,7 @@ public class MotionLoggingService
 			final MotionTime motion = new MotionTime();
 			motion.setName(entry.getKey());
 			
-			for (final WeaponTime wt : entry.getValue())
+			for (WeaponTime wt : entry.getValue())
 			{
 				// process values
 				final TreeMap<WeaponTypeWrapper, Integer> map = wt.process();
@@ -280,7 +280,7 @@ public class MotionLoggingService
 				final StringBuilder sb = new StringBuilder();
 				boolean first = true;
 				// create time
-				for (final WeaponTypeWrapper weapon : listofWeapons)
+				for (WeaponTypeWrapper weapon : listofWeapons)
 				{
 					if (first)
 					{
@@ -336,11 +336,11 @@ public class MotionLoggingService
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, new Boolean(true));
 			marshaller.marshal(templates, new FileOutputStream(file));
 		}
-		catch (final JAXBException e)
+		catch (JAXBException e)
 		{
 			e.printStackTrace();
 		}
-		catch (final FileNotFoundException e)
+		catch (FileNotFoundException e)
 		{
 			e.printStackTrace();
 		}
@@ -443,7 +443,7 @@ public class MotionLoggingService
 			{
 				speed = Float.parseFloat(method);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				// log
 			}
@@ -465,7 +465,7 @@ public class MotionLoggingService
 		{
 			con = DatabaseFactory.getConnection();
 			final PreparedStatement stmt = con.prepareStatement(INSERT_QUERY);
-			for (final Entry<String, MotionLog> entry : motionsMap.entrySet())
+			for (Entry<String, MotionLog> entry : motionsMap.entrySet())
 			{
 				final String motionName = entry.getKey();
 				// set motion_name
@@ -476,7 +476,7 @@ public class MotionLoggingService
 					continue;
 				}
 				// loop through weaponType
-				for (final Entry<WeaponTypeWrapper, List<SkillTime>> entry2 : entry.getValue().getMotionLog().entrySet())
+				for (Entry<WeaponTypeWrapper, List<SkillTime>> entry2 : entry.getValue().getMotionLog().entrySet())
 				{
 					final String weaponType = (entry2.getKey().getMainHand() != null ? entry2.getKey().getMainHand().toString() : "null");
 					final String offWeaponType = (entry2.getKey().getOffHand() != null ? entry2.getKey().getOffHand().toString() : "null");
@@ -490,7 +490,7 @@ public class MotionLoggingService
 					}
 					// sort by skillId
 					Collections.sort(entry2.getValue());
-					for (final SkillTime st : entry2.getValue())
+					for (SkillTime st : entry2.getValue())
 					{
 						stmt.setInt(4, st.getSkillId());
 						stmt.setInt(5, st.getAttackSpeed());
@@ -503,7 +503,7 @@ public class MotionLoggingService
 			}
 			stmt.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("MotionLoggingService", e);
 		}
@@ -545,7 +545,7 @@ public class MotionLoggingService
 					race = Race.valueOf(sRace);
 					gender = Gender.valueOf(sGender);
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					log.info("cant load gender or race for motion_name: " + motionName);
 				}
@@ -557,7 +557,7 @@ public class MotionLoggingService
 			resultSet.close();
 			stmt.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("MotionLoggingService", e);
 		}
@@ -575,7 +575,7 @@ public class MotionLoggingService
 	
 	private void clearMotions()
 	{
-		for (final MotionLog mLog : motionsMap.values())
+		for (MotionLog mLog : motionsMap.values())
 		{
 			mLog.getMotionLog().clear();
 		}
@@ -672,7 +672,7 @@ public class MotionLoggingService
 		{
 			if (motionsForWeapons.containsKey(weapon))
 			{
-				for (final SkillTime st : motionsForWeapons.get(weapon))
+				for (SkillTime st : motionsForWeapons.get(weapon))
 				{
 					if ((st.getSkillId() == skillId) && (st.getAttackSpeed() == currentAttackSpeed) && (st.getRace() == race) && (st.getGender() == gender))
 					{
@@ -688,7 +688,7 @@ public class MotionLoggingService
 		{
 			if (motionsForWeapons.containsKey(weapon))
 			{
-				for (final SkillTime st : motionsForWeapons.get(weapon))
+				for (SkillTime st : motionsForWeapons.get(weapon))
 				{
 					if ((st.getSkillId() == skillId) && (st.getAttackSpeed() == currentAttackSpeed) && (st.getRace() == race) && (st.getGender() == gender))
 					{
@@ -893,7 +893,7 @@ public class MotionLoggingService
 		{
 			final TreeMap<WeaponTypeWrapper, Integer> weaponMap = new TreeMap<>();
 			
-			for (final Entry<WeaponTypeWrapper, List<Integer>> entry2 : values.entrySet())
+			for (Entry<WeaponTypeWrapper, List<Integer>> entry2 : values.entrySet())
 			{
 				// logic to calculate one value per weaponType
 				// count the element with the most occurencies
@@ -901,7 +901,7 @@ public class MotionLoggingService
 				int maxFrequency = 0;
 				int value = 0;
 				int total = 0;
-				for (final Integer i : entry2.getValue())
+				for (Integer i : entry2.getValue())
 				{
 					total += i;
 					if (calculateFrequency(entry2.getValue(), i) > maxFrequency)
@@ -936,7 +936,7 @@ public class MotionLoggingService
 		// 10% tolerance
 		final int min = Math.round(value * 0.90f);
 		final int max = Math.round(value * 1.1f);
-		for (final Integer i : list)
+		for (Integer i : list)
 		{
 			if (i == null)
 			{

@@ -55,7 +55,7 @@ public class _24043Lazy_Language_Lessons extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerQuestNpc(253610).addOnAttackEvent(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

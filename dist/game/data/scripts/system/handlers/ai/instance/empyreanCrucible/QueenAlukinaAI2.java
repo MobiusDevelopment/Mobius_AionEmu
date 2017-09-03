@@ -122,7 +122,7 @@ public class QueenAlukinaAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void scheduleSkill(final int skillId, int delay)
+	private void scheduleSkill(int skillId, int delay)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -139,7 +139,7 @@ public class QueenAlukinaAI2 extends AggressiveNpcAI2
 	
 	private void checkPercentage(int percentage)
 	{
-		for (final Integer percent : percents)
+		for (Integer percent : percents)
 		{
 			if (percentage <= percent)
 			{

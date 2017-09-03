@@ -98,7 +98,7 @@ public class CM_HOUSE_TELEPORT extends AionClientPacket
 			final Legion legion = player1.getLegion();
 			if (legion != null)
 			{
-				for (final int memberId : legion.getLegionMembers())
+				for (int memberId : legion.getLegionMembers())
 				{
 					address = HousingService.getInstance().getPlayerAddress(memberId);
 					if (address != 0)

@@ -51,7 +51,7 @@ public class F2PBonusData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final F2pBonusAttr template : f2pBonusattr)
+		for (F2pBonusAttr template : f2pBonusattr)
 		{
 			templates.put(template.getBuffId(), template);
 		}

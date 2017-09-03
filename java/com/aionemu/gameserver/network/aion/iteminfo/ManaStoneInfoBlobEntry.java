@@ -183,7 +183,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry
 			final Set<ManaStone> itemStones = item.getItemStones();
 			final ArrayList<ManaStone> basicStones = new ArrayList<>();
 			final ArrayList<ManaStone> ancientStones = new ArrayList<>();
-			for (final ManaStone itemStone : itemStones)
+			for (ManaStone itemStone : itemStones)
 			{
 				if (itemStone.isBasic())
 				{
@@ -198,7 +198,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry
 			{
 				if (ancientStones.size() > 0)
 				{
-					for (final ManaStone ancientStone : ancientStones)
+					for (ManaStone ancientStone : ancientStones)
 					{
 						if (count == 6)
 						{
@@ -214,7 +214,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry
 					count++;
 				}
 			}
-			for (final ManaStone basicStone : basicStones)
+			for (ManaStone basicStone : basicStones)
 			{
 				if (count == 6)
 				{

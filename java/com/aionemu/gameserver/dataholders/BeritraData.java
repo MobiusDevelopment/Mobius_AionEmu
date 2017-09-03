@@ -46,7 +46,7 @@ public class BeritraData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final BeritraTemplate template : beritraTemplates)
+		for (BeritraTemplate template : beritraTemplates)
 		{
 			beritra.put(template.getId(), new BeritraLocation(template));
 		}

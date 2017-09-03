@@ -175,14 +175,14 @@ public class LootGroupRules
 		this.nrMisc = nrMisc;
 	}
 	
-	public void setPlayersInRoll(final Collection<Player> players, int time, final int index, final int npcId)
+	public void setPlayersInRoll(Collection<Player> players, int time, int index, int npcId)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
 			@Override
 			public void run()
 			{
-				for (final Player player : players)
+				for (Player player : players)
 				{
 					if (player.isInPlayerMode(PlayerMode.IN_ROLL))
 					{

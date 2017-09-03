@@ -38,7 +38,7 @@ public class ChatCommandsLoader implements ClassListener
 	@Override
 	public void postLoad(Class<?>[] classes)
 	{
-		for (final Class<?> c : classes)
+		for (Class<?> c : classes)
 		{
 			if (!isValidClass(c))
 			{
@@ -51,11 +51,11 @@ public class ChatCommandsLoader implements ClassListener
 				{
 					processor.registerCommand((ChatCommand) tmp.newInstance());
 				}
-				catch (final InstantiationException e)
+				catch (InstantiationException e)
 				{
 					e.printStackTrace();
 				}
-				catch (final IllegalAccessException e)
+				catch (IllegalAccessException e)
 				{
 					e.printStackTrace();
 				}

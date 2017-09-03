@@ -86,7 +86,7 @@ public class HouseController extends VisibleObjectController<House>
 	{
 		if (getOwner().getRegistry() != null)
 		{
-			for (final HouseObject<?> obj : getOwner().getRegistry().getSpawnedObjects())
+			for (HouseObject<?> obj : getOwner().getRegistry().getSpawnedObjects())
 			{
 				obj.spawn();
 			}
@@ -100,7 +100,7 @@ public class HouseController extends VisibleObjectController<House>
 			@Override
 			public void run()
 			{
-				for (final int playerId : observed.keySet())
+				for (int playerId : observed.keySet())
 				{
 					final Player player = World.getInstance().findPlayer(playerId);
 					if (player == null)
@@ -120,7 +120,7 @@ public class HouseController extends VisibleObjectController<House>
 			@Override
 			public void run()
 			{
-				for (final int playerId : observed.keySet())
+				for (int playerId : observed.keySet())
 				{
 					final Player player = World.getInstance().findPlayer(playerId);
 					if (player == null)
@@ -136,11 +136,11 @@ public class HouseController extends VisibleObjectController<House>
 	public void kickVisitors(Player kicker, boolean kickFriends, boolean onSettingsChange)
 	{
 		final List<ZoneInfo> zoneInfo = DataManager.ZONE_DATA.getZones().get(getOwner().getWorldId());
-		for (final ZoneInfo info : zoneInfo)
+		for (ZoneInfo info : zoneInfo)
 		{
 			if (info.getZoneTemplate().getName().name().equals(getOwner().getName()))
 			{
-				for (final Integer objId : observed.keySet())
+				for (Integer objId : observed.keySet())
 				{
 					if (objId == getOwner().getOwnerId())
 					{

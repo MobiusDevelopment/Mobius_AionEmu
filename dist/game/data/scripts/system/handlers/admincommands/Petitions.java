@@ -54,7 +54,7 @@ public class Petitions extends AdminCommand
 			if (petitionsArray.length < 5)
 			{
 				PacketSendUtility.sendMessage(admin, "== " + petitionsArray.length + " first petitions to reply ==");
-				for (final Petition element : petitionsArray)
+				for (Petition element : petitionsArray)
 				{
 					PacketSendUtility.sendMessage(admin, element.getPetitionId() + " | " + element.getTitle());
 				}
@@ -76,7 +76,7 @@ public class Petitions extends AdminCommand
 		{
 			petitionId = Integer.parseInt(params[0]);
 		}
-		catch (final NumberFormatException nfe)
+		catch (NumberFormatException nfe)
 		{
 			PacketSendUtility.sendMessage(admin, "Invalid petition id.");
 			return;

@@ -48,17 +48,17 @@ public class GoodsListData
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
 		goodsListData = new TIntObjectHashMap<>();
-		for (final GoodsList it : list)
+		for (GoodsList it : list)
 		{
 			goodsListData.put(it.getId(), it);
 		}
 		goodsInListData = new TIntObjectHashMap<>();
-		for (final GoodsList it : inList)
+		for (GoodsList it : inList)
 		{
 			goodsInListData.put(it.getId(), it);
 		}
 		goodsPurchaseListData = new TIntObjectHashMap<>();
-		for (final GoodsList it : pList)
+		for (GoodsList it : pList)
 		{
 			goodsPurchaseListData.put(it.getId(), it);
 		}

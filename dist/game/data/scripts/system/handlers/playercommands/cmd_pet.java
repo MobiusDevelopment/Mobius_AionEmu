@@ -39,7 +39,7 @@ public class cmd_pet extends PlayerCommand
 	// }
 	// }
 	@Override
-	public void execute(final Player player, String... param)
+	public void execute(Player player, String... param)
 	{
 		if (param.length < 1)
 		{

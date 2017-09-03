@@ -64,7 +64,7 @@ public class HousePart
 			return;
 		}
 		
-		for (final String tag : buildingTags)
+		for (String tag : buildingTags)
 		{
 			tagsSet.add(tag);
 		}

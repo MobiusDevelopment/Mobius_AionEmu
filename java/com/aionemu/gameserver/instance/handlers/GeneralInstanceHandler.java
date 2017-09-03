@@ -117,7 +117,7 @@ public class GeneralInstanceHandler implements InstanceHandler
 		return SpawnEngine.spawnObject(template, instanceId);
 	}
 	
-	protected Npc getNpc(final int npcId)
+	protected Npc getNpc(int npcId)
 	{
 		return instance.getNpc(npcId);
 	}

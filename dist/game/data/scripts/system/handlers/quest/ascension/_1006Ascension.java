@@ -75,11 +75,11 @@ public class _1006Ascension extends QuestHandler
 			205000
 		};
 		qe.registerOnLevelUp(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
@@ -92,7 +92,7 @@ public class _1006Ascension extends QuestHandler
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
@@ -275,7 +275,7 @@ public class _1006Ascension extends QuestHandler
 										updateQuestStatus(env);
 										final List<Npc> mobs = new ArrayList<>();
 										mobs.add((Npc) QuestService.addNewSpawn(310010000, instanceId, 211042, (float) 224.073, (float) 239.1, (float) 206.7, (byte) 0));
-										for (final Npc mob : mobs)
+										for (Npc mob : mobs)
 										{
 											mob.getAggroList().addDamage(player, 1000);
 										}
@@ -300,7 +300,7 @@ public class _1006Ascension extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

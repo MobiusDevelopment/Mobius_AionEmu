@@ -50,7 +50,7 @@ public class _2564WiththePowerofFlame extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(204753).addOnQuestStart(questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

@@ -150,13 +150,13 @@ public class StatFunction implements IStatFunction
 		final List<StatFunction> allModifiers = new ArrayList<>();
 		final EnumSet<StatEnum> rndNames = EnumSet.noneOf(StatEnum.class);
 		
-		for (final IStatFunction func : rndBonuses)
+		for (IStatFunction func : rndBonuses)
 		{
 			rndNames.add(func.getName());
 		}
 		
 		// add values to original stats
-		for (final StatFunction modifier : modifiers)
+		for (StatFunction modifier : modifiers)
 		{
 			if (!rndNames.contains(modifier.getName()) || !modifier.isBonus() || modifier.hasConditions())
 			{
@@ -165,7 +165,7 @@ public class StatFunction implements IStatFunction
 			}
 			
 			IStatFunction rndBonus = null;
-			for (final IStatFunction func : rndBonuses)
+			for (IStatFunction func : rndBonuses)
 			{
 				if (func.getName() == modifier.getName())
 				{
@@ -198,7 +198,7 @@ public class StatFunction implements IStatFunction
 		}
 		
 		// add new stat values
-		for (final StatFunction modifier : rndBonuses)
+		for (StatFunction modifier : rndBonuses)
 		{
 			if (rndNames.contains(modifier.getName()))
 			{

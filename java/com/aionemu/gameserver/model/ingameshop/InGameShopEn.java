@@ -104,9 +104,9 @@ public class InGameShopEn
 	
 	public IGItem getIGItem(int id)
 	{
-		for (final byte key : items.keySet())
+		for (byte key : items.keySet())
 		{
-			for (final IGItem item : items.get(key))
+			for (IGItem item : items.get(key))
 			{
 				if (item.getObjectId() == id)
 				{
@@ -134,7 +134,7 @@ public class InGameShopEn
 		{
 			return FastList.newInstance();
 		}
-		for (final IGItem item : items.get(category))
+		for (IGItem item : items.get(category))
 		{
 			if ((item.getSalesRanking() != 0) && ((subCategory == 2) || (item.getSubCategory() == subCategory)))
 			{
@@ -143,7 +143,7 @@ public class InGameShopEn
 		}
 		final FastList<Integer> top = FastList.newInstance();
 		byte cnt = 0;
-		for (final Integer integer : map.values())
+		for (Integer integer : map.values())
 		{
 			final int objId = integer;
 			if (cnt > max)
@@ -165,7 +165,7 @@ public class InGameShopEn
 		{
 			return id;
 		}
-		for (final IGItem item : items.get(category))
+		for (IGItem item : items.get(category))
 		{
 			if (item.getSubCategory() == subCategoryId)
 			{
@@ -284,7 +284,7 @@ public class InGameShopEn
 	
 	public void finishRequest(int requestId, int result, long toll, long luna)
 	{
-		for (final IGRequest request : activeRequests)
+		for (IGRequest request : activeRequests)
 		{
 			if (request.requestId == requestId)
 			{

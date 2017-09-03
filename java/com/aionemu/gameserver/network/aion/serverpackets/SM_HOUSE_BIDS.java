@@ -60,7 +60,7 @@ public class SM_HOUSE_BIDS extends AionServerPacket
 		}
 		final List<House> playerHouses = player.getHouses();
 		House sellHouse = null;
-		for (final House house : playerHouses)
+		for (House house : playerHouses)
 		{
 			if (house.getStatus() == HouseStatus.SELL_WAIT)
 			{

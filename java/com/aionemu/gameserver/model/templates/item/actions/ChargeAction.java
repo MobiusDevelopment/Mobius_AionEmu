@@ -46,7 +46,7 @@ public class ChargeAction extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, Item parentItem, Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 		if (!player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1))
 		{

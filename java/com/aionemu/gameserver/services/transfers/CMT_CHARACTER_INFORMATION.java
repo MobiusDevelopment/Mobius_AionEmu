@@ -241,14 +241,14 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 				final Item item = new Item(newId, itemId, itemCnt, itemColor, colorExpires, itemCreator, itemExpireTime, itemActivationCnt, itemEquipped, itemSoulBound, equipSlot, location, enchant, skinId, fusionId, optSocket, optFusion, charge, bonusNum, randomNum, wrappingNum, newId, itemPacked, 0, itemPacked, newId, 0, itemPacked, requireLevel, unSeal);
 				if (manastones.size() > 0)
 				{
-					for (final int[] stone : manastones)
+					for (int[] stone : manastones)
 					{
 						ItemSocketService.addManaStone(item, stone[0], stone[1]);
 					}
 				}
 				if (fusions.size() > 0)
 				{
-					for (final int[] stone : fusions)
+					for (int[] stone : fusions)
 					{
 						ItemSocketService.addFusionStone(item, stone[0], stone[1]);
 					}
@@ -335,14 +335,14 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 				final Item item = new Item(newId, itemId, itemCnt, itemColor, 0, itemCreator, itemExpireTime, itemActivationCnt, itemEquipped, itemSoulBound, equipSlot, location, enchant, skinId, fusionId, optSocket, optFusion, charge, bonusNum, randomNum, wrappingNum, newId, itemPacked, 0, itemPacked, newId, 0, itemPacked, requireLevel, unSeal);
 				if (manastones.size() > 0)
 				{
-					for (final int[] stone : manastones)
+					for (int[] stone : manastones)
 					{
 						ItemSocketService.addManaStone(item, stone[0], stone[1]);
 					}
 				}
 				if (fusions.size() > 0)
 				{
-					for (final int[] stone : fusions)
+					for (int[] stone : fusions)
 					{
 						ItemSocketService.addFusionStone(item, stone[0], stone[1]);
 					}
@@ -360,7 +360,7 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		}
 		DAOManager.getDAO(InventoryDAO.class).store(player);
 		
-		for (final String s : itemOut)
+		for (String s : itemOut)
 		{
 			textLog.info(s);
 		}
@@ -514,7 +514,7 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		}
 		if ((cnt > 0) && PlayerTransferConfig.ALLOW_TITLES)
 		{
-			for (final Title t : player.getTitleList().getTitles())
+			for (Title t : player.getTitleList().getTitles())
 			{
 				DAOManager.getDAO(PlayerTitleListDAO.class).storeTitles(player, t);
 			}

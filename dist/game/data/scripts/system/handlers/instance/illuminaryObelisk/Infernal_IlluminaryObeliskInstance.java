@@ -92,7 +92,7 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 702018: // Supply Box.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -141,7 +141,7 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		super.onInstanceCreate(instance);
 		if (instanceTimer == null)
@@ -618,7 +618,7 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 		storage.decreaseByItemId(164000290, storage.getItemCountByItemId(164000290));
 	}
 	
-	private void attackGenerator(final Npc npc, float x, float y, float z, boolean despawn)
+	private void attackGenerator(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -781,7 +781,7 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -793,7 +793,7 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -870,7 +870,7 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 	
 	protected void despawnNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			npc.getController().onDelete();
 		}
@@ -906,7 +906,7 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

@@ -39,7 +39,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 public class PortalRequestAI2 extends PortalAI2
 {
 	@Override
-	protected void handleUseItemFinish(final Player player)
+	protected void handleUseItemFinish(Player player)
 	{
 		if (teleportTemplate != null)
 		{

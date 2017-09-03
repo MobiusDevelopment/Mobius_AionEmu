@@ -60,11 +60,11 @@ public class MultiReturnAction extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, final Item parentItem, Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 	}
 	
-	public void act(final Player player, final Item MultiReturn, final int SelectedMapIndex)
+	public void act(Player player, Item MultiReturn, int SelectedMapIndex)
 	{
 		PacketSendUtility.sendPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), MultiReturn.getObjectId(), MultiReturn.getItemTemplate().getTemplateId(), 5000, 0, 0));
 		player.getController().cancelTask(TaskId.ITEM_USE);

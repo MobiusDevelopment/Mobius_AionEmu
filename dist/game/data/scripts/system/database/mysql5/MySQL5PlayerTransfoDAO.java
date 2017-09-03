@@ -38,7 +38,7 @@ public class MySQL5PlayerTransfoDAO extends PlayerTransformDAO
 	public static final String DELETE_QUERY = "DELETE FROM `player_transform` WHERE `player_id`=?";
 	
 	@Override
-	public void loadPlTransfo(final Player player)
+	public void loadPlTransfo(Player player)
 	{
 		DB.select(SELECT_QUERY, new ParamReadStH()
 		{
@@ -76,7 +76,7 @@ public class MySQL5PlayerTransfoDAO extends PlayerTransformDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store f2p for player " + playerId + " from DB: " + e.getMessage(), e);
 			return false;
@@ -100,7 +100,7 @@ public class MySQL5PlayerTransfoDAO extends PlayerTransformDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not delete f2p for player " + playerId + " from DB: " + e.getMessage(), e);
 			return false;

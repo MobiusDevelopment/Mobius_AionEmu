@@ -53,7 +53,7 @@ public class _24042A_Ready_Rescue extends QuestHandler
 		qe.registerAddOnReachTargetEvent(questId);
 		qe.registerAddOnLostTargetEvent(questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

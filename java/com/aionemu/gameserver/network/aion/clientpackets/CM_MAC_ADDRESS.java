@@ -119,7 +119,7 @@ public class CM_MAC_ADDRESS extends AionClientPacket
 		}
 		if (AdminConfig.NO_OPEN_NEW_WINDOW && !getConnection().getIP().equals("127.0.0.1"))
 		{
-			for (final Player player : World.getInstance().getAllPlayers())
+			for (Player player : World.getInstance().getAllPlayers())
 			{
 				if (player.getClientConnection().getIP().equals(getConnection().getIP()) && player.getClientConnection().getMacAddress().equals(macAddress) && player.getClientConnection().getHddSerial().equals(hdd_serial))
 				{

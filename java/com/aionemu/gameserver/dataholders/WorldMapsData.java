@@ -45,7 +45,7 @@ public class WorldMapsData implements Iterable<WorldMapTemplate>
 	
 	protected void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final WorldMapTemplate map : worldMaps)
+		for (WorldMapTemplate map : worldMaps)
 		{
 			worldIdMap.put(map.getMapId(), map);
 		}

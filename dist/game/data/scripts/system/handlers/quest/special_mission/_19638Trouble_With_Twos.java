@@ -53,7 +53,7 @@ public class _19638Trouble_With_Twos extends QuestHandler
 		qe.registerQuestNpc(798926).addOnQuestStart(questId);
 		qe.registerQuestNpc(798926).addOnTalkEvent(questId);
 		qe.registerQuestNpc(799022).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

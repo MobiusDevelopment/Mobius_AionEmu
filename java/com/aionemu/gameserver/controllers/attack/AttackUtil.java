@@ -160,7 +160,7 @@ public class AttackUtil
 	/**
 	 * Generate attack results based on weapon hit count
 	 */
-	private static List<AttackResult> splitPhysicalDamage(final Creature attacker, final Creature attacked, int hitCount, int damage, AttackStatus status, List<AttackResult> attackList)
+	private static List<AttackResult> splitPhysicalDamage(Creature attacker, Creature attacked, int hitCount, int damage, AttackStatus status, List<AttackResult> attackList)
 	{
 		WeaponType weaponType;
 		
@@ -801,7 +801,7 @@ public class AttackUtil
 		
 	}
 	
-	public static void cancelCastOn(final Creature target)
+	public static void cancelCastOn(Creature target)
 	{
 		target.getKnownList().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -848,12 +848,12 @@ public class AttackUtil
 	 * Send a packet to everyone who is targeting creature.
 	 * @param object
 	 */
-	public static void removeTargetFrom(final Creature object)
+	public static void removeTargetFrom(Creature object)
 	{
 		removeTargetFrom(object, false);
 	}
 	
-	public static void removeTargetFrom(final Creature object, final boolean validateSee)
+	public static void removeTargetFrom(Creature object, boolean validateSee)
 	{
 		object.getKnownList().doOnAllPlayers(new Visitor<Player>()
 		{

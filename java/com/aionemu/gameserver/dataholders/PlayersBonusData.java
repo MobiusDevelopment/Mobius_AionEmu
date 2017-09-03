@@ -50,7 +50,7 @@ public class PlayersBonusData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final PlayersBonusServiceAttr template : playersServiceBonusattr)
+		for (PlayersBonusServiceAttr template : playersServiceBonusattr)
 		{
 			templates.put(template.getBuffId(), template);
 		}

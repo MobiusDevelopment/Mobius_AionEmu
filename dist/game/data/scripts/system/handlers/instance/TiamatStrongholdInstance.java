@@ -128,7 +128,7 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 			case 219356: // Brigade General Laksyaka.
 			case 219357: // Adjudant Anuhart.
 			case 701541: // Brigade General Tahabata Chest.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -141,7 +141,7 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 219354: // Brigade General Terath.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -179,7 +179,7 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 				break;
 			case 701501: // Balaur Medal Box.
 			case 701527: // Stronghold Treasure Chest.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -317,7 +317,7 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 		spawn(701501, 1099.8691f, 1047.1895f, 787.685f, (byte) 64);
 	}
 	
-	private void raidProtectorate(final Npc npc, float x, float y, float z, boolean despawn)
+	private void raidProtectorate(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -349,7 +349,7 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 		raidProtectorate((Npc) spawn(219373, 1508.3008f, 1073.0205f, 491.48438f, (byte) 3), 1555.0793f, 1070.4535f, 492.16028f, false); // Protectorate Elite Mounted Officer.
 	}
 	
-	private void moveToForward(final Npc npc, float x, float y, float z, boolean despawn)
+	private void moveToForward(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -437,7 +437,7 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -449,7 +449,7 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -492,7 +492,7 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

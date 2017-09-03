@@ -56,7 +56,7 @@ public class BalaurAssaultService
 		return instance;
 	}
 	
-	public void onSiegeStart(final Siege<?> siege)
+	public void onSiegeStart(Siege<?> siege)
 	{
 		if (siege instanceof FortressSiege)
 		{
@@ -129,7 +129,7 @@ public class BalaurAssaultService
 			return false;
 		}
 		int count = 0;
-		for (final FortressAssault fa : fortressAssaults.values())
+		for (FortressAssault fa : fortressAssaults.values())
 		{
 			if (fa.getWorldId() == fortress.getWorldId())
 			{
@@ -187,7 +187,7 @@ public class BalaurAssaultService
 		float influence;
 		if (isBalaurea)
 		{
-			for (final FortressLocation fl : SiegeService.getInstance().getFortresses().values())
+			for (FortressLocation fl : SiegeService.getInstance().getFortresses().values())
 			{
 				if ((fl.getWorldId() != 400010000) && !fortressAssaults.containsKey(fl.getLocationId()) && fl.getRace().equals(locationRace))
 				{
@@ -207,7 +207,7 @@ public class BalaurAssaultService
 	{
 		final AssembledNpcTemplate template = DataManager.ASSEMBLED_NPC_DATA.getAssembledNpcTemplate(spawnId);
 		final FastList<AssembledNpcPart> assembledParts = new FastList<>();
-		for (final AssembledNpcTemplate.AssembledNpcPartTemplate npcPart : template.getAssembledNpcPartTemplates())
+		for (AssembledNpcTemplate.AssembledNpcPartTemplate npcPart : template.getAssembledNpcPartTemplates())
 		{
 			assembledParts.add(new AssembledNpcPart(IDFactory.getInstance().nextId(), npcPart));
 		}

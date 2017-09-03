@@ -35,7 +35,7 @@ public class CallbacksUtil
 	 */
 	public static boolean isAnnotationPresent(CtMethod method, Class<? extends java.lang.annotation.Annotation> annotation)
 	{
-		for (final Object o : method.getMethodInfo().getAttributes())
+		for (Object o : method.getMethodInfo().getAttributes())
 		{
 			if (o instanceof AnnotationsAttribute)
 			{

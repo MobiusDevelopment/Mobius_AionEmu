@@ -49,7 +49,7 @@ public enum DropRewardEnum
 		{
 			return MINUS_7.dropRewardPercent;
 		}
-		for (final DropRewardEnum dropReward : values())
+		for (DropRewardEnum dropReward : values())
 		{
 			if (dropReward.levelDifference == levelDifference)
 			{

@@ -72,7 +72,7 @@ public class AI2Engine implements GameEngine
 			log.info("Loaded " + aiMap.size() + " ai handlers.");
 			validateScripts();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new GameServerError("Can't initialize ai handlers.", e);
 		}
@@ -117,7 +117,7 @@ public class AI2Engine implements GameEngine
 				aiInstance.setLogging(true);
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("[AI2] AI factory error: " + name, e);
 		}

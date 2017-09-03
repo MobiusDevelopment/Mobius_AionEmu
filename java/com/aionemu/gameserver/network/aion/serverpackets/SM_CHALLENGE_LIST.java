@@ -62,7 +62,7 @@ public class SM_CHALLENGE_LIST extends AionServerPacket
 			case 2:
 				writeD((int) (System.currentTimeMillis() / 1000));
 				writeH(tasks.size());
-				for (final ChallengeTask task : tasks)
+				for (ChallengeTask task : tasks)
 				{
 					writeD(32);
 					writeD(task.getTaskId());
@@ -76,7 +76,7 @@ public class SM_CHALLENGE_LIST extends AionServerPacket
 				writeD(32);
 				writeD(task.getTaskId());
 				writeH(task.getQuestsCount());
-				for (final ChallengeQuest quest : task.getQuests().values())
+				for (ChallengeQuest quest : task.getQuests().values())
 				{
 					writeD(quest.getQuestId());
 					writeH(quest.getMaxRepeats());

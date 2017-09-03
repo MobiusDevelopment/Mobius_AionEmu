@@ -51,7 +51,7 @@ public class _2533BeritrasCurse extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		
 		final Player player = env.getPlayer();

@@ -53,7 +53,7 @@ public class SM_IN_GAME_SHOP_LIST extends AionServerPacket
 			int size = 0;
 			int tabSize = 9;
 			int f = 0;
-			for (final IGItem a : items)
+			for (IGItem a : items)
 			{
 				if ((subCategory == 2) || (a.getSubCategory() == subCategory))
 				{
@@ -79,7 +79,7 @@ public class SM_IN_GAME_SHOP_LIST extends AionServerPacket
 			writeH(inAllItems == null ? 0 : inAllItems.size());
 			if (inAllItems != null)
 			{
-				for (final IGItem item : inAllItems)
+				for (IGItem item : inAllItems)
 				{
 					writeD(item.getObjectId());
 				}
@@ -92,7 +92,7 @@ public class SM_IN_GAME_SHOP_LIST extends AionServerPacket
 			writeD(nrList);
 			writeD((InGameShopEn.getInstance().getMaxList(subCategory, category) + 1) * 9);
 			writeH(salesRankingItems.size());
-			for (final int id : salesRankingItems)
+			for (int id : salesRankingItems)
 			{
 				writeD(id);
 			}

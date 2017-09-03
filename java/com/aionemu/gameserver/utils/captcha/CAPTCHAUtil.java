@@ -91,7 +91,7 @@ public class CAPTCHAUtil
 			// resource dispose
 			g2.dispose();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			e.printStackTrace();
 			bImg = null;

@@ -86,7 +86,7 @@ public class _13831Pelias_Aid extends QuestHandler
 			if (zoneName == ZoneName.get("EXALTED_PATH_110010000"))
 			{
 				boolean sent = false;
-				for (final Letter l : player.getMailbox().getLetters())
+				for (Letter l : player.getMailbox().getLetters())
 				{
 					if (l.getTitle().equals("[Stigma Bundle]"))
 					{

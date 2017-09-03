@@ -71,7 +71,7 @@ public class AnnouncementService
 		// Cancel all tasks
 		if ((delays != null) && (delays.size() > 0))
 		{
-			for (final Future<?> delay : delays)
+			for (Future<?> delay : delays)
 			{
 				delay.cancel(false);
 			}
@@ -91,7 +91,7 @@ public class AnnouncementService
 	{
 		announcements = new FastSet<>(getDAO().getAnnouncements()).shared();
 		
-		for (final Announcement announce : announcements)
+		for (Announcement announce : announcements)
 		{
 			delays.add(ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
 			{
@@ -139,7 +139,7 @@ public class AnnouncementService
 		getDAO().addAnnouncement(announce);
 	}
 	
-	public boolean delAnnouncement(final int idAnnounce)
+	public boolean delAnnouncement(int idAnnounce)
 	{
 		return getDAO().delAnnouncement(idAnnounce);
 	}

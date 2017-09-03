@@ -42,7 +42,7 @@ public final class PlayerWardrobeList implements WardrobeList<Player>
 	public PlayerWardrobeList(List<PlayerWardrobeEntry> entries)
 	{
 		this();
-		for (final PlayerWardrobeEntry e : entries)
+		for (PlayerWardrobeEntry e : entries)
 		{
 			entry.put(e.getItemId(), e);
 		}

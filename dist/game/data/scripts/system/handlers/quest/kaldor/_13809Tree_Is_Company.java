@@ -48,7 +48,7 @@ public class _13809Tree_Is_Company extends QuestHandler
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final int targetId = env.getTargetId();

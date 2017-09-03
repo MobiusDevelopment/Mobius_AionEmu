@@ -124,7 +124,7 @@ public class ItemRemodelService
 		{
 			return false;
 		}
-		for (final Item item : equip.getEquippedItemsWithoutStigmaOld())
+		for (Item item : equip.getEquippedItemsWithoutStigmaOld())
 		{
 			if ((item.getEquipmentSlot() == ItemSlot.MAIN_OFF_HAND.getSlotIdMask()) || (item.getEquipmentSlot() == ItemSlot.SUB_OFF_HAND.getSlotIdMask()))
 			{
@@ -150,7 +150,7 @@ public class ItemRemodelService
 		return false;
 	}
 	
-	public static void viewRemodelItem(final Player player, final Item item, ItemTemplate template, int duration)
+	public static void viewRemodelItem(Player player, Item item, ItemTemplate template, int duration)
 	{
 		final ItemTemplate oldTemplate = item.getItemSkinTemplate();
 		item.setItemSkinTemplate(template);

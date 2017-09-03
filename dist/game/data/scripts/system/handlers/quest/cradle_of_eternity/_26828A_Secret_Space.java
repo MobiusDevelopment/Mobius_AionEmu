@@ -51,11 +51,11 @@ public class _26828A_Secret_Space extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : IDEternity02AGuardianFiSN72Ae)
+		for (int mob : IDEternity02AGuardianFiSN72Ae)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

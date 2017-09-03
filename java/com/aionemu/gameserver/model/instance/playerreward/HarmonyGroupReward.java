@@ -40,7 +40,7 @@ public class HarmonyGroupReward extends PvPArenaPlayerReward
 	
 	public boolean containPlayer(Integer object)
 	{
-		for (final AGPlayer agp : players)
+		for (AGPlayer agp : players)
 		{
 			if (agp.getObjectId().equals(object))
 			{
@@ -52,7 +52,7 @@ public class HarmonyGroupReward extends PvPArenaPlayerReward
 	
 	public AGPlayer getAGPlayer(Integer object)
 	{
-		for (final AGPlayer agp : players)
+		for (AGPlayer agp : players)
 		{
 			if (agp.getObjectId().equals(object))
 			{

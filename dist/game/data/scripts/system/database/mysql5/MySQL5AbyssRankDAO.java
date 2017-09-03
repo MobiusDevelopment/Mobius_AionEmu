@@ -101,7 +101,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 			resultSet.close();
 			stmt.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("loadAbyssRank", e);
 		}
@@ -113,7 +113,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 	}
 	
 	@Override
-	public void loadAbyssRank(final Player player)
+	public void loadAbyssRank(Player player)
 	{
 		final AbyssRank rank = loadAbyssRank(player.getObjectId());
 		player.setAbyssRank(rank);
@@ -137,7 +137,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 		return result;
 	}
 	
-	private boolean addRank(final int objectId, final AbyssRank rank)
+	private boolean addRank(int objectId, AbyssRank rank)
 	{
 		Connection con = null;
 		try
@@ -165,7 +165,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 			stmt.close();
 			return true;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("addRank", e);
 			
@@ -177,7 +177,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 		}
 	}
 	
-	private boolean updateRank(final int objectId, final AbyssRank rank)
+	private boolean updateRank(int objectId, AbyssRank rank)
 	{
 		Connection con = null;
 		try
@@ -205,7 +205,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 			stmt.close();
 			return true;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("updateRank", e);
 			
@@ -218,7 +218,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 	}
 	
 	@Override
-	public ArrayList<AbyssRankingResult> getAbyssRankingPlayers(final Race race)
+	public ArrayList<AbyssRankingResult> getAbyssRankingPlayers(Race race)
 	{
 		Connection con = null;
 		final ArrayList<AbyssRankingResult> results = new ArrayList<>();
@@ -252,7 +252,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 			resultSet.close();
 			stmt.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("getAbyssRankingPlayers", e);
 		}
@@ -264,7 +264,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 	}
 	
 	@Override
-	public ArrayList<AbyssRankingResult> getAbyssRankingLegions(final Race race)
+	public ArrayList<AbyssRankingResult> getAbyssRankingLegions(Race race)
 	{
 		final ArrayList<AbyssRankingResult> results = new ArrayList<>();
 		DB.select(SELECT_LEGIONS_RANKING, new ParamReadStH()
@@ -295,7 +295,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 		return results;
 	}
 	
-	int getLegionMembersCount(final int legionId)
+	int getLegionMembersCount(int legionId)
 	{
 		final int[] result = new int[1];
 		DB.select(SELECT_LEGION_COUNT, new ParamReadStH()
@@ -319,7 +319,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 	}
 	
 	@Override
-	public Map<Integer, Integer> loadPlayersAp(final Race race, final int lowerApLimit, final int maxOfflineDays)
+	public Map<Integer, Integer> loadPlayersAp(Race race, int lowerApLimit, int maxOfflineDays)
 	{
 		final Map<Integer, Integer> results = new HashMap<>();
 		DB.select(maxOfflineDays > 0 ? SELECT_AP_PLAYER_ACTIVE_ONLY : SELECT_AP_PLAYER, new ParamReadStH()
@@ -351,7 +351,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 	}
 	
 	@Override
-	public Map<Integer, Integer> loadPlayersGp(final Race race, final int lowerGpLimit, final int maxOfflineDays)
+	public Map<Integer, Integer> loadPlayersGp(Race race, int lowerGpLimit, int maxOfflineDays)
 	{
 		final Map<Integer, Integer> results = new HashMap<>();
 		DB.select(maxOfflineDays > 0 ? SELECT_GP_PLAYER_ACTIVE_ONLY : SELECT_GP_PLAYER, new ParamReadStH()
@@ -396,7 +396,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("updateAbyss/GloryRank", e);
 		}
@@ -438,7 +438,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 			stmt.addBatch();
 			stmt.executeBatch();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("updateRank", e);
 		}
@@ -455,7 +455,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 		Connection con = null;
 		try
 		{
-			for (final Player player : listP)
+			for (Player player : listP)
 			{
 				con = DatabaseFactory.getConnection();
 				stmt = con.prepareStatement(DELETE_QUERY);
@@ -465,7 +465,7 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 			stmt.executeBatch();
 			con.commit();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error while Deleting player From Abyss Rank", e);
 		}

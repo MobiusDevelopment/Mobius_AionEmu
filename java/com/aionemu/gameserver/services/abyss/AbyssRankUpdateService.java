@@ -183,7 +183,7 @@ public class AbyssRankUpdateService
 	
 	private void updateToNoQuotaGpRank(List<Entry<Integer, Integer>> playerGpEntries)
 	{
-		for (final Entry<Integer, Integer> playerGpEntry : playerGpEntries)
+		for (Entry<Integer, Integer> playerGpEntry : playerGpEntries)
 		{
 			updateGpRankTo(AbyssRankEnum.SUPREME_COMMANDER, playerGpEntry.getKey());
 		}

@@ -148,7 +148,7 @@ public class PropertiesUtils
 	{
 		if (properties != null)
 		{
-			for (final Properties props : properties)
+			for (Properties props : properties)
 			{
 				overrideProperties(initialProperties, props);
 			}
@@ -166,7 +166,7 @@ public class PropertiesUtils
 	{
 		if (properties != null)
 		{
-			for (final Properties initialProps : initialProperties)
+			for (Properties initialProps : initialProperties)
 			{
 				initialProps.putAll(properties);
 			}

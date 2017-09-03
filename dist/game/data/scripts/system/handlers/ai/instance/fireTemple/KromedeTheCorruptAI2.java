@@ -147,7 +147,7 @@ public class KromedeTheCorruptAI2 extends AggressiveNpcAI2
 						final int size = players.size();
 						if (players.size() < 4)
 						{
-							for (final Player p : players)
+							for (Player p : players)
 							{
 								spawnStickyTrap(p);
 							}
@@ -194,7 +194,7 @@ public class KromedeTheCorruptAI2 extends AggressiveNpcAI2
 	private List<Player> getLifedPlayers()
 	{
 		final List<Player> players = new ArrayList<>();
-		for (final Player player : getKnownList().getKnownPlayers().values())
+		for (Player player : getKnownList().getKnownPlayers().values())
 		{
 			if (!CreatureActions.isAlreadyDead(player))
 			{

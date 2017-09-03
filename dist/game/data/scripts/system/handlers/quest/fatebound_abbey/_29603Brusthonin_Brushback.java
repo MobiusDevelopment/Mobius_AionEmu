@@ -54,7 +54,7 @@ public class _29603Brusthonin_Brushback extends QuestHandler
 		qe.registerQuestNpc(804662).addOnQuestStart(questId);
 		qe.registerQuestNpc(804662).addOnTalkEvent(questId);
 		qe.registerQuestNpc(205150).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

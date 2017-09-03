@@ -94,7 +94,7 @@ public class Western_Shield_GeneratorAI2 extends NpcAI2
 	}
 	
 	@Override
-	public boolean onDialogSelect(final Player player, int dialogId, int questId, int extendedRewardIndex)
+	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		final int instanceId = getPosition().getInstanceId();
 		switch (getNpcId())
@@ -159,7 +159,7 @@ public class Western_Shield_GeneratorAI2 extends NpcAI2
 		}, 1000);
 	}
 	
-	private void attackGenerator(final Npc npc, float x, float y, float z, boolean despawn)
+	private void attackGenerator(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);

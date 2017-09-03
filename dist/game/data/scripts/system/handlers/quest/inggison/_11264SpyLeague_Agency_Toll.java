@@ -52,7 +52,7 @@ public class _11264SpyLeague_Agency_Toll extends QuestHandler
 	{
 		qe.registerQuestNpc(799038).addOnQuestStart(questId); // Laestrygos.
 		qe.registerQuestNpc(799038).addOnTalkEvent(questId); // Laestrygos.
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

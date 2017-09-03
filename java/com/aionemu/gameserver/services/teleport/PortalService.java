@@ -53,7 +53,7 @@ public class PortalService
 {
 	private static Logger log = LoggerFactory.getLogger(PortalService.class);
 	
-	public static void port(final PortalPath portalPath, final Player player, int npcObjectId)
+	public static void port(PortalPath portalPath, Player player, int npcObjectId)
 	{
 		if (!CustomConfig.ENABLE_INSTANCES)
 		{
@@ -206,7 +206,7 @@ public class PortalService
 				}
 				if ((instance == null) && (group != null) && !instanceGroupReq)
 				{
-					for (final Player member : group.getMembers())
+					for (Player member : group.getMembers())
 					{
 						instance = InstanceService.getRegisteredInstance(mapId, member.getObjectId());
 						if (instance != null)
@@ -243,7 +243,7 @@ public class PortalService
 					}
 					if ((instance == null) && (group != null) && !instanceGroupReq)
 					{
-						for (final Player member : group.getMembers())
+						for (Player member : group.getMembers())
 						{
 							instance = InstanceService.getRegisteredInstance(mapId, member.getObjectId());
 							if (instance != null)
@@ -294,9 +294,9 @@ public class PortalService
 					{
 						if (league != null)
 						{
-							for (final PlayerAlliance alliance : allianceGroup.getLeague().getMembers())
+							for (PlayerAlliance alliance : allianceGroup.getLeague().getMembers())
 							{
-								for (final Player member : alliance.getMembers())
+								for (Player member : alliance.getMembers())
 								{
 									instance = InstanceService.getRegisteredInstance(mapId, member.getObjectId());
 									if (instance != null)
@@ -308,7 +308,7 @@ public class PortalService
 						}
 						else
 						{
-							for (final Player member : allianceGroup.getMembers())
+							for (Player member : allianceGroup.getMembers())
 							{
 								instance = InstanceService.getRegisteredInstance(mapId, member.getObjectId());
 								if (instance != null)
@@ -468,7 +468,7 @@ public class PortalService
 	{
 		if (questReq != null)
 		{
-			for (final QuestReq quest : questReq)
+			for (QuestReq quest : questReq)
 			{
 				final int questId = quest.getQuestId();
 				final int questStep = quest.getQuestStep();
@@ -496,7 +496,7 @@ public class PortalService
 		if (itemReq != null)
 		{
 			final Storage inventory = player.getInventory();
-			for (final ItemReq item : itemReq)
+			for (ItemReq item : itemReq)
 			{
 				if (inventory.getItemCountByItemId(item.getItemId()) < item.getItemCount())
 				{
@@ -512,7 +512,7 @@ public class PortalService
 					return false;
 				}
 			}
-			for (final ItemReq item : itemReq)
+			for (ItemReq item : itemReq)
 			{
 				inventory.decreaseByItemId(item.getItemId(), item.getItemCount());
 			}

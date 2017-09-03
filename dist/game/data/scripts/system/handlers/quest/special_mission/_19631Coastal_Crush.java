@@ -58,7 +58,7 @@ public class _19631Coastal_Crush extends QuestHandler
 		qe.registerQuestNpc(798155).addOnQuestStart(questId);
 		qe.registerQuestNpc(798155).addOnTalkEvent(questId);
 		qe.registerQuestNpc(800411).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

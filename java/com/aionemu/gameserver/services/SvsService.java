@@ -64,7 +64,7 @@ public class SvsService
 		if (CustomConfig.SVS_ENABLED)
 		{
 			svs = DataManager.SVS_DATA.getSvsLocations();
-			for (final SvsLocation loc : getSvsLocations().values())
+			for (SvsLocation loc : getSvsLocations().values())
 			{
 				spawn(loc, SvsStateType.PEACE);
 			}
@@ -80,9 +80,9 @@ public class SvsService
 		if (CustomConfig.SVS_ENABLED)
 		{
 			svsSchedule = SvsSchedule.load();
-			for (final Svs svs : svsSchedule.getSvssList())
+			for (Svs svs : svsSchedule.getSvssList())
 			{
-				for (final String svsTime : svs.getSvsTimes())
+				for (String svsTime : svs.getSvsTimes())
 				{
 					CronService.getInstance().schedule(new SvsStartRunnable(svs.getId()), svsTime);
 				}
@@ -90,7 +90,7 @@ public class SvsService
 		}
 	}
 	
-	public void startSvs(final int id)
+	public void startSvs(int id)
 	{
 		final Panesterra<?> gate;
 		synchronized (this)
@@ -139,9 +139,9 @@ public class SvsService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getSvsSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final SvsSpawnTemplate svstemplate = (SvsSpawnTemplate) st;
 				if (svstemplate.getPStateType().equals(pstate))
@@ -269,7 +269,7 @@ public class SvsService
 	
 	public void despawn(SvsLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

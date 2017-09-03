@@ -99,7 +99,7 @@ public class AttackShieldObserver extends AttackCalcObserver
 	@Override
 	public void checkShield(List<AttackResult> attackList, Effect attackerEffect, Creature attacker)
 	{
-		for (final AttackResult attackResult : attackList)
+		for (AttackResult attackResult : attackList)
 		{
 			if ((AttackStatus.getBaseStatus(attackResult.getAttackStatus()) == AttackStatus.DODGE) || (AttackStatus.getBaseStatus(attackResult.getAttackStatus()) == AttackStatus.RESIST))
 			{
@@ -268,7 +268,7 @@ public class AttackShieldObserver extends AttackCalcObserver
 		{
 			return false;
 		}
-		for (final EffectTemplate template : effect.getEffectTemplates())
+		for (EffectTemplate template : effect.getEffectTemplates())
 		{
 			if (template.getSubEffect() != null)
 			{

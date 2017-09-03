@@ -60,7 +60,7 @@ public class _25601Anima_Curse extends QuestHandler
 		qe.registerQuestNpc(806170).addOnQuestStart(questId); // Hekadun.
 		qe.registerQuestNpc(806170).addOnTalkEvent(questId); // Hekadun.
 		qe.registerQuestNpc(806196).addOnTalkEvent(questId); // 스피리투스의 영혼.
-		for (final int boss : DF6B224NamedBirdmom70Al)
+		for (int boss : DF6B224NamedBirdmom70Al)
 		{
 			qe.registerQuestNpc(boss).addOnKillEvent(questId);
 		}
@@ -208,7 +208,7 @@ public class _25601Anima_Curse extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

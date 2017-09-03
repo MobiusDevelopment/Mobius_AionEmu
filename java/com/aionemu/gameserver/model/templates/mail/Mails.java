@@ -47,7 +47,7 @@ public class Mails
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final SysMail template : sysMailTemplates)
+		for (SysMail template : sysMailTemplates)
 		{
 			final String sysMailName = template.getName().toLowerCase();
 			sysMailByName.put(sysMailName, template);

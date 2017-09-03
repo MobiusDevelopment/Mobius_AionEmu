@@ -53,7 +53,7 @@ public class GlobalCallbackEnhancer extends CallbackClassFileTransformer
 		
 		final Set<CtMethod> methdosToEnhance = new HashSet<>();
 		
-		for (final CtMethod method : clazz.getDeclaredMethods())
+		for (CtMethod method : clazz.getDeclaredMethods())
 		{
 			if (!isEnhanceable(method))
 			{
@@ -66,7 +66,7 @@ public class GlobalCallbackEnhancer extends CallbackClassFileTransformer
 		if (!methdosToEnhance.isEmpty())
 		{
 			log.debug("Enhancing class: " + clazz.getName());
-			for (final CtMethod method : methdosToEnhance)
+			for (CtMethod method : methdosToEnhance)
 			{
 				log.debug("Enhancing method: " + method.getLongName());
 				enhanceMethod(method);
@@ -101,7 +101,7 @@ public class GlobalCallbackEnhancer extends CallbackClassFileTransformer
 		{
 			clazz.getField(listenerFieldName);
 		}
-		catch (final NotFoundException e)
+		catch (NotFoundException e)
 		{
 			clazz.addField(CtField.make((isStatic ? "static " : "") + "Class " + listenerFieldName + " = Class.forName(\"" + listenerClazz.getName() + "\");", clazz));
 		}

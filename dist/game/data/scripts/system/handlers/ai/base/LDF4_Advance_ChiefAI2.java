@@ -174,7 +174,7 @@ public class LDF4_Advance_ChiefAI2 extends AggressiveNpcAI2
 	
 	private void checkForSupport(Creature creature)
 	{
-		for (final VisibleObject object : getKnownList().getKnownObjects().values())
+		for (VisibleObject object : getKnownList().getKnownObjects().values())
 		{
 			if ((object instanceof Npc) && isInRange(object, 30))
 			{

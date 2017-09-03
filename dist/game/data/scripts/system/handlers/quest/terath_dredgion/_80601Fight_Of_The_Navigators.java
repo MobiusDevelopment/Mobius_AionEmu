@@ -47,7 +47,7 @@ public class _80601Fight_Of_The_Navigators extends QuestHandler
 		qe.registerQuestNpc(831831).addOnQuestStart(questId);
 		qe.registerQuestNpc(831831).addOnTalkEvent(questId);
 		qe.registerQuestNpc(800325).addOnTalkEvent(questId);
-		for (final int mob : captainAnusa)
+		for (int mob : captainAnusa)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

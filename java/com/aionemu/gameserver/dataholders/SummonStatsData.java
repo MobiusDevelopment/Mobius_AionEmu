@@ -41,7 +41,7 @@ public class SummonStatsData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final SummonStatsType st : summonTemplatesList)
+		for (SummonStatsType st : summonTemplatesList)
 		{
 			final int summonDark = makeHash(st.getNpcIdDark(), st.getRequiredLevel());
 			summonTemplates.put(summonDark, st.getTemplate());

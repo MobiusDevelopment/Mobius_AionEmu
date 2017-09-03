@@ -169,7 +169,7 @@ public class Conquest_Gelkmaros_BossAI2 extends AggressiveNpcAI2
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{
 			final List<Npc> npcs = getPosition().getWorldMapInstance().getNpcs(npcId);
-			for (final Npc npc : npcs)
+			for (Npc npc : npcs)
 			{
 				npc.getController().onDelete();
 			}

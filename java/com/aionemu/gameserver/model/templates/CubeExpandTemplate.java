@@ -47,7 +47,7 @@ public class CubeExpandTemplate
 	
 	public boolean contains(int level)
 	{
-		for (final Expand expand : cubeExpands)
+		for (Expand expand : cubeExpands)
 		{
 			if (expand.getLevel() == level)
 			{
@@ -59,7 +59,7 @@ public class CubeExpandTemplate
 	
 	public Expand get(int level)
 	{
-		for (final Expand expand : cubeExpands)
+		for (Expand expand : cubeExpands)
 		{
 			if (expand.getLevel() == level)
 			{

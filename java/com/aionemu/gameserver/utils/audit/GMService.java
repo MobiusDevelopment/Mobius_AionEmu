@@ -53,12 +53,12 @@ public class GMService
 		{
 			try
 			{
-				for (final String level : AdminConfig.ANNOUNCE_LEVEL_LIST.split(","))
+				for (String level : AdminConfig.ANNOUNCE_LEVEL_LIST.split(","))
 				{
 					announceList.add(Byte.parseByte(level));
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				announceAny = true;
 			}
@@ -241,7 +241,7 @@ public class GMService
 	public void broadcastMesage(String message)
 	{
 		final SM_MESSAGE packet = new SM_MESSAGE(0, null, message, ChatType.BRIGHT_YELLOW_CENTER);
-		for (final Player player : gms.values())
+		for (Player player : gms.values())
 		{
 			PacketSendUtility.sendPacket(player, packet);
 		}

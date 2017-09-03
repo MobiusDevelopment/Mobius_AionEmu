@@ -90,7 +90,7 @@ public class HousingLand
 	
 	public Building getDefaultBuilding()
 	{
-		for (final Building building : buildings)
+		for (Building building : buildings)
 		{
 			if (building.isDefault())
 			{

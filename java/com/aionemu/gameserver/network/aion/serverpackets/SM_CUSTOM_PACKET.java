@@ -124,7 +124,7 @@ public class SM_CUSTOM_PACKET extends AionServerPacket
 		
 		public static PacketElementType getByCode(char code)
 		{
-			for (final PacketElementType type : values())
+			for (PacketElementType type : values())
 			{
 				if (type.code == code)
 				{
@@ -197,7 +197,7 @@ public class SM_CUSTOM_PACKET extends AionServerPacket
 	@Override
 	public void writeImpl(AionConnection con)
 	{
-		for (final PacketElement el : elements)
+		for (PacketElement el : elements)
 		{
 			el.writeValue(this);
 		}

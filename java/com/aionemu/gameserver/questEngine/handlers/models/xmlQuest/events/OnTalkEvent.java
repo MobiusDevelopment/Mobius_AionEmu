@@ -45,7 +45,7 @@ public class OnTalkEvent extends QuestEvent
 		if ((conditions == null) || conditions.checkConditionOfSet(env))
 		{
 			final QuestState qs = env.getPlayer().getQuestStateList().getQuestState(env.getQuestId());
-			for (final QuestVar questVar : var)
+			for (QuestVar questVar : var)
 			{
 				if (questVar.operate(env, qs))
 				{

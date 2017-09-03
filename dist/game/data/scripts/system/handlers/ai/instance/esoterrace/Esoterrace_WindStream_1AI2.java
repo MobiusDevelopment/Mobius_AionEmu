@@ -47,7 +47,7 @@ public class Esoterrace_WindStream_1AI2 extends NpcAI2
 		windStreamAnnounce(getOwner(), 0);
 	}
 	
-	private void startWindStream(final Npc npc)
+	private void startWindStream(Npc npc)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -71,10 +71,10 @@ public class Esoterrace_WindStream_1AI2 extends NpcAI2
 		}, 5000);
 	}
 	
-	private void windStreamAnnounce(final Npc npc, final int state)
+	private void windStreamAnnounce(Npc npc, int state)
 	{
 		final WindstreamTemplate template = DataManager.WINDSTREAM_DATA.getStreamTemplate(npc.getPosition().getMapId());
-		for (final Location2D wind : template.getLocations().getLocation())
+		for (Location2D wind : template.getLocations().getLocation())
 		{
 			if (wind.getId() == 160)
 			{
@@ -97,7 +97,7 @@ public class Esoterrace_WindStream_1AI2 extends NpcAI2
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{
 			final List<Npc> npcs = getPosition().getWorldMapInstance().getNpcs(npcId);
-			for (final Npc npc : npcs)
+			for (Npc npc : npcs)
 			{
 				npc.getController().onDelete();
 			}

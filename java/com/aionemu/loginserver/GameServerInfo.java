@@ -293,7 +293,7 @@ public class GameServerInfo
 			};
 		}
 		
-		for (final IPRange ipr : ipRanges)
+		for (IPRange ipr : ipRanges)
 		{
 			if (ipr.isInRange(playerIp))
 			{

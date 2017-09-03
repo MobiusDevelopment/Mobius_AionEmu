@@ -49,7 +49,7 @@ public class Recharger extends AdminCommand
 			if (isOpened)
 			{
 				final Collection<Npc> recharger = World.getInstance().getNpcs();
-				for (final Npc n : recharger)
+				for (Npc n : recharger)
 				{
 					if (n.getNpcId() == RechargerID)
 					{

@@ -106,7 +106,7 @@ public class BonusService
 		{
 			return null;
 		}
-		for (final BonusItemGroup gr : groups)
+		for (BonusItemGroup gr : groups)
 		{
 			total += gr.getChance();
 		}
@@ -119,7 +119,7 @@ public class BonusService
 		if (groups != null)
 		{
 			int percent = 100;
-			for (final BonusItemGroup gr : groups)
+			for (BonusItemGroup gr : groups)
 			{
 				final float chance = getNormalizedChance(gr.getChance(), total);
 				if (Rnd.get(0, percent) <= chance)
@@ -213,7 +213,7 @@ public class BonusService
 		}
 		final List<ItemRaceEntry> finalList = new ArrayList<>();
 		
-		for (final ItemRaceEntry allReward : allRewards)
+		for (ItemRaceEntry allReward : allRewards)
 		{
 			final ItemRaceEntry r = allReward;
 			if (!r.checkRace(player.getCommonData().getRace()))
@@ -249,7 +249,7 @@ public class BonusService
 		MedalItem finalReward = null;
 		
 		float total = 0.0F;
-		for (final MedalItem medal : group.getItems())
+		for (MedalItem medal : group.getItems())
 		{
 			if (medal.getLevel() == bonusLevel)
 			{
@@ -262,7 +262,7 @@ public class BonusService
 		}
 		final float rnd = Rnd.get() * total;
 		float luck = 0.0F;
-		for (final MedalItem medal : group.getItems())
+		for (MedalItem medal : group.getItems())
 		{
 			if (medal.getLevel() == bonusLevel)
 			{
@@ -283,7 +283,7 @@ public class BonusService
 		final ManastoneGroup group = (ManastoneGroup) getRandomGroup(BonusType.MANASTONE);
 		final ItemRaceEntry[] allRewards = group.getRewards();
 		final List<ItemRaceEntry> finalList = new ArrayList<>();
-		for (final ItemRaceEntry r : allRewards)
+		for (ItemRaceEntry r : allRewards)
 		{
 			final ItemTemplate template = DataManager.ITEM_DATA.getItemTemplate(r.getId());
 			if (bonus.getLevel() != template.getLevel())

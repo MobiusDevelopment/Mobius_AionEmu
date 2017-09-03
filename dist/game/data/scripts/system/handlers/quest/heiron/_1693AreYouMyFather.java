@@ -50,7 +50,7 @@ public class _1693AreYouMyFather extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(798386).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

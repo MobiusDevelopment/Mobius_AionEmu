@@ -112,7 +112,7 @@ public abstract class AbstractIterativePeriodicTaskManager<T>extends AbstractPer
 			{
 				callTask(task);
 			}
-			catch (final RuntimeException e)
+			catch (RuntimeException e)
 			{
 				log.warn("", e);
 			}

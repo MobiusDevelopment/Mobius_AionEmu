@@ -80,7 +80,7 @@ public class cmd_faction extends PlayerCommand
 			{
 				final StringBuilder sbMessage = new StringBuilder("[Asmos] " + player.getCustomTag(true) + player.getName() + " : ");
 				
-				for (final String p : params)
+				for (String p : params)
 				{
 					sbMessage.append(p + " ");
 				}
@@ -90,7 +90,7 @@ public class cmd_faction extends PlayerCommand
 				{
 					PlayerChatService.chatLogging(player, ChatType.NORMAL, "[Faction] " + sMessage);
 				}
-				for (final Player a : World.getInstance().getAllPlayers())
+				for (Player a : World.getInstance().getAllPlayers())
 				{
 					if (((a.getCommonData().getRace() == Race.ASMODIANS) || a.isGM()) && !player.isInPrison())
 					{
@@ -102,7 +102,7 @@ public class cmd_faction extends PlayerCommand
 			{
 				final StringBuilder sbMessage = new StringBuilder("[Elyos] " + player.getCustomTag(true) + player.getName() + " : ");
 				
-				for (final String p : params)
+				for (String p : params)
 				{
 					sbMessage.append(p + " ");
 				}
@@ -112,7 +112,7 @@ public class cmd_faction extends PlayerCommand
 				{
 					PlayerChatService.chatLogging(player, ChatType.NORMAL, "[Faction] " + sMessage);
 				}
-				for (final Player e : World.getInstance().getAllPlayers())
+				for (Player e : World.getInstance().getAllPlayers())
 				{
 					if (((e.getCommonData().getRace() == Race.ELYOS) || e.isGM()) && !player.isInPrison())
 					{

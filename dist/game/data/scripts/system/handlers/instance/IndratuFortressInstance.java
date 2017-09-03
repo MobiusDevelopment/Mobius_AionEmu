@@ -58,7 +58,7 @@ public class IndratuFortressInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 214159: // Brigadier Indratu.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -92,7 +92,7 @@ public class IndratuFortressInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

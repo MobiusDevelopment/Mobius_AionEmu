@@ -310,7 +310,7 @@ public class Triangle extends AbstractTriangle implements Reusable
 			t.pointc = pointc.clone();
 			return t;
 		}
-		catch (final CloneNotSupportedException e)
+		catch (CloneNotSupportedException e)
 		{
 			throw new AssertionError();
 		}

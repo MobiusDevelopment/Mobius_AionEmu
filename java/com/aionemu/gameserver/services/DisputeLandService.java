@@ -107,7 +107,7 @@ public class DisputeLandService
 	
 	private void syncState()
 	{
-		for (final int world : worlds)
+		for (int world : worlds)
 		{
 			if ((world == 210020000) || // Eltnen.
 				(world == 210040000) || // Heiron.

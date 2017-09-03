@@ -61,7 +61,7 @@ public class IdianDepthsService
 		if (CustomConfig.IDIAN_DEPTHS_ENABLED)
 		{
 			idianDepths = DataManager.IDIAN_DEPTHS_DATA.getIdianDepthsLocations();
-			for (final IdianDepthsLocation loc : getIdianDepthsLocations().values())
+			for (IdianDepthsLocation loc : getIdianDepthsLocations().values())
 			{
 				spawn(loc, IdianDepthsStateType.CLOSED);
 			}
@@ -70,7 +70,7 @@ public class IdianDepthsService
 				@Override
 				public void run()
 				{
-					for (final IdianDepthsLocation loc : getIdianDepthsLocations().values())
+					for (IdianDepthsLocation loc : getIdianDepthsLocations().values())
 					{
 						startIdianDepths(loc.getId());
 					}
@@ -92,7 +92,7 @@ public class IdianDepthsService
 		}
 	}
 	
-	public void startIdianDepths(final int id)
+	public void startIdianDepths(int id)
 	{
 		final IdianDepths<?> idian;
 		synchronized (this)
@@ -139,9 +139,9 @@ public class IdianDepthsService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getIdianDepthsSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final IdianDepthsSpawnTemplate idianDepthsttemplate = (IdianDepthsSpawnTemplate) st;
 				if (idianDepthsttemplate.getIStateType().equals(istate))
@@ -152,7 +152,7 @@ public class IdianDepthsService
 		}
 	}
 	
-	public void sendRequest(final Player player)
+	public void sendRequest(Player player)
 	{
 		final String message = "Idian Depths is now opened. Do you want to enter ?";
 		final RequestResponseHandler responseHandler = new RequestResponseHandler(player)
@@ -187,7 +187,7 @@ public class IdianDepthsService
 	
 	public void despawn(IdianDepthsLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

@@ -59,7 +59,7 @@ public class PingPongThread implements Runnable
 			{
 				Thread.sleep(Config.PINGPONG_DELAY);
 			}
-			catch (final InterruptedException e)
+			catch (InterruptedException e)
 			{
 				e.printStackTrace();
 			}
@@ -81,7 +81,7 @@ public class PingPongThread implements Runnable
 					DAOManager.getDAO(SvStatsDAO.class).update_SvStats_Online(currentID, 1, currentPlayer, currentMax);
 				}
 			}
-			catch (final Exception ex)
+			catch (Exception ex)
 			{
 				log.error("PingThread#" + connection.getGameServerInfo().getId(), ex);
 			}
@@ -115,7 +115,7 @@ public class PingPongThread implements Runnable
 					{
 						Runtime.getRuntime().exec("taskkill /pid " + serverPID + " /f");
 					}
-					catch (final IOException e)
+					catch (IOException e)
 					{
 						e.printStackTrace();
 					}

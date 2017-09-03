@@ -63,7 +63,7 @@ public class RealGeoData implements GeoData
 		int currentProgress = 0;
 		int lastProgress = 1;
 		
-		for (final WorldMapTemplate map : DataManager.WORLD_MAPS_DATA)
+		for (WorldMapTemplate map : DataManager.WORLD_MAPS_DATA)
 		{
 			final GeoMap geoMap = new GeoMap(Integer.toString(map.getMapId()), map.getWorldSize());
 			try
@@ -73,7 +73,7 @@ public class RealGeoData implements GeoData
 					geoMaps.put(map.getMapId(), geoMap);
 				}
 			}
-			catch (final Throwable t)
+			catch (Throwable t)
 			{
 				mapsWithErrors.add(map.getMapId());
 				geoMaps.put(map.getMapId(), DummyGeoData.DUMMY_MAP);
@@ -104,7 +104,7 @@ public class RealGeoData implements GeoData
 		{
 			models = GeoWorldLoader.loadMeshs("data/geodata/meshs.geo");
 		}
-		catch (final IOException e)
+		catch (IOException e)
 		{
 			throw new IllegalStateException("Problem loading meshes", e);
 		}

@@ -215,7 +215,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 						writeD(harmonyArena.getRound());
 						final FastList<HarmonyGroupReward> groups = harmonyArena.getHarmonyGroupInside();
 						writeC(groups.size());
-						for (final HarmonyGroupReward group : groups)
+						for (HarmonyGroupReward group : groups)
 						{
 							writeC(harmonyArena.getRank(group.getPoints()));
 							writeD(group.getPvPKills());
@@ -224,7 +224,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 							final FastList<Player> members = harmonyArena.getPlayersInside(group);
 							writeC(members.size());
 							int i = 0;
-							for (final Player p : members)
+							for (Player p : members)
 							{
 								final PvPArenaPlayerReward rewardedPlayer = harmonyArena.getPlayerReward(p.getObjectId());
 								writeD(0);
@@ -260,7 +260,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				writeD(elyosScore);
 				writeD(asmosScore);
 				writeH(0);
-				for (final DredgionReward.DredgionRooms dredgionRoom : dredgionReward.getDredgionRooms())
+				for (DredgionReward.DredgionRooms dredgionRoom : dredgionReward.getDredgionRooms())
 				{
 					writeC(dredgionRoom.getState());
 				}
@@ -313,7 +313,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					case 6:
 						int counter = 0;
 						writeD(100);
-						for (final Player player : players)
+						for (Player player : players)
 						{
 							if (player.getRace() != Race.ELYOS)
 							{
@@ -329,7 +329,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 							writeB(new byte[12 * (24 - counter)]);
 						}
 						counter = 0;
-						for (final Player player : players)
+						for (Player player : players)
 						{
 							if (player.getRace() != Race.ASMODIANS)
 							{
@@ -391,7 +391,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				{
 					case 2:
 						writeD(0);
-						for (final Player player : players)
+						for (Player player : players)
 						{
 							switch (player.getWorldId())
 							{
@@ -438,7 +438,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					case 6:
 						int counter = 0;
 						writeD(100);
-						for (final Player player : players)
+						for (Player player : players)
 						{
 							if (player.getRace() != Race.ELYOS)
 							{
@@ -454,7 +454,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 							writeB(new byte[12 * (24 - counter)]);
 						}
 						counter = 0;
-						for (final Player player : players)
+						for (Player player : players)
 						{
 							if (player.getRace() != Race.ASMODIANS)
 							{
@@ -551,7 +551,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					case 6:
 						int counter = 0;
 						writeD(100);
-						for (final Player player : players)
+						for (Player player : players)
 						{
 							if (player.getRace() != Race.ELYOS)
 							{
@@ -567,7 +567,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 							writeB(new byte[12 * (24 - counter)]);
 						}
 						counter = 0;
-						for (final Player player : players)
+						for (Player player : players)
 						{
 							if (player.getRace() != Race.ASMODIANS)
 							{
@@ -664,7 +664,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					case 6:
 						int counter = 0;
 						writeD(100);
-						for (final Player player : players)
+						for (Player player : players)
 						{
 							if (player.getRace() != Race.ELYOS)
 							{
@@ -680,7 +680,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 							writeB(new byte[12 * (24 - counter)]);
 						}
 						counter = 0;
-						for (final Player player : players)
+						for (Player player : players)
 						{
 							if (player.getRace() != Race.ASMODIANS)
 							{
@@ -777,7 +777,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					case 6:
 						int counter = 0;
 						writeD(100);
-						for (final Player player : players)
+						for (Player player : players)
 						{
 							if (player.getRace() != Race.ELYOS)
 							{
@@ -793,7 +793,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 							writeB(new byte[12 * (24 - counter)]);
 						}
 						counter = 0;
-						for (final Player player : players)
+						for (Player player : players)
 						{
 							if (player.getRace() != Race.ASMODIANS)
 							{
@@ -844,7 +844,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				break;
 			case 300300000: // Empyrean Crucible 2.5
 			case 300320000: // Empyrean Crucible Challenge 2.6
-				for (final CruciblePlayerReward playerReward : (FastList<CruciblePlayerReward>) instanceReward.getInstanceRewards())
+				for (CruciblePlayerReward playerReward : (FastList<CruciblePlayerReward>) instanceReward.getInstanceRewards())
 				{
 					writeD(playerReward.getOwner());
 					writeD(playerReward.getPoints());
@@ -865,7 +865,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				writeD(dpr.getRank());
 				break;
 			case 300540000: // Eternal Bastion 4.8
-				for (final EternalBastionPlayerReward playerReward : (FastList<EternalBastionPlayerReward>) instanceReward.getInstanceRewards())
+				for (EternalBastionPlayerReward playerReward : (FastList<EternalBastionPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final EternalBastionReward etr = (EternalBastionReward) instanceReward;
 					writeD(etr.getPoints());
@@ -911,7 +911,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				break;
 			case 301400000: // The Shugo Emperor's Vault 4.7.5
 			case 301590000: // Emperor Trillirunerk's Safe 4.9.1
-				for (final ShugoEmperorVaultPlayerReward playerReward : (FastList<ShugoEmperorVaultPlayerReward>) instanceReward.getInstanceRewards())
+				for (ShugoEmperorVaultPlayerReward playerReward : (FastList<ShugoEmperorVaultPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final ShugoEmperorVaultReward sevr = (ShugoEmperorVaultReward) instanceReward;
 					writeD(sevr.getPoints());
@@ -950,7 +950,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				}
 				break;
 			case 301500000: // Stonespear Reach 4.8
-				for (final StonespearReachPlayerReward playerReward : (FastList<StonespearReachPlayerReward>) instanceReward.getInstanceRewards())
+				for (StonespearReachPlayerReward playerReward : (FastList<StonespearReachPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final StonespearReachReward srr = (StonespearReachReward) instanceReward;
 					writeD(srr.getPoints());
@@ -959,7 +959,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				}
 				break;
 			case 301510000: // Sealed Argent Manor 4.9.1
-				for (final SealedArgentManorPlayerReward playerReward : (FastList<SealedArgentManorPlayerReward>) instanceReward.getInstanceRewards())
+				for (SealedArgentManorPlayerReward playerReward : (FastList<SealedArgentManorPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final SealedArgentManorReward samr = (SealedArgentManorReward) instanceReward;
 					writeD(samr.getPoints());
@@ -999,7 +999,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				}
 				break;
 			case 301630000: // Contaminated Underpath 5.0.5
-				for (final ContaminatedUnderpathPlayerReward playerReward : (FastList<ContaminatedUnderpathPlayerReward>) instanceReward.getInstanceRewards())
+				for (ContaminatedUnderpathPlayerReward playerReward : (FastList<ContaminatedUnderpathPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final ContaminatedUnderpathReward cur = (ContaminatedUnderpathReward) instanceReward;
 					writeD(cur.getPoints());
@@ -1039,7 +1039,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				}
 				break;
 			case 301640000: // Secret Munitions Factory 5.0.5
-				for (final SecretMunitionsFactoryPlayerReward playerReward : (FastList<SecretMunitionsFactoryPlayerReward>) instanceReward.getInstanceRewards())
+				for (SecretMunitionsFactoryPlayerReward playerReward : (FastList<SecretMunitionsFactoryPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final SecretMunitionsFactoryReward smfr = (SecretMunitionsFactoryReward) instanceReward;
 					writeD(smfr.getPoints());
@@ -1079,7 +1079,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				}
 				break;
 			case 302000000: // Smoldering Fire Temple 5.1
-				for (final SmolderingPlayerReward playerReward : (FastList<SmolderingPlayerReward>) instanceReward.getInstanceRewards())
+				for (SmolderingPlayerReward playerReward : (FastList<SmolderingPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final SmolderingReward sr = (SmolderingReward) instanceReward;
 					writeD(sr.getPoints());
@@ -1118,7 +1118,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				}
 				break;
 			case 302100000: // Fissure Of Oblivion 5.1
-				for (final OblivionRiftPlayerReward playerReward : (FastList<OblivionRiftPlayerReward>) instanceReward.getInstanceRewards())
+				for (OblivionRiftPlayerReward playerReward : (FastList<OblivionRiftPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final OblivionRiftReward or = (OblivionRiftReward) instanceReward;
 					writeD(or.getPoints());
@@ -1165,7 +1165,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				final PvPArenaPlayerReward rewardedPlayer = arenaReward.getPlayerReward(ownerObject);
 				int rank, points;
 				final boolean isRewarded = arenaReward.isRewarded();
-				for (final Player player : players)
+				for (Player player : players)
 				{
 					final InstancePlayerReward reward = arenaReward.getPlayerReward(player.getObjectId());
 					final PvPArenaPlayerReward playerReward = (PvPArenaPlayerReward) reward;
@@ -1284,7 +1284,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 	{
 		int count = 0;
 		final DredgionReward dredgionReward = (DredgionReward) instanceReward;
-		for (final Player player : players)
+		for (Player player : players)
 		{
 			if (!race.equals(player.getRace()))
 			{
@@ -1324,7 +1324,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 		int count = 0;
 		final KamarBattlefieldReward kbr = (KamarBattlefieldReward) instanceReward;
 		final boolean isFirst = false;
-		for (final Player player : players)
+		for (Player player : players)
 		{
 			if (!race.equals(player.getRace()))
 			{
@@ -1353,7 +1353,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 		int count = 0;
 		final EngulfedOphidanBridgeReward eobr = (EngulfedOphidanBridgeReward) instanceReward;
 		final boolean isFirst = false;
-		for (final Player player : players)
+		for (Player player : players)
 		{
 			if (!race.equals(player.getRace()))
 			{
@@ -1382,7 +1382,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 		int count = 0;
 		final IronWallWarfrontReward iwwr = (IronWallWarfrontReward) instanceReward;
 		final boolean isFirst = false;
-		for (final Player player : players)
+		for (Player player : players)
 		{
 			if (!race.equals(player.getRace()))
 			{
@@ -1411,7 +1411,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 		int count = 0;
 		final IdgelDomeReward idr = (IdgelDomeReward) instanceReward;
 		final boolean isFirst = false;
-		for (final Player player : players)
+		for (Player player : players)
 		{
 			if (!race.equals(player.getRace()))
 			{
@@ -1440,7 +1440,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 		int count = 0;
 		final LandMarkReward lmr = (LandMarkReward) instanceReward;
 		final boolean isFirst = false;
-		for (final Player player : players)
+		for (Player player : players)
 		{
 			if (!race.equals(player.getRace()))
 			{

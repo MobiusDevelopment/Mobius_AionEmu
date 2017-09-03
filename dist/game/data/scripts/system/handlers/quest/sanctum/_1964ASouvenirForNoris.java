@@ -40,7 +40,7 @@ public class _1964ASouvenirForNoris extends QuestHandler
 			203776
 		};
 		qe.registerQuestNpc(203726).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

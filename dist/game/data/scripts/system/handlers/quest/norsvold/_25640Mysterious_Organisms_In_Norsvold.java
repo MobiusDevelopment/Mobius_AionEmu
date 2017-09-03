@@ -106,7 +106,7 @@ public class _25640Mysterious_Organisms_In_Norsvold extends QuestHandler
 	{
 		qe.registerQuestNpc(806101).addOnQuestStart(questId); // Vadorei.
 		qe.registerQuestNpc(806101).addOnTalkEvent(questId); // Vadorei.
-		for (final int mob : Q25640)
+		for (int mob : Q25640)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

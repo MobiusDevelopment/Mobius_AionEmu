@@ -258,7 +258,7 @@ public class SM_PLAYER_INFO extends AionServerPacket
 		 */
 		int mask = 0;
 		final FastList<Item> items = player.getEquipment().getEquippedForApparence();
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			if (item.getItemTemplate().isTwoHandWeapon())
 			{
@@ -271,7 +271,7 @@ public class SM_PLAYER_INFO extends AionServerPacket
 			}
 		}
 		writeD(mask); // DBS size
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			writeD(DisplayService.getDisplayTemplate(player, item));
 			final GodStone godStone = item.getGodStone();

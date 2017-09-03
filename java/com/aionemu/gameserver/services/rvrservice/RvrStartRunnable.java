@@ -81,7 +81,7 @@ public class RvrStartRunnable implements Runnable
 			public void run()
 			{
 				final Map<Integer, RvrLocation> locations = RvrService.getInstance().getRvrLocations();
-				for (final RvrLocation loc : locations.values())
+				for (RvrLocation loc : locations.values())
 				{
 					if (loc.getId() == id)
 					{

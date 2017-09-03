@@ -45,7 +45,7 @@ public class MySQL5PlayerTitleListDAO extends PlayerTitleListDAO
 	private static final String DELETE_QUERY = "DELETE FROM `player_titles` WHERE `player_id`=? AND `title_id` =?;";
 	
 	@Override
-	public TitleList loadTitleList(final int playerId)
+	public TitleList loadTitleList(int playerId)
 	{
 		final TitleList tl = new TitleList();
 		
@@ -86,7 +86,7 @@ public class MySQL5PlayerTitleListDAO extends PlayerTitleListDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store emotionId for player " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 			return false;
@@ -121,7 +121,7 @@ public class MySQL5PlayerTitleListDAO extends PlayerTitleListDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not delete title for player " + playerId + " from DB: " + e.getMessage(), e);
 			return false;

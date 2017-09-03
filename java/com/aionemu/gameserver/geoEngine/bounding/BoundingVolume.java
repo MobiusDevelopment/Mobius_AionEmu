@@ -220,7 +220,7 @@ public abstract class BoundingVolume implements Collidable
 			clone.center = center.clone();
 			return clone;
 		}
-		catch (final CloneNotSupportedException ex)
+		catch (CloneNotSupportedException ex)
 		{
 			throw new AssertionError();
 		}

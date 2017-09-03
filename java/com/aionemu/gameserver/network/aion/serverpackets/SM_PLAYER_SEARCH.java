@@ -43,7 +43,7 @@ public class SM_PLAYER_SEARCH extends AionServerPacket
 	protected void writeImpl(AionConnection con)
 	{
 		writeH(players.size());
-		for (final Player player : players)
+		for (Player player : players)
 		{
 			if (player.getActiveRegion() == null)
 			{

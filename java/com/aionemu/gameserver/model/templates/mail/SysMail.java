@@ -50,7 +50,7 @@ public class SysMail
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final MailTemplate template : templates)
+		for (MailTemplate template : templates)
 		{
 			final String caseName = template.getName().toLowerCase();
 			List<MailTemplate> sysTemplates = mailCaseTemplates.get(caseName);
@@ -72,7 +72,7 @@ public class SysMail
 		{
 			return null;
 		}
-		for (final MailTemplate template : sysTemplates)
+		for (MailTemplate template : sysTemplates)
 		{
 			if ((template.getRace() == playerRace) || (template.getRace() == Race.PC_ALL))
 			{

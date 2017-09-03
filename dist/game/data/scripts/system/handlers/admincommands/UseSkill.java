@@ -64,7 +64,7 @@ public class UseSkill extends AdminCommand
 			skillId = Integer.parseInt(params[0]);
 			skillLevel = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(admin, "SkillId and skillLevel need to be an integer.");
 			return;
@@ -95,7 +95,7 @@ public class UseSkill extends AdminCommand
 					{
 						time = Integer.parseInt(params[3]);
 					}
-					catch (final NumberFormatException e)
+					catch (NumberFormatException e)
 					{
 						PacketSendUtility.sendMessage(admin, "Time has to be integer!");
 						return;

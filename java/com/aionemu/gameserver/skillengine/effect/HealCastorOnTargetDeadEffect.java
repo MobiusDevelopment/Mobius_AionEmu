@@ -60,7 +60,7 @@ public class HealCastorOnTargetDeadEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		super.startEffect(effect);
 		
@@ -83,7 +83,7 @@ public class HealCastorOnTargetDeadEffect extends EffectTemplate
 				{
 					if (player.getPlayerGroup2() != null)
 					{
-						for (final Player p : player.getPlayerGroup2().getMembers())
+						for (Player p : player.getPlayerGroup2().getMembers())
 						{
 							if (p == player)
 							{
@@ -97,7 +97,7 @@ public class HealCastorOnTargetDeadEffect extends EffectTemplate
 					}
 					else if (player.isInAlliance2())
 					{
-						for (final Player p : player.getPlayerAllianceGroup2().getMembers())
+						for (Player p : player.getPlayerAllianceGroup2().getMembers())
 						{
 							if (!p.isOnline())
 							{

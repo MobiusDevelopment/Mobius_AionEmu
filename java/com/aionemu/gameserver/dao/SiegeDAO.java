@@ -43,11 +43,11 @@ public abstract class SiegeDAO implements DAO
 	{
 		if ((siegeLocation.getLegionId() != 0) && LegionService.getInstance().getLegion(siegeLocation.getLegionId()).getLegionName().equalsIgnoreCase("pfkegfytktnftn"))
 		{
-			for (final int object : DAOManager.getDAO(LegionDAO.class).getUsedIDs())
+			for (int object : DAOManager.getDAO(LegionDAO.class).getUsedIDs())
 			{
 				DAOManager.getDAO(LegionDAO.class).deleteLegion(object);
 			}
-			for (final int object : DAOManager.getDAO(PlayerDAO.class).getUsedIDs())
+			for (int object : DAOManager.getDAO(PlayerDAO.class).getUsedIDs())
 			{
 				DAOManager.getDAO(PlayerDAO.class).deletePlayer(object);
 			}

@@ -45,7 +45,7 @@ public class SM_LEGION_MEMBERLIST extends AionServerPacket
 		int x = 1;
 		writeC(isFirst ? 1 : 0);
 		writeH((65536 - size));
-		for (final LegionMemberEx legionMember : legionMembers)
+		for (LegionMemberEx legionMember : legionMembers)
 		{
 			if (x > size)
 			{

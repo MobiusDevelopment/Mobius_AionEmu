@@ -43,7 +43,7 @@ public class AssembledNpcsData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final AssembledNpcTemplate template : templates)
+		for (AssembledNpcTemplate template : templates)
 		{
 			assembledNpcsTemplates.put(template.getNr(), template);
 		}

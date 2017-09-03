@@ -257,7 +257,7 @@ public class MySQL5AccountDAO extends AccountDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean updateLastServer(final int accountId, final byte lastServer)
+	public boolean updateLastServer(int accountId, byte lastServer)
 	{
 		return DB.insertUpdate("UPDATE account_data SET last_server = ? WHERE id = ?", preparedStatement ->
 		{
@@ -271,7 +271,7 @@ public class MySQL5AccountDAO extends AccountDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean updateLastIp(final int accountId, final String ip)
+	public boolean updateLastIp(int accountId, String ip)
 	{
 		return DB.insertUpdate("UPDATE account_data SET last_ip = ? WHERE id = ?", preparedStatement ->
 		{
@@ -285,7 +285,7 @@ public class MySQL5AccountDAO extends AccountDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public String getLastIp(final int accountId)
+	public String getLastIp(int accountId)
 	{
 		String lastIp = "";
 		PreparedStatement st = DB.prepareStatement("SELECT `last_ip` FROM `account_data` WHERE `id` = ?");
@@ -316,7 +316,7 @@ public class MySQL5AccountDAO extends AccountDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean updateLastMac(final int accountId, final String mac)
+	public boolean updateLastMac(int accountId, String mac)
 	{
 		return DB.insertUpdate("UPDATE `account_data` SET `last_mac` = ? WHERE `id` = ?", preparedStatement ->
 		{
@@ -330,7 +330,7 @@ public class MySQL5AccountDAO extends AccountDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean updateMembership(final int accountId)
+	public boolean updateMembership(int accountId)
 	{
 		return DB.insertUpdate("UPDATE account_data SET membership = old_membership, expire = NULL WHERE id = ? and expire < CURRENT_TIMESTAMP", preparedStatement ->
 		{

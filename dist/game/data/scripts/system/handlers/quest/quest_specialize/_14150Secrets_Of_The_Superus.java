@@ -56,7 +56,7 @@ public class _14150Secrets_Of_The_Superus extends QuestHandler
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

@@ -89,7 +89,7 @@ public class SM_INVENTORY_INFO extends AionServerPacket
 		writeC(0); // unk?
 		writeH(items.size()); // number of entries
 		
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			writeItemInfo(item);
 		}

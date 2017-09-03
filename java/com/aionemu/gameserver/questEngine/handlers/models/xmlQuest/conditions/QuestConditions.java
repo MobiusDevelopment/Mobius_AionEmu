@@ -54,7 +54,7 @@ public class QuestConditions
 	public boolean checkConditionOfSet(QuestEnv env)
 	{
 		boolean inCondition = (operate == ConditionUnionType.AND);
-		for (final QuestCondition cond : conditions)
+		for (QuestCondition cond : conditions)
 		{
 			final boolean bCond = cond.doCheck(env);
 			switch (operate)

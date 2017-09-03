@@ -46,7 +46,7 @@ public class NightmareCircusData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final NightmareCircusTemplate template : nightmareCircusTemplates)
+		for (NightmareCircusTemplate template : nightmareCircusTemplates)
 		{
 			nightmareCircus.put(template.getId(), new NightmareCircusLocation(template));
 		}

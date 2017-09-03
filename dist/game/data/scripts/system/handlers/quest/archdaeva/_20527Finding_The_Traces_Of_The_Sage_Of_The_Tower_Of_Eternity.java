@@ -60,11 +60,11 @@ public class _20527Finding_The_Traces_Of_The_Sage_Of_The_Tower_Of_Eternity exten
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : DF6MissionLightRa71An)
+		for (int mob : DF6MissionLightRa71An)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -99,7 +99,7 @@ public class SM_ATTACK extends AionServerPacket
 		}
 		writeH(0);
 		writeC(attackList.size());
-		for (final AttackResult attack : attackList)
+		for (AttackResult attack : attackList)
 		{
 			writeD(attack.getDamage());
 			writeC(attack.getAttackStatus().getId());

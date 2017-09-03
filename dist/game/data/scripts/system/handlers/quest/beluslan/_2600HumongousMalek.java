@@ -50,7 +50,7 @@ public class _2600HumongousMalek extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(204734).addOnQuestStart(questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

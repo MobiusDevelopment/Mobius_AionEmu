@@ -93,7 +93,7 @@ public class _2100Order_Of_The_Captain extends QuestHandler
 					2006,
 					2007
 				};
-				for (final int id : misions)
+				for (int id : misions)
 				{
 					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), id, env.getDialogId()));
 				}

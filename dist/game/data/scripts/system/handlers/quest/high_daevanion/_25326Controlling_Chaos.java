@@ -52,7 +52,7 @@ public class _25326Controlling_Chaos extends QuestHandler
 	{
 		qe.registerQuestNpc(805331).addOnQuestStart(questId); // Mashinee.
 		qe.registerQuestNpc(805331).addOnTalkEvent(questId); // Mashinee.
-		for (final int mob : Cygnea)
+		for (int mob : Cygnea)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

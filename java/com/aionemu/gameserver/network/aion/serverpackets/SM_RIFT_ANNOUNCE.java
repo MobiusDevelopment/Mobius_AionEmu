@@ -82,7 +82,7 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket
 			case 0:
 				writeH(0x57);
 				writeC(actionId);
-				for (final int value : rifts.values())
+				for (int value : rifts.values())
 				{
 					writeD(value);
 				}

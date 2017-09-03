@@ -83,7 +83,7 @@ public class XmlDataLoader
 		 * catch (IllegalAnnotationsException e) { log.error("Error while loading static data", e); throw new Error("Error while loading static data", e); } catch (FileNotFoundException e) { log.error("Error while loading static data", e); throw new Error("Error while loading static data", e); }
 		 * catch (JAXBException e) { log.error("Error while loading static data", e); throw new Error("Error while loading static data", e); }
 		 */
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error while loading static data", e);
 		}
@@ -103,7 +103,7 @@ public class XmlDataLoader
 		{
 			schema = sf.newSchema(new File(XML_SCHEMA_FILE));
 		}
-		catch (final SAXException saxe)
+		catch (SAXException saxe)
 		{
 			log.error("Error while getting schema", saxe);
 			throw new Error("Error while getting schema", saxe);
@@ -136,7 +136,7 @@ public class XmlDataLoader
 		{
 			merger.process();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error while merging xml files", e);
 			throw new Error("Error while merging xml files", e);

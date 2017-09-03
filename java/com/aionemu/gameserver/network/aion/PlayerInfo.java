@@ -143,7 +143,7 @@ public abstract class PlayerInfo extends AionServerPacket
 		writeD((int) pbd.getLastOnline().getTime());
 		int itemsDataSize = 0;
 		final List<Item> items = accPlData.getEquipment();
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			if (itemsDataSize >= 208)
 			{

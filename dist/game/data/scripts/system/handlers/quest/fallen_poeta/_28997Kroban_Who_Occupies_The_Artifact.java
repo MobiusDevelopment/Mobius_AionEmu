@@ -46,7 +46,7 @@ public class _28997Kroban_Who_Occupies_The_Artifact extends QuestHandler
 	{
 		qe.registerQuestNpc(806253).addOnQuestStart(questId); // Vienste.
 		qe.registerQuestNpc(806253).addOnTalkEvent(questId); // Vienste.
-		for (final int mob : IDLF1TVanqNamed73Ah)
+		for (int mob : IDLF1TVanqNamed73Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

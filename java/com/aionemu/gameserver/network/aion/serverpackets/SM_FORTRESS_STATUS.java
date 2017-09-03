@@ -78,7 +78,7 @@ public class SM_FORTRESS_STATUS extends AionServerPacket
 		writeF(inf.getKaldorAsmodiansInfluence());
 		writeF(inf.getKaldorBalaursInfluence());
 		writeH(fortresses.size());
-		for (final FortressLocation fortress : fortresses.values())
+		for (FortressLocation fortress : fortresses.values())
 		{
 			writeD(fortress.getLocationId());
 			writeC(fortress.getNextState());

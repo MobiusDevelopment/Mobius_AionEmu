@@ -54,7 +54,7 @@ public class MaintenanceTask extends AbstractCronTask
 		{
 			instance = new MaintenanceTask(HousingConfig.HOUSE_MAINTENANCE_TIME);
 		}
-		catch (final ParseException pe)
+		catch (ParseException pe)
 		{
 		}
 	}
@@ -119,7 +119,7 @@ public class MaintenanceTask extends AbstractCronTask
 		}
 		final Date now = new Date();
 		final FastList<House> houses = HousingService.getInstance().getCustomHouses();
-		for (final House house : houses)
+		for (House house : houses)
 		{
 			if (house.getStatus() == HouseStatus.INACTIVE)
 			{
@@ -159,7 +159,7 @@ public class MaintenanceTask extends AbstractCronTask
 		final DateTime now = new DateTime();
 		final DateTime previousRun = now.minus(getPeriod());
 		final DateTime beforePreviousRun = previousRun.minus(getPeriod());
-		for (final House house : maintainedHouses)
+		for (House house : maintainedHouses)
 		{
 			if (house.isFeePaid())
 			{

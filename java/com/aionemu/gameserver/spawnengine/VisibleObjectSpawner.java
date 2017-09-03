@@ -155,7 +155,7 @@ public class VisibleObjectSpawner
 		{
 			SpawnEngine.bringIntoWorld(npc, spawn, instanceIndex);
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Error during spawn of npc {}, world {}, x-y {}-{}", new Object[]
 			{
@@ -815,7 +815,7 @@ public class VisibleObjectSpawner
 		return kisk;
 	}
 	
-	public static Npc spawnPostman(final Player owner)
+	public static Npc spawnPostman(Player owner)
 	{
 		final int npcId = owner.getRace() == Race.ELYOS ? 798100 : 798101;
 		final NpcData npcData = DataManager.NPC_DATA;
@@ -835,7 +835,7 @@ public class VisibleObjectSpawner
 		return postman;
 	}
 	
-	public static Npc spawnFunctionalNpc(final Player owner, int npcId, SummonOwner summonOwner)
+	public static Npc spawnFunctionalNpc(Player owner, int npcId, SummonOwner summonOwner)
 	{
 		final NpcData npcData = DataManager.NPC_DATA;
 		final NpcTemplate template = npcData.getNpcTemplate(npcId);

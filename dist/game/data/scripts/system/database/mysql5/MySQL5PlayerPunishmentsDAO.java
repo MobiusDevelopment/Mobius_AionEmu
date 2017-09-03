@@ -41,7 +41,7 @@ public class MySQL5PlayerPunishmentsDAO extends PlayerPunishmentsDAO
 	public static final String DELETE_QUERY = "DELETE FROM `player_punishments` WHERE `player_id`=? AND `punishment_type`=?";
 	
 	@Override
-	public void loadPlayerPunishments(final Player player, final PunishmentType punishmentType)
+	public void loadPlayerPunishments(Player player, PunishmentType punishmentType)
 	{
 		DB.select(SELECT_QUERY, new ParamReadStH()
 		{
@@ -72,7 +72,7 @@ public class MySQL5PlayerPunishmentsDAO extends PlayerPunishmentsDAO
 	}
 	
 	@Override
-	public void storePlayerPunishments(final Player player, final PunishmentType punishmentType)
+	public void storePlayerPunishments(Player player, PunishmentType punishmentType)
 	{
 		DB.insertUpdate(UPDATE_QUERY, new IUStH()
 		{
@@ -96,7 +96,7 @@ public class MySQL5PlayerPunishmentsDAO extends PlayerPunishmentsDAO
 	}
 	
 	@Override
-	public void punishPlayer(final int playerId, final PunishmentType punishmentType, final long duration, final String reason)
+	public void punishPlayer(int playerId, PunishmentType punishmentType, long duration, String reason)
 	{
 		DB.insertUpdate(REPLACE_QUERY, new IUStH()
 		{
@@ -115,7 +115,7 @@ public class MySQL5PlayerPunishmentsDAO extends PlayerPunishmentsDAO
 	}
 	
 	@Override
-	public void punishPlayer(final Player player, final PunishmentType punishmentType, final String reason)
+	public void punishPlayer(Player player, PunishmentType punishmentType, String reason)
 	{
 		if (punishmentType == PunishmentType.PRISON)
 		{
@@ -128,7 +128,7 @@ public class MySQL5PlayerPunishmentsDAO extends PlayerPunishmentsDAO
 	}
 	
 	@Override
-	public void unpunishPlayer(final int playerId, final PunishmentType punishmentType)
+	public void unpunishPlayer(int playerId, PunishmentType punishmentType)
 	{
 		DB.insertUpdate(DELETE_QUERY, new IUStH()
 		{
@@ -144,7 +144,7 @@ public class MySQL5PlayerPunishmentsDAO extends PlayerPunishmentsDAO
 	}
 	
 	@Override
-	public CharacterBanInfo getCharBanInfo(final int playerId)
+	public CharacterBanInfo getCharBanInfo(int playerId)
 	{
 		final CharacterBanInfo[] charBan = new CharacterBanInfo[1];
 		DB.select(SELECT_QUERY, new ParamReadStH()

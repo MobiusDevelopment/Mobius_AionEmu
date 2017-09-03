@@ -56,7 +56,7 @@ public abstract class CallbackClassFileTransformer implements ClassFileTransform
 			// actual class transformation
 			return transformClass(loader, classfileBuffer);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			
 			final Error e1 = new Error("Can't transform class " + className, e);

@@ -36,7 +36,7 @@ public class SM_QUEST_LIST extends AionServerPacket
 	{
 		writeH(0x01);
 		writeH(-questState.size() & 0xFFFF);
-		for (final QuestState qs : questState)
+		for (QuestState qs : questState)
 		{
 			writeD(qs.getQuestId());
 			writeC(qs.getStatus().value());

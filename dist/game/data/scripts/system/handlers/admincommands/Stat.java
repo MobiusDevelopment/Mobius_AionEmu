@@ -63,14 +63,14 @@ public class Stat extends AdminCommand
 				
 				if (params.length == 1)
 				{
-					for (final IStatFunction stat : stats)
+					for (IStatFunction stat : stats)
 					{
 						PacketSendUtility.sendMessage(admin, stat.toString());
 					}
 				}
 				else if ("details".equals(params[1]))
 				{
-					for (final IStatFunction stat : stats)
+					for (IStatFunction stat : stats)
 					{
 						final String details = collectDetails(stat);
 						PacketSendUtility.sendMessage(admin, details);

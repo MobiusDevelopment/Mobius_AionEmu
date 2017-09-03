@@ -55,7 +55,7 @@ public class ServiceBuff implements StatOwner
 		{
 			return;
 		}
-		for (final BonusPenaltyAttr bonusPenaltyAttr : serviceBonusAttr.getPenaltyAttr())
+		for (BonusPenaltyAttr bonusPenaltyAttr : serviceBonusAttr.getPenaltyAttr())
 		{
 			if (bonusPenaltyAttr.getFunc().equals(Func.PERCENT))
 			{

@@ -66,7 +66,7 @@ public class Send extends AdminCommand
 		{
 			unmarshaller = JAXBContext.newInstance(Packets.class, Packet.class, Part.class).createUnmarshaller();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new GameServerError("Failed to initialize unmarshaller.", e);
 		}
@@ -107,7 +107,7 @@ public class Send extends AdminCommand
 		{
 			packetsTemplate = (Packets) unmarshaller.unmarshal(packetsData);
 		}
-		catch (final JAXBException e)
+		catch (JAXBException e)
 		{
 			logger.error("Unmarshalling error", e);
 			return;
@@ -122,19 +122,19 @@ public class Send extends AdminCommand
 		send(admin, target, packetsTemplate);
 	}
 	
-	private void send(Player sender, final Player target, Packets packets)
+	private void send(Player sender, Player target, Packets packets)
 	{
 		final String senderObjectId = String.valueOf(sender.getObjectId());
 		final String targetObjectId = String.valueOf(target.getObjectId());
 		
 		long delay = 0;
-		for (final Packet packetTemplate : packets)
+		for (Packet packetTemplate : packets)
 		{
 			// logger.debug("Processing: " + packetTemplate);
 			
 			final SM_CUSTOM_PACKET packet = new SM_CUSTOM_PACKET(packetTemplate.getOpcode());
 			
-			for (final Part part : packetTemplate.getParts())
+			for (Part part : packetTemplate.getParts())
 			{
 				final PacketElementType byCode = PacketElementType.getByCode(part.getType());
 				

@@ -69,7 +69,7 @@ public class PvPRewardService
 		if (rewardString != null)
 		{
 			final String[] parts = rewardString.split(",");
-			for (final String part : parts)
+			for (String part : parts)
 			{
 				rewardList.add(Integer.valueOf(Integer.parseInt(part)));
 			}
@@ -224,7 +224,7 @@ public class PvPRewardService
 	{
 		final List<Integer> filteredRewardList = new ArrayList<>();
 		final List<Integer> rewardList = getRewardList(pc);
-		for (final Integer integer : rewardList)
+		for (Integer integer : rewardList)
 		{
 			final int id = integer;
 			final ItemTemplate itemTemp = DataManager.ITEM_DATA.getItemTemplate(id);

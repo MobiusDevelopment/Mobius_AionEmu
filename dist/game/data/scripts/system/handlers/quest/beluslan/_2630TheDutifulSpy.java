@@ -42,7 +42,7 @@ public class _2630TheDutifulSpy extends QuestHandler
 			204799,
 			204777
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

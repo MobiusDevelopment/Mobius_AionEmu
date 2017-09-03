@@ -105,7 +105,7 @@ public class BrokerService
 		
 		final List<BrokerItem> brokerItems = DAOManager.getDAO(BrokerDAO.class).loadBroker();
 		
-		for (final BrokerItem item : brokerItems)
+		for (BrokerItem item : brokerItems)
 		{
 			if (item.getItemBrokerRace() == BrokerRace.ASMODIAN)
 			{
@@ -186,7 +186,7 @@ public class BrokerService
 		if (itemList != null)
 		{
 			final List<BrokerItem> itemsFound = new ArrayList<>();
-			for (final BrokerItem item : searchItems)
+			for (BrokerItem item : searchItems)
 			{
 				if (itemList.contains(item.getItemId()))
 				{
@@ -226,7 +226,7 @@ public class BrokerService
 			{
 				return null;
 			}
-			for (final BrokerItem item : brokerItems)
+			for (BrokerItem item : brokerItems)
 			{
 				if ((item == null) || (item.getItem() == null))
 				{
@@ -245,7 +245,7 @@ public class BrokerService
 			{
 				return null;
 			}
-			for (final BrokerItem item : brokerItems.values())
+			for (BrokerItem item : brokerItems.values())
 			{
 				if ((item == null) || (item.getItem() == null))
 				{
@@ -496,7 +496,7 @@ public class BrokerService
 		newItem.setItemCreator(sourceItem.getItemCreator());
 		if (sourceItem.hasManaStones())
 		{
-			for (final ManaStone manaStone : sourceItem.getItemStones())
+			for (ManaStone manaStone : sourceItem.getItemStones())
 			{
 				ItemSocketService.addManaStone(newItem, manaStone.getItemId());
 			}
@@ -583,7 +583,7 @@ public class BrokerService
 	{
 		final int playerId = player.getObjectId();
 		int c = 0;
-		for (final BrokerItem item : getRaceBrokerItems(player.getRace()).values())
+		for (BrokerItem item : getRaceBrokerItems(player.getRace()).values())
 		{
 			if ((item != null) && (playerId == item.getSellerId()))
 			{
@@ -743,7 +743,7 @@ public class BrokerService
 		}
 		
 		final List<BrokerItem> itemsFound = new ArrayList<>();
-		for (final BrokerItem item : searchItems)
+		for (BrokerItem item : searchItems)
 		{
 			if (TargetItem.getItemId() == item.getItemId())
 			{
@@ -818,7 +818,7 @@ public class BrokerService
 		final List<BrokerItem> registeredItems = new ArrayList<>();
 		final int playerId = player.getObjectId();
 		
-		for (final BrokerItem item : brokerItems.values())
+		for (BrokerItem item : brokerItems.values())
 		{
 			if ((item != null) && (item.getItem() != null) && (playerId == item.getSellerId()))
 			{
@@ -832,7 +832,7 @@ public class BrokerService
 	public boolean hasRegisteredItems(Player player)
 	{
 		final Map<Integer, BrokerItem> brokerItems = getRaceBrokerItems(player.getRace());
-		for (final BrokerItem item : brokerItems.values())
+		for (BrokerItem item : brokerItems.values())
 		{
 			if ((item != null) && (item.getItem() != null) && (player.getObjectId() == item.getSellerId()))
 			{
@@ -884,7 +884,7 @@ public class BrokerService
 		final List<BrokerItem> settledItems = new ArrayList<>();
 		final int playerId = player.getObjectId();
 		long totalKinah = 0;
-		for (final BrokerItem item : brokerSettledItems.values())
+		for (BrokerItem item : brokerSettledItems.values())
 		{
 			if ((item != null) && (playerId == item.getSellerId()))
 			{
@@ -906,7 +906,7 @@ public class BrokerService
 		final Map<Integer, BrokerItem> brokerSettledItems = getRaceBrokerSettledItems(playerCommonData.getRace());
 		final int playerId = playerCommonData.getPlayerObjId();
 		long totalKinah = 0;
-		for (final BrokerItem item : brokerSettledItems.values())
+		for (BrokerItem item : brokerSettledItems.values())
 		{
 			if ((item != null) && (playerId == item.getSellerId()))
 			{
@@ -923,7 +923,7 @@ public class BrokerService
 	{
 		long totalKinah = 0;
 		final int playerId = player.getObjectId();
-		for (final BrokerItem item : getRaceBrokerSettledItems(player.getRace()).values())
+		for (BrokerItem item : getRaceBrokerSettledItems(player.getRace()).values())
 		{
 			if ((item != null) && (playerId == item.getSellerId()))
 			{
@@ -948,7 +948,7 @@ public class BrokerService
 		long kinahCollect = 0;
 		boolean itemsLeft = false;
 		
-		for (final BrokerItem item : brokerSettledItems.values())
+		for (BrokerItem item : brokerSettledItems.values())
 		{
 			if (item.getSellerId() == playerId)
 			{
@@ -956,7 +956,7 @@ public class BrokerService
 			}
 		}
 		
-		for (final BrokerItem item : collectedItems)
+		for (BrokerItem item : collectedItems)
 		{
 			if (item.isSold())
 			{
@@ -1034,7 +1034,7 @@ public class BrokerService
 		
 		final Timestamp currentTime = new Timestamp(Calendar.getInstance().getTimeInMillis());
 		
-		for (final BrokerItem item : asmoBrokerItems.values())
+		for (BrokerItem item : asmoBrokerItems.values())
 		{
 			if ((item != null) && (item.getExpireTime().getTime() <= currentTime.getTime()))
 			{
@@ -1044,7 +1044,7 @@ public class BrokerService
 			}
 		}
 		
-		for (final BrokerItem item : elyosBrokerItems.values())
+		for (BrokerItem item : elyosBrokerItems.values())
 		{
 			if ((item != null) && (item.getExpireTime().getTime() <= currentTime.getTime()))
 			{
@@ -1075,7 +1075,7 @@ public class BrokerService
 	{
 		final Map<Integer, BrokerItem> brokerSettledItems = getRaceBrokerSettledItems(player.getRace());
 		final int playerId = player.getObjectId();
-		for (final BrokerItem item : brokerSettledItems.values())
+		for (BrokerItem item : brokerSettledItems.values())
 		{
 			if ((item != null) && (playerId == item.getSellerId()))
 			{

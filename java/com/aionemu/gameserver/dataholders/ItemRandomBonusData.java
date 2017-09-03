@@ -58,7 +58,7 @@ public class ItemRandomBonusData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final RandomBonus bonus : randomBonuses)
+		for (RandomBonus bonus : randomBonuses)
 		{
 			getBonusMap(bonus.getBonusType()).put(bonus.getId(), bonus);
 		}

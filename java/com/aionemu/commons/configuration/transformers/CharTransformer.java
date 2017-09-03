@@ -51,7 +51,7 @@ public class CharTransformer implements PropertyTransformer<Character>
 			
 			return chars[0];
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new TransformationException(e);
 		}

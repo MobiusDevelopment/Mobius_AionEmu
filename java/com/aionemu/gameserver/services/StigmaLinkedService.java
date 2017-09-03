@@ -42,7 +42,7 @@ public class StigmaLinkedService
 	public static void checkEquipConditions(Player player, List<Integer> list)
 	{
 		boolean check = false;
-		for (final Integer Stigma : list)
+		for (Integer Stigma : list)
 		{
 			final ItemTemplate it = DataManager.ITEM_DATA.getItemTemplate(Stigma);
 			if (it.getName().contains("(Inert)"))

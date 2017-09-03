@@ -80,7 +80,7 @@ public class ChaosTrainingGroundsInstance extends PvPArenaInstance
 		final float totalRankingCrucible = 500 - (500 * rankingRate);
 		final float totalRankingCourage = 100 - (100 * rankingRate);
 		final float totalRankingInfinity = 100 - (100 * rankingRate);
-		for (final InstancePlayerReward playerReward : instanceReward.getInstanceRewards())
+		for (InstancePlayerReward playerReward : instanceReward.getInstanceRewards())
 		{
 			final PvPArenaPlayerReward reward = (PvPArenaPlayerReward) playerReward;
 			if (!reward.isRewarded())

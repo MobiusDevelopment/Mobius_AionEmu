@@ -75,7 +75,7 @@ public class League extends GeneralTeam<PlayerAlliance, LeagueMember>
 	@Override
 	public void sendPacket(AionServerPacket packet)
 	{
-		for (final PlayerAlliance alliance : getMembers())
+		for (PlayerAlliance alliance : getMembers())
 		{
 			alliance.sendPacket(packet);
 		}
@@ -84,7 +84,7 @@ public class League extends GeneralTeam<PlayerAlliance, LeagueMember>
 	@Override
 	public void sendPacket(AionServerPacket packet, Predicate<PlayerAlliance> predicate)
 	{
-		for (final PlayerAlliance alliance : getMembers())
+		for (PlayerAlliance alliance : getMembers())
 		{
 			if (predicate.apply(alliance))
 			{
@@ -130,7 +130,7 @@ public class League extends GeneralTeam<PlayerAlliance, LeagueMember>
 	
 	public Player getPlayerMember(Integer playerObjId)
 	{
-		for (final PlayerAlliance member : getMembers())
+		for (PlayerAlliance member : getMembers())
 		{
 			final PlayerAllianceMember playerMember = member.getMember(playerObjId);
 			if (playerMember != null)

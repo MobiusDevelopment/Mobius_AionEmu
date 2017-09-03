@@ -571,7 +571,7 @@ public final class Vector2f implements Cloneable
 		{
 			return (Vector2f) super.clone();
 		}
-		catch (final CloneNotSupportedException e)
+		catch (CloneNotSupportedException e)
 		{
 			throw new AssertionError(); // can not happen
 		}

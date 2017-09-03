@@ -72,7 +72,7 @@ public class RepurchaseService
 	public Item getRepurchaseItem(Player player, int itemObjectId)
 	{
 		final Collection<Item> items = getRepurchaseItems(player.getObjectId());
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			if (item.getObjectId() == itemObjectId)
 			{
@@ -89,7 +89,7 @@ public class RepurchaseService
 	public void repurchaseFromShop(Player player, RepurchaseList repurchaseList)
 	{
 		final Storage inventory = player.getInventory();
-		for (final Item repurchaseItem : repurchaseList.getRepurchaseItems())
+		for (Item repurchaseItem : repurchaseList.getRepurchaseItems())
 		{
 			final Collection<Item> items = repurchaseItems.get(player.getObjectId());
 			if (items.contains(repurchaseItem))

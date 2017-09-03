@@ -104,7 +104,7 @@ public class SM_GROUP_MEMBER_INFO extends AionServerPacket
 				writeC(0x7F);
 				final List<Effect> abnormalEffects = player.getEffectController().getAbnormalEffects();
 				writeH(abnormalEffects.size());
-				for (final Effect effect : abnormalEffects)
+				for (Effect effect : abnormalEffects)
 				{
 					writeD(effect.getEffectorId());
 					writeH(effect.getSkillId());
@@ -121,7 +121,7 @@ public class SM_GROUP_MEMBER_INFO extends AionServerPacket
 				writeC(0x7F);
 				final List<Effect> abnormalEffects1 = player.getEffectController().getAbnormalEffects();
 				writeH(abnormalEffects1.size());
-				for (final Effect effect : abnormalEffects1)
+				for (Effect effect : abnormalEffects1)
 				{
 					writeD(effect.getEffectorId());
 					writeH(effect.getSkillId());

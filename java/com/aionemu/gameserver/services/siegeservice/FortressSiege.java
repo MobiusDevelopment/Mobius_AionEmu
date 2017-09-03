@@ -323,7 +323,7 @@ public class FortressSiege extends Siege<FortressLocation>
 			final PlayerCommonData BGeneral = DAOManager.getDAO(PlayerDAO.class).loadPlayerCommonData(legionBGeneral);
 			if (legionRewards != null)
 			{
-				for (final SiegeLegionReward medalsType : legionRewards)
+				for (SiegeLegionReward medalsType : legionRewards)
 				{
 					MailFormatter.sendAbyssRewardMail(getSiegeLocation(), BGeneral, AbyssSiegeLevel.VETERAN_SOLDIER, resultLegion, System.currentTimeMillis(), medalsType.getItemId(), medalsType.getCount() * SiegeConfig.SIEGE_MEDAL_RATE, 0);
 				}
@@ -339,7 +339,7 @@ public class FortressSiege extends Siege<FortressLocation>
 		final SiegeResult resultPlayers = isBossKilled() ? SiegeResult.OCCUPY : SiegeResult.DEFENDER;
 		int i = 0;
 		final List<SiegeReward> playerRewards = getSiegeLocation().getReward();
-		for (final SiegeReward topGrade : playerRewards)
+		for (SiegeReward topGrade : playerRewards)
 		{
 			for (int rewardedPC = 0; (i < topPlayersIds.size()) && (rewardedPC < topGrade.getTop()); ++i)
 			{

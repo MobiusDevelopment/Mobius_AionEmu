@@ -47,7 +47,7 @@ public class _18743Not_So_Fast_Nasto extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(804707).addOnTalkEvent(questId);
-		for (final int mob : reviverNasto)
+		for (int mob : reviverNasto)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -101,7 +101,7 @@ public class EventData
 		final Set<String> ae = new HashSet<>();
 		Collections.addAll(ae, active.split(";"));
 		
-		for (final EventTemplate ev : events)
+		for (EventTemplate ev : events)
 		{
 			if (ae.contains(ev.getName()) && ev.isActive())
 			{
@@ -146,7 +146,7 @@ public class EventData
 		this.events = events;
 		this.active = active;
 		
-		for (final EventTemplate et : this.events)
+		for (EventTemplate et : this.events)
 		{
 			if (allEvents.containsKey(et.getName()))
 			{

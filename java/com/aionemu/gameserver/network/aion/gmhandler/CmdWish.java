@@ -97,7 +97,7 @@ public class CmdWish extends AbstractGMHandler
 			
 			if ((itemDesc != null) && (countitems > 0))
 			{
-				for (final ItemTemplate template : DataManager.ITEM_DATA.getItemData().valueCollection())
+				for (ItemTemplate template : DataManager.ITEM_DATA.getItemData().valueCollection())
 				{
 					if ((template.getName() != null) && template.getName().equalsIgnoreCase(itemDesc))
 					{

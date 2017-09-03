@@ -54,7 +54,7 @@ public class _29647Assisting_Grangund extends QuestHandler
 		qe.registerQuestNpc(804662).addOnQuestStart(questId);
 		qe.registerQuestNpc(804662).addOnTalkEvent(questId);
 		qe.registerQuestNpc(804914).addOnTalkEvent(questId); // DF5 Grangund.
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

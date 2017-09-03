@@ -65,7 +65,7 @@ public class SM_ATREIAN_PASSPORT extends AionServerPacket
 		{
 			writeD(stamps);
 		}
-		for (final AtreianPassport atp : passports.values())
+		for (AtreianPassport atp : passports.values())
 		{
 			writeH(atp.getRewardId());
 			if (atp.isFinish() && (atp.getAttendType() == AttendType.CUMULATIVE))

@@ -139,7 +139,7 @@ public class Plane3D
 			result.y = la.y + ((lb.y - la.y) * formula[0]);
 			result.z = la.z + ((lb.z - la.z) * formula[0]);
 		}
-		catch (final RuntimeException e)
+		catch (RuntimeException e)
 		{
 			LoggerFactory.getLogger(getClass()).debug(m1 + "(determinant: " + m1.determinant() + ") * [ " + v1[0] + "," + v1[1] + "," + v1[0] + " ]: " + e.getMessage(), e);
 		}

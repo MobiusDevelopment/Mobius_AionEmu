@@ -66,7 +66,7 @@ public class CosmeticItemAction extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, Item parentItem, Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 		final CosmeticItemTemplate template = DataManager.COSMETIC_ITEMS_DATA.getCosmeticItemsTemplate(cosmeticName);
 		final PlayerAppearance playerAppearance = player.getPlayerAppearance();

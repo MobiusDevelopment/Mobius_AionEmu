@@ -73,18 +73,18 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 		qe.registerQuestNpc(212992).addOnKillEvent(questId);
 		qe.registerOnEnterWorld(questId);
 		qe.registerOnDie(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int stigma : stigmas)
+		for (int stigma : stigmas)
 		{
 			qe.registerOnEquipItem(stigma, questId);
 		}
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
@@ -440,7 +440,7 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 	private boolean isStigmaEquipped(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		for (final Item i : player.getEquipment().getEquippedItemsAllStigma())
+		for (Item i : player.getEquipment().getEquippedItemsAllStigma())
 		{
 			if (i.getItemId() == getStoneId(player))
 			{
@@ -453,7 +453,7 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 	private void removeStigma(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		for (final Item item : player.getEquipment().getEquippedItemsByItemId(getStoneId(player)))
+		for (Item item : player.getEquipment().getEquippedItemsByItemId(getStoneId(player)))
 		{
 			player.getEquipment().unEquipItem(item.getObjectId(), 0);
 		}

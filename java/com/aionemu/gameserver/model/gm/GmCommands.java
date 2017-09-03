@@ -47,7 +47,7 @@ public enum GmCommands
 	
 	public static GmCommands getValue(String command)
 	{
-		for (final GmCommands value : values())
+		for (GmCommands value : values())
 		{
 			if (value.name().equals(command.toUpperCase()))
 			{

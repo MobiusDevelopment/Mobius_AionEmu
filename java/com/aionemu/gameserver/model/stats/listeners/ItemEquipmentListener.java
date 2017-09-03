@@ -220,7 +220,7 @@ public class ItemEquipmentListener
 			{
 				if ((player.getLevel() >= 65) && !itemTemplate.isArchdaeva())
 				{
-					for (final StatFunction a : modifiers)
+					for (StatFunction a : modifiers)
 					{
 						final int value = a.getValue();
 						final int formula = (int) (value * (20.0f / 100.0f));
@@ -274,7 +274,7 @@ public class ItemEquipmentListener
 				{
 					percentageDecrease = 20.0f;
 				}
-				for (final StatFunction a : modifiers)
+				for (StatFunction a : modifiers)
 				{
 					final int value = a.getValue();
 					final int formula = (int) (value * (percentageDecrease / 100.0f));
@@ -302,7 +302,7 @@ public class ItemEquipmentListener
 	private static List<StatFunction> wrapModifiers(Item item, List<StatFunction> modifiers)
 	{
 		final List<StatFunction> allModifiers = new ArrayList<>();
-		for (final StatFunction modifier : modifiers)
+		for (StatFunction modifier : modifiers)
 		{
 			switch (modifier.getName())
 			{
@@ -350,7 +350,7 @@ public class ItemEquipmentListener
 		final boolean mainAndOffNotSame = mainHandItemId != offHandItemId;
 		
 		// 2.- Check Item Set Parts and add effects one by one if not done already
-		for (final PartBonus itempartbonus : itemSetTemplate.getPartbonus())
+		for (PartBonus itempartbonus : itemSetTemplate.getPartbonus())
 		{
 			if (mainAndOffNotSame && isWeapon)
 			{
@@ -395,7 +395,7 @@ public class ItemEquipmentListener
 			return;
 		}
 		
-		for (final ManaStone stone : itemStones)
+		for (ManaStone stone : itemStones)
 		{
 			addStoneStats(item, stone, cgs);
 		}
@@ -429,7 +429,7 @@ public class ItemEquipmentListener
 			return;
 		}
 		
-		for (final ManaStone stone : itemStones)
+		for (ManaStone stone : itemStones)
 		{
 			final List<StatFunction> modifiers = stone.getModifiers();
 			if (modifiers != null)

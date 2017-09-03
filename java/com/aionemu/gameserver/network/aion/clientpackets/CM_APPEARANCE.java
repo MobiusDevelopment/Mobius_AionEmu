@@ -83,7 +83,7 @@ public class CM_APPEARANCE extends AionClientPacket
 				final Item item = player.getInventory().getItemByObjId(itemObjId);
 				if (item != null)
 				{
-					for (final AbstractItemAction action : item.getItemTemplate().getActions().getItemActions())
+					for (AbstractItemAction action : item.getItemTemplate().getActions().getItemActions())
 					{
 						if (action instanceof CosmeticItemAction)
 						{

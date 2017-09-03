@@ -56,7 +56,7 @@ public class ReportToManyData extends XMLQuest
 	{
 		int maxVar = 0;
 		final FastMap<Integer, NpcInfos> NpcInfo = new FastMap<>();
-		for (final NpcInfos mi : npcInfos)
+		for (NpcInfos mi : npcInfos)
 		{
 			NpcInfo.put(mi.getNpcId(), mi);
 			if (mi.getVar() > maxVar)

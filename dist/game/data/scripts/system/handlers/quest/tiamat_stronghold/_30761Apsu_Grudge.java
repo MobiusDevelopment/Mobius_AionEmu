@@ -47,7 +47,7 @@ public class _30761Apsu_Grudge extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(730701).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

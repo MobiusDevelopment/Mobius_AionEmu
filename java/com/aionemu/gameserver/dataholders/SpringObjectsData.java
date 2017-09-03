@@ -50,7 +50,7 @@ public class SpringObjectsData
 	
 	void afterUnmarshal(Unmarshaller unmarshaller, Object parent)
 	{
-		for (final SpringTemplate template : springObject)
+		for (SpringTemplate template : springObject)
 		{
 			springObjects.add(template);
 		}

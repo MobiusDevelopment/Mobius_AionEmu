@@ -98,19 +98,19 @@ public class _25322Through_The_Rift extends QuestHandler
 	{
 		qe.registerQuestNpc(805342).addOnQuestStart(questId); // Hikait.
 		qe.registerQuestNpc(805342).addOnTalkEvent(questId); // Hikait.
-		for (final int mob : LF5_B)
+		for (int mob : LF5_B)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob2 : LF5_D)
+		for (int mob2 : LF5_D)
 		{
 			qe.registerQuestNpc(mob2).addOnKillEvent(questId);
 		}
-		for (final int mob3 : LF5_F)
+		for (int mob3 : LF5_F)
 		{
 			qe.registerQuestNpc(mob3).addOnKillEvent(questId);
 		}
-		for (final int mob4 : LF5_H)
+		for (int mob4 : LF5_H)
 		{
 			qe.registerQuestNpc(mob4).addOnKillEvent(questId);
 		}

@@ -59,7 +59,7 @@ public class _3933Class_Preceptor_Consent extends QuestHandler
 			801215
 		};
 		qe.registerQuestNpc(203701).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

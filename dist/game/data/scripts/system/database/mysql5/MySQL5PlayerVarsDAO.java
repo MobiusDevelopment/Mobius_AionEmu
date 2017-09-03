@@ -36,7 +36,7 @@ public class MySQL5PlayerVarsDAO extends PlayerVarsDAO
 {
 	
 	@Override
-	public Map<String, Object> load(final int playerId)
+	public Map<String, Object> load(int playerId)
 	{
 		final Map<String, Object> map = FastMap.newInstance();
 		DB.select("SELECT param,value FROM player_vars WHERE player_id=?", new ParamReadStH()
@@ -64,7 +64,7 @@ public class MySQL5PlayerVarsDAO extends PlayerVarsDAO
 	}
 	
 	@Override
-	public boolean set(final int playerId, final String key, final Object value)
+	public boolean set(int playerId, String key, Object value)
 	{
 		final boolean result = DB.insertUpdate("INSERT INTO player_vars (`player_id`, `param`, `value`, `time`) VALUES (?,?,?,NOW())", new IUStH()
 		{
@@ -83,7 +83,7 @@ public class MySQL5PlayerVarsDAO extends PlayerVarsDAO
 	}
 	
 	@Override
-	public boolean remove(final int playerId, final String key)
+	public boolean remove(int playerId, String key)
 	{
 		final boolean result = DB.insertUpdate("DELETE FROM player_vars WHERE player_id=? AND param=?", new IUStH()
 		{

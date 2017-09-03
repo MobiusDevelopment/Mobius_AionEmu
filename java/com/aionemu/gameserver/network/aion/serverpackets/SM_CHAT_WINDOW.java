@@ -52,7 +52,7 @@ public class SM_CHAT_WINDOW extends AionServerPacket
 				writeD(group.getTeamId());
 				writeS(group.getLeader().getName());
 				final Collection<Player> members = group.getMembers();
-				for (final Player groupMember : members)
+				for (Player groupMember : members)
 				{
 					writeC(groupMember.getLevel());
 				}
@@ -60,7 +60,7 @@ public class SM_CHAT_WINDOW extends AionServerPacket
 				{
 					writeC(0);
 				}
-				for (final Player groupMember : members)
+				for (Player groupMember : members)
 				{
 					writeC(groupMember.getPlayerClass().getClassId());
 				}
@@ -77,7 +77,7 @@ public class SM_CHAT_WINDOW extends AionServerPacket
 				writeD(alliance.getTeamId());
 				writeS(alliance.getLeader().getName());
 				final Collection<Player> members = alliance.getMembers();
-				for (final Player groupMember : members)
+				for (Player groupMember : members)
 				{
 					writeC(groupMember.getLevel());
 				}
@@ -85,7 +85,7 @@ public class SM_CHAT_WINDOW extends AionServerPacket
 				{
 					writeC(0);
 				}
-				for (final Player groupMember : members)
+				for (Player groupMember : members)
 				{
 					writeC(groupMember.getPlayerClass().getClassId());
 				}

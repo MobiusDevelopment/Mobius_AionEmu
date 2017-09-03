@@ -58,7 +58,7 @@ public class DredgionSchedule
 			final String xml = FileUtils.readFileToString(new File("./config/shedule/dredgion_schedule.xml"));
 			ds = JAXBUtil.deserialize(xml, DredgionSchedule.class);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to initialize dredgion", e);
 		}

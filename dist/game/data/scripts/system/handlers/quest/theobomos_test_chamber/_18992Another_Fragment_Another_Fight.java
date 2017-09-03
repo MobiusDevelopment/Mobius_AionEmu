@@ -55,15 +55,15 @@ public class _18992Another_Fragment_Another_Fight extends QuestHandler
 		qe.registerQuestNpc(806075).addOnQuestStart(questId); // Weatha.
 		qe.registerQuestNpc(806075).addOnTalkEvent(questId); // Weatha.
 		qe.registerQuestNpc(806215).addOnTalkEvent(questId); // Stochio.
-		for (final int mob : IDF6LapShelukSN67Ae)
+		for (int mob : IDF6LapShelukSN67Ae)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : IDF6LapPrincessSN67Ae)
+		for (int mob : IDF6LapPrincessSN67Ae)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : IDF6LapGodElemental67Ah)
+		for (int mob : IDF6LapGodElemental67Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

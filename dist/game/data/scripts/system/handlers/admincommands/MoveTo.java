@@ -53,7 +53,7 @@ public class MoveTo extends AdminCommand
 			y = Float.parseFloat(params[2]);
 			z = Float.parseFloat(params[3]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(admin, "All the parameters should be numbers");
 			return;

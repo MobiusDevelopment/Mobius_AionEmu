@@ -52,7 +52,7 @@ public class _10506Mind_Over_Matter extends QuestHandler
 			702666,
 			702667
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

@@ -409,7 +409,7 @@ public class KromedesTrialInstance extends GeneralInstanceHandler
 		storage.decreaseByItemId(164000141, storage.getItemCountByItemId(164000141)); // Silver Blade Rotan.
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -421,7 +421,7 @@ public class KromedesTrialInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -486,7 +486,7 @@ public class KromedesTrialInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));
@@ -495,7 +495,7 @@ public class KromedesTrialInstance extends GeneralInstanceHandler
 	
 	private void rageOfKromede()
 	{
-		for (final Player p : instance.getPlayersInside())
+		for (Player p : instance.getPlayersInside())
 		{
 			final SkillTemplate st = DataManager.SKILL_DATA.getSkillTemplate(19288); // Rage Of Kromede.
 			final Effect e = new Effect(p, p, st, 1, st.getEffectsDuration(9));

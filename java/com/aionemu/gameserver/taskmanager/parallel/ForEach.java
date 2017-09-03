@@ -83,7 +83,7 @@ public final class ForEach<E>extends CountedCompleter<E>
 			{
 				operation.apply(list[l]);
 			}
-			catch (final Throwable ex)
+			catch (Throwable ex)
 			{
 				onExceptionalCompletion(ex, this);
 			}

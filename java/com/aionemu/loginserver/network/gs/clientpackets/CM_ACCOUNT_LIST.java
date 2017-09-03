@@ -53,7 +53,7 @@ public class CM_ACCOUNT_LIST extends GsClientPacket
 	@Override
 	protected void runImpl()
 	{
-		for (final String s : accountNames)
+		for (String s : accountNames)
 		{
 			final Account a = AccountController.loadAccount(s);
 			if (GameServerTable.isAccountOnAnyGameServer(a))

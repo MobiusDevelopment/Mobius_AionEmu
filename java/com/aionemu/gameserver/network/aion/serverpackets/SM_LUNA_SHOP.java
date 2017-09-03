@@ -160,7 +160,7 @@ public class SM_LUNA_SHOP extends AionServerPacket
 				writeH(itemSize);
 				for (int i = 0; i < itemSize; i++)
 				{
-					for (final PlayerWardrobeEntry ce : player.getWardrobe().getAllWardrobe())
+					for (PlayerWardrobeEntry ce : player.getWardrobe().getAllWardrobe())
 					{
 						writeC(ce.getSlot());
 						writeD(ce.getItemId());
@@ -183,7 +183,7 @@ public class SM_LUNA_SHOP extends AionServerPacket
 			case 12:// open chest
 				writeC(0);// unk
 				writeH(3);// size always 3
-				for (final Map.Entry<Integer, Long> e : munirunerk_treasure.entrySet())
+				for (Map.Entry<Integer, Long> e : munirunerk_treasure.entrySet())
 				{
 					writeD(e.getKey());
 					writeQ(e.getValue());

@@ -56,7 +56,7 @@ public class EmotionLearnAction extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, final Item parentItem, Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 		final ItemTemplate itemTemplate = parentItem.getItemTemplate();
 		PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_USE_ITEM(new DescriptionId(itemTemplate.getNameId())));

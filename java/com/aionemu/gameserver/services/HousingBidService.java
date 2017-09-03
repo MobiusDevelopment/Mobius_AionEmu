@@ -87,7 +87,7 @@ public class HousingBidService extends AbstractCronTask
 		{
 			instance = new HousingBidService(HousingConfig.HOUSE_AUCTION_TIME);
 		}
-		catch (final ParseException pe)
+		catch (ParseException pe)
 		{
 		}
 	}
@@ -127,7 +127,7 @@ public class HousingBidService extends AbstractCronTask
 		{
 			registerDateExpr = new CronExpression(registerEndExpression);
 		}
-		catch (final ParseException e)
+		catch (ParseException e)
 		{
 		}
 		final ServerVariablesDAO dao = DAOManager.getDAO(ServerVariablesDAO.class);
@@ -213,7 +213,7 @@ public class HousingBidService extends AbstractCronTask
 	private int getBidsCountByType(Race race, HouseType type)
 	{
 		int count = 0;
-		for (final HouseBidEntry entry : houseBids.values())
+		for (HouseBidEntry entry : houseBids.values())
 		{
 			final HousingLand land = DataManager.HOUSE_DATA.getLand(entry.getLandId());
 			final Race entryRace = DataManager.NPC_DATA.getNpcTemplate(land.getManagerNpcId()).getTribe() == TribeClass.GENERAL ? Race.ELYOS : Race.ASMODIANS;
@@ -231,12 +231,12 @@ public class HousingBidService extends AbstractCronTask
 		final List<PlayerHouseBid> sortedBids = new ArrayList<>(playerBidData);
 		Collections.sort(sortedBids);
 		final FastMap<Integer, House> housesById = FastMap.newInstance();
-		for (final House house : HousingService.getInstance().getCustomHouses())
+		for (House house : HousingService.getInstance().getCustomHouses())
 		{
 			housesById.put(house.getObjectId(), house);
 		}
 		int entryIndex = 1;
-		for (final PlayerHouseBid playerBid : sortedBids)
+		for (PlayerHouseBid playerBid : sortedBids)
 		{
 			final House house = housesById.get(playerBid.getHouseId());
 			if (house == null)
@@ -264,7 +264,7 @@ public class HousingBidService extends AbstractCronTask
 				entry.incrementBidCount();
 			}
 		}
-		for (final House house : housesById.values())
+		for (House house : housesById.values())
 		{
 			if (house.getOwnerId() == 0)
 			{
@@ -292,7 +292,7 @@ public class HousingBidService extends AbstractCronTask
 			{
 				Thread.sleep(500);
 			}
-			catch (final InterruptedException e)
+			catch (InterruptedException e)
 			{
 				return;
 			}
@@ -300,7 +300,7 @@ public class HousingBidService extends AbstractCronTask
 		final Map<HouseBidEntry, Integer> winners = new HashMap<>();
 		final Map<HouseBidEntry, Integer> successSell = new HashMap<>();
 		final Map<HouseBidEntry, Integer> failedSell = new HashMap<>();
-		for (final Entry<Integer, HouseBidEntry> playerBid : playerBids.entrySet())
+		for (Entry<Integer, HouseBidEntry> playerBid : playerBids.entrySet())
 		{
 			final int playerId = playerBid.getKey();
 			final HouseBidEntry houseBid = getBidByEntryIndex(playerBid.getValue().getEntryIndex());
@@ -317,7 +317,7 @@ public class HousingBidService extends AbstractCronTask
 				}
 			}
 		}
-		for (final HouseBidEntry houseBid : houseBids.values())
+		for (HouseBidEntry houseBid : houseBids.values())
 		{
 			final House house = HousingService.getInstance().getHouseByAddress(houseBid.getAddress());
 			if (houseBid.getBidCount() > 0)
@@ -333,7 +333,7 @@ public class HousingBidService extends AbstractCronTask
 		{
 			log.info("##### Houses sold by admins #####");
 		}
-		for (final Entry<HouseBidEntry, Integer> winData : winners.entrySet())
+		for (Entry<HouseBidEntry, Integer> winData : winners.entrySet())
 		{
 			final House wonHouse = HousingService.getInstance().getHouseByAddress(winData.getKey().getAddress());
 			if (getPlayerData(winData.getValue()) == null)
@@ -348,7 +348,7 @@ public class HousingBidService extends AbstractCronTask
 		{
 			log.info("##### Houses auctioned by players #####");
 		}
-		for (final Entry<HouseBidEntry, Integer> sellData : successSell.entrySet())
+		for (Entry<HouseBidEntry, Integer> sellData : successSell.entrySet())
 		{
 			final House soldHouse = HousingService.getInstance().getHouseByAddress(sellData.getKey().getAddress());
 			final PlayerCommonData buyerPcd = getPlayerData(sellData.getValue());
@@ -385,7 +385,7 @@ public class HousingBidService extends AbstractCronTask
 			}
 			final AuctionResult result = completeHouseSell(buyerPcd, soldHouse);
 		}
-		for (final Entry<HouseBidEntry, Integer> notSoldData : failedSell.entrySet())
+		for (Entry<HouseBidEntry, Integer> notSoldData : failedSell.entrySet())
 		{
 			final HouseBidEntry bidEntry = notSoldData.getKey();
 			final PlayerCommonData sellerPcd = getPlayerData(notSoldData.getValue());
@@ -434,7 +434,7 @@ public class HousingBidService extends AbstractCronTask
 		{
 			log.info("##### Houses added back to auction #####");
 		}
-		for (final HouseBidEntry houseBid : copy)
+		for (HouseBidEntry houseBid : copy)
 		{
 			final House house = HousingService.getInstance().getHouseByAddress(houseBid.getAddress());
 			DAOManager.getDAO(HouseBidsDAO.class).deleteHouseBids(house.getObjectId());
@@ -573,7 +573,7 @@ public class HousingBidService extends AbstractCronTask
 		HouseBidEntry bidEntry = null;
 		synchronized (bidsByIndex)
 		{
-			for (final Integer index : bidsByIndex.keySet())
+			for (Integer index : bidsByIndex.keySet())
 			{
 				if (index > maxIndex)
 				{
@@ -767,7 +767,7 @@ public class HousingBidService extends AbstractCronTask
 		}
 		List<Letter> letters = player.getMailbox().getNewSystemLetters("$$HS_AUCTION_MAIL");
 		boolean needsRefresh = false;
-		for (final Letter letter : letters)
+		for (Letter letter : letters)
 		{
 			final String[] titleParts = letter.getTitle().split(",");
 			final String[] bodyParts = letter.getMessage().split(",");
@@ -801,7 +801,7 @@ public class HousingBidService extends AbstractCronTask
 			PacketSendUtility.sendPacket(player, new SM_RECEIVE_BIDS(0));
 		}
 		letters = player.getMailbox().getNewSystemLetters("$$HS_OVERDUE_");
-		for (final Letter letter : letters)
+		for (Letter letter : letters)
 		{
 			if (letter.getSenderName().endsWith("FINAL") || letter.getSenderName().endsWith("3RD"))
 			{
@@ -827,7 +827,7 @@ public class HousingBidService extends AbstractCronTask
 		synchronized (houseBids)
 		{
 			final List<HouseBidEntry> bids = new ArrayList<>();
-			for (final HouseBidEntry bid : houseBids.values())
+			for (HouseBidEntry bid : houseBids.values())
 			{
 				final HousingLand land = DataManager.HOUSE_DATA.getLand(bid.getLandId());
 				final boolean isEly = DataManager.NPC_DATA.getNpcTemplate(land.getManagerNpcId()).getTribe() == TribeClass.GENERAL;

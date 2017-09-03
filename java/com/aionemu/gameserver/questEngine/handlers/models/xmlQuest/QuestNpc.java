@@ -53,7 +53,7 @@ public class QuestNpc
 		{
 			return false;
 		}
-		for (final QuestDialog questDialog : dialog)
+		for (QuestDialog questDialog : dialog)
 		{
 			if (questDialog.operate(env, qs))
 			{

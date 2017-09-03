@@ -55,7 +55,7 @@ public class CmdAddSkill extends AbstractGMHandler
 			return;
 		}
 		
-		for (final SkillTemplate template : DataManager.SKILL_DATA.getSkillData().valueCollection())
+		for (SkillTemplate template : DataManager.SKILL_DATA.getSkillData().valueCollection())
 		{
 			if ((template.getName() != null) && template.getName().equalsIgnoreCase(params))
 			{

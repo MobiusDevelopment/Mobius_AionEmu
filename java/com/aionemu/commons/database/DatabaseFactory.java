@@ -81,7 +81,7 @@ public class DatabaseFactory
 		{
 			DatabaseConfig.DATABASE_DRIVER.newInstance();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error obtaining DB driver", e);
 			throw new Error("DB Driver doesnt exist!");
@@ -106,7 +106,7 @@ public class DatabaseFactory
 		{
 			connectionPool = new BoneCP(config);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Error while creating DB Connection pool", e);
 			throw new Error("DatabaseFactory not initialized!", e);
@@ -123,7 +123,7 @@ public class DatabaseFactory
 			databaseMinorVersion = dmd.getDatabaseMinorVersion();
 			c.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error with connection string: " + DatabaseConfig.DATABASE_URL, e);
 			throw new Error("DatabaseFactory not initialized!");
@@ -178,7 +178,7 @@ public class DatabaseFactory
 		{
 			connectionPool.shutdown();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.warn("Failed to shutdown DatabaseFactory", e);
 		}
@@ -217,7 +217,7 @@ public class DatabaseFactory
 				st.close();
 			}
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't close Prepared Statement", e);
 		}
@@ -244,7 +244,7 @@ public class DatabaseFactory
 				con.setAutoCommit(true);
 			}
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Failed to set autocommit to true while closing connection: ", e);
 		}
@@ -253,7 +253,7 @@ public class DatabaseFactory
 		{
 			con.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("DatabaseFactory: Failed to close database connection!", e);
 		}

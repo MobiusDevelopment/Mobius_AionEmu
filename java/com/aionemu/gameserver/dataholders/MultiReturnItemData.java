@@ -46,7 +46,7 @@ public class MultiReturnItemData
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
 		ItemLocationList.clear();
-		for (final MultiReturn template : ItemList)
+		for (MultiReturn template : ItemList)
 		{
 			ItemLocationList.put(template.getId(), template.getMultiReturnList());
 		}
@@ -59,7 +59,7 @@ public class MultiReturnItemData
 	
 	public MultiReturn getMultiReturnById(int id)
 	{
-		for (final MultiReturn template : ItemList)
+		for (MultiReturn template : ItemList)
 		{
 			if (template.getId() == id)
 			{

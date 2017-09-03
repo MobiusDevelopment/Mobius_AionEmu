@@ -60,10 +60,10 @@ public class HouseData
 		{
 			return;
 		}
-		for (final HousingLand land : lands)
+		for (HousingLand land : lands)
 		{
 			landsById.put(land.getId(), land);
-			for (final HouseAddress address : land.getAddresses())
+			for (HouseAddress address : land.getAddresses())
 			{
 				Integer exitMapId = address.getExitMapId();
 				if (exitMapId == null)
@@ -95,9 +95,9 @@ public class HouseData
 		{
 			return null;
 		}
-		for (final HousingLand land : worldHouseAreas)
+		for (HousingLand land : worldHouseAreas)
 		{
-			for (final Building building : land.getBuildings())
+			for (Building building : land.getBuildings())
 			{
 				if (houseSize.value().equals(building.getSize()))
 				{

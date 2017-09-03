@@ -47,7 +47,7 @@ public class _51008Non_Helping_Hands extends QuestHandler
 	{
 		qe.registerQuestNpc(831039).addOnQuestStart(questId);
 		qe.registerQuestNpc(831037).addOnTalkEvent(questId);
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

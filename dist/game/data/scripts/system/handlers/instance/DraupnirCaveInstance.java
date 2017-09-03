@@ -57,7 +57,7 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 	protected boolean isInstanceDestroyed = false;
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		super.onInstanceCreate(instance);
 		// You must kill Afrane, Saraswati, Lakshmi, and Nimbarka to make Commander Bakarma appear.
@@ -98,7 +98,7 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); // [Event] Noble Abbey Bundle.
 				break;
 			case 213780: // Commander Bakarma.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -118,7 +118,7 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 237275: // Akhal.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -291,7 +291,7 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 		abyssGateRaid((Npc) spawn(236900, 514.45465f, 614.66077f, 515.35785f, (byte) 67));
 	}
 	
-	private void abyssGateRaid(final Npc npc)
+	private void abyssGateRaid(Npc npc)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -300,7 +300,7 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 			{
 				if (!isInstanceDestroyed)
 				{
-					for (final Player player : instance.getPlayersInside())
+					for (Player player : instance.getPlayersInside())
 					{
 						npc.setTarget(player);
 						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
@@ -329,7 +329,7 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -341,7 +341,7 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -374,7 +374,7 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

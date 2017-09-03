@@ -51,7 +51,7 @@ public class _29636Back_To_Surt extends QuestHandler
 		qe.registerQuestNpc(205164).addOnQuestStart(questId);
 		qe.registerQuestNpc(205164).addOnTalkEvent(questId);
 		qe.registerQuestNpc(205150).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -176,7 +176,7 @@ public class XmlMerger
 			{
 				doUpdate();
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				FileUtils.deleteQuietly(destFile);
 				FileUtils.deleteQuietly(metaDataFile);
@@ -288,7 +288,7 @@ public class XmlMerger
 				{
 					writer.close();
 				}
-				catch (final Exception ignored)
+				catch (Exception ignored)
 				{
 				}
 			}
@@ -298,7 +298,7 @@ public class XmlMerger
 				{
 					reader.close();
 				}
-				catch (final Exception ignored)
+				catch (Exception ignored)
 				{
 				}
 			}
@@ -345,7 +345,7 @@ public class XmlMerger
 			
 			final Collection<File> files = listFiles(file, recImport);
 			
-			for (final File childFile : files)
+			for (File childFile : files)
 			{
 				importFile(childFile, skipRoot, writer, metadata);
 			}
@@ -464,7 +464,7 @@ public class XmlMerger
 				{
 					reader.close();
 				}
-				catch (final Exception ignored)
+				catch (Exception ignored)
 				{
 				}
 			}
@@ -528,7 +528,7 @@ public class XmlMerger
 				
 				final Collection<File> files = listFiles(file, rec == null ? true : Boolean.valueOf(rec));
 				
-				for (final File childFile : files)
+				for (File childFile : files)
 				{
 					if (checkFile(childFile))
 					{
@@ -557,7 +557,7 @@ public class XmlMerger
 					return true;
 				}
 			}
-			catch (final IOException e)
+			catch (IOException e)
 			{
 				logger.warn("File varification error. File: " + file.getPath() + ", location=" + locator.getLineNumber() + ":" + locator.getColumnNumber(), e);
 				return true;// was modified.
@@ -591,7 +591,7 @@ public class XmlMerger
 			
 			return props;
 		}
-		catch (final IOException e)// properties
+		catch (IOException e)// properties
 		{
 			logger.debug("File modfications restoring error. ", e);
 			return null;
@@ -610,7 +610,7 @@ public class XmlMerger
 			writer = new FileWriter(file, false);
 			props.store(writer, " This file is machine-generated. DO NOT EDIT!");
 		}
-		catch (final IOException e)
+		catch (IOException e)
 		{
 			logger.error("Failed to store file modification data.");
 			throw e;

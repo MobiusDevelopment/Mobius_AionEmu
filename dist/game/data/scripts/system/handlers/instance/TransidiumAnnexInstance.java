@@ -69,7 +69,7 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 277224: // Ahserion.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -95,7 +95,7 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		super.onInstanceCreate(instance);
 		if (instanceTimer == null)
@@ -511,7 +511,7 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 		doors.clear();
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -523,7 +523,7 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -546,7 +546,7 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

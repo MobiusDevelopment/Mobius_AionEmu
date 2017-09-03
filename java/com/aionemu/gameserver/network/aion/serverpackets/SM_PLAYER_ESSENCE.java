@@ -72,7 +72,7 @@ public class SM_PLAYER_ESSENCE extends AionServerPacket
 		writeH(size);
 		if (onLogin)
 		{
-			for (final PlayerCPEntry ce : activePlayer.getCP().getAllCP())
+			for (PlayerCPEntry ce : activePlayer.getCP().getAllCP())
 			{
 				writeD(ce.getSlot());
 				writeH(ce.getPoint());
@@ -119,7 +119,7 @@ public class SM_PLAYER_ESSENCE extends AionServerPacket
 		}
 		else
 		{
-			for (final PlayerCPEntry ce : activePlayer.getCP().getAllCP())
+			for (PlayerCPEntry ce : activePlayer.getCP().getAllCP())
 			{
 				if (ce.getSlot() == 1)
 				{

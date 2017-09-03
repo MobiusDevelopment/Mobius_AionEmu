@@ -59,7 +59,7 @@ public class MailTemplate
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final MailPart part : mailParts)
+		for (MailPart part : mailParts)
 		{
 			mailPartsMap.put(part.getType(), part);
 		}

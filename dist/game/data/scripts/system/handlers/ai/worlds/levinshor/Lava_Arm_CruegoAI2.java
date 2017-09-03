@@ -81,7 +81,7 @@ public class Lava_Arm_CruegoAI2 extends AggressiveNpcAI2
 	private synchronized void checkPercentage(int hpPercentage)
 	{
 		curentPercent = hpPercentage;
-		for (final Integer percent : percents)
+		for (Integer percent : percents)
 		{
 			if (hpPercentage <= percent)
 			{

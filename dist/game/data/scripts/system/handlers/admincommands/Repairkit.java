@@ -92,7 +92,7 @@ public class Repairkit extends AdminCommand
 		
 	}
 	
-	private void removeItemFromDatabase(final Player admin, final int itemId)
+	private void removeItemFromDatabase(Player admin, int itemId)
 	{
 		Connection con = null;
 		try
@@ -103,7 +103,7 @@ public class Repairkit extends AdminCommand
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("ERROR while deleting ALL item through Repairkit Command!!");
 		}
@@ -114,7 +114,7 @@ public class Repairkit extends AdminCommand
 		PacketSendUtility.sendMessage(admin, "[item:" + itemId + "] (" + itemId + ") has been successfully removed from all players!");
 	}
 	
-	private void wipeInventoryExceptEquiped(final Player admin, final String playerToWipe)
+	private void wipeInventoryExceptEquiped(Player admin, String playerToWipe)
 	{
 		Connection con = null;
 		final Player checkPOnline = World.getInstance().findPlayer(playerToWipe);
@@ -135,7 +135,7 @@ public class Repairkit extends AdminCommand
 		{
 			playerID = DAOManager.getDAO(PlayerDAO.class).getPlayerIdByName(playerToWipe);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.info("[repairkit-wipe] GM : [" + admin.getName() + "] couldn't Find Name in Database ( RepairKIT )");
 		}
@@ -154,7 +154,7 @@ public class Repairkit extends AdminCommand
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("[repairkit-wipe] GM : [" + admin.getName() + "] Error While wiping item inventory through RepairKit Command!");
 		}
@@ -166,7 +166,7 @@ public class Repairkit extends AdminCommand
 		log.error("[repairkit-wipe] GM : [" + admin.getName() + "] succesfully wiped the player's Inventory of [" + playerToWipe + "]");
 	}
 	
-	private void removeItemByID(final Player admin, final String playerToRemoveFrom, final int itemID)
+	private void removeItemByID(Player admin, String playerToRemoveFrom, int itemID)
 	{
 		Connection con = null;
 		final Player checkPlayerOnline = World.getInstance().findPlayer(playerToRemoveFrom);
@@ -187,7 +187,7 @@ public class Repairkit extends AdminCommand
 		{
 			playerID = DAOManager.getDAO(PlayerDAO.class).getPlayerIdByName(playerToRemoveFrom);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.info("[repairkit-removeItem] GM : [" + admin.getName() + "] Couldn't Find Name in Database ( RepairKIT )");
 		}
@@ -208,7 +208,7 @@ public class Repairkit extends AdminCommand
 			stmt.close();
 			
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("[repairkit-removeItem] GM : [" + admin.getName() + "] ERROR while deleting item through Repairkit Command!!");
 		}
@@ -220,7 +220,7 @@ public class Repairkit extends AdminCommand
 		log.error("[repairkit-wipe] GM : [" + admin.getName() + "] succesfully removed an Item [" + itemID + "] from player [" + playerToRemoveFrom + "]");
 	}
 	
-	private void returnPlayer(final Player admin, final String playerToReturn, final String race)
+	private void returnPlayer(Player admin, String playerToReturn, String race)
 	{
 		Connection con = null;
 		final Player checkPlayerOnline = World.getInstance().findPlayer(Util.convertName(playerToReturn));
@@ -279,7 +279,7 @@ public class Repairkit extends AdminCommand
 		{
 			playerID = DAOManager.getDAO(PlayerDAO.class).getPlayerIdByName(playerToReturn);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.info("[repairkit-return] GM : [" + admin.getName() + "] Couldn't Find Name in Database ( RepairKIT )");
 		}
@@ -305,7 +305,7 @@ public class Repairkit extends AdminCommand
 			stmt.close();
 			
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("[repairkit-return] GM : [" + admin.getName() + "] Error Returning Player through Command!");
 		}

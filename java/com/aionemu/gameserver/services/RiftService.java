@@ -62,9 +62,9 @@ public class RiftService
 		if (CustomConfig.RIFT_ENABLED)
 		{
 			riftSchedule = RiftSchedule.load();
-			for (final Rift rift : riftSchedule.getRiftsList())
+			for (Rift rift : riftSchedule.getRiftsList())
 			{
-				for (final String openTimes : rift.getOpenTime())
+				for (String openTimes : rift.getOpenTime())
 				{
 					CronService.getInstance().schedule(new RiftOpenRunnable(rift.getWorldId()), openTimes);
 				}
@@ -80,7 +80,7 @@ public class RiftService
 		}
 		else
 		{
-			for (final RiftLocation loc : RiftService.getInstance().getRiftLocations().values())
+			for (RiftLocation loc : RiftService.getInstance().getRiftLocations().values())
 			{
 				if (loc.getWorldId() == id)
 				{
@@ -113,7 +113,7 @@ public class RiftService
 			else
 			{
 				boolean opened = false;
-				for (final RiftLocation rift : getRiftLocations().values())
+				for (RiftLocation rift : getRiftLocations().values())
 				{
 					if ((rift.getWorldId() == id) && rift.getSpawned().isEmpty())
 					{
@@ -144,7 +144,7 @@ public class RiftService
 			else
 			{
 				boolean opened = false;
-				for (final RiftLocation rift : getRiftLocations().values())
+				for (RiftLocation rift : getRiftLocations().values())
 				{
 					if ((rift.getWorldId() == id) && !rift.getSpawned().isEmpty())
 					{
@@ -176,7 +176,7 @@ public class RiftService
 	public void closeRift(RiftLocation location)
 	{
 		location.setOpened(false);
-		for (final VisibleObject npc : location.getSpawned())
+		for (VisibleObject npc : location.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();
@@ -189,7 +189,7 @@ public class RiftService
 		closing.lock();
 		try
 		{
-			for (final RiftLocation rift : activeRifts.values())
+			for (RiftLocation rift : activeRifts.values())
 			{
 				closeRift(rift);
 			}

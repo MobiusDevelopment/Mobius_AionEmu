@@ -82,7 +82,7 @@ public class ItemUpgradeService
 		}
 		if (resultItem.getNeed_kinah() == null)
 		{
-			for (final SubMaterialItem sub : resultItem.getUpgrade_materials().getSubMaterialItem())
+			for (SubMaterialItem sub : resultItem.getUpgrade_materials().getSubMaterialItem())
 			{
 				if (player.getInventory().getItemCountByItemId(sub.getId()) < sub.getCount())
 				{
@@ -108,7 +108,7 @@ public class ItemUpgradeService
 		final UpgradeResultItem resultItem = resultItemMap.get(resultItemId);
 		if (resultItem.getNeed_kinah() == null)
 		{
-			for (final SubMaterialItem item : resultItem.getUpgrade_materials().getSubMaterialItem())
+			for (SubMaterialItem item : resultItem.getUpgrade_materials().getSubMaterialItem())
 			{
 				if (!player.getInventory().decreaseByItemId(item.getId(), item.getCount()))
 				{

@@ -142,7 +142,7 @@ public class ScriptContextImpl implements ScriptContext
 		
 		if (childScriptContexts != null)
 		{
-			for (final ScriptContext context : childScriptContexts)
+			for (ScriptContext context : childScriptContexts)
 			{
 				context.init();
 			}
@@ -164,7 +164,7 @@ public class ScriptContextImpl implements ScriptContext
 		
 		if (childScriptContexts != null)
 		{
-			for (final ScriptContext child : childScriptContexts)
+			for (ScriptContext child : childScriptContexts)
 			{
 				child.shutdown();
 			}
@@ -342,7 +342,7 @@ public class ScriptContextImpl implements ScriptContext
 		{
 			sc = (ScriptCompiler) Class.forName(getCompilerClassName(), true, cl).newInstance();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Can't create instance of compiler");
 			throw new RuntimeException(e);

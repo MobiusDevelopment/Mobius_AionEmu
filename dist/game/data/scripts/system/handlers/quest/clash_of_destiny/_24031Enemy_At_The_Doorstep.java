@@ -71,7 +71,7 @@ public class _24031Enemy_At_The_Doorstep extends QuestHandler
 		qe.registerQuestItem(182215395, questId); // Aurtri's Dimension Investigation Device.
 		qe.registerQuestItem(182215396, questId); // Tyr's Dimension Investigation Device.
 		qe.registerQuestNpc(233879).addOnKillEvent(questId); // Captain Hagarkan.
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}
@@ -258,7 +258,7 @@ public class _24031Enemy_At_The_Doorstep extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		final Player player = env.getPlayer();
 		final int id = item.getItemTemplate().getTemplateId();

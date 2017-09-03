@@ -94,7 +94,7 @@ public class _14040Orders_From_Reshanta extends QuestHandler
 					14046,
 					14047
 				};
-				for (final int id : ids)
+				for (int id : ids)
 				{
 					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), id, env.getDialogId()));
 				}

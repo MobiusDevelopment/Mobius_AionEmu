@@ -90,7 +90,7 @@ public class _14020Orders_From_Eltnen extends QuestHandler
 					14024,
 					14025
 				};
-				for (final int id : ids)
+				for (int id : ids)
 				{
 					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), id, env.getDialogId()));
 				}

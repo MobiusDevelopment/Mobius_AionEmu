@@ -76,7 +76,7 @@ public class BaseCommand extends AdminCommand
 			showHelp(player);
 			return;
 		}
-		for (final BaseLocation base : BaseService.getInstance().getBaseLocations().values())
+		for (BaseLocation base : BaseService.getInstance().getBaseLocations().values())
 		{
 			PacketSendUtility.sendMessage(player, "Base:" + base.getId() + " belongs to " + base.getRace());
 		}
@@ -99,7 +99,7 @@ public class BaseCommand extends AdminCommand
 		{
 			race = Race.valueOf(params[2].toUpperCase());
 		}
-		catch (final IllegalArgumentException e)
+		catch (IllegalArgumentException e)
 		{
 		}
 		if (race == null)

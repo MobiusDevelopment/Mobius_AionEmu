@@ -149,7 +149,7 @@ public class HouseCommand extends AdminCommand
 				return;
 			}
 			House revokedHouse = null;
-			for (final House house : target.getHouses())
+			for (House house : target.getHouses())
 			{
 				if (house.getName().equals(houseName))
 				{

@@ -93,7 +93,7 @@ public class _18951Minion_Madness extends QuestHandler
 		qe.registerQuestNpc(209678).addOnQuestStart(questId);
 		qe.registerQuestNpc(209678).addOnTalkEvent(questId);
 		qe.registerQuestNpc(804711).addOnTalkEvent(questId);
-		for (final int mob : minion)
+		for (int mob : minion)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

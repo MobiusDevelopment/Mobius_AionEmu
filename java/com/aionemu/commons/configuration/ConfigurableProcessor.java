@@ -72,7 +72,7 @@ public class ConfigurableProcessor
 		// Only classes (static fields) can be located in interfaces
 		if (obj == null)
 		{
-			for (final Class<?> itf : clazz.getInterfaces())
+			for (Class<?> itf : clazz.getInterfaces())
 			{
 				process(itf, obj, props);
 			}
@@ -93,7 +93,7 @@ public class ConfigurableProcessor
 	 */
 	private static void processFields(Class<?> clazz, Object obj, Properties[] props)
 	{
-		for (final Field f : clazz.getDeclaredFields())
+		for (Field f : clazz.getDeclaredFields())
 		{
 			// Static fields should not be modified when processing object
 			if (Modifier.isStatic(f.getModifiers()) && (obj != null))
@@ -144,7 +144,7 @@ public class ConfigurableProcessor
 				log.debug("Field " + f.getName() + " of class " + f.getDeclaringClass().getName() + " wasn't modified");
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Can't transform field " + f.getName() + " of class " + f.getDeclaringClass());
 			throw new RuntimeException();
@@ -198,7 +198,7 @@ public class ConfigurableProcessor
 	 */
 	private static String findPropertyByKey(String key, Properties[] props)
 	{
-		for (final Properties p : props)
+		for (Properties p : props)
 		{
 			if (p.containsKey(key))
 			{

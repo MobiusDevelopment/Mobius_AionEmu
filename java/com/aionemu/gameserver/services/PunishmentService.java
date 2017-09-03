@@ -141,7 +141,7 @@ public class PunishmentService
 	 * This method will update the prison status
 	 * @param player
 	 */
-	public static void updatePrisonStatus(final Player player)
+	public static void updatePrisonStatus(Player player)
 	{
 		if (player.isInPrison())
 		{
@@ -173,7 +173,7 @@ public class PunishmentService
 	 * @param player
 	 * @param prisonTimer
 	 */
-	private static void schedulePrisonTask(final Player player, long prisonTimer)
+	private static void schedulePrisonTask(Player player, long prisonTimer)
 	{
 		player.setPrisonTimer(prisonTimer);
 		player.getController().addTask(TaskId.PRISON, ThreadPoolManager.getInstance().schedule(() -> setIsInPrison(player, false, 0, ""), prisonTimer));
@@ -268,7 +268,7 @@ public class PunishmentService
 	 * @param gatherableTimer
 	 * @author Cura
 	 */
-	private static void scheduleGatherableTask(final Player player, long gatherableTimer)
+	private static void scheduleGatherableTask(Player player, long gatherableTimer)
 	{
 		player.setGatherableTimer(gatherableTimer);
 		player.getController().addTask(TaskId.GATHERABLE, ThreadPoolManager.getInstance().schedule(() -> setIsNotGatherable(player, 0, false, 0), gatherableTimer));

@@ -90,7 +90,7 @@ public class Conditions
 	{
 		if (conditions != null)
 		{
-			for (final Condition condition : getConditions())
+			for (Condition condition : getConditions())
 			{
 				if (!condition.validate(skill))
 				{
@@ -105,7 +105,7 @@ public class Conditions
 	{
 		if (conditions != null)
 		{
-			for (final Condition condition : getConditions())
+			for (Condition condition : getConditions())
 			{
 				if (!condition.validate(stat, statFunction))
 				{
@@ -120,7 +120,7 @@ public class Conditions
 	{
 		if (conditions != null)
 		{
-			for (final Condition condition : getConditions())
+			for (Condition condition : getConditions())
 			{
 				if (!condition.validate(effect))
 				{

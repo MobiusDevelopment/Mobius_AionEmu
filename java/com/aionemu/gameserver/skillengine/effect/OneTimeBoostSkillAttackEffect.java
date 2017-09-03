@@ -40,7 +40,7 @@ public class OneTimeBoostSkillAttackEffect extends BuffEffect
 	private SkillType type;
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		super.startEffect(effect);
 		

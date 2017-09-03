@@ -49,7 +49,7 @@ public class _2633DestroyingBalaurWeapons extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(204700).addOnQuestStart(questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

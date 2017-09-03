@@ -60,7 +60,7 @@ public class WalkerData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final WalkerTemplate route : walkerlist)
+		for (WalkerTemplate route : walkerlist)
 		{
 			if (walkerlistData.containsKey(route.getRouteId()))
 			{
@@ -105,7 +105,7 @@ public class WalkerData
 		{
 			schema = sf.newSchema(new File("./data/static_data/npc_walker/npc_walker.xsd"));
 		}
-		catch (final SAXException e1)
+		catch (SAXException e1)
 		{
 			log.error("Error while saving data: " + e1.getMessage(), e1.getCause());
 			return;
@@ -122,7 +122,7 @@ public class WalkerData
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			marshaller.marshal(this, xml);
 		}
-		catch (final JAXBException e)
+		catch (JAXBException e)
 		{
 			log.error("Error while saving data: " + e.getMessage(), e.getCause());
 			return;

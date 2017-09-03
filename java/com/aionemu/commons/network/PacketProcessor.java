@@ -297,7 +297,7 @@ public class PacketProcessor<T extends AConnection>
 			{
 				Thread.sleep(sleepTime);
 			}
-			catch (final InterruptedException e)
+			catch (InterruptedException e)
 			{
 				// we dont care
 			}

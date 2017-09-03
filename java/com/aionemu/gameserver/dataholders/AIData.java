@@ -44,7 +44,7 @@ public class AIData
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
 		aiTemplate.clear();
-		for (final Ai template : templates)
+		for (Ai template : templates)
 		{
 			aiTemplate.put(template.getNpcId(), new AITemplate(template));
 		}

@@ -76,7 +76,7 @@ public class Shutdown extends Thread
 		{
 			NetConnector.getInstance().shutdown();
 		}
-		catch (final Throwable t)
+		catch (Throwable t)
 		{
 			log.error("Can't shutdown NetConnector", t);
 		}
@@ -85,7 +85,7 @@ public class Shutdown extends Thread
 		{
 			DatabaseFactory.shutdown();
 		}
-		catch (final Throwable t)
+		catch (Throwable t)
 		{
 			log.error("Can't shutdown DatabaseFactory", t);
 		}
@@ -98,7 +98,7 @@ public class Shutdown extends Thread
 		{
 			ThreadPoolManager.getInstance().shutdown();
 		}
-		catch (final Throwable t)
+		catch (Throwable t)
 		{
 			log.error("Can't shutdown ThreadPoolManager", t);
 		}

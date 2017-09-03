@@ -48,7 +48,7 @@ public class _30350Improve_Cipher_Blade extends QuestHandler
 		qe.registerQuestNpc(799336).addOnQuestStart(questId); // Tataka.
 		qe.registerQuestNpc(799336).addOnTalkEvent(questId); // Tataka.
 		qe.registerGetingItem(182213560, questId);
-		for (final int debilkarim : debilkarims)
+		for (int debilkarim : debilkarims)
 		{
 			qe.registerQuestNpc(debilkarim).addOnKillEvent(questId);
 		}

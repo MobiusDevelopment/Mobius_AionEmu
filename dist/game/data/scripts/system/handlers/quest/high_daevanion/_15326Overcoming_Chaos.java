@@ -66,7 +66,7 @@ public class _15326Overcoming_Chaos extends QuestHandler
 	{
 		qe.registerQuestNpc(805331).addOnQuestStart(questId); // Machina.
 		qe.registerQuestNpc(805331).addOnTalkEvent(questId); // Machina.
-		for (final int mob : DF5P1)
+		for (int mob : DF5P1)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

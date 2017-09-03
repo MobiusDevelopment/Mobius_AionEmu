@@ -48,7 +48,7 @@ public class PetSkillData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final PetSkillTemplate petSkill : petSkills)
+		for (PetSkillTemplate petSkill : petSkills)
 		{
 			TIntIntHashMap orderSkillMap = petSkillData.get(petSkill.getOrderSkill());
 			if (orderSkillMap == null)

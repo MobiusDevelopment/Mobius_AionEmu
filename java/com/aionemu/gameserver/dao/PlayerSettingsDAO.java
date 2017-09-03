@@ -39,10 +39,10 @@ public abstract class PlayerSettingsDAO implements DAO
 	 * @param playerId
 	 * @param data
 	 */
-	public abstract void saveSettings(final Player player);
+	public abstract void saveSettings(Player player);
 	
 	/**
 	 * @param playerId
 	 */
-	public abstract void loadSettings(final Player player);
+	public abstract void loadSettings(Player player);
 }

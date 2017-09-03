@@ -64,7 +64,7 @@ public class RvrService
 		if (CustomConfig.RVR_ENABLED)
 		{
 			rvr = DataManager.RVR_DATA.getRvrLocations();
-			for (final RvrLocation loc : getRvrLocations().values())
+			for (RvrLocation loc : getRvrLocations().values())
 			{
 				spawn(loc, RvrStateType.PEACE);
 			}
@@ -80,9 +80,9 @@ public class RvrService
 		if (CustomConfig.RVR_ENABLED)
 		{
 			rvrSchedule = RvrSchedule.load();
-			for (final Rvr rvr : rvrSchedule.getRvrsList())
+			for (Rvr rvr : rvrSchedule.getRvrsList())
 			{
-				for (final String rvrTime : rvr.getRvrTimes())
+				for (String rvrTime : rvr.getRvrTimes())
 				{
 					CronService.getInstance().schedule(new RvrStartRunnable(rvr.getId()), rvrTime);
 				}
@@ -90,7 +90,7 @@ public class RvrService
 		}
 	}
 	
-	public void startRvr(final int id)
+	public void startRvr(int id)
 	{
 		final Rvrlf3df3<?> directPortal;
 		synchronized (this)
@@ -140,9 +140,9 @@ public class RvrService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getRvrSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final RvrSpawnTemplate rvrtemplate = (RvrSpawnTemplate) st;
 				if (rvrtemplate.getRStateType().equals(rstate))
@@ -505,7 +505,7 @@ public class RvrService
 	public void despawn(RvrLocation loc)
 	{
 		loc.setRvrActive(false);
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

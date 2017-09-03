@@ -60,15 +60,15 @@ public class _28996Unstable_Cursed_Canyon_Fragment extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : IDLF1TBarricadeDragon01)
+		for (int mob : IDLF1TBarricadeDragon01)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : IDLF1TBarricadeDragon03)
+		for (int mob : IDLF1TBarricadeDragon03)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

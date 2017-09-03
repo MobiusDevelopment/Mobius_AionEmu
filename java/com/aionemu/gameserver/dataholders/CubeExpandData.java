@@ -43,7 +43,7 @@ public class CubeExpandData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final CubeExpandTemplate npc : clist)
+		for (CubeExpandTemplate npc : clist)
 		{
 			npctlistData.put(npc.getNpcId(), npc);
 		}

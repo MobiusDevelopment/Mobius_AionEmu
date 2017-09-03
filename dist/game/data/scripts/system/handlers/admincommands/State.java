@@ -44,11 +44,11 @@ public class State extends AdminCommand
 	
 	static
 	{
-		for (final CreatureState s : EnumSet.allOf(CreatureState.class))
+		for (CreatureState s : EnumSet.allOf(CreatureState.class))
 		{
 			creatureStateLookup.put(s.getId(), s);
 		}
-		for (final TestState t : EnumSet.allOf(TestState.class))
+		for (TestState t : EnumSet.allOf(TestState.class))
 		{
 			testStateLookup.put(t.id, t);
 		}
@@ -108,7 +108,7 @@ public class State extends AdminCommand
 			{
 				number = Integer.valueOf(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "syntax //state set <bit number>");
 				return;

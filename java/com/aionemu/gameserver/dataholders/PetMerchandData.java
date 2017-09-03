@@ -45,7 +45,7 @@ public class PetMerchandData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final PetMerchandEntry merch : list)
+		for (PetMerchandEntry merch : list)
 		{
 			merchandsById.put(merch.getId(), merch);
 		}

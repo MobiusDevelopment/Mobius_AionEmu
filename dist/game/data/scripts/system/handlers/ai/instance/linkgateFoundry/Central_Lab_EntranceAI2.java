@@ -49,7 +49,7 @@ public class Central_Lab_EntranceAI2 extends NpcAI2
 	 * http://na.aiononline.com/media/uploads/images/front-page-banners/AION_Patch_Notes_021716.pdf - The number of keys required to move to the central lab has been reduced from 1/5/7 to 1/3/5
 	 */
 	@Override
-	public boolean onDialogSelect(final Player player, int dialogId, int questId, int extendedRewardIndex)
+	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		final int instanceId = getPosition().getInstanceId();
 		switch (getNpcId())

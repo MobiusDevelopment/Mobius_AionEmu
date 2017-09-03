@@ -79,7 +79,7 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); // [Event] Noble Abbey Bundle.
 				break;
 			case 236300: // Brigade General Vasharti.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -109,7 +109,7 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 218572: // Ariana's Jewelry Box.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -156,7 +156,7 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 833048: // Rentus Quality Supplies Storage Box.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -187,7 +187,7 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onDie(final Npc npc)
+	public void onDie(Npc npc)
 	{
 		final Player player = npc.getAggroList().getMostPlayerDamage();
 		if (isInstanceDestroyed)
@@ -373,13 +373,13 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 	
 	private void despawnNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			npc.getController().onDelete();
 		}
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -391,7 +391,7 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -428,7 +428,7 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 	
 	private void boostMorale()
 	{
-		for (final Player p : instance.getPlayersInside())
+		for (Player p : instance.getPlayersInside())
 		{
 			final SkillTemplate st = DataManager.SKILL_DATA.getSkillTemplate(19367); // Boost Morale.
 			final Effect e = new Effect(p, p, st, 1, st.getEffectsDuration(9));
@@ -448,7 +448,7 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

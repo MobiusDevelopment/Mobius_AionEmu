@@ -54,7 +54,7 @@ public class Say extends AdminCommand
 		
 		final StringBuilder sbMessage = new StringBuilder();
 		
-		for (final String p : params)
+		for (String p : params)
 		{
 			sbMessage.append(p + " ");
 		}

@@ -58,7 +58,7 @@ public class ChallengeTask
 		taskId = template.getId();
 		this.ownerId = ownerId;
 		final Map<Integer, ChallengeQuest> quests = new HashMap<>();
-		for (final ChallengeQuestTemplate qt : template.getQuests())
+		for (ChallengeQuestTemplate qt : template.getQuests())
 		{
 			final ChallengeQuest quest = new ChallengeQuest(qt, 0);
 			quest.setPersistentState(PersistentState.NEW);
@@ -112,7 +112,7 @@ public class ChallengeTask
 	public boolean isCompleted()
 	{
 		boolean isCompleted = true;
-		for (final ChallengeQuest quest : quests.values())
+		for (ChallengeQuest quest : quests.values())
 		{
 			if (quest.getCompleteCount() < quest.getMaxRepeats())
 			{

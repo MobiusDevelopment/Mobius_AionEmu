@@ -48,11 +48,11 @@ public class _16832A_Hidden_Asmodian_Kisk extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : IDEternity02DEventStartDa)
+		for (int mob : IDEternity02DEventStartDa)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

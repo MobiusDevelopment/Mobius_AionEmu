@@ -58,7 +58,7 @@ public class MoltenusSchedule
 			final String xml = FileUtils.readFileToString(new File("./config/shedule/moltenus_schedule.xml"));
 			ms = JAXBUtil.deserialize(xml, MoltenusSchedule.class);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to initialize moltenus", e);
 		}

@@ -109,7 +109,7 @@ public class AddCraft extends AdminCommand
 		{
 			skillLevel = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "Parameters need to be an integer.");
 			return;
@@ -135,7 +135,7 @@ public class AddCraft extends AdminCommand
 		{
 			skillLevel = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "Parameters need to be an integer.");
 			return;
@@ -161,7 +161,7 @@ public class AddCraft extends AdminCommand
 		{
 			skillLevel = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "Parameters need to be an integer.");
 			return;
@@ -187,7 +187,7 @@ public class AddCraft extends AdminCommand
 		{
 			skillLevel = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "Parameters need to be an integer.");
 			return;
@@ -213,7 +213,7 @@ public class AddCraft extends AdminCommand
 		{
 			skillLevel = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "Parameters need to be an integer.");
 			return;
@@ -239,7 +239,7 @@ public class AddCraft extends AdminCommand
 		{
 			skillLevel = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "Parameters need to be an integer.");
 			return;
@@ -265,7 +265,7 @@ public class AddCraft extends AdminCommand
 		{
 			skillLevel = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "Parameters need to be an integer.");
 			return;
@@ -291,7 +291,7 @@ public class AddCraft extends AdminCommand
 		{
 			skillLevel = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "Parameters need to be an integer.");
 			return;
@@ -317,7 +317,7 @@ public class AddCraft extends AdminCommand
 		{
 			skillLevel = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "Parameters need to be an integer.");
 			return;

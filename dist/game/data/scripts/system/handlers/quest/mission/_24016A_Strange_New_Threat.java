@@ -57,7 +57,7 @@ public class _24016A_Strange_New_Threat extends QuestHandler
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerOnMovieEndQuest(154, questId);
 		qe.registerQuestNpc(233876).addOnKillEvent(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

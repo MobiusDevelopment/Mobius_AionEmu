@@ -40,11 +40,11 @@ public abstract class PlayerQuestListDAO implements DAO
 	 * @param playerId
 	 * @return QuestStateList
 	 */
-	public abstract QuestStateList load(final Player player);
+	public abstract QuestStateList load(Player player);
 	
 	/**
 	 * @param Player
 	 * @param QuestStateList
 	 */
-	public abstract void store(final Player player);
+	public abstract void store(Player player);
 }

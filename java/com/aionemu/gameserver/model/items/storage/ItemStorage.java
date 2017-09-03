@@ -71,7 +71,7 @@ public class ItemStorage
 	
 	public Item getFirstItemById(int itemId)
 	{
-		for (final Item item : items.values())
+		for (Item item : items.values())
 		{
 			if (item.getItemTemplate().getTemplateId() == itemId)
 			{
@@ -84,7 +84,7 @@ public class ItemStorage
 	public FastList<Item> getItemsById(int itemId)
 	{
 		final FastList<Item> temp = FastList.newInstance();
-		for (final Item item : items.values())
+		for (Item item : items.values())
 		{
 			if (item.getItemTemplate().getTemplateId() == itemId)
 			{
@@ -101,7 +101,7 @@ public class ItemStorage
 	
 	public long getSlotIdByItemId(int itemId)
 	{
-		for (final Item item : items.values())
+		for (Item item : items.values())
 		{
 			if (item.getItemTemplate().getTemplateId() == itemId)
 			{
@@ -113,7 +113,7 @@ public class ItemStorage
 	
 	public Item getItemBySlotId(short slotId)
 	{
-		for (final Item item : getCubeItems())
+		for (Item item : getCubeItems())
 		{
 			if (item.getEquipmentSlot() == slotId)
 			{
@@ -125,7 +125,7 @@ public class ItemStorage
 	
 	public Item getSpecialItemBySlotId(short slotId)
 	{
-		for (final Item item : getSpecialCubeItems())
+		for (Item item : getSpecialCubeItems())
 		{
 			if (item.getEquipmentSlot() == slotId)
 			{

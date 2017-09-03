@@ -54,7 +54,7 @@ public class _29657Protect_The_Salt_Desert extends QuestHandler
 		qe.registerQuestNpc(804662).addOnQuestStart(questId);
 		qe.registerQuestNpc(804662).addOnTalkEvent(questId);
 		qe.registerQuestNpc(804662).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

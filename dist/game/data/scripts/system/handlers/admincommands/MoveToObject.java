@@ -49,7 +49,7 @@ public class MoveToObject extends AdminCommand
 		{
 			objectId = Integer.valueOf(params[0]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(admin, "Only numbers please!!!");
 		}

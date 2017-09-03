@@ -62,7 +62,7 @@ public class AddExp extends AdminCommand
 		{
 			exp = Long.parseLong(paramValue);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "<exp> must be an Integer");
 			return;

@@ -74,7 +74,7 @@ public class SM_MOTION extends AionServerPacket
 		{
 			case 1:
 				writeH(motions.size());
-				for (final Motion motion : motions)
+				for (Motion motion : motions)
 				{
 					writeH(motion.getId());
 					writeD(motion.getRemainingTime());

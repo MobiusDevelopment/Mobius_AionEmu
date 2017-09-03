@@ -74,7 +74,7 @@ public class DuelService
 			PacketSendUtility.sendPacket(requester, SM_SYSTEM_MESSAGE.STR_DUEL_HE_REJECT_DUEL(responder.getName()));
 			return;
 		}
-		for (final ZoneInstance zone : responder.getPosition().getMapRegion().getZones(responder))
+		for (ZoneInstance zone : responder.getPosition().getMapRegion().getZones(responder))
 		{
 			if (((!zone.isOtherRaceDuelsAllowed()) && (!responder.getRace().equals(requester.getRace()))) || ((!zone.isSameRaceDuelsAllowed()) && (responder.getRace().equals(requester.getRace()))))
 			{
@@ -137,7 +137,7 @@ public class DuelService
 		PacketSendUtility.sendPacket(owner, SM_SYSTEM_MESSAGE.STR_DUEL_WITHDRAW_REQUEST(target.getName()));
 	}
 	
-	private void startDuel(final Player requester, final Player responder)
+	private void startDuel(Player requester, Player responder)
 	{
 		PacketSendUtility.sendPacket(requester, SM_DUEL.SM_DUEL_STARTED(responder.getObjectId()));
 		PacketSendUtility.sendPacket(responder, SM_DUEL.SM_DUEL_STARTED(requester.getObjectId()));
@@ -146,7 +146,7 @@ public class DuelService
 		createTask(requester, responder);
 	}
 	
-	private void startDuelMsg(final Player player1, final Player player2)
+	private void startDuelMsg(Player player1, Player player2)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -162,7 +162,7 @@ public class DuelService
 		});
 	}
 	
-	private void loseDuelMsg(final Player player1, final Player player2)
+	private void loseDuelMsg(Player player1, Player player2)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -178,7 +178,7 @@ public class DuelService
 		});
 	}
 	
-	private void drawDuelMsg(final Player player1, final Player player2)
+	private void drawDuelMsg(Player player1, Player player2)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -249,7 +249,7 @@ public class DuelService
 		removeDuel(player.getObjectId(), opponnentId);
 	}
 	
-	private void createTask(final Player requester, final Player responder)
+	private void createTask(Player requester, Player responder)
 	{
 		final Future<?> task = ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

@@ -61,7 +61,7 @@ public class SM_LEGION_INFO extends AionServerPacket
 		
 		/** Show max 7 announcements **/
 		int i = 0;
-		for (final Timestamp unixTime : announcementList.keySet())
+		for (Timestamp unixTime : announcementList.keySet())
 		{
 			writeS(announcementList.get(unixTime));
 			writeD((int) (unixTime.getTime() / 1000));

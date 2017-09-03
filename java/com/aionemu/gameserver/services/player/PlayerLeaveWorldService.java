@@ -64,7 +64,7 @@ public class PlayerLeaveWorldService
 {
 	private static final Logger log = LoggerFactory.getLogger(PlayerLeaveWorldService.class);
 	
-	public static void startLeaveWorldDelay(final Player player, int delay)
+	public static void startLeaveWorldDelay(Player player, int delay)
 	{
 		player.getController().stopMoving();
 		ThreadPoolManager.getInstance().schedule(() -> startLeaveWorld(player), delay);

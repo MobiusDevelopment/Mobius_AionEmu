@@ -36,7 +36,7 @@ public class outlaw extends AdminCommand
 	}
 	
 	@Override
-	public void execute(final Player admin, String... param)
+	public void execute(Player admin, String... param)
 	{
 		// Fixed opposite
 		if (param.length == 0)

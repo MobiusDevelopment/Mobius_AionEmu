@@ -87,7 +87,7 @@ public class ChatProcessor implements GameEngine
 		init(scriptManager, this);
 	}
 	
-	private void init(final ScriptManager scriptManager, ChatProcessor processor)
+	private void init(ScriptManager scriptManager, ChatProcessor processor)
 	{
 		loadLevels();
 		
@@ -118,7 +118,7 @@ public class ChatProcessor implements GameEngine
 					{
 						scriptManager.load(files[index]);
 					}
-					catch (final Exception e)
+					catch (Exception e)
 					{
 						loadException = e;
 					}
@@ -134,7 +134,7 @@ public class ChatProcessor implements GameEngine
 		{
 			loadLatch.await();
 		}
-		catch (final InterruptedException e1)
+		catch (InterruptedException e1)
 		{
 		}
 		if (loadException != null)
@@ -174,7 +174,7 @@ public class ChatProcessor implements GameEngine
 			tmpSM = new ScriptManager();
 			adminCP = new ChatProcessor(tmpSM);
 		}
-		catch (final Throwable e)
+		catch (Throwable e)
 		{
 			commands = backupCommands;
 			throw new GameServerError("Can't reload chat handlers.", e);
@@ -197,13 +197,13 @@ public class ChatProcessor implements GameEngine
 		{
 			final java.util.Properties props = PropertiesUtils.load("config/administration/commands.properties");
 			
-			for (final Object key : props.keySet())
+			for (Object key : props.keySet())
 			{
 				final String str = (String) key;
 				accessLevel.put(str, Byte.valueOf(props.getProperty(str).trim()));
 			}
 		}
-		catch (final IOException e)
+		catch (IOException e)
 		{
 			log.error("Can't read commands.properties", e);
 		}

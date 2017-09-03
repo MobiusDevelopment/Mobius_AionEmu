@@ -164,7 +164,7 @@ public class SM_BROKER_SERVICE extends AionServerPacket
 		writeC(0);
 		writeH(startPage);
 		writeH(brokerItems.length);
-		for (final BrokerItem item : brokerItems)
+		for (BrokerItem item : brokerItems)
 		{
 			writeItemInfo(item);
 		}
@@ -175,7 +175,7 @@ public class SM_BROKER_SERVICE extends AionServerPacket
 		writeC(type.getId());
 		writeD(0x00);
 		writeH(brokerItems.length);
-		for (final BrokerItem brokerItem : brokerItems)
+		for (BrokerItem brokerItem : brokerItems)
 		{
 			writeRegisteredItemInfo(brokerItem);
 		}
@@ -220,7 +220,7 @@ public class SM_BROKER_SERVICE extends AionServerPacket
 		writeD(0x00);
 		writeC(0x00);
 		writeH(brokerItems.length);
-		for (final BrokerItem settledItem : brokerItems)
+		for (BrokerItem settledItem : brokerItems)
 		{
 			writeD(settledItem.getItemId());
 			if (settledItem.isSold())

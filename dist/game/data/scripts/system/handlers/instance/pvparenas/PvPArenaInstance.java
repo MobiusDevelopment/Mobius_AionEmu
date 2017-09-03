@@ -111,7 +111,7 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 		{
 			return;
 		}
-		for (final AggroInfo damager : victim.getAggroList().getList())
+		for (AggroInfo damager : victim.getAggroList().getList())
 		{
 			if (!(damager.getAttacker() instanceof Creature))
 			{
@@ -183,7 +183,7 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 		sendPacket();
 	}
 	
-	private void sendPacket(final AionServerPacket packet)
+	private void sendPacket(AionServerPacket packet)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -368,7 +368,7 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 		return true;
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -398,7 +398,7 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 	
 	private void openDoors()
 	{
-		for (final StaticDoor door : instance.getDoors().values())
+		for (StaticDoor door : instance.getDoors().values())
 		{
 			if (door != null)
 			{
@@ -446,7 +446,7 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 	
 	private void clearDebuffs(Player player)
 	{
-		for (final Effect ef : player.getEffectController().getAbnormalEffects())
+		for (Effect ef : player.getEffectController().getAbnormalEffects())
 		{
 			final DispelCategoryType category = ef.getSkillTemplate().getDispelCategory();
 			if ((category == DispelCategoryType.DEBUFF) || (category == DispelCategoryType.DEBUFF_MENTAL) || (category == DispelCategoryType.DEBUFF_PHYSICAL) || (category == DispelCategoryType.ALL))
@@ -484,7 +484,7 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 			@Override
 			public void run()
 			{
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					instanceReward.portToPosition(player);
 				}
@@ -495,7 +495,7 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 	
 	protected void reward()
 	{
-		for (final Player player : instance.getPlayersInside())
+		for (Player player : instance.getPlayersInside())
 		{
 			if (CreatureActions.isAlreadyDead(player))
 			{
@@ -556,7 +556,7 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 				}
 			}
 		}
-		for (final Npc npc : instance.getNpcs())
+		for (Npc npc : instance.getNpcs())
 		{
 			npc.getController().onDelete();
 		}
@@ -567,7 +567,7 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 			{
 				if (!isInstanceDestroyed)
 				{
-					for (final Player player : instance.getPlayersInside())
+					for (Player player : instance.getPlayersInside())
 					{
 						onExitInstance(player);
 					}
@@ -585,7 +585,7 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 	{
 		if (!isInstanceDestroyed)
 		{
-			for (final Npc npc : instance.getNpcs())
+			for (Npc npc : instance.getNpcs())
 			{
 				final SpawnTemplate st = npc.getSpawn();
 				if ((st.getX() == x) && (st.getY() == y) && (st.getZ() == z))

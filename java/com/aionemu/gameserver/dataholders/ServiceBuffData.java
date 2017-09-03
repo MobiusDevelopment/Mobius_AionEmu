@@ -50,7 +50,7 @@ public class ServiceBuffData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final BonusServiceAttr template : serviceBonusattr)
+		for (BonusServiceAttr template : serviceBonusattr)
 		{
 			templates.put(template.getBuffId(), template);
 		}

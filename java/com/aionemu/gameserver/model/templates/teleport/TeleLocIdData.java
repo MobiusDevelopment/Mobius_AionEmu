@@ -44,7 +44,7 @@ public class TeleLocIdData
 	
 	public TeleportLocation getTeleportLocation(int value)
 	{
-		for (final TeleportLocation t : locids)
+		for (TeleportLocation t : locids)
 		{
 			if ((t != null) && (t.getLocId() == value))
 			{

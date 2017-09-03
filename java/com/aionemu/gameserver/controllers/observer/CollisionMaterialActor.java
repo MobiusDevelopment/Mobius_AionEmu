@@ -64,7 +64,7 @@ public class CollisionMaterialActor extends AbstractCollisionObserver implements
 			}
 		}
 		MaterialSkill foundSkill = null;
-		for (final MaterialSkill skill : actionTemplate.getSkills())
+		for (MaterialSkill skill : actionTemplate.getSkills())
 		{
 			if (skill.getTarget().isTarget(creature))
 			{
@@ -82,7 +82,7 @@ public class CollisionMaterialActor extends AbstractCollisionObserver implements
 			return null;
 		}
 		final List<ZoneInstance> zones = creature.getActiveRegion().getZones(creature);
-		for (final ZoneInstance regionZone : zones)
+		for (ZoneInstance regionZone : zones)
 		{
 			if (regionZone.getZoneTemplate().getZoneType() == ZoneClassName.WEATHER)
 			{

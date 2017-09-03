@@ -63,7 +63,7 @@ public class _1098PearlofProtection extends QuestHandler
 	public void register()
 	{
 		qe.registerOnLevelUp(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

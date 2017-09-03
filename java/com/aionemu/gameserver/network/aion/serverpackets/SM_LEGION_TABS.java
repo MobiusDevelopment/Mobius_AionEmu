@@ -70,7 +70,7 @@ public class SM_LEGION_TABS extends AionServerPacket
 		writeD(hisSize);
 		
 		int i = 0;
-		for (final LegionHistory history : legionHistory)
+		for (LegionHistory history : legionHistory)
 		{
 			if ((i >= (page * 8)) && (i <= (8 + (page * 8))))
 			{

@@ -277,7 +277,7 @@ public class WalkerGroup
 		{
 			npcAI.setSubStateIfNot(AISubState.WALK_WAIT_GROUP);
 			boolean allArrived = true;
-			for (final ClusteredNpc snpc : members)
+			for (ClusteredNpc snpc : members)
 			{
 				allArrived &= snpc.getNpc().getAi2().getSubState() == AISubState.WALK_WAIT_GROUP;
 				if (!allArrived)
@@ -304,7 +304,7 @@ public class WalkerGroup
 	
 	public void spawn()
 	{
-		for (final ClusteredNpc snpc : members)
+		for (ClusteredNpc snpc : members)
 		{
 			final float height = getHeight(snpc.getX(), snpc.getY(), snpc.getNpc().getSpawn());
 			snpc.spawn(height);
@@ -330,7 +330,7 @@ public class WalkerGroup
 	
 	public ClusteredNpc getClusterData(Npc npc)
 	{
-		for (final ClusteredNpc snpc : members)
+		for (ClusteredNpc snpc : members)
 		{
 			if (snpc.getNpc().equals(npc))
 			{
@@ -367,7 +367,7 @@ public class WalkerGroup
 		{
 			return false;
 		}
-		for (final ClusteredNpc snpc : members)
+		for (ClusteredNpc snpc : members)
 		{
 			if (snpc.getNpc().equals(npc))
 			{

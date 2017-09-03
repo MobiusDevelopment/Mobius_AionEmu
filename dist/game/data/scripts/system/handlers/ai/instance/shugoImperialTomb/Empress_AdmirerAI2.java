@@ -68,7 +68,7 @@ public class Empress_AdmirerAI2 extends NpcAI2
 		return true;
 	}
 	
-	private void attackEvent(final Npc npc, float x, float y, float z, boolean despawn)
+	private void attackEvent(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);

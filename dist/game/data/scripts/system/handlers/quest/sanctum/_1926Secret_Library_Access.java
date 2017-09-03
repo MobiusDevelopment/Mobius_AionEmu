@@ -52,7 +52,7 @@ public class _1926Secret_Library_Access extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(203894).addOnQuestStart(questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

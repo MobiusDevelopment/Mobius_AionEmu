@@ -76,10 +76,10 @@ public class NpcEquippedGear implements Iterable<Entry<ItemSlot, ItemTemplate>>
 			if (items == null)
 			{
 				items = new TreeMap<>();
-				for (final ItemTemplate item : v.items)
+				for (ItemTemplate item : v.items)
 				{
 					final ItemSlot[] itemSlots = ItemSlot.getSlotsFor(item.getItemSlot());
-					for (final ItemSlot itemSlot : itemSlots)
+					for (ItemSlot itemSlot : itemSlots)
 					{
 						if (items.get(itemSlot) == null)
 						{

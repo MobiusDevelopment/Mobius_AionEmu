@@ -98,7 +98,7 @@ public class SM_TITLE_INFO extends AionServerPacket
 				writeC(0x00);
 				writeC(0x01);// 5.0
 				writeH(titleList.size());
-				for (final Title title : titleList.getTitles())
+				for (Title title : titleList.getTitles())
 				{
 					writeD(title.getId());
 					writeD(title.getRemainingTime());

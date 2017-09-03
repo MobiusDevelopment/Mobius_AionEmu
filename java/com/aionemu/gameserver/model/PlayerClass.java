@@ -65,7 +65,7 @@ public enum PlayerClass
 	
 	public static PlayerClass getPlayerClassById(byte classId)
 	{
-		for (final PlayerClass pc : values())
+		for (PlayerClass pc : values())
 		{
 			if (pc.getClassId() == classId)
 			{
@@ -116,7 +116,7 @@ public enum PlayerClass
 	
 	public static PlayerClass getPlayerClassByString(String fieldName)
 	{
-		for (final PlayerClass pc : values())
+		for (PlayerClass pc : values())
 		{
 			if (pc.toString().equals(fieldName))
 			{

@@ -53,7 +53,7 @@ public class _30701The_Lord_Of_Illusion extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(804868).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

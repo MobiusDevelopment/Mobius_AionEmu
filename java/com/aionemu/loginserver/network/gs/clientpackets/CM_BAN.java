@@ -85,7 +85,7 @@ public class CM_BAN extends GsClientPacket
 			Account account = null;
 			
 			// Find account on GameServers
-			for (final GameServerInfo gsi : GameServerTable.getGameServers())
+			for (GameServerInfo gsi : GameServerTable.getGameServers())
 			{
 				if (gsi.isAccountOnGameServer(accountId))
 				{

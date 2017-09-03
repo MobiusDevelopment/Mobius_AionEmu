@@ -42,7 +42,7 @@ public class SM_MACBAN_LIST extends GsServerPacket
 		writeC(9);
 		writeD(bannedList.size());
 		
-		for (final BannedMacEntry entry : bannedList.values())
+		for (BannedMacEntry entry : bannedList.values())
 		{
 			writeS(entry.getMac());
 			writeQ(entry.getTime().getTime());

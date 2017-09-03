@@ -48,7 +48,7 @@ public class TeleporterData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final TeleporterTemplate template : tlist)
+		for (TeleporterTemplate template : tlist)
 		{
 			npctlistData.put(template.getTeleportId(), template);
 		}
@@ -61,7 +61,7 @@ public class TeleporterData
 	
 	public TeleporterTemplate getTeleporterTemplateByNpcId(int npcId)
 	{
-		for (final TeleporterTemplate template : npctlistData.valueCollection())
+		for (TeleporterTemplate template : npctlistData.valueCollection())
 		{
 			if (template.containNpc(npcId))
 			{

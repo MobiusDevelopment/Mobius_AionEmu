@@ -85,7 +85,7 @@ public class MySQL5BrokerDAO extends BrokerDAO
 					Item item = null;
 					if (!isSold)
 					{
-						for (final Item brItem : items)
+						for (Item brItem : items)
 						{
 							if (itemPointer == brItem.getObjectId())
 							{
@@ -187,7 +187,7 @@ public class MySQL5BrokerDAO extends BrokerDAO
 		return result;
 	}
 	
-	private boolean insertBrokerItem(final BrokerItem item)
+	private boolean insertBrokerItem(BrokerItem item)
 	{
 		final boolean result = DB.insertUpdate("INSERT INTO `broker` (`item_pointer`, `item_id`, `item_count`, `item_creator`, `seller`, `price`, `broker_race`, `expire_time`, `settle_time`, `seller_id`, `is_sold`, `is_settled`, `is_splitsell`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)", new IUStH()
 		{
@@ -216,7 +216,7 @@ public class MySQL5BrokerDAO extends BrokerDAO
 		return result;
 	}
 	
-	private boolean deleteBrokerItem(final BrokerItem item)
+	private boolean deleteBrokerItem(BrokerItem item)
 	{
 		final boolean result = DB.insertUpdate("DELETE FROM `broker` WHERE `item_pointer` = ? AND `seller_id` = ? AND `expire_time` = ?", new IUStH()
 		{
@@ -251,7 +251,7 @@ public class MySQL5BrokerDAO extends BrokerDAO
 				return true;
 			}
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't to prebuy broker check: ", e);
 		}
@@ -262,7 +262,7 @@ public class MySQL5BrokerDAO extends BrokerDAO
 		return false;
 	}
 	
-	private boolean updateBrokerItem(final BrokerItem item)
+	private boolean updateBrokerItem(BrokerItem item)
 	{
 		final boolean result = DB.insertUpdate("UPDATE broker SET `is_sold` = ?, `is_settled` = 1, `settle_time` = ? WHERE `item_pointer` = ? AND `expire_time` = ? AND `seller_id` = ? AND `is_settled` = 0", new IUStH()
 		{
@@ -283,7 +283,7 @@ public class MySQL5BrokerDAO extends BrokerDAO
 		return result;
 	}
 	
-	private boolean updateItem(final BrokerItem item)
+	private boolean updateItem(BrokerItem item)
 	{
 		final boolean result = DB.insertUpdate("UPDATE broker SET `item_count` = ?, `price` = ?, `is_sold` = ?, `is_settled` = ?, `settle_time` = ?, `is_splitsell` = ? WHERE `item_pointer` = ? AND `expire_time` = ? AND `seller_id` = ? AND `is_settled` = 0", new IUStH()
 		{
@@ -326,7 +326,7 @@ public class MySQL5BrokerDAO extends BrokerDAO
 			}
 			return ids;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't get list of id's from players table", e);
 		}

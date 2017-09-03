@@ -61,7 +61,7 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 			204075
 		};
 		qe.registerQuestNpc(204053).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

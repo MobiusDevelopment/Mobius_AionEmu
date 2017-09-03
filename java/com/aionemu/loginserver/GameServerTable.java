@@ -137,7 +137,7 @@ public class GameServerTable
 	 */
 	public static boolean isAccountOnAnyGameServer(Account acc)
 	{
-		for (final GameServerInfo gsi : getGameServers())
+		for (GameServerInfo gsi : getGameServers())
 		{
 			if (gsi.isAccountOnGameServer(acc.getId()))
 			{
@@ -153,7 +153,7 @@ public class GameServerTable
 	 */
 	public static void kickAccountFromGameServer(Account account)
 	{
-		for (final GameServerInfo gsi : getGameServers())
+		for (GameServerInfo gsi : getGameServers())
 		{
 			if (gsi.isAccountOnGameServer(account.getId()))
 			{
@@ -174,7 +174,7 @@ public class GameServerTable
 	
 	public static void pong(byte serverId, int pid)
 	{
-		for (final GameServerInfo gsi : getGameServers())
+		for (GameServerInfo gsi : getGameServers())
 		{
 			if (gsi.getId() == serverId)
 			{

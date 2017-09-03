@@ -47,7 +47,7 @@ public class Announcements extends AdminCommand
 			PacketSendUtility.sendMessage(player, "ID  |  FACTION  |  CHAT TYPE  |  DELAY  |  MESSAGE");
 			PacketSendUtility.sendMessage(player, "-------------------------------------------------------------------");
 			
-			for (final Announcement announce : announces)
+			for (Announcement announce : announces)
 			{
 				PacketSendUtility.sendMessage(player, announce.getId() + "  |  " + announce.getFaction() + "  |  " + announce.getType() + "  |  " + announce.getDelay() + "  |  " + announce.getAnnounce());
 			}
@@ -66,7 +66,7 @@ public class Announcements extends AdminCommand
 			{
 				delay = Integer.parseInt(params[3]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				// 15 minutes, default
 				delay = 900;
@@ -108,7 +108,7 @@ public class Announcements extends AdminCommand
 			{
 				id = Integer.parseInt(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(player, "The announcement's ID is wrong !");
 				onFail(player, e.getMessage());

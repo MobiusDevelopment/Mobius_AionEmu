@@ -47,7 +47,7 @@ public class NpcData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final NpcTemplate npc : npcs)
+		for (NpcTemplate npc : npcs)
 		{
 			npcData.put(npc.getTemplateId(), npc);
 		}

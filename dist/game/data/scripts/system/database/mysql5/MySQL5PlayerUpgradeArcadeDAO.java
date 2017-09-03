@@ -73,7 +73,7 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore PlayerUpgradeArcade data for playerObjId: " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -84,7 +84,7 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 	}
 	
 	@Override
-	public boolean addUpgradeArcade(final int playerId, final int frenzy_meter, final int upgrade_lvl)
+	public boolean addUpgradeArcade(int playerId, int frenzy_meter, int upgrade_lvl)
 	{
 		return DB.insertUpdate(ADD_QUERY, new IUStH()
 		{
@@ -101,7 +101,7 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 	}
 	
 	@Override
-	public boolean delUpgradeArcade(final int playerId, final int frenzy_meter, final int upgrade_lvl)
+	public boolean delUpgradeArcade(int playerId, int frenzy_meter, int upgrade_lvl)
 	{
 		return DB.insertUpdate(DELETE_QUERY, new IUStH()
 		{
@@ -118,7 +118,7 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 	}
 	
 	@Override
-	public int getFrenzyMeterByObjId(final int obj)
+	public int getFrenzyMeterByObjId(int obj)
 	{
 		Connection con = null;
 		int frenzy_meter = 0;
@@ -133,7 +133,7 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 			rs.close();
 			s.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return 0;
 		}
@@ -145,7 +145,7 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 	}
 	
 	@Override
-	public int getUpgradeLvlByObjId(final int obj)
+	public int getUpgradeLvlByObjId(int obj)
 	{
 		Connection con = null;
 		int upgrade_lvl;
@@ -160,7 +160,7 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 			rs.close();
 			s.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return 0;
 		}
@@ -185,7 +185,7 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 			stmt.executeBatch();
 			con.commit();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not update PlayerUpgradeArcade data for player " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 			return false;
@@ -198,7 +198,7 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 	}
 	
 	@Override
-	public boolean store(final Player player)
+	public boolean store(Player player)
 	{
 		Connection con = null;
 		boolean insert = false;
@@ -218,7 +218,7 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 			}
 			bind.setPersistentState(PersistentState.UPDATED);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't open connection to save player updateUpgradeArcade: " + player.getObjectId());
 		}
@@ -242,7 +242,7 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return false;
 		}
@@ -266,7 +266,7 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return false;
 		}

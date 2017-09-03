@@ -52,7 +52,7 @@ public class RobotData
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
 		robotInfos = new TIntObjectHashMap<>();
-		for (final RobotInfo info : robots)
+		for (RobotInfo info : robots)
 		{
 			robotInfos.put(info.getRobotId(), info);
 		}

@@ -101,7 +101,7 @@ public class KnownList
 	 */
 	public void clear()
 	{
-		for (final VisibleObject object : knownObjects.values())
+		for (VisibleObject object : knownObjects.values())
 		{
 			object.getKnownList().del(owner, false);
 		}
@@ -217,7 +217,7 @@ public class KnownList
 	 */
 	private void forgetObjects()
 	{
-		for (final VisibleObject object : knownObjects.values())
+		for (VisibleObject object : knownObjects.values())
 		{
 			if (!checkObjectInRange(object) && !object.getKnownList().checkReversedObjectInRange(owner))
 			{
@@ -238,7 +238,7 @@ public class KnownList
 		}
 		
 		final MapRegion[] regions = owner.getActiveRegion().getNeighbours();
-		for (final MapRegion r : regions)
+		for (MapRegion r : regions)
 		{
 			final FastMap<Integer, VisibleObject> objects = r.getObjects();
 			for (FastMap.Entry<Integer, VisibleObject> e = objects.head(), mapEnd = objects.tail(); (e = e.getNext()) != mapEnd;)
@@ -328,7 +328,7 @@ public class KnownList
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Exception when running visitor on all npcs" + ex);
 		}
@@ -358,7 +358,7 @@ public class KnownList
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Exception when running visitor on all npcs" + ex);
 		}
@@ -382,7 +382,7 @@ public class KnownList
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Exception when running visitor on all players" + ex);
 		}
@@ -401,7 +401,7 @@ public class KnownList
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Exception when running visitor on all objects" + ex);
 		}

@@ -69,7 +69,7 @@ public class CM_PTRANSFER_RESPONSE extends LsClientPacket
 					{
 						throw new Exception("Requesting player transfer for server id " + serverId + " but this is " + NetworkConfig.GAMESERVER_ID + " omgshit!");
 					}
-					catch (final Exception e)
+					catch (Exception e)
 					{
 						e.printStackTrace();
 					}

@@ -46,7 +46,7 @@ public class GuideHtmlData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final GuideTemplate template : guideTemplates)
+		for (GuideTemplate template : guideTemplates)
 		{
 			addTemplate(template);
 		}
@@ -84,9 +84,9 @@ public class GuideHtmlData
 	
 	public GuideTemplate getTemplateByTitle(String title)
 	{
-		for (final int templateHash : templates.keys())
+		for (int templateHash : templates.keys())
 		{
-			for (final GuideTemplate template : templates.get(templateHash))
+			for (GuideTemplate template : templates.get(templateHash))
 			{
 				if (template.getTitle().equals(title))
 				{

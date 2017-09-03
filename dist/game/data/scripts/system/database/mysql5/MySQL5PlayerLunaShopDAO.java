@@ -67,7 +67,7 @@ public class MySQL5PlayerLunaShopDAO extends PlayerLunaShopDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore PlayerLunaShop data for playerObjId: " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -78,7 +78,7 @@ public class MySQL5PlayerLunaShopDAO extends PlayerLunaShopDAO
 	}
 	
 	@Override
-	public boolean add(final int playerId, final boolean freeUnderpath, final boolean freeFactory, final boolean freeChest)
+	public boolean add(int playerId, boolean freeUnderpath, boolean freeFactory, boolean freeChest)
 	{
 		return DB.insertUpdate(ADD_QUERY, new IUStH()
 		{
@@ -131,7 +131,7 @@ public class MySQL5PlayerLunaShopDAO extends PlayerLunaShopDAO
 			}
 			bind.setPersistentState(PersistentState.UPDATED);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't open connection to save player updateLunaShop: " + player.getObjectId());
 		}
@@ -157,7 +157,7 @@ public class MySQL5PlayerLunaShopDAO extends PlayerLunaShopDAO
 			stmt.executeBatch();
 			con.commit();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not update PlayerLunaShop data for player " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 			return false;
@@ -170,7 +170,7 @@ public class MySQL5PlayerLunaShopDAO extends PlayerLunaShopDAO
 	}
 	
 	@Override
-	public boolean setLunaShopByObjId(int obj, final boolean freeUnderpath, final boolean freeFactory, final boolean freeChest)
+	public boolean setLunaShopByObjId(int obj, boolean freeUnderpath, boolean freeFactory, boolean freeChest)
 	{
 		Connection con = null;
 		try
@@ -184,7 +184,7 @@ public class MySQL5PlayerLunaShopDAO extends PlayerLunaShopDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return false;
 		}

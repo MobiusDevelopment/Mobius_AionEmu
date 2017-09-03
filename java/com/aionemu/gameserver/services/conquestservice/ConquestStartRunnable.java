@@ -46,7 +46,7 @@ public class ConquestStartRunnable implements Runnable
 		// Conquest/Offering a rare monster appeared !!!
 		ConquestService.getInstance().conquestOfferingMsg(id);
 		final Map<Integer, ConquestLocation> locations = ConquestService.getInstance().getConquestLocations();
-		for (final ConquestLocation loc : locations.values())
+		for (ConquestLocation loc : locations.values())
 		{
 			if (loc.getId() == id)
 			{

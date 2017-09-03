@@ -45,7 +45,7 @@ public class VortexData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final VortexTemplate template : vortexTemplates)
+		for (VortexTemplate template : vortexTemplates)
 		{
 			vortex.put(template.getId(), new VortexLocation(template));
 		}
@@ -58,7 +58,7 @@ public class VortexData
 	
 	public VortexLocation getVortexLocation(int invasionWorldId)
 	{
-		for (final VortexLocation loc : vortex.values())
+		for (VortexLocation loc : vortex.values())
 		{
 			if (loc.getInvasionWorldId() == invasionWorldId)
 			{

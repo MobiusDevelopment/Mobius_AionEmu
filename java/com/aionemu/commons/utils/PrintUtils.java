@@ -45,7 +45,7 @@ public class PrintUtils
 	public static String bytes2hex(byte[] bytes)
 	{
 		final StringBuilder result = new StringBuilder();
-		for (final byte b : bytes)
+		for (byte b : bytes)
 		{
 			final int value = b & 255;
 			result.append(String.format("%02X", value));

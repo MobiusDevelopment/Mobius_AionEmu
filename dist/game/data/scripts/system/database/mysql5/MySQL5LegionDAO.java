@@ -87,7 +87,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean isNameUsed(final String name)
+	public boolean isNameUsed(String name)
 	{
 		final PreparedStatement s = DB.prepareStatement("SELECT count(id) as cnt FROM legions WHERE ? = legions.name");
 		try
@@ -97,7 +97,7 @@ public class MySQL5LegionDAO extends LegionDAO
 			rs.next();
 			return rs.getInt("cnt") > 0;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't check if name " + name + ", is used, returning possitive result", e);
 			return true;
@@ -121,7 +121,7 @@ public class MySQL5LegionDAO extends LegionDAO
 				legionIds.add(rs.getInt("id"));
 			}
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Error on getting legions with territoryId... Error: ", e);
 		}
@@ -136,7 +136,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean saveNewLegion(final Legion legion)
+	public boolean saveNewLegion(Legion legion)
 	{
 		final boolean success = DB.insertUpdate(INSERT_LEGION_QUERY, new IUStH()
 		{
@@ -158,7 +158,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void storeLegion(final Legion legion)
+	public void storeLegion(Legion legion)
 	{
 		DB.insertUpdate(UPDATE_LEGION_QUERY, new IUStH()
 		{
@@ -183,7 +183,7 @@ public class MySQL5LegionDAO extends LegionDAO
 				stmt.setInt(13, legion.getLegionId());
 				if (!legion.getJoinRequestMap().isEmpty())
 				{
-					for (final LegionJoinRequest ljr : legion.getJoinRequestMap().values())
+					for (LegionJoinRequest ljr : legion.getJoinRequestMap().values())
 					{
 						storeLegionJoinRequest(ljr);
 					}
@@ -197,7 +197,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Legion loadLegion(final String legionName)
+	public Legion loadLegion(String legionName)
 	{
 		final Legion legion = new Legion();
 		final boolean success = DB.select(SELECT_LEGION_QUERY2, new ParamReadStH()
@@ -238,7 +238,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Legion loadLegion(final int legionId)
+	public Legion loadLegion(int legionId)
 	{
 		final Legion legion = new Legion();
 		final boolean success = DB.select(SELECT_LEGION_QUERY1, new ParamReadStH()
@@ -271,7 +271,7 @@ public class MySQL5LegionDAO extends LegionDAO
 					legion.setJoinType(resultSet.getInt("joinType"));
 					legion.setMinJoinLevel(resultSet.getInt("minJoinLevel"));
 					legion.setDisbandTime(resultSet.getInt("disband_time"));
-					for (final LegionJoinRequest ljr : loadLegionJoinRequests(legion.getLegionId()))
+					for (LegionJoinRequest ljr : loadLegionJoinRequests(legion.getLegionId()))
 					{
 						legion.addJoinRequest(ljr);
 					}
@@ -293,7 +293,7 @@ public class MySQL5LegionDAO extends LegionDAO
 		{
 			statement.setInt(1, legionId);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("deleteLegion #1", e);
 		}
@@ -304,7 +304,7 @@ public class MySQL5LegionDAO extends LegionDAO
 		{
 			statement.setInt(1, legionId);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("deleteLegion #2", e);
 		}
@@ -333,7 +333,7 @@ public class MySQL5LegionDAO extends LegionDAO
 			}
 			return ids;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't get list of id's from legions table", e);
 		}
@@ -358,7 +358,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public TreeMap<Timestamp, String> loadAnnouncementList(final int legionId)
+	public TreeMap<Timestamp, String> loadAnnouncementList(int legionId)
 	{
 		final TreeMap<Timestamp, String> announcementList = new TreeMap<>();
 		
@@ -393,7 +393,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean saveNewAnnouncement(final int legionId, final Timestamp currentTime, final String message)
+	public boolean saveNewAnnouncement(int legionId, Timestamp currentTime, String message)
 	{
 		final boolean success = DB.insertUpdate(INSERT_ANNOUNCEMENT_QUERY, new IUStH()
 		{
@@ -424,7 +424,7 @@ public class MySQL5LegionDAO extends LegionDAO
 			statement.setInt(1, legionId);
 			statement.setTimestamp(2, unixTime);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Some crap, can't set int parameter to PreparedStatement", e);
 		}
@@ -435,7 +435,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void storeLegionEmblem(final int legionId, final LegionEmblem legionEmblem)
+	public void storeLegionEmblem(int legionId, LegionEmblem legionEmblem)
 	{
 		if (!validEmblem(legionEmblem))
 		{
@@ -460,7 +460,7 @@ public class MySQL5LegionDAO extends LegionDAO
 		legionEmblem.setPersistentState(PersistentState.UPDATED);
 	}
 	
-	private boolean validEmblem(final LegionEmblem legionEmblem)
+	private boolean validEmblem(LegionEmblem legionEmblem)
 	{
 		return (legionEmblem.getEmblemType().toString().equals("CUSTOM") && (legionEmblem.getCustomEmblemData() == null)) ? false : true;
 	}
@@ -468,7 +468,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	/**
 	 * @param legionid
 	 */
-	public boolean checkEmblem(final int legionid)
+	public boolean checkEmblem(int legionid)
 	{
 		final PreparedStatement st = DB.prepareStatement(SELECT_EMBLEM_QUERY);
 		try
@@ -482,7 +482,7 @@ public class MySQL5LegionDAO extends LegionDAO
 				return true;
 			}
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't check " + legionid + " legion emblem: ", e);
 		}
@@ -498,7 +498,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * @param legionEmblem
 	 * @return
 	 */
-	private void createLegionEmblem(final int legionId, final LegionEmblem legionEmblem)
+	private void createLegionEmblem(int legionId, LegionEmblem legionEmblem)
 	{
 		DB.insertUpdate(INSERT_EMBLEM_QUERY, new IUStH()
 		{
@@ -522,7 +522,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * @param legionId
 	 * @param legionEmblem
 	 */
-	private void updateLegionEmblem(final int legionId, final LegionEmblem legionEmblem)
+	private void updateLegionEmblem(int legionId, LegionEmblem legionEmblem)
 	{
 		DB.insertUpdate(UPDATE_EMBLEM_QUERY, new IUStH()
 		{
@@ -546,7 +546,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public LegionEmblem loadLegionEmblem(final int legionId)
+	public LegionEmblem loadLegionEmblem(int legionId)
 	{
 		final LegionEmblem legionEmblem = new LegionEmblem();
 		
@@ -641,7 +641,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void loadLegionHistory(final Legion legion)
+	public void loadLegionHistory(Legion legion)
 	{
 		
 		final Collection<LegionHistory> history = legion.getLegionHistory();
@@ -670,7 +670,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean saveNewLegionHistory(final int legionId, final LegionHistory legionHistory)
+	public boolean saveNewLegionHistory(int legionId, LegionHistory legionHistory)
 	{
 		final boolean success = DB.insertUpdate(INSERT_HISTORY_QUERY, new IUStH()
 		{
@@ -691,7 +691,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	}
 	
 	@Override
-	public void updateLegionDescription(final Legion legion)
+	public void updateLegionDescription(Legion legion)
 	{
 		DB.insertUpdate(UPDATE_LEGION_DESCRIPTION_QUERY, new IUStH()
 		{
@@ -708,7 +708,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	}
 	
 	@Override
-	public void storeLegionJoinRequest(final LegionJoinRequest legionJoinRequest)
+	public void storeLegionJoinRequest(LegionJoinRequest legionJoinRequest)
 	{
 		DB.insertUpdate(INSERT_RECRUIT_LIST_QUERY, new IUStH()
 		{
@@ -730,7 +730,7 @@ public class MySQL5LegionDAO extends LegionDAO
 	}
 	
 	@Override
-	public FastList<LegionJoinRequest> loadLegionJoinRequests(final int legionId)
+	public FastList<LegionJoinRequest> loadLegionJoinRequests(int legionId)
 	{
 		final FastList<LegionJoinRequest> requestList = new FastList<>();
 		DB.select(SELECT_RECRUIT_LIST_QUERY, new ParamReadStH()
@@ -771,7 +771,7 @@ public class MySQL5LegionDAO extends LegionDAO
 			statement.setInt(1, legionId);
 			statement.setInt(2, playerId);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 		}
 		DB.executeUpdateAndClose(statement);

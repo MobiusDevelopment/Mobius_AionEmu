@@ -81,7 +81,7 @@ public class MySQL5inGameShopDAO extends InGameShopDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore inGameShop data for all from DB: " + e.getMessage(), e);
 		}
@@ -107,7 +107,7 @@ public class MySQL5inGameShopDAO extends InGameShopDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error delete ingameshopItem: " + itemId, e);
 			return false;
@@ -143,7 +143,7 @@ public class MySQL5inGameShopDAO extends InGameShopDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error saving Item: " + objectId, e);
 		}
@@ -166,7 +166,7 @@ public class MySQL5inGameShopDAO extends InGameShopDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error increaseSales Item: " + object, e);
 			return false;

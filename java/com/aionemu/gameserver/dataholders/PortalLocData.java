@@ -47,7 +47,7 @@ public class PortalLocData
 	
 	void afterUnmarshal(Unmarshaller unmarshaller, Object parent)
 	{
-		for (final PortalLoc loc : portalLoc)
+		for (PortalLoc loc : portalLoc)
 		{
 			portalLocs.put(loc.getLocId(), loc);
 		}

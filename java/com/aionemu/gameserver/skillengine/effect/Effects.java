@@ -253,7 +253,7 @@ public class Effects
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final EffectTemplate et : getEffects())
+		for (EffectTemplate et : getEffects())
 		{
 			addEffectType(et.getEffectType());
 		}

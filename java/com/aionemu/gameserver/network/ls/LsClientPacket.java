@@ -51,7 +51,7 @@ public abstract class LsClientPacket extends BaseClientPacket<LoginServerConnect
 		{
 			runImpl();
 		}
-		catch (final Throwable e)
+		catch (Throwable e)
 		{
 			log.warn("error handling ls (" + getConnection().getIP() + ") message " + this, e);
 		}
@@ -76,7 +76,7 @@ public abstract class LsClientPacket extends BaseClientPacket<LoginServerConnect
 		{
 			return (LsClientPacket) super.clone();
 		}
-		catch (final CloneNotSupportedException e)
+		catch (CloneNotSupportedException e)
 		{
 			return null;
 		}

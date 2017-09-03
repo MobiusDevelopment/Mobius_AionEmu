@@ -46,7 +46,7 @@ public class _3329Dinners_On_Me extends QuestHandler
 		qe.registerQuestNpc(203909).addOnQuestStart(questId);
 		qe.registerQuestNpc(203909).addOnTalkEvent(questId);
 		qe.registerQuestNpc(203956).addOnTalkEvent(questId);
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

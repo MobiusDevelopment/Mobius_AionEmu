@@ -49,7 +49,7 @@ public class _29639Monsters_Unholy extends QuestHandler
 		qe.registerQuestNpc(799248).addOnQuestStart(questId);
 		qe.registerQuestNpc(799248).addOnTalkEvent(questId);
 		qe.registerQuestNpc(799248).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -85,7 +85,7 @@ public class PlayerActions extends CreatureActions
 				PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.START_EMOTE2, 0, 0), true);
 				PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.RIDE_END), true);
 				player.getGameStats().updateStatsAndSpeedVisually();
-				for (final ActionObserver observer : player.getRideObservers())
+				for (ActionObserver observer : player.getRideObservers())
 				{
 					player.getObserveController().removeObserver(observer);
 				}

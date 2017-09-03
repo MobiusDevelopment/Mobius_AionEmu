@@ -49,7 +49,7 @@ public class SM_TRADE_IN_LIST extends AionServerPacket
 			writeD(buyPriceModifier);
 			writeD(0x64); // 4.7
 			writeH(tlist.getCount());
-			for (final TradeTab tradeTabl : tlist.getTradeTablist())
+			for (TradeTab tradeTabl : tlist.getTradeTablist())
 			{
 				writeD(tradeTabl.getId());
 			}

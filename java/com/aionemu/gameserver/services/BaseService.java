@@ -55,7 +55,7 @@ public class BaseService
 	
 	public void initBases()
 	{
-		for (final BaseLocation base : getBaseLocations().values())
+		for (BaseLocation base : getBaseLocations().values())
 		{
 			start(base.getId());
 		}
@@ -127,7 +127,7 @@ public class BaseService
 		return bases.get(id);
 	}
 	
-	public void start(final int id)
+	public void start(int id)
 	{
 		final Base<?> base;
 		synchronized (this)
@@ -188,7 +188,7 @@ public class BaseService
 	
 	public void onEnterBaseWorld(Player player)
 	{
-		for (final BaseLocation baseLocation : getBaseLocations().values())
+		for (BaseLocation baseLocation : getBaseLocations().values())
 		{
 			if ((baseLocation.getWorldId() == player.getWorldId()) && isActive(baseLocation.getId()))
 			{
@@ -199,7 +199,7 @@ public class BaseService
 		}
 	}
 	
-	public void broadcastUpdate(final BaseLocation baseLocation)
+	public void broadcastUpdate(BaseLocation baseLocation)
 	{
 		World.getInstance().getWorldMap(baseLocation.getWorldId()).getMainWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
 		{

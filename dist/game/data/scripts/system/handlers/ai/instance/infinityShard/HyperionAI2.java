@@ -246,7 +246,7 @@ public class HyperionAI2 extends AggressiveNpcAI2
 	
 	private void checkPercentage(int hpPercentage)
 	{
-		for (final Integer percent : percents)
+		for (Integer percent : percents)
 		{
 			if (hpPercentage <= percent)
 			{
@@ -490,7 +490,7 @@ public class HyperionAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void rushInfinityShard(final Npc npc, float x, float y, float z, boolean despawn)
+	private void rushInfinityShard(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -576,7 +576,7 @@ public class HyperionAI2 extends AggressiveNpcAI2
 	
 	private void deleteNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			if (npc != null)
 			{

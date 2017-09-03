@@ -54,7 +54,7 @@ public enum PartType
 	
 	public static PartType getForLineNr(int lineNr)
 	{
-		for (final PartType type : PartType.values())
+		for (PartType type : PartType.values())
 		{
 			if ((type.getStartLineNr() <= lineNr) && (type.getEndLineNr() >= lineNr))
 			{

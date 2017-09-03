@@ -60,7 +60,7 @@ public class _15560Archon_Shadow_Scout extends QuestHandler
 	{
 		qe.registerQuestNpc(731684).addOnQuestStart(questId);
 		qe.registerQuestNpc(806090).addOnTalkEvent(questId);
-		for (final int mob : warshipInvasionA)
+		for (int mob : warshipInvasionA)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

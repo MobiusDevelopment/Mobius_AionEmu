@@ -49,7 +49,7 @@ public class _16804Archives_Of_Eternity_Protector extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerQuestNpc(806148).addOnTalkEvent(questId);
-		for (final int mob : IDEternity01Boss)
+		for (int mob : IDEternity01Boss)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

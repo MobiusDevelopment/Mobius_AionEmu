@@ -78,7 +78,7 @@ public class cmd_clean extends PlayerCommand
 				}
 			}
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			try
 			{
@@ -109,12 +109,12 @@ public class cmd_clean extends PlayerCommand
 					}
 				}
 			}
-			catch (final NumberFormatException ex)
+			catch (NumberFormatException ex)
 			{
 				PacketSendUtility.sendMessage(player, "You must give Id or @link to item.");
 				return;
 			}
-			catch (final Exception ex2)
+			catch (Exception ex2)
 			{
 				onFail(player, msg);
 				return;

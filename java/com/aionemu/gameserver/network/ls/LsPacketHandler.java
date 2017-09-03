@@ -55,7 +55,7 @@ public class LsPacketHandler
 	
 	public void addPacketPrototype(LsClientPacket packetPrototype, State... states)
 	{
-		for (final State state : states)
+		for (State state : states)
 		{
 			Map<Integer, LsClientPacket> pm = packetPrototypes.get(state);
 			if (pm == null)

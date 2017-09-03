@@ -640,7 +640,7 @@ public class Effect implements StatOwner
 	 */
 	public boolean containsEffectId(int effectId)
 	{
-		for (final EffectTemplate template : successEffects.values())
+		for (EffectTemplate template : successEffects.values())
 		{
 			if (template.getEffectid() == effectId)
 			{
@@ -652,7 +652,7 @@ public class Effect implements StatOwner
 	
 	public TransformType getTransformType()
 	{
-		for (final EffectTemplate et : skillTemplate.getEffects().getEffects())
+		for (EffectTemplate et : skillTemplate.getEffects().getEffects())
 		{
 			if (et instanceof TransformEffect)
 			{
@@ -686,7 +686,7 @@ public class Effect implements StatOwner
 		{
 			return;
 		}
-		for (final EffectTemplate template : getEffectTemplates())
+		for (EffectTemplate template : getEffectTemplates())
 		{
 			template.calculate(this);
 			if (template instanceof DelayedSpellAttackInstantEffect)
@@ -726,13 +726,13 @@ public class Effect implements StatOwner
 				isAuthorizeBoost = true;
 			}
 		}
-		for (final EffectTemplate template : getEffectTemplates())
+		for (EffectTemplate template : getEffectTemplates())
 		{
 			template.calculateHate(this);
 		}
 		if (isLaunchSubEffect())
 		{
-			for (final EffectTemplate template : successEffects.values())
+			for (EffectTemplate template : successEffects.values())
 			{
 				template.calculateSubEffect(this);
 			}
@@ -861,7 +861,7 @@ public class Effect implements StatOwner
 			return;
 		}
 		
-		for (final EffectTemplate template : successEffects.values())
+		for (EffectTemplate template : successEffects.values())
 		{
 			if (getEffected() != null)
 			{
@@ -885,7 +885,7 @@ public class Effect implements StatOwner
 			return;
 		}
 		shedulePeriodicActions();
-		for (final EffectTemplate template : successEffects.values())
+		for (EffectTemplate template : successEffects.values())
 		{
 			template.startEffect(this);
 			checkUseEquipmentConditions();
@@ -955,7 +955,7 @@ public class Effect implements StatOwner
 		{
 			return;
 		}
-		for (final EffectTemplate template : successEffects.values())
+		for (EffectTemplate template : successEffects.values())
 		{
 			template.endEffect(this);
 		}
@@ -1140,7 +1140,7 @@ public class Effect implements StatOwner
 	public void addAllEffectToSucess()
 	{
 		successEffects.clear();
-		for (final EffectTemplate template : getEffectTemplates())
+		for (EffectTemplate template : getEffectTemplates())
 		{
 			successEffects.put(template.getPosition(), template);
 		}
@@ -1164,7 +1164,7 @@ public class Effect implements StatOwner
 			@Override
 			public void run()
 			{
-				for (final PeriodicAction action : periodicActions.getPeriodicActions())
+				for (PeriodicAction action : periodicActions.getPeriodicActions())
 				{
 					action.act(Effect.this);
 				}
@@ -1558,7 +1558,7 @@ public class Effect implements StatOwner
 	
 	public void endEffects()
 	{
-		for (final EffectTemplate template : successEffects.values())
+		for (EffectTemplate template : successEffects.values())
 		{
 			template.endEffect(this);
 		}
@@ -1566,7 +1566,7 @@ public class Effect implements StatOwner
 	
 	public boolean isFearEffect()
 	{
-		for (final EffectTemplate template : successEffects.values())
+		for (EffectTemplate template : successEffects.values())
 		{
 			if (template instanceof FearEffect)
 			{

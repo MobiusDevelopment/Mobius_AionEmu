@@ -49,7 +49,7 @@ public class _24011Funny_Floating_Fungus extends QuestHandler
 		qe.registerQuestNpc(700092).addOnKillEvent(questId);
 		qe.registerOnLevelUp(questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
-		for (final int id : talkNpcs)
+		for (int id : talkNpcs)
 		{
 			qe.registerQuestNpc(id).addOnTalkEvent(questId);
 		}

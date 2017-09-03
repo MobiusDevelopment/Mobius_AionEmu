@@ -172,17 +172,17 @@ public class EventTemplate
 			{
 				spawnedObjects = new ArrayList<>();
 			}
-			for (final SpawnMap map : spawns.getTemplates())
+			for (SpawnMap map : spawns.getTemplates())
 			{
 				DataManager.SPAWNS_DATA2.addNewSpawnMap(map);
 				final Collection<Integer> instanceIds = World.getInstance().getWorldMap(map.getMapId()).getAvailableInstanceIds();
-				for (final Integer instanceId : instanceIds)
+				for (Integer instanceId : instanceIds)
 				{
 					int spawnCount = 0;
-					for (final Spawn spawn : map.getSpawns())
+					for (Spawn spawn : map.getSpawns())
 					{
 						spawn.setEventTemplate(this);
-						for (final SpawnSpotTemplate spot : spawn.getSpawnSpotTemplates())
+						for (SpawnSpotTemplate spot : spawn.getSpawnSpotTemplates())
 						{
 							final SpawnTemplate t = SpawnEngine.addNewSpawn(map.getMapId(), spawn.getNpcId(), spot.getX(), spot.getY(), spot.getZ(), spot.getHeading(), spawn.getRespawnTime());
 							t.setEventTemplate(this);
@@ -223,7 +223,7 @@ public class EventTemplate
 		
 		if (surveys != null)
 		{
-			for (final String survey : surveys)
+			for (String survey : surveys)
 			{
 				final GuideTemplate template = DataManager.GUIDE_HTML_DATA.getTemplateByTitle(survey);
 				if (template != null)
@@ -245,7 +245,7 @@ public class EventTemplate
 		
 		if (spawnedObjects != null)
 		{
-			for (final VisibleObject o : spawnedObjects)
+			for (VisibleObject o : spawnedObjects)
 			{
 				if (o.isSpawned())
 				{
@@ -266,7 +266,7 @@ public class EventTemplate
 		
 		if (surveys != null)
 		{
-			for (final String survey : surveys)
+			for (String survey : surveys)
 			{
 				final GuideTemplate template = DataManager.GUIDE_HTML_DATA.getTemplateByTitle(survey);
 				if (template != null)

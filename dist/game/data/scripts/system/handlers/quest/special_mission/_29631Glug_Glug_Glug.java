@@ -58,7 +58,7 @@ public class _29631Glug_Glug_Glug extends QuestHandler
 		qe.registerQuestNpc(205150).addOnQuestStart(questId);
 		qe.registerQuestNpc(205150).addOnTalkEvent(questId);
 		qe.registerQuestNpc(205150).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -46,7 +46,7 @@ public class _18995Deja_Drakenseer extends QuestHandler
 	{
 		qe.registerQuestNpc(806241).addOnQuestStart(questId); // Riseon.
 		qe.registerQuestNpc(806241).addOnTalkEvent(questId); // Riseon.
-		for (final int mob : IDF6DragonMessenger69Ah)
+		for (int mob : IDF6DragonMessenger69Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

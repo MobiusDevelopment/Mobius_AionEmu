@@ -45,7 +45,7 @@ public class RiftData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final RiftTemplate template : riftTemplates)
+		for (RiftTemplate template : riftTemplates)
 		{
 			rift.put(template.getId(), new RiftLocation(template));
 		}

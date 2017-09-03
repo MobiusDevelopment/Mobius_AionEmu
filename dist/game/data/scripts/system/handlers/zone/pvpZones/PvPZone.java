@@ -43,7 +43,7 @@ public abstract class PvPZone implements AdvencedZoneHandler
 	}
 	
 	@Override
-	public boolean onDie(final Creature lastAttacker, Creature target, final ZoneInstance zone)
+	public boolean onDie(Creature lastAttacker, Creature target, ZoneInstance zone)
 	{
 		if (!(target instanceof Player))
 		{

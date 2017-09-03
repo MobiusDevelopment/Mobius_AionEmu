@@ -65,7 +65,7 @@ public class InetSocketAddressTransformer implements PropertyTransformer<InetSoc
 			final int port = Integer.parseInt(parts[1]);
 			return new InetSocketAddress(address, port);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new TransformationException(e);
 		}

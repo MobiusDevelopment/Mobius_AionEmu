@@ -69,7 +69,7 @@ public class MySQL5PlayerTransferDAO extends PlayerTransferDAO
 	}
 	
 	@Override
-	public boolean update(final PlayerTransferTask task)
+	public boolean update(PlayerTransferTask task)
 	{
 		String table = "";
 		switch (task.status)

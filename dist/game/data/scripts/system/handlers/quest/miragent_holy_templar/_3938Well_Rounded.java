@@ -60,7 +60,7 @@ public class _3938Well_Rounded extends QuestHandler
 			203701
 		};
 		qe.registerQuestNpc(203701).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

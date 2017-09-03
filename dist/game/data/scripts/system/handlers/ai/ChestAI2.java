@@ -42,7 +42,7 @@ public class ChestAI2 extends ActionItemNpcAI2
 	private ChestTemplate chestTemplate;
 	
 	@Override
-	protected void handleDialogStart(final Player player)
+	protected void handleDialogStart(Player player)
 	{
 		chestTemplate = DataManager.CHEST_DATA.getChestTemplate(getNpcId());
 		if (chestTemplate == null)
@@ -65,7 +65,7 @@ public class ChestAI2 extends ActionItemNpcAI2
 			final Collection<Player> players = new HashSet<>();
 			if (player.isInGroup2())
 			{
-				for (final Player member : player.getPlayerGroup2().getOnlineMembers())
+				for (Player member : player.getPlayerGroup2().getOnlineMembers())
 				{
 					if (MathUtil.isIn3dRange(member, getOwner(), GroupConfig.GROUP_MAX_DISTANCE))
 					{
@@ -75,7 +75,7 @@ public class ChestAI2 extends ActionItemNpcAI2
 			}
 			else if (player.isInAlliance2())
 			{
-				for (final Player member : player.getPlayerAlliance2().getOnlineMembers())
+				for (Player member : player.getPlayerAlliance2().getOnlineMembers())
 				{
 					if (MathUtil.isIn3dRange(member, getOwner(), GroupConfig.GROUP_MAX_DISTANCE))
 					{
@@ -96,11 +96,11 @@ public class ChestAI2 extends ActionItemNpcAI2
 		}
 	}
 	
-	private boolean analyzeOpening(final Player player)
+	private boolean analyzeOpening(Player player)
 	{
 		final List<KeyItem> keyItems = chestTemplate.getKeyItem();
 		int i = 0;
-		for (final KeyItem keyItem : keyItems)
+		for (KeyItem keyItem : keyItems)
 		{
 			if (keyItem.getItemId() == 0)
 			{
@@ -112,7 +112,7 @@ public class ChestAI2 extends ActionItemNpcAI2
 				if (item.getItemCount() != keyItem.getQuantity())
 				{
 					int _i = 0;
-					for (final Item findedItem : player.getInventory().getItemsByItemId(keyItem.getItemId()))
+					for (Item findedItem : player.getInventory().getItemsByItemId(keyItem.getItemId()))
 					{
 						_i += findedItem.getItemCount();
 					}
@@ -131,7 +131,7 @@ public class ChestAI2 extends ActionItemNpcAI2
 		}
 		if (i == keyItems.size())
 		{
-			for (final KeyItem keyItem : keyItems)
+			for (KeyItem keyItem : keyItems)
 			{
 				player.getInventory().decreaseByItemId(keyItem.getItemId(), keyItem.getQuantity());
 			}

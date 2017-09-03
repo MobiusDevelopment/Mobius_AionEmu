@@ -73,7 +73,7 @@ public class EquipedLevelAdjAction extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, final Item parentItem, final Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 		PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 5000, 0, 0));
 		final ItemUseObserver observer = new ItemUseObserver()

@@ -138,7 +138,7 @@ public class SysMail extends AdminCommand
 			kinah = Integer.parseInt(paramValues[4]);
 			letterType = LetterType.getLetterTypeById(Integer.parseInt(paramValues[1]));
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(admin, "<Regular|Blackcloud|Express> <Item|Count|Kinah> value must be an integer.");
 			return;
@@ -200,7 +200,7 @@ public class SysMail extends AdminCommand
 		}
 		else
 		{
-			for (final Player player : World.getInstance().getAllPlayers())
+			for (Player player : World.getInstance().getAllPlayers())
 			{
 				if (recipientType.isAllowed(player.getRace()))
 				{

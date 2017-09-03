@@ -53,7 +53,7 @@ public class FixNpc extends AdminCommand
 	}
 	
 	@Override
-	public void execute(final Player admin, String... params)
+	public void execute(Player admin, String... params)
 	{
 		if (admin.getAccessLevel() < 5)
 		{
@@ -71,7 +71,7 @@ public class FixNpc extends AdminCommand
 				PacketSendUtility.sendMessage(admin, "spawnId: " + spawnId);
 				if (spawnId != null)
 				{
-					for (final SpawnGroup2 spawn : spawnId)
+					for (SpawnGroup2 spawn : spawnId)
 					{
 						final StringBuilder comment = new StringBuilder();
 						comment.append(target.getObjectTemplate().getName()).append(" (");
@@ -96,7 +96,7 @@ public class FixNpc extends AdminCommand
 							{
 								DataManager.SPAWNS_DATA2.saveSpawn(admin, visibleObject, false);
 							}
-							catch (final IOException e)
+							catch (IOException e)
 							{
 								e.printStackTrace();
 								PacketSendUtility.sendMessage(admin, "Could not save spawn");
@@ -127,7 +127,7 @@ public class FixNpc extends AdminCommand
 			List<SpawnGroup2> spawngroups = DataManager.SPAWNS_DATA2.getSpawnsByWorldId(admin2.getWorldId());
 			List<SpawnTemplate> templates = new ArrayList<>();
 			PacketSendUtility.sendMessage(admin2, "[Fix Z Coord]: will start in 10 seconds.");
-			for (final SpawnGroup2 spawngroup : spawngroups)
+			for (SpawnGroup2 spawngroup : spawngroups)
 			{
 				templates.addAll(spawngroup.getSpawnTemplates());
 				numofspawns += spawngroup.getSpawnTemplates().size();
@@ -135,7 +135,7 @@ public class FixNpc extends AdminCommand
 			PacketSendUtility.sendMessage(admin2, "[Aprox Time]: " + ((numofspawns * 3.6) / 60) + " Minutes.");
 			int time = 9000;
 			int counter = 0;
-			for (final SpawnTemplate template : templates)
+			for (SpawnTemplate template : templates)
 			{
 				if ((counter >= stop) && (stop >= 0))
 				{
@@ -193,7 +193,7 @@ public class FixNpc extends AdminCommand
 						{
 							DataManager.SPAWNS_DATA2.saveSpawn(admin, visibleObject, false);
 						}
-						catch (final IOException e)
+						catch (IOException e)
 						{
 							e.printStackTrace();
 							PacketSendUtility.sendMessage(admin, "Could not save spawn");

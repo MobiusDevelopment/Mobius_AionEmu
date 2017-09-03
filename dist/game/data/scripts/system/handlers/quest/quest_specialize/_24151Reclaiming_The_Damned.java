@@ -59,14 +59,14 @@ public class _24151Reclaiming_The_Damned extends QuestHandler
 		qe.registerQuestNpc(204715).addOnQuestStart(questId); // Grundt
 		qe.registerQuestNpc(204715).addOnTalkEvent(questId); // Grundt
 		qe.registerQuestNpc(204801).addOnTalkEvent(questId); // Gigrite
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

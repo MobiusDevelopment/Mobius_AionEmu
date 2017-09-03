@@ -55,7 +55,7 @@ public class _3205For_The_Black_Cloud_Traders extends QuestHandler
 		qe.registerQuestNpc(278651).addOnTalkEvent(questId);
 		qe.registerQuestNpc(204535).addOnTalkEvent(questId);
 		qe.registerQuestNpc(805835).addOnTalkEvent(questId);
-		for (final int mob : Petrahulk_Sentinel)
+		for (int mob : Petrahulk_Sentinel)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

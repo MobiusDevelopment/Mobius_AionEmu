@@ -35,7 +35,7 @@ public class SiegeWeaponController extends SummonController
 	}
 	
 	@Override
-	public void release(final UnsummonType unsummonType)
+	public void release(UnsummonType unsummonType)
 	{
 		getMaster().getController().cancelTask(TaskId.SUMMON_FOLLOW);
 		getOwner().getMoveController().abortMove();
@@ -84,7 +84,7 @@ public class SiegeWeaponController extends SummonController
 	}
 	
 	@Override
-	public void onDie(final Creature lastAttacker)
+	public void onDie(Creature lastAttacker)
 	{
 		getMaster().getController().cancelTask(TaskId.SUMMON_FOLLOW);
 		super.onDie(lastAttacker);

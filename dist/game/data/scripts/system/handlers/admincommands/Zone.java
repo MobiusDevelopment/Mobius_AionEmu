@@ -80,7 +80,7 @@ public class Zone extends AdminCommand
 				{
 					PacketSendUtility.sendMessage(admin, "WATER");
 				}
-				for (final ZoneInstance zone : zones)
+				for (ZoneInstance zone : zones)
 				{
 					PacketSendUtility.sendMessage(admin, zone.getAreaTemplate().getZoneName().name());
 					PacketSendUtility.sendMessage(admin, "Fly: " + zone.canFly() + "; Glide: " + zone.canGlide());
@@ -106,7 +106,7 @@ public class Zone extends AdminCommand
 				final ZoneName name = ZoneName.get(params[1]);
 				PacketSendUtility.sendMessage(admin, "isInsideZone: " + admin.isInsideZone(name));
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(admin, "Zone name missing!");
 				PacketSendUtility.sendMessage(admin, "Syntax: //zone inside <zone name> ");

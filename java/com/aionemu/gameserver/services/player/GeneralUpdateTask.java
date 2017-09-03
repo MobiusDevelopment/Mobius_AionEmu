@@ -54,12 +54,12 @@ class GeneralUpdateTask implements Runnable
 				DAOManager.getDAO(PlayerPassportsDAO.class).store(player);
 				DAOManager.getDAO(PlayerDAO.class).storePlayer(player);
 				DAOManager.getDAO(PlayerStigmasEquippedDAO.class).storeItems(player);
-				for (final House house : player.getHouses())
+				for (House house : player.getHouses())
 				{
 					house.save();
 				}
 			}
-			catch (final Exception ex)
+			catch (Exception ex)
 			{
 				log.error("Exception during periodic saving of player " + player.getName(), ex);
 			}

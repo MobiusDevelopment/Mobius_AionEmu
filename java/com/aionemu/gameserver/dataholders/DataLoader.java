@@ -74,7 +74,7 @@ abstract class DataLoader
 			@SuppressWarnings("deprecation")
 			final Collection<?> files = FileUtils.listFiles(dataFile, FileFilterUtils.andFileFilter(FileFilterUtils.andFileFilter(FileFilterUtils.notFileFilter(FileFilterUtils.nameFileFilter("new")), FileFilterUtils.suffixFileFilter(".txt")), HiddenFileFilter.VISIBLE), HiddenFileFilter.VISIBLE);
 			
-			for (final Object file1 : files)
+			for (Object file1 : files)
 			{
 				final File f = (File) file1;
 				loadFile(f);
@@ -108,7 +108,7 @@ abstract class DataLoader
 				parse(line);
 			}
 		}
-		catch (final IOException e)
+		catch (IOException e)
 		{
 			log.error("Error while loading " + getClass().getSimpleName() + ", file: " + file.getPath(), e);
 		}
@@ -145,7 +145,7 @@ abstract class DataLoader
 			
 			return true;
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error while saving " + desc, e);
 			return false;
@@ -158,7 +158,7 @@ abstract class DataLoader
 				{
 					fr.close();
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					log.error("Error while closing save data file", e);
 				}

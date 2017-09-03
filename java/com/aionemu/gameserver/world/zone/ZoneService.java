@@ -108,11 +108,11 @@ public final class ZoneService implements GameEngine
 			{
 				zoneHandler = zoneClass.newInstance();
 			}
-			catch (final IllegalAccessException ex)
+			catch (IllegalAccessException ex)
 			{
 				log.warn("Can't instantiate zone handler " + zoneName, ex);
 			}
-			catch (final Exception ex)
+			catch (Exception ex)
 			{
 				log.warn("Can't instantiate zone handler " + zoneName, ex);
 			}
@@ -133,7 +133,7 @@ public final class ZoneService implements GameEngine
 		if (idAnnotation != null)
 		{
 			final String[] zoneNames = idAnnotation.value().split(" ");
-			for (final String zoneNameString : zoneNames)
+			for (String zoneNameString : zoneNames)
 			{
 				try
 				{
@@ -144,7 +144,7 @@ public final class ZoneService implements GameEngine
 					}
 					handlers.put(zoneName, handler);
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					log.warn("Missing ZoneName: " + idAnnotation.value());
 				}
@@ -174,11 +174,11 @@ public final class ZoneService implements GameEngine
 			scriptManager.load(ZONE_DESCRIPTOR_FILE);
 			log.info("Loaded " + handlers.size() + " zone handlers.");
 		}
-		catch (final IllegalStateException e)
+		catch (IllegalStateException e)
 		{
 			log.warn("Can't initialize instance handlers.", e.getMessage());
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new GameServerError("Can't initialize instance handlers.", e);
 		}
@@ -222,7 +222,7 @@ public final class ZoneService implements GameEngine
 		}
 		ShieldService.getInstance().load(mapId);
 		
-		for (final ZoneInfo area : areas)
+		for (ZoneInfo area : areas)
 		{
 			ZoneInstance instance = null;
 			switch (area.getZoneTemplate().getZoneType())
@@ -244,7 +244,7 @@ public final class ZoneService implements GameEngine
 					break;
 				case ARTIFACT:
 					instance = new SiegeZoneInstance(mapId, area);
-					for (final int artifactId : area.getZoneTemplate().getSiegeId())
+					for (int artifactId : area.getZoneTemplate().getSiegeId())
 					{
 						final SiegeLocation artifact = DataManager.SIEGE_LOCATION_DATA.getArtifacts().get(artifactId);
 						if (artifact == null)
@@ -360,7 +360,7 @@ public final class ZoneService implements GameEngine
 			areas = zoneByMapIdMap.get(worldId);
 		}
 		ZoneInfo zoneInfo = null;
-		for (final ZoneInfo area : areas)
+		for (ZoneInfo area : areas)
 		{
 			if (area.getZoneTemplate().getName().equals(zoneName))
 			{
@@ -409,14 +409,14 @@ public final class ZoneService implements GameEngine
 	public void saveMaterialZones()
 	{
 		final List<ZoneTemplate> templates = new ArrayList<>();
-		for (final WorldMapTemplate map : DataManager.WORLD_MAPS_DATA)
+		for (WorldMapTemplate map : DataManager.WORLD_MAPS_DATA)
 		{
 			final Collection<ZoneInfo> areas = zoneByMapIdMap.get(map.getMapId());
 			if (areas == null)
 			{
 				continue;
 			}
-			for (final ZoneInfo zone : areas)
+			for (ZoneInfo zone : areas)
 			{
 				if (collidableHandlers.containsKey(zone.getArea().getZoneName()))
 				{

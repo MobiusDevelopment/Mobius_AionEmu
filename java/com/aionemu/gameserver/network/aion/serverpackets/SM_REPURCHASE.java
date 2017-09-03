@@ -50,7 +50,7 @@ public class SM_REPURCHASE extends AionServerPacket
 		writeD(1);
 		writeH(items.size());
 		
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			final ItemTemplate itemTemplate = item.getItemTemplate();
 			

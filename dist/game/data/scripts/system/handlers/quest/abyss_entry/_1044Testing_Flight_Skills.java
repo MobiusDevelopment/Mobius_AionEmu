@@ -55,7 +55,7 @@ public class _1044Testing_Flight_Skills extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(203901).addOnTalkEvent(questId);
 		qe.registerQuestNpc(203930).addOnTalkEvent(questId);
-		for (final String ring : rings)
+		for (String ring : rings)
 		{
 			qe.registerOnPassFlyingRings(ring, questId);
 		}

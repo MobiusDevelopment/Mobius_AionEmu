@@ -169,13 +169,13 @@ public class LegionEmblem
 		int i = 0;
 		if ((uploadData != null) && (uploadData.length > 0))
 		{
-			for (final byte dataByte : uploadData)
+			for (byte dataByte : uploadData)
 			{
 				newData[i] = dataByte;
 				i++;
 			}
 		}
-		for (final byte dataByte : data)
+		for (byte dataByte : data)
 		{
 			newData[i] = dataByte;
 			i++;

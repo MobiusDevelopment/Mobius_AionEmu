@@ -58,7 +58,7 @@ public class _1003Illegal_Logging extends QuestHandler
 		qe.registerQuestNpc(203081).addOnTalkEvent(questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerOnLevelUp(questId);
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

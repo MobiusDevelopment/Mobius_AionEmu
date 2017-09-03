@@ -44,7 +44,7 @@ public enum HousingAction
 	
 	public static HousingAction getActionTypeById(int id)
 	{
-		for (final HousingAction actionType : values())
+		for (HousingAction actionType : values())
 		{
 			if (actionType.getTypeId() == id)
 			{

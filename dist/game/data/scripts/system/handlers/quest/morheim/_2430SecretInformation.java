@@ -51,7 +51,7 @@ public class _2430SecretInformation extends QuestHandler
 			204300
 		};
 		qe.registerQuestNpc(204327).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

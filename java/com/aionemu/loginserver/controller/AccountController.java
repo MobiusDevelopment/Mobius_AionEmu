@@ -254,7 +254,7 @@ public class AccountController
 	{
 		synchronized (AccountController.class)
 		{
-			for (final GameServerInfo gsi : GameServerTable.getGameServers())
+			for (GameServerInfo gsi : GameServerTable.getGameServers())
 			{
 				if (gsi.isAccountOnGameServer(accountId))
 				{
@@ -365,7 +365,7 @@ public class AccountController
 		
 		accountCharacterCount = accountsGSCharacterCounts.get(accountId);
 		
-		for (final GameServerInfo gsi : GameServerTable.getGameServers())
+		for (GameServerInfo gsi : GameServerTable.getGameServers())
 		{
 			gsc = gsi.getConnection();
 			

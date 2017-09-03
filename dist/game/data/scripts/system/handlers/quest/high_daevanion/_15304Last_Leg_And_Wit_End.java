@@ -62,7 +62,7 @@ public class _15304Last_Leg_And_Wit_End extends QuestHandler
 		qe.registerQuestNpc(805327).addOnQuestStart(questId); // Rike.
 		qe.registerQuestNpc(805327).addOnTalkEvent(questId); // Rike.
 		qe.registerQuestNpc(805328).addOnTalkEvent(questId); // Efaion.
-		for (final int mob : Ab1NewMobs)
+		for (int mob : Ab1NewMobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

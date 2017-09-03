@@ -51,7 +51,7 @@ public class _20501What_The_Ruins_Say extends QuestHandler
 			731540,
 			804722
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

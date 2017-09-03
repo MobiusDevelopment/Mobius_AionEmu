@@ -49,12 +49,12 @@ public class AccountUtils
 			messageDiegest.update(password.getBytes("UTF-8"));
 			return Base64.getEncoder().encodeToString(messageDiegest.digest());
 		}
-		catch (final NoSuchAlgorithmException e)
+		catch (NoSuchAlgorithmException e)
 		{
 			log.error("Exception while encoding password");
 			throw new Error(e);
 		}
-		catch (final UnsupportedEncodingException e)
+		catch (UnsupportedEncodingException e)
 		{
 			log.error("Exception while encoding password");
 			throw new Error(e);

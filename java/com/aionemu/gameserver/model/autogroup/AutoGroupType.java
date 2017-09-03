@@ -1104,7 +1104,7 @@ public enum AutoGroupType
 	
 	public static AutoGroupType getAGTByMaskId(int instanceMaskId)
 	{
-		for (final AutoGroupType autoGroupsType : values())
+		for (AutoGroupType autoGroupsType : values())
 		{
 			if (autoGroupsType.getInstanceMaskId() == instanceMaskId)
 			{
@@ -1116,7 +1116,7 @@ public enum AutoGroupType
 	
 	public static AutoGroupType getAutoGroup(int level, int npcId)
 	{
-		for (final AutoGroupType agt : values())
+		for (AutoGroupType agt : values())
 		{
 			if (agt.hasLevelPermit(level) && agt.containNpcId(npcId))
 			{
@@ -1128,7 +1128,7 @@ public enum AutoGroupType
 	
 	public static AutoGroupType getAutoGroupByWorld(int level, int worldId)
 	{
-		for (final AutoGroupType agt : values())
+		for (AutoGroupType agt : values())
 		{
 			if ((agt.getInstanceMapId() == worldId) && agt.hasLevelPermit(level))
 			{
@@ -1140,7 +1140,7 @@ public enum AutoGroupType
 	
 	public static AutoGroupType getAutoGroup(int npcId)
 	{
-		for (final AutoGroupType agt : values())
+		for (AutoGroupType agt : values())
 		{
 			if (agt.containNpcId(npcId))
 			{

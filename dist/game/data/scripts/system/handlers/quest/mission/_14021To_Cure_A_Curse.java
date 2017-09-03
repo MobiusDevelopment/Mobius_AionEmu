@@ -59,11 +59,11 @@ public class _14021To_Cure_A_Curse extends QuestHandler
 	{
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerOnLevelUp(questId);
-		for (final int npc : npc_ids)
+		for (int npc : npc_ids)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

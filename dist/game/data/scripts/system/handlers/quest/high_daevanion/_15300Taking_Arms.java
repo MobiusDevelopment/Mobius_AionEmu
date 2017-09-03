@@ -56,7 +56,7 @@ public class _15300Taking_Arms extends QuestHandler
 			805363,
 			805377
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

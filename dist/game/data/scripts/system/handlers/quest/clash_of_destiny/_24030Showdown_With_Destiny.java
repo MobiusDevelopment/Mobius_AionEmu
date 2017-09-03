@@ -74,11 +74,11 @@ public class _24030Showdown_With_Destiny extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerOnDie(questId);
 		qe.registerOnEnterWorld(questId);
-		for (final int npc_id : npcs)
+		for (int npc_id : npcs)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

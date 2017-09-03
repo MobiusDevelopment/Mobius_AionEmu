@@ -38,7 +38,7 @@ public class InstanceStartRunnable implements Runnable
 	public void run()
 	{
 		final Map<Integer, InstanceRiftLocation> locations = InstanceRiftService.getInstance().getInstanceRiftLocations();
-		for (final InstanceRiftLocation loc : locations.values())
+		for (InstanceRiftLocation loc : locations.values())
 		{
 			if (loc.getId() == id)
 			{

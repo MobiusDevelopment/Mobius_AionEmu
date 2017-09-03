@@ -38,7 +38,7 @@ public final class PlayerCPList implements CPList<Player>
 	public PlayerCPList(List<PlayerCPEntry> entries)
 	{
 		this();
-		for (final PlayerCPEntry e : entries)
+		for (PlayerCPEntry e : entries)
 		{
 			entry.put(e.getSlot(), e);
 		}

@@ -108,7 +108,7 @@ public class SimpleAttackManager
 	/**
 	 * @param npcAI
 	 */
-	protected static void attackAction(final NpcAI2 npcAI)
+	protected static void attackAction(NpcAI2 npcAI)
 	{
 		if (!npcAI.isInState(AIState.FIGHT))
 		{

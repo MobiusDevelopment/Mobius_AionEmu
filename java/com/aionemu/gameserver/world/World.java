@@ -64,7 +64,7 @@ public class World
 		allObjects = new FastMap<Integer, VisibleObject>().shared();
 		allNpcs = new FastMap<Integer, Npc>().shared();
 		worldMaps = new TIntObjectHashMap<>();
-		for (final WorldMapTemplate template : DataManager.WORLD_MAPS_DATA)
+		for (WorldMapTemplate template : DataManager.WORLD_MAPS_DATA)
 		{
 			worldMaps.put(template.getMapId(), new WorldMap(template, this));
 		}
@@ -484,7 +484,7 @@ public class World
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Exception when running visitor on all objects", ex);
 		}

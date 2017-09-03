@@ -50,7 +50,7 @@ public class Promote extends AdminCommand
 		{
 			mask = Integer.parseInt(params[2]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(admin, "Only number!");
 			return;

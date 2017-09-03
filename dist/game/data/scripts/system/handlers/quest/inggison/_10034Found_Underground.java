@@ -57,7 +57,7 @@ public class _10034Found_Underground extends QuestHandler
 			700604,
 			730229
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
@@ -121,7 +121,7 @@ public class _10034Found_Underground extends QuestHandler
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
@@ -287,7 +287,7 @@ public class _10034Found_Underground extends QuestHandler
 	}
 	
 	@Override
-	public boolean onKillEvent(final QuestEnv env)
+	public boolean onKillEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final int instanceId = player.getInstanceId();

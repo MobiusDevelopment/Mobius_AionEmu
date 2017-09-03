@@ -68,11 +68,11 @@ public class _20031Go_To_Gelkmaros extends QuestHandler
 			799364,
 			799365
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
@@ -314,7 +314,7 @@ public class _20031Go_To_Gelkmaros extends QuestHandler
 						20034,
 						20035
 					};
-					for (final int quest : gelkmarosMission)
+					for (int quest : gelkmarosMission)
 					{
 						QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
 					}
@@ -352,7 +352,7 @@ public class _20031Go_To_Gelkmaros extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

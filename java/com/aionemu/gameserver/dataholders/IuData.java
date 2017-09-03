@@ -46,7 +46,7 @@ public class IuData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final IuTemplate template : iuTemplates)
+		for (IuTemplate template : iuTemplates)
 		{
 			iu.put(template.getId(), new IuLocation(template));
 		}

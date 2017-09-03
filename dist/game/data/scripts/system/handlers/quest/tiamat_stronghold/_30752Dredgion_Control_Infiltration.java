@@ -47,7 +47,7 @@ public class _30752Dredgion_Control_Infiltration extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(800424).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

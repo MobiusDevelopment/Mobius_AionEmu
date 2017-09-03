@@ -34,7 +34,7 @@ public class RiftOpenRunnable implements Runnable
 	public void run()
 	{
 		final Map<Integer, RiftLocation> locations = RiftService.getInstance().getRiftLocations();
-		for (final RiftLocation loc : locations.values())
+		for (RiftLocation loc : locations.values())
 		{
 			if (loc.getWorldId() == worldId)
 			{

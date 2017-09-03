@@ -42,7 +42,7 @@ public class FlyPathData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final FlyPathEntry loc : list)
+		for (FlyPathEntry loc : list)
 		{
 			loctlistData.put(loc.getId(), loc);
 		}

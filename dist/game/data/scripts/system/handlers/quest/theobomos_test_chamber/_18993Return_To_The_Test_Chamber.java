@@ -46,7 +46,7 @@ public class _18993Return_To_The_Test_Chamber extends QuestHandler
 	{
 		qe.registerQuestNpc(806215).addOnQuestStart(questId); // Stochio.
 		qe.registerQuestNpc(806215).addOnTalkEvent(questId); // Stochio.
-		for (final int mob : IDF6LapGodElemental67Ah)
+		for (int mob : IDF6LapGodElemental67Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

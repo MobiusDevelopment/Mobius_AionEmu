@@ -73,7 +73,7 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 			case 220526: // Insightful Eye.
 			case 220534: // Fallen Sea Jotun.
 			case 220540: // Typhon.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -436,7 +436,7 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 		spawn(IDEternity02AGuardOffRun, 1242.3444f, 860.0123f, 1028.6128f, (byte) 91);
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -448,7 +448,7 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -515,7 +515,7 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

@@ -46,7 +46,7 @@ public class InstanceRiftData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final InstanceRiftTemplate template : instanceRiftTemplates)
+		for (InstanceRiftTemplate template : instanceRiftTemplates)
 		{
 			instanceRift.put(template.getId(), new InstanceRiftLocation(template));
 		}

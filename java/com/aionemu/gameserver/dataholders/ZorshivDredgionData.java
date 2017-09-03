@@ -46,7 +46,7 @@ public class ZorshivDredgionData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final ZorshivDredgionTemplate template : zorshivDredgionTemplates)
+		for (ZorshivDredgionTemplate template : zorshivDredgionTemplates)
 		{
 			zorshivDredgion.put(template.getId(), new ZorshivDredgionLocation(template));
 		}

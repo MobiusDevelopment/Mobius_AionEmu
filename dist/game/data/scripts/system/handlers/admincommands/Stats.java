@@ -51,7 +51,7 @@ public class Stats extends AdminCommand implements StatOwner
 		{
 			value = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "Wrong Param");
 			return;

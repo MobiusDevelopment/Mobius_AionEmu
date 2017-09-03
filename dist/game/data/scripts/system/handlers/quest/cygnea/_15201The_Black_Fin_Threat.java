@@ -51,7 +51,7 @@ public class _15201The_Black_Fin_Threat extends QuestHandler
 	{
 		qe.registerQuestNpc(804704).addOnQuestStart(questId);
 		qe.registerQuestNpc(804704).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

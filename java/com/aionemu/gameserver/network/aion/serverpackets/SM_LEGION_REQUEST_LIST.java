@@ -35,7 +35,7 @@ public class SM_LEGION_REQUEST_LIST extends AionServerPacket
 	protected void writeImpl(AionConnection con)
 	{
 		writeH(-ljrList.size());
-		for (final LegionJoinRequest ljr : ljrList)
+		for (LegionJoinRequest ljr : ljrList)
 		{
 			writeD(ljr.getPlayerId());
 			writeS(ljr.getPlayerName());

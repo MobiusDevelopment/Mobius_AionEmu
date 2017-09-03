@@ -142,7 +142,7 @@ public class _2008Ascension extends QuestHandler
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final int instanceId = player.getInstanceId();
@@ -383,7 +383,7 @@ public class _2008Ascension extends QuestHandler
 									updateQuestStatus(env);
 									final List<Npc> mobs = new ArrayList<>();
 									mobs.add((Npc) QuestService.addNewSpawn(320020000, instanceId, 205040, 294f, 277f, 207f, (byte) 0));
-									for (final Npc mob : mobs)
+									for (Npc mob : mobs)
 									{
 										mob.getAggroList().addDamage(player, 1000);
 									}

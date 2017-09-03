@@ -50,7 +50,7 @@ public enum TeamCommand
 	static
 	{
 		teamCommands = new TIntObjectHashMap<>();
-		for (final TeamCommand eventCode : values())
+		for (TeamCommand eventCode : values())
 		{
 			teamCommands.put(eventCode.getCodeId(), eventCode);
 		}

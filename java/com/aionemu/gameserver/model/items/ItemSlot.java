@@ -103,7 +103,7 @@ public enum ItemSlot
 	public static ItemSlot[] getSlotsFor(long slot)
 	{
 		final List<ItemSlot> slots = new ArrayList<>();
-		for (final ItemSlot itemSlot : values())
+		for (ItemSlot itemSlot : values())
 		{
 			if ((slot != 0) && !itemSlot.isCombo() && ((slot & itemSlot.slotIdMask) == itemSlot.slotIdMask))
 			{

@@ -51,7 +51,7 @@ public class LunaData
 		elyos = FastList.newInstance();
 		asmos = FastList.newInstance();
 		any = FastList.newInstance();
-		for (final LunaTemplate lt : list)
+		for (LunaTemplate lt : list)
 		{
 			lunaData.put(lt.getId(), lt);
 			switch (lt.getRace())

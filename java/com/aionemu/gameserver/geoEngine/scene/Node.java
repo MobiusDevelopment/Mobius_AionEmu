@@ -508,7 +508,7 @@ public class Node extends Spatial implements Cloneable
 	{
 		final Node node = new Node(name);
 		node.collisionFlags = collisionFlags;
-		for (final Spatial spatial : children)
+		for (Spatial spatial : children)
 		{
 			if (spatial instanceof Geometry)
 			{

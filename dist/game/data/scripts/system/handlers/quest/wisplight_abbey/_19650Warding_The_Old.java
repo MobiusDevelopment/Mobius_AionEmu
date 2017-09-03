@@ -53,7 +53,7 @@ public class _19650Warding_The_Old extends QuestHandler
 		qe.registerQuestNpc(804651).addOnQuestStart(questId);
 		qe.registerQuestNpc(804651).addOnTalkEvent(questId);
 		qe.registerQuestNpc(804709).addOnTalkEvent(questId); // LF5 Brontte.
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

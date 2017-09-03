@@ -82,7 +82,7 @@ public class Info extends AdminCommand
 			int asmoDmg = 0;
 			int elyDmg = 0;
 			PacketSendUtility.sendMessage(admin, "[AgroList]");
-			for (final AggroInfo ai : npc.getAggroList().getList())
+			for (AggroInfo ai : npc.getAggroList().getList())
 			{
 				if (!(ai.getAttacker() instanceof Creature))
 				{

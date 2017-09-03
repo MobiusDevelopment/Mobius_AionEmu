@@ -46,7 +46,7 @@ public class _28510End_Of_The_Shift_In_Haramel extends QuestHandler
 			700953
 		};
 		qe.registerQuestNpc(804605).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

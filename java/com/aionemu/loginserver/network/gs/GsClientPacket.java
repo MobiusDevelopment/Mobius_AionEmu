@@ -48,7 +48,7 @@ public abstract class GsClientPacket extends BaseClientPacket<GsConnection>
 		{
 			runImpl();
 		}
-		catch (final Throwable e)
+		catch (Throwable e)
 		{
 			log.warn("error handling gs (" + getConnection().getIP() + ") message " + this, e);
 		}

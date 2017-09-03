@@ -58,7 +58,7 @@ public class SvsSchedule
 			final String xml = FileUtils.readFileToString(new File("./config/shedule/svs_schedule.xml"));
 			ss = JAXBUtil.deserialize(xml, SvsSchedule.class);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to initialize svs", e);
 		}

@@ -68,7 +68,7 @@ public class RightWingChamberInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		super.onInstanceCreate(instance);
 		if (!isStartTimer)
@@ -374,7 +374,7 @@ public class RightWingChamberInstance extends GeneralInstanceHandler
 		TeleportService2.moveToInstanceExit(player, mapId, player.getRace());
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
@@ -396,7 +396,7 @@ public class RightWingChamberInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

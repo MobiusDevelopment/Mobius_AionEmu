@@ -83,7 +83,7 @@ public class BeritraStartRunnable implements Runnable
 			public void run()
 			{
 				final Map<Integer, BeritraLocation> locations = BeritraService.getInstance().getBeritraLocations();
-				for (final BeritraLocation loc : locations.values())
+				for (BeritraLocation loc : locations.values())
 				{
 					if (loc.getId() == id)
 					{

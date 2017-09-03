@@ -69,7 +69,7 @@ public class MySQL5RewardServiceDAO extends RewardServiceDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.warn("getAvailable() for " + playerId + " from DB: " + e.getMessage(), e);
 		}
@@ -89,7 +89,7 @@ public class MySQL5RewardServiceDAO extends RewardServiceDAO
 		{
 			con = DatabaseFactory.getConnection();
 			PreparedStatement stmt;
-			for (final int uniqid : ids)
+			for (int uniqid : ids)
 			{
 				stmt = con.prepareStatement(UPDATE_QUERY);
 				stmt.setInt(1, 1);
@@ -98,7 +98,7 @@ public class MySQL5RewardServiceDAO extends RewardServiceDAO
 				stmt.close();
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("uncheckAvailable", e);
 		}

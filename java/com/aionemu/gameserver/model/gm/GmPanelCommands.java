@@ -73,7 +73,7 @@ public enum GmPanelCommands
 	
 	public static GmPanelCommands getValue(String command)
 	{
-		for (final GmPanelCommands value : values())
+		for (GmPanelCommands value : values())
 		{
 			if (value.name().equals(command.toUpperCase()))
 			{

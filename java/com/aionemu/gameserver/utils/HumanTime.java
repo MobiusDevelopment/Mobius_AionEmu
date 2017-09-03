@@ -74,14 +74,14 @@ public class HumanTime implements Externalizable, Comparable<HumanTime>, Cloneab
 		return out;
 	}
 	
-	public static HumanTime eval(final CharSequence s)
+	public static HumanTime eval(CharSequence s)
 	{
 		final HumanTime out = new HumanTime(0L);
 		int num = 0;
 		int start = 0;
 		int end = 0;
 		State oldState = State.IGNORED;
-		for (final char c : new Iterable<Character>()
+		for (char c : new Iterable<Character>()
 		{
 			@Override
 			public Iterator<Character> iterator()
@@ -361,7 +361,7 @@ public class HumanTime implements Externalizable, Comparable<HumanTime>, Cloneab
 				a.append('s');
 			}
 		}
-		catch (final IOException ex)
+		catch (IOException ex)
 		{
 		}
 		return a;
@@ -540,7 +540,7 @@ public class HumanTime implements Externalizable, Comparable<HumanTime>, Cloneab
 				}
 			}
 		}
-		catch (final IOException ex)
+		catch (IOException ex)
 		{
 		}
 		return a;

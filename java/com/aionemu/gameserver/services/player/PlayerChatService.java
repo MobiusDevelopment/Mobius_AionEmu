@@ -32,7 +32,7 @@ public class PlayerChatService
 {
 	private static final Logger log = LoggerFactory.getLogger("CHAT_LOG");
 	
-	public static boolean isFlooding(final Player player)
+	public static boolean isFlooding(Player player)
 	{
 		player.setLastMessageTime();
 		if (player.floodMsgCount() > SecurityConfig.FLOOD_MSG)

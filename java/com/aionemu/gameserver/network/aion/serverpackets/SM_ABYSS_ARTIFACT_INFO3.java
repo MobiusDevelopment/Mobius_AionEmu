@@ -51,7 +51,7 @@ public class SM_ABYSS_ARTIFACT_INFO3 extends AionServerPacket
 	protected void writeImpl(AionConnection con)
 	{
 		writeH(locations.size());
-		for (final ArtifactLocation artifact : locations)
+		for (ArtifactLocation artifact : locations)
 		{
 			writeD((artifact.getLocationId() * 10) + 1);
 			writeC(artifact.getStatus().getValue());

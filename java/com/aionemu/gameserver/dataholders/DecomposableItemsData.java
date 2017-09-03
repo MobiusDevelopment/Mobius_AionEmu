@@ -44,7 +44,7 @@ public class DecomposableItemsData
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
 		decomposableItemsInfo.clear();
-		for (final DecomposableItemInfo template : decomposableItemsTemplates)
+		for (DecomposableItemInfo template : decomposableItemsTemplates)
 		{
 			decomposableItemsInfo.put(template.getItemId(), template.getItemsCollections());
 		}

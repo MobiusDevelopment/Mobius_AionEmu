@@ -50,7 +50,7 @@ public class _28500The_Secret_Of_The_Odella extends QuestHandler
 			799522
 		};
 		qe.registerQuestNpc(203560).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

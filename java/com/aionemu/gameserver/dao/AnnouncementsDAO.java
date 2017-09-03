@@ -30,9 +30,9 @@ public abstract class AnnouncementsDAO implements DAO
 	
 	public abstract Set<Announcement> getAnnouncements();
 	
-	public abstract void addAnnouncement(final Announcement announce);
+	public abstract void addAnnouncement(Announcement announce);
 	
-	public abstract boolean delAnnouncement(final int idAnnounce);
+	public abstract boolean delAnnouncement(int idAnnounce);
 	
 	/**
 	 * Returns class name that will be uses as unique identifier for all DAO classes

@@ -62,7 +62,7 @@ public class LifeStatsRestoreService
 	 * @param lifeStats
 	 * @return
 	 */
-	public Future<?> scheduleFpReduceTask(final PlayerLifeStats lifeStats, Integer costFp)
+	public Future<?> scheduleFpReduceTask(PlayerLifeStats lifeStats, Integer costFp)
 	{
 		return ThreadPoolManager.getInstance().scheduleAtFixedRate(new FpReduceTask(lifeStats, costFp), 2000, DEFAULT_FPREDUCE_DELAY);
 	}
@@ -140,7 +140,7 @@ public class LifeStatsRestoreService
 		private PlayerLifeStats lifeStats;
 		private final Integer costFp;
 		
-		private FpReduceTask(PlayerLifeStats lifeStats, final Integer costFp)
+		private FpReduceTask(PlayerLifeStats lifeStats, Integer costFp)
 		{
 			this.lifeStats = lifeStats;
 			this.costFp = costFp;

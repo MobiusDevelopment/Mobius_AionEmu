@@ -55,7 +55,7 @@ public class GoodsList
 			return;
 		}
 		
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			itemIdList.add(item.getId());
 		}
@@ -69,7 +69,7 @@ public class GoodsList
 		final FastList<LimitedItem> limitedItems = new FastList<>();
 		if (items != null)
 		{
-			for (final Item item : items)
+			for (Item item : items)
 			{
 				if ((item.getBuyLimit() != null) && (item.getSellLimit() != null))
 				{

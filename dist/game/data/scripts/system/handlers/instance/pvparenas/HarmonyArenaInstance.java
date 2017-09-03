@@ -70,7 +70,7 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		final Integer object = player.getObjectId();
 		if (!instanceReward.containPlayer(object))
@@ -86,7 +86,7 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 		sendEnterPacket(player);
 	}
 	
-	private void sendEnterPacket(final Player player)
+	private void sendEnterPacket(Player player)
 	{
 		final Integer object = player.getObjectId();
 		final HarmonyGroupReward group = instanceReward.getHarmonyGroupReward(object);
@@ -144,7 +144,7 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 		{
 			return;
 		}
-		for (final AggroInfo damager : victim.getAggroList().getList())
+		for (AggroInfo damager : victim.getAggroList().getList())
 		{
 			if (!(damager.getAttacker() instanceof Creature))
 			{
@@ -319,7 +319,7 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 			@Override
 			public void run()
 			{
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					instanceReward.portToPosition(player);
 					instanceReward.sendPacket(4, player.getObjectId());
@@ -328,7 +328,7 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 		}, 1000);
 	}
 	
-	private void sendPacket(final AionServerPacket packet)
+	private void sendPacket(AionServerPacket packet)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -353,7 +353,7 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -383,7 +383,7 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 	
 	private void openDoors()
 	{
-		for (final StaticDoor door : instance.getDoors().values())
+		for (StaticDoor door : instance.getDoors().values())
 		{
 			if (door != null)
 			{
@@ -394,7 +394,7 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 	
 	private void clearDebuffs(Player player)
 	{
-		for (final Effect ef : player.getEffectController().getAbnormalEffects())
+		for (Effect ef : player.getEffectController().getAbnormalEffects())
 		{
 			final DispelCategoryType category = ef.getSkillTemplate().getDispelCategory();
 			if ((category == DispelCategoryType.DEBUFF) || (category == DispelCategoryType.DEBUFF_MENTAL) || (category == DispelCategoryType.DEBUFF_PHYSICAL) || (category == DispelCategoryType.ALL))
@@ -409,7 +409,7 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 	{
 		if (instanceReward.canRewarded())
 		{
-			for (final Player player : instance.getPlayersInside())
+			for (Player player : instance.getPlayersInside())
 			{
 				final HarmonyGroupReward group = instanceReward.getHarmonyGroupReward(player.getObjectId());
 				final float playerRate = player.getRates().getGloryRewardRate();
@@ -434,7 +434,7 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 				}
 			}
 		}
-		for (final Npc npc : instance.getNpcs())
+		for (Npc npc : instance.getNpcs())
 		{
 			npc.getController().onDelete();
 		}
@@ -445,7 +445,7 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 			{
 				if (!isInstanceDestroyed)
 				{
-					for (final Player player : instance.getPlayersInside())
+					for (Player player : instance.getPlayersInside())
 					{
 						if (CreatureActions.isAlreadyDead(player))
 						{

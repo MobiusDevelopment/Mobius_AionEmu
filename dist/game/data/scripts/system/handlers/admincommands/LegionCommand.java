@@ -86,7 +86,7 @@ public class LegionCommand extends AdminCommand
 			{
 				level = Byte.parseByte(params[2]);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 			}
 			
@@ -123,7 +123,7 @@ public class LegionCommand extends AdminCommand
 			{
 				points = Long.parseLong(params[2]);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 			}
 			
@@ -181,7 +181,7 @@ public class LegionCommand extends AdminCommand
 			message.add("members: " + members.size());
 			
 			PlayerDAO dao = null;
-			for (final int memberId : members)
+			for (int memberId : members)
 			{
 				final Player pl = World.getInstance().findPlayer(memberId);
 				if (pl != null)
@@ -207,7 +207,7 @@ public class LegionCommand extends AdminCommand
 			message.addAll(offline);
 			FastList.recycle(offline);
 			
-			for (final String msg : message)
+			for (String msg : message)
 			{
 				PacketSendUtility.sendMessage(player, msg);
 			}
@@ -305,7 +305,7 @@ public class LegionCommand extends AdminCommand
 			
 			final List<Integer> members = legion.getLegionMembers();
 			Player bgplayer = null;
-			for (final int memberId : members)
+			for (int memberId : members)
 			{
 				final Player pl = World.getInstance().findPlayer(memberId);
 				if (pl != null)
@@ -392,7 +392,7 @@ public class LegionCommand extends AdminCommand
 			}
 			if (params[1].equalsIgnoreCase("list"))
 			{
-				for (final LegionTerritory territory : TerritoryService.getInstance().getTerritories())
+				for (LegionTerritory territory : TerritoryService.getInstance().getTerritories())
 				{
 					PacketSendUtility.sendMessage(player, "Id: " + territory.getId() + " owned by Legion: " + territory.getLegionName());
 				}

@@ -92,7 +92,7 @@ public class Bk extends AdminCommand
 				
 				updateInfo(player.getObjectId());
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(player, "syntax //bk <add|del|tele> <bookmark name>");
 				return;
@@ -111,7 +111,7 @@ public class Bk extends AdminCommand
 				statement.executeUpdate();
 				statement.close();
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(player, "syntax //bk <add|del|tele> <bookmark name>");
 				return;
@@ -151,7 +151,7 @@ public class Bk extends AdminCommand
 					}
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(player, "syntax //bk <add|del|tele> <bookmark name>");
 				return;
@@ -161,7 +161,7 @@ public class Bk extends AdminCommand
 		{
 			updateInfo(player.getObjectId());
 			PacketSendUtility.sendMessage(player, "=====Bookmark list begin=====");
-			for (final Bookmark b : bookmarks)
+			for (Bookmark b : bookmarks)
 			{
 				final String chatLink = ChatUtil.position(b.getName(), b.getWorld_id(), b.getX(), b.getY(), b.getZ());
 				PacketSendUtility.sendMessage(player, " = " + chatLink + " =  " + WorldMapType.getWorld(b.getWorld_id()) + "  ( " + b.getX() + " ," + b.getY() + " ," + b.getZ() + " )");
@@ -174,7 +174,7 @@ public class Bk extends AdminCommand
 	 * Reload bookmark list from db
 	 * @param objId
 	 */
-	public void updateInfo(final int objId)
+	public void updateInfo(int objId)
 	{
 		bookmarks.clear();
 		
@@ -209,7 +209,7 @@ public class Bk extends AdminCommand
 	 */
 	public Bookmark selectByName(String bk_name)
 	{
-		for (final Bookmark b : bookmarks)
+		for (Bookmark b : bookmarks)
 		{
 			if (b.getName().equals(bk_name))
 			{
@@ -224,7 +224,7 @@ public class Bk extends AdminCommand
 	 * @param objId
 	 * @return true if bookmark exists
 	 */
-	public boolean isBookmarkExists(final String bk_name, final int objId)
+	public boolean isBookmarkExists(String bk_name, int objId)
 	{
 		Connection con = null;
 		int bkcount = 0;
@@ -242,7 +242,7 @@ public class Bk extends AdminCommand
 			rset.close();
 			statement.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error in reading db", e);
 		}

@@ -48,7 +48,7 @@ public class _20503Ancient_Evil_Plans extends QuestHandler
 			804728,
 			804729
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

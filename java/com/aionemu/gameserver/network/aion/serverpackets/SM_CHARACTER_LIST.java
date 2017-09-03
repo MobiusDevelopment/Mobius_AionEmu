@@ -72,7 +72,7 @@ public class SM_CHARACTER_LIST extends PlayerInfo
 			writeD(playOk2);
 			final Account account = con.getAccount();
 			writeC(account.size()); // characters count
-			for (final PlayerAccountData playerData : account.getSortedAccountsList())
+			for (PlayerAccountData playerData : account.getSortedAccountsList())
 			{
 				final PlayerCommonData pcd = playerData.getPlayerCommonData();
 				final Player player = PlayerService.getPlayer(pcd.getPlayerObjId(), account);

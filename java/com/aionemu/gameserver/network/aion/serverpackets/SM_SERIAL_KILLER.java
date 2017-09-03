@@ -58,7 +58,7 @@ public class SM_SERIAL_KILLER extends AionServerPacket
 				writeD(0x01);
 				writeD(0x01);
 				writeH(players.size());
-				for (final Player player : players)
+				for (Player player : players)
 				{
 					writeD(player.getProtectorInfo().getRank());
 					writeD(player.getProtectorInfo().getType());
@@ -75,7 +75,7 @@ public class SM_SERIAL_KILLER extends AionServerPacket
 				break;
 			case 5:
 				writeH(players.size());
-				for (final Player player : players)
+				for (Player player : players)
 				{
 					writeD(player.getProtectorInfo().getRank());
 					writeD(player.getProtectorInfo().getType());

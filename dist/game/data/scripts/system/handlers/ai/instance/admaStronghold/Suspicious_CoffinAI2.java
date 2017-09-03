@@ -56,7 +56,7 @@ public class Suspicious_CoffinAI2 extends AggressiveNpcAI2
 		}, 5000);
 	}
 	
-	private void rushZombies(final Npc npc, float x, float y, float z, boolean despawn)
+	private void rushZombies(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);

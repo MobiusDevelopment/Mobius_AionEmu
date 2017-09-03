@@ -85,7 +85,7 @@ public class PetTemplate
 			}
 			else
 			{
-				for (final PetFunction func : petFunctions)
+				for (PetFunction func : petFunctions)
 				{
 					if (func.getPetFunctionType().isPlayerFunction())
 					{
@@ -108,7 +108,7 @@ public class PetTemplate
 		{
 			return null;
 		}
-		for (final PetFunction pf : petFunctions)
+		for (PetFunction pf : petFunctions)
 		{
 			if (pf.getPetFunctionType() == PetFunctionType.WAREHOUSE)
 			{
@@ -128,7 +128,7 @@ public class PetTemplate
 			return false;
 		}
 		
-		for (final PetFunction t : getPetFunctions())
+		for (PetFunction t : getPetFunctions())
 		{
 			if (t.getPetFunctionType() == type)
 			{
@@ -143,7 +143,7 @@ public class PetTemplate
 	 */
 	public PetFunction getPetFunction(PetFunctionType type)
 	{
-		for (final PetFunction t : getPetFunctions())
+		for (PetFunction t : getPetFunctions())
 		{
 			if (t.getPetFunctionType() == type)
 			{

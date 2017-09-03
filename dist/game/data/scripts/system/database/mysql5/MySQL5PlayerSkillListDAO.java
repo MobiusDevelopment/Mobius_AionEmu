@@ -102,7 +102,7 @@ public class MySQL5PlayerSkillListDAO extends PlayerSkillListDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore SkillList data for player: " + playerId + " from DB: " + e.getMessage(), e);
 		}
@@ -140,7 +140,7 @@ public class MySQL5PlayerSkillListDAO extends PlayerSkillListDAO
 			updateSkills(con, player, skills);
 			
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Failed to open connection to database while saving SkillList for player " + player.getObjectId());
 		}
@@ -149,7 +149,7 @@ public class MySQL5PlayerSkillListDAO extends PlayerSkillListDAO
 			DatabaseFactory.close(con);
 		}
 		
-		for (final PlayerSkillEntry skill : skills)
+		for (PlayerSkillEntry skill : skills)
 		{
 			skill.setPersistentState(PersistentState.UPDATED);
 		}
@@ -169,7 +169,7 @@ public class MySQL5PlayerSkillListDAO extends PlayerSkillListDAO
 		{
 			ps = con.prepareStatement(INSERT_QUERY);
 			
-			for (final PlayerSkillEntry skill : skillsToInsert)
+			for (PlayerSkillEntry skill : skillsToInsert)
 			{
 				ps.setInt(1, player.getObjectId());
 				ps.setInt(2, skill.getSkillId());
@@ -180,7 +180,7 @@ public class MySQL5PlayerSkillListDAO extends PlayerSkillListDAO
 			ps.executeBatch();
 			con.commit();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't add skills for player: " + player.getObjectId());
 		}
@@ -204,7 +204,7 @@ public class MySQL5PlayerSkillListDAO extends PlayerSkillListDAO
 		{
 			ps = con.prepareStatement(UPDATE_QUERY);
 			
-			for (final PlayerSkillEntry skill : skillsToUpdate)
+			for (PlayerSkillEntry skill : skillsToUpdate)
 			{
 				ps.setInt(1, skill.getSkillLevel());
 				ps.setInt(2, player.getObjectId());
@@ -215,7 +215,7 @@ public class MySQL5PlayerSkillListDAO extends PlayerSkillListDAO
 			ps.executeBatch();
 			con.commit();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't update skills for player: " + player.getObjectId());
 		}
@@ -239,7 +239,7 @@ public class MySQL5PlayerSkillListDAO extends PlayerSkillListDAO
 		{
 			ps = con.prepareStatement(DELETE_QUERY);
 			
-			for (final PlayerSkillEntry skill : skillsToDelete)
+			for (PlayerSkillEntry skill : skillsToDelete)
 			{
 				ps.setInt(1, player.getObjectId());
 				ps.setInt(2, skill.getSkillId());
@@ -249,7 +249,7 @@ public class MySQL5PlayerSkillListDAO extends PlayerSkillListDAO
 			ps.executeBatch();
 			con.commit();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't delete skills for player: " + player.getObjectId());
 		}

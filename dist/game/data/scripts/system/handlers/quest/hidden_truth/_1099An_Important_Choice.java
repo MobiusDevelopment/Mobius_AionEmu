@@ -74,11 +74,11 @@ public class _1099An_Important_Choice extends QuestHandler
 		qe.registerOnDie(questId);
 		qe.registerOnLevelUp(questId);
 		qe.registerOnEnterWorld(questId);
-		for (final int npc_id : npcs)
+		for (int npc_id : npcs)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

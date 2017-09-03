@@ -59,7 +59,7 @@ public final class PlayerSkillList implements SkillList<Player>
 	public PlayerSkillList(List<PlayerSkillEntry> skills)
 	{
 		this();
-		for (final PlayerSkillEntry entry : skills)
+		for (PlayerSkillEntry entry : skills)
 		{
 			if (entry.isStigma())
 			{
@@ -91,15 +91,15 @@ public final class PlayerSkillList implements SkillList<Player>
 	public List<Integer> getAllSkills2()
 	{
 		final HashSet<Integer> allSkills = new HashSet<>();
-		for (final PlayerSkillEntry i : basicSkills.values())
+		for (PlayerSkillEntry i : basicSkills.values())
 		{
 			allSkills.add(i.getSkillId());
 		}
-		for (final PlayerSkillEntry i : stigmaSkills.values())
+		for (PlayerSkillEntry i : stigmaSkills.values())
 		{
 			allSkills.add(i.getSkillId());
 		}
-		for (final PlayerSkillEntry i : linkedSkills.values())
+		for (PlayerSkillEntry i : linkedSkills.values())
 		{
 			allSkills.add(i.getSkillId());
 		}
@@ -172,7 +172,7 @@ public final class PlayerSkillList implements SkillList<Player>
 	
 	public void addStigmaSkill(Player player, List<StigmaSkill> skills, boolean equipedByNpc)
 	{
-		for (final StigmaSkill sSkill : skills)
+		for (StigmaSkill sSkill : skills)
 		{
 			final PlayerSkillEntry skill = new PlayerSkillEntry(sSkill.getSkillId(), true, false, sSkill.getSkillLvl(), PersistentState.NOACTION);
 			stigmaSkills.put(sSkill.getSkillId(), skill);

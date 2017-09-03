@@ -60,7 +60,7 @@ public class _25606The_White_Sinsye extends QuestHandler
 		qe.registerQuestNpc(806156).addOnTalkEvent(questId); // 기억을 잃은 여인.
 		qe.registerQuestNpc(806157).addOnTalkEvent(questId); // 리니.
 		qe.registerQuestNpc(703140).addOnTalkEvent(questId); // 리니의 소품 상자.
-		for (final int mobs : DF6G6NamedSinsi68Ah)
+		for (int mobs : DF6G6NamedSinsi68Ah)
 		{
 			qe.registerQuestNpc(mobs).addOnKillEvent(questId);
 		}

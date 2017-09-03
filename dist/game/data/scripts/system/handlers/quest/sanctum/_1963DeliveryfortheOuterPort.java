@@ -41,7 +41,7 @@ public class _1963DeliveryfortheOuterPort extends QuestHandler
 			203851
 		};
 		qe.registerQuestNpc(203726).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

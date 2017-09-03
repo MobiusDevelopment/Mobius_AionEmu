@@ -64,7 +64,7 @@ public class XMLStartCondition
 	{
 		if ((finished != null) && (finished.size() > 0))
 		{
-			for (final FinishedQuestCond fqc : finished)
+			for (FinishedQuestCond fqc : finished)
 			{
 				final int questId = fqc.getQuestId();
 				final int reward = fqc.getReward();
@@ -91,7 +91,7 @@ public class XMLStartCondition
 	{
 		if ((unfinished != null) && (unfinished.size() > 0))
 		{
-			for (final Integer questId : unfinished)
+			for (Integer questId : unfinished)
 			{
 				final QuestState qs = qsl.getQuestState(questId);
 				if ((qs != null) && (qs.getStatus() == QuestStatus.COMPLETE))
@@ -108,7 +108,7 @@ public class XMLStartCondition
 	{
 		if ((noacquired != null) && (noacquired.size() > 0))
 		{
-			for (final Integer questId : noacquired)
+			for (Integer questId : noacquired)
 			{
 				final QuestState qs = qsl.getQuestState(questId);
 				if ((qs != null) && ((qs.getStatus() == QuestStatus.START) || (qs.getStatus() == QuestStatus.REWARD) || (qs.getStatus() == QuestStatus.COMPLETE)))
@@ -125,7 +125,7 @@ public class XMLStartCondition
 	{
 		if ((acquired != null) && (acquired.size() > 0))
 		{
-			for (final Integer questId : acquired)
+			for (Integer questId : acquired)
 			{
 				final QuestState qs = qsl.getQuestState(questId);
 				if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || (qs.getStatus() == QuestStatus.LOCKED))
@@ -145,7 +145,7 @@ public class XMLStartCondition
 		}
 		if ((equipped != null) && (equipped.size() > 0))
 		{
-			for (final int itemId : equipped)
+			for (int itemId : equipped)
 			{
 				if (!player.getEquipment().getEquippedItemIds().contains(itemId))
 				{

@@ -106,7 +106,7 @@ public class _80033EventAvertingTheGaze extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		// check if the parent quest is active (you get Charm Cards)
 		if (!EventService.getInstance().checkQuestIsActive(80032))

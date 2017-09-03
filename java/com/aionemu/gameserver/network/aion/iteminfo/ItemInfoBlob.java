@@ -47,7 +47,7 @@ public class ItemInfoBlob extends PacketWriteHelper
 	public void writeMe(ByteBuffer buf)
 	{
 		writeH(buf, size());
-		for (final ItemBlobEntry ent : itemBlobEntries)
+		for (ItemBlobEntry ent : itemBlobEntries)
 		{
 			ent.writeMe(buf);
 		}
@@ -137,7 +137,7 @@ public class ItemInfoBlob extends PacketWriteHelper
 			final List<StatFunction> allModifiers = itemTemplate.getModifiers();
 			if (allModifiers != null)
 			{
-				for (final IStatFunction modifier : allModifiers)
+				for (IStatFunction modifier : allModifiers)
 				{
 					if (modifier.isBonus() && !modifier.hasConditions())
 					{
@@ -162,7 +162,7 @@ public class ItemInfoBlob extends PacketWriteHelper
 	public int size()
 	{
 		int totalSize = 0;
-		for (final ItemBlobEntry ent : itemBlobEntries)
+		for (ItemBlobEntry ent : itemBlobEntries)
 		{
 			totalSize += ent.getSize() + 1;
 		}

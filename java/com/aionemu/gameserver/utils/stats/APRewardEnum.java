@@ -73,7 +73,7 @@ public enum APRewardEnum
 			return SUPREME_COMMANDER.rewardPercent;
 		}
 		
-		for (final APRewardEnum apReward : values())
+		for (APRewardEnum apReward : values())
 		{
 			if (apReward.playerRank == playerRank)
 			{

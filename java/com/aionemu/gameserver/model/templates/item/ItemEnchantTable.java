@@ -55,7 +55,7 @@ public class ItemEnchantTable
 	
 	public List<StatFunction> getStats(int level)
 	{
-		for (final ItemEnchantBonus ib : getItemEnchant())
+		for (ItemEnchantBonus ib : getItemEnchant())
 		{
 			if (ib.getLevel() != level)
 			{

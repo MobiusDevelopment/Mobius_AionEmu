@@ -49,7 +49,7 @@ public class cmd_luna extends PlayerCommand
 		{
 			luna = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			return;
 		}

@@ -239,7 +239,7 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void undergroundRaid(final Npc npc)
+	private void undergroundRaid(Npc npc)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -248,7 +248,7 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 			{
 				if (!isInstanceDestroyed)
 				{
-					for (final Player player : instance.getPlayersInside())
+					for (Player player : instance.getPlayersInside())
 					{
 						npc.setTarget(player);
 						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
@@ -500,7 +500,7 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 		return 0;
 	}
 	
-	private void sendPacket(final int nameId, final int point)
+	private void sendPacket(int nameId, int point)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -585,7 +585,7 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		if (!instanceReward.containPlayer(player.getObjectId()))
 		{
@@ -729,7 +729,7 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 		effectController.removeEffect(21346);
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -741,7 +741,7 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -774,7 +774,7 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

@@ -82,7 +82,7 @@ public class CM_ABYSS_RANKING_PLAYERS extends AionClientPacket
 			else
 			{
 				final List<SM_ABYSS_RANKING_PLAYERS> results = AbyssRankingCache.getInstance().getPlayers(queriedRace);
-				for (final SM_ABYSS_RANKING_PLAYERS packet : results)
+				for (SM_ABYSS_RANKING_PLAYERS packet : results)
 				{
 					sendPacket(packet);
 				}

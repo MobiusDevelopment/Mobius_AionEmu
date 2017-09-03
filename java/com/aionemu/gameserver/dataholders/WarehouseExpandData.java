@@ -43,7 +43,7 @@ public class WarehouseExpandData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final WarehouseExpandTemplate npc : clist)
+		for (WarehouseExpandTemplate npc : clist)
 		{
 			npctlistData.put(npc.getNpcId(), npc);
 		}

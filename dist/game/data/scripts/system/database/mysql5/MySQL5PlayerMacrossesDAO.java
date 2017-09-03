@@ -51,7 +51,7 @@ public class MySQL5PlayerMacrossesDAO extends PlayerMacrossesDAO
 	 * @param macro macro contents.
 	 */
 	@Override
-	public void addMacro(final int playerId, final int macroPosition, final String macro)
+	public void addMacro(int playerId, int macroPosition, String macro)
 	{
 		DB.insertUpdate(INSERT_QUERY, new IUStH()
 		{
@@ -69,7 +69,7 @@ public class MySQL5PlayerMacrossesDAO extends PlayerMacrossesDAO
 	}
 	
 	@Override
-	public void updateMacro(final int playerId, final int macroPosition, final String macro)
+	public void updateMacro(int playerId, int macroPosition, String macro)
 	{
 		DB.insertUpdate(UPDATE_QUERY, new IUStH()
 		{
@@ -88,7 +88,7 @@ public class MySQL5PlayerMacrossesDAO extends PlayerMacrossesDAO
 	
 	/** {@inheritDoc} */
 	@Override
-	public void deleteMacro(final int playerId, final int macroPosition)
+	public void deleteMacro(int playerId, int macroPosition)
 	{
 		DB.insertUpdate(DELETE_QUERY, new IUStH()
 		{
@@ -106,7 +106,7 @@ public class MySQL5PlayerMacrossesDAO extends PlayerMacrossesDAO
 	
 	/** {@inheritDoc} */
 	@Override
-	public MacroList restoreMacrosses(final int playerId)
+	public MacroList restoreMacrosses(int playerId)
 	{
 		final Map<Integer, String> macrosses = new HashMap<>();
 		Connection con = null;
@@ -126,7 +126,7 @@ public class MySQL5PlayerMacrossesDAO extends PlayerMacrossesDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore MacroList data for player " + playerId + " from DB: " + e.getMessage(), e);
 		}

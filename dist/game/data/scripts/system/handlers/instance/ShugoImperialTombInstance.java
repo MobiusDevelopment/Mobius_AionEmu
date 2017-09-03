@@ -77,7 +77,7 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 			case 219514: // Strong Kobold Worker.
 			case 219521: // Swift Krall Graverobber.
 			case 219528: // Krall Lookout Commander.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -106,7 +106,7 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 			case 219530: // Letu Erezat.
 			case 219531: // Captain Lediar.
 			case 219544: // Awakened Guardian.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -145,7 +145,7 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000147, 5)); // Mithril Medal.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000242, 5)); // Ceramium Medal.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182006999, 2)); // Shugo Coin.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -180,7 +180,7 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000147, 5)); // Mithril Medal.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000242, 5)); // Ceramium Medal.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182006999, 2)); // Shugo Coin.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -215,7 +215,7 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000147, 5)); // Mithril Medal.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000242, 5)); // Ceramium Medal.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182006999, 2)); // Shugo Coin.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -257,7 +257,7 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		// Ancient Elite Shugo Warrior.
 		SkillEngine.getInstance().applyEffectDirectly(21096, player, player, 3600000 * 1);
@@ -373,7 +373,7 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 		spawn(219505, 321.05954f, 430.44263f, 294.58875f, (byte) 115);
 	}
 	
-	private void tombRaid(final Npc npc, float x, float y, float z, boolean despawn)
+	private void tombRaid(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -984,7 +984,7 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 		removeEffects(player);
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -996,7 +996,7 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -1019,7 +1019,7 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

@@ -107,7 +107,7 @@ public class cmd_reskin extends PlayerCommand
 				return;
 			}
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "syntax .reskin <Old Item> <New Item>");
 			return;

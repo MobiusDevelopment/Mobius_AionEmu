@@ -45,7 +45,7 @@ public class ChallengeData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final ChallengeTaskTemplate t : task)
+		for (ChallengeTaskTemplate t : task)
 		{
 			tasksById.put(t.getId(), t);
 		}
@@ -65,9 +65,9 @@ public class ChallengeData
 	
 	public ChallengeTaskTemplate getTaskByQuestId(int questId)
 	{
-		for (final ChallengeTaskTemplate ct : tasksById.values())
+		for (ChallengeTaskTemplate ct : tasksById.values())
 		{
-			for (final ChallengeQuestTemplate cq : ct.getQuests())
+			for (ChallengeQuestTemplate cq : ct.getQuests())
 			{
 				if (cq.getId() == questId)
 				{
@@ -80,9 +80,9 @@ public class ChallengeData
 	
 	public ChallengeQuestTemplate getQuestByQuestId(int questId)
 	{
-		for (final ChallengeTaskTemplate ct : tasksById.values())
+		for (ChallengeTaskTemplate ct : tasksById.values())
 		{
-			for (final ChallengeQuestTemplate cq : ct.getQuests())
+			for (ChallengeQuestTemplate cq : ct.getQuests())
 			{
 				if (cq.getId() == questId)
 				{

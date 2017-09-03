@@ -90,23 +90,23 @@ public class _15306Wielding_Power extends QuestHandler
 		qe.registerQuestNpc(805328).addOnTalkEvent(questId); // Efaion.
 		qe.registerQuestNpc(702829).addOnTalkEvent(questId); // Sealed Book.
 		qe.registerQuestNpc(702862).addOnTalkEvent(questId); // Cursed Book.
-		for (final int mob : LDF4AdvanceMobs)
+		for (int mob : LDF4AdvanceMobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : LDF5FortressMobs)
+		for (int mob : LDF5FortressMobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : Ab1NewMobs)
+		for (int mob : Ab1NewMobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int boss : Boss1)
+		for (int boss : Boss1)
 		{
 			qe.registerQuestNpc(boss).addOnKillEvent(questId);
 		}
-		for (final int boss : Boss2)
+		for (int boss : Boss2)
 		{
 			qe.registerQuestNpc(boss).addOnKillEvent(questId);
 		}

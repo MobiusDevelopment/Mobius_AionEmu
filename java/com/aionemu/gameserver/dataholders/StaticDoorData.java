@@ -50,7 +50,7 @@ public class StaticDoorData
 	{
 		staticDoorData.clear();
 		
-		for (final StaticDoorWorld world : staticDorWorlds)
+		for (StaticDoorWorld world : staticDorWorlds)
 		{
 			staticDoorData.put(world.getWorld(), world);
 		}

@@ -87,7 +87,7 @@ public class CelestiusAI2 extends AggressiveNpcAI2
 		}, 1000, 25000);
 	}
 	
-	private void rushTalocHollow(final Npc npc, float x, float y, float z, boolean despawn)
+	private void rushTalocHollow(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -111,7 +111,7 @@ public class CelestiusAI2 extends AggressiveNpcAI2
 			if (instance != null)
 			{
 				final List<Npc> npcs = instance.getNpcs(281514);
-				for (final Npc npc : npcs)
+				for (Npc npc : npcs)
 				{
 					final SpawnTemplate template = npc.getSpawn();
 					if ((npc != null) && ((template.getX() == 518) || (template.getX() == 551) || (template.getX() == 574)))

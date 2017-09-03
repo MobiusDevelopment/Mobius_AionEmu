@@ -58,7 +58,7 @@ public class InstanceSchedule
 			final String xml = FileUtils.readFileToString(new File("./config/shedule/instance_schedule.xml"));
 			is = JAXBUtil.deserialize(xml, InstanceSchedule.class);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to initialize instance", e);
 		}

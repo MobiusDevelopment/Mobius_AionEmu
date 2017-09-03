@@ -118,7 +118,7 @@ public class House extends VisibleObject
 	
 	private void putDefaultParts()
 	{
-		for (final PartType partType : PartType.values())
+		for (PartType partType : PartType.values())
 		{
 			final Integer partId = building.getDefaultPartId(partType);
 			if (partId == null)
@@ -138,9 +138,9 @@ public class House extends VisibleObject
 	{
 		if (land == null)
 		{
-			for (final HousingLand housingland : DataManager.HOUSE_DATA.getLands())
+			for (HousingLand housingland : DataManager.HOUSE_DATA.getLands())
 			{
-				for (final HouseAddress houseAddress : housingland.getAddresses())
+				for (HouseAddress houseAddress : housingland.getAddresses())
 				{
 					if (getAddress().getId() == houseAddress.getId())
 					{
@@ -193,7 +193,7 @@ public class House extends VisibleObject
 		{
 			final Collection<ZoneInstance> zones = ZoneService.getInstance().getZoneInstancesByWorldId(getAddress().getMapId()).values();
 			String msg = null;
-			for (final ZoneInstance zone : zones)
+			for (ZoneInstance zone : zones)
 			{
 				if ((zone.getZoneTemplate().getZoneType() != ZoneClassName.SUB) || (zone.getZoneTemplate().getPriority() > 20))
 				{
@@ -229,7 +229,7 @@ public class House extends VisibleObject
 				revokeOwner();
 			}
 		}
-		for (final HouseSpawn spawn : templates)
+		for (HouseSpawn spawn : templates)
 		{
 			SpawnTemplate t = null;
 			if ((spawn.getType() == SpawnType.MANAGER) && (spawns.get(SpawnType.MANAGER) == null))

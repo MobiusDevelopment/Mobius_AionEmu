@@ -46,7 +46,7 @@ public class CuringObjectsData
 	
 	void afterUnmarshal(Unmarshaller unmarshaller, Object parent)
 	{
-		for (final CuringTemplate template : curingObject)
+		for (CuringTemplate template : curingObject)
 		{
 			curingObjects.add(template);
 		}

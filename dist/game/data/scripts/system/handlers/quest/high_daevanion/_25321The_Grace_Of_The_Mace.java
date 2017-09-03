@@ -144,27 +144,27 @@ public class _25321The_Grace_Of_The_Mace extends QuestHandler
 		qe.registerQuestNpc(805347).addOnTalkEvent(questId); // Fenke.
 		qe.registerQuestNpc(805348).addOnTalkEvent(questId); // Sach.
 		qe.registerQuestNpc(805349).addOnTalkEvent(questId); // Jelewoe.
-		for (final int mob : DF5_P1)
+		for (int mob : DF5_P1)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob2 : DF5_P2)
+		for (int mob2 : DF5_P2)
 		{
 			qe.registerQuestNpc(mob2).addOnKillEvent(questId);
 		}
-		for (final int mob3 : DF4_Rotation)
+		for (int mob3 : DF4_Rotation)
 		{
 			qe.registerQuestNpc(mob3).addOnKillEvent(questId);
 		}
-		for (final int mob4 : LDF4_Advance)
+		for (int mob4 : LDF4_Advance)
 		{
 			qe.registerQuestNpc(mob4).addOnKillEvent(questId);
 		}
-		for (final int mob5 : LDF5_Fortress)
+		for (int mob5 : LDF5_Fortress)
 		{
 			qe.registerQuestNpc(mob5).addOnKillEvent(questId);
 		}
-		for (final int mob6 : AB1)
+		for (int mob6 : AB1)
 		{
 			qe.registerQuestNpc(mob6).addOnKillEvent(questId);
 		}

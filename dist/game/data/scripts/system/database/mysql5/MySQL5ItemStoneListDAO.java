@@ -81,14 +81,14 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 	};
 	
 	@Override
-	public void load(final Collection<Item> items)
+	public void load(Collection<Item> items)
 	{
 		Connection con = null;
 		try
 		{
 			con = DatabaseFactory.getConnection();
 			final PreparedStatement stmt = con.prepareStatement(SELECT_QUERY);
-			for (final Item item : items)
+			for (Item item : items)
 			{
 				if (item.getItemTemplate().isArmor() || item.getItemTemplate().isWeapon())
 				{
@@ -136,7 +136,7 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 			}
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore ItemStoneList data from DB: " + e.getMessage(), e);
 		}
@@ -157,7 +157,7 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 		final Set<ManaStone> fusionStones = Sets.newHashSet();
 		final Set<GodStone> godStones = Sets.newHashSet();
 		final Set<IdianStone> idianStones = Sets.newHashSet();
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			if (item.hasManaStones())
 			{
@@ -220,7 +220,7 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 			addItemStones(con, stonesToAdd, ist);
 			updateItemStones(con, stonesToUpdate, ist);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't save stones", e);
 		}
@@ -228,7 +228,7 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 		{
 			DatabaseFactory.close(con);
 		}
-		for (final ItemStone is : stones)
+		for (ItemStone is : stones)
 		{
 			is.setPersistentState(PersistentState.UPDATED);
 		}
@@ -244,7 +244,7 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 		try
 		{
 			st = con.prepareStatement(INSERT_QUERY);
-			for (final ItemStone is : itemStones)
+			for (ItemStone is : itemStones)
 			{
 				st.setInt(1, is.getItemObjId());
 				st.setInt(2, is.getItemId());
@@ -266,7 +266,7 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 			st.executeBatch();
 			con.commit();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Error occured while saving item stones", e);
 		}
@@ -286,7 +286,7 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 		try
 		{
 			st = con.prepareStatement(UPDATE_QUERY);
-			for (final ItemStone is : itemStones)
+			for (ItemStone is : itemStones)
 			{
 				st.setInt(1, is.getItemId());
 				st.setInt(2, is.getSlot());
@@ -308,7 +308,7 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 			st.executeBatch();
 			con.commit();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Error occured while saving item stones", e);
 		}
@@ -328,7 +328,7 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 		try
 		{
 			st = con.prepareStatement(DELETE_QUERY);
-			for (final ItemStone is : itemStones)
+			for (ItemStone is : itemStones)
 			{
 				st.setInt(1, is.getItemObjId());
 				st.setInt(2, is.getSlot());
@@ -339,7 +339,7 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 			st.executeBatch();
 			con.commit();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Error occured while saving item stones", e);
 		}
@@ -360,7 +360,7 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 			st.setInt(3, category);
 			st.execute();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Error occured while saving item stones", e);
 		}

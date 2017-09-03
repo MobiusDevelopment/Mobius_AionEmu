@@ -49,7 +49,7 @@ public class SM_HOUSE_REGISTRY extends AionServerPacket
 				return;
 			}
 			writeH(player.getHouseRegistry().getNotSpawnedObjects().size());
-			for (final HouseObject<?> obj : player.getHouseRegistry().getNotSpawnedObjects())
+			for (HouseObject<?> obj : player.getHouseRegistry().getNotSpawnedObjects())
 			{
 				writeD(obj.getObjectId());
 				final int templateId = obj.getObjectTemplate().getTemplateId();
@@ -93,12 +93,12 @@ public class SM_HOUSE_REGISTRY extends AionServerPacket
 		else if (action == 2)
 		{
 			writeH(player.getHouseRegistry().getDefaultParts().size() + player.getHouseRegistry().getCustomParts().size());
-			for (final HouseDecoration deco : player.getHouseRegistry().getDefaultParts())
+			for (HouseDecoration deco : player.getHouseRegistry().getDefaultParts())
 			{
 				writeD(0);
 				writeD(deco.getTemplate().getId());
 			}
-			for (final HouseDecoration houseDecor : player.getHouseRegistry().getCustomParts())
+			for (HouseDecoration houseDecor : player.getHouseRegistry().getCustomParts())
 			{
 				writeD(houseDecor.getObjectId());
 				writeD(houseDecor.getTemplate().getId());

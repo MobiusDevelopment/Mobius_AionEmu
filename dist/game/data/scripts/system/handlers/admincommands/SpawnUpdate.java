@@ -88,7 +88,7 @@ public class SpawnUpdate extends AdminCommand
 				{
 					DataManager.SPAWNS_DATA2.saveSpawn(admin, npc, false);
 				}
-				catch (final IOException e)
+				catch (IOException e)
 				{
 					e.printStackTrace();
 					PacketSendUtility.sendMessage(admin, "Could not save spawn");
@@ -115,7 +115,7 @@ public class SpawnUpdate extends AdminCommand
 				{
 					DataManager.SPAWNS_DATA2.saveSpawn(admin, npc, false);
 				}
-				catch (final IOException e)
+				catch (IOException e)
 				{
 					e.printStackTrace();
 					PacketSendUtility.sendMessage(admin, "Could not save spawn");
@@ -142,7 +142,7 @@ public class SpawnUpdate extends AdminCommand
 				{
 					DataManager.SPAWNS_DATA2.saveSpawn(admin, npc, false);
 				}
-				catch (final IOException e)
+				catch (IOException e)
 				{
 					e.printStackTrace();
 					PacketSendUtility.sendMessage(admin, "Could not save spawn");
@@ -178,7 +178,7 @@ public class SpawnUpdate extends AdminCommand
 				{
 					DataManager.SPAWNS_DATA2.saveSpawn(admin, npc, false);
 				}
-				catch (final IOException e)
+				catch (IOException e)
 				{
 					e.printStackTrace();
 					PacketSendUtility.sendMessage(admin, "Could not save spawn");
@@ -202,7 +202,7 @@ public class SpawnUpdate extends AdminCommand
 					PacketSendUtility.sendPacket(admin, new SM_NPC_INFO(npc, admin));
 					PacketSendUtility.sendMessage(admin, "updated npcs coordinates to " + admin.getX() + ", " + admin.getY() + ", " + admin.getZ() + ".");
 				}
-				catch (final IOException e)
+				catch (IOException e)
 				{
 					e.printStackTrace();
 					PacketSendUtility.sendMessage(admin, "Could not save spawn");
@@ -249,7 +249,7 @@ public class SpawnUpdate extends AdminCommand
 				{
 					DataManager.SPAWNS_DATA2.saveSpawn(admin, npc, false);
 				}
-				catch (final IOException e)
+				catch (IOException e)
 				{
 					e.printStackTrace();
 					PacketSendUtility.sendMessage(admin, "Could not save spawn");

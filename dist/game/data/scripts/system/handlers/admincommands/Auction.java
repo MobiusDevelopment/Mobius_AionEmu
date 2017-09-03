@@ -82,7 +82,7 @@ public class Auction extends AdminCommand
 					PacketSendUtility.sendMessage(admin, "No such zone!");
 					return;
 				}
-				for (final House house : HousingService.getInstance().getCustomHouses())
+				for (House house : HousingService.getInstance().getCustomHouses())
 				{
 					if (house.getStatus() != HouseStatus.SELL_WAIT)
 					{
@@ -115,7 +115,7 @@ public class Auction extends AdminCommand
 				noSale = true;
 			}
 			
-			for (final House house : housesToRemove)
+			for (House house : housesToRemove)
 			{
 				if (HousingBidService.getInstance().removeHouseFromAuction(house, noSale))
 				{
@@ -148,7 +148,7 @@ public class Auction extends AdminCommand
 			{
 				houseType = HouseType.fromValue(params[2].toUpperCase());
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 			}
 			
@@ -169,7 +169,7 @@ public class Auction extends AdminCommand
 						throw new IllegalArgumentException();
 					}
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					PacketSendUtility.sendMessage(admin, "Only positive numbers for the bid price!");
 					return;
@@ -179,7 +179,7 @@ public class Auction extends AdminCommand
 			boolean found = false;
 			int counter = 0;
 			
-			for (final House house : HousingService.getInstance().getCustomHouses())
+			for (House house : HousingService.getInstance().getCustomHouses())
 			{
 				if ((house.getOwnerId() != 0) || (house.getHouseType() != houseType))
 				{
@@ -260,7 +260,7 @@ public class Auction extends AdminCommand
 			{
 				houseType = HouseType.fromValue(params[2].toUpperCase());
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 			}
 			
@@ -279,7 +279,7 @@ public class Auction extends AdminCommand
 					throw new IllegalArgumentException();
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(admin, "Invalid count. Only positive numbers!");
 				return;
@@ -295,7 +295,7 @@ public class Auction extends AdminCommand
 						throw new IllegalArgumentException();
 					}
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					PacketSendUtility.sendMessage(admin, "Only positive numbers for the bid price!");
 					return;

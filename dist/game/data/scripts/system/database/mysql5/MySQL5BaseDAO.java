@@ -41,7 +41,7 @@ public class MySQL5BaseDAO extends BaseDAO
 	public static final String INSERT_QUERY = "INSERT INTO `base_location` (`id`, `race`) VALUES(?, ?)";
 	
 	@Override
-	public boolean loadBaseLocations(final Map<Integer, BaseLocation> locations)
+	public boolean loadBaseLocations(Map<Integer, BaseLocation> locations)
 	{
 		boolean success = true;
 		Connection con = null;
@@ -60,7 +60,7 @@ public class MySQL5BaseDAO extends BaseDAO
 			}
 			resultSet.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.warn("Error loading Siege informaiton from database: " + e.getMessage(), e);
 			success = false;
@@ -69,7 +69,7 @@ public class MySQL5BaseDAO extends BaseDAO
 		{
 			DatabaseFactory.close(stmt, con);
 		}
-		for (final Map.Entry<Integer, BaseLocation> entry : locations.entrySet())
+		for (Map.Entry<Integer, BaseLocation> entry : locations.entrySet())
 		{
 			final BaseLocation sLoc = entry.getValue();
 			if (!loaded.contains(sLoc.getId()))
@@ -81,7 +81,7 @@ public class MySQL5BaseDAO extends BaseDAO
 	}
 	
 	@Override
-	public boolean updateBaseLocation(final BaseLocation locations)
+	public boolean updateBaseLocation(BaseLocation locations)
 	{
 		Connection con = null;
 		PreparedStatement stmt = null;
@@ -93,7 +93,7 @@ public class MySQL5BaseDAO extends BaseDAO
 			stmt.setInt(2, locations.getId());
 			stmt.execute();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error update Base Location: " + "id: " + locations.getId());
 			return false;
@@ -105,7 +105,7 @@ public class MySQL5BaseDAO extends BaseDAO
 		return true;
 	}
 	
-	private boolean insertBaseLocation(final BaseLocation locations)
+	private boolean insertBaseLocation(BaseLocation locations)
 	{
 		Connection con = null;
 		PreparedStatement stmt = null;
@@ -117,7 +117,7 @@ public class MySQL5BaseDAO extends BaseDAO
 			stmt.setString(2, Race.NPC.toString());
 			stmt.execute();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error insert Base Location: " + locations.getId(), e);
 			return false;

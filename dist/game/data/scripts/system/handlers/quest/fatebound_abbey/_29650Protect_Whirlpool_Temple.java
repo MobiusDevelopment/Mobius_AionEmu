@@ -53,7 +53,7 @@ public class _29650Protect_Whirlpool_Temple extends QuestHandler
 		qe.registerQuestNpc(804662).addOnQuestStart(questId);
 		qe.registerQuestNpc(804662).addOnTalkEvent(questId);
 		qe.registerQuestNpc(804736).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

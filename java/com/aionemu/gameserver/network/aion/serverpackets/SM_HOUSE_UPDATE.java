@@ -71,7 +71,7 @@ public class SM_HOUSE_UPDATE extends AionServerPacket
 		// Show/Hide Owner Name
 		writeC(house.getNoticeState().getPacketValue());
 		final byte[] signNotice = house.getSignNotice();
-		for (final byte element : signNotice)
+		for (byte element : signNotice)
 		{
 			writeC(element);
 		}

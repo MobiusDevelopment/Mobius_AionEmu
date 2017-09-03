@@ -39,7 +39,7 @@ public enum PetEmote
 	static
 	{
 		petEmotes = new TIntObjectHashMap<>();
-		for (final PetEmote emote : values())
+		for (PetEmote emote : values())
 		{
 			petEmotes.put(emote.getEmoteId(), emote);
 		}

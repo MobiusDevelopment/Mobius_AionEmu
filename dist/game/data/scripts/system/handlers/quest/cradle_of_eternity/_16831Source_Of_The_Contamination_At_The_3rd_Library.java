@@ -45,7 +45,7 @@ public class _16831Source_Of_The_Contamination_At_The_3rd_Library extends QuestH
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

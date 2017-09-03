@@ -38,7 +38,7 @@ import com.google.common.collect.Collections2;
 
 public class ItemChargeService
 {
-	public static Collection<Item> filterItemsToCondition(Player player, Item selectedItem, final int chargeWay)
+	public static Collection<Item> filterItemsToCondition(Player player, Item selectedItem, int chargeWay)
 	{
 		if (selectedItem != null)
 		{
@@ -54,7 +54,7 @@ public class ItemChargeService
 		});
 	}
 	
-	public static void startChargingEquippedItems(final Player player, int senderObj, final int chargeWay)
+	public static void startChargingEquippedItems(Player player, int senderObj, int chargeWay)
 	{
 		final Collection<Item> filteredItems = filterItemsToCondition(player, null, chargeWay);
 		if (filteredItems.isEmpty())
@@ -70,7 +70,7 @@ public class ItemChargeService
 			{
 				if (processPayment(player, chargeWay, payAmount))
 				{
-					for (final Item item : filteredItems)
+					for (Item item : filteredItems)
 					{
 						chargeItem(player, item, item.getChargeLevelMax());
 					}
@@ -92,7 +92,7 @@ public class ItemChargeService
 	private static long calculatePrice(Collection<Item> items)
 	{
 		long result = 0;
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			result += getPayAmountForService(item, item.getChargeLevelMax());
 		}
@@ -101,7 +101,7 @@ public class ItemChargeService
 	
 	public static void chargeItems(Player player, Collection<Item> items, int level)
 	{
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			chargeItem(player, item, level);
 		}

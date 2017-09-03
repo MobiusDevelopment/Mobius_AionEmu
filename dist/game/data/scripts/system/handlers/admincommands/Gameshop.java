@@ -67,7 +67,7 @@ public class Gameshop extends AdminCommand
 				subCategory = Byte.parseByte(params[3]);
 				list = Integer.parseInt(params[4]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "<itemId, category, subCategory, list> values must be int, byte, byte, int.");
 				return;
@@ -89,7 +89,7 @@ public class Gameshop extends AdminCommand
 				list = Integer.parseInt(params[8]);
 				titleDescription = Util.convertName(params[9]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "<itemId, count, price, category, subCategory, itemType, gift, list, description> values must be int, long, long, byte, byte, byte, byte, int, string, Object... .");
 				return;
@@ -148,7 +148,7 @@ public class Gameshop extends AdminCommand
 			{
 				itemId = Integer.parseInt(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "<itemId> value must be an integer.");
 			}
@@ -166,7 +166,7 @@ public class Gameshop extends AdminCommand
 				gift = Byte.parseByte(params[5]);
 				titleDescription = Util.convertName(params[6]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "<itemId, count, price, itemType, gift, description> value must be int, long, long, byte, byte, string, Object... .");
 				return;
@@ -200,7 +200,7 @@ public class Gameshop extends AdminCommand
 				{
 					toll = Integer.parseInt(params[2]);
 				}
-				catch (final NumberFormatException e)
+				catch (NumberFormatException e)
 				{
 					PacketSendUtility.sendMessage(admin, "<toll> value must be an integer.");
 					return;
@@ -232,7 +232,7 @@ public class Gameshop extends AdminCommand
 				{
 					toll = Integer.parseInt(params[1]);
 				}
-				catch (final NumberFormatException e)
+				catch (NumberFormatException e)
 				{
 					PacketSendUtility.sendMessage(admin, "<toll> value must be an integer.");
 					return;
@@ -276,7 +276,7 @@ public class Gameshop extends AdminCommand
 				{
 					toll = Integer.parseInt(params[2]);
 				}
-				catch (final NumberFormatException e)
+				catch (NumberFormatException e)
 				{
 					PacketSendUtility.sendMessage(admin, "<toll> value must be an integer.");
 					return;
@@ -306,7 +306,7 @@ public class Gameshop extends AdminCommand
 				{
 					toll = Integer.parseInt(params[1]);
 				}
-				catch (final NumberFormatException e)
+				catch (NumberFormatException e)
 				{
 					PacketSendUtility.sendMessage(admin, "<toll> value must be an integer.");
 					return;

@@ -49,7 +49,7 @@ public class _14024A_Kralling_Suspicion extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

@@ -162,7 +162,7 @@ public enum RiftEnum
 	
 	public static RiftEnum getRift(int id) throws IllegalArgumentException
 	{
-		for (final RiftEnum rift : RiftEnum.values())
+		for (RiftEnum rift : RiftEnum.values())
 		{
 			if (rift.getId() == id)
 			{
@@ -174,7 +174,7 @@ public enum RiftEnum
 	
 	public static RiftEnum getVortex(Race race) throws IllegalArgumentException
 	{
-		for (final RiftEnum rift : RiftEnum.values())
+		for (RiftEnum rift : RiftEnum.values())
 		{
 			if (rift.isVortex() && rift.getDestination().equals(race))
 			{

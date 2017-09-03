@@ -60,7 +60,7 @@ public class _25562Shadow_Over_Norsvold extends QuestHandler
 	{
 		qe.registerQuestNpc(731685).addOnQuestStart(questId);
 		qe.registerQuestNpc(806102).addOnTalkEvent(questId);
-		for (final int mob : warshipInvasionE)
+		for (int mob : warshipInvasionE)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

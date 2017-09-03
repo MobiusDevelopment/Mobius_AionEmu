@@ -59,7 +59,7 @@ public class SM_WAREHOUSE_ADD_ITEM extends AionServerPacket
 		writeC(warehouseType);
 		writeH(addType.getMask());
 		writeH(items.size());
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			writeItemInfo(item);
 		}

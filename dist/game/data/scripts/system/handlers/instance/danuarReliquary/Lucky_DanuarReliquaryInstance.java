@@ -61,7 +61,7 @@ public class Lucky_DanuarReliquaryInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 701795: // Lucky Danuar Reliquary Box.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -184,12 +184,12 @@ public class Lucky_DanuarReliquaryInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
@@ -200,7 +200,7 @@ public class Lucky_DanuarReliquaryInstance extends GeneralInstanceHandler
 		}), time);
 	}
 	
-	private void sendMessage(final int msgId, long delay)
+	private void sendMessage(int msgId, long delay)
 	{
 		if (delay == 0)
 		{
@@ -243,7 +243,7 @@ public class Lucky_DanuarReliquaryInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

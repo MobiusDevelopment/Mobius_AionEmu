@@ -78,7 +78,7 @@ public class BollvigAI2 extends AggressiveFirstSkillAI2
 	
 	private synchronized void checkPercentage(int hpPercentage)
 	{
-		for (final Integer percent : percents)
+		for (Integer percent : percents)
 		{
 			if (hpPercentage <= percent)
 			{
@@ -261,7 +261,7 @@ public class BollvigAI2 extends AggressiveFirstSkillAI2
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{
 			final List<Npc> npcs = getPosition().getWorldMapInstance().getNpcs(npcId);
-			for (final Npc npc : npcs)
+			for (Npc npc : npcs)
 			{
 				npc.getController().onDelete();
 			}

@@ -100,7 +100,7 @@ public class Warp extends AdminCommand
 				PacketSendUtility.sendMessage(player, "You have successfully warped to this location --- > " + LocS);
 			}
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			// [pos:Location;120010000 1304.7 1423.1 0.0 0] <-- uses this format of Location
 			

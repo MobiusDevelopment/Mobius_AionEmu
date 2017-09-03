@@ -81,7 +81,7 @@ public final class SystemPropertyUtil
 		{
 			value = System.getProperty(key);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			if (!loggedException)
 			{
@@ -156,7 +156,7 @@ public final class SystemPropertyUtil
 			{
 				return Integer.parseInt(value);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				// Ignore
 			}
@@ -188,7 +188,7 @@ public final class SystemPropertyUtil
 			{
 				return Long.parseLong(value);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				// Ignore
 			}

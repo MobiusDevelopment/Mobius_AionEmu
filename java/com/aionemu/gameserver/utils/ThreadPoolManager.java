@@ -162,7 +162,7 @@ public final class ThreadPoolManager
 			scheduledPool.setContinueExistingPeriodicTasksAfterShutdownPolicy(false);
 			success |= awaitTermination(10000);
 		}
-		catch (final InterruptedException e)
+		catch (InterruptedException e)
 		{
 			e.printStackTrace();
 		}

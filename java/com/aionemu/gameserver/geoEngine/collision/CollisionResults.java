@@ -129,7 +129,7 @@ public class CollisionResults implements Iterable<CollisionResult>
 	{
 		final StringBuilder sb = new StringBuilder();
 		sb.append("CollisionResults[");
-		for (final CollisionResult result : results)
+		for (CollisionResult result : results)
 		{
 			sb.append(result).append(", ");
 		}

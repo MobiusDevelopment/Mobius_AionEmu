@@ -807,9 +807,9 @@ public class TwoTeamSmallBg extends Battleground
 		super.openStaticDoors();
 		synchronized (super.getGroups())
 		{
-			for (final PlayerGroup group : super.getGroups())
+			for (PlayerGroup group : super.getGroups())
 			{
-				for (final Player pl : group.getMembers())
+				for (Player pl : group.getMembers())
 				{
 					if (!pl.isAfk())
 					{
@@ -836,7 +836,7 @@ public class TwoTeamSmallBg extends Battleground
 	}
 	
 	@Override
-	public void onDie(final Player player, Creature lastAttacker)
+	public void onDie(Player player, Creature lastAttacker)
 	{
 		super.onDieDefault(player, lastAttacker);
 		if ((lastAttacker instanceof Player) && (((Player) lastAttacker).getObjectId() != player.getObjectId()))
@@ -845,7 +845,7 @@ public class TwoTeamSmallBg extends Battleground
 			if (killer.getPlayerGroup2() != null)
 			{
 				int deadCounter = 0;
-				for (final Player pl : player.getPlayerGroup2().getMembers())
+				for (Player pl : player.getPlayerGroup2().getMembers())
 				{
 					if (pl.getLifeStats().isAlreadyDead() || pl.isAfk())
 					{
@@ -878,7 +878,7 @@ public class TwoTeamSmallBg extends Battleground
 	public void onLeave(Player player, boolean isLogout, boolean isAfk)
 	{
 		super.onLeaveDefault(player, isLogout, isAfk);
-		for (final PlayerGroup group : super.getGroups())
+		for (PlayerGroup group : super.getGroups())
 		{
 			if (group.size() < 1)
 			{
@@ -893,9 +893,9 @@ public class TwoTeamSmallBg extends Battleground
 		super.setStartStamp(System.currentTimeMillis());
 		synchronized (super.getGroups())
 		{
-			for (final PlayerGroup group : super.getGroups())
+			for (PlayerGroup group : super.getGroups())
 			{
-				for (final Player pl : group.getMembers())
+				for (Player pl : group.getMembers())
 				{
 					ThreadPoolManager.getInstance().schedule(() ->
 					{
@@ -912,7 +912,7 @@ public class TwoTeamSmallBg extends Battleground
 				}
 			}
 		}
-		for (final Player pl : super.getSpectators())
+		for (Player pl : super.getSpectators())
 		{
 			super.createTimer(pl, getMatchLength());
 		}
@@ -921,7 +921,7 @@ public class TwoTeamSmallBg extends Battleground
 		ThreadPoolManager.getInstance().schedule(() ->
 		{
 			endCalled = false;
-			for (final PlayerGroup group : getGroups())
+			for (PlayerGroup group : getGroups())
 			{
 				if (group.size() < 1)
 				{
@@ -952,10 +952,10 @@ public class TwoTeamSmallBg extends Battleground
 	{
 		PlayerGroup winner = null;
 		final Map<PlayerGroup, Integer> deadCounts = new HashMap<>();
-		for (final PlayerGroup group : super.getGroups())
+		for (PlayerGroup group : super.getGroups())
 		{
 			int deadCounter = 0;
-			for (final Player pl : group.getMembers())
+			for (Player pl : group.getMembers())
 			{
 				if (pl.getLifeStats().isAlreadyDead() || pl.isAfk())
 				{
@@ -966,7 +966,7 @@ public class TwoTeamSmallBg extends Battleground
 		}
 		final int winDeadCount = Collections.min(deadCounts.values());
 		int winnerCount = 0;
-		for (final Integer deadCount : deadCounts.values())
+		for (Integer deadCount : deadCounts.values())
 		{
 			if (deadCount == winDeadCount)
 			{
@@ -975,7 +975,7 @@ public class TwoTeamSmallBg extends Battleground
 		}
 		if (winnerCount == 1)
 		{
-			for (final Map.Entry<PlayerGroup, Integer> entry : deadCounts.entrySet())
+			for (Map.Entry<PlayerGroup, Integer> entry : deadCounts.entrySet())
 			{
 				if (entry.getValue() == winDeadCount)
 				{
@@ -990,7 +990,7 @@ public class TwoTeamSmallBg extends Battleground
 	{
 		PlayerGroup winner = null;
 		int drawPoints = 0;
-		for (final Map.Entry<Integer, Integer> entry : roundResults.entrySet())
+		for (Map.Entry<Integer, Integer> entry : roundResults.entrySet())
 		{
 			if ((winner == null) && (entry.getValue() > drawPoints))
 			{
@@ -1020,9 +1020,9 @@ public class TwoTeamSmallBg extends Battleground
 			return;
 		}
 		endCalled = true;
-		for (final PlayerGroup group : super.getGroups())
+		for (PlayerGroup group : super.getGroups())
 		{
-			for (final Player pl : group.getMembers())
+			for (Player pl : group.getMembers())
 			{
 				if (!pl.isAfk())
 				{
@@ -1050,9 +1050,9 @@ public class TwoTeamSmallBg extends Battleground
 			{
 				if (roundWinner != null)
 				{
-					for (final PlayerGroup group : super.getGroups())
+					for (PlayerGroup group : super.getGroups())
 					{
-						for (final Player pl : group.getMembers())
+						for (Player pl : group.getMembers())
 						{
 							super.scheduleAnnouncement(pl, LadderService.getInstance().getNameByIndex(roundWinner.getBgIndex()) + " Win's the round!", 0);
 						}
@@ -1064,9 +1064,9 @@ public class TwoTeamSmallBg extends Battleground
 			}
 			else
 			{
-				for (final PlayerGroup group : super.getGroups())
+				for (PlayerGroup group : super.getGroups())
 				{
-					for (final Player pl : group.getMembers())
+					for (Player pl : group.getMembers())
 					{
 						super.scheduleAnnouncement(pl, "Draw!", 0);
 					}
@@ -1081,9 +1081,9 @@ public class TwoTeamSmallBg extends Battleground
 		final PlayerGroup winner = getWinner();
 		if (winner == null)
 		{
-			for (final PlayerGroup group : super.getGroups())
+			for (PlayerGroup group : super.getGroups())
 			{
-				for (final Player pl : group.getMembers())
+				for (Player pl : group.getMembers())
 				{
 					super.scheduleAnnouncement(pl, "Draw!", 0);
 					final byte level = pl.getLevel();
@@ -1125,11 +1125,11 @@ public class TwoTeamSmallBg extends Battleground
 		}
 		else
 		{
-			for (final PlayerGroup group : super.getGroups())
+			for (PlayerGroup group : super.getGroups())
 			{
 				if (group.getTeamId() == winner.getTeamId())
 				{
-					for (final Player pl : group.getMembers())
+					for (Player pl : group.getMembers())
 					{
 						super.playerWinMatch(pl, super.K_VALUE / 2);
 						final byte level = pl.getLevel();
@@ -1174,7 +1174,7 @@ public class TwoTeamSmallBg extends Battleground
 				}
 				else
 				{
-					for (final Player pl : group.getMembers())
+					for (Player pl : group.getMembers())
 					{
 						super.playerLoseMatch(pl, -super.K_VALUE / 4);
 						final byte level = pl.getLevel();

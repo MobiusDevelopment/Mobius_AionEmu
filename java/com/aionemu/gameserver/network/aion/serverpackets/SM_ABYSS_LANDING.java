@@ -39,7 +39,7 @@ public class SM_ABYSS_LANDING extends AionServerPacket
 	@Override
 	protected void writeImpl(AionConnection con)
 	{
-		for (final LandingLocation loc : locations.values())
+		for (LandingLocation loc : locations.values())
 		{
 			writeD(loc.getQuestPoints()); // Quest Completion.
 			writeD(loc.getSiegePoints()); // Fortress Occupation.

@@ -56,14 +56,14 @@ public class PriorityThreadFactory implements ThreadFactory
 	 * @param name
 	 * @param prio
 	 */
-	public PriorityThreadFactory(final String name, final int prio)
+	public PriorityThreadFactory(String name, int prio)
 	{
 		this.prio = prio;
 		this.name = name;
 		group = new ThreadGroup(this.name);
 	}
 	
-	public PriorityThreadFactory(final String name, ExecutorService defaultPool)
+	public PriorityThreadFactory(String name, ExecutorService defaultPool)
 	{
 		this(name, Thread.NORM_PRIORITY);
 		setDefaultPool(defaultPool);
@@ -83,7 +83,7 @@ public class PriorityThreadFactory implements ThreadFactory
 	 * {@inheritDoc}
 	 */
 	@Override
-	public Thread newThread(final Runnable r)
+	public Thread newThread(Runnable r)
 	{
 		final Thread t = new Thread(group, r);
 		t.setName(name + "-" + threadNumber.getAndIncrement());

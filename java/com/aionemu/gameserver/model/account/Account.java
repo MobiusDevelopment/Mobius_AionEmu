@@ -302,7 +302,7 @@ public class Account implements Iterable<PlayerAccountData>
 	public int getMaxPlayerLevel()
 	{
 		int maxLevel = 1;
-		for (final PlayerAccountData pad : players.values())
+		for (PlayerAccountData pad : players.values())
 		{
 			if (pad.getPlayerCommonData().getLevel() > maxLevel)
 			{

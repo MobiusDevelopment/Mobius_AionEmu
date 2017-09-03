@@ -77,7 +77,7 @@ public class Damage extends AdminCommand
 					creature.getController().onAttack(admin, Integer.parseInt(params[0]), true);
 				}
 			}
-			catch (final Exception ex)
+			catch (Exception ex)
 			{
 				onFail(admin, null);
 			}

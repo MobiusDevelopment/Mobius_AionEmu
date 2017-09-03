@@ -131,7 +131,7 @@ public enum AbyssRankEnum
 	public static DescriptionId getRankDescriptionId(Player player)
 	{
 		final int pRankId = player.getAbyssRank().getRank().getId();
-		for (final AbyssRankEnum rank : values())
+		for (AbyssRankEnum rank : values())
 		{
 			if (rank.getId() == pRankId)
 			{
@@ -148,7 +148,7 @@ public enum AbyssRankEnum
 	 */
 	public static AbyssRankEnum getRankById(int id)
 	{
-		for (final AbyssRankEnum rank : values())
+		for (AbyssRankEnum rank : values())
 		{
 			if (rank.getId() == id)
 			{
@@ -165,7 +165,7 @@ public enum AbyssRankEnum
 	public static AbyssRankEnum getRankForAp(int ap)
 	{
 		AbyssRankEnum r = AbyssRankEnum.GRADE9_SOLDIER;
-		for (final AbyssRankEnum rank : values())
+		for (AbyssRankEnum rank : values())
 		{
 			if (rank.getApRequired() <= ap)
 			{
@@ -186,7 +186,7 @@ public enum AbyssRankEnum
 	public static AbyssRankEnum getRankForGp(int gp)
 	{
 		AbyssRankEnum rgp = AbyssRankEnum.STAR1_OFFICER;
-		for (final AbyssRankEnum rank : values())
+		for (AbyssRankEnum rank : values())
 		{
 			if (rank.getGpRequired() <= gp)
 			{

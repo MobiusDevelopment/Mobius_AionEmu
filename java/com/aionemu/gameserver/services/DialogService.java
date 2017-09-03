@@ -108,7 +108,7 @@ public class DialogService
 		}
 	}
 	
-	public static void onDialogSelect(int dialogId, final Player player, Npc npc, int questId, int extendedRewardIndex)
+	public static void onDialogSelect(int dialogId, Player player, Npc npc, int questId, int extendedRewardIndex)
 	{
 		final QuestEnv env = new QuestEnv(npc, player, questId, dialogId);
 		env.setExtendedRewardIndex(extendedRewardIndex);

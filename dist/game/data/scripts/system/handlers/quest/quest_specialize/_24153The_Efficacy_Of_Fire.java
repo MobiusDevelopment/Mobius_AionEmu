@@ -61,14 +61,14 @@ public class _24153The_Efficacy_Of_Fire extends QuestHandler
 		qe.registerQuestNpc(204787).addOnTalkEvent(questId); // Chieftain Akagitan
 		qe.registerQuestNpc(204784).addOnTalkEvent(questId); // Delris
 		qe.registerQuestItem(182215462, questId);
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

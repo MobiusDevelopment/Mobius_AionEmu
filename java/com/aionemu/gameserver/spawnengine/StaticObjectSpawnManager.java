@@ -59,7 +59,7 @@ public class StaticObjectSpawnManager
 		}
 		else
 		{
-			for (final SpawnTemplate template : spawn.getSpawnTemplates())
+			for (SpawnTemplate template : spawn.getSpawnTemplates())
 			{
 				final int objectId = IDFactory.getInstance().nextId();
 				final StaticObject staticObject = new StaticObject(objectId, new StaticObjectController(), template, objectTemplate);

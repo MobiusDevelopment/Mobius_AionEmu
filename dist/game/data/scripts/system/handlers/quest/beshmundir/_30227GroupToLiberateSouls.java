@@ -54,7 +54,7 @@ public class _30227GroupToLiberateSouls extends QuestHandler
 		qe.registerQuestNpc(798946).addOnTalkEvent(questId);
 		qe.registerQuestNpc(799521).addOnTalkEvent(questId);
 		qe.registerQuestNpc(799517).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

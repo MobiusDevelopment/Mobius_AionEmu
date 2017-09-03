@@ -45,7 +45,7 @@ public class SkillPanel
 	
 	public boolean canUseSkill(int skillId, int level)
 	{
-		for (final Integer skill : skills)
+		for (Integer skill : skills)
 		{
 			if (((skill >> 8) == skillId) && ((skill & 0xFF) == level))
 			{

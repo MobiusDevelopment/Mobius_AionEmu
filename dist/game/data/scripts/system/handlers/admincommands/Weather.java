@@ -43,7 +43,7 @@ public class Weather extends AdminCommand
 		{
 			int weatherCode = -1;
 			final List<ZoneInstance> zones = admin.getActiveRegion().getZones(admin);
-			for (final ZoneInstance regionZone : zones)
+			for (ZoneInstance regionZone : zones)
 			{
 				if (regionZone.getZoneTemplate().getZoneType() == ZoneClassName.WEATHER)
 				{
@@ -76,7 +76,7 @@ public class Weather extends AdminCommand
 			{
 				weatherType = Integer.parseInt(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "weather type parameter need to be an integer [0-12].");
 				return;
@@ -88,7 +88,7 @@ public class Weather extends AdminCommand
 			return;
 		}
 		WorldMapType region = null;
-		for (final WorldMapType worldMapType : WorldMapType.values())
+		for (WorldMapType worldMapType : WorldMapType.values())
 		{
 			if (worldMapType.name().toLowerCase().equals(regionName.toLowerCase()))
 			{

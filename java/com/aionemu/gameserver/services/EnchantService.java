@@ -152,7 +152,7 @@ public class EnchantService
 	}
 	
 	// TODO apply additional stat for skill on each stigma @@!
-	public static void stigmaEnchant(final Player player, final Item parentItem, final Item targetItem)
+	public static void stigmaEnchant(Player player, Item parentItem, Item targetItem)
 	{
 		if (targetItem.getEnchantLevel() >= 5)
 		{
@@ -572,7 +572,7 @@ public class EnchantService
 				{
 					// If the enchant fails, there is a chance that the player will receive their "Manastones & Godstones" back.
 					ItemService.addItem(player, targetItem.getGodStone().getItemId(), 1);
-					for (final ManaStone manaStone : targetItem.getItemStones())
+					for (ManaStone manaStone : targetItem.getItemStones())
 					{
 						ItemService.addItem(player, manaStone.getItemId(), 1);
 					}
@@ -1435,7 +1435,7 @@ public class EnchantService
 						{
 							modifiers.addAll(ie.getStats(item.getAuthorize()));
 						}
-						catch (final Exception localException2)
+						catch (Exception localException2)
 						{
 							log.error("Cant add tempering modifiers for item: " + item.getItemId() + " , " + ie.getStats(item.getAuthorize()));
 						}
@@ -1462,7 +1462,7 @@ public class EnchantService
 				player.getGameStats().addEffect(item, modifiers);
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Error on item equip.", ex);
 		}
@@ -1596,7 +1596,7 @@ public class EnchantService
 	{
 		int Enchant = 0;
 		final Equipment equip = player.getEquipment();
-		for (final Item item : equip.getEquippedItemsWithoutStigmaOld())
+		for (Item item : equip.getEquippedItemsWithoutStigmaOld())
 		{
 			if (item.getItemTemplate().isWeapon() || item.getItemTemplate().isArmor() || (item.getItemTemplate().getItemSlot() == 32768))
 			{

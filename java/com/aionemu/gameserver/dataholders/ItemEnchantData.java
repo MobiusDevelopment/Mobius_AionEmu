@@ -50,7 +50,7 @@ public class ItemEnchantData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final ItemEnchantTemplate it : enchantTemplates)
+		for (ItemEnchantTemplate it : enchantTemplates)
 		{
 			getEnchantMap(it.getEnchantType()).put(it.getId(), it);
 		}

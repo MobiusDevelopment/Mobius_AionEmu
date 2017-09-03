@@ -61,12 +61,12 @@ public class RemoveCd extends AdminCommand
 				if (player.getSkillCoolDowns() != null)
 				{
 					final long currentTime = System.currentTimeMillis();
-					for (final Entry<Integer, Long> en : player.getSkillCoolDowns().entrySet())
+					for (Entry<Integer, Long> en : player.getSkillCoolDowns().entrySet())
 					{
 						delayIds.add(en.getKey());
 					}
 					
-					for (final Integer delayId : delayIds)
+					for (Integer delayId : delayIds)
 					{
 						player.setSkillCoolDown(delayId, currentTime);
 					}
@@ -77,12 +77,12 @@ public class RemoveCd extends AdminCommand
 				
 				if (player.getItemCoolDowns() != null)
 				{
-					for (final Entry<Integer, ItemCooldown> en : player.getItemCoolDowns().entrySet())
+					for (Entry<Integer, ItemCooldown> en : player.getItemCoolDowns().entrySet())
 					{
 						delayIds.add(en.getKey());
 					}
 					
-					for (final Integer delayId : delayIds)
+					for (Integer delayId : delayIds)
 					{
 						player.addItemCoolDown(delayId, 0, 0);
 					}
@@ -128,12 +128,12 @@ public class RemoveCd extends AdminCommand
 					if (params[1].equalsIgnoreCase("all"))
 					{
 						final List<Integer> mapIds = new ArrayList<>();
-						for (final Entry<Integer, PortalCooldownItem> mapId : player.getPortalCooldownList().getPortalCoolDowns().entrySet())
+						for (Entry<Integer, PortalCooldownItem> mapId : player.getPortalCooldownList().getPortalCoolDowns().entrySet())
 						{
 							mapIds.add(mapId.getKey());
 						}
 						
-						for (final Integer id : mapIds)
+						for (Integer id : mapIds)
 						{
 							player.getPortalCooldownList().addPortalCooldown(id, 0, 0);
 						}
@@ -156,7 +156,7 @@ public class RemoveCd extends AdminCommand
 						{
 							worldId = Integer.parseInt(params[1]);
 						}
-						catch (final NumberFormatException e)
+						catch (NumberFormatException e)
 						{
 							PacketSendUtility.sendMessage(admin, "WorldId has to be integer or use \"all\"");
 							return;

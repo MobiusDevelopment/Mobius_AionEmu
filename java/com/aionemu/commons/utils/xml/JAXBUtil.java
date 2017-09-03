@@ -42,7 +42,7 @@ public class JAXBUtil
 			m.marshal(obj, sw);
 			return sw.toString();
 		}
-		catch (final JAXBException e)
+		catch (JAXBException e)
 		{
 			throw new RuntimeException("Failed to marshall object of class " + obj.getClass().getName(), e);
 		}
@@ -87,7 +87,7 @@ public class JAXBUtil
 			u.setSchema(schema);
 			return (T) u.unmarshal(new StringReader(s));
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to unmarshall class " + clazz.getName() + " from xml:\n " + s, e);
 		}
@@ -102,7 +102,7 @@ public class JAXBUtil
 			jc.generateSchema(ssor);
 			return ssor.getSchemma();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to generate schemma", e);
 		}

@@ -77,7 +77,7 @@ public class ResponseRequester
 	 */
 	public synchronized void denyAll()
 	{
-		for (final RequestResponseHandler handler : map.values())
+		for (RequestResponseHandler handler : map.values())
 		{
 			handler.handle(player, 0);
 		}

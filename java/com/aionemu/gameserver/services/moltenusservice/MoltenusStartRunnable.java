@@ -38,7 +38,7 @@ public class MoltenusStartRunnable implements Runnable
 	public void run()
 	{
 		final Map<Integer, MoltenusLocation> locations = MoltenusService.getInstance().getMoltenusLocations();
-		for (final MoltenusLocation loc : locations.values())
+		for (MoltenusLocation loc : locations.values())
 		{
 			if (loc.getId() == id)
 			{

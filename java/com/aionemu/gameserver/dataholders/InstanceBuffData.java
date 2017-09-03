@@ -49,7 +49,7 @@ public class InstanceBuffData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final InstanceBonusAttr template : instanceBonusattr)
+		for (InstanceBonusAttr template : instanceBonusattr)
 		{
 			templates.put(template.getBuffId(), template);
 		}

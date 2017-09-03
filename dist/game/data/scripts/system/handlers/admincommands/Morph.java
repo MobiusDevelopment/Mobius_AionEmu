@@ -48,7 +48,7 @@ public class Morph extends AdminCommand
 			{
 				param = Integer.parseInt(params[0]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "Parameter must be an integer, or cancel.");
 				return;

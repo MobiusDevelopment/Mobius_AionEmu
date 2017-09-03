@@ -46,7 +46,7 @@ public final class FloodManager
 		private final int _rejectLimit;
 		private final int _tickLimit;
 		
-		public FloodFilter(final int warnLimit, final int rejectLimit, final int tickLimit)
+		public FloodFilter(int warnLimit, int rejectLimit, int tickLimit)
 		{
 			_warnLimit = warnLimit;
 			_rejectLimit = rejectLimit;
@@ -85,7 +85,7 @@ public final class FloodManager
 			return (getCurrentTick() - _lastTick) < (_tickAmount * 10);
 		}
 		
-		public Result isFlooding(final boolean increment)
+		public Result isFlooding(boolean increment)
 		{
 			final int currentTick = getCurrentTick();
 			
@@ -113,7 +113,7 @@ public final class FloodManager
 				_ticks[_lastTick % _ticks.length]++;
 			}
 			
-			for (final FloodFilter filter : _filters)
+			for (FloodFilter filter : _filters)
 			{
 				int previousSum = 0;
 				int currentSum = 0;
@@ -154,7 +154,7 @@ public final class FloodManager
 		WARNED,
 		REJECTED;
 		
-		public static Result max(final Result r1, final Result r2)
+		public static Result max(Result r1, Result r2)
 		{
 			if (r1.ordinal() > r2.ordinal())
 			{
@@ -178,14 +178,14 @@ public final class FloodManager
 	
 	private final FloodFilter[] _filters;
 	
-	public FloodManager(final int msecPerTick, final FloodFilter... filters)
+	public FloodManager(int msecPerTick, FloodFilter... filters)
 	{
 		_tickLength = msecPerTick;
 		_filters = filters;
 		
 		int max = 1;
 		
-		for (final FloodFilter filter : _filters)
+		for (FloodFilter filter : _filters)
 		{
 			max = Math.max(filter.getTickLimit() + 1, max);
 		}
@@ -207,7 +207,7 @@ public final class FloodManager
 		_lock.lock();
 		try
 		{
-			for (final Iterator<LogEntry> it = _entries.values().iterator(); it.hasNext();)
+			for (Iterator<LogEntry> it = _entries.values().iterator(); it.hasNext();)
 			{
 				if (it.next().isActive())
 				{
@@ -223,7 +223,7 @@ public final class FloodManager
 		}
 	}
 	
-	public Result isFlooding(final String key, final boolean increment)
+	public Result isFlooding(String key, boolean increment)
 	{
 		if ((key == null) || key.isEmpty())
 		{

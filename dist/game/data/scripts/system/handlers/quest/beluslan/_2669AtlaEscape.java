@@ -46,7 +46,7 @@ public class _2669AtlaEscape extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(204815).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

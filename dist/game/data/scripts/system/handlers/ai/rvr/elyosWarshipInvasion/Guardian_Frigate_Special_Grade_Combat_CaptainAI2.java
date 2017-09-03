@@ -63,7 +63,7 @@ public class Guardian_Frigate_Special_Grade_Combat_CaptainAI2 extends Aggressive
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{
 			final List<Npc> npcs = getPosition().getWorldMapInstance().getNpcs(npcId);
-			for (final Npc npc : npcs)
+			for (Npc npc : npcs)
 			{
 				npc.getController().onDelete();
 			}

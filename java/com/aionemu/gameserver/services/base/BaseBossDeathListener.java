@@ -108,7 +108,7 @@ public class BaseBossDeathListener extends OnDieEventCallback
 	{
 	}
 	
-	public void announceCapture(final TemporaryPlayerTeam team, final Creature kill)
+	public void announceCapture(TemporaryPlayerTeam team, Creature kill)
 	{
 		final String baseName = base.getBaseLocation().getName();
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()

@@ -48,11 +48,11 @@ public class _16824Insightful_Eye extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : IDEternity02TowerBoss75Ah)
+		for (int mob : IDEternity02TowerBoss75Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

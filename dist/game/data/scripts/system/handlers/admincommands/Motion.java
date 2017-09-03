@@ -95,7 +95,7 @@ public class Motion extends AdminCommand implements StatOwner
 				{
 					parameter = Integer.parseInt(params[1]);
 				}
-				catch (final NumberFormatException e)
+				catch (NumberFormatException e)
 				{
 					PacketSendUtility.sendMessage(player, "Parameter should number");
 					return;

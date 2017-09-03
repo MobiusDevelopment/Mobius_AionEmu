@@ -61,11 +61,11 @@ public class _1922Deliveron_Your_Promises extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcIds)
+		for (int npc : npcIds)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : mobIds)
+		for (int mob : mobIds)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
@@ -218,7 +218,7 @@ public class _1922Deliveron_Your_Promises extends QuestHandler
 				{
 					defaultOnKillEvent(env, mobIds, 9, 10, 4);
 					QuestService.questTimerEnd(env);
-					for (final Npc npcInside : player.getPosition().getWorldMapInstance().getNpcs())
+					for (Npc npcInside : player.getPosition().getWorldMapInstance().getNpcs())
 					{
 						CreatureActions.delete(npcInside);
 					}

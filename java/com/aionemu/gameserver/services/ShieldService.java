@@ -61,7 +61,7 @@ public class ShieldService
 	
 	public void load(int mapId)
 	{
-		for (final ShieldTemplate template : DataManager.SHIELD_DATA.getShieldTemplates())
+		for (ShieldTemplate template : DataManager.SHIELD_DATA.getShieldTemplates())
 		{
 			if (template.getMap() != mapId)
 			{
@@ -74,14 +74,14 @@ public class ShieldService
 	
 	public void spawnAll()
 	{
-		for (final Shield shield : sphereShields.values())
+		for (Shield shield : sphereShields.values())
 		{
 			shield.spawn();
 			log.debug("Added " + shield.getName() + " at m=" + shield.getWorldId() + ",x=" + shield.getX() + ",y=" + shield.getY() + ",z=" + shield.getZ());
 		}
-		for (final List<SiegeShield> otherShields : registeredShields.values())
+		for (List<SiegeShield> otherShields : registeredShields.values())
 		{
-			for (final SiegeShield shield : otherShields)
+			for (SiegeShield shield : otherShields)
 			{
 				log.debug("Not bound shield " + shield.getGeometry().getName());
 			}

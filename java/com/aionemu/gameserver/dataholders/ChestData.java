@@ -57,7 +57,7 @@ public class ChestData
 		instancesMap.clear();
 		namedChests.clear();
 		
-		for (final ChestTemplate chest : chests)
+		for (ChestTemplate chest : chests)
 		{
 			chestData.put(chest.getNpcId(), chest);
 			if ((chest.getName() != null) && !chest.getName().isEmpty())

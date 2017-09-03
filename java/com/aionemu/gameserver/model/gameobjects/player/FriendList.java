@@ -72,7 +72,7 @@ public class FriendList implements Iterable<Friend>
 	 */
 	public Friend getFriend(int objId)
 	{
-		for (final Friend friend : friends)
+		for (Friend friend : friends)
 		{
 			if (friend.getOid() == objId)
 			{
@@ -108,7 +108,7 @@ public class FriendList implements Iterable<Friend>
 	 */
 	public Friend getFriend(String name)
 	{
-		for (final Friend friend : friends)
+		for (Friend friend : friends)
 		{
 			if (friend.getName().equalsIgnoreCase(name))
 			{
@@ -166,7 +166,7 @@ public class FriendList implements Iterable<Friend>
 		final Status previousStatus = this.status;
 		this.status = status;
 		
-		for (final Friend friend : friends) // For all my friends
+		for (Friend friend : friends) // For all my friends
 		{
 			if (friend.isOnline()) // If the player is online
 			{
@@ -253,7 +253,7 @@ public class FriendList implements Iterable<Friend>
 		 */
 		public static Status getByValue(byte value)
 		{
-			for (final Status stat : values())
+			for (Status stat : values())
 			{
 				if (stat.getId() == value)
 				{

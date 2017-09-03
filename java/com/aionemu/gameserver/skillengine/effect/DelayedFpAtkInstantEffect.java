@@ -41,7 +41,7 @@ public class DelayedFpAtkInstantEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void applyEffect(final Effect effect)
+	public void applyEffect(Effect effect)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

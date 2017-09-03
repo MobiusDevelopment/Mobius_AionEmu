@@ -47,11 +47,11 @@ public class FixedInTimeTrigger extends TaskFromDBTrigger
 				second = Integer.parseInt(time[2]);
 				return true;
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				log.warn("Could not parse the time for a FixedInTimeTrigger from DB", e);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.warn("A time for FixedInTimeTrigger is missing or invalid", e);
 			}

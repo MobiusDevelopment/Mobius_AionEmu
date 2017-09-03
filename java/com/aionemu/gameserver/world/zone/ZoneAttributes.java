@@ -61,7 +61,7 @@ public enum ZoneAttributes
 	public static Integer fromList(List<ZoneAttributes> flagValues)
 	{
 		Integer result = 0;
-		for (final ZoneAttributes attribute : ZoneAttributes.values())
+		for (ZoneAttributes attribute : ZoneAttributes.values())
 		{
 			if (flagValues.contains(attribute))
 			{

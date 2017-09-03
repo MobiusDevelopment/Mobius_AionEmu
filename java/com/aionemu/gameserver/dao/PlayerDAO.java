@@ -49,23 +49,23 @@ public abstract class PlayerDAO implements IDFactoryAwareDAO
 	
 	public abstract List<Integer> getPlayerOidsOnAccount(int accountId);
 	
-	public abstract void storeLastOnlineTime(final int objectId, final Timestamp lastOnline);
+	public abstract void storeLastOnlineTime(int objectId, Timestamp lastOnline);
 	
-	public abstract void onlinePlayer(final Player player, final boolean online);
+	public abstract void onlinePlayer(Player player, boolean online);
 	
-	public abstract void setPlayersOffline(final boolean online);
+	public abstract void setPlayersOffline(boolean online);
 	
 	public abstract PlayerCommonData loadPlayerCommonDataByName(String name);
 	
-	public abstract int getAccountIdByName(final String name);
+	public abstract int getAccountIdByName(String name);
 	
-	public abstract String getPlayerNameByObjId(final int playerObjId);
+	public abstract String getPlayerNameByObjId(int playerObjId);
 	
-	public abstract int getPlayerIdByName(final String playerName);
+	public abstract int getPlayerIdByName(String playerName);
 	
 	public abstract void storePlayerName(PlayerCommonData recipientCommonData);
 	
-	public abstract int getCharacterCountOnAccount(final int accountId);
+	public abstract int getCharacterCountOnAccount(int accountId);
 	
 	public abstract int getCharacterCountForRace(Race race);
 	
@@ -73,7 +73,7 @@ public abstract class PlayerDAO implements IDFactoryAwareDAO
 	
 	public abstract List<Integer> getPlayersToDelete(int paramInt1, int paramInt2);
 	
-	public abstract void setPlayerLastTransferTime(final int playerId, final long time);
+	public abstract void setPlayerLastTransferTime(int playerId, long time);
 	
 	@Override
 	public final String getClassName()
@@ -81,13 +81,13 @@ public abstract class PlayerDAO implements IDFactoryAwareDAO
 		return PlayerDAO.class.getName();
 	}
 	
-	public abstract Timestamp getCharacterCreationDateId(final int obj);
+	public abstract Timestamp getCharacterCreationDateId(int obj);
 	
 	public abstract void updateLegionJoinRequestState(int playerId, LegionJoinRequestState state);
 	
-	public abstract void clearJoinRequest(final int playerId);
+	public abstract void clearJoinRequest(int playerId);
 	
 	public abstract void getJoinRequestState(Player player);
 	
-	public abstract int getPlayerLunaConsumeByObjId(final int playerObjId);
+	public abstract int getPlayerLunaConsumeByObjId(int playerObjId);
 }

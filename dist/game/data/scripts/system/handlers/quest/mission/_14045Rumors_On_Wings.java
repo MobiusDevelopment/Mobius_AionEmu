@@ -48,7 +48,7 @@ public class _14045Rumors_On_Wings extends QuestHandler
 			279023,
 			279006
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

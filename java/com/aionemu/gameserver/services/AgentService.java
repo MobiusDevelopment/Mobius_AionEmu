@@ -62,7 +62,7 @@ public class AgentService
 		if (CustomConfig.AGENT_ENABLED)
 		{
 			agent = DataManager.AGENT_DATA.getAgentLocations();
-			for (final AgentLocation loc : getAgentLocations().values())
+			for (AgentLocation loc : getAgentLocations().values())
 			{
 				spawn(loc, AgentStateType.PEACE);
 			}
@@ -78,9 +78,9 @@ public class AgentService
 		if (CustomConfig.AGENT_ENABLED)
 		{
 			agentSchedule = AgentSchedule.load();
-			for (final Agent agent : agentSchedule.getAgentsList())
+			for (Agent agent : agentSchedule.getAgentsList())
 			{
-				for (final String fightTime : agent.getFightTimes())
+				for (String fightTime : agent.getFightTimes())
 				{
 					CronService.getInstance().schedule(new AgentStartRunnable(agent.getId()), fightTime);
 				}
@@ -88,7 +88,7 @@ public class AgentService
 		}
 	}
 	
-	public void startAgentFight(final int id)
+	public void startAgentFight(int id)
 	{
 		final AgentFight<?> fight;
 		synchronized (this)
@@ -136,9 +136,9 @@ public class AgentService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getAgentSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final AgentSpawnTemplate agenttemplate = (AgentSpawnTemplate) st;
 				if (agenttemplate.getAStateType().equals(astate))
@@ -216,7 +216,7 @@ public class AgentService
 	
 	public void despawn(AgentLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

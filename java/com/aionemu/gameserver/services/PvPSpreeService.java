@@ -64,7 +64,7 @@ public class PvPSpreeService
 	
 	private static void sendUpdateSpreeMessage(Player winner, int level)
 	{
-		for (final Player p : World.getInstance().getAllPlayers())
+		for (Player p : World.getInstance().getAllPlayers())
 		{
 			if (level == 1)
 			{
@@ -96,7 +96,7 @@ public class PvPSpreeService
 	private static void sendEndSpreeMessage(Player victim, Creature killer, boolean isPvPDeath, int killsBeforeDeath)
 	{
 		final String spreeEnder = isPvPDeath ? ((Player) killer).getName() : "A monster";
-		for (final Player p : World.getInstance().getAllPlayers())
+		for (Player p : World.getInstance().getAllPlayers())
 		{
 			PacketSendUtility.sendWhiteMessageOnCenter(p, "The killing spree of " + victim.getName() + " has been stopped by " + spreeEnder + " after " + killsBeforeDeath + " uninterrupted murders !");
 		}

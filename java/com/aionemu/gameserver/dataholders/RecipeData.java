@@ -48,7 +48,7 @@ public class RecipeData
 		elyos = FastList.newInstance();
 		asmos = FastList.newInstance();
 		any = FastList.newInstance();
-		for (final RecipeTemplate it : list)
+		for (RecipeTemplate it : list)
 		{
 			recipeData.put(it.getId(), it);
 			if (it.getAutoLearn() == 0)
@@ -78,7 +78,7 @@ public class RecipeData
 		switch (race)
 		{
 			case ASMODIANS:
-				for (final RecipeTemplate recipe : asmos)
+				for (RecipeTemplate recipe : asmos)
 				{
 					if ((recipe.getSkillid() == skillId) && (recipe.getSkillpoint() <= maxLevel))
 					{
@@ -87,7 +87,7 @@ public class RecipeData
 				}
 				break;
 			case ELYOS:
-				for (final RecipeTemplate recipe : elyos)
+				for (RecipeTemplate recipe : elyos)
 				{
 					if ((recipe.getSkillid() == skillId) && (recipe.getSkillpoint() <= maxLevel))
 					{
@@ -97,7 +97,7 @@ public class RecipeData
 				break;
 		}
 		
-		for (final RecipeTemplate recipe : any)
+		for (RecipeTemplate recipe : any)
 		{
 			if ((recipe.getSkillid() == skillId) && (recipe.getSkillpoint() <= maxLevel))
 			{

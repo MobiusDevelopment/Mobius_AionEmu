@@ -235,7 +235,7 @@ public class KuharaTheVolatileAI2 extends AggressiveNpcAI2
 	
 	private void deleteNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			if (npc != null)
 			{
@@ -256,7 +256,7 @@ public class KuharaTheVolatileAI2 extends AggressiveNpcAI2
 		MoveBombToBoss(rndSpawnInRange(282396, Rnd.get(0, 2), new Point3D(119.23888f, 245.8903f, 209.81859f)));
 	}
 	
-	private void MoveBombToBoss(final Npc npc)
+	private void MoveBombToBoss(Npc npc)
 	{
 		if (!isAlreadyDead() && !isHome.get())
 		{

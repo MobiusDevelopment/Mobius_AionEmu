@@ -106,13 +106,13 @@ public class TemporaryTradeTimeTask extends AbstractPeriodicTaskManager
 		writeLock();
 		try
 		{
-			for (final Map.Entry<Item, Collection<Integer>> entry : items.entrySet())
+			for (Map.Entry<Item, Collection<Integer>> entry : items.entrySet())
 			{
 				final Item item = entry.getKey();
 				final int time = (item.getTemporaryExchangeTime() - (int) (System.currentTimeMillis() / 1000));
 				if (time == 60)
 				{
-					for (final int playerId : entry.getValue())
+					for (int playerId : entry.getValue())
 					{
 						final Player player = World.getInstance().findPlayer(playerId);
 						if (player != null)
@@ -123,7 +123,7 @@ public class TemporaryTradeTimeTask extends AbstractPeriodicTaskManager
 				}
 				else if (time <= 0)
 				{
-					for (final int playerId : entry.getValue())
+					for (int playerId : entry.getValue())
 					{
 						final Player player = World.getInstance().findPlayer(playerId);
 						if (player != null)

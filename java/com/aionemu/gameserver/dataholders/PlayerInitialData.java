@@ -56,7 +56,7 @@ public class PlayerInitialData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final PlayerCreationData pt : dataList)
+		for (PlayerCreationData pt : dataList)
 		{
 			data.put(pt.getRequiredPlayerClass(), pt);
 		}

@@ -264,7 +264,7 @@ public abstract class EffectTemplate
 			return null;
 		}
 		
-		for (final ActionModifier modifier : modifiers.getActionModifiers())
+		for (ActionModifier modifier : modifiers.getActionModifiers())
 		{
 			if (modifier.check(effect))
 			{
@@ -333,7 +333,7 @@ public abstract class EffectTemplate
 		if (getPosition() > 1)
 		{
 			final FastList<Integer> positions = getPreEffects();
-			for (final int pos : positions)
+			for (int pos : positions)
 			{
 				if (!effect.isInSuccessEffects(pos))
 				{
@@ -443,7 +443,7 @@ public abstract class EffectTemplate
 		}
 		
 		final String[] parts = getPreEffect().split("_");
-		for (final String part : parts)
+		for (String part : parts)
 		{
 			preEffects.add(Integer.parseInt(part));
 		}
@@ -781,7 +781,7 @@ public abstract class EffectTemplate
 		{
 			temp = EffectType.valueOf(getClass().getName().replaceAll("com.aionemu.gameserver.skillengine.effect.", "").replaceAll("Effect", "").toUpperCase());
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.info("missing effectype for " + getClass().getName().replaceAll("com.aionemu.gameserver.skillengine.effect.", "").replaceAll("Effect", "").toUpperCase());
 		}

@@ -53,7 +53,7 @@ public class _28601Nightmares_And_Dreamscapes extends QuestHandler
 	public void register()
 	{
 		qe.registerOnLevelUp(questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 			qe.registerQuestNpc(204702).addOnQuestStart(questId);

@@ -58,7 +58,7 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error update pet #" + petId, e);
 		}
@@ -77,7 +77,7 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 			con = DatabaseFactory.getConnection();
 			final PreparedStatement stmt = con.prepareStatement("UPDATE player_pets SET dopings = ? WHERE player_id = ? AND pet_id = ?");
 			String itemIds = bag.getFoodItem() + "," + bag.getDrinkItem();
-			for (final int itemId : bag.getScrollsUsed())
+			for (int itemId : bag.getScrollsUsed())
 			{
 				itemIds += "," + Integer.toString(itemId);
 			}
@@ -87,7 +87,7 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error update doping for pet #" + petId, e);
 		}
@@ -111,7 +111,7 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error update pet #" + petId, e);
 		}
@@ -138,7 +138,7 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error inserting new pet #" + petCommonData.getPetId() + "[" + petCommonData.getName() + "]", e);
 		}
@@ -161,7 +161,7 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error removing pet #" + petId, e);
 		}
@@ -220,7 +220,7 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 				{
 					ts = rs.getTimestamp("despawn_time");
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 				}
 				if (ts == null)
@@ -232,7 +232,7 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 			}
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error getting pets for " + player.getObjectId(), e);
 		}
@@ -257,7 +257,7 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error update pet #" + petCommonData.getPetId(), e);
 		}
@@ -285,7 +285,7 @@ public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error updating mood for pet #" + petCommonData.getPetId(), e);
 			return false;

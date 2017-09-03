@@ -41,7 +41,7 @@ public class Map extends AdminCommand
 		final WorldMapInstance instance = admin.getPosition().getWorldMapInstance();
 		if ("freeze".equalsIgnoreCase(params[0]))
 		{
-			for (final Npc npc : instance.getNpcs())
+			for (Npc npc : instance.getNpcs())
 			{
 				npc.getAi2().onGeneralEvent(AIEventType.FREEZE);
 			}
@@ -49,7 +49,7 @@ public class Map extends AdminCommand
 		}
 		else if ("unfreeze".equalsIgnoreCase(params[0]))
 		{
-			for (final Npc npc : instance.getNpcs())
+			for (Npc npc : instance.getNpcs())
 			{
 				npc.getAi2().onGeneralEvent(AIEventType.UNFREEZE);
 			}
@@ -57,7 +57,7 @@ public class Map extends AdminCommand
 		}
 		else if ("stats".equalsIgnoreCase(params[0]))
 		{
-			for (final String line : MovementNotifyTask.getInstance().dumpBroadcastStats())
+			for (String line : MovementNotifyTask.getInstance().dumpBroadcastStats())
 			{
 				PacketSendUtility.sendMessage(admin, line);
 			}

@@ -52,7 +52,7 @@ public class _24041Training_In_The_Abyss extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

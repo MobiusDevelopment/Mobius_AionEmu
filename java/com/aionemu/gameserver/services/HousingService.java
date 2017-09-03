@@ -132,14 +132,14 @@ public class HousingService
 		}
 		
 		int spawnedCounter = 0;
-		for (final HousingLand land : lands)
+		for (HousingLand land : lands)
 		{
 			final Building defaultBuilding = land.getDefaultBuilding();
 			if (defaultBuilding.getType() == BuildingType.PERSONAL_INS)
 			{
 				continue;
 			}
-			for (final HouseAddress address : land.getAddresses())
+			for (HouseAddress address : land.getAddresses())
 			{
 				if (address.getMapId() != worldId)
 				{
@@ -179,7 +179,7 @@ public class HousingService
 				return houses;
 			}
 		}
-		for (final House house : customHouses.values())
+		for (House house : customHouses.values())
 		{
 			if (house.getOwnerId() == playerObjId)
 			{
@@ -198,7 +198,7 @@ public class HousingService
 				return studios.get(playerId).getAddress().getId();
 			}
 		}
-		for (final House house : customHouses.values())
+		for (House house : customHouses.values())
 		{
 			if (house.getStatus() == HouseStatus.INACTIVE)
 			{
@@ -215,11 +215,11 @@ public class HousingService
 	public void resetAppearance(House house)
 	{
 		final FastList<HouseDecoration> customParts = house.getRegistry().getCustomParts();
-		for (final HouseDecoration deco : customParts)
+		for (HouseDecoration deco : customParts)
 		{
 			deco.setPersistentState(PersistentState.DELETED);
 		}
-		for (final HouseDecoration deco : customParts)
+		for (HouseDecoration deco : customParts)
 		{
 			house.getRegistry().removeCustomPart(deco.getObjectId());
 		}
@@ -227,7 +227,7 @@ public class HousingService
 	
 	public House getHouseByName(String houseName)
 	{
-		for (final House house : customHouses.values())
+		for (House house : customHouses.values())
 		{
 			if (house.getName().equals(houseName))
 			{
@@ -239,7 +239,7 @@ public class HousingService
 	
 	public House getHouseByAddress(int address)
 	{
-		for (final House house : customHouses.values())
+		for (House house : customHouses.values())
 		{
 			if (house.getAddress().getId() == address)
 			{
@@ -251,7 +251,7 @@ public class HousingService
 	
 	public House activateBoughtHouse(int playerId)
 	{
-		for (final House house : customHouses.values())
+		for (House house : customHouses.values())
 		{
 			if ((house.getOwnerId() == playerId) && (house.getStatus() == HouseStatus.INACTIVE))
 			{
@@ -349,7 +349,7 @@ public class HousingService
 	public FastList<House> getCustomHouses()
 	{
 		final FastList<House> houses = FastList.newInstance();
-		for (final List<House> mapHouses : housesByMapId.values())
+		for (List<House> mapHouses : housesByMapId.values())
 		{
 			houses.addAll(mapHouses);
 		}
@@ -376,7 +376,7 @@ public class HousingService
 	{
 		House activeHouse = null;
 		byte buildingState = PlayerHouseOwnerFlags.BUY_STUDIO_ALLOWED.getId();
-		for (final House house : player.getHouses())
+		for (House house : player.getHouses())
 		{
 			if ((house.getStatus() == HouseStatus.ACTIVE) || (house.getStatus() == HouseStatus.SELL_WAIT))
 			{

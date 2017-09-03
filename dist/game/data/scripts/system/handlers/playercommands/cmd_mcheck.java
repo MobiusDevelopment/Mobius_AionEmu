@@ -42,7 +42,7 @@ public class cmd_mcheck extends PlayerCommand
 	public void execute(Player player, String... params)
 	{
 		final Collection<QuestState> qsl = player.getQuestStateList().getAllQuestState();
-		for (final QuestState qs : qsl)
+		for (QuestState qs : qsl)
 		{
 			if (qs.getStatus() == QuestStatus.LOCKED)
 			{

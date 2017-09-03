@@ -36,11 +36,11 @@ public class InstanceTimeClear extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, final Item parentItem, Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 	}
 	
-	public void act(final Player player, final Item parentItem, final int SelectedSyncId)
+	public void act(Player player, Item parentItem, int SelectedSyncId)
 	{
 		final int mapid = DataManager.INSTANCE_COOLTIME_DATA.getWorldId(SelectedSyncId);
 		if (player.getPortalCooldownList().getPortalCooldown(mapid) == 0)

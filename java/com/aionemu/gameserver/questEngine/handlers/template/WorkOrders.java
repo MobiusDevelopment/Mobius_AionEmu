@@ -104,7 +104,7 @@ public class WorkOrders extends QuestHandler
 						if (qwi != null)
 						{
 							long count = 0;
-							for (final QuestItems qi : qwi.getQuestWorkItem())
+							for (QuestItems qi : qwi.getQuestWorkItem())
 							{
 								if (qi != null)
 								{
@@ -129,7 +129,7 @@ public class WorkOrders extends QuestHandler
 				final QuestTemplate template = DataManager.QUEST_DATA.getQuestById(workOrdersData.getId());
 				final CollectItems collectItems = template.getCollectItems();
 				long count = 0;
-				for (final CollectItem collectItem : collectItems.getCollectItem())
+				for (CollectItem collectItem : collectItems.getCollectItem())
 				{
 					count = player.getInventory().getItemCountByItemId(collectItem.getItemId());
 					if (count > 0)

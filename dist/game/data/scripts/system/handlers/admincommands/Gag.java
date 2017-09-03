@@ -62,7 +62,7 @@ public class Gag extends AdminCommand
 			{
 				time = Integer.parseInt(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "Syntax: //gag <player> [time in minutes]");
 				return;

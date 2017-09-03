@@ -57,7 +57,7 @@ public class CM_INSTANCE_INFO extends AionClientPacket
 			if (player.isInAlliance2())
 			{
 				boolean answer = true;
-				for (final Player p : player.getPlayerAlliance2().getMembers())
+				for (Player p : player.getPlayerAlliance2().getMembers())
 				{
 					if (answer)
 					{
@@ -73,7 +73,7 @@ public class CM_INSTANCE_INFO extends AionClientPacket
 			else if (player.isInGroup2())
 			{
 				boolean answer = true;
-				for (final Player p : player.getPlayerGroup2().getMembers())
+				for (Player p : player.getPlayerGroup2().getMembers())
 				{
 					if (answer)
 					{

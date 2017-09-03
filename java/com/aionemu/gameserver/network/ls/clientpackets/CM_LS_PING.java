@@ -46,7 +46,7 @@ public class CM_LS_PING extends LsClientPacket
 		{
 			pid = Integer.parseInt(ManagementFactory.getRuntimeMXBean().getName().split("@")[0]);
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 		}
 		

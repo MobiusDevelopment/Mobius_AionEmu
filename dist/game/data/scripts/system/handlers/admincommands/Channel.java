@@ -53,7 +53,7 @@ public class Channel extends AdminCommand
 				PacketSendUtility.sendMessage(player, "The command .faction is OFF.");
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			PacketSendUtility.sendMessage(player, "Error! Wrong property or value.");
 			return;

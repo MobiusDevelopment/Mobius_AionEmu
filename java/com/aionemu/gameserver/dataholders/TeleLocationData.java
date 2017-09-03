@@ -44,7 +44,7 @@ public class TeleLocationData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final TelelocationTemplate loc : tlist)
+		for (TelelocationTemplate loc : tlist)
 		{
 			loctlistData.put(loc.getLocId(), loc);
 		}

@@ -54,14 +54,14 @@ public class SerialGuardData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final GuardRankRestriction template : guardRankRestriction)
+		for (GuardRankRestriction template : guardRankRestriction)
 		{
 			templates.put(template.getRankNum(), template);
 		}
 		guardRankRestriction.clear();
 		guardRankRestriction = null;
 		////////////////////////////
-		for (final GuardTypeRestriction template : guardTypeRestriction)
+		for (GuardTypeRestriction template : guardTypeRestriction)
 		{
 			templatesType.put(template.getTypeNum(), template);
 		}

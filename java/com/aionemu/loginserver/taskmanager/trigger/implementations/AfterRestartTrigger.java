@@ -42,7 +42,7 @@ public class AfterRestartTrigger extends TaskFromDBTrigger
 				isBlocking = Boolean.parseBoolean(params[0]);
 				return true;
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.warn("A time for FixedInTimeTrigger is missing or invalid", e);
 			}

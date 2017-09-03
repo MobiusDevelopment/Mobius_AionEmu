@@ -58,7 +58,7 @@ public abstract class AionClientPacket extends BaseClientPacket<LoginConnection>
 		{
 			runImpl();
 		}
-		catch (final Throwable e)
+		catch (Throwable e)
 		{
 			String name;
 			final Account account = getConnection().getAccount();

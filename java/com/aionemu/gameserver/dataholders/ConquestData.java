@@ -46,7 +46,7 @@ public class ConquestData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final ConquestTemplate template : conquestTemplates)
+		for (ConquestTemplate template : conquestTemplates)
 		{
 			conquest.put(template.getId(), new ConquestLocation(template));
 		}

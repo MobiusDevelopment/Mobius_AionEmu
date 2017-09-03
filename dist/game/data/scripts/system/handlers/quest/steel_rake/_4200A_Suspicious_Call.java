@@ -65,14 +65,14 @@ public class _4200A_Suspicious_Call extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(204839).addOnQuestStart(questId); // Uikinerk.
 		qe.registerQuestItem(182209097, questId); // Teleport Scroll.
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

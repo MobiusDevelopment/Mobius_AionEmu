@@ -60,7 +60,7 @@ public class CreativityEssenceService
 		{
 			final int totalPoint = player.getCreativityPoint();
 			final int size = DAOManager.getDAO(PlayerCPDAO.class).getSlotSize(player.getObjectId());
-			for (final PlayerCPEntry ce : player.getCP().getAllCP())
+			for (PlayerCPEntry ce : player.getCP().getAllCP())
 			{
 				if ((ce.getSlot() <= 6) && (ce.getPoint() >= 255))
 				{
@@ -287,7 +287,7 @@ public class CreativityEssenceService
 			PacketSendUtility.sendPacket(player, new SM_PLAYER_ESSENCE(player.getCreativityPoint(), player.getCPStep(), size, false));
 			int vesselCount = 0;
 			int avatarCount = 0;
-			for (final PlayerCPEntry ce : player.getCP().getAllCP())
+			for (PlayerCPEntry ce : player.getCP().getAllCP())
 			{
 				if ((ce.getSlot() >= 7) && (ce.getSlot() <= 14))
 				{
@@ -358,7 +358,7 @@ public class CreativityEssenceService
 	
 	public void onResetEssence(Player player, int plusSize)
 	{
-		for (final PlayerCPEntry ce : player.getCP().getAllCP())
+		for (PlayerCPEntry ce : player.getCP().getAllCP())
 		{
 			if (ce.getSlot() <= 6)
 			{

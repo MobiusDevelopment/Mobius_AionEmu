@@ -473,7 +473,7 @@ public final class Ray implements Cloneable, Collidable
 			r.origin = origin.clone();
 			return r;
 		}
-		catch (final CloneNotSupportedException e)
+		catch (CloneNotSupportedException e)
 		{
 			throw new AssertionError();
 		}

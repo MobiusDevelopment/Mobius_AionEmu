@@ -87,7 +87,7 @@ public class SiegeZoneInstance extends ZoneInstance
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Exception when running visitor on all players" + ex);
 		}

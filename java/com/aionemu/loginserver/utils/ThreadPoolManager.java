@@ -208,7 +208,7 @@ public final class ThreadPoolManager
 			
 			success |= awaitTermination(10000);
 		}
-		catch (final InterruptedException e)
+		catch (InterruptedException e)
 		{
 			e.printStackTrace();
 		}

@@ -147,7 +147,7 @@ public class AccountService
 		
 		final List<Integer> playerIdList = playerDAO.getPlayerOidsOnAccount(accountId);
 		
-		for (final int playerId : playerIdList)
+		for (int playerId : playerIdList)
 		{
 			final PlayerCommonData playerCommonData = playerDAO.loadPlayerCommonData(playerId);
 			final CharacterBanInfo cbi = DAOManager.getDAO(PlayerPunishmentsDAO.class).getCharBanInfo(playerId);

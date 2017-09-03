@@ -2924,12 +2924,12 @@ public class Add extends AdminCommand
 				{
 					itemId = Integer.parseInt(params[1]);
 				}
-				catch (final NumberFormatException ex)
+				catch (NumberFormatException ex)
 				{
 					itemId = validateItem(player, itemId, params);
 				}
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(player, "You need to give the ItemID.");
 				return;
@@ -2963,7 +2963,7 @@ public class Add extends AdminCommand
 				ItemService.addItem(player, ItemId.KINAH.value(), count);
 				return;
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				return;
 			}
@@ -2992,12 +2992,12 @@ public class Add extends AdminCommand
 				{
 					itemId = Integer.parseInt(params[1]);
 				}
-				catch (final NumberFormatException ex)
+				catch (NumberFormatException ex)
 				{
 					itemId = validateItem(player, itemId, params);
 				}
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(player, "You need to give the ItemID.");
 				return;
@@ -3046,7 +3046,7 @@ public class Add extends AdminCommand
 			}
 			receiver = player;
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			receiver = World.getInstance().findPlayer(Util.convertName(params[0]));
 			
@@ -3095,12 +3095,12 @@ public class Add extends AdminCommand
 					}
 				}
 			}
-			catch (final NumberFormatException ex)
+			catch (NumberFormatException ex)
 			{
 				PacketSendUtility.sendMessage(player, "You must give number to itemid.");
 				return;
 			}
-			catch (final Exception ex2)
+			catch (Exception ex2)
 			{
 				PacketSendUtility.sendMessage(player, "Occurs an error.");
 				return;
@@ -3115,7 +3115,7 @@ public class Add extends AdminCommand
 		
 		if (itemId != 0)
 		{
-			for (final int id : opItemsId)
+			for (int id : opItemsId)
 			{
 				if (player.getAccessLevel() <= 2)
 				{
@@ -3178,7 +3178,7 @@ public class Add extends AdminCommand
 	
 	private boolean isRestrictedItem(int itemId)
 	{
-		for (final int item : opItemsId)
+		for (int item : opItemsId)
 		{
 			if (item == itemId)
 			{
@@ -3224,11 +3224,11 @@ public class Add extends AdminCommand
 			}
 			return itemId;
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "You must give number to itemid.");
 		}
-		catch (final Exception ex1)
+		catch (Exception ex1)
 		{
 			PacketSendUtility.sendMessage(player, "Occurs an error.");
 		}

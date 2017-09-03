@@ -97,7 +97,7 @@ public class CrucibleInstance extends GeneralInstanceHandler
 		return player.isInsideZone(zone);
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -109,7 +109,7 @@ public class CrucibleInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -141,7 +141,7 @@ public class CrucibleInstance extends GeneralInstanceHandler
 	
 	protected void despawnNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			npc.getController().onDelete();
 		}

@@ -75,7 +75,7 @@ public abstract class AbstractFIFOPeriodicTaskManager<T>extends AbstractPeriodic
 			{
 				callTask(task);
 			}
-			catch (final RuntimeException e)
+			catch (RuntimeException e)
 			{
 				log.warn("", e);
 			}

@@ -44,7 +44,7 @@ public class ArenaOfHarmonyInstance extends HarmonyArenaInstance
 		final float totalScoreCourage = (1.0f * 3) * 100;
 		final float totalScoreInfinity = (1.0f * 3) * 100;
 		final int totalPoints = instanceReward.getTotalPoints();
-		for (final HarmonyGroupReward group : instanceReward.getGroups())
+		for (HarmonyGroupReward group : instanceReward.getGroups())
 		{
 			final int score = group.getPoints();
 			final int rank = instanceReward.getRank(score);

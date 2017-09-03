@@ -58,7 +58,7 @@ public class VortexSchedule
 			final String xml = FileUtils.readFileToString(new File("./config/shedule/vortex_schedule.xml"));
 			vs = JAXBUtil.deserialize(xml, VortexSchedule.class);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to initialize vortex", e);
 		}

@@ -72,7 +72,7 @@ public class BonusAddExpAction extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, final Item parentItem, final Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 		final ItemTemplate itemTemplate = parentItem.getItemTemplate();
 		player.getCommonData().addExp((long) ((player.getCommonData().getExpNeed() * getRate()) / 100f), RewardType.HUNTING);

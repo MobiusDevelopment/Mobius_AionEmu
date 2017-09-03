@@ -46,7 +46,7 @@ public class IdianDepthsData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final IdianDepthsTemplate template : idianDepthsTemplates)
+		for (IdianDepthsTemplate template : idianDepthsTemplates)
 		{
 			idianDepths.put(template.getId(), new IdianDepthsLocation(template));
 		}

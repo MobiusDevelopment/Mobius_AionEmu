@@ -68,7 +68,7 @@ public class SummonController extends CreatureController<Summon>
 	/**
 	 * Release summon
 	 */
-	public void release(final UnsummonType unsummonType)
+	public void release(UnsummonType unsummonType)
 	{
 		SummonsService.release(getOwner(), unsummonType, isAttacked);
 	}
@@ -157,7 +157,7 @@ public class SummonController extends CreatureController<Summon>
 	}
 	
 	@Override
-	public void onDie(final Creature lastAttacker)
+	public void onDie(Creature lastAttacker)
 	{
 		if (lastAttacker == null)
 		{

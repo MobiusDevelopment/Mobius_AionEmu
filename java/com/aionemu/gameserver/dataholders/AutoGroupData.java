@@ -48,13 +48,13 @@ public class AutoGroupData
 	
 	void afterUnmarshal(Unmarshaller unmarshaller, Object parent)
 	{
-		for (final AutoGroup ag : autoGroup)
+		for (AutoGroup ag : autoGroup)
 		{
 			autoGroupByInstanceId.put(ag.getId(), ag);
 			
 			if (!ag.getNpcIds().isEmpty())
 			{
-				for (final int npcId : ag.getNpcIds())
+				for (int npcId : ag.getNpcIds())
 				{
 					autoGroupByNpcId.put(npcId, ag);
 				}

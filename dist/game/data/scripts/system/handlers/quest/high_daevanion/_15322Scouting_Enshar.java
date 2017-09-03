@@ -100,19 +100,19 @@ public class _15322Scouting_Enshar extends QuestHandler
 	{
 		qe.registerQuestNpc(805330).addOnQuestStart(questId); // Potencia.
 		qe.registerQuestNpc(805330).addOnTalkEvent(questId); // Potencia.
-		for (final int mob : DF5_B)
+		for (int mob : DF5_B)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob2 : DF5_D)
+		for (int mob2 : DF5_D)
 		{
 			qe.registerQuestNpc(mob2).addOnKillEvent(questId);
 		}
-		for (final int mob3 : DF5_F)
+		for (int mob3 : DF5_F)
 		{
 			qe.registerQuestNpc(mob3).addOnKillEvent(questId);
 		}
-		for (final int mob4 : DF5_H)
+		for (int mob4 : DF5_H)
 		{
 			qe.registerQuestNpc(mob4).addOnKillEvent(questId);
 		}

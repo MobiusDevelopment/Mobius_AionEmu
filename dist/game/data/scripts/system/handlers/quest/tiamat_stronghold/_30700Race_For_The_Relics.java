@@ -57,11 +57,11 @@ public class _30700Race_For_The_Relics extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(804868).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -33,7 +33,7 @@ public class DAOLoader implements ClassListener
 	public void postLoad(Class<?>[] classes)
 	{
 		// Register DAOs
-		for (final Class<?> clazz : classes)
+		for (Class<?> clazz : classes)
 		{
 			if (!isValidDAO(clazz))
 			{
@@ -44,7 +44,7 @@ public class DAOLoader implements ClassListener
 			{
 				DAOManager.registerDAO((Class<? extends DAO>) clazz);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				throw new Error("Can't register DAO class", e);
 			}
@@ -56,7 +56,7 @@ public class DAOLoader implements ClassListener
 	public void preUnload(Class<?>[] classes)
 	{
 		// Unregister DAO's
-		for (final Class<?> clazz : classes)
+		for (Class<?> clazz : classes)
 		{
 			if (!isValidDAO(clazz))
 			{
@@ -67,7 +67,7 @@ public class DAOLoader implements ClassListener
 			{
 				DAOManager.unregisterDAO((Class<? extends DAO>) clazz);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				throw new Error("Can't unregister DAO class", e);
 			}

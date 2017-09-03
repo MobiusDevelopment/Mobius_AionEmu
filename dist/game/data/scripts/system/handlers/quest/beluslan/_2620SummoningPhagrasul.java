@@ -56,7 +56,7 @@ public class _2620SummoningPhagrasul extends QuestHandler
 		qe.registerQuestNpc(204787).addOnTalkEvent(questId);
 		qe.registerQuestNpc(204824).addOnTalkEvent(questId); // Gigantic Phagrasul
 		qe.registerQuestNpc(700323).addOnTalkEvent(questId); // Huge Mamut Skull
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}
@@ -102,7 +102,7 @@ public class _2620SummoningPhagrasul extends QuestHandler
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		int targetId = 0;

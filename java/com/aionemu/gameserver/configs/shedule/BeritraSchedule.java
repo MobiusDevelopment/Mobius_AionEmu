@@ -58,7 +58,7 @@ public class BeritraSchedule
 			final String xml = FileUtils.readFileToString(new File("./config/shedule/beritra_schedule.xml"));
 			bs = JAXBUtil.deserialize(xml, BeritraSchedule.class);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to initialize beritra", e);
 		}

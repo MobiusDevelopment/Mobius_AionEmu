@@ -44,7 +44,7 @@ public class PlayerStatsData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final PlayerStatsType pt : templatesList)
+		for (PlayerStatsType pt : templatesList)
 		{
 			final int code = makeHash(pt.getRequiredPlayerClass(), pt.getRequiredLevel());
 			final PlayerStatsTemplate template = pt.getTemplate();

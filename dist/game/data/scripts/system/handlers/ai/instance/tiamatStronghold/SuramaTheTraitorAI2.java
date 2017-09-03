@@ -85,7 +85,7 @@ public class SuramaTheTraitorAI2 extends GeneralNpcAI2
 				laksyaka.setTarget(getOwner());
 				SkillEngine.getInstance().getSkill(laksyaka, 20952, 60, getOwner()).useNoAnimationSkill();
 				laksyaka.setNpcType(NpcType.ATTACKABLE);
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (MathUtil.isIn3dRange(player, laksyaka, 100))
 					{

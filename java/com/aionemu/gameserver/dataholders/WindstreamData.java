@@ -45,7 +45,7 @@ public class WindstreamData
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
 		windstreams = new TIntObjectHashMap<>();
-		for (final WindstreamTemplate wt : wts)
+		for (WindstreamTemplate wt : wts)
 		{
 			windstreams.put(wt.getMapid(), wt);
 		}

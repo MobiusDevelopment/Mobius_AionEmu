@@ -156,7 +156,7 @@ public class SeizedDanuarSanctuaryInstance extends GeneralInstanceHandler
 			case 235619: // Warmage Suyaroka.
 			case 235620: // Chief Medic Tagnu.
 			case 235621: // Virulent Ukahim.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -181,7 +181,7 @@ public class SeizedDanuarSanctuaryInstance extends GeneralInstanceHandler
 			case 233391: // Sanctuary Keybox.
 				// Be careful in your selection. The key cannot be changed once it is chosen.
 				sendMsgByRace(1401946, Race.PC_ALL, 0);
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -357,7 +357,7 @@ public class SeizedDanuarSanctuaryInstance extends GeneralInstanceHandler
 		storage.decreaseByItemId(185000183, storage.getItemCountByItemId(185000183)); // The Charnels Key.
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -369,7 +369,7 @@ public class SeizedDanuarSanctuaryInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -428,7 +428,7 @@ public class SeizedDanuarSanctuaryInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

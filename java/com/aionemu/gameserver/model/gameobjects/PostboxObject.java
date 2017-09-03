@@ -41,7 +41,7 @@ public class PostboxObject extends HouseObject<HousingPostbox>
 	}
 	
 	@Override
-	public void onUse(final Player player)
+	public void onUse(Player player)
 	{
 		if (!usingPlayer.compareAndSet(null, player))
 		{

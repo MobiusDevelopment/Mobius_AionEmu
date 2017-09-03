@@ -77,7 +77,7 @@ public class NpcShoutData
 	
 	public void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final ShoutGroup group : shoutGroups)
+		for (ShoutGroup group : shoutGroups)
 		{
 			for (int i = group.getShoutNpcs().size() - 1; i >= 0; i--)
 			{
@@ -179,7 +179,7 @@ public class NpcShoutData
 			return false;
 		}
 		
-		for (final NpcShout s : shouts)
+		for (NpcShout s : shouts)
 		{
 			if (s.getWhen() == type)
 			{
@@ -206,7 +206,7 @@ public class NpcShoutData
 		}
 		
 		final List<NpcShout> result = new ArrayList<>();
-		for (final NpcShout s : shouts)
+		for (NpcShout s : shouts)
 		{
 			if (s.getWhen() == type)
 			{

@@ -234,7 +234,7 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 	private void despawnNpcs(int npcId)
 	{
 		final List<Npc> npcs = getPosition().getWorldMapInstance().getNpcs(npcId);
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			if (npc != null)
 			{

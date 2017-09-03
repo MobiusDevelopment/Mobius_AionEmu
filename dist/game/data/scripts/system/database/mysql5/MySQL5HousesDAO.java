@@ -70,7 +70,7 @@ public class MySQL5HousesDAO extends HousesDAO
 			}
 			return ids;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't get list of id's from houses table", e);
 		}
@@ -98,7 +98,7 @@ public class MySQL5HousesDAO extends HousesDAO
 			rs.next();
 			return rs.getInt(1) > 0;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't check if house " + houseObjectId + ", is used, returning possitive result", e);
 			return true;
@@ -174,7 +174,7 @@ public class MySQL5HousesDAO extends HousesDAO
 			stmt.close();
 			house.setPersistentState(PersistentState.UPDATED);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store studio data. " + e.getMessage(), e);
 			return;
@@ -235,7 +235,7 @@ public class MySQL5HousesDAO extends HousesDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store house data. " + e.getMessage(), e);
 			return;
@@ -253,9 +253,9 @@ public class MySQL5HousesDAO extends HousesDAO
 		final Map<Integer, House> houses = new HashMap<>();
 		final Map<Integer, HouseAddress> addressesById = new HashMap<>();
 		final Map<Integer, List<Building>> buildingsForAddress = new HashMap<>();
-		for (final HousingLand land : lands)
+		for (HousingLand land : lands)
 		{
-			for (final HouseAddress address : land.getAddresses())
+			for (HouseAddress address : land.getAddresses())
 			{
 				addressesById.put(address.getId(), address);
 				buildingsForAddress.put(address.getId(), land.getBuildings());
@@ -275,7 +275,7 @@ public class MySQL5HousesDAO extends HousesDAO
 				final int buildingId = rset.getInt("building_id");
 				final HouseAddress address = addressesById.get(rset.getInt("address"));
 				Building building = null;
-				for (final Building b : buildingsForAddress.get(address.getId()))
+				for (Building b : buildingsForAddress.get(address.getId()))
 				{
 					if (b.getId() == buildingId)
 					{
@@ -319,7 +319,7 @@ public class MySQL5HousesDAO extends HousesDAO
 			}
 			rset.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore House data from DB: " + e.getMessage(), e);
 		}
@@ -341,7 +341,7 @@ public class MySQL5HousesDAO extends HousesDAO
 			stmt.setInt(1, playerId);
 			stmt.execute();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Delete House failed", e);
 		}

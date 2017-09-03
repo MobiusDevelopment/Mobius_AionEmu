@@ -49,7 +49,7 @@ public class CompositeItemBlobEntry extends ItemBlobEntry
 			final Set<ManaStone> itemStones = item.getFusionStones();
 			final ArrayList<ManaStone> basicStones = new ArrayList<>();
 			final ArrayList<ManaStone> ancientStones = new ArrayList<>();
-			for (final ManaStone itemStone : itemStones)
+			for (ManaStone itemStone : itemStones)
 			{
 				if (itemStone.isBasic())
 				{
@@ -64,7 +64,7 @@ public class CompositeItemBlobEntry extends ItemBlobEntry
 			{
 				if (ancientStones.size() > 0)
 				{
-					for (final ManaStone ancientStone : ancientStones)
+					for (ManaStone ancientStone : ancientStones)
 					{
 						if (count == 6)
 						{
@@ -80,7 +80,7 @@ public class CompositeItemBlobEntry extends ItemBlobEntry
 					count++;
 				}
 			}
-			for (final ManaStone basicFusionStone : basicStones)
+			for (ManaStone basicFusionStone : basicStones)
 			{
 				if (count == 6)
 				{

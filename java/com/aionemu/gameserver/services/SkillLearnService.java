@@ -62,7 +62,7 @@ public class SkillLearnService
 				addSkills(player, i, startinClass, playerRace);
 			}
 			PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, player.getSkillList().getBasicSkills()));
-			for (final PlayerSkillEntry stigmaSkill : player.getSkillList().getStigmaSkills())
+			for (PlayerSkillEntry stigmaSkill : player.getSkillList().getStigmaSkills())
 			{
 				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, stigmaSkill));
 			}
@@ -86,7 +86,7 @@ public class SkillLearnService
 				addSkills(player, i, startinClass, playerRace);
 			}
 			PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, player.getSkillList().getBasicSkills()));
-			for (final PlayerSkillEntry stigmaSkill : player.getSkillList().getStigmaSkills())
+			for (PlayerSkillEntry stigmaSkill : player.getSkillList().getStigmaSkills())
 			{
 				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, stigmaSkill));
 			}
@@ -97,7 +97,7 @@ public class SkillLearnService
 	{
 		final SkillLearnTemplate[] skillTemplates = DataManager.SKILL_TREE_DATA.getTemplatesFor(playerClass, level, playerRace);
 		final PlayerSkillList playerSkillList = player.getSkillList();
-		for (final SkillLearnTemplate template : skillTemplates)
+		for (SkillLearnTemplate template : skillTemplates)
 		{
 			if (!checkLearnIsPossible(player, playerSkillList, template))
 			{
@@ -147,7 +147,7 @@ public class SkillLearnService
 		for (int i = 1; i <= player.getLevel(); i++)
 		{
 			skillTemplates = DataManager.SKILL_TREE_DATA.getTemplatesFor(player.getPlayerClass(), i, player.getRace());
-			for (final SkillLearnTemplate skill : skillTemplates)
+			for (SkillLearnTemplate skill : skillTemplates)
 			{
 				if (skillId == skill.getSkillId())
 				{
@@ -207,7 +207,7 @@ public class SkillLearnService
 		final SkillLearnTemplate[] skillTemplates = DataManager.SKILL_TREE_DATA.getTemplatesForSkill(skillId);
 		int learnFinishes = 0;
 		int maxLevel = 0;
-		for (final SkillLearnTemplate template : skillTemplates)
+		for (SkillLearnTemplate template : skillTemplates)
 		{
 			if (maxLevel < template.getSkillLevel())
 			{
@@ -230,7 +230,7 @@ public class SkillLearnService
 	{
 		final SkillLearnTemplate[] skillTemplates = DataManager.SKILL_TREE_DATA.getTemplatesForSkill(skillId);
 		SkillLearnTemplate foundTemplate = null;
-		for (final SkillLearnTemplate template : skillTemplates)
+		for (SkillLearnTemplate template : skillTemplates)
 		{
 			if ((template.getSkillLevel() <= wantedSkillLevel) && (template.getMinLevel() <= playerLevel))
 			{

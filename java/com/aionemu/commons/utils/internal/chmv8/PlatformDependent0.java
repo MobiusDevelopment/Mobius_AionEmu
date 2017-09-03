@@ -52,7 +52,7 @@ final class PlatformDependent0
 			final Cleaner cleaner = (Cleaner) cleanerField.get(direct);
 			cleaner.clean();
 		}
-		catch (final Throwable t)
+		catch (Throwable t)
 		{
 			cleanerField = null;
 		}
@@ -77,7 +77,7 @@ final class PlatformDependent0
 				cleaner.clean();
 			}
 		}
-		catch (final Throwable t)
+		catch (Throwable t)
 		{
 			addressField = null;
 		}
@@ -102,7 +102,7 @@ final class PlatformDependent0
 					long.class
 				});
 			}
-			catch (final Throwable cause)
+			catch (Throwable cause)
 			{
 				unsafe = null;
 			}
@@ -134,7 +134,7 @@ final class PlatformDependent0
 				unalignedMethod.setAccessible(true);
 				unaligned = Boolean.TRUE.equals(unalignedMethod.invoke(null));
 			}
-			catch (final Throwable t)
+			catch (Throwable t)
 			{
 				// We at least know x86 and x64 support unaligned access.
 				final String arch = SystemPropertyUtil.get("os.arch", "");
@@ -167,7 +167,7 @@ final class PlatformDependent0
 			}
 			cleaner.clean();
 		}
-		catch (final Throwable t)
+		catch (Throwable t)
 		{
 			// Nothing we can do here.
 		}

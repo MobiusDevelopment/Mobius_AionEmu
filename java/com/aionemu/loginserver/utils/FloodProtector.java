@@ -68,7 +68,7 @@ public class FloodProtector
 	public boolean tooFast(String ip)
 	{
 		final String[] exclIps = Config.EXCLUDED_IP.split(",");
-		for (final String exclIp : exclIps)
+		for (String exclIp : exclIps)
 		{
 			if (ip.equals(exclIp))
 			{

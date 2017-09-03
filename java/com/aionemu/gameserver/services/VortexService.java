@@ -61,7 +61,7 @@ public class VortexService
 		if (CustomConfig.VORTEX_ENABLED)
 		{
 			vortex = DataManager.VORTEX_DATA.getVortexLocations();
-			for (final VortexLocation loc : getVortexLocations().values())
+			for (VortexLocation loc : getVortexLocations().values())
 			{
 				spawn(loc, VortexStateType.PEACE);
 			}
@@ -77,9 +77,9 @@ public class VortexService
 		if (CustomConfig.VORTEX_ENABLED)
 		{
 			vortexSchedule = VortexSchedule.load();
-			for (final Vortex vortex : vortexSchedule.getVortexsList())
+			for (Vortex vortex : vortexSchedule.getVortexsList())
 			{
-				for (final String invasionTime : vortex.getInvasionTimes())
+				for (String invasionTime : vortex.getInvasionTimes())
 				{
 					CronService.getInstance().schedule(new VortexStartRunnable(vortex.getId()), invasionTime);
 				}
@@ -87,7 +87,7 @@ public class VortexService
 		}
 	}
 	
-	public void startInvasion(final int id)
+	public void startInvasion(int id)
 	{
 		final DimensionalVortex<?> invasion;
 		synchronized (this)
@@ -142,9 +142,9 @@ public class VortexService
 			RiftInformer.sendRiftsInfo(loc.getHomeWorldId());
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getVortexSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final VortexSpawnTemplate vortextemplate = (VortexSpawnTemplate) st;
 				if (vortextemplate.getStateType().equals(state))
@@ -248,7 +248,7 @@ public class VortexService
 	public void despawn(VortexLocation loc)
 	{
 		loc.setVortexController(null);
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();
@@ -273,7 +273,7 @@ public class VortexService
 	
 	public void removeDefenderPlayer(Player player)
 	{
-		for (final DimensionalVortex<?> invasion : activeInvasions.values())
+		for (DimensionalVortex<?> invasion : activeInvasions.values())
 		{
 			if (invasion.getDefenders().containsKey(player.getObjectId()))
 			{
@@ -285,7 +285,7 @@ public class VortexService
 	
 	public void removeInvaderPlayer(Player player)
 	{
-		for (final DimensionalVortex<?> invasion : activeInvasions.values())
+		for (DimensionalVortex<?> invasion : activeInvasions.values())
 		{
 			if (invasion.getInvaders().containsKey(player.getObjectId()))
 			{
@@ -297,7 +297,7 @@ public class VortexService
 	
 	public boolean isInvaderPlayer(Player player)
 	{
-		for (final DimensionalVortex<?> invasion : activeInvasions.values())
+		for (DimensionalVortex<?> invasion : activeInvasions.values())
 		{
 			if (invasion.getInvaders().containsKey(player.getObjectId()))
 			{

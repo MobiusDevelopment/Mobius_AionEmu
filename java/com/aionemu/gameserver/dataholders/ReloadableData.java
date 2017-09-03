@@ -61,7 +61,7 @@ public abstract class ReloadableData
 		{
 			schema = sf.newSchema(new File(xml_schema));
 		}
-		catch (final SAXException saxe)
+		catch (SAXException saxe)
 		{
 			throw new Error("Error while getting schema", saxe);
 		}

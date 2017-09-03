@@ -46,7 +46,7 @@ public class MoltenusData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final MoltenusTemplate template : moltenusTemplates)
+		for (MoltenusTemplate template : moltenusTemplates)
 		{
 			moltenus.put(template.getId(), new MoltenusLocation(template));
 		}

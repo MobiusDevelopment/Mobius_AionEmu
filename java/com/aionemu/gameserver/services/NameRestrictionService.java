@@ -45,7 +45,7 @@ public class NameRestrictionService
 		{
 			forbiddenByClient = NameConfig.NAME_FORBIDDEN_CLIENT.split(",");
 		}
-		for (final String s : forbiddenByClient)
+		for (String s : forbiddenByClient)
 		{
 			if (name.equalsIgnoreCase(s))
 			{
@@ -65,7 +65,7 @@ public class NameRestrictionService
 		{
 			forbiddenSequences = NameConfig.NAME_SEQUENCE_FORBIDDEN.toLowerCase().split(",");
 		}
-		for (final String s : forbiddenSequences)
+		for (String s : forbiddenSequences)
 		{
 			if (name.toLowerCase().contains(s))
 			{
@@ -77,7 +77,7 @@ public class NameRestrictionService
 	
 	public static String filterMessage(String message)
 	{
-		for (final String word : message.split(" "))
+		for (String word : message.split(" "))
 		{
 			if (isForbiddenWord(word))
 			{

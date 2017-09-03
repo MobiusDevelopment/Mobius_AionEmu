@@ -76,15 +76,15 @@ public class _25324Tenacious_Spree extends QuestHandler
 	{
 		qe.registerQuestNpc(805343).addOnQuestStart(questId); // Mashinee.
 		qe.registerQuestNpc(805343).addOnTalkEvent(questId); // Mashinee.
-		for (final int mob : Enshar)
+		for (int mob : Enshar)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : Levinshor)
+		for (int mob : Levinshor)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : Kaldor)
+		for (int mob : Kaldor)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

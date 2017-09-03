@@ -53,14 +53,14 @@ public class _2136TheLostAxe extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestItem(182203130, questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		int targetId = 0;

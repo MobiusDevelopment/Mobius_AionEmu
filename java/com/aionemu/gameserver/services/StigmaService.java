@@ -71,7 +71,7 @@ public class StigmaService
 		return price;
 	}
 	
-	public static boolean notifyEquipAction(final Player player, Item resultItem, long slot)
+	public static boolean notifyEquipAction(Player player, Item resultItem, long slot)
 	{
 		if (resultItem.getItemTemplate().isStigma())
 		{
@@ -106,7 +106,7 @@ public class StigmaService
 			for (int i = 1; i <= player.getLevel(); i++)
 			{
 				final SkillLearnTemplate[] skillTemplates = DataManager.SKILL_TREE_DATA.getTemplatesFor(player.getPlayerClass(), i, player.getRace());
-				for (final SkillLearnTemplate skillTree : skillTemplates)
+				for (SkillLearnTemplate skillTree : skillTemplates)
 				{
 					if (resultItem.getSkillGroup().equals(skillTree.getSkillGroup()))
 					{
@@ -138,16 +138,16 @@ public class StigmaService
 					return false;
 				}
 			}
-			for (final Item item : player.getEquipment().getEquippedItemsAllStigma())
+			for (Item item : player.getEquipment().getEquippedItemsAllStigma())
 			{
 				final Stigma si = item.getItemTemplate().getStigma();
 				if ((resultItem == item) || (si == null))
 				{
 					continue;
 				}
-				for (final StigmaSkill skill : stigmaInfo.getSkills())
+				for (StigmaSkill skill : stigmaInfo.getSkills())
 				{
-					for (final RequireSkill rs : si.getRequireSkill())
+					for (RequireSkill rs : si.getRequireSkill())
 					{
 						if (rs.getSkillIds().contains(skill.getSkillId()))
 						{
@@ -159,11 +159,11 @@ public class StigmaService
 			}
 			PacketSendUtility.sendPacket(player, SM_CUBE_UPDATE.stigmaSlots(player.getCommonData().getAdvencedStigmaSlotSize()));
 			PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, resultItem));
-			for (final StigmaSkill skill : stigmaInfo.getSkills())
+			for (StigmaSkill skill : stigmaInfo.getSkills())
 			{
 				final String skillStack = DataManager.SKILL_DATA.getSkillTemplate(skill.getSkillId()).getStack();
 				final PlayerSkillEntry[] skillTemplates = player.getSkillList().getStigmaSkills();
-				for (final PlayerSkillEntry skillTree : skillTemplates)
+				for (PlayerSkillEntry skillTree : skillTemplates)
 				{
 					if (skillTree.getSkillTemplate().getStack().equals(skillStack))
 					{
@@ -192,12 +192,12 @@ public class StigmaService
 	public static void onPlayerLogin(Player player)
 	{
 		final List<Item> equippedItems = player.getEquipment().getEquippedItemsAllStigma();
-		for (final Item item : equippedItems)
+		for (Item item : equippedItems)
 		{
 			for (int i = 1; i <= player.getLevel(); i++)
 			{
 				final SkillLearnTemplate[] skillTemplates = DataManager.SKILL_TREE_DATA.getTemplatesFor(player.getPlayerClass(), i, player.getRace());
-				for (final SkillLearnTemplate skillTree : skillTemplates)
+				for (SkillLearnTemplate skillTree : skillTemplates)
 				{
 					if (item.getItemTemplate().isStigma() && item.getSkillGroup().equals(skillTree.getSkillGroup()))
 					{
@@ -207,7 +207,7 @@ public class StigmaService
 				}
 			}
 		}
-		for (final Item item : equippedItems)
+		for (Item item : equippedItems)
 		{
 			if (item.getItemTemplate().isStigma())
 			{
@@ -224,9 +224,9 @@ public class StigmaService
 					continue;
 				}
 				int needSkill = stigmaInfo.getRequireSkill().size();
-				for (final RequireSkill rs : stigmaInfo.getRequireSkill())
+				for (RequireSkill rs : stigmaInfo.getRequireSkill())
 				{
-					for (final int id : rs.getSkillIds())
+					for (int id : rs.getSkillIds())
 					{
 						if (player.getSkillList().isSkillPresent(id))
 						{

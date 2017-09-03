@@ -78,7 +78,7 @@ public class WarehouseExpandTemplate
 	 */
 	public boolean contains(int level)
 	{
-		for (final Expand expand : warehouseExpands)
+		for (Expand expand : warehouseExpands)
 		{
 			if (expand.getLevel() == level)
 			{
@@ -94,7 +94,7 @@ public class WarehouseExpandTemplate
 	 */
 	public Expand get(int level)
 	{
-		for (final Expand expand : warehouseExpands)
+		for (Expand expand : warehouseExpands)
 		{
 			if (expand.getLevel() == level)
 			{

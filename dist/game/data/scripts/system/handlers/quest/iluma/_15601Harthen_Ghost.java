@@ -56,7 +56,7 @@ public class _15601Harthen_Ghost extends QuestHandler
 		qe.registerQuestNpc(806158).addOnTalkEvent(questId); // Luabo.
 		qe.registerQuestNpc(806193).addOnTalkEvent(questId); // Harden Ghost.
 		qe.registerQuestNpc(703135).addOnTalkEvent(questId); // 낡은 해적의 상자.
-		for (final int boss : LF6B224NamedSkeletonKing70Al)
+		for (int boss : LF6B224NamedSkeletonKing70Al)
 		{
 			qe.registerQuestNpc(boss).addOnKillEvent(questId);
 		}

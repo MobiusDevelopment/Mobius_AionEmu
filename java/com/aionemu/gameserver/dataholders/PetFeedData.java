@@ -51,7 +51,7 @@ public class PetFeedData
 		{
 			return;
 		}
-		for (final PetFlavour flavour : flavours)
+		for (PetFlavour flavour : flavours)
 		{
 			petFlavoursById.put(flavour.getId(), flavour);
 		}

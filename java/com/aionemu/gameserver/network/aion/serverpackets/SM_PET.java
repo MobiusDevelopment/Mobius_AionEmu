@@ -127,7 +127,7 @@ public class SM_PET extends AionServerPacket
 			case 0:
 				writeC(0);
 				writeH(pets.size());
-				for (final PetCommonData petCommonData : pets)
+				for (PetCommonData petCommonData : pets)
 				{
 					petTemplate = DataManager.PET_DATA.getPetTemplate(petCommonData.getPetId());
 					final int expireTime = petCommonData.getExpireTime();

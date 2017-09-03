@@ -51,7 +51,7 @@ public class AbsoluteStatsData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final AbsoluteStatsTemplate stats : absoluteStats)
+		for (AbsoluteStatsTemplate stats : absoluteStats)
 		{
 			absoluteStatsData.put(stats.getId(), stats.getModifiers());
 		}

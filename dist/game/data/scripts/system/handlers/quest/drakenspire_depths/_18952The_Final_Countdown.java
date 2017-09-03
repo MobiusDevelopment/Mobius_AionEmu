@@ -54,7 +54,7 @@ public class _18952The_Final_Countdown extends QuestHandler
 		qe.registerQuestNpc(209678).addOnQuestStart(questId);
 		qe.registerQuestNpc(209678).addOnTalkEvent(questId);
 		qe.registerQuestNpc(804711).addOnTalkEvent(questId);
-		for (final int mob_id : boss)
+		for (int mob_id : boss)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

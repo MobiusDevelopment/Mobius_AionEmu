@@ -53,7 +53,7 @@ public class _29645A_Tidy_Supply_Route extends QuestHandler
 		qe.registerQuestNpc(804662).addOnQuestStart(questId);
 		qe.registerQuestNpc(804662).addOnTalkEvent(questId);
 		qe.registerQuestNpc(804719).addOnTalkEvent(questId); // DF5 Haldor.
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -77,7 +77,7 @@ public class ZoneData
 	{
 		int lastMapId = 0;
 		int weatherZoneId = 1;
-		for (final ZoneTemplate zone : zoneList)
+		for (ZoneTemplate zone : zoneList)
 		{
 			Area area = null;
 			switch (zone.getAreaType())
@@ -151,7 +151,7 @@ public class ZoneData
 		{
 			schema = sf.newSchema(new File("./data/static_data/zones/zones.xsd"));
 		}
-		catch (final SAXException e1)
+		catch (SAXException e1)
 		{
 			log.error("Error while saving data: " + e1.getMessage(), e1.getCause());
 			return;
@@ -168,7 +168,7 @@ public class ZoneData
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			marshaller.marshal(this, xml);
 		}
-		catch (final JAXBException e)
+		catch (JAXBException e)
 		{
 			log.error("Error while saving data: " + e.getMessage(), e.getCause());
 			return;

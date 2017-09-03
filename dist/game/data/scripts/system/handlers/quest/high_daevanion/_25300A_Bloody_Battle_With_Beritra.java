@@ -56,7 +56,7 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 			805366,
 			805377
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

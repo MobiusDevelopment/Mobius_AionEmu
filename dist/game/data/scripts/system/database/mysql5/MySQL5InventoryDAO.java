@@ -132,7 +132,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			}
 			rset.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore storage data for player: " + playerId + " from DB: " + e.getMessage(), e);
 		}
@@ -170,7 +170,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			}
 			rset.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore loadStorageDirect data for player: " + playerId + " from DB: " + e.getMessage(), e);
 		}
@@ -208,7 +208,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore Equipment data for player: " + playerId + " from DB: " + e.getMessage(), e);
 		}
@@ -243,7 +243,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore Equipment data for player: " + playerId + " from DB: " + e.getMessage(), e);
 		}
@@ -254,7 +254,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 		return items;
 	}
 	
-	private Item constructItem(final int storage, ResultSet rset) throws SQLException
+	private Item constructItem(int storage, ResultSet rset) throws SQLException
 	{
 		final int itemUniqueId = rset.getInt("item_unique_id");
 		final int itemId = rset.getInt("item_id");
@@ -289,7 +289,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 		return item;
 	}
 	
-	private int loadPlayerAccountId(final int playerId)
+	private int loadPlayerAccountId(int playerId)
 	{
 		Connection con = null;
 		int accountId = 0;
@@ -306,7 +306,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore accountId data for player: " + playerId + " from DB: " + e.getMessage(), e);
 		}
@@ -317,7 +317,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 		return accountId;
 	}
 	
-	public int loadLegionId(final int playerId)
+	public int loadLegionId(int playerId)
 	{
 		Connection con = null;
 		int legionId = 0;
@@ -334,7 +334,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Failed to load legion id for player id: " + playerId, e);
 		}
@@ -374,7 +374,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 		Integer accountId = null;
 		Integer legionId = null;
 		
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			
 			if ((accountId == null) && (item.getItemLocation() == StorageType.ACCOUNT_WAREHOUSE.getId()))
@@ -415,7 +415,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			insertResult = insertItems(con, itemsToInsert, playerId, accountId, legionId);
 			updateResult = updateItems(con, itemsToUpdate, playerId, accountId, legionId);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't open connection to save player inventory: " + playerId);
 		}
@@ -424,7 +424,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			DatabaseFactory.close(con);
 		}
 		
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			item.setPersistentState(PersistentState.UPDATED);
 		}
@@ -465,7 +465,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 		{
 			stmt = con.prepareStatement(INSERT_QUERY);
 			
-			for (final Item item : items)
+			for (Item item : items)
 			{
 				stmt.setInt(1, item.getObjectId());
 				stmt.setInt(2, item.getItemTemplate().getTemplateId());
@@ -504,7 +504,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			stmt.executeBatch();
 			con.commit();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			// log.error("Failed to execute insert batch", e);
 			return false;
@@ -529,7 +529,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 		{
 			stmt = con.prepareStatement(UPDATE_QUERY);
 			
-			for (final Item item : items)
+			for (Item item : items)
 			{
 				stmt.setLong(1, item.getItemCount());
 				stmt.setInt(2, item.getItemColor());
@@ -567,7 +567,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			stmt.executeBatch();
 			con.commit();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Failed to execute update batch", e);
 			return false;
@@ -591,7 +591,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 		try
 		{
 			stmt = con.prepareStatement(DELETE_QUERY);
-			for (final Item item : items)
+			for (Item item : items)
 			{
 				stmt.setInt(1, item.getObjectId());
 				stmt.addBatch();
@@ -600,7 +600,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			stmt.executeBatch();
 			con.commit();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Failed to execute delete batch", e);
 			return false;
@@ -616,7 +616,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 	 * Since inventory is not using FK - need to clean items
 	 */
 	@Override
-	public boolean deletePlayerItems(final int playerId)
+	public boolean deletePlayerItems(int playerId)
 	{
 		Connection con = null;
 		try
@@ -627,7 +627,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error Player all items. PlayerObjId: " + playerId, e);
 			return false;
@@ -640,7 +640,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 	}
 	
 	@Override
-	public void deleteAccountWH(final int accountId)
+	public void deleteAccountWH(int accountId)
 	{
 		Connection con = null;
 		try
@@ -651,7 +651,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error deleting all items from account WH. AccountId: " + accountId, e);
 		}
@@ -680,7 +680,7 @@ public class MySQL5InventoryDAO extends InventoryDAO
 			}
 			return ids;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't get list of id's from inventory table", e);
 		}

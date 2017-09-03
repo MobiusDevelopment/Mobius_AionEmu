@@ -39,7 +39,7 @@ public class KillSpawnedData extends MonsterHuntData
 	public void register(QuestEngine questEngine)
 	{
 		final FastMap<List<Integer>, SpawnedMonster> spawnedMonsters = new FastMap<>();
-		for (final SpawnedMonster m : spawnedMonster)
+		for (SpawnedMonster m : spawnedMonster)
 		{
 			spawnedMonsters.put(m.getNpcIds(), m);
 		}

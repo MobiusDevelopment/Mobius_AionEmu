@@ -48,7 +48,7 @@ public class _2505LetCookingExpertsCook extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(204720).addOnQuestStart(questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

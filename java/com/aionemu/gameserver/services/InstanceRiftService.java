@@ -61,7 +61,7 @@ public class InstanceRiftService
 		if (CustomConfig.INSTANCE_RIFT_ENABLED)
 		{
 			instanceRift = DataManager.INSTANCE_RIFT_DATA.getInstanceRiftLocations();
-			for (final InstanceRiftLocation loc : getInstanceRiftLocations().values())
+			for (InstanceRiftLocation loc : getInstanceRiftLocations().values())
 			{
 				spawn(loc, InstanceRiftStateType.CLOSED);
 			}
@@ -77,9 +77,9 @@ public class InstanceRiftService
 		if (CustomConfig.INSTANCE_RIFT_ENABLED)
 		{
 			instanceSchedule = InstanceSchedule.load();
-			for (final Instance instance : instanceSchedule.getInstancesList())
+			for (Instance instance : instanceSchedule.getInstancesList())
 			{
-				for (final String instanceTime : instance.getInstanceTimes())
+				for (String instanceTime : instance.getInstanceTimes())
 				{
 					CronService.getInstance().schedule(new InstanceStartRunnable(instance.getId()), instanceTime);
 				}
@@ -87,7 +87,7 @@ public class InstanceRiftService
 		}
 	}
 	
-	public void startInstanceRift(final int id)
+	public void startInstanceRift(int id)
 	{
 		final RiftInstance<?> rift;
 		synchronized (this)
@@ -135,9 +135,9 @@ public class InstanceRiftService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getInstanceRiftSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final InstanceRiftSpawnTemplate instanceRifttemplate = (InstanceRiftSpawnTemplate) st;
 				if (instanceRifttemplate.getEStateType().equals(estate))
@@ -169,7 +169,7 @@ public class InstanceRiftService
 	
 	public void despawn(InstanceRiftLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

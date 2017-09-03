@@ -72,7 +72,7 @@ public class MySQL5SurveyControllerDAO extends SurveyControllerDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.warn("getAllNew() from DB: " + e.getMessage(), e);
 		}
@@ -98,7 +98,7 @@ public class MySQL5SurveyControllerDAO extends SurveyControllerDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("useItem", e);
 			return false;

@@ -57,7 +57,7 @@ public class _4943Luck_And_Persistence extends QuestHandler
 			700538
 		};
 		qe.registerQuestNpc(204053).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

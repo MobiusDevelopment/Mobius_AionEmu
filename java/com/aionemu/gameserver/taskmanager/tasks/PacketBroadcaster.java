@@ -126,7 +126,7 @@ public final class PacketBroadcaster extends AbstractFIFOPeriodicTaskManager<Cre
 		
 		protected abstract void sendPacket(Creature creature);
 		
-		protected final void trySendPacket(final Creature creature, byte mask)
+		protected final void trySendPacket(Creature creature, byte mask)
 		{
 			if ((mask & mask()) == mask())
 			{
@@ -143,7 +143,7 @@ public final class PacketBroadcaster extends AbstractFIFOPeriodicTaskManager<Cre
 	{
 		for (byte mask; (mask = creature.getPacketBroadcastMask()) != 0;)
 		{
-			for (final BroadcastMode mode : VALUES)
+			for (BroadcastMode mode : VALUES)
 			{
 				mode.trySendPacket(creature, mask);
 			}

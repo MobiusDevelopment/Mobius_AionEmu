@@ -47,7 +47,7 @@ public class _10504Confiscate_The_Slate extends QuestHandler
 			804706,
 			702671
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

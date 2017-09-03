@@ -63,7 +63,7 @@ public class MySQL5HouseScriptsDAO extends HouseScriptsDAO
 			stmt.executeUpdate();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			// log.error("Could not save script data for houseId: " + houseId + " from DB: " + e.getMessage(), e);
 		}
@@ -93,7 +93,7 @@ public class MySQL5HouseScriptsDAO extends HouseScriptsDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			// log.error("Could not restore script data for houseId: " + houseId + " from DB: " + e.getMessage(), e);
 		}
@@ -126,7 +126,7 @@ public class MySQL5HouseScriptsDAO extends HouseScriptsDAO
 			stmt.executeUpdate();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			// log.error("Could not save script data for houseId: " + houseId + " from DB: " + e.getMessage(), e);
 		}
@@ -149,7 +149,7 @@ public class MySQL5HouseScriptsDAO extends HouseScriptsDAO
 			stmt.executeUpdate();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			// log.error("Could not delete script for houseId: " + houseId + " from DB: " + e.getMessage(), e);
 		}

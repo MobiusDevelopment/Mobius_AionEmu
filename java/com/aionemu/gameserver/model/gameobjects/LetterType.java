@@ -36,7 +36,7 @@ public enum LetterType
 	
 	public static LetterType getLetterTypeById(int id)
 	{
-		for (final LetterType lt : values())
+		for (LetterType lt : values())
 		{
 			if (lt.id == id)
 			{

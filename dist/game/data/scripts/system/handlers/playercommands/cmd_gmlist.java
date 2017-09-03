@@ -70,7 +70,7 @@ public class cmd_gmlist extends PlayerCommand
 				PacketSendUtility.sendMessage(player, "There are some Helper's Online!");
 			}
 			
-			for (final Player helper : helpers)
+			for (Player helper : helpers)
 			{
 				String tag = "";
 				if (helper.getAccessLevel() == 1)
@@ -101,7 +101,7 @@ public class cmd_gmlist extends PlayerCommand
 				PacketSendUtility.sendMessage(player, "There are some GM's Online!");
 			}
 			
-			for (final Player admin : admins)
+			for (Player admin : admins)
 			{
 				String tag = "";
 				String tagEnd = "";

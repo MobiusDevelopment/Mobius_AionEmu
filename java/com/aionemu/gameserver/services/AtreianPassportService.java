@@ -81,7 +81,7 @@ public class AtreianPassportService
 			final int newStamps = stamps + 1;
 			pcd.setPassportStamps(newStamps);
 		}
-		for (final AtreianPassport atp : cumu.values())
+		for (AtreianPassport atp : cumu.values())
 		{
 			if (atp.getPeriodStart().isBeforeNow() && atp.getPeriodEnd().isAfterNow())
 			{
@@ -110,7 +110,7 @@ public class AtreianPassportService
 				}
 			}
 		}
-		for (final AtreianPassport atp : daily.values())
+		for (AtreianPassport atp : daily.values())
 		{
 			if (atp.getPeriodStart().isBeforeNow() && atp.getPeriodEnd().isAfterNow())
 			{
@@ -179,7 +179,7 @@ public class AtreianPassportService
 	
 	private void checkCompletedPassports(PlayerCommonData pcd)
 	{
-		for (final AtreianPassport pp : pcd.getCompletedPassports().getAllPassports())
+		for (AtreianPassport pp : pcd.getCompletedPassports().getAllPassports())
 		{
 			if (pcd.getPlayerPassports().containsValue(pp))
 			{
@@ -273,7 +273,7 @@ public class AtreianPassportService
 	
 	public void onGetReward(Player player, int timestamp, List<Integer> passportId)
 	{
-		for (final Integer i : passportId)
+		for (Integer i : passportId)
 		{
 			final AtreianPassport atp = data.get(i);
 			ItemService.addItem(player, atp.getRewardItem(), atp.getRewardItemNum(), new ItemUpdatePredicate(ItemAddType.ITEM_COLLECT, ItemUpdateType.INC_PASSPORT_ADD));
@@ -289,7 +289,7 @@ public class AtreianPassportService
 	public void getPassports(Map<Integer, AtreianPassport> raw)
 	{
 		data.putAll(raw);
-		for (final AtreianPassport atp : data.values())
+		for (AtreianPassport atp : data.values())
 		{
 			switch (atp.getAttendType())
 			{

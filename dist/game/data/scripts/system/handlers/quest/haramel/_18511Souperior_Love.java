@@ -49,7 +49,7 @@ public class _18511Souperior_Love extends QuestHandler
 		};
 		qe.registerQuestNpc(799522).addOnQuestStart(questId);
 		qe.registerGetingItem(182212011, questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

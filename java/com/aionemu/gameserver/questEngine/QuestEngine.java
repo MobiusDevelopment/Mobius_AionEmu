@@ -156,7 +156,7 @@ public class QuestEngine implements GameEngine
 			else
 			{
 				final Npc npc = (Npc) env.getVisibleObject();
-				for (final int questId : getQuestNpc(npc == null ? 0 : npc.getNpcId()).getOnTalkEvent())
+				for (int questId : getQuestNpc(npc == null ? 0 : npc.getNpcId()).getOnTalkEvent())
 				{
 					questHandler = getQuestHandlerByQuestId(questId);
 					if (questHandler != null)
@@ -171,7 +171,7 @@ public class QuestEngine implements GameEngine
 				env.setQuestId(0);
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onDialog", ex);
 			return false;
@@ -184,7 +184,7 @@ public class QuestEngine implements GameEngine
 		try
 		{
 			final Npc npc = (Npc) env.getVisibleObject();
-			for (final int questId : getQuestNpc(npc.getNpcId()).getOnKillEvent())
+			for (int questId : getQuestNpc(npc.getNpcId()).getOnKillEvent())
 			{
 				final QuestHandler questHandler = getQuestHandlerByQuestId(questId);
 				if (questHandler != null)
@@ -194,7 +194,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onKill", ex);
 			return false;
@@ -207,7 +207,7 @@ public class QuestEngine implements GameEngine
 		try
 		{
 			final Npc npc = (Npc) env.getVisibleObject();
-			for (final int questId : getQuestNpc(npc.getNpcId()).getOnAttackEvent())
+			for (int questId : getQuestNpc(npc.getNpcId()).getOnAttackEvent())
 			{
 				final QuestHandler questHandler = getQuestHandlerByQuestId(questId);
 				if (questHandler != null)
@@ -217,7 +217,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onAttack", ex);
 			return false;
@@ -245,7 +245,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onLvlUp", ex);
 		}
@@ -267,7 +267,7 @@ public class QuestEngine implements GameEngine
 				questHandler.onZoneMissionEndEvent(env);
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onLvlUp", ex);
 		}
@@ -287,7 +287,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onDie", ex);
 		}
@@ -307,7 +307,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onLogOut", ex);
 		}
@@ -327,7 +327,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onNpcReachTarget", ex);
 		}
@@ -347,7 +347,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onNpcLostTarget", ex);
 		}
@@ -368,7 +368,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onFlyRingPassEvent", ex);
 		}
@@ -388,7 +388,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onEnterWorld", ex);
 		}
@@ -415,7 +415,7 @@ public class QuestEngine implements GameEngine
 			}
 			return HandlerResult.UNKNOWN;
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onItemUseEvent", ex);
 			return HandlerResult.FAILED;
@@ -473,7 +473,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onKillRanked", ex);
 			return false;
@@ -499,7 +499,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onKillInWorld", ex);
 			return false;
@@ -522,7 +522,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onEnterZone", ex);
 			return false;
@@ -548,7 +548,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onLeaveZone", ex);
 			return false;
@@ -574,7 +574,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onMovieEnd", ex);
 		}
@@ -583,7 +583,7 @@ public class QuestEngine implements GameEngine
 	
 	public void onQuestTimerEnd(QuestEnv env)
 	{
-		for (final int questId : questOnTimerEnd)
+		for (int questId : questOnTimerEnd)
 		{
 			final QuestHandler questHandler = getQuestHandlerByQuestId(questId);
 			if (questHandler != null)
@@ -596,7 +596,7 @@ public class QuestEngine implements GameEngine
 	
 	public void onInvisibleTimerEnd(QuestEnv env)
 	{
-		for (final int questId : onInvisibleTimerEnd)
+		for (int questId : onInvisibleTimerEnd)
 		{
 			final QuestHandler questHandler = getQuestHandlerByQuestId(questId);
 			if (questHandler != null)
@@ -625,7 +625,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onUseSkill", ex);
 			return false;
@@ -655,7 +655,7 @@ public class QuestEngine implements GameEngine
 		if (questOnEquipItem.containsKey(itemId))
 		{
 			final Set<Integer> questIds = questOnEquipItem.get(itemId);
-			for (final int questId : questIds)
+			for (int questId : questIds)
 			{
 				final QuestHandler questHandler = getQuestHandlerByQuestId(questId);
 				if (questHandler != null)
@@ -667,7 +667,7 @@ public class QuestEngine implements GameEngine
 		}
 	}
 	
-	public boolean onCanAct(final QuestEnv env, int templateId, final QuestActionType questActionType, final Object... objects)
+	public boolean onCanAct(QuestEnv env, int templateId, QuestActionType questActionType, Object... objects)
 	{
 		if (questCanAct.containsKey(templateId))
 		{
@@ -695,7 +695,7 @@ public class QuestEngine implements GameEngine
 	
 	public void onDredgionReward(QuestEnv env)
 	{
-		for (final int questId : questOnDredgionReward)
+		for (int questId : questOnDredgionReward)
 		{
 			final QuestHandler questHandler = getQuestHandlerByQuestId(questId);
 			if (questHandler != null)
@@ -708,7 +708,7 @@ public class QuestEngine implements GameEngine
 	
 	public void onKamarReward(QuestEnv env)
 	{
-		for (final int questId : questOnKamarReward)
+		for (int questId : questOnKamarReward)
 		{
 			final QuestHandler questHandler = getQuestHandlerByQuestId(questId);
 			if (questHandler != null)
@@ -721,7 +721,7 @@ public class QuestEngine implements GameEngine
 	
 	public void onOphidanReward(QuestEnv env)
 	{
-		for (final int questId : questOnOphidanReward)
+		for (int questId : questOnOphidanReward)
 		{
 			final QuestHandler questHandler = getQuestHandlerByQuestId(questId);
 			if (questHandler != null)
@@ -734,7 +734,7 @@ public class QuestEngine implements GameEngine
 	
 	public void onBastionReward(QuestEnv env)
 	{
-		for (final int questId : questOnBastionReward)
+		for (int questId : questOnBastionReward)
 		{
 			final QuestHandler questHandler = getQuestHandlerByQuestId(questId);
 			if (questHandler != null)
@@ -761,7 +761,7 @@ public class QuestEngine implements GameEngine
 			}
 			return HandlerResult.UNKNOWN;
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onBonusApply", ex);
 			return HandlerResult.FAILED;
@@ -773,7 +773,7 @@ public class QuestEngine implements GameEngine
 		try
 		{
 			final Npc npc = (Npc) env.getVisibleObject();
-			for (final int questId : getQuestNpc(npc.getNpcId()).getOnAddAggroListEvent())
+			for (int questId : getQuestNpc(npc.getNpcId()).getOnAddAggroListEvent())
 			{
 				final QuestHandler questHandler = getQuestHandlerByQuestId(questId);
 				if (questHandler != null)
@@ -783,7 +783,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onAddAggroList", ex);
 			return false;
@@ -811,7 +811,7 @@ public class QuestEngine implements GameEngine
 		}
 		try
 		{
-			for (final int questId : questNpc.getOnDistanceEvent())
+			for (int questId : questNpc.getOnDistanceEvent())
 			{
 				final QuestHandler questHandler = getQuestHandlerByQuestId(questId);
 				if (questHandler != null)
@@ -821,7 +821,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onAtDistance", ex);
 			return false;
@@ -843,7 +843,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onWindStream", ex);
 		}
@@ -863,7 +863,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in rideAction", ex);
 		}
@@ -883,7 +883,7 @@ public class QuestEngine implements GameEngine
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			// log.error("QE: exception in onCreativityPoint", ex);
 		}
@@ -1340,9 +1340,9 @@ public class QuestEngine implements GameEngine
 	{
 		log.info("Quest engine load started");
 		final QuestsData questData = DataManager.QUEST_DATA;
-		for (final QuestTemplate data : questData.getQuestsData())
+		for (QuestTemplate data : questData.getQuestsData())
 		{
-			for (final QuestDrop drop : data.getQuestDrop())
+			for (QuestDrop drop : data.getQuestDrop())
 			{
 				drop.setQuestId(data.getId());
 				QuestService.addQuestDrop(drop.getNpcId(), drop);
@@ -1361,13 +1361,13 @@ public class QuestEngine implements GameEngine
 			final File questDescription = new File("./data/scripts/system/quest_handlers.xml");
 			scriptManager.load(questDescription);
 			final XMLQuests xmlQuests = DataManager.XML_QUESTS;
-			for (final XMLQuest xmlQuest : xmlQuests.getQuest())
+			for (XMLQuest xmlQuest : xmlQuests.getQuest())
 			{
 				xmlQuest.register(this);
 			}
 			log.info("Loaded " + questHandlers.size() + " quest handlers.");
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new GameServerError("Can't initialize quest handlers.", e);
 		}
@@ -1379,7 +1379,7 @@ public class QuestEngine implements GameEngine
 			}
 		}
 		addMessageSendingTask();
-		for (final QuestDialog d : QuestDialog.values())
+		for (QuestDialog d : QuestDialog.values())
 		{
 			dialogMap.put(d.id(), d);
 		}
@@ -1404,9 +1404,9 @@ public class QuestEngine implements GameEngine
 			{
 				final SM_SYSTEM_MESSAGE dailyMessage = new SM_SYSTEM_MESSAGE(1400854);
 				final SM_SYSTEM_MESSAGE weeklyMessage = new SM_SYSTEM_MESSAGE(1400856);
-				for (final Player player : World.getInstance().getAllPlayers())
+				for (Player player : World.getInstance().getAllPlayers())
 				{
-					for (final QuestState qs : player.getQuestStateList().getAllQuestState())
+					for (QuestState qs : player.getQuestStateList().getAllQuestState())
 					{
 						if ((qs != null) && qs.canRepeat())
 						{

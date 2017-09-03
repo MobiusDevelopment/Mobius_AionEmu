@@ -92,7 +92,7 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 				break;
 			case 215783: // Nexus.
 			case 215795: // Debilkarim The Maker.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -139,7 +139,7 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		super.onInstanceCreate(instance);
 		if (!isStartTimer1)
@@ -531,7 +531,7 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		storage.decreaseByItemId(185000087, storage.getItemCountByItemId(185000087)); // Shadowy Prison Key.
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -554,7 +554,7 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

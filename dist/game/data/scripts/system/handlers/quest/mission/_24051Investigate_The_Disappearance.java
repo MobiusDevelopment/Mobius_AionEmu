@@ -59,7 +59,7 @@ public class _24051Investigate_The_Disappearance extends QuestHandler
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerOnEnterZone(ZoneName.get("MINE_PORT_220040000"), questId);
 		qe.registerOnEnterWorld(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
@@ -169,7 +169,7 @@ public class _24051Investigate_The_Disappearance extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
@@ -185,7 +185,7 @@ public class _24051Investigate_The_Disappearance extends QuestHandler
 	}
 	
 	@Override
-	public boolean onEnterZoneEvent(final QuestEnv env, ZoneName name)
+	public boolean onEnterZoneEvent(QuestEnv env, ZoneName name)
 	{
 		final Player player = env.getPlayer();
 		if (player == null)

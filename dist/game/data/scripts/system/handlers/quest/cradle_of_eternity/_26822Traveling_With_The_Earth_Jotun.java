@@ -51,11 +51,11 @@ public class _26822Traveling_With_The_Earth_Jotun extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : IDEternity02NepilimBoss75Ah)
+		for (int mob : IDEternity02NepilimBoss75Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

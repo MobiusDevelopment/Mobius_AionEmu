@@ -66,7 +66,7 @@ public class Siege_CommanderAI2 extends AggressiveNpcAI2
 		AI2Actions.deleteOwner(this);
 	}
 	
-	private void updateCommanderLanding1(final int id)
+	private void updateCommanderLanding1(int id)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -88,7 +88,7 @@ public class Siege_CommanderAI2 extends AggressiveNpcAI2
 		});
 	}
 	
-	private void updateCommanderLanding2(final int id)
+	private void updateCommanderLanding2(int id)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{

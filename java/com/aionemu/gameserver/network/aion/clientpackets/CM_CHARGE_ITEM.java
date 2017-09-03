@@ -63,7 +63,7 @@ public class CM_CHARGE_ITEM extends AionClientPacket
 			return; // TODO audit?
 		}
 		
-		for (final int itemObjId : itemIds)
+		for (int itemObjId : itemIds)
 		{
 			final Item item = player.getInventory().getItemByObjId(itemObjId);
 			if (item != null)

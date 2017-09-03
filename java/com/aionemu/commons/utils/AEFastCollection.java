@@ -93,7 +93,7 @@ public abstract class AEFastCollection<E> implements Collection<E>
 	{
 		boolean modified = false;
 		
-		for (final E e : c)
+		for (E e : c)
 		{
 			if (add(e))
 			{
@@ -129,7 +129,7 @@ public abstract class AEFastCollection<E> implements Collection<E>
 		
 		boolean modified = false;
 		
-		for (final E e : c)
+		for (E e : c)
 		{
 			if (add(e))
 			{
@@ -187,7 +187,7 @@ public abstract class AEFastCollection<E> implements Collection<E>
 	
 	public boolean containsAll(Object[] c)
 	{
-		for (final Object obj : c)
+		for (Object obj : c)
 		{
 			if (!contains(obj))
 			{
@@ -221,7 +221,7 @@ public abstract class AEFastCollection<E> implements Collection<E>
 			return containsAll((AEFastCollection<?>) c);
 		}
 		
-		for (final Object obj : c)
+		for (Object obj : c)
 		{
 			if (!contains(obj))
 			{

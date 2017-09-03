@@ -280,7 +280,7 @@ public class SpawnEngine
 			log.info("Spawns are disabled");
 			return;
 		}
-		for (final WorldMapTemplate worldMapTemplate : DataManager.WORLD_MAPS_DATA)
+		for (WorldMapTemplate worldMapTemplate : DataManager.WORLD_MAPS_DATA)
 		{
 			if (worldMapTemplate.isInstance())
 			{
@@ -336,7 +336,7 @@ public class SpawnEngine
 		int spawnedCounter = 0;
 		if (worldSpawns != null)
 		{
-			for (final SpawnGroup2 spawn : worldSpawns)
+			for (SpawnGroup2 spawn : worldSpawns)
 			{
 				final int difficult = spawn.getDifficultId();
 				if ((difficult != 0) && (difficult != difficultId))
@@ -381,7 +381,7 @@ public class SpawnEngine
 				}
 				else
 				{
-					for (final SpawnTemplate template : spawn.getSpawnTemplates())
+					for (SpawnTemplate template : spawn.getSpawnTemplates())
 					{
 						spawnObject(template, instanceId);
 						spawnedCounter++;

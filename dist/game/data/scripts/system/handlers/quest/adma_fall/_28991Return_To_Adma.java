@@ -46,7 +46,7 @@ public class _28991Return_To_Adma extends QuestHandler
 	{
 		qe.registerQuestNpc(806216).addOnQuestStart(questId); // Petur.
 		qe.registerQuestNpc(806216).addOnTalkEvent(questId); // Petur.
-		for (final int mob : IDF6AdmaEvilSpirit67Ah)
+		for (int mob : IDF6AdmaEvilSpirit67Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -118,7 +118,7 @@ public class MagePreceptorAI2 extends AggressiveNpcAI2
 	private Player getTargetPlayer()
 	{
 		final List<Player> players = new ArrayList<>();
-		for (final Player player : getKnownList().getKnownPlayers().values())
+		for (Player player : getKnownList().getKnownPlayers().values())
 		{
 			if (!CreatureActions.isAlreadyDead(player) && MathUtil.isIn3dRange(player, getOwner(), 37))
 			{
@@ -130,7 +130,7 @@ public class MagePreceptorAI2 extends AggressiveNpcAI2
 	
 	private void checkPercentage(int percentage)
 	{
-		for (final Integer percent : percents)
+		for (Integer percent : percents)
 		{
 			if (percentage <= percent)
 			{
@@ -186,7 +186,7 @@ public class MagePreceptorAI2 extends AggressiveNpcAI2
 	
 	private void deleteNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			if (npc != null)
 			{

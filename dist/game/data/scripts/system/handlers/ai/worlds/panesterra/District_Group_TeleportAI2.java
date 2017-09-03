@@ -58,7 +58,7 @@ public class District_Group_TeleportAI2 extends NpcAI2
 		}
 	}
 	
-	public void sendDistrictGroupRequest(final Player player)
+	public void sendDistrictGroupRequest(Player player)
 	{
 		final String message = "Accept use District Group Teleport ?";
 		final RequestResponseHandler responseHandler = new RequestResponseHandler(player)

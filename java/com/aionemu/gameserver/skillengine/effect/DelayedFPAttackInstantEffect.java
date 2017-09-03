@@ -57,7 +57,7 @@ public class DelayedFPAttackInstantEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void applyEffect(final Effect effect)
+	public void applyEffect(Effect effect)
 	{
 		final Player effected = (Player) effect.getEffected();
 		final int newValue = effect.getReserved2();

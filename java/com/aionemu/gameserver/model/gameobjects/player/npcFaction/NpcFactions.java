@@ -169,7 +169,7 @@ public class NpcFactions
 			boolean canEnter = false;
 			if (npcFactionTemplate.getCategory() == FactionCategory.COMBINESKILL)
 			{
-				for (final PlayerSkillEntry skill : owner.getSkillList().getAllSkills())
+				for (PlayerSkillEntry skill : owner.getSkillList().getAllSkills())
 				{
 					if (CraftSkillUpdateService.isCraftingSkill(skill.getSkillId()) && (skill.getSkillLevel() >= skillPoints))
 					{
@@ -213,7 +213,7 @@ public class NpcFactions
 		}
 	}
 	
-	private void askLeaveNpcFaction(final Npc npc)
+	private void askLeaveNpcFaction(Npc npc)
 	{
 		final NpcFactionTemplate npcFactionTemplate = DataManager.NPC_FACTIONS_DATA.getNpcFactionByNpcId(npc.getNpcId());
 		final NpcFaction activeNpcFaction = getActiveNpcFaction(npcFactionTemplate.isMentor());

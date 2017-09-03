@@ -101,7 +101,7 @@ public class PetService
 		schedule(pet, player, item, count, action);
 	}
 	
-	private void schedule(final Pet pet, final Player player, final Item item, final int count, final int action)
+	private void schedule(Pet pet, Player player, Item item, int count, int action)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -199,7 +199,7 @@ public class PetService
 		}
 	}
 	
-	public void useDoping(final Player player, int action, int itemId, int slot)
+	public void useDoping(Player player, int action, int itemId, int slot)
 	{
 		final Pet pet = player.getPet();
 		if ((pet == null) || (pet.getCommonData().getDopingBag() == null))
@@ -247,7 +247,7 @@ public class PetService
 					break;
 				}
 				player.getController().cancelCurrentSkill();
-				for (final AbstractItemAction itemAction : itemActions.getItemActions())
+				for (AbstractItemAction itemAction : itemActions.getItemActions())
 				{
 					if (itemAction.canAct(player, useItem, null))
 					{
@@ -263,7 +263,7 @@ public class PetService
 		itemId = pet.getCommonData().getDopingBag().getDrinkItem();
 		totalDopes += player.getInventory().getItemCountByItemId(itemId);
 		final int[] scrollBag = pet.getCommonData().getDopingBag().getScrollsUsed();
-		for (final int element : scrollBag)
+		for (int element : scrollBag)
 		{
 			if (element != 0)
 			{
@@ -277,7 +277,7 @@ public class PetService
 		}
 	}
 	
-	public void activateLoot(final Player player, final boolean activate)
+	public void activateLoot(Player player, boolean activate)
 	{
 		if (player.getPet() == null)
 		{
@@ -300,7 +300,7 @@ public class PetService
 		PacketSendUtility.sendPacket(player, new SM_PET(activate));
 	}
 	
-	public void activeCheering(final Player player, final boolean activate)
+	public void activeCheering(Player player, boolean activate)
 	{
 		final Pet pet = player.getPet();
 		final PetTemplate petTemp = DataManager.PET_DATA.getPetTemplate(pet.getPetId());
@@ -326,7 +326,7 @@ public class PetService
 		}
 	}
 	
-	public void activeAutoSell(final Player player, final boolean activate)
+	public void activeAutoSell(Player player, boolean activate)
 	{
 		final Pet pet = player.getPet();
 		final PetTemplate petTemp = DataManager.PET_DATA.getPetTemplate(pet.getPetId());

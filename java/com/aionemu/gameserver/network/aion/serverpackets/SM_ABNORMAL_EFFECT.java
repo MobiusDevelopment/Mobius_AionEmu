@@ -58,7 +58,7 @@ public class SM_ABNORMAL_EFFECT extends AionServerPacket
 		writeC(0x7F);// unk 4.5
 		writeH(filtered.size()); // effects size
 		
-		for (final Effect effect : filtered)
+		for (Effect effect : filtered)
 		{
 			switch (effectType)
 			{

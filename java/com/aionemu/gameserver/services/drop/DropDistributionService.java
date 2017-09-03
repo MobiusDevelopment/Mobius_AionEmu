@@ -66,7 +66,7 @@ public class DropDistributionService
 				luck = Rnd.get(1, 100);
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_DICE_RESULT_ME(luck, 100));
 			}
-			for (final Player member : dropNpc.getInRangePlayers())
+			for (Player member : dropNpc.getInRangePlayers())
 			{
 				if (member == null)
 				{
@@ -119,7 +119,7 @@ public class DropDistributionService
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_PAY_GIVEUP_ME);
 			}
 			
-			for (final Player member : dropNpc.getInRangePlayers())
+			for (Player member : dropNpc.getInRangePlayers())
 			{
 				if (member == null)
 				{
@@ -161,7 +161,7 @@ public class DropDistributionService
 		
 		synchronized (dropItems)
 		{
-			for (final DropItem dropItem : dropItems)
+			for (DropItem dropItem : dropItems)
 			{
 				if (dropItem.getIndex() == dropNpc.getCurrentIndex())
 				{
@@ -195,7 +195,7 @@ public class DropDistributionService
 		
 		if (player.isInGroup2() || player.isInAlliance2())
 		{
-			for (final Player member : dropNpc.getInRangePlayers())
+			for (Player member : dropNpc.getInRangePlayers())
 			{
 				if (member == null)
 				{

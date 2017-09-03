@@ -42,7 +42,7 @@ public class CoalescenceService
 {
 	private static final int ItemId = 0;
 	
-	public static void startCoalescence(final Player player, final int upgradedItemObjectId, final List<Integer> ItemsList)
+	public static void startCoalescence(Player player, int upgradedItemObjectId, List<Integer> ItemsList)
 	{
 		final Item firstItem = player.getInventory().getItemByObjId(upgradedItemObjectId);
 		final List<Integer> list = new ArrayList<>();
@@ -54,7 +54,7 @@ public class CoalescenceService
 		}
 		
 		// check if item is in bag
-		for (final Integer ItemObjId : ItemsList)
+		for (Integer ItemObjId : ItemsList)
 		{
 			if (player.getInventory().getItemByObjId(ItemObjId).getItemCount() > 0)
 			{
@@ -68,7 +68,7 @@ public class CoalescenceService
 		}
 		
 		// get random item
-		for (final ItemTemplate template : DataManager.ITEM_DATA.getItemData().valueCollection())
+		for (ItemTemplate template : DataManager.ITEM_DATA.getItemData().valueCollection())
 		{
 			if (template.getCategory() == firstItem.getItemTemplate().getCategory())
 			{
@@ -169,7 +169,7 @@ public class CoalescenceService
 			{
 				final int random = list.get(new Random().nextInt(list.size()));
 				final int description = DataManager.ITEM_DATA.getItemTemplate(random).getNameId();
-				for (final Integer ItemObjId : ItemsList)
+				for (Integer ItemObjId : ItemsList)
 				{
 					player.getInventory().decreaseByObjectId(ItemObjId, 1);
 				}

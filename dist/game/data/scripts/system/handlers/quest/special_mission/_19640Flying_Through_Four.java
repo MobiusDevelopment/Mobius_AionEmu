@@ -49,7 +49,7 @@ public class _19640Flying_Through_Four extends QuestHandler
 		qe.registerQuestNpc(799022).addOnQuestStart(questId);
 		qe.registerQuestNpc(799022).addOnTalkEvent(questId);
 		qe.registerQuestNpc(798991).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -47,7 +47,7 @@ public class PetBuffData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final PetBonusAttr template : petBonusattr)
+		for (PetBonusAttr template : petBonusattr)
 		{
 			templates.put(template.getBuffId(), template);
 			templates.put(template.getFoodCount(), template);

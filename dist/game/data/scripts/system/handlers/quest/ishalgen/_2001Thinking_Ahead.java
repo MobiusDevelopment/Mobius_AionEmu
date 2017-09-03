@@ -49,7 +49,7 @@ public class _2001Thinking_Ahead extends QuestHandler
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerQuestNpc(203518).addOnTalkEvent(questId);
 		qe.registerQuestNpc(700093).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

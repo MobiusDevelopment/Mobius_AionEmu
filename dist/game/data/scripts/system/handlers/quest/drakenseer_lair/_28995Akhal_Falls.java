@@ -46,7 +46,7 @@ public class _28995Akhal_Falls extends QuestHandler
 	{
 		qe.registerQuestNpc(806242).addOnQuestStart(questId); // Bakao.
 		qe.registerQuestNpc(806242).addOnTalkEvent(questId); // Bakao.
-		for (final int mob : IDF6DragonMessenger69Ah)
+		for (int mob : IDF6DragonMessenger69Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

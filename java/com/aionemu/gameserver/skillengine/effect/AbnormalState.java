@@ -64,7 +64,7 @@ public enum AbnormalState
 	
 	public static AbnormalState getIdByName(String name)
 	{
-		for (final AbnormalState id : values())
+		for (AbnormalState id : values())
 		{
 			if (id.name().equals(name))
 			{
@@ -76,7 +76,7 @@ public enum AbnormalState
 	
 	public static AbnormalState getStateById(int id)
 	{
-		for (final AbnormalState as : values())
+		for (AbnormalState as : values())
 		{
 			if (as.getId() == id)
 			{

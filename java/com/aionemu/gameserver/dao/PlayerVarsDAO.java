@@ -31,9 +31,9 @@ public abstract class PlayerVarsDAO implements DAO
 		return PlayerVarsDAO.class.getName();
 	}
 	
-	public abstract Map<String, Object> load(final int playerId);
+	public abstract Map<String, Object> load(int playerId);
 	
-	public abstract boolean set(final int playerId, final String key, final Object value);
+	public abstract boolean set(int playerId, String key, Object value);
 	
-	public abstract boolean remove(final int playerId, final String key);
+	public abstract boolean remove(int playerId, String key);
 }

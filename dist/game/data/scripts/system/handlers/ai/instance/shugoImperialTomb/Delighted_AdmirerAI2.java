@@ -39,7 +39,7 @@ public class Delighted_AdmirerAI2 extends GeneralNpcAI2
 	}
 	
 	@Override
-	public boolean onDialogSelect(final Player player, int dialogId, int questId, int extendedRewardIndex)
+	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		final int instanceId = getPosition().getInstanceId();
 		if (dialogId == 10001)

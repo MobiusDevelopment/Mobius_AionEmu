@@ -38,7 +38,7 @@ public class BleedEffect extends AbstractOverTimeEffect
 	}
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		final int valueWithDelta = value + (delta * effect.getSkillLevel());
 		final int critAddDmg = critAddDmg2 + (critAddDmg1 * effect.getSkillLevel());

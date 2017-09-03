@@ -167,7 +167,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 			{
 				completed = exec();
 			}
-			catch (final Throwable rex)
+			catch (Throwable rex)
 			{
 				return setExceptionalCompletion(rex);
 			}
@@ -210,7 +210,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 						{
 							wait();
 						}
-						catch (final InterruptedException ie)
+						catch (InterruptedException ie)
 						{
 							interrupted = true;
 						}
@@ -390,7 +390,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 			{
 				t.cancel(false);
 			}
-			catch (final Throwable ignore)
+			catch (Throwable ignore)
 			{
 			}
 		}
@@ -478,7 +478,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 			{
 				Constructor<?> noArgCtor = null;
 				final Constructor<?>[] cs = ec.getConstructors();// public ctors only
-				for (final Constructor<?> c : cs)
+				for (Constructor<?> c : cs)
 				{
 					final Class<?>[] ps = c.getParameterTypes();
 					if (ps.length == 0)
@@ -497,7 +497,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 					return wx;
 				}
 			}
-			catch (final Exception ignore)
+			catch (Exception ignore)
 			{
 			}
 		}
@@ -562,7 +562,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	/**
 	 * A version of "sneaky throw" to relay exceptions
 	 */
-	static void rethrow(final Throwable ex)
+	static void rethrow(Throwable ex)
 	{
 		if (ex != null)
 		{
@@ -870,7 +870,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 		{
 			setRawResult(value);
 		}
-		catch (final Throwable rex)
+		catch (Throwable rex)
 		{
 			setExceptionalCompletion(rex);
 			return;
@@ -981,7 +981,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 									{
 										wait(ms);
 									}
-									catch (final InterruptedException ie)
+									catch (InterruptedException ie)
 									{
 										if (p == null)
 										{
@@ -1390,15 +1390,15 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 				result = callable.call();
 				return true;
 			}
-			catch (final Error err)
+			catch (Error err)
 			{
 				throw err;
 			}
-			catch (final RuntimeException rex)
+			catch (RuntimeException rex)
 			{
 				throw rex;
 			}
-			catch (final Exception ex)
+			catch (Exception ex)
 			{
 				throw new RuntimeException(ex);
 			}
@@ -1485,7 +1485,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 			final Class<?> k = ForkJoinTask.class;
 			STATUS = U.objectFieldOffset(k.getDeclaredField("status"));
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new Error(e);
 		}
@@ -1501,7 +1501,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 		{
 			return sun.misc.Unsafe.getUnsafe();
 		}
-		catch (final SecurityException tryReflectionInstead)
+		catch (SecurityException tryReflectionInstead)
 		{
 		}
 		try
@@ -1512,7 +1512,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 				public sun.misc.Unsafe run() throws Exception
 				{
 					final Class<sun.misc.Unsafe> k = sun.misc.Unsafe.class;
-					for (final java.lang.reflect.Field f : k.getDeclaredFields())
+					for (java.lang.reflect.Field f : k.getDeclaredFields())
 					{
 						f.setAccessible(true);
 						final Object x = f.get(null);
@@ -1525,7 +1525,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 				}
 			});
 		}
-		catch (final java.security.PrivilegedActionException e)
+		catch (java.security.PrivilegedActionException e)
 		{
 			throw new RuntimeException("Could not initialize intrinsics", e.getCause());
 		}

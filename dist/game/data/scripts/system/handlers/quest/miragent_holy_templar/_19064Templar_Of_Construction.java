@@ -54,7 +54,7 @@ public class _19064Templar_Of_Construction extends QuestHandler
 			203752
 		};
 		qe.registerQuestNpc(203701).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

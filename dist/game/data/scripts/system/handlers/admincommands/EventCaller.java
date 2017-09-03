@@ -58,7 +58,7 @@ public class EventCaller extends AdminCommand
 			PacketSendUtility.sendMessage(player, "==================================");
 			final Collection<Player> players = World.getInstance().getAllPlayers();
 			
-			for (final Player p : players)
+			for (Player p : players)
 			{
 				if (p.isRegedEvent())
 				{

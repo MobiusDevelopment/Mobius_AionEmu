@@ -71,7 +71,7 @@ public class PetFlavour
 	 */
 	public FoodType getFoodType(int itemId)
 	{
-		for (final PetRewards rewards : getFood())
+		for (PetRewards rewards : getFood())
 		{
 			if (DataManager.ITEM_GROUPS_DATA.isFood(itemId, rewards.getType()))
 			{
@@ -90,7 +90,7 @@ public class PetFlavour
 	public PetFeedResult processFeedResult(PetFeedProgress progress, FoodType foodType, int itemLevel, int playerLevel)
 	{
 		PetRewards rewardGroup = null;
-		for (final PetRewards rewards : getFood())
+		for (PetRewards rewards : getFood())
 		{
 			if (rewards.getType() == foodType)
 			{
@@ -125,7 +125,7 @@ public class PetFlavour
 	public boolean isLovedFood(FoodType foodType, int itemId)
 	{
 		PetRewards rewardGroup = null;
-		for (final PetRewards rewards : getFood())
+		for (PetRewards rewards : getFood())
 		{
 			if (rewards.getType() == foodType)
 			{

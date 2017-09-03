@@ -43,7 +43,7 @@ public class HotspotLocationData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final HotspotlocationTemplate loc : hslist)
+		for (HotspotlocationTemplate loc : hslist)
 		{
 			lochslistData.put(loc.getLocId(), loc);
 		}

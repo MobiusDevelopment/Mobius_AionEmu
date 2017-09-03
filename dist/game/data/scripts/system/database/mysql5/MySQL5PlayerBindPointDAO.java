@@ -73,7 +73,7 @@ public class MySQL5PlayerBindPointDAO extends PlayerBindPointDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore BindPointPosition data for playerObjId: " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -102,7 +102,7 @@ public class MySQL5PlayerBindPointDAO extends PlayerBindPointDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store BindPointPosition data for player " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 			return false;
@@ -133,7 +133,7 @@ public class MySQL5PlayerBindPointDAO extends PlayerBindPointDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not update BindPointPosition data for player " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 			return false;
@@ -146,7 +146,7 @@ public class MySQL5PlayerBindPointDAO extends PlayerBindPointDAO
 	}
 	
 	@Override
-	public boolean store(final Player player)
+	public boolean store(Player player)
 	{
 		boolean insert = false;
 		final BindPointPosition bind = player.getBindPoint();

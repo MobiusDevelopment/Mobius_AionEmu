@@ -171,7 +171,7 @@ public class _2994A_New_Choice extends QuestHandler
 	private int getItem(int dialogId)
 	{
 		int x = 0;
-		for (final int id : dialogs)
+		for (int id : dialogs)
 		{
 			if (id == dialogId)
 			{

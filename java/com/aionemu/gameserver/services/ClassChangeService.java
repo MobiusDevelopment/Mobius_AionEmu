@@ -97,7 +97,7 @@ public class ClassChangeService
 		}
 	}
 	
-	public static void changeClassToSelection(final Player player, final int dialogId)
+	public static void changeClassToSelection(Player player, int dialogId)
 	{
 		final Race playerRace = player.getRace();
 		if (CustomConfig.ENABLE_SIMPLE_2NDCLASS)

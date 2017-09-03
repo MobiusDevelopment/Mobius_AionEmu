@@ -146,14 +146,14 @@ public class ObserveController
 		}
 		
 		// notify outside of lock
-		for (final ActionObserver observer : tempOnceused)
+		for (ActionObserver observer : tempOnceused)
 		{
 			notifyAction(type, observer, object);
 		}
 		
 		if (observers.size() > 0)
 		{
-			for (final ActionObserver observer : observers)
+			for (ActionObserver observer : observers)
 			{
 				if (observer.getObserverType().matchesObserver(type))
 				{
@@ -309,7 +309,7 @@ public class ObserveController
 	{
 		if (attackCalcObservers.size() > 0)
 		{
-			for (final AttackCalcObserver observer : attackCalcObservers)
+			for (AttackCalcObserver observer : attackCalcObservers)
 			{
 				if (observer.checkStatus(status))
 				{
@@ -328,7 +328,7 @@ public class ObserveController
 	{
 		if (attackCalcObservers.size() > 0)
 		{
-			for (final AttackCalcObserver observer : attackCalcObservers)
+			for (AttackCalcObserver observer : attackCalcObservers)
 			{
 				if (observer.checkAttackerStatus(status))
 				{
@@ -343,7 +343,7 @@ public class ObserveController
 	{
 		if (attackCalcObservers.size() > 0)
 		{
-			for (final AttackCalcObserver observer : attackCalcObservers)
+			for (AttackCalcObserver observer : attackCalcObservers)
 			{
 				final AttackerCriticalStatus acStatus = observer.checkAttackerCriticalStatus(status, isSkill);
 				if (acStatus.isResult())
@@ -362,7 +362,7 @@ public class ObserveController
 	{
 		if (attackCalcObservers.size() > 0)
 		{
-			for (final AttackCalcObserver observer : attackCalcObservers)
+			for (AttackCalcObserver observer : attackCalcObservers)
 			{
 				observer.checkShield(attackList, effect, attacker);
 			}
@@ -374,7 +374,7 @@ public class ObserveController
 		float multiplier = 1;
 		if (attackCalcObservers.size() > 0)
 		{
-			for (final AttackCalcObserver observer : attackCalcObservers)
+			for (AttackCalcObserver observer : attackCalcObservers)
 			{
 				multiplier *= observer.getBasePhysicalDamageMultiplier(isSkill);
 			}
@@ -387,7 +387,7 @@ public class ObserveController
 		float multiplier = 1;
 		if (attackCalcObservers.size() > 0)
 		{
-			for (final AttackCalcObserver observer : attackCalcObservers)
+			for (AttackCalcObserver observer : attackCalcObservers)
 			{
 				multiplier *= observer.getBaseMagicalDamageMultiplier();
 			}

@@ -54,7 +54,7 @@ public class MySQL5PetitionDAO extends PetitionDAO
 			result = rset.getInt("nextid") + 1;
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Cannot get next available petition id", e);
 			return 0;
@@ -102,7 +102,7 @@ public class MySQL5PetitionDAO extends PetitionDAO
 			
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Cannot get petition #" + petitionId, e);
 		}
@@ -146,7 +146,7 @@ public class MySQL5PetitionDAO extends PetitionDAO
 			}
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Cannot get next available petition id", e);
 			return null;
@@ -170,7 +170,7 @@ public class MySQL5PetitionDAO extends PetitionDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Cannot delete petition", e);
 		}
@@ -200,7 +200,7 @@ public class MySQL5PetitionDAO extends PetitionDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Cannot insert petition", e);
 		}
@@ -223,7 +223,7 @@ public class MySQL5PetitionDAO extends PetitionDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Cannot set petition replied", e);
 		}

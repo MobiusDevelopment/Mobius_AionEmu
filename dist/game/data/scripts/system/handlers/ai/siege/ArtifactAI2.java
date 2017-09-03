@@ -68,7 +68,7 @@ public class ArtifactAI2 extends NpcAI2
 	}
 	
 	@Override
-	protected void handleDialogStart(final Player player)
+	protected void handleDialogStart(Player player)
 	{
 		final ArtifactLocation loc = SiegeService.getInstance().getArtifact(getSpawnTemplate().getSiegeId());
 		AI2Actions.addRequest(this, player, 160028, new AI2Request()
@@ -101,7 +101,7 @@ public class ArtifactAI2 extends NpcAI2
 	{
 	}
 	
-	public void onActivate(final Player player)
+	public void onActivate(Player player)
 	{
 		final ArtifactLocation loc = SiegeService.getInstance().getArtifact(getSpawnTemplate().getSiegeId());
 		final ArtifactActivation activation = loc.getTemplate().getActivation();
@@ -271,7 +271,7 @@ public class ArtifactAI2 extends NpcAI2
 				}
 			});
 			final boolean pc = skill.getProperties().getTargetSpecies() == TargetSpeciesAttribute.PC;
-			for (final Creature creature : artifact.getCreatures().values())
+			for (Creature creature : artifact.getCreatures().values())
 			{
 				if ((creature.getActingCreature() instanceof Player) || ((creature instanceof SiegeNpc) && !pc))
 				{

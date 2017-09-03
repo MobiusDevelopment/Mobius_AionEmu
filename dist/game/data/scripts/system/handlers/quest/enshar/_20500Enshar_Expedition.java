@@ -50,7 +50,7 @@ public class _20500Enshar_Expedition extends QuestHandler
 			804719,
 			804718
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
@@ -134,7 +134,7 @@ public class _20500Enshar_Expedition extends QuestHandler
 						20506,
 						20507
 					};
-					for (final int quest : ensharMission)
+					for (int quest : ensharMission)
 					{
 						QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
 					}

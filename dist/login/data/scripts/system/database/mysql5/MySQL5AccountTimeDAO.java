@@ -41,7 +41,7 @@ public class MySQL5AccountTimeDAO extends AccountTimeDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean updateAccountTime(final int accountId, final AccountTime accountTime)
+	public boolean updateAccountTime(int accountId, AccountTime accountTime)
 	{
 		return DB.insertUpdate("REPLACE INTO account_time (account_id, last_active, expiration_time, " + "session_duration, accumulated_online, accumulated_rest, penalty_end) values " + "(?,?,?,?,?,?,?)", preparedStatement ->
 		{

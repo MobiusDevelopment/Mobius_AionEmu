@@ -36,11 +36,11 @@ public class KiskService
 	
 	public void removeKisk(Kisk kisk)
 	{
-		for (final int memberId : kisk.getCurrentMemberIds())
+		for (int memberId : kisk.getCurrentMemberIds())
 		{
 			boundButOfflinePlayer.remove(memberId);
 		}
-		for (final Integer obj : ownerPlayer.keySet())
+		for (Integer obj : ownerPlayer.keySet())
 		{
 			if (ownerPlayer.get(obj).equals(kisk))
 			{
@@ -48,7 +48,7 @@ public class KiskService
 				break;
 			}
 		}
-		for (final Player member : kisk.getCurrentMemberList())
+		for (Player member : kisk.getCurrentMemberList())
 		{
 			member.setKisk(null);
 			PacketSendUtility.sendPacket(member, new SM_BIND_POINT_INFO(0, 0f, 0f, 0f, member));

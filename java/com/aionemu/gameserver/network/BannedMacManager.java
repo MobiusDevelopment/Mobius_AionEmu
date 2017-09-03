@@ -46,7 +46,7 @@ public class BannedMacManager
 	
 	public final void banAddress(String address, long newTime, String details)
 	{
-		for (final Player player : World.getInstance().getAllPlayers())
+		for (Player player : World.getInstance().getAllPlayers())
 		{
 			if (player.getClientConnection().getMacAddress().equals(address))
 			{

@@ -77,7 +77,7 @@ public class DatabaseCleaningService
 				Thread.sleep(WORKER_CHECK_TIME);
 				log.info("DatabaseCleaningService: Until now " + currentlyDeletedChars() + " chars deleted in " + ((System.currentTimeMillis() - startTime) / 1000L) + " seconds!");
 			}
-			catch (final InterruptedException ex)
+			catch (InterruptedException ex)
 			{
 				log.error("DatabaseCleaningService: Got Interrupted!");
 			}
@@ -86,7 +86,7 @@ public class DatabaseCleaningService
 	
 	private boolean allWorkersReady()
 	{
-		for (final Worker w : workers)
+		for (Worker w : workers)
 		{
 			if (!w._READY)
 			{
@@ -99,7 +99,7 @@ public class DatabaseCleaningService
 	private int currentlyDeletedChars()
 	{
 		int deletedChars = 0;
-		for (final Worker w : workers)
+		for (Worker w : workers)
 		{
 			deletedChars += w.deletedChars;
 		}
@@ -124,7 +124,7 @@ public class DatabaseCleaningService
 			workerNo++;
 		}
 		
-		for (final Worker w : workers)
+		for (Worker w : workers)
 		{
 			ThreadPoolManager.getInstance().executeLongRunning(w);
 		}
@@ -149,7 +149,7 @@ public class DatabaseCleaningService
 		@Override
 		public void run()
 		{
-			for (final int id : ids)
+			for (int id : ids)
 			{
 				PlayerService.deletePlayerFromDB(id);
 				deletedChars += 1;

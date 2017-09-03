@@ -54,7 +54,7 @@ public class KillList
 		final long now = System.currentTimeMillis();
 		int killCount = 0;
 		
-		for (final Iterator<Long> i = killTimes.iterator(); i.hasNext();)
+		for (Iterator<Long> i = killTimes.iterator(); i.hasNext();)
 		{
 			if ((now - i.next().longValue()) > PvPConfig.CHAIN_KILL_TIME_RESTRICTION)
 			{

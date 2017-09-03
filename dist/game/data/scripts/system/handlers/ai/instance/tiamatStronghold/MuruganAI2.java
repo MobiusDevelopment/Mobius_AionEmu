@@ -74,7 +74,7 @@ public class MuruganAI2 extends GeneralNpcAI2
 		}
 	}
 	
-	private void startWalk(final Player player)
+	private void startWalk(Player player)
 	{
 		final int owner = getOwner().getNpcId();
 		if ((owner == 800436) || (owner == 800438))

@@ -52,7 +52,7 @@ public class EventAi extends AdminCommand
 	}
 	
 	@Override
-	public void execute(final Player admin, String... params)
+	public void execute(Player admin, String... params)
 	{
 		if (params.length < 1)
 		{

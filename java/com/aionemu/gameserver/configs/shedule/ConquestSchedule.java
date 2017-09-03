@@ -58,7 +58,7 @@ public class ConquestSchedule
 			final String xml = FileUtils.readFileToString(new File("./config/shedule/conquest_schedule.xml"));
 			cs = JAXBUtil.deserialize(xml, ConquestSchedule.class);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to initialize conquest", e);
 		}

@@ -97,7 +97,7 @@ public class Raw extends AdminCommand
 				PacketSendUtility.sendPacket(admin, packet);
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			PacketSendUtility.sendMessage(admin, "An error has occurred.");
 			logger.warn("IO Error.", e);

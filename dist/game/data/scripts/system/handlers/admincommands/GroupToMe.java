@@ -56,7 +56,7 @@ public class GroupToMe extends AdminCommand
 			return;
 		}
 		
-		for (final Player target : groupToMove.getPlayerGroup2().getMembers())
+		for (Player target : groupToMove.getPlayerGroup2().getMembers())
 		{
 			if (target != admin)
 			{

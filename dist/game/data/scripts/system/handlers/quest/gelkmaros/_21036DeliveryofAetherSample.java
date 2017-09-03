@@ -44,7 +44,7 @@ public class _21036DeliveryofAetherSample extends QuestHandler
 			798713,
 			799239
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

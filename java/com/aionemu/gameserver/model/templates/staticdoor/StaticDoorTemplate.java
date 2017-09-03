@@ -124,7 +124,7 @@ public class StaticDoorTemplate extends VisibleObjectTemplate
 			{
 				StaticDoorState.setStates(Integer.parseInt(statesHex, radix), states);
 			}
-			catch (final NumberFormatException ex)
+			catch (NumberFormatException ex)
 			{
 			}
 			finally

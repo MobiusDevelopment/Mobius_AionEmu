@@ -793,7 +793,7 @@ public class SoloSurvivorBg extends Battleground
 	@Override
 	public boolean isInBg(Player player)
 	{
-		for (final BattlegroundMap bgMap : maps)
+		for (BattlegroundMap bgMap : maps)
 		{
 			if (bgMap.getMapId() == player.getWorldId())
 			{
@@ -809,7 +809,7 @@ public class SoloSurvivorBg extends Battleground
 		super.createInstance();
 		synchronized (super.getPlayers())
 		{
-			for (final Player pl : super.getPlayers())
+			for (Player pl : super.getPlayers())
 			{
 				super.preparePlayer(pl, 25000);
 				final SpawnPosition pos = getSpawnPositions().get(pl.getBgIndex());
@@ -850,7 +850,7 @@ public class SoloSurvivorBg extends Battleground
 	}
 	
 	@Override
-	public void onDie(final Player player, Creature lastAttacker)
+	public void onDie(Player player, Creature lastAttacker)
 	{
 		if ((lastAttacker == null) && is1v1() && (getPlayers().size() == 2))
 		{
@@ -860,14 +860,14 @@ public class SoloSurvivorBg extends Battleground
 		if ((lastAttacker instanceof Player) && (((Player) lastAttacker).getObjectId() != player.getObjectId()))
 		{
 			final Player killer = (Player) lastAttacker;
-			for (final Player pl : super.getPlayers())
+			for (Player pl : super.getPlayers())
 			{
 				scheduleAnnouncement(pl, killer.getName() + " has killed " + player.getName(), 0);
 			}
 			super.specAnnounce(killer.getName() + " has killed " + player.getName());
 		}
 		int deadCounter = 0;
-		for (final Player pl : super.getPlayers())
+		for (Player pl : super.getPlayers())
 		{
 			if (pl.getLifeStats().isAlreadyDead() || pl.isAfk())
 			{
@@ -895,7 +895,7 @@ public class SoloSurvivorBg extends Battleground
 		super.setStartStamp(System.currentTimeMillis());
 		synchronized (super.getPlayers())
 		{
-			for (final Player pl : super.getPlayers())
+			for (Player pl : super.getPlayers())
 			{
 				ThreadPoolManager.getInstance().schedule(() ->
 				{
@@ -908,7 +908,7 @@ public class SoloSurvivorBg extends Battleground
 				}, 5000);
 			}
 		}
-		for (final Player pl : super.getSpectators())
+		for (Player pl : super.getSpectators())
 		{
 			super.createTimer(pl, getMatchLength());
 		}
@@ -927,7 +927,7 @@ public class SoloSurvivorBg extends Battleground
 	private Player getRoundWinner()
 	{
 		Player winner = null;
-		for (final Player pl : super.getPlayers())
+		for (Player pl : super.getPlayers())
 		{
 			if (!pl.getLifeStats().isAlreadyDead())
 			{
@@ -942,7 +942,7 @@ public class SoloSurvivorBg extends Battleground
 	{
 		Player winner = null;
 		int drawPoints = 0;
-		for (final Player pl : super.getPlayers())
+		for (Player pl : super.getPlayers())
 		{
 			if ((winner == null) && (pl.getTotalKills() > drawPoints))
 			{
@@ -972,7 +972,7 @@ public class SoloSurvivorBg extends Battleground
 			return;
 		}
 		endCalled = true;
-		for (final Player pl : super.getPlayers())
+		for (Player pl : super.getPlayers())
 		{
 			super.freezeNoEnd(pl);
 		}
@@ -988,7 +988,7 @@ public class SoloSurvivorBg extends Battleground
 			{
 				if (roundWinner != null)
 				{
-					for (final Player pl : super.getPlayers())
+					for (Player pl : super.getPlayers())
 					{
 						super.scheduleAnnouncement(pl, roundWinner.getName() + " Win's the round!", 0);
 						pl.sendMessage("Number of round:" + roundsDone);
@@ -1000,7 +1000,7 @@ public class SoloSurvivorBg extends Battleground
 			}
 			else
 			{
-				for (final Player pl : super.getPlayers())
+				for (Player pl : super.getPlayers())
 				{
 					super.scheduleAnnouncement(pl, "The round ended with a draw!", 0);
 				}
@@ -1010,7 +1010,7 @@ public class SoloSurvivorBg extends Battleground
 		final Player winner = getWinner();
 		if (winner == null)
 		{
-			for (final Player pl : super.getPlayers())
+			for (Player pl : super.getPlayers())
 			{
 				scheduleAnnouncement(pl, "The round ended with a draw! You will have more luck next time.", 0);
 				final byte level = pl.getLevel();
@@ -1051,7 +1051,7 @@ public class SoloSurvivorBg extends Battleground
 		}
 		else
 		{
-			for (final Player pl : super.getPlayers())
+			for (Player pl : super.getPlayers())
 			{
 				if (pl.getObjectId() == winner.getObjectId())
 				{

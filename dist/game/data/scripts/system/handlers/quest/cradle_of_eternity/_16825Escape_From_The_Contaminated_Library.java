@@ -52,15 +52,15 @@ public class _16825Escape_From_The_Contaminated_Library extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : IDEternity02TowerBoss75Ah)
+		for (int mob : IDEternity02TowerBoss75Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : IDEternity02CKeyRa75Ae)
+		for (int mob : IDEternity02CKeyRa75Ae)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

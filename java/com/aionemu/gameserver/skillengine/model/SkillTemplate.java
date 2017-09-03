@@ -532,7 +532,7 @@ public class SkillTemplate
 	{
 		if (startconditions != null)
 		{
-			for (final Condition cond : startconditions.getConditions())
+			for (Condition cond : startconditions.getConditions())
 			{
 				if (cond instanceof ChainCondition)
 				{
@@ -553,7 +553,7 @@ public class SkillTemplate
 	{
 		if ((getEffects() != null) && (getEffects().getEffects() != null))
 		{
-			for (final EffectTemplate et : getEffects().getEffects())
+			for (EffectTemplate et : getEffects().getEffects())
 			{
 				if (et.getEffectid() != 0)
 				{
@@ -575,7 +575,7 @@ public class SkillTemplate
 	{
 		if (startconditions != null)
 		{
-			for (final Condition cond : startconditions.getConditions())
+			for (Condition cond : startconditions.getConditions())
 			{
 				if (cond instanceof HpCondition)
 				{

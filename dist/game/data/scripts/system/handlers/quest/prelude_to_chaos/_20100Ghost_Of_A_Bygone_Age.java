@@ -53,7 +53,7 @@ public class _20100Ghost_Of_A_Bygone_Age extends QuestHandler
 		};
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestItem(182215449, questId);
-		for (final int npcId : npcIds)
+		for (int npcId : npcIds)
 		{
 			qe.registerQuestNpc(npcId).addOnTalkEvent(questId);
 		}

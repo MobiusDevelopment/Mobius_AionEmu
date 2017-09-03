@@ -50,7 +50,7 @@ public class Advance_Corridor_ReturnAI2 extends NpcAI2
 		handleUseItemStart(player);
 	}
 	
-	protected void handleUseItemStart(final Player player)
+	protected void handleUseItemStart(Player player)
 	{
 		final int delay = getTalkDelay();
 		if (delay != 0)

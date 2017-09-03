@@ -74,7 +74,7 @@ public class GeoMap extends Node
 		final Vector3f templatePoint = new Vector3f(x, y, z);
 		float distance = Float.MAX_VALUE;
 		DoorGeometry foundDoor = null;
-		for (final Entry<String, DoorGeometry> door : doors.entrySet())
+		for (Entry<String, DoorGeometry> door : doors.entrySet())
 		{
 			if (!(door.getKey().startsWith(Integer.toString(worldId)) && door.getKey().endsWith(mesh)))
 			{
@@ -127,7 +127,7 @@ public class GeoMap extends Node
 			doors.put(child.getName(), (DoorGeometry) child);
 		}
 		
-		for (final Spatial spatial : getChildren())
+		for (Spatial spatial : getChildren())
 		{
 			if (tmpBox.get(i).intersects(child.getWorldBound()))
 			{
@@ -374,7 +374,7 @@ public class GeoMap extends Node
 				p3 = terrainData[((yInt) + ((xInt + 1) * size))] / 32f;
 				p4 = terrainData[((yInt + 1) + ((xInt + 1) * size))] / 32f;
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				return null;
 			}

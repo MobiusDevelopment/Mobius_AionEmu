@@ -50,7 +50,7 @@ public class BanIp extends AdminCommand
 			{
 				time = Integer.parseInt(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				onFail(player, e.getMessage());
 				return;

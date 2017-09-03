@@ -74,7 +74,7 @@ public class PlayerAllianceInvite extends RequestResponseHandler
 			{
 				alliance = PlayerAllianceService.createAlliance(inviter, invited, TeamType.ALLIANCE);
 			}
-			for (final Player member : playersToAdd)
+			for (Player member : playersToAdd)
 			{
 				PlayerAllianceService.addPlayer(alliance, member);
 			}

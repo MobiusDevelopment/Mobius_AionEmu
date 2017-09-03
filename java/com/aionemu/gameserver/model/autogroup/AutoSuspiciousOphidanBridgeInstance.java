@@ -55,7 +55,7 @@ public class AutoSuspiciousOphidanBridgeInstance extends AutoInstance
 				{
 					return AGQuestion.FAILED;
 				}
-				for (final Player member : player.getPlayerGroup2().getOnlineMembers())
+				for (Player member : player.getPlayerGroup2().getOnlineMembers())
 				{
 					if (searchInstance.getMembers().contains(member.getObjectId()))
 					{

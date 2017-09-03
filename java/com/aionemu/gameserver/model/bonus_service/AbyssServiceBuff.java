@@ -53,7 +53,7 @@ public class AbyssServiceBuff implements StatOwner
 		{
 			return;
 		}
-		for (final AbyssPenaltyAttr abyssPenaltyAttr : abyssBonusAttr.getPenaltyAttr())
+		for (AbyssPenaltyAttr abyssPenaltyAttr : abyssBonusAttr.getPenaltyAttr())
 		{
 			if (abyssPenaltyAttr.getFunc().equals(Func.PERCENT))
 			{

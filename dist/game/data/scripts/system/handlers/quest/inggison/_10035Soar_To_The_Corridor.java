@@ -57,11 +57,11 @@ public class _10035Soar_To_The_Corridor extends QuestHandler
 			702663,
 			798926
 		};
-		for (final int mob : basrasaTrapper)
+		for (int mob : basrasaTrapper)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

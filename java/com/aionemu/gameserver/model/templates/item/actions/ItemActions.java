@@ -89,7 +89,7 @@ public class ItemActions
 		{
 			return result;
 		}
-		for (final AbstractItemAction action : itemActions)
+		for (AbstractItemAction action : itemActions)
 		{
 			if (action instanceof ToyPetSpawnAction)
 			{
@@ -105,7 +105,7 @@ public class ItemActions
 		{
 			return null;
 		}
-		for (final AbstractItemAction action : itemActions)
+		for (AbstractItemAction action : itemActions)
 		{
 			if ((action instanceof EnchantItemAction))
 			{
@@ -121,7 +121,7 @@ public class ItemActions
 		{
 			return null;
 		}
-		for (final AbstractItemAction action : itemActions)
+		for (AbstractItemAction action : itemActions)
 		{
 			if ((action instanceof SummonHouseObjectAction))
 			{
@@ -137,7 +137,7 @@ public class ItemActions
 		{
 			return null;
 		}
-		for (final AbstractItemAction action : itemActions)
+		for (AbstractItemAction action : itemActions)
 		{
 			if ((action instanceof CraftLearnAction))
 			{
@@ -153,7 +153,7 @@ public class ItemActions
 		{
 			return null;
 		}
-		for (final AbstractItemAction action : itemActions)
+		for (AbstractItemAction action : itemActions)
 		{
 			if ((action instanceof DecorateAction))
 			{
@@ -169,7 +169,7 @@ public class ItemActions
 		{
 			return null;
 		}
-		for (final AbstractItemAction action : itemActions)
+		for (AbstractItemAction action : itemActions)
 		{
 			if (action instanceof DyeAction)
 			{
@@ -185,7 +185,7 @@ public class ItemActions
 		{
 			return null;
 		}
-		for (final AbstractItemAction action : itemActions)
+		for (AbstractItemAction action : itemActions)
 		{
 			if (action instanceof AdoptPetAction)
 			{
@@ -201,7 +201,7 @@ public class ItemActions
 		{
 			return null;
 		}
-		for (final AbstractItemAction action : itemActions)
+		for (AbstractItemAction action : itemActions)
 		{
 			if (action instanceof RetuningAction)
 			{
@@ -217,7 +217,7 @@ public class ItemActions
 		{
 			return null;
 		}
-		for (final AbstractItemAction action : itemActions)
+		for (AbstractItemAction action : itemActions)
 		{
 			if (action instanceof IdianAction)
 			{
@@ -233,7 +233,7 @@ public class ItemActions
 		{
 			return null;
 		}
-		for (final AbstractItemAction action : itemActions)
+		for (AbstractItemAction action : itemActions)
 		{
 			if (action instanceof TemperingAction)
 			{
@@ -249,7 +249,7 @@ public class ItemActions
 		{
 			return null;
 		}
-		for (final AbstractItemAction action : itemActions)
+		for (AbstractItemAction action : itemActions)
 		{
 			if (action instanceof UnbindingAction)
 			{

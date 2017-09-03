@@ -62,7 +62,7 @@ public class _1990A_Sages_Gift extends QuestHandler
 		};
 		qe.registerQuestNpc(203771).addOnQuestStart(questId);
 		qe.registerQuestNpc(203771).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

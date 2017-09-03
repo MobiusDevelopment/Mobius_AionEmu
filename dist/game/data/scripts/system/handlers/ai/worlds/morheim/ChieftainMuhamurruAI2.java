@@ -81,7 +81,7 @@ public class ChieftainMuhamurruAI2 extends AggressiveNpcAI2
 		}, 14000, 14000);
 	}
 	
-	private void startEvent(int time, final int msg, final int skill)
+	private void startEvent(int time, int msg, int skill)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

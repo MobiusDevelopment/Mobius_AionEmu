@@ -46,7 +46,7 @@ public class SM_ABNORMAL_STATE extends AionServerPacket
 		writeC(0x7F);// unk 4.5 what's that? O.o
 		writeH(effects.size());
 		
-		for (final Effect effect : effects)
+		for (Effect effect : effects)
 		{
 			writeD(effect.getEffectorId());
 			writeH(effect.getSkillId());

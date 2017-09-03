@@ -38,7 +38,7 @@ public abstract class Executor<T extends AionObject>
 	{
 		try
 		{
-			for (final T o : objects)
+			for (T o : objects)
 			{
 				if (o != null)
 				{
@@ -49,13 +49,13 @@ public abstract class Executor<T extends AionObject>
 				}
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.warn(e.getMessage(), e);
 		}
 	}
 	
-	public final void execute(final Collection<T> objects, boolean now)
+	public final void execute(Collection<T> objects, boolean now)
 	{
 		if (now)
 		{
@@ -75,7 +75,7 @@ public abstract class Executor<T extends AionObject>
 		}
 	}
 	
-	public final void execute(final Collection<T> objects)
+	public final void execute(Collection<T> objects)
 	{
 		execute(objects, false);
 	}

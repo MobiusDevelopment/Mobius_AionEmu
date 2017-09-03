@@ -58,7 +58,7 @@ public class _19637Onboard_For_One extends QuestHandler
 		qe.registerQuestNpc(798926).addOnQuestStart(questId);
 		qe.registerQuestNpc(798926).addOnTalkEvent(questId);
 		qe.registerQuestNpc(798926).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

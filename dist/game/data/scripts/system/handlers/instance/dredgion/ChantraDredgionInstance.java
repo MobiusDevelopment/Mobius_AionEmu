@@ -119,7 +119,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 216886: // Captain Zanata.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -152,7 +152,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 			case 216885: // Hookmatan.
 			case 216887: // Skyguard Parishka.
 			case 216888: // Quartermaster Bhati.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -163,7 +163,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 216889: // Rajaya The Inquisitor.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -198,7 +198,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 216890: // Windfinder Kumar.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -236,7 +236,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 			 * Obtain the Captain’s Key by killing Gatekeeper Sarta. The Captain’s Key opens the door to the Captain’s Cabin.
 			 */
 			case 217037: // Gatekeeper Sarta.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000105, 1)); // Captain's Cabin Passage Key.
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000189, 1)); // Secret Cache Key.
@@ -255,7 +255,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 	{
 		final Race race = mostPlayerDamage.getRace();
 		captureRoom(race, (npc.getNpcId() + 14) - 700851); // Captain's Cabin Power Surkana.
-		for (final Player player : instance.getPlayersInside())
+		for (Player player : instance.getPlayersInside())
 		{
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400199, new DescriptionId(race.equals(Race.ASMODIANS) ? 1800483 : 1800481), new DescriptionId((npc.getObjectTemplate().getNameId() * 2) + 1)));
 		}
@@ -549,7 +549,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		if (!containPlayer(player.getObjectId()))
 		{
@@ -579,7 +579,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 	
 	public void doReward()
 	{
-		for (final Player player : instance.getPlayersInside())
+		for (Player player : instance.getPlayersInside())
 		{
 			final InstancePlayerReward playerReward = getPlayerReward(player);
 			float abyssPoint = playerReward.getPoints() * RateConfig.DREDGION_REWARD_RATE;
@@ -595,7 +595,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 			final QuestEnv env = new QuestEnv(null, player, 0, 0);
 			QuestEngine.getInstance().onDredgionReward(env);
 		}
-		for (final Npc npc : instance.getNpcs())
+		for (Npc npc : instance.getNpcs())
 		{
 			npc.getController().onDelete();
 		}
@@ -606,7 +606,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 			{
 				if (!isInstanceDestroyed)
 				{
-					for (final Player player : instance.getPlayersInside())
+					for (Player player : instance.getPlayersInside())
 					{
 						if (CreatureActions.isAlreadyDead(player))
 						{
@@ -705,7 +705,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 		final List<Player> playersToGainScore = new ArrayList<>();
 		if ((target != null) && player.isInGroup2())
 		{
-			for (final Player member : player.getPlayerGroup2().getOnlineMembers())
+			for (Player member : player.getPlayerGroup2().getOnlineMembers())
 			{
 				if (member.getLifeStats().isAlreadyDead())
 				{
@@ -721,7 +721,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 		{
 			playersToGainScore.add(player);
 		}
-		for (final Player playerToGainScore : playersToGainScore)
+		for (Player playerToGainScore : playersToGainScore)
 		{
 			addPointToPlayer(playerToGainScore, points / playersToGainScore.size());
 			if (target instanceof Npc)
@@ -791,17 +791,17 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time)
+	protected void sp(int npcId, float x, float y, float z, byte h, int time)
 	{
 		sp(npcId, x, y, z, h, 0, time, 0, null);
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time, final int msg, final Race race)
+	protected void sp(int npcId, float x, float y, float z, byte h, int time, int msg, Race race)
 	{
 		sp(npcId, x, y, z, h, 0, time, msg, race);
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int entityId, final int time, final int msg, final Race race)
+	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
 		chantraTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -820,7 +820,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 		}, time));
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time, final String walkerId)
+	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
 		chantraTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -837,7 +837,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 		}, time));
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		chantraTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -859,7 +859,7 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 		}, time));
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{

@@ -122,23 +122,23 @@ public class cmd_reskin2 extends PlayerCommand
 					}
 				}
 			}
-			catch (final NumberFormatException ex)
+			catch (NumberFormatException ex)
 			{
 				PacketSendUtility.sendMessage(admin, "1 " + (admin.isGM() ? ex : ""));
 				return;
 			}
-			catch (final Exception ex2)
+			catch (Exception ex2)
 			{
 				PacketSendUtility.sendMessage(admin, "2 " + (admin.isGM() ? ex2 : ""));
 				return;
 			}
 		}
-		catch (final NumberFormatException ex)
+		catch (NumberFormatException ex)
 		{
 			PacketSendUtility.sendMessage(admin, "3 " + (admin.isGM() ? ex : ""));
 			return;
 		}
-		catch (final Exception ex2)
+		catch (Exception ex2)
 		{
 			PacketSendUtility.sendMessage(admin, "4 " + (admin.isGM() ? ex2 : ""));
 			return;
@@ -202,7 +202,7 @@ public class cmd_reskin2 extends PlayerCommand
 		}
 	}
 	
-	public void reskin(final Player admin, final int toll, final int itemId, final List<Item> items)
+	public void reskin(Player admin, int toll, int itemId, List<Item> items)
 	{
 		final long tolls = admin.getClientConnection().getAccount().getToll();
 		final RequestResponseHandler responseHandler = new RequestResponseHandler(admin)

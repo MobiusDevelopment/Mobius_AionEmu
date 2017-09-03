@@ -50,7 +50,7 @@ public class AbyssOpData
 	
 	void afterUnmarshal(Unmarshaller paramUnmarshaller, Object paramObject)
 	{
-		for (final AbyssOp abyssOp : aolist)
+		for (AbyssOp abyssOp : aolist)
 		{
 			opData.put(abyssOp.getId(), abyssOp);
 			opDataMap.put(abyssOp.getId(), abyssOp);

@@ -44,7 +44,7 @@ public class FlyRingService
 	
 	private FlyRingService()
 	{
-		for (final FlyRingTemplate t : DataManager.FLY_RING_DATA.getFlyRingTemplates())
+		for (FlyRingTemplate t : DataManager.FLY_RING_DATA.getFlyRingTemplates())
 		{
 			final FlyRing f = new FlyRing(t, 0);
 			f.spawn();

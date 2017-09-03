@@ -38,7 +38,7 @@ public class VortexStartRunnable implements Runnable
 	public void run()
 	{
 		final Map<Integer, VortexLocation> locations = VortexService.getInstance().getVortexLocations();
-		for (final VortexLocation loc : locations.values())
+		for (VortexLocation loc : locations.values())
 		{
 			if (loc.getId() == id)
 			{

@@ -44,7 +44,7 @@ public enum HousePermissions
 	public static HousePermissions getPacketDoorState(int value)
 	{
 		value <<= 8;
-		for (final HousePermissions perm : HousePermissions.values())
+		for (HousePermissions perm : HousePermissions.values())
 		{
 			if (value == perm.value)
 			{
@@ -57,7 +57,7 @@ public enum HousePermissions
 	public static HousePermissions getDoorState(int value)
 	{
 		value &= 0xFF00;
-		for (final HousePermissions perm : HousePermissions.values())
+		for (HousePermissions perm : HousePermissions.values())
 		{
 			if (value == perm.value)
 			{

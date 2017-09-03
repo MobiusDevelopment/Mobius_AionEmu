@@ -69,7 +69,7 @@ public class _15537Scout_Zenzen_Tribal_Grounds extends QuestHandler
 	{
 		qe.registerQuestNpc(806254).addOnQuestStart(questId);
 		qe.registerQuestNpc(806254).addOnTalkEvent(questId);
-		for (final int mob : Q15537)
+		for (int mob : Q15537)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

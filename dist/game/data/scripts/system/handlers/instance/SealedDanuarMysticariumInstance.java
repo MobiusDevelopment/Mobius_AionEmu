@@ -550,7 +550,7 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void raidMysticarium(final Npc npc)
+	private void raidMysticarium(Npc npc)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -559,7 +559,7 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 			{
 				if (!isInstanceDestroyed)
 				{
-					for (final Player player : instance.getPlayersInside())
+					for (Player player : instance.getPlayersInside())
 					{
 						npc.setTarget(player);
 						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
@@ -696,7 +696,7 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 		raidMysticarium((Npc) spawn(219987, 494.27405f, 491.4183f, 100.36539f, (byte) 106));
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -708,7 +708,7 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -730,7 +730,7 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 		}, time);
 	}
 	
-	private void sendMessage(final int msgId, long delay)
+	private void sendMessage(int msgId, long delay)
 	{
 		if (delay == 0)
 		{
@@ -776,7 +776,7 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

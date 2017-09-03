@@ -118,7 +118,7 @@ public class AcceptReadWriteDispatcherImpl extends Dispatcher
 	{
 		synchronized (pendingClose)
 		{
-			for (final AConnection connection : pendingClose)
+			for (AConnection connection : pendingClose)
 			{
 				closeConnectionImpl(connection);
 			}

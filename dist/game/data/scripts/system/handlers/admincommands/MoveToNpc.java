@@ -43,21 +43,21 @@ public class MoveToNpc extends AdminCommand
 		{
 			npcId = Integer.valueOf(params[0]);
 		}
-		catch (final ArrayIndexOutOfBoundsException e)
+		catch (ArrayIndexOutOfBoundsException e)
 		{
 			onFail(player, e.getMessage());
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			String npcName = "";
 			
-			for (final String param : params)
+			for (String param : params)
 			{
 				npcName += param + " ";
 			}
 			npcName = npcName.substring(0, npcName.length() - 1);
 			
-			for (final NpcTemplate template : DataManager.NPC_DATA.getNpcData().valueCollection())
+			for (NpcTemplate template : DataManager.NPC_DATA.getNpcData().valueCollection())
 			{
 				if (template.getName().equalsIgnoreCase(npcName))
 				{

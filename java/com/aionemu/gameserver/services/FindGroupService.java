@@ -176,7 +176,7 @@ public class FindGroupService
 		PacketSendUtility.sendPacket(player, new SM_FIND_GROUP(action, (int) (System.currentTimeMillis() / 1000), getFindGroups(player.getRace(), action)));
 	}
 	
-	public FindGroup removeFindGroup(final Race race, int action, int playerObjId)
+	public FindGroup removeFindGroup(Race race, int action, int playerObjId)
 	{
 		FindGroup findGroup = null;
 		switch (race)
@@ -229,7 +229,7 @@ public class FindGroupService
 	
 	private void cleanMap(FastMap<Integer, FindGroup> map, Race race, int action)
 	{
-		for (final FindGroup group : map.values())
+		for (FindGroup group : map.values())
 		{
 			if ((group.getLastUpdate() + (60 * 60)) < (System.currentTimeMillis() / 1000))
 			{

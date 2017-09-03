@@ -42,7 +42,7 @@ public class CosmeticItemsData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final CosmeticItemTemplate template : templates)
+		for (CosmeticItemTemplate template : templates)
 		{
 			cosmeticItemTemplates.put(template.getCosmeticName(), template);
 		}

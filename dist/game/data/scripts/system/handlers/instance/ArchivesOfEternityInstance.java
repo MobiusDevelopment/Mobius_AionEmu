@@ -65,7 +65,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 			case 857460: // Ancient Relic Techgolem.
 			case 857462: // Fleshgolem Captain.
 			case 857464: // Mountainous Shardgolem.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -81,7 +81,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 			 * Chosen "Guardian's Set" Appearance change items obtainable from "Archives Of Eternity" Can be used on any type of item. Headgear can be obtained from "환영의 상자" Pants, Shoes, Pauldrons and Gloves can be obtained from "Cryptograph Cube"
 			 */
 			case 806139: // Cryptograph Cube.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -110,7 +110,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 			 * Elyos
 			 */
 			case 703131: // Histories Of Atreia.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -136,7 +136,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 703132: // Records From The Era Of Men.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -162,7 +162,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 703133: // Empyrean Histories.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -191,7 +191,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 			 * Asmodians
 			 */
 			case 703149: // Histories Of Atreia.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -217,7 +217,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 703150: // Records From The Era Of Men.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -243,7 +243,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 703151: // Empyrean Histories.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -269,7 +269,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 703134: // Annals Of Life [Q18627/Q28627].
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -477,7 +477,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 		return TeleportService2.teleportTo(player, mapId, instanceId, 737f, 511f, 469f, (byte) 0);
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -489,7 +489,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -534,7 +534,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

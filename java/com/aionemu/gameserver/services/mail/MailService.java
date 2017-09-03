@@ -399,7 +399,7 @@ public class MailService
 	{
 		final Mailbox mailbox = player.getMailbox();
 		
-		for (final int letterId : mailObjId)
+		for (int letterId : mailObjId)
 		{
 			mailbox.removeLetter(letterId);
 			DAOManager.getDAO(MailDAO.class).deleteLetter(letterId);

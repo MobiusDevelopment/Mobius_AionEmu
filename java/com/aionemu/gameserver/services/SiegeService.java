@@ -156,34 +156,34 @@ public class SiegeService
 		{
 			return;
 		}
-		for (final Integer i : getSiegeLocations().keySet())
+		for (Integer i : getSiegeLocations().keySet())
 		{
 			deSpawnNpcs(i);
 		}
-		for (final FortressLocation f : getFortresses().values())
+		for (FortressLocation f : getFortresses().values())
 		{
 			spawnNpcs(f.getLocationId(), f.getRace(), SiegeModType.PEACE);
 		}
-		for (final OutpostLocation o : getOutposts().values())
+		for (OutpostLocation o : getOutposts().values())
 		{
 			if ((SiegeRace.BALAUR != o.getRace()) && (o.getLocationRace() != o.getRace()))
 			{
 				spawnNpcs(o.getLocationId(), o.getRace(), SiegeModType.PEACE);
 			}
 		}
-		for (final ArtifactLocation a : getStandaloneArtifacts().values())
+		for (ArtifactLocation a : getStandaloneArtifacts().values())
 		{
 			spawnNpcs(a.getLocationId(), a.getRace(), SiegeModType.PEACE);
 		}
 		siegeSchedule = SiegeSchedule.load();
-		for (final Fortress f : siegeSchedule.getFortressesList())
+		for (Fortress f : siegeSchedule.getFortressesList())
 		{
-			for (final String siegeTime : f.getSiegeTimes())
+			for (String siegeTime : f.getSiegeTimes())
 			{
 				CronService.getInstance().schedule(new SiegeStartRunnable(f.getId()), siegeTime);
 			}
 		}
-		for (final ArtifactLocation artifact : artifacts.values())
+		for (ArtifactLocation artifact : artifacts.values())
 		{
 			if (artifact.isStandAlone())
 			{
@@ -207,12 +207,12 @@ public class SiegeService
 					@Override
 					public void visit(Player player)
 					{
-						for (final FortressLocation fortress : getFortresses().values())
+						for (FortressLocation fortress : getFortresses().values())
 						{
 							PacketSendUtility.sendPacket(player, new SM_FORTRESS_INFO(fortress.getLocationId(), false));
 						}
 						PacketSendUtility.sendPacket(player, new SM_FORTRESS_STATUS());
-						for (final FortressLocation fortress : getFortresses().values())
+						for (FortressLocation fortress : getFortresses().values())
 						{
 							PacketSendUtility.sendPacket(player, new SM_FORTRESS_INFO(fortress.getLocationId(), true));
 						}
@@ -234,7 +234,7 @@ public class SiegeService
 		}
 	}
 	
-	public void startSiege(final int siegeLocationId)
+	public void startSiege(int siegeLocationId)
 	{
 		// Siege should not be started two times. Never.
 		Siege<?> siege;
@@ -328,7 +328,7 @@ public class SiegeService
 		
 		// Create map FortressId-To-AllTriggers
 		final Map<Integer, List<Trigger>> siegeIdToStartTriggers = Maps.newHashMap();
-		for (final Map.Entry<Runnable, JobDetail> entry : siegeStartRunables.entrySet())
+		for (Map.Entry<Runnable, JobDetail> entry : siegeStartRunables.entrySet())
 		{
 			final SiegeStartRunnable fssr = (SiegeStartRunnable) entry.getKey();
 			
@@ -342,11 +342,11 @@ public class SiegeService
 		}
 		
 		// update each fortress next state
-		for (final Map.Entry<Integer, List<Trigger>> entry : siegeIdToStartTriggers.entrySet())
+		for (Map.Entry<Integer, List<Trigger>> entry : siegeIdToStartTriggers.entrySet())
 		{
 			
 			final List<Date> nextFireDates = Lists.newArrayListWithCapacity(entry.getValue().size());
-			for (final Trigger trigger : entry.getValue())
+			for (Trigger trigger : entry.getValue())
 			{
 				nextFireDates.add(trigger.getNextFireTime());
 			}
@@ -517,7 +517,7 @@ public class SiegeService
 	public Map<Integer, SiegeLocation> getSiegeLocations(int worldId)
 	{
 		final Map<Integer, SiegeLocation> mapLocations = new FastMap<>();
-		for (final SiegeLocation location : getSiegeLocations().values())
+		for (SiegeLocation location : getSiegeLocations().values())
 		{
 			if (location.getWorldId() == worldId)
 			{
@@ -546,7 +546,7 @@ public class SiegeService
 	
 	public void cleanLegionId(int legionId)
 	{
-		for (final SiegeLocation loc : getSiegeLocations().values())
+		for (SiegeLocation loc : getSiegeLocations().values())
 		{
 			if (loc.getLegionId() == legionId)
 			{
@@ -558,12 +558,12 @@ public class SiegeService
 	
 	public void updateOutpostStatusByFortress(FortressLocation fortress)
 	{
-		for (final OutpostLocation outpost : getOutposts().values())
+		for (OutpostLocation outpost : getOutposts().values())
 		{
 			if (outpost.getFortressDependency().contains(fortress.getLocationId()))
 			{
 				SiegeRace fortressRace = fortress.getRace();
-				for (final Integer fortressId : outpost.getFortressDependency())
+				for (Integer fortressId : outpost.getFortressDependency())
 				{
 					final SiegeRace sr = getFortresses().get(fortressId).getRace();
 					if (fortressRace != sr)
@@ -613,9 +613,9 @@ public class SiegeService
 	public void spawnNpcs(int siegeLocationId, SiegeRace race, SiegeModType type)
 	{
 		final List<SpawnGroup2> siegeSpawns = DataManager.SPAWNS_DATA2.getSiegeSpawnsByLocId(siegeLocationId);
-		for (final SpawnGroup2 group : siegeSpawns)
+		for (SpawnGroup2 group : siegeSpawns)
 		{
-			for (final SpawnTemplate template : group.getSpawnTemplates())
+			for (SpawnTemplate template : group.getSpawnTemplates())
 			{
 				final SiegeSpawnTemplate siegetemplate = (SiegeSpawnTemplate) template;
 				if (siegetemplate.getSiegeRace().equals(race) && siegetemplate.getSiegeModType().equals(type))
@@ -629,7 +629,7 @@ public class SiegeService
 	public void deSpawnNpcs(int siegeLocationId)
 	{
 		final Collection<SiegeNpc> siegeNpcs = World.getInstance().getLocalSiegeNpcs(siegeLocationId);
-		for (final SiegeNpc npc : siegeNpcs)
+		for (SiegeNpc npc : siegeNpcs)
 		{
 			npc.getController().onDelete();
 		}
@@ -666,7 +666,7 @@ public class SiegeService
 		broadcast(new SM_SIEGE_LOCATION_INFO(loc), new SM_INFLUENCE_RATIO());
 	}
 	
-	public void broadcast(final AionServerPacket pkt1, final AionServerPacket pkt2)
+	public void broadcast(AionServerPacket pkt1, AionServerPacket pkt2)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -693,7 +693,7 @@ public class SiegeService
 		broadcast(pkt, info, loc.getRace());
 	}
 	
-	private void broadcast(final AionServerPacket pkt, final AionServerPacket info, final SiegeRace race)
+	private void broadcast(AionServerPacket pkt, AionServerPacket info, SiegeRace race)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -727,7 +727,7 @@ public class SiegeService
 		broadcast(new SM_RIFT_ANNOUNCE(getOutpost(3111).isSilentraAllowed(), getOutpost(2111).isSilentraAllowed()), info);
 	}
 	
-	private void broadcast(final SM_RIFT_ANNOUNCE rift, final SM_SYSTEM_MESSAGE info)
+	private void broadcast(SM_RIFT_ANNOUNCE rift, SM_SYSTEM_MESSAGE info)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -769,7 +769,7 @@ public class SiegeService
 			h = start.getHeading();
 		}
 		
-		for (final FortressLocation fortress : getFortresses().values())
+		for (FortressLocation fortress : getFortresses().values())
 		{
 			if (fortress.isInActiveSiegeZone(player) && fortress.isEnemy(player))
 			{
@@ -794,14 +794,14 @@ public class SiegeService
 		final FastMap<Integer, SiegeLocation> worldLocations = new FastMap<>();
 		final FastMap<Integer, ArtifactLocation> worldArtifacts = new FastMap<>();
 		
-		for (final SiegeLocation location : getSiegeLocations().values())
+		for (SiegeLocation location : getSiegeLocations().values())
 		{
 			if (location.getWorldId() == player.getWorldId())
 			{
 				worldLocations.put(location.getLocationId(), location);
 			}
 		}
-		for (final ArtifactLocation artifact : getArtifacts().values())
+		for (ArtifactLocation artifact : getArtifacts().values())
 		{
 			if (artifact.getWorldId() == player.getWorldId())
 			{

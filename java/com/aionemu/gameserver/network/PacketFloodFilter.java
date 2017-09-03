@@ -51,14 +51,14 @@ public class PacketFloodFilter
 			try
 			{
 				final java.util.Properties props = PropertiesUtils.load("config/administration/pff.properties");
-				for (final Object key : props.keySet())
+				for (Object key : props.keySet())
 				{
 					final String str = (String) key;
 					packets[Integer.decode(str)] = Integer.valueOf(props.getProperty(str).trim());
 					cnt++;
 				}
 			}
-			catch (final IOException e)
+			catch (IOException e)
 			{
 				log.error("Can't read pff.properties", e);
 			}

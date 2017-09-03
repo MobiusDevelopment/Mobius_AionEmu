@@ -41,7 +41,7 @@ public class WarehouseService
 	private static final int MIN_EXPAND = 0;
 	private static final int MAX_EXPAND = 11;
 	
-	public static void expandWarehouse(final Player player, Npc npc)
+	public static void expandWarehouse(Player player, Npc npc)
 	{
 		final WarehouseExpandTemplate expandTemplate = DataManager.WAREHOUSEEXPANDER_DATA.getWarehouseExpandListTemplate(npc.getNpcId());
 		if (expandTemplate == null)

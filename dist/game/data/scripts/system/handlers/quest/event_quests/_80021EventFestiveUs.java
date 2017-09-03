@@ -54,7 +54,7 @@ public class _80021EventFestiveUs extends QuestHandler
 	{
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(799784).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

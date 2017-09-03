@@ -72,7 +72,7 @@ public class DancingFlameAI2 extends GeneralNpcAI2
 	
 	private boolean isPlayerInRange()
 	{
-		for (final Player player : getKnownList().getKnownPlayers().values())
+		for (Player player : getKnownList().getKnownPlayers().values())
 		{
 			if (isInRange(player, 30))
 			{

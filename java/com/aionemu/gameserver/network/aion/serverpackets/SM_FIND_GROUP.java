@@ -67,7 +67,7 @@ public class SM_FIND_GROUP extends AionServerPacket
 				writeH(groupSize); // groupSize
 				writeH(groupSize); // groupSize
 				writeD(lastUpdate); // objId?
-				for (final FindGroup findGroup : findGroups)
+				for (FindGroup findGroup : findGroups)
 				{
 					writeD(findGroup.getObjectId()); // player object id
 					writeD(findGroup.getUnk()); // unk (0 or 65557)
@@ -90,7 +90,7 @@ public class SM_FIND_GROUP extends AionServerPacket
 				writeH(groupSize); // groupSize
 				writeH(groupSize); // groupSize
 				writeD(lastUpdate); // objId?
-				for (final FindGroup findGroup : findGroups)
+				for (FindGroup findGroup : findGroups)
 				{
 					writeD(findGroup.getObjectId()); // player object id
 					writeC(findGroup.getGroupType()); // 0:group, 1:alliance
@@ -108,7 +108,7 @@ public class SM_FIND_GROUP extends AionServerPacket
 				writeH(groupSize);// size
 				writeH(groupSize);// size
 				writeD(lastUpdate);
-				for (final FindGroup findGroup : findGroups)
+				for (FindGroup findGroup : findGroups)
 				{
 					writeD(0);// groupregisteredId
 					writeD(findGroup.getInstanceId());// instanceId
@@ -130,7 +130,7 @@ public class SM_FIND_GROUP extends AionServerPacket
 				break;
 			case 0x0E: // register new InstanceGroup
 				writeC(1);// packetNumber 0 || 1 || 2
-				for (final FindGroup findGroup : findGroups)
+				for (FindGroup findGroup : findGroups)
 				{
 					writeD(0);// entryId? counts forwards every entry
 					writeD(findGroup.getInstanceId());// instanceId
@@ -156,7 +156,7 @@ public class SM_FIND_GROUP extends AionServerPacket
 				writeH(groupSize);// size
 				writeH(groupSize);// size
 				writeD(lastUpdate);// systemcurrentimemillis
-				for (final FindGroup findGroup : findGroups)
+				for (FindGroup findGroup : findGroups)
 				{
 					writeD(0);// groupId?
 					writeD(findGroup.getInstanceId());// instanceId
@@ -176,7 +176,7 @@ public class SM_FIND_GROUP extends AionServerPacket
 				writeD(0);// GroupObjId
 				writeD(0);// instanceId
 				writeC(0);// classId?
-				for (final FindGroup findGroup : findGroups)
+				for (FindGroup findGroup : findGroups)
 				{
 					writeD(0);// GroupRegisteredId
 					writeD(findGroup.getInstanceId());// instanceId

@@ -56,7 +56,7 @@ public class BanMac extends AdminCommand
 				time = 60 * 24 * 365 * 10;
 			}
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			onFail(player, "Please enter a valid integer amount of minutes");
 			return;

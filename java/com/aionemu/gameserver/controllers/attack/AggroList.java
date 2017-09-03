@@ -79,7 +79,7 @@ public class AggroList
 	/**
 	 * Extra hate that is received from using non-damage skill effects
 	 */
-	public void addHate(final Creature creature, int hate)
+	public void addHate(Creature creature, int hate)
 	{
 		if (!isAware(creature))
 		{
@@ -91,19 +91,19 @@ public class AggroList
 	/**
 	 * start hating creature by adding 1 hate value
 	 */
-	public void startHate(final Creature creature)
+	public void startHate(Creature creature)
 	{
 		addHateValue(creature, 1);
 	}
 	
-	protected void addHateValue(final Creature creature, int hate)
+	protected void addHateValue(Creature creature, int hate)
 	{
 		final AggroInfo ai = getAggroInfo(creature);
 		ai.addHate(hate);
 		// TODO move out to controller
 		if ((creature instanceof Player) && (owner instanceof Npc))
 		{
-			for (final Player player : owner.getKnownList().getKnownPlayers().values())
+			for (Player player : owner.getKnownList().getKnownPlayers().values())
 			{
 				if (MathUtil.isIn3dRange(owner, player, 50))
 				{
@@ -122,7 +122,7 @@ public class AggroList
 		AionObject mostDamage = null;
 		int maxDamage = 0;
 		
-		for (final AggroInfo ai : getFinalDamageList(true))
+		for (AggroInfo ai : getFinalDamageList(true))
 		{
 			if ((ai.getAttacker() == null) || owner.equals(ai.getAttacker()))
 			{
@@ -167,7 +167,7 @@ public class AggroList
 		int maxDamage = 0;
 		
 		// Use final damage list to get pet damage as well.
-		for (final AggroInfo ai : getFinalDamageList(false))
+		for (AggroInfo ai : getFinalDamageList(false))
 		{
 			if ((ai.getDamage() > maxDamage) && (ai.getAttacker() instanceof Player))
 			{
@@ -193,7 +193,7 @@ public class AggroList
 		int maxDamage = 0;
 		
 		// Use final damage list to get pet damage as well.
-		for (final AggroInfo ai : getFinalDamageList(false))
+		for (AggroInfo ai : getFinalDamageList(false))
 		{
 			if (!(ai.getAttacker() instanceof Player))
 			{
@@ -215,7 +215,7 @@ public class AggroList
 		
 		if ((mostDamage != null) && mostDamage.isMentor())
 		{
-			for (final Player member : team)
+			for (Player member : team)
 			{
 				if (member.getLevel() == highestLevel)
 				{
@@ -361,7 +361,7 @@ public class AggroList
 	public int getTotalDamage()
 	{
 		int totalDamage = 0;
-		for (final AggroInfo ai : aggroList.values())
+		for (AggroInfo ai : aggroList.values())
 		{
 			totalDamage += ai.getDamage();
 		}
@@ -376,7 +376,7 @@ public class AggroList
 	{
 		final Map<Integer, AggroInfo> list = new HashMap<>();
 		
-		for (final AggroInfo ai : aggroList.values())
+		for (AggroInfo ai : aggroList.values())
 		{
 			// Get master only to control damage.
 			final Creature creature = ((Creature) ai.getAttacker()).getMaster();

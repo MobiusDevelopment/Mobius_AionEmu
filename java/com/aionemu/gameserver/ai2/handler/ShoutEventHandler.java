@@ -167,7 +167,7 @@ public final class ShoutEventHandler
 		final List<NpcShout> shouts = DataManager.NPC_SHOUT_DATA.getNpcShouts(npc.getPosition().getMapId(), npc.getNpcId(), ShoutEventType.ATTACKED, null, 0);
 		
 		final List<NpcShout> finalShouts = new ArrayList<>();
-		for (final NpcShout s : shouts)
+		for (NpcShout s : shouts)
 		{
 			if (s.getShoutType() == ShoutType.SAY)
 			{
@@ -233,7 +233,7 @@ public final class ShoutEventHandler
 		
 		List<NpcShout> validShouts = new ArrayList<>();
 		final List<NpcShout> nonNumberedShouts = new ArrayList<>();
-		for (final NpcShout shout : shouts)
+		for (NpcShout shout : shouts)
 		{
 			if (shout.getSkillNo() == 0)
 			{

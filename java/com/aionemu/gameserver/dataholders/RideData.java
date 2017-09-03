@@ -49,7 +49,7 @@ public class RideData
 	{
 		rideInfos = new TIntObjectHashMap<>();
 		
-		for (final RideInfo info : rides)
+		for (RideInfo info : rides)
 		{
 			rideInfos.put(info.getNpcId(), info);
 		}

@@ -99,7 +99,7 @@ public abstract class CreatureGameStats<T extends Creature>
 		lock.writeLock().lock();
 		try
 		{
-			for (final IStatFunction function : functions)
+			for (IStatFunction function : functions)
 			{
 				if (!stats.containsKey(function.getName()))
 				{
@@ -133,7 +133,7 @@ public abstract class CreatureGameStats<T extends Creature>
 			for (Entry<StatEnum, TreeSet<IStatFunction>> e = stats.head(), end = stats.tail(); (e = e.getNext()) != end;)
 			{
 				final TreeSet<IStatFunction> value = e.getValue();
-				for (final Iterator<IStatFunction> iter = value.iterator(); iter.hasNext();)
+				for (Iterator<IStatFunction> iter = value.iterator(); iter.hasNext();)
 				{
 					final IStatFunction ownedMod = iter.next();
 					if ((ownedMod.getOwner() != null) && ownedMod.getOwner().equals(statOwner))
@@ -198,7 +198,7 @@ public abstract class CreatureGameStats<T extends Creature>
 			{
 				return stat;
 			}
-			for (final IStatFunction func : functions)
+			for (IStatFunction func : functions)
 			{
 				if (func.validate(stat, func))
 				{
@@ -224,7 +224,7 @@ public abstract class CreatureGameStats<T extends Creature>
 			{
 				return stat;
 			}
-			for (final IStatFunction func : functions)
+			for (IStatFunction func : functions)
 			{
 				if (func.validate(stat, func) && ((func.getOwner() instanceof Item) || (func.getOwner() instanceof ManaStone)))
 				{
@@ -370,7 +370,7 @@ public abstract class CreatureGameStats<T extends Creature>
 		}
 		final TreeSet<IStatFunction> tmp = new TreeSet<>();
 		List<IStatFunction> setFuncs = null;
-		for (final IStatFunction func : allStats)
+		for (IStatFunction func : allStats)
 		{
 			if (func.getPriority() >= (Integer.MAX_VALUE - 10))
 			{

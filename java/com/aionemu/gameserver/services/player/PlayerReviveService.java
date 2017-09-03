@@ -152,7 +152,7 @@ public class PlayerReviveService
 		else
 		{
 			boolean isInvadeActiveVortex = false;
-			for (final VortexLocation loc : VortexService.getInstance().getVortexLocations().values())
+			for (VortexLocation loc : VortexService.getInstance().getVortexLocations().values())
 			{
 				isInvadeActiveVortex = loc.isInsideActiveVortex(player) && player.getRace().equals(loc.getInvadersRace());
 				if (isInvadeActiveVortex)
@@ -238,7 +238,7 @@ public class PlayerReviveService
 		player.unsetResPosState();
 	}
 	
-	public static void revive(final Player player, int hpPercent, int mpPercent, boolean setSoulsickness, int resurrectionSkill)
+	public static void revive(Player player, int hpPercent, int mpPercent, boolean setSoulsickness, int resurrectionSkill)
 	{
 		player.getKnownList().doOnAllPlayers(new Visitor<Player>()
 		{

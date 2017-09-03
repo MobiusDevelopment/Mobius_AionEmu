@@ -44,7 +44,7 @@ public class SM_LOOT_ITEMLIST extends AionServerPacket
 			LoggerFactory.getLogger(SM_LOOT_ITEMLIST.class).warn("null Set<DropItem>, skip");
 			return;
 		}
-		for (final DropItem item : setItems)
+		for (DropItem item : setItems)
 		{
 			if ((item.getPlayerObjId() == 0) || (player.getObjectId() == item.getPlayerObjId()))
 			{
@@ -58,7 +58,7 @@ public class SM_LOOT_ITEMLIST extends AionServerPacket
 	{
 		writeD(targetObjectId);
 		writeC(dropItems.size());
-		for (final DropItem dropItem : dropItems)
+		for (DropItem dropItem : dropItems)
 		{
 			final Drop drop = dropItem.getDropTemplate();
 			writeC(dropItem.getIndex());

@@ -107,7 +107,7 @@ public class AutoGroupService
 		}
 		if (ert.isGroupEntry())
 		{
-			for (final Player member : player.getPlayerGroup2().getOnlineMembers())
+			for (Player member : player.getPlayerGroup2().getOnlineMembers())
 			{
 				if (agt.isDredgion())
 				{
@@ -337,7 +337,7 @@ public class AutoGroupService
 		final LookingForParty lfp = searchers.get(obj);
 		if (lfp != null)
 		{
-			for (final SearchInstance searchInstance : lfp.getSearchInstances())
+			for (SearchInstance searchInstance : lfp.getSearchInstances())
 			{
 				if (searchInstance.getEntryRequestType().isGroupEntry() && !player.isInGroup2())
 				{
@@ -418,7 +418,7 @@ public class AutoGroupService
 				return;
 			}
 			lfp.setPlayer(player);
-			for (final SearchInstance si : lfp.getSearchInstances())
+			for (SearchInstance si : lfp.getSearchInstances())
 			{
 				startSort(si.getEntryRequestType(), si.getInstanceMaskId(), true);
 			}
@@ -435,7 +435,7 @@ public class AutoGroupService
 			lfp.setPlayer(null);
 			if (lfp.isOnStartEnterTask())
 			{
-				for (final AutoInstance autoInstance : autoInstances.values())
+				for (AutoInstance autoInstance : autoInstances.values())
 				{
 					if (autoInstance.players.containsKey(obj) && !autoInstance.players.get(obj).isInInstance())
 					{
@@ -499,13 +499,13 @@ public class AutoGroupService
 			final Collection<Player> players = new HashSet<>();
 			if (ert.isFastGroupEntry())
 			{
-				for (final LookingForParty lfp : searchers.values())
+				for (LookingForParty lfp : searchers.values())
 				{
 					if ((lfp.getPlayer() == null) || lfp.isOnStartEnterTask())
 					{
 						continue;
 					}
-					for (final AutoInstance autoInstance : autoInstances.values())
+					for (AutoInstance autoInstance : autoInstances.values())
 					{
 						final int searchMaskId = autoInstance.agt.getInstanceMaskId();
 						final SearchInstance searchInstance = lfp.getSearchInstance(searchMaskId);
@@ -524,7 +524,7 @@ public class AutoGroupService
 						}
 					}
 				}
-				for (final Player p : players)
+				for (Player p : players)
 				{
 					searchers.remove(p.getObjectId());
 				}
@@ -564,7 +564,7 @@ public class AutoGroupService
 						{
 							if (searchInstance.getEntryRequestType().isGroupEntry())
 							{
-								for (final Player member : lfp.getPlayer().getPlayerGroup2().getOnlineMembers())
+								for (Player member : lfp.getPlayer().getPlayerGroup2().getOnlineMembers())
 								{
 									if (searchInstance.getMembers().contains(member.getObjectId()))
 									{
@@ -589,7 +589,7 @@ public class AutoGroupService
 					final WorldMapInstance instance = createInstance(agt.getInstanceMapId(), agt.getDifficultId());
 					autoInstance.onInstanceCreate(instance);
 					autoInstances.put(instance.getInstanceId(), autoInstance);
-					for (final Player player : players)
+					for (Player player : players)
 					{
 						final Integer obj = player.getObjectId();
 						lfp = searchers.get(obj);
@@ -688,7 +688,7 @@ public class AutoGroupService
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_INSTANCE_NOT_LEADER);
 					return false;
 				}
-				for (final Player member : purposeGroup.getMembers())
+				for (Player member : purposeGroup.getMembers())
 				{
 					if (purposeGroup.getLeaderObject().equals(member))
 					{
@@ -732,7 +732,7 @@ public class AutoGroupService
 						return false;
 					}
 				}
-				for (final Player member : group.getMembers())
+				for (Player member : group.getMembers())
 				{
 					if (group.getLeaderObject().equals(member))
 					{
@@ -808,7 +808,7 @@ public class AutoGroupService
 	
 	private AutoInstance getAutoInstance(Player player, int instanceMaskId)
 	{
-		for (final AutoInstance autoInstance : autoInstances.values())
+		for (AutoInstance autoInstance : autoInstances.values())
 		{
 			if ((autoInstance.agt.getInstanceMaskId() == instanceMaskId) && autoInstance.players.containsKey(player.getObjectId()))
 			{
@@ -846,7 +846,7 @@ public class AutoGroupService
 		return worldMapInstance;
 	}
 	
-	private void startPenalty(final Integer obj)
+	private void startPenalty(Integer obj)
 	{
 		if (penaltys.contains(obj))
 		{
@@ -868,7 +868,7 @@ public class AutoGroupService
 	
 	public void unRegisterInstance(byte instanceMaskId)
 	{
-		for (final LookingForParty lfp : searchers.values())
+		for (LookingForParty lfp : searchers.values())
 		{
 			if (lfp.isRegistredInstance(instanceMaskId))
 			{
@@ -893,7 +893,7 @@ public class AutoGroupService
 		final int instanceMaskId = si.getInstanceMaskId();
 		if (si.getEntryRequestType().isGroupEntry() && (si.getMembers() != null))
 		{
-			for (final Integer obj : si.getMembers())
+			for (Integer obj : si.getMembers())
 			{
 				final Player member = World.getInstance().findPlayer(obj);
 				if (member != null)

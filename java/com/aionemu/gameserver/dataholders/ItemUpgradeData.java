@@ -55,13 +55,13 @@ public class ItemUpgradeData
 	{
 		itemUpgradeSets = new TIntObjectHashMap<>();
 		upgradeResultItemMap = new FastMap<>();
-		for (final ItemUpgradeTemplate set : itemUpgradeTemplates)
+		for (ItemUpgradeTemplate set : itemUpgradeTemplates)
 		{
 			itemUpgradeSets.put(set.getUpgrade_base_item_id(), set);
 			upgradeResultItemMap.put(set.getUpgrade_base_item_id(), new FastMap<Integer, UpgradeResultItem>());
 			if (!set.getUpgrade_result_item().isEmpty())
 			{
-				for (final UpgradeResultItem resultItem : set.getUpgrade_result_item())
+				for (UpgradeResultItem resultItem : set.getUpgrade_result_item())
 				{
 					upgradeResultItemMap.get(set.getUpgrade_base_item_id()).put(resultItem.getItem_id(), resultItem);
 				}

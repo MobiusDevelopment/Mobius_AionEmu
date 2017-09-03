@@ -109,7 +109,7 @@ public final class CronService
 			scheduler = new StdSchedulerFactory(properties).getScheduler();
 			scheduler.start();
 		}
-		catch (final SchedulerException e)
+		catch (SchedulerException e)
 		{
 			throw new CronServiceException("Failed to initialize CronService", e);
 		}
@@ -135,7 +135,7 @@ public final class CronService
 		{
 			localScheduler.shutdown(false);
 		}
-		catch (final SchedulerException e)
+		catch (SchedulerException e)
 		{
 			log.error("Failed to shutdown CronService correctly", e);
 		}
@@ -164,7 +164,7 @@ public final class CronService
 			
 			scheduler.scheduleJob(jobDetail, trigger);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new CronServiceException("Failed to start job", e);
 		}
@@ -194,7 +194,7 @@ public final class CronService
 		{
 			scheduler.deleteJob(jd.getKey());
 		}
-		catch (final SchedulerException e)
+		catch (SchedulerException e)
 		{
 			throw new CronServiceException("Failed to delete Job", e);
 		}
@@ -217,14 +217,14 @@ public final class CronService
 			}
 			
 			final Set<JobDetail> result = Sets.newHashSetWithExpectedSize(keys.size());
-			for (final JobKey jk : keys)
+			for (JobKey jk : keys)
 			{
 				result.add(scheduler.getJobDetail(jk));
 			}
 			
 			return result;
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new CronServiceException("Can't get all active job details", e);
 		}
@@ -239,7 +239,7 @@ public final class CronService
 		}
 		
 		final Map<Runnable, JobDetail> result = Maps.newHashMap();
-		for (final JobDetail jd : jobDetails)
+		for (JobDetail jd : jobDetails)
 		{
 			if (GenericValidator.isBlankOrNull(jd.getJobDataMap()))
 			{
@@ -271,7 +271,7 @@ public final class CronService
 		{
 			return scheduler.getTriggersOfJob(jk);
 		}
-		catch (final SchedulerException e)
+		catch (SchedulerException e)
 		{
 			throw new CronServiceException("Can't get triggers for JobKey " + jk, e);
 		}

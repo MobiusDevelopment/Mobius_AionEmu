@@ -44,7 +44,7 @@ public class RoadService
 	
 	private RoadService()
 	{
-		for (final RoadTemplate rt : DataManager.ROAD_DATA.getRoadTemplates())
+		for (RoadTemplate rt : DataManager.ROAD_DATA.getRoadTemplates())
 		{
 			final Road r = new Road(rt);
 			r.spawn();

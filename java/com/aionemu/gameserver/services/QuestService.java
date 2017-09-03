@@ -438,7 +438,7 @@ public final class QuestService
 		if (qwi != null)
 		{
 			long count = 0;
-			for (final QuestItems qi : qwi.getQuestWorkItem())
+			for (QuestItems qi : qwi.getQuestWorkItem())
 			{
 				if (qi != null)
 				{
@@ -507,7 +507,7 @@ public final class QuestService
 		{
 			int daysToAdd = 7;
 			int startDay = 7;
-			for (final QuestRepeatCycle weekDay : template.getRepeatCycle())
+			for (QuestRepeatCycle weekDay : template.getRepeatCycle())
 			{
 				final int diff = weekDay.getDay() - repeatDate.getDayOfWeek();
 				if ((diff > 0) && (diff < daysToAdd))
@@ -617,7 +617,7 @@ public final class QuestService
 		int fulfilledStartConditions = 0;
 		if (!template.getXMLStartConditions().isEmpty())
 		{
-			for (final XMLStartCondition startCondition : template.getXMLStartConditions())
+			for (XMLStartCondition startCondition : template.getXMLStartConditions())
 			{
 				if (startCondition.check(player, warn))
 				{
@@ -653,7 +653,7 @@ public final class QuestService
 				skills.add(template.getCombineSkill());
 			}
 			boolean result = false;
-			for (final int skillId : skills)
+			for (int skillId : skills)
 			{
 				final PlayerSkillEntry skill = player.getSkillList().getSkillEntry(skillId);
 				if ((skill != null) && (skill.getSkillLevel() >= template.getCombineSkillPoint()))
@@ -811,7 +811,7 @@ public final class QuestService
 				skills.add(template.getCombineSkill());
 			}
 			boolean result = false;
-			for (final int skillId : skills)
+			for (int skillId : skills)
 			{
 				final PlayerSkillEntry skill = player.getSkillList().getSkillEntry(skillId);
 				if ((skill != null) && (skill.getSkillLevel() >= template.getCombineSkillPoint()) && ((skill.getSkillLevel() - 40) <= template.getCombineSkillPoint()))
@@ -923,7 +923,7 @@ public final class QuestService
 			{
 				return true;
 			}
-			for (final InventoryItem inventoryItem : inventoryItems.getInventoryItem())
+			for (InventoryItem inventoryItem : inventoryItems.getInventoryItem())
 			{
 				final int itemId = inventoryItem.getItemId();
 				if (player.getInventory().getItemCountByItemId(itemId) < 1)
@@ -933,14 +933,14 @@ public final class QuestService
 			}
 			if (removeItem)
 			{
-				for (final InventoryItem inventoryItem : inventoryItems.getInventoryItem())
+				for (InventoryItem inventoryItem : inventoryItems.getInventoryItem())
 				{
 					player.getInventory().decreaseByItemId(inventoryItem.getItemId(), 1);
 				}
 			}
 			return true;
 		}
-		for (final CollectItem collectItem : collectItems.getCollectItem())
+		for (CollectItem collectItem : collectItems.getCollectItem())
 		{
 			final int itemId = collectItem.getItemId();
 			final long count = itemId == ItemId.KINAH.value() ? player.getInventory().getKinah() : player.getInventory().getItemCountByItemId(itemId);
@@ -951,7 +951,7 @@ public final class QuestService
 		}
 		if (removeItem)
 		{
-			for (final CollectItem collectItem : collectItems.getCollectItem())
+			for (CollectItem collectItem : collectItems.getCollectItem())
 			{
 				if (collectItem.getItemId() == 182400001)
 				{
@@ -976,7 +976,7 @@ public final class QuestService
 			return true;
 		}
 		int requiredItemNameId = 0;
-		for (final InventoryItem inventoryItem : inventoryItems.getInventoryItem())
+		for (InventoryItem inventoryItem : inventoryItems.getInventoryItem())
 		{
 			final Item item = player.getInventory().getFirstItemByItemId(inventoryItem.getItemId());
 			if (item == null)
@@ -1011,7 +1011,7 @@ public final class QuestService
 		}
 	}
 	
-	private static void despawnQuestNpc(final Npc npc, int timeInMin)
+	private static void despawnQuestNpc(Npc npc, int timeInMin)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -1034,7 +1034,7 @@ public final class QuestService
 			return index;
 		}
 		final DropNpc dropNpc = DropRegistrationService.getInstance().getDropRegistrationMap().get(npc.getObjectId());
-		for (final QuestDrop drop : drops)
+		for (QuestDrop drop : drops)
 		{
 			if ((Rnd.get() * 100) > drop.getChance())
 			{
@@ -1045,7 +1045,7 @@ public final class QuestService
 				final List<Player> pls = new ArrayList<>();
 				if (drop.isDropEachMemberGroup())
 				{
-					for (final Player member : players)
+					for (Player member : players)
 					{
 						if (isQuestDrop(member, drop))
 						{
@@ -1056,7 +1056,7 @@ public final class QuestService
 				}
 				else
 				{
-					for (final Player member : players)
+					for (Player member : players)
 					{
 						if (isQuestDrop(member, drop))
 						{
@@ -1071,7 +1071,7 @@ public final class QuestService
 					{
 						dropItems.add(regQuestDropItem(drop, index++, 0));
 					}
-					for (final Player p : pls)
+					for (Player p : pls)
 					{
 						dropNpc.setPlayerObjectId(p.getObjectId());
 						if (player.getPlayerGroup2().getLootGroupRules().getLootRule() != LootRuleType.FREEFORALL)
@@ -1087,7 +1087,7 @@ public final class QuestService
 				final List<Player> pls = new ArrayList<>();
 				if (drop.isDropEachMemberAlliance())
 				{
-					for (final Player member : players)
+					for (Player member : players)
 					{
 						if (isQuestDrop(member, drop))
 						{
@@ -1098,7 +1098,7 @@ public final class QuestService
 				}
 				else
 				{
-					for (final Player member : players)
+					for (Player member : players)
 					{
 						if (isQuestDrop(member, drop))
 						{
@@ -1113,7 +1113,7 @@ public final class QuestService
 					{
 						dropItems.add(regQuestDropItem(drop, index++, 0));
 					}
-					for (final Player p : pls)
+					for (Player p : pls)
 					{
 						dropNpc.setPlayerObjectId(p.getObjectId());
 						if (player.getPlayerAlliance2().getLootGroupRules().getLootRule() != LootRuleType.FREEFORALL)
@@ -1175,7 +1175,7 @@ public final class QuestService
 			}
 			final PlayerGroup group = player.getPlayerGroup2();
 			boolean found = false;
-			for (final Player member : group.getMembers())
+			for (Player member : group.getMembers())
 			{
 				if (member.isMentor() && (MathUtil.getDistance(player, member) < GroupConfig.GROUP_MAX_DISTANCE))
 				{
@@ -1197,7 +1197,7 @@ public final class QuestService
 		{
 			return true;
 		}
-		for (final CollectItem collectItem : collectItems.getCollectItem())
+		for (CollectItem collectItem : collectItems.getCollectItem())
 		{
 			final int collectItemId = collectItem.getItemId();
 			final long count = player.getInventory().getItemCountByItemId(collectItemId);
@@ -1302,7 +1302,7 @@ public final class QuestService
 		if (qwi != null)
 		{
 			long count = 0;
-			for (final QuestItems qi : qwi.getQuestWorkItem())
+			for (QuestItems qi : qwi.getQuestWorkItem())
 			{
 				if (qi != null)
 				{
@@ -1317,7 +1317,7 @@ public final class QuestService
 		if (template.getCategory() == QuestCategory.TASK)
 		{
 			WorkOrdersData wod = null;
-			for (final XMLQuest xmlQuest : DataManager.XML_QUESTS.getQuest())
+			for (XMLQuest xmlQuest : DataManager.XML_QUESTS.getQuest())
 			{
 				if (xmlQuest.getId() == questId)
 				{
@@ -1366,11 +1366,11 @@ public final class QuestService
 	public static List<Player> getEachDropMembersGroup(PlayerGroup group, int npcId, int questId)
 	{
 		final List<Player> players = new ArrayList<>();
-		for (final QuestDrop qd : getQuestDrop(npcId))
+		for (QuestDrop qd : getQuestDrop(npcId))
 		{
 			if (qd.isDropEachMemberGroup())
 			{
-				for (final Player player : group.getMembers())
+				for (Player player : group.getMembers())
 				{
 					final QuestState qstel = player.getQuestStateList().getQuestState(questId);
 					if ((qstel != null) && (qstel.getStatus() == QuestStatus.START))
@@ -1387,11 +1387,11 @@ public final class QuestService
 	public static List<Player> getEachDropMembersAlliance(PlayerAlliance alliance, int npcId, int questId)
 	{
 		final List<Player> players = new ArrayList<>();
-		for (final QuestDrop qd : getQuestDrop(npcId))
+		for (QuestDrop qd : getQuestDrop(npcId))
 		{
 			if (qd.isDropEachMemberGroup())
 			{
-				for (final Player player : alliance.getMembers())
+				for (Player player : alliance.getMembers())
 				{
 					final QuestState qstel = player.getQuestStateList().getQuestState(questId);
 					if ((qstel != null) && (qstel.getStatus() == QuestStatus.START))

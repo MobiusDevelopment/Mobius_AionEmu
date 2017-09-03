@@ -103,7 +103,7 @@ public class Ban extends AdminCommand
 			{
 				time = Integer.parseInt(params[2]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "Syntax: //ban <player> [account|ip|full] [time in minutes]");
 				return;

@@ -114,7 +114,7 @@ public enum Race
 	
 	public static Race getRaceByString(String fieldName)
 	{
-		for (final Race r : values())
+		for (Race r : values())
 		{
 			if (r.toString().equals(fieldName))
 			{

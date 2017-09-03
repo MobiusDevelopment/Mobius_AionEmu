@@ -43,7 +43,7 @@ public class SM_SHIELD_EFFECT extends AionServerPacket
 	protected void writeImpl(AionConnection con)
 	{
 		writeH(locations.size());
-		for (final SiegeLocation loc : locations)
+		for (SiegeLocation loc : locations)
 		{
 			writeD(loc.getLocationId());
 			writeC(loc.isUnderShield() ? 1 : 0);

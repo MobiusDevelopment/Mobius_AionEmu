@@ -64,7 +64,7 @@ public class HousingObjectData
 		{
 			return;
 		}
-		for (final PlaceableHouseObject obj : housingObjects)
+		for (PlaceableHouseObject obj : housingObjects)
 		{
 			objectTemplatesById.put(obj.getTemplateId(), obj);
 		}

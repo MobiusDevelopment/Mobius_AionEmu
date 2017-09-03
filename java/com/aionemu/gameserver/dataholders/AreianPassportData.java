@@ -50,7 +50,7 @@ public class AreianPassportData
 	
 	void afterUnmarshal(Unmarshaller paramUnmarshaller, Object paramObject)
 	{
-		for (final AtreianPassport atreianPassport : tlist)
+		for (AtreianPassport atreianPassport : tlist)
 		{
 			passportData.put(atreianPassport.getId(), atreianPassport);
 			passportDataMap.put(atreianPassport.getId(), atreianPassport);

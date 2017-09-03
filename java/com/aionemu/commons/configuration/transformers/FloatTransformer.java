@@ -46,7 +46,7 @@ public class FloatTransformer implements PropertyTransformer<Float>
 		{
 			return Float.parseFloat(value);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new TransformationException(e);
 		}

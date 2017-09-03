@@ -64,11 +64,11 @@ public class _4944Loyalty_And_Affableness extends QuestHandler
 	{
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(204053).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
@@ -213,7 +213,7 @@ public class _4944Loyalty_And_Affableness extends QuestHandler
 					251033,
 					251036
 				};
-				for (final int id : npcids)
+				for (int id : npcids)
 				{
 					if (targetId == id)
 					{

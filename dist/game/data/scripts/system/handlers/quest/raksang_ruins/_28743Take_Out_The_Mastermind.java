@@ -47,7 +47,7 @@ public class _28743Take_Out_The_Mastermind extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(804732).addOnTalkEvent(questId);
-		for (final int mob : reviverNasto)
+		for (int mob : reviverNasto)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

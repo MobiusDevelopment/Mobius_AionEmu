@@ -85,7 +85,7 @@ public class Tatar_BlazeAI2 extends AggressiveNpcAI2
 	private synchronized void checkPercentage(int hpPercentage)
 	{
 		curentPercent = hpPercentage;
-		for (final Integer percent : percents)
+		for (Integer percent : percents)
 		{
 			if (hpPercentage <= percent)
 			{

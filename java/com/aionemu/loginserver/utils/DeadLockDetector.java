@@ -92,12 +92,12 @@ public class DeadLockDetector extends Thread
 					deadlock = true;
 					final ThreadInfo[] tis = tmx.getThreadInfo(ids, true, true);
 					String info = "DeadLock Found!\n";
-					for (final ThreadInfo ti : tis)
+					for (ThreadInfo ti : tis)
 					{
 						info += ti.toString();
 					}
 					
-					for (final ThreadInfo ti : tis)
+					for (ThreadInfo ti : tis)
 					{
 						final LockInfo[] locks = ti.getLockedSynchronizers();
 						final MonitorInfo[] monitors = ti.getLockedMonitors();
@@ -129,7 +129,7 @@ public class DeadLockDetector extends Thread
 				}
 				Thread.sleep(sleepTime);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.warn("DeadLockDetector: " + e, e);
 			}

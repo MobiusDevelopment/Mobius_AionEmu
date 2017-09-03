@@ -44,7 +44,7 @@ public class BindPointData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final BindPointTemplate bind : bplist)
+		for (BindPointTemplate bind : bplist)
 		{
 			bindplistData.put(bind.getNpcId(), bind);
 		}

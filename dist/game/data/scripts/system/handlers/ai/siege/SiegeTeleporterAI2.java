@@ -51,7 +51,7 @@ public class SiegeTeleporterAI2 extends GeneralNpcAI2
 		super.handleSpawned();
 	}
 	
-	private void siegeTeleport(final boolean status)
+	private void siegeTeleport(boolean status)
 	{
 		final int id = ((SiegeNpc) getOwner()).getSiegeId();
 		SiegeService.getInstance().getFortress(id).setCanTeleport(status);
@@ -65,7 +65,7 @@ public class SiegeTeleporterAI2 extends GeneralNpcAI2
 		});
 	}
 	
-	private void artifactTeleport(final boolean status)
+	private void artifactTeleport(boolean status)
 	{
 		final int id = ((SiegeNpc) getOwner()).getSiegeId();
 		SiegeService.getInstance().getArtifact(id).setCanTeleport(status);

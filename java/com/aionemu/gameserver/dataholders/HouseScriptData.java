@@ -71,7 +71,7 @@ public class HouseScriptData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final LBox template : scriptData)
+		for (LBox template : scriptData)
 		{
 			defaultTemplates.put(template.getId(), template);
 		}
@@ -93,7 +93,7 @@ public class HouseScriptData
 		{
 			marshaller.marshal(fragment, writer);
 		}
-		catch (final JAXBException e)
+		catch (JAXBException e)
 		{
 		}
 		return XmlFormatter.format(writer.toString());
@@ -120,7 +120,7 @@ public class HouseScriptData
 			marshaller.setSchema(schema);
 			marshaller.setProperty("jaxb.encoding", "UTF-8");
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not instantiate HouseScriptData : \n" + e);
 		}
@@ -147,7 +147,7 @@ public class HouseScriptData
 				serializer.serialize(document);
 				return out.toString();
 			}
-			catch (final IOException e)
+			catch (IOException e)
 			{
 			}
 			return null;
@@ -160,11 +160,11 @@ public class HouseScriptData
 				final InputSource is = new InputSource(new StringReader(in));
 				return db.parse(is);
 			}
-			catch (final SAXException e)
+			catch (SAXException e)
 			{
 				throw new RuntimeException(e);
 			}
-			catch (final IOException e)
+			catch (IOException e)
 			{
 				throw new RuntimeException(e);
 			}
@@ -176,7 +176,7 @@ public class HouseScriptData
 			{
 				db = dbf.newDocumentBuilder();
 			}
-			catch (final ParserConfigurationException e)
+			catch (ParserConfigurationException e)
 			{
 				log.error("Could not instantiate XmlFormatter : \n" + e);
 			}

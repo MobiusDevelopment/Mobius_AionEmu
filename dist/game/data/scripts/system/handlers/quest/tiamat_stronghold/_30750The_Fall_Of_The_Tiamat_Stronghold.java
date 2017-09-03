@@ -57,11 +57,11 @@ public class _30750The_Fall_Of_The_Tiamat_Stronghold extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(804869).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -65,11 +65,11 @@ public class _20035Silentera_Support extends QuestHandler
 			799309,
 			799225
 		};
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
@@ -272,7 +272,7 @@ public class _20035Silentera_Support extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		final Player player = env.getPlayer();
 		if (player.isInsideZone(ZoneName.get("DF4_ITEMUSEAREA_Q20035")))

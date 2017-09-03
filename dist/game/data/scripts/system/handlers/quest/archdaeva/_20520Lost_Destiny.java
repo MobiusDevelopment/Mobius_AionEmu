@@ -59,7 +59,7 @@ public class _20520Lost_Destiny extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
@@ -200,7 +200,7 @@ public class _20520Lost_Destiny extends QuestHandler
 						20528,
 						20529
 					};
-					for (final int quest : norsvoldMission)
+					for (int quest : norsvoldMission)
 					{
 						QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
 					}
@@ -247,7 +247,7 @@ public class _20520Lost_Destiny extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

@@ -103,7 +103,7 @@ public class Appearance extends AdminCommand
 			{
 				height = Float.parseFloat(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "The value must be a number !");
 				onFail(player, e.getMessage());
@@ -127,7 +127,7 @@ public class Appearance extends AdminCommand
 			{
 				voice = Integer.parseInt(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "The value must be a number !");
 				onFail(player, e.getMessage());
@@ -151,7 +151,7 @@ public class Appearance extends AdminCommand
 			{
 				hair = Integer.parseInt(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "The value must be a number !");
 				onFail(player, e.getMessage());
@@ -175,7 +175,7 @@ public class Appearance extends AdminCommand
 			{
 				face = Integer.parseInt(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "The value must be a number !");
 				onFail(player, e.getMessage());
@@ -199,7 +199,7 @@ public class Appearance extends AdminCommand
 			{
 				deco = Integer.parseInt(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "The value must be a number !");
 				onFail(player, e.getMessage());
@@ -223,7 +223,7 @@ public class Appearance extends AdminCommand
 			{
 				head = Integer.parseInt(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "The value must be a number !");
 				onFail(player, e.getMessage());
@@ -247,7 +247,7 @@ public class Appearance extends AdminCommand
 			{
 				tattoo = Integer.parseInt(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "The value must be a number !");
 				onFail(player, e.getMessage());

@@ -67,7 +67,7 @@ public class MySQL5TaskFromDBDAO extends TaskFromDBDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("getAllTasks", e);
 		}
@@ -80,7 +80,7 @@ public class MySQL5TaskFromDBDAO extends TaskFromDBDAO
 	}
 	
 	@Override
-	public void setLastActivation(final int id)
+	public void setLastActivation(int id)
 	{
 		Connection con = null;
 		
@@ -94,7 +94,7 @@ public class MySQL5TaskFromDBDAO extends TaskFromDBDAO
 			stmt.setInt(2, id);
 			stmt.execute();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("setLastActivation", e);
 		}

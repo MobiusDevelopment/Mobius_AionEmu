@@ -60,7 +60,7 @@ public class _25560Tunes_Of_Splendor_Scout extends QuestHandler
 	{
 		qe.registerQuestNpc(731685).addOnQuestStart(questId);
 		qe.registerQuestNpc(806102).addOnTalkEvent(questId);
-		for (final int mob : warshipInvasionE)
+		for (int mob : warshipInvasionE)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

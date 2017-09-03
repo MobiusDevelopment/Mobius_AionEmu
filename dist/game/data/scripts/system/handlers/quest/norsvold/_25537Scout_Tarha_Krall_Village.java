@@ -67,7 +67,7 @@ public class _25537Scout_Tarha_Krall_Village extends QuestHandler
 	{
 		qe.registerQuestNpc(806255).addOnQuestStart(questId);
 		qe.registerQuestNpc(806255).addOnTalkEvent(questId);
-		for (final int mob : Q25537)
+		for (int mob : Q25537)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

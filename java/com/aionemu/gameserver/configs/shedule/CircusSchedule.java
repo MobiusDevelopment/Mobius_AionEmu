@@ -58,7 +58,7 @@ public class CircusSchedule
 			final String xml = FileUtils.readFileToString(new File("./config/shedule/circus_schedule.xml"));
 			cs = JAXBUtil.deserialize(xml, CircusSchedule.class);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to initialize circus", e);
 		}

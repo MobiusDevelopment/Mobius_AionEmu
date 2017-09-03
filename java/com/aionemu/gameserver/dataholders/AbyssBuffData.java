@@ -50,7 +50,7 @@ public class AbyssBuffData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final AbyssServiceAttr template : abyssBonusattr)
+		for (AbyssServiceAttr template : abyssBonusattr)
 		{
 			templates.put(template.getBuffId(), template);
 		}

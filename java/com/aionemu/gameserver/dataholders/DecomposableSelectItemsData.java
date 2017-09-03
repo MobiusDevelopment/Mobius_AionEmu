@@ -52,7 +52,7 @@ public class DecomposableSelectItemsData
 	})
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final Object element : selectItems)
+		for (Object element : selectItems)
 		{
 			DecomposableSelectItem item;
 			item = (DecomposableSelectItem) element;
@@ -62,7 +62,7 @@ public class DecomposableSelectItemsData
 				{
 					selectItemData.put(Integer.valueOf(item.getItemId()), new HashMap());
 				}
-				for (final SelectItems its : item.getItems())
+				for (SelectItems its : item.getItems())
 				{
 					((HashMap) selectItemData.get(Integer.valueOf(item.getItemId()))).put(its.getPlayerClass(), its);
 				}
@@ -80,7 +80,7 @@ public class DecomposableSelectItemsData
 			if (((HashMap) selectItemData.get(Integer.valueOf(itemid))).containsKey(playerClass))
 			{
 				final SelectItems filtered = new SelectItems();
-				for (final SelectItem si : selectItemData.get(itemid).get(playerClass).getItems())
+				for (SelectItem si : selectItemData.get(itemid).get(playerClass).getItems())
 				{
 					if ((si.getRace() == Race.PC_ALL) || (si.getRace() == race))
 					{
@@ -92,7 +92,7 @@ public class DecomposableSelectItemsData
 			if (((HashMap) selectItemData.get(Integer.valueOf(itemid))).containsKey(PlayerClass.ALL))
 			{
 				final SelectItems filtered = new SelectItems();
-				for (final SelectItem si : selectItemData.get(itemid).get(PlayerClass.ALL).getItems())
+				for (SelectItem si : selectItemData.get(itemid).get(PlayerClass.ALL).getItems())
 				{
 					if ((si.getRace() == Race.PC_ALL) || (si.getRace() == race))
 					{

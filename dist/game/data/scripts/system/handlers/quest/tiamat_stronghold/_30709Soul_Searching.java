@@ -47,7 +47,7 @@ public class _30709Soul_Searching extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(800423).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

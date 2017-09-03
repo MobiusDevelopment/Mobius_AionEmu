@@ -45,7 +45,7 @@ public class ConquerorBuffs implements StatOwner
 		{
 			endEffect(player);
 		}
-		for (final RankPenaltyAttr rankPenaltyAttr : rankRestriction.getPenaltyAttr())
+		for (RankPenaltyAttr rankPenaltyAttr : rankRestriction.getPenaltyAttr())
 		{
 			if (rankPenaltyAttr.getFunc().equals(Func.PERCENT))
 			{

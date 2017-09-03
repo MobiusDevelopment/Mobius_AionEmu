@@ -953,7 +953,7 @@ public class Item extends AionObject implements IExpirable, StatOwner
 			player.getEquipment().unEquipItem(getObjectId(), getEquipmentSlot());
 		}
 		
-		for (final StorageType i : StorageType.values())
+		for (StorageType i : StorageType.values())
 		{
 			if (i == StorageType.LEGION_WAREHOUSE)
 			{

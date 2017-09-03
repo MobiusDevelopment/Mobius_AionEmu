@@ -92,7 +92,7 @@ public class _24010Suthrans_Orders extends QuestHandler
 					24015,
 					24016
 				};
-				for (final int id : ids)
+				for (int id : ids)
 				{
 					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), id, env.getDialogId()));
 				}

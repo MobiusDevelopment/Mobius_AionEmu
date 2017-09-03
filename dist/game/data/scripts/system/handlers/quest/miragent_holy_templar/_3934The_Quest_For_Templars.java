@@ -61,7 +61,7 @@ public class _3934The_Quest_For_Templars extends QuestHandler
 			203701
 		};
 		qe.registerQuestNpc(203701).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

@@ -63,7 +63,7 @@ public class CalindiFlamelordAI2 extends AggressiveNpcAI2
 	
 	private synchronized void checkPercentage(int hpPercentage)
 	{
-		for (final Integer percent : percents)
+		for (Integer percent : percents)
 		{
 			if (hpPercentage <= percent)
 			{

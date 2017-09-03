@@ -161,7 +161,7 @@ public final class PlayerEnterWorldService
 	private static PlayersBonus playersBonus;
 	static ScheduledFuture<?> adv = null;
 	
-	public static void startEnterWorld(final int objectId, final AionConnection client)
+	public static void startEnterWorld(int objectId, AionConnection client)
 	{
 		final PlayerAccountData playerAccData = client.getAccount().getPlayerAccountData(objectId);
 		final Timestamp lastOnline = playerAccData.getPlayerCommonData().getLastOnline();
@@ -193,7 +193,7 @@ public final class PlayerEnterWorldService
 		}
 	}
 	
-	private static void showPasskey(final int objectId, final AionConnection client)
+	private static void showPasskey(int objectId, AionConnection client)
 	{
 		client.getAccount().getCharacterPasskey().setConnectType(ConnectType.ENTER);
 		client.getAccount().getCharacterPasskey().setObjectId(objectId);
@@ -208,7 +208,7 @@ public final class PlayerEnterWorldService
 		}
 	}
 	
-	private static void validateAndEnterWorld(final int objectId, final AionConnection client)
+	private static void validateAndEnterWorld(int objectId, AionConnection client)
 	{
 		synchronized (pendingEnterWorld)
 		{
@@ -238,7 +238,7 @@ public final class PlayerEnterWorldService
 				}
 				enterWorld(client, objectId);
 			}
-			catch (final Throwable ex)
+			catch (Throwable ex)
 			{
 				log.error("Error during enter world " + objectId, ex);
 			}
@@ -341,7 +341,7 @@ public final class PlayerEnterWorldService
 			client.sendPacket(new SM_A_STATION(0, 1, true));
 			AbyssSkillService.onEnterWorld(player);
 			client.sendPacket(new SM_SKILL_LIST(player, player.getSkillList().getBasicSkills()));
-			for (final PlayerSkillEntry stigmaSkill : player.getSkillList().getStigmaSkills())
+			for (PlayerSkillEntry stigmaSkill : player.getSkillList().getStigmaSkills())
 			{
 				client.sendPacket(new SM_SKILL_LIST(player, stigmaSkill));
 			}
@@ -356,7 +356,7 @@ public final class PlayerEnterWorldService
 			// UpgradeArcadeService.getInstance().onEnterWorld(player);
 			final FastList<QuestState> questList = FastList.newInstance();
 			final FastList<QuestState> completeQuestList = FastList.newInstance();
-			for (final QuestState qs : player.getQuestStateList().getAllQuestState())
+			for (QuestState qs : player.getQuestStateList().getAllQuestState())
 			{
 				if ((qs.getStatus() == QuestStatus.NONE) && (qs.getCompleteCount() == 0))
 				{
@@ -528,7 +528,7 @@ public final class PlayerEnterWorldService
 				
 				if (player.getAccessLevel() >= AdminConfig.GM_SPECIAL_SKILLS)
 				{
-					for (final int al : GmSpecialSkills.getAlType(player.getAccessLevel()).getSkills())
+					for (int al : GmSpecialSkills.getAlType(player.getAccessLevel()).getSkills())
 					{
 						player.getSkillList().addGMSkill(player, al, 1);
 					}
@@ -668,7 +668,7 @@ public final class PlayerEnterWorldService
 			{
 				HTMLService.onPlayerLogin(player);
 			}
-			for (final StorageType st : StorageType.values())
+			for (StorageType st : StorageType.values())
 			{
 				if (st == StorageType.LEGION_WAREHOUSE)
 				{
@@ -677,7 +677,7 @@ public final class PlayerEnterWorldService
 				final IStorage storage = player.getStorage(st.getId());
 				if (storage != null)
 				{
-					for (final Item item : storage.getItemsWithKinah())
+					for (Item item : storage.getItemsWithKinah())
 					{
 						if (item.getExpireTime() > 0)
 						{
@@ -686,28 +686,28 @@ public final class PlayerEnterWorldService
 					}
 				}
 			}
-			for (final Item item : player.getEquipment().getEquippedItems())
+			for (Item item : player.getEquipment().getEquippedItems())
 			{
 				if (item.getExpireTime() > 0)
 				{
 					ExpireTimerTask.getInstance().addTask(item, player);
 				}
 			}
-			for (final Motion motion : player.getMotions().getMotions().values())
+			for (Motion motion : player.getMotions().getMotions().values())
 			{
 				if (motion.getExpireTime() != 0)
 				{
 					ExpireTimerTask.getInstance().addTask(motion, player);
 				}
 			}
-			for (final Emotion emotion : player.getEmotions().getEmotions())
+			for (Emotion emotion : player.getEmotions().getEmotions())
 			{
 				if (emotion.getExpireTime() != 0)
 				{
 					ExpireTimerTask.getInstance().addTask(emotion, player);
 				}
 			}
-			for (final Title title : player.getTitleList().getTitles())
+			for (Title title : player.getTitleList().getTitles())
 			{
 				if (title.getExpireTime() != 0)
 				{
@@ -716,7 +716,7 @@ public final class PlayerEnterWorldService
 			}
 			if (player.getHouseRegistry() != null)
 			{
-				for (final HouseObject<?> obj : player.getHouseRegistry().getObjects())
+				for (HouseObject<?> obj : player.getHouseRegistry().getObjects())
 				{
 					if (obj.getPersistentState() != PersistentState.DELETED)
 					{
@@ -822,7 +822,7 @@ public final class PlayerEnterWorldService
 	 * [Abyss Logon] 4.9
 	 * @param player
 	 */
-	public static void abyssLightLogon(final Player player)
+	public static void abyssLightLogon(Player player)
 	{
 		if (player.getAbyssRank().getRank().getId() == AbyssRankEnum.SUPREME_COMMANDER.getId())
 		{
@@ -830,7 +830,7 @@ public final class PlayerEnterWorldService
 		}
 	}
 	
-	public static void abyssDarkLogon(final Player player)
+	public static void abyssDarkLogon(Player player)
 	{
 		if (player.getAbyssRank().getRank().getId() == AbyssRankEnum.SUPREME_COMMANDER.getId())
 		{

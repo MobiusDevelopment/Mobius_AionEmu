@@ -63,11 +63,11 @@ public class _26806They_Dont_Make_Em_Like_They_Used_To extends QuestHandler
 	{
 		qe.registerOnEnterWorld(questId);
 		qe.registerQuestNpc(806149).addOnTalkEvent(questId);
-		for (final int mob : IDEternity01Mobs)
+		for (int mob : IDEternity01Mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : IDEternity01Boss)
+		for (int mob : IDEternity01Boss)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -39,7 +39,7 @@ public class CubeExpandService
 	private static final int MIN_EXPAND = 0;
 	private static final int MAX_EXPAND = 15;
 	
-	public static void expandCube(final Player player, Npc npc)
+	public static void expandCube(Player player, Npc npc)
 	{
 		final CubeExpandTemplate expandTemplate = DataManager.CUBEEXPANDER_DATA.getCubeExpandListTemplate(npc.getNpcId());
 		if (expandTemplate == null)
@@ -149,7 +149,7 @@ public class CubeExpandService
 			2937,
 			1797
 		};
-		for (final int q : questIds)
+		for (int q : questIds)
 		{
 			if ((qs.getQuestState(q) != null) && qs.getQuestState(q).getStatus().equals(QuestStatus.COMPLETE))
 			{

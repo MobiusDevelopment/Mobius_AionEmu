@@ -39,7 +39,7 @@ public class SM_ABYSS_ARTIFACT_INFO2 extends AionServerPacket
 	protected void writeImpl(AionConnection con)
 	{
 		final FastList<SiegeLocation> validLocations = new FastList<>();
-		for (final SiegeLocation loc : locations)
+		for (SiegeLocation loc : locations)
 		{
 			if (((loc.getType() == SiegeType.ARTIFACT) || (loc.getType() == SiegeType.FORTRESS)) && (loc.getLocationId() >= 1011) && (loc.getLocationId() < 2000))
 			{
@@ -47,7 +47,7 @@ public class SM_ABYSS_ARTIFACT_INFO2 extends AionServerPacket
 			}
 		}
 		writeH(validLocations.size());
-		for (final SiegeLocation loc : validLocations)
+		for (SiegeLocation loc : validLocations)
 		{
 			writeD(loc.getLocationId());
 			writeC(0);

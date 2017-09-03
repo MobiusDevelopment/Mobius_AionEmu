@@ -87,7 +87,7 @@ public class CM_LOGIN extends AionClientPacket
 			rsaCipher.init(Cipher.DECRYPT_MODE, getConnection().getRSAPrivateKey());
 			decrypted = rsaCipher.doFinal(data, 0, 128);
 		}
-		catch (final GeneralSecurityException e)
+		catch (GeneralSecurityException e)
 		{
 			sendPacket(new SM_LOGIN_FAIL(AionAuthResponse.SYSTEM_ERROR));
 			return;

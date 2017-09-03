@@ -76,10 +76,10 @@ public class DropInfo extends AdminCommand
 		
 		int count = 0;
 		PacketSendUtility.sendMessage(player, "[Drop Info for the specified NPC]\n");
-		for (final DropGroup dropGroup : npcDrop.getDropGroup())
+		for (DropGroup dropGroup : npcDrop.getDropGroup())
 		{
 			PacketSendUtility.sendMessage(player, "DropGroup: " + dropGroup.getGroupName());
-			for (final Drop drop : dropGroup.getDrop())
+			for (Drop drop : dropGroup.getDrop())
 			{
 				PacketSendUtility.sendMessage(player, "[item:" + drop.getItemId() + "]" + "	Rate: " + drop.getChance());
 				count++;

@@ -47,7 +47,7 @@ public class _18932All_Out_Dredgion_Attack extends QuestHandler
 		qe.registerQuestNpc(806259).addOnQuestStart(questId);
 		qe.registerQuestNpc(806259).addOnTalkEvent(questId);
 		qe.registerQuestNpc(806258).addOnTalkEvent(questId);
-		for (final int mob : frigateCommanderAshunatal)
+		for (int mob : frigateCommanderAshunatal)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

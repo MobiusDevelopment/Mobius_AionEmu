@@ -66,7 +66,7 @@ public class ArenaOfDisciplineInstance extends PvPArenaInstance
 		final float totalCrucible = (0.01f * size) * 100;
 		final float totalCourage = (0.01f * size) * 100;
 		final float totalInfinity = (0.01f * size) * 100;
-		for (final InstancePlayerReward playerReward : instanceReward.getInstanceRewards())
+		for (InstancePlayerReward playerReward : instanceReward.getInstanceRewards())
 		{
 			final PvPArenaPlayerReward reward = (PvPArenaPlayerReward) playerReward;
 			if (!reward.isRewarded())

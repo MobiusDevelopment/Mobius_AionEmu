@@ -63,15 +63,15 @@ public class _14014Turning_The_Ide extends QuestHandler
 	{
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerOnLevelUp(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int item : items)
+		for (int item : items)
 		{
 			qe.registerQuestItem(item, questId);
 		}
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
@@ -188,7 +188,7 @@ public class _14014Turning_The_Ide extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(QuestEnv env, final Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

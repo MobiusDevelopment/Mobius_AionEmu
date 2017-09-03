@@ -45,7 +45,7 @@ public class GatherableData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final GatherableTemplate gatherable : gatherables)
+		for (GatherableTemplate gatherable : gatherables)
 		{
 			if (gatherable.getMaterials() != null)
 			{

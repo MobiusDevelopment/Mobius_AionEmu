@@ -69,7 +69,7 @@ public class MonsterHuntData extends XMLQuest
 	public void register(QuestEngine questEngine)
 	{
 		final FastMap<Monster, Set<Integer>> monsterNpcs = new FastMap<>();
-		for (final Monster m : monster)
+		for (Monster m : monster)
 		{
 			monsterNpcs.put(m, new HashSet<>(m.getNpcIds()));
 		}

@@ -86,7 +86,7 @@ public class ExtractExpAction extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, final Item parentItem, final Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 		final ItemTemplate itemTemplate = parentItem.getItemTemplate();
 		ItemService.addItem(player, getReward(), 1);

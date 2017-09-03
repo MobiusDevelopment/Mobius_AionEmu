@@ -92,7 +92,7 @@ public class ThreadPoolManager implements Executor
 	 * @param pkt
 	 */
 	@Override
-	public void execute(final Runnable pkt)
+	public void execute(Runnable pkt)
 	{
 		generalPacketsThreadPool.execute(new RunnableWrapper(pkt));
 	}
@@ -113,7 +113,7 @@ public class ThreadPoolManager implements Executor
 	 * @return ScheduledFuture
 	 */
 	@SuppressWarnings("unchecked")
-	public <T extends Runnable> ListenableFuture<T> schedule(final T r, long delay)
+	public <T extends Runnable> ListenableFuture<T> schedule(T r, long delay)
 	{
 		try
 		{
@@ -123,7 +123,7 @@ public class ThreadPoolManager implements Executor
 			}
 			return (ListenableFuture<T>) JdkFutureAdapters.listenInPoolThread(scheduledThreadPool.schedule(r, delay, TimeUnit.MILLISECONDS));
 		}
-		catch (final RejectedExecutionException e)
+		catch (RejectedExecutionException e)
 		{
 			return null; /* shutdown, ignore */
 			
@@ -139,7 +139,7 @@ public class ThreadPoolManager implements Executor
 	 * @return ScheduledFuture
 	 */
 	@SuppressWarnings("unchecked")
-	public <T extends Runnable> ListenableFuture<T> scheduleAtFixedRate(final T r, long initial, long delay)
+	public <T extends Runnable> ListenableFuture<T> scheduleAtFixedRate(T r, long initial, long delay)
 	{
 		try
 		{
@@ -153,7 +153,7 @@ public class ThreadPoolManager implements Executor
 			}
 			return (ListenableFuture<T>) JdkFutureAdapters.listenInPoolThread(scheduledThreadPool.scheduleAtFixedRate(r, initial, delay, TimeUnit.MILLISECONDS));
 		}
-		catch (final RejectedExecutionException e)
+		catch (RejectedExecutionException e)
 		{
 			return null;
 		}
@@ -172,7 +172,7 @@ public class ThreadPoolManager implements Executor
 			generalPacketsThreadPool.awaitTermination(2, TimeUnit.SECONDS);
 			log.info("All ThreadPools are now stopped.");
 		}
-		catch (final InterruptedException e)
+		catch (InterruptedException e)
 		{
 			log.error("Can't shutdown ThreadPoolManager", e);
 		}

@@ -55,7 +55,7 @@ public class _4205Smack_The_Shulack extends QuestHandler
 		qe.registerQuestNpc(278151).addOnTalkEvent(questId);
 		qe.registerQuestNpc(204792).addOnTalkEvent(questId);
 		qe.registerQuestNpc(805842).addOnTalkEvent(questId);
-		for (final int mob : Petrahulk_Sentinel)
+		for (int mob : Petrahulk_Sentinel)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

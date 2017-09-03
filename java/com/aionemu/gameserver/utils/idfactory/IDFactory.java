@@ -133,7 +133,7 @@ public class IDFactory
 		try
 		{
 			lock.lock();
-			for (final int id : ids)
+			for (int id : ids)
 			{
 				final boolean status = idList.get(id);
 				if (status)
@@ -159,7 +159,7 @@ public class IDFactory
 		try
 		{
 			lock.lock();
-			for (final int id : ids)
+			for (int id : ids)
 			{
 				final boolean status = idList.get(id);
 				if (status)
@@ -212,7 +212,7 @@ public class IDFactory
 		try
 		{
 			lock.lock();
-			for (final Integer id : ids)
+			for (Integer id : ids)
 			{
 				final boolean status = idList.get(id);
 				if (!status)

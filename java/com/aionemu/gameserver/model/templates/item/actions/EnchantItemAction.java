@@ -112,12 +112,12 @@ public class EnchantItemAction extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, final Item parentItem, final Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 		act(player, parentItem, targetItem, null, 1);
 	}
 	
-	public void act(final Player player, final Item parentItem, final Item targetItem, final Item supplementItem, final int targetWeapon)
+	public void act(Player player, Item parentItem, Item targetItem, Item supplementItem, int targetWeapon)
 	{
 		if ((supplementItem != null) && (!checkSupplementLevel(player, supplementItem.getItemTemplate(), targetItem.getItemTemplate())))
 		{
@@ -197,7 +197,7 @@ public class EnchantItemAction extends AbstractItemAction
 		}, enchantCast));
 	}
 	
-	private boolean isSuccess(final Player player, final Item parentItem, final Item targetItem, final Item supplementItem, final int targetWeapon)
+	private boolean isSuccess(Player player, Item parentItem, Item targetItem, Item supplementItem, int targetWeapon)
 	{
 		if (parentItem.getItemTemplate() != null)
 		{
@@ -241,7 +241,7 @@ public class EnchantItemAction extends AbstractItemAction
 		return (getMinLevel() > 0) || (getMaxLevel() > 0) || (getChance() > 0) || isManastoneOnly();
 	}
 	
-	private boolean checkSupplementLevel(final Player player, final ItemTemplate supplementTemplate, final ItemTemplate targetItemTemplate)
+	private boolean checkSupplementLevel(Player player, ItemTemplate supplementTemplate, ItemTemplate targetItemTemplate)
 	{
 		if (supplementTemplate.getCategory() != ItemCategory.ENCHANTMENT)
 		{

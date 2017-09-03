@@ -44,7 +44,7 @@ public class SM_IN_GAME_SHOP_CATEGORY_LIST extends AionServerPacket
 		{
 			case 0:
 				writeH(ing.size());
-				for (final IGCategory category : ing.getCategories())
+				for (IGCategory category : ing.getCategories())
 				{
 					writeD(category.getId());
 					writeS(category.getName());
@@ -55,7 +55,7 @@ public class SM_IN_GAME_SHOP_CATEGORY_LIST extends AionServerPacket
 				{
 					final IGCategory iGCategory = ing.getCategories().get(categoryId);
 					writeH(iGCategory.getSubCategories().size());
-					for (final IGSubCategory subCategory : iGCategory.getSubCategories())
+					for (IGSubCategory subCategory : iGCategory.getSubCategories())
 					{
 						writeD(subCategory.getId());
 						writeS(subCategory.getName());

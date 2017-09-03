@@ -63,7 +63,7 @@ public class SM_ABYSS_RANKING_PLAYERS extends AionServerPacket
 		writeD(isEndPacket ? 0x7F : 0);// 0:Nothing 1:Update Table
 		writeH(data.size());// list size
 		
-		for (final AbyssRankingResult rs : data)
+		for (AbyssRankingResult rs : data)
 		{
 			writeD(rs.getRankPos());// Current Rank
 			writeD(rs.getPlayerAbyssRank());// Abyss rank

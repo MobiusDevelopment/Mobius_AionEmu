@@ -31,7 +31,7 @@ public class SM_FRIEND_LIST extends AionServerPacket
 		final FriendList list = con.getActivePlayer().getFriendList();
 		writeH((0 - list.getSize()));
 		writeC(0);
-		for (final Friend friend : list)
+		for (Friend friend : list)
 		{
 			writeD(friend.getOid());
 			writeS(friend.getName());

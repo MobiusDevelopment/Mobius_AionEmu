@@ -93,7 +93,7 @@ public class EventService
 		
 		synchronized (activeEvents)
 		{
-			for (final EventTemplate et : activeEvents)
+			for (EventTemplate et : activeEvents)
 			{
 				if (et.isActive())
 				{
@@ -154,7 +154,7 @@ public class EventService
 				int fulfilledStartConditions = 0;
 				if (amountOfStartConditions != 0)
 				{
-					for (final XMLStartCondition startCondition : template.getXMLStartConditions())
+					for (XMLStartCondition startCondition : template.getXMLStartConditions())
 					{
 						if (startCondition.check(player, false))
 						{
@@ -183,7 +183,7 @@ public class EventService
 						
 						if (templateMap.containsKey(questId))
 						{
-							for (final EventTemplate et : templateMap.get(questId))
+							for (EventTemplate et : templateMap.get(questId))
 							{
 								// recurring event, reset it
 								if (et.getStartDate().isAfter(completed))
@@ -258,7 +258,7 @@ public class EventService
 		final List<EventTemplate> newEvents = new ArrayList<>();
 		final List<EventTemplate> allEvents = DataManager.EVENT_DATA.getAllEvents();
 		
-		for (final EventTemplate et : allEvents)
+		for (EventTemplate et : allEvents)
 		{
 			if (et.isActive())
 			{
@@ -269,7 +269,7 @@ public class EventService
 		
 		synchronized (activeEvents)
 		{
-			for (final EventTemplate et : activeEvents)
+			for (EventTemplate et : activeEvents)
 			{
 				if (et.isExpired() || !DataManager.EVENT_DATA.Contains(et.getName()))
 				{
@@ -290,9 +290,9 @@ public class EventService
 	
 	private void updateQuestMap()
 	{
-		for (final EventTemplate et : activeEvents)
+		for (EventTemplate et : activeEvents)
 		{
-			for (final int qId : et.getStartableQuests())
+			for (int qId : et.getStartableQuests())
 			{
 				if (!eventsForStartQuest.containsKey(qId))
 				{
@@ -300,7 +300,7 @@ public class EventService
 				}
 				eventsForStartQuest.get(qId).add(et);
 			}
-			for (final int qId : et.getMaintainableQuests())
+			for (int qId : et.getMaintainableQuests())
 			{
 				if (!eventsForMaintainQuest.containsKey(qId))
 				{
@@ -327,7 +327,7 @@ public class EventService
 	{
 		if (EventsConfig.ENABLE_EVENT_SERVICE)
 		{
-			for (final EventTemplate et : activeEvents)
+			for (EventTemplate et : activeEvents)
 			{
 				final String theme = et.getTheme();
 				if (theme != null)

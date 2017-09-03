@@ -62,7 +62,7 @@ public class ZorshivDredgionService
 		if (CustomConfig.ZORSHIV_DREDGION_ENABLED)
 		{
 			zorshivDredgion = DataManager.ZORSHIV_DREDGION_DATA.getZorshivDredgionLocations();
-			for (final ZorshivDredgionLocation loc : getZorshivDredgionLocations().values())
+			for (ZorshivDredgionLocation loc : getZorshivDredgionLocations().values())
 			{
 				spawn(loc, ZorshivDredgionStateType.PEACE);
 			}
@@ -78,9 +78,9 @@ public class ZorshivDredgionService
 		if (CustomConfig.ZORSHIV_DREDGION_ENABLED)
 		{
 			dredgionSchedule = DredgionSchedule.load();
-			for (final Dredgion dredgion : dredgionSchedule.getDredgionsList())
+			for (Dredgion dredgion : dredgionSchedule.getDredgionsList())
 			{
-				for (final String zorshivTime : dredgion.getZorshivTimes())
+				for (String zorshivTime : dredgion.getZorshivTimes())
 				{
 					CronService.getInstance().schedule(new DredgionStartRunnable(dredgion.getId()), zorshivTime);
 				}
@@ -88,7 +88,7 @@ public class ZorshivDredgionService
 		}
 	}
 	
-	public void startZorshivDredgion(final int id)
+	public void startZorshivDredgion(int id)
 	{
 		final ZorshivDredgion<?> zorshiv;
 		synchronized (this)
@@ -135,9 +135,9 @@ public class ZorshivDredgionService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getZorshivDredgionSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final ZorshivDredgionSpawnTemplate zorshivDredgiontemplate = (ZorshivDredgionSpawnTemplate) st;
 				if (zorshivDredgiontemplate.getZStateType().equals(zstate))
@@ -204,7 +204,7 @@ public class ZorshivDredgionService
 	
 	public void despawn(ZorshivDredgionLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

@@ -47,7 +47,7 @@ public class _30702The_Dredgion_Fleet extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(800424).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

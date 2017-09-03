@@ -176,7 +176,7 @@ public class SM_NPC_INFO extends AionServerPacket
 		else
 		{
 			writeD(gear.getItemsMask());
-			for (final Entry<ItemSlot, ItemTemplate> item : gear) // getting it from template ( later if we make sure that npcs
+			for (Entry<ItemSlot, ItemTemplate> item : gear) // getting it from template ( later if we make sure that npcs
 			// actually use items, we'll make Item from it )
 			{
 				if (item.getValue().getWeaponType() != null)

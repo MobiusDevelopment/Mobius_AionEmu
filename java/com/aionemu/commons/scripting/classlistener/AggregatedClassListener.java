@@ -52,7 +52,7 @@ public class AggregatedClassListener implements ClassListener
 	@Override
 	public void postLoad(Class<?>[] classes)
 	{
-		for (final ClassListener cl : getClassListeners())
+		for (ClassListener cl : getClassListeners())
 		{
 			cl.postLoad(classes);
 		}
@@ -61,7 +61,7 @@ public class AggregatedClassListener implements ClassListener
 	@Override
 	public void preUnload(Class<?>[] classes)
 	{
-		for (final ClassListener cl : Lists.reverse(getClassListeners()))
+		for (ClassListener cl : Lists.reverse(getClassListeners()))
 		{
 			cl.preUnload(classes);
 		}

@@ -82,7 +82,7 @@ public class PeriodicSaveService
 					 */
 					DAOManager.getDAO(ItemStoneListDAO.class).save(allItems);
 				}
-				catch (final Exception ex)
+				catch (Exception ex)
 				{
 					log.error("Exception during periodic saving of legion WH", ex);
 				}

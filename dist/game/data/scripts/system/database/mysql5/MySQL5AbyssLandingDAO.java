@@ -47,7 +47,7 @@ public class MySQL5AbyssLandingDAO extends AbyssLandingDAO
 	}
 	
 	@Override
-	public boolean loadLandingLocations(final Map<Integer, LandingLocation> locations)
+	public boolean loadLandingLocations(Map<Integer, LandingLocation> locations)
 	{
 		boolean success = true;
 		Connection con = null;
@@ -74,7 +74,7 @@ public class MySQL5AbyssLandingDAO extends AbyssLandingDAO
 			}
 			resultSet.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.warn("Error loading Siege informaiton from database: " + e.getMessage(), e);
 			success = false;
@@ -83,7 +83,7 @@ public class MySQL5AbyssLandingDAO extends AbyssLandingDAO
 		{
 			DatabaseFactory.close(stmt, con);
 		}
-		for (final Map.Entry<Integer, LandingLocation> entry : locations.entrySet())
+		for (Map.Entry<Integer, LandingLocation> entry : locations.entrySet())
 		{
 			final LandingLocation sLoc = entry.getValue();
 			if (!loaded.contains(sLoc.getId()))
@@ -95,7 +95,7 @@ public class MySQL5AbyssLandingDAO extends AbyssLandingDAO
 	}
 	
 	@Override
-	public boolean updateLandingLocation(final LandingLocation locations)
+	public boolean updateLandingLocation(LandingLocation locations)
 	{
 		Connection con = null;
 		PreparedStatement stmt = null;
@@ -115,7 +115,7 @@ public class MySQL5AbyssLandingDAO extends AbyssLandingDAO
 			stmt.setInt(10, locations.getId());
 			stmt.execute();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error update Abyss Landing Location: " + "id: " + locations.getId());
 			return false;
@@ -127,7 +127,7 @@ public class MySQL5AbyssLandingDAO extends AbyssLandingDAO
 		return true;
 	}
 	
-	private boolean insertLandingLocation(final LandingLocation locations)
+	private boolean insertLandingLocation(LandingLocation locations)
 	{
 		Connection con = null;
 		PreparedStatement stmt = null;
@@ -149,7 +149,7 @@ public class MySQL5AbyssLandingDAO extends AbyssLandingDAO
 			stmt.setInt(12, locations.getPoints());
 			stmt.execute();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error insert Abyss Landing Location: " + locations.getId(), e);
 			return false;

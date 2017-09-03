@@ -132,7 +132,7 @@ public abstract class GLObject implements Cloneable
 			obj.updateNeeded = true;
 			return obj;
 		}
-		catch (final CloneNotSupportedException ex)
+		catch (CloneNotSupportedException ex)
 		{
 			throw new AssertionError();
 		}

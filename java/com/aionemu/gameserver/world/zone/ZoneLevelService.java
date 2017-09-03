@@ -95,7 +95,7 @@ public class ZoneLevelService
 	/**
 	 * @param player
 	 */
-	private static void scheduleDrowningTask(final Player player)
+	private static void scheduleDrowningTask(Player player)
 	{
 		player.getController().addTask(TaskId.DROWN, ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
 		{

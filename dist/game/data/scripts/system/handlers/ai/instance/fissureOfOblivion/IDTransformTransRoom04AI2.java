@@ -339,7 +339,7 @@ public class IDTransformTransRoom04AI2 extends NpcAI2
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{
 			final List<Npc> npcs = getPosition().getWorldMapInstance().getNpcs(npcId);
-			for (final Npc npc : npcs)
+			for (Npc npc : npcs)
 			{
 				npc.getController().onDelete();
 			}

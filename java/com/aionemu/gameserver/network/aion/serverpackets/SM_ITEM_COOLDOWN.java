@@ -43,7 +43,7 @@ public class SM_ITEM_COOLDOWN extends AionServerPacket
 	{
 		writeH(cooldowns.size());
 		final long currentTime = System.currentTimeMillis();
-		for (final Map.Entry<Integer, ItemCooldown> entry : cooldowns.entrySet())
+		for (Map.Entry<Integer, ItemCooldown> entry : cooldowns.entrySet())
 		{
 			writeH(entry.getKey());
 			final int left = (int) ((entry.getValue().getReuseTime() - currentTime) / 1000);

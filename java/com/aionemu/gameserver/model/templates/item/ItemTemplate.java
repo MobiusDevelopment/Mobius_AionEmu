@@ -423,7 +423,7 @@ public class ItemTemplate extends VisibleObjectTemplate
 			final int val = Integer.parseInt(description);
 			return val;
 		}
-		catch (final NumberFormatException nfe)
+		catch (NumberFormatException nfe)
 		{
 			return 0;
 		}

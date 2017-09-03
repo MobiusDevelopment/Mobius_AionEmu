@@ -26,7 +26,7 @@ import com.aionemu.loginserver.model.AccountTime;
 public class MySQL5AccountPlayTimeDAO extends AccountPlayTimeDAO
 {
 	@Override
-	public boolean update(final Integer accountId, final AccountTime accountTime)
+	public boolean update(Integer accountId, AccountTime accountTime)
 	{
 		String sql = "INSERT INTO account_playtime (`account_id`,`accumulated_online`) VALUES (" + accountId + ", " + accountTime.getAccumulatedOnlineTime() + ") " + "ON DUPLICATE KEY UPDATE `accumulated_online` = `accumulated_online` + " + accountTime.getAccumulatedOnlineTime();
 		return DB.insertUpdate(sql);

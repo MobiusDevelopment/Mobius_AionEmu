@@ -38,7 +38,7 @@ public class SM_SKILL_COOLDOWN extends AionServerPacket
 		writeH(calculateSize());
 		writeC(1);
 		final long currentTime = System.currentTimeMillis();
-		for (final Map.Entry<Integer, Long> entry : cooldowns.entrySet())
+		for (Map.Entry<Integer, Long> entry : cooldowns.entrySet())
 		{
 			final int left = (int) ((entry.getValue() - currentTime) / 1000);
 			final ArrayList<Integer> skillsWithCooldown = DataManager.SKILL_DATA.getSkillsForDelayId(entry.getKey());
@@ -55,7 +55,7 @@ public class SM_SKILL_COOLDOWN extends AionServerPacket
 	private int calculateSize()
 	{
 		int size = 0;
-		for (final Map.Entry<Integer, Long> entry : cooldowns.entrySet())
+		for (Map.Entry<Integer, Long> entry : cooldowns.entrySet())
 		{
 			size += DataManager.SKILL_DATA.getSkillsForDelayId(entry.getKey()).size();
 		}

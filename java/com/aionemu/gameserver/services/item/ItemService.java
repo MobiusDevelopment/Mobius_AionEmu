@@ -183,7 +183,7 @@ public class ItemService
 		newItem.setEnchantBonus(sourceItem.getEnchantBonus());
 		if (sourceItem.hasManaStones())
 		{
-			for (final ManaStone manaStone : sourceItem.getItemStones())
+			for (ManaStone manaStone : sourceItem.getItemStones())
 			{
 				ItemSocketService.addManaStone(newItem, manaStone.getItemId());
 			}
@@ -219,7 +219,7 @@ public class ItemService
 	{
 		final Storage inventory = player.getInventory();
 		Collection<Item> items = inventory.getItemsByItemId(itemTemplate.getTemplateId());
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			if (count == 0)
 			{
@@ -231,7 +231,7 @@ public class ItemService
 		{
 			final Equipment equipement = player.getEquipment();
 			items = equipement.getEquippedItemsByItemId(itemTemplate.getTemplateId());
-			for (final Item item : items)
+			for (Item item : items)
 			{
 				if (count == 0)
 				{
@@ -259,7 +259,7 @@ public class ItemService
 	{
 		int slotReq = 0, specialSlot = 0;
 		
-		for (final QuestItems qi : questItems)
+		for (QuestItems qi : questItems)
 		{
 			if ((qi.getItemId() != ItemId.KINAH.value()) && (qi.getCount() != 0))
 			{
@@ -291,7 +291,7 @@ public class ItemService
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_DECOMPRESS_INVENTORY_IS_FULL);
 			return false;
 		}
-		for (final QuestItems qi : questItems)
+		for (QuestItems qi : questItems)
 		{
 			addItem(player, qi.getItemId(), qi.getCount(), predicate);
 		}
@@ -325,7 +325,7 @@ public class ItemService
 		{
 			final List<Item> items = storage.getItemsByItemId(itemId);
 			boolean hasFreeStack = false;
-			for (final Item item : items)
+			for (Item item : items)
 			{
 				if ((item.getPersistentState() == PersistentState.DELETED) || (item.getItemCount() < item.getItemTemplate().getMaxStackCount()))
 				{
@@ -431,7 +431,7 @@ public class ItemService
 	{
 		if (sourceItem.hasManaStones())
 		{
-			for (final ManaStone manaStone : sourceItem.getItemStones())
+			for (ManaStone manaStone : sourceItem.getItemStones())
 			{
 				ItemSocketService.addManaStone(newItem, manaStone.getItemId());
 			}

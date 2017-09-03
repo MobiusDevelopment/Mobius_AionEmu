@@ -51,7 +51,7 @@ public class TargetRelationProperty
 			case ALL:
 				break;
 			case ENEMY:
-				for (final Iterator<Creature> iter = effectedList.iterator(); iter.hasNext();)
+				for (Iterator<Creature> iter = effectedList.iterator(); iter.hasNext();)
 				{
 					final Creature nextEffected = iter.next();
 					
@@ -64,7 +64,7 @@ public class TargetRelationProperty
 				}
 				break;
 			case FRIEND:
-				for (final Iterator<Creature> iter = effectedList.iterator(); iter.hasNext();)
+				for (Iterator<Creature> iter = effectedList.iterator(); iter.hasNext();)
 				{
 					final Creature nextEffected = iter.next();
 					
@@ -87,7 +87,7 @@ public class TargetRelationProperty
 				}
 				break;
 			case MYPARTY:
-				for (final Iterator<Creature> iter = effectedList.iterator(); iter.hasNext();)
+				for (Iterator<Creature> iter = effectedList.iterator(); iter.hasNext();)
 				{
 					final Creature nextEffected = iter.next();
 					

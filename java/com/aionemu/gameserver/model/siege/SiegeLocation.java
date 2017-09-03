@@ -151,7 +151,7 @@ public class SiegeLocation implements ZoneHandler
 		isUnderShield = value;
 		if (shields != null)
 		{
-			for (final SiegeShield shield : shields)
+			for (SiegeShield shield : shields)
 			{
 				shield.setEnabled(value);
 			}
@@ -162,7 +162,7 @@ public class SiegeLocation implements ZoneHandler
 	{
 		this.shields = shields;
 		log.debug("Attached shields for locId: " + locationId);
-		for (final SiegeShield shield : shields)
+		for (SiegeShield shield : shields)
 		{
 			log.debug(shield.toString());
 		}
@@ -264,7 +264,7 @@ public class SiegeLocation implements ZoneHandler
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Exception when running visitor on all players" + ex);
 		}

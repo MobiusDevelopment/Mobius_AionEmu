@@ -68,7 +68,7 @@ public class InGameShopProperty
 			final String xml = FileUtils.readFileToString(new File("./config/ingameshop/in_game_shop.xml"), "UTF-8");
 			ing = JAXBUtil.deserialize(xml, InGameShopProperty.class);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to initialize ingameshop", e);
 		}

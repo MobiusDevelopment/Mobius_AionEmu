@@ -40,7 +40,7 @@ public class AlwaysResistEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		final AttackCalcObserver acObserver = new AttackStatusObserver(value, AttackStatus.RESIST)
 		{

@@ -51,7 +51,7 @@ public class _28600Suspicious_Errand extends QuestHandler
 			205233,
 			804607
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 			qe.registerQuestNpc(204702).addOnQuestStart(questId);

@@ -27,12 +27,12 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 
 public class QuestTasks
 {
-	public static Future<?> newFollowingToTargetCheckTask(final QuestEnv env, Npc npc, Npc target)
+	public static Future<?> newFollowingToTargetCheckTask(QuestEnv env, Npc npc, Npc target)
 	{
 		return ThreadPoolManager.getInstance().scheduleAtFixedRate(new FollowingNpcCheckTask(env, new TargetDestinationChecker(npc, target)), 1000, 1000);
 	}
 	
-	public static Future<?> newFollowingToTargetCheckTask(final QuestEnv env, Npc npc, int npcTargetId)
+	public static Future<?> newFollowingToTargetCheckTask(QuestEnv env, Npc npc, int npcTargetId)
 	{
 		final SpawnSearchResult searchResult = DataManager.SPAWNS_DATA2.getFirstSpawnByNpcId(npc.getWorldId(), npcTargetId);
 		if (searchResult == null)
@@ -42,12 +42,12 @@ public class QuestTasks
 		return ThreadPoolManager.getInstance().scheduleAtFixedRate(new FollowingNpcCheckTask(env, new CoordinateDestinationChecker(npc, searchResult.getSpot().getX(), searchResult.getSpot().getY(), searchResult.getSpot().getZ())), 1000, 1000);
 	}
 	
-	public static Future<?> newFollowingToTargetCheckTask(final QuestEnv env, Npc npc, float x, float y, float z)
+	public static Future<?> newFollowingToTargetCheckTask(QuestEnv env, Npc npc, float x, float y, float z)
 	{
 		return ThreadPoolManager.getInstance().scheduleAtFixedRate(new FollowingNpcCheckTask(env, new CoordinateDestinationChecker(npc, x, y, z)), 1000, 1000);
 	}
 	
-	public static Future<?> newFollowingToTargetCheckTask(final QuestEnv env, Npc npc, ZoneName zoneName)
+	public static Future<?> newFollowingToTargetCheckTask(QuestEnv env, Npc npc, ZoneName zoneName)
 	{
 		return ThreadPoolManager.getInstance().scheduleAtFixedRate(new FollowingNpcCheckTask(env, new ZoneChecker(npc, zoneName)), 1000, 1000);
 	}

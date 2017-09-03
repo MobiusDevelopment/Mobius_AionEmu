@@ -51,7 +51,7 @@ public class _19632Cascade_Critters extends QuestHandler
 		qe.registerQuestNpc(800411).addOnQuestStart(questId);
 		qe.registerQuestNpc(800411).addOnTalkEvent(questId);
 		qe.registerQuestNpc(800411).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

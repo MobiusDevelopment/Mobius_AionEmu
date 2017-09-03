@@ -186,7 +186,7 @@ public class SummonerAI2 extends AggressiveNpcAI2
 	
 	private void removeHelpersSpawn()
 	{
-		for (final Integer object : spawnedNpc)
+		for (Integer object : spawnedNpc)
 		{
 			final VisibleObject npc = World.getInstance().findVisibleObject(object);
 			if ((npc != null) && npc.isSpawned())
@@ -206,7 +206,7 @@ public class SummonerAI2 extends AggressiveNpcAI2
 	
 	private void checkPercentage(int hpPercentage)
 	{
-		for (final Percentage percent : percentage)
+		for (Percentage percent : percentage)
 		{
 			if ((spawnedPercent != 0) && (spawnedPercent <= percent.getPercent()))
 			{
@@ -226,7 +226,7 @@ public class SummonerAI2 extends AggressiveNpcAI2
 				else if (percent.getSummons() != null)
 				{
 					handleBeforeSpawn(percent);
-					for (final SummonGroup summonGroup : percent.getSummons())
+					for (SummonGroup summonGroup : percent.getSummons())
 					{
 						final SummonGroup sg = summonGroup;
 						ThreadPoolManager.getInstance().schedule(new Runnable()

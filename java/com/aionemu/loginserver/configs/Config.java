@@ -126,7 +126,7 @@ public class Config
 				log.info("Loading: myls.properties");
 				myProps = PropertiesUtils.load("./config/myls.properties");
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.info("No override properties found");
 			}
@@ -144,7 +144,7 @@ public class Config
 			ConfigurableProcessor.process(DatabaseConfig.class, props);
 			
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Can't load loginserver configuration", e);
 			throw new Error("Can't load loginserver configuration", e);

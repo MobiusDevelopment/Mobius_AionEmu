@@ -49,12 +49,12 @@ public class AdminChat extends AdminCommand
 		
 		final StringBuilder sbMessage = new StringBuilder("[Admin] " + admin.getName() + " : ");
 		
-		for (final String p : params)
+		for (String p : params)
 		{
 			sbMessage.append(p + " ");
 		}
 		final String message = sbMessage.toString().trim();
-		for (final Player a : World.getInstance().getAllPlayers())
+		for (Player a : World.getInstance().getAllPlayers())
 		{
 			if (a.isGM())
 			{

@@ -53,7 +53,7 @@ public class MagicCounterAtkEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		final Creature effector = effect.getEffector();
 		final Creature effected = effect.getEffected();
@@ -63,7 +63,7 @@ public class MagicCounterAtkEffect extends EffectTemplate
 		{
 			
 			@Override
-			public void skilluse(final Skill skill)
+			public void skilluse(Skill skill)
 			{
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{

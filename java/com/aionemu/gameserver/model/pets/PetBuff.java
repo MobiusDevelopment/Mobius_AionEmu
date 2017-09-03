@@ -61,7 +61,7 @@ public class PetBuff implements StatOwner
 			task = ThreadPoolManager.getInstance().schedule(new PetBuffTask(player), time);
 		}
 		startTime = System.currentTimeMillis();
-		for (final PetPenaltyAttr petPenaltyAttr : petBonusAttr.getPenaltyAttr())
+		for (PetPenaltyAttr petPenaltyAttr : petBonusAttr.getPenaltyAttr())
 		{
 			final StatEnum stat = petPenaltyAttr.getStat();
 			final int statToModified = player.getGameStats().getStat(stat, 0).getBase();

@@ -81,7 +81,7 @@ public class _15325Courageous_Spirit extends QuestHandler
 	{
 		qe.registerQuestNpc(805331).addOnQuestStart(questId); // Machina.
 		qe.registerQuestNpc(805331).addOnTalkEvent(questId); // Machina.
-		for (final int mob : LF4C5DrakanFi)
+		for (int mob : LF4C5DrakanFi)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

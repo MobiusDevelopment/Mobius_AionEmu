@@ -61,7 +61,7 @@ public class SkillUse extends QuestHandler
 		{
 			qe.registerQuestNpc(endNpc).addOnTalkEvent(questId);
 		}
-		for (final List<Integer> skillIds : qsd.keySet())
+		for (List<Integer> skillIds : qsd.keySet())
 		{
 			final Iterator<Integer> iterator = skillIds.iterator();
 			while (iterator.hasNext())
@@ -126,7 +126,7 @@ public class SkillUse extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			for (final QuestSkillData qd : qsd.values())
+			for (QuestSkillData qd : qsd.values())
 			{
 				if (qd.getSkillIds().contains(skillId))
 				{

@@ -27,7 +27,7 @@ public abstract class BaseDAO implements DAO
 	
 	public abstract boolean updateBaseLocation(BaseLocation location);
 	
-	public void updateLocation(final BaseLocation location)
+	public void updateLocation(BaseLocation location)
 	{
 		updateBaseLocation(location);
 	}

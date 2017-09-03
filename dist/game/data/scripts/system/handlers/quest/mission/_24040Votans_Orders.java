@@ -93,7 +93,7 @@ public class _24040Votans_Orders extends QuestHandler
 					24045,
 					24046
 				};
-				for (final int id : ids)
+				for (int id : ids)
 				{
 					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), id, env.getDialogId()));
 				}

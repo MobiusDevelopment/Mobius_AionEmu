@@ -46,7 +46,7 @@ public class IntegerTransformer implements PropertyTransformer<Integer>
 		{
 			return Integer.decode(value);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new TransformationException(e);
 		}

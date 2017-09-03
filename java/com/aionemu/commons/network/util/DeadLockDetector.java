@@ -60,7 +60,7 @@ public class DeadLockDetector extends Thread
 	 * @param sleepTime
 	 * @param doWhenDL
 	 */
-	public DeadLockDetector(final int sleepTime, final byte doWhenDL)
+	public DeadLockDetector(int sleepTime, byte doWhenDL)
 	{
 		super("DeadLockDetector");
 		this.sleepTime = sleepTime * 1000;
@@ -89,12 +89,12 @@ public class DeadLockDetector extends Thread
 					deadlock = true;
 					final ThreadInfo[] tis = tmx.getThreadInfo(ids, true, true);
 					String info = "DeadLock Found!\n";
-					for (final ThreadInfo ti : tis)
+					for (ThreadInfo ti : tis)
 					{
 						info += ti.toString();
 					}
 					
-					for (final ThreadInfo ti : tis)
+					for (ThreadInfo ti : tis)
 					{
 						final LockInfo[] locks = ti.getLockedSynchronizers();
 						final MonitorInfo[] monitors = ti.getLockedMonitors();
@@ -118,7 +118,7 @@ public class DeadLockDetector extends Thread
 						}
 						
 						info += "\nDumping all threads:\n";
-						for (final ThreadInfo dumpedTI : tmx.dumpAllThreads(true, true))
+						for (ThreadInfo dumpedTI : tmx.dumpAllThreads(true, true))
 						{
 							info += printDumpedThreadInfo(dumpedTI);
 						}
@@ -132,7 +132,7 @@ public class DeadLockDetector extends Thread
 				}
 				Thread.sleep(sleepTime);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.warn("DeadLockDetector: " + e, e);
 			}
@@ -182,7 +182,7 @@ public class DeadLockDetector extends Thread
 		{
 			final StackTraceElement ste = stacktrace[i];
 			sb.append("\t" + "at " + ste.toString() + "\n");
-			for (final MonitorInfo mi : threadInfo.getLockedMonitors())
+			for (MonitorInfo mi : threadInfo.getLockedMonitors())
 			{
 				if (mi.getLockedStackDepth() == i)
 				{

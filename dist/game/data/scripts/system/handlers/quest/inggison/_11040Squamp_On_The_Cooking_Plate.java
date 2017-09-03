@@ -51,7 +51,7 @@ public class _11040Squamp_On_The_Cooking_Plate extends QuestHandler
 		qe.registerAddOnReachTargetEvent(questId);
 		qe.registerAddOnLostTargetEvent(questId);
 		qe.registerQuestNpc(799036).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

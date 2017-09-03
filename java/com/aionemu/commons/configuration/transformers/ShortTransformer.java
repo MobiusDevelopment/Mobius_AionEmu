@@ -46,7 +46,7 @@ public class ShortTransformer implements PropertyTransformer<Short>
 		{
 			return Short.decode(value);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new TransformationException(e);
 		}

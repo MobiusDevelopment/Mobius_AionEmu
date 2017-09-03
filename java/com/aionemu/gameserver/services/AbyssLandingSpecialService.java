@@ -48,14 +48,14 @@ public class AbyssLandingSpecialService
 	public void initLandingSpecialLocations()
 	{
 		abyssSpecialLanding = DataManager.LANDING_SPECIAL_LOCATION_DATA.getLandingSpecialLocations();
-		for (final LandingSpecialLocation loc : getLandingSpecialLocations().values())
+		for (LandingSpecialLocation loc : getLandingSpecialLocations().values())
 		{
 			spawn(loc, LandingSpecialStateType.DESPAWN);
 		}
 		log.info("[Abyss Landing Monument] Loaded " + abyssSpecialLanding.size() + " Locations");
 	}
 	
-	public void startLanding(final int id)
+	public void startLanding(int id)
 	{
 		final SpecialLanding<?> land;
 		synchronized (this)
@@ -94,9 +94,9 @@ public class AbyssLandingSpecialService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getLandingSpecialSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final LandingSpecialSpawnTemplate landingtTemplate = (LandingSpecialSpawnTemplate) st;
 				if (landingtTemplate.getFStateType().equals(fstate))
@@ -114,7 +114,7 @@ public class AbyssLandingSpecialService
 	
 	public static void despawn(LandingSpecialLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

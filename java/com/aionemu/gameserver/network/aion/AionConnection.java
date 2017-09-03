@@ -271,7 +271,7 @@ public class AionConnection extends AConnection
 				return true;
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Exception caught during decrypt!" + ex.getMessage());
 			return false;

@@ -52,7 +52,7 @@ public class _11302SpyLeague_Veilled extends QuestHandler
 	{
 		qe.registerQuestNpc(799038).addOnQuestStart(questId); // Laestrygos.
 		qe.registerQuestNpc(799038).addOnTalkEvent(questId); // Laestrygos.
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

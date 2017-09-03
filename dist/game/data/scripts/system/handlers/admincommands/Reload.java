@@ -93,7 +93,7 @@ public class Reload extends AdminCommand
 				questsData.setQuestsData(newQuestData.getQuestsData());
 				final XMLQuests questScriptsData = DataManager.XML_QUESTS;
 				questScriptsData.getQuest().clear();
-				for (final File file : listFiles(dir, true))
+				for (File file : listFiles(dir, true))
 				{
 					final XMLQuests data = ((XMLQuests) un.unmarshal(file));
 					if (data != null)
@@ -106,7 +106,7 @@ public class Reload extends AdminCommand
 				}
 				QuestEngine.getInstance().load(null);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(admin, "Quest reload failed!");
 				log.error("quest reload fail", e);
@@ -125,7 +125,7 @@ public class Reload extends AdminCommand
 				final Unmarshaller un = jc.createUnmarshaller();
 				un.setSchema(getSchema("./data/static_data/static_data.xsd"));
 				final List<SkillTemplate> newTemplates = new ArrayList<>();
-				for (final File file : listFiles(dir, true))
+				for (File file : listFiles(dir, true))
 				{
 					final SkillData data = (SkillData) un.unmarshal(file);
 					if (data != null)
@@ -136,7 +136,7 @@ public class Reload extends AdminCommand
 				DataManager.SKILL_DATA.setSkillTemplates(newTemplates);
 				DataManager.SKILL_DATA.initializeCooldownGroups();
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(admin, "Skill reload failed!");
 				log.error("Skill reload failed!", e);
@@ -162,7 +162,7 @@ public class Reload extends AdminCommand
 				// }
 				// DataManager.PORTAL_DATA.setPortals(newTemplates);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(admin, "Portal reload failed!");
 				log.error("Portal reload failed!", e);
@@ -203,7 +203,7 @@ public class Reload extends AdminCommand
 				un.setSchema(getSchema("./data/static_data/static_data.xsd"));
 				data = (EventData) un.unmarshal(eventXml);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(admin, "Event reload failed! Keeping the last version ...");
 				log.error("Event reload failed!", e);
@@ -238,7 +238,7 @@ public class Reload extends AdminCommand
 		{
 			schema = sf.newSchema(new File(xml_schema));
 		}
-		catch (final SAXException saxe)
+		catch (SAXException saxe)
 		{
 			throw new Error("Error while getting schema", saxe);
 		}

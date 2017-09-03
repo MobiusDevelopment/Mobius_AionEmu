@@ -153,7 +153,7 @@ public class WalkManager
 		}
 		else
 		{
-			for (final RouteStep step : route)
+			for (RouteStep step : route)
 			{
 				final double stepDist = MathUtil.getDistance(x, y, z, step.getX(), step.getY(), step.getZ());
 				if ((closestDist == 0) || (stepDist < closestDist))
@@ -205,7 +205,7 @@ public class WalkManager
 	/**
 	 * @param npcAI
 	 */
-	public static void targetReached(final NpcAI2 npcAI)
+	public static void targetReached(NpcAI2 npcAI)
 	{
 		if (npcAI.isInState(AIState.WALKING))
 		{
@@ -241,7 +241,7 @@ public class WalkManager
 	/**
 	 * @param npcAI
 	 */
-	protected static void chooseNextRouteStep(final NpcAI2 npcAI)
+	protected static void chooseNextRouteStep(NpcAI2 npcAI)
 	{
 		final int walkPause = npcAI.getOwner().getMoveController().getWalkPause();
 		if (walkPause == 0)
@@ -272,7 +272,7 @@ public class WalkManager
 	/**
 	 * @param npcAI
 	 */
-	private static void chooseNextRandomPoint(final NpcAI2 npcAI)
+	private static void chooseNextRandomPoint(NpcAI2 npcAI)
 	{
 		final Npc owner = npcAI.getOwner();
 		owner.getMoveController().abortMove();

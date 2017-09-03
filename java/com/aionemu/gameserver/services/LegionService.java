@@ -420,7 +420,7 @@ public class LegionService
 		final Legion legion = LegionService.getInstance().getLegion(legionId);
 		int legionBG = 0;
 		
-		for (final int memberObjId : legion.getLegionMembers())
+		for (int memberObjId : legion.getLegionMembers())
 		{
 			final LegionMember legionMember = LegionService.getInstance().getLegionMember(memberObjId);
 			if (legionMember.getRank() == LegionRank.BRIGADE_GENERAL)
@@ -487,7 +487,7 @@ public class LegionService
 	 */
 	public void disbandLegion(Legion legion)
 	{
-		for (final Integer memberObjId : legion.getLegionMembers())
+		for (Integer memberObjId : legion.getLegionMembers())
 		{
 			allCachedLegionMembers.remove(getLegionMemberEx(memberObjId));
 		}
@@ -539,7 +539,7 @@ public class LegionService
 	 * @param npc
 	 * @param activePlayer
 	 */
-	public void requestDisbandLegion(Creature npc, final Player activePlayer)
+	public void requestDisbandLegion(Creature npc, Player activePlayer)
 	{
 		final Legion legion = activePlayer.getLegion();
 		if (legionRestrictions.canDisbandLegion(activePlayer, legion))
@@ -645,7 +645,7 @@ public class LegionService
 	 * @param activePlayer
 	 * @param targetPlayer
 	 */
-	private void invitePlayerToLegion(final Player activePlayer, final Player targetPlayer)
+	private void invitePlayerToLegion(Player activePlayer, Player targetPlayer)
 	{
 		if (legionRestrictions.canInvitePlayer(activePlayer, targetPlayer))
 		{
@@ -713,7 +713,7 @@ public class LegionService
 	 * @param activePlayer
 	 * @param targetPlayer
 	 */
-	private void appointBrigadeGeneral(final Player activePlayer, final Player targetPlayer)
+	private void appointBrigadeGeneral(Player activePlayer, Player targetPlayer)
 	{
 		if (legionRestrictions.canAppointBrigadeGeneral(activePlayer, targetPlayer))
 		{
@@ -941,7 +941,7 @@ public class LegionService
 	 */
 	private void updateAfterDisbandLegion(Legion legion)
 	{
-		for (final Player onlineLegionMember : legion.getOnlineLegionMembers())
+		for (Player onlineLegionMember : legion.getOnlineLegionMembers())
 		{
 			PacketSendUtility.broadcastPacket(onlineLegionMember, new SM_LEGION_UPDATE_TITLE(onlineLegionMember.getObjectId(), 0, "", 0), true);
 			PacketSendUtility.sendPacket(onlineLegionMember, new SM_LEGION_LEAVE_MEMBER(1300302, 0, legion.getLegionName()));
@@ -957,7 +957,7 @@ public class LegionService
 	private void updateMembersEmblem(Legion legion, LegionEmblemType emblemType)
 	{
 		final LegionEmblem legionEmblem = legion.getLegionEmblem();
-		for (final Player onlineLegionMember : legion.getOnlineLegionMembers())
+		for (Player onlineLegionMember : legion.getOnlineLegionMembers())
 		{
 			PacketSendUtility.broadcastPacket(onlineLegionMember, new SM_LEGION_UPDATE_EMBLEM(legion.getLegionId(), legionEmblem.getEmblemId(), legionEmblem.getColor_r(), legionEmblem.getColor_g(), legionEmblem.getColor_b(), emblemType), true);
 			if (legionEmblem.getEmblemType() == LegionEmblemType.CUSTOM)
@@ -974,7 +974,7 @@ public class LegionService
 	 */
 	private void updateMembersOfDisbandLegion(Legion legion, int unixTime)
 	{
-		for (final Player onlineLegionMember : legion.getOnlineLegionMembers())
+		for (Player onlineLegionMember : legion.getOnlineLegionMembers())
 		{
 			PacketSendUtility.sendPacket(onlineLegionMember, new SM_LEGION_UPDATE_MEMBER(onlineLegionMember, 1300303, unixTime + ""));
 			PacketSendUtility.broadcastPacketToLegion(legion, new SM_LEGION_EDIT(0x06, unixTime));
@@ -988,7 +988,7 @@ public class LegionService
 	 */
 	private void updateMembersOfRecreateLegion(Legion legion)
 	{
-		for (final Player onlineLegionMember : legion.getOnlineLegionMembers())
+		for (Player onlineLegionMember : legion.getOnlineLegionMembers())
 		{
 			PacketSendUtility.sendPacket(onlineLegionMember, new SM_LEGION_UPDATE_MEMBER(onlineLegionMember, 1300307, ""));
 			PacketSendUtility.broadcastPacketToLegion(legion, new SM_LEGION_EDIT(0x07));
@@ -1044,7 +1044,7 @@ public class LegionService
 	public ArrayList<LegionMemberEx> loadLegionMemberExList(Legion legion, Integer objExcluded)
 	{
 		final ArrayList<LegionMemberEx> legionMembers = new ArrayList<>();
-		for (final Integer memberObjId : legion.getLegionMembers())
+		for (Integer memberObjId : legion.getLegionMembers())
 		{
 			LegionMemberEx legionMemberEx;
 			if ((objExcluded != null) && objExcluded.equals(memberObjId))
@@ -1067,7 +1067,7 @@ public class LegionService
 	
 	public String getBrigadeGeneralName(Legion legion)
 	{
-		for (final LegionMemberEx member : loadLegionMemberExList(legion, null))
+		for (LegionMemberEx member : loadLegionMemberExList(legion, null))
 		{
 			if (member.isBrigadeGeneral())
 			{
@@ -1080,7 +1080,7 @@ public class LegionService
 	public Player getBrigadeGeneral(Legion legion)
 	{
 		Player player = null;
-		for (final LegionMemberEx member : loadLegionMemberExList(legion, null))
+		for (LegionMemberEx member : loadLegionMemberExList(legion, null))
 		{
 			if (member.isBrigadeGeneral())
 			{
@@ -1202,7 +1202,7 @@ public class LegionService
 			 */
 			DAOManager.getDAO(ItemStoneListDAO.class).save(allItems);
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Exception during periodic saving of legion WH", ex);
 		}
@@ -1342,7 +1342,7 @@ public class LegionService
 		legion.setLegionName(newLegionName);
 		PacketSendUtility.broadcastPacketToLegion(legion, new SM_LEGION_INFO(legion));
 		
-		for (final Player legionMember : legion.getOnlineLegionMembers())
+		for (Player legionMember : legion.getOnlineLegionMembers())
 		{
 			PacketSendUtility.broadcastPacket(legionMember, new SM_LEGION_UPDATE_TITLE(legionMember.getObjectId(), legion.getLegionId(), legion.getLegionName(), legionMember.getLegionMember().getRank().getRankId()), true);
 		}
@@ -2331,7 +2331,7 @@ public class LegionService
 				matchingLegions = allCachedLegions.getAllLegions();
 				break;
 			case 1:
-				for (final Legion legion : allCachedLegions.getAllLegions())
+				for (Legion legion : allCachedLegions.getAllLegions())
 				{
 					if (legion.getLegionName().toLowerCase().contains(legionName.toLowerCase()))
 					{

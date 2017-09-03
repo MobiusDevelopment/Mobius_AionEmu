@@ -53,11 +53,11 @@ public class _16823Reunion_With_Agent_Viola extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : IDEternity02EventGuardFiDa)
+		for (int mob : IDEternity02EventGuardFiDa)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

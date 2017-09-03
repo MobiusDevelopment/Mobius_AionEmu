@@ -100,7 +100,7 @@ public class TradeList
 		final long availableKinah = player.getInventory().getKinah();
 		requiredKinah = 0;
 		
-		for (final TradeItem tradeItem : tradeItems)
+		for (TradeItem tradeItem : tradeItems)
 		{
 			requiredKinah += (PricesService.getKinahForBuy(tradeItem.getItemTemplate().getPrice(), player.getRace()) * tradeItem.getCount() * modifier) / 100;
 		}
@@ -118,7 +118,7 @@ public class TradeList
 		requiredAp = 0;
 		requiredItems.clear();
 		
-		for (final TradeItem tradeItem : tradeItems)
+		for (TradeItem tradeItem : tradeItems)
 		{
 			final Acquisition aquisition = tradeItem.getItemTemplate().getAcquisition();
 			if ((aquisition == null) || ((aquisition.getType() != AcquisitionType.ABYSS) && (aquisition.getType() != AcquisitionType.AP)))
@@ -156,7 +156,7 @@ public class TradeList
 			return false;
 		}
 		
-		for (final Integer itemId : requiredItems.keySet())
+		for (Integer itemId : requiredItems.keySet())
 		{
 			final long count = player.getInventory().getItemCountByItemId(itemId);
 			if ((requiredItems.get(itemId) < 1) || (count < requiredItems.get(itemId)))
@@ -175,7 +175,7 @@ public class TradeList
 	{
 		requiredItems.clear();
 		
-		for (final TradeItem tradeItem : tradeItems)
+		for (TradeItem tradeItem : tradeItems)
 		{
 			final Acquisition aquisition = tradeItem.getItemTemplate().getAcquisition();
 			if ((aquisition == null) || ((aquisition.getType() != AcquisitionType.REWARD) && (aquisition.getType() != AcquisitionType.COUPON)))
@@ -199,7 +199,7 @@ public class TradeList
 			}
 		}
 		
-		for (final Integer itemId : requiredItems.keySet())
+		for (Integer itemId : requiredItems.keySet())
 		{
 			final long count = player.getInventory().getItemCountByItemId(itemId);
 			if ((requiredItems.get(itemId) < 1) || (count < requiredItems.get(itemId)))

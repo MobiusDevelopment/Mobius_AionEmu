@@ -45,7 +45,7 @@ public class NpcSkillList implements SkillList<Npc>
 		if (npcSkillList != null)
 		{
 			initSkills();
-			for (final NpcSkillTemplate template : npcSkillList.getNpcSkills())
+			for (NpcSkillTemplate template : npcSkillList.getNpcSkills())
 			{
 				skills.add(new NpcSkillTemplateEntry(template));
 			}
@@ -117,7 +117,7 @@ public class NpcSkillList implements SkillList<Npc>
 	
 	private SkillEntry getSkill(int skillId)
 	{
-		for (final SkillEntry entry : skills)
+		for (SkillEntry entry : skills)
 		{
 			if (entry.getSkillId() == skillId)
 			{

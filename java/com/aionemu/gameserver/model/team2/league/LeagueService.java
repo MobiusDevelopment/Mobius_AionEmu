@@ -48,7 +48,7 @@ public class LeagueService
 		GlobalCallbackHelper.addCallback(new AllianceDisbandListener());
 	}
 	
-	public static void inviteToLeague(final Player inviter, final Player invited)
+	public static void inviteToLeague(Player inviter, Player invited)
 	{
 		if (canInvite(inviter, invited))
 		{
@@ -150,7 +150,7 @@ public class LeagueService
 		{
 			try
 			{
-				for (final League league : leagues.values())
+				for (League league : leagues.values())
 				{
 					if (league.hasMember(alliance.getTeamId()))
 					{
@@ -158,7 +158,7 @@ public class LeagueService
 					}
 				}
 			}
-			catch (final Throwable t)
+			catch (Throwable t)
 			{
 				// log.error("Error during alliance disband listen", t);
 			}

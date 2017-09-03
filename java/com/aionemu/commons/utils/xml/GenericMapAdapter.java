@@ -46,7 +46,7 @@ public class GenericMapAdapter<K, V>extends XmlAdapter<GenericMapAdapter.KeyValu
 		}
 		
 		final KeyValuePairContainer<K, V> result = new KeyValuePairContainer<>();
-		for (final Map.Entry<K, V> entry : v.entrySet())
+		for (Map.Entry<K, V> entry : v.entrySet())
 		{
 			result.addElement(entry);
 		}
@@ -61,7 +61,7 @@ public class GenericMapAdapter<K, V>extends XmlAdapter<GenericMapAdapter.KeyValu
 	public Map<K, V> unmarshal(KeyValuePairContainer<K, V> v)
 	{
 		final Map<K, V> result = new HashMap<>();
-		for (final KeyValuePair<K, V> kvp : v.getValues())
+		for (KeyValuePair<K, V> kvp : v.getValues())
 		{
 			if (kvp.getMapValue() != null)
 			{

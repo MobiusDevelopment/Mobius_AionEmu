@@ -282,15 +282,15 @@ public final class RunnableStatsManager
 		dumpClassStats(null);
 	}
 	
-	public static void dumpClassStats(final SortBy sortBy)
+	public static void dumpClassStats(SortBy sortBy)
 	{
 		final List<MethodStat> methodStats = new ArrayList<>();
 		
 		synchronized (RunnableStatsManager.class)
 		{
-			for (final ClassStat classStat : classStats.values())
+			for (ClassStat classStat : classStats.values())
 			{
-				for (final MethodStat methodStat : classStat.methodStats)
+				for (MethodStat methodStat : classStat.methodStats)
 				{
 					if (methodStat.count > 0)
 					{
@@ -367,7 +367,7 @@ public final class RunnableStatsManager
 				}
 			}
 			
-			for (final SortBy sort : SortBy.VALUES)
+			for (SortBy sort : SortBy.VALUES)
 			{
 				if (set.contains(sort))
 				{
@@ -387,12 +387,12 @@ public final class RunnableStatsManager
 		{
 			ps = new PrintStream("MethodStats-" + System.currentTimeMillis() + ".log");
 			
-			for (final String line : lines)
+			for (String line : lines)
 			{
 				ps.println(line);
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.warn("", e);
 		}

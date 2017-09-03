@@ -33,7 +33,7 @@ public class ThreadUncaughtExceptionHandler implements Thread.UncaughtExceptionH
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void uncaughtException(final Thread t, final Throwable e)
+	public void uncaughtException(Thread t, Throwable e)
 	{
 		log.error("Critical Error - Thread: " + t.getName() + " terminated abnormaly: " + e, e);
 		if (e instanceof OutOfMemoryError)

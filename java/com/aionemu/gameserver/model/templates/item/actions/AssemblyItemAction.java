@@ -49,7 +49,7 @@ public class AssemblyItemAction extends AbstractItemAction
 		{
 			return false;
 		}
-		for (final Integer itemId : assemblyItem.getParts())
+		for (Integer itemId : assemblyItem.getParts())
 		{
 			if (player.getInventory().getFirstItemByItemId(itemId) == null)
 			{
@@ -67,7 +67,7 @@ public class AssemblyItemAction extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, final Item parentItem, Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 1000, 0, 0), true);
 		final ItemUseObserver observer = new ItemUseObserver()
@@ -91,7 +91,7 @@ public class AssemblyItemAction extends AbstractItemAction
 				player.getObserveController().removeObserver(observer);
 				player.getController().cancelTask(TaskId.ITEM_USE);
 				final AssemblyItem assemblyItem = getAssemblyItem();
-				for (final Integer itemId : assemblyItem.getParts())
+				for (Integer itemId : assemblyItem.getParts())
 				{
 					if (!player.getInventory().decreaseByItemId(itemId, assemblyItem.getPartsNum()))
 					{

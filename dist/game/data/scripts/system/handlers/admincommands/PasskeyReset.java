@@ -58,7 +58,7 @@ public class PasskeyReset extends AdminCommand
 		{
 			Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "parameters should be number!");
 			return;

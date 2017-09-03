@@ -164,7 +164,7 @@ public class ObjectCallbackHelper
 			return CallbackResult.newContinue();
 		}
 		
-		for (final Callback c : list)
+		for (Callback c : list)
 		{
 			try
 			{
@@ -174,7 +174,7 @@ public class ObjectCallbackHelper
 					break;
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.error("Uncaught exception in callback", e);
 			}
@@ -218,7 +218,7 @@ public class ObjectCallbackHelper
 			return CallbackResult.newContinue();
 		}
 		
-		for (final Callback c : list)
+		for (Callback c : list)
 		{
 			try
 			{
@@ -228,7 +228,7 @@ public class ObjectCallbackHelper
 					break;
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.error("Uncaught exception in callback", e);
 			}

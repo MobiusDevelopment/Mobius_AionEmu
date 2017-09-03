@@ -46,7 +46,7 @@ public class _18991Back_Into_The_Grave extends QuestHandler
 	{
 		qe.registerQuestNpc(806214).addOnQuestStart(questId); // Enosi.
 		qe.registerQuestNpc(806214).addOnTalkEvent(questId); // Enosi.
-		for (final int mob : IDF6AdmaEvilSpirit67Ah)
+		for (int mob : IDF6AdmaEvilSpirit67Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

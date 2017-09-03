@@ -46,7 +46,7 @@ public class RvrData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final RvrTemplate template : rvrTemplates)
+		for (RvrTemplate template : rvrTemplates)
 		{
 			rvr.put(template.getId(), new RvrLocation(template));
 		}

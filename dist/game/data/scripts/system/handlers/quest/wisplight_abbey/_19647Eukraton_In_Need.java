@@ -54,7 +54,7 @@ public class _19647Eukraton_In_Need extends QuestHandler
 		qe.registerQuestNpc(804651).addOnQuestStart(questId);
 		qe.registerQuestNpc(804651).addOnTalkEvent(questId);
 		qe.registerQuestNpc(804704).addOnTalkEvent(questId); // LF5 Eukraton.
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -61,7 +61,7 @@ public class MySQL5ItemCooldownsDAO extends ItemCooldownsDAO
 	};
 	
 	@Override
-	public void loadItemCooldowns(final Player player)
+	public void loadItemCooldowns(Player player)
 	{
 		DB.select(SELECT_QUERY, new ParamReadStH()
 		{
@@ -131,7 +131,7 @@ public class MySQL5ItemCooldownsDAO extends ItemCooldownsDAO
 			st.executeBatch();
 			con.commit();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Error while storing item cooldows for player " + player.getObjectId(), e);
 		}
@@ -141,7 +141,7 @@ public class MySQL5ItemCooldownsDAO extends ItemCooldownsDAO
 		}
 	}
 	
-	private void deleteItemCooldowns(final Player player)
+	private void deleteItemCooldowns(Player player)
 	{
 		DB.insertUpdate(DELETE_QUERY, new IUStH()
 		{

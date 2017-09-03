@@ -53,7 +53,7 @@ public class _2252ChasingtheLegend extends QuestHandler
 		qe.registerQuestNpc(203646).addOnQuestStart(questId); // Sinood
 		qe.registerQuestNpc(203646).addOnTalkEvent(questId);
 		qe.registerQuestNpc(700060).addOnTalkEvent(questId); // Bone of Minusha
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

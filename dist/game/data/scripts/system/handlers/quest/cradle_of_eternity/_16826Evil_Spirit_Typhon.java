@@ -48,11 +48,11 @@ public class _16826Evil_Spirit_Typhon extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : IDEternity02SnakeMBoss75Ah)
+		for (int mob : IDEternity02SnakeMBoss75Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -65,7 +65,7 @@ public abstract class XmlUtils
 					final DocumentBuilder db = dbf.newDocumentBuilder();
 					document = db.parse(new InputSource(stream));
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					throw new RuntimeException("Error converting string to document", e);
 				}
@@ -88,7 +88,7 @@ public abstract class XmlUtils
 				transformer.transform(domSource, result);
 				return writer.toString();
 			}
-			catch (final TransformerException e)
+			catch (TransformerException e)
 			{
 				throw new RuntimeException(e);
 			}
@@ -108,7 +108,7 @@ public abstract class XmlUtils
 				schema = sf.newSchema(ss);
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to create schemma from string: " + schemaString, e);
 		}
@@ -126,7 +126,7 @@ public abstract class XmlUtils
 				schema = sf.newSchema(schemaURL);
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to create shcemma from URL " + schemaURL, e);
 		}
@@ -141,7 +141,7 @@ public abstract class XmlUtils
 		{
 			validator.validate(new DOMSource(document));
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to validate document", e);
 		}

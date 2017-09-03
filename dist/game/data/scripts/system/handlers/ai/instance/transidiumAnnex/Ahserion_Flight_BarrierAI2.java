@@ -56,7 +56,7 @@ public class Ahserion_Flight_BarrierAI2 extends NpcAI2
 				GAb1SubCenterBarricadeDa65Ah.setTarget(getOwner());
 				GAb1SubCenterBarricadeDa65Ah.setNpcType(NpcType.ATTACKABLE);
 				final WorldMapInstance instance = getPosition().getWorldMapInstance();
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (MathUtil.isIn3dRange(player, GAb1SubCenterBarricadeDa65Ah, 5))
 					{

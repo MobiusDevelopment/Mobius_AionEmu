@@ -49,7 +49,7 @@ public class EmpyreanArbiterAI2 extends NpcAI2
 	}
 	
 	@Override
-	public boolean onDialogSelect(final Player player, int dialogId, int questId, int extendedRewardIndex)
+	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		final int instanceId = getPosition().getInstanceId();
 		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(186000124, 1))

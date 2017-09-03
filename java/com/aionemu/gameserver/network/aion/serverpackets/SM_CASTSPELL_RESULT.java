@@ -129,7 +129,7 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket
 				break;
 		}
 		writeH(effects.size());
-		for (final Effect effect : effects)
+		for (Effect effect : effects)
 		{
 			final Creature effected = effect.getEffected();
 			if (effected != null)

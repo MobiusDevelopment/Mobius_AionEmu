@@ -47,7 +47,7 @@ public class _80606The_Good_News_And_Bad extends QuestHandler
 		qe.registerQuestNpc(831832).addOnQuestStart(questId);
 		qe.registerQuestNpc(831832).addOnTalkEvent(questId);
 		qe.registerQuestNpc(800327).addOnTalkEvent(questId);
-		for (final int mob : captainAnusa)
+		for (int mob : captainAnusa)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -142,7 +142,7 @@ public class CM_USE_ITEM extends AionClientPacket
 		{
 			return;
 		}
-		for (final AbstractItemAction itemAction : itemActions.getItemActions())
+		for (AbstractItemAction itemAction : itemActions.getItemActions())
 		{
 			// check if the item can be used before placing it on the cooldown list.
 			if ((targetHouseObject != null) && (itemAction instanceof HouseDyeAction))
@@ -177,7 +177,7 @@ public class CM_USE_ITEM extends AionClientPacket
 		}
 		// notify item use observer
 		player.getObserveController().notifyItemuseObservers(item);
-		for (final AbstractItemAction itemAction : actions)
+		for (AbstractItemAction itemAction : actions)
 		{
 			if ((targetHouseObject != null) && (itemAction instanceof HouseDyeAction))
 			{

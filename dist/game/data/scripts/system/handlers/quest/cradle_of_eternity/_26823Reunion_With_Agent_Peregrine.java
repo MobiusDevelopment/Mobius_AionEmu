@@ -53,11 +53,11 @@ public class _26823Reunion_With_Agent_Peregrine extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : IDEternity02EventGuardFiLi)
+		for (int mob : IDEternity02EventGuardFiLi)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -49,7 +49,7 @@ public class cmd_questrestart extends PlayerCommand
 		{
 			id = Integer.valueOf(params[0]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "syntax .questrestart <quest id>");
 			return;

@@ -60,11 +60,11 @@ public class _10527Finding_The_Traces_Of_The_Sage extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : LF6MissionDarkRa71An)
+		for (int mob : LF6MissionDarkRa71An)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

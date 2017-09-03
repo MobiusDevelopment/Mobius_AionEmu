@@ -50,7 +50,7 @@ public class _2303DaevaWheresMyHerb extends QuestHandler
 		};
 		qe.registerQuestNpc(798082).addOnQuestStart(questId);
 		qe.registerQuestNpc(798082).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

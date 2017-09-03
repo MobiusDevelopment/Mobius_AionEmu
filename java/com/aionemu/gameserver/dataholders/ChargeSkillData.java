@@ -44,7 +44,7 @@ public class ChargeSkillData
 	{
 		templates = new TIntObjectHashMap<>();
 		
-		for (final ChargeSkillTemplate chargeSkill : chargeSkills)
+		for (ChargeSkillTemplate chargeSkill : chargeSkills)
 		{
 			templates.put(chargeSkill.getId(), chargeSkill);
 		}

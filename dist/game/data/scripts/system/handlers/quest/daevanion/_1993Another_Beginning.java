@@ -206,7 +206,7 @@ public class _1993Another_Beginning extends QuestHandler
 	private int getItem(int dialogId)
 	{
 		int x = 0;
-		for (final int id : dialogs)
+		for (int id : dialogs)
 		{
 			if (id == dialogId)
 			{

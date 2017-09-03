@@ -39,7 +39,7 @@ public class ReadAction extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, Item parentItem, Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 		final int itemObjId = parentItem.getObjectId();
 		final int id = parentItem.getItemTemplate().getTemplateId();

@@ -54,7 +54,7 @@ public class AzoturanFortressInstance extends GeneralInstanceHandler
 	
 	private void shadowGuard()
 	{
-		for (final Player p : instance.getPlayersInside())
+		for (Player p : instance.getPlayersInside())
 		{
 			final SkillTemplate st = DataManager.SKILL_DATA.getSkillTemplate(274); // Shadow Guard.
 			final Effect e = new Effect(p, p, st, 1, st.getEffectsDuration(9));
@@ -92,7 +92,7 @@ public class AzoturanFortressInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

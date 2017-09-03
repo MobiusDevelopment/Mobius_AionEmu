@@ -50,7 +50,7 @@ public class MySQL5FriendListDAO extends FriendListDAO
 	public static final String DEL_QUERY = "DELETE FROM friends WHERE player = ? AND friend = ?";
 	
 	@Override
-	public FriendList load(final Player player)
+	public FriendList load(Player player)
 	{
 		final List<Friend> friends = new ArrayList<>();
 		Connection con = null;
@@ -73,7 +73,7 @@ public class MySQL5FriendListDAO extends FriendListDAO
 				}
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore QuestStateList data for player: " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -89,7 +89,7 @@ public class MySQL5FriendListDAO extends FriendListDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean addFriends(final Player player, final Player friend)
+	public boolean addFriends(Player player, Player friend)
 	{
 		return DB.insertUpdate(ADD_QUERY, new IUStH()
 		{
@@ -112,7 +112,7 @@ public class MySQL5FriendListDAO extends FriendListDAO
 	}
 	
 	@Override
-	public boolean delFriends(final int playerOid, final int friendOid)
+	public boolean delFriends(int playerOid, int friendOid)
 	{
 		return DB.insertUpdate(DEL_QUERY, new IUStH()
 		{

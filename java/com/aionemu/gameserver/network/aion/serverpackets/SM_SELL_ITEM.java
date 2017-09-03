@@ -57,7 +57,7 @@ public class SM_SELL_ITEM extends AionServerPacket
 		if (tradeListTemplate != null)
 		{
 			writeH(tradeListTemplate.getCount());
-			for (final TradeTab tradeTabl : tradeListTemplate.getTradeTablist())
+			for (TradeTab tradeTabl : tradeListTemplate.getTradeTablist())
 			{
 				writeD(tradeTabl.getId());
 			}

@@ -38,7 +38,7 @@ public class BoostSkillCostEffect extends BuffEffect
 	protected boolean percent;
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		super.startEffect(effect);
 		

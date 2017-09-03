@@ -74,7 +74,7 @@ public class PlayerScripts
 			}
 			script.setData(bytes, scriptXML.length() * 2);
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			logger.error("Script compression failed: " + ex);
 			return false;
@@ -107,7 +107,7 @@ public class PlayerScripts
 		{
 			return CompressUtil.Decompress(bytes);
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			logger.error("Script decompression failed: " + ex);
 		}
@@ -138,7 +138,7 @@ public class PlayerScripts
 					}
 					size = uncompressedSize;
 				}
-				catch (final Exception ex)
+				catch (Exception ex)
 				{
 					return false;
 				}

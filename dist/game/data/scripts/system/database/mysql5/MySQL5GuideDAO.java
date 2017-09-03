@@ -62,7 +62,7 @@ public class MySQL5GuideDAO extends GuideDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error delete guide_id: " + guide_id, e);
 			return false;
@@ -98,7 +98,7 @@ public class MySQL5GuideDAO extends GuideDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore Guide data for player: " + playerId + " from DB: " + e.getMessage(), e);
 		}
@@ -131,7 +131,7 @@ public class MySQL5GuideDAO extends GuideDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore Survey data for player: " + player_id + " from DB: " + e.getMessage(), e);
 		}
@@ -157,7 +157,7 @@ public class MySQL5GuideDAO extends GuideDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error saving playerName: " + player, e);
 		}
@@ -186,7 +186,7 @@ public class MySQL5GuideDAO extends GuideDAO
 			}
 			return ids;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't get list of id's from guides table", e);
 		}

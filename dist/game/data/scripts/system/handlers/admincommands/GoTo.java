@@ -42,7 +42,7 @@ public class GoTo extends AdminCommand
 			return;
 		}
 		final StringBuilder sbDestination = new StringBuilder();
-		for (final String p : params)
+		for (String p : params)
 		{
 			sbDestination.append(p + " ");
 		}
@@ -966,7 +966,7 @@ public class GoTo extends AdminCommand
 		}
 	}
 	
-	private static void goTo(final Player player, int worldId, float x, float y, float z)
+	private static void goTo(Player player, int worldId, float x, float y, float z)
 	{
 		final WorldMap destinationMap = World.getInstance().getWorldMap(worldId);
 		if (destinationMap.isInstanceType())

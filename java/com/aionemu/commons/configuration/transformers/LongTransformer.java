@@ -45,7 +45,7 @@ public class LongTransformer implements PropertyTransformer<Long>
 		{
 			return Long.decode(value);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new TransformationException(e);
 		}

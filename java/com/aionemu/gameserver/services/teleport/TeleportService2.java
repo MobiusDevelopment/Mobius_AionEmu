@@ -193,7 +193,7 @@ public class TeleportService2
 		return true;
 	}
 	
-	private static void sendLoc(final Player player, final int mapId, final int instanceId, final float x, final float y, final float z, final byte h, final TeleportAnimation animation)
+	private static void sendLoc(Player player, int mapId, int instanceId, float x, float y, float z, byte h, TeleportAnimation animation)
 	{
 		final boolean isInstance = DataManager.WORLD_MAPS_DATA.getTemplate(mapId).isInstance();
 		PacketSendUtility.sendPacket(player, new SM_TELEPORT_LOC(isInstance, instanceId, mapId, x, y, z, h, animation.getStartAnimationId()));
@@ -355,7 +355,7 @@ public class TeleportService2
 		return true;
 	}
 	
-	private static void changePosition(final Player player, int worldId, int instanceId, float x, float y, float z, byte heading, TeleportAnimation animation)
+	private static void changePosition(Player player, int worldId, int instanceId, float x, float y, float z, byte heading, TeleportAnimation animation)
 	{
 		if (player.hasStore())
 		{

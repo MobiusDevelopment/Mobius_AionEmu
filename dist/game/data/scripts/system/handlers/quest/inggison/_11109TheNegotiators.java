@@ -49,7 +49,7 @@ public class _11109TheNegotiators extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(798971).addOnQuestStart(questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

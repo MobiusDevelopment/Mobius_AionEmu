@@ -58,7 +58,7 @@ public class _25604Prison_Of_Silence extends QuestHandler
 		qe.registerQuestNpc(806115).addOnQuestStart(questId); // Svanhild.
 		qe.registerQuestNpc(806115).addOnTalkEvent(questId); // Svanhild.
 		qe.registerQuestNpc(806173).addOnTalkEvent(questId); // Groma.
-		for (final int mobs : DF6FOBJSacrificeGuardian01)
+		for (int mobs : DF6FOBJSacrificeGuardian01)
 		{
 			qe.registerQuestNpc(mobs).addOnKillEvent(questId);
 		}

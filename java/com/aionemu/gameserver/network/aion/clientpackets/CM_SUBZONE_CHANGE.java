@@ -49,7 +49,7 @@ public class CM_SUBZONE_CHANGE extends AionClientPacket
 		{
 			final List<ZoneInstance> zones = player.getPosition().getMapRegion().getZones(player);
 			int foundZones = 0;
-			for (final ZoneInstance zone : zones)
+			for (ZoneInstance zone : zones)
 			{
 				if ((zone.getZoneTemplate().getZoneType() == ZoneClassName.DUMMY) || (zone.getZoneTemplate().getZoneType() == ZoneClassName.WEATHER))
 				{

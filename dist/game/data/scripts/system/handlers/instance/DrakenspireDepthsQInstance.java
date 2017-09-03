@@ -900,7 +900,7 @@ public class DrakenspireDepthsQInstance extends GeneralInstanceHandler
 	
 	private void kaisinelLight()
 	{
-		for (final Player p : instance.getPlayersInside())
+		for (Player p : instance.getPlayersInside())
 		{
 			final SkillTemplate st = DataManager.SKILL_DATA.getSkillTemplate(22778); // Kaisinel's Light.
 			final Effect e = new Effect(p, p, st, 1, st.getEffectsDuration(9));
@@ -911,7 +911,7 @@ public class DrakenspireDepthsQInstance extends GeneralInstanceHandler
 	
 	private void marchutanGrace()
 	{
-		for (final Player p : instance.getPlayersInside())
+		for (Player p : instance.getPlayersInside())
 		{
 			final SkillTemplate st = DataManager.SKILL_DATA.getSkillTemplate(22779); // Marchutan's Grace.
 			final Effect e = new Effect(p, p, st, 1, st.getEffectsDuration(9));
@@ -999,7 +999,7 @@ public class DrakenspireDepthsQInstance extends GeneralInstanceHandler
 		objects.put(731581, SpawnEngine.spawnObject(AionFXPostGlow, instanceId));
 	}
 	
-	private void moveToSealForward(final Npc npc, float x, float y, float z, boolean despawn)
+	private void moveToSealForward(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -1023,7 +1023,7 @@ public class DrakenspireDepthsQInstance extends GeneralInstanceHandler
 		moveToSealForward((Npc) spawn(209787, 636.07764f, 846.96954f, 1599.9142f, (byte) 30), 631.50134f, 895.16174f, 1600.5238f, false);
 	}
 	
-	private void raidSeal(final Npc npc)
+	private void raidSeal(Npc npc)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -1032,7 +1032,7 @@ public class DrakenspireDepthsQInstance extends GeneralInstanceHandler
 			{
 				if (!isInstanceDestroyed)
 				{
-					for (final Player player : instance.getPlayersInside())
+					for (Player player : instance.getPlayersInside())
 					{
 						npc.setTarget(player);
 						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
@@ -1101,7 +1101,7 @@ public class DrakenspireDepthsQInstance extends GeneralInstanceHandler
 		raidSeal((Npc) spawn(237236, 688.66656f, 931.058f, 1617.5339f, (byte) 72));
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -1113,7 +1113,7 @@ public class DrakenspireDepthsQInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -1193,7 +1193,7 @@ public class DrakenspireDepthsQInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

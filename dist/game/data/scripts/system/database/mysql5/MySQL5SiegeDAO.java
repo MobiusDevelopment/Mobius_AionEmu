@@ -45,7 +45,7 @@ public class MySQL5SiegeDAO extends SiegeDAO
 	public static final String UPDATE_QUERY = "UPDATE `siege_locations` SET  `race` = ?, `legion_id` = ? WHERE `id` = ?";
 	
 	@Override
-	public boolean loadSiegeLocations(final Map<Integer, SiegeLocation> locations)
+	public boolean loadSiegeLocations(Map<Integer, SiegeLocation> locations)
 	{
 		boolean success = true;
 		Connection con = null;
@@ -66,7 +66,7 @@ public class MySQL5SiegeDAO extends SiegeDAO
 			}
 			resultSet.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.warn("Error loading Siege informaiton from database: " + e.getMessage(), e);
 			success = false;
@@ -76,7 +76,7 @@ public class MySQL5SiegeDAO extends SiegeDAO
 			DatabaseFactory.close(stmt, con);
 		}
 		
-		for (final Map.Entry<Integer, SiegeLocation> entry : locations.entrySet())
+		for (Map.Entry<Integer, SiegeLocation> entry : locations.entrySet())
 		{
 			final SiegeLocation sLoc = entry.getValue();
 			if (!loaded.contains(sLoc.getLocationId()))
@@ -89,7 +89,7 @@ public class MySQL5SiegeDAO extends SiegeDAO
 	}
 	
 	@Override
-	public boolean updateSiegeLocation(final SiegeLocation siegeLocation)
+	public boolean updateSiegeLocation(SiegeLocation siegeLocation)
 	{
 		Connection con = null;
 		PreparedStatement stmt = null;
@@ -102,7 +102,7 @@ public class MySQL5SiegeDAO extends SiegeDAO
 			stmt.setInt(3, siegeLocation.getLocationId());
 			stmt.execute();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error update Siege Location: " + siegeLocation.getLocationId() + " to race: " + siegeLocation.getRace().toString(), e);
 			return false;
@@ -118,7 +118,7 @@ public class MySQL5SiegeDAO extends SiegeDAO
 	 * @param siegeLocation
 	 * @return success
 	 */
-	private boolean insertSiegeLocation(final SiegeLocation siegeLocation)
+	private boolean insertSiegeLocation(SiegeLocation siegeLocation)
 	{
 		Connection con = null;
 		PreparedStatement stmt = null;
@@ -131,7 +131,7 @@ public class MySQL5SiegeDAO extends SiegeDAO
 			stmt.setInt(3, siegeLocation.getLegionId());
 			stmt.execute();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error insert Siege Location: " + siegeLocation.getLocationId(), e);
 			return false;

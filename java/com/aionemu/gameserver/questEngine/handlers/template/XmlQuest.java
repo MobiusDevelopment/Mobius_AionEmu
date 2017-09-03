@@ -51,16 +51,16 @@ public class XmlQuest extends QuestHandler
 		{
 			qe.registerQuestNpc(xmlQuestData.getEndNpcId()).addOnTalkEvent(getQuestId());
 		}
-		for (final OnTalkEvent talkEvent : xmlQuestData.getOnTalkEvent())
+		for (OnTalkEvent talkEvent : xmlQuestData.getOnTalkEvent())
 		{
-			for (final int npcId : talkEvent.getIds())
+			for (int npcId : talkEvent.getIds())
 			{
 				qe.registerQuestNpc(npcId).addOnTalkEvent(getQuestId());
 			}
 		}
-		for (final OnKillEvent killEvent : xmlQuestData.getOnKillEvent())
+		for (OnKillEvent killEvent : xmlQuestData.getOnKillEvent())
 		{
-			for (final Monster monster : killEvent.getMonsters())
+			for (Monster monster : killEvent.getMonsters())
 			{
 				final Iterator<Integer> iterator = monster.getNpcIds().iterator();
 				while (iterator.hasNext())
@@ -76,7 +76,7 @@ public class XmlQuest extends QuestHandler
 	public boolean onDialogEvent(QuestEnv env)
 	{
 		env.setQuestId(getQuestId());
-		for (final OnTalkEvent talkEvent : xmlQuestData.getOnTalkEvent())
+		for (OnTalkEvent talkEvent : xmlQuestData.getOnTalkEvent())
 		{
 			if (talkEvent.operate(env))
 			{
@@ -111,7 +111,7 @@ public class XmlQuest extends QuestHandler
 	public boolean onKillEvent(QuestEnv env)
 	{
 		env.setQuestId(getQuestId());
-		for (final OnKillEvent killEvent : xmlQuestData.getOnKillEvent())
+		for (OnKillEvent killEvent : xmlQuestData.getOnKillEvent())
 		{
 			if (killEvent.operate(env))
 			{

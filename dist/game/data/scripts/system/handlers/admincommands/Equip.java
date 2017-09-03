@@ -108,7 +108,7 @@ public class Equip extends AdminCommand
 					manastone = params[i + 1] == null ? manastone : Integer.parseInt(params[i + 1]);
 					quant = params[i + 2] == null ? quant : Integer.parseInt(params[i + 2]);
 				}
-				catch (final Exception ex2)
+				catch (Exception ex2)
 				{
 					showHelpSocket(admin);
 					return;
@@ -128,7 +128,7 @@ public class Equip extends AdminCommand
 				{
 					enchant = params[i + 1] == null ? enchant : Integer.parseInt(params[i + 1]);
 				}
-				catch (final Exception ex)
+				catch (Exception ex)
 				{
 					showHelpEnchant(admin);
 					return;
@@ -148,7 +148,7 @@ public class Equip extends AdminCommand
 				{
 					tempering = params[i + 1] == null ? tempering : Integer.parseInt(params[i + 1]);
 				}
-				catch (final Exception ex)
+				catch (Exception ex)
 				{
 					showHelpTempering(admin);
 					return;
@@ -168,7 +168,7 @@ public class Equip extends AdminCommand
 				{
 					godstone = params[i + 1] == null ? godstone : Integer.parseInt(params[i + 1]);
 				}
-				catch (final Exception ex)
+				catch (Exception ex)
 				{
 					showHelpGodstone(admin);
 					return;
@@ -187,7 +187,7 @@ public class Equip extends AdminCommand
 			PacketSendUtility.sendMessage(admin, "You are suposed to give the item id for a" + " Manastone or 0 to remove all manastones.");
 			return;
 		}
-		for (final Item targetItem : player.getEquipment().getEquippedItemsWithoutStigma())
+		for (Item targetItem : player.getEquipment().getEquippedItemsWithoutStigma())
 		{
 			if (isUpgradable(targetItem))
 			{
@@ -285,7 +285,7 @@ public class Equip extends AdminCommand
 				probability.setInt(targetItem.getGodStone(), godstone);
 				probabilityLeft.setInt(targetItem.getGodStone(), godstone);
 			}
-			catch (final Exception ex2)
+			catch (Exception ex2)
 			{
 				PacketSendUtility.sendMessage(admin, "Occurs an error.");
 				return;
@@ -305,7 +305,7 @@ public class Equip extends AdminCommand
 	
 	private void enchant(Player admin, Player player, int enchant)
 	{
-		for (final Item targetItem : player.getEquipment().getEquippedItemsWithoutStigma())
+		for (Item targetItem : player.getEquipment().getEquippedItemsWithoutStigma())
 		{
 			if (isUpgradable(targetItem))
 			{
@@ -635,7 +635,7 @@ public class Equip extends AdminCommand
 	
 	private void tempering(Player admin, Player player, int tempering)
 	{
-		for (final Item targetItem : player.getEquipment().getEquippedItemsWithoutStigma())
+		for (Item targetItem : player.getEquipment().getEquippedItemsWithoutStigma())
 		{
 			if (isTempering(targetItem))
 			{

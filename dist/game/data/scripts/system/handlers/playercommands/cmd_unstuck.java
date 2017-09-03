@@ -39,7 +39,7 @@ public class cmd_unstuck extends PlayerCommand
 	}
 	
 	@Override
-	public void execute(final Player player, String... params)
+	public void execute(Player player, String... params)
 	{
 		if (player.getLifeStats().isAlreadyDead())
 		{

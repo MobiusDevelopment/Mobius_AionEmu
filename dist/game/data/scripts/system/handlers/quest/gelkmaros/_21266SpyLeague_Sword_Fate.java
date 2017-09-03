@@ -52,7 +52,7 @@ public class _21266SpyLeague_Sword_Fate extends QuestHandler
 	{
 		qe.registerQuestNpc(799340).addOnQuestStart(questId); // Athana.
 		qe.registerQuestNpc(799340).addOnTalkEvent(questId); // Athana.
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

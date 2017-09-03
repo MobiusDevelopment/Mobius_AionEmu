@@ -42,7 +42,7 @@ public class _21033ExorcisingInfisto extends QuestHandler
 			799256,
 			204734
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

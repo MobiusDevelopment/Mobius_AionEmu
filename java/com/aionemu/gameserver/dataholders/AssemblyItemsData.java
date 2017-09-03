@@ -46,7 +46,7 @@ public class AssemblyItemsData
 	
 	void afterUnmarshal(Unmarshaller unmarshaller, Object parent)
 	{
-		for (final AssemblyItem template : item)
+		for (AssemblyItem template : item)
 		{
 			items.add(template);
 		}
@@ -59,7 +59,7 @@ public class AssemblyItemsData
 	
 	public AssemblyItem getAssemblyItem(int itemId)
 	{
-		for (final AssemblyItem assemblyItem : items)
+		for (AssemblyItem assemblyItem : items)
 		{
 			if (assemblyItem.getId() == itemId)
 			{

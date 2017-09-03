@@ -91,7 +91,7 @@ public final class BufferUtils
 			return null;
 		}
 		final FloatBuffer buff = createFloatBuffer(3 * data.length);
-		for (final Vector3f element : data)
+		for (Vector3f element : data)
 		{
 			if (element != null)
 			{
@@ -303,7 +303,7 @@ public final class BufferUtils
 			return null;
 		}
 		final FloatBuffer buff = createFloatBuffer(2 * data.length);
-		for (final Vector2f element : data)
+		for (Vector2f element : data)
 		{
 			if (element != null)
 			{
@@ -813,7 +813,7 @@ public final class BufferUtils
 		final ArrayList<Buffer> bufs = new ArrayList<>(trackingHash.keySet());
 		int fBufs = 0, bBufs = 0, iBufs = 0, sBufs = 0, dBufs = 0;
 		int fBufsM = 0, bBufsM = 0, iBufsM = 0, sBufsM = 0, dBufsM = 0;
-		for (final Buffer b : bufs)
+		for (Buffer b : bufs)
 		{
 			if (b instanceof ByteBuffer)
 			{

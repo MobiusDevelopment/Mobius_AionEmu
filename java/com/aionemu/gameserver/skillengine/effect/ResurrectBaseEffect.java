@@ -48,7 +48,7 @@ public class ResurrectBaseEffect extends ResurrectEffect
 	}
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		final Creature effected = effect.getEffected();
 		if (effected instanceof Player)

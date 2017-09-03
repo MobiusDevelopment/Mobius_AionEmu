@@ -211,7 +211,7 @@ public class Dye extends AdminCommand
 			rgb = Integer.parseInt(color, 16);
 			bgra = 0xFF | ((rgb & 0xFF) << 24) | ((rgb & 0xFF00) << 8) | ((rgb & 0xFF0000) >>> 8);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			if (!color.equalsIgnoreCase("no"))
 			{
@@ -223,7 +223,7 @@ public class Dye extends AdminCommand
 		{
 			admin.getInventory().decreaseKinah(price);
 		}
-		for (final Item targetItem : target.getEquipment().getEquippedItemsWithoutStigma())
+		for (Item targetItem : target.getEquipment().getEquippedItemsWithoutStigma())
 		{
 			if (color.equals("no"))
 			{

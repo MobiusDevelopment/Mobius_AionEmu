@@ -102,7 +102,7 @@ public class PetController extends VisibleObjectController<Pet>
 					}
 				}
 			}
-			catch (final Exception ex)
+			catch (Exception ex)
 			{
 				player.getController().cancelTask(TaskId.PET_UPDATE);
 			}

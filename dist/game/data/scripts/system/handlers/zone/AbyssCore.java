@@ -45,7 +45,7 @@ public class AbyssCore implements ZoneHandler
 			geometry = (Node) GeoWorldLoader.loadMeshs("data/geodata/models/na_ab_lmark_col_01a.mesh").values().toArray()[0];
 			geometry.setTransform(new Matrix3f(1.15f, 0, 0, 0, 1.15f, 0, 0, 0, 1.15f), new Vector3f(2140.104f, 1925.5823f, 2303.919f), 1f);
 		}
-		catch (final IOException e)
+		catch (IOException e)
 		{
 			e.printStackTrace();
 		}

@@ -119,7 +119,7 @@ public class Drop implements DropCalculator
 		{
 			if (eachMember && (groupMembers != null) && (!groupMembers.isEmpty()))
 			{
-				for (final Player player : groupMembers)
+				for (Player player : groupMembers)
 				{
 					final DropItem dropitem = new DropItem(this);
 					dropitem.calculateCount();

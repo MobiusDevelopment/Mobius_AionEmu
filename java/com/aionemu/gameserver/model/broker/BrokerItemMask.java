@@ -218,7 +218,7 @@ public enum BrokerItemMask
 	
 	public static BrokerItemMask getBrokerMaskById(int id)
 	{
-		for (final BrokerItemMask mt : values())
+		for (BrokerItemMask mt : values())
 		{
 			if (mt.typeId == id)
 			{

@@ -52,7 +52,7 @@ public class StatCapUtil
 	static HashMap<StatEnum, StatLimits> limits = new HashMap<>();
 	static
 	{
-		for (final StatEnum stat : StatEnum.values())
+		for (StatEnum stat : StatEnum.values())
 		{
 			minValues.put(stat, getLowerCap(stat));
 			maxValues.put(stat, getUpperCap(stat));

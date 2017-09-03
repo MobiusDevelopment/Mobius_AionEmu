@@ -119,7 +119,7 @@ enum AbyssSkills
 	
 	public static int[] getSkills(Race race, AbyssRankEnum rank)
 	{
-		for (final AbyssSkills aSkills : values())
+		for (AbyssSkills aSkills : values())
 		{
 			if ((aSkills.race == race) && (aSkills.rankenum == rank))
 			{

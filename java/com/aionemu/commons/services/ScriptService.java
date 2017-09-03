@@ -89,7 +89,7 @@ public class ScriptService
 		{
 			sm.load(file);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("loadFile", e);
 			throw new RuntimeException(e);
@@ -104,7 +104,7 @@ public class ScriptService
 	 */
 	private void loadDir(File dir)
 	{
-		for (final Object file : FileUtils.listFiles(dir, new String[]
+		for (Object file : FileUtils.listFiles(dir, new String[]
 		{
 			"xml"
 		}, false))
@@ -175,13 +175,13 @@ public class ScriptService
 	 */
 	public void shutdown()
 	{
-		for (final Iterator<Entry<File, ScriptManager>> it = map.entrySet().iterator(); it.hasNext();)
+		for (Iterator<Entry<File, ScriptManager>> it = map.entrySet().iterator(); it.hasNext();)
 		{
 			try
 			{
 				it.next().getValue().shutdown();
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.warn("An exception occured during shudown procedure.", e);
 			}

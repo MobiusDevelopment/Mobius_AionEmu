@@ -49,7 +49,7 @@ public class _28511Souper_Passion extends QuestHandler
 		};
 		qe.registerQuestNpc(799522).addOnQuestStart(questId);
 		qe.registerGetingItem(182212023, questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

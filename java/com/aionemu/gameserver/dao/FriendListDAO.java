@@ -40,7 +40,7 @@ public abstract class FriendListDAO implements DAO
 	 * @param player Player to get friend list of
 	 * @return FriendList for player
 	 */
-	public abstract FriendList load(final Player player);
+	public abstract FriendList load(Player player);
 	
 	/**
 	 * Makes the given players friends
@@ -51,7 +51,7 @@ public abstract class FriendListDAO implements DAO
 	 * @param friend Friend to add to the friend list
 	 * @return Success
 	 */
-	public abstract boolean addFriends(final Player player, final Player friend);
+	public abstract boolean addFriends(Player player, Player friend);
 	
 	/**
 	 * Deletes the friends from eachothers lists
@@ -59,6 +59,6 @@ public abstract class FriendListDAO implements DAO
 	 * @param friendName Name of friend to delete
 	 * @return Success
 	 */
-	public abstract boolean delFriends(final int playerOid, final int friendOid);
+	public abstract boolean delFriends(int playerOid, int friendOid);
 	
 }

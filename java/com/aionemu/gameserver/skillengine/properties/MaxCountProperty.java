@@ -29,7 +29,7 @@ import com.aionemu.gameserver.utils.MathUtil;
 public class MaxCountProperty
 {
 	
-	public static boolean set(final Skill skill, Properties properties)
+	public static boolean set(Skill skill, Properties properties)
 	{
 		final TargetRangeAttribute value = properties.getTargetType();
 		final int maxcount = properties.getTargetMaxCount();
@@ -44,12 +44,12 @@ public class MaxCountProperty
 					return false;
 				}
 				final SortedMap<Double, Creature> sortedMap = new TreeMap<>();
-				for (final Creature creature : skill.getEffectedList())
+				for (Creature creature : skill.getEffectedList())
 				{
 					sortedMap.put(MathUtil.getDistance(firstTarget, creature), creature);
 				}
 				skill.getEffectedList().clear();
-				for (final Creature creature : sortedMap.values())
+				for (Creature creature : sortedMap.values())
 				{
 					if (areaCounter >= maxcount)
 					{

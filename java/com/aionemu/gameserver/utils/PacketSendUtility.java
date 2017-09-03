@@ -96,7 +96,7 @@ public class PacketSendUtility
 	/**
 	 * Player Send Packet
 	 */
-	public static void playerSendPacketTime(final Player player, final AionServerPacket packet, int time)
+	public static void playerSendPacketTime(Player player, AionServerPacket packet, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -114,7 +114,7 @@ public class PacketSendUtility
 	/**
 	 * Npc Send Packet
 	 */
-	public static void npcSendPacketTime(final Npc npc, final AionServerPacket packet, int time)
+	public static void npcSendPacketTime(Npc npc, AionServerPacket packet, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -154,7 +154,7 @@ public class PacketSendUtility
 		broadcastPacket(visibleObject, packet);
 	}
 	
-	public static void broadcastPacket(VisibleObject visibleObject, final AionServerPacket packet)
+	public static void broadcastPacket(VisibleObject visibleObject, AionServerPacket packet)
 	{
 		visibleObject.getKnownList().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -169,7 +169,7 @@ public class PacketSendUtility
 		});
 	}
 	
-	public static void broadcastPacket(Player player, final AionServerPacket packet, boolean toSelf, final ObjectFilter<Player> filter)
+	public static void broadcastPacket(Player player, AionServerPacket packet, boolean toSelf, ObjectFilter<Player> filter)
 	{
 		if (toSelf)
 		{
@@ -188,7 +188,7 @@ public class PacketSendUtility
 		});
 	}
 	
-	public static void broadcastPacket(final VisibleObject visibleObject, final AionServerPacket packet, final int distance)
+	public static void broadcastPacket(VisibleObject visibleObject, AionServerPacket packet, int distance)
 	{
 		visibleObject.getKnownList().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -203,7 +203,7 @@ public class PacketSendUtility
 		});
 	}
 	
-	public static void broadcastFilteredPacket(final AionServerPacket packet, final ObjectFilter<Player> filter)
+	public static void broadcastFilteredPacket(AionServerPacket packet, ObjectFilter<Player> filter)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -221,7 +221,7 @@ public class PacketSendUtility
 	
 	public static void broadcastPacketToLegion(Legion legion, AionServerPacket packet)
 	{
-		for (final Player onlineLegionMember : legion.getOnlineLegionMembers())
+		for (Player onlineLegionMember : legion.getOnlineLegionMembers())
 		{
 			sendPacket(onlineLegionMember, packet);
 		}
@@ -229,7 +229,7 @@ public class PacketSendUtility
 	
 	public static void broadcastPacketToLegion(Legion legion, AionServerPacket packet, int playerObjId)
 	{
-		for (final Player onlineLegionMember : legion.getOnlineLegionMembers())
+		for (Player onlineLegionMember : legion.getOnlineLegionMembers())
 		{
 			if (onlineLegionMember.getObjectId() != playerObjId)
 			{
@@ -238,7 +238,7 @@ public class PacketSendUtility
 		}
 	}
 	
-	public static void broadcastPacketToZone(SiegeZoneInstance zone, final AionServerPacket packet)
+	public static void broadcastPacketToZone(SiegeZoneInstance zone, AionServerPacket packet)
 	{
 		zone.doOnAllPlayers(new Visitor<Player>()
 		{

@@ -86,7 +86,7 @@ public class GlobalCallbackHelper
 	{
 		
 		CallbackResult<?> cr = null;
-		for (final Callback cb : globalCallbacks)
+		for (Callback cb : globalCallbacks)
 		{
 			if (!ClassUtils.isSubclass(cb.getBaseClass(), callbackClass))
 			{
@@ -101,7 +101,7 @@ public class GlobalCallbackHelper
 					break;
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.error("Exception in global callback", e);
 			}
@@ -126,7 +126,7 @@ public class GlobalCallbackHelper
 	{
 		
 		CallbackResult<?> cr = null;
-		for (final Callback cb : globalCallbacks)
+		for (Callback cb : globalCallbacks)
 		{
 			if (!ClassUtils.isSubclass(cb.getBaseClass(), callbackClass))
 			{
@@ -141,7 +141,7 @@ public class GlobalCallbackHelper
 					break;
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.error("Exception in global callback", e);
 			}

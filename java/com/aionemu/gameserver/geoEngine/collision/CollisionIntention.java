@@ -51,7 +51,7 @@ public enum CollisionIntention
 	public static EnumSet<CollisionIntention> getFlagsFormValue(int value)
 	{
 		final EnumSet<CollisionIntention> result = EnumSet.noneOf(CollisionIntention.class);
-		for (final CollisionIntention m : CollisionIntention.values())
+		for (CollisionIntention m : CollisionIntention.values())
 		{
 			if ((value & m.getId()) == m.getId())
 			{
@@ -68,7 +68,7 @@ public enum CollisionIntention
 	public static String toString(int value)
 	{
 		String str = "";
-		for (final CollisionIntention m : CollisionIntention.values())
+		for (CollisionIntention m : CollisionIntention.values())
 		{
 			if ((m == NONE) || (m == ALL))
 			{

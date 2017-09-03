@@ -73,7 +73,7 @@ public class BeritraService
 		if (CustomConfig.BERITRA_ENABLED)
 		{
 			beritra = DataManager.BERITRA_DATA.getBeritraLocations();
-			for (final BeritraLocation loc : getBeritraLocations().values())
+			for (BeritraLocation loc : getBeritraLocations().values())
 			{
 				spawn(loc, BeritraStateType.PEACE);
 			}
@@ -89,9 +89,9 @@ public class BeritraService
 		if (CustomConfig.BERITRA_ENABLED)
 		{
 			beritraSchedule = BeritraSchedule.load();
-			for (final Beritra beritra : beritraSchedule.getBeritrasList())
+			for (Beritra beritra : beritraSchedule.getBeritrasList())
 			{
-				for (final String invasionTime : beritra.getInvasionTimes())
+				for (String invasionTime : beritra.getInvasionTimes())
 				{
 					CronService.getInstance().schedule(new BeritraStartRunnable(beritra.getId()), invasionTime);
 				}
@@ -99,7 +99,7 @@ public class BeritraService
 		}
 	}
 	
-	public void startBeritraInvasion(final int id)
+	public void startBeritraInvasion(int id)
 	{
 		final BeritraInvasion<?> invade;
 		synchronized (this)
@@ -148,9 +148,9 @@ public class BeritraService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getBeritraSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final BeritraSpawnTemplate beritratemplate = (BeritraSpawnTemplate) st;
 				if (beritratemplate.getBStateType().equals(bstate))
@@ -595,7 +595,7 @@ public class BeritraService
 	
 	public void despawn(BeritraLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

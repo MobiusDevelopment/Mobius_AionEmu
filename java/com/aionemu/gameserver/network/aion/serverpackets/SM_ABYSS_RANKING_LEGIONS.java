@@ -59,7 +59,7 @@ public class SM_ABYSS_RANKING_LEGIONS extends AionServerPacket
 		writeD(sendData);// 0:Nothing 1:Update Table
 		writeD(sendData);// 0:Nothing 1:Update Table
 		writeH(data.size());// list size
-		for (final AbyssRankingResult rs : data)
+		for (AbyssRankingResult rs : data)
 		{
 			writeD(rs.getRankPos());// Current Rank
 			writeD((rs.getOldRankPos() == 0) ? 76 : rs.getOldRankPos());// Old Rank

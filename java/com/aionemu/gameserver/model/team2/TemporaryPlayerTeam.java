@@ -119,7 +119,7 @@ public abstract class TemporaryPlayerTeam<TM extends TeamMember<Player>>extends 
 		{
 			if (predicate.apply(player))
 			{
-				for (final AionServerPacket packet : packets)
+				for (AionServerPacket packet : packets)
 				{
 					PacketSendUtility.sendPacket(player, packet);
 				}

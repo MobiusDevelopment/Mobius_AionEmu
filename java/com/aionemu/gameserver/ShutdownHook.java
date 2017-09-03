@@ -99,7 +99,7 @@ public class ShutdownHook extends Thread
 				}
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error(e.getMessage());
 		}
@@ -123,7 +123,7 @@ public class ShutdownHook extends Thread
 				}
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error(e.getMessage());
 		}
@@ -156,7 +156,7 @@ public class ShutdownHook extends Thread
 					sleep(i * 1000);
 				}
 			}
-			catch (final InterruptedException e)
+			catch (InterruptedException e)
 			{
 				return;
 			}
@@ -175,7 +175,7 @@ public class ShutdownHook extends Thread
 			{
 				PlayerLeaveWorldService.startLeaveWorld(activePlayer);
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.error("Error while saving player " + e.getMessage());
 			}

@@ -50,17 +50,17 @@ public class TradeListData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final TradeListTemplate npc : tlist)
+		for (TradeListTemplate npc : tlist)
 		{
 			npctlistData.put(npc.getNpcId(), npc);
 		}
 		
-		for (final TradeListTemplate npc : tInlist)
+		for (TradeListTemplate npc : tInlist)
 		{
 			npcTradeInlistData.put(npc.getNpcId(), npc);
 		}
 		
-		for (final TradeListTemplate npc : ptlist)
+		for (TradeListTemplate npc : ptlist)
 		{
 			npcPurchaselistData.put(npc.getNpcId(), npc);
 		}

@@ -77,7 +77,7 @@ public class IPConfig
 						{
 							defaultAddress = InetAddress.getByName(attributes.getValue("default")).getAddress();
 						}
-						catch (final UnknownHostException e)
+						catch (UnknownHostException e)
 						{
 							throw new RuntimeException("Failed to resolve DSN for address: " + attributes.getValue("default"), e);
 						}
@@ -93,7 +93,7 @@ public class IPConfig
 				}
 			});
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Critical error while parsing ipConfig", e);
 			throw new Error("Can't load ipConfig", e);

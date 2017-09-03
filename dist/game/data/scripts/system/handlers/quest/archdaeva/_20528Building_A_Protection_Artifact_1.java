@@ -60,11 +60,11 @@ public class _20528Building_A_Protection_Artifact_1 extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : DF6MissionGriffon73An)
+		for (int mob : DF6MissionGriffon73An)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
@@ -285,7 +285,7 @@ public class _20528Building_A_Protection_Artifact_1 extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

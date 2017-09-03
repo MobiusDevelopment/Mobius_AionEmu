@@ -63,7 +63,7 @@ public final class PetFeedCalculator
 	static
 	{
 		final TreeSet<Short> counts = new TreeSet<>();
-		for (final PetFlavour flavour : DataManager.PET_FEED_DATA.getPetFlavours())
+		for (PetFlavour flavour : DataManager.PET_FEED_DATA.getPetFlavours())
 		{
 			if (flavour.getFullCount() > 0)
 			{
@@ -95,7 +95,7 @@ public final class PetFeedCalculator
 	 */
 	static void calculate()
 	{
-		for (final byte levelByte : itemLevels)
+		for (byte levelByte : itemLevels)
 		{
 			final short level = (short) (levelByte & 0xFF);
 			if (level < 10)
@@ -103,7 +103,7 @@ public final class PetFeedCalculator
 				continue;
 			}
 			int countIndex = 0;
-			for (final short countByte : fullCounts)
+			for (short countByte : fullCounts)
 			{
 				final short count = (short) (countByte & 0xFF);
 				int finalLevel = level;
@@ -226,7 +226,7 @@ public final class PetFeedCalculator
 			}
 			final List<PetFeedResult> validRewards = new ArrayList<>();
 			int maxLevel = 0;
-			for (final PetFeedResult result : rewardGroup.getResults())
+			for (PetFeedResult result : rewardGroup.getResults())
 			{
 				final int resultLevel = DataManager.ITEM_DATA.getItemTemplate(result.getItem()).getLevel();
 				if (resultLevel > playerLevel)

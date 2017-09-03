@@ -52,7 +52,7 @@ public class ItemEnchantTableData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final ItemEnchantTable it : enchantTables)
+		for (ItemEnchantTable it : enchantTables)
 		{
 			getEnchantMap().put(it.getId(), it);
 		}
@@ -65,7 +65,7 @@ public class ItemEnchantTableData
 	
 	public ItemEnchantTable getTableWeapon(ItemCategory cType)
 	{
-		for (final ItemEnchantTable it : enchantTables)
+		for (ItemEnchantTable it : enchantTables)
 		{
 			if (it.getType().equalsIgnoreCase(cType.toString()))
 			{
@@ -78,7 +78,7 @@ public class ItemEnchantTableData
 	
 	public ItemEnchantTable getTableArmor(ArmorType aType, ItemCategory cType)
 	{
-		for (final ItemEnchantTable it : enchantTables)
+		for (ItemEnchantTable it : enchantTables)
 		{
 			if (it.getPart() == null)
 			{
@@ -99,7 +99,7 @@ public class ItemEnchantTableData
 	
 	public ItemEnchantTable getTablePlume()
 	{
-		for (final ItemEnchantTable it : enchantTables)
+		for (ItemEnchantTable it : enchantTables)
 		{
 			if (it.getType() != "PLUME")
 			{
@@ -113,7 +113,7 @@ public class ItemEnchantTableData
 	
 	public ItemEnchantTable getTableAuthorize()
 	{
-		for (final ItemEnchantTable it : enchantTables)
+		for (ItemEnchantTable it : enchantTables)
 		{
 			if (it.getType() != "AUTHORIZE")
 			{

@@ -56,7 +56,7 @@ public class Drana_LumpAI2 extends AggressiveNpcAI2
 		final Npc spallerRakanatra = getPosition().getWorldMapInstance().getNpc(215388); // Spaller Rakanatra.
 		final Npc spallerDhatra = getPosition().getWorldMapInstance().getNpc(215389); // Spaller Dhatra.
 		final WorldMapInstance instance = getPosition().getWorldMapInstance();
-		for (final Player player : instance.getPlayersInside())
+		for (Player player : instance.getPlayersInside())
 		{
 			if (MathUtil.isIn3dRange(player, spallerEchtra, 8))
 			{

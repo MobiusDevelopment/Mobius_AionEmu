@@ -192,7 +192,7 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket
 				List<Item> inv = DAOManager.getDAO(InventoryDAO.class).loadStorageDirect(player.getObjectId(), StorageType.CUBE);
 				writeD(inv.size());
 				ItemService.loadItemStones(inv);
-				for (final Item item : inv)
+				for (Item item : inv)
 				{
 					writeD(item.getObjectId());
 					writeD(item.getItemId());
@@ -213,14 +213,14 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket
 					writeD(item.getChargePoints());
 					Set<ManaStone> itemStones = item.getItemStones();
 					writeD(itemStones.size());
-					for (final ManaStone stone : itemStones)
+					for (ManaStone stone : itemStones)
 					{
 						writeD(stone.getItemId());
 						writeD(stone.getSlot());
 					}
 					itemStones = item.getFusionStones();
 					writeD(itemStones.size());
-					for (final ManaStone stone : itemStones)
+					for (ManaStone stone : itemStones)
 					{
 						writeD(stone.getItemId());
 						writeD(stone.getSlot());
@@ -238,7 +238,7 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket
 				inv = DAOManager.getDAO(InventoryDAO.class).loadStorageDirect(player.getObjectId(), StorageType.REGULAR_WAREHOUSE);
 				ItemService.loadItemStones(inv);
 				writeD(inv.size());
-				for (final Item item : inv)
+				for (Item item : inv)
 				{
 					writeD(item.getObjectId());
 					writeD(item.getItemId());
@@ -259,14 +259,14 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket
 					writeD(item.getChargePoints());
 					Set<ManaStone> itemStones = item.getItemStones();
 					writeD(itemStones.size());
-					for (final ManaStone stone : itemStones)
+					for (ManaStone stone : itemStones)
 					{
 						writeD(stone.getItemId());
 						writeD(stone.getSlot());
 					}
 					itemStones = item.getFusionStones();
 					writeD(itemStones.size());
-					for (final ManaStone stone : itemStones)
+					for (ManaStone stone : itemStones)
 					{
 						writeD(stone.getItemId());
 						writeD(stone.getSlot());
@@ -283,14 +283,14 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket
 				}
 				final EmotionList emo = player.getEmotions();
 				writeD(emo.getEmotions().size());
-				for (final Emotion e : emo.getEmotions())
+				for (Emotion e : emo.getEmotions())
 				{
 					writeD(e.getId());
 					writeD(e.getRemainingTime());
 				}
 				final MotionList motions = player.getMotions();
 				writeD(motions.getMotions().size());
-				for (final Motion motion : motions.getMotions().values())
+				for (Motion motion : motions.getMotions().values())
 				{
 					writeD(motion.getId());
 					writeD(motion.getExpireTime());
@@ -298,14 +298,14 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket
 				}
 				final MacroList macro = player.getMacroList();
 				writeD(macro.getMacrosses().size());
-				for (final Entry<Integer, String> m : macro.getMacrosses().entrySet())
+				for (Entry<Integer, String> m : macro.getMacrosses().entrySet())
 				{
 					writeD(m.getKey());
 					writeS(m.getValue());
 				}
 				final NpcFactions nf = player.getNpcFactions();
 				writeD(nf.getNpcFactions().size());
-				for (final NpcFaction f : nf.getNpcFactions())
+				for (NpcFaction f : nf.getNpcFactions())
 				{
 					writeD(f.getId());
 					writeD(f.getTime());
@@ -315,7 +315,7 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket
 				}
 				final Collection<PetCommonData> pets = player.getPetList().getPets();
 				writeD(pets.size());
-				for (final PetCommonData pet : pets)
+				for (PetCommonData pet : pets)
 				{
 					writeD(pet.getPetId());
 					writeD(pet.getDecoration());
@@ -325,14 +325,14 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket
 				}
 				final RecipeList rec = player.getRecipeList();
 				writeD(rec.getRecipeList().size());
-				for (final int id : rec.getRecipeList())
+				for (int id : rec.getRecipeList())
 				{
 					writeD(id);
 				}
 				final PlayerSkillList skillList = player.getSkillList();
 				// discard stigma skills
 				final List<PlayerSkillEntry> skills = new ArrayList<>();
-				for (final PlayerSkillEntry sk : skillList.getAllSkills())
+				for (PlayerSkillEntry sk : skillList.getAllSkills())
 				{
 					if (!sk.isStigma())
 					{
@@ -340,14 +340,14 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket
 					}
 				}
 				writeD(skills.size());
-				for (final PlayerSkillEntry sk : skills)
+				for (PlayerSkillEntry sk : skills)
 				{
 					writeD(sk.getSkillId());
 					writeD(sk.getSkillLevel());
 				}
 				final TitleList titles = player.getTitleList();
 				writeD(titles.getTitles().size());
-				for (final Title t : titles.getTitles())
+				for (Title t : titles.getTitles())
 				{
 					writeD(t.getId());
 					writeD(t.getRemainingTime());
@@ -367,7 +367,7 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket
 				writeD(ps.getDisplay());
 				final QuestStateList qsl = player.getQuestStateList();
 				final FastList<QuestState> quests = FastList.newInstance();
-				for (final QuestState qs : qsl.getQuests().values())
+				for (QuestState qs : qsl.getQuests().values())
 				{
 					if (qs == null)
 					{
@@ -377,7 +377,7 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket
 					quests.add(qs);
 				}
 				writeD(quests.size());
-				for (final QuestState qs : quests)
+				for (QuestState qs : quests)
 				{
 					writeD(qs.getQuestId());
 					writeS(qs.getStatus().toString());

@@ -69,7 +69,7 @@ public class _20034Rescue_The_Reians extends QuestHandler
 		qe.registerOnEnterWorld(questId);
 		qe.registerOnMovieEndQuest(442, questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

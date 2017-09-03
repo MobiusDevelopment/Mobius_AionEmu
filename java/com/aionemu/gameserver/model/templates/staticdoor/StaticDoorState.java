@@ -43,7 +43,7 @@ public enum StaticDoorState
 	
 	public static void setStates(int flags, EnumSet<StaticDoorState> state)
 	{
-		for (final StaticDoorState states : StaticDoorState.values())
+		for (StaticDoorState states : StaticDoorState.values())
 		{
 			if (states == NONE)
 			{
@@ -63,7 +63,7 @@ public enum StaticDoorState
 	public static int getFlags(EnumSet<StaticDoorState> doorStates)
 	{
 		int result = 0;
-		for (final StaticDoorState state : StaticDoorState.values())
+		for (StaticDoorState state : StaticDoorState.values())
 		{
 			if (state == NONE)
 			{

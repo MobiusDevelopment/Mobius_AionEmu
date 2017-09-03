@@ -29,7 +29,7 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 public class ReflectorEffect extends ShieldEffect
 {
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		final int hit = hitvalue + (hitdelta * effect.getSkillLevel());
 		final AttackShieldObserver asObserver = new AttackShieldObserver(hit, value, percent, false, effect, hitType, getType(), hitTypeProb, minradius, radius, null, 0, 0);

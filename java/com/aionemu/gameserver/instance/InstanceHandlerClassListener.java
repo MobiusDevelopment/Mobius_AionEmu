@@ -37,7 +37,7 @@ public class InstanceHandlerClassListener implements ClassListener
 	@Override
 	public void postLoad(Class<?>[] classes)
 	{
-		for (final Class<?> c : classes)
+		for (Class<?> c : classes)
 		{
 			if (log.isDebugEnabled())
 			{
@@ -65,7 +65,7 @@ public class InstanceHandlerClassListener implements ClassListener
 	{
 		if (log.isDebugEnabled())
 		{
-			for (final Class<?> c : classes)
+			for (Class<?> c : classes)
 			{
 				log.debug("Unload class " + c.getName());
 			}

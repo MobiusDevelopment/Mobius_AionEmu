@@ -71,9 +71,9 @@ public abstract class TransformEffect extends EffectTemplate
 		{
 			int newModel = 0;
 			TransformType transformType = TransformType.PC;
-			for (final Effect tmp : effected.getEffectController().getAbnormalEffects())
+			for (Effect tmp : effected.getEffectController().getAbnormalEffects())
 			{
-				for (final EffectTemplate template : tmp.getEffectTemplates())
+				for (EffectTemplate template : tmp.getEffectTemplates())
 				{
 					if (template instanceof TransformEffect)
 					{

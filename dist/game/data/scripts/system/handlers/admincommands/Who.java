@@ -40,7 +40,7 @@ public class Who extends AdminCommand
 		
 		PacketSendUtility.sendMessage(admin, "Player :");
 		
-		for (final Player player : players)
+		for (Player player : players)
 		{
 			if ((params != null) && (params.length > 0))
 			{

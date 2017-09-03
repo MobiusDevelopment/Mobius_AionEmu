@@ -385,7 +385,7 @@ public class ExchangeService
 	{
 		final Storage inventory = player.getInventory();
 		
-		for (final ExchangeItem exchangeItem : exchange.getItems().values())
+		for (ExchangeItem exchangeItem : exchange.getItems().values())
 		{
 			final Item item = exchangeItem.getItem();
 			final Item itemInInventory = inventory.getItemByObjId(exchangeItem.getItemObjId());
@@ -449,7 +449,7 @@ public class ExchangeService
 	 */
 	private void putItemToInventory(Player player, Exchange exchange1, Exchange exchange2)
 	{
-		for (final ExchangeItem exchangeItem : exchange1.getItems().values())
+		for (ExchangeItem exchangeItem : exchange1.getItems().values())
 		{
 			final Item itemToPut = exchangeItem.getItem();
 			itemToPut.setEquipmentSlot(0);

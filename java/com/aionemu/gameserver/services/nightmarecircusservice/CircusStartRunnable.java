@@ -38,7 +38,7 @@ public class CircusStartRunnable implements Runnable
 	public void run()
 	{
 		final Map<Integer, NightmareCircusLocation> locations = NightmareCircusService.getInstance().getNightmareCircusLocations();
-		for (final NightmareCircusLocation loc : locations.values())
+		for (NightmareCircusLocation loc : locations.values())
 		{
 			if (loc.getId() == id)
 			{

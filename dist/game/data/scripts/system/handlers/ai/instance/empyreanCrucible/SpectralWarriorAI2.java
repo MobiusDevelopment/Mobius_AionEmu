@@ -63,7 +63,7 @@ public class SpectralWarriorAI2 extends AggressiveNpcAI2
 	
 	private void resurrectAllies()
 	{
-		for (final VisibleObject obj : getKnownList().getKnownObjects().values())
+		for (VisibleObject obj : getKnownList().getKnownObjects().values())
 		{
 			if (obj instanceof Npc)
 			{

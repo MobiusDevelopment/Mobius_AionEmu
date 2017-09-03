@@ -54,7 +54,7 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 			702831,
 			702832
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

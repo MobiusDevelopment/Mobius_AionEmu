@@ -51,7 +51,7 @@ public class _29635Beach_Day extends QuestHandler
 		qe.registerQuestNpc(205164).addOnQuestStart(questId);
 		qe.registerQuestNpc(205164).addOnTalkEvent(questId);
 		qe.registerQuestNpc(205164).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

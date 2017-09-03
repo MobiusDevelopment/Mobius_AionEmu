@@ -60,7 +60,7 @@ public class _2007Wheres_Rae_This_Time extends QuestHandler
 		};
 		qe.registerOnLevelUp(questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
-		for (final int id : talkNpcs)
+		for (int id : talkNpcs)
 		{
 			qe.registerQuestNpc(id).addOnTalkEvent(questId);
 		}
@@ -277,7 +277,7 @@ public class _2007Wheres_Rae_This_Time extends QuestHandler
 		return false;
 	}
 	
-	private void destroy(final int var, final QuestEnv env)
+	private void destroy(int var, QuestEnv env)
 	{
 		final int targetObjectId = env.getVisibleObject().getObjectId();
 		final Player player = env.getPlayer();

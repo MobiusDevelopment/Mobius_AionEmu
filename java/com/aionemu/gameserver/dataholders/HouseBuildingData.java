@@ -53,7 +53,7 @@ public class HouseBuildingData
 			return;
 		}
 		
-		for (final Building building : buildings)
+		for (Building building : buildings)
 		{
 			buildingById.put(building.getId(), building);
 		}

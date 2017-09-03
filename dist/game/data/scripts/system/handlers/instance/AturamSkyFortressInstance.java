@@ -382,7 +382,7 @@ public class AturamSkyFortressInstance extends GeneralInstanceHandler
 		objects.put(730392, SpawnEngine.spawnObject(activatedBalaurTeleporter2, instanceId));
 	}
 	
-	private void rushWalk(final Npc npc)
+	private void rushWalk(Npc npc)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -391,7 +391,7 @@ public class AturamSkyFortressInstance extends GeneralInstanceHandler
 			{
 				if (!isInstanceDestroyed)
 				{
-					for (final Player player : instance.getPlayersInside())
+					for (Player player : instance.getPlayersInside())
 					{
 						npc.setTarget(player);
 						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
@@ -465,7 +465,7 @@ public class AturamSkyFortressInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(false, false, 0, 8));
@@ -559,7 +559,7 @@ public class AturamSkyFortressInstance extends GeneralInstanceHandler
 		return TeleportService2.teleportTo(player, mapId, instanceId, 685.2202f, 462.81192f, 655.21655f, (byte) 60);
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -571,7 +571,7 @@ public class AturamSkyFortressInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

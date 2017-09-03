@@ -74,7 +74,7 @@ public class ItemMoveService
 			if (item.getItemTemplate().isStackable())
 			{
 				final List<Item> sameItems = targetStorage.getItemsByItemId(item.getItemId());
-				for (final Item sameItem : sameItems)
+				for (Item sameItem : sameItems)
 				{
 					final long itemCount = item.getItemCount();
 					if (itemCount == 0)

@@ -51,7 +51,7 @@ public class _18500Illegal_Odium extends QuestHandler
 			206150
 		};
 		qe.registerQuestNpc(203106).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

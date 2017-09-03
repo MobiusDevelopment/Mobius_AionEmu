@@ -114,7 +114,7 @@ public class Power_GeneratorAI2 extends AggressiveNpcAI2
 						final int size = players.size();
 						if (players.size() < 6)
 						{
-							for (final Player p : players)
+							for (Player p : players)
 							{
 								spawnGeneratorCore(p);
 							}
@@ -178,7 +178,7 @@ public class Power_GeneratorAI2 extends AggressiveNpcAI2
 	private List<Player> getLifedPlayers()
 	{
 		final List<Player> players = new ArrayList<>();
-		for (final Player player : getKnownList().getKnownPlayers().values())
+		for (Player player : getKnownList().getKnownPlayers().values())
 		{
 			if (!CreatureActions.isAlreadyDead(player))
 			{
@@ -230,7 +230,7 @@ public class Power_GeneratorAI2 extends AggressiveNpcAI2
 	
 	private void deleteNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			if (npc != null)
 			{

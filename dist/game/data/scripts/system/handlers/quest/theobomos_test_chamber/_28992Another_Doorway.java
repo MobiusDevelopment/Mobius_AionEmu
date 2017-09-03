@@ -55,15 +55,15 @@ public class _28992Another_Doorway extends QuestHandler
 		qe.registerQuestNpc(806079).addOnQuestStart(questId); // Feregran.
 		qe.registerQuestNpc(806079).addOnTalkEvent(questId); // Feregran.
 		qe.registerQuestNpc(806217).addOnTalkEvent(questId); // Guranka.
-		for (final int mob : IDF6LapShelukSN67Ae)
+		for (int mob : IDF6LapShelukSN67Ae)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : IDF6LapPrincessSN67Ae)
+		for (int mob : IDF6LapPrincessSN67Ae)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : IDF6LapGodElemental67Ah)
+		for (int mob : IDF6LapGodElemental67Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

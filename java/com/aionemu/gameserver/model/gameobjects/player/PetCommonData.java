@@ -157,7 +157,7 @@ public class PetCommonData extends VisibleObjectTemplate implements IExpirable
 		this.feedingTime = feedingTime;
 	}
 	
-	public void setReFoodTime(final long reFoodTime)
+	public void setReFoodTime(long reFoodTime)
 	{
 		setFeedingTime(false);
 		ThreadPoolManager.getInstance().schedule(() ->

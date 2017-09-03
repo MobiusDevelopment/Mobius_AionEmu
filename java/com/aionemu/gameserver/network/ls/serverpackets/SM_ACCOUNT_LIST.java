@@ -47,7 +47,7 @@ public class SM_ACCOUNT_LIST extends LsServerPacket
 	protected void writeImpl(LoginServerConnection con)
 	{
 		writeD(accounts.size());
-		for (final AionConnection ac : accounts.values())
+		for (AionConnection ac : accounts.values())
 		{
 			writeS(ac.getAccount().getName());
 		}

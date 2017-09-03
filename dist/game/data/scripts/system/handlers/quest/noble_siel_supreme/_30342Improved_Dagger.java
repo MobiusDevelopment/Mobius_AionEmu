@@ -48,7 +48,7 @@ public class _30342Improved_Dagger extends QuestHandler
 		qe.registerQuestNpc(799336).addOnQuestStart(questId); // Tataka.
 		qe.registerQuestNpc(799336).addOnTalkEvent(questId); // Tataka.
 		qe.registerGetingItem(182209740, questId);
-		for (final int debilkarim : debilkarims)
+		for (int debilkarim : debilkarims)
 		{
 			qe.registerQuestNpc(debilkarim).addOnKillEvent(questId);
 		}

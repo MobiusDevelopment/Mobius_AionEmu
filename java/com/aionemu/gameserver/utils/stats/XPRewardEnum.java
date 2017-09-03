@@ -70,7 +70,7 @@ public enum XPRewardEnum
 			return PLUS_4.xpRewardPercent;
 		}
 		
-		for (final XPRewardEnum xpReward : values())
+		for (XPRewardEnum xpReward : values())
 		{
 			if (xpReward.levelDifference == levelDifference)
 			{

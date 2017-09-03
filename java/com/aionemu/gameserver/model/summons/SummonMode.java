@@ -38,7 +38,7 @@ public enum SummonMode
 	
 	public static SummonMode getSummonModeById(int id)
 	{
-		for (final SummonMode mode : values())
+		for (SummonMode mode : values())
 		{
 			if (mode.getId() == id)
 			{

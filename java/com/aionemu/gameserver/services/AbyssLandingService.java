@@ -60,14 +60,14 @@ public class AbyssLandingService
 	{
 		abyssLanding = DataManager.LANDING_LOCATION_DATA.getLandingLocations();
 		DAOManager.getDAO(AbyssLandingDAO.class).loadLandingLocations(abyssLanding);
-		for (final LandingLocation loc : getLandingLocations().values())
+		for (LandingLocation loc : getLandingLocations().values())
 		{
 			startLanding(loc.getId());
 		}
 		log.info("[Abyss Landing] Loaded " + abyssLanding.size() + " Locations");
 	}
 	
-	public void startLanding(final int id)
+	public void startLanding(int id)
 	{
 		final Landing<?> land;
 		synchronized (this)
@@ -106,9 +106,9 @@ public class AbyssLandingService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getLandingSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final LandingSpawnTemplate landingtTemplate = (LandingSpawnTemplate) st;
 				if (landingtTemplate.getEStateType().equals(estate))
@@ -121,7 +121,7 @@ public class AbyssLandingService
 	
 	public static void despawn(LandingLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();
@@ -367,7 +367,7 @@ public class AbyssLandingService
 		onUpdate();
 	}
 	
-	public void AnnounceToPoints(final Player pl, final DescriptionId race, final DescriptionId name, final int points, final LandingPointsEnum type)
+	public void AnnounceToPoints(Player pl, DescriptionId race, DescriptionId name, int points, LandingPointsEnum type)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{

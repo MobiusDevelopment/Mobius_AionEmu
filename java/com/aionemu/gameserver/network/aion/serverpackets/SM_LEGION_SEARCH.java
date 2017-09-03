@@ -36,7 +36,7 @@ public class SM_LEGION_SEARCH extends AionServerPacket
 	protected void writeImpl(AionConnection con)
 	{
 		writeH(-legions.size());
-		for (final Legion legion : legions)
+		for (Legion legion : legions)
 		{
 			writeD(legion.getLegionId());
 			writeS(legion.getLegionName());

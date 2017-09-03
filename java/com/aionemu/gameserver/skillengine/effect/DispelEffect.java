@@ -73,7 +73,7 @@ public class DispelEffect extends EffectTemplate
 		switch (dispeltype)
 		{
 			case EFFECTID:
-				for (final Integer effectId : effectids)
+				for (Integer effectId : effectids)
 				{
 					effect.getEffected().getEffectController().removeEffectByEffectId(effectId);
 				}
@@ -85,14 +85,14 @@ public class DispelEffect extends EffectTemplate
 				}
 				break;
 			case EFFECTTYPE:
-				for (final String type : effecttype)
+				for (String type : effecttype)
 				{
 					EffectType temp = null;
 					try
 					{
 						temp = EffectType.valueOf(type);
 					}
-					catch (final Exception e)
+					catch (Exception e)
 					{
 						log.error("wrong effecttype in dispeleffect " + type);
 					}
@@ -103,7 +103,7 @@ public class DispelEffect extends EffectTemplate
 				}
 				break;
 			case SLOTTYPE:
-				for (final String type : slottype)
+				for (String type : slottype)
 				{
 					effect.getEffected().getEffectController().removeAbnormalEffectsByTargetSlot(SkillTargetSlot.valueOf(type));
 				}

@@ -63,11 +63,11 @@ public class _3502Nereus_Need_You extends QuestHandler
 	{
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(204656).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

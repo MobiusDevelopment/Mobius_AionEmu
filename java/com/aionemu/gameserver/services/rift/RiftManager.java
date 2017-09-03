@@ -50,7 +50,7 @@ public class RiftManager
 		}
 		else
 		{
-			for (final SpawnTemplate template : spawn.getSpawnTemplates())
+			for (SpawnTemplate template : spawn.getSpawnTemplates())
 			{
 				riftGroups.put(template.getAnchor(), template);
 			}

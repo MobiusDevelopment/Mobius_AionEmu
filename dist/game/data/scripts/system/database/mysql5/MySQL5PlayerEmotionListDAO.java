@@ -71,7 +71,7 @@ public class MySQL5PlayerEmotionListDAO extends PlayerEmotionListDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore emotionId for playerObjId: " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -96,7 +96,7 @@ public class MySQL5PlayerEmotionListDAO extends PlayerEmotionListDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store emotionId for player " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -119,7 +119,7 @@ public class MySQL5PlayerEmotionListDAO extends PlayerEmotionListDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not delete title for player " + playerId + " from DB: " + e.getMessage(), e);
 		}

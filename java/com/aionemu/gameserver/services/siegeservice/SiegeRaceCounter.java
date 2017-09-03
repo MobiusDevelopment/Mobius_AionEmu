@@ -133,7 +133,7 @@ public class SiegeRaceCounter implements Comparable<SiegeRaceCounter>
 			}
 		});
 		final Map<K, Long> result = Maps.newLinkedHashMap();
-		for (final Map.Entry<K, AtomicLong> entry : tempList)
+		for (Map.Entry<K, AtomicLong> entry : tempList)
 		{
 			if (entry.getValue().get() > 0)
 			{
@@ -157,7 +157,7 @@ public class SiegeRaceCounter implements Comparable<SiegeRaceCounter>
 	public Integer getWinnerLegionId()
 	{
 		final Map<Player, AtomicLong> teamDamageMap = new HashMap<>();
-		for (final Integer id : playerDamageCounter.keySet())
+		for (Integer id : playerDamageCounter.keySet())
 		{
 			final Player player = World.getInstance().findPlayer(id);
 			if ((player != null) && (player.getCurrentTeam() != null))

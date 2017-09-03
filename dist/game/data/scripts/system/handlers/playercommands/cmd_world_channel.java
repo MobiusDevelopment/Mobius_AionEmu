@@ -131,7 +131,7 @@ public class cmd_world_channel extends PlayerCommand
 			sbMessage = new StringBuilder("[World-Chat]" + " " + player.getName() + " : ");
 		}
 		
-		for (final String s : params)
+		for (String s : params)
 		{
 			if ((i++ != 0) && (check))
 			{

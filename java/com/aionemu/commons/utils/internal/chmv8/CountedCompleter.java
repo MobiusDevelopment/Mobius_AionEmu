@@ -478,7 +478,7 @@ public abstract class CountedCompleter<T>extends ForkJoinTask<T>
 			U = getUnsafe();
 			PENDING = U.objectFieldOffset(CountedCompleter.class.getDeclaredField("pending"));
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new Error(e);
 		}
@@ -494,7 +494,7 @@ public abstract class CountedCompleter<T>extends ForkJoinTask<T>
 		{
 			return sun.misc.Unsafe.getUnsafe();
 		}
-		catch (final SecurityException tryReflectionInstead)
+		catch (SecurityException tryReflectionInstead)
 		{
 		}
 		try
@@ -505,7 +505,7 @@ public abstract class CountedCompleter<T>extends ForkJoinTask<T>
 				public sun.misc.Unsafe run() throws Exception
 				{
 					final Class<sun.misc.Unsafe> k = sun.misc.Unsafe.class;
-					for (final java.lang.reflect.Field f : k.getDeclaredFields())
+					for (java.lang.reflect.Field f : k.getDeclaredFields())
 					{
 						f.setAccessible(true);
 						final Object x = f.get(null);
@@ -518,7 +518,7 @@ public abstract class CountedCompleter<T>extends ForkJoinTask<T>
 				}
 			});
 		}
-		catch (final java.security.PrivilegedActionException e)
+		catch (java.security.PrivilegedActionException e)
 		{
 			throw new RuntimeException("Could not initialize intrinsics", e.getCause());
 		}

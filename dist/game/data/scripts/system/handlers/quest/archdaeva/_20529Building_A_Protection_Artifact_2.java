@@ -64,15 +64,15 @@ public class _20529Building_A_Protection_Artifact_2 extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : DF6MissionLightFi75An)
+		for (int mob : DF6MissionLightFi75An)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : DF6MissionLightWi75An)
+		for (int mob : DF6MissionLightWi75An)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

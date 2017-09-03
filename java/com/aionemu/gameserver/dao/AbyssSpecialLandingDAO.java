@@ -29,7 +29,7 @@ public abstract class AbyssSpecialLandingDAO implements DAO
 	
 	public abstract boolean updateLandingSpecialLocation(LandingSpecialLocation location);
 	
-	public void updateLocation(final LandingSpecialLocation location)
+	public void updateLocation(LandingSpecialLocation location)
 	{
 		updateLandingSpecialLocation(location);
 	}

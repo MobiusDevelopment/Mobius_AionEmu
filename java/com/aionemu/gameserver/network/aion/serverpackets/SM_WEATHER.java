@@ -40,7 +40,7 @@ public class SM_WEATHER extends AionServerPacket
 	{
 		writeC(0x00);// unk
 		writeC(weatherEntries.length);
-		for (final WeatherEntry entry : weatherEntries)
+		for (WeatherEntry entry : weatherEntries)
 		{
 			writeC(entry.getCode());
 		}

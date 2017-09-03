@@ -157,7 +157,7 @@ public class NpcController extends CreatureController<Npc>
 		super.onDespawn();
 	}
 	
-	public void defeatNamedMsg(final Player player)
+	public void defeatNamedMsg(Player player)
 	{
 		final Npc owner = getOwner();
 		final int npcNameId = owner.getObjectTemplate().getNameId();
@@ -234,7 +234,7 @@ public class NpcController extends CreatureController<Npc>
 			return;
 		}
 		float totalDmg = 0;
-		for (final AggroInfo info : finalList)
+		for (AggroInfo info : finalList)
 		{
 			totalDmg += info.getDamage();
 		}
@@ -242,7 +242,7 @@ public class NpcController extends CreatureController<Npc>
 		{
 			return;
 		}
-		for (final AggroInfo info : finalList)
+		for (AggroInfo info : finalList)
 		{
 			final AionObject attacker = info.getAttacker();
 			if (attacker instanceof Npc)
@@ -505,7 +505,7 @@ public class NpcController extends CreatureController<Npc>
 	}
 	
 	@Override
-	public void onDialogSelect(int dialogId, final Player player, int questId, int extendedRewardIndex)
+	public void onDialogSelect(int dialogId, Player player, int questId, int extendedRewardIndex)
 	{
 		final QuestEnv env = new QuestEnv(getOwner(), player, questId, dialogId);
 		if (!MathUtil.isInRange(getOwner(), player, getOwner().getObjectTemplate().getTalkDistance() + 2) && !QuestEngine.getInstance().onDialog(env))
@@ -585,7 +585,7 @@ public class NpcController extends CreatureController<Npc>
 	private void rewardSiegeNpc()
 	{
 		final int totalDamage = getOwner().getAggroList().getTotalDamage();
-		for (final AggroInfo aggro : getOwner().getAggroList().getFinalDamageList(true))
+		for (AggroInfo aggro : getOwner().getAggroList().getFinalDamageList(true))
 		{
 			final float percentage = aggro.getDamage() / totalDamage;
 			List<Player> players = new ArrayList<>();
@@ -601,7 +601,7 @@ public class NpcController extends CreatureController<Npc>
 			else if (aggro.getAttacker() instanceof PlayerGroup)
 			{
 				final PlayerGroup group = (PlayerGroup) aggro.getAttacker();
-				for (final Player member : group.getMembers())
+				for (Player member : group.getMembers())
 				{
 					if (MathUtil.isIn3dRange(member, getOwner(), GroupConfig.GROUP_MAX_DISTANCE) && !member.getLifeStats().isAlreadyDead())
 					{
@@ -610,7 +610,7 @@ public class NpcController extends CreatureController<Npc>
 				}
 				if (!players.isEmpty())
 				{
-					for (final Player member : players)
+					for (Player member : players)
 					{
 						final int baseApReward = StatFunctions.calculatePvEApGained(member, getOwner());
 						final int apRewardPerMember = Math.round((baseApReward * percentage) / players.size());
@@ -625,7 +625,7 @@ public class NpcController extends CreatureController<Npc>
 			{
 				final PlayerAlliance alliance = (PlayerAlliance) aggro.getAttacker();
 				players = new ArrayList<>();
-				for (final Player member : alliance.getMembers())
+				for (Player member : alliance.getMembers())
 				{
 					if (MathUtil.isIn3dRange(member, getOwner(), GroupConfig.GROUP_MAX_DISTANCE) && !member.getLifeStats().isAlreadyDead())
 					{
@@ -634,7 +634,7 @@ public class NpcController extends CreatureController<Npc>
 				}
 				if (!players.isEmpty())
 				{
-					for (final Player member : players)
+					for (Player member : players)
 					{
 						final int baseApReward = StatFunctions.calculatePvEApGained(member, getOwner());
 						final int apRewardPerMember = Math.round((baseApReward * percentage) / players.size());

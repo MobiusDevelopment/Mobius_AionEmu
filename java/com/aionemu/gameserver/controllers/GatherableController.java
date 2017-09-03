@@ -60,7 +60,7 @@ public class GatherableController extends VisibleObjectController<Gatherable>
 		IDLE
 	}
 	
-	public void onStartUse(final Player player)
+	public void onStartUse(Player player)
 	{
 		final GatherableTemplate template = getOwner().getObjectTemplate();
 		final int gatherId = template.getTemplateId();
@@ -145,7 +145,7 @@ public class GatherableController extends VisibleObjectController<Gatherable>
 				break;
 		}
 		mats = new RndSelector<>();
-		for (final Material mat : materials)
+		for (Material mat : materials)
 		{
 			mats.add(mat, mat.getRate());
 		}
@@ -188,7 +188,7 @@ public class GatherableController extends VisibleObjectController<Gatherable>
 		return null;
 	}
 	
-	private boolean checkPlayerSkill(final Player player, final GatherableTemplate template)
+	private boolean checkPlayerSkill(Player player, GatherableTemplate template)
 	{
 		final int harvestSkillId = template.getHarvestSkill();
 		if (!player.getSkillList().isSkillPresent(harvestSkillId))
@@ -211,7 +211,7 @@ public class GatherableController extends VisibleObjectController<Gatherable>
 		return true;
 	}
 	
-	private byte checkPlayerRequiredExtractor(final Player player, final GatherableTemplate template)
+	private byte checkPlayerRequiredExtractor(Player player, GatherableTemplate template)
 	{
 		if (template.getRequiredItemId() > 0)
 		{
@@ -219,7 +219,7 @@ public class GatherableController extends VisibleObjectController<Gatherable>
 			{
 				final List<Item> items = player.getEquipment().getEquippedItemsByItemId(template.getRequiredItemId());
 				boolean condOk = false;
-				for (final Item item : items)
+				for (Item item : items)
 				{
 					if (item.isEquipped())
 					{
@@ -245,7 +245,7 @@ public class GatherableController extends VisibleObjectController<Gatherable>
 		return 2;
 	}
 	
-	private boolean checkGatherable(final Player player, final GatherableTemplate template)
+	private boolean checkGatherable(Player player, GatherableTemplate template)
 	{
 		if (player.isNotGatherable())
 		{

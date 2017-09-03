@@ -40,7 +40,7 @@ public class MySQL5OldNamesDAO extends OldNamesDAO
 	private static final String INSERT_QUERY = "INSERT INTO `old_names` (`player_id`, `old_name`, `new_name`) VALUES (?,?,?)";
 	
 	@Override
-	public boolean isOldName(final String name)
+	public boolean isOldName(String name)
 	{
 		final PreparedStatement s = DB.prepareStatement("SELECT count(player_id) as cnt FROM old_names WHERE ? = old_names.old_name");
 		try
@@ -50,7 +50,7 @@ public class MySQL5OldNamesDAO extends OldNamesDAO
 			rs.next();
 			return rs.getInt("cnt") > 0;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't check if name " + name + ", is used, returning possitive result", e);
 			return true;
@@ -62,7 +62,7 @@ public class MySQL5OldNamesDAO extends OldNamesDAO
 	}
 	
 	@Override
-	public void insertNames(final int id, final String oldname, final String newname)
+	public void insertNames(int id, String oldname, String newname)
 	{
 		DB.insertUpdate(INSERT_QUERY, new IUStH()
 		{

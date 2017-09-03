@@ -42,7 +42,7 @@ public class InvulnerableWingEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void applyEffect(final Effect effect)
+	public void applyEffect(Effect effect)
 	{
 		effect.addToEffectedController();
 		((Player) effect.getEffected()).setInvulnerableWing(true);

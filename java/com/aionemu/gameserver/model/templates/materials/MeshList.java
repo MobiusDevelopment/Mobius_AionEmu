@@ -56,7 +56,7 @@ public class MeshList
 			return;
 		}
 		
-		for (final MeshMaterial meshMaterial : meshMaterials)
+		for (MeshMaterial meshMaterial : meshMaterials)
 		{
 			materialIdsByPath.put(meshMaterial.path, meshMaterial.materialId);
 			pathZones.put(meshMaterial.path.hashCode(), meshMaterial.getZoneName());

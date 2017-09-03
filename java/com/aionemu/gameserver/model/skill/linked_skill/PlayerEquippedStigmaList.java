@@ -50,7 +50,7 @@ public final class PlayerEquippedStigmaList implements StigmaList<Player>
 	public PlayerEquippedStigmaList(List<EquippedStigmasEntry> items)
 	{
 		this();
-		for (final EquippedStigmasEntry entry : items)
+		for (EquippedStigmasEntry entry : items)
 		{
 			itemList.put(entry.getItemId(), entry);
 		}
@@ -66,7 +66,7 @@ public final class PlayerEquippedStigmaList implements StigmaList<Player>
 	public List<Integer> getAllItemsAsInteger()
 	{
 		final HashSet<Integer> equippedIds = new HashSet<>();
-		for (final EquippedStigmasEntry i : itemList.values())
+		for (EquippedStigmasEntry i : itemList.values())
 		{
 			equippedIds.add(i.getItemId());
 		}

@@ -90,7 +90,7 @@ public class GoldenEyeMantutuAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void startFeedTime(final Npc npc)
+	private void startFeedTime(Npc npc)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

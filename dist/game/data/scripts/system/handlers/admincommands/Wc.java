@@ -77,7 +77,7 @@ public class Wc extends AdminCommand
 			}
 		}
 		
-		for (final String s : params)
+		for (String s : params)
 		{
 			if ((i++ != 1) && (check))
 			{

@@ -77,7 +77,7 @@ public class cmd_remodel extends PlayerCommand
 		{
 			return false;
 		}
-		for (final Item item : equip.getEquippedItemsWithoutStigmaOld())
+		for (Item item : equip.getEquippedItemsWithoutStigmaOld())
 		{
 			if (item.getItemTemplate().isWeapon())
 			{

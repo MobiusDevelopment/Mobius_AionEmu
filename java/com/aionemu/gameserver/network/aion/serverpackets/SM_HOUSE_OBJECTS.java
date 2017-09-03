@@ -37,7 +37,7 @@ public class SM_HOUSE_OBJECTS extends AionServerPacket
 	{
 		final FastList<HouseObject<?>> objects = player.getHouseRegistry().getSpawnedObjects();
 		writeH(objects.size());
-		for (final HouseObject<?> obj : objects)
+		for (HouseObject<?> obj : objects)
 		{
 			writeD(obj.getObjectTemplate().getTemplateId());
 			writeF(obj.getX());

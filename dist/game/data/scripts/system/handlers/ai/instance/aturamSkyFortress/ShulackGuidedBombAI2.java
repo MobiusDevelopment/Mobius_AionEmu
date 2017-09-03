@@ -85,7 +85,7 @@ public class ShulackGuidedBombAI2 extends AggressiveNpcAI2
 		}, 10000);
 	}
 	
-	private void doSchedule(final Creature creature)
+	private void doSchedule(Creature creature)
 	{
 		task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
 		{

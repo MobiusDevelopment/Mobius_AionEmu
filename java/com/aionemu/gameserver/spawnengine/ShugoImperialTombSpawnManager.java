@@ -44,14 +44,14 @@ public class ShugoImperialTombSpawnManager
 	public void start()
 	{
 		final String[] times = EventsConfig.IMPERIAL_TOMB_TIMES.split("\\|");
-		for (final String cron : times)
+		for (String cron : times)
 		{
 			CronService.getInstance().schedule(new Runnable()
 			{
 				@Override
 				public void run()
 				{
-					for (final RiftEnum rift : RiftEnum.values())
+					for (RiftEnum rift : RiftEnum.values())
 					{
 						spawnImperialTomb(rift);
 					}
@@ -70,7 +70,7 @@ public class ShugoImperialTombSpawnManager
 		sendAnnounce(visibleObject);
 	}
 	
-	private static void scheduleDelete(final VisibleObject visObj)
+	private static void scheduleDelete(VisibleObject visObj)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -88,7 +88,7 @@ public class ShugoImperialTombSpawnManager
 	
 	public static void sendImperialStatus(Player activePlayer)
 	{
-		for (final VisibleObject visObj : tomb)
+		for (VisibleObject visObj : tomb)
 		{
 			if (visObj.getWorldId() == activePlayer.getWorldId())
 			{
@@ -97,7 +97,7 @@ public class ShugoImperialTombSpawnManager
 		}
 	}
 	
-	public static void sendAnnounce(final VisibleObject visObj)
+	public static void sendAnnounce(VisibleObject visObj)
 	{
 		if (visObj.isSpawned())
 		{

@@ -50,7 +50,7 @@ public class _21455Ingredients_For_The_Antidote extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(799404).addOnQuestStart(questId); // Miener.
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

@@ -53,7 +53,7 @@ public class PetitionService
 	{
 		log.info("Loading PetitionService ...");
 		final Set<Petition> petitions = DAOManager.getDAO(PetitionDAO.class).getPetitions();
-		for (final Petition p : petitions)
+		for (Petition p : petitions)
 		{
 			registeredPetitions.put(p.getPetitionId(), p);
 		}
@@ -68,14 +68,14 @@ public class PetitionService
 	public void deletePetition(int playerObjId)
 	{
 		final Set<Petition> petitions = new HashSet<>();
-		for (final Petition p : registeredPetitions.values())
+		for (Petition p : registeredPetitions.values())
 		{
 			if (p.getPlayerObjId() == playerObjId)
 			{
 				petitions.add(p);
 			}
 		}
-		for (final Petition p : petitions)
+		for (Petition p : petitions)
 		{
 			if (registeredPetitions.containsKey(p.getPetitionId()))
 			{
@@ -117,7 +117,7 @@ public class PetitionService
 	
 	private void rebroadcastPlayerData()
 	{
-		for (final Petition p : registeredPetitions.values())
+		for (Petition p : registeredPetitions.values())
 		{
 			final Player player = World.getInstance().findPlayer(p.getPlayerObjId());
 			if (player != null)
@@ -148,7 +148,7 @@ public class PetitionService
 	public boolean hasRegisteredPetition(int playerObjId)
 	{
 		boolean result = false;
-		for (final Petition p : registeredPetitions.values())
+		for (Petition p : registeredPetitions.values())
 		{
 			if (p.getPlayerObjId() == playerObjId)
 			{
@@ -160,7 +160,7 @@ public class PetitionService
 	
 	public Petition getPetition(int playerObjId)
 	{
-		for (final Petition p : registeredPetitions.values())
+		for (Petition p : registeredPetitions.values())
 		{
 			if (p.getPlayerObjId() == playerObjId)
 			{
@@ -178,7 +178,7 @@ public class PetitionService
 	public int getWaitingPlayers(int playerObjId)
 	{
 		int counter = 0;
-		for (final Petition p : registeredPetitions.values())
+		for (Petition p : registeredPetitions.values())
 		{
 			if (p.getPlayerObjId() == playerObjId)
 			{
@@ -194,7 +194,7 @@ public class PetitionService
 		final int timePerPetition = 15;
 		final int timeBetweenPetition = 30;
 		int result = timeBetweenPetition;
-		for (final Petition p : registeredPetitions.values())
+		for (Petition p : registeredPetitions.values())
 		{
 			if (p.getPlayerObjId() == playerObjId)
 			{

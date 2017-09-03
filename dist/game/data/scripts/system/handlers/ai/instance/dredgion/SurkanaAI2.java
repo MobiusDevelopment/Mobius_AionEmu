@@ -41,7 +41,7 @@ public class SurkanaAI2 extends OneDmgPerHitAI2
 	
 	private void checkForSupport(Creature creature)
 	{
-		for (final VisibleObject object : getKnownList().getKnownObjects().values())
+		for (VisibleObject object : getKnownList().getKnownObjects().values())
 		{
 			if ((object instanceof Npc) && isInRange(object, 20))
 			{

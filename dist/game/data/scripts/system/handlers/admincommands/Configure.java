@@ -99,7 +99,7 @@ public class Configure extends AdminCommand
 				someField = classToMofify.getDeclaredField(fieldName.toUpperCase());
 				PacketSendUtility.sendMessage(player, "Current value is " + someField.get(null));
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				PacketSendUtility.sendMessage(player, "Error! Wrong property or value.");
 				return;
@@ -138,7 +138,7 @@ public class Configure extends AdminCommand
 					}
 					
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					PacketSendUtility.sendMessage(player, "Error! Wrong property or value.");
 					return;

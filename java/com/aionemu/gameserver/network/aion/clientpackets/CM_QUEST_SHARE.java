@@ -66,7 +66,7 @@ public class CM_QUEST_SHARE extends AionClientPacket
 		}
 		if (player.isInGroup2())
 		{
-			for (final Player member : player.getPlayerGroup2().getOnlineMembers())
+			for (Player member : player.getPlayerGroup2().getOnlineMembers())
 			{
 				if (player == member)
 				{
@@ -118,7 +118,7 @@ public class CM_QUEST_SHARE extends AionClientPacket
 		}
 		else if (player.isInAlliance2())
 		{
-			for (final Player member : player.getPlayerAllianceGroup2().getOnlineMembers())
+			for (Player member : player.getPlayerAllianceGroup2().getOnlineMembers())
 			{
 				if (player == member)
 				{

@@ -113,7 +113,7 @@ public class RelinquishCraftStatus
 	
 	public static void removeRecipesAbove(Player player, int skillId, int level)
 	{
-		for (final RecipeTemplate recipe : DataManager.RECIPE_DATA.getRecipeTemplates().valueCollection())
+		for (RecipeTemplate recipe : DataManager.RECIPE_DATA.getRecipeTemplates().valueCollection())
 		{
 			if ((recipe.getSkillid() != skillId) || (recipe.getSkillpoint() < level))
 			{
@@ -125,7 +125,7 @@ public class RelinquishCraftStatus
 	
 	public static void deleteCraftStatusQuests(int skillId, Player player, boolean isExpert)
 	{
-		for (final int questId : MasterQuestsList.getSkillsIds(skillId, player.getRace()))
+		for (int questId : MasterQuestsList.getSkillsIds(skillId, player.getRace()))
 		{
 			final QuestState qs = player.getQuestStateList().getQuestState(questId);
 			if (qs != null)
@@ -138,7 +138,7 @@ public class RelinquishCraftStatus
 		}
 		if (isExpert)
 		{
-			for (final int questId : ExpertQuestsList.getSkillsIds(skillId, player.getRace()))
+			for (int questId : ExpertQuestsList.getSkillsIds(skillId, player.getRace()))
 			{
 				final QuestState qs = player.getQuestStateList().getQuestState(questId);
 				if (qs != null)
@@ -162,7 +162,7 @@ public class RelinquishCraftStatus
 		int skillLevel;
 		final int maxCraftStatus = isExpert ? CraftConfig.MAX_EXPERT_CRAFTING_SKILLS : CraftConfig.MAX_MASTER_CRAFTING_SKILLS;
 		int countCraftStatus;
-		for (final PlayerSkillEntry skill : player.getSkillList().getBasicSkills())
+		for (PlayerSkillEntry skill : player.getSkillList().getBasicSkills())
 		{
 			countCraftStatus = isExpert ? CraftSkillUpdateService.getTotalMasterCraftingSkills(player) + CraftSkillUpdateService.getTotalExpertCraftingSkills(player) : CraftSkillUpdateService.getTotalMasterCraftingSkills(player);
 			if (countCraftStatus > maxCraftStatus)

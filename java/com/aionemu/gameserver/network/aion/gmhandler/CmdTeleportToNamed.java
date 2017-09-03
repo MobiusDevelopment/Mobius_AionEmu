@@ -41,15 +41,15 @@ public class CmdTeleportToNamed extends AbstractGMHandler
 		{
 			npcId = Integer.valueOf(params);
 		}
-		catch (final ArrayIndexOutOfBoundsException e)
+		catch (ArrayIndexOutOfBoundsException e)
 		{
 			onFail(admin, e.getMessage());
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			final String npcDesc = params;
 			
-			for (final NpcTemplate template : DataManager.NPC_DATA.getNpcData().valueCollection())
+			for (NpcTemplate template : DataManager.NPC_DATA.getNpcData().valueCollection())
 			{
 				if ((template.getName() != null) && template.getName().equalsIgnoreCase(npcDesc))
 				{

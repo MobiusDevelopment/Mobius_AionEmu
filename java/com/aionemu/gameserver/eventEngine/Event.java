@@ -94,13 +94,13 @@ public abstract class Event implements Runnable
 	
 	protected void announce(Collection<Player> players, String msg)
 	{
-		for (final Player pl : players)
+		for (Player pl : players)
 		{
 			announce(pl, msg, 0);
 		}
 	}
 	
-	protected void announce(final Player pl, final String msg, int delay)
+	protected void announce(Player pl, String msg, int delay)
 	{
 		if (delay > 0)
 		{
@@ -124,7 +124,7 @@ public abstract class Event implements Runnable
 		announceAll(msg, 0);
 	}
 	
-	protected void announceAll(final String msg, int delay)
+	protected void announceAll(String msg, int delay)
 	{
 		if (delay > 0)
 		{

@@ -66,7 +66,7 @@ public class ShieldEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		final int skillLvl = effect.getSkillLevel();
 		final int valueWithDelta = value + (delta * skillLvl);

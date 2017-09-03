@@ -71,7 +71,7 @@ public enum DialogPage
 	
 	public static DialogPage getPageByAction(int dialogId)
 	{
-		for (final DialogPage page : values())
+		for (DialogPage page : values())
 		{
 			if (page.actionId() == dialogId)
 			{

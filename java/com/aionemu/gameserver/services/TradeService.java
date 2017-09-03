@@ -104,7 +104,7 @@ public class TradeService
 		final long tradeListPrice = tradeList.getRequiredKinah();
 		// check if soldOutItem
 		LimitedItem item = null;
-		for (final TradeItem tradeItem : tradeList.getTradeItems())
+		for (TradeItem tradeItem : tradeList.getTradeItems())
 		{
 			item = LimitedItemTradeService.getInstance().getLimitedItem(tradeItem.getItemId(), npc.getNpcId());
 			if (item != null)
@@ -160,7 +160,7 @@ public class TradeService
 				}
 			}
 			final Map<Integer, Long> requiredItems = tradeList.getRequiredItems();
-			for (final Integer itemId : requiredItems.keySet())
+			for (Integer itemId : requiredItems.keySet())
 			{
 				if (!player.getInventory().decreaseByItemId(itemId, requiredItems.get(itemId)))
 				{
@@ -227,7 +227,7 @@ public class TradeService
 		
 		AbyssPointsService.addAp(player, -tradeList.getRequiredAp());
 		final Map<Integer, Long> requiredItems = tradeList.getRequiredItems();
-		for (final Integer itemId : requiredItems.keySet())
+		for (Integer itemId : requiredItems.keySet())
 		{
 			if (!player.getInventory().decreaseByItemId(itemId, requiredItems.get(itemId)))
 			{
@@ -236,7 +236,7 @@ public class TradeService
 			}
 		}
 		
-		for (final TradeItem tradeItem : tradeList.getTradeItems())
+		for (TradeItem tradeItem : tradeList.getTradeItems())
 		{
 			final long count = ItemService.addItem(player, tradeItem.getItemTemplate().getTemplateId(), tradeItem.getCount());
 			if (count != 0)
@@ -294,7 +294,7 @@ public class TradeService
 		}
 		
 		final Map<Integer, Long> requiredItems = tradeList.getRequiredItems();
-		for (final Integer itemId : requiredItems.keySet())
+		for (Integer itemId : requiredItems.keySet())
 		{
 			if (!player.getInventory().decreaseByItemId(itemId, requiredItems.get(itemId)))
 			{
@@ -303,7 +303,7 @@ public class TradeService
 			}
 		}
 		
-		for (final TradeItem tradeItem : tradeList.getTradeItems())
+		for (TradeItem tradeItem : tradeList.getTradeItems())
 		{
 			final long count = ItemService.addItem(player, tradeItem.getItemTemplate().getTemplateId(), tradeItem.getCount());
 			if (count != 0)
@@ -324,7 +324,7 @@ public class TradeService
 		final TradeListTemplate tradeListTemplate = tradeListData.getTradeListTemplate(npc.getObjectTemplate().getTemplateId());
 		
 		final Set<Integer> allowedItems = new HashSet<>();
-		for (final TradeTab tradeTab : tradeListTemplate.getTradeTablist())
+		for (TradeTab tradeTab : tradeListTemplate.getTradeTablist())
 		{
 			final GoodsList goodsList = goodsListData.getGoodsListById(tradeTab.getId());
 			if ((goodsList != null) && (goodsList.getItemIdList() != null))
@@ -333,7 +333,7 @@ public class TradeService
 			}
 		}
 		
-		for (final TradeItem tradeItem : tradeList.getTradeItems())
+		for (TradeItem tradeItem : tradeList.getTradeItems())
 		{
 			if (tradeItem.getCount() < 1)
 			{
@@ -364,7 +364,7 @@ public class TradeService
 			return false;
 		}
 		
-		for (final TradeItem tradeItem : tradeList.getTradeItems())
+		for (TradeItem tradeItem : tradeList.getTradeItems())
 		{
 			final Item item = inventory.getItemByObjId(tradeItem.getItemId());
 			// 1) don't allow to sell fake items;
@@ -441,7 +441,7 @@ public class TradeService
 			return false;
 		}
 		boolean valid = false;
-		for (final TradeTab tab : tradeInList.getTradeTablist())
+		for (TradeTab tab : tradeInList.getTradeTablist())
 		{
 			final GoodsList goodList = goodsListData.getGoodsInListById(tab.getId());
 			if (goodList.getItemIdList().contains(itemId))
@@ -462,7 +462,7 @@ public class TradeService
 		}
 		try
 		{
-			for (final TradeinItem treadInList : itemTemplate.getTradeinList().getTradeinItem())
+			for (TradeinItem treadInList : itemTemplate.getTradeinList().getTradeinItem())
 			{
 				if (player.getInventory().getItemCountByItemId(treadInList.getId()) < SafeMath.multSafe(treadInList.getPrice(), count))
 				{
@@ -470,7 +470,7 @@ public class TradeService
 				}
 			}
 			
-			for (final TradeinItem treadInList : itemTemplate.getTradeinList().getTradeinItem())
+			for (TradeinItem treadInList : itemTemplate.getTradeinList().getTradeinItem())
 			{
 				if (!player.getInventory().decreaseByItemId(treadInList.getId(), SafeMath.multSafe(treadInList.getPrice(), count)))
 				{
@@ -478,7 +478,7 @@ public class TradeService
 				}
 			}
 		}
-		catch (final OverfowException e)
+		catch (OverfowException e)
 		{
 			AuditLogger.info(player, "OverfowException using tradeInTrade " + e.getMessage());
 			return false;
@@ -498,7 +498,7 @@ public class TradeService
 			return false;
 		}
 		final Storage inventory = player.getInventory();
-		for (final TradeItem tradeItem : tradeList.getTradeItems())
+		for (TradeItem tradeItem : tradeList.getTradeItems())
 		{
 			final int itemObjectId = tradeItem.getItemId();
 			final long count = tradeItem.getCount();
@@ -509,7 +509,7 @@ public class TradeService
 			}
 			final int itemId = item.getItemId();
 			boolean valid = false;
-			for (final TradeTab tab : purchaseTemplate.getTradeTablist())
+			for (TradeTab tab : purchaseTemplate.getTradeTablist())
 			{
 				final GoodsList goodList = goodsListData.getGoodsPurchaseListById(tab.getId());
 				if (goodList.getItemIdList().contains(itemId))
@@ -540,7 +540,7 @@ public class TradeService
 			return false;
 		}
 		final Storage inventory = player.getInventory();
-		for (final TradeItem tradeItem : tradeList.getTradeItems())
+		for (TradeItem tradeItem : tradeList.getTradeItems())
 		{
 			final int itemObjectId = tradeItem.getItemId();
 			final long count = tradeItem.getCount();
@@ -552,7 +552,7 @@ public class TradeService
 			final long purchaseListPrice = PricesService.getKinahForSell(item.getItemTemplate().getPrice(), player.getRace());
 			final int itemId = item.getItemId();
 			boolean valid = false;
-			for (final TradeTab tab : purchaseTemplate.getTradeTablist())
+			for (TradeTab tab : purchaseTemplate.getTradeTablist())
 			{
 				final GoodsList goodList = goodsListData.getGoodsPurchaseListById(tab.getId());
 				if (goodList.getItemIdList().contains(itemId))

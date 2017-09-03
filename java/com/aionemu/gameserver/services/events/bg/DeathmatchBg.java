@@ -797,7 +797,7 @@ public class DeathmatchBg extends Battleground
 		final List<SpawnPosition> spawns = new ArrayList<>(getSpawnPositions());
 		synchronized (super.getPlayers())
 		{
-			for (final Player pl : super.getPlayers())
+			for (Player pl : super.getPlayers())
 			{
 				super.preparePlayer(pl, 25000);
 				final SpawnPosition pos = spawns.remove(Rnd.get(spawns.size()));
@@ -835,12 +835,12 @@ public class DeathmatchBg extends Battleground
 	}
 	
 	@Override
-	public void onDie(final Player player, Creature lastAttacker)
+	public void onDie(Player player, Creature lastAttacker)
 	{
 		super.onDieDefault(player, lastAttacker);
 		if (player.getKillStreak() > 1)
 		{
-			for (final Player pl : super.getPlayers())
+			for (Player pl : super.getPlayers())
 			{
 				scheduleAnnouncement(pl, player.getName() + "'s killing ended", 0);
 			}
@@ -853,7 +853,7 @@ public class DeathmatchBg extends Battleground
 			killer.setKillStreak(killer.getKillStreak() + 1);
 			if (killer.getKillStreak() > 1)
 			{
-				for (final Player pl : super.getPlayers())
+				for (Player pl : super.getPlayers())
 				{
 					scheduleAnnouncement(pl, killer.getName() + " is on a series of murders: " + killer.getKillStreak() + "!", 0);
 				}
@@ -909,7 +909,7 @@ public class DeathmatchBg extends Battleground
 	{
 		super.onEndFirstDefault();
 		Player winner = null;
-		for (final Player pl : super.getPlayers())
+		for (Player pl : super.getPlayers())
 		{
 			if ((winner == null) || (winner.getTotalKills() < pl.getTotalKills()))
 			{
@@ -918,7 +918,7 @@ public class DeathmatchBg extends Battleground
 		}
 		if (winner != null)
 		{
-			for (final Player pl : super.getPlayers())
+			for (Player pl : super.getPlayers())
 			{
 				super.scheduleAnnouncement(pl, winner.getName() + " win's the <Deathmatch> with " + winner.getTotalKills() + " kill's in total!", 0);
 				if (pl.getObjectId() == winner.getObjectId())
@@ -968,7 +968,7 @@ public class DeathmatchBg extends Battleground
 			}
 			super.specAnnounce(winner.getName() + " win's the <Deathmatch> with " + winner.getTotalKills() + " kill's in total!");
 		}
-		for (final Player pl : super.getPlayers())
+		for (Player pl : super.getPlayers())
 		{
 			super.scheduleAnnouncement(pl, "You have received rewards for your efforts in this battleground!", 3000);
 		}

@@ -70,13 +70,13 @@ public class InstanceWalkerFormations
 	 */
 	protected void organizeAndSpawn()
 	{
-		for (final List<ClusteredNpc> candidates : groupedSpawnObjects.values())
+		for (List<ClusteredNpc> candidates : groupedSpawnObjects.values())
 		{
 			final Group<ClusteredNpc> bySize = group(candidates, by(on(ClusteredNpc.class).getPositionHash()));
 			final Set<String> keys = bySize.keySet();
 			int maxSize = 0;
 			List<ClusteredNpc> npcs = null;
-			for (final String key : keys)
+			for (String key : keys)
 			{
 				if (bySize.find(key).size() > maxSize)
 				{
@@ -86,7 +86,7 @@ public class InstanceWalkerFormations
 			}
 			if (maxSize == 1)
 			{
-				for (final ClusteredNpc snpc : candidates)
+				for (ClusteredNpc snpc : candidates)
 				{
 					snpc.spawn(snpc.getNpc().getSpawn().getZ());
 				}
@@ -102,7 +102,7 @@ public class InstanceWalkerFormations
 				wg.spawn();
 				walkFormations.put(candidates.get(0).getWalkTemplate().getRouteId(), wg);
 				// spawn the rest which didn't have the same coordinates
-				for (final ClusteredNpc snpc : candidates)
+				for (ClusteredNpc snpc : candidates)
 				{
 					if (npcs.contains(snpc))
 					{

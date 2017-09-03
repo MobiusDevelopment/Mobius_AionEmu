@@ -292,7 +292,7 @@ public class PvpService
 		boolean success = false;
 		
 		// Distribute AP to groups and players that had damage.
-		for (final AggroInfo aggro : victim.getAggroList().getFinalDamageList(true))
+		for (AggroInfo aggro : victim.getAggroList().getFinalDamageList(true))
 		{
 			if (aggro.getAttacker() instanceof Player)
 			{
@@ -363,7 +363,7 @@ public class PvpService
 		int maxRank = AbyssRankEnum.GRADE9_SOLDIER.getId();
 		int maxLevel = 0;
 		
-		for (final Player member : group.getMembers())
+		for (Player member : group.getMembers())
 		{
 			if (MathUtil.isIn3dRange(member, victim, GroupConfig.GROUP_MAX_DISTANCE))
 			{
@@ -399,7 +399,7 @@ public class PvpService
 		final int xpRewardPerMember = Math.round((baseXpReward * groupPercentage) / players.size());
 		final int dpRewardPerMember = Math.round((baseDpReward * groupPercentage) / players.size());
 		
-		for (final Player member : players)
+		for (Player member : players)
 		{
 			int memberApGain = 1;
 			int memberGpGain = 1;
@@ -478,7 +478,7 @@ public class PvpService
 		int maxRank = AbyssRankEnum.GRADE9_SOLDIER.getId();
 		int maxLevel = 0;
 		
-		for (final Player member : alliance.getMembers())
+		for (Player member : alliance.getMembers())
 		{
 			if (!member.isOnline())
 			{
@@ -518,7 +518,7 @@ public class PvpService
 		final int xpRewardPerMember = Math.round((baseXpReward * groupPercentage) / players.size());
 		final int dpRewardPerMember = Math.round((baseDpReward * groupPercentage) / players.size());
 		
-		for (final Player member : players)
+		for (Player member : players)
 		{
 			int memberApGain = 1;
 			int memberGpGain = 1;

@@ -1194,7 +1194,7 @@ public class PlayerAppearance implements Cloneable
 		{
 			newObject = super.clone();
 		}
-		catch (final CloneNotSupportedException e)
+		catch (CloneNotSupportedException e)
 		{
 			e.printStackTrace();
 		}

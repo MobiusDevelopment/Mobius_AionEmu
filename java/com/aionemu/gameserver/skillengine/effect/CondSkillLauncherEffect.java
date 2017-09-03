@@ -59,7 +59,7 @@ public class CondSkillLauncherEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		final ActionObserver observer = new ActionObserver(ObserverType.ATTACKED)
 		{

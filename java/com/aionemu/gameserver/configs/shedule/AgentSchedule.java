@@ -58,7 +58,7 @@ public class AgentSchedule
 			final String xml = FileUtils.readFileToString(new File("./config/shedule/agent_schedule.xml"));
 			as = JAXBUtil.deserialize(xml, AgentSchedule.class);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to initialize agent", e);
 		}

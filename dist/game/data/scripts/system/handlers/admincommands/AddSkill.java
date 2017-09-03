@@ -51,7 +51,7 @@ public class AddSkill extends AdminCommand
 			skillId = Integer.parseInt(params[0]);
 			skillLevel = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "Parameters need to be integers.");
 			return;

@@ -56,7 +56,7 @@ public class _14016A_Gate_Agape extends QuestHandler
 		qe.registerOnMovieEndQuest(153, questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerQuestNpc(233873).addOnKillEvent(questId);
-		for (final int npcId : npcs)
+		for (int npcId : npcs)
 		{
 			qe.registerQuestNpc(npcId).addOnTalkEvent(questId);
 		}

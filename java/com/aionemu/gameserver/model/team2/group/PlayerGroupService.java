@@ -65,7 +65,7 @@ public class PlayerGroupService
 	private static final AtomicBoolean offlineCheckStarted = new AtomicBoolean();
 	private static FastMap<Integer, PlayerGroup> groupMembers;
 	
-	public static void inviteToGroup(final Player inviter, final Player invited)
+	public static void inviteToGroup(Player inviter, Player invited)
 	{
 		if (canInvite(inviter, invited))
 		{
@@ -102,7 +102,7 @@ public class PlayerGroupService
 		{
 			if (invited.isInTeam())
 			{
-				for (final Player pm : invited.getCurrentTeam().getMembers())
+				for (Player pm : invited.getCurrentTeam().getMembers())
 				{
 					if (pm.isInInstance())
 					{
@@ -161,7 +161,7 @@ public class PlayerGroupService
 	
 	public static void onPlayerLogin(Player player)
 	{
-		for (final PlayerGroup group : groups.values())
+		for (PlayerGroup group : groups.values())
 		{
 			final PlayerGroupMember member = group.getMember(player.getObjectId());
 			if (member != null)
@@ -290,7 +290,7 @@ public class PlayerGroupService
 	
 	public static PlayerGroup searchGroup(Integer playerObjId)
 	{
-		for (final PlayerGroup group : groups.values())
+		for (PlayerGroup group : groups.values())
 		{
 			if (group.hasMember(playerObjId))
 			{
@@ -307,7 +307,7 @@ public class PlayerGroupService
 		@Override
 		public void run()
 		{
-			for (final PlayerGroup group : groups.values())
+			for (PlayerGroup group : groups.values())
 			{
 				currentGroup = group;
 				group.apply(this);

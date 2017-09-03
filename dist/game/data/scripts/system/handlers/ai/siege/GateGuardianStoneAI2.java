@@ -38,7 +38,7 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 public class GateGuardianStoneAI2 extends NpcAI2
 {
 	@Override
-	protected void handleDialogStart(final Player player)
+	protected void handleDialogStart(Player player)
 	{
 		final RequestResponseHandler gaterepair = new RequestResponseHandler(player)
 		{

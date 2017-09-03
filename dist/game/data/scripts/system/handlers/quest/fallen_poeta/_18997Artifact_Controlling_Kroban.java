@@ -46,7 +46,7 @@ public class _18997Artifact_Controlling_Kroban extends QuestHandler
 	{
 		qe.registerQuestNpc(806252).addOnQuestStart(questId); // Favoni.
 		qe.registerQuestNpc(806252).addOnTalkEvent(questId); // Favoni.
-		for (final int mob : IDLF1TVanqNamed73Ah)
+		for (int mob : IDLF1TVanqNamed73Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

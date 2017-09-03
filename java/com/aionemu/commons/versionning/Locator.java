@@ -109,7 +109,7 @@ public final class Locator
 		{
 			url = new URL(uri);
 		}
-		catch (final MalformedURLException emYouEarlEx)
+		catch (MalformedURLException emYouEarlEx)
 		{
 			// Ignore malformed exception
 		}
@@ -188,14 +188,14 @@ public final class Locator
 			Class.forName("com.sun.tools.javac.Main");
 			toolsJarAvailable = true;
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			try
 			{
 				Class.forName("sun.tools.javac.Main");
 				toolsJarAvailable = true;
 			}
-			catch (final Exception e2)
+			catch (Exception e2)
 			{
 				// ignore
 			}
@@ -241,7 +241,7 @@ public final class Locator
 	 * @return an array of URLs of matching files.
 	 * @throws MalformedURLException if the URLs for the files cannot be formed.
 	 */
-	public static URL[] getLocationURLs(File location, final String[] extensions) throws MalformedURLException
+	public static URL[] getLocationURLs(File location, String[] extensions) throws MalformedURLException
 	{
 		
 		URL[] urls = new URL[0];
@@ -254,7 +254,7 @@ public final class Locator
 		{
 			urls = new URL[1];
 			final String path = location.getPath();
-			for (final String extension : extensions)
+			for (String extension : extensions)
 			{
 				if (path.toLowerCase().endsWith(extension))
 				{
@@ -270,7 +270,7 @@ public final class Locator
 			@Override
 			public boolean accept(File dir, String name)
 			{
-				for (final String extension : extensions)
+				for (String extension : extensions)
 				{
 					if (name.toLowerCase().endsWith(extension))
 					{

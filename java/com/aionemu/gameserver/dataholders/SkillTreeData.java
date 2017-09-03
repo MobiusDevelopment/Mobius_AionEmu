@@ -47,7 +47,7 @@ public class SkillTreeData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final SkillLearnTemplate template : skillTemplates)
+		for (SkillLearnTemplate template : skillTemplates)
 		{
 			addTemplate(template);
 		}
@@ -142,7 +142,7 @@ public class SkillTreeData
 	public int size()
 	{
 		int size = 0;
-		for (final Integer key : templates.keys())
+		for (Integer key : templates.keys())
 		{
 			size += templates.get(key).size();
 		}

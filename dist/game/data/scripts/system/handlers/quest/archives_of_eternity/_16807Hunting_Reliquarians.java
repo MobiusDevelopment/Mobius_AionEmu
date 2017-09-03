@@ -54,7 +54,7 @@ public class _16807Hunting_Reliquarians extends QuestHandler
 	{
 		qe.registerOnEnterWorld(questId);
 		qe.registerQuestNpc(806148).addOnTalkEvent(questId);
-		for (final int mob : IDEternity01Mobs)
+		for (int mob : IDEternity01Mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -42,7 +42,7 @@ public abstract class MailServicePacket extends AionServerPacket
 		writeD(player.getObjectId());
 		writeC(0);
 		writeH(isPostman ? -showCount : -letters.size());
-		for (final Letter letter : letters)
+		for (Letter letter : letters)
 		{
 			if (isPostman)
 			{
@@ -134,7 +134,7 @@ public abstract class MailServicePacket extends AionServerPacket
 		writeD(totalCount + (unreadCount * 0x10000));
 		writeD(expressCount + blackCloudCount);
 		writeH(letterIds.length);
-		for (final int letterId : letterIds)
+		for (int letterId : letterIds)
 		{
 			writeD(letterId);
 		}

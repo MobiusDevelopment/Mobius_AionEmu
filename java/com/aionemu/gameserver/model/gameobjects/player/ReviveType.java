@@ -40,7 +40,7 @@ public enum ReviveType
 	
 	public static ReviveType getReviveTypeById(int id, Player pl)
 	{
-		for (final ReviveType rt : values())
+		for (ReviveType rt : values())
 		{
 			if (rt.typeId == id)
 			{

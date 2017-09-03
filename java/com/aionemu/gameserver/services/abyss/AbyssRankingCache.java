@@ -70,11 +70,11 @@ public class AbyssRankingCache
 		legions.clear();
 		legions.put(Race.ASMODIANS, new SM_ABYSS_RANKING_LEGIONS(lastUpdate, asmoRanking, Race.ASMODIANS));
 		legions.put(Race.ELYOS, new SM_ABYSS_RANKING_LEGIONS(lastUpdate, elyosRanking, Race.ELYOS));
-		for (final AbyssRankingResult result : elyosRanking)
+		for (AbyssRankingResult result : elyosRanking)
 		{
 			newLegionRankingCache.put(Integer.valueOf(result.getLegionId()), result.getRankPos());
 		}
-		for (final AbyssRankingResult result : asmoRanking)
+		for (AbyssRankingResult result : asmoRanking)
 		{
 			newLegionRankingCache.put(Integer.valueOf(result.getLegionId()), result.getRankPos());
 		}

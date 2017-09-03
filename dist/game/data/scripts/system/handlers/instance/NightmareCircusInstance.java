@@ -88,7 +88,7 @@ public class NightmareCircusInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		switch (player.getRace())
 		{
@@ -128,7 +128,7 @@ public class NightmareCircusInstance extends GeneralInstanceHandler
 		
 	}
 	
-	private void attackEvent(final Npc npc, float x, float y, float z, boolean despawn)
+	private void attackEvent(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -547,13 +547,13 @@ public class NightmareCircusInstance extends GeneralInstanceHandler
 	
 	protected void despawnNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			npc.getController().onDelete();
 		}
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -565,7 +565,7 @@ public class NightmareCircusInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

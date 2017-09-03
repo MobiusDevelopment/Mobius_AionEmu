@@ -61,7 +61,7 @@ public class CM_SET_NOTE extends AionClientPacket
 			activePlayer.getCommonData().setNote(note);
 			activePlayer.getClientConnection().sendPacket(new SM_UPDATE_NOTE(activePlayer.getObjectId(), note));
 			
-			for (final Friend friend : activePlayer.getFriendList()) // For all my friends
+			for (Friend friend : activePlayer.getFriendList()) // For all my friends
 			{
 				final Player frienPlayer = friend.getPlayer();
 				if (friend.isOnline() && (frienPlayer != null)) // If the player is online

@@ -130,7 +130,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 			}
 			return ids;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't get list of id's from player_registered_items table", e);
 		}
@@ -190,11 +190,11 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 					obj.setPersistentState(PersistentState.UPDATED);
 				}
 			}
-			for (final PartType partType : PartType.values())
+			for (PartType partType : PartType.values())
 			{
 				if (usedParts.containsKey(partType))
 				{
-					for (final HouseDecoration usedDeco : usedParts.get(partType))
+					for (HouseDecoration usedDeco : usedParts.get(partType))
 					{
 						registry.setPartInUse(usedDeco, usedDeco.getFloor());
 					}
@@ -217,7 +217,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 			registry.setPersistentState(PersistentState.UPDATED);
 			rset.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore house registry data for player: " + playerId + " from DB: " + e.getMessage(), e);
 		}
@@ -227,7 +227,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 		}
 	}
 	
-	private HouseObject<?> constructObject(final HouseRegistry registry, House house, ResultSet rset) throws SQLException, IllegalAccessException
+	private HouseObject<?> constructObject(HouseRegistry registry, House house, ResultSet rset) throws SQLException, IllegalAccessException
 	{
 		final int itemUniqueId = rset.getInt("item_unique_id");
 		final VisibleObject visObj = World.getInstance().findVisibleObject(itemUniqueId);
@@ -302,7 +302,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 			storeParts(con, partsToAdd, playerId, true);
 			registry.setPersistentState(PersistentState.UPDATED);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't open connection to save player inventory: " + playerId);
 		}
@@ -310,7 +310,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 		{
 			DatabaseFactory.close(con);
 		}
-		for (final HouseObject<?> obj : objects)
+		for (HouseObject<?> obj : objects)
 		{
 			if (obj.getPersistentState() == PersistentState.DELETED)
 			{
@@ -321,7 +321,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 				obj.setPersistentState(PersistentState.UPDATED);
 			}
 		}
-		for (final HouseDecoration decor : decors)
+		for (HouseDecoration decor : decors)
 		{
 			if (decor.getPersistentState() == PersistentState.DELETED)
 			{
@@ -339,7 +339,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 		}
 		if (!partsToDelete.isEmpty() && partsDeleteResult)
 		{
-			for (final HouseDecoration part : partsToDelete)
+			for (HouseDecoration part : partsToDelete)
 			{
 				if (part.getObjectId() != 0)
 				{
@@ -360,7 +360,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 		try
 		{
 			stmt = con.prepareStatement(isNew ? INSERT_QUERY : UPDATE_QUERY);
-			for (final HouseObject<?> obj : objects)
+			for (HouseObject<?> obj : objects)
 			{
 				if (obj.getExpireTime() > 0)
 				{
@@ -402,7 +402,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 			stmt.executeBatch();
 			con.commit();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Failed to execute house object update batch", e);
 			return false;
@@ -424,7 +424,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 		try
 		{
 			stmt = con.prepareStatement(isNew ? INSERT_QUERY : UPDATE_QUERY);
-			for (final HouseDecoration part : parts)
+			for (HouseDecoration part : parts)
 			{
 				stmt.setNull(1, Types.INTEGER);
 				stmt.setNull(2, Types.INTEGER);
@@ -445,7 +445,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 			stmt.executeBatch();
 			con.commit();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Failed to execute house parts update batch", e);
 			return false;
@@ -467,7 +467,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 		try
 		{
 			stmt = con.prepareStatement(DELETE_QUERY);
-			for (final HouseObject<?> obj : objects)
+			for (HouseObject<?> obj : objects)
 			{
 				stmt.setInt(1, obj.getObjectId());
 				stmt.addBatch();
@@ -475,7 +475,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 			stmt.executeBatch();
 			con.commit();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Failed to execute delete batch", e);
 			return false;
@@ -497,7 +497,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 		try
 		{
 			stmt = con.prepareStatement(DELETE_QUERY);
-			for (final HouseDecoration part : parts)
+			for (HouseDecoration part : parts)
 			{
 				stmt.setInt(1, part.getObjectId());
 				stmt.addBatch();
@@ -505,7 +505,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 			stmt.executeBatch();
 			con.commit();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Failed to execute delete batch", e);
 			return false;
@@ -530,7 +530,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error in deleting all player registered items. PlayerObjId: " + playerId, e);
 			return false;
@@ -555,7 +555,7 @@ public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error in resetting  player registered items. PlayerObjId: " + playerId, e);
 		}

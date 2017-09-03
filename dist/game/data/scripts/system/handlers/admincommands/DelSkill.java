@@ -70,7 +70,7 @@ public class DelSkill extends AdminCommand
 				{
 					skillId = Integer.parseInt(params[1]);
 				}
-				catch (final NumberFormatException e)
+				catch (NumberFormatException e)
 				{
 					PacketSendUtility.sendMessage(admin, "Param 1 must be an integer or <all>.");
 					return;
@@ -107,7 +107,7 @@ public class DelSkill extends AdminCommand
 					{
 						skillId = Integer.parseInt(params[0]);
 					}
-					catch (final NumberFormatException e)
+					catch (NumberFormatException e)
 					{
 						PacketSendUtility.sendMessage(admin, "Param 0 must be an integer or <all>.");
 						return;
@@ -154,7 +154,7 @@ public class DelSkill extends AdminCommand
 		}
 		else
 		{
-			for (final PlayerSkillEntry skillEntry : playerSkillList.getAllSkills())
+			for (PlayerSkillEntry skillEntry : playerSkillList.getAllSkills())
 			{
 				if (!skillEntry.isStigma())
 				{

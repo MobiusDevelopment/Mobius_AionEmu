@@ -47,7 +47,7 @@ public class TownSpawnMap
 	{
 		townSpawnsData.clear();
 		
-		for (final TownSpawn town : townSpawns)
+		for (TownSpawn town : townSpawns)
 		{
 			townSpawnsData.put(town.getTownId(), town);
 		}

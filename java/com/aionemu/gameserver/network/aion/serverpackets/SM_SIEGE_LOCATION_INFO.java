@@ -64,7 +64,7 @@ public class SM_SIEGE_LOCATION_INFO extends AionServerPacket
 		}
 		writeC(infoType);
 		writeH(locations.size());
-		for (final SiegeLocation loc : locations.values())
+		for (SiegeLocation loc : locations.values())
 		{
 			LegionEmblem emblem = new LegionEmblem();
 			writeD(loc.getLocationId());

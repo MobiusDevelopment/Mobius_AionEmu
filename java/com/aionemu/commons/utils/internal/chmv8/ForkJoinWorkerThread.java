@@ -91,7 +91,7 @@ public class ForkJoinWorkerThread extends Thread
 			onStart();
 			pool.runWorker(workQueue);
 		}
-		catch (final Throwable ex)
+		catch (Throwable ex)
 		{
 			exception = ex;
 		}
@@ -101,7 +101,7 @@ public class ForkJoinWorkerThread extends Thread
 			{
 				onTermination(exception);
 			}
-			catch (final Throwable ex)
+			catch (Throwable ex)
 			{
 				if (exception == null)
 				{

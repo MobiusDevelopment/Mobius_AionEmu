@@ -52,7 +52,7 @@ public class _28302Document_Saved extends QuestHandler
 		qe.registerQuestNpc(799530).addOnQuestStart(questId);
 		qe.registerQuestNpc(799530).addOnTalkEvent(questId);
 		qe.registerQuestNpc(730375).addOnTalkEvent(questId);
-		for (final int id : dredgionGenerator)
+		for (int id : dredgionGenerator)
 		{
 			qe.registerQuestNpc(id).addOnKillEvent(questId);
 		}
@@ -148,7 +148,7 @@ public class _28302Document_Saved extends QuestHandler
 		{
 			return false;
 		}
-		for (final int id : dredgionGenerator)
+		for (int id : dredgionGenerator)
 		{
 			if (targetId == id)
 			{

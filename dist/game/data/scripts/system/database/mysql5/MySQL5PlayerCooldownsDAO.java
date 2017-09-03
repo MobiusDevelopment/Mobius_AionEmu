@@ -61,7 +61,7 @@ public class MySQL5PlayerCooldownsDAO extends PlayerCooldownsDAO
 	};
 	
 	@Override
-	public void loadPlayerCooldowns(final Player player)
+	public void loadPlayerCooldowns(Player player)
 	{
 		DB.select(SELECT_QUERY, new ParamReadStH()
 		{
@@ -90,7 +90,7 @@ public class MySQL5PlayerCooldownsDAO extends PlayerCooldownsDAO
 	}
 	
 	@Override
-	public void storePlayerCooldowns(final Player player)
+	public void storePlayerCooldowns(Player player)
 	{
 		deletePlayerCooldowns(player);
 		
@@ -112,7 +112,7 @@ public class MySQL5PlayerCooldownsDAO extends PlayerCooldownsDAO
 				con.setAutoCommit(false);
 				st = con.prepareStatement(INSERT_QUERY);
 				
-				for (final Map.Entry<Integer, Long> entry : filteredCooldown.entrySet())
+				for (Map.Entry<Integer, Long> entry : filteredCooldown.entrySet())
 				{
 					st.setInt(1, player.getObjectId());
 					st.setInt(2, entry.getKey());
@@ -124,7 +124,7 @@ public class MySQL5PlayerCooldownsDAO extends PlayerCooldownsDAO
 				con.commit();
 				
 			}
-			catch (final SQLException e)
+			catch (SQLException e)
 			{
 				log.error("Can't save cooldowns for player " + player.getObjectId());
 			}
@@ -135,7 +135,7 @@ public class MySQL5PlayerCooldownsDAO extends PlayerCooldownsDAO
 		}
 	}
 	
-	private void deletePlayerCooldowns(final Player player)
+	private void deletePlayerCooldowns(Player player)
 	{
 		DB.insertUpdate(DELETE_QUERY, new IUStH()
 		{

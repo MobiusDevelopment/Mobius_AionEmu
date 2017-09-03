@@ -61,7 +61,7 @@ public class ConquestService
 		if (CustomConfig.CONQUEST_ENABLED)
 		{
 			conquest = DataManager.CONQUEST_DATA.getConquestLocations();
-			for (final ConquestLocation loc : getConquestLocations().values())
+			for (ConquestLocation loc : getConquestLocations().values())
 			{
 				spawn(loc, ConquestStateType.PEACE);
 			}
@@ -77,9 +77,9 @@ public class ConquestService
 		if (CustomConfig.CONQUEST_ENABLED)
 		{
 			conquestSchedule = ConquestSchedule.load();
-			for (final Conquest conquest : conquestSchedule.getConquestsList())
+			for (Conquest conquest : conquestSchedule.getConquestsList())
 			{
-				for (final String offeringTime : conquest.getOfferingTimes())
+				for (String offeringTime : conquest.getOfferingTimes())
 				{
 					CronService.getInstance().schedule(new ConquestStartRunnable(conquest.getId()), offeringTime);
 				}
@@ -87,7 +87,7 @@ public class ConquestService
 		}
 	}
 	
-	public void startConquest(final int id)
+	public void startConquest(int id)
 	{
 		final ConquestOffering<?> offering;
 		synchronized (this)
@@ -134,9 +134,9 @@ public class ConquestService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getConquestSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final ConquestSpawnTemplate conquesttemplate = (ConquestSpawnTemplate) st;
 				if (conquesttemplate.getOStateType().equals(ostate))
@@ -225,7 +225,7 @@ public class ConquestService
 	
 	public void despawn(ConquestLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

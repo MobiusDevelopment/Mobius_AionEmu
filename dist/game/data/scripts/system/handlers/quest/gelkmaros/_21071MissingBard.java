@@ -42,7 +42,7 @@ public class _21071MissingBard extends QuestHandler
 			799407,
 			799329
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

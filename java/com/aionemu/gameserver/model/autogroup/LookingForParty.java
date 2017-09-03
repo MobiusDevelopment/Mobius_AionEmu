@@ -42,7 +42,7 @@ public class LookingForParty extends AbstractLockManager
 		super.writeLock();
 		try
 		{
-			for (final SearchInstance si : searchInstances)
+			for (SearchInstance si : searchInstances)
 			{
 				if (si.getInstanceMaskId() == instanceMaskId)
 				{
@@ -61,7 +61,7 @@ public class LookingForParty extends AbstractLockManager
 	public List<SearchInstance> getSearchInstances()
 	{
 		final FastList<SearchInstance> tempList = FastList.newInstance();
-		for (final SearchInstance si : searchInstances)
+		for (SearchInstance si : searchInstances)
 		{
 			tempList.add(si);
 		}
@@ -86,7 +86,7 @@ public class LookingForParty extends AbstractLockManager
 		super.readLock();
 		try
 		{
-			for (final SearchInstance si : searchInstances)
+			for (SearchInstance si : searchInstances)
 			{
 				if (si.getInstanceMaskId() == instanceMaskId)
 				{
@@ -103,7 +103,7 @@ public class LookingForParty extends AbstractLockManager
 	
 	public boolean isRegistredInstance(int instanceMaskId)
 	{
-		for (final SearchInstance si : searchInstances)
+		for (SearchInstance si : searchInstances)
 		{
 			if (si.getInstanceMaskId() == instanceMaskId)
 			{

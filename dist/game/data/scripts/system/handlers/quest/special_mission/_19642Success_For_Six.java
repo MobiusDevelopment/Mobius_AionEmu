@@ -51,7 +51,7 @@ public class _19642Success_For_Six extends QuestHandler
 		qe.registerQuestNpc(798991).addOnQuestStart(questId);
 		qe.registerQuestNpc(798991).addOnTalkEvent(questId);
 		qe.registerQuestNpc(798926).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

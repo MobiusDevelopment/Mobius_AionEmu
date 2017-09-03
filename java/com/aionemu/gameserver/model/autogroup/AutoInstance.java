@@ -41,7 +41,7 @@ public abstract class AutoInstance extends AbstractLockManager implements AutoIn
 	{
 		long i = 0;
 		List<Item> items = player.getInventory().getItemsByItemId(itemId);
-		for (final Item findedItem : items)
+		for (Item findedItem : items)
 		{
 			i += findedItem.getItemCount();
 		}
@@ -50,7 +50,7 @@ public abstract class AutoInstance extends AbstractLockManager implements AutoIn
 			return false;
 		}
 		items = sort(items, on(Item.class).getExpireTime());
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			final long l = player.getInventory().decreaseItemCount(item, count);
 			if (l == 0)

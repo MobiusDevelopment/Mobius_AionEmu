@@ -55,7 +55,7 @@ public class _26805Beware_The_Librarians extends QuestHandler
 	{
 		qe.registerOnEnterWorld(questId);
 		qe.registerQuestNpc(806149).addOnTalkEvent(questId);
-		for (final int mob : IDEternity01Mobs)
+		for (int mob : IDEternity01Mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

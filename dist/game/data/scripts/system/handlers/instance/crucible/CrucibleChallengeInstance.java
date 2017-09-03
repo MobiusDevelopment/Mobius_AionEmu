@@ -90,7 +90,7 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 		sendEventPacket();
 	}
 	
-	private void sendPacket(final int nameId, final int points)
+	private void sendPacket(int nameId, int points)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -125,7 +125,7 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 	}
 	
 	@Override
-	public void onDie(final Npc npc)
+	public void onDie(Npc npc)
 	{
 		int points = 0;
 		switch (npc.getNpcId())
@@ -576,7 +576,7 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 		}, 12000, 4000);
 	}
 	
-	private void startWalk(final Npc npc, final String walkId)
+	private void startWalk(Npc npc, String walkId)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -658,7 +658,7 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 	
 	private void clearCrucibleDebuffs(Player player)
 	{
-		for (final Effect ef : player.getEffectController().getAbnormalEffects())
+		for (Effect ef : player.getEffectController().getAbnormalEffects())
 		{
 			final DispelCategoryType category = ef.getSkillTemplate().getDispelCategory();
 			if ((category == DispelCategoryType.DEBUFF) || (category == DispelCategoryType.DEBUFF_MENTAL) || (category == DispelCategoryType.DEBUFF_PHYSICAL) || (category == DispelCategoryType.ALL))
@@ -670,7 +670,7 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		super.onDie(player, lastAttacker);
 		int place = 0;
@@ -942,7 +942,7 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 		}
 	}
 	
-	private void sp(final int npcId, final float x, final float y, final float z, final byte h, int time)
+	private void sp(int npcId, float x, float y, float z, byte h, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

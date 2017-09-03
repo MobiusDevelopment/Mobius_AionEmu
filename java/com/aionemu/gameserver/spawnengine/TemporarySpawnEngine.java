@@ -47,9 +47,9 @@ public class TemporarySpawnEngine
 	
 	private static void despawn()
 	{
-		for (final SpawnGroup2 spawn : temporarySpawns)
+		for (SpawnGroup2 spawn : temporarySpawns)
 		{
-			for (final SpawnTemplate template : spawn.getSpawnTemplates())
+			for (SpawnTemplate template : spawn.getSpawnTemplates())
 			{
 				if (template.getTemporarySpawn().canDespawn())
 				{
@@ -78,7 +78,7 @@ public class TemporarySpawnEngine
 	
 	private static void spawn(boolean startCheck)
 	{
-		for (final SpawnGroup2 spawn : temporarySpawns)
+		for (SpawnGroup2 spawn : temporarySpawns)
 		{
 			final HashSet<Integer> instances = tempSpawnInstanceMap.get(spawn);
 			if (spawn.hasPool())
@@ -86,7 +86,7 @@ public class TemporarySpawnEngine
 				final TemporarySpawn temporarySpawn = spawn.geTemporarySpawn();
 				if (temporarySpawn.canSpawn() || (startCheck && (spawn.getRespawnTime() != 0) && temporarySpawn.isInSpawnTime()))
 				{
-					for (final Integer instanceId : instances)
+					for (Integer instanceId : instances)
 					{
 						spawn.resetTemplates(instanceId);
 						for (int pool = 0; pool < spawn.getPool(); pool++)
@@ -99,12 +99,12 @@ public class TemporarySpawnEngine
 			}
 			else
 			{
-				for (final SpawnTemplate template : spawn.getSpawnTemplates())
+				for (SpawnTemplate template : spawn.getSpawnTemplates())
 				{
 					final TemporarySpawn temporarySpawn = template.getTemporarySpawn();
 					if (temporarySpawn.canSpawn() || (startCheck && !template.isNoRespawn() && temporarySpawn.isInSpawnTime()))
 					{
-						for (final Integer instanceId : instances)
+						for (Integer instanceId : instances)
 						{
 							SpawnEngine.spawnObject(template, instanceId);
 						}

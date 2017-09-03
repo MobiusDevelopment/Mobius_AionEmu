@@ -74,7 +74,7 @@ public class CompositionAction extends AbstractItemAction
 		return true;
 	}
 	
-	public void act(final Player player, final Item tools, final Item first, final Item second)
+	public void act(Player player, Item tools, Item first, Item second)
 	{
 		PacketSendUtility.sendPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), tools.getObjectId(), tools.getItemTemplate().getTemplateId(), 5000, 0, 0));
 		player.getController().cancelTask(TaskId.ITEM_USE);

@@ -100,7 +100,7 @@ public class CM_GROUP_DATA_EXCHANGE extends AionClientPacket
 		
 		if (players != null)
 		{
-			for (final Player member : players)
+			for (Player member : players)
 			{
 				if (!member.equals(player))
 				{

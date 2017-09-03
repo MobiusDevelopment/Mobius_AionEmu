@@ -68,7 +68,7 @@ public class ProtectorConquerorService
 		{
 			return;
 		}
-		for (final String world : CustomConfig.PROTECTOR_CONQUEROR_WORLDS.split(","))
+		for (String world : CustomConfig.PROTECTOR_CONQUEROR_WORLDS.split(","))
 		{
 			if ("".equals(world))
 			{
@@ -86,7 +86,7 @@ public class ProtectorConquerorService
 			@Override
 			public void run()
 			{
-				for (final Protector info : protectors.values())
+				for (Protector info : protectors.values())
 				{
 					if ((info.victims > 0) && !isEnemyWorld(info.getOwner()))
 					{
@@ -104,7 +104,7 @@ public class ProtectorConquerorService
 						}
 					}
 				}
-				for (final Conqueror info : conquerors.values())
+				for (Conqueror info : conquerors.values())
 				{
 					if ((info.victims > 0) && !isEnemyWorld(info.getOwner()))
 					{
@@ -181,7 +181,7 @@ public class ProtectorConquerorService
 		onLeaveMap(player);
 	}
 	
-	public void onEnterMap(final Player player)
+	public void onEnterMap(Player player)
 	{
 		if (!CustomConfig.PROTECTOR_CONQUEROR_ENABLE)
 		{
@@ -298,7 +298,7 @@ public class ProtectorConquerorService
 			{
 				info.setRank(0);
 				protectorBuff.endEffect(player);
-				for (final Player victim : World.getInstance().getWorldMap(worldId).getWorldMapInstanceById(player.getInstanceId()).getPlayersInside())
+				for (Player victim : World.getInstance().getWorldMap(worldId).getWorldMapInstanceById(player.getInstanceId()).getPlayersInside())
 				{
 					if (!player.getRace().equals(victim.getRace()))
 					{
@@ -318,7 +318,7 @@ public class ProtectorConquerorService
 			{
 				info.setRank(0);
 				conquerorBuff.endEffect(player);
-				for (final Player victim : World.getInstance().getWorldMap(worldId).getWorldMapInstanceById(player.getInstanceId()).getPlayersInside())
+				for (Player victim : World.getInstance().getWorldMap(worldId).getWorldMapInstanceById(player.getInstanceId()).getPlayersInside())
 				{
 					if (!player.getRace().equals(victim.getRace()))
 					{
@@ -341,7 +341,7 @@ public class ProtectorConquerorService
 		}
 	}
 	
-	public void updateRanks(final Player killer, Player victim)
+	public void updateRanks(Player killer, Player victim)
 	{
 		if (!isEnemyWorld(killer))
 		{ // Protector.
@@ -440,7 +440,7 @@ public class ProtectorConquerorService
 		return kills > CustomConfig.PROTECTOR_CONQUEROR_2ND_RANK_KILLS ? 2 : kills > CustomConfig.PROTECTOR_CONQUEROR_1ST_RANK_KILLS ? 1 : 0;
 	}
 	
-	public void onKillProtectorConqueror(final Player killer, final Player victim)
+	public void onKillProtectorConqueror(Player killer, Player victim)
 	{
 		if (!isEnemyWorld(victim))
 		{

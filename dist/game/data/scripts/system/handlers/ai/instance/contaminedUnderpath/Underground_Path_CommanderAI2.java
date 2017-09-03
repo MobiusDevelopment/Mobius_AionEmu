@@ -54,7 +54,7 @@ public class Underground_Path_CommanderAI2 extends NpcAI2
 	}
 	
 	@Override
-	public boolean onDialogSelect(final Player player, int dialogId, int questId, int extendedRewardIndex)
+	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		// Say you are ready.
 		if (dialogId == 10000)
@@ -107,7 +107,7 @@ public class Underground_Path_CommanderAI2 extends NpcAI2
 		}, 15000);
 	}
 	
-	private void attackUnderground(final Npc npc, float x, float y, float z, boolean despawn)
+	private void attackUnderground(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);

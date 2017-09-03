@@ -95,7 +95,7 @@ public class Mailbox
 			
 		});
 		
-		for (final Letter letter : mails.values())
+		for (Letter letter : mails.values())
 		{
 			letters.add(letter);
 		}
@@ -110,7 +110,7 @@ public class Mailbox
 	public List<Letter> getNewSystemLetters(String substring)
 	{
 		final List<Letter> letters = new ArrayList<>();
-		for (final Letter letter : mails.values())
+		for (Letter letter : mails.values())
 		{
 			if ((letter.getSenderName() == null) || !letter.isUnread())
 			{
@@ -147,7 +147,7 @@ public class Mailbox
 	 */
 	public boolean haveUnread()
 	{
-		for (final Letter letter : mails.values())
+		for (Letter letter : mails.values())
 		{
 			if (letter.isUnread())
 			{
@@ -160,7 +160,7 @@ public class Mailbox
 	public final int getUnreadCount()
 	{
 		int unreadCount = 0;
-		for (final Letter letter : mails.values())
+		for (Letter letter : mails.values())
 		{
 			if (letter.isUnread())
 			{
@@ -172,7 +172,7 @@ public class Mailbox
 	
 	public boolean haveUnreadByType(LetterType letterType)
 	{
-		for (final Letter letter : mails.values())
+		for (Letter letter : mails.values())
 		{
 			if (letter.isUnread() && (letter.getLetterType() == letterType))
 			{
@@ -185,7 +185,7 @@ public class Mailbox
 	public final int getUnreadCountByType(LetterType letterType)
 	{
 		int count = 0;
-		for (final Letter letter : mails.values())
+		for (Letter letter : mails.values())
 		{
 			if (letter.isUnread() && (letter.getLetterType() == letterType))
 			{
@@ -225,7 +225,7 @@ public class Mailbox
 	{
 		if ((reserveMail.size() > 0) && haveFreeSlots())
 		{
-			for (final Letter letter : reserveMail.values())
+			for (Letter letter : reserveMail.values())
 			{
 				if (haveFreeSlots())
 				{

@@ -53,7 +53,7 @@ public class LunaConsumeRewardsData
 	
 	void afterUnmarshal(Unmarshaller paramUnmarshaller, Object paramObject)
 	{
-		for (final LunaConsumeRewardsTemplate lunaConsume : lunaList)
+		for (LunaConsumeRewardsTemplate lunaConsume : lunaList)
 		{
 			lunaData.put(lunaConsume.getId(), lunaConsume);
 			lunaConsumeCountData.put(lunaConsume.getSumCount(), lunaConsume);

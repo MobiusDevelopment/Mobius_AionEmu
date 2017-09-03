@@ -58,7 +58,7 @@ public class IuService
 		if (CustomConfig.IU_ENABLED)
 		{
 			iu = DataManager.IU_DATA.getIuLocations();
-			for (final IuLocation loc : getIuLocations().values())
+			for (IuLocation loc : getIuLocations().values())
 			{
 				spawn(loc, IuStateType.CLOSED);
 			}
@@ -67,7 +67,7 @@ public class IuService
 				@Override
 				public void run()
 				{
-					for (final IuLocation loc : getIuLocations().values())
+					for (IuLocation loc : getIuLocations().values())
 					{
 						startConcert(loc.getId());
 					}
@@ -88,7 +88,7 @@ public class IuService
 		}
 	}
 	
-	public void startConcert(final int id)
+	public void startConcert(int id)
 	{
 		final Iu<?> circusBound;
 		synchronized (this)
@@ -136,9 +136,9 @@ public class IuService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getIuSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final IuSpawnTemplate iutemplate = (IuSpawnTemplate) st;
 				if (iutemplate.getIUStateType().equals(iustate))
@@ -192,7 +192,7 @@ public class IuService
 	
 	public void despawn(IuLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

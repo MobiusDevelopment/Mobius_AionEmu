@@ -62,7 +62,7 @@ public class Annihilation_MonumentAI2 extends NpcAI2
 		AI2Actions.deleteOwner(this);
 	}
 	
-	private void updateAnnihilationLanding1(final int id)
+	private void updateAnnihilationLanding1(int id)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -84,7 +84,7 @@ public class Annihilation_MonumentAI2 extends NpcAI2
 		});
 	}
 	
-	private void updateAnnihilationLanding2(final int id)
+	private void updateAnnihilationLanding2(int id)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{

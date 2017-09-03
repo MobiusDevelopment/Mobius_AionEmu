@@ -50,7 +50,7 @@ public class PanelCpData
 	
 	void afterUnmarshal(Unmarshaller paramUnmarshaller, Object paramObject)
 	{
-		for (final PanelCp panelCp : pclist)
+		for (PanelCp panelCp : pclist)
 		{
 			cpData.put(panelCp.getId(), panelCp);
 			cpDataMap.put(panelCp.getId(), panelCp);

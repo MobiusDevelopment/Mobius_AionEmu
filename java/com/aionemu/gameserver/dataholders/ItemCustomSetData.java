@@ -46,7 +46,7 @@ public class ItemCustomSetData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final ItemCustomSetTeamplate it : customTemplates)
+		for (ItemCustomSetTeamplate it : customTemplates)
 		{
 			getCustomMap().put(it.getId(), it);
 		}

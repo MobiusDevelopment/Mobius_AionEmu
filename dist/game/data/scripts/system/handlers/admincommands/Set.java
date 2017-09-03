@@ -70,7 +70,7 @@ public class Set extends AdminCommand
 			{
 				newClass = Byte.parseByte(paramValue);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "You should enter valid second params!");
 				return;
@@ -90,7 +90,7 @@ public class Set extends AdminCommand
 			{
 				exp = Long.parseLong(paramValue);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "You should enter valid second params!");
 				return;
@@ -111,7 +111,7 @@ public class Set extends AdminCommand
 			{
 				ap = Integer.parseInt(paramValue);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "You should enter valid second params!");
 				return;
@@ -140,7 +140,7 @@ public class Set extends AdminCommand
 			{
 				gp = Integer.parseInt(paramValue);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "You should enter valid second params!");
 				return;
@@ -168,7 +168,7 @@ public class Set extends AdminCommand
 			{
 				level = Integer.parseInt(paramValue);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "You should enter valid second params!");
 				return;
@@ -192,7 +192,7 @@ public class Set extends AdminCommand
 			{
 				titleId = Integer.parseInt(paramValue);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "You should enter valid second params!");
 				return;
@@ -216,7 +216,7 @@ public class Set extends AdminCommand
 			{
 				toll = Integer.parseInt(paramValue);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "You should enter valid second params!");
 				return;
@@ -252,7 +252,7 @@ public class Set extends AdminCommand
 			{
 				luna = Integer.parseInt(paramValue);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "You should enter valid second params!");
 				return;
@@ -280,7 +280,7 @@ public class Set extends AdminCommand
 			{
 				key = Integer.parseInt(paramValue);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "You should enter valid second params!");
 				return;

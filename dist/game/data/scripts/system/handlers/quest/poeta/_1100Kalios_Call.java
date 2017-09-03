@@ -91,7 +91,7 @@ public class _1100Kalios_Call extends QuestHandler
 					1004,
 					1005
 				};
-				for (final int id : ids)
+				for (int id : ids)
 				{
 					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), id, env.getDialogId()));
 				}

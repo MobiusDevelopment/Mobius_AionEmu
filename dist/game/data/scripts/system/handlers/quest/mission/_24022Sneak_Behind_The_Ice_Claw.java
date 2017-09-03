@@ -60,7 +60,7 @@ public class _24022Sneak_Behind_The_Ice_Claw extends QuestHandler
 		qe.registerQuestNpc(204417).addOnKillEvent(questId);
 		qe.registerQuestNpc(212877).addOnKillEvent(questId);
 		qe.registerQuestItem(182215364, questId); // Hard Flint.
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
@@ -79,7 +79,7 @@ public class _24022Sneak_Behind_The_Ice_Claw extends QuestHandler
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

@@ -59,7 +59,7 @@ public class AuraEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void onPeriodicAction(final Effect effect)
+	public void onPeriodicAction(Effect effect)
 	{
 		final Player effector = (Player) effect.getEffector();
 		if (!effector.isOnline())
@@ -70,7 +70,7 @@ public class AuraEffect extends EffectTemplate
 		{
 			final Collection<Player> onlinePlayers = effector.isInGroup2() ? effector.getPlayerGroup2().getOnlineMembers() : effector.getPlayerAllianceGroup2().getOnlineMembers();
 			final int actualRange = (int) ((distance * effector.getGameStats().getStat(StatEnum.BOOST_MANTRA_RANGE, 100).getCurrent()) / 100f);
-			for (final Player player : onlinePlayers)
+			for (Player player : onlinePlayers)
 			{
 				if (MathUtil.isIn3dRange(effector, player, actualRange))
 				{
@@ -105,7 +105,7 @@ public class AuraEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		effect.setPeriodicTask(ThreadPoolManager.getInstance().scheduleAtFixedRate(new AuraTask(effect), 0, 6500), position);
 	}

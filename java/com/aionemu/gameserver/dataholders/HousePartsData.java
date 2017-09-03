@@ -61,7 +61,7 @@ public class HousePartsData
 			return;
 		}
 		
-		for (final HousePart part : houseParts)
+		for (HousePart part : houseParts)
 		{
 			partsById.put(part.getId(), part);
 			final Iterator<String> iterator = part.getTags().iterator();

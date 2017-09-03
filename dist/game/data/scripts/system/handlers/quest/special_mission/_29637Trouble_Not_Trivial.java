@@ -57,7 +57,7 @@ public class _29637Trouble_Not_Trivial extends QuestHandler
 		qe.registerQuestNpc(799225).addOnQuestStart(questId);
 		qe.registerQuestNpc(799225).addOnTalkEvent(questId);
 		qe.registerQuestNpc(799248).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

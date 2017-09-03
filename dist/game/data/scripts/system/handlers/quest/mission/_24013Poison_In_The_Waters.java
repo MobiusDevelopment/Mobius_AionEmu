@@ -58,7 +58,7 @@ public class _24013Poison_In_The_Waters extends QuestHandler
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerQuestNpc(203631).addOnTalkEvent(questId);
 		qe.registerQuestNpc(203621).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -53,7 +53,7 @@ public class _19664In_A_Manor_Of_Trouble extends QuestHandler
 		qe.registerQuestNpc(804651).addOnQuestStart(questId);
 		qe.registerQuestNpc(804651).addOnTalkEvent(questId);
 		qe.registerQuestNpc(804651).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

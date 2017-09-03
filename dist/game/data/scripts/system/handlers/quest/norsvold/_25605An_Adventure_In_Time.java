@@ -60,7 +60,7 @@ public class _25605An_Adventure_In_Time extends QuestHandler
 		qe.registerQuestNpc(806174).addOnQuestStart(questId); // Chardelil.
 		qe.registerQuestNpc(806174).addOnTalkEvent(questId); // Chardelil.
 		qe.registerQuestNpc(806199).addOnTalkEvent(questId); // 차원에 묶인 데바.
-		for (final int mobs : DF6F224NamedDeathKnight70Al)
+		for (int mobs : DF6F224NamedDeathKnight70Al)
 		{
 			qe.registerQuestNpc(mobs).addOnKillEvent(questId);
 		}
@@ -208,7 +208,7 @@ public class _25605An_Adventure_In_Time extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

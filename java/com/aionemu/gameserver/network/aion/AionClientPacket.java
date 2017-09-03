@@ -66,7 +66,7 @@ public abstract class AionClientPacket extends BaseClientPacket<AionConnection> 
 				runImpl();
 			}
 		}
-		catch (final Throwable e)
+		catch (Throwable e)
 		{
 			String name = getConnection().getAccount().getName();
 			if (name == null)
@@ -97,7 +97,7 @@ public abstract class AionClientPacket extends BaseClientPacket<AionConnection> 
 		{
 			return (AionClientPacket) super.clone();
 		}
-		catch (final CloneNotSupportedException e)
+		catch (CloneNotSupportedException e)
 		{
 			return null;
 		}

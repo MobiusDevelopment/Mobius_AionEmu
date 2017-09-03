@@ -31,7 +31,7 @@ public class HandlerSideDrop extends QuestDrop
 		this.chance = chance;
 		
 		final QuestTemplate template = DataManager.QUEST_DATA.getQuestById(questId);
-		for (final QuestDrop drop : template.getQuestDrop())
+		for (QuestDrop drop : template.getQuestDrop())
 		{
 			if ((drop.npcId == npcId) && (drop.itemId == itemId))
 			{

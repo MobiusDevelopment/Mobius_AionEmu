@@ -58,7 +58,7 @@ public class CM_CHARACTER_PASSKEY extends AionClientPacket
 				newPasskey = new String(readB(65), "UTF-8");
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 		}
 	}

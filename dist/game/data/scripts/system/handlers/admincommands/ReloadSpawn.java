@@ -49,7 +49,7 @@ public class ReloadSpawn extends AdminCommand
 		else
 		{
 			final StringBuilder sbDestination = new StringBuilder();
-			for (final String p : params)
+			for (String p : params)
 			{
 				sbDestination.append(p + " ");
 			}

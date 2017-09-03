@@ -33,17 +33,17 @@ public abstract class PlayerUpgradeArcadeDAO implements DAO
 	
 	public abstract void load(Player player);
 	
-	public abstract boolean addUpgradeArcade(final int playerId, final int frenzy_meter, final int upgrade_lvl);
+	public abstract boolean addUpgradeArcade(int playerId, int frenzy_meter, int upgrade_lvl);
 	
-	public abstract boolean delUpgradeArcade(final int playerId, final int frenzy_meter, final int upgrade_lvl);
+	public abstract boolean delUpgradeArcade(int playerId, int frenzy_meter, int upgrade_lvl);
 	
 	public abstract boolean store(Player player);
 	
-	public abstract boolean setFrenzyMeterByObjId(final int obj, final int frenzy_meter);
+	public abstract boolean setFrenzyMeterByObjId(int obj, int frenzy_meter);
 	
-	public abstract boolean setUpgradeLvlByObjId(final int obj, final int upgrade_lvl);
+	public abstract boolean setUpgradeLvlByObjId(int obj, int upgrade_lvl);
 	
-	public abstract int getFrenzyMeterByObjId(final int obj);
+	public abstract int getFrenzyMeterByObjId(int obj);
 	
-	public abstract int getUpgradeLvlByObjId(final int obj);
+	public abstract int getUpgradeLvlByObjId(int obj);
 }

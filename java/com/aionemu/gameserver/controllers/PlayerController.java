@@ -252,7 +252,7 @@ public class PlayerController extends CreatureController<Player>
 	public void updateNearbyQuests()
 	{
 		final HashMap<Integer, Integer> nearbyQuestList = new HashMap<>();
-		for (final int questId : getOwner().getPosition().getMapRegion().getParent().getQuestIds())
+		for (int questId : getOwner().getPosition().getMapRegion().getParent().getQuestIds())
 		{
 			int diff = 0;
 			if (questId <= 0xFFFF)
@@ -508,7 +508,7 @@ public class PlayerController extends CreatureController<Player>
 		{
 			getOwner().getEffectController().removeAllEffects();
 		}
-		for (final Effect ef : getOwner().getEffectController().getAbnormalEffects())
+		for (Effect ef : getOwner().getEffectController().getAbnormalEffects())
 		{
 			if (ef.isDeityAvatar())
 			{
@@ -565,7 +565,7 @@ public class PlayerController extends CreatureController<Player>
 		final long secondsOffline = (System.currentTimeMillis() / 1000) - (lastOnline / 1000);
 		if (secondsOffline > (10 * 60))
 		{ // Logout in no-recall zone sends you to bindpoint after 10 (??) minutes
-			for (final ZoneInstance zone : getOwner().getPosition().getMapRegion().getZones(getOwner()))
+			for (ZoneInstance zone : getOwner().getPosition().getMapRegion().getZones(getOwner()))
 			{
 				if (!zone.canRecall())
 				{
@@ -969,7 +969,7 @@ public class PlayerController extends CreatureController<Player>
 	public void updatePassiveStats()
 	{
 		final Player player = getOwner();
-		for (final PlayerSkillEntry skillEntry : player.getSkillList().getAllSkills())
+		for (PlayerSkillEntry skillEntry : player.getSkillList().getAllSkills())
 		{
 			final Skill skill = SkillEngine.getInstance().getSkillFor(player, skillEntry.getSkillId(), player.getTarget());
 			if ((skill != null) && skill.isPassive())
@@ -1125,7 +1125,7 @@ public class PlayerController extends CreatureController<Player>
 		CreativityEssenceService.getInstance().pointPerLevel(player);
 	}
 	
-	public static void reachedPlayerLvl(final Player player)
+	public static void reachedPlayerLvl(Player player)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -1228,7 +1228,7 @@ public class PlayerController extends CreatureController<Player>
 		return ItemService.addQuestItems(getOwner(), Collections.singletonList(new QuestItems(itemId, count)));
 	}
 	
-	public void startStance(final int skillId)
+	public void startStance(int skillId)
 	{
 		stance = skillId;
 	}

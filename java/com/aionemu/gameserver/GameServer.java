@@ -186,7 +186,7 @@ public class GameServer
 				final ZipOutputStream out = new ZipOutputStream(new FileOutputStream(outFilename));
 				out.setMethod(ZipOutputStream.DEFLATED);
 				out.setLevel(Deflater.BEST_COMPRESSION);
-				for (final File logFile : files)
+				for (File logFile : files)
 				{
 					final FileInputStream in = new FileInputStream(logFile);
 					out.putNextEntry(new ZipEntry(logFile.getName()));
@@ -201,7 +201,7 @@ public class GameServer
 				}
 				out.close();
 			}
-			catch (final IOException e)
+			catch (IOException e)
 			{
 			}
 		}
@@ -213,7 +213,7 @@ public class GameServer
 			lc.reset();
 			configurator.doConfigure("config/slf4j-logback.xml");
 		}
-		catch (final JoranException je)
+		catch (JoranException je)
 		{
 			throw new RuntimeException("Failed to configure loggers, shutting down...", je);
 		}
@@ -263,7 +263,7 @@ public class GameServer
 		{
 			progressLatch.await();
 		}
-		catch (final InterruptedException e1)
+		catch (InterruptedException e1)
 		{
 		}
 		// Siege
@@ -519,7 +519,7 @@ public class GameServer
 					ELYOS_COUNT = DAOManager.getDAO(PlayerDAO.class).getCharacterCountForRace(Race.ELYOS);
 					computeRatios();
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 				}
 				finally
@@ -574,7 +574,7 @@ public class GameServer
 	{
 		final Set<StartupHook> startupHooks = startUpHooks;
 		startUpHooks = null;
-		for (final StartupHook hook : startupHooks)
+		for (StartupHook hook : startupHooks)
 		{
 			hook.onStartup();
 		}
@@ -598,7 +598,7 @@ public class GameServer
 			}
 			computeRatios();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 		}
 		finally

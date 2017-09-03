@@ -51,7 +51,7 @@ public class HotspotTeleportService
 		log.info(hotspotList + "<Hotspot Location 5.1> loaded.");
 	}
 	
-	public void doTeleport(final Player player, final int teleportId, final int price)
+	public void doTeleport(Player player, int teleportId, int price)
 	{
 		final int worldId = DataManager.HOTSPOT_LOCATION_DATA.getHotspotlocationTemplate(teleportId).getMapId();
 		final float getX = DataManager.HOTSPOT_LOCATION_DATA.getHotspotlocationTemplate(teleportId).getX();

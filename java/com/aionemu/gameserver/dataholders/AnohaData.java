@@ -46,7 +46,7 @@ public class AnohaData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final AnohaTemplate template : anohaTemplates)
+		for (AnohaTemplate template : anohaTemplates)
 		{
 			anoha.put(template.getId(), new AnohaLocation(template));
 		}

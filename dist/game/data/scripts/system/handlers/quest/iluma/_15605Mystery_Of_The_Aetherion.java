@@ -57,7 +57,7 @@ public class _15605Mystery_Of_The_Aetherion extends QuestHandler
 		qe.registerQuestNpc(806162).addOnTalkEvent(questId); // Polonius.
 		qe.registerQuestNpc(703137).addOnTalkEvent(questId); // 희미한 고대의 유적.
 		qe.registerQuestNpc(703138).addOnTalkEvent(questId); // 빛나는 고대의 유적.
-		for (final int boss : LF6F224NamedRuinsGolem70Al)
+		for (int boss : LF6F224NamedRuinsGolem70Al)
 		{
 			qe.registerQuestNpc(boss).addOnKillEvent(questId);
 		}

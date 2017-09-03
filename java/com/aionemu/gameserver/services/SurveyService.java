@@ -129,7 +129,7 @@ public class SurveyService
 		
 		final List<Integer> players = FastList.newInstance();
 		int cnt = 0;
-		for (final SurveyItem item : newList)
+		for (SurveyItem item : newList)
 		{
 			activeItems.put(item.uniqueId, item);
 			cnt++;
@@ -139,7 +139,7 @@ public class SurveyService
 			}
 		}
 		log.info("[SurveyController] found new " + cnt + " items for " + players.size() + " players.");
-		for (final int ownerId : players)
+		for (int ownerId : players)
 		{
 			final Player player = World.getInstance().findPlayer(ownerId);
 			if (player != null)
@@ -151,7 +151,7 @@ public class SurveyService
 	
 	public void showAvailable(Player player)
 	{
-		for (final SurveyItem item : activeItems.values())
+		for (SurveyItem item : activeItems.values())
 		{
 			if (item.ownerId != player.getObjectId())
 			{

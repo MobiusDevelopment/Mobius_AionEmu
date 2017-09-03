@@ -46,7 +46,7 @@ public class _28993Insistent_Ifrit extends QuestHandler
 	{
 		qe.registerQuestNpc(806217).addOnQuestStart(questId); // Guranka.
 		qe.registerQuestNpc(806217).addOnTalkEvent(questId); // Guranka.
-		for (final int mob : IDF6LapGodElemental67Ah)
+		for (int mob : IDF6LapGodElemental67Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -44,7 +44,7 @@ public class NpcFactionsData
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
 		factionsById.clear();
-		for (final NpcFactionTemplate template : npcFactionsData)
+		for (NpcFactionTemplate template : npcFactionsData)
 		{
 			factionsById.put(template.getId(), template);
 			if (template.getNpcId() != 0)

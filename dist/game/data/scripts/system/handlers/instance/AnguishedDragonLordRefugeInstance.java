@@ -97,7 +97,7 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); // [Event] Noble Abbey Bundle.
 				break;
 			case 702729: // Tiamat's Huge Treasure Crate.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053789, 1)); // Major Stigma Support Bundle.
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053619, 1)); // Ancient Manastone Bundle.
@@ -539,7 +539,7 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 	// Kaisinel's Light.
 	private void kaisinelLight()
 	{
-		for (final Player p : instance.getPlayersInside())
+		for (Player p : instance.getPlayersInside())
 		{
 			final SkillTemplate st = DataManager.SKILL_DATA.getSkillTemplate(20932); // Kaisinel's Light.
 			final Effect e = new Effect(p, p, st, 1, st.getEffectsDuration(9));
@@ -551,7 +551,7 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 	// Marchutan's Grace.
 	private void marchutanGrace()
 	{
-		for (final Player p : instance.getPlayersInside())
+		for (Player p : instance.getPlayersInside())
 		{
 			final SkillTemplate st = DataManager.SKILL_DATA.getSkillTemplate(20936); // Marchutan's Grace.
 			final Effect e = new Effect(p, p, st, 1, st.getEffectsDuration(9));
@@ -594,7 +594,7 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void eventGodAttack(final Npc npc, float x, float y, float z, boolean despawn)
+	private void eventGodAttack(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -688,7 +688,7 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 	}
 	
 	// PHASE RUSH.
-	private void rushWalk(final Npc npc)
+	private void rushWalk(Npc npc)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -697,7 +697,7 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 			{
 				if (!isInstanceDestroyed)
 				{
-					for (final Player player : instance.getPlayersInside())
+					for (Player player : instance.getPlayersInside())
 					{
 						npc.setTarget(player);
 						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
@@ -756,7 +756,7 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 	
 	protected void despawnNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			npc.getController().onDelete();
 		}
@@ -781,7 +781,7 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 		return null;
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -793,7 +793,7 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -825,7 +825,7 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(false, false, 0, 8));

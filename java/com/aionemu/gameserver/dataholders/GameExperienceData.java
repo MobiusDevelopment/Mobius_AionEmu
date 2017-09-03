@@ -50,7 +50,7 @@ public class GameExperienceData
 	
 	void afterUnmarshal(Unmarshaller paramUnmarshaller, Object paramObject)
 	{
-		for (final GameExperience gameExperience : glist)
+		for (GameExperience gameExperience : glist)
 		{
 			experienceData.put(gameExperience.getId(), gameExperience);
 			experienceDataMap.put(gameExperience.getId(), gameExperience);

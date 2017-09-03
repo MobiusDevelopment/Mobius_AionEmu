@@ -111,7 +111,7 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 		{
 			case 214780: // Dakaer Diabolist.
 			case 214781: // Dakaer Bloodmender.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -121,7 +121,7 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 				break;
 			case 214782: // Dakaer Adjutant.
 			case 214784: // Dakaer Physician.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -131,7 +131,7 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 				break;
 			case 215449: // Relic Protector Kael.
 			case 215450: // Ebonlord Vasana.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -177,7 +177,7 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		super.onInstanceCreate(instance);
 		HamateIsleStoreroomTreasureBoxSuscess.add((Npc) spawn(700472, 377.06046f, 512.4419f, 102.618126f, (byte) 114));
@@ -201,7 +201,7 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 		}, 900000); // 15 Minutes.
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -244,7 +244,7 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

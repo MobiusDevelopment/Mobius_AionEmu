@@ -51,7 +51,7 @@ public class _14012Dukaki_Mischief extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(203129).addOnTalkEvent(questId);
 		qe.registerQuestNpc(203098).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

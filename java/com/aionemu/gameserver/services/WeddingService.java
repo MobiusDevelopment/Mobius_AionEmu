@@ -122,7 +122,7 @@ public class WeddingService
 			boolean success2 = false;
 			try
 			{
-				for (final String suit : suits)
+				for (String suit : suits)
 				{
 					final int suitId = Integer.parseInt(suit);
 					if (!player.getEquipment().getEquippedItemsByItemId(suitId).isEmpty())
@@ -135,7 +135,7 @@ public class WeddingService
 					}
 				}
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				e.printStackTrace();
 			}

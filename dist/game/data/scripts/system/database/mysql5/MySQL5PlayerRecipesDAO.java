@@ -39,7 +39,7 @@ public class MySQL5PlayerRecipesDAO extends PlayerRecipesDAO
 	private static final String DELETE_QUERY = "DELETE FROM player_recipes WHERE `player_id`=? AND `recipe_id`=?";
 	
 	@Override
-	public RecipeList load(final int playerId)
+	public RecipeList load(int playerId)
 	{
 		final HashSet<Integer> recipeList = new HashSet<>();
 		DB.select(SELECT_QUERY, new ParamReadStH()
@@ -64,7 +64,7 @@ public class MySQL5PlayerRecipesDAO extends PlayerRecipesDAO
 	}
 	
 	@Override
-	public boolean addRecipe(final int playerId, final int recipeId)
+	public boolean addRecipe(int playerId, int recipeId)
 	{
 		return DB.insertUpdate(ADD_QUERY, new IUStH()
 		{
@@ -80,7 +80,7 @@ public class MySQL5PlayerRecipesDAO extends PlayerRecipesDAO
 	}
 	
 	@Override
-	public boolean delRecipe(final int playerId, final int recipeId)
+	public boolean delRecipe(int playerId, int recipeId)
 	{
 		return DB.insertUpdate(DELETE_QUERY, new IUStH()
 		{

@@ -54,7 +54,7 @@ public class MechaturerkAI2 extends AggressiveNpcAI2
 	
 	private void deleteNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			if (npc != null)
 			{

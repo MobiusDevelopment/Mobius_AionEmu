@@ -76,7 +76,7 @@ public class _14026A_Lone_Defense extends QuestHandler
 		qe.registerQuestNpc(203901).addOnTalkEvent(questId); // Telemachus.
 		qe.registerQuestNpc(204020).addOnTalkEvent(questId); // Mabangtah.
 		qe.registerQuestNpc(204044).addOnTalkEvent(questId); // Kimeia.
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
@@ -346,7 +346,7 @@ public class _14026A_Lone_Defense extends QuestHandler
 		final Npc spawn = (Npc) QuestService.spawnQuestNpc(310040000, player.getInstanceId(), mobToSpawn, x, y, z, (byte) 95);
 		final Collection<Npc> allNpcs = World.getInstance().getNpcs();
 		Npc target = null;
-		for (final Npc npc : allNpcs)
+		for (Npc npc : allNpcs)
 		{
 			if (npc.getNpcId() == 204044)
 			{ // Kimeia.

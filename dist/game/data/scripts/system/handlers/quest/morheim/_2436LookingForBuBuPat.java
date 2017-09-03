@@ -46,7 +46,7 @@ public class _2436LookingForBuBuPat extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(204390).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

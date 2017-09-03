@@ -55,7 +55,7 @@ public class cmd_questauto extends PlayerCommand
 		{
 			questId = Integer.parseInt(params[0]);
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			PacketSendUtility.sendMessage(player, "wrong quest id");
 			return;

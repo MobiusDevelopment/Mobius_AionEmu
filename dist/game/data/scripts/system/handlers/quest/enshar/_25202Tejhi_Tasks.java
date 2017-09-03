@@ -58,7 +58,7 @@ public class _25202Tejhi_Tasks extends QuestHandler
 	{
 		qe.registerQuestNpc(804914).addOnQuestStart(questId);
 		qe.registerQuestNpc(804914).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

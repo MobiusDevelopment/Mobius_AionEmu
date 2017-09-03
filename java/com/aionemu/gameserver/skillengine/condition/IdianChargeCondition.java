@@ -38,7 +38,7 @@ public class IdianChargeCondition extends ChargeCondition
 		if (env.getEffector() instanceof Player)
 		{
 			final Player effector = (Player) env.getEffector();
-			for (final Item item : effector.getEquipment().getEquippedItems())
+			for (Item item : effector.getEquipment().getEquippedItems())
 			{
 				if (item.getItemTemplate().isWeapon() && (item.getIdianStone() != null))
 				{

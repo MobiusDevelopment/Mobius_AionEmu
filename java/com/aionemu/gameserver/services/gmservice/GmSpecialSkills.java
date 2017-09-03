@@ -255,7 +255,7 @@ public enum GmSpecialSkills
 	
 	public static GmSpecialSkills getAlType(int level)
 	{
-		for (final GmSpecialSkills al : GmSpecialSkills.values())
+		for (GmSpecialSkills al : GmSpecialSkills.values())
 		{
 			if (level == al.getLevel())
 			{
@@ -267,7 +267,7 @@ public enum GmSpecialSkills
 	
 	public static String getAlName(int level)
 	{
-		for (final GmSpecialSkills al : GmSpecialSkills.values())
+		for (GmSpecialSkills al : GmSpecialSkills.values())
 		{
 			if (level == al.getLevel())
 			{

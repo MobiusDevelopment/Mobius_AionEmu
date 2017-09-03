@@ -106,7 +106,7 @@ public class _15640Mysterious_Organisms_In_Iluma extends QuestHandler
 	{
 		qe.registerQuestNpc(806089).addOnQuestStart(questId);
 		qe.registerQuestNpc(806089).addOnTalkEvent(questId);
-		for (final int mob : Q15640)
+		for (int mob : Q15640)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

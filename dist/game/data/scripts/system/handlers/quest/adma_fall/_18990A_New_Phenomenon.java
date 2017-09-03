@@ -55,15 +55,15 @@ public class _18990A_New_Phenomenon extends QuestHandler
 		qe.registerQuestNpc(806075).addOnQuestStart(questId); // Weatha.
 		qe.registerQuestNpc(806075).addOnTalkEvent(questId); // Weatha.
 		qe.registerQuestNpc(806214).addOnTalkEvent(questId); // Enosi.
-		for (final int mob : IDF6AdmaZombieSN67Ae)
+		for (int mob : IDF6AdmaZombieSN67Ae)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : IDF6AdmaPrincessSN67Ae)
+		for (int mob : IDF6AdmaPrincessSN67Ae)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : IDF6AdmaEvilSpirit67Ah)
+		for (int mob : IDF6AdmaEvilSpirit67Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

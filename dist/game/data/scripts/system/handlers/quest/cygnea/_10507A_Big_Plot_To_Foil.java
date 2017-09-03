@@ -50,7 +50,7 @@ public class _10507A_Big_Plot_To_Foil extends QuestHandler
 			804714,
 			804715
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

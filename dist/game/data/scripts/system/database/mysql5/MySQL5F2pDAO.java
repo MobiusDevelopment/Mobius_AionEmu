@@ -63,7 +63,7 @@ public class MySQL5F2pDAO extends F2pDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore f2p time for playerObjId: " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -87,7 +87,7 @@ public class MySQL5F2pDAO extends F2pDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store f2p for player " + objectId + " from DB: " + e.getMessage(), e);
 			return false;
@@ -112,7 +112,7 @@ public class MySQL5F2pDAO extends F2pDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store f2p for player " + objectId + " from DB: " + e.getMessage(), e);
 			return false;
@@ -136,7 +136,7 @@ public class MySQL5F2pDAO extends F2pDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not delete f2p for player " + objectId + " from DB: " + e.getMessage(), e);
 			return false;

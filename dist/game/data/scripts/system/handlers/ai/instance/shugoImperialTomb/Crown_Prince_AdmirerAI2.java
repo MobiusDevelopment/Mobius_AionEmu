@@ -71,7 +71,7 @@ public class Crown_Prince_AdmirerAI2 extends NpcAI2
 		return true;
 	}
 	
-	private void attackEvent(final Npc npc, float x, float y, float z, boolean despawn)
+	private void attackEvent(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -84,7 +84,7 @@ public class Crown_Prince_AdmirerAI2 extends NpcAI2
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{
 			final List<Npc> npcs = getPosition().getWorldMapInstance().getNpcs(npcId);
-			for (final Npc npc : npcs)
+			for (Npc npc : npcs)
 			{
 				npc.getController().onDelete();
 			}

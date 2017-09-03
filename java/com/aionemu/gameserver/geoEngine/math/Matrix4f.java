@@ -1949,7 +1949,7 @@ public final class Matrix4f implements Cloneable
 		{
 			return (Matrix4f) super.clone();
 		}
-		catch (final CloneNotSupportedException e)
+		catch (CloneNotSupportedException e)
 		{
 			throw new AssertionError(); // can not happen
 		}

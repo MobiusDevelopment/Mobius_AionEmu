@@ -43,7 +43,7 @@ public class MySQL5WeddingDAO extends WeddingDAO
 	public static final String DELETE_QUERY = "DELETE FROM `weddings` WHERE (`player1`=? AND `player2`=?) OR (`player2`=? AND `player1`=?)";
 	
 	@Override
-	public int loadPartnerId(final Player player)
+	public int loadPartnerId(Player player)
 	{
 		Connection con = null;
 		final int playerId = player.getObjectId();
@@ -66,7 +66,7 @@ public class MySQL5WeddingDAO extends WeddingDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not get partner for player: " + playerId + " from DB: " + e.getMessage(), e);
 		}
@@ -78,7 +78,7 @@ public class MySQL5WeddingDAO extends WeddingDAO
 	}
 	
 	@Override
-	public void storeWedding(final Player partner1, final Player partner2)
+	public void storeWedding(Player partner1, Player partner2)
 	{
 		Connection con = null;
 		PreparedStatement stmt = null;
@@ -91,7 +91,7 @@ public class MySQL5WeddingDAO extends WeddingDAO
 			stmt.setInt(2, partner2.getObjectId());
 			stmt.execute();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("storeWeddings", e);
 		}
@@ -102,7 +102,7 @@ public class MySQL5WeddingDAO extends WeddingDAO
 	}
 	
 	@Override
-	public void deleteWedding(final Player partner1, final Player partner2)
+	public void deleteWedding(Player partner1, Player partner2)
 	{
 		Connection con = null;
 		PreparedStatement stmt = null;
@@ -117,7 +117,7 @@ public class MySQL5WeddingDAO extends WeddingDAO
 			stmt.setInt(4, partner2.getObjectId());
 			stmt.execute();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("deleteWedding", e);
 		}

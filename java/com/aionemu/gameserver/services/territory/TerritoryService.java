@@ -53,11 +53,11 @@ public class TerritoryService
 		{
 			territories.put(i, new LegionTerritory(i));
 		}
-		for (final Integer legionId : DAOManager.getDAO(LegionDAO.class).getLegionIdsWithTerritories())
+		for (Integer legionId : DAOManager.getDAO(LegionDAO.class).getLegionIdsWithTerritories())
 		{
 			legions.add(ls.getLegion(legionId));
 		}
-		for (final Legion legion : legions)
+		for (Legion legion : legions)
 		{
 			final LegionTerritory territory = legion.getTerritory();
 			territories.remove(territory.getId());
@@ -175,7 +175,7 @@ public class TerritoryService
 	public void broadcastTerritoryList(TreeMap<Integer, LegionTerritory> terr)
 	{
 		final Collection<Player> players = World.getInstance().getAllPlayers();
-		for (final Player player : players)
+		for (Player player : players)
 		{
 			if (!player.isOnline())
 			{

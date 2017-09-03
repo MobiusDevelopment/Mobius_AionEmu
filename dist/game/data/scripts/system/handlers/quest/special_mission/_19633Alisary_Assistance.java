@@ -50,7 +50,7 @@ public class _19633Alisary_Assistance extends QuestHandler
 		qe.registerQuestNpc(800411).addOnQuestStart(questId);
 		qe.registerQuestNpc(800411).addOnTalkEvent(questId);
 		qe.registerQuestNpc(205304).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

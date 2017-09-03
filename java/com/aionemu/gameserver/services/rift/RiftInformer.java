@@ -37,7 +37,7 @@ public class RiftInformer
 	{
 		final List<Npc> rifts = RiftManager.getSpawned();
 		final List<Npc> worldRifts = new CopyOnWriteArrayList<>();
-		for (final Npc rift : rifts)
+		for (Npc rift : rifts)
 		{
 			if (rift.getWorldId() == worldId)
 			{
@@ -69,7 +69,7 @@ public class RiftInformer
 	
 	public static void sendRiftInfo(int[] worlds)
 	{
-		for (final int worldId : worlds)
+		for (int worldId : worlds)
 		{
 			syncRiftsState(worldId, getPackets(worlds[0], -1));
 		}
@@ -90,7 +90,7 @@ public class RiftInformer
 		final List<AionServerPacket> packets = new ArrayList<>();
 		if (objId == -1)
 		{
-			for (final Npc rift : getSpawned(worldId))
+			for (Npc rift : getSpawned(worldId))
 			{
 				final RVController controller = (RVController) rift.getController();
 				if (!controller.isMaster())
@@ -107,7 +107,7 @@ public class RiftInformer
 		else
 		{
 			packets.add(new SM_RIFT_ANNOUNCE(getAnnounceData(worldId)));
-			for (final Npc rift : getSpawned(worldId))
+			for (Npc rift : getSpawned(worldId))
 			{
 				final RVController controller = (RVController) rift.getController();
 				if (!controller.isMaster())
@@ -121,20 +121,20 @@ public class RiftInformer
 		return packets;
 	}
 	
-	private static void syncRiftsState(Player player, final List<AionServerPacket> packets)
+	private static void syncRiftsState(Player player, List<AionServerPacket> packets)
 	{
-		for (final AionServerPacket packet : packets)
+		for (AionServerPacket packet : packets)
 		{
 			PacketSendUtility.sendPacket(player, packet);
 		}
 	}
 	
-	private static void syncRiftsState(int worldId, final List<AionServerPacket> packets)
+	private static void syncRiftsState(int worldId, List<AionServerPacket> packets)
 	{
 		syncRiftsState(worldId, packets, false);
 	}
 	
-	private static void syncRiftsState(int worldId, final List<AionServerPacket> packets, final boolean isDespawnInfo)
+	private static void syncRiftsState(int worldId, List<AionServerPacket> packets, boolean isDespawnInfo)
 	{
 		World.getInstance().getWorldMap(worldId).getMainWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -153,7 +153,7 @@ public class RiftInformer
 		{
 			localRifts.put(i, 0);
 		}
-		for (final Npc rift : getSpawned(worldId))
+		for (Npc rift : getSpawned(worldId))
 		{
 			final RVController rc = (RVController) rift.getController();
 			localRifts = calcRiftsData(rc, localRifts);

@@ -46,7 +46,7 @@ public class ByteTransformer implements PropertyTransformer<Byte>
 		{
 			return Byte.decode(value);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new TransformationException(e);
 		}

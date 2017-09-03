@@ -50,7 +50,7 @@ public class BeshmundirsWalkAI2 extends ActionItemNpcAI2
 	}
 	
 	@Override
-	public boolean onDialogSelect(Player player, final int dialogId, int questId, int extendedRewardIndex)
+	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		final AI2Request request = new AI2Request()
 		{
@@ -105,7 +105,7 @@ public class BeshmundirsWalkAI2 extends ActionItemNpcAI2
 	{
 		if (player.isInGroup2())
 		{
-			for (final Player member : player.getPlayerGroup2().getMembers())
+			for (Player member : player.getPlayerGroup2().getMembers())
 			{
 				if (member.getWorldId() == 300170000)
 				{ // Beshmundir Temple.

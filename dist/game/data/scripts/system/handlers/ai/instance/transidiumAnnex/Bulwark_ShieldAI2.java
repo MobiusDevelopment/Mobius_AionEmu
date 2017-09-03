@@ -56,7 +56,7 @@ public class Bulwark_ShieldAI2 extends NpcAI2
 				GAb1SubNamedBarricadeDa65Ah.setTarget(getOwner());
 				GAb1SubNamedBarricadeDa65Ah.setNpcType(NpcType.ATTACKABLE);
 				final WorldMapInstance instance = getPosition().getWorldMapInstance();
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (MathUtil.isIn3dRange(player, GAb1SubNamedBarricadeDa65Ah, 5))
 					{

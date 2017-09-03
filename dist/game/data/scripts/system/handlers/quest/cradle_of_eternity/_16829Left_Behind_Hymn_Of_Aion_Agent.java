@@ -55,11 +55,11 @@ public class _16829Left_Behind_Hymn_Of_Aion_Agent extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : IDEternity02AS72Ae)
+		for (int mob : IDEternity02AS72Ae)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -420,7 +420,7 @@ public class DecomposeAction extends AbstractItemAction
 	}
 	
 	@Override
-	public void act(final Player player, final Item parentItem, final Item targetItem)
+	public void act(Player player, Item parentItem, Item targetItem)
 	{
 		final List<SelectItem> selectedList = new ArrayList<>();
 		player.getController().cancelUseItem();
@@ -451,7 +451,7 @@ public class DecomposeAction extends AbstractItemAction
 					}
 					else
 					{
-						for (final SelectItem resultItem : selectitems.getItems())
+						for (SelectItem resultItem : selectitems.getItems())
 						{
 							if (canAcquireSelect(player, resultItem))
 							{
@@ -504,7 +504,7 @@ public class DecomposeAction extends AbstractItemAction
 					{
 						if (selectedCollection.getItems().size() > 0)
 						{
-							for (final ResultedItem resultItem : selectedCollection.getItems())
+							for (ResultedItem resultItem : selectedCollection.getItems())
 							{
 								if (canAcquire(player, resultItem))
 								{
@@ -526,7 +526,7 @@ public class DecomposeAction extends AbstractItemAction
 						}
 						else if (selectedCollection.getRandomItems().size() > 0)
 						{
-							for (final RandomItem randomItem : selectedCollection.getRandomItems())
+							for (RandomItem randomItem : selectedCollection.getRandomItems())
 							{
 								final RandomType randomType = randomItem.getType();
 								if (randomType != null)
@@ -768,7 +768,7 @@ public class DecomposeAction extends AbstractItemAction
 	{
 		final int playerLevel = player.getLevel();
 		final Collection<ExtractedItemsCollection> result = new ArrayList<>();
-		for (final ExtractedItemsCollection collection : itemsCollections)
+		for (ExtractedItemsCollection collection : itemsCollections)
 		{
 			if (collection.getMinLevel() > playerLevel)
 			{
@@ -789,7 +789,7 @@ public class DecomposeAction extends AbstractItemAction
 		float currentSum = 0f;
 		final float rnd = (float) Rnd.get(0, (int) (sumOfChances - 1) * 1000) / 1000;
 		ExtractedItemsCollection selectedCollection = null;
-		for (final ExtractedItemsCollection collection : itemsCollections)
+		for (ExtractedItemsCollection collection : itemsCollections)
 		{
 			currentSum += collection.getChance();
 			if (rnd < currentSum)
@@ -804,7 +804,7 @@ public class DecomposeAction extends AbstractItemAction
 	private int calcMaxCountOfSlots(ExtractedItemsCollection itemsCollections, Player player, boolean special)
 	{
 		int maxCount = 0;
-		for (final ResultedItem item : itemsCollections.getItems())
+		for (ResultedItem item : itemsCollections.getItems())
 		{
 			if (item.getRace().equals(Race.PC_ALL) || player.getRace().equals(item.getRace()))
 			{
@@ -828,7 +828,7 @@ public class DecomposeAction extends AbstractItemAction
 	private float calcSumOfChances(Collection<ExtractedItemsCollection> itemsCollections)
 	{
 		float sum = 0;
-		for (final ExtractedItemsCollection collection : itemsCollections)
+		for (ExtractedItemsCollection collection : itemsCollections)
 		{
 			sum += collection.getChance();
 		}

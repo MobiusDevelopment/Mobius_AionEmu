@@ -77,7 +77,7 @@ public class AdminService
 				list.add(Integer.parseInt(pt));
 			}
 		}
-		catch (final IOException e)
+		catch (IOException e)
 		{
 			e.printStackTrace();
 		}
@@ -89,7 +89,7 @@ public class AdminService
 				{
 					br.close();
 				}
-				catch (final IOException e)
+				catch (IOException e)
 				{
 					e.printStackTrace();
 				}

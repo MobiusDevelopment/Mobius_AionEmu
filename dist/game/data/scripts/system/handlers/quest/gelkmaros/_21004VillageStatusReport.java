@@ -43,7 +43,7 @@ public class _21004VillageStatusReport extends QuestHandler
 			799268,
 			799269
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

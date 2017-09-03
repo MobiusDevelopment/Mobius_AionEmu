@@ -91,7 +91,7 @@ public class _24050Neritas_Orders extends QuestHandler
 					24053,
 					24054
 				};
-				for (final int id : ids)
+				for (int id : ids)
 				{
 					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), id, env.getDialogId()));
 				}

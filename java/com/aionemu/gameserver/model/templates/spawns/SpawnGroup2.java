@@ -86,7 +86,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final SpawnTemplate spawnTemplate = new SpawnTemplate(this, template);
 			if (spawn.isEventSpawn())
@@ -101,7 +101,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final BaseSpawnTemplate spawnTemplate = new BaseSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -114,7 +114,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final SiegeSpawnTemplate spawnTemplate = new SiegeSpawnTemplate(this, template);
 			spawnTemplate.setSiegeId(siegeId);
@@ -128,7 +128,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final LegionDominionSpawnTemplate spawnTemplate = new LegionDominionSpawnTemplate(this, template);
 			spawnTemplate.setLegionDominionId(legionDominionId);
@@ -142,7 +142,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final RiftSpawnTemplate spawnTemplate = new RiftSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -154,7 +154,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final VortexSpawnTemplate spawnTemplate = new VortexSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -167,7 +167,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final BeritraSpawnTemplate spawnTemplate = new BeritraSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -180,7 +180,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final AgentSpawnTemplate spawnTemplate = new AgentSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -193,7 +193,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final AnohaSpawnTemplate spawnTemplate = new AnohaSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -206,7 +206,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final ConquestSpawnTemplate spawnTemplate = new ConquestSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -219,7 +219,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final SvsSpawnTemplate spawnTemplate = new SvsSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -232,7 +232,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final RvrSpawnTemplate spawnTemplate = new RvrSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -245,7 +245,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final IuSpawnTemplate spawnTemplate = new IuSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -258,7 +258,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final DynamicRiftSpawnTemplate spawnTemplate = new DynamicRiftSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -271,7 +271,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final InstanceRiftSpawnTemplate spawnTemplate = new InstanceRiftSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -284,7 +284,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final NightmareCircusSpawnTemplate spawnTemplate = new NightmareCircusSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -297,7 +297,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final IdianDepthsSpawnTemplate spawnTemplate = new IdianDepthsSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -310,7 +310,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final ZorshivDredgionSpawnTemplate spawnTemplate = new ZorshivDredgionSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -323,7 +323,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final MoltenusSpawnTemplate spawnTemplate = new MoltenusSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -336,7 +336,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final LandingSpawnTemplate spawnTemplate = new LandingSpawnTemplate(this, template);
 			spawnTemplate.setId(landingId);
@@ -349,7 +349,7 @@ public class SpawnGroup2 extends AbstractLockManager
 	{
 		this.worldId = worldId;
 		initializing(spawn);
-		for (final SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
+		for (SpawnSpotTemplate template : spawn.getSpawnSpotTemplates())
 		{
 			final LandingSpecialSpawnTemplate spawnTemplate = new LandingSpecialSpawnTemplate(this, template);
 			spawnTemplate.setId(id);
@@ -440,7 +440,7 @@ public class SpawnGroup2 extends AbstractLockManager
 		super.readLock();
 		try
 		{
-			for (final SpawnTemplate template : allTemplates)
+			for (SpawnTemplate template : allTemplates)
 			{
 				if (!isTemplateUsed(instanceId, template))
 				{
@@ -514,7 +514,7 @@ public class SpawnGroup2 extends AbstractLockManager
 		super.writeLock();
 		try
 		{
-			for (final SpawnTemplate template : states.keySet())
+			for (SpawnTemplate template : states.keySet())
 			{
 				states.put(template, false);
 			}

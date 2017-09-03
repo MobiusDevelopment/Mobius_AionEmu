@@ -65,7 +65,7 @@ public class PropertyTransformerFactory
 			{
 				return tc.newInstance();
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				throw new TransformationException("Can't instantiate property transfromer", e);
 			}

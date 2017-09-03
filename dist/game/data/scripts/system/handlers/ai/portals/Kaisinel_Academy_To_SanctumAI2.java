@@ -45,7 +45,7 @@ public class Kaisinel_Academy_To_SanctumAI2 extends NpcAI2
 	}
 	
 	@Override
-	public boolean onDialogSelect(final Player player, int dialogId, int questId, int extendedRewardIndex)
+	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		if (dialogId == 10000)
 		{

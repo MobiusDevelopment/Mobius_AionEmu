@@ -49,7 +49,7 @@ public class _21458Practical_Research extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(799249).addOnQuestStart(questId); // Irkale.
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

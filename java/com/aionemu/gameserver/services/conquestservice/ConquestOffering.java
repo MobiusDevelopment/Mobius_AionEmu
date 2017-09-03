@@ -79,7 +79,7 @@ public abstract class ConquestOffering<CL extends ConquestLocation>
 	protected void initConquestBoss()
 	{
 		Npc cb = null;
-		for (final VisibleObject obj : getConquestLocation().getSpawned())
+		for (VisibleObject obj : getConquestLocation().getSpawned())
 		{
 			final int npcId = ((Npc) obj).getNpcId();
 			// Conquest/Offering Inggison.

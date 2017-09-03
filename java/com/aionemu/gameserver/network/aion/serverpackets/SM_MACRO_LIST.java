@@ -65,7 +65,7 @@ public class SM_MACRO_LIST extends AionServerPacket
 		
 		if (size != 0)
 		{
-			for (final Map.Entry<Integer, String> entry : macrosToSend.entrySet())
+			for (Map.Entry<Integer, String> entry : macrosToSend.entrySet())
 			{
 				writeC(entry.getKey());// order
 				writeS(entry.getValue());// xml

@@ -184,7 +184,7 @@ public abstract class AbstractAI implements AI2
 			if ((currentState == AIState.DIED) && (newState == AIState.FIGHT))
 			{
 				final StackTraceElement[] stack = new Throwable().getStackTrace();
-				for (final StackTraceElement elem : stack)
+				for (StackTraceElement elem : stack)
 				{
 					AI2Logger.info(this, elem.toString());
 				}

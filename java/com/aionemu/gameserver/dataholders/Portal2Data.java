@@ -69,21 +69,21 @@ public class Portal2Data
 	{
 		if (portalUse != null)
 		{
-			for (final PortalUse portal : portalUse)
+			for (PortalUse portal : portalUse)
 			{
 				portalUses.put(portal.getNpcId(), portal);
 			}
 		}
 		if (portalDialog != null)
 		{
-			for (final PortalDialog portal : portalDialog)
+			for (PortalDialog portal : portalDialog)
 			{
 				portalDialogs.put(portal.getNpcId(), portal);
 			}
 		}
 		if (portalScroll != null)
 		{
-			for (final PortalScroll portal : portalScroll)
+			for (PortalScroll portal : portalScroll)
 			{
 				portalScrolls.put(portal.getName(), portal);
 			}
@@ -100,7 +100,7 @@ public class Portal2Data
 		final PortalDialog portal = portalDialogs.get(npcId);
 		if (portal != null)
 		{
-			for (final PortalPath path : portal.getPortalPath())
+			for (PortalPath path : portal.getPortalPath())
 			{
 				if ((path.getDialog() == dialogId) && (race.equals(path.getRace()) || path.getRace().equals(Race.PC_ALL)))
 				{

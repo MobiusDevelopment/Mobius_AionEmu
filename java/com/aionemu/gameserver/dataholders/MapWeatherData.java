@@ -52,7 +52,7 @@ public class MapWeatherData
 	{
 		mapWeather = new TIntObjectHashMap<>();
 		
-		for (final WeatherTable table : weatherData)
+		for (WeatherTable table : weatherData)
 		{
 			mapWeather.put(table.getMapId(), table);
 		}

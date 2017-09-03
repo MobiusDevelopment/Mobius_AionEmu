@@ -61,11 +61,11 @@ public class InstanceService
 	
 	public static void load()
 	{
-		for (final String s : CustomConfig.INSTANCES_MOB_AGGRO.split(","))
+		for (String s : CustomConfig.INSTANCES_MOB_AGGRO.split(","))
 		{
 			instanceAggro.add(Integer.parseInt(s));
 		}
-		for (final String s : CustomConfig.INSTANCES_COOL_DOWN_FILTER.split(","))
+		for (String s : CustomConfig.INSTANCES_COOL_DOWN_FILTER.split(","))
 		{
 			instanceCoolDownFilter.add(Integer.parseInt(s));
 		}
@@ -367,7 +367,7 @@ public class InstanceService
 		player.getController().updateNearbyQuests();
 		player.getPosition().getWorldMapInstance().getInstanceHandler().onEnterInstance(player);
 		AutoGroupService.getInstance().onEnterInstance(player);
-		for (final Item item : player.getInventory().getItems())
+		for (Item item : player.getInventory().getItems())
 		{
 			if (item.getItemTemplate().getOwnershipWorld() == 0)
 			{
@@ -383,7 +383,7 @@ public class InstanceService
 	public static void onLeaveInstance(Player player)
 	{
 		player.getPosition().getWorldMapInstance().getInstanceHandler().onLeaveInstance(player);
-		for (final Item item : player.getInventory().getItems())
+		for (Item item : player.getInventory().getItems())
 		{
 			if (item.getItemTemplate().getOwnershipWorld() == player.getWorldId())
 			{

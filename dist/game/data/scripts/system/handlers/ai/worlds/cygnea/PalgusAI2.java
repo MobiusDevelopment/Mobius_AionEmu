@@ -52,7 +52,7 @@ public class PalgusAI2 extends NpcAI2
 	}
 	
 	@Override
-	public boolean onDialogSelect(final Player player, int dialogId, int questId, int extendedRewardIndex)
+	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		// Erivale Territory Village Infiltration Rift Corridor Key.
 		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000232, 1))
@@ -94,7 +94,7 @@ public class PalgusAI2 extends NpcAI2
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{
 			final List<Npc> npcs = getPosition().getWorldMapInstance().getNpcs(npcId);
-			for (final Npc npc : npcs)
+			for (Npc npc : npcs)
 			{
 				npc.getController().onDelete();
 			}

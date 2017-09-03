@@ -90,7 +90,7 @@ public class ChallengeTaskService
 			}
 			final List<ChallengeTask> availableTasks = buildTaskList(player, challengeType, ownerId, ownerLevel);
 			PacketSendUtility.sendPacket(player, new SM_CHALLENGE_LIST(2, ownerId, challengeType, availableTasks));
-			for (final ChallengeTask task : availableTasks)
+			for (ChallengeTask task : availableTasks)
 			{
 				PacketSendUtility.sendPacket(player, new SM_CHALLENGE_LIST(7, ownerId, challengeType, task));
 			}
@@ -115,7 +115,7 @@ public class ChallengeTaskService
 			final Map<Integer, ChallengeTask> tasks = DAOManager.getDAO(ChallengeTasksDAO.class).load(ownerId, challengeType);
 			taskMap.put(ownerId, tasks);
 		}
-		for (final ChallengeTask ct : taskMap.get(ownerId).values())
+		for (ChallengeTask ct : taskMap.get(ownerId).values())
 		{
 			if (ct.getTemplate().isRepeatable())
 			{
@@ -126,7 +126,7 @@ public class ChallengeTaskService
 				availableTasks.add(ct);
 			}
 		}
-		for (final ChallengeTaskTemplate template : DataManager.CHALLENGE_DATA.getTasks().values())
+		for (ChallengeTaskTemplate template : DataManager.CHALLENGE_DATA.getTasks().values())
 		{
 			if ((template.getType() == challengeType) && (template.getRace() == player.getRace()))
 			{
@@ -265,7 +265,7 @@ public class ChallengeTaskService
 			if (task.isCompleted())
 			{
 				TreeMap<Integer, List<Integer>> winnersByPoints = new TreeMap<>();
-				for (final Integer memberObjId : player.getLegion().getLegionMembers())
+				for (Integer memberObjId : player.getLegion().getLegionMembers())
 				{
 					final Player member = World.getInstance().findPlayer(memberObjId);
 					if (member != null)
@@ -297,11 +297,11 @@ public class ChallengeTaskService
 					}
 				}
 				int rewardsAdded = 0, itemId, itemCount;
-				for (final Entry<Integer, List<Integer>> e : winnersByPoints.descendingMap().entrySet())
+				for (Entry<Integer, List<Integer>> e : winnersByPoints.descendingMap().entrySet())
 				{
-					for (final int objectId : e.getValue())
+					for (int objectId : e.getValue())
 					{
-						for (final ContributionReward reward : taskTemplate.getContrib())
+						for (ContributionReward reward : taskTemplate.getContrib())
 						{
 							if (rewardsAdded <= reward.getNumber())
 							{
@@ -333,7 +333,7 @@ public class ChallengeTaskService
 		{
 			tasks = DAOManager.getDAO(ChallengeTasksDAO.class).load(legionId, ChallengeType.LEGION);
 		}
-		for (final ChallengeTask task : tasks.values())
+		for (ChallengeTask task : tasks.values())
 		{
 			if ((task.getTemplate().getMinLevel() == legionLevel) && task.isCompleted())
 			{

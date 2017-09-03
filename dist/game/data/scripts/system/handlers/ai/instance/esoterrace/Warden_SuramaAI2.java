@@ -57,7 +57,7 @@ public class Warden_SuramaAI2 extends AggressiveNpcAI2
 	
 	private void checkPercentage(int hpPercentage)
 	{
-		for (final Integer percent : percents)
+		for (Integer percent : percents)
 		{
 			if (hpPercentage <= percent)
 			{
@@ -191,7 +191,7 @@ public class Warden_SuramaAI2 extends AggressiveNpcAI2
 	
 	private void deleteNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			if (npc != null)
 			{

@@ -69,7 +69,7 @@ public class MySQL5PlayerCPDAO extends PlayerCPDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore CP time for playerObjId: " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -94,7 +94,7 @@ public class MySQL5PlayerCPDAO extends PlayerCPDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store CP for player " + objectId + " from DB: " + e.getMessage(), e);
 			return false;
@@ -119,7 +119,7 @@ public class MySQL5PlayerCPDAO extends PlayerCPDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not delete CP for player " + objectId + " from DB: " + e.getMessage(), e);
 			return false;
@@ -147,7 +147,7 @@ public class MySQL5PlayerCPDAO extends PlayerCPDAO
 			rs.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return 0;
 		}
@@ -159,7 +159,7 @@ public class MySQL5PlayerCPDAO extends PlayerCPDAO
 	}
 	
 	@Override
-	public int getCPSlotObjId(final int obj)
+	public int getCPSlotObjId(int obj)
 	{
 		Connection con = null;
 		int cpSlot = 0;
@@ -174,7 +174,7 @@ public class MySQL5PlayerCPDAO extends PlayerCPDAO
 			rs.close();
 			s.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return 0;
 		}

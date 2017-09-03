@@ -53,7 +53,7 @@ public class _28952Drakenspire_Domination extends QuestHandler
 		qe.registerQuestNpc(209743).addOnQuestStart(questId);
 		qe.registerQuestNpc(209743).addOnTalkEvent(questId);
 		qe.registerQuestNpc(804738).addOnTalkEvent(questId);
-		for (final int mob_id : boss)
+		for (int mob_id : boss)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

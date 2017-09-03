@@ -73,7 +73,7 @@ public class GodStone extends ItemStone
 		}
 	}
 	
-	public void onEquip(final Player player)
+	public void onEquip(Player player)
 	{
 		if ((godstoneInfo == null) || (godItem == null))
 		{

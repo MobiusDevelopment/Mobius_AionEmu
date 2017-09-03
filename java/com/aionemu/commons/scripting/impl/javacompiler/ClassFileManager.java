@@ -132,7 +132,7 @@ public class ClassFileManager extends ForwardingJavaFileManager<JavaFileManager>
 	 */
 	public void addLibraries(Iterable<File> files) throws IOException
 	{
-		for (final File f : files)
+		for (File f : files)
 		{
 			addLibrary(f);
 		}
@@ -164,7 +164,7 @@ public class ClassFileManager extends ForwardingJavaFileManager<JavaFileManager>
 		if (StandardLocation.CLASS_PATH.equals(location) && kinds.contains(Kind.CLASS))
 		{
 			final List<JavaFileObject> temp = new ArrayList<>();
-			for (final JavaFileObject object : objects)
+			for (JavaFileObject object : objects)
 			{
 				temp.add(object);
 			}

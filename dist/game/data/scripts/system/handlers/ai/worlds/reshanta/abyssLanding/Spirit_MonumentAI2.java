@@ -64,7 +64,7 @@ public class Spirit_MonumentAI2 extends NpcAI2
 		AI2Actions.deleteOwner(this);
 	}
 	
-	private void updateGuardianLanding(final int id)
+	private void updateGuardianLanding(int id)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{

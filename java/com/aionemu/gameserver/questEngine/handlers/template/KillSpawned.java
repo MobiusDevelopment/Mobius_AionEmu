@@ -61,7 +61,7 @@ public class KillSpawned extends QuestHandler
 		}
 		this.spawnedMonsters = spawnedMonsters;
 		spawnerObjects = new TIntArrayList();
-		for (final SpawnedMonster m : spawnedMonsters.values())
+		for (SpawnedMonster m : spawnedMonsters.values())
 		{
 			spawnerObjects.add(m.getSpawnerObject());
 		}
@@ -77,7 +77,7 @@ public class KillSpawned extends QuestHandler
 			qe.registerQuestNpc(startNpc).addOnQuestStart(getQuestId());
 			qe.registerQuestNpc(startNpc).addOnTalkEvent(getQuestId());
 		}
-		for (final List<Integer> spawnedMonsterIds : spawnedMonsters.keySet())
+		for (List<Integer> spawnedMonsterIds : spawnedMonsters.keySet())
 		{
 			iterator = spawnedMonsterIds.iterator();
 			while (iterator.hasNext())
@@ -125,7 +125,7 @@ public class KillSpawned extends QuestHandler
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					int monsterId = 0;
-					for (final SpawnedMonster m : spawnedMonsters.values())
+					for (SpawnedMonster m : spawnedMonsters.values())
 					{
 						if (m.getSpawnerObject() == targetId)
 						{
@@ -140,7 +140,7 @@ public class KillSpawned extends QuestHandler
 			}
 			else
 			{
-				for (final Monster mi : spawnedMonsters.values())
+				for (Monster mi : spawnedMonsters.values())
 				{
 					if (mi.getEndVar() > qs.getQuestVarById(mi.getVar()))
 					{
@@ -177,14 +177,14 @@ public class KillSpawned extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			for (final SpawnedMonster m : spawnedMonsters.values())
+			for (SpawnedMonster m : spawnedMonsters.values())
 			{
 				if (m.getNpcIds().contains(env.getTargetId()))
 				{
 					if (qs.getQuestVarById(m.getVar()) < m.getEndVar())
 					{
 						qs.setQuestVarById(m.getVar(), qs.getQuestVarById(m.getVar()) + 1);
-						for (final Monster mi : spawnedMonsters.values())
+						for (Monster mi : spawnedMonsters.values())
 						{
 							if (qs.getQuestVarById(mi.getVar()) < mi.getEndVar())
 							{

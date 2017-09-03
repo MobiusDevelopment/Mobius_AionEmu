@@ -67,7 +67,7 @@ public class PlayerTransferService
 		dao = DAOManager.getDAO(PlayerDAO.class);
 		if (!PlayerTransferConfig.REMOVE_SKILL_LIST.equals("*"))
 		{
-			for (final String skillId : PlayerTransferConfig.REMOVE_SKILL_LIST.split(","))
+			for (String skillId : PlayerTransferConfig.REMOVE_SKILL_LIST.split(","))
 			{
 				rsList.add(Integer.parseInt(skillId));
 			}
@@ -103,7 +103,7 @@ public class PlayerTransferService
 	public void startTransfer(int accountId, int targetAccountId, int playerId, byte targetServerId, int taskId)
 	{
 		boolean exist = false;
-		for (final int id : DAOManager.getDAO(PlayerDAO.class).getPlayerOidsOnAccount(accountId))
+		for (int id : DAOManager.getDAO(PlayerDAO.class).getPlayerOidsOnAccount(accountId))
 		{
 			if (id == playerId)
 			{

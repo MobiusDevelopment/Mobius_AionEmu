@@ -127,7 +127,7 @@ public abstract class Battleground
 	
 	public abstract void startMatch();
 	
-	public abstract void onDie(final Player player, Creature lastAttacker);
+	public abstract void onDie(Player player, Creature lastAttacker);
 	
 	public abstract void onLeave(Player player, boolean isLogout, boolean isAfk);
 	
@@ -177,7 +177,7 @@ public abstract class Battleground
 	
 	public boolean isInBg(Player player)
 	{
-		for (final BattlegroundMap bgMap : maps)
+		for (BattlegroundMap bgMap : maps)
 		{
 			if (bgMap.getMapId() == player.getWorldId())
 			{
@@ -326,7 +326,7 @@ public abstract class Battleground
 			return false;
 		}
 		int groupSize = 100;
-		for (final List<Player> team : teams)
+		for (List<Player> team : teams)
 		{
 			if (team.size() < groupSize)
 			{
@@ -345,7 +345,7 @@ public abstract class Battleground
 			{
 				players.remove(players.size());
 			}
-			for (final Player pl : players)
+			for (Player pl : players)
 			{
 				pl.setBattleground(this);
 				removePlayerFromTeam(pl);
@@ -369,7 +369,7 @@ public abstract class Battleground
 			return false;
 		}
 		int allianceSize = 100;
-		for (final List<Player> team : teams)
+		for (List<Player> team : teams)
 		{
 			if (team.size() < allianceSize)
 			{
@@ -388,7 +388,7 @@ public abstract class Battleground
 			{
 				players.remove(players.size());
 			}
-			for (final Player pl : players)
+			for (Player pl : players)
 			{
 				pl.setBattleground(this);
 				removePlayerFromTeam(pl);
@@ -408,9 +408,9 @@ public abstract class Battleground
 	protected boolean createPlayers(List<List<Player>> players)
 	{
 		final List<Integer> playerList = new ArrayList<>();
-		for (final List<Player> plList : players)
+		for (List<Player> plList : players)
 		{
-			for (final Player pl : plList)
+			for (Player pl : plList)
 			{
 				playerList.add(pl.getObjectId());
 			}
@@ -453,7 +453,7 @@ public abstract class Battleground
 		player.getEffectController().broadCastEffects();
 	}
 	
-	protected void freezePlayer(final Player player, int duration)
+	protected void freezePlayer(Player player, int duration)
 	{
 		player.getEffectController().setAbnormal(AbnormalState.PARALYZE.getId());
 		player.getEffectController().updatePlayerEffectIcons();
@@ -498,11 +498,11 @@ public abstract class Battleground
 		if (player.getSkillCoolDowns() != null)
 		{
 			final long currentTime = System.currentTimeMillis();
-			for (final Map.Entry<Integer, Long> en : player.getSkillCoolDowns().entrySet())
+			for (Map.Entry<Integer, Long> en : player.getSkillCoolDowns().entrySet())
 			{
 				delayIds.add(en.getKey());
 			}
-			for (final Integer delayId : delayIds)
+			for (Integer delayId : delayIds)
 			{
 				player.setSkillCoolDown(delayId, currentTime);
 			}
@@ -530,7 +530,7 @@ public abstract class Battleground
 		TeleportService2.teleportTo(player, previousPos.getMapId(), previousPos.getX(), previousPos.getY(), previousPos.getZ() + 1);
 	}
 	
-	protected void scheduleAnnouncement(final Player player, final String sender, final String msg, int delay)
+	protected void scheduleAnnouncement(Player player, String sender, String msg, int delay)
 	{
 		if (delay > 0)
 		{
@@ -567,20 +567,20 @@ public abstract class Battleground
 	
 	protected void specAnnounce(String msg)
 	{
-		for (final Player player : getSpectators())
+		for (Player player : getSpectators())
 		{
 			PacketSendUtility.sendSys3Message(player, "BG", msg);
 		}
 	}
 	
-	protected void specAnnounce(final String msg, int delay)
+	protected void specAnnounce(String msg, int delay)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
 			@Override
 			public void run()
 			{
-				for (final Player player : getSpectators())
+				for (Player player : getSpectators())
 				{
 					PacketSendUtility.sendSys3Message(player, "BG", msg);
 				}
@@ -596,7 +596,7 @@ public abstract class Battleground
 		}
 	}
 	
-	protected void scheduleGroupDisband(final PlayerGroup group, int delay)
+	protected void scheduleGroupDisband(PlayerGroup group, int delay)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -611,7 +611,7 @@ public abstract class Battleground
 		}, delay);
 	}
 	
-	protected void scheduleAllianceDisband(final PlayerAlliance alliance, int delay)
+	protected void scheduleAllianceDisband(PlayerAlliance alliance, int delay)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -626,12 +626,12 @@ public abstract class Battleground
 		}, delay);
 	}
 	
-	protected void preparePlayer(final Player pl, int time)
+	protected void preparePlayer(Player pl, int time)
 	{
 		preparePlayer(pl, time, true);
 	}
 	
-	protected void preparePlayer(final Player pl, int time, boolean announce)
+	protected void preparePlayer(Player pl, int time, boolean announce)
 	{
 		DuelService.getInstance().loseDuel(pl);
 		pl.setKillStreak(0);
@@ -692,11 +692,11 @@ public abstract class Battleground
 		final List<Integer> delay = new ArrayList<>();
 		if (player.getSkillCoolDowns() != null)
 		{
-			for (final Map.Entry<Integer, Long> en : player.getSkillCoolDowns().entrySet())
+			for (Map.Entry<Integer, Long> en : player.getSkillCoolDowns().entrySet())
 			{
 				delay.add(en.getKey());
 			}
-			for (final Integer delayId : delay)
+			for (Integer delayId : delay)
 			{
 				player.setSkillCoolDown(delayId, 0);
 			}
@@ -705,7 +705,7 @@ public abstract class Battleground
 		}
 	}
 	
-	protected void resetPlayerKnownlist(final Player player, int delay)
+	protected void resetPlayerKnownlist(Player player, int delay)
 	{
 		if (delay > 0)
 		{
@@ -771,12 +771,12 @@ public abstract class Battleground
 	{
 		int avgWinnerRating = 0;
 		int avgLoserRating = 0;
-		for (final Player pl : winner)
+		for (Player pl : winner)
 		{
 			getLadderDAO().addWin(pl);
 			avgWinnerRating += getLadderDAO().getRating(pl);
 		}
-		for (final Player pl : winner)
+		for (Player pl : winner)
 		{
 			getLadderDAO().addLoss(pl);
 			avgWinnerRating += getLadderDAO().getRating(pl);
@@ -790,11 +790,11 @@ public abstract class Battleground
 			avgLoserRating = avgLoserRating / loser.size();
 		}
 		final int ratingChange = calcRatingChange(avgWinnerRating, avgLoserRating);
-		for (final Player pl : winner)
+		for (Player pl : winner)
 		{
 			getLadderDAO().addRating(pl, +ratingChange);
 		}
-		for (final Player pl : loser)
+		for (Player pl : loser)
 		{
 			getLadderDAO().addRating(pl, -ratingChange);
 		}
@@ -849,9 +849,9 @@ public abstract class Battleground
 	{
 		if (getGroups().size() > 0)
 		{
-			for (final PlayerGroup group : getGroups())
+			for (PlayerGroup group : getGroups())
 			{
-				for (final Player pl : group.getMembers())
+				for (Player pl : group.getMembers())
 				{
 					if ((pl == null) || pl.getLifeStats().isAlreadyDead() || (map.getMapId() != pl.getWorldId()) || (pl.getBattleground() == null))
 					{
@@ -867,9 +867,9 @@ public abstract class Battleground
 		}
 		if (getAlliances().size() > 0)
 		{
-			for (final PlayerAlliance alliance : getAlliances())
+			for (PlayerAlliance alliance : getAlliances())
 			{
-				for (final Player pl : alliance.getMembers())
+				for (Player pl : alliance.getMembers())
 				{
 					if ((pl == null) || pl.getLifeStats().isAlreadyDead() || (map.getMapId() != pl.getWorldId()) || (pl.getBattleground() == null))
 					{
@@ -885,7 +885,7 @@ public abstract class Battleground
 		}
 		if (getPlayers().size() > 0)
 		{
-			for (final Player pl : getPlayers())
+			for (Player pl : getPlayers())
 			{
 				if ((pl == null) || pl.getLifeStats().isAlreadyDead() || (map.getMapId() != pl.getWorldId()) || (pl.getBattleground() == null))
 				{
@@ -1004,7 +1004,7 @@ public abstract class Battleground
 		}
 		if (getPlayers().size() > 0)
 		{
-			for (final Player pl : getPlayers())
+			for (Player pl : getPlayers())
 			{
 				if (!pl.getLifeStats().isAlreadyDead())
 				{
@@ -1014,9 +1014,9 @@ public abstract class Battleground
 		}
 		if (getGroups().size() > 0)
 		{
-			for (final PlayerGroup group : getGroups())
+			for (PlayerGroup group : getGroups())
 			{
-				for (final Player pl : group.getMembers())
+				for (Player pl : group.getMembers())
 				{
 					if (!pl.getLifeStats().isAlreadyDead())
 					{
@@ -1027,9 +1027,9 @@ public abstract class Battleground
 		}
 		if (getAlliances().size() > 0)
 		{
-			for (final PlayerAlliance alliance : getAlliances())
+			for (PlayerAlliance alliance : getAlliances())
 			{
-				for (final Player pl : alliance.getMembers())
+				for (Player pl : alliance.getMembers())
 				{
 					if (pl == null)
 					{
@@ -1049,7 +1049,7 @@ public abstract class Battleground
 		LadderService.getInstance().onBgEnd(this);
 		if (getPlayers().size() > 0)
 		{
-			for (final Player pl : getPlayers())
+			for (Player pl : getPlayers())
 			{
 				freezePlayer(pl, 7500);
 			}
@@ -1058,7 +1058,7 @@ public abstract class Battleground
 				@Override
 				public void run()
 				{
-					for (final Player pl : getPlayers())
+					for (Player pl : getPlayers())
 					{
 						returnToPreviousLocation(pl);
 					}
@@ -1067,9 +1067,9 @@ public abstract class Battleground
 		}
 		if (getGroups().size() > 0)
 		{
-			for (final PlayerGroup group : getGroups())
+			for (PlayerGroup group : getGroups())
 			{
-				for (final Player pl : group.getMembers())
+				for (Player pl : group.getMembers())
 				{
 					freezePlayer(pl, 7500);
 				}
@@ -1079,9 +1079,9 @@ public abstract class Battleground
 				@Override
 				public void run()
 				{
-					for (final PlayerGroup group : getGroups())
+					for (PlayerGroup group : getGroups())
 					{
-						for (final Player pl : group.getMembers())
+						for (Player pl : group.getMembers())
 						{
 							returnToPreviousLocation(pl);
 						}
@@ -1095,9 +1095,9 @@ public abstract class Battleground
 		}
 		if (getAlliances().size() > 0)
 		{
-			for (final PlayerAlliance alliance : getAlliances())
+			for (PlayerAlliance alliance : getAlliances())
 			{
-				for (final Player pl : alliance.getMembers())
+				for (Player pl : alliance.getMembers())
 				{
 					if (pl == null)
 					{
@@ -1111,9 +1111,9 @@ public abstract class Battleground
 				@Override
 				public void run()
 				{
-					for (final PlayerAlliance alliance : getAlliances())
+					for (PlayerAlliance alliance : getAlliances())
 					{
-						for (final Player pl : alliance.getMembers())
+						for (Player pl : alliance.getMembers())
 						{
 							if (pl == null)
 							{
@@ -1137,7 +1137,7 @@ public abstract class Battleground
 				final List<Player> spectators = getSpectators();
 				synchronized (spectators)
 				{
-					for (final Iterator<Player> it = spectators.iterator(); it.hasNext();)
+					for (Iterator<Player> it = spectators.iterator(); it.hasNext();)
 					{
 						final Player pl = it.next();
 						onSpectatorLeave(pl, true);
@@ -1151,7 +1151,7 @@ public abstract class Battleground
 			@Override
 			public void run()
 			{
-				for (final Player pl : getInstance().getPlayersInside())
+				for (Player pl : getInstance().getPlayersInside())
 				{
 					returnToPreviousLocation(pl);
 				}
@@ -1179,7 +1179,7 @@ public abstract class Battleground
 		scheduleAnnouncement(spectator, "You have join " + getName() + " <Spectator> battleground!", 0);
 	}
 	
-	public void onSpectatorLeave(final Player spectator, boolean isIterating)
+	public void onSpectatorLeave(Player spectator, boolean isIterating)
 	{
 		endTimer(spectator);
 		returnToPreviousLocation(spectator);
@@ -1231,7 +1231,7 @@ public abstract class Battleground
 			final int bgIndex = getPlayers().get(getPlayers().size() - 1).getBgIndex() + 1;
 			player.setBgIndex(bgIndex);
 			pos = getSpawnPositions().get(Rnd.get(getSpawnPositions().size()));
-			for (final Player pl : getPlayers())
+			for (Player pl : getPlayers())
 			{
 				scheduleAnnouncement(pl, msg, 0);
 			}
@@ -1242,9 +1242,9 @@ public abstract class Battleground
 			final PlayerAlliance alliance = (PlayerAlliance) obj;
 			PlayerAllianceService.onPlayerLogin(player);
 			pos = getSpawnPositions().get(alliance.getBgIndex());
-			for (final PlayerAlliance ally : getAlliances())
+			for (PlayerAlliance ally : getAlliances())
 			{
-				for (final Player pl : ally.getMembers())
+				for (Player pl : ally.getMembers())
 				{
 					if (pl == null)
 					{
@@ -1260,9 +1260,9 @@ public abstract class Battleground
 			final PlayerGroup group = (PlayerGroup) obj;
 			PlayerGroupService.onPlayerLogin(player);
 			pos = getSpawnPositions().get(group.getBgIndex());
-			for (final PlayerGroup grp : getGroups())
+			for (PlayerGroup grp : getGroups())
 			{
-				for (final Player pl : grp.getMembers())
+				for (Player pl : grp.getMembers())
 				{
 					scheduleAnnouncement(pl, msg, 0);
 				}
@@ -1307,9 +1307,9 @@ public abstract class Battleground
 		{
 			return;
 		}
-		for (final Player pl : getPlayers())
+		for (Player pl : getPlayers())
 		{
-			for (final Integer doorId : getMap().getStaticDoors())
+			for (Integer doorId : getMap().getStaticDoors())
 			{
 				StaticDoorService.getInstance().openStaticDoor(pl, doorId);
 			}

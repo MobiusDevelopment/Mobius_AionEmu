@@ -98,7 +98,7 @@ public class ResourceBundleControl extends ResourceBundle.Control
 					throw new ClassCastException(bundleClass.getName() + " cannot be cast to ResourceBundle");
 				}
 			}
-			catch (final ClassNotFoundException ignored)
+			catch (ClassNotFoundException ignored)
 			{
 			}
 		}
@@ -145,7 +145,7 @@ public class ResourceBundleControl extends ResourceBundle.Control
 					isr = new InputStreamReader(stream, encoding);
 				}
 			}
-			catch (final PrivilegedActionException e)
+			catch (PrivilegedActionException e)
 			{
 				throw (IOException) e.getException();
 			}

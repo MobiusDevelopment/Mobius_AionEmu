@@ -62,7 +62,7 @@ public class Defeat_MonumentAI2 extends NpcAI2
 		AI2Actions.deleteOwner(this);
 	}
 	
-	private void updateDefeatLanding1(final int id)
+	private void updateDefeatLanding1(int id)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -84,7 +84,7 @@ public class Defeat_MonumentAI2 extends NpcAI2
 		});
 	}
 	
-	private void updateDefeatLanding2(final int id)
+	private void updateDefeatLanding2(int id)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{

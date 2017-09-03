@@ -49,7 +49,7 @@ public class _20507Its_Worse_Than_We_Thought extends QuestHandler
 			804740,
 			804741
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

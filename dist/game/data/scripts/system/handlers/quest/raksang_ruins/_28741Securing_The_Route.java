@@ -53,7 +53,7 @@ public class _28741Securing_The_Route extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(804732).addOnTalkEvent(questId);
-		for (final int mob : embercrackStepsDrillCorps)
+		for (int mob : embercrackStepsDrillCorps)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

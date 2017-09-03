@@ -212,7 +212,7 @@ public class cmd_dye extends PlayerCommand
 			rgb = Integer.parseInt(color, 16);
 			bgra = 0xFF | ((rgb & 0xFF) << 24) | ((rgb & 0xFF00) << 8) | ((rgb & 0xFF0000) >>> 8);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			if (!color.equalsIgnoreCase("no"))
 			{
@@ -226,7 +226,7 @@ public class cmd_dye extends PlayerCommand
 			player.getInventory().decreaseKinah(price);
 		}
 		
-		for (final Item targetItem : target.getEquipment().getEquippedItemsWithoutStigma())
+		for (Item targetItem : target.getEquipment().getEquippedItemsWithoutStigma())
 		{
 			if (color.equals("no"))
 			{

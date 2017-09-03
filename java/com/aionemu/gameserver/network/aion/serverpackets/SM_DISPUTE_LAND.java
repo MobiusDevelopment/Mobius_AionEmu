@@ -40,7 +40,7 @@ public class SM_DISPUTE_LAND extends AionServerPacket
 	protected void writeImpl(AionConnection con)
 	{
 		writeH(worlds.size());
-		for (final int world : worlds)
+		for (int world : worlds)
 		{
 			writeD(active ? 0x02 : 0x01);
 			writeD(world);

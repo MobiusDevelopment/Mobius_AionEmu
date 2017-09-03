@@ -51,7 +51,7 @@ public class WeaponMasteryEffect extends BuffEffect
 		
 		final List<IStatFunction> modifiers = getModifiers(effect);
 		final List<IStatFunction> masteryModifiers = new ArrayList<>(modifiers.size());
-		for (final IStatFunction modifier : modifiers)
+		for (IStatFunction modifier : modifiers)
 		{
 			if (weaponType.getRequiredSlots() == 2)
 			{

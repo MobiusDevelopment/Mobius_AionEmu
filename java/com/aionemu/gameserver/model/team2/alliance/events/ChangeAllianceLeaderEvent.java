@@ -48,7 +48,7 @@ public class ChangeAllianceLeaderEvent extends ChangeLeaderEvent<PlayerAlliance>
 		if (eventPlayer == null)
 		{
 			final Collection<Integer> viceCaptainIds = team.getViceCaptainIds();
-			for (final Integer viceCaptainId : viceCaptainIds)
+			for (Integer viceCaptainId : viceCaptainIds)
 			{
 				final PlayerAllianceMember viceCaptain = team.getMember(viceCaptainId);
 				if (viceCaptain.isOnline())
@@ -75,7 +75,7 @@ public class ChangeAllianceLeaderEvent extends ChangeLeaderEvent<PlayerAlliance>
 	}
 	
 	@Override
-	protected void changeLeaderTo(final Player player)
+	protected void changeLeaderTo(Player player)
 	{
 		team.changeLeader(team.getMember(player.getObjectId()));
 		team.applyOnMembers(new Predicate<Player>()

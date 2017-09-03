@@ -57,7 +57,7 @@ public class AddEmotion extends AdminCommand
 				expireMinutes = Long.parseLong(params[1]);
 			}
 		}
-		catch (final NumberFormatException ex)
+		catch (NumberFormatException ex)
 		{
 			if (params[0].equalsIgnoreCase("html"))
 			{

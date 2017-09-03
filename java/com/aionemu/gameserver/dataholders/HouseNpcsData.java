@@ -58,7 +58,7 @@ public class HouseNpcsData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final HouseSpawns houseSpawns : getHouseSpawns())
+		for (HouseSpawns houseSpawns : getHouseSpawns())
 		{
 			houseSpawnsByAddressId.put(houseSpawns.getAddress(), houseSpawns.getSpawns());
 		}

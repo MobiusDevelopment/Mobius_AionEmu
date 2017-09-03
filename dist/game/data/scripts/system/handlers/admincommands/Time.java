@@ -64,7 +64,7 @@ public class Time extends AdminCommand
 			{
 				hour = Integer.parseInt(params[0]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				onFail(admin, null);
 				return;

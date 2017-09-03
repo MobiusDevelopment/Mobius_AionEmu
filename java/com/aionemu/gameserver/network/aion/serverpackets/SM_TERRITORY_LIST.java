@@ -36,7 +36,7 @@ public class SM_TERRITORY_LIST extends AionServerPacket
 	protected void writeImpl(AionConnection con)
 	{
 		writeH(territoryList.size());
-		for (final LegionTerritory territory : territoryList)
+		for (LegionTerritory territory : territoryList)
 		{
 			writeD(territory.getId());
 			writeD(territory.getLegionId());

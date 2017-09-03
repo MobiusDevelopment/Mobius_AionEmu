@@ -42,7 +42,7 @@ public class _21027FearlessKantele extends QuestHandler
 			799254,
 			799255
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

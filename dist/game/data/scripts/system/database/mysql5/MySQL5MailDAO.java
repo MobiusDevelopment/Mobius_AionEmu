@@ -87,7 +87,7 @@ public class MySQL5MailDAO extends MailDAO
 					Item attachedItem = null;
 					if (attachedItemId != 0)
 					{
-						for (final Item item : mailboxItems)
+						for (Item item : mailboxItems)
 						{
 							if (item.getObjectId() == attachedItemId)
 							{
@@ -133,7 +133,7 @@ public class MySQL5MailDAO extends MailDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not read mail for player: " + playerId + " from DB: " + e.getMessage(), e);
 		}
@@ -144,7 +144,7 @@ public class MySQL5MailDAO extends MailDAO
 		return false;
 	}
 	
-	private List<Item> loadMailboxItems(final int playerId)
+	private List<Item> loadMailboxItems(int playerId)
 	{
 		final List<Item> mailboxItems = new ArrayList<>();
 		
@@ -209,7 +209,7 @@ public class MySQL5MailDAO extends MailDAO
 			return;
 		}
 		final Collection<Letter> letters = mailbox.getLetters();
-		for (final Letter letter : letters)
+		for (Letter letter : letters)
 		{
 			storeLetter(letter.getTimeStamp(), letter);
 		}
@@ -237,7 +237,7 @@ public class MySQL5MailDAO extends MailDAO
 		return result;
 	}
 	
-	private boolean saveLetter(final Timestamp time, final Letter letter)
+	private boolean saveLetter(Timestamp time, Letter letter)
 	{
 		int attachedItemId = 0;
 		if (letter.getAttachedItem() != null)
@@ -268,7 +268,7 @@ public class MySQL5MailDAO extends MailDAO
 		});
 	}
 	
-	private boolean updateLetter(final Timestamp time, final Letter letter)
+	private boolean updateLetter(Timestamp time, Letter letter)
 	{
 		int attachedItemId = 0;
 		if (letter.getAttachedItem() != null)
@@ -296,7 +296,7 @@ public class MySQL5MailDAO extends MailDAO
 	}
 	
 	@Override
-	public boolean deleteLetter(final int letterId)
+	public boolean deleteLetter(int letterId)
 	{
 		return DB.insertUpdate("DELETE FROM mail WHERE mail_unique_id=?", new IUStH()
 		{
@@ -311,7 +311,7 @@ public class MySQL5MailDAO extends MailDAO
 	}
 	
 	@Override
-	public void updateOfflineMailCounter(final PlayerCommonData recipientCommonData)
+	public void updateOfflineMailCounter(PlayerCommonData recipientCommonData)
 	{
 		DB.insertUpdate("UPDATE players SET mailbox_letters=? WHERE name=?", new IUStH()
 		{
@@ -345,7 +345,7 @@ public class MySQL5MailDAO extends MailDAO
 			}
 			return ids;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't get list of id's from mail table", e);
 		}

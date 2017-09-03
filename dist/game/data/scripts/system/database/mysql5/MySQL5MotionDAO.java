@@ -71,7 +71,7 @@ public class MySQL5MotionDAO extends MotionDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore motions for playerObjId: " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -97,7 +97,7 @@ public class MySQL5MotionDAO extends MotionDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store motion for player " + objectId + " from DB: " + e.getMessage(), e);
 			return false;
@@ -122,7 +122,7 @@ public class MySQL5MotionDAO extends MotionDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not delete motion for player " + objectId + " from DB: " + e.getMessage(), e);
 			return false;
@@ -148,7 +148,7 @@ public class MySQL5MotionDAO extends MotionDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store motion for player " + objectId + " from DB: " + e.getMessage(), e);
 			return false;

@@ -72,7 +72,7 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053219, 1)); // [Event] Sauro Commander's Accessory Box.
 				break;
 			case 230846: // Sauro Base Grave Robber.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -84,7 +84,7 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 			case 230847: // Mystery Box Key.
 				// Be careful in your selection. The key cannot be changed once it is chosen.
 				sendMsgByRace(1401946, Race.PC_ALL, 0);
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -93,7 +93,7 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 230852: // Commander Ranodim.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -127,7 +127,7 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 			case 230850: // Research Teselik.
 			case 230851: // Chief Gunner Kurmata.
 			case 230853: // Chief Of Staff Moriata.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -147,7 +147,7 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 				break;
 			case 230857: // Guard Captain Ahuradim.
 			case 230858: // Brigade General Sheba.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -354,7 +354,7 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 		storage.decreaseByItemId(185000179, storage.getItemCountByItemId(185000179)); // Danuar Stone Room Key.
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -366,7 +366,7 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -399,7 +399,7 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

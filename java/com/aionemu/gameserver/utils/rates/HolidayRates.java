@@ -46,7 +46,7 @@ public class HolidayRates
 					break;
 			}
 			
-			for (final String level : RateConfig.HOLIDAY_RATE_DAYS.split(","))
+			for (String level : RateConfig.HOLIDAY_RATE_DAYS.split(","))
 			{
 				if (calendar.get(Calendar.DAY_OF_WEEK) == Integer.parseInt(level))
 				{

@@ -155,7 +155,7 @@ public class ScriptCompilerImpl implements ScriptCompiler
 	{
 		final List<JavaFileObject> list = new ArrayList<>();
 		
-		for (final File f : compilationUnits)
+		for (File f : compilationUnits)
 		{
 			list.add(new JavaSourceFromFile(f, JavaFileObject.Kind.SOURCE));
 		}
@@ -182,7 +182,7 @@ public class ScriptCompilerImpl implements ScriptCompiler
 			{
 				manager.addLibraries(libraries);
 			}
-			catch (final IOException e)
+			catch (IOException e)
 			{
 				log.error("Can't set libraries for compiler.", e);
 			}
@@ -212,14 +212,14 @@ public class ScriptCompilerImpl implements ScriptCompiler
 		final Class<?>[] classes = new Class<?>[classNames.size()];
 		
 		int i = 0;
-		for (final String className : classNames)
+		for (String className : classNames)
 		{
 			try
 			{
 				final Class<?> clazz = cl.loadClass(className);
 				classes[i] = clazz;
 			}
-			catch (final ClassNotFoundException e)
+			catch (ClassNotFoundException e)
 			{
 				throw new RuntimeException(e);
 			}

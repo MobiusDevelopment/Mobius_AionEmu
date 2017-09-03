@@ -48,7 +48,7 @@ public class Kinah extends AdminCommand
 			{
 				kinahCount = Long.parseLong(params[0]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "Kinah value must be an integer.");
 				return;
@@ -68,7 +68,7 @@ public class Kinah extends AdminCommand
 			{
 				kinahCount = Long.parseLong(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "Kinah value must be an integer.");
 				return;

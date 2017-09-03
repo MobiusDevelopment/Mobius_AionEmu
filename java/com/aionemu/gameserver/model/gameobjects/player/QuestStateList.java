@@ -85,7 +85,7 @@ public class QuestStateList
 	public FastList<QuestState> getAllFinishedQuests()
 	{
 		final FastList<QuestState> completeQuestList = FastList.newInstance();
-		for (final QuestState qs : _quests.values())
+		for (QuestState qs : _quests.values())
 		{
 			if (qs.getStatus() == QuestStatus.COMPLETE)
 			{
@@ -112,7 +112,7 @@ public class QuestStateList
 	{
 		final Collection<QuestState> l = new ArrayList<>();
 		
-		for (final QuestState qs : getAllQuestState())
+		for (QuestState qs : getAllQuestState())
 		{
 			final QuestCategory qc = _questData.getQuestById(qs.getQuestId()).getCategory();
 			final QuestStatus s = qs.getStatus();

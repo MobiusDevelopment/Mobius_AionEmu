@@ -119,7 +119,7 @@ public class DredgionReward extends InstanceReward<DredgionPlayerReward>
 	
 	public DredgionRooms getDredgionRoomById(int roomId)
 	{
-		for (final DredgionRooms dredgionRoom : dredgionRooms)
+		for (DredgionRooms dredgionRoom : dredgionRooms)
 		{
 			if (dredgionRoom.getRoomId() == roomId)
 			{

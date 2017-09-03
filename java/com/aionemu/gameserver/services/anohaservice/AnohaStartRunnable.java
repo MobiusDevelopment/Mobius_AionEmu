@@ -61,7 +61,7 @@ public class AnohaStartRunnable implements Runnable
 			public void run()
 			{
 				final Map<Integer, AnohaLocation> locations = AnohaService.getInstance().getAnohaLocations();
-				for (final AnohaLocation loc : locations.values())
+				for (AnohaLocation loc : locations.values())
 				{
 					if (loc.getId() == id)
 					{

@@ -40,9 +40,9 @@ public class LimitedItemTradeService
 	
 	public void start()
 	{
-		for (final int npcId : tradeListData.getTradeListTemplate().keys())
+		for (int npcId : tradeListData.getTradeListTemplate().keys())
 		{
-			for (final TradeTab list : tradeListData.getTradeListTemplate(npcId).getTradeTablist())
+			for (TradeTab list : tradeListData.getTradeListTemplate(npcId).getTradeTablist())
 			{
 				final GoodsList goodsList = goodsListData.getGoodsListById(list.getId());
 				if (goodsList == null)
@@ -64,9 +64,9 @@ public class LimitedItemTradeService
 				}
 			}
 		}
-		for (final LimitedTradeNpc limitedTradeNpc : limitedTradeNpcs.values())
+		for (LimitedTradeNpc limitedTradeNpc : limitedTradeNpcs.values())
 		{
-			for (final LimitedItem limitedItem : limitedTradeNpc.getLimitedItems())
+			for (LimitedItem limitedItem : limitedTradeNpc.getLimitedItems())
 			{
 				CronService.getInstance().schedule(new Runnable()
 				{
@@ -85,7 +85,7 @@ public class LimitedItemTradeService
 	{
 		if (limitedTradeNpcs.containsKey(npcId))
 		{
-			for (final LimitedItem limitedItem : limitedTradeNpcs.get(npcId).getLimitedItems())
+			for (LimitedItem limitedItem : limitedTradeNpcs.get(npcId).getLimitedItems())
 			{
 				if (limitedItem.getItemId() == itemId)
 				{

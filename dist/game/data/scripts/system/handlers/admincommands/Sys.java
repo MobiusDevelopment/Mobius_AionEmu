@@ -52,25 +52,25 @@ public class Sys extends AdminCommand
 			PacketSendUtility.sendMessage(player, "System Informations at: " + AEInfos.getRealTime().toString());
 			
 			// OS Infos
-			for (final String line : AEInfos.getOSInfo())
+			for (String line : AEInfos.getOSInfo())
 			{
 				PacketSendUtility.sendMessage(player, line);
 			}
 			
 			// CPU Infos
-			for (final String line : AEInfos.getCPUInfo())
+			for (String line : AEInfos.getCPUInfo())
 			{
 				PacketSendUtility.sendMessage(player, line);
 			}
 			
 			// JRE Infos
-			for (final String line : AEInfos.getJREInfo())
+			for (String line : AEInfos.getJREInfo())
 			{
 				PacketSendUtility.sendMessage(player, line);
 			}
 			
 			// JVM Infos
-			for (final String line : AEInfos.getJVMInfo())
+			for (String line : AEInfos.getJVMInfo())
 			{
 				PacketSendUtility.sendMessage(player, line);
 			}
@@ -79,7 +79,7 @@ public class Sys extends AdminCommand
 		else if (params[0].equals("memory"))
 		{
 			// Memory Infos
-			for (final String line : AEInfos.getMemoryInfo())
+			for (String line : AEInfos.getMemoryInfo())
 			{
 				PacketSendUtility.sendMessage(player, line);
 			}
@@ -104,11 +104,11 @@ public class Sys extends AdminCommand
 				ShutdownHook.getInstance().doShutdown(val, announceInterval, ShutdownMode.SHUTDOWN);
 				PacketSendUtility.sendMessage(player, "Server will shutdown in " + val + " seconds.");
 			}
-			catch (final ArrayIndexOutOfBoundsException e)
+			catch (ArrayIndexOutOfBoundsException e)
 			{
 				PacketSendUtility.sendMessage(player, "Numbers only!");
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(player, "Numbers only!");
 			}
@@ -122,11 +122,11 @@ public class Sys extends AdminCommand
 				ShutdownHook.getInstance().doShutdown(val, announceInterval, ShutdownMode.RESTART);
 				PacketSendUtility.sendMessage(player, "Server will restart in " + val + " seconds.");
 			}
-			catch (final ArrayIndexOutOfBoundsException e)
+			catch (ArrayIndexOutOfBoundsException e)
 			{
 				PacketSendUtility.sendMessage(player, "Numbers only!");
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(player, "Numbers only!");
 			}
@@ -134,7 +134,7 @@ public class Sys extends AdminCommand
 		else if (params[0].equals("threadpool"))
 		{
 			final List<String> stats = ThreadPoolManager.getInstance().getStats();
-			for (final String stat : stats)
+			for (String stat : stats)
 			{
 				PacketSendUtility.sendMessage(player, stat.replaceAll("\t", ""));
 			}

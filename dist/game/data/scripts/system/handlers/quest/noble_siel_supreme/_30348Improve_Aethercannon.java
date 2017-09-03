@@ -48,7 +48,7 @@ public class _30348Improve_Aethercannon extends QuestHandler
 		qe.registerQuestNpc(799336).addOnQuestStart(questId); // Tataka.
 		qe.registerQuestNpc(799336).addOnTalkEvent(questId); // Tataka.
 		qe.registerGetingItem(182213289, questId);
-		for (final int debilkarim : debilkarims)
+		for (int debilkarim : debilkarims)
 		{
 			qe.registerQuestNpc(debilkarim).addOnKillEvent(questId);
 		}

@@ -114,7 +114,7 @@ public enum MasterQuestsList
 	
 	public static int[] getSkillsIds(int craftSkillId, Race race)
 	{
-		for (final MasterQuestsList mql : values())
+		for (MasterQuestsList mql : values())
 		{
 			if ((race.equals(mql.getRace())) && (craftSkillId == mql.getCraftSkillId()))
 			{

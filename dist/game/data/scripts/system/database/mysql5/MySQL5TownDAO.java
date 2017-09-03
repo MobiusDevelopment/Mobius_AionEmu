@@ -68,7 +68,7 @@ public class MySQL5TownDAO extends TownDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't load towns info. " + e);
 		}
@@ -108,7 +108,7 @@ public class MySQL5TownDAO extends TownDAO
 			stmt.close();
 			town.setPersistentState(PersistentState.UPDATED);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can insert new town into database! Town id:" + town.getId() + ". " + e);
 		}
@@ -133,7 +133,7 @@ public class MySQL5TownDAO extends TownDAO
 			stmt.close();
 			town.setPersistentState(PersistentState.UPDATED);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can insert new town into database! Town id:" + town.getId() + ". " + e);
 		}

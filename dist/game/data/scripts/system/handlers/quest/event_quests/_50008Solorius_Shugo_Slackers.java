@@ -47,7 +47,7 @@ public class _50008Solorius_Shugo_Slackers extends QuestHandler
 	{
 		qe.registerQuestNpc(831038).addOnQuestStart(questId);
 		qe.registerQuestNpc(831036).addOnTalkEvent(questId);
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

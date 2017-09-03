@@ -38,7 +38,7 @@ public class SM_NPC_ASSEMBLER extends AionServerPacket
 	protected void writeImpl(AionConnection con)
 	{
 		writeD(assembledNpc.getAssembledParts().size());
-		for (final AssembledNpcPart npc : assembledNpc.getAssembledParts())
+		for (AssembledNpcPart npc : assembledNpc.getAssembledParts())
 		{
 			writeD(routeId);
 			writeD(npc.getObject());

@@ -102,7 +102,7 @@ class DuplicateStatFunction extends StatFunction
 	private List<StatFunction> getFunctions(List<StatFunction> list, Stat2 stat, Item item)
 	{
 		final List<StatFunction> functions = new ArrayList<>();
-		for (final StatFunction func : list)
+		for (StatFunction func : list)
 		{
 			final StatFunctionProxy func2 = new StatFunctionProxy(item, func);
 			if ((func.getName() == getName()) && func2.validate(stat, func2))

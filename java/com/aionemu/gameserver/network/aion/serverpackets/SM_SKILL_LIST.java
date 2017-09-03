@@ -85,7 +85,7 @@ public class SM_SKILL_LIST extends AionServerPacket
 		}
 		if (size > 0)
 		{
-			for (final PlayerSkillEntry entry : skillList)
+			for (PlayerSkillEntry entry : skillList)
 			{
 				writeH(entry.getSkillId());
 				writeH(entry.getSkillLevel());

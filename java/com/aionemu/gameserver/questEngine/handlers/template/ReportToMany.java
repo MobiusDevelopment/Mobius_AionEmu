@@ -87,7 +87,7 @@ public class ReportToMany extends QuestHandler
 				qe.registerQuestNpc(startNpc).addOnTalkEvent(getQuestId());
 			}
 		}
-		for (final int npcId : npcInfos.keySet())
+		for (int npcId : npcInfos.keySet())
 		{
 			qe.registerQuestNpc(npcId).addOnTalkEvent(getQuestId());
 		}
@@ -220,7 +220,7 @@ public class ReportToMany extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		if (startItem != 0)
 		{

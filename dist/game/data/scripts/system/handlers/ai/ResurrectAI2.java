@@ -91,7 +91,7 @@ public class ResurrectAI2 extends NpcAI2
 		bindHere(player, bindPointTemplate);
 	}
 	
-	private void bindHere(Player player, final BindPointTemplate bindPointTemplate)
+	private void bindHere(Player player, BindPointTemplate bindPointTemplate)
 	{
 		final String price = Integer.toString(bindPointTemplate.getPrice());
 		AI2Actions.addRequest(this, player, SM_QUESTION_WINDOW.STR_ASK_REGISTER_RESURRECT_POINT, 0, new AI2Request()
@@ -132,7 +132,7 @@ public class ResurrectAI2 extends NpcAI2
 		}, price);
 	}
 	
-	private void newBind(Player player, final BindPointTemplate bindPointTemplate)
+	private void newBind(Player player, BindPointTemplate bindPointTemplate)
 	{
 		final String price = Integer.toString(bindPointTemplate.getPrice());
 		AI2Actions.addRequest(this, player, SM_QUESTION_WINDOW.STR_ASK_REGISTER_RESURRECT_POINT, 0, new AI2Request()

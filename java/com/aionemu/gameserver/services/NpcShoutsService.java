@@ -54,7 +54,7 @@ public class NpcShoutsService
 	
 	private NpcShoutsService()
 	{
-		for (final Npc npc : World.getInstance().getNpcs())
+		for (Npc npc : World.getInstance().getNpcs())
 		{
 			final int npcId = npc.getNpcId();
 			final int worldId = npc.getSpawn().getWorldId();
@@ -72,7 +72,7 @@ public class NpcShoutsService
 			}
 			
 			int defaultPollDelay = Rnd.get(180, 360) * 1000;
-			for (final NpcShout shout : shouts)
+			for (NpcShout shout : shouts)
 			{
 				if ((shout.getPollDelay() != 0) && (shout.getPollDelay() < defaultPollDelay))
 				{
@@ -127,7 +127,7 @@ public class NpcShoutsService
 			if (isSequence)
 			{
 				int nextDelay = 5;
-				for (final NpcShout shout : shouts)
+				for (NpcShout shout : shouts)
 				{
 					if (delaySeconds == -1)
 					{
@@ -235,7 +235,7 @@ public class NpcShoutsService
 		sendMsg(null, instance, msg, 0, false, 25, delay);
 	}
 	
-	public void sendMsg(final Npc npc, final WorldMapInstance instance, final int msg, final int Obj, final boolean isShout, final int color, int delay)
+	public void sendMsg(Npc npc, WorldMapInstance instance, int msg, int Obj, boolean isShout, int color, int delay)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

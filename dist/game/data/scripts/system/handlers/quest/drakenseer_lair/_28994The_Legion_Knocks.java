@@ -47,7 +47,7 @@ public class _28994The_Legion_Knocks extends QuestHandler
 		qe.registerQuestNpc(806079).addOnQuestStart(questId); // Feregran.
 		qe.registerQuestNpc(806079).addOnTalkEvent(questId); // Feregran.
 		qe.registerQuestNpc(806242).addOnTalkEvent(questId); // Bakao.
-		for (final int mob : IDF6DragonArtifactBoost)
+		for (int mob : IDF6DragonArtifactBoost)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

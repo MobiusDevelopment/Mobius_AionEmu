@@ -268,7 +268,7 @@ public enum StatEnum
 	
 	public static StatEnum findByItemStoneMask(int mask)
 	{
-		for (final StatEnum sEnum : values())
+		for (StatEnum sEnum : values())
 		{
 			if (sEnum.getItemStoneMask() == mask)
 			{

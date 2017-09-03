@@ -121,7 +121,7 @@ public enum StorageType
 	
 	public static StorageType getStorageTypeById(int id)
 	{
-		for (final StorageType st : values())
+		for (StorageType st : values())
 		{
 			if (st.id == id)
 			{
@@ -133,7 +133,7 @@ public enum StorageType
 	
 	public static int getStorageId(int limit, int length)
 	{
-		for (final StorageType st : values())
+		for (StorageType st : values())
 		{
 			if ((st.limit == limit) && (st.length == length))
 			{

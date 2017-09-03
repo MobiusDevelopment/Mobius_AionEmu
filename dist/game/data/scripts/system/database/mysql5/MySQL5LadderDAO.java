@@ -126,7 +126,7 @@ public class MySQL5LadderDAO extends LadderDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 		}
 		finally
@@ -160,7 +160,7 @@ public class MySQL5LadderDAO extends LadderDAO
 				con = DatabaseFactory.getConnection();
 				final PreparedStatement stmtRank = con.prepareStatement("UPDATE ladder_player SET rank = ? WHERE player_id = ?");
 				final PreparedStatement stmtLast = con.prepareStatement("UPDATE ladder_player SET last_rank = ?, last_update = ? WHERE player_id = ?");
-				for (final PlayerInfo plInfo : players)
+				for (PlayerInfo plInfo : players)
 				{
 					final int playerId = plInfo.getPlayerId();
 					final Timestamp update = plInfo.getLastUpdate();
@@ -181,7 +181,7 @@ public class MySQL5LadderDAO extends LadderDAO
 				stmtRank.close();
 				stmtLast.close();
 			}
-			catch (final SQLException e)
+			catch (SQLException e)
 			{
 			}
 			finally
@@ -210,7 +210,7 @@ public class MySQL5LadderDAO extends LadderDAO
 				stmt.setInt(2, player.getObjectId());
 				stmt.execute();
 			}
-			catch (final SQLException e)
+			catch (SQLException e)
 			{
 			}
 			finally
@@ -228,7 +228,7 @@ public class MySQL5LadderDAO extends LadderDAO
 				stmt.setInt(2, "rating".equals(data) ? 1000 + value : value);
 				stmt.execute();
 			}
-			catch (final SQLException e)
+			catch (SQLException e)
 			{
 			}
 			finally
@@ -251,7 +251,7 @@ public class MySQL5LadderDAO extends LadderDAO
 				stmt.setInt(2, player.getObjectId());
 				stmt.execute();
 			}
-			catch (final SQLException e)
+			catch (SQLException e)
 			{
 			}
 			finally
@@ -269,7 +269,7 @@ public class MySQL5LadderDAO extends LadderDAO
 				stmt.setInt(2, value);
 				stmt.execute();
 			}
-			catch (final SQLException e)
+			catch (SQLException e)
 			{
 			}
 			finally
@@ -290,7 +290,7 @@ public class MySQL5LadderDAO extends LadderDAO
 			stmt.setInt(2, playerId);
 			stmt.execute();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 		}
 		finally
@@ -316,7 +316,7 @@ public class MySQL5LadderDAO extends LadderDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 		}
 		finally
@@ -347,7 +347,7 @@ public class MySQL5LadderDAO extends LadderDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 		}
 		finally
@@ -378,7 +378,7 @@ public class MySQL5LadderDAO extends LadderDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 		}
 		finally
@@ -399,7 +399,7 @@ public class MySQL5LadderDAO extends LadderDAO
 			stmt.setInt(2, player.getObjectId());
 			stmt.execute();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 		}
 		finally
@@ -419,7 +419,7 @@ public class MySQL5LadderDAO extends LadderDAO
 			stmt.setInt(2, playerId);
 			stmt.execute();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 		}
 		finally
@@ -446,7 +446,7 @@ public class MySQL5LadderDAO extends LadderDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 		}
 		finally
@@ -477,7 +477,7 @@ public class MySQL5LadderDAO extends LadderDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 		}
 		finally

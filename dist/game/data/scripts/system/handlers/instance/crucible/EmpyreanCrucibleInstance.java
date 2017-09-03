@@ -72,7 +72,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 		
 		private boolean containNpc()
 		{
-			for (final Npc npc : npcs)
+			for (Npc npc : npcs)
 			{
 				if (instance.getNpcs().contains(npc))
 				{
@@ -122,7 +122,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 		PacketSendUtility.sendPacket(player, new SM_INSTANCE_STAGE_INFO(2, stageType.getId(), stageType.getType()));
 	}
 	
-	private void sendPacket(final int points, final int nameId)
+	private void sendPacket(int points, int nameId)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -146,7 +146,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 		});
 	}
 	
-	private void sendEventPacket(final StageType type, final int time)
+	private void sendEventPacket(StageType type, int time)
 	{
 		stageType = type;
 		ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -1749,7 +1749,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 	
 	private void rewardGroup()
 	{
-		for (final Player p : instance.getPlayersInside())
+		for (Player p : instance.getPlayersInside())
 		{
 			doReward(p);
 		}
@@ -1782,7 +1782,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 	}
 	
 	@Override
-	public boolean onReviveEvent(final Player player)
+	public boolean onReviveEvent(Player player)
 	{
 		super.onReviveEvent(player);
 		moveToReadyRoom(player);
@@ -1808,7 +1808,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 	
 	private EmpyreanStage getEmpyreanStage(Npc npc)
 	{
-		for (final EmpyreanStage es : empyreanStage)
+		for (EmpyreanStage es : empyreanStage)
 		{
 			if (es.npcs.contains(npc))
 			{
@@ -1820,7 +1820,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 	
 	private boolean isSpawn(List<Integer> round)
 	{
-		for (final Npc n : npcs)
+		for (Npc n : npcs)
 		{
 			if (round.contains(n.getNpcId()))
 			{
@@ -1831,7 +1831,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 	}
 	
 	@Override
-	public void onChangeStage(final StageType type)
+	public void onChangeStage(StageType type)
 	{
 		switch (type)
 		{
@@ -2030,7 +2030,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 	
 	private void crucibleTeleport(float x, float y, float z, byte h)
 	{
-		for (final Player player : instance.getPlayersInside())
+		for (Player player : instance.getPlayersInside())
 		{
 			if (player.isOnline())
 			{
@@ -2077,7 +2077,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 	
 	private void clearCrucibleDebuffs(Player player)
 	{
-		for (final Effect ef : player.getEffectController().getAbnormalEffects())
+		for (Effect ef : player.getEffectController().getAbnormalEffects())
 		{
 			final DispelCategoryType category = ef.getSkillTemplate().getDispelCategory();
 			if ((category == DispelCategoryType.DEBUFF) || (category == DispelCategoryType.DEBUFF_MENTAL) || (category == DispelCategoryType.DEBUFF_PHYSICAL) || (category == DispelCategoryType.ALL))
@@ -2132,7 +2132,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 		doReward(player);
 	}
 	
-	private void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time)
+	private void sp(int npcId, float x, float y, float z, byte h, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -2171,7 +2171,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 			 */
 			case 217735: // Worthiness Ticket Box (Fin Stage 3)
 			case 217756: // Worthiness Ticket Box (Fin Stage 1)
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -2200,7 +2200,7 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 				}
 				break;
 			case 217738: // Cut Saam.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{

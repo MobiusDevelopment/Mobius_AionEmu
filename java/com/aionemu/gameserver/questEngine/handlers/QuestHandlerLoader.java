@@ -41,7 +41,7 @@ public class QuestHandlerLoader implements ClassListener
 	@Override
 	public void postLoad(Class<?>[] classes)
 	{
-		for (final Class<?> c : classes)
+		for (Class<?> c : classes)
 		{
 			if (logger.isDebugEnabled())
 			{
@@ -63,7 +63,7 @@ public class QuestHandlerLoader implements ClassListener
 						QuestEngine.getInstance().addQuestHandler(tmp.newInstance());
 					}
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					throw new RuntimeException("Failed to load quest handler class: " + c.getName(), e);
 				}
@@ -76,7 +76,7 @@ public class QuestHandlerLoader implements ClassListener
 	{
 		if (logger.isDebugEnabled())
 		{
-			for (final Class<?> c : classes)
+			for (Class<?> c : classes)
 			{
 				// debug messages
 				logger.debug("Unload class " + c.getName());

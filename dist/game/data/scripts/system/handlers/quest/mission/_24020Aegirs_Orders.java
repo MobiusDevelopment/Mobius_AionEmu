@@ -92,7 +92,7 @@ public class _24020Aegirs_Orders extends QuestHandler
 					24025,
 					24026
 				};
-				for (final int id : ids)
+				for (int id : ids)
 				{
 					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), id, env.getDialogId()));
 				}

@@ -47,7 +47,7 @@ public class Defense_Turret_PlatformAI2 extends NpcAI2
 	}
 	
 	@Override
-	public boolean onDialogSelect(final Player player, int dialogId, int questId, int extendedRewardIndex)
+	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		// Rapid Fire Multiple Fire Cannon Installation (1 Bright Aether).
 		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(182007405, 1))

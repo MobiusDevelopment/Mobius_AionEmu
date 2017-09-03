@@ -60,7 +60,7 @@ public class SM_TRADELIST extends AionServerPacket
 			writeC(1); // 4.7
 			writeC(1); // 4.7
 			writeH(tlist.getCount());
-			for (final TradeTab tradeTabl : tlist.getTradeTablist())
+			for (TradeTab tradeTabl : tlist.getTradeTablist())
 			{
 				writeD(tradeTabl.getId());
 				final Player activePlayer = con.getActivePlayer();
@@ -79,7 +79,7 @@ public class SM_TRADELIST extends AionServerPacket
 			writeH(i);
 			if (limitedTradeNpc != null)
 			{
-				for (final LimitedItem limitedItem : limitedTradeNpc.getLimitedItems())
+				for (LimitedItem limitedItem : limitedTradeNpc.getLimitedItems())
 				{
 					writeD(limitedItem.getItemId());
 					writeH(limitedItem.getBuyCount().get(playerObj) == null ? 0 : limitedItem.getBuyCount().get(playerObj));

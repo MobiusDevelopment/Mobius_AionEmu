@@ -38,11 +38,11 @@ public class AbyssSkillService
 		}
 		final AbyssRankEnum rankEnum = abyssRank.getRank();
 		// remove all abyss skills first
-		for (final AbyssSkills abyssSkill : AbyssSkills.values())
+		for (AbyssSkills abyssSkill : AbyssSkills.values())
 		{
 			if (abyssSkill.getRace() == player.getRace())
 			{
-				for (final int skillId : abyssSkill.getSkills())
+				for (int skillId : abyssSkill.getSkills())
 				{
 					player.getSkillList().removeSkill(skillId);
 				}
@@ -51,7 +51,7 @@ public class AbyssSkillService
 		// add new skills
 		if (abyssRank.getRank().getId() >= AbyssRankEnum.STAR5_OFFICER.getId())
 		{
-			for (final int skillId : AbyssSkills.getSkills(player.getRace(), rankEnum))
+			for (int skillId : AbyssSkills.getSkills(player.getRace(), rankEnum))
 			{
 				player.getSkillList().addAbyssSkill(player, skillId, 1);
 			}

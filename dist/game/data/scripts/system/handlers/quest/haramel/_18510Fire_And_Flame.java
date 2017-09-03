@@ -46,7 +46,7 @@ public class _18510Fire_And_Flame extends QuestHandler
 			700953
 		};
 		qe.registerQuestNpc(203166).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

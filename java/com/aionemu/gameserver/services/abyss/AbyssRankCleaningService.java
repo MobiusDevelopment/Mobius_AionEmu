@@ -72,7 +72,7 @@ public class AbyssRankCleaningService
 		final ArrayList<AbyssRankingResult> rankingsElyos = DAOManager.getDAO(AbyssRankDAO.class).getAbyssRankingPlayers(Race.ELYOS);
 		final ArrayList<AbyssRankingResult> rankingsAsmos = DAOManager.getDAO(AbyssRankDAO.class).getAbyssRankingPlayers(Race.ASMODIANS);
 		final List<Player> ToArray = new ArrayList<>();
-		for (final AbyssRankingResult result : rankingsElyos)
+		for (AbyssRankingResult result : rankingsElyos)
 		{
 			final Player p = World.getInstance().findPlayer(result.getPlayerName());
 			if (p == null)
@@ -87,7 +87,7 @@ public class AbyssRankCleaningService
 			}
 		}
 		
-		for (final AbyssRankingResult result : rankingsAsmos)
+		for (AbyssRankingResult result : rankingsAsmos)
 		{
 			final Player p = World.getInstance().findPlayer(result.getPlayerName());
 			if (p == null)

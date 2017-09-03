@@ -49,7 +49,7 @@ public class _14011Fragment_In_The_Sky extends QuestHandler
 		qe.registerQuestNpc(700091).addOnKillEvent(questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerOnLevelUp(questId);
-		for (final int id : talkNpcs)
+		for (int id : talkNpcs)
 		{
 			qe.registerQuestNpc(id).addOnTalkEvent(questId);
 		}

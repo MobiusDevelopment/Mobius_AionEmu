@@ -72,7 +72,7 @@ public class MySQL5PlayerWardrobeDAO extends PlayerWardrobeDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore Wardrobe time for playerObjId: " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -98,7 +98,7 @@ public class MySQL5PlayerWardrobeDAO extends PlayerWardrobeDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store Wardrobe for player " + objectId + " from DB: " + e.getMessage(), e);
 			return false;
@@ -123,7 +123,7 @@ public class MySQL5PlayerWardrobeDAO extends PlayerWardrobeDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not delete Wardrobe for player " + objectId + " from DB: " + e.getMessage(), e);
 			return false;
@@ -151,7 +151,7 @@ public class MySQL5PlayerWardrobeDAO extends PlayerWardrobeDAO
 			rs.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return 0;
 		}
@@ -163,7 +163,7 @@ public class MySQL5PlayerWardrobeDAO extends PlayerWardrobeDAO
 	}
 	
 	@Override
-	public int getWardrobeItemBySlot(final int obj, int slot)
+	public int getWardrobeItemBySlot(int obj, int slot)
 	{
 		Connection con = null;
 		int wardrobeItemId = 0;
@@ -179,7 +179,7 @@ public class MySQL5PlayerWardrobeDAO extends PlayerWardrobeDAO
 			rs.close();
 			s.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return 0;
 		}
@@ -191,7 +191,7 @@ public class MySQL5PlayerWardrobeDAO extends PlayerWardrobeDAO
 	}
 	
 	@Override
-	public int getReskinCountBySlot(final int obj, int slot)
+	public int getReskinCountBySlot(int obj, int slot)
 	{
 		Connection con = null;
 		int reskinCount = 0;
@@ -207,7 +207,7 @@ public class MySQL5PlayerWardrobeDAO extends PlayerWardrobeDAO
 			rs.close();
 			s.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return 0;
 		}
@@ -232,7 +232,7 @@ public class MySQL5PlayerWardrobeDAO extends PlayerWardrobeDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return false;
 		}

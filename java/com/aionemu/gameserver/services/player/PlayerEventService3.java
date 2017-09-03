@@ -71,7 +71,7 @@ public class PlayerEventService3
 						ItemService.addItem(player, (player.getRace() == Race.ELYOS ? EventsConfig.EVENT_ITEM_ELYOS3 : EventsConfig.EVENT_ITEM_ASMO3), EventsConfig.EVENT_ITEM_COUNT3 * rate);
 					}
 				}
-				catch (final Exception ex)
+				catch (Exception ex)
 				{
 					log.error("Exception during event rewarding of player " + player.getName(), ex);
 				}

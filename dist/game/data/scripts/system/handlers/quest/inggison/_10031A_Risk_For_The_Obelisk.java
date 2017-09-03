@@ -73,15 +73,15 @@ public class _10031A_Risk_For_The_Obelisk extends QuestHandler
 			730224,
 			702662
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : armoredSpaller)
+		for (int mob : armoredSpaller)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : hikironFarmBalaur)
+		for (int mob : hikironFarmBalaur)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
@@ -309,7 +309,7 @@ public class _10031A_Risk_For_The_Obelisk extends QuestHandler
 						10034,
 						10035
 					};
-					for (final int quest : inggisonMission)
+					for (int quest : inggisonMission)
 					{
 						QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
 					}

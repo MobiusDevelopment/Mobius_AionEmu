@@ -43,7 +43,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 public class RideRobotEffect extends EffectTemplate
 {
 	@Override
-	public void applyEffect(final Effect effect)
+	public void applyEffect(Effect effect)
 	{
 		effect.addToEffectedController();
 		final Creature effected = effect.getEffected();

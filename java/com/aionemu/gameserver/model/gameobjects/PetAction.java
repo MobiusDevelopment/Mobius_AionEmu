@@ -39,7 +39,7 @@ public enum PetAction
 	static
 	{
 		petActions = new TIntObjectHashMap<>();
-		for (final PetAction action : values())
+		for (PetAction action : values())
 		{
 			petActions.put(action.getActionId(), action);
 		}

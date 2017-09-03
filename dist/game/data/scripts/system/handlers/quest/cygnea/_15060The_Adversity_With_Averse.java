@@ -47,7 +47,7 @@ public class _15060The_Adversity_With_Averse extends QuestHandler
 	{
 		qe.registerQuestNpc(804707).addOnQuestStart(questId);
 		qe.registerQuestNpc(804707).addOnTalkEvent(questId);
-		for (final int mob : LF5FDrakan60An)
+		for (int mob : LF5FDrakan60An)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -74,7 +74,7 @@ public class WeatherTable
 		{
 			return null;
 		}
-		for (final WeatherEntry we : getZoneData())
+		for (WeatherEntry we : getZoneData())
 		{
 			if (we.getZoneId() != entry.getZoneId())
 			{
@@ -98,7 +98,7 @@ public class WeatherTable
 	public List<WeatherEntry> getWeathersForZone(int zoneId)
 	{
 		final List<WeatherEntry> result = new ArrayList<>();
-		for (final WeatherEntry entry : getZoneData())
+		for (WeatherEntry entry : getZoneData())
 		{
 			if (entry.getZoneId() == zoneId)
 			{

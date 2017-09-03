@@ -141,7 +141,7 @@ public class PlayerInfo extends AdminCommand
 			
 			final PlayerSkillEntry sle[] = target.getSkillList().getAllSkills();
 			
-			for (final PlayerSkillEntry element : sle)
+			for (PlayerSkillEntry element : sle)
 			{
 				strbld.append("    level " + element.getSkillLevel() + " of " + element.getSkillName() + "\n");
 			}
@@ -211,7 +211,7 @@ public class PlayerInfo extends AdminCommand
 			{
 				PacketSendUtility.sendMessage(admin, "KnownList of " + target.getName());
 				
-				for (final VisibleObject obj : target.getKnownList().getKnownObjects().values())
+				for (VisibleObject obj : target.getKnownList().getKnownObjects().values())
 				{
 					PacketSendUtility.sendMessage(admin, obj.getName() + " objectId:" + obj.getObjectId());
 				}
@@ -241,7 +241,7 @@ public class PlayerInfo extends AdminCommand
 			{
 				PacketSendUtility.sendMessage(admin, "VisualList of " + target.getName());
 				
-				for (final VisibleObject obj : target.getKnownList().getVisibleObjects().values())
+				for (VisibleObject obj : target.getKnownList().getVisibleObjects().values())
 				{
 					PacketSendUtility.sendMessage(admin, obj.getName() + " objectId:" + obj.getObjectId());
 				}

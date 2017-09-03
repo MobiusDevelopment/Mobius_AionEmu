@@ -42,7 +42,7 @@ public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 	public static final String UPDATE_QUERY = "UPDATE player_life_stats set `hp`=?, `mp`=?, `fp`=? WHERE `player_id`=?";
 	
 	@Override
-	public void loadPlayerLifeStat(final Player player)
+	public void loadPlayerLifeStat(Player player)
 	{
 		Connection con = null;
 		try
@@ -65,7 +65,7 @@ public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore PlayerLifeStat data for playerObjId: " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -76,7 +76,7 @@ public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 	}
 	
 	@Override
-	public void insertPlayerLifeStat(final Player player)
+	public void insertPlayerLifeStat(Player player)
 	{
 		Connection con = null;
 		try
@@ -90,7 +90,7 @@ public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not store PlayerLifeStat data for player " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}
@@ -101,7 +101,7 @@ public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 	}
 	
 	@Override
-	public void updatePlayerLifeStat(final Player player)
+	public void updatePlayerLifeStat(Player player)
 	{
 		Connection con = null;
 		try
@@ -115,7 +115,7 @@ public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not update PlayerLifeStat data for player " + player.getObjectId() + " from DB: " + e.getMessage(), e);
 		}

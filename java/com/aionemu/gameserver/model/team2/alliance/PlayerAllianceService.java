@@ -66,7 +66,7 @@ public class PlayerAllianceService
 	private static final Map<Integer, PlayerAlliance> alliances = new ConcurrentHashMap<>();
 	private static final AtomicBoolean offlineCheckStarted = new AtomicBoolean();
 	
-	public static void inviteToAlliance(final Player inviter, final Player invited)
+	public static void inviteToAlliance(Player inviter, Player invited)
 	{
 		if (canInvite(inviter, invited))
 		{
@@ -111,7 +111,7 @@ public class PlayerAllianceService
 		{
 			if (invited.isInTeam())
 			{
-				for (final Player tm : invited.getCurrentTeam().getMembers())
+				for (Player tm : invited.getCurrentTeam().getMembers())
 				{
 					if (tm.isInInstance())
 					{
@@ -168,7 +168,7 @@ public class PlayerAllianceService
 	
 	public static void onPlayerLogin(Player player)
 	{
-		for (final PlayerAlliance alliance : alliances.values())
+		for (PlayerAlliance alliance : alliances.values())
 		{
 			final PlayerAllianceMember member = alliance.getMember(player.getObjectId());
 			if (member != null)
@@ -268,7 +268,7 @@ public class PlayerAllianceService
 	
 	public static PlayerAlliance searchAlliance(Integer playerObjId)
 	{
-		for (final PlayerAlliance alliance : alliances.values())
+		for (PlayerAlliance alliance : alliances.values())
 		{
 			if (alliance.hasMember(playerObjId))
 			{
@@ -340,7 +340,7 @@ public class PlayerAllianceService
 		@Override
 		public void run()
 		{
-			for (final PlayerAlliance alliance : alliances.values())
+			for (PlayerAlliance alliance : alliances.values())
 			{
 				currentAlliance = alliance;
 				alliance.apply(this);

@@ -40,7 +40,7 @@ public class StaticDoorService
 		protected static final StaticDoorService instance = new StaticDoorService();
 	}
 	
-	public void openStaticDoor(final Player player, int doorId)
+	public void openStaticDoor(Player player, int doorId)
 	{
 		if (player.getAccessLevel() >= 3)
 		{

@@ -506,7 +506,7 @@ public class Npc extends Creature
 		return ((System.currentTimeMillis() - lastShoutedSeconds) / 1000) >= delaySeconds;
 	}
 	
-	public void shout(final NpcShout shout, final Creature target, final Object param, int delaySeconds)
+	public void shout(NpcShout shout, Creature target, Object param, int delaySeconds)
 	{
 		if (((shout.getWhen() != ShoutEventType.DIED) && (shout.getWhen() != ShoutEventType.BEFORE_DESPAWN) && getLifeStats().isAlreadyDead()) || !mayShout(delaySeconds))
 		{

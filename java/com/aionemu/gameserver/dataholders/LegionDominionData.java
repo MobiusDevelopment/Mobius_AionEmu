@@ -46,7 +46,7 @@ public class LegionDominionData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final LegionDominionTemplate template : legionDominionTemplates)
+		for (LegionDominionTemplate template : legionDominionTemplates)
 		{
 			legionDominion.put(template.getLegionDominionId(), new LegionDominionLocation(template));
 		}

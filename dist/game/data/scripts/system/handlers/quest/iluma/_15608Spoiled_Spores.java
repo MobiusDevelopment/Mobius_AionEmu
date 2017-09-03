@@ -56,7 +56,7 @@ public class _15608Spoiled_Spores extends QuestHandler
 		qe.registerQuestNpc(806165).addOnQuestStart(questId); // Canella.
 		qe.registerQuestNpc(806165).addOnTalkEvent(questId); // Canella.
 		qe.registerQuestNpc(703139).addOnTalkEvent(questId); // 검은 버섯.
-		for (final int boss : LF6I6NamedNoName68Ah)
+		for (int boss : LF6I6NamedNoName68Ah)
 		{
 			qe.registerQuestNpc(boss).addOnKillEvent(questId);
 		}

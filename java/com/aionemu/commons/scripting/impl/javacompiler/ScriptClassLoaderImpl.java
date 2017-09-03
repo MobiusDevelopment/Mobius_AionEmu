@@ -117,7 +117,7 @@ public class ScriptClassLoaderImpl extends ScriptClassLoader
 		}
 		
 		// load current classloader compiled classes
-		for (final String cn : classFileManager.getCompiledClasses().keySet())
+		for (String cn : classFileManager.getCompiledClasses().keySet())
 		{
 			if (ClassUtils.isPackageMember(cn, packageName))
 			{
@@ -161,7 +161,7 @@ public class ScriptClassLoaderImpl extends ScriptClassLoader
 		classNames.addAll(getLibraryClassNames());
 		
 		// load classes for class names from this classloader
-		for (final String cn : classNames)
+		for (String cn : classNames)
 		{
 			if (ClassUtils.isPackageMember(cn, packageName))
 			{
@@ -172,7 +172,7 @@ public class ScriptClassLoaderImpl extends ScriptClassLoader
 					final OutputStream os = bc.openOutputStream();
 					os.write(data);
 				}
-				catch (final IOException e)
+				catch (IOException e)
 				{
 					log.error("Error while loading class from package " + packageName, e);
 					throw e;
@@ -203,12 +203,12 @@ public class ScriptClassLoaderImpl extends ScriptClassLoader
 			is = resource.openStream();
 			clazz = IOUtils.toByteArray(is);
 		}
-		catch (final IOException e)
+		catch (IOException e)
 		{
 			log.error("Error while loading class data: " + name, e);
 			throw e;
 		}
-		catch (final NullPointerException e)
+		catch (NullPointerException e)
 		{
 			log.error("Can't open input stream for resource: " + name);
 			throw new IllegalArgumentException("Failed to open input stream for resource: " + name);
@@ -221,7 +221,7 @@ public class ScriptClassLoaderImpl extends ScriptClassLoader
 				{
 					is.close();
 				}
-				catch (final IOException e)
+				catch (IOException e)
 				{
 					log.error("Error while closing stream", e);
 				}

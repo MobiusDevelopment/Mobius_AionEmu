@@ -153,7 +153,7 @@ public class KillInWorld extends QuestHandler
 	
 	private boolean searchOpenRift()
 	{
-		for (final RiftLocation loc : RiftService.getInstance().getRiftLocations().values())
+		for (RiftLocation loc : RiftService.getInstance().getRiftLocations().values())
 		{
 			if ((loc.getWorldId() == invasionWorldId) && loc.isOpened())
 			{

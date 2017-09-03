@@ -54,7 +54,7 @@ public class _29064Fang_Of_Construction extends QuestHandler
 			204053
 		};
 		qe.registerQuestNpc(204053).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

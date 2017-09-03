@@ -61,7 +61,7 @@ public class NightmareCircusService
 		if (CustomConfig.NIGHTMARE_CIRCUS_ENABLE)
 		{
 			nightmareCircus = DataManager.NIGHTMARE_CIRCUS_DATA.getNightmareCircusLocations();
-			for (final NightmareCircusLocation loc : getNightmareCircusLocations().values())
+			for (NightmareCircusLocation loc : getNightmareCircusLocations().values())
 			{
 				spawn(loc, NightmareCircusStateType.CLOSED);
 			}
@@ -77,9 +77,9 @@ public class NightmareCircusService
 		if (CustomConfig.NIGHTMARE_CIRCUS_ENABLE)
 		{
 			circusSchedule = CircusSchedule.load();
-			for (final Circus circus : circusSchedule.getCircussList())
+			for (Circus circus : circusSchedule.getCircussList())
 			{
-				for (final String circusTime : circus.getCircusTimes())
+				for (String circusTime : circus.getCircusTimes())
 				{
 					CronService.getInstance().schedule(new CircusStartRunnable(circus.getId()), circusTime);
 				}
@@ -87,7 +87,7 @@ public class NightmareCircusService
 		}
 	}
 	
-	public void startNightmareCircus(final int id)
+	public void startNightmareCircus(int id)
 	{
 		final CircusInstance<?> nightmare;
 		synchronized (this)
@@ -135,9 +135,9 @@ public class NightmareCircusService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getNightmareCircusSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final NightmareCircusSpawnTemplate nightmareCircustemplate = (NightmareCircusSpawnTemplate) st;
 				if (nightmareCircustemplate.getNStateType().equals(nstate))
@@ -169,7 +169,7 @@ public class NightmareCircusService
 	
 	public void despawn(NightmareCircusLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

@@ -63,7 +63,7 @@ public class SM_INVENTORY_ADD_ITEM extends AionServerPacket
 		}
 		writeH(mask); //
 		writeH(size); // number of entries
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			writeItemInfo(item);
 		}

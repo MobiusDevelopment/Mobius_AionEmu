@@ -46,7 +46,7 @@ public class MoveToMeAll extends AdminCommand
 		
 		if (params[0].equals("all"))
 		{
-			for (final Player p : World.getInstance().getAllPlayers())
+			for (Player p : World.getInstance().getAllPlayers())
 			{
 				if (!p.equals(admin))
 				{
@@ -61,7 +61,7 @@ public class MoveToMeAll extends AdminCommand
 		
 		if (params[0].equals("elyos"))
 		{
-			for (final Player p : World.getInstance().getAllPlayers())
+			for (Player p : World.getInstance().getAllPlayers())
 			{
 				if (!p.equals(admin))
 				{
@@ -79,7 +79,7 @@ public class MoveToMeAll extends AdminCommand
 		
 		if (params[0].equals("asmos"))
 		{
-			for (final Player p : World.getInstance().getAllPlayers())
+			for (Player p : World.getInstance().getAllPlayers())
 			{
 				if (!p.equals(admin))
 				{

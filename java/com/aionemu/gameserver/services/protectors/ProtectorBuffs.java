@@ -48,7 +48,7 @@ public class ProtectorBuffs implements StatOwner
 		{
 			endEffect(player);
 		}
-		for (final GuardRankPenaltyAttr guardrankPenaltyAttr : guardRankRestriction.getGuardPenaltyAttr())
+		for (GuardRankPenaltyAttr guardrankPenaltyAttr : guardRankRestriction.getGuardPenaltyAttr())
 		{
 			if (guardrankPenaltyAttr.getFunc().equals(Func.PERCENT))
 			{
@@ -73,7 +73,7 @@ public class ProtectorBuffs implements StatOwner
 		{
 			endEffect(player);
 		}
-		for (final GuardTypePenaltyAttr guardtypePenaltyAttr : guardTypeRestriction.getGuardPenaltyAttr())
+		for (GuardTypePenaltyAttr guardtypePenaltyAttr : guardTypeRestriction.getGuardPenaltyAttr())
 		{
 			if (guardtypePenaltyAttr.getFunc().equals(Func.PERCENT))
 			{

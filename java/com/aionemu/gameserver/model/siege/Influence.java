@@ -105,7 +105,7 @@ public class Influence
 		float a_kaldor = 0f;
 		float b_kaldor = 0f;
 		float t_kaldor = 0f;
-		for (final SiegeLocation sLoc : SiegeService.getInstance().getSiegeLocations().values())
+		for (SiegeLocation sLoc : SiegeService.getInstance().getSiegeLocations().values())
 		{
 			switch (sLoc.getWorldId())
 			{

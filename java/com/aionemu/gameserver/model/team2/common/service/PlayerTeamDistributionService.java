@@ -73,7 +73,7 @@ public class PlayerTeamDistributionService
 		{
 			bonus = 150 + ((size - 2) * 10);
 		}
-		for (final Player member : filteredStats.players)
+		for (Player member : filteredStats.players)
 		{
 			if (member.isMentor() || member.getLifeStats().isAlreadyDead())
 			{

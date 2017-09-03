@@ -73,7 +73,7 @@ public class DropRegistrationService
 	{
 		init();
 		noReductionMaps = new FastList<>();
-		for (final String zone : DropConfig.DISABLE_DROP_REDUCTION_IN_ZONES.split(","))
+		for (String zone : DropConfig.DISABLE_DROP_REDUCTION_IN_ZONES.split(","))
 		{
 			noReductionMaps.add(Integer.parseInt(zone));
 		}
@@ -82,7 +82,7 @@ public class DropRegistrationService
 	public final void init()
 	{
 		final NpcDropData npcDrop = DataManager.NPC_DROP_DATA;
-		for (final NpcDrop drop : npcDrop.getNpcDrop())
+		for (NpcDrop drop : npcDrop.getNpcDrop())
 		{
 			final NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(drop.getNpcId());
 			if (npcTemplate == null)
@@ -92,15 +92,15 @@ public class DropRegistrationService
 			if (npcTemplate.getNpcDrop() != null)
 			{
 				final NpcDrop currentDrop = npcTemplate.getNpcDrop();
-				for (final DropGroup dg : currentDrop.getDropGroup())
+				for (DropGroup dg : currentDrop.getDropGroup())
 				{
 					final Iterator<Drop> iter = dg.getDrop().iterator();
 					while (iter.hasNext())
 					{
 						final Drop d = iter.next();
-						for (final DropGroup dg2 : drop.getDropGroup())
+						for (DropGroup dg2 : drop.getDropGroup())
 						{
-							for (final Drop d2 : dg2.getDrop())
+							for (Drop d2 : dg2.getDrop())
 							{
 								if (d.getItemId() == d2.getItemId())
 								{
@@ -111,10 +111,10 @@ public class DropRegistrationService
 					}
 				}
 				final List<DropGroup> list = new ArrayList<>();
-				for (final DropGroup dg : drop.getDropGroup())
+				for (DropGroup dg : drop.getDropGroup())
 				{
 					boolean added = false;
-					for (final DropGroup dg2 : currentDrop.getDropGroup())
+					for (DropGroup dg2 : currentDrop.getDropGroup())
 					{
 						if (dg2.getGroupName().equals(dg.getGroupName()))
 						{
@@ -188,7 +188,7 @@ public class DropRegistrationService
 					}
 					
 					int i = 0;
-					for (final Player p : groupMembers)
+					for (Player p : groupMembers)
 					{
 						i++;
 						if (i == lootGrouRules.getNrRoundRobin())
@@ -213,7 +213,7 @@ public class DropRegistrationService
 					break;
 			}
 			
-			for (final Player member : winningPlayers)
+			for (Player member : winningPlayers)
 			{
 				dropMembers.add(member.getObjectId());
 				dropPlayers.add(member);
@@ -249,14 +249,14 @@ public class DropRegistrationService
 		if (EventsConfig.ENABLE_EVENT_SERVICE)
 		{
 			final List<EventTemplate> activeEvents = EventService.getInstance().getActiveEvents();
-			for (final EventTemplate eventTemplate : activeEvents)
+			for (EventTemplate eventTemplate : activeEvents)
 			{
 				if (eventTemplate.EventDrop() == null)
 				{
 					continue;
 				}
 				final List<EventDrop> eventDrops = eventTemplate.EventDrop().getEventDrops();
-				for (final EventDrop eventDrop : eventDrops)
+				for (EventDrop eventDrop : eventDrops)
 				{
 					final int diff = npc.getLevel() - eventDrop.getItemTemplate().getLevel();
 					final int minDiff = eventDrop.getMinDiff();
@@ -290,7 +290,7 @@ public class DropRegistrationService
 			npc.getPosition().getWorldMapInstance().getInstanceHandler().onDropRegistered(npc);
 		}
 		npc.getAi2().onGeneralEvent(AIEventType.DROP_REGISTERED);
-		for (final Player p : dropPlayers)
+		for (Player p : dropPlayers)
 		{
 			PacketSendUtility.sendPacket(p, new SM_LOOT_STATUS(npcObjId, 0));
 		}
@@ -305,7 +305,7 @@ public class DropRegistrationService
 			else
 			{
 				final DropItem[] dropItems = drops.toArray(new DropItem[0]);
-				for (final DropItem dropItem : dropItems)
+				for (DropItem dropItem : dropItems)
 				{
 					DropService.getInstance().requestDropItem(player, npcObjId, dropItem.getIndex(), true);
 				}
@@ -321,7 +321,7 @@ public class DropRegistrationService
 	
 	public void setItemsToWinner(Set<DropItem> droppedItems, Integer obj)
 	{
-		for (final DropItem dropItem : droppedItems)
+		for (DropItem dropItem : droppedItems)
 		{
 			if (!dropItem.getDropTemplate().isEachMember())
 			{

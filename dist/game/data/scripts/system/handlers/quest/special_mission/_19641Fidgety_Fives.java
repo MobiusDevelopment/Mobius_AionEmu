@@ -51,7 +51,7 @@ public class _19641Fidgety_Fives extends QuestHandler
 		qe.registerQuestNpc(798991).addOnQuestStart(questId);
 		qe.registerQuestNpc(798991).addOnTalkEvent(questId);
 		qe.registerQuestNpc(798991).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

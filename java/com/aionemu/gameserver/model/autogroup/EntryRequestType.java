@@ -52,7 +52,7 @@ public enum EntryRequestType
 	
 	public static EntryRequestType getTypeById(byte id)
 	{
-		for (final EntryRequestType ert : values())
+		for (EntryRequestType ert : values())
 		{
 			if (ert.getId() == id)
 			{

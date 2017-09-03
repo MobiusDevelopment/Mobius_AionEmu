@@ -121,7 +121,7 @@ public abstract class ScriptClassLoader extends URLClassLoader
 			{
 				return new URL(null, VirtualClassURLStreamHandler.HANDLER_PROTOCOL + newName, urlStreamHandler);
 			}
-			catch (final MalformedURLException e)
+			catch (MalformedURLException e)
 			{
 				log.error("Can't create url for compiled class", e);
 			}

@@ -92,7 +92,7 @@ public class _14010Terrain_Of_The_Verteron_Fortress extends QuestHandler
 					14015,
 					14016
 				};
-				for (final int id : ids)
+				for (int id : ids)
 				{
 					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), id, env.getDialogId()));
 				}

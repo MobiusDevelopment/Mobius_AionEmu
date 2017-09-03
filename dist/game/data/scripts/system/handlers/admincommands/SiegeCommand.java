@@ -156,15 +156,15 @@ public class SiegeCommand extends AdminCommand
 	
 	protected void listLocations(Player player)
 	{
-		for (final FortressLocation f : SiegeService.getInstance().getFortresses().values())
+		for (FortressLocation f : SiegeService.getInstance().getFortresses().values())
 		{
 			PacketSendUtility.sendMessage(player, "Fortress: " + f.getLocationId() + " belongs to " + f.getRace());
 		}
-		for (final OutpostLocation o : SiegeService.getInstance().getOutposts().values())
+		for (OutpostLocation o : SiegeService.getInstance().getOutposts().values())
 		{
 			PacketSendUtility.sendMessage(player, "Outpost: " + o.getLocationId() + " belongs to " + o.getRace());
 		}
-		for (final ArtifactLocation a : SiegeService.getInstance().getStandaloneArtifacts().values())
+		for (ArtifactLocation a : SiegeService.getInstance().getStandaloneArtifacts().values())
 		{
 			PacketSendUtility.sendMessage(player, "Artifact: " + a.getLocationId() + " belongs to " + a.getRace());
 		}
@@ -172,7 +172,7 @@ public class SiegeCommand extends AdminCommand
 	
 	protected void listSieges(Player player)
 	{
-		for (final Integer i : SiegeService.getInstance().getSiegeLocations().keySet())
+		for (Integer i : SiegeService.getInstance().getSiegeLocations().keySet())
 		{
 			final Siege s = SiegeService.getInstance().getSiege(i);
 			if (s != null)
@@ -203,7 +203,7 @@ public class SiegeCommand extends AdminCommand
 		{
 			sr = SiegeRace.valueOf(params[2].toUpperCase());
 		}
-		catch (final IllegalArgumentException e)
+		catch (IllegalArgumentException e)
 		{
 		}
 		Legion legion = null;
@@ -214,7 +214,7 @@ public class SiegeCommand extends AdminCommand
 				final int legionId = Integer.valueOf(params[2]);
 				legion = LegionService.getInstance().getLegion(legionId);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				String legionName = "";
 				for (int i = 2; i < params.length; i++)

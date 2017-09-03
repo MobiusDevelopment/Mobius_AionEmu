@@ -50,7 +50,7 @@ public class AbyssGroupData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final AbyssGroupAttr template : abyssGroupattr)
+		for (AbyssGroupAttr template : abyssGroupattr)
 		{
 			templates.put(template.getBuffId(), template);
 		}

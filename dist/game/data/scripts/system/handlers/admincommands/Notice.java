@@ -43,12 +43,12 @@ public class Notice extends AdminCommand
 		
 		try
 		{
-			for (final String param : params)
+			for (String param : params)
 			{
 				message += " " + param;
 			}
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "Parameters should be text or number !");
 			return;

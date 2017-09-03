@@ -113,7 +113,7 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 	private synchronized void checkPercentage(int hpPercentage)
 	{
 		curentPercent = hpPercentage;
-		for (final Integer percent : percents)
+		for (Integer percent : percents)
 		{
 			if (hpPercentage <= percent)
 			{
@@ -313,7 +313,7 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void deleteNpcs(final int npcId)
+	private void deleteNpcs(int npcId)
 	{
 		if (getKnownList() != null)
 		{
@@ -331,7 +331,7 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private int explosiveSacrifice(final int npcId)
+	private int explosiveSacrifice(int npcId)
 	{
 		final AtomicInteger total = new AtomicInteger();
 		if (getKnownList() != null)

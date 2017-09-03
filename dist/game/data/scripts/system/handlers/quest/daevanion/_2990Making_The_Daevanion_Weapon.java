@@ -66,7 +66,7 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 		qe.registerQuestNpc(253721).addOnKillEvent(questId);
 		qe.registerQuestNpc(254513).addOnKillEvent(questId);
 		qe.registerQuestNpc(254514).addOnKillEvent(questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

@@ -88,7 +88,7 @@ public class UseableItemObject extends HouseObject<HousingUseableItem>
 	}
 	
 	@Override
-	public void onUse(final Player player)
+	public void onUse(Player player)
 	{
 		if (!usingPlayer.compareAndSet(null, player))
 		{
@@ -306,7 +306,7 @@ public class UseableItemObject extends HouseObject<HousingUseableItem>
 		usingPlayer.set(null);
 	}
 	
-	private void selfDestroy(final Player player, SM_SYSTEM_MESSAGE message)
+	private void selfDestroy(Player player, SM_SYSTEM_MESSAGE message)
 	{
 		PacketSendUtility.sendPacket(player, new SM_HOUSE_EDIT(7, 0, getObjectId()));
 		getController().onDelete();

@@ -54,7 +54,7 @@ public class AddSet extends AdminCommand
 			itemSetId = Integer.parseInt(params[0]);
 			receiver = player;
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			receiver = World.getInstance().findPlayer(Util.convertName(params[0]));
 			
@@ -68,13 +68,13 @@ public class AddSet extends AdminCommand
 			{
 				itemSetId = Integer.parseInt(params[1]);
 			}
-			catch (final NumberFormatException ex)
+			catch (NumberFormatException ex)
 			{
 				
 				PacketSendUtility.sendMessage(player, "You must give number to itemset ID.");
 				return;
 			}
-			catch (final Exception ex2)
+			catch (Exception ex2)
 			{
 				PacketSendUtility.sendMessage(player, "Occurs an error.");
 				return;
@@ -94,7 +94,7 @@ public class AddSet extends AdminCommand
 			return;
 		}
 		
-		for (final ItemPart setPart : itemSet.getItempart())
+		for (ItemPart setPart : itemSet.getItempart())
 		{
 			final long count = ItemService.addItem(receiver, setPart.getItemid(), 1);
 			

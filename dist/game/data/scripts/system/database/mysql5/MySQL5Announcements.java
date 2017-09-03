@@ -61,7 +61,7 @@ public class MySQL5Announcements extends AnnouncementsDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void addAnnouncement(final Announcement announce)
+	public void addAnnouncement(Announcement announce)
 	{
 		DB.insertUpdate("INSERT INTO announcements (announce, faction, type, delay) VALUES (?, ?, ?, ?)", new IUStH()
 		{
@@ -82,7 +82,7 @@ public class MySQL5Announcements extends AnnouncementsDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean delAnnouncement(final int idAnnounce)
+	public boolean delAnnouncement(int idAnnounce)
 	{
 		return DB.insertUpdate("DELETE FROM announcements WHERE id = ?", new IUStH()
 		{

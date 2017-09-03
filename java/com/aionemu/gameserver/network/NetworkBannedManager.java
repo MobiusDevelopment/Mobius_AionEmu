@@ -61,7 +61,7 @@ public class NetworkBannedManager
 	
 	public final void banAddress(String address, long newTime, String details)
 	{
-		for (final Player player : World.getInstance().getAllPlayers())
+		for (Player player : World.getInstance().getAllPlayers())
 		{
 			if (player.getClientConnection().getIP().startsWith(address))
 			{

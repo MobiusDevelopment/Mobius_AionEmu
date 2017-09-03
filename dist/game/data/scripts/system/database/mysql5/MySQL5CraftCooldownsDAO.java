@@ -45,7 +45,7 @@ public class MySQL5CraftCooldownsDAO extends CraftCooldownsDAO
 	public static final String SELECT_QUERY = "SELECT `delay_id`, `reuse_time` FROM `craft_cooldowns` WHERE `player_id`=?";
 	
 	@Override
-	public void loadCraftCooldowns(final Player player)
+	public void loadCraftCooldowns(Player player)
 	{
 		Connection con = null;
 		final FastMap<Integer, Long> craftCoolDowns = new FastMap<>();
@@ -72,7 +72,7 @@ public class MySQL5CraftCooldownsDAO extends CraftCooldownsDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("LoadcraftCoolDowns", e);
 		}
@@ -83,7 +83,7 @@ public class MySQL5CraftCooldownsDAO extends CraftCooldownsDAO
 	}
 	
 	@Override
-	public void storeCraftCooldowns(final Player player)
+	public void storeCraftCooldowns(Player player)
 	{
 		deleteCraftCoolDowns(player);
 		final Map<Integer, Long> craftCoolDowns = player.getCraftCooldownList().getCraftCoolDowns();
@@ -93,7 +93,7 @@ public class MySQL5CraftCooldownsDAO extends CraftCooldownsDAO
 			return;
 		}
 		
-		for (final Map.Entry<Integer, Long> entry : craftCoolDowns.entrySet())
+		for (Map.Entry<Integer, Long> entry : craftCoolDowns.entrySet())
 		{
 			final int delayId = entry.getKey();
 			final long reuseTime = entry.getValue();
@@ -115,7 +115,7 @@ public class MySQL5CraftCooldownsDAO extends CraftCooldownsDAO
 				stmt.setLong(3, reuseTime);
 				stmt.execute();
 			}
-			catch (final SQLException e)
+			catch (SQLException e)
 			{
 				log.error("storecraftCoolDowns", e);
 			}
@@ -126,7 +126,7 @@ public class MySQL5CraftCooldownsDAO extends CraftCooldownsDAO
 		}
 	}
 	
-	private void deleteCraftCoolDowns(final Player player)
+	private void deleteCraftCoolDowns(Player player)
 	{
 		Connection con = null;
 		
@@ -138,7 +138,7 @@ public class MySQL5CraftCooldownsDAO extends CraftCooldownsDAO
 			stmt.setInt(1, player.getObjectId());
 			stmt.execute();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("deletecraftCoolDowns", e);
 		}

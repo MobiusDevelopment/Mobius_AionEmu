@@ -268,7 +268,7 @@ public abstract class Storage implements IStorage
 			return false;
 		}
 		
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			if (count == 0)
 			{
@@ -348,7 +348,7 @@ public abstract class Storage implements IStorage
 		}
 		
 		long cnt = 0;
-		for (final Item item : temp)
+		for (Item item : temp)
 		{
 			cnt += item.getItemCount();
 		}
@@ -427,7 +427,7 @@ public abstract class Storage implements IStorage
 	
 	public void clear()
 	{
-		for (final Item i : itemStorage.getItems())
+		for (Item i : itemStorage.getItems())
 		{
 			remove(i);
 		}

@@ -51,7 +51,7 @@ public class Krotan_Crystal_SwordAI2 extends NpcAI2
 	}
 	
 	@Override
-	public boolean onDialogSelect(final Player player, int dialogId, int questId, int extendedRewardIndex)
+	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000245, 1))
 		{ // Spirit Of Krotan's Pendant.

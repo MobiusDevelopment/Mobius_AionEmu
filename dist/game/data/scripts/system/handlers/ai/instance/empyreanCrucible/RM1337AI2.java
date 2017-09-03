@@ -116,7 +116,7 @@ public class RM1337AI2 extends AggressiveNpcAI2
 						final int size = players.size();
 						if (players.size() < 6)
 						{
-							for (final Player p : players)
+							for (Player p : players)
 							{
 								spawnSparks(p);
 							}
@@ -163,7 +163,7 @@ public class RM1337AI2 extends AggressiveNpcAI2
 	private List<Player> getLifedPlayers()
 	{
 		final List<Player> players = new ArrayList<>();
-		for (final Player player : getKnownList().getKnownPlayers().values())
+		for (Player player : getKnownList().getKnownPlayers().values())
 		{
 			if (!CreatureActions.isAlreadyDead(player))
 			{

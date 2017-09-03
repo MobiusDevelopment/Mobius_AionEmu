@@ -52,7 +52,7 @@ public class ArenaOfGloryInstance extends PvPArenaInstance
 		}
 		final float totalRankingAP = 30800 - (30800 * rankingRate);
 		final float totalRankingGP = 800 - (800 * rankingRate);
-		for (final InstancePlayerReward playerReward : instanceReward.getInstanceRewards())
+		for (InstancePlayerReward playerReward : instanceReward.getInstanceRewards())
 		{
 			final PvPArenaPlayerReward reward = (PvPArenaPlayerReward) playerReward;
 			if (!reward.isRewarded())

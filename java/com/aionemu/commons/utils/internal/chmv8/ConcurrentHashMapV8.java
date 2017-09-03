@@ -1820,7 +1820,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		boolean npe = false; // to throw exception on exit for nulls
 		try
 		{ // to clean up counts on other exceptions
-			for (final Map.Entry<?, ? extends V> entry : m.entrySet())
+			for (Map.Entry<?, ? extends V> entry : m.entrySet())
 			{
 				Object k;
 				V v;
@@ -2195,7 +2195,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 				final Node[] tb = new Node[n << 1];
 				nextTab = tb;
 			}
-			catch (final Throwable ex)
+			catch (Throwable ex)
 			{ // try to cope with OOME
 				sizeCtl = Integer.MAX_VALUE;
 				return;
@@ -2393,7 +2393,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		long sum = baseCount;
 		if (as != null)
 		{
-			for (final CounterCell element : as)
+			for (CounterCell element : as)
 			{
 				a = element;
 				if (a != null)
@@ -3298,7 +3298,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 					return false;
 				}
 			}
-			for (final Map.Entry<?, ?> e : m.entrySet())
+			for (Map.Entry<?, ?> e : m.entrySet())
 			{
 				Object mk = e.getKey(), mv, v;
 				if ((mk == null) || ((mv = e.getValue()) == null) || ((v = internalGet(mk)) == null) || ((mv != v) && !mv.equals(v)))
@@ -4994,7 +4994,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		public final int hashCode()
 		{
 			int h = 0;
-			for (final Iterator<?> it = iterator(); it.hasNext();)
+			for (Iterator<?> it = iterator(); it.hasNext();)
 			{
 				h += it.next().hashCode();
 			}
@@ -5027,7 +5027,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		{
 			if (c != this)
 			{
-				for (final Object e : c)
+				for (Object e : c)
 				{
 					if ((e == null) || !contains(e))
 					{
@@ -5041,7 +5041,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		public final boolean removeAll(Collection<?> c)
 		{
 			boolean modified = false;
-			for (final Iterator<?> it = iterator(); it.hasNext();)
+			for (Iterator<?> it = iterator(); it.hasNext();)
 			{
 				if (c.contains(it.next()))
 				{
@@ -5055,7 +5055,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		public final boolean retainAll(Collection<?> c)
 		{
 			boolean modified = false;
-			for (final Iterator<?> it = iterator(); it.hasNext();)
+			for (Iterator<?> it = iterator(); it.hasNext();)
 			{
 				if (!c.contains(it.next()))
 				{
@@ -5135,7 +5135,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 			{
 				throw new UnsupportedOperationException();
 			}
-			for (final K e : c)
+			for (K e : c)
 			{
 				if (map.internalPut(e, v, true) == null)
 				{
@@ -5262,7 +5262,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		public final boolean addAll(Collection<? extends Entry<K, V>> c)
 		{
 			boolean added = false;
-			for (final Entry<K, V> e : c)
+			for (Entry<K, V> e : c)
 			{
 				if (add(e))
 				{
@@ -7539,7 +7539,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 			}
 			ASHIFT = 31 - Integer.numberOfLeadingZeros(scale);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new Error(e);
 		}
@@ -7555,7 +7555,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		{
 			return sun.misc.Unsafe.getUnsafe();
 		}
-		catch (final SecurityException tryReflectionInstead)
+		catch (SecurityException tryReflectionInstead)
 		{
 		}
 		try
@@ -7566,7 +7566,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 				public sun.misc.Unsafe run() throws Exception
 				{
 					final Class<sun.misc.Unsafe> k = sun.misc.Unsafe.class;
-					for (final java.lang.reflect.Field f : k.getDeclaredFields())
+					for (java.lang.reflect.Field f : k.getDeclaredFields())
 					{
 						f.setAccessible(true);
 						final Object x = f.get(null);
@@ -7579,7 +7579,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 				}
 			});
 		}
-		catch (final java.security.PrivilegedActionException e)
+		catch (java.security.PrivilegedActionException e)
 		{
 			throw new RuntimeException("Could not initialize intrinsics", e.getCause());
 		}

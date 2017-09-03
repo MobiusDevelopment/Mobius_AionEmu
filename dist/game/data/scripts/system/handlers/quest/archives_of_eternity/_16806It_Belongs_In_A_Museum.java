@@ -63,11 +63,11 @@ public class _16806It_Belongs_In_A_Museum extends QuestHandler
 	{
 		qe.registerOnEnterWorld(questId);
 		qe.registerQuestNpc(806148).addOnTalkEvent(questId);
-		for (final int mob : IDEternity01Mobs)
+		for (int mob : IDEternity01Mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : IDEternity01Boss)
+		for (int mob : IDEternity01Boss)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

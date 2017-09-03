@@ -78,7 +78,7 @@ public class DropService
 	/**
 	 * @param npcUniqueId
 	 */
-	public void scheduleFreeForAll(final int npcUniqueId)
+	public void scheduleFreeForAll(int npcUniqueId)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -218,7 +218,7 @@ public class DropService
 				final LootRuleType lrt = lootGrouRules.getLootRule();
 				if (lrt != LootRuleType.FREEFORALL)
 				{
-					for (final Player member : dropNpc.getInRangePlayers())
+					for (Player member : dropNpc.getInRangePlayers())
 					{
 						if (member != null)
 						{
@@ -282,7 +282,7 @@ public class DropService
 				if (lootGrouRules.getItemsToBeDistributed().isEmpty() || containDropItem)
 				{
 					dropNpc.setCurrentIndex(requestedItem.getIndex());
-					for (final Player member : dropNpc.getInRangePlayers())
+					for (Player member : dropNpc.getInRangePlayers())
 					{
 						final Player finalPlayer = World.getInstance().findPlayer(member.getObjectId());
 						if ((finalPlayer != null) && finalPlayer.isOnline())
@@ -343,7 +343,7 @@ public class DropService
 		if ((distId > 1) && (lootGroupRules.getQualityRule(quality)))
 		{
 			boolean anyOnline = false;
-			for (final Player member : dropNpc.getInRangePlayers())
+			for (Player member : dropNpc.getInRangePlayers())
 			{
 				final Player finalPlayer = World.getInstance().findPlayer(member.getObjectId());
 				if ((finalPlayer != null) && (finalPlayer.isOnline()))
@@ -375,7 +375,7 @@ public class DropService
 		
 		synchronized (dropItems)
 		{
-			for (final DropItem dropItem : dropItems)
+			for (DropItem dropItem : dropItems)
 			{
 				if (dropItem.getIndex() == itemIndex)
 				{
@@ -483,7 +483,7 @@ public class DropService
 					}
 					
 					int i = 0;
-					for (final Player p : members)
+					for (Player p : members)
 					{
 						i++;
 						if (i == lootGrouRules.getNrMisc())
@@ -592,7 +592,7 @@ public class DropService
 		
 		if (player.isInGroup2() || player.isInAlliance2())
 		{
-			for (final Player member : DropRegistrationService.getInstance().getDropRegistrationMap().get(npcId).getInRangePlayers())
+			for (Player member : DropRegistrationService.getInstance().getDropRegistrationMap().get(npcId).getInRangePlayers())
 			{
 				if ((member != null) && !player.equals(member) && member.isOnline())
 				{
@@ -617,7 +617,7 @@ public class DropService
 		
 		if (player.isInGroup2() || player.isInAlliance2())
 		{
-			for (final Player member : dropNpc.getInRangePlayers())
+			for (Player member : dropNpc.getInRangePlayers())
 			{
 				if ((member != null) && !player.equals(member) && member.isOnline())
 				{
@@ -641,7 +641,7 @@ public class DropService
 		final int itemId = requestedItem.getDropTemplate().getItemId();
 		if (player.isInGroup2() || player.isInAlliance2())
 		{
-			for (final Player member : dropNpc.getInRangePlayers())
+			for (Player member : dropNpc.getInRangePlayers())
 			{
 				if ((member != null) && !requestedItem.getWinningPlayer().equals(member) && member.isOnline())
 				{
@@ -651,7 +651,7 @@ public class DropService
 		}
 	}
 	
-	public void see(final Player player, Npc owner)
+	public void see(Player player, Npc owner)
 	{
 		final int id = owner.getObjectId();
 		final DropNpc dropNpc = DropRegistrationService.getInstance().getDropRegistrationMap().get(id);
@@ -675,7 +675,7 @@ public class DropService
 		}
 	}
 	
-	private void uniqueDropAnnounce(final Player player, final DropItem requestedItem)
+	private void uniqueDropAnnounce(Player player, DropItem requestedItem)
 	{
 		if (DropConfig.ENABLE_UNIQUE_DROP_ANNOUNCE && !player.getInventory().isFull(requestedItem.getDropTemplate().getItemTemplate().getExtraInventoryId()))
 		{

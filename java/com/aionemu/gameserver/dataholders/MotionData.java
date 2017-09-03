@@ -46,7 +46,7 @@ public class MotionData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final MotionTime motion : motionTimes)
+		for (MotionTime motion : motionTimes)
 		{
 			motionTimesMap.put(motion.getName(), motion);
 		}

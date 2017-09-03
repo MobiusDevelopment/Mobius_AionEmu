@@ -72,7 +72,7 @@ public class OnKillEvent extends QuestEvent
 		}
 		
 		final Npc npc = (Npc) env.getVisibleObject();
-		for (final Monster m : monster)
+		for (Monster m : monster)
 		{
 			if (m.getNpcIds().contains(npc.getNpcId()))
 			{
@@ -87,7 +87,7 @@ public class OnKillEvent extends QuestEvent
 		
 		if (complite != null)
 		{
-			for (final Monster m : monster)
+			for (Monster m : monster)
 			{
 				if (qs.getQuestVarById(m.getVar()) != qs.getQuestVarById(m.getVar()))
 				{

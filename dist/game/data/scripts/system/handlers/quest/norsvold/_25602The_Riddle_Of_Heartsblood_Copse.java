@@ -56,7 +56,7 @@ public class _25602The_Riddle_Of_Heartsblood_Copse extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(806171).addOnQuestStart(questId); // Phyndar.
 		qe.registerQuestNpc(806171).addOnTalkEvent(questId); // Phyndar.
-		for (final int boss : DF6C6NamedDemonTree68Ah)
+		for (int boss : DF6C6NamedDemonTree68Ah)
 		{
 			qe.registerQuestNpc(boss).addOnKillEvent(questId);
 		}

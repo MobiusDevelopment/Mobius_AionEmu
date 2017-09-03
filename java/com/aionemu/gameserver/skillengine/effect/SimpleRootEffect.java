@@ -54,7 +54,7 @@ public class SimpleRootEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		final Creature effected = effect.getEffected();
 		final Creature effector = effect.getEffector();

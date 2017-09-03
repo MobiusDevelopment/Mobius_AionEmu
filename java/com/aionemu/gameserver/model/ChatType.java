@@ -85,7 +85,7 @@ public enum ChatType
 	 */
 	public static ChatType getChatTypeByInt(int integerValue) throws IllegalArgumentException
 	{
-		for (final ChatType ct : ChatType.values())
+		for (ChatType ct : ChatType.values())
 		{
 			if (ct.toInteger() == integerValue)
 			{

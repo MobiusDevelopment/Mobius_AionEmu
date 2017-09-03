@@ -189,7 +189,7 @@ public class Guard_Captain_RohukaAI2 extends AggressiveNpcAI2
 	private void getRandomTarget()
 	{
 		final List<Player> players = new ArrayList<>();
-		for (final Player player : getKnownList().getKnownPlayers().values())
+		for (Player player : getKnownList().getKnownPlayers().values())
 		{
 			if (!CreatureActions.isAlreadyDead(player) && MathUtil.isIn3dRange(player, getOwner(), 16))
 			{

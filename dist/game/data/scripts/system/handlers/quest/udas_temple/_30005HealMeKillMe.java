@@ -48,7 +48,7 @@ public class _30005HealMeKillMe extends QuestHandler
 	{
 		qe.registerQuestNpc(799029).addOnQuestStart(questId);
 		qe.registerQuestNpc(799029).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

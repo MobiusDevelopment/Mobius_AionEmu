@@ -83,7 +83,7 @@ public class TaskManagerFromDB
 	private void registerTasks()
 	{
 		// For all tasks from DB
-		for (final TaskFromDB task : tasksList)
+		for (TaskFromDB task : tasksList)
 		{
 			// If the task name exist
 			if (handlers.get(task.getName()) != null)
@@ -96,11 +96,11 @@ public class TaskManagerFromDB
 					// Create new instance of the task
 					currentTask = tmpClass.newInstance();
 				}
-				catch (final InstantiationException e)
+				catch (InstantiationException e)
 				{
 					log.error(e.getMessage(), e);
 				}
-				catch (final IllegalAccessException e)
+				catch (IllegalAccessException e)
 				{
 					log.error(e.getMessage(), e);
 				}

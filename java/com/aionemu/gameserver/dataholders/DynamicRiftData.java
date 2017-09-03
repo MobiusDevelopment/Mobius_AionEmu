@@ -46,7 +46,7 @@ public class DynamicRiftData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final DynamicRiftTemplate template : dynamicRiftTemplates)
+		for (DynamicRiftTemplate template : dynamicRiftTemplates)
 		{
 			dynamicRift.put(template.getId(), new DynamicRiftLocation(template));
 		}

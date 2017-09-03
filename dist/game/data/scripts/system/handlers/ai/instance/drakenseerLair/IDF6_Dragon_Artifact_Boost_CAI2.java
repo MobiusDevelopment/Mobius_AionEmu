@@ -107,7 +107,7 @@ public class IDF6_Dragon_Artifact_Boost_CAI2 extends NpcAI2
 		dragonRaid((Npc) spawn(220440, 333.3891f, 319.6643f, 318.8283f, (byte) 82), 312.16144f, 285.48962f, 318.85556f, false);
 	}
 	
-	private void dragonRaid(final Npc npc, float x, float y, float z, boolean despawn)
+	private void dragonRaid(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);

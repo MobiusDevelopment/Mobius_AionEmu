@@ -60,7 +60,7 @@ public class AgentStartRunnable implements Runnable
 			public void run()
 			{
 				final Map<Integer, AgentLocation> locations = AgentService.getInstance().getAgentLocations();
-				for (final AgentLocation loc : locations.values())
+				for (AgentLocation loc : locations.values())
 				{
 					if (loc.getId() == id)
 					{

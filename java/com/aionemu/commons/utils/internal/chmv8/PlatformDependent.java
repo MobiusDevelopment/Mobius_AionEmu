@@ -294,7 +294,7 @@ public final class PlatformDependent
 					root = true;
 					break;
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					// Failed to bind.
 					// Check the error message so that we don't always need to bind 1023 times.
@@ -317,7 +317,7 @@ public final class PlatformDependent
 						{
 							ss.close();
 						}
-						catch (final Exception e)
+						catch (Exception e)
 						{
 							// Ignore.
 						}
@@ -335,7 +335,7 @@ public final class PlatformDependent
 			Class.forName("java.time.Clock", false, Object.class.getClassLoader());
 			return 8;
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			// Ignore
 		}
@@ -345,7 +345,7 @@ public final class PlatformDependent
 			Class.forName("java.util.concurrent.LinkedTransferQueue", false, BlockingQueue.class.getClassLoader());
 			return 7;
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			// Ignore
 		}
@@ -359,7 +359,7 @@ public final class PlatformDependent
 		{
 			return PlatformDependent0.hasUnsafe();
 		}
-		catch (final Throwable t)
+		catch (Throwable t)
 		{
 			return false;
 		}

@@ -50,7 +50,7 @@ public class SvsStartRunnable implements Runnable
 			}
 		}, 480000);
 		final Map<Integer, SvsLocation> locations = SvsService.getInstance().getSvsLocations();
-		for (final SvsLocation loc : locations.values())
+		for (SvsLocation loc : locations.values())
 		{
 			if (loc.getId() == id)
 			{

@@ -65,7 +65,7 @@ public class MaterialData
 			return;
 		}
 		
-		for (final MaterialTemplate template : materialTemplates)
+		for (MaterialTemplate template : materialTemplates)
 		{
 			materialsById.put(template.getId(), template);
 			if (template.getSkills() != null)

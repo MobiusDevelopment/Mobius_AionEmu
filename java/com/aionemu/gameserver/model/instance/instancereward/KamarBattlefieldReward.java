@@ -214,7 +214,7 @@ public class KamarBattlefieldReward extends InstanceReward<KamarBattlefieldPlaye
 		return (KamarBattlefieldPlayerReward) super.getPlayerReward(object);
 	}
 	
-	public void sendPacket(final int type, final Integer object)
+	public void sendPacket(int type, Integer object)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{

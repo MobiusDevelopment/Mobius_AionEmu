@@ -54,7 +54,7 @@ public class _19603Clipping_The_Commotion extends QuestHandler
 		qe.registerQuestNpc(804651).addOnQuestStart(questId);
 		qe.registerQuestNpc(804651).addOnTalkEvent(questId);
 		qe.registerQuestNpc(798155).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

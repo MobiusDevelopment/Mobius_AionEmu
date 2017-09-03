@@ -45,7 +45,7 @@ public class HarmonyArenaReward extends PvPArenaReward
 	
 	public HarmonyGroupReward getHarmonyGroupReward(Integer object)
 	{
-		for (final InstancePlayerReward reward : groups)
+		for (InstancePlayerReward reward : groups)
 		{
 			final HarmonyGroupReward harmonyReward = (HarmonyGroupReward) reward;
 			if (harmonyReward.containPlayer(object))
@@ -59,9 +59,9 @@ public class HarmonyArenaReward extends PvPArenaReward
 	public FastList<HarmonyGroupReward> getHarmonyGroupInside()
 	{
 		final FastList<HarmonyGroupReward> harmonyGroups = new FastList<>();
-		for (final HarmonyGroupReward group : groups)
+		for (HarmonyGroupReward group : groups)
 		{
-			for (final AGPlayer agp : group.getAGPlayers())
+			for (AGPlayer agp : group.getAGPlayers())
 			{
 				if (agp.isInInstance())
 				{
@@ -76,7 +76,7 @@ public class HarmonyArenaReward extends PvPArenaReward
 	public FastList<Player> getPlayersInside(HarmonyGroupReward group)
 	{
 		final FastList<Player> players = new FastList<>();
-		for (final Player playerInside : instance.getPlayersInside())
+		for (Player playerInside : instance.getPlayersInside())
 		{
 			if (group.containPlayer(playerInside.getObjectId()))
 			{
@@ -96,7 +96,7 @@ public class HarmonyArenaReward extends PvPArenaReward
 		return groups;
 	}
 	
-	public void sendPacket(final int type, final Integer object)
+	public void sendPacket(int type, Integer object)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -112,7 +112,7 @@ public class HarmonyArenaReward extends PvPArenaReward
 	public int getRank(int points)
 	{
 		int rank = -1;
-		for (final HarmonyGroupReward reward : sortGroupPoints())
+		for (HarmonyGroupReward reward : sortGroupPoints())
 		{
 			if (reward.getPoints() >= points)
 			{

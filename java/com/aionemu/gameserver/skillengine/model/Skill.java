@@ -357,7 +357,7 @@ public class Skill
 		if (chargeTemplate != null)
 		{
 			duration = 0;
-			for (final ChargeTemplate charge : chargeTemplate.getCharges())
+			for (ChargeTemplate charge : chargeTemplate.getCharges())
 			{
 				duration += charge.getTime();
 			}
@@ -1339,7 +1339,7 @@ public class Skill
 			}
 			
 			int skillId = skillTemplate.getSkillId();
-			for (final ChargeTemplate charge : chargeTemplate.getCharges())
+			for (ChargeTemplate charge : chargeTemplate.getCharges())
 			{
 				time -= charge.getTime();
 				skillId = charge.getId();
@@ -1422,7 +1422,7 @@ public class Skill
 		if (skillTemplate.getEffects() != null)
 		{
 			boolean blockAOESpread = false;
-			for (final Creature effected : effectedList)
+			for (Creature effected : effectedList)
 			{
 				final Effect effect = new Effect(this, effected, 0, itemTemplate);
 				if (effected instanceof Player)
@@ -1521,7 +1521,7 @@ public class Skill
 		final Actions skillActions = skillTemplate.getActions();
 		if (skillActions != null)
 		{
-			for (final Action action : skillActions.getActions())
+			for (Action action : skillActions.getActions())
 			{
 				action.act(this);
 			}
@@ -1565,7 +1565,7 @@ public class Skill
 		/**
 		 * Apply effects to effected objects
 		 */
-		for (final Effect effect : effects)
+		for (Effect effect : effects)
 		{
 			effect.applyEffect();
 		}

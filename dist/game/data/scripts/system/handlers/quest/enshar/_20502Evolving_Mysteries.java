@@ -49,7 +49,7 @@ public class _20502Evolving_Mysteries extends QuestHandler
 			804725,
 			804726
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

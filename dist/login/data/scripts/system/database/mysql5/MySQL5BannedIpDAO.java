@@ -42,7 +42,7 @@ public class MySQL5BannedIpDAO extends BannedIpDAO
 	}
 	
 	@Override
-	public BannedIP insert(final String mask, final Timestamp expireTime)
+	public BannedIP insert(String mask, Timestamp expireTime)
 	{
 		BannedIP result = new BannedIP();
 		result.setMask(mask);
@@ -56,7 +56,7 @@ public class MySQL5BannedIpDAO extends BannedIpDAO
 	}
 	
 	@Override
-	public boolean insert(final BannedIP bannedIP)
+	public boolean insert(BannedIP bannedIP)
 	{
 		boolean insert = DB.insertUpdate("INSERT INTO banned_ip(mask, time_end) VALUES (?, ?)", preparedStatement ->
 		{
@@ -100,7 +100,7 @@ public class MySQL5BannedIpDAO extends BannedIpDAO
 	}
 	
 	@Override
-	public boolean update(final BannedIP bannedIP)
+	public boolean update(BannedIP bannedIP)
 	{
 		return DB.insertUpdate("UPDATE banned_ip SET mask = ?, time_end = ? WHERE id = ?", preparedStatement ->
 		{
@@ -119,7 +119,7 @@ public class MySQL5BannedIpDAO extends BannedIpDAO
 	}
 	
 	@Override
-	public boolean remove(final String mask)
+	public boolean remove(String mask)
 	{
 		return DB.insertUpdate("DELETE FROM banned_ip WHERE mask = ?", preparedStatement ->
 		{
@@ -129,7 +129,7 @@ public class MySQL5BannedIpDAO extends BannedIpDAO
 	}
 	
 	@Override
-	public boolean remove(final BannedIP bannedIP)
+	public boolean remove(BannedIP bannedIP)
 	{
 		return DB.insertUpdate("DELETE FROM banned_ip WHERE mask = ?", preparedStatement ->
 		{

@@ -67,7 +67,7 @@ public class AnohaService
 		if (CustomConfig.ANOHA_ENABLED)
 		{
 			anoha = DataManager.ANOHA_DATA.getAnohaLocations();
-			for (final AnohaLocation loc : getAnohaLocations().values())
+			for (AnohaLocation loc : getAnohaLocations().values())
 			{
 				spawn(loc, AnohaStateType.PEACE);
 			}
@@ -83,9 +83,9 @@ public class AnohaService
 		if (CustomConfig.ANOHA_ENABLED)
 		{
 			anohaSchedule = AnohaSchedule.load();
-			for (final Anoha anoha : anohaSchedule.getAnohasList())
+			for (Anoha anoha : anohaSchedule.getAnohasList())
 			{
-				for (final String berserkTime : anoha.getBerserkTimes())
+				for (String berserkTime : anoha.getBerserkTimes())
 				{
 					CronService.getInstance().schedule(new AnohaStartRunnable(anoha.getId()), berserkTime);
 				}
@@ -93,7 +93,7 @@ public class AnohaService
 		}
 	}
 	
-	public void startAnoha(final int id)
+	public void startAnoha(int id)
 	{
 		final BerserkAnoha<?> danuarhero;
 		synchronized (this)
@@ -140,9 +140,9 @@ public class AnohaService
 		{
 		}
 		final List<SpawnGroup2> locSpawns = DataManager.SPAWNS_DATA2.getAnohaSpawnsByLocId(loc.getId());
-		for (final SpawnGroup2 group : locSpawns)
+		for (SpawnGroup2 group : locSpawns)
 		{
-			for (final SpawnTemplate st : group.getSpawnTemplates())
+			for (SpawnTemplate st : group.getSpawnTemplates())
 			{
 				final AnohaSpawnTemplate anohatemplate = (AnohaSpawnTemplate) st;
 				if (anohatemplate.getCStateType().equals(cstate))
@@ -165,7 +165,7 @@ public class AnohaService
 		}
 	}
 	
-	public void sendRequest(final Player player)
+	public void sendRequest(Player player)
 	{
 		final String message = "Berserk Anoha has appeared. Do you want to fight ?";
 		final RequestResponseHandler responseHandler = new RequestResponseHandler(player)
@@ -190,7 +190,7 @@ public class AnohaService
 	
 	public void despawn(AnohaLocation loc)
 	{
-		for (final VisibleObject npc : loc.getSpawned())
+		for (VisibleObject npc : loc.getSpawned())
 		{
 			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
 			npc.getController().onDelete();

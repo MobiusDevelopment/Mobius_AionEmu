@@ -49,9 +49,9 @@ public abstract class AbyssRankDAO implements DAO
 	
 	public abstract ArrayList<AbyssRankingResult> getAbyssRankingLegions(Race race);
 	
-	public abstract Map<Integer, Integer> loadPlayersAp(Race race, final int lowerApLimit, final int maxOfflineDays);
+	public abstract Map<Integer, Integer> loadPlayersAp(Race race, int lowerApLimit, int maxOfflineDays);
 	
-	public abstract Map<Integer, Integer> loadPlayersGp(Race race, final int lowerGpLimit, final int maxOfflineDays);
+	public abstract Map<Integer, Integer> loadPlayersGp(Race race, int lowerGpLimit, int maxOfflineDays);
 	
 	public abstract void updateAbyssRank(int playerId, AbyssRankEnum rankEnum);
 	

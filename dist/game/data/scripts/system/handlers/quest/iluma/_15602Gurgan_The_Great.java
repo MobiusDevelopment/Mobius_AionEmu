@@ -57,7 +57,7 @@ public class _15602Gurgan_The_Great extends QuestHandler
 		qe.registerQuestNpc(806159).addOnTalkEvent(questId); // Alexandria.
 		qe.registerQuestNpc(806194).addOnTalkEvent(questId); // Frogboy.
 		qe.registerQuestNpc(703136).addOnTalkEvent(questId); // 셀라투의 공물 항아리.
-		for (final int boss : LF6C6NamedFrogFighter68Ah)
+		for (int boss : LF6C6NamedFrogFighter68Ah)
 		{
 			qe.registerQuestNpc(boss).addOnKillEvent(questId);
 		}

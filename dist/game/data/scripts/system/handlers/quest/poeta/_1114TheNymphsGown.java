@@ -54,14 +54,14 @@ public class _1114TheNymphsGown extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestItem(182200214, questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		int targetId = 0;
@@ -189,7 +189,7 @@ public class _1114TheNymphsGown extends QuestHandler
 				case USE_OBJECT:
 					if (var == 1)
 					{
-						for (final VisibleObject obj : player.getKnownList().getKnownObjects().values())
+						for (VisibleObject obj : player.getKnownList().getKnownObjects().values())
 						{
 							if (!(obj instanceof Npc))
 							{

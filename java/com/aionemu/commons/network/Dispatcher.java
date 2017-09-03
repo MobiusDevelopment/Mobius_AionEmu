@@ -107,7 +107,7 @@ public abstract class Dispatcher extends Thread
 				{
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.error("Dispatcher error! " + e, e);
 			}
@@ -157,7 +157,7 @@ public abstract class Dispatcher extends Thread
 		{
 			((Acceptor) key.attachment()).accept(key);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error while accepting connection: +" + e, e);
 		}
@@ -190,7 +190,7 @@ public abstract class Dispatcher extends Thread
 		{
 			numRead = socketChannel.read(rb);
 		}
-		catch (final IOException e)
+		catch (IOException e)
 		{
 			closeConnectionImpl(con);
 			return;
@@ -264,7 +264,7 @@ public abstract class Dispatcher extends Thread
 			
 			return con.processData(b);
 		}
-		catch (final IllegalArgumentException e)
+		catch (IllegalArgumentException e)
 		{
 			log.warn("Error on parsing input from client - account: " + con + " packet size: " + sz + " real size:" + buf.remaining(), e);
 			return false;
@@ -291,7 +291,7 @@ public abstract class Dispatcher extends Thread
 			{
 				numWrite = socketChannel.write(wb);
 			}
-			catch (final IOException e)
+			catch (IOException e)
 			{
 				closeConnectionImpl(con);
 				return;
@@ -330,7 +330,7 @@ public abstract class Dispatcher extends Thread
 			{
 				numWrite = socketChannel.write(wb);
 			}
-			catch (final IOException e)
+			catch (IOException e)
 			{
 				closeConnectionImpl(con);
 				return;

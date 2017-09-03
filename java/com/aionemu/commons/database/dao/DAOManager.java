@@ -74,19 +74,19 @@ public class DAOManager
 			
 			scriptManager.load(DatabaseConfig.DATABASE_SCRIPTCONTEXT_DESCRIPTOR);
 		}
-		catch (final RuntimeException e)
+		catch (RuntimeException e)
 		{
 			throw new Error(e.getMessage(), e);
 		}
-		catch (final FileNotFoundException e)
+		catch (FileNotFoundException e)
 		{
 			throw new Error("Can't load database script context: " + DatabaseConfig.DATABASE_SCRIPTCONTEXT_DESCRIPTOR, e);
 		}
-		catch (final JAXBException e)
+		catch (JAXBException e)
 		{
 			throw new Error("Can't compile database handlers - check your MySQL5 implementations", e);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new Error("A fatal error occured during loading or compiling the database handlers", e);
 		}
@@ -181,7 +181,7 @@ public class DAOManager
 	{
 		synchronized (DAOManager.class)
 		{
-			for (final DAO dao : daoMap.values())
+			for (DAO dao : daoMap.values())
 			{
 				if (dao.getClass() == daoClass)
 				{

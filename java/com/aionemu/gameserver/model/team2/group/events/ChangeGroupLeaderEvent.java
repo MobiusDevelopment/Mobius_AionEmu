@@ -56,7 +56,7 @@ public class ChangeGroupLeaderEvent extends ChangeLeaderEvent<PlayerGroup>
 	}
 	
 	@Override
-	protected void changeLeaderTo(final Player player)
+	protected void changeLeaderTo(Player player)
 	{
 		team.changeLeader(team.getMember(player.getObjectId()));
 		team.applyOnMembers(new Predicate<Player>()

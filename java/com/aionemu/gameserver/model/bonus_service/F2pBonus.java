@@ -53,7 +53,7 @@ public class F2pBonus implements StatOwner
 		{
 			return;
 		}
-		for (final F2pPenalityAttr f2pBonusPenaltyAttr : f2pBonusattr.getPenaltyAttr())
+		for (F2pPenalityAttr f2pBonusPenaltyAttr : f2pBonusattr.getPenaltyAttr())
 		{
 			if (f2pBonusPenaltyAttr.getFunc().equals(Func.PERCENT))
 			{

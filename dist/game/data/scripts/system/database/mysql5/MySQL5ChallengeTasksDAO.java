@@ -87,7 +87,7 @@ public class MySQL5ChallengeTasksDAO extends ChallengeTasksDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Error while loading challenge task. " + e);
 		}
@@ -101,7 +101,7 @@ public class MySQL5ChallengeTasksDAO extends ChallengeTasksDAO
 	@Override
 	public void storeTask(ChallengeTask task)
 	{
-		for (final ChallengeQuest quest : task.getQuests().values())
+		for (ChallengeQuest quest : task.getQuests().values())
 		{
 			switch (quest.getPersistentState())
 			{
@@ -132,7 +132,7 @@ public class MySQL5ChallengeTasksDAO extends ChallengeTasksDAO
 			stmt.close();
 			quest.setPersistentState(PersistentState.UPDATED);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Error while inserting challenge task. " + e);
 		}
@@ -158,7 +158,7 @@ public class MySQL5ChallengeTasksDAO extends ChallengeTasksDAO
 			stmt.close();
 			quest.setPersistentState(PersistentState.UPDATED);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Error while updating challenge task. " + e);
 		}

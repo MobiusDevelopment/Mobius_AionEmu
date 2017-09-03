@@ -50,7 +50,7 @@ public class _30203GroupHalttheCeremony extends QuestHandler
 		qe.registerQuestNpc(216179).addOnKillEvent(questId);
 		qe.registerQuestNpc(216181).addOnKillEvent(questId);
 		qe.registerQuestNpc(216263).addOnKillEvent(questId);
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}

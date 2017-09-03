@@ -125,7 +125,7 @@ public class Transaction
 		{
 			connection.commit();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.warn("Error while commiting transaction", e);
 			
@@ -140,7 +140,7 @@ public class Transaction
 					connection.rollback();
 				}
 			}
-			catch (final SQLException e1)
+			catch (SQLException e1)
 			{
 				log.error("Can't rollback transaction", e1);
 			}

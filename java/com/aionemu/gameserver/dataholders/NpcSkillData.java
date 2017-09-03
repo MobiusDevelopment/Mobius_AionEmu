@@ -46,7 +46,7 @@ public class NpcSkillData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final NpcSkillTemplates npcSkill : npcSkills)
+		for (NpcSkillTemplates npcSkill : npcSkills)
 		{
 			npcSkillData.put(npcSkill.getNpcId(), npcSkill);
 			

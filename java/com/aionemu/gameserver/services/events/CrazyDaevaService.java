@@ -47,7 +47,7 @@ public class CrazyDaevaService
 	public void startTimer()
 	{
 		final String[] times = EventsConfig.CRAZY_TIMES.split("\\|");
-		for (final String cron : times)
+		for (String cron : times)
 		{
 			CronService.getInstance().schedule(new Runnable()
 			{
@@ -75,7 +75,7 @@ public class CrazyDaevaService
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
 			@Override
-			public void visit(final Player player)
+			public void visit(Player player)
 			{
 				int rnd = 0;
 				rnd = Rnd.get(1, 100);
@@ -136,7 +136,7 @@ public class CrazyDaevaService
 	}
 	
 	// killer reward + announce
-	private void sendEndSpreeMessage(final Player victim, Creature killer, boolean isPvPDeath)
+	private void sendEndSpreeMessage(Player victim, Creature killer, boolean isPvPDeath)
 	{
 		if (killer instanceof Player)
 		{
@@ -147,7 +147,7 @@ public class CrazyDaevaService
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
-					public void visit(final Player player)
+					public void visit(Player player)
 					{
 						PacketSendUtility.sendYellowMessageOnCenter(player, "Crazier " + victim.getName() + " has slain by " + spreeEnder + "!");
 					}
@@ -169,7 +169,7 @@ public class CrazyDaevaService
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
-					public void visit(final Player player)
+					public void visit(Player player)
 					{
 						if (player.isInCrazy())
 						{

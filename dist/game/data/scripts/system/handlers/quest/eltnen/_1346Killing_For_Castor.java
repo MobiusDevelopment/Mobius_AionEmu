@@ -51,7 +51,7 @@ public class _1346Killing_For_Castor extends QuestHandler
 		qe.registerQuestNpc(203966).addOnQuestStart(questId);
 		qe.registerQuestNpc(203966).addOnTalkEvent(questId);
 		qe.registerQuestNpc(203965).addOnTalkEvent(questId);
-		for (final int mob_id : mob_ids)
+		for (int mob_id : mob_ids)
 		{
 			qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
 		}

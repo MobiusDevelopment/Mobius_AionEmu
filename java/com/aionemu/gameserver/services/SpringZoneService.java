@@ -42,7 +42,7 @@ public class SpringZoneService
 	
 	private SpringZoneService()
 	{
-		for (final SpringTemplate t : DataManager.SPRING_OBJECTS_DATA.getSpringObject())
+		for (SpringTemplate t : DataManager.SPRING_OBJECTS_DATA.getSpringObject())
 		{
 			final SpringObject obj = new SpringObject(t, 0);
 			obj.spawn();
@@ -58,7 +58,7 @@ public class SpringZoneService
 			@Override
 			public void run()
 			{
-				for (final SpringObject obj : springObjects)
+				for (SpringObject obj : springObjects)
 				{
 					obj.getKnownList().doOnAllPlayers(new Visitor<Player>()
 					{

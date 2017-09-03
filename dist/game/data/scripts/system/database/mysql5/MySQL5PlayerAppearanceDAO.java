@@ -36,7 +36,7 @@ public class MySQL5PlayerAppearanceDAO extends PlayerAppearanceDAO
 	private static final Logger log = LoggerFactory.getLogger(PlayerAppearanceDAO.class);
 	
 	@Override
-	public PlayerAppearance load(final int playerId)
+	public PlayerAppearance load(int playerId)
 	{
 		Connection con = null;
 		final PlayerAppearance pa = new PlayerAppearance();
@@ -114,7 +114,7 @@ public class MySQL5PlayerAppearanceDAO extends PlayerAppearanceDAO
 			resultSet.close();
 			statement.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore PlayerAppearance data for player " + playerId + " from DB: " + e.getMessage(), e);
 			return null;
@@ -127,7 +127,7 @@ public class MySQL5PlayerAppearanceDAO extends PlayerAppearanceDAO
 	}
 	
 	@Override
-	public boolean store(final int id, final PlayerAppearance pa)
+	public boolean store(int id, PlayerAppearance pa)
 	{
 		return DB.insertUpdate("REPLACE INTO player_appearance (" + "player_id, voice, skin_rgb, hair_rgb, eye_rgb, lip_rgb, face, hair, deco, tattoo, face_contour, expression, pupil_shape, remove_mane, right_eye_rgb, eye_lash_shape," + "jaw_line, forehead, eye_height, eye_space, eye_width, eye_size, eye_shape, eye_angle, brow_height, brow_angle, brow_shape, nose, nose_bridge, nose_width, nose_tip," + "cheek, lip_height, mouth_size, lip_size, smile, lip_shape, jaw_height, chin_jut, ear_shape, head_size, neck, neck_length, shoulder_size, torso, chest, waist, hips," + "arm_thickness, hand_size, leg_thickness, facial_rate, foot_size, arm_length, leg_length, shoulders, face_shape, pupil_size, upper_torso, fore_arm_thickness, hand_span," + "calf_thickness, height)" + " VALUES " + "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?," + "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?" + ")", new IUStH()
 		{

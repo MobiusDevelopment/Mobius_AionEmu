@@ -141,7 +141,7 @@ public class FortressLocation extends SiegeLocation
 	@Override
 	public void clearLocation()
 	{
-		for (final Creature creature : getCreatures().values())
+		for (Creature creature : getCreatures().values())
 		{
 			if ((isEnemy(creature)) && ((creature instanceof Kisk)))
 			{
@@ -151,7 +151,7 @@ public class FortressLocation extends SiegeLocation
 			
 		}
 		
-		for (final Player player : getPlayers().values())
+		for (Player player : getPlayers().values())
 		{
 			if (isEnemy(player))
 			{

@@ -55,7 +55,7 @@ public class _18600Scoring_Some_Bad_Stigma extends QuestHandler
 			804601,
 			205228
 		};
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 			qe.registerQuestNpc(204500).addOnQuestStart(questId);

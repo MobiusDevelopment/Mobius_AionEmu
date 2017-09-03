@@ -107,13 +107,13 @@ public final class HTMLCache
 				
 				cache = (FastMap<String, String>) ois.readObject();
 				
-				for (final String html : cache.values())
+				for (String html : cache.values())
 				{
 					loadedFiles++;
 					size += html.length();
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.warn("", e);
 				
@@ -142,7 +142,7 @@ public final class HTMLCache
 			
 			final StringBuilder sb = new StringBuilder(8192);
 			
-			for (final Entry<String, String> entry : cache.entrySet())
+			for (Entry<String, String> entry : cache.entrySet())
 			{
 				try
 				{
@@ -154,7 +154,7 @@ public final class HTMLCache
 					
 					entry.setValue(newHtml);
 				}
-				catch (final RuntimeException e)
+				catch (RuntimeException e)
 				{
 					log.warn("Cache[HTML]: Error during compaction of " + entry.getKey(), e);
 				}
@@ -174,7 +174,7 @@ public final class HTMLCache
 				
 				oos.writeObject(cache);
 			}
-			catch (final IOException e)
+			catch (IOException e)
 			{
 				log.warn("", e);
 			}
@@ -210,7 +210,7 @@ public final class HTMLCache
 		
 		final List<String> list = new ArrayList<>();
 		
-		for (final String tag : tagsToCompact)
+		for (String tag : tagsToCompact)
 		{
 			list.add("<" + tag + ">");
 			list.add("</" + tag + ">");
@@ -220,7 +220,7 @@ public final class HTMLCache
 		
 		final List<String> list2 = new ArrayList<>();
 		
-		for (final String tag : list)
+		for (String tag : list)
 		{
 			list2.add(tag);
 			list2.add(tag + " ");
@@ -290,7 +290,7 @@ public final class HTMLCache
 	
 	public void parseDir(File dir)
 	{
-		for (final File file : dir.listFiles(HTML_FILTER))
+		for (File file : dir.listFiles(HTML_FILTER))
 		{
 			if (!file.isDirectory())
 			{
@@ -333,7 +333,7 @@ public final class HTMLCache
 				
 				return content;
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.warn("Problem with htm file:", e);
 			}

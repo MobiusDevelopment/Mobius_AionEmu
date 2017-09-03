@@ -41,7 +41,7 @@ public enum AuctionResult
 	
 	public static AuctionResult getResultFromId(int resultId)
 	{
-		for (final AuctionResult result : AuctionResult.values())
+		for (AuctionResult result : AuctionResult.values())
 		{
 			if (result.getId() == resultId)
 			{

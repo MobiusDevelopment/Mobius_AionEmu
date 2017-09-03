@@ -59,7 +59,7 @@ public class LevelDown extends AdminCommand
 		{
 			level = Integer.parseInt(params[0]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(player, "You should enter valid second params!");
 			return;

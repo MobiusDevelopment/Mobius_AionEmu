@@ -82,7 +82,7 @@ public class ScriptManager
 		{
 			list = (ScriptList) u.unmarshal(fin);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw e;
 		}
@@ -94,7 +94,7 @@ public class ScriptManager
 			}
 		}
 		
-		for (final ScriptInfo si : list.getScriptInfos())
+		for (ScriptInfo si : list.getScriptInfos())
 		{
 			final ScriptContext context = createContext(si, null);
 			if (context != null)
@@ -129,7 +129,7 @@ public class ScriptManager
 		{
 			loadDirectory(directory, list, DEFAULT_COMPILER_CLASS.getName());
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to load script context from directory " + directory.getAbsolutePath(), e);
 		}
@@ -185,7 +185,7 @@ public class ScriptManager
 		
 		if ((si.getScriptInfos() != null) && !si.getScriptInfos().isEmpty())
 		{
-			for (final ScriptInfo child : si.getScriptInfos())
+			for (ScriptInfo child : si.getScriptInfos())
 			{
 				createContext(child, context);
 			}
@@ -204,7 +204,7 @@ public class ScriptManager
 	 */
 	public synchronized void shutdown()
 	{
-		for (final ScriptContext context : contexts)
+		for (ScriptContext context : contexts)
 		{
 			context.shutdown();
 		}
@@ -217,7 +217,7 @@ public class ScriptManager
 	 */
 	public synchronized void reload()
 	{
-		for (final ScriptContext context : contexts)
+		for (ScriptContext context : contexts)
 		{
 			reloadContext(context);
 		}

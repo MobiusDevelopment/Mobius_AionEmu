@@ -82,7 +82,7 @@ public class CarpusIsleStoreroomInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 214762: // Dakaer Tactician.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -91,7 +91,7 @@ public class CarpusIsleStoreroomInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 214766: // Dakaer Chanter.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -100,7 +100,7 @@ public class CarpusIsleStoreroomInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 215444: // Ebonlord Kiriel.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -146,7 +146,7 @@ public class CarpusIsleStoreroomInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		super.onInstanceCreate(instance);
 		CarpusIsleStoreroomTreasureBoxSuscess.add((Npc) spawn(700475, 524.4908f, 706.2591f, 191.8985f, (byte) 90));
@@ -170,7 +170,7 @@ public class CarpusIsleStoreroomInstance extends GeneralInstanceHandler
 		}, 900000); // 15 Minutes.
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -213,7 +213,7 @@ public class CarpusIsleStoreroomInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

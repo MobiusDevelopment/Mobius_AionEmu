@@ -51,7 +51,7 @@ public class Goldenspark_ApparatusAI2 extends ActionItemNpcAI2
 	
 	private void killNpc(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			AI2Actions.killSilently(this, npc);
 		}

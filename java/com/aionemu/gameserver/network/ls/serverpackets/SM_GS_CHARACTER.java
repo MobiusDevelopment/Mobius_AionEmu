@@ -32,7 +32,7 @@ public class SM_GS_CHARACTER extends LsServerPacket
 	 * @param accountId
 	 * @param characterCount
 	 */
-	public SM_GS_CHARACTER(final int accountId, final int characterCount)
+	public SM_GS_CHARACTER(int accountId, int characterCount)
 	{
 		super(0x08);
 		this.accountId = accountId;

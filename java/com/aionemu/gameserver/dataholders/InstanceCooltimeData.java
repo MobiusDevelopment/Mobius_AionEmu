@@ -44,7 +44,7 @@ public class InstanceCooltimeData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final InstanceCooltime tmp : instanceCooltime)
+		for (InstanceCooltime tmp : instanceCooltime)
 		{
 			instanceCooltimes.put(tmp.getWorldId(), tmp);
 			syncIdToMapId.put(tmp.getId(), tmp.getWorldId());
@@ -152,7 +152,7 @@ public class InstanceCooltimeData
 		final DateTime now = DateTime.now();
 		DateTime repeatDate = new DateTime(now.getYear(), now.getMonthOfYear(), now.getDayOfMonth(), hour, 0, 0);
 		final int curentDay = now.getDayOfWeek();
-		for (final String name : days)
+		for (String name : days)
 		{
 			final int day = getDay(name);
 			if (day < curentDay)

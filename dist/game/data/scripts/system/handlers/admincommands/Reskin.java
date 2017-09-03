@@ -59,7 +59,7 @@ public class Reskin extends AdminCommand
 			oldItemId = Integer.parseInt(params[0]);
 			newItemId = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(admin, "<old item ID> & <new item ID> must be an integer.");
 			return;

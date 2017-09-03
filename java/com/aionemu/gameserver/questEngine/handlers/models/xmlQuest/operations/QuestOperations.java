@@ -70,7 +70,7 @@ public class QuestOperations
 	{
 		if (operations != null)
 		{
-			for (final QuestOperation oper : operations)
+			for (QuestOperation oper : operations)
 			{
 				oper.doOperate(env);
 			}

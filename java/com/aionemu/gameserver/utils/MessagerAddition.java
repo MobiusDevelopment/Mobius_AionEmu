@@ -62,7 +62,7 @@ public class MessagerAddition
 		PacketSendUtility.sendYellowMessageOnCenter(player, msg);
 	}
 	
-	public static void announceAll(final String msg, int delay)
+	public static void announceAll(String msg, int delay)
 	{
 		if (delay > 0)
 		{
@@ -97,7 +97,7 @@ public class MessagerAddition
 		}
 	}
 	
-	public static void messageToAll(final String msg, int delay)
+	public static void messageToAll(String msg, int delay)
 	{
 		if (delay > 0)
 		{
@@ -132,7 +132,7 @@ public class MessagerAddition
 		}
 	}
 	
-	public static void whiteMsgToAll(final String msg, int delay)
+	public static void whiteMsgToAll(String msg, int delay)
 	{
 		if (delay > 0)
 		{
@@ -167,7 +167,7 @@ public class MessagerAddition
 		}
 	}
 	
-	public static void whiteAnnounceToAll(final String msg, int delay)
+	public static void whiteAnnounceToAll(String msg, int delay)
 	{
 		if (delay > 0)
 		{
@@ -202,7 +202,7 @@ public class MessagerAddition
 		}
 	}
 	
-	public static void yellowMsgToAll(final String msg, int delay)
+	public static void yellowMsgToAll(String msg, int delay)
 	{
 		if (delay > 0)
 		{
@@ -237,7 +237,7 @@ public class MessagerAddition
 		}
 	}
 	
-	public static void yellowAnnounceToAll(final String msg, int delay)
+	public static void yellowAnnounceToAll(String msg, int delay)
 	{
 		if (delay > 0)
 		{
@@ -272,7 +272,7 @@ public class MessagerAddition
 		}
 	}
 	
-	public static void global(final String msg)
+	public static void global(String msg)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -285,7 +285,7 @@ public class MessagerAddition
 		});
 	}
 	
-	public static void attention(final String msg)
+	public static void attention(String msg)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{

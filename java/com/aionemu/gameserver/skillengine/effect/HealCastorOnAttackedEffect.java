@@ -55,7 +55,7 @@ public class HealCastorOnAttackedEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		super.startEffect(effect);
 		
@@ -70,7 +70,7 @@ public class HealCastorOnAttackedEffect extends EffectTemplate
 			{
 				if (player.getPlayerGroup2() != null)
 				{
-					for (final Player p : player.getPlayerGroup2().getMembers())
+					for (Player p : player.getPlayerGroup2().getMembers())
 					{
 						if (MathUtil.isIn3dRange(effect.getEffected(), p, range))
 						{
@@ -80,7 +80,7 @@ public class HealCastorOnAttackedEffect extends EffectTemplate
 				}
 				else if (player.isInAlliance2())
 				{
-					for (final Player p : player.getPlayerAllianceGroup2().getMembers())
+					for (Player p : player.getPlayerAllianceGroup2().getMembers())
 					{
 						if (!p.isOnline())
 						{

@@ -44,7 +44,7 @@ public class TargetRangeProperty
 	 * @param properties
 	 * @return
 	 */
-	public static boolean set(final Skill skill, Properties properties)
+	public static boolean set(Skill skill, Properties properties)
 	{
 		
 		final TargetRangeAttribute value = properties.getTargetType();
@@ -68,7 +68,7 @@ public class TargetRangeProperty
 				
 				// Create a sorted map of the objects in knownlist
 				// and filter them properly
-				for (final VisibleObject nextCreature : firstTarget.getKnownList().getKnownObjects().values())
+				for (VisibleObject nextCreature : firstTarget.getKnownList().getKnownObjects().values())
 				{
 					if (((nextCreature instanceof Creature)) && (firstTarget != nextCreature) && (((Creature) nextCreature).getLifeStats() != null) && (!((Creature) nextCreature).getLifeStats().isAlreadyDead()) && ((!(skill.getEffector() instanceof Trap)) || (((Trap) skill.getEffector()).getCreator() != nextCreature)) && ((!(nextCreature instanceof Player)) || (!((Player) nextCreature).isProtectionActive())))
 					{
@@ -136,7 +136,7 @@ public class TargetRangeProperty
 					if (effector.isInAlliance2())
 					{
 						effectedList.clear();
-						for (final Player player : effector.getPlayerAllianceGroup2().getMembers())
+						for (Player player : effector.getPlayerAllianceGroup2().getMembers())
 						{
 							if ((partyCount >= 6) || (partyCount >= maxcount))
 							{
@@ -156,7 +156,7 @@ public class TargetRangeProperty
 					else if (effector.isInGroup2())
 					{
 						effectedList.clear();
-						for (final Player member : effector.getPlayerGroup2().getMembers())
+						for (Player member : effector.getPlayerGroup2().getMembers())
 						{
 							if (partyCount >= maxcount)
 							{
@@ -180,7 +180,7 @@ public class TargetRangeProperty
 					{
 						effectedList.clear();
 						// TODO may be alliance group ?
-						for (final Player player : effector.getPlayerAlliance2().getMembers())
+						for (Player player : effector.getPlayerAlliance2().getMembers())
 						{
 							if (!player.isOnline())
 							{
@@ -204,7 +204,7 @@ public class TargetRangeProperty
 					else if (effector.isInGroup2())
 					{
 						effectedList.clear();
-						for (final Player member : effector.getPlayerGroup2().getMembers())
+						for (Player member : effector.getPlayerGroup2().getMembers())
 						{
 							if (!member.isOnline())
 							{
@@ -228,7 +228,7 @@ public class TargetRangeProperty
 				}
 				break;
 			case POINT:
-				for (final VisibleObject nextCreature : skill.getEffector().getKnownList().getKnownObjects().values())
+				for (VisibleObject nextCreature : skill.getEffector().getKnownList().getKnownObjects().values())
 				{
 					if (!(nextCreature instanceof Creature))
 					{

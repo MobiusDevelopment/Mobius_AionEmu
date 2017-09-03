@@ -40,7 +40,7 @@ public class SM_NEARBY_QUESTS extends AionServerPacket
 		}
 		writeC(0);
 		writeH(-nearbyQuestList.size() & 0xFFFF);
-		for (final Entry<Integer, Integer> nearbyQuest : nearbyQuestList.entrySet())
+		for (Entry<Integer, Integer> nearbyQuest : nearbyQuestList.entrySet())
 		{
 			if (nearbyQuest.getValue() > 0)
 			{

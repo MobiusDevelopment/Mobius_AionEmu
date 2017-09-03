@@ -45,7 +45,7 @@ public class MySQL5HouseObjectCooldownsDAO extends HouseObjectCooldownsDAO
 	public static final String SELECT_QUERY = "SELECT `object_id`, `reuse_time` FROM `house_object_cooldowns` WHERE `player_id`=?";
 	
 	@Override
-	public void loadHouseObjectCooldowns(final Player player)
+	public void loadHouseObjectCooldowns(Player player)
 	{
 		Connection con = null;
 		final FastMap<Integer, Long> houseObjectCoolDowns = new FastMap<>();
@@ -72,7 +72,7 @@ public class MySQL5HouseObjectCooldownsDAO extends HouseObjectCooldownsDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("LoadHouseObjectCooldowns", e);
 		}
@@ -83,7 +83,7 @@ public class MySQL5HouseObjectCooldownsDAO extends HouseObjectCooldownsDAO
 	}
 	
 	@Override
-	public void storeHouseObjectCooldowns(final Player player)
+	public void storeHouseObjectCooldowns(Player player)
 	{
 		deleteHouseObjectCoolDowns(player);
 		final Map<Integer, Long> houseObjectCoolDowns = player.getHouseObjectCooldownList().getHouseObjectCooldowns();
@@ -93,7 +93,7 @@ public class MySQL5HouseObjectCooldownsDAO extends HouseObjectCooldownsDAO
 			return;
 		}
 		
-		for (final Map.Entry<Integer, Long> entry : houseObjectCoolDowns.entrySet())
+		for (Map.Entry<Integer, Long> entry : houseObjectCoolDowns.entrySet())
 		{
 			final int templateId = entry.getKey();
 			final long reuseTime = entry.getValue();
@@ -115,7 +115,7 @@ public class MySQL5HouseObjectCooldownsDAO extends HouseObjectCooldownsDAO
 				stmt.setLong(3, reuseTime);
 				stmt.execute();
 			}
-			catch (final SQLException e)
+			catch (SQLException e)
 			{
 				log.error("storeHouseObjectCoolDowns", e);
 			}
@@ -126,7 +126,7 @@ public class MySQL5HouseObjectCooldownsDAO extends HouseObjectCooldownsDAO
 		}
 	}
 	
-	private void deleteHouseObjectCoolDowns(final Player player)
+	private void deleteHouseObjectCoolDowns(Player player)
 	{
 		Connection con = null;
 		
@@ -138,7 +138,7 @@ public class MySQL5HouseObjectCooldownsDAO extends HouseObjectCooldownsDAO
 			stmt.setInt(1, player.getObjectId());
 			stmt.execute();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("deleteHouseObjectCoolDowns", e);
 		}

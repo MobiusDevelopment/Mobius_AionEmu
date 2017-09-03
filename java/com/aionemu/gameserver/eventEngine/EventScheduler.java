@@ -44,7 +44,7 @@ public class EventScheduler implements Runnable
 		log.info("EventScheduler initialized");
 	}
 	
-	public void schedule(final Event event, int delay)
+	public void schedule(Event event, int delay)
 	{
 		event.reset();
 		queue.offer(new DelayedEvent(event, delay));

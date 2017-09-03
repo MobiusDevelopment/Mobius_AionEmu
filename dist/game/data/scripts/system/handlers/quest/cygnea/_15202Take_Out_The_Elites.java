@@ -47,7 +47,7 @@ public class _15202Take_Out_The_Elites extends QuestHandler
 	{
 		qe.registerQuestNpc(804704).addOnQuestStart(questId);
 		qe.registerQuestNpc(804704).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -58,7 +58,7 @@ public class AnohaSchedule
 			final String xml = FileUtils.readFileToString(new File("./config/shedule/anoha_schedule.xml"));
 			as = JAXBUtil.deserialize(xml, AnohaSchedule.class);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to initialize anoha", e);
 		}

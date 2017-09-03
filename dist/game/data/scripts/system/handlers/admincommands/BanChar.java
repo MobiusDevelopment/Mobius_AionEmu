@@ -73,7 +73,7 @@ public class BanChar extends AdminCommand
 		{
 			dayCount = Integer.parseInt(params[1]);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(admin, "Second parameter is not an integer.");
 			sendInfo(admin, true);

@@ -79,15 +79,15 @@ public class _15324Unyielding_Spirit extends QuestHandler
 	{
 		qe.registerQuestNpc(805331).addOnQuestStart(questId); // Machina.
 		qe.registerQuestNpc(805331).addOnTalkEvent(questId); // Machina.
-		for (final int mob : Cygnea)
+		for (int mob : Cygnea)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : Levinshor)
+		for (int mob : Levinshor)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : Kaldor)
+		for (int mob : Kaldor)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

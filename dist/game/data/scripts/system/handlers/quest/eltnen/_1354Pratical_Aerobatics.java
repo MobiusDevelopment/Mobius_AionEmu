@@ -51,7 +51,7 @@ public class _1354Pratical_Aerobatics extends QuestHandler
 		qe.registerQuestNpc(203983).addOnQuestStart(questId);
 		qe.registerQuestNpc(203983).addOnTalkEvent(questId);
 		qe.registerOnQuestTimerEnd(questId);
-		for (final String ring : rings)
+		for (String ring : rings)
 		{
 			qe.registerOnPassFlyingRings(ring, questId);
 		}

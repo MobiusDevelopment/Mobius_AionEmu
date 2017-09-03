@@ -38,7 +38,7 @@ public class CuringZoneService
 	
 	private CuringZoneService()
 	{
-		for (final CuringTemplate t : DataManager.CURING_OBJECTS_DATA.getCuringObject())
+		for (CuringTemplate t : DataManager.CURING_OBJECTS_DATA.getCuringObject())
 		{
 			final CuringObject obj = new CuringObject(t, 0);
 			obj.spawn();
@@ -56,7 +56,7 @@ public class CuringZoneService
 			@Override
 			public void run()
 			{
-				for (final CuringObject obj : curingObjects)
+				for (CuringObject obj : curingObjects)
 				{
 					obj.getKnownList().doOnAllPlayers(new Visitor<Player>()
 					{

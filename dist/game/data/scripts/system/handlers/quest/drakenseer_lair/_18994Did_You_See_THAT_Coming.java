@@ -47,7 +47,7 @@ public class _18994Did_You_See_THAT_Coming extends QuestHandler
 		qe.registerQuestNpc(806075).addOnQuestStart(questId); // Weatha.
 		qe.registerQuestNpc(806075).addOnTalkEvent(questId); // Weatha.
 		qe.registerQuestNpc(806241).addOnTalkEvent(questId); // Riseon.
-		for (final int mob : IDF6DragonArtifactBoost)
+		for (int mob : IDF6DragonArtifactBoost)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

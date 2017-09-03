@@ -53,7 +53,7 @@ public class _18741A_Versed_Order extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(804707).addOnTalkEvent(questId);
-		for (final int mob : embercrackStepsDrillCorps)
+		for (int mob : embercrackStepsDrillCorps)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

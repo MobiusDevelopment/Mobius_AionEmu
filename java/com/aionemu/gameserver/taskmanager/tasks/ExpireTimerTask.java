@@ -57,7 +57,7 @@ public class ExpireTimerTask extends AbstractPeriodicTaskManager
 		writeLock();
 		try
 		{
-			for (final Map.Entry<IExpirable, Player> entry : expirables.entrySet())
+			for (Map.Entry<IExpirable, Player> entry : expirables.entrySet())
 			{
 				if (entry.getValue() == player)
 				{
@@ -78,7 +78,7 @@ public class ExpireTimerTask extends AbstractPeriodicTaskManager
 		try
 		{
 			final int timeNow = (int) (System.currentTimeMillis() / 1000);
-			for (final Iterator<Map.Entry<IExpirable, Player>> i = expirables.entrySet().iterator(); i.hasNext();)
+			for (Iterator<Map.Entry<IExpirable, Player>> i = expirables.entrySet().iterator(); i.hasNext();)
 			{
 				final Map.Entry<IExpirable, Player> entry = i.next();
 				final IExpirable expirable = entry.getKey();

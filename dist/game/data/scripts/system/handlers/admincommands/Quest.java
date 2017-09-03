@@ -93,7 +93,7 @@ public class Quest extends AdminCommand
 					id = Integer.parseInt(params[1]);
 				}
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "syntax //quest start <questId>");
 				return;
@@ -111,12 +111,12 @@ public class Quest extends AdminCommand
 				final List<XMLStartCondition> preconditions = template.getXMLStartConditions();
 				if ((preconditions != null) && (preconditions.size() > 0))
 				{
-					for (final XMLStartCondition condition : preconditions)
+					for (XMLStartCondition condition : preconditions)
 					{
 						final List<FinishedQuestCond> finisheds = condition.getFinishedPreconditions();
 						if ((finisheds != null) && (finisheds.size() > 0))
 						{
-							for (final FinishedQuestCond fcondition : finisheds)
+							for (FinishedQuestCond fcondition : finisheds)
 							{
 								final QuestState qs1 = admin.getQuestStateList().getQuestState(fcondition.getQuestId());
 								if ((qs1 == null) || (qs1.getStatus() != QuestStatus.COMPLETE))
@@ -177,7 +177,7 @@ public class Quest extends AdminCommand
 					varNum = Integer.valueOf(params[4]);
 				}
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "syntax //quest set <questId status var [varNum]>");
 				return;
@@ -219,7 +219,7 @@ public class Quest extends AdminCommand
 			{
 				id = Integer.valueOf(params[1]);
 			}
-			catch (final NumberFormatException e)
+			catch (NumberFormatException e)
 			{
 				PacketSendUtility.sendMessage(admin, "syntax //quest delete <quest id>");
 				return;
@@ -266,7 +266,7 @@ public class Quest extends AdminCommand
 		{
 			id = Integer.valueOf(param);
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(admin, "syntax //quest show <quest id>");
 			return;

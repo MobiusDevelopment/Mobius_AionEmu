@@ -58,7 +58,7 @@ public class Assault extends AdminCommand
 				despawnTime = Math.abs(Integer.parseInt(params[3]));
 			}
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(admin, "You should only input integers as radius, amount and despawn time.");
 			return;
@@ -135,13 +135,13 @@ public class Assault extends AdminCommand
 		}
 		else
 		{
-			for (final String npcId : params[2].split(","))
+			for (String npcId : params[2].split(","))
 			{
 				try
 				{
 					idList.add(Integer.parseInt(npcId));
 				}
-				catch (final NumberFormatException e)
+				catch (NumberFormatException e)
 				{
 					PacketSendUtility.sendMessage(admin, "You should only input integers as NPC ids.");
 					return;
@@ -210,12 +210,12 @@ public class Assault extends AdminCommand
 		PacketSendUtility.sendMessage(admin, spawnCount + " npc have been spawned.");
 	}
 	
-	private void despawnThem(final Player admin, final List<VisibleObject> despawnList, final int despawnTime)
+	private void despawnThem(Player admin, List<VisibleObject> despawnList, int despawnTime)
 	{
 		ThreadPoolManager.getInstance().schedule(() ->
 		{
 			int despawnCount = 0;
-			for (final VisibleObject visObj : despawnList)
+			for (VisibleObject visObj : despawnList)
 			{
 				if ((visObj != null) && visObj.isSpawned())
 				{

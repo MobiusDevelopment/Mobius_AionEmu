@@ -52,7 +52,7 @@ public class _19645Eliminating_The_Hindrance_In_The_Supply_Route extends QuestHa
 		qe.registerQuestNpc(804651).addOnQuestStart(questId);
 		qe.registerQuestNpc(804651).addOnTalkEvent(questId);
 		qe.registerQuestNpc(804699).addOnTalkEvent(questId); // LF5 Atmos.
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

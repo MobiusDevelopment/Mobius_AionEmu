@@ -46,7 +46,7 @@ public class SvsData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final SvsTemplate template : svsTemplates)
+		for (SvsTemplate template : svsTemplates)
 		{
 			svs.put(template.getId(), new SvsLocation(template));
 		}

@@ -202,7 +202,7 @@ public abstract class WorldMapInstance
 			final QuestNpc data = QuestEngine.getInstance().getQuestNpc(((Npc) object).getNpcId());
 			if (data != null)
 			{
-				for (final int id : data.getOnQuestStart())
+				for (int id : data.getOnQuestStart())
 				{
 					if (!questIds.contains(id))
 					{
@@ -243,7 +243,7 @@ public abstract class WorldMapInstance
 	 */
 	public Npc getNpc(int npcId)
 	{
-		for (final Iterator<VisibleObject> iter = objectIterator(); iter.hasNext();)
+		for (Iterator<VisibleObject> iter = objectIterator(); iter.hasNext();)
 		{
 			final VisibleObject obj = iter.next();
 			if (obj instanceof Npc)
@@ -276,7 +276,7 @@ public abstract class WorldMapInstance
 	public List<Npc> getNpcs(int npcId)
 	{
 		final List<Npc> npcs = new ArrayList<>();
-		for (final Iterator<VisibleObject> iter = objectIterator(); iter.hasNext();)
+		for (Iterator<VisibleObject> iter = objectIterator(); iter.hasNext();)
 		{
 			final VisibleObject obj = iter.next();
 			if (obj instanceof Npc)
@@ -297,7 +297,7 @@ public abstract class WorldMapInstance
 	public List<Npc> getNpcs()
 	{
 		final List<Npc> npcs = new ArrayList<>();
-		for (final Iterator<VisibleObject> iter = objectIterator(); iter.hasNext();)
+		for (Iterator<VisibleObject> iter = objectIterator(); iter.hasNext();)
 		{
 			final VisibleObject obj = iter.next();
 			if (obj instanceof Npc)
@@ -314,7 +314,7 @@ public abstract class WorldMapInstance
 	public Map<Integer, StaticDoor> getDoors()
 	{
 		final Map<Integer, StaticDoor> doors = new HashMap<>();
-		for (final Iterator<VisibleObject> iter = objectIterator(); iter.hasNext();)
+		for (Iterator<VisibleObject> iter = objectIterator(); iter.hasNext();)
 		{
 			final VisibleObject obj = iter.next();
 			if (obj instanceof StaticDoor)
@@ -332,7 +332,7 @@ public abstract class WorldMapInstance
 	public List<Trap> getTraps(Creature p)
 	{
 		final List<Trap> traps = new ArrayList<>();
-		for (final Iterator<VisibleObject> iter = objectIterator(); iter.hasNext();)
+		for (Iterator<VisibleObject> iter = objectIterator(); iter.hasNext();)
 		{
 			final VisibleObject obj = iter.next();
 			if (obj instanceof Trap)
@@ -497,7 +497,7 @@ public abstract class WorldMapInstance
 	
 	public Player getPlayer(Integer object)
 	{
-		for (final Player player : worldMapPlayers.values())
+		for (Player player : worldMapPlayers.values())
 		{
 			if (object == player.getObjectId())
 			{
@@ -514,7 +514,7 @@ public abstract class WorldMapInstance
 	{
 		try
 		{
-			for (final Player player : worldMapPlayers.values())
+			for (Player player : worldMapPlayers.values())
 			{
 				if (player != null)
 				{
@@ -522,7 +522,7 @@ public abstract class WorldMapInstance
 				}
 			}
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			log.error("Exception when running visitor on all players" + ex);
 		}
@@ -533,7 +533,7 @@ public abstract class WorldMapInstance
 		final List<ZoneInstance> regionZones = new ArrayList<>();
 		final RegionZone regionZone = new RegionZone(startX, startY, minZ, maxZ);
 		
-		for (final ZoneInstance zoneInstance : zones.values())
+		for (ZoneInstance zoneInstance : zones.values())
 		{
 			if (zoneInstance.getAreaTemplate().intersectsRectangle(regionZone))
 			{

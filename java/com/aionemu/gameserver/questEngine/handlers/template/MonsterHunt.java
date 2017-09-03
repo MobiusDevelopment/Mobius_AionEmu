@@ -75,23 +75,23 @@ public class MonsterHunt extends QuestHandler
 	@Override
 	public void register()
 	{
-		for (final Integer startNpc : startNpcs)
+		for (Integer startNpc : startNpcs)
 		{
 			qe.registerQuestNpc(startNpc).addOnQuestStart(getQuestId());
 			qe.registerQuestNpc(startNpc).addOnTalkEvent(getQuestId());
 		}
-		for (final Set<Integer> monsterIds : monsters.values())
+		for (Set<Integer> monsterIds : monsters.values())
 		{
-			for (final Integer monsterId : monsterIds)
+			for (Integer monsterId : monsterIds)
 			{
 				qe.registerQuestNpc(monsterId).addOnKillEvent(questId);
 			}
 		}
-		for (final Integer endNpc : endNpcs)
+		for (Integer endNpc : endNpcs)
 		{
 			qe.registerQuestNpc(endNpc).addOnTalkEvent(getQuestId());
 		}
-		for (final Integer aggroNpc : aggroNpcs)
+		for (Integer aggroNpc : aggroNpcs)
 		{
 			qe.registerQuestNpc(aggroNpc).addOnAddAggroListEvent(getQuestId());
 		}
@@ -123,7 +123,7 @@ public class MonsterHunt extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			for (final Monster mi : monsters.keySet())
+			for (Monster mi : monsters.keySet())
 			{
 				int endVar = mi.getEndVar();
 				int varId = mi.getVar();
@@ -214,7 +214,7 @@ public class MonsterHunt extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			for (final Monster m : monsters.keySet())
+			for (Monster m : monsters.keySet())
 			{
 				if (m.getNpcIds().contains(env.getTargetId()))
 				{
@@ -300,7 +300,7 @@ public class MonsterHunt extends QuestHandler
 	
 	private boolean searchOpenRift()
 	{
-		for (final RiftLocation loc : RiftService.getInstance().getRiftLocations().values())
+		for (RiftLocation loc : RiftService.getInstance().getRiftLocations().values())
 		{
 			if ((loc.getWorldId() == invasionWorldId) && loc.isOpened())
 			{

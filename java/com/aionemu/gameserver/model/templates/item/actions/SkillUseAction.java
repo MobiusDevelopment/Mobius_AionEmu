@@ -67,7 +67,7 @@ public class SkillUseAction extends AbstractItemAction
 		}
 		if (player.isTransformed())
 		{
-			for (final EffectTemplate template : skill.getSkillTemplate().getEffects().getEffects())
+			for (EffectTemplate template : skill.getSkillTemplate().getEffects().getEffects())
 			{
 				if (template instanceof TransformEffect)
 				{
@@ -78,7 +78,7 @@ public class SkillUseAction extends AbstractItemAction
 		}
 		if (player.getSummon() != null)
 		{
-			for (final EffectTemplate template : skill.getSkillTemplate().getEffects().getEffects())
+			for (EffectTemplate template : skill.getSkillTemplate().getEffects().getEffects())
 			{
 				if (template instanceof SummonEffect)
 				{

@@ -217,7 +217,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 	public boolean sendQuestEndDialog(QuestEnv env, int[] questItemsToRemove)
 	{
 		final Player player = env.getPlayer();
-		for (final int item : questItemsToRemove)
+		for (int item : questItemsToRemove)
 		{
 			final long count = player.getInventory().getItemCountByItemId(item);
 			if (count > 0)
@@ -530,7 +530,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 		{
 			final int var = qs.getQuestVarById(varNum);
 			final int targetId = env.getTargetId();
-			for (final int id : npcIds)
+			for (int id : npcIds)
 			{
 				if (targetId == id)
 				{
@@ -581,7 +581,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 		{
 			final int var = qs.getQuestVarById(varNum);
 			final int targetId = env.getTargetId();
-			for (final int id : npcIds)
+			for (int id : npcIds)
 			{
 				if (targetId == id)
 				{
@@ -824,7 +824,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 		return useQuestItem(env, item, step, nextStep, reward, 0, 0, 0);
 	}
 	
-	public boolean useQuestItem(QuestEnv env, Item item, int step, int nextStep, boolean reward, final int addItemId, final int addItemCount)
+	public boolean useQuestItem(QuestEnv env, Item item, int step, int nextStep, boolean reward, int addItemId, int addItemCount)
 	{
 		return useQuestItem(env, item, step, nextStep, reward, addItemId, addItemCount, 0);
 	}
@@ -834,13 +834,13 @@ public abstract class QuestHandler extends AbstractQuestHandler
 		return useQuestItem(env, item, step, nextStep, reward, 0, 0, movieId);
 	}
 	
-	public boolean useQuestItem(final QuestEnv env, final Item item, final int step, final int nextStep, final boolean reward, final int addItemId, final int addItemCount, final int movieId)
+	public boolean useQuestItem(QuestEnv env, Item item, int step, int nextStep, boolean reward, int addItemId, int addItemCount, int movieId)
 	{
 		return useQuestItem(env, item, step, nextStep, reward, addItemId, addItemCount, movieId, 0);
 	}
 	
 	/** Handle use item event */
-	public boolean useQuestItem(final QuestEnv env, final Item item, final int step, final int nextStep, final boolean reward, final int addItemId, final int addItemCount, final int movieId, final int varNum)
+	public boolean useQuestItem(QuestEnv env, Item item, int step, int nextStep, boolean reward, int addItemId, int addItemCount, int movieId, int varNum)
 	{
 		final Player player = env.getPlayer();
 		if (player == null)
@@ -924,7 +924,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 			QuestService.startMission(env, QuestStatus.LOCKED);
 			return false;
 		}
-		for (final int id : quests)
+		for (int id : quests)
 		{
 			if (id != 0)
 			{
@@ -937,7 +937,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 			}
 		}
 		final QuestTemplate template = DataManager.QUEST_DATA.getQuestById(env.getQuestId());
-		for (final XMLStartCondition startCondition : template.getXMLStartConditions())
+		for (XMLStartCondition startCondition : template.getXMLStartConditions())
 		{
 			if (!startCondition.check(player, false))
 			{
@@ -1006,7 +1006,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 		{
 			return false;
 		}
-		for (final int id : quests)
+		for (int id : quests)
 		{
 			if (id != 0)
 			{
@@ -1022,7 +1022,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 			}
 		}
 		final QuestTemplate template = DataManager.QUEST_DATA.getQuestById(env.getQuestId());
-		for (final XMLStartCondition startCondition : template.getXMLStartConditions())
+		for (XMLStartCondition startCondition : template.getXMLStartConditions())
 		{
 			if (!startCondition.check(player, false))
 			{

@@ -53,7 +53,7 @@ public class StaticDoorSpawnManager
 			return;
 		}
 		int counter = 0;
-		for (final StaticDoorTemplate data : staticDoorWorld.getStaticDoors())
+		for (StaticDoorTemplate data : staticDoorWorld.getStaticDoors())
 		{
 			if (data.getDoorType() != DoorType.DOOR)
 			{

@@ -165,9 +165,9 @@ public class AutoHarmonyInstance extends AutoInstance
 	private List<Player> getPlayerFromGroup(List<AGPlayer> group)
 	{
 		final List<Player> _players = new ArrayList<>();
-		for (final AGPlayer agp : group)
+		for (AGPlayer agp : group)
 		{
-			for (final Player p : instance.getPlayersInside())
+			for (Player p : instance.getPlayersInside())
 			{
 				if (p.getObjectId().equals(agp.getObjectId()))
 				{
@@ -207,7 +207,7 @@ public class AutoHarmonyInstance extends AutoInstance
 		}
 		if ((group.size() + searchInstance.getMembers().size()) <= 2)
 		{
-			for (final Player member : player.getPlayerGroup2().getOnlineMembers())
+			for (Player member : player.getPlayerGroup2().getOnlineMembers())
 			{
 				final Integer obj = member.getObjectId();
 				if (searchInstance.getMembers().contains(obj))

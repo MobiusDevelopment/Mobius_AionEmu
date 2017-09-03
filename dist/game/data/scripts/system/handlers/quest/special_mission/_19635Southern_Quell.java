@@ -51,7 +51,7 @@ public class _19635Southern_Quell extends QuestHandler
 		qe.registerQuestNpc(205304).addOnQuestStart(questId);
 		qe.registerQuestNpc(205304).addOnTalkEvent(questId);
 		qe.registerQuestNpc(205304).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

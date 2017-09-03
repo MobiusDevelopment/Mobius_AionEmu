@@ -58,7 +58,7 @@ public class RvrSchedule
 			final String xml = FileUtils.readFileToString(new File("./config/shedule/rvr_schedule.xml"));
 			rs = JAXBUtil.deserialize(xml, RvrSchedule.class);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			throw new RuntimeException("Failed to initialize rvr", e);
 		}

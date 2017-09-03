@@ -783,7 +783,7 @@ public final class Vector3f implements Cloneable, Reusable
 		{
 			return (Vector3f) super.clone();
 		}
-		catch (final CloneNotSupportedException e)
+		catch (CloneNotSupportedException e)
 		{
 			throw new AssertionError(); // can not happen
 		}

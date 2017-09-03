@@ -166,7 +166,7 @@ public class AI2Actions
 	/**
 	 * Add RequestResponseHandler to player, which cancels request on movement
 	 */
-	public static void addRequest(AbstractAI ai2, Player player, int requestId, int senderId, int range, final AI2Request request, Object... requestParams)
+	public static void addRequest(AbstractAI ai2, Player player, int requestId, int senderId, int range, AI2Request request, Object... requestParams)
 	{
 		
 		final boolean requested = player.getResponseRequester().putRequest(requestId, new RequestResponseHandler(ai2.getOwner())
@@ -206,7 +206,7 @@ public class AI2Actions
 	/**
 	 * Add RequestResponseHandler to player
 	 */
-	public static void addRequest(AbstractAI ai2, Player player, int requestId, int senderId, final AI2Request request, Object... requestParams)
+	public static void addRequest(AbstractAI ai2, Player player, int requestId, int senderId, AI2Request request, Object... requestParams)
 	{
 		addRequest(ai2, player, requestId, senderId, 0, request, requestParams);
 	}

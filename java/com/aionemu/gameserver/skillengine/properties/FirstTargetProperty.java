@@ -161,7 +161,7 @@ public class FirstTargetProperty
 					return false;
 				}
 				boolean myParty = false;
-				for (final Player member : ((Player) skill.getEffector()).getPlayerGroup2().getMembers())
+				for (Player member : ((Player) skill.getEffector()).getPlayerGroup2().getMembers())
 				{
 					if (member != skill.getEffector())
 					{

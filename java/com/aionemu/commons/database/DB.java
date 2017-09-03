@@ -159,7 +159,7 @@ public final class DB
 			rset = stmt.executeQuery();
 			reader.handleRead(rset);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			if (errMsg == null)
 			{
@@ -184,7 +184,7 @@ public final class DB
 					stmt.close();
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.warn("Failed to close DB connection " + e, e);
 			}
@@ -227,7 +227,7 @@ public final class DB
 			rset = stmt.executeQuery();
 			reader.handleRead(rset);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			if (errMsg == null)
 			{
@@ -252,7 +252,7 @@ public final class DB
 					stmt.close();
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.warn("Failed to close DB connection " + e, e);
 			}
@@ -318,7 +318,7 @@ public final class DB
 			}
 			
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			if (errMsg == null)
 			{
@@ -344,7 +344,7 @@ public final class DB
 					stmt.close();
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.warn("Failed to close DB connection " + e, e);
 			}
@@ -395,7 +395,7 @@ public final class DB
 			c = DatabaseFactory.getConnection();
 			ps = c.prepareStatement(sql, resultSetType, resultSetConcurrency);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Can't create PreparedStatement for querry: " + sql, e);
 			if (c != null)
@@ -404,7 +404,7 @@ public final class DB
 				{
 					c.close();
 				}
-				catch (final SQLException e1)
+				catch (SQLException e1)
 				{
 					log.error("Can't close connection after exception", e1);
 				}
@@ -425,7 +425,7 @@ public final class DB
 		{
 			return statement.executeUpdate();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Can't execute update for PreparedStatement", e);
 		}
@@ -455,7 +455,7 @@ public final class DB
 		{
 			rs = statement.executeQuery();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error while executing querry", e);
 		}
@@ -482,7 +482,7 @@ public final class DB
 			statement.close();
 			c.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error while closing PreparedStatement", e);
 		}

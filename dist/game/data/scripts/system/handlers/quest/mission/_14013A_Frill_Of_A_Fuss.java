@@ -50,7 +50,7 @@ public class _14013A_Frill_Of_A_Fuss extends QuestHandler
 		qe.registerQuestNpc(203129).addOnTalkEvent(questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerOnLevelUp(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

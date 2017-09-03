@@ -25333,7 +25333,7 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 		writeD(npcObjId);
 		writeD(code);
 		writeC(params.length);
-		for (final Object param : params)
+		for (Object param : params)
 		{
 			if (param instanceof DescriptionId)
 			{

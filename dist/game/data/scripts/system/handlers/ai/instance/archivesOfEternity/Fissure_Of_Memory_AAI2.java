@@ -54,7 +54,7 @@ public class Fissure_Of_Memory_AAI2 extends NpcAI2
 	}
 	
 	@Override
-	public boolean onDialogSelect(final Player player, int dialogId, int questId, int extendedRewardIndex)
+	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		final PlayerGroup group = player.getPlayerGroup2();
 		if (player.getPlayerGroup2() == null)

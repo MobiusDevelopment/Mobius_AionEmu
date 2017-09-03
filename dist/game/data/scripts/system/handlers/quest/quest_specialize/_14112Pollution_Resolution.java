@@ -55,7 +55,7 @@ public class _14112Pollution_Resolution extends QuestHandler
 		qe.registerQuestNpc(203149).addOnQuestStart(questId);
 		qe.registerQuestNpc(203148).addOnTalkEvent(questId);
 		qe.registerQuestNpc(203195).addOnTalkEvent(questId);
-		for (final int mob : poisonousBubblegut)
+		for (int mob : poisonousBubblegut)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -63,7 +63,7 @@ public class Fsc extends AdminCommand
 		final SM_CUSTOM_PACKET packet = new SM_CUSTOM_PACKET(id);
 		
 		int i = 0;
-		for (final char c : format.toCharArray())
+		for (char c : format.toCharArray())
 		{
 			packet.addElement(PacketElementType.getByCode(c), params[i + 2]);
 			i++;

@@ -114,7 +114,7 @@ public class AEInfos
 	
 	public static void printMemoryInfo()
 	{
-		for (final String line : getMemoryInfo())
+		for (String line : getMemoryInfo())
 		{
 			log.info(line);
 		}
@@ -122,7 +122,7 @@ public class AEInfos
 	
 	public static void printCPUInfo()
 	{
-		for (final String line : getCPUInfo())
+		for (String line : getCPUInfo())
 		{
 			log.info(line);
 		}
@@ -130,7 +130,7 @@ public class AEInfos
 	
 	public static void printOSInfo()
 	{
-		for (final String line : getOSInfo())
+		for (String line : getOSInfo())
 		{
 			log.info(line);
 		}
@@ -138,7 +138,7 @@ public class AEInfos
 	
 	public static void printJREInfo()
 	{
-		for (final String line : getJREInfo())
+		for (String line : getJREInfo())
 		{
 			log.info(line);
 		}
@@ -146,7 +146,7 @@ public class AEInfos
 	
 	public static void printJVMInfo()
 	{
-		for (final String line : getJVMInfo())
+		for (String line : getJVMInfo())
 		{
 			log.info(line);
 		}

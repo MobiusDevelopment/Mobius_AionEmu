@@ -59,11 +59,11 @@ public class _4502Essence_Of_Fate extends QuestHandler
 	{
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(204837).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -119,7 +119,7 @@ public class PriestElyosPreceptorAI2 extends AggressiveNpcAI2
 	private Player getTargetPlayer()
 	{
 		final List<Player> players = new ArrayList<>();
-		for (final Player player : getKnownList().getKnownPlayers().values())
+		for (Player player : getKnownList().getKnownPlayers().values())
 		{
 			if (!CreatureActions.isAlreadyDead(player) && MathUtil.isIn3dRange(player, getOwner(), 25))
 			{
@@ -129,7 +129,7 @@ public class PriestElyosPreceptorAI2 extends AggressiveNpcAI2
 		return players.get(Rnd.get(players.size()));
 	}
 	
-	private void applySoulSickness(final Npc npc)
+	private void applySoulSickness(Npc npc)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -172,7 +172,7 @@ public class PriestElyosPreceptorAI2 extends AggressiveNpcAI2
 	
 	private void deleteNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			if (npc != null)
 			{

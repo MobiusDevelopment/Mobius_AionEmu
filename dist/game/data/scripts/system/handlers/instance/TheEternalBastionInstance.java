@@ -119,7 +119,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 			case 701915: // Bastion's Eternal Treasure B.
 			case 701916: // Bastion's Eternal Treasure C.
 			case 701917: // Bastion's Eternal Treasure D.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -141,7 +141,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 			// Bastion's Eternal Treasure Chest.
 			case 801268:
 			case 801269:
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -537,7 +537,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		spawn(commander, 748.7025f, 287.65768f, 233.81223f, (byte) 44);
 	}
 	
-	private void moveToForward(final Npc npc, float x, float y, float z, boolean despawn)
+	private void moveToForward(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -746,7 +746,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		return 0;
 	}
 	
-	private void sendPacket(final int nameId, final int point)
+	private void sendPacket(int nameId, int point)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -819,7 +819,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 	
 	private void rewardGroup()
 	{
-		for (final Player p : instance.getPlayersInside())
+		for (Player p : instance.getPlayersInside())
 		{
 			doReward(p);
 		}
@@ -892,7 +892,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		if (!instanceReward.containPlayer(player.getObjectId()))
 		{
@@ -961,7 +961,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		doors.clear();
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -973,7 +973,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -1027,7 +1027,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

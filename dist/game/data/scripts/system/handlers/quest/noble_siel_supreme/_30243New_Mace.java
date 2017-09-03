@@ -48,7 +48,7 @@ public class _30243New_Mace extends QuestHandler
 		qe.registerQuestNpc(799032).addOnQuestStart(questId); // Gefeios.
 		qe.registerQuestNpc(799032).addOnTalkEvent(questId); // Gefeios.
 		qe.registerGetingItem(182209641, questId);
-		for (final int debilkarim : debilkarims)
+		for (int debilkarim : debilkarims)
 		{
 			qe.registerQuestNpc(debilkarim).addOnKillEvent(questId);
 		}

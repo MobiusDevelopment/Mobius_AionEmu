@@ -153,7 +153,7 @@ public class Legion
 	public ArrayList<Player> getOnlineLegionMembers()
 	{
 		final ArrayList<Player> onlineLegionMembers = new ArrayList<>();
-		for (final int legionMemberObjId : legionMembers)
+		for (int legionMemberObjId : legionMembers)
 		{
 			final Player onlineLegionMember = World.getInstance().findPlayer(legionMemberObjId);
 			if (onlineLegionMember != null)
@@ -579,7 +579,7 @@ public class Legion
 		{
 			if (hasBonus.compareAndSet(false, true))
 			{
-				for (final Player member : members)
+				for (Player member : members)
 				{
 					serviceBuff = new ServiceBuff(1);
 					serviceBuff.applyEffect(member, 1);
@@ -590,7 +590,7 @@ public class Legion
 		{
 			if (hasBonus.compareAndSet(false, true))
 			{
-				for (final Player member : members)
+				for (Player member : members)
 				{
 					serviceBuff = new ServiceBuff(5);
 					serviceBuff.applyEffect(member, 5);
@@ -607,7 +607,7 @@ public class Legion
 		{
 			if (hasBonus.compareAndSet(true, false))
 			{
-				for (final Player member : members)
+				for (Player member : members)
 				{
 					serviceBuff = new ServiceBuff(1);
 					serviceBuff.endEffect(member, 1);
@@ -618,7 +618,7 @@ public class Legion
 		{
 			if (hasBonus.compareAndSet(true, false))
 			{
-				for (final Player member : members)
+				for (Player member : members)
 				{
 					serviceBuff = new ServiceBuff(5);
 					serviceBuff.endEffect(member, 5);

@@ -80,7 +80,7 @@ public class BannedIpController
 	 */
 	public static boolean isBanned(String ip)
 	{
-		for (final BannedIP ipBan : banList)
+		for (BannedIP ipBan : banList)
 		{
 			if (ipBan.isActive() && NetworkUtils.checkIPMatching(ipBan.getMask(), ip))
 			{
@@ -122,7 +122,7 @@ public class BannedIpController
 			getDAO().insert(ipBan);
 			return true;
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.warn("Ip " + ip + " is already banned.");
 			return false;

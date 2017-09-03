@@ -111,9 +111,9 @@ public class Base<BL extends BaseLocation>
 	
 	protected void spawn()
 	{
-		for (final SpawnGroup2 group : getBaseSpawns())
+		for (SpawnGroup2 group : getBaseSpawns())
 		{
-			for (final SpawnTemplate spawn : group.getSpawnTemplates())
+			for (SpawnTemplate spawn : group.getSpawnTemplates())
 			{
 				final BaseSpawnTemplate template = (BaseSpawnTemplate) spawn;
 				if (template.getBaseRace().equals(getBaseLocation().getRace()))
@@ -192,7 +192,7 @@ public class Base<BL extends BaseLocation>
 		}
 	}
 	
-	private void delayedSpawn(final Race race)
+	private void delayedSpawn(Race race)
 	{
 		ThreadPoolManager.getInstance().schedule(() ->
 		{
@@ -205,9 +205,9 @@ public class Base<BL extends BaseLocation>
 	
 	protected void spawnBoss()
 	{
-		for (final SpawnGroup2 group : getBaseSpawns())
+		for (SpawnGroup2 group : getBaseSpawns())
 		{
-			for (final SpawnTemplate spawn : group.getSpawnTemplates())
+			for (SpawnTemplate spawn : group.getSpawnTemplates())
 			{
 				final BaseSpawnTemplate template = (BaseSpawnTemplate) spawn;
 				if (template.getBaseRace().equals(getBaseLocation().getRace()))
@@ -227,7 +227,7 @@ public class Base<BL extends BaseLocation>
 	protected void chooseAttackersRace()
 	{
 		final AtomicBoolean next = new AtomicBoolean(Math.random() < 0.5);
-		for (final Race race : list)
+		for (Race race : list)
 		{
 			if (!race.equals(getRace()))
 			{
@@ -432,9 +432,9 @@ public class Base<BL extends BaseLocation>
 		if (!isAttacked())
 		{
 			despawnAttackers();
-			for (final SpawnGroup2 group : getBaseSpawns())
+			for (SpawnGroup2 group : getBaseSpawns())
 			{
-				for (final SpawnTemplate spawn : group.getSpawnTemplates())
+				for (SpawnTemplate spawn : group.getSpawnTemplates())
 				{
 					final BaseSpawnTemplate template = (BaseSpawnTemplate) spawn;
 					if (template.getBaseRace().equals(race))
@@ -463,7 +463,7 @@ public class Base<BL extends BaseLocation>
 	
 	public boolean isAttacked()
 	{
-		for (final Npc attacker : getAttackers())
+		for (Npc attacker : getAttackers())
 		{
 			if (!attacker.getLifeStats().isAlreadyDead())
 			{
@@ -477,7 +477,7 @@ public class Base<BL extends BaseLocation>
 	{
 		setFlag(null);
 		final Collection<BaseNpc> baseNpcs = World.getInstance().getLocalBaseNpcs(baseLocationId);
-		for (final BaseNpc npc : baseNpcs)
+		for (BaseNpc npc : baseNpcs)
 		{
 			npc.getController().onDelete();
 		}
@@ -494,7 +494,7 @@ public class Base<BL extends BaseLocation>
 	
 	protected void despawnAttackers()
 	{
-		for (final Npc attacker : getAttackers())
+		for (Npc attacker : getAttackers())
 		{
 			attacker.getController().onDelete();
 		}

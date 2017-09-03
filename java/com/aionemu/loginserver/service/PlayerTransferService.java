@@ -79,7 +79,7 @@ public class PlayerTransferService
 	{
 		final FastList<PlayerTransferTask> tasksNew = dao.getNew();
 		log.info("PlayerTransfer perform task init. " + tasks.size() + " new tasks.");
-		for (final PlayerTransferTask task : tasksNew)
+		for (PlayerTransferTask task : tasksNew)
 		{
 			final GameServerInfo server = GameServerTable.getGameServerInfo(task.sourceServerId);
 			if ((server == null) || (server.getConnection() == null))

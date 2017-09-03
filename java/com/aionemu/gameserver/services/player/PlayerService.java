@@ -137,7 +137,7 @@ public class PlayerService
 		DAOManager.getDAO(PlayerPunishmentsDAO.class).storePlayerPunishments(player, PunishmentType.PRISON);
 		DAOManager.getDAO(PlayerPunishmentsDAO.class).storePlayerPunishments(player, PunishmentType.GATHER);
 		DAOManager.getDAO(InventoryDAO.class).store(player);
-		for (final House house : player.getHouses())
+		for (House house : player.getHouses())
 		{
 			DAOManager.getDAO(HousesDAO.class).storeHouse(house);
 			if ((house.getRegistry() != null) && (house.getRegistry().getPersistentState() == PersistentState.UPDATE_REQUIRED))
@@ -219,7 +219,7 @@ public class PlayerService
 		ItemService.loadItemStones(warehouse.getItems());
 		player.setStorage(warehouse, StorageType.REGULAR_WAREHOUSE);
 		HouseRegistry houseRegistry = null;
-		for (final House house : player.getHouses())
+		for (House house : player.getHouses())
 		{
 			if ((house.getStatus() == HouseStatus.ACTIVE) || (house.getStatus() == HouseStatus.SELL_WAIT))
 			{
@@ -273,7 +273,7 @@ public class PlayerService
 		if (playerCreationData != null)
 		{
 			final List<ItemType> items = playerCreationData.getItems();
-			for (final ItemType itemType : items)
+			for (ItemType itemType : items)
 			{
 				final int itemId = itemType.getTemplate().getTemplateId();
 				final Item item = ItemFactory.newItem(itemId, itemType.getCount());
@@ -354,7 +354,7 @@ public class PlayerService
 	public static int deleteAccountsCharsFromDB(int accountId)
 	{
 		final List<Integer> charIds = DAOManager.getDAO(PlayerDAO.class).getPlayerOidsOnAccount(accountId);
-		for (final int playerId : charIds)
+		for (int playerId : charIds)
 		{
 			deletePlayerFromDB(playerId);
 		}

@@ -33,7 +33,7 @@ public class Clone_Of_BarrierAI2 extends AggressiveNpcAI2
 	@Override
 	protected void handleDied()
 	{
-		for (final VisibleObject object : getKnownList().getKnownObjects().values())
+		for (VisibleObject object : getKnownList().getKnownObjects().values())
 		{
 			if (object instanceof Npc)
 			{

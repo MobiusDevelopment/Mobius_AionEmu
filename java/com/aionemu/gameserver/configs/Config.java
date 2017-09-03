@@ -83,7 +83,7 @@ public class Config
 				log.info("Loading: mygs.properties");
 				myProps = PropertiesUtils.load("./config/mygs.properties");
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.info("No override properties found");
 			}
@@ -141,7 +141,7 @@ public class Config
 			ConfigurableProcessor.process(DatabaseConfig.class, networkProps);
 			ConfigurableProcessor.process(NetworkConfig.class, networkProps);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Can't load gameserver configuration: ", e);
 			throw new Error("Can't load gameserver configuration: ", e);
@@ -159,7 +159,7 @@ public class Config
 				log.info("Loading: mygs.properties");
 				myProps = PropertiesUtils.load("./config/mygs.properties");
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				log.info("No override properties found");
 			}
@@ -212,7 +212,7 @@ public class Config
 			ConfigurableProcessor.process(AutoGroupConfig.class, mainProps);
 			ConfigurableProcessor.process(PvPModConfig.class, mainProps);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Can't reload configuration: ", e);
 			throw new Error("Can't reload configuration: ", e);

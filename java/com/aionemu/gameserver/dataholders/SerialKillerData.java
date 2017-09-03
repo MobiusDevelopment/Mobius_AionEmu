@@ -46,7 +46,7 @@ public class SerialKillerData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final RankRestriction template : rankRestriction)
+		for (RankRestriction template : rankRestriction)
 		{
 			templates.put(template.getRankNum(), template);
 		}

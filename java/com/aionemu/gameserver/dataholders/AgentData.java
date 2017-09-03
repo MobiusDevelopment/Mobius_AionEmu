@@ -46,7 +46,7 @@ public class AgentData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final AgentTemplate template : agentTemplates)
+		for (AgentTemplate template : agentTemplates)
 		{
 			agent.put(template.getId(), new AgentLocation(template));
 		}

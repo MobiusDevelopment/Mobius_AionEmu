@@ -141,7 +141,7 @@ public class Mesh
 	@SuppressWarnings("unchecked")
 	public void setStatic()
 	{
-		for (final Entry<VertexBuffer> entry : buffers)
+		for (Entry<VertexBuffer> entry : buffers)
 		{
 			entry.getValue().setUsage(Usage.Static);
 		}
@@ -150,7 +150,7 @@ public class Mesh
 	@SuppressWarnings("unchecked")
 	public void setStreamed()
 	{
-		for (final Entry<VertexBuffer> entry : buffers)
+		for (Entry<VertexBuffer> entry : buffers)
 		{
 			entry.getValue().setUsage(Usage.Stream);
 		}
@@ -160,7 +160,7 @@ public class Mesh
 	public void setInterleaved()
 	{
 		final ArrayList<VertexBuffer> vbs = new ArrayList<>();
-		for (final Entry<VertexBuffer> entry : buffers)
+		for (Entry<VertexBuffer> entry : buffers)
 		{
 			vbs.add(entry.getValue());
 		}
@@ -231,7 +231,7 @@ public class Mesh
 		}
 		
 		int offset = 0;
-		for (final VertexBuffer vb : vbs)
+		for (VertexBuffer vb : vbs)
 		{
 			vb.setOffset(offset);
 			vb.setStride(stride);

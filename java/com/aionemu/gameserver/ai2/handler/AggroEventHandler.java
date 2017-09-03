@@ -45,7 +45,7 @@ public class AggroEventHandler
 	 * @param npcAI
 	 * @param creature
 	 */
-	public static void onAggro(NpcAI2 npcAI, final Creature myTarget)
+	public static void onAggro(NpcAI2 npcAI, Creature myTarget)
 	{
 		final Npc owner = npcAI.getOwner();
 		// TODO move out?

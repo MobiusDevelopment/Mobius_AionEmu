@@ -670,7 +670,7 @@ public class CmdTeleportTo extends AbstractGMHandler
 		}
 	}
 	
-	private static void goTo(final Player admin, int worldId, float x, float y, float z)
+	private static void goTo(Player admin, int worldId, float x, float y, float z)
 	{
 		final WorldMap destinationMap = World.getInstance().getWorldMap(worldId);
 		if (destinationMap.isInstanceType())

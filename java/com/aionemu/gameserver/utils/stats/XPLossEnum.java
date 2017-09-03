@@ -56,7 +56,7 @@ public enum XPLossEnum
 		{ // 5.0
 			return 0;
 		}
-		for (final XPLossEnum xpLossEnum : values())
+		for (XPLossEnum xpLossEnum : values())
 		{
 			if (level <= xpLossEnum.getLevel())
 			{

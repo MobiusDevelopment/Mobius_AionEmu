@@ -61,7 +61,7 @@ public class Remove extends AdminCommand
 				itemCount = Long.parseLong(params[2]);
 			}
 		}
-		catch (final NumberFormatException e)
+		catch (NumberFormatException e)
 		{
 			PacketSendUtility.sendMessage(admin, "Parameters need to be an integer.");
 			return;

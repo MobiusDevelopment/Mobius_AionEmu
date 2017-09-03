@@ -89,7 +89,7 @@ public final class IntMap<T> implements Iterable<Entry>, Cloneable
 			clone.table = newTable;
 			return clone;
 		}
-		catch (final CloneNotSupportedException ex)
+		catch (CloneNotSupportedException ex)
 		{
 		}
 		return null;
@@ -343,7 +343,7 @@ public final class IntMap<T> implements Iterable<Entry>, Cloneable
 				clone.next = next != null ? next.clone() : null;
 				return clone;
 			}
-			catch (final CloneNotSupportedException ex)
+			catch (CloneNotSupportedException ex)
 			{
 			}
 			return null;

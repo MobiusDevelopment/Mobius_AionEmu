@@ -88,7 +88,7 @@ public class FireTempleInstance extends GeneralInstanceHandler
 		{
 			case 212846: // Kromede The Corrupt.
 			case 214621: // Vile Judge Kromede.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -100,7 +100,7 @@ public class FireTempleInstance extends GeneralInstanceHandler
 			case 833523: // Kromede's Ornate Treasure Chest.
 			case 833524: // Kromede's Brilliant Treasure Chest.
 			case 833525: // Kromede's Dazzling Treasure Chest.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -112,7 +112,7 @@ public class FireTempleInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 212840: // Lava Gatneri.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -121,7 +121,7 @@ public class FireTempleInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 212842: // Black Smoke Asparn.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -192,7 +192,7 @@ public class FireTempleInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -215,7 +215,7 @@ public class FireTempleInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

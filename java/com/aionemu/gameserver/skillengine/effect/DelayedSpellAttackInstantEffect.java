@@ -40,7 +40,7 @@ public class DelayedSpellAttackInstantEffect extends DamageEffect
 	protected int delay;
 	
 	@Override
-	public void applyEffect(final Effect effect)
+	public void applyEffect(Effect effect)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

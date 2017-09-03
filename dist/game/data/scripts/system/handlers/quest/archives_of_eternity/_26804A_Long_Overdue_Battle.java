@@ -49,7 +49,7 @@ public class _26804A_Long_Overdue_Battle extends QuestHandler
 		qe.registerOnLevelUp(questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
 		qe.registerQuestNpc(806149).addOnTalkEvent(questId);
-		for (final int mob : IDEternity01Boss)
+		for (int mob : IDEternity01Boss)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

@@ -54,7 +54,7 @@ public class HTMLService
 		
 		final StringBuilder sb = new StringBuilder();
 		sb.append("<reward_items multi_count='").append(template.getRewardCount()).append("'>\n");
-		for (final SurveyTemplate survey : template.getSurveys())
+		for (SurveyTemplate survey : template.getSurveys())
 		{
 			sb.append("<item_id count='").append(survey.getCount()).append("'>").append(survey.getItemId()).append("</item_id>\n");
 		}
@@ -66,7 +66,7 @@ public class HTMLService
 		return context;
 	}
 	
-	public static void pushSurvey(final String html)
+	public static void pushSurvey(String html)
 	{
 		final int messageId = IDFactory.getInstance().nextId();
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
@@ -106,7 +106,7 @@ public class HTMLService
 					final String sub = html.substring(from, to);
 					player.getClientConnection().sendPacket(new SM_QUESTIONNAIRE(messageId, i, packet_count, sub));
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					log.error("htmlservice.sendData", e);
 				}
@@ -120,7 +120,7 @@ public class HTMLService
 		{
 			final GuideTemplate[] surveyTemplate = DataManager.GUIDE_HTML_DATA.getTemplatesFor(player.getPlayerClass(), player.getRace(), player.getLevel());
 			
-			for (final GuideTemplate template : surveyTemplate)
+			for (GuideTemplate template : surveyTemplate)
 			{
 				if (!template.isActivated())
 				{
@@ -142,7 +142,7 @@ public class HTMLService
 		
 		final List<Guide> guides = DAOManager.getDAO(GuideDAO.class).loadGuides(player.getObjectId());
 		
-		for (final Guide guide : guides)
+		for (Guide guide : guides)
 		{
 			final GuideTemplate template = DataManager.GUIDE_HTML_DATA.getTemplateByTitle(guide.getTitle());
 			if (template != null)
@@ -204,7 +204,7 @@ public class HTMLService
 			{
 				return;
 			}
-			for (final SurveyTemplate item : templates)
+			for (SurveyTemplate item : templates)
 			{
 				ItemService.addItem(player, item.getItemId(), item.getCount());
 				if (LoggingConfig.LOG_ITEM)
@@ -220,7 +220,7 @@ public class HTMLService
 	private static List<SurveyTemplate> getSurveyTemplates(List<SurveyTemplate> surveys, List<Integer> items)
 	{
 		final List<SurveyTemplate> templates = new ArrayList<>();
-		for (final SurveyTemplate survey : surveys)
+		for (SurveyTemplate survey : surveys)
 		{
 			if (items.contains(survey.getItemId()))
 			{

@@ -119,7 +119,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 214823: // Captain Adhati.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -150,7 +150,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 			case 215092: // Gun Captain Ankrana.
 			case 215390: // Auditor Nirshaka.
 			case 215391: // Quartermaster Vujara.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -161,7 +161,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 				}
 				break;
 			case 215087: // Sentinel Garkusa.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000040, 1)); // Brig Key.
 					if (player.isOnline())
@@ -173,7 +173,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 				}
 				break;
 			case 215088: // Prison Guard Mahnena.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000072, 1)); // Secondary Brig Key.
 					if (player.isOnline())
@@ -185,7 +185,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 				}
 				break;
 			case 215093: // Adjutant Kalanadi.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -220,7 +220,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 				}
 				break;
 			case 215427: // Supervisor Lakhane.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000189, 1)); // Secret Cache Key.
 					if (player.isOnline())
@@ -259,7 +259,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 	{
 		final Race race = mostPlayerDamage.getRace();
 		captureRoom(race, (npc.getNpcId() + 14) - 700498); // Captain's Cabin Power Surkana.
-		for (final Player player : instance.getPlayersInside())
+		for (Player player : instance.getPlayersInside())
 		{
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400199, new DescriptionId(race.equals(Race.ASMODIANS) ? 1800483 : 1800481), new DescriptionId((npc.getObjectTemplate().getNameId() * 2) + 1)));
 		}
@@ -540,7 +540,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public void onEnterInstance(final Player player)
+	public void onEnterInstance(Player player)
 	{
 		if (!containPlayer(player.getObjectId()))
 		{
@@ -570,7 +570,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 	
 	public void doReward()
 	{
-		for (final Player player : instance.getPlayersInside())
+		for (Player player : instance.getPlayersInside())
 		{
 			final InstancePlayerReward playerReward = getPlayerReward(player);
 			float abyssPoint = playerReward.getPoints() * RateConfig.DREDGION_REWARD_RATE;
@@ -586,7 +586,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 			final QuestEnv env = new QuestEnv(null, player, 0, 0);
 			QuestEngine.getInstance().onDredgionReward(env);
 		}
-		for (final Npc npc : instance.getNpcs())
+		for (Npc npc : instance.getNpcs())
 		{
 			npc.getController().onDelete();
 		}
@@ -597,7 +597,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 			{
 				if (!isInstanceDestroyed)
 				{
-					for (final Player player : instance.getPlayersInside())
+					for (Player player : instance.getPlayersInside())
 					{
 						if (CreatureActions.isAlreadyDead(player))
 						{
@@ -696,7 +696,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 		final List<Player> playersToGainScore = new ArrayList<>();
 		if ((target != null) && player.isInGroup2())
 		{
-			for (final Player member : player.getPlayerGroup2().getOnlineMembers())
+			for (Player member : player.getPlayerGroup2().getOnlineMembers())
 			{
 				if (member.getLifeStats().isAlreadyDead())
 				{
@@ -712,7 +712,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 		{
 			playersToGainScore.add(player);
 		}
-		for (final Player playerToGainScore : playersToGainScore)
+		for (Player playerToGainScore : playersToGainScore)
 		{
 			addPointToPlayer(playerToGainScore, points / playersToGainScore.size());
 			if (target instanceof Npc)
@@ -782,17 +782,17 @@ public class BaranathDredgion extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time)
+	protected void sp(int npcId, float x, float y, float z, byte h, int time)
 	{
 		sp(npcId, x, y, z, h, 0, time, 0, null);
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time, final int msg, final Race race)
+	protected void sp(int npcId, float x, float y, float z, byte h, int time, int msg, Race race)
 	{
 		sp(npcId, x, y, z, h, 0, time, msg, race);
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int entityId, final int time, final int msg, final Race race)
+	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
 		baranathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -811,7 +811,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 		}, time));
 	}
 	
-	protected void sp(final int npcId, final float x, final float y, final float z, final byte h, final int time, final String walkerId)
+	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
 		baranathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -828,7 +828,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 		}, time));
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		baranathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -850,7 +850,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 		}, time));
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{

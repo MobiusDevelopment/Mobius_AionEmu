@@ -84,7 +84,7 @@ public class HideEffect extends BuffEffect
 	}
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		super.startEffect(effect);
 		

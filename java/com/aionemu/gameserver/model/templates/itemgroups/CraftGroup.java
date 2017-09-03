@@ -41,7 +41,7 @@ public abstract class CraftGroup extends BonusItemGroup
 			return new ItemRaceEntry[0];
 		}
 		final List<CraftReward> result = new ArrayList<>();
-		for (final List<CraftReward> items : dataHolder.get(skillId).values())
+		for (List<CraftReward> items : dataHolder.get(skillId).values())
 		{
 			result.addAll(items);
 		}
@@ -55,7 +55,7 @@ public abstract class CraftGroup extends BonusItemGroup
 			return new ItemRaceEntry[0];
 		}
 		final List<CraftReward> result = new ArrayList<>();
-		for (final Entry<IntRange, List<CraftReward>> entry : dataHolder.get(skillId).entrySet())
+		for (Entry<IntRange, List<CraftReward>> entry : dataHolder.get(skillId).entrySet())
 		{
 			if (entry.getKey().containsInteger(skillPoints))
 			{

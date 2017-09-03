@@ -272,7 +272,7 @@ public enum WorldMapType
 	
 	public static WorldMapType getWorld(int id)
 	{
-		for (final WorldMapType type : WorldMapType.values())
+		for (WorldMapType type : WorldMapType.values())
 		{
 			if (type.getId() == id)
 			{

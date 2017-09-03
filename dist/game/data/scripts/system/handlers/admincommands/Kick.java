@@ -45,7 +45,7 @@ public class Kick extends AdminCommand
 		
 		if ((params[0] != null) && "All".equalsIgnoreCase(params[0]))
 		{
-			for (final Player player : World.getInstance().getAllPlayers())
+			for (Player player : World.getInstance().getAllPlayers())
 			{
 				if (!player.isGM())
 				{

@@ -31,7 +31,7 @@ public class ConvertHealEffect extends ShieldEffect
 	protected boolean hitPercent;
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		final int skillLvl = effect.getSkillLevel();
 		final int valueWithDelta = value + (delta * skillLvl);

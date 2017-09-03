@@ -93,7 +93,7 @@ public class FindGroup
 		else if (object instanceof PlayerAlliance)
 		{
 			int minLvl = 99;
-			for (final Player member : ((PlayerAlliance) (object)).getMembers())
+			for (Player member : ((PlayerAlliance) (object)).getMembers())
 			{
 				final int memberLvl = member.getCommonData().getLevel();
 				if (memberLvl < minLvl)
@@ -123,7 +123,7 @@ public class FindGroup
 		else if (object instanceof PlayerAlliance)
 		{
 			int maxLvl = 1;
-			for (final Player member : ((PlayerAlliance) (object)).getMembers())
+			for (Player member : ((PlayerAlliance) (object)).getMembers())
 			{
 				final int memberLvl = member.getCommonData().getLevel();
 				if (memberLvl > maxLvl)

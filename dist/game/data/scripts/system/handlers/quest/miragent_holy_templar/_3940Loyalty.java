@@ -64,11 +64,11 @@ public class _3940Loyalty extends QuestHandler
 	{
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(203701).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
@@ -217,7 +217,7 @@ public class _3940Loyalty extends QuestHandler
 					251033,
 					251036
 				};
-				for (final int id : npcids)
+				for (int id : npcids)
 				{
 					if (targetId == id)
 					{

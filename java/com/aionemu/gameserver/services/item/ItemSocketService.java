@@ -67,7 +67,7 @@ public class ItemSocketService
 		int normalSlotsOccupied = specialSlotCount;
 		int maxSlot = specialSlotCount;
 		final HashSet<Integer> allSlots = new HashSet<>();
-		for (final ManaStone ms : manaStones)
+		for (ManaStone ms : manaStones)
 		{
 			final ItemCategory category = DataManager.ITEM_DATA.getItemTemplate(ms.getItemId()).getCategory();
 			if (category == ItemCategory.SPECIAL_MANASTONE)
@@ -144,11 +144,11 @@ public class ItemSocketService
 	{
 		if (source.hasManaStones())
 		{
-			for (final ManaStone manaStone : source.getItemStones())
+			for (ManaStone manaStone : source.getItemStones())
 			{
 				target.getItemStones().add(new ManaStone(target.getObjectId(), manaStone.getItemId(), manaStone.getSlot(), PersistentState.NEW));
 			}
-			for (final ManaStone manaStone : source.getFusionStones())
+			for (ManaStone manaStone : source.getFusionStones())
 			{
 				target.getFusionStones().add(new ManaStone(target.getObjectId(), manaStone.getItemId(), manaStone.getSlot(), PersistentState.NEW));
 			}
@@ -159,7 +159,7 @@ public class ItemSocketService
 	{
 		if (source.hasManaStones())
 		{
-			for (final ManaStone manaStone : source.getItemStones())
+			for (ManaStone manaStone : source.getItemStones())
 			{
 				target.getFusionStones().add(new ManaStone(target.getObjectId(), manaStone.getItemId(), manaStone.getSlot(), PersistentState.NEW));
 			}
@@ -187,7 +187,7 @@ public class ItemSocketService
 		int normalSlotsOccupied = specialSlotCount;
 		int maxSlot = specialSlotCount;
 		final HashSet<Integer> allSlots = new HashSet<>();
-		for (final ManaStone ms : manaStones)
+		for (ManaStone ms : manaStones)
 		{
 			final ItemCategory category = DataManager.ITEM_DATA.getItemTemplate(ms.getItemId()).getCategory();
 			if (category == ItemCategory.SPECIAL_MANASTONE)
@@ -282,7 +282,7 @@ public class ItemSocketService
 		}
 		final Set<ManaStone> itemStones = item.getItemStones();
 		final int specialSlotCount = item.getItemTemplate().getSpecialSlots();
-		for (final ManaStone ms : itemStones)
+		for (ManaStone ms : itemStones)
 		{
 			if (ms.getSlot() == slotNum)
 			{
@@ -329,7 +329,7 @@ public class ItemSocketService
 		}
 		final Set<ManaStone> itemStones = item.getFusionStones();
 		final int specialSlotCount = item.getFusionedItemTemplate().getSpecialSlots();
-		for (final ManaStone ms : itemStones)
+		for (ManaStone ms : itemStones)
 		{
 			if (ms.getSlot() == slotNum)
 			{
@@ -368,7 +368,7 @@ public class ItemSocketService
 			return;
 		}
 		final Set<ManaStone> itemStones = item.getItemStones();
-		for (final ManaStone ms : itemStones)
+		for (ManaStone ms : itemStones)
 		{
 			ms.setPersistentState(PersistentState.DELETED);
 		}
@@ -389,7 +389,7 @@ public class ItemSocketService
 			return;
 		}
 		final Set<ManaStone> fusionStones = item.getFusionStones();
-		for (final ManaStone ms : fusionStones)
+		for (ManaStone ms : fusionStones)
 		{
 			ms.setPersistentState(PersistentState.DELETED);
 		}
@@ -398,7 +398,7 @@ public class ItemSocketService
 		ItemPacketService.updateItemAfterInfoChange(player, item);
 	}
 	
-	public static void socketGodstone(final Player player, int weaponId, int stoneId)
+	public static void socketGodstone(Player player, int weaponId, int stoneId)
 	{
 		final Item weaponItem = player.getInventory().getItemByObjId(weaponId);
 		if (weaponItem == null)
@@ -456,7 +456,7 @@ public class ItemSocketService
 	}
 	
 	@SuppressWarnings("null")
-	public static void amplification(final Player player, int itemId, int toolUniqueId, final int enchantmentStoneObjectId)
+	public static void amplification(Player player, int itemId, int toolUniqueId, int enchantmentStoneObjectId)
 	{
 		final Item currentItem = player.getInventory().getItemByObjId(itemId);
 		final Item toolItem = player.getInventory().getItemByObjId(toolUniqueId);

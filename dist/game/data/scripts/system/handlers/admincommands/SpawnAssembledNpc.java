@@ -55,7 +55,7 @@ public class SpawnAssembledNpc extends AdminCommand
 		{
 			spawnId = Integer.parseInt(params[0]);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			onFail(player, null);
 			return;
@@ -68,7 +68,7 @@ public class SpawnAssembledNpc extends AdminCommand
 			return;
 		}
 		final FastList<AssembledNpcPart> assembledPatrs = new FastList<>();
-		for (final AssembledNpcTemplate.AssembledNpcPartTemplate npcPart : template.getAssembledNpcPartTemplates())
+		for (AssembledNpcTemplate.AssembledNpcPartTemplate npcPart : template.getAssembledNpcPartTemplates())
 		{
 			assembledPatrs.add(new AssembledNpcPart(IDFactory.getInstance().nextId(), npcPart));
 		}

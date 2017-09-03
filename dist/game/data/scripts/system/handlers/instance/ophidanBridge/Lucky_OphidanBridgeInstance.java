@@ -187,7 +187,7 @@ public class Lucky_OphidanBridgeInstance extends GeneralInstanceHandler
 			case 235759: // Fugitive Mazikin Leader.
 			case 235763: // Runaway Hirakiki Leader.
 			case 235767: // Escapee Asachin Leader.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -218,7 +218,7 @@ public class Lucky_OphidanBridgeInstance extends GeneralInstanceHandler
 			case 235769: // Velkur Aethercaster.
 			case 235770: // Velkur Aetherpriest.
 			case 235771: // Velkur Aetherknife.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -290,7 +290,7 @@ public class Lucky_OphidanBridgeInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -313,7 +313,7 @@ public class Lucky_OphidanBridgeInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

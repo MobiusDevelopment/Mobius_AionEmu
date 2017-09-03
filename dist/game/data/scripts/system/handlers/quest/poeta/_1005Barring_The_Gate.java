@@ -61,7 +61,7 @@ public class _1005Barring_The_Gate extends QuestHandler
 		};
 		qe.registerOnLevelUp(questId);
 		qe.registerOnEnterZoneMissionEnd(questId);
-		for (final int id : talkNpcs)
+		for (int id : talkNpcs)
 		{
 			qe.registerQuestNpc(id).addOnTalkEvent(questId);
 		}
@@ -96,7 +96,7 @@ public class _1005Barring_The_Gate extends QuestHandler
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
@@ -274,7 +274,7 @@ public class _1005Barring_The_Gate extends QuestHandler
 		return false;
 	}
 	
-	private void destroy(final int var, final QuestEnv env)
+	private void destroy(int var, QuestEnv env)
 	{
 		final int targetObjectId = env.getVisibleObject().getObjectId();
 		final Player player = env.getPlayer();

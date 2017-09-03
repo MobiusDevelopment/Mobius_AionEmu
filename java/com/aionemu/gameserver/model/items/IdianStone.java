@@ -61,7 +61,7 @@ public class IdianStone extends ItemStone
 		rndBonusEffect = new RandomBonusEffect(StatBonusType.POLISH, polishSetId, polishNumber);
 	}
 	
-	public void onEquip(final Player player)
+	public void onEquip(Player player)
 	{
 		if ((item.getEquipmentSlot() == ItemSlot.MAIN_HAND.getSlotIdMask()) || item.getItemTemplate().isTwoHandWeapon())
 		{

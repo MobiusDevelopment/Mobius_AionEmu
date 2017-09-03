@@ -59,11 +59,11 @@ public class Invasion extends DimensionalVortex<VortexLocation>
 	{
 		getVortexLocation().setActiveVortex(null);
 		// unregisterSiegeBossListeners(); // FIXME? init listeners - EnhancedObject cast
-		for (final Kisk kisk : getVortexLocation().getInvadersKisks().values())
+		for (Kisk kisk : getVortexLocation().getInvadersKisks().values())
 		{
 			kisk.getController().die();
 		}
-		for (final Player invader : invaders.values())
+		for (Player invader : invaders.values())
 		{
 			if (invader.isOnline())
 			{
@@ -86,7 +86,7 @@ public class Invasion extends DimensionalVortex<VortexLocation>
 		else if (!list.isEmpty())
 		{
 			Player first = null;
-			for (final Player firstOne : list.values())
+			for (Player firstOne : list.values())
 			{
 				if (firstOne.isInGroup2())
 				{
@@ -210,7 +210,7 @@ public class Invasion extends DimensionalVortex<VortexLocation>
 	
 	private void updateAlliance()
 	{
-		for (final Player player : getVortexLocation().getPlayers().values())
+		for (Player player : getVortexLocation().getPlayers().values())
 		{
 			if (player.getRace().equals(getVortexLocation().getDefendersRace()))
 			{

@@ -46,7 +46,7 @@ public final class DateTimeUtil
 				canApplyZoneChange = true;
 			}
 		}
-		catch (final Throwable e)
+		catch (Throwable e)
 		{
 			log.error("Invalid or not supported timezones specified!!!\n" + "Use both -Duser.timezone=\"timezone_id\" switch from command line\n" + "and add a valid value for GSConfig.TIME_ZONE_ID");
 		}

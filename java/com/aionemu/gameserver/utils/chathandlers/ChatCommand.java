@@ -45,7 +45,7 @@ public abstract class ChatCommand
 			execute(player, params);
 			return true;
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("", e);
 			onFail(player, e.getMessage());

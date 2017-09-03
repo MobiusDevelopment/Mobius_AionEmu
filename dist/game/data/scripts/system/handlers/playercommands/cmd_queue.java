@@ -100,7 +100,7 @@ public class cmd_queue extends PlayerCommand
 	{
 		int count = 0;
 		final Collection<Player> players = World.getInstance().getAllPlayers();
-		for (final Player p : players)
+		for (Player p : players)
 		{
 			if (p.isRegedEvent())
 			{

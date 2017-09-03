@@ -68,7 +68,7 @@ public class MaterialZoneHandler implements ZoneHandler
 			return;
 		}
 		MaterialSkill foundSkill = null;
-		for (final MaterialSkill skill : template.getSkills())
+		for (MaterialSkill skill : template.getSkills())
 		{
 			if (skill.getTarget().isTarget(creature))
 			{

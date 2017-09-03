@@ -59,14 +59,14 @@ public class _24114You_Gotta_Stop_Umkata extends QuestHandler
 		qe.registerQuestNpc(700097).addOnTalkEvent(questId); // Umkata's Jewel Box
 		qe.registerQuestNpc(700098).addOnTalkEvent(questId); // Umkata's Grave
 		qe.registerQuestNpc(210752).addOnKillEvent(questId); // Umkata
-		for (final int mob : heroSpirit)
+		for (int mob : heroSpirit)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
 	}
 	
 	@Override
-	public boolean onDialogEvent(final QuestEnv env)
+	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);

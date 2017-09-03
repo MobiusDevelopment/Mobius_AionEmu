@@ -40,7 +40,7 @@ public class OnClassLoadUnloadListener implements ClassListener
 	@Override
 	public void postLoad(Class<?>[] classes)
 	{
-		for (final Class<?> c : classes)
+		for (Class<?> c : classes)
 		{
 			doMethodInvoke(c.getDeclaredMethods(), OnClassLoad.class);
 		}
@@ -49,7 +49,7 @@ public class OnClassLoadUnloadListener implements ClassListener
 	@Override
 	public void preUnload(Class<?>[] classes)
 	{
-		for (final Class<?> c : classes)
+		for (Class<?> c : classes)
 		{
 			doMethodInvoke(c.getDeclaredMethods(), OnClassUnload.class);
 		}
@@ -62,7 +62,7 @@ public class OnClassLoadUnloadListener implements ClassListener
 	 */
 	protected final void doMethodInvoke(Method[] methods, Class<? extends Annotation> annotationClass)
 	{
-		for (final Method m : methods)
+		for (Method m : methods)
 		{
 			if (!Modifier.isStatic(m.getModifiers()))
 			{
@@ -78,11 +78,11 @@ public class OnClassLoadUnloadListener implements ClassListener
 				{
 					m.invoke(null);
 				}
-				catch (final IllegalAccessException e)
+				catch (IllegalAccessException e)
 				{
 					log.error("Can't access method " + m.getName() + " of class " + m.getDeclaringClass().getName(), e);
 				}
-				catch (final InvocationTargetException e)
+				catch (InvocationTargetException e)
 				{
 					log.error("Can't invoke method " + m.getName() + " of class " + m.getDeclaringClass().getName(), e);
 				}

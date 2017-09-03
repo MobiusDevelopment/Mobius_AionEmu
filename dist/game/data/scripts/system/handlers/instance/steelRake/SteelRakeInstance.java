@@ -70,7 +70,7 @@ public class SteelRakeInstance extends GeneralInstanceHandler
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000054, 1)); // Mercenary Quarters Key.
 				break;
 			case 215058: // Timid Alakin.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -86,7 +86,7 @@ public class SteelRakeInstance extends GeneralInstanceHandler
 				break;
 			case 215064: // Collector Memekin.
 			case 215065: // Discemer Werikiki.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -95,7 +95,7 @@ public class SteelRakeInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 215066: // Technician Binukin.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -127,7 +127,7 @@ public class SteelRakeInstance extends GeneralInstanceHandler
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000048, 1)); // Menagerie Key.
 				break;
 			case 215411: // Zerkin The One-Eyed.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -141,7 +141,7 @@ public class SteelRakeInstance extends GeneralInstanceHandler
 				break;
 			case 215080: // Engineer Lahulahu.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000051, 1)); // Anchor Point Key.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -150,7 +150,7 @@ public class SteelRakeInstance extends GeneralInstanceHandler
 				}
 				break;
 			case 215081: // Brass-Eye Grogget.
-				for (final Player player : instance.getPlayersInside())
+				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
 					{
@@ -342,7 +342,7 @@ public class SteelRakeInstance extends GeneralInstanceHandler
 		isInstanceDestroyed = true;
 	}
 	
-	private void sendMsg(final String str)
+	private void sendMsg(String str)
 	{
 		instance.doOnAllPlayers(new Visitor<Player>()
 		{
@@ -354,7 +354,7 @@ public class SteelRakeInstance extends GeneralInstanceHandler
 		});
 	}
 	
-	protected void sendMsgByRace(final int msg, final Race race, int time)
+	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -395,7 +395,7 @@ public class SteelRakeInstance extends GeneralInstanceHandler
 	}
 	
 	@Override
-	public boolean onDie(final Player player, Creature lastAttacker)
+	public boolean onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));

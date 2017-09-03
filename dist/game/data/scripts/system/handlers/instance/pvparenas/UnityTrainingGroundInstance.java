@@ -50,7 +50,7 @@ public class UnityTrainingGroundInstance extends HarmonyArenaInstance
 		final float totalScoreCourage = (1.0f * 3) * 100;
 		final float totalScoreInfinity = (1.0f * 3) * 100;
 		final int totalPoints = instanceReward.getTotalPoints();
-		for (final HarmonyGroupReward group : instanceReward.getGroups())
+		for (HarmonyGroupReward group : instanceReward.getGroups())
 		{
 			final int score = group.getPoints();
 			final int rank = instanceReward.getRank(score);
@@ -408,7 +408,7 @@ public class UnityTrainingGroundInstance extends HarmonyArenaInstance
 	{
 		if (!isInstanceDestroyed)
 		{
-			for (final Npc npc : instance.getNpcs())
+			for (Npc npc : instance.getNpcs())
 			{
 				final SpawnTemplate st = npc.getSpawn();
 				if ((st.getX() == x) && (st.getY() == y) && (st.getZ() == z))

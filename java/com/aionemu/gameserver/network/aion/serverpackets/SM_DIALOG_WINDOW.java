@@ -93,7 +93,7 @@ public class SM_DIALOG_WINDOW extends AionServerPacket
 					else
 					{
 						final List<ZoneInstance> zones = region.getZones(npc);
-						for (final ZoneInstance zone : zones)
+						for (ZoneInstance zone : zones)
 						{
 							townId = zone.getTownId();
 							if (townId > 0)

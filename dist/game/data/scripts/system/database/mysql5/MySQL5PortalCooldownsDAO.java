@@ -43,7 +43,7 @@ public class MySQL5PortalCooldownsDAO extends PortalCooldownsDAO
 	public static final String SELECT_QUERY = "SELECT `world_id`, `reuse_time`, `entry_count` FROM `portal_cooldowns` WHERE `player_id`=?";
 	
 	@Override
-	public void loadPortalCooldowns(final Player player)
+	public void loadPortalCooldowns(Player player)
 	{
 		Connection con = null;
 		final FastMap<Integer, PortalCooldownItem> portalCoolDowns = new FastMap<>();
@@ -69,7 +69,7 @@ public class MySQL5PortalCooldownsDAO extends PortalCooldownsDAO
 			player.getPortalCooldownList().setPortalCoolDowns(portalCoolDowns);
 			rset.close();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("LoadPortalCooldowns", e);
 		}
@@ -80,7 +80,7 @@ public class MySQL5PortalCooldownsDAO extends PortalCooldownsDAO
 	}
 	
 	@Override
-	public void storePortalCooldowns(final Player player)
+	public void storePortalCooldowns(Player player)
 	{
 		deletePortalCooldowns(player);
 		final Map<Integer, PortalCooldownItem> portalCoolDowns = player.getPortalCooldownList().getPortalCoolDowns();
@@ -90,7 +90,7 @@ public class MySQL5PortalCooldownsDAO extends PortalCooldownsDAO
 			return;
 		}
 		
-		for (final Map.Entry<Integer, PortalCooldownItem> entry : portalCoolDowns.entrySet())
+		for (Map.Entry<Integer, PortalCooldownItem> entry : portalCoolDowns.entrySet())
 		{
 			final int worldId = entry.getKey();
 			final long reuseTime = entry.getValue().getCooldown();
@@ -115,7 +115,7 @@ public class MySQL5PortalCooldownsDAO extends PortalCooldownsDAO
 				stmt.setInt(4, entryCount);
 				stmt.execute();
 			}
-			catch (final SQLException e)
+			catch (SQLException e)
 			{
 				log.error("storePortalCooldowns", e);
 			}
@@ -126,7 +126,7 @@ public class MySQL5PortalCooldownsDAO extends PortalCooldownsDAO
 		}
 	}
 	
-	private void deletePortalCooldowns(final Player player)
+	private void deletePortalCooldowns(Player player)
 	{
 		
 		Connection con = null;
@@ -139,7 +139,7 @@ public class MySQL5PortalCooldownsDAO extends PortalCooldownsDAO
 			stmt.setInt(1, player.getObjectId());
 			stmt.execute();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("deletePortalCooldowns", e);
 		}

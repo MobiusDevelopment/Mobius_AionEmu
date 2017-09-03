@@ -216,7 +216,7 @@ public class GeoWorldLoader
 						{
 							nodeClone = node.clone();
 						}
-						catch (final CloneNotSupportedException e)
+						catch (CloneNotSupportedException e)
 						{
 							e.printStackTrace();
 						}
@@ -243,7 +243,7 @@ public class GeoWorldLoader
 					}
 				}
 			}
-			catch (final Throwable t)
+			catch (Throwable t)
 			{
 				System.out.println(t);
 			}
@@ -260,7 +260,7 @@ public class GeoWorldLoader
 		{
 			nodeClone = node.clone();
 		}
-		catch (final CloneNotSupportedException e)
+		catch (CloneNotSupportedException e)
 		{
 			e.printStackTrace();
 		}

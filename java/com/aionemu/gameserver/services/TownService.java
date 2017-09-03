@@ -61,9 +61,9 @@ public class TownService
 		asmosTowns = DAOManager.getDAO(TownDAO.class).load(Race.ASMODIANS);
 		if ((elyosTowns.size() == 0) && (asmosTowns.size() == 0))
 		{
-			for (final HousingLand land : DataManager.HOUSE_DATA.getLands())
+			for (HousingLand land : DataManager.HOUSE_DATA.getLands())
 			{
-				for (final HouseAddress address : land.getAddresses())
+				for (HouseAddress address : land.getAddresses())
 				{
 					if (address.getTownId() == 0)
 					{
@@ -136,7 +136,7 @@ public class TownService
 		else
 		{
 			final List<ZoneInstance> zones = region.getZones(creature);
-			for (final ZoneInstance zone : zones)
+			for (ZoneInstance zone : zones)
 			{
 				townId = zone.getTownId();
 				if (townId > 0)

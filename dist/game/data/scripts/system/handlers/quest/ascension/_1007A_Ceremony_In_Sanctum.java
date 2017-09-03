@@ -67,7 +67,7 @@ public class _1007A_Ceremony_In_Sanctum extends QuestHandler
 			return;
 		}
 		qe.registerOnLevelUp(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

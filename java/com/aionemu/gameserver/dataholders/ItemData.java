@@ -61,7 +61,7 @@ public class ItemData extends ReloadableData
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
 		items = new TIntObjectHashMap<>();
-		for (final ItemTemplate it : its)
+		for (ItemTemplate it : its)
 		{
 			items.put(it.getTemplateId(), it);
 			// if (it.getCategory().equals(ItemCategory.MANASTONE)) {
@@ -81,7 +81,7 @@ public class ItemData extends ReloadableData
 	
 	public void cleanup()
 	{
-		for (final ItemCleanupTemplate ict : DataManager.ITEM_CLEAN_UP.getList())
+		for (ItemCleanupTemplate ict : DataManager.ITEM_CLEAN_UP.getList())
 		{
 			final ItemTemplate template = items.get(ict.getId());
 			applyCleanup(template, ict.resultTrade(), ItemMask.TRADEABLE);
@@ -147,7 +147,7 @@ public class ItemData extends ReloadableData
 			}
 			DataManager.ITEM_DATA.setData(newTemplates);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			PacketSendUtility.sendMessage(admin, "Item templates reload failed!");
 			log.error("Item templates reload failed!", e);

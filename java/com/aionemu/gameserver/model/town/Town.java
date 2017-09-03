@@ -150,9 +150,9 @@ public class Town
 	{
 		final List<Spawn> newSpawns = DataManager.TOWN_SPAWNS_DATA.getSpawns(id, level);
 		final int worldId = DataManager.TOWN_SPAWNS_DATA.getWorldIdForTown(id);
-		for (final Spawn spawn : newSpawns)
+		for (Spawn spawn : newSpawns)
 		{
-			for (final SpawnSpotTemplate sst : spawn.getSpawnSpotTemplates())
+			for (SpawnSpotTemplate sst : spawn.getSpawnSpotTemplates())
 			{
 				final SpawnTemplate spawnTemplate = SpawnEngine.addNewSpawn(worldId, spawn.getNpcId(), sst.getX(), sst.getY(), sst.getZ(), sst.getHeading(), spawn.getRespawnTime());
 				spawnTemplate.setEntityId(sst.getEntityId());
@@ -169,7 +169,7 @@ public class Town
 	
 	private void despawnOldObjects()
 	{
-		for (final Npc npc : spawnedNpcs)
+		for (Npc npc : spawnedNpcs)
 		{
 			npc.getController().delete();
 		}

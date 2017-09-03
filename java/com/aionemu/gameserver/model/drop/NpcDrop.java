@@ -69,7 +69,7 @@ public class NpcDrop implements DropCalculator
 		{
 			return index;
 		}
-		for (final DropGroup dg : dropGroup)
+		for (DropGroup dg : dropGroup)
 		{
 			if ((dg.getRace() == Race.PC_ALL) || (dg.getRace() == race))
 			{

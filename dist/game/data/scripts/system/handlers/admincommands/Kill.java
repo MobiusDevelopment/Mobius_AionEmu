@@ -70,13 +70,13 @@ public class Kill extends AdminCommand
 				{
 					range = Integer.parseInt(params[0]);
 				}
-				catch (final NumberFormatException ex)
+				catch (NumberFormatException ex)
 				{
 					PacketSendUtility.sendMessage(admin, "<range> must be a number.");
 					return;
 				}
 			}
-			for (final VisibleObject obj : admin.getKnownList().getKnownObjects().values())
+			for (VisibleObject obj : admin.getKnownList().getKnownObjects().values())
 			{
 				if (obj instanceof Creature)
 				{

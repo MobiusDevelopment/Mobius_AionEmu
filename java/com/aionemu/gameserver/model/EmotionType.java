@@ -81,7 +81,7 @@ public enum EmotionType
 	
 	public static EmotionType getEmotionTypeById(int id)
 	{
-		for (final EmotionType emotionType : values())
+		for (EmotionType emotionType : values())
 		{
 			if (emotionType.getTypeId() == id)
 			{

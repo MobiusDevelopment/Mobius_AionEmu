@@ -45,7 +45,7 @@ public class _1938BlackCloudFakery extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(203703).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

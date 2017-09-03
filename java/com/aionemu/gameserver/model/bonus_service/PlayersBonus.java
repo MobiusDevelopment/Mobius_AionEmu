@@ -53,7 +53,7 @@ public class PlayersBonus implements StatOwner
 		{
 			return;
 		}
-		for (final PlayersBonusPenaltyAttr playersBonusPenaltyAttr : playersServiceBonusattr.getPenaltyAttr())
+		for (PlayersBonusPenaltyAttr playersBonusPenaltyAttr : playersServiceBonusattr.getPenaltyAttr())
 		{
 			if (playersBonusPenaltyAttr.getFunc().equals(Func.PERCENT))
 			{

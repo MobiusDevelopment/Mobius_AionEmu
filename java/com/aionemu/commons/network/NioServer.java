@@ -107,7 +107,7 @@ public class NioServer
 			/**
 			 * Create a new non-blocking server socket channel for clients
 			 */
-			for (final ServerCfg cfg : cfgs)
+			for (ServerCfg cfg : cfgs)
 			{
 				final ServerSocketChannel serverChannel = ServerSocketChannel.open();
 				serverChannel.configureBlocking(false);
@@ -135,7 +135,7 @@ public class NioServer
 				serverChannelKeys.add(acceptKey);
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("NioServer Initialization Error: " + e, e);
 			throw new Error("NioServer Initialization Error!");
@@ -207,7 +207,7 @@ public class NioServer
 		int count = 0;
 		if (readWriteDispatchers != null)
 		{
-			for (final Dispatcher d : readWriteDispatchers)
+			for (Dispatcher d : readWriteDispatchers)
 			{
 				count += d.selector().keys().size();
 			}
@@ -227,13 +227,13 @@ public class NioServer
 		log.info("Closing ServerChannels...");
 		try
 		{
-			for (final SelectionKey key : serverChannelKeys)
+			for (SelectionKey key : serverChannelKeys)
 			{
 				key.cancel();
 			}
 			log.info("ServerChannel closed.");
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error during closing ServerChannel, " + e, e);
 		}
@@ -246,7 +246,7 @@ public class NioServer
 		{
 			Thread.sleep(1000);
 		}
-		catch (final Throwable t)
+		catch (Throwable t)
 		{
 			log.warn("Nio thread was interrupted during shutdown", t);
 		}
@@ -270,7 +270,7 @@ public class NioServer
 		{
 			Thread.sleep(1000);
 		}
-		catch (final Throwable t)
+		catch (Throwable t)
 		{
 			log.warn("Nio thread was interrupted during shutdown", t);
 		}
@@ -283,9 +283,9 @@ public class NioServer
 	{
 		if (readWriteDispatchers != null)
 		{
-			for (final Dispatcher d : readWriteDispatchers)
+			for (Dispatcher d : readWriteDispatchers)
 			{
-				for (final SelectionKey key : d.selector().keys())
+				for (SelectionKey key : d.selector().keys())
 				{
 					if (key.attachment() instanceof AConnection)
 					{
@@ -296,7 +296,7 @@ public class NioServer
 		}
 		else
 		{
-			for (final SelectionKey key : acceptDispatcher.selector().keys())
+			for (SelectionKey key : acceptDispatcher.selector().keys())
 			{
 				if (key.attachment() instanceof AConnection)
 				{
@@ -313,9 +313,9 @@ public class NioServer
 	{
 		if (readWriteDispatchers != null)
 		{
-			for (final Dispatcher d : readWriteDispatchers)
+			for (Dispatcher d : readWriteDispatchers)
 			{
-				for (final SelectionKey key : d.selector().keys())
+				for (SelectionKey key : d.selector().keys())
 				{
 					if (key.attachment() instanceof AConnection)
 					{
@@ -326,7 +326,7 @@ public class NioServer
 		}
 		else
 		{
-			for (final SelectionKey key : acceptDispatcher.selector().keys())
+			for (SelectionKey key : acceptDispatcher.selector().keys())
 			{
 				if (key.attachment() instanceof AConnection)
 				{

@@ -176,7 +176,7 @@ public class GameTime implements Cloneable
 	{
 		int answer = 1;
 		int minutesInYear = gameTime % MINUTES_IN_YEAR;
-		for (final Monthes m : Monthes.values())
+		for (Monthes m : Monthes.values())
 		{
 			if ((minutesInYear - getProperMinutesInMonth(m)) > 0)
 			{
@@ -204,7 +204,7 @@ public class GameTime implements Cloneable
 	{
 		int answer = 1;
 		int minutesInYear = gameTime % MINUTES_IN_YEAR;
-		for (final Monthes m : Monthes.values())
+		for (Monthes m : Monthes.values())
 		{
 			if ((minutesInYear - getProperMinutesInMonth(m)) > 0)
 			{

@@ -37,7 +37,7 @@ public final class RestrictionsManager
 	
 	public static synchronized void activate(Restrictions restriction)
 	{
-		for (final Method method : restriction.getClass().getMethods())
+		for (Method method : restriction.getClass().getMethods())
 		{
 			final RestrictionMode mode = RestrictionMode.parse(method);
 			if (mode == null)
@@ -60,7 +60,7 @@ public final class RestrictionsManager
 	
 	public static synchronized void deactivate(Restrictions restriction)
 	{
-		for (final RestrictionMode mode : RestrictionMode.VALUES)
+		for (RestrictionMode mode : RestrictionMode.VALUES)
 		{
 			Restrictions[] restrictions = RESTRICTIONS[mode.ordinal()];
 			for (int index; (index = ArrayUtils.indexOf(restrictions, restriction)) != -1;)
@@ -90,7 +90,7 @@ public final class RestrictionsManager
 		{
 			return true;
 		}
-		for (final Restrictions restrictions : RESTRICTIONS[RestrictionMode.isRestricted.ordinal()])
+		for (Restrictions restrictions : RESTRICTIONS[RestrictionMode.isRestricted.ordinal()])
 		{
 			if (!restrictions.isRestricted(player, callingRestriction))
 			{
@@ -107,7 +107,7 @@ public final class RestrictionsManager
 	 */
 	public static boolean canAttack(Player player, VisibleObject target)
 	{
-		for (final Restrictions restrictions : RESTRICTIONS[RestrictionMode.canAttack.ordinal()])
+		for (Restrictions restrictions : RESTRICTIONS[RestrictionMode.canAttack.ordinal()])
 		{
 			if (!restrictions.canAttack(player, target))
 			{
@@ -124,7 +124,7 @@ public final class RestrictionsManager
 	 */
 	public static boolean canAffectBySkill(Player player, VisibleObject target, Skill skill)
 	{
-		for (final Restrictions restrictions : RESTRICTIONS[RestrictionMode.canAffectBySkill.ordinal()])
+		for (Restrictions restrictions : RESTRICTIONS[RestrictionMode.canAffectBySkill.ordinal()])
 		{
 			if (!restrictions.canAffectBySkill(player, target, skill))
 			{
@@ -142,7 +142,7 @@ public final class RestrictionsManager
 	 */
 	public static boolean canUseSkill(Player player, Skill skill)
 	{
-		for (final Restrictions restrictions : RESTRICTIONS[RestrictionMode.canUseSkill.ordinal()])
+		for (Restrictions restrictions : RESTRICTIONS[RestrictionMode.canUseSkill.ordinal()])
 		{
 			if (!restrictions.canUseSkill(player, skill))
 			{
@@ -158,7 +158,7 @@ public final class RestrictionsManager
 	 */
 	public static boolean canChat(Player player)
 	{
-		for (final Restrictions restrictions : RESTRICTIONS[RestrictionMode.canChat.ordinal()])
+		for (Restrictions restrictions : RESTRICTIONS[RestrictionMode.canChat.ordinal()])
 		{
 			if (!restrictions.canChat(player))
 			{
@@ -175,7 +175,7 @@ public final class RestrictionsManager
 	 */
 	public static boolean canInviteToGroup(Player player, Player target)
 	{
-		for (final Restrictions restrictions : RESTRICTIONS[RestrictionMode.canInviteToGroup.ordinal()])
+		for (Restrictions restrictions : RESTRICTIONS[RestrictionMode.canInviteToGroup.ordinal()])
 		{
 			if (!restrictions.canInviteToGroup(player, target))
 			{
@@ -192,7 +192,7 @@ public final class RestrictionsManager
 	 */
 	public static boolean canInviteToAlliance(Player player, Player target)
 	{
-		for (final Restrictions restrictions : RESTRICTIONS[RestrictionMode.canInviteToAlliance.ordinal()])
+		for (Restrictions restrictions : RESTRICTIONS[RestrictionMode.canInviteToAlliance.ordinal()])
 		{
 			if (!restrictions.canInviteToAlliance(player, target))
 			{
@@ -209,7 +209,7 @@ public final class RestrictionsManager
 	 */
 	public static boolean canInviteToLeague(Player player, Player target)
 	{
-		for (final Restrictions restrictions : RESTRICTIONS[RestrictionMode.canInviteToLeague.ordinal()])
+		for (Restrictions restrictions : RESTRICTIONS[RestrictionMode.canInviteToLeague.ordinal()])
 		{
 			if (!restrictions.canInviteToLeague(player, target))
 			{
@@ -225,7 +225,7 @@ public final class RestrictionsManager
 	 */
 	public static boolean canChangeEquip(Player player)
 	{
-		for (final Restrictions restrictions : RESTRICTIONS[RestrictionMode.canChangeEquip.ordinal()])
+		for (Restrictions restrictions : RESTRICTIONS[RestrictionMode.canChangeEquip.ordinal()])
 		{
 			if (!restrictions.canChangeEquip(player))
 			{
@@ -242,7 +242,7 @@ public final class RestrictionsManager
 	 */
 	public static boolean canTrade(Player player)
 	{
-		for (final Restrictions restrictions : RESTRICTIONS[RestrictionMode.canTrade.ordinal()])
+		for (Restrictions restrictions : RESTRICTIONS[RestrictionMode.canTrade.ordinal()])
 		{
 			if (!restrictions.canTrade(player))
 			{
@@ -263,7 +263,7 @@ public final class RestrictionsManager
 	 */
 	public static boolean canUseWarehouse(Player player)
 	{
-		for (final Restrictions restrictions : RESTRICTIONS[RestrictionMode.canUseWarehouse.ordinal()])
+		for (Restrictions restrictions : RESTRICTIONS[RestrictionMode.canUseWarehouse.ordinal()])
 		{
 			if (!restrictions.canUseWarehouse(player))
 			{
@@ -280,7 +280,7 @@ public final class RestrictionsManager
 	 */
 	public static boolean canUseItem(Player player, Item item)
 	{
-		for (final Restrictions restrictions : RESTRICTIONS[RestrictionMode.canUseItem.ordinal()])
+		for (Restrictions restrictions : RESTRICTIONS[RestrictionMode.canUseItem.ordinal()])
 		{
 			if (!restrictions.canUseItem(player, item))
 			{
@@ -309,7 +309,7 @@ public final class RestrictionsManager
 		
 		private RestrictionMode()
 		{
-			for (final Method method : Restrictions.class.getMethods())
+			for (Method method : Restrictions.class.getMethods())
 			{
 				if (name().equals(method.getName()))
 				{
@@ -337,7 +337,7 @@ public final class RestrictionsManager
 		
 		private static RestrictionMode parse(Method method)
 		{
-			for (final RestrictionMode mode : VALUES)
+			for (RestrictionMode mode : VALUES)
 			{
 				if (mode.equalsMethod(method))
 				{
@@ -370,7 +370,7 @@ public final class RestrictionsManager
 		
 		private Method getMatchingMethod(Class<? extends Restrictions> clazz)
 		{
-			for (final Method method : clazz.getMethods())
+			for (Method method : clazz.getMethods())
 			{
 				if (equalsMethod(method))
 				{

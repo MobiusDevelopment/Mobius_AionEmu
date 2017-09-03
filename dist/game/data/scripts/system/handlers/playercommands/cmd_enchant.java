@@ -42,7 +42,7 @@ public class cmd_enchant extends PlayerCommand
 		{
 			enchant = params[0] == null ? enchant : Integer.parseInt(params[0]);
 		}
-		catch (final Exception ex)
+		catch (Exception ex)
 		{
 			onFail(player, "Fail");
 			return;
@@ -63,7 +63,7 @@ public class cmd_enchant extends PlayerCommand
 		final int enchantLevel;
 		final int maxEnchant;
 		
-		for (final Item targetItem : player.getEquipment().getEquippedItemsWithoutStigma())
+		for (Item targetItem : player.getEquipment().getEquippedItemsWithoutStigma())
 		{
 			if (isUpgradeble(targetItem))
 			{

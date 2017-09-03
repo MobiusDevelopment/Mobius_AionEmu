@@ -137,7 +137,7 @@ public class PvPArenaReward extends InstanceReward<PvPArenaPlayerReward>
 	private List<Integer> getFreePositions()
 	{
 		final List<Integer> p = new ArrayList<>();
-		for (final Integer key : positions.keySet())
+		for (Integer key : positions.keySet())
 		{
 			if (!positions.get(key))
 			{
@@ -230,7 +230,7 @@ public class PvPArenaReward extends InstanceReward<PvPArenaPlayerReward>
 	public int getRank(int points)
 	{
 		int rank = -1;
-		for (final PvPArenaPlayerReward reward : sortPoints())
+		for (PvPArenaPlayerReward reward : sortPoints())
 		{
 			if (reward.getScorePoints() >= points)
 			{

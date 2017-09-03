@@ -84,7 +84,7 @@ public class LoginServer
 				out.setMethod(ZipOutputStream.DEFLATED);
 				out.setLevel(Deflater.BEST_COMPRESSION);
 				
-				for (final File logFile : files)
+				for (File logFile : files)
 				{
 					final FileInputStream in = new FileInputStream(logFile);
 					out.putNextEntry(new ZipEntry(logFile.getName()));
@@ -99,7 +99,7 @@ public class LoginServer
 				}
 				out.close();
 			}
-			catch (final IOException e)
+			catch (IOException e)
 			{
 			}
 		}
@@ -111,7 +111,7 @@ public class LoginServer
 			lc.reset();
 			configurator.doConfigure("config/slf4j-logback.xml");
 		}
-		catch (final JoranException je)
+		catch (JoranException je)
 		{
 			throw new RuntimeException("Failed to configure loggers, shutting down...", je);
 		}
@@ -120,7 +120,7 @@ public class LoginServer
 	/**
 	 * @param args
 	 */
-	public static void main(final String[] args)
+	public static void main(String[] args)
 	{
 		final long start = System.currentTimeMillis();
 		
@@ -146,7 +146,7 @@ public class LoginServer
 		{
 			KeyGen.init();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Failed initializing Key Generator. Reason: " + e.getMessage(), e);
 			System.exit(ExitCode.CODE_ERROR);

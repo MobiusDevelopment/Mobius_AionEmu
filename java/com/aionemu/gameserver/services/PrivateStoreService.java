@@ -69,7 +69,7 @@ public class PrivateStoreService
 		/**
 		 * Check if player owns itemObjId else don't add item
 		 */
-		for (final TradePSItem tradePSItem : tradePSItems)
+		for (TradePSItem tradePSItem : tradePSItems)
 		{
 			final Item item = getItemByObjId(activePlayer, tradePSItem.getItemObjId());
 			if ((item != null) && item.isTradeable(activePlayer))
@@ -181,7 +181,7 @@ public class PrivateStoreService
 		 */
 		if (buyer.getInventory().getKinah() >= price)
 		{
-			for (final TradeItem tradeItem : tradeList.getTradeItems())
+			for (TradeItem tradeItem : tradeList.getTradeItems())
 			{
 				final Item item = getItemByObjId(seller, tradeItem.getItemId());
 				if (item != null)
@@ -239,10 +239,10 @@ public class PrivateStoreService
 		final PrivateStore store = seller.getStore();
 		final TradeList newTradeList = new TradeList();
 		
-		for (final TradeItem tradeItem : tradeList.getTradeItems())
+		for (TradeItem tradeItem : tradeList.getTradeItems())
 		{
 			int i = 0;
-			for (final int itemObjId : store.getSoldItems().keySet())
+			for (int itemObjId : store.getSoldItems().keySet())
 			{
 				if (i == tradeItem.getItemId())
 				{
@@ -277,7 +277,7 @@ public class PrivateStoreService
 	 */
 	private static boolean validateBuyItems(Player seller, TradeList tradeList)
 	{
-		for (final TradeItem tradeItem : tradeList.getTradeItems())
+		for (TradeItem tradeItem : tradeList.getTradeItems())
 		{
 			final Item item = seller.getInventory().getItemByObjId(tradeItem.getItemId());
 			
@@ -330,7 +330,7 @@ public class PrivateStoreService
 	private static long getTotalPrice(PrivateStore store, TradeList tradeList)
 	{
 		long totalprice = 0;
-		for (final TradeItem tradeItem : tradeList.getTradeItems())
+		for (TradeItem tradeItem : tradeList.getTradeItems())
 		{
 			final TradePSItem item = store.getTradeItemByObjId(tradeItem.getItemId());
 			if (item == null)

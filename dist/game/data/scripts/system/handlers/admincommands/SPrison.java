@@ -60,7 +60,7 @@ public class SPrison extends AdminCommand
 				PacketSendUtility.sendMessage(admin, "Player " + playerToPrison.getName() + " sent to prison for " + delay + " because " + reason + ".");
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			sendInfo(admin);
 		}

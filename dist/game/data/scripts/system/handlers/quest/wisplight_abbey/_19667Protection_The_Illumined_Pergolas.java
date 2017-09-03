@@ -60,7 +60,7 @@ public class _19667Protection_The_Illumined_Pergolas extends QuestHandler
 		qe.registerQuestNpc(806243).addOnQuestStart(questId);
 		qe.registerQuestNpc(806243).addOnTalkEvent(questId);
 		qe.registerQuestNpc(806089).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

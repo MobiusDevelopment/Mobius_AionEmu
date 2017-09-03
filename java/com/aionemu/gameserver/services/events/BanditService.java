@@ -67,7 +67,7 @@ public class BanditService
 		log.info("[PK] Bandit started!");
 	}
 	
-	public void startBandit(final Player player)
+	public void startBandit(Player player)
 	{
 		player.getEffectController().setAbnormal(AbnormalState.SLEEP.getId());
 		player.getEffectController().updatePlayerEffectIcons();
@@ -123,7 +123,7 @@ public class BanditService
 		}, 5 * 1000));
 	}
 	
-	public void stopBandit(final Player player)
+	public void stopBandit(Player player)
 	{
 		player.getEffectController().setAbnormal(AbnormalState.SLEEP.getId());
 		player.getEffectController().updatePlayerEffectIcons();
@@ -178,7 +178,7 @@ public class BanditService
 		}, 5 * 1000));
 	}
 	
-	public void onDie(final Player player, final Creature lastAttacker)
+	public void onDie(Player player, Creature lastAttacker)
 	{
 		final Summon summon = player.getSummon();
 		if (summon != null)
@@ -243,7 +243,7 @@ public class BanditService
 		}
 	}
 	
-	public void sendAnnounce(final Player player)
+	public void sendAnnounce(Player player)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -258,7 +258,7 @@ public class BanditService
 		});
 	}
 	
-	public void sendDieAnnounce(final Player looser, final Player killer)
+	public void sendDieAnnounce(Player looser, Player killer)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{

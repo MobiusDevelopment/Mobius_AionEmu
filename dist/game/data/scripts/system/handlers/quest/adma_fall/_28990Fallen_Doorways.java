@@ -55,15 +55,15 @@ public class _28990Fallen_Doorways extends QuestHandler
 		qe.registerQuestNpc(806079).addOnQuestStart(questId); // Feregran.
 		qe.registerQuestNpc(806079).addOnTalkEvent(questId); // Feregran.
 		qe.registerQuestNpc(806216).addOnTalkEvent(questId); // Petur.
-		for (final int mob : IDF6AdmaZombieSN67Ae)
+		for (int mob : IDF6AdmaZombieSN67Ae)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : IDF6AdmaPrincessSN67Ae)
+		for (int mob : IDF6AdmaPrincessSN67Ae)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}
-		for (final int mob : IDF6AdmaEvilSpirit67Ah)
+		for (int mob : IDF6AdmaEvilSpirit67Ah)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

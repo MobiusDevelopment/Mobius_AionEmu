@@ -45,7 +45,7 @@ public class PetData
 	
 	void afterUnmarshal(Unmarshaller u, Object parent)
 	{
-		for (final PetTemplate pet : pets)
+		for (PetTemplate pet : pets)
 		{
 			petData.put(pet.getId(), pet);
 		}

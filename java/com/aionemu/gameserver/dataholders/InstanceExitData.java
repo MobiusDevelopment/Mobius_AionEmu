@@ -47,7 +47,7 @@ public class InstanceExitData
 	
 	void afterUnmarshal(Unmarshaller unmarshaller, Object parent)
 	{
-		for (final InstanceExit exit : instanceExit)
+		for (InstanceExit exit : instanceExit)
 		{
 			instanceExits.add(exit);
 		}
@@ -57,7 +57,7 @@ public class InstanceExitData
 	
 	public InstanceExit getInstanceExit(int worldId, Race race)
 	{
-		for (final InstanceExit exit : instanceExits)
+		for (InstanceExit exit : instanceExits)
 		{
 			if ((exit.getInstanceId() == worldId) && (race.equals(exit.getRace()) || exit.getRace().equals(Race.PC_ALL)))
 			{

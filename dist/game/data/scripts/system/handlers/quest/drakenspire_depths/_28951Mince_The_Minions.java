@@ -93,7 +93,7 @@ public class _28951Mince_The_Minions extends QuestHandler
 		qe.registerQuestNpc(209743).addOnQuestStart(questId);
 		qe.registerQuestNpc(209743).addOnTalkEvent(questId);
 		qe.registerQuestNpc(804711).addOnTalkEvent(questId);
-		for (final int mob : minion)
+		for (int mob : minion)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

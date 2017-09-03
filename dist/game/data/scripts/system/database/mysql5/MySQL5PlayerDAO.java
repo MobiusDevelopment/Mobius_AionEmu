@@ -68,7 +68,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean isNameUsed(final String name)
+	public boolean isNameUsed(String name)
 	{
 		final PreparedStatement s = DB.prepareStatement("SELECT count(id) as cnt FROM players WHERE ? = players.name");
 		try
@@ -78,7 +78,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rs.next();
 			return rs.getInt("cnt") > 0;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't check if name " + name + ", is used, returning possitive result", e);
 			return true;
@@ -113,7 +113,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 				result.put(id, name);
 			}
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			throw new RuntimeException("Failed to load player names", e);
 		}
@@ -129,7 +129,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void storePlayer(final Player player)
+	public void storePlayer(Player player)
 	{
 		Connection con = null;
 		try
@@ -184,7 +184,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error saving player: " + player.getObjectId() + " " + player.getName(), e);
 		}
@@ -207,7 +207,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean saveNewPlayer(final PlayerCommonData pcd, final int accountId, final String accountName)
+	public boolean saveNewPlayer(PlayerCommonData pcd, int accountId, String accountName)
 	{
 		Connection con = null;
 		try
@@ -237,7 +237,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			preparedStatement.execute();
 			preparedStatement.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error saving new player: " + pcd.getPlayerObjId() + " " + pcd.getName(), e);
 			return false;
@@ -255,7 +255,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	}
 	
 	@Override
-	public PlayerCommonData loadPlayerCommonDataByName(final String name)
+	public PlayerCommonData loadPlayerCommonDataByName(String name)
 	{
 		final Player player = World.getInstance().findPlayer(name);
 		if (player != null)
@@ -283,7 +283,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			// log.error("Could not restore playerId data for player name: " + name + " from DB: " + e.getMessage(), e);
 		}
@@ -300,7 +300,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	}
 	
 	@Override
-	public PlayerCommonData loadPlayerCommonData(final int playerObjId)
+	public PlayerCommonData loadPlayerCommonData(int playerObjId)
 	{
 		
 		final PlayerCommonData cached = playerCommonData.get(playerObjId);
@@ -383,7 +383,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			resultSet.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			// log.error("Could not restore PlayerCommonData data for player: " + playerObjId + " from DB: " + e.getMessage(), e);
 		}
@@ -415,7 +415,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 		{
 			statement.setInt(1, playerId);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Some crap, can't set int parameter to PreparedStatement", e);
 		}
@@ -434,7 +434,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public List<Integer> getPlayerOidsOnAccount(final int accountId)
+	public List<Integer> getPlayerOidsOnAccount(int accountId)
 	{
 		final List<Integer> result = new ArrayList<>();
 		final boolean success = DB.select("SELECT id FROM players WHERE account_id = ?", new ParamReadStH()
@@ -463,7 +463,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void setCreationDeletionTime(final PlayerAccountData acData)
+	public void setCreationDeletionTime(PlayerAccountData acData)
 	{
 		DB.select("SELECT creation_date, deletion_date FROM players WHERE id = ?", new ParamReadStH()
 		{
@@ -489,7 +489,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void updateDeletionTime(final int objectId, final Timestamp deletionDate)
+	public void updateDeletionTime(int objectId, Timestamp deletionDate)
 	{
 		DB.insertUpdate("UPDATE players set deletion_date = ? where id = ?", new IUStH()
 		{
@@ -508,7 +508,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void storeCreationTime(final int objectId, final Timestamp creationDate)
+	public void storeCreationTime(int objectId, Timestamp creationDate)
 	{
 		DB.insertUpdate("UPDATE players set creation_date = ? where id = ?", new IUStH()
 		{
@@ -524,7 +524,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	}
 	
 	@Override
-	public void storeLastOnlineTime(final int objectId, final Timestamp lastOnline)
+	public void storeLastOnlineTime(int objectId, Timestamp lastOnline)
 	{
 		DB.insertUpdate("UPDATE players set last_online = ? where id = ?", new IUStH()
 		{
@@ -561,7 +561,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			}
 			return ids;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't get list of id's from players table", e);
 		}
@@ -577,7 +577,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * {@inheritDoc} - Saelya
 	 */
 	@Override
-	public void onlinePlayer(final Player player, final boolean online)
+	public void onlinePlayer(Player player, boolean online)
 	{
 		DB.insertUpdate("UPDATE players SET online=? WHERE id=?", new IUStH()
 		{
@@ -598,7 +598,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * {@inheritDoc} - Nemiroff
 	 */
 	@Override
-	public void setPlayersOffline(final boolean online)
+	public void setPlayersOffline(boolean online)
 	{
 		DB.insertUpdate("UPDATE players SET online=?", new IUStH()
 		{
@@ -613,7 +613,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	}
 	
 	@Override
-	public String getPlayerNameByObjId(final int playerObjId)
+	public String getPlayerNameByObjId(int playerObjId)
 	{
 		final String[] result = new String[1];
 		DB.select("SELECT name FROM players WHERE id = ?", new ParamReadStH()
@@ -638,7 +638,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	}
 	
 	@Override
-	public int getPlayerLunaConsumeByObjId(final int playerObjId)
+	public int getPlayerLunaConsumeByObjId(int playerObjId)
 	{
 		final int[] result = new int[1];
 		DB.select("SELECT luna_consume FROM players WHERE id = ?", new ParamReadStH()
@@ -663,7 +663,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	}
 	
 	@Override
-	public int getPlayerIdByName(final String playerName)
+	public int getPlayerIdByName(String playerName)
 	{
 		final int[] result = new int[1];
 		DB.select("SELECT id FROM players WHERE name = ?", new ParamReadStH()
@@ -691,7 +691,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public int getAccountIdByName(final String name)
+	public int getAccountIdByName(String name)
 	{
 		Connection con = null;
 		int accountId = 0;
@@ -706,7 +706,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rs.close();
 			s.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return 0;
 		}
@@ -721,7 +721,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * @author xTz
 	 */
 	@Override
-	public void storePlayerName(final PlayerCommonData recipientCommonData)
+	public void storePlayerName(PlayerCommonData recipientCommonData)
 	{
 		Connection con = null;
 		try
@@ -736,7 +736,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			stmt.execute();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error saving playerName: " + recipientCommonData.getPlayerObjId() + " " + recipientCommonData.getName(), e);
 		}
@@ -747,7 +747,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	}
 	
 	@Override
-	public int getCharacterCountOnAccount(final int accountId)
+	public int getCharacterCountOnAccount(int accountId)
 	{
 		Connection con = null;
 		int cnt = 0;
@@ -763,7 +763,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rs.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return 0;
 		}
@@ -792,7 +792,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rs.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return 0;
 		}
@@ -820,7 +820,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rs.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return 0;
 		}
@@ -836,7 +836,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public List<Integer> getPlayersToDelete(final int daysOfInactivity, int limitation)
+	public List<Integer> getPlayersToDelete(int daysOfInactivity, int limitation)
 	{
 		String SELECT_QUERY = "SELECT id FROM players WHERE UNIX_TIMESTAMP(CURDATE())-UNIX_TIMESTAMP(last_online) > ? * 24 * 60 * 60";
 		
@@ -874,7 +874,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	 * {@inheritDoc} - KID
 	 */
 	@Override
-	public void setPlayerLastTransferTime(final int playerId, final long time)
+	public void setPlayerLastTransferTime(int playerId, long time)
 	{
 		DB.insertUpdate("UPDATE players SET last_transfer_time=? WHERE id=?", new IUStH()
 		{
@@ -898,7 +898,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	}
 	
 	@Override
-	public Timestamp getCharacterCreationDateId(final int obj)
+	public Timestamp getCharacterCreationDateId(int obj)
 	{
 		Connection con = null;
 		Timestamp creationDate;
@@ -913,7 +913,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			rs.close();
 			s.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return null;
 		}
@@ -925,7 +925,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	}
 	
 	@Override
-	public void updateLegionJoinRequestState(final int playerId, final LegionJoinRequestState state)
+	public void updateLegionJoinRequestState(int playerId, LegionJoinRequestState state)
 	{
 		DB.insertUpdate("UPDATE players SET join_state=? WHERE id=?", new IUStH()
 		{
@@ -940,7 +940,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	}
 	
 	@Override
-	public void clearJoinRequest(final int playerId)
+	public void clearJoinRequest(int playerId)
 	{
 		Connection con = null;
 		try
@@ -951,7 +951,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 			stmt.setString(2, "NONE");
 			stmt.setInt(3, playerId);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 		}
 		finally
@@ -961,7 +961,7 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	}
 	
 	@Override
-	public void getJoinRequestState(final Player player)
+	public void getJoinRequestState(Player player)
 	{
 		final String SELECT_QUERY = "SELECT * FROM players WHERE id=?";
 		DB.select(SELECT_QUERY, new ParamReadStH()

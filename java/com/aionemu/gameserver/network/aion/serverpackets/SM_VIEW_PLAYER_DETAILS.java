@@ -51,7 +51,7 @@ public class SM_VIEW_PLAYER_DETAILS extends AionServerPacket
 		writeD(targetObjId);
 		writeC(11);
 		writeH(itemSize);
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			writeItemInfo(item);
 		}

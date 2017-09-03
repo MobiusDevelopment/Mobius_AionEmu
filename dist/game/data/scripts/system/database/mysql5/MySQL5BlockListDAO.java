@@ -53,7 +53,7 @@ public class MySQL5BlockListDAO extends BlockListDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean addBlockedUser(final int playerObjId, final int objIdToBlock, final String reason)
+	public boolean addBlockedUser(int playerObjId, int objIdToBlock, String reason)
 	{
 		return DB.insertUpdate(ADD_QUERY, new IUStH()
 		{
@@ -73,7 +73,7 @@ public class MySQL5BlockListDAO extends BlockListDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean delBlockedUser(final int playerObjId, final int objIdToDelete)
+	public boolean delBlockedUser(int playerObjId, int objIdToDelete)
 	{
 		return DB.insertUpdate(DEL_QUERY, new IUStH()
 		{
@@ -92,7 +92,7 @@ public class MySQL5BlockListDAO extends BlockListDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public BlockList load(final Player player)
+	public BlockList load(Player player)
 	{
 		final Map<Integer, BlockedPlayer> list = new HashMap<>();
 		
@@ -132,7 +132,7 @@ public class MySQL5BlockListDAO extends BlockListDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean setReason(final int playerObjId, final int blockedPlayerObjId, final String reason)
+	public boolean setReason(int playerObjId, int blockedPlayerObjId, String reason)
 	{
 		return DB.insertUpdate(SET_REASON_QUERY, new IUStH()
 		{

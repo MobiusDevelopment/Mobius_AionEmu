@@ -53,7 +53,7 @@ public class HouseRegistry
 	public FastList<HouseObject<?>> getObjects()
 	{
 		final FastList<HouseObject<?>> temp = FastList.newInstance();
-		for (final HouseObject<?> obj : objects.values())
+		for (HouseObject<?> obj : objects.values())
 		{
 			temp.add(obj);
 		}
@@ -63,7 +63,7 @@ public class HouseRegistry
 	public FastList<HouseObject<?>> getSpawnedObjects()
 	{
 		final FastList<HouseObject<?>> temp = FastList.newInstance();
-		for (final HouseObject<?> obj : objects.values())
+		for (HouseObject<?> obj : objects.values())
 		{
 			if (obj.isSpawnedByPlayer() && (obj.getPersistentState() != PersistentState.DELETED))
 			{
@@ -76,7 +76,7 @@ public class HouseRegistry
 	public FastList<HouseObject<?>> getNotSpawnedObjects()
 	{
 		final FastList<HouseObject<?>> temp = FastList.newInstance();
-		for (final HouseObject<?> obj : objects.values())
+		for (HouseObject<?> obj : objects.values())
 		{
 			if (!obj.isSpawnedByPlayer() && (obj.getPersistentState() != PersistentState.DELETED))
 			{
@@ -129,7 +129,7 @@ public class HouseRegistry
 	public FastList<HouseDecoration> getCustomParts()
 	{
 		final FastList<HouseDecoration> temp = FastList.newInstance();
-		for (final HouseDecoration decor : customParts.values())
+		for (HouseDecoration decor : customParts.values())
 		{
 			if ((decor.getPersistentState() != PersistentState.DELETED) && !decor.isUsed())
 			{
@@ -141,7 +141,7 @@ public class HouseRegistry
 	
 	public HouseDecoration getCustomPartByType(PartType partType, int floor)
 	{
-		for (final HouseDecoration deco : customParts.values())
+		for (HouseDecoration deco : customParts.values())
 		{
 			if ((deco.getPersistentState() != PersistentState.DELETED) && (deco.getTemplate().getType() == partType))
 			{
@@ -161,7 +161,7 @@ public class HouseRegistry
 	
 	public HouseDecoration getCustomPartByPartId(int partId, int floor)
 	{
-		for (final HouseDecoration deco : customParts.values())
+		for (HouseDecoration deco : customParts.values())
 		{
 			if ((deco.getPersistentState() != PersistentState.DELETED) && (deco.getTemplate().getId() == partId) && (deco.getFloor() == floor))
 			{
@@ -174,7 +174,7 @@ public class HouseRegistry
 	public int getCustomPartCountByPartId(int partId)
 	{
 		int counter = 0;
-		for (final HouseDecoration deco : customParts.values())
+		for (HouseDecoration deco : customParts.values())
 		{
 			if ((deco.getPersistentState() != PersistentState.DELETED) && (deco.getTemplate().getId() == partId))
 			{
@@ -215,7 +215,7 @@ public class HouseRegistry
 	public FastList<HouseDecoration> getDefaultParts()
 	{
 		final FastList<HouseDecoration> temp = FastList.newInstance();
-		for (final HouseDecoration deco : defaultParts)
+		for (HouseDecoration deco : defaultParts)
 		{
 			if (deco != null)
 			{
@@ -239,14 +239,14 @@ public class HouseRegistry
 	public FastList<HouseDecoration> getAllParts()
 	{
 		final FastList<HouseDecoration> temp = FastList.newInstance();
-		for (final HouseDecoration deco : defaultParts)
+		for (HouseDecoration deco : defaultParts)
 		{
 			if (deco != null)
 			{
 				temp.add(deco);
 			}
 		}
-		for (final HouseDecoration decor : customParts.values())
+		for (HouseDecoration decor : customParts.values())
 		{
 			temp.add(decor);
 		}
@@ -255,7 +255,7 @@ public class HouseRegistry
 	
 	public HouseDecoration getRenderPart(PartType partType, int floor)
 	{
-		for (final HouseDecoration decor : customParts.values())
+		for (HouseDecoration decor : customParts.values())
 		{
 			if ((decor.getTemplate().getType() == partType) && decor.isUsed() && (decor.getFloor() == floor))
 			{
@@ -271,7 +271,7 @@ public class HouseRegistry
 		if (defaultDecor.getTemplate().getId() == decorationUse.getTemplate().getId())
 		{
 			defaultDecor.setUsed(true);
-			for (final HouseDecoration decor : customParts.values())
+			for (HouseDecoration decor : customParts.values())
 			{
 				if (decor.getTemplate().getType() != decorationUse.getTemplate().getType())
 				{
@@ -296,7 +296,7 @@ public class HouseRegistry
 			}
 			return;
 		}
-		for (final HouseDecoration decor : customParts.values())
+		for (HouseDecoration decor : customParts.values())
 		{
 			if (decor.getTemplate().getType() != decorationUse.getTemplate().getType())
 			{
@@ -377,7 +377,7 @@ public class HouseRegistry
 	
 	public void despawnObjects(boolean remove)
 	{
-		for (final HouseObject<?> obj : getSpawnedObjects())
+		for (HouseObject<?> obj : getSpawnedObjects())
 		{
 			if (obj.isInWorld())
 			{

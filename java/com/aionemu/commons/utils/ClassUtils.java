@@ -63,7 +63,7 @@ public class ClassUtils
 			if (b.isInterface())
 			{
 				final Class<?>[] interfaces = x.getInterfaces();
-				for (final Class<?> anInterface : interfaces)
+				for (Class<?> anInterface : interfaces)
 				{
 					if (isSubclass(anInterface, b))
 					{
@@ -135,7 +135,7 @@ public class ClassUtils
 			return classes;
 		}
 		final File[] files = directory.listFiles();
-		for (final File file : files)
+		for (File file : files)
 		{
 			if (file.isDirectory())
 			{
@@ -210,7 +210,7 @@ public class ClassUtils
 				{
 					jarFile.close();
 				}
-				catch (final IOException e)
+				catch (IOException e)
 				{
 					log.error("Failed to close jar file " + jarFile.getName(), e);
 				}

@@ -67,7 +67,7 @@ public class _25325Threat_The_Farm extends QuestHandler
 	{
 		qe.registerQuestNpc(805343).addOnQuestStart(questId); // Mashinee.
 		qe.registerQuestNpc(805343).addOnTalkEvent(questId); // Mashinee.
-		for (final int mob : Gelkmaros)
+		for (int mob : Gelkmaros)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

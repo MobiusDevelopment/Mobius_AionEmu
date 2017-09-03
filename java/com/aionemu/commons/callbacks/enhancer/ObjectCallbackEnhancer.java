@@ -71,7 +71,7 @@ public class ObjectCallbackEnhancer extends CallbackClassFileTransformer
 		
 		final Set<CtMethod> methdosToEnhance = new HashSet<>();
 		
-		for (final CtMethod method : clazz.getDeclaredMethods())
+		for (CtMethod method : clazz.getDeclaredMethods())
 		{
 			if (!isEnhanceable(method))
 			{
@@ -84,7 +84,7 @@ public class ObjectCallbackEnhancer extends CallbackClassFileTransformer
 		if (!methdosToEnhance.isEmpty())
 		{
 			final CtClass eo = cp.get(EnhancedObject.class.getName());
-			for (final CtClass i : clazz.getInterfaces())
+			for (CtClass i : clazz.getInterfaces())
 			{
 				if (i.equals(eo))
 				{
@@ -95,7 +95,7 @@ public class ObjectCallbackEnhancer extends CallbackClassFileTransformer
 			log.debug("Enhancing class: " + clazz.getName());
 			writeEnhancedObjectImpl(clazz);
 			
-			for (final CtMethod method : methdosToEnhance)
+			for (CtMethod method : methdosToEnhance)
 			{
 				log.debug("Enhancing method: " + method.getLongName());
 				enhanceMethod(method);
@@ -129,7 +129,7 @@ public class ObjectCallbackEnhancer extends CallbackClassFileTransformer
 		{
 			clazz.getField(listenerFieldName);
 		}
-		catch (final NotFoundException e)
+		catch (NotFoundException e)
 		{
 			clazz.addField(CtField.make("Class " + listenerFieldName + " = Class.forName(\"" + listenerClazz.getName() + "\");", clazz));
 		}

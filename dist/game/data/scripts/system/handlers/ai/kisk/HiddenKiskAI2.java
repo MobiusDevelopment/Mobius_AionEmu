@@ -74,7 +74,7 @@ public class HiddenKiskAI2 extends NpcAI2
 	{
 		if (getLifeStats().isFullyRestoredHp())
 		{
-			for (final Player member : getOwner().getCurrentMemberList())
+			for (Player member : getOwner().getCurrentMemberList())
 			{
 				PacketSendUtility.sendPacket(member, SM_SYSTEM_MESSAGE.STR_BINDSTONE_IS_ATTACKED);
 			}

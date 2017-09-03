@@ -46,7 +46,7 @@ public class _30708Surama_The_Betrayer extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(800369).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

@@ -44,7 +44,7 @@ public class SM_UPDATE_PLAYER_APPEARANCE extends AionServerPacket
 		writeD(playerId);
 		
 		int mask = 0;
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			if (item.getItemTemplate().isTwoHandWeapon())
 			{
@@ -59,7 +59,7 @@ public class SM_UPDATE_PLAYER_APPEARANCE extends AionServerPacket
 		
 		writeD(mask); // item size HBS
 		
-		for (final Item item : items)
+		for (Item item : items)
 		{
 			writeD(item.getItemSkinTemplate().getTemplateId());
 			final GodStone godStone = item.getGodStone();

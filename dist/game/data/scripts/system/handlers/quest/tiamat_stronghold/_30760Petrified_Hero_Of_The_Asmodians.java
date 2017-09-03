@@ -47,7 +47,7 @@ public class _30760Petrified_Hero_Of_The_Asmodians extends QuestHandler
 	public void register()
 	{
 		qe.registerQuestNpc(804871).addOnQuestStart(questId);
-		for (final int npc : npcs)
+		for (int npc : npcs)
 		{
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
 		}

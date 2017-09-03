@@ -71,7 +71,7 @@ public class _14031A_Hyper_vention extends QuestHandler
 		qe.registerQuestItem(182215389, questId); // Verteron Ide Detection Device.
 		qe.registerQuestItem(182215390, questId); // Eltnen Ide Detection Device.
 		qe.registerQuestNpc(233878).addOnKillEvent(questId); // Captain Tarbana.
-		for (final int npc_id : npc_ids)
+		for (int npc_id : npc_ids)
 		{
 			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
 		}
@@ -258,7 +258,7 @@ public class _14031A_Hyper_vention extends QuestHandler
 	}
 	
 	@Override
-	public HandlerResult onItemUseEvent(final QuestEnv env, Item item)
+	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		final Player player = env.getPlayer();
 		final int id = item.getItemTemplate().getTemplateId();

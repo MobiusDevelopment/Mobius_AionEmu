@@ -75,7 +75,7 @@ public class BrigadeGeneralVashartiAI2 extends AggressiveNpcAI2
 	
 	private synchronized void checkPercentage(int hpPercentage)
 	{
-		for (final Integer percent : percents)
+		for (Integer percent : percents)
 		{
 			if (hpPercentage <= percent)
 			{
@@ -89,7 +89,7 @@ public class BrigadeGeneralVashartiAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void startAirEvent(final NpcAI2 ai, final int percent)
+	private void startAirEvent(NpcAI2 ai, int percent)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
@@ -188,7 +188,7 @@ public class BrigadeGeneralVashartiAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void startFlameSmashEvent(final int percent)
+	private void startFlameSmashEvent(int percent)
 	{
 		flameSmashTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
 		{
@@ -273,7 +273,7 @@ public class BrigadeGeneralVashartiAI2 extends AggressiveNpcAI2
 	
 	private boolean isSpawned(int npcId, Point3D position)
 	{
-		for (final Npc npc : getPosition().getWorldMapInstance().getNpcs(npcId))
+		for (Npc npc : getPosition().getWorldMapInstance().getNpcs(npcId))
 		{
 			if ((npc.getX() == position.getX()) && (npc.getY() == position.getY()))
 			{
@@ -286,7 +286,7 @@ public class BrigadeGeneralVashartiAI2 extends AggressiveNpcAI2
 	private List<Point3D> getRedFlameSmashs(int npcId)
 	{
 		final List<Point3D> flameSmashs = new ArrayList<>();
-		for (final Point3D flameSmash : (npcId == 283008 ? redFlameSmashs : blueFlameSmashs))
+		for (Point3D flameSmash : (npcId == 283008 ? redFlameSmashs : blueFlameSmashs))
 		{
 			if (!isSpawned(npcId, flameSmash))
 			{
@@ -298,7 +298,7 @@ public class BrigadeGeneralVashartiAI2 extends AggressiveNpcAI2
 	
 	private void deleteNpcs(List<Npc> npcs)
 	{
-		for (final Npc npc : npcs)
+		for (Npc npc : npcs)
 		{
 			if (npc != null)
 			{
@@ -386,7 +386,7 @@ public class BrigadeGeneralVashartiAI2 extends AggressiveNpcAI2
 		}, 0, 40000);
 	}
 	
-	private void useKissBuff(final Npc npc)
+	private void useKissBuff(Npc npc)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

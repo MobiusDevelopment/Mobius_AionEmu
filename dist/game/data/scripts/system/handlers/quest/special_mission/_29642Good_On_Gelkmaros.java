@@ -51,7 +51,7 @@ public class _29642Good_On_Gelkmaros extends QuestHandler
 		qe.registerQuestNpc(799297).addOnQuestStart(questId);
 		qe.registerQuestNpc(799297).addOnTalkEvent(questId);
 		qe.registerQuestNpc(799225).addOnTalkEvent(questId);
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

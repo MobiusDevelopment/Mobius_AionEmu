@@ -96,7 +96,7 @@ public class MySQL5PlayerStigmasEquippedDAO extends PlayerStigmasEquippedDAO
 			rset.close();
 			stmt.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Could not restore StigmasEquipped data for player: " + playerId + " from DB: " + e.getMessage(), e);
 		}
@@ -128,7 +128,7 @@ public class MySQL5PlayerStigmasEquippedDAO extends PlayerStigmasEquippedDAO
 			addItems(con, player, skills);
 			updateItems(con, player, skills);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Failed to open connection to database while saving SkillList for player " + player.getObjectId());
 		}
@@ -136,7 +136,7 @@ public class MySQL5PlayerStigmasEquippedDAO extends PlayerStigmasEquippedDAO
 		{
 			DatabaseFactory.close(con);
 		}
-		for (final EquippedStigmasEntry skill : skills)
+		for (EquippedStigmasEntry skill : skills)
 		{
 			skill.setPersistentState(PersistentState.UPDATED);
 		}
@@ -153,7 +153,7 @@ public class MySQL5PlayerStigmasEquippedDAO extends PlayerStigmasEquippedDAO
 		try
 		{
 			ps = con.prepareStatement(INSERT_QUERY);
-			for (final EquippedStigmasEntry skill : skillsToInsert)
+			for (EquippedStigmasEntry skill : skillsToInsert)
 			{
 				ps.setInt(1, player.getObjectId());
 				ps.setInt(2, skill.getItemId());
@@ -163,7 +163,7 @@ public class MySQL5PlayerStigmasEquippedDAO extends PlayerStigmasEquippedDAO
 			ps.executeBatch();
 			con.commit();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 		}
 		finally
@@ -183,7 +183,7 @@ public class MySQL5PlayerStigmasEquippedDAO extends PlayerStigmasEquippedDAO
 		try
 		{
 			ps = con.prepareStatement(UPDATE_QUERY);
-			for (final EquippedStigmasEntry skill : skillsToUpdate)
+			for (EquippedStigmasEntry skill : skillsToUpdate)
 			{
 				ps.setInt(1, skill.getItemId());
 				ps.setInt(2, player.getObjectId());
@@ -193,7 +193,7 @@ public class MySQL5PlayerStigmasEquippedDAO extends PlayerStigmasEquippedDAO
 			ps.executeBatch();
 			con.commit();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 		}
 		finally
@@ -213,7 +213,7 @@ public class MySQL5PlayerStigmasEquippedDAO extends PlayerStigmasEquippedDAO
 		try
 		{
 			ps = con.prepareStatement(DELETE_QUERY);
-			for (final EquippedStigmasEntry skill : skillsToDelete)
+			for (EquippedStigmasEntry skill : skillsToDelete)
 			{
 				ps.setInt(1, player.getObjectId());
 				ps.setInt(2, skill.getItemId());
@@ -223,7 +223,7 @@ public class MySQL5PlayerStigmasEquippedDAO extends PlayerStigmasEquippedDAO
 			ps.executeBatch();
 			con.commit();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 		}
 		finally

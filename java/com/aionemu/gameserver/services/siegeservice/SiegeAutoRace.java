@@ -44,7 +44,7 @@ public class SiegeAutoRace
 	private static final Logger log = LoggerFactory.getLogger("SIEGE_LOG");
 	private static String[] siegeIds = SiegeConfig.SIEGE_AUTO_LOCID.split(";");
 	
-	public static void AutoSiegeRace(final int locid)
+	public static void AutoSiegeRace(int locid)
 	{
 		final SiegeLocation loc = SiegeService.getInstance().getSiegeLocation(locid);
 		if (!loc.getRace().equals(SiegeRace.ASMODIANS) || !loc.getRace().equals(SiegeRace.ELYOS))
@@ -109,7 +109,7 @@ public class SiegeAutoRace
 	
 	public static boolean ElyosAutoSiege(int locId)
 	{
-		for (final String id : siegeIds[0].split(","))
+		for (String id : siegeIds[0].split(","))
 		{
 			if (locId == Integer.parseInt(id))
 			{
@@ -121,7 +121,7 @@ public class SiegeAutoRace
 	
 	public static boolean AsmoAutoSiege(int locId)
 	{
-		for (final String id : siegeIds[1].split(","))
+		for (String id : siegeIds[1].split(","))
 		{
 			if (locId == Integer.parseInt(id))
 			{

@@ -52,7 +52,7 @@ public class SM_PRIVATE_STORE extends AionServerPacket
 			
 			writeD(storePlayer.getObjectId());
 			writeH(soldItems.size());
-			for (final Integer itemObjId : soldItems.keySet())
+			for (Integer itemObjId : soldItems.keySet())
 			{
 				final Item item = storePlayer.getInventory().getItemByObjId(itemObjId);
 				final TradePSItem tradeItem = store.getTradeItemByObjId(itemObjId);

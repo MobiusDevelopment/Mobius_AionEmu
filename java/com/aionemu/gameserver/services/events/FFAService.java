@@ -2528,7 +2528,7 @@ public class FFAService
 		if (activeMap != null)
 		{
 			mapsWithoutActive.remove(activeMap);
-			for (final WorldMapInstance instance : getWorldMap().getInstances())
+			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = "Map loading, please wait...";
 				instance.doOnAllPlayers(new Visitor<Player>()
@@ -2554,7 +2554,7 @@ public class FFAService
 	
 	private void announcePlayerCount()
 	{
-		for (final WorldMapInstance instance : getWorldMap().getInstances())
+		for (WorldMapInstance instance : getWorldMap().getInstances())
 		{
 			final String msg = "[FFA] There are currently: " + instance.getPlayersInside().size() + " player's on the map.";
 			instance.doOnAllPlayers(new Visitor<Player>()
@@ -2570,7 +2570,7 @@ public class FFAService
 	
 	public void announceKill(Player victim, Player killer)
 	{
-		for (final WorldMapInstance instance : getWorldMap().getInstances())
+		for (WorldMapInstance instance : getWorldMap().getInstances())
 		{
 			final String msg = killer.getPlayerClass() + " has killed " + victim.getPlayerClass() + "!";
 			instance.doOnAllPlayers(new Visitor<Player>()
@@ -2584,7 +2584,7 @@ public class FFAService
 		}
 	}
 	
-	public void onDie(final Player player, Creature lastAttacker)
+	public void onDie(Player player, Creature lastAttacker)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, lastAttacker == null ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_DEATH_MESSAGE_ME);
@@ -2635,7 +2635,7 @@ public class FFAService
 		killer.getLifeStats().increaseHp(SM_ATTACK_STATUS.TYPE.HP, 1500);
 		killer.getLifeStats().increaseMp(SM_ATTACK_STATUS.TYPE.MP, 1500);
 		killer.getCommonData().setDp(500 + killer.getCommonData().getDp());
-		for (final WorldMapInstance instance : getWorldMap().getInstances())
+		for (WorldMapInstance instance : getWorldMap().getInstances())
 		{
 			final String msg = killer.getName() + " has killed " + player.getName() + "!";
 			instance.doOnAllPlayers(new Visitor<Player>()
@@ -2653,7 +2653,7 @@ public class FFAService
 	{
 		if (player.getKillStreak() == 2)
 		{
-			for (final WorldMapInstance instance : getWorldMap().getInstances())
+			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Dominating> !";
 				instance.doOnAllPlayers(new Visitor<Player>()
@@ -2668,7 +2668,7 @@ public class FFAService
 		}
 		if (player.getKillStreak() == 4)
 		{
-			for (final WorldMapInstance instance : getWorldMap().getInstances())
+			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Killing Spree> !";
 				instance.doOnAllPlayers(new Visitor<Player>()
@@ -2683,7 +2683,7 @@ public class FFAService
 		}
 		if (player.getKillStreak() == 6)
 		{
-			for (final WorldMapInstance instance : getWorldMap().getInstances())
+			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Monster Kill> !";
 				instance.doOnAllPlayers(new Visitor<Player>()
@@ -2698,7 +2698,7 @@ public class FFAService
 		}
 		if (player.getKillStreak() == 8)
 		{
-			for (final WorldMapInstance instance : getWorldMap().getInstances())
+			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Unstoppable> !";
 				instance.doOnAllPlayers(new Visitor<Player>()
@@ -2713,7 +2713,7 @@ public class FFAService
 		}
 		if (player.getKillStreak() == 10)
 		{
-			for (final WorldMapInstance instance : getWorldMap().getInstances())
+			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Godlike> !";
 				instance.doOnAllPlayers(new Visitor<Player>()
@@ -2728,7 +2728,7 @@ public class FFAService
 		}
 		if (player.getKillStreak() == 12)
 		{
-			for (final WorldMapInstance instance : getWorldMap().getInstances())
+			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Holy Shit> !";
 				instance.doOnAllPlayers(new Visitor<Player>()
@@ -2743,7 +2743,7 @@ public class FFAService
 		}
 		if (player.getKillStreak() == 14)
 		{
-			for (final WorldMapInstance instance : getWorldMap().getInstances())
+			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Ludicrous Kill> !";
 				instance.doOnAllPlayers(new Visitor<Player>()
@@ -2758,7 +2758,7 @@ public class FFAService
 		}
 		if ((player.getKillStreak() >= 16) && (player.getKillStreak() <= 999))
 		{
-			for (final WorldMapInstance instance : getWorldMap().getInstances())
+			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Wicked Sick> !";
 				instance.doOnAllPlayers(new Visitor<Player>()
@@ -2775,7 +2775,7 @@ public class FFAService
 	
 	public boolean isInArena(Player player)
 	{
-		for (final ArenaMap arenaMap : maps)
+		for (ArenaMap arenaMap : maps)
 		{
 			if (arenaMap.getMapId() == player.getWorldId())
 			{
@@ -2785,7 +2785,7 @@ public class FFAService
 		return false;
 	}
 	
-	public void enterArena(final Player player, final boolean isMapRotation)
+	public void enterArena(Player player, boolean isMapRotation)
 	{
 		player.getEffectController().setAbnormal(AbnormalState.SLEEP.getId());
 		player.getEffectController().updatePlayerEffectIcons();
@@ -2840,7 +2840,7 @@ public class FFAService
 		}, 10 * 1000));
 	}
 	
-	public void leaveArena(final Player player)
+	public void leaveArena(Player player)
 	{
 		final WorldPosition pos = previousLocations.remove(player.getObjectId());
 		player.getEffectController().setAbnormal(AbnormalState.SLEEP.getId());
@@ -2878,7 +2878,7 @@ public class FFAService
 	
 	private void analyseInstanceBalance()
 	{
-		for (final WorldMapInstance instance : getWorldMap().getInstances())
+		for (WorldMapInstance instance : getWorldMap().getInstances())
 		{
 			if (instance.getPlayersInside().size() < activeMap.getPlayerCap())
 			{

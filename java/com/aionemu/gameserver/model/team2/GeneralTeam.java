@@ -113,7 +113,7 @@ public abstract class GeneralTeam<M extends AionObject, TM extends TeamMember<M>
 		lock();
 		try
 		{
-			for (final TM member : members.values())
+			for (TM member : members.values())
 			{
 				if (!predicate.apply(member))
 				{
@@ -136,7 +136,7 @@ public abstract class GeneralTeam<M extends AionObject, TM extends TeamMember<M>
 		lock();
 		try
 		{
-			for (final TM member : members.values())
+			for (TM member : members.values())
 			{
 				if (!predicate.apply(member.getObject()))
 				{

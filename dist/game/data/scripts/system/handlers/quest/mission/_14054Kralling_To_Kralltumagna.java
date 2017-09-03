@@ -75,7 +75,7 @@ public class _14054Kralling_To_Kralltumagna extends QuestHandler
 			233861
 		};
 		// ****//
-		for (final int mob : mobs)
+		for (int mob : mobs)
 		{
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
 		}

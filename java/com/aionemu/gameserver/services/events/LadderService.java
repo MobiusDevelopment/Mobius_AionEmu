@@ -202,7 +202,7 @@ public class LadderService
 		{
 			return false;
 		}
-		for (final Player pl : group.getMembers())
+		for (Player pl : group.getMembers())
 		{
 			if (pl.getBattleground() != null)
 			{
@@ -217,7 +217,7 @@ public class LadderService
 		{
 			unregisterFromQueue(group);
 		}
-		for (final Player pl : group.getMembers())
+		for (Player pl : group.getMembers())
 		{
 			PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(1, 301550000, 2));
 			PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(301550000, false));
@@ -231,7 +231,7 @@ public class LadderService
 		{
 			return false;
 		}
-		for (final Player pl : group.getMembers())
+		for (Player pl : group.getMembers())
 		{
 			if (pl.getBattleground() != null)
 			{
@@ -242,7 +242,7 @@ public class LadderService
 		{
 			unregisterFromQueue(group);
 		}
-		for (final Player pl : group.getMembers())
+		for (Player pl : group.getMembers())
 		{
 			PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(1, 300350000, 2));
 			PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(300350000, false));
@@ -274,7 +274,7 @@ public class LadderService
 		if (normalQueueList.contains(group))
 		{
 			unregisterForNormal(group);
-			for (final Player pl : group.getMembers())
+			for (Player pl : group.getMembers())
 			{
 				PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(2, 301550000, 0));
 				PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(301550000, true));
@@ -283,7 +283,7 @@ public class LadderService
 		if (eventQueueList.contains(group))
 		{
 			unregisterForEvent(group);
-			for (final Player pl : group.getMembers())
+			for (Player pl : group.getMembers())
 			{
 				PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(2, 301550000, 0));
 				PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(301550000, true));
@@ -299,7 +299,7 @@ public class LadderService
 	public int getEventQueuePlayers()
 	{
 		int players = 0;
-		for (final AionObject ao : eventQueueList)
+		for (AionObject ao : eventQueueList)
 		{
 			if (ao instanceof Player)
 			{
@@ -337,14 +337,14 @@ public class LadderService
 		{
 			bg = (Battleground) bgs[Rnd.get(bgs.length)].newInstance();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			// log.error("getRandomBg() failed!", e);
 		}
 		return bg;
 	}
 	
-	public boolean createNormalBgs(final BattlegroundEvent event)
+	public boolean createNormalBgs(BattlegroundEvent event)
 	{
 		if (normalTask != null)
 		{
@@ -444,7 +444,7 @@ public class LadderService
 	{
 		final List<List<Player>> validGroups = new ArrayList<>();
 		final List<Integer> validParticipants = new ArrayList<>();
-		for (final AionObject ao : normalQueueList)
+		for (AionObject ao : normalQueueList)
 		{
 			if (ao == null)
 			{
@@ -465,7 +465,7 @@ public class LadderService
 			{
 				final PlayerGroup group = (PlayerGroup) ao;
 				boolean add = true;
-				for (final Player pl : group.getMembers())
+				for (Player pl : group.getMembers())
 				{
 					PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(2, 301550000, 0));
 					if (!pl.isOnline() || (pl.getBattleground() != null))
@@ -519,7 +519,7 @@ public class LadderService
 				for (int i = 0; i < bg.getTeamCount(); i++)
 				{
 					groups.add(new ArrayList<Player>());
-					for (final List<Player> group : validGroups)
+					for (List<Player> group : validGroups)
 					{
 						if (!usedGroups.contains(group) && (group.size() <= bg.getMaxSize()))
 						{
@@ -531,7 +531,7 @@ public class LadderService
 				}
 				if (groups.get(0).size() < bg.getMinSize())
 				{
-					for (final List<Player> group : validGroups)
+					for (List<Player> group : validGroups)
 					{
 						if (!usedGroups.contains(group) && ((group.size() + groups.get(0).size()) <= bg.getMaxSize()))
 						{
@@ -553,7 +553,7 @@ public class LadderService
 				{
 					if (groups.get(i).size() < groups.get(0).size())
 					{
-						for (final List<Player> group : validGroups)
+						for (List<Player> group : validGroups)
 						{
 							if (!usedGroups.contains(group) && ((group.size() + groups.get(i).size()) <= groups.get(0).size()))
 							{
@@ -571,9 +571,9 @@ public class LadderService
 				{
 					continue;
 				}
-				for (final List<Player> group : groups)
+				for (List<Player> group : groups)
 				{
-					for (final Player pl : group)
+					for (Player pl : group)
 					{
 						participants.add(pl.getObjectId());
 					}
@@ -598,9 +598,9 @@ public class LadderService
 		}
 		if (normalTeamBased)
 		{
-			for (final List<Player> group : validGroups)
+			for (List<Player> group : validGroups)
 			{
-				for (final Player pl : group)
+				for (Player pl : group)
 				{
 					scheduleAnnouncement(pl, "No opponents found!!! Please wait for the next registration.", 0);
 				}
@@ -608,7 +608,7 @@ public class LadderService
 		}
 		else
 		{
-			for (final Integer objectId : validParticipants)
+			for (Integer objectId : validParticipants)
 			{
 				final AionObject ao = World.getInstance().findVisibleObject(objectId);
 				if ((ao != null) && (ao instanceof Player))
@@ -623,7 +623,7 @@ public class LadderService
 	{
 		final List<List<Player>> validGroups = new ArrayList<>();
 		final List<Integer> validParticipants = new ArrayList<>();
-		for (final AionObject ao : eventQueueList)
+		for (AionObject ao : eventQueueList)
 		{
 			if ((ao != null) && (ao instanceof Player))
 			{
@@ -640,7 +640,7 @@ public class LadderService
 			{
 				final PlayerGroup group = (PlayerGroup) ao;
 				boolean add = true;
-				for (final Player pl : group.getMembers())
+				for (Player pl : group.getMembers())
 				{
 					PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(2, 300350000, 0));
 					if (!pl.isOnline() || (pl.getBattleground() != null))
@@ -686,7 +686,7 @@ public class LadderService
 			{
 				bg = (Battleground) eventBgClass.newInstance();
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				continue;
 			}
@@ -704,7 +704,7 @@ public class LadderService
 				for (int i = 0; i < bg.getTeamCount(); i++)
 				{
 					groups.add(new ArrayList<Player>());
-					for (final List<Player> group : validGroups)
+					for (List<Player> group : validGroups)
 					{
 						if (!usedGroups.contains(group) && (group.size() <= bg.getMaxSize()))
 						{
@@ -716,7 +716,7 @@ public class LadderService
 				}
 				if (groups.get(0).size() < bg.getMinSize())
 				{
-					for (final List<Player> group : validGroups)
+					for (List<Player> group : validGroups)
 					{
 						if (!usedGroups.contains(group) && ((group.size() + groups.get(0).size()) <= bg.getMaxSize()))
 						{
@@ -738,7 +738,7 @@ public class LadderService
 				{
 					if (groups.get(i).size() < groups.get(0).size())
 					{
-						for (final List<Player> group : validGroups)
+						for (List<Player> group : validGroups)
 						{
 							if (!usedGroups.contains(group) && ((group.size() + groups.get(i).size()) <= groups.get(0).size()))
 							{
@@ -756,9 +756,9 @@ public class LadderService
 				{
 					continue;
 				}
-				for (final List<Player> group : groups)
+				for (List<Player> group : groups)
 				{
-					for (final Player pl : group)
+					for (Player pl : group)
 					{
 						participants.add(pl.getObjectId());
 					}
@@ -777,9 +777,9 @@ public class LadderService
 		}
 		if (eventTeamBased)
 		{
-			for (final List<Player> group : validGroups)
+			for (List<Player> group : validGroups)
 			{
-				for (final Player pl : group)
+				for (Player pl : group)
 				{
 					scheduleAnnouncement(pl, "There are no more place!!!, You will more luck next time!", 0);
 				}
@@ -787,7 +787,7 @@ public class LadderService
 		}
 		else
 		{
-			for (final Integer objectId : validParticipants)
+			for (Integer objectId : validParticipants)
 			{
 				final AionObject ao = World.getInstance().findVisibleObject(objectId);
 				if ((ao != null) && (ao instanceof Player))
@@ -808,7 +808,7 @@ public class LadderService
 			return;
 		}
 		final List<Player> validPlayers = new ArrayList<>();
-		for (final AionObject ao : soloQueueList)
+		for (AionObject ao : soloQueueList)
 		{
 			if (ao instanceof Player)
 			{
@@ -841,7 +841,7 @@ public class LadderService
 		}
 		if (validPlayers.size() > 0)
 		{
-			for (final Player pl : validPlayers)
+			for (Player pl : validPlayers)
 			{
 				PacketSendUtility.sendSys3Message(pl, "\uE005", "No opponents found!!! Search for a new opponent...");
 				PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(2, 320150000, 0));
@@ -881,7 +881,7 @@ public class LadderService
 		}
 	}
 	
-	private void announceAll(final String msg)
+	private void announceAll(String msg)
 	{
 		World.getInstance().doOnAllPlayers(new Visitor<Player>()
 		{
@@ -936,7 +936,7 @@ public class LadderService
 	
 	public Battleground getActiveBattleground(Player player)
 	{
-		for (final Battleground bg : getBattlegrounds().values())
+		for (Battleground bg : getBattlegrounds().values())
 		{
 			if (bg.getSecondsLeft() > 1)
 			{
@@ -1301,7 +1301,7 @@ public class LadderService
 								{
 									if (registerForEvent(player.getPlayerGroup2()))
 									{
-										for (final Player pl : player.getPlayerGroup2().getMembers())
+										for (Player pl : player.getPlayerGroup2().getMembers())
 										{
 											PacketSendUtility.sendSys3Message(pl, "\uE005", "Your group is now registered for event.");
 										}
@@ -1328,7 +1328,7 @@ public class LadderService
 					else if (player.isInGroup2() && isInQueue(player.getPlayerGroup2()))
 					{
 						unregisterFromQueue(player.getPlayerGroup2());
-						for (final Player pl : player.getPlayerGroup2().getMembers())
+						for (Player pl : player.getPlayerGroup2().getMembers())
 						{
 							PacketSendUtility.sendSys3Message(pl, "\uE005", "Your group to withdraw its registration for the event!!!");
 						}
@@ -1364,7 +1364,7 @@ public class LadderService
 								{
 									if (registerForNormal(player.getPlayerGroup2()))
 									{
-										for (final Player pl : player.getPlayerGroup2().getMembers())
+										for (Player pl : player.getPlayerGroup2().getMembers())
 										{
 											PacketSendUtility.sendSys3Message(pl, "\uE005", "Your group is now registered for battlefield.");
 										}
@@ -1391,7 +1391,7 @@ public class LadderService
 					else if (player.isInGroup2() && isInQueue(player.getPlayerGroup2()))
 					{
 						unregisterFromQueue(player.getPlayerGroup2());
-						for (final Player pl : player.getPlayerGroup2().getMembers())
+						for (Player pl : player.getPlayerGroup2().getMembers())
 						{
 							PacketSendUtility.sendSys3Message(pl, "\uE005", "Your group to withdraw its registration for the battlefield!!!");
 						}
@@ -1418,7 +1418,7 @@ public class LadderService
 		final List<Integer> scout = new ArrayList<>();
 		final List<Integer> mage = new ArrayList<>();
 		final List<Integer> cleric = new ArrayList<>();
-		for (final Integer objectId : participants)
+		for (Integer objectId : participants)
 		{
 			final Player pl = World.getInstance().findPlayer(objectId);
 			if (pl == null)
@@ -1491,12 +1491,12 @@ public class LadderService
 		return clone;
 	}
 	
-	private void scheduleAnnouncement(final Player player, final String msg, int delay)
+	private void scheduleAnnouncement(Player player, String msg, int delay)
 	{
 		scheduleAnnouncement(player, "\uE005", msg, delay);
 	}
 	
-	private void scheduleAnnouncement(final Player player, final String sender, final String msg, int delay)
+	private void scheduleAnnouncement(Player player, String sender, String msg, int delay)
 	{
 		if (delay > 0)
 		{

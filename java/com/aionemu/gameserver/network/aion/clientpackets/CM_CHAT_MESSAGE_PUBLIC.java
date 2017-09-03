@@ -143,7 +143,7 @@ public class CM_CHAT_MESSAGE_PUBLIC extends AionClientPacket
 		}
 	}
 	
-	private void broadcastFromCommander(final Player player)
+	private void broadcastFromCommander(Player player)
 	{
 		final int senderRace = player.getRace().getRaceId();
 		PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, message, type), true, new ObjectFilter<Player>()
@@ -156,12 +156,12 @@ public class CM_CHAT_MESSAGE_PUBLIC extends AionClientPacket
 		});
 	}
 	
-	private void broadcastFromGm(final Player player)
+	private void broadcastFromGm(Player player)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, message, type), true);
 	}
 	
-	private void broadcastToNonBlockedPlayers(final Player player)
+	private void broadcastToNonBlockedPlayers(Player player)
 	{
 		PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, message, type), true, new ObjectFilter<Player>()
 		{
@@ -173,7 +173,7 @@ public class CM_CHAT_MESSAGE_PUBLIC extends AionClientPacket
 		});
 	}
 	
-	private void broadcastToNonBlockedRacePlayers(final Player player)
+	private void broadcastToNonBlockedRacePlayers(Player player)
 	{
 		final int senderRace = player.getRace().getRaceId();
 		PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, message, type), true, new ObjectFilter<Player>()
@@ -194,7 +194,7 @@ public class CM_CHAT_MESSAGE_PUBLIC extends AionClientPacket
 		});
 	}
 	
-	private void broadcastToGroupMembers(final Player player)
+	private void broadcastToGroupMembers(Player player)
 	{
 		if (player.isInTeam())
 		{
@@ -206,17 +206,17 @@ public class CM_CHAT_MESSAGE_PUBLIC extends AionClientPacket
 		}
 	}
 	
-	private void broadcastToAllianceMembers(final Player player)
+	private void broadcastToAllianceMembers(Player player)
 	{
 		player.getPlayerAlliance2().sendPacket(new SM_MESSAGE(player, message, type));
 	}
 	
-	private void broadcastToLeagueMembers(final Player player)
+	private void broadcastToLeagueMembers(Player player)
 	{
 		player.getPlayerAlliance2().getLeague().sendPacket(new SM_MESSAGE(player, message, type));
 	}
 	
-	private void broadcastToLegionMembers(final Player player)
+	private void broadcastToLegionMembers(Player player)
 	{
 		if (player.isLegionMember())
 		{

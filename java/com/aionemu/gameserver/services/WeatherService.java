@@ -51,7 +51,7 @@ public class WeatherService
 	{
 		worldZoneWeathers = new HashMap<>();
 		final GameTime gameTime = (GameTime) GameTimeManager.getGameTime().clone();
-		for (final WorldMapTemplate worldMapTemplate : DataManager.WORLD_MAPS_DATA)
+		for (WorldMapTemplate worldMapTemplate : DataManager.WORLD_MAPS_DATA)
 		{
 			final int mapId = worldMapTemplate.getMapId();
 			final WeatherTable table = DataManager.MAP_WEATHER_DATA.getWeather(mapId);
@@ -103,7 +103,7 @@ public class WeatherService
 	{
 		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			for (final WeatherKey key : worldZoneWeathers.keySet())
+			for (WeatherKey key : worldZoneWeathers.keySet())
 			{
 				setNextWeather(key);
 				onWeatherChange(key.getMapId(), null);
@@ -152,7 +152,7 @@ public class WeatherService
 		final List<WeatherEntry> chosenWeather = new ArrayList<>();
 		while (attRanking >= 0)
 		{
-			for (final WeatherEntry entry : weathers)
+			for (WeatherEntry entry : weathers)
 			{
 				if (entry.getAttRanking() == -1)
 				{
@@ -181,7 +181,7 @@ public class WeatherService
 			// Weather Before.
 			if (!newWeather.isBefore())
 			{
-				for (final WeatherEntry entry : weathers)
+				for (WeatherEntry entry : weathers)
 				{
 					if (newWeather.getWeatherName().equals(entry.getWeatherName()) && entry.isBefore())
 					{
@@ -193,7 +193,7 @@ public class WeatherService
 			// Weather After.
 			if (!newWeather.isAfter())
 			{
-				for (final WeatherEntry entry : weathers)
+				for (WeatherEntry entry : weathers)
 				{
 					if (newWeather.getWeatherName().equals(entry.getWeatherName()) && entry.isAfter())
 					{
@@ -223,7 +223,7 @@ public class WeatherService
 	
 	private WeatherKey getWeatherKeyByMapId(int mapId)
 	{
-		for (final WeatherKey key : worldZoneWeathers.keySet())
+		for (WeatherKey key : worldZoneWeathers.keySet())
 		{
 			if (key.getMapId() == mapId)
 			{
@@ -269,7 +269,7 @@ public class WeatherService
 	public synchronized void resetWeather()
 	{
 		final Set<WeatherKey> loadedWeathers = new HashSet<>(worldZoneWeathers.keySet());
-		for (final WeatherKey key : loadedWeathers)
+		for (WeatherKey key : loadedWeathers)
 		{
 			final WeatherEntry[] oldEntries = worldZoneWeathers.get(key);
 			for (int i = 0; i < oldEntries.length; i++)
@@ -283,7 +283,7 @@ public class WeatherService
 	public int getWeatherCode(int mapId, int weatherZoneId)
 	{
 		final WeatherEntry[] weatherEntries = getWeatherEntries(mapId);
-		for (final WeatherEntry entry : weatherEntries)
+		for (WeatherEntry entry : weatherEntries)
 		{
 			if ((entry != null) && (entry.getZoneId() == weatherZoneId))
 			{
@@ -302,7 +302,7 @@ public class WeatherService
 		}
 		if (player == null)
 		{
-			for (final Iterator<Player> playerIterator = World.getInstance().getPlayersIterator(); playerIterator.hasNext();)
+			for (Iterator<Player> playerIterator = World.getInstance().getPlayersIterator(); playerIterator.hasNext();)
 			{
 				final Player currentPlayer = playerIterator.next();
 				if (!currentPlayer.isSpawned())
@@ -319,7 +319,7 @@ public class WeatherService
 		{
 			PacketSendUtility.sendPacket(player, new SM_WEATHER(weatherEntries));
 		}
-		for (final WeatherEntry entry : weatherEntries)
+		for (WeatherEntry entry : weatherEntries)
 		{
 			SiegeService.getInstance().onWeatherChanged(entry);
 		}

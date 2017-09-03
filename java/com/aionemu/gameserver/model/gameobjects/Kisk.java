@@ -92,7 +92,7 @@ public class Kisk extends SummonedObject<Player>
 	public List<Player> getCurrentMemberList()
 	{
 		final List<Player> currentMemberList = new FastList<>();
-		for (final int memberId : kiskMemberIds)
+		for (int memberId : kiskMemberIds)
 		{
 			final Player member = World.getInstance().findPlayer(memberId);
 			if (member != null)
@@ -204,7 +204,7 @@ public class Kisk extends SummonedObject<Player>
 	
 	private void broadcastKiskUpdate()
 	{
-		for (final Player member : getCurrentMemberList())
+		for (Player member : getCurrentMemberList())
 		{
 			if (!getKnownList().knowns(member))
 			{
@@ -227,7 +227,7 @@ public class Kisk extends SummonedObject<Player>
 	
 	public void broadcastPacket(SM_SYSTEM_MESSAGE message)
 	{
-		for (final Player member : getCurrentMemberList())
+		for (Player member : getCurrentMemberList())
 		{
 			if (member != null)
 			{

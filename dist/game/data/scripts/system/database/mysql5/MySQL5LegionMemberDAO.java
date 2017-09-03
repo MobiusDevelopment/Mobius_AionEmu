@@ -57,7 +57,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean isIdUsed(final int playerObjId)
+	public boolean isIdUsed(int playerObjId)
 	{
 		final PreparedStatement s = DB.prepareStatement("SELECT count(player_id) as cnt FROM legion_members WHERE ? = legion_members.player_id");
 		try
@@ -67,7 +67,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 			rs.next();
 			return rs.getInt("cnt") > 0;
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Can't check if name " + playerObjId + ", is used, returning possitive result", e);
 			return true;
@@ -82,7 +82,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public boolean saveNewLegionMember(final LegionMember legionMember)
+	public boolean saveNewLegionMember(LegionMember legionMember)
 	{
 		final boolean success = DB.insertUpdate(INSERT_LEGIONMEMBER_QUERY, new IUStH()
 		{
@@ -103,7 +103,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void storeLegionMember(final int playerId, final LegionMember legionMember)
+	public void storeLegionMember(int playerId, LegionMember legionMember)
 	{
 		DB.insertUpdate(UPDATE_LEGIONMEMBER_QUERY, new IUStH()
 		{
@@ -125,7 +125,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public LegionMember loadLegionMember(final int playerObjId)
+	public LegionMember loadLegionMember(int playerObjId)
 	{
 		if (playerObjId == 0)
 		{
@@ -156,7 +156,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 					legionMember.setChallengeScore(resultSet.getInt("challenge_score"));
 					legionMember.setLegion(LegionService.getInstance().getLegion(legionId));
 				}
-				catch (final SQLException sqlE)
+				catch (SQLException sqlE)
 				{
 					log.debug("[DAO: MySQL5LegionMemberDAO] Player is not in a Legion");
 				}
@@ -174,7 +174,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public LegionMemberEx loadLegionMemberEx(final int playerObjId)
+	public LegionMemberEx loadLegionMemberEx(int playerObjId)
 	{
 		final LegionMemberEx legionMemberEx = new LegionMemberEx(playerObjId);
 		
@@ -206,7 +206,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 					
 					legionMemberEx.setLegion(LegionService.getInstance().getLegion(legionId));
 				}
-				catch (final SQLException sqlE)
+				catch (SQLException sqlE)
 				{
 					log.debug("[DAO: MySQL5LegionMemberDAO] Player is not in a Legion");
 				}
@@ -224,7 +224,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public LegionMemberEx loadLegionMemberEx(final String playerName)
+	public LegionMemberEx loadLegionMemberEx(String playerName)
 	{
 		final LegionMemberEx legionMember = new LegionMemberEx(playerName);
 		
@@ -256,7 +256,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 					
 					legionMember.setLegion(LegionService.getInstance().getLegion(legionId));
 				}
-				catch (final SQLException sqlE)
+				catch (SQLException sqlE)
 				{
 					log.debug("[DAO: MySQL5LegionMemberDAO] Player is not in a Legion");
 				}
@@ -274,7 +274,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 	 * {@inheritDoc}
 	 */
 	@Override
-	public ArrayList<Integer> loadLegionMembers(final int legionId)
+	public ArrayList<Integer> loadLegionMembers(int legionId)
 	{
 		final ArrayList<Integer> legionMembers = new ArrayList<>();
 		
@@ -298,7 +298,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 						legionMembers.add(playerObjId);
 					}
 				}
-				catch (final SQLException sqlE)
+				catch (SQLException sqlE)
 				{
 					log.error("[DAO: MySQL5LegionMemberDAO] No players in Legion. DELETE Legion Id: " + legionId);
 				}
@@ -332,7 +332,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 		{
 			statement.setInt(1, playerObjId);
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Some crap, can't set int parameter to PreparedStatement", e);
 		}

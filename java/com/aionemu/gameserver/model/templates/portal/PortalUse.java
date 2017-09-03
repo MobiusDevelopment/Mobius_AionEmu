@@ -49,7 +49,7 @@ public class PortalUse
 	{
 		if (portalPath != null)
 		{
-			for (final PortalPath path : portalPath)
+			for (PortalPath path : portalPath)
 			{
 				if (path.getRace().equals(race) || path.getRace().equals(Race.PC_ALL))
 				{

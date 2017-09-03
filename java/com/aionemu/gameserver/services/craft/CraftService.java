@@ -53,7 +53,7 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 public class CraftService
 {
-	public static void finishCrafting(final Player player, RecipeTemplate recipetemplate, int critCount, int bonus)
+	public static void finishCrafting(Player player, RecipeTemplate recipetemplate, int critCount, int bonus)
 	{
 		if (recipetemplate.getMaxProductionCount() != null)
 		{
@@ -142,7 +142,7 @@ public class CraftService
 		player.getCraftingTask().start();
 	}
 	
-	public static void stopAetherforging(final Player player, int recipeId)
+	public static void stopAetherforging(Player player, int recipeId)
 	{
 		final RecipeTemplate recipeTemplate = DataManager.RECIPE_DATA.getRecipeTemplateById(recipeId);
 		final ItemUseObserver Aetherforging = new ItemUseObserver()
@@ -157,7 +157,7 @@ public class CraftService
 		PacketSendUtility.sendPacket(player, new SM_AETHERFORGING_ANIMATION(player, 0, 0, 1));
 	}
 	
-	public static void startAetherforging(final Player player, int recipeId, int craftType)
+	public static void startAetherforging(Player player, int recipeId, int craftType)
 	{
 		final RecipeTemplate recipeTemplate = DataManager.RECIPE_DATA.getRecipeTemplateById(recipeId);
 		final int delayedTime = 4000;
@@ -227,9 +227,9 @@ public class CraftService
 		if (recipeTemplate.getComponent() != null)
 		{
 			final HashMap<Integer, Integer> hm = new HashMap<>();
-			for (final Component a : recipeTemplate.getComponent())
+			for (Component a : recipeTemplate.getComponent())
 			{
-				for (final ComponentElement b : a.getComponents())
+				for (ComponentElement b : a.getComponents())
 				{
 					if (b.getItemid().equals(itemId))
 					{

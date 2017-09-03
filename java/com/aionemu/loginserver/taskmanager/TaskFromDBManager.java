@@ -48,7 +48,7 @@ public class TaskFromDBManager
 	private void registerTaskInstances()
 	{
 		// For all tasks from DB
-		for (final TaskFromDBTrigger trigger : tasksList)
+		for (TaskFromDBTrigger trigger : tasksList)
 		{
 			if (trigger.isValid())
 			{

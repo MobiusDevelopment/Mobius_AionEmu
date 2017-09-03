@@ -40,7 +40,7 @@ public class MySQL5AbyssSpecialLandingDAO extends AbyssSpecialLandingDAO
 	public static final String INSERT_QUERY = "INSERT INTO `special_landing` (`id`, `type`) VALUES(?, ?)";
 	
 	@Override
-	public boolean loadLandingSpecialLocations(final Map<Integer, LandingSpecialLocation> locations)
+	public boolean loadLandingSpecialLocations(Map<Integer, LandingSpecialLocation> locations)
 	{
 		boolean success = true;
 		Connection con = null;
@@ -59,7 +59,7 @@ public class MySQL5AbyssSpecialLandingDAO extends AbyssSpecialLandingDAO
 			}
 			resultSet.close();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.warn("Error loading Siege informaiton from database: " + e.getMessage(), e);
 			success = false;
@@ -68,7 +68,7 @@ public class MySQL5AbyssSpecialLandingDAO extends AbyssSpecialLandingDAO
 		{
 			DatabaseFactory.close(stmt, con);
 		}
-		for (final Map.Entry<Integer, LandingSpecialLocation> entry : locations.entrySet())
+		for (Map.Entry<Integer, LandingSpecialLocation> entry : locations.entrySet())
 		{
 			final LandingSpecialLocation sLoc = entry.getValue();
 			if (!loaded.contains(sLoc.getId()))
@@ -86,7 +86,7 @@ public class MySQL5AbyssSpecialLandingDAO extends AbyssSpecialLandingDAO
 	}
 	
 	@Override
-	public boolean updateLandingSpecialLocation(final LandingSpecialLocation locations)
+	public boolean updateLandingSpecialLocation(LandingSpecialLocation locations)
 	{
 		Connection con = null;
 		PreparedStatement stmt = null;
@@ -98,7 +98,7 @@ public class MySQL5AbyssSpecialLandingDAO extends AbyssSpecialLandingDAO
 			stmt.setInt(2, locations.getId());
 			stmt.execute();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error update special Landing Location: " + "id: " + locations.getId());
 			return false;
@@ -110,7 +110,7 @@ public class MySQL5AbyssSpecialLandingDAO extends AbyssSpecialLandingDAO
 		return true;
 	}
 	
-	private boolean insertLandingLocation(final LandingSpecialLocation locations)
+	private boolean insertLandingLocation(LandingSpecialLocation locations)
 	{
 		Connection con = null;
 		PreparedStatement stmt = null;
@@ -122,7 +122,7 @@ public class MySQL5AbyssSpecialLandingDAO extends AbyssSpecialLandingDAO
 			stmt.setString(2, LandingSpecialStateType.DESPAWN.toString());
 			stmt.execute();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			log.error("Error insert special Landing Location: " + locations.getId(), e);
 			return false;

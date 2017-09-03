@@ -41,7 +41,7 @@ public class DelayedSkillEffect extends EffectTemplate
 	}
 	
 	@Override
-	public void startEffect(final Effect effect)
+	public void startEffect(Effect effect)
 	{
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

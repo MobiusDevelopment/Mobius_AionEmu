@@ -42,7 +42,7 @@ public class InstanceReward<T extends InstancePlayerReward>
 	
 	public boolean containPlayer(Integer object)
 	{
-		for (final InstancePlayerReward instanceReward : instanceRewards)
+		for (InstancePlayerReward instanceReward : instanceRewards)
 		{
 			if (instanceReward.getOwner().equals(object))
 			{
@@ -62,7 +62,7 @@ public class InstanceReward<T extends InstancePlayerReward>
 	
 	public InstancePlayerReward getPlayerReward(Integer object)
 	{
-		for (final InstancePlayerReward instanceReward : instanceRewards)
+		for (InstancePlayerReward instanceReward : instanceRewards)
 		{
 			if (instanceReward.getOwner().equals(object))
 			{
