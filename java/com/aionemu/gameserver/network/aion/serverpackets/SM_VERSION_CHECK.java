@@ -29,15 +29,15 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.network.NetworkController;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
-import com.aionemu.gameserver.services.ChatService;
 
 public class SM_VERSION_CHECK extends AionServerPacket
 {
+	private static final Logger log = LoggerFactory.getLogger(SM_VERSION_CHECK.class);
 	private final int version;
 	private int characterLimitCount;
 	private final int characterCreateMode;
 	private final int characterFactionsMode;
-	private static final Logger log = LoggerFactory.getLogger(SM_VERSION_CHECK.class);
+	private static int port = 10241;
 	
 	public SM_VERSION_CHECK(int version)
 	{
@@ -153,6 +153,6 @@ public class SM_VERSION_CHECK extends AionServerPacket
 		writeH(0x01);
 		writeC(0x00);
 		writeB(IPConfig.getDefaultAddress());
-		writeH(ChatService.getPort());
+		writeH(port);
 	}
 }

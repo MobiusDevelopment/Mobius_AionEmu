@@ -21,7 +21,6 @@
 	<property name="build.dist" location="${build}/dist" />
 	<property name="build.dist.game" location="${build.dist}/game" />
 	<property name="build.dist.login" location="${build.dist}/login" />
-	<property name="build.dist.chat" location="${build.dist}/chat" />
 	<property name="datapack" location="dist" />
 	<property name="libs" location="${datapack}/libs" />
 	<property name="src" location="java" />
@@ -68,22 +67,9 @@
 			<format property="time.stamp" pattern="yyyy-MM-dd HH:mm:ss" />
 		</tstamp>
 
-		<jar destfile="${build.dist.chat}/AionEmu-Chat.jar" level="9">
-			<fileset dir="${build.bin}">
-				<exclude name="**/gameserver/**" />
-				<exclude name="**/loginserver/**" />
-			</fileset>
-			<manifest>
-				<attribute name="Built-By" value="${user.name}" />
-				<attribute name="Built-Date" value="${time.stamp}" />
-				<attribute name="Class-Path" value="${manifest.libs}" />
-				<attribute name="Main-Class" value="com.aionemu.chatserver.ChatServer" />
-			</manifest>
-		</jar>
 		<jar destfile="${build.dist.login}/AionEmu-Login.jar" level="9">
 			<fileset dir="${build.bin}">
 				<exclude name="**/gameserver/**" />
-				<exclude name="**/chatserver/**" />
 			</fileset>
 			<manifest>
 				<attribute name="Built-By" value="${user.name}" />
@@ -94,7 +80,6 @@
 		</jar>
 		<jar destfile="${build.dist.game}/AionEmu-Game.jar" level="9">
 			<fileset dir="${build.bin}">
-				<exclude name="**/chatserver/**" />
 				<exclude name="**/loginserver/**" />
 			</fileset>
 			<manifest>

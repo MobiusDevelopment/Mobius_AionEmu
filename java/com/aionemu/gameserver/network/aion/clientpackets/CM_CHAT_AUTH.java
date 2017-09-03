@@ -16,12 +16,9 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
-import com.aionemu.gameserver.configs.main.GSConfig;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_CHAT_INIT;
-import com.aionemu.gameserver.network.cs.ChatServer;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class CM_CHAT_AUTH extends AionClientPacket
@@ -43,17 +40,6 @@ public class CM_CHAT_AUTH extends AionClientPacket
 	@Override
 	protected void runImpl()
 	{
-		final Player player = getConnection().getActivePlayer();
-		if (GSConfig.ENABLE_CHAT_SERVER)
-		{
-			if (!player.isInPrison())
-			{
-				ChatServer.getInstance().sendPlayerLoginRequst(player);
-			}
-		}
-		else
-		{
-			PacketSendUtility.sendPacket(player, new SM_CHAT_INIT(new byte[0]));
-		}
+		PacketSendUtility.sendPacket(getConnection().getActivePlayer(), new SM_CHAT_INIT(new byte[0]));
 	}
 }

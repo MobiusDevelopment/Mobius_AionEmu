@@ -24,7 +24,6 @@ import org.slf4j.LoggerFactory;
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.configs.main.AutoGroupConfig;
 import com.aionemu.gameserver.configs.main.CustomConfig;
-import com.aionemu.gameserver.configs.main.GSConfig;
 import com.aionemu.gameserver.dao.HouseObjectCooldownsDAO;
 import com.aionemu.gameserver.dao.ItemCooldownsDAO;
 import com.aionemu.gameserver.dao.PlayerBindPointDAO;
@@ -44,7 +43,6 @@ import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.services.BrokerService;
-import com.aionemu.gameserver.services.ChatService;
 import com.aionemu.gameserver.services.DuelService;
 import com.aionemu.gameserver.services.ExchangeService;
 import com.aionemu.gameserver.services.FindGroupService;
@@ -69,14 +67,7 @@ public class PlayerLeaveWorldService
 	public static void startLeaveWorldDelay(final Player player, int delay)
 	{
 		player.getController().stopMoving();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				startLeaveWorld(player);
-			}
-		}, delay);
+		ThreadPoolManager.getInstance().schedule(() -> startLeaveWorld(player), delay);
 	}
 	
 	public static void startLeaveWorld(Player player)
@@ -168,10 +159,6 @@ public class PlayerLeaveWorldService
 		player.getCommonData().setLastOnline(new Timestamp(System.currentTimeMillis()));
 		player.setClientConnection(null);
 		DAOManager.getDAO(PlayerDAO.class).onlinePlayer(player, false);
-		if (GSConfig.ENABLE_CHAT_SERVER)
-		{
-			ChatService.onPlayerLogout(player);
-		}
 		PlayerService.storePlayer(player);
 		ExpireTimerTask.getInstance().removePlayer(player);
 		if (player.getCraftingTask() != null)

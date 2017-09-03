@@ -63,7 +63,6 @@ import com.aionemu.gameserver.model.house.MaintenanceTask;
 import com.aionemu.gameserver.model.siege.Influence;
 import com.aionemu.gameserver.network.BannedMacManager;
 import com.aionemu.gameserver.network.aion.GameConnectionFactoryImpl;
-import com.aionemu.gameserver.network.cs.ChatServer;
 import com.aionemu.gameserver.network.ls.LoginServer;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.services.AbyssLandingService;
@@ -538,15 +537,9 @@ public class GameServer
 		Util.printSection("Starting Network");
 		final NioServer nioServer = new NioServer(NetworkConfig.NIO_READ_WRITE_THREADS, new ServerCfg(NetworkConfig.GAME_BIND_ADDRESS, NetworkConfig.GAME_PORT, "Game Connections", new GameConnectionFactoryImpl()));
 		final LoginServer ls = LoginServer.getInstance();
-		final ChatServer cs = ChatServer.getInstance();
 		ls.setNioServer(nioServer);
-		cs.setNioServer(nioServer);
 		nioServer.connect();
 		ls.connect();
-		if (GSConfig.ENABLE_CHAT_SERVER)
-		{
-			cs.connect();
-		}
 	}
 	
 	private static void initUtilityServicesAndConfig()
