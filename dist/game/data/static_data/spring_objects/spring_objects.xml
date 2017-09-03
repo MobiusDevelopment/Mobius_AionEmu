@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Siege Spring
+	Made By Rinzler
+ -->
+<spring_objects xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="spring_objects.xsd">
+	<!-- INGGISON -->
+	<spring_object map_id="210050000" x="812.93695" y="1975.0272" z="337.38342" range="10"/>
+	<spring_object map_id="210050000" x="892.911" y="1880.54" z="333.26" range="10"/>
+	<spring_object map_id="210050000" x="1673.0" y="2190.0" z="324.9358" range="10"/>
+	<spring_object map_id="210050000" x="1798.3" y="2166.36" z="320.835" range="10"/>
+	<!-- GELKMAROS -->
+	<spring_object map_id="220070000" x="1151.069" y="891.408" z="305.962" range="10"/>
+	<spring_object map_id="220070000" x="1255.225" y="855.900" z="310.162" range="10"/>
+	<spring_object map_id="220070000" x="1833.030" y="1128.823" z="322.812" range="10"/>
+	<spring_object map_id="220070000" x="1938.8042" y="1074.9586" z="326.9665" range="10"/>
+	<!-- RESHANTA -->
+	<spring_object map_id="400010000" x="739.875" y="2943.625" z="2894.250" range="10"/>
+	<spring_object map_id="400010000" x="1785.104" y="2275.684" z="2943.877" range="10"/>
+	<spring_object map_id="400010000" x="2056.963" y="1281.802" z="2957.204" range="10"/>
+	<spring_object map_id="400010000" x="2498.860" y="2107.281" z="3044.250" range="10"/>
+	<spring_object map_id="400010000" x="2608.565" y="2860.927" z="1500.523" range="10"/>
+	<spring_object map_id="400010000" x="2790.118" y="2609.0884" z="1503.3386" range="10"/>
+	<!-- KALDOR -->
+	<spring_object map_id="600090000" x="786.97711" y="259.64624" z="143.00507" range="10"/>
+	<spring_object map_id="600090000" x="802.72742" y="297.94226" z="143.00507" range="10"/>
+	<spring_object map_id="600090000" x="771.23541" y="297.91895" z="143.00507" range="10"/>
+</spring_objects>

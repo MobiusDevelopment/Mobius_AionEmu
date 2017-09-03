@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	The Shugo Emperor's Vault 4.7.5
+	Emperor Trillirunerk's Safe 4.9.1
+	Smoldering Fire Temple 5.1
+	Spawn By Encom (Rinzler)
+ -->
+<spawns>
+    <spawn_map map_id="120010000">
+		<!-- [The Shugo Emperor's Vault 4.7.5] -->
+		<conquest_spawn id="5">
+			<conquest_type ostate="CONQUEST">
+				<!-- The Shugo Emperor's Vault -->
+				<spawn npc_id="832920">
+				    <spot x="1275.4172" y="1341.2452" z="204.42003" h="90"/>
+				</spawn>
+				<!-- Indinerk Jonakak -->
+				<spawn npc_id="832921">
+				    <spot x="1275.3762" y="1338.1615" z="204.42003" h="90"/>
+				</spawn>
+			</conquest_type>
+			<conquest_type ostate="PEACE">
+			</conquest_type>
+		</conquest_spawn>
+		<!-- [Emperor Trillirunerk's Safe 4.9.1] -->
+		<conquest_spawn id="6">
+			<conquest_type ostate="CONQUEST">
+				<!-- Emperor Trillirunerk's Safe -->
+				<spawn npc_id="833737">
+				    <spot x="1275.4172" y="1341.2452" z="204.42003" h="90"/>
+				</spawn>
+				<!-- Indinerk Jonakak -->
+				<spawn npc_id="832921">
+				    <spot x="1275.3762" y="1338.1615" z="204.42003" h="90"/>
+				</spawn>
+			</conquest_type>
+			<conquest_type ostate="PEACE">
+			</conquest_type>
+		</conquest_spawn>
+		<!-- [Smoldering Fire Temple 5.1] -->
+		<conquest_spawn id="8">
+			<conquest_type ostate="CONQUEST">
+				<!-- Annaerunerk
+				<Smoldering Fire Temple> -->
+				<spawn npc_id="834161">
+				    <spot x="1275.4172" y="1341.2452" z="204.42003" h="90"/>
+				</spawn>
+			</conquest_type>
+			<conquest_type ostate="PEACE">
+			</conquest_type>
+		</conquest_spawn>
+    </spawn_map>
+</spawns>

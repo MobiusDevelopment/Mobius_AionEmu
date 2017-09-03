@@ -1,0 +1,4522 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	Skill Enchant 5.0/5.1/5.3
+	Made By Encom
+ -->
+<skill_enchants xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="skill_enchants.xsd">
+    <skill_enchant id="1">
+        <modifiers chance="5.0">
+           <skill id="784"/>
+        </modifiers>
+		<modifiers chance="3.0">
+           <skill id="826"/>
+        </modifiers>
+		<modifiers chance="2.0">
+           <skill id="830"/>
+        </modifiers>
+    </skill_enchant>
+    <skill_enchant id="2">
+        <modifiers chance="5.0">
+           <skill id="784"/>
+        </modifiers>
+    </skill_enchant>
+    <skill_enchant id="3">
+	    <modifiers chance="10.0">
+           <skill id="1282"/>
+        </modifiers>
+    </skill_enchant>
+    <skill_enchant id="4">
+	    <modifiers chance="10.0">
+           <skill id="1282"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="5">
+	    <modifiers chance="10.0">
+           <skill id="1282"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="6">
+	    <modifiers chance="10.0">
+           <skill id="508"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="7">
+	    <modifiers chance="10.0">
+           <skill id="682"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="8">
+	    <modifiers chance="10.0">
+           <skill id="621"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="9">
+	    <modifiers chance="10.0">
+           <skill id="554"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="10">
+	    <modifiers chance="10.0">
+           <skill id="545"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="11">
+	    <modifiers chance="10.0">
+           <skill id="3031"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="12">
+	    <modifiers chance="10.0">
+           <skill id="3106"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="13">
+	    <modifiers chance="10.0">
+           <skill id="2967"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="14">
+	    <modifiers chance="10.0">
+           <skill id="3162"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="15">
+	    <modifiers chance="10.0">
+           <skill id="3069"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="16">
+	    <modifiers chance="10.0">
+           <skill id="3356"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="17">
+	    <modifiers chance="10.0">
+           <skill id="3404"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="18">
+	    <modifiers chance="10.0">
+           <skill id="3455"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="19">
+	    <modifiers chance="10.0">
+           <skill id="3300"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="20">
+	    <modifiers chance="10.0">
+           <skill id="3406"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="21">
+	    <modifiers chance="10.0">
+           <skill id="848"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="22">
+	    <modifiers chance="10.0">
+           <skill id="1086"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="23">
+	    <modifiers chance="10.0">
+           <skill id="1054"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="24">
+	    <modifiers chance="10.0">
+           <skill id="1090"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="25">
+	    <modifiers chance="10.0">
+           <skill id="1120"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="26">
+	    <modifiers chance="10.0">
+           <skill id="3867"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="27">
+	    <modifiers chance="10.0">
+           <skill id="4098"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="28">
+	    <modifiers chance="10.0">
+           <skill id="3939"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="29">
+	    <modifiers chance="10.0">
+           <skill id="3912"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="30">
+	    <modifiers chance="10.0">
+           <skill id="3918"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="31">
+	    <modifiers chance="10.0">
+           <skill id="1562"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="32">
+	    <modifiers chance="10.0">
+           <skill id="1735"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="33">
+	    <modifiers chance="10.0">
+           <skill id="1715"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="34">
+	    <modifiers chance="10.0">
+           <skill id="1557"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="35">
+	    <modifiers chance="10.0">
+           <skill id="1798"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="36">
+	    <modifiers chance="10.0">
+           <skill id="1506"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="37">
+	    <modifiers chance="10.0">
+           <skill id="1192"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="38">
+	    <modifiers chance="10.0">
+           <skill id="1421"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="39">
+	    <modifiers chance="10.0">
+           <skill id="1384"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="40">
+	    <modifiers chance="10.0">
+           <skill id="1543"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="41">
+	    <modifiers chance="10.0">
+           <skill id="3643"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="42">
+	    <modifiers chance="10.0">
+           <skill id="3852"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="43">
+	    <modifiers chance="10.0">
+           <skill id="3630"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="44">
+	    <modifiers chance="10.0">
+           <skill id="3839"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="45">
+	    <modifiers chance="10.0">
+           <skill id="3838"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="46">
+	    <modifiers chance="10.0">
+           <skill id="1995"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="47">
+	    <modifiers chance="10.0">
+           <skill id="2350"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="48">
+	    <modifiers chance="10.0">
+           <skill id="2041"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="49">
+	    <modifiers chance="10.0">
+           <skill id="2204"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="50">
+	    <modifiers chance="10.0">
+           <skill id="2264"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="51">
+	    <modifiers chance="10.0">
+           <skill id="4400"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="52">
+	    <modifiers chance="10.0">
+           <skill id="4368"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="53">
+	    <modifiers chance="10.0">
+           <skill id="4392"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="54">
+	    <modifiers chance="10.0">
+           <skill id="4396"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="55">
+	    <modifiers chance="10.0">
+           <skill id="4297"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="56">
+	    <modifiers chance="10.0">
+           <skill id="2568"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="57">
+	    <modifiers chance="10.0">
+           <skill id="2756"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="58">
+	    <modifiers chance="10.0">
+           <skill id="4647"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="59">
+	    <modifiers chance="10.0">
+           <skill id="2717"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="60">
+	    <modifiers chance="10.0">
+           <skill id="2726"/>
+        </modifiers>
+    </skill_enchant>
+	<!-- 5.0 -->
+	<skill_enchant id="61">
+	    <modifiers chance="1.43">
+		    <skill id="3140"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="3084"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="2864"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="2877"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="3055"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="3113"/>
+        </modifiers>
+	    <modifiers chance="1.42">
+		    <skill id="3065"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="62">
+	    <modifiers chance="1.43">
+		    <skill id="3140"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="3084"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="2864"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="2877"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="3055"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="3113"/>
+        </modifiers>
+	    <modifiers chance="1.42">
+		    <skill id="3065"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="63">
+	    <modifiers chance="1.43">
+		    <skill id="1768"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="1769"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="1700"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="1580"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="1858"/>
+        </modifiers>
+	    <modifiers chance="1.43">
+		    <skill id="4012"/>
+        </modifiers>
+	    <modifiers chance="1.42">
+		    <skill id="4685"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="64">
+        <skill id="3223"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="3365"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="3427"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="3435"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="3348"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="3182"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="3417"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1102"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="826"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1135"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1010"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="838"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1118"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1075"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="65">
+	    <modifiers chance="4.8">
+		    <skill id="1396"/>
+        </modifiers>
+        <skill id="1259"/>
+	    <modifiers chance="4.8">
+        </modifiers>
+        <skill id="1526"/>
+	    <modifiers chance="4.8">
+        </modifiers>
+        <skill id="1250"/>
+	    <modifiers chance="4.8">
+        </modifiers>
+        <skill id="1385"/>
+	    <modifiers chance="4.8">
+        </modifiers>
+        <skill id="1533"/>
+	    <modifiers chance="4.7">
+        </modifiers>
+        <skill id="1155"/>
+	    <modifiers chance="4.7">
+        </modifiers>
+        <skill id="3740"/>
+	    <modifiers chance="4.8">
+        </modifiers>
+        <skill id="3603"/>
+	    <modifiers chance="4.8">
+        </modifiers>
+        <skill id="3614"/>
+	    <modifiers chance="4.8">
+        </modifiers>
+        <skill id="4668"/>
+	    <modifiers chance="4.8">
+        </modifiers>
+        <skill id="1447"/>
+	    <modifiers chance="4.7">
+        </modifiers>
+        <skill id="3742"/>
+	    <modifiers chance="4.7">
+        </modifiers>
+        <skill id="3834"/>
+	    <modifiers chance="4.7">
+        </modifiers>
+        <skill id="4408"/>
+	    <modifiers chance="4.8">
+        </modifiers>
+        <skill id="4264"/>
+	    <modifiers chance="4.8">
+        </modifiers>
+        <skill id="4253"/>
+	    <modifiers chance="4.8">
+        </modifiers>
+        <skill id="4300"/>
+	    <modifiers chance="4.8">
+        </modifiers>
+        <skill id="4221"/>
+	    <modifiers chance="4.7">
+        </modifiers>
+        <skill id="4234"/>
+	    <modifiers chance="4.7">
+        </modifiers>
+        <skill id="4552"/>
+	    <modifiers chance="4.7">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="66">
+        <skill id="3223"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="3365"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="3427"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="3435"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="3348"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="3182"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="3417"/>
+	    <modifiers chance="1.42">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="67">
+        <skill id="3223"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="3365"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="3427"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="3435"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="3348"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="3182"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="3417"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="739"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="720"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="2864"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="707"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="2877"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="710"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="3140"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="3084"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="2864"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="2877"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="3055"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="3113"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+        <skill id="3065"/>
+	    <modifiers chance="5.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="68">
+        <skill id="4012"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4083"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4046"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4073"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4061"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4195"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4176"/>
+	    <modifiers chance="1.42">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="69">
+        <skill id="3140"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+        <skill id="2864"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+        <skill id="2877"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+        <skill id="3055"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+        <skill id="3065"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="70">
+        <skill id="670"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="739"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="720"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2864"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="707"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2877"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="710"/>
+	    <modifiers chance="1.42">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="71">
+        <skill id="1768"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="1769"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="1700"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="1580"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="1858"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4012"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4685"/>
+	    <modifiers chance="1.42">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="72">
+        <skill id="1102"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="826"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="1135"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="1010"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="838"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="1118"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="1075"/>
+	    <modifiers chance="1.42">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="73">
+        <skill id="1396"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1259"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1526"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1250"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1385"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="1533"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="1155"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="3740"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="3603"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="3614"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="4668"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1447"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="3742"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="3834"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="74">
+        <skill id="1396"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1259"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1526"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1250"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1385"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="1533"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="1155"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="3740"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="3603"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="3614"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="4668"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="1447"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="3742"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="3834"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="75">
+        <skill id="4408"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4264"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4253"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4300"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4221"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4234"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4552"/>
+	    <modifiers chance="1.42">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="76">
+        <skill id="2125"/>
+	    <modifiers chance="2.5">
+        </modifiers>
+        <skill id="1957"/>
+	    <modifiers chance="2.5">
+        </modifiers>
+        <skill id="1911"/>
+	    <modifiers chance="2.5">
+        </modifiers>
+        <skill id="2219"/>
+	    <modifiers chance="2.5">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="77">
+        <skill id="2322"/>
+	    <modifiers chance="3.33">
+        </modifiers>
+        <skill id="2210"/>
+	    <modifiers chance="3.33">
+        </modifiers>
+        <skill id="1992"/>
+	    <modifiers chance="3.34">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="78">
+        <skill id="2819"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2779"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2741"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2833"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2426"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2498"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2415"/>
+	    <modifiers chance="1.42">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="79">
+        <skill id="601"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+        <skill id="3116"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+        <skill id="3271"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+        <skill id="881"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+        <skill id="1639"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="80">
+        <skill id="2890"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="3478"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="939"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="1891"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="644"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="3131"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="3196"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="784"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="1703"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="81">
+        <skill id="769"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="3066"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="3340"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="994"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="1596"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="707"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="2877"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="3348"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="1102"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="1858"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="82">
+        <skill id="635"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+        <skill id="3130"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+        <skill id="3470"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+        <skill id="830"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+        <skill id="1602"/>
+	    <modifiers chance="2.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="83">
+        <skill id="4037"/>
+	    <modifiers chance="1.67">
+        </modifiers>
+        <skill id="1217"/>
+	    <modifiers chance="1.67">
+        </modifiers>
+        <skill id="3593"/>
+	    <modifiers chance="1.67">
+        </modifiers>
+        <skill id="2349"/>
+	    <modifiers chance="1.67">
+        </modifiers>
+        <skill id="4457"/>
+	    <modifiers chance="1.66">
+        </modifiers>
+        <skill id="2606"/>
+	    <modifiers chance="1.66">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="84">
+        <skill id="4170"/>
+	    <modifiers chance="8.4">
+        </modifiers>
+        <skill id="4659"/>
+	    <modifiers chance="8.4">
+        </modifiers>
+        <skill id="4661"/>
+	    <modifiers chance="8.4">
+        </modifiers>
+        <skill id="2210"/>
+	    <modifiers chance="8.4">
+        </modifiers>
+        <skill id="4336"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="2807"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="1271"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="3776"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="1992"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="4246"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="2543"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="85">
+        <skill id="4213"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="1258"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="3835"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="2107"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="4522"/>
+	    <modifiers chance="8.4">
+        </modifiers>
+        <skill id="2806"/>
+	    <modifiers chance="8.4">
+        </modifiers>
+        <skill id="4046"/>
+	    <modifiers chance="8.4">
+        </modifiers>
+        <skill id="1259"/>
+	    <modifiers chance="8.4">
+        </modifiers>
+        <skill id="3740"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="1957"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="4408"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+        <skill id="2741"/>
+	    <modifiers chance="8.3">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="86">
+        <skill id="3951"/>
+	    <modifiers chance="1.67">
+        </modifiers>
+        <skill id="1494"/>
+	    <modifiers chance="1.67">
+        </modifiers>
+        <skill id="3582"/>
+	    <modifiers chance="1.67">
+        </modifiers>
+        <skill id="2008"/>
+	    <modifiers chance="1.67">
+        </modifiers>
+        <skill id="4471"/>
+	    <modifiers chance="1.66">
+        </modifiers>
+        <skill id="2566"/>
+	    <modifiers chance="1.66">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="87">
+        <skill id="4012"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4083"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4046"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4073"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4061"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4195"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4176"/>
+	    <modifiers chance="1.42">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="88">
+        <skill id="670"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="739"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="720"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2864"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="707"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2877"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="710"/>
+	    <modifiers chance="1.42">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="89">
+        <skill id="4012"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4083"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4046"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4073"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4061"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4195"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="4176"/>
+	    <modifiers chance="1.42">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="90">
+        <skill id="4012"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="4083"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="4046"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="4073"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="4061"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="4195"/>
+	    <modifiers chance="7.2">
+        </modifiers>
+        <skill id="4176"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="2819"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="2779"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="2741"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="2833"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="2426"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="2498"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+        <skill id="2415"/>
+	    <modifiers chance="7.1">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="91">
+        <skill id="2350"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2125"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2219"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="1957"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2142"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="1911"/>
+	    <modifiers chance="1.43">
+        </modifiers>
+        <skill id="2132"/>
+	    <modifiers chance="1.42">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="92">
+        <skill id="601"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="644"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="769"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="635"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3116"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3131"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3066"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3130"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3271"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3478"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3196"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3340"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3470"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="881"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="939"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="784"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="994"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="830"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1639"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1891"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1703"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1596"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1602"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="93">
+        <skill id="4037"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="4170"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="4213"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3951"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="1217"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4659"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="1271"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="1258"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="1494"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2349"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2107"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2142"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2008"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2132"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4457"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4336"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4246"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4522"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4471"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2606"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2807"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2543"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2806"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2566"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="3593"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="4661"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3776"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3835"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3582"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="94">
+        <skill id="601"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="644"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="769"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="635"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3116"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3131"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3066"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3130"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3271"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3478"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3196"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3340"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3470"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="881"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="939"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="784"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="994"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="830"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1639"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1891"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1703"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1596"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1602"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="4037"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4170"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4213"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3951"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1217"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4659"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1271"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1258"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1494"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2349"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2107"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2142"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2008"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2132"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4457"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4336"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4246"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4522"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4471"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2606"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2807"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2543"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2806"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2566"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3593"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="4661"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="3776"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="3835"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="3582"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="95">
+        <skill id="601"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="644"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="769"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="635"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3116"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3131"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3066"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3130"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3271"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3478"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3196"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3340"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3470"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="881"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="939"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="784"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="994"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="830"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1639"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1891"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1703"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1596"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1602"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="96">
+        <skill id="4037"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="4170"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="4213"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3951"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="1217"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4659"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="1271"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="1258"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="1494"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2349"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2107"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2142"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2008"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2132"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4457"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4336"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4246"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4522"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4471"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2606"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2807"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2543"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2806"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2566"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="3593"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="4661"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3776"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3835"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3582"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="97">
+        <skill id="601"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="644"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="769"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="635"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3116"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3131"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3066"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3130"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3271"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3478"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3196"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3340"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3470"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="881"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="939"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="784"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="994"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="830"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1639"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1891"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1703"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1596"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1602"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="4037"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4170"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4213"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3951"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1217"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4659"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1271"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1258"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1494"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2349"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2107"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2142"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2008"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2132"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4457"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4336"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4246"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4522"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4471"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2606"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2807"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2543"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2806"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2566"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3593"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="4661"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="3776"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="3835"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="3582"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="98">
+        <skill id="601"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="644"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="769"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="635"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3116"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3131"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3066"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3130"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3271"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3478"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3196"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3340"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3470"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="881"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="939"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="784"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="994"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="830"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1639"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1891"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1703"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1596"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1602"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="99">
+        <skill id="4037"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="4170"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="4213"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3951"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="1217"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4659"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="1271"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="1258"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="1494"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2349"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2107"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2142"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2008"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2132"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4457"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4336"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4246"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4522"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4471"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2606"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2807"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2543"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2806"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2566"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="3593"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="4661"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3776"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3835"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3582"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="100">
+        <skill id="601"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="644"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="769"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="635"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3116"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3131"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3066"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3130"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3271"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3478"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3196"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3340"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3470"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="881"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="939"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="784"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="994"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="830"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1639"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1891"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1703"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1596"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1602"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="4037"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4170"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4213"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3951"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1217"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4659"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1271"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1258"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1494"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2349"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2107"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2142"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2008"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2132"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4457"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4336"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4246"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4522"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4471"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2606"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2807"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2543"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2806"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2566"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3593"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="4661"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="3776"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="3835"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="3582"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="101">
+        <skill id="601"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="644"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="769"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="635"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3116"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3131"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3066"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3130"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3271"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3478"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3196"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3340"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="3470"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="881"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="939"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="784"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="994"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="830"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1639"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1891"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1703"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1596"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+        <skill id="1602"/>
+	    <modifiers chance="4.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="102">
+        <skill id="4037"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="4170"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="4213"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3951"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="1217"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4659"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="1271"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="1258"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="1494"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2349"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2107"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2142"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2008"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2132"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4457"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4336"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4246"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4522"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="4471"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2606"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2807"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2543"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2806"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="2566"/>
+	    <modifiers chance="3.3">
+        </modifiers>
+        <skill id="3593"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="4661"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3776"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3835"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+        <skill id="3582"/>
+	    <modifiers chance="3.4">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="103">
+        <skill id="601"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="644"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="769"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="635"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3116"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3131"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3066"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3130"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3271"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3478"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3196"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3340"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3470"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="881"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="939"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="784"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="994"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="830"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1639"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1891"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1703"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1596"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="1602"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="4037"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4170"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4213"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3951"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1217"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4659"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1271"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1258"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="1494"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2349"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2107"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2142"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2008"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2132"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4457"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4336"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4246"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4522"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="4471"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2606"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2807"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2543"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2806"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="2566"/>
+	    <modifiers chance="1.8">
+        </modifiers>
+        <skill id="3593"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="4661"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="3776"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="3835"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+        <skill id="3582"/>
+	    <modifiers chance="1.9">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="104">
+        <skill id="601"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="644"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="769"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="635"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="3116"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="2890"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="3131"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="3066"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+        <skill id="3130"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="105">
+        <skill id="1639"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="1891"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="1703"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="1596"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="1602"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="4037"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="4170"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="4213"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="3951"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="2606"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+        <skill id="2807"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+        <skill id="2543"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+        <skill id="2806"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+        <skill id="2566"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="106">
+        <skill id="3271"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="3478"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="3196"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="3340"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="3470"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="881"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="939"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="784"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="994"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="830"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="2349"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+        <skill id="2107"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+        <skill id="2142"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+        <skill id="2008"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+        <skill id="2132"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="107">
+        <skill id="1217"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="4659"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="1271"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="1258"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="1494"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="4457"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="4336"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="4246"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="4522"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="4471"/>
+	    <modifiers chance="6.7">
+        </modifiers>
+        <skill id="3593"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+        <skill id="4661"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+        <skill id="3776"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+        <skill id="3835"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+        <skill id="3582"/>
+	    <modifiers chance="6.6">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="108">
+        <skill id="663"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="624"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="572"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="604"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="590"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="519"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="531"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3072"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3169"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3038"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3085"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3125"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3019"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3071"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3385"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3482"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3283"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3415"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3500"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3467"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3512"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="890"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="848"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1022"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="950"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="4679"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1054"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1066"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1677"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1587"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1814"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1778"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1627"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1875"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="109">
+        <skill id="1814"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4150"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4025"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4095"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4102"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4128"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="4054"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="1226"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1179"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1204"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1394"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1510"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1391"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="1184"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="2171"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1912"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2186"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2055"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2180"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2004"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2093"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="4281"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4425"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4403"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4273"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4431"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4567"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4339"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="2690"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2553"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2399"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2763"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2536"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2401"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2530"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="3790"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3838"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3643"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3630"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3839"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3852"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1155"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="110">
+        <skill id="663"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="624"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="572"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="604"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="590"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="519"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="531"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3072"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3169"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3038"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3085"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3125"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3019"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3071"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3385"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3482"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3283"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3415"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3500"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3467"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3512"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="890"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="848"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1022"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="950"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="4679"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1054"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1066"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1677"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1587"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1814"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1778"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1627"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1875"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="111">
+        <skill id="1814"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4150"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4025"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4095"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4102"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4128"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="4054"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="1226"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1179"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1204"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1394"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1510"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1391"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="1184"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="2171"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1912"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2186"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2055"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2180"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2004"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2093"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="4281"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4425"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4403"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4273"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4431"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4567"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4339"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="2690"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2553"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2399"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2763"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2536"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2401"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2530"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="3790"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3838"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3643"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3630"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3839"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3852"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1155"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="112">
+        <skill id="663"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="624"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="572"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="604"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="590"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="519"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="531"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3072"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3169"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3038"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3085"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3125"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3019"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3071"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3385"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3482"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3283"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3415"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3500"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3467"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3512"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="890"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="848"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1022"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="950"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="4679"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1054"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1066"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1677"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1587"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1814"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1778"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1627"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1875"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="113">
+        <skill id="1814"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4150"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4025"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4095"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4102"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4128"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="4054"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="1226"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1179"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1204"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1394"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1510"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1391"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="1184"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="2171"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1912"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2186"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2055"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2180"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2004"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2093"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="4281"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4425"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4403"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4273"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4431"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4567"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4339"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="2690"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2553"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2399"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2763"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2536"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2401"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2530"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="3790"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3838"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3643"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3630"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3839"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3852"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1155"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="114">
+        <skill id="663"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="624"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="572"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="604"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="590"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="519"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="531"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3072"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3169"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3038"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3085"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3125"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3019"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3071"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3385"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3482"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3283"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3415"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="3500"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3467"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="3512"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="890"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="848"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1022"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="950"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="4679"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1054"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1066"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1677"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1587"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1814"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1778"/>
+	    <modifiers chance="2.9">
+        </modifiers>
+        <skill id="1838"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1627"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+        <skill id="1875"/>
+	    <modifiers chance="2.8">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="115">
+        <skill id="1814"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4150"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4025"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4095"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4102"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4128"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="4054"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="1226"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1179"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1204"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1394"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1510"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1391"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="1184"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="2171"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1912"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2186"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2055"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2180"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2004"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2093"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="4281"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4425"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4403"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4273"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4431"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4567"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="4339"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="2690"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2553"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2399"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2763"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2536"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2401"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="2530"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+        <skill id="3790"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3838"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3643"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3630"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3839"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="3852"/>
+	    <modifiers chance="2.4">
+        </modifiers>
+        <skill id="1155"/>
+	    <modifiers chance="2.3">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="116">
+        <skill id="2890"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="117">
+        <skill id="3116"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="118">
+        <skill id="3271"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="119">
+        <skill id="4037"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="120">
+        <skill id="1639"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="121">
+        <skill id="3271"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="122">
+        <skill id="1217"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="123">
+        <skill id="3593"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="124">
+        <skill id="1217"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="125">
+        <skill id="3593"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="126">
+        <skill id="3116"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="127">
+        <skill id="601"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="128">
+        <skill id="4037"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="129">
+        <skill id="1639"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="130">
+        <skill id="881"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="131">
+        <skill id="2349"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="132">
+        <skill id="2107"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="133">
+        <skill id="4457"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="134">
+	    <modifiers chance="10.0">
+		    <skill id="2606"/>
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="135">
+        <skill id="644"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="136">
+        <skill id="4721"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="137">
+        <skill id="4774"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="138">
+        <skill id="4779"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="139">
+        <skill id="4730"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="140">
+        <skill id="4774"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="141">
+        <skill id="4726"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="142">
+        <skill id="4784"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="143">
+        <skill id="4726"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="144">
+        <skill id="4784"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="145">
+        <skill id="4721"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="146">
+        <skill id="4716"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="147">
+        <skill id="4779"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="148">
+        <skill id="4730"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="149">
+        <skill id="4723"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="150">
+        <skill id="2132"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="151">
+        <skill id="4786"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="152">
+        <skill id="4790"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="153">
+        <skill id="4795"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="154">
+        <skill id="4659"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="155">
+        <skill id="1271"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="156">
+        <skill id="1258"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="157">
+        <skill id="1494"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="158">
+        <skill id="1396"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="159">
+        <skill id="1259"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="160">
+        <skill id="4661"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="161">
+        <skill id="3776"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="162">
+        <skill id="3835"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="163">
+        <skill id="3582"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="164">
+        <skill id="3740"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="165">
+        <skill id="3614"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="166">
+        <skill id="4336"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="167">
+        <skill id="4246"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="168">
+        <skill id="4522"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="169">
+        <skill id="4471"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="170">
+        <skill id="4408"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="171">
+        <skill id="4264"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="172">
+        <skill id="3478"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="173">
+        <skill id="3196"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="174">
+        <skill id="3340"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="175">
+        <skill id="3470"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="176">
+        <skill id="3223"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="177">
+        <skill id="3365"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="178">
+        <skill id="939"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="179">
+        <skill id="784"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="180">
+        <skill id="994"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="181">
+        <skill id="830"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="182">
+        <skill id="1102"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="183">
+        <skill id="826"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="184">
+        <skill id="2142"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="185">
+        <skill id="2008"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="186">
+        <skill id="2125"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="187">
+        <skill id="2322"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="188">
+        <skill id="2219"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="189">
+        <skill id="1992"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="190">
+        <skill id="4170"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="191">
+        <skill id="1838"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="192">
+        <skill id="4213"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="193">
+        <skill id="3951"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="194">
+        <skill id="4012"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="195">
+        <skill id="4083"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="196">
+        <skill id="1891"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="197">
+        <skill id="1703"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="198">
+        <skill id="1596"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="199">
+        <skill id="1602"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="200">
+        <skill id="1768"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="201">
+        <skill id="1769"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="202">
+        <skill id="2807"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="203">
+        <skill id="2543"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="204">
+        <skill id="2806"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="205">
+        <skill id="2566"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="206">
+        <skill id="2819"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="207">
+        <skill id="2779"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="208">
+        <skill id="720"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="209">
+        <skill id="2864"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="210">
+        <skill id="769"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="211">
+        <skill id="635"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="212">
+        <skill id="670"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="213">
+        <skill id="739"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="214">
+        <skill id="2890"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="215">
+        <skill id="3131"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="216">
+        <skill id="3066"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="217">
+        <skill id="3130"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="218">
+        <skill id="3140"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="219">
+        <skill id="2864"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="220">
+        <skill id="3084"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="221">
+        <skill id="4176"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="222">
+        <skill id="4659"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="223">
+        <skill id="1271"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="224">
+        <skill id="1258"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="225">
+        <skill id="1494"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="226">
+        <skill id="1396"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="227">
+        <skill id="1259"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="228">
+        <skill id="4661"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="229">
+        <skill id="3776"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="230">
+        <skill id="3835"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="231">
+        <skill id="3582"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="232">
+        <skill id="3740"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="233">
+        <skill id="3614"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="234">
+        <skill id="4336"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="235">
+        <skill id="4246"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="236">
+        <skill id="4522"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="237">
+        <skill id="4471"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="238">
+        <skill id="4408"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="239">
+        <skill id="4264"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="240">
+        <skill id="3478"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="241">
+        <skill id="3196"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="242">
+        <skill id="3340"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="243">
+        <skill id="3470"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="244">
+        <skill id="3223"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="245">
+        <skill id="3365"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="246">
+        <skill id="939"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="247">
+        <skill id="784"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="248">
+        <skill id="994"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="249">
+        <skill id="830"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="250">
+        <skill id="1102"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="251">
+        <skill id="826"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="252">
+        <skill id="2142"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="253">
+        <skill id="2008"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="254">
+        <skill id="2125"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="255">
+        <skill id="2322"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="256">
+        <skill id="2219"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="257">
+        <skill id="1992"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="258">
+        <skill id="4170"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="259">
+        <skill id="1838"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="260">
+        <skill id="4213"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="261">
+        <skill id="3951"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="262">
+        <skill id="4012"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="263">
+        <skill id="4083"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="264">
+        <skill id="1891"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="265">
+        <skill id="1703"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="266">
+        <skill id="1596"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="267">
+        <skill id="1602"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="268">
+        <skill id="1768"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="269">
+        <skill id="1769"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="270">
+        <skill id="2807"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="271">
+        <skill id="2543"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="272">
+        <skill id="2806"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="273">
+        <skill id="2566"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="274">
+        <skill id="2819"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="275">
+        <skill id="2779"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="276">
+        <skill id="720"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="277">
+        <skill id="2864"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="278">
+        <skill id="769"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="279">
+        <skill id="635"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="280">
+        <skill id="670"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="281">
+        <skill id="739"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="282">
+        <skill id="2890"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="283">
+        <skill id="3131"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="284">
+        <skill id="3066"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="285">
+        <skill id="3130"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="286">
+        <skill id="3140"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="287">
+        <skill id="2864"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="288">
+        <skill id="3084"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+	<skill_enchant id="289">
+        <skill id="4176"/>
+	    <modifiers chance="10.0">
+        </modifiers>
+    </skill_enchant>
+</skill_enchants>

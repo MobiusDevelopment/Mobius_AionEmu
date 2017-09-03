@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Agent Fight 4.7
+	Made By Rinzler (Encom)
+ -->
+<agent_schedule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="agent_schedule.xsd">
+	<!-- [AGENT FIGHT LEVINSHOR 4.7] -->
+	<!-- [EMPOWERED MASTARIUS & EMPOWERED VEILLE] -->
+	<agent id="1">
+		<fightTime>0 0 8 ? * MON-SUN *</fightTime>
+		<fightTime>0 0 12 ? * MON-SAT *</fightTime>
+		<fightTime>0 0 16 ? * MON-SUN *</fightTime>
+		<fightTime>0 0 0 ? * MON-SUN *</fightTime>
+		<fightTime>0 0 4 ? * MON-SUN *</fightTime>
+	</agent>
+	<!-- [AGENT INGGISON & GELKMAROS 2.0] -->
+	<!-- [ENRAGED VEILLE] -->
+	<agent id="2">
+	    <fightTime>0 0 9 ? * MON-SUN *</fightTime>
+		<fightTime>0 0 13 ? * MON-SUN *</fightTime>
+		<fightTime>0 0 17 ? * MON-SUN *</fightTime>
+		<fightTime>0 0 1 ? * MON-SUN *</fightTime>
+		<fightTime>0 0 5 ? * MON-SUN *</fightTime>
+	</agent>
+	<!-- [ENRAGED MASTARIUS] -->
+	<agent id="3">
+	    <fightTime>0 0 9 ? * MON-SUN *</fightTime>
+		<fightTime>0 0 13 ? * MON-SUN *</fightTime>
+		<fightTime>0 0 17 ? * MON-SUN *</fightTime>
+		<fightTime>0 0 1 ? * MON-SUN *</fightTime>
+		<fightTime>0 0 5 ? * MON-SUN *</fightTime>
+	</agent>
+</agent_schedule>

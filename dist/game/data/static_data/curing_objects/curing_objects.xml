@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Curing Object 4.3/4.7.5/5.0/5.1
+	Made By Encom
+ -->
+<curing_objects xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="curing_objects.xsd">
+	<!-- SANCTUM -->
+	<curing_object map_id="110010000" x="1320.9950" y="1516.3832" z="567.91705" range="10.3"/>
+	<!-- POETA -->
+	<curing_object map_id="210010000" x="440.92267" y="1744.5022" z="119.65639" range="10.3"/>
+	<curing_object map_id="210010000" x="805.29236" y="1237.8237" z="118.75000" range="10.3"/>
+	<!-- VERTERON -->
+	<curing_object map_id="210030000" x="1293.9990" y="2204.0962" z="142.13095" range="10.3"/>
+	<curing_object map_id="210030000" x="2059.4385" y="2422.0554" z="274.21484" range="10.3"/>
+	<curing_object map_id="210030000" x="2334.2947" y="1821.0206" z="193.00087" range="10.3"/>
+	<curing_object map_id="210030000" x="2381.6404" y="787.67004" z="102.30739" range="10.3"/>
+	<curing_object map_id="210030000" x="1643.0200" y="1505.0400" z="119.71300" range="10.3"/>
+	<!-- ELTNEN -->
+	<curing_object map_id="210020000" x="690.64490" y="434.95303" z="332.10992" range="10.3"/>
+	<curing_object map_id="210020000" x="1777.3481" y="883.15090" z="422.00000" range="10.3"/>
+	<curing_object map_id="210020000" x="2409.8884" y="2722.2354" z="361.62500" range="10.3"/>
+	<curing_object map_id="210020000" x="934.62274" y="2208.7153" z="253.25162" range="10.3"/>
+	<curing_object map_id="210020000" x="340.63900" y="2730.0500" z="264.03000" range="10.3"/>
+	<curing_object map_id="210020000" x="1917.0900" y="2044.6800" z="361.66700" range="10.3"/>
+	<!-- HEIRON -->
+	<curing_object map_id="210040000" x="2770.6638" y="1887.0455" z="153.81479" range="10.3"/>
+	<curing_object map_id="210040000" x="173.26576" y="1655.6879" z="120.44034" range="10.3"/>
+	<curing_object map_id="210040000" x="983.55597" y="686.14360" z="135.12500" range="10.3"/>
+	<curing_object map_id="210040000" x="914.73440" y="2260.7330" z="157.71408" range="10.3"/>
+	<curing_object map_id="210040000" x="2002.8744" y="1388.0824" z="118.12500" range="10.3"/>
+	<curing_object map_id="210040000" x="764.45880" y="2884.0918" z="107.09123" range="10.3"/>
+	<curing_object map_id="210040000" x="2520.6300" y="350.72400" z="411.32900" range="10.3"/>
+	<curing_object map_id="210040000" x="1422.6200" y="1338.4500" z="174.75000" range="10.3"/>
+	<curing_object map_id="210040000" x="1630.3600" y="2696.5600" z="115.37500" range="10.3"/>
+	<!-- INGGISON -->
+	<curing_object map_id="210050000" x="1339.4084" y="268.29758" z="589.42175" range="10.3"/>
+	<curing_object map_id="210050000" x="2712.6167" y="1426.9312" z="384.47630" range="10.3"/>
+	<curing_object map_id="210050000" x="392.91556" y="948.43730" z="460.50055" range="10.3"/>
+	<curing_object map_id="210050000" x="1894.1260" y="1750.2194" z="327.61115" range="10.3"/>
+	<!-- THEOBOMOS -->
+	<curing_object map_id="210060000" x="2242.0122" y="2282.0550" z="50.491380" range="10.3"/>
+	<curing_object map_id="210060000" x="1394.5488" y="1554.7007" z="30.875000" range="10.3"/>
+	<curing_object map_id="210060000" x="905.60913" y="2772.5940" z="62.212875" range="10.3"/>
+	<curing_object map_id="210060000" x="2675.6620" y="827.89777" z="138.35718" range="10.3"/>
+	<curing_object map_id="210060000" x="453.93478" y="1258.5248" z="126.87500" range="10.3"/>
+	<curing_object map_id="210060000" x="1212.7177" y="386.37057" z="217.35180" range="10.3"/>
+	<curing_object map_id="210060000" x="2779.8680" y="2140.0745" z="75.711270" range="10.3"/>
+	<!-- CYGNEA -->
+	<curing_object map_id="210070000" x="2895.9548" y="798.37420" z="569.60126" range="10.3"/>
+	<curing_object map_id="210070000" x="506.22950" y="1900.5718" z="467.20273" range="10.3"/>
+	<curing_object map_id="210070000" x="2167.8652" y="2904.4420" z="325.25000" range="10.3"/>
+	<curing_object map_id="210070000" x="1135.8120" y="2911.4673" z="291.26178" range="10.3"/>
+	<!-- ILUMA -->
+	<curing_object map_id="210100000" x="835.10770" y="1853.3948" z="310.19380" range="10.3"/>
+	<curing_object map_id="210100000" x="1894.7565" y="2046.5613" z="343.40512" range="10.3"/>
+	<curing_object map_id="210100000" x="2434.3157" y="1274.5050" z="227.75000" range="10.3"/>
+	<curing_object map_id="210100000" x="1357.6220" y="390.53275" z="349.75000" range="10.3"/>
+	<!-- PANDAEMONIUM -->
+	<curing_object map_id="120010000" x="1674.4692" y="1404.5408" z="194.74540" range="10.3"/>
+	<!-- ISHALGEN -->
+	<curing_object map_id="220010000" x="939.91187" y="1700.0162" z="259.74390" range="10.3"/>
+	<curing_object map_id="220010000" x="530.05900" y="2453.7200" z="281.37500" range="10.3"/>
+	<!-- ALTGARD -->
+	<curing_object map_id="220030000" x="1750.1696" y="1802.1425" z="254.43912" range="10.3"/>
+	<curing_object map_id="220030000" x="2689.0698" y="1025.1900" z="312.24194" range="10.3"/>
+	<curing_object map_id="220030000" x="1471.2162" y="2564.5708" z="299.00000" range="10.3"/>
+	<curing_object map_id="220030000" x="2668.5168" y="1663.8270" z="324.68967" range="10.3"/>
+	<curing_object map_id="220030000" x="1906.7651" y="698.87430" z="260.54752" range="10.3"/>
+	<!-- MORHEIM -->
+	<curing_object map_id="220020000" x="1069.4409" y="2488.9763" z="239.28494" range="10.3"/>
+	<curing_object map_id="220020000" x="2795.7310" y="1118.0547" z="171.37500" range="10.3"/>
+	<curing_object map_id="220020000" x="1775.2734" y="1661.9309" z="197.56206" range="10.3"/>
+	<curing_object map_id="220020000" x="303.66803" y="2274.8735" z="448.62534" range="10.3"/>
+	<curing_object map_id="220020000" x="637.14020" y="897.73944" z="360.60535" range="10.3"/>
+	<curing_object map_id="220020000" x="2343.1672" y="2221.3682" z="127.05163" range="10.3"/>
+	<curing_object map_id="220020000" x="2390.1724" y="1737.8538" z="101.87500" range="10.3"/>
+	<!-- BELUSLAN -->
+	<curing_object map_id="220040000" x="393.25300" y="406.88068" z="222.11166" range="10.3"/>
+	<curing_object map_id="220040000" x="2459.3410" y="2070.7627" z="577.23620" range="10.3"/>
+	<curing_object map_id="220040000" x="1907.5759" y="500.17343" z="412.13583" range="10.3"/>
+	<curing_object map_id="220040000" x="1244.4023" y="817.30860" z="259.87500" range="10.3"/>
+	<curing_object map_id="220040000" x="2361.0447" y="1237.9553" z="469.98853" range="10.3"/>
+	<curing_object map_id="220040000" x="532.54560" y="1879.2339" z="261.37500" range="10.3"/>
+	<!-- BRUSHTONIN -->
+	<curing_object map_id="220050000" x="2923.4340" y="2418.3113" z="15.000000" range="10.3"/>
+	<curing_object map_id="220050000" x="1387.1172" y="2009.8157" z="51.449180" range="10.3"/>
+	<curing_object map_id="220050000" x="1533.6464" y="379.37915" z="231.03851" range="10.3"/>
+	<curing_object map_id="220050000" x="836.22363" y="2019.5700" z="307.25000" range="10.3"/>
+	<curing_object map_id="220050000" x="522.75750" y="850.94100" z="75.875000" range="10.3"/>
+	<curing_object map_id="220050000" x="247.50130" y="2520.0317" z="267.50000" range="10.3"/>
+	<!-- GELKMAROS -->
+	<curing_object map_id="220070000" x="1760.8632" y="2911.2908" z="554.79820" range="10.3"/>
+	<curing_object map_id="220070000" x="800.85390" y="1716.5687" z="357.85745" range="10.3"/>
+	<curing_object map_id="220070000" x="2498.4941" y="2145.1663" z="464.50555" range="10.3"/>
+	<curing_object map_id="220070000" x="1286.7462" y="1555.9907" z="303.74963" range="10.3"/>
+	<!-- ENSHAR -->
+	<curing_object map_id="220080000" x="461.00660" y="2261.7986" z="219.96588" range="10.3"/>
+	<curing_object map_id="220080000" x="2689.6580" y="1419.4094" z="338.97940" range="10.3"/>
+	<curing_object map_id="220080000" x="1574.2133" y="148.94653" z="186.81342" range="10.3"/>
+	<curing_object map_id="220080000" x="2392.8987" y="798.25740" z="286.91504" range="10.3"/>
+	<!-- NORSVOLD -->
+	<curing_object map_id="220110000" x="2182.0142" y="1855.3329" z="237.25000" range="10.3"/>
+	<curing_object map_id="220110000" x="1086.8320" y="2589.6310" z="232.85188" range="10.3"/>
+	<curing_object map_id="220110000" x="1008.4986" y="1377.6820" z="287.56470" range="10.3"/>
+	<curing_object map_id="220110000" x="1436.7047" y="957.31885" z="226.62132" range="10.3"/>
+	<!-- RESHANTA -->
+	<curing_object map_id="400010000" x="2859.4253" y="1036.5546" z="1528.1271" range="10.3"/>
+	<curing_object map_id="400010000" x="1084.7164" y="2840.1602" z="1636.4862" range="10.3"/>
+</curing_objects>

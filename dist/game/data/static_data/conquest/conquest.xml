@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Conquest/Offering 4.8
+	Shugo Emperor's Vault 4.7.5
+	Emperor Trillirunerk's Safe 4.9.1
+	Old Fire Temple 5.1
+	Made By Encom (Rinzler)
+ -->
+<conquest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="conquest.xsd">
+	<!-- [CONQUEST/OFFERING 4.8] -->
+	<!-- [Inggison] -->
+	<conquest_location id="1"/>
+	<!-- [Gelkmaros] -->
+	<conquest_location id="2"/>
+	
+	<!-- [THE SHUGO EMPEROR VAULT 4.7.5] -->
+	<!-- [EMPEROR TRILLIRUNERK SAFE 4.9.1] -->
+	<!-- [FIRE TEMPLE OF MEMORIES 5.1] -->
+	<!-- [Shugo Emperor's Vault 4.7.5 - Sanctum] -->
+	<conquest_location id="3"/>
+	<!-- [Emperor Trillirunerk's Safe 4.9.1 - Sanctum] -->
+	<conquest_location id="4"/>
+	<!-- [Shugo Emperor's Vault 4.7.5 - Pandaemonium] -->
+	<conquest_location id="5"/>
+	<!-- [Emperor Trillirunerk's Safe 4.9.1 - Pandaemonium] -->
+	<conquest_location id="6"/>
+	<!-- [Old Fire Temple 5.1 - Sanctum] -->
+	<conquest_location id="7"/>
+	<!-- [Old Fire Temple 5.1 - Pandaemonium] -->
+	<conquest_location id="8"/>
+</conquest>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Agent Fight 4.7
+	Made By Encom
+ -->
+<agent_fight xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="agent_fight.xsd">
+	<!-- [AGENT FIGHT LEVINSHOR 4.7] -->
+	<!-- [EMPOWERED MASTARIUS & EMPOWERED VEILLE] -->
+	<agent_location id="1"/>
+	<!-- [AGENT INGGISON & GELKMAROS 2.0] -->
+	<!-- [ENRAGED VEILLE] -->
+	<agent_location id="2"/>
+	<!-- [ENRAGED MASTARIUS] -->
+	<agent_location id="3"/>
+</agent_fight>

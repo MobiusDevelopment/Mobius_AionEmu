@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	[Moltenus Reshanta]
+	Made By Encom
+ -->
+<moltenus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="moltenus.xsd">
+	<!-- エレシュランタ -->
+	<moltenus_location id="1"/>
+	<moltenus_location id="2"/>
+	<moltenus_location id="3"/>
+</moltenus>

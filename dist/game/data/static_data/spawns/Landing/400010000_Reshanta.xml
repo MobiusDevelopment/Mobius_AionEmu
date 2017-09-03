@@ -1,0 +1,2898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Abyss Landing 4.9.1
+	Made By Encom
+ -->
+<spawns>
+    <spawn_map map_id="400010000">
+        <!-- Redemption Landing -->
+        <landing_spawn id="1" name_id="404687">
+            <landing_level level="LVL1">
+                <!-- Cygnia Corridor -->
+				<spawn npc_id="805604">
+				    <spot x="2409.239" y="363.0645" z="2938.0312" h="32"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805615">
+				    <spot x="2466.6182" y="429.25024" z="2939.5876" h="54"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883912">
+				    <spot x="2356.5496" y="514.38995" z="2939.0083" entity_id="1888"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884038">
+				    <spot x="2387.7498" y="512.1005" z="2938.5012" h="33"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL2">
+                <!-- Cygnia Corridor -->
+				<spawn npc_id="805604">
+				    <spot x="2409.239" y="363.0645" z="2938.0312" h="32"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805613">
+				    <spot x="2468.7" y="452.7596" z="2939.588" h="62"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805614">
+				    <spot x="2468.5315" y="440.3786" z="2939.588" h="59"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805615">
+				    <spot x="2466.6182" y="429.25024" z="2939.5876" h="54"/>
+				</spawn>
+				<!-- Ugirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805634">
+				    <spot x="2385.0398" y="382.11743" z="2938.0312" h="94"/>
+				</spawn>
+				<!-- Basilios
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805647">
+				    <spot x="2329.3057" y="472.88434" z="2939.4001" h="113"/>
+				</spawn>
+				<!-- Nerisa
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805648">
+				    <spot x="2328.483" y="469.88193" z="2939.4004" h="114"/>
+				</spawn>
+				<!-- Damaskos
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805649">
+				    <spot x="2456.242" y="487.19266" z="2939.5881" h="72"/>
+				</spawn>
+				<!-- Sanctum Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805746">
+				    <spot x="2396.6714" y="361.26315" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Jonar
+				<Redemption Landing Captain> -->
+				<spawn npc_id="805798">
+				    <spot x="2466.976" y="463.28973" z="2939.588" h="65"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883912">
+				    <spot x="2356.5496" y="514.38995" z="2939.0083" entity_id="1888"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883913">
+				    <spot x="2312.74490" y="460.8306" z="2939.9192" entity_id="2437"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884038">
+				    <spot x="2387.7498" y="512.1005" z="2938.5012" h="33"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884039">
+				    <spot x="2351.1353" y="488.48846" z="2938.3105" h="15"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL3">
+                <!-- Cygnia Corridor -->
+				<spawn npc_id="805604">
+				    <spot x="2409.239" y="363.0645" z="2938.0312" h="32"/>
+				</spawn>
+				<!-- Inggison Corridor
+				<Landing Level 3 Facility> -->
+				<spawn npc_id="805606">
+				    <spot x="2403.2922" y="362.10324" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805613">
+				    <spot x="2468.7" y="452.7596" z="2939.588" h="62"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805614">
+				    <spot x="2468.5315" y="440.3786" z="2939.588" h="59"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805615">
+				    <spot x="2466.6182" y="429.25024" z="2939.5876" h="54"/>
+				</spawn>
+				<!-- Ugirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805634">
+				    <spot x="2385.0398" y="382.11743" z="2938.0312" h="94"/>
+				</spawn>
+				<!-- Vernamin
+				<General Goods Merchant> -->
+				<spawn npc_id="805637">
+				    <spot x="2381.7507" y="381.6727" z="2938.0312" h="93"/>
+				</spawn>
+				<!-- Benedictus
+				<Blood Mark Weapon Officer> -->
+				<spawn npc_id="805644">
+				    <spot x="2393.78" y="361.8615" z="2944.8237" h="90"/>
+				</spawn>
+				<!-- Callansa
+				<Blood Mark Armor Officer> -->
+				<spawn npc_id="805645">
+				    <spot x="2390.593" y="362.44446" z="2944.8237" h="86"/>
+				</spawn>
+				<!-- Taniana
+				<Blood Mark Accessory Officer> -->
+				<spawn npc_id="805646">
+				    <spot x="2387.807" y="363.1999" z="2944.8237" h="86"/>
+				</spawn>
+				<!-- Basilios
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805647">
+				    <spot x="2329.3057" y="472.88434" z="2939.4001" h="113"/>
+				</spawn>
+				<!-- Nerisa
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805648">
+				    <spot x="2328.483" y="469.88193" z="2939.4004" h="114"/>
+				</spawn>
+				<!-- Damaskos
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805649">
+				    <spot x="2456.242" y="487.19266" z="2939.5881" h="72"/>
+				</spawn>
+				<!-- Ligia
+				<Special Crafting Merchant> -->
+				<spawn npc_id="805650">
+				    <spot x="2458.3726" y="484.30954" z="2939.5881" h="73"/>
+				</spawn>
+				<!-- Karlika
+				<Special Crafting Contributor> -->
+				<spawn npc_id="805651">
+				    <spot x="2460.2905" y="482.19608" z="2939.588" h="70"/>
+				</spawn>
+				<!-- Harunerk
+				<Ancient Coin Reward Officer> -->
+				<spawn npc_id="805652">
+				    <spot x="2461.601" y="479.28528" z="2939.588" h="68"/>
+				</spawn>
+				<!-- Shurunerk
+				<Special Crafting Item Merchant> -->
+				<spawn npc_id="805653">
+				    <spot x="2463.7368" y="474.36533" z="2939.588" h="68"/>
+				</spawn>
+				<!-- Chaorinrin
+				<Material Merchant> -->
+				<spawn npc_id="805654">
+				    <spot x="2465.2754" y="470.84338" z="2939.588" h="66"/>
+				</spawn>
+				<!-- Naoshunerk
+				<Draconic Design Merchant> -->
+				<spawn npc_id="805655">
+				    <spot x="2466.1614" y="467.3423" z="2939.588" h="64"/>
+				</spawn>
+				<!-- Damara
+				<Blood Mark Equipment Officer> -->
+				<spawn npc_id="805659">
+				    <spot x="2325.1606" y="458.9093" z="2939.4004" h="117"/>
+				</spawn>
+				<!-- Sanctum Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805746">
+				    <spot x="2396.6714" y="361.26315" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Jonar
+				<Redemption Landing Captain> -->
+				<spawn npc_id="805798">
+				    <spot x="2466.976" y="463.28973" z="2939.588" h="65"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883912">
+				    <spot x="2356.5496" y="514.38995" z="2939.0083" entity_id="1888"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883913">
+				    <spot x="2312.74490" y="460.8306" z="2939.9192" entity_id="2437"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883914">
+				    <spot x="2301.4282" y="415.56204" z="2942.8230" entity_id="2554"/>
+				</spawn>
+				<!-- Redemption Flight Energy
+				<Well Of Winds> -->
+				<spawn npc_id="883956">
+				    <spot x="2417.1055" y="473.24673" z="2938.3416" h="76"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884038">
+				    <spot x="2387.7498" y="512.1005" z="2938.5012" h="33"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884039">
+				    <spot x="2351.1353" y="488.48846" z="2938.3105" h="15"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884040">
+				    <spot x="2428.592" y="500.13943" z="2938.3079" h="50"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL4">
+				<!-- Cygnia Corridor -->
+				<spawn npc_id="805604">
+				    <spot x="2409.239" y="363.0645" z="2938.0312" h="32"/>
+				</spawn>
+				<!-- Inggison Corridor
+				<Landing Level 3 Facility> -->
+				<spawn npc_id="805606">
+				    <spot x="2403.2922" y="362.10324" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Kaldor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805607">
+				    <spot x="2415.2937" y="363.8368" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Levinshor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805608">
+				    <spot x="2421.9958" y="364.96555" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Iluma Corridor -->
+				<spawn npc_id="731701">
+				    <spot x="2390.4067" y="365.846" z="2938.0312" h="3"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805613">
+				    <spot x="2468.7" y="452.7596" z="2939.588" h="62"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805614">
+				    <spot x="2468.5315" y="440.3786" z="2939.588" h="59"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805615">
+				    <spot x="2466.6182" y="429.25024" z="2939.5876" h="54"/>
+				</spawn>
+				<!-- Ugirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805634">
+				    <spot x="2385.0398" y="382.11743" z="2938.0312" h="94"/>
+				</spawn>
+				<!-- Vernamin
+				<General Goods Merchant> -->
+				<spawn npc_id="805637">
+				    <spot x="2381.7507" y="381.6727" z="2938.0312" h="93"/>
+				</spawn>
+				<!-- Benedictus
+				<Blood Mark Weapon Officer> -->
+				<spawn npc_id="805644">
+				    <spot x="2393.78" y="361.8615" z="2944.8237" h="90"/>
+				</spawn>
+				<!-- Callansa
+				<Blood Mark Armor Officer> -->
+				<spawn npc_id="805645">
+				    <spot x="2390.593" y="362.44446" z="2944.8237" h="86"/>
+				</spawn>
+				<!-- Taniana
+				<Blood Mark Accessory Officer> -->
+				<spawn npc_id="805646">
+				    <spot x="2387.807" y="363.1999" z="2944.8237" h="86"/>
+				</spawn>
+				<!-- Basilios
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805647">
+				    <spot x="2329.3057" y="472.88434" z="2939.4001" h="113"/>
+				</spawn>
+				<!-- Nerisa
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805648">
+				    <spot x="2328.483" y="469.88193" z="2939.4004" h="114"/>
+				</spawn>
+				<!-- Damaskos
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805649">
+				    <spot x="2456.242" y="487.19266" z="2939.5881" h="72"/>
+				</spawn>
+				<!-- Ligia
+				<Special Crafting Merchant> -->
+				<spawn npc_id="805650">
+				    <spot x="2458.3726" y="484.30954" z="2939.5881" h="73"/>
+				</spawn>
+				<!-- Karlika
+				<Special Crafting Contributor> -->
+				<spawn npc_id="805651">
+				    <spot x="2460.2905" y="482.19608" z="2939.588" h="70"/>
+				</spawn>
+				<!-- Harunerk
+				<Ancient Coin Reward Officer> -->
+				<spawn npc_id="805652">
+				    <spot x="2461.601" y="479.28528" z="2939.588" h="68"/>
+				</spawn>
+				<!-- Shurunerk
+				<Special Crafting Item Merchant> -->
+				<spawn npc_id="805653">
+				    <spot x="2463.7368" y="474.36533" z="2939.588" h="68"/>
+				</spawn>
+				<!-- Chaorinrin
+				<Material Merchant> -->
+				<spawn npc_id="805654">
+				    <spot x="2465.2754" y="470.84338" z="2939.588" h="66"/>
+				</spawn>
+				<!-- Naoshunerk
+				<Draconic Design Merchant> -->
+				<spawn npc_id="805655">
+				    <spot x="2466.1614" y="467.3423" z="2939.588" h="64"/>
+				</spawn>
+				<!-- Daorinerk
+				<Ancient Relics Supervisor> -->
+				<spawn npc_id="805657">
+				    <spot x="2327.032" y="465.99048" z="2939.4001" h="114"/>
+				</spawn>
+				<!-- Damara
+				<Blood Mark Equipment Officer> -->
+				<spawn npc_id="805659">
+				    <spot x="2325.1606" y="458.9093" z="2939.4004" h="117"/>
+				</spawn>
+				<!-- Sanctum Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805746">
+				    <spot x="2396.6714" y="361.26315" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Jonar
+				<Redemption Landing Captain> -->
+				<spawn npc_id="805798">
+				    <spot x="2466.976" y="463.28973" z="2939.588" h="65"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883912">
+				    <spot x="2356.5496" y="514.38995" z="2939.0083" entity_id="1888"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883913">
+				    <spot x="2312.74490" y="460.8306" z="2939.9192" entity_id="2437"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883914">
+				    <spot x="2301.4282" y="415.56204" z="2942.8230" entity_id="2554"/>
+				</spawn>
+				<!-- Redemption's Light
+				<10,000 Points> -->
+				<spawn npc_id="883915">
+				    <spot x="2333.2852" y="355.17447" z="2976.3774" entity_id="2555"/>
+				</spawn>
+				<!-- Redemption Flight Energy
+				<Well Of Winds> -->
+				<spawn npc_id="883956">
+				    <spot x="2417.1055" y="473.24673" z="2938.3416" h="76"/>
+				</spawn>
+				<!-- Redemption Life Energy
+				<Well Of Renewal> -->
+				<spawn npc_id="883957">
+				    <spot x="2369.023" y="466.1781" z="2938.3416" h="109"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884038">
+				    <spot x="2387.7498" y="512.1005" z="2938.5012" h="33"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884039">
+				    <spot x="2351.1353" y="488.48846" z="2938.3105" h="15"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884040">
+				    <spot x="2428.592" y="500.13943" z="2938.3079" h="50"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<10,000 Points> -->
+				<spawn npc_id="884041">
+				    <spot x="2449.6318" y="459.2829" z="2938.0808" h="36"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL5">
+                <!-- Cygnia Corridor -->
+				<spawn npc_id="805604">
+				    <spot x="2409.239" y="363.0645" z="2938.0312" h="32"/>
+				</spawn>
+				<!-- Inggison Corridor
+				<Landing Level 3 Facility> -->
+				<spawn npc_id="805606">
+				    <spot x="2403.2922" y="362.10324" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Kaldor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805607">
+				    <spot x="2415.2937" y="363.8368" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Levinshor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805608">
+				    <spot x="2421.9958" y="364.96555" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Iluma Corridor -->
+				<spawn npc_id="731701">
+				    <spot x="2390.4067" y="365.846" z="2938.0312" h="3"/>
+				</spawn>
+				<!-- Torino
+				<Landing Level 5 Illuminary Obelisk Entrance Officer> -->
+				<spawn npc_id="805609">
+				    <spot x="2324.3171" y="442.34793" z="2939.4001" h="1"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805613">
+				    <spot x="2468.7" y="452.7596" z="2939.588" h="62"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805614">
+				    <spot x="2468.5315" y="440.3786" z="2939.588" h="59"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805615">
+				    <spot x="2466.6182" y="429.25024" z="2939.5876" h="54"/>
+				</spawn>
+				<!-- Ugirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805634">
+				    <spot x="2385.0398" y="382.11743" z="2938.0312" h="94"/>
+				</spawn>
+				<!-- Vernamin
+				<General Goods Merchant> -->
+				<spawn npc_id="805637">
+				    <spot x="2381.7507" y="381.6727" z="2938.0312" h="93"/>
+				</spawn>
+				<!-- Vatsaros
+				<Stigma Master> -->
+				<spawn npc_id="805640">
+				    <spot x="2431.6997" y="389.26172" z="2938.0312" h="93"/>
+				</spawn>
+				<!-- Achilios
+				<Blood Medal Weapon Officer> -->
+				<spawn npc_id="805641">
+				    <spot x="2394.3691" y="353.04453" z="2944.8237" h="23"/>
+				</spawn>
+				<!-- Adonia
+				<Blood Medal Armor Officer> -->
+				<spawn npc_id="805642">
+				    <spot x="2391.8071" y="353.9134" z="2944.8237" h="26"/>
+				</spawn>
+				<!-- Benedictus
+				<Blood Mark Weapon Officer> -->
+				<spawn npc_id="805644">
+				    <spot x="2393.78" y="361.8615" z="2944.8237" h="90"/>
+				</spawn>
+				<!-- Callansa
+				<Blood Mark Armor Officer> -->
+				<spawn npc_id="805645">
+				    <spot x="2390.593" y="362.44446" z="2944.8237" h="86"/>
+				</spawn>
+				<!-- Taniana
+				<Blood Mark Accessory Officer> -->
+				<spawn npc_id="805646">
+				    <spot x="2387.807" y="363.1999" z="2944.8237" h="86"/>
+				</spawn>
+				<!-- Basilios
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805647">
+				    <spot x="2329.3057" y="472.88434" z="2939.4001" h="113"/>
+				</spawn>
+				<!-- Nerisa
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805648">
+				    <spot x="2328.483" y="469.88193" z="2939.4004" h="114"/>
+				</spawn>
+				<!-- Damaskos
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805649">
+				    <spot x="2456.242" y="487.19266" z="2939.5881" h="72"/>
+				</spawn>
+				<!-- Ligia
+				<Special Crafting Merchant> -->
+				<spawn npc_id="805650">
+				    <spot x="2458.3726" y="484.30954" z="2939.5881" h="73"/>
+				</spawn>
+				<!-- Karlika
+				<Special Crafting Contributor> -->
+				<spawn npc_id="805651">
+				    <spot x="2460.2905" y="482.19608" z="2939.588" h="70"/>
+				</spawn>
+				<!-- Harunerk
+				<Ancient Coin Reward Officer> -->
+				<spawn npc_id="805652">
+				    <spot x="2461.601" y="479.28528" z="2939.588" h="68"/>
+				</spawn>
+				<!-- Shurunerk
+				<Special Crafting Item Merchant> -->
+				<spawn npc_id="805653">
+				    <spot x="2463.7368" y="474.36533" z="2939.588" h="68"/>
+				</spawn>
+				<!-- Chaorinrin
+				<Material Merchant> -->
+				<spawn npc_id="805654">
+				    <spot x="2465.2754" y="470.84338" z="2939.588" h="66"/>
+				</spawn>
+				<!-- Naoshunerk
+				<Draconic Design Merchant> -->
+				<spawn npc_id="805655">
+				    <spot x="2466.1614" y="467.3423" z="2939.588" h="64"/>
+				</spawn>
+				<!-- Daorinerk
+				<Ancient Relics Supervisor> -->
+				<spawn npc_id="805657">
+				    <spot x="2327.032" y="465.99048" z="2939.4001" h="114"/>
+				</spawn>
+				<!-- Zakus
+				<Blood Medal Consumables Officer> -->
+				<spawn npc_id="805658">
+				    <spot x="2325.4397" y="462.38333" z="2939.4001" h="116"/>
+				</spawn>
+				<!-- Damara
+				<Blood Mark Equipment Officer> -->
+				<spawn npc_id="805659">
+				    <spot x="2325.1606" y="458.9093" z="2939.4004" h="117"/>
+				</spawn>
+				<!-- Sanctum Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805746">
+				    <spot x="2396.6714" y="361.26315" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Jonar
+				<Redemption Landing Captain> -->
+				<spawn npc_id="805798">
+				    <spot x="2466.976" y="463.28973" z="2939.588" h="65"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883912">
+				    <spot x="2356.5496" y="514.38995" z="2939.0083" entity_id="1888"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883913">
+				    <spot x="2312.74490" y="460.8306" z="2939.9192" entity_id="2437"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883914">
+				    <spot x="2301.4282" y="415.56204" z="2942.8230" entity_id="2554"/>
+				</spawn>
+				<!-- Redemption's Light
+				<10,000 Points> -->
+				<spawn npc_id="883915">
+				    <spot x="2333.2852" y="355.17447" z="2976.3774" entity_id="2555"/>
+				</spawn>
+				<!-- Redemption's Light
+				<10,000 Points> -->
+				<spawn npc_id="883916">
+				    <spot x="2345.0183" y="381.47079" z="2973.9333" entity_id="2792"/>
+				</spawn>
+				<!-- Redemption Flight Energy
+				<Well Of Winds> -->
+				<spawn npc_id="883956">
+				    <spot x="2417.1055" y="473.24673" z="2938.3416" h="76"/>
+				</spawn>
+				<!-- Redemption Life Energy
+				<Well Of Renewal> -->
+				<spawn npc_id="883957">
+				    <spot x="2369.023" y="466.1781" z="2938.3416" h="109"/>
+				</spawn>
+				<!-- Redemption Battle Energy
+				<Well Of Strength> -->
+				<spawn npc_id="883958">
+				    <spot x="2425.79" y="462.6022" z="2938.3416" h="70"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884038">
+				    <spot x="2387.7498" y="512.1005" z="2938.5012" h="33"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884039">
+				    <spot x="2351.1353" y="488.48846" z="2938.3105" h="15"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884040">
+				    <spot x="2428.592" y="500.13943" z="2938.3079" h="50"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<10,000 Points> -->
+				<spawn npc_id="884041">
+				    <spot x="2449.6318" y="459.2829" z="2938.0808" h="36"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<10,000 Points> -->
+				<spawn npc_id="884042">
+				    <spot x="2343.4214" y="444.5649" z="2938.1006" h="31"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL6">
+                <!-- Cygnia Corridor -->
+				<spawn npc_id="805604">
+				    <spot x="2409.239" y="363.0645" z="2938.0312" h="32"/>
+				</spawn>
+				<!-- Inggison Corridor
+				<Landing Level 3 Facility> -->
+				<spawn npc_id="805606">
+				    <spot x="2403.2922" y="362.10324" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Kaldor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805607">
+				    <spot x="2415.2937" y="363.8368" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Levinshor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805608">
+				    <spot x="2421.9958" y="364.96555" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Iluma Corridor -->
+				<spawn npc_id="731701">
+				    <spot x="2390.4067" y="365.846" z="2938.0312" h="3"/>
+				</spawn>
+				<!-- Torino
+				<Landing Level 5 Illuminary Obelisk Entrance Officer> -->
+				<spawn npc_id="805609">
+				    <spot x="2324.3171" y="442.34793" z="2939.4001" h="1"/>
+				</spawn>
+				<!-- Zenoa
+				<Landing Level 6 Danuar Reliquary Entrance Officer> -->
+				<spawn npc_id="805610">
+				    <spot x="2326.0183" y="431.7206" z="2939.4001" h="5"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805613">
+				    <spot x="2468.7" y="452.7596" z="2939.588" h="62"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805614">
+				    <spot x="2468.5315" y="440.3786" z="2939.588" h="59"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805615">
+				    <spot x="2466.6182" y="429.25024" z="2939.5876" h="54"/>
+				</spawn>
+				<!-- Ugirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805634">
+				    <spot x="2385.0398" y="382.11743" z="2938.0312" h="94"/>
+				</spawn>
+				<!-- Vernamin
+				<General Goods Merchant> -->
+				<spawn npc_id="805637">
+				    <spot x="2381.7507" y="381.6727" z="2938.0312" h="93"/>
+				</spawn>
+				<!-- Vatsaros
+				<Stigma Master> -->
+				<spawn npc_id="805640">
+				    <spot x="2431.6997" y="389.26172" z="2938.0312" h="93"/>
+				</spawn>
+				<!-- Achilios
+				<Blood Medal Weapon Officer> -->
+				<spawn npc_id="805641">
+				    <spot x="2394.3691" y="353.04453" z="2944.8237" h="23"/>
+				</spawn>
+				<!-- Adonia
+				<Blood Medal Armor Officer> -->
+				<spawn npc_id="805642">
+				    <spot x="2391.8071" y="353.9134" z="2944.8237" h="26"/>
+				</spawn>
+				<!-- Benedictus
+				<Blood Mark Weapon Officer> -->
+				<spawn npc_id="805644">
+				    <spot x="2393.78" y="361.8615" z="2944.8237" h="90"/>
+				</spawn>
+				<!-- Callansa
+				<Blood Mark Armor Officer> -->
+				<spawn npc_id="805645">
+				    <spot x="2390.593" y="362.44446" z="2944.8237" h="86"/>
+				</spawn>
+				<!-- Taniana
+				<Blood Mark Accessory Officer> -->
+				<spawn npc_id="805646">
+				    <spot x="2387.807" y="363.1999" z="2944.8237" h="86"/>
+				</spawn>
+				<!-- Basilios
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805647">
+				    <spot x="2329.3057" y="472.88434" z="2939.4001" h="113"/>
+				</spawn>
+				<!-- Nerisa
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805648">
+				    <spot x="2328.483" y="469.88193" z="2939.4004" h="114"/>
+				</spawn>
+				<!-- Damaskos
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805649">
+				    <spot x="2456.242" y="487.19266" z="2939.5881" h="72"/>
+				</spawn>
+				<!-- Ligia
+				<Special Crafting Merchant> -->
+				<spawn npc_id="805650">
+				    <spot x="2458.3726" y="484.30954" z="2939.5881" h="73"/>
+				</spawn>
+				<!-- Karlika
+				<Special Crafting Contributor> -->
+				<spawn npc_id="805651">
+				    <spot x="2460.2905" y="482.19608" z="2939.588" h="70"/>
+				</spawn>
+				<!-- Harunerk
+				<Ancient Coin Reward Officer> -->
+				<spawn npc_id="805652">
+				    <spot x="2461.601" y="479.28528" z="2939.588" h="68"/>
+				</spawn>
+				<!-- Shurunerk
+				<Special Crafting Item Merchant> -->
+				<spawn npc_id="805653">
+				    <spot x="2463.7368" y="474.36533" z="2939.588" h="68"/>
+				</spawn>
+				<!-- Chaorinrin
+				<Material Merchant> -->
+				<spawn npc_id="805654">
+				    <spot x="2465.2754" y="470.84338" z="2939.588" h="66"/>
+				</spawn>
+				<!-- Naoshunerk
+				<Draconic Design Merchant> -->
+				<spawn npc_id="805655">
+				    <spot x="2466.1614" y="467.3423" z="2939.588" h="64"/>
+				</spawn>
+				<!-- Daorinerk
+				<Ancient Relics Supervisor> -->
+				<spawn npc_id="805657">
+				    <spot x="2327.032" y="465.99048" z="2939.4001" h="114"/>
+				</spawn>
+				<!-- Zakus
+				<Blood Medal Consumables Officer> -->
+				<spawn npc_id="805658">
+				    <spot x="2325.4397" y="462.38333" z="2939.4001" h="116"/>
+				</spawn>
+				<!-- Damara
+				<Blood Mark Equipment Officer> -->
+				<spawn npc_id="805659">
+				    <spot x="2325.1606" y="458.9093" z="2939.4004" h="117"/>
+				</spawn>
+				<!-- Sanctum Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805746">
+				    <spot x="2396.6714" y="361.26315" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Jonar
+				<Redemption Landing Captain> -->
+				<spawn npc_id="805798">
+				    <spot x="2466.976" y="463.28973" z="2939.588" h="65"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883912">
+				    <spot x="2356.5496" y="514.38995" z="2939.0083" entity_id="1888"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883913">
+				    <spot x="2312.74490" y="460.8306" z="2939.9192" entity_id="2437"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883914">
+				    <spot x="2301.4282" y="415.56204" z="2942.8230" entity_id="2554"/>
+				</spawn>
+				<!-- Redemption's Light
+				<10,000 Points> -->
+				<spawn npc_id="883915">
+				    <spot x="2333.2852" y="355.17447" z="2976.3774" entity_id="2555"/>
+				</spawn>
+				<!-- Redemption's Light
+				<10,000 Points> -->
+				<spawn npc_id="883916">
+				    <spot x="2345.0183" y="381.47079" z="2973.9333" entity_id="2792"/>
+				</spawn>
+				<!-- Redemption's Light
+				<16,000 Points> -->
+				<spawn npc_id="883917">
+				    <spot x="2414.5776" y="523.32947" z="2939.0967" entity_id="2793"/>
+				</spawn>
+				<!-- Redemption Flight Energy
+				<Well Of Winds> -->
+				<spawn npc_id="883956">
+				    <spot x="2417.1055" y="473.24673" z="2938.3416" h="76"/>
+				</spawn>
+				<!-- Redemption Life Energy
+				<Well Of Renewal> -->
+				<spawn npc_id="883957">
+				    <spot x="2369.023" y="466.1781" z="2938.3416" h="109"/>
+				</spawn>
+				<!-- Redemption Battle Energy
+				<Well Of Strength> -->
+				<spawn npc_id="883958">
+				    <spot x="2425.79" y="462.6022" z="2938.3416" h="70"/>
+				</spawn>
+				<!-- Redemption Defense Energy
+				<Well Of Protection> -->
+				<spawn npc_id="883959">
+				    <spot x="2364.0286" y="453.23087" z="2938.3416" h="118"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884038">
+				    <spot x="2387.7498" y="512.1005" z="2938.5012" h="33"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884039">
+				    <spot x="2351.1353" y="488.48846" z="2938.3105" h="15"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884040">
+				    <spot x="2428.592" y="500.13943" z="2938.3079" h="50"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<10,000 Points> -->
+				<spawn npc_id="884041">
+				    <spot x="2449.6318" y="459.2829" z="2938.0808" h="36"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<10,000 Points> -->
+				<spawn npc_id="884042">
+				    <spot x="2343.4214" y="444.5649" z="2938.1006" h="31"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<16,000 Points> -->
+				<spawn npc_id="884043">
+				    <spot x="2358.3833" y="400.6494" z="2938.309" h="47"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL7">
+                <!-- Cygnia Corridor -->
+				<spawn npc_id="805604">
+				    <spot x="2409.239" y="363.0645" z="2938.0312" h="32"/>
+				</spawn>
+				<!-- Inggison Corridor
+				<Landing Level 3 Facility> -->
+				<spawn npc_id="805606">
+				    <spot x="2403.2922" y="362.10324" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Kaldor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805607">
+				    <spot x="2415.2937" y="363.8368" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Levinshor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805608">
+				    <spot x="2421.9958" y="364.96555" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Iluma Corridor -->
+				<spawn npc_id="731701">
+				    <spot x="2390.4067" y="365.846" z="2938.0312" h="3"/>
+				</spawn>
+				<!-- Torino
+				<Landing Level 5 Illuminary Obelisk Entrance Officer> -->
+				<spawn npc_id="805609">
+				    <spot x="2324.3171" y="442.34793" z="2939.4001" h="1"/>
+				</spawn>
+				<!-- Zenoa
+				<Landing Level 6 Danuar Reliquary Entrance Officer> -->
+				<spawn npc_id="805610">
+				    <spot x="2326.0183" y="431.7206" z="2939.4001" h="5"/>
+				</spawn>
+				<!-- Milano
+				<Landing Level 7 Infinity Shard Entrance Officer> -->
+				<spawn npc_id="805611">
+				    <spot x="2329.4868" y="419.7908" z="2939.4001" h="7"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805613">
+				    <spot x="2468.7" y="452.7596" z="2939.588" h="62"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805614">
+				    <spot x="2468.5315" y="440.3786" z="2939.588" h="59"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805615">
+				    <spot x="2466.6182" y="429.25024" z="2939.5876" h="54"/>
+				</spawn>
+				<!-- Ugirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805634">
+				    <spot x="2385.0398" y="382.11743" z="2938.0312" h="94"/>
+				</spawn>
+				<!-- Vernamin
+				<General Goods Merchant> -->
+				<spawn npc_id="805637">
+				    <spot x="2381.7507" y="381.6727" z="2938.0312" h="93"/>
+				</spawn>
+				<!-- Christoparos
+				<Magical Power Charger> -->
+				<spawn npc_id="805639">
+				    <spot x="2428.3887" y="388.7991" z="2938.0312" h="94"/>
+				</spawn>
+				<!-- Vatsaros
+				<Stigma Master> -->
+				<spawn npc_id="805640">
+				    <spot x="2431.6997" y="389.26172" z="2938.0312" h="93"/>
+				</spawn>
+				<!-- Achilios
+				<Blood Medal Weapon Officer> -->
+				<spawn npc_id="805641">
+				    <spot x="2394.3691" y="353.04453" z="2944.8237" h="23"/>
+				</spawn>
+				<!-- Adonia
+				<Blood Medal Armor Officer> -->
+				<spawn npc_id="805642">
+				    <spot x="2391.8071" y="353.9134" z="2944.8237" h="26"/>
+				</spawn>
+				<!-- Benedictus
+				<Blood Mark Weapon Officer> -->
+				<spawn npc_id="805644">
+				    <spot x="2393.78" y="361.8615" z="2944.8237" h="90"/>
+				</spawn>
+				<!-- Callansa
+				<Blood Mark Armor Officer> -->
+				<spawn npc_id="805645">
+				    <spot x="2390.593" y="362.44446" z="2944.8237" h="86"/>
+				</spawn>
+				<!-- Taniana
+				<Blood Mark Accessory Officer> -->
+				<spawn npc_id="805646">
+				    <spot x="2387.807" y="363.1999" z="2944.8237" h="86"/>
+				</spawn>
+				<!-- Basilios
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805647">
+				    <spot x="2329.3057" y="472.88434" z="2939.4001" h="113"/>
+				</spawn>
+				<!-- Nerisa
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805648">
+				    <spot x="2328.483" y="469.88193" z="2939.4004" h="114"/>
+				</spawn>
+				<!-- Damaskos
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805649">
+				    <spot x="2456.242" y="487.19266" z="2939.5881" h="72"/>
+				</spawn>
+				<!-- Ligia
+				<Special Crafting Merchant> -->
+				<spawn npc_id="805650">
+				    <spot x="2458.3726" y="484.30954" z="2939.5881" h="73"/>
+				</spawn>
+				<!-- Karlika
+				<Special Crafting Contributor> -->
+				<spawn npc_id="805651">
+				    <spot x="2460.2905" y="482.19608" z="2939.588" h="70"/>
+				</spawn>
+				<!-- Harunerk
+				<Ancient Coin Reward Officer> -->
+				<spawn npc_id="805652">
+				    <spot x="2461.601" y="479.28528" z="2939.588" h="68"/>
+				</spawn>
+				<!-- Shurunerk
+				<Special Crafting Item Merchant> -->
+				<spawn npc_id="805653">
+				    <spot x="2463.7368" y="474.36533" z="2939.588" h="68"/>
+				</spawn>
+				<!-- Chaorinrin
+				<Material Merchant> -->
+				<spawn npc_id="805654">
+				    <spot x="2465.2754" y="470.84338" z="2939.588" h="66"/>
+				</spawn>
+				<!-- Naoshunerk
+				<Draconic Design Merchant> -->
+				<spawn npc_id="805655">
+				    <spot x="2466.1614" y="467.3423" z="2939.588" h="64"/>
+				</spawn>
+				<!-- Daorinerk
+				<Ancient Relics Supervisor> -->
+				<spawn npc_id="805657">
+				    <spot x="2327.032" y="465.99048" z="2939.4001" h="114"/>
+				</spawn>
+				<!-- Zakus
+				<Blood Medal Consumables Officer> -->
+				<spawn npc_id="805658">
+				    <spot x="2325.4397" y="462.38333" z="2939.4001" h="116"/>
+				</spawn>
+				<!-- Damara
+				<Blood Mark Equipment Officer> -->
+				<spawn npc_id="805659">
+				    <spot x="2325.1606" y="458.9093" z="2939.4004" h="117"/>
+				</spawn>
+				<!-- Carlis
+				<Major Magical Power Charger> -->
+				<spawn npc_id="805661">
+				    <spot x="2324.0835" y="451.3541" z="2939.4001" h="119"/>
+				</spawn>
+				<!-- Sanctum Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805746">
+				    <spot x="2396.6714" y="361.26315" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Jonar
+				<Redemption Landing Captain> -->
+				<spawn npc_id="805798">
+				    <spot x="2466.976" y="463.28973" z="2939.588" h="65"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883912">
+				    <spot x="2356.5496" y="514.38995" z="2939.0083" entity_id="1888"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883913">
+				    <spot x="2312.74490" y="460.8306" z="2939.9192" entity_id="2437"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883914">
+				    <spot x="2301.4282" y="415.56204" z="2942.8230" entity_id="2554"/>
+				</spawn>
+				<!-- Redemption's Light
+				<10,000 Points> -->
+				<spawn npc_id="883915">
+				    <spot x="2333.2852" y="355.17447" z="2976.3774" entity_id="2555"/>
+				</spawn>
+				<!-- Redemption's Light
+				<10,000 Points> -->
+				<spawn npc_id="883916">
+				    <spot x="2345.0183" y="381.47079" z="2973.9333" entity_id="2792"/>
+				</spawn>
+				<!-- Redemption's Light
+				<16,000 Points> -->
+				<spawn npc_id="883917">
+				    <spot x="2414.5776" y="523.32947" z="2939.0967" entity_id="2793"/>
+				</spawn>
+				<!-- Redemption's Light
+				<16,000 Points> -->
+				<spawn npc_id="883918">
+				    <spot x="2473.0520" y="484.02423" z="2940.2207" entity_id="2794"/>
+				</spawn>
+				<!-- Redemption Flight Energy
+				<Well Of Winds> -->
+				<spawn npc_id="883956">
+				    <spot x="2417.1055" y="473.24673" z="2938.3416" h="76"/>
+				</spawn>
+				<!-- Redemption Life Energy
+				<Well Of Renewal> -->
+				<spawn npc_id="883957">
+				    <spot x="2369.023" y="466.1781" z="2938.3416" h="109"/>
+				</spawn>
+				<!-- Redemption Battle Energy
+				<Well Of Strength> -->
+				<spawn npc_id="883958">
+				    <spot x="2425.79" y="462.6022" z="2938.3416" h="70"/>
+				</spawn>
+				<!-- Redemption Defense Energy
+				<Well Of Protection> -->
+				<spawn npc_id="883959">
+				    <spot x="2364.0286" y="453.23087" z="2938.3416" h="118"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884038">
+				    <spot x="2387.7498" y="512.1005" z="2938.5012" h="33"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884039">
+				    <spot x="2351.1353" y="488.48846" z="2938.3105" h="15"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884040">
+				    <spot x="2428.592" y="500.13943" z="2938.3079" h="50"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<10,000 Points> -->
+				<spawn npc_id="884041">
+				    <spot x="2449.6318" y="459.2829" z="2938.0808" h="36"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<10,000 Points> -->
+				<spawn npc_id="884042">
+				    <spot x="2343.4214" y="444.5649" z="2938.1006" h="31"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<16,000 Points> -->
+				<spawn npc_id="884043">
+				    <spot x="2358.3833" y="400.6494" z="2938.309" h="47"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<16,000 Points> -->
+				<spawn npc_id="884044">
+				    <spot x="2445.504" y="411.46506" z="2938.3835" h="19"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL8">
+                <!-- Cygnia Corridor -->
+				<spawn npc_id="805604">
+				    <spot x="2409.239" y="363.0645" z="2938.0312" h="32"/>
+				</spawn>
+				<!-- Inggison Corridor
+				<Landing Level 3 Facility> -->
+				<spawn npc_id="805606">
+				    <spot x="2403.2922" y="362.10324" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Kaldor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805607">
+				    <spot x="2415.2937" y="363.8368" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Levinshor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805608">
+				    <spot x="2421.9958" y="364.96555" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Iluma Corridor -->
+				<spawn npc_id="731701">
+				    <spot x="2390.4067" y="365.846" z="2938.0312" h="3"/>
+				</spawn>
+				<!-- Torino
+				<Landing Level 5 Illuminary Obelisk Entrance Officer> -->
+				<spawn npc_id="805609">
+				    <spot x="2324.3171" y="442.34793" z="2939.4001" h="1"/>
+				</spawn>
+				<!-- Zenoa
+				<Landing Level 6 Danuar Reliquary Entrance Officer> -->
+				<spawn npc_id="805610">
+				    <spot x="2326.0183" y="431.7206" z="2939.4001" h="5"/>
+				</spawn>
+				<!-- Milano
+				<Landing Level 7 Infinity Shard Entrance Officer> -->
+				<spawn npc_id="805611">
+				    <spot x="2329.4868" y="419.7908" z="2939.4001" h="7"/>
+				</spawn>
+				<!-- Bronia
+				<Landing Level 8 Eternal Bastion Entrance Officer> -->
+				<spawn npc_id="805612">
+				    <spot x="2334.7515" y="409.8042" z="2939.4001" h="12"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805613">
+				    <spot x="2468.7" y="452.7596" z="2939.588" h="62"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805614">
+				    <spot x="2468.5315" y="440.3786" z="2939.588" h="59"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805615">
+				    <spot x="2466.6182" y="429.25024" z="2939.5876" h="54"/>
+				</spawn>
+				<!-- Ugirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805634">
+				    <spot x="2385.0398" y="382.11743" z="2938.0312" h="94"/>
+				</spawn>
+				<!-- Vernamin
+				<General Goods Merchant> -->
+				<spawn npc_id="805637">
+				    <spot x="2381.7507" y="381.6727" z="2938.0312" h="93"/>
+				</spawn>
+				<!-- Carla
+				<Conditioning Officer> -->
+				<spawn npc_id="805638">
+				    <spot x="2425.2305" y="388.20374" z="2938.0312" h="94"/>
+				</spawn>
+				<!-- Christoparos
+				<Magical Power Charger> -->
+				<spawn npc_id="805639">
+				    <spot x="2428.3887" y="388.7991" z="2938.0312" h="94"/>
+				</spawn>
+				<!-- Vatsaros
+				<Stigma Master> -->
+				<spawn npc_id="805640">
+				    <spot x="2431.6997" y="389.26172" z="2938.0312" h="93"/>
+				</spawn>
+				<!-- Achilios
+				<Blood Medal Weapon Officer> -->
+				<spawn npc_id="805641">
+				    <spot x="2394.3691" y="353.04453" z="2944.8237" h="23"/>
+				</spawn>
+				<!-- Adonia
+				<Blood Medal Armor Officer> -->
+				<spawn npc_id="805642">
+				    <spot x="2391.8071" y="353.9134" z="2944.8237" h="26"/>
+				</spawn>
+				<!-- Benedictus
+				<Blood Mark Weapon Officer> -->
+				<spawn npc_id="805644">
+				    <spot x="2393.78" y="361.8615" z="2944.8237" h="90"/>
+				</spawn>
+				<!-- Callansa
+				<Blood Mark Armor Officer> -->
+				<spawn npc_id="805645">
+				    <spot x="2390.593" y="362.44446" z="2944.8237" h="86"/>
+				</spawn>
+				<!-- Taniana
+				<Blood Mark Accessory Officer> -->
+				<spawn npc_id="805646">
+				    <spot x="2387.807" y="363.1999" z="2944.8237" h="86"/>
+				</spawn>
+				<!-- Basilios
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805647">
+				    <spot x="2329.3057" y="472.88434" z="2939.4001" h="113"/>
+				</spawn>
+				<!-- Nerisa
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805648">
+				    <spot x="2328.483" y="469.88193" z="2939.4004" h="114"/>
+				</spawn>
+				<!-- Damaskos
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805649">
+				    <spot x="2456.242" y="487.19266" z="2939.5881" h="72"/>
+				</spawn>
+				<!-- Ligia
+				<Special Crafting Merchant> -->
+				<spawn npc_id="805650">
+				    <spot x="2458.3726" y="484.30954" z="2939.5881" h="73"/>
+				</spawn>
+				<!-- Karlika
+				<Special Crafting Contributor> -->
+				<spawn npc_id="805651">
+				    <spot x="2460.2905" y="482.19608" z="2939.588" h="70"/>
+				</spawn>
+				<!-- Harunerk
+				<Ancient Coin Reward Officer> -->
+				<spawn npc_id="805652">
+				    <spot x="2461.601" y="479.28528" z="2939.588" h="68"/>
+				</spawn>
+				<!-- Shurunerk
+				<Special Crafting Item Merchant> -->
+				<spawn npc_id="805653">
+				    <spot x="2463.7368" y="474.36533" z="2939.588" h="68"/>
+				</spawn>
+				<!-- Chaorinrin
+				<Material Merchant> -->
+				<spawn npc_id="805654">
+				    <spot x="2465.2754" y="470.84338" z="2939.588" h="66"/>
+				</spawn>
+				<!-- Naoshunerk
+				<Draconic Design Merchant> -->
+				<spawn npc_id="805655">
+				    <spot x="2466.1614" y="467.3423" z="2939.588" h="64"/>
+				</spawn>
+				<!-- Daorinerk
+				<Ancient Relics Supervisor> -->
+				<spawn npc_id="805657">
+				    <spot x="2327.032" y="465.99048" z="2939.4001" h="114"/>
+				</spawn>
+				<!-- Zakus
+				<Blood Medal Consumables Officer> -->
+				<spawn npc_id="805658">
+				    <spot x="2325.4397" y="462.38333" z="2939.4001" h="116"/>
+				</spawn>
+				<!-- Damara
+				<Blood Mark Equipment Officer> -->
+				<spawn npc_id="805659">
+				    <spot x="2325.1606" y="458.9093" z="2939.4004" h="117"/>
+				</spawn>
+				<!-- Achilina
+				<Greater Conditioning Officer> -->
+				<spawn npc_id="805660">
+				    <spot x="2324.491" y="455.40195" z="2939.4001" h="118"/>
+				</spawn>
+				<!-- Carlis
+				<Major Magical Power Charger> -->
+				<spawn npc_id="805661">
+				    <spot x="2324.0835" y="451.3541" z="2939.4001" h="119"/>
+				</spawn>
+				<!-- Sanctum Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805746">
+				    <spot x="2396.6714" y="361.26315" z="2938.0312" h="33"/>
+				</spawn>
+				<!-- Jonar
+				<Redemption Landing Captain> -->
+				<spawn npc_id="805798">
+				    <spot x="2466.976" y="463.28973" z="2939.588" h="65"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883912">
+				    <spot x="2356.5496" y="514.38995" z="2939.0083" entity_id="1888"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883913">
+				    <spot x="2312.74490" y="460.8306" z="2939.9192" entity_id="2437"/>
+				</spawn>
+				<!-- Redemption's Light
+				<6,000 Points> -->
+				<spawn npc_id="883914">
+				    <spot x="2301.4282" y="415.56204" z="2942.8230" entity_id="2554"/>
+				</spawn>
+				<!-- Redemption's Light
+				<10,000 Points> -->
+				<spawn npc_id="883915">
+				    <spot x="2333.2852" y="355.17447" z="2976.3774" entity_id="2555"/>
+				</spawn>
+				<!-- Redemption's Light
+				<10,000 Points> -->
+				<spawn npc_id="883916">
+				    <spot x="2345.0183" y="381.47079" z="2973.9333" entity_id="2792"/>
+				</spawn>
+				<!-- Redemption's Light
+				<16,000 Points> -->
+				<spawn npc_id="883917">
+				    <spot x="2414.5776" y="523.32947" z="2939.0967" entity_id="2793"/>
+				</spawn>
+				<!-- Redemption's Light
+				<16,000 Points> -->
+				<spawn npc_id="883918">
+				    <spot x="2473.0520" y="484.02423" z="2940.2207" entity_id="2794"/>
+				</spawn>
+				<!-- Redemption's Light
+				<30,000 Points> -->
+				<spawn npc_id="883919">
+				    <spot x="2495.7563" y="443.52713" z="2942.9797" entity_id="2795"/>
+				</spawn>
+				<!-- Redemption's Light
+				<30,000 Points> -->
+				<spawn npc_id="883920">
+				    <spot x="2482.9724" y="376.91562" z="2976.2617" entity_id="2796"/>
+				</spawn>
+				<!-- Redemption's Light
+				<30,000 Points> -->
+				<spawn npc_id="883921">
+				    <spot x="2463.9600" y="398.77097" z="2974.1140" entity_id="2797"/>
+				</spawn>
+				<!-- Redemption Flight Energy
+				<Well Of Winds> -->
+				<spawn npc_id="883956">
+				    <spot x="2417.1055" y="473.24673" z="2938.3416" h="76"/>
+				</spawn>
+				<!-- Redemption Life Energy
+				<Well Of Renewal> -->
+				<spawn npc_id="883957">
+				    <spot x="2369.023" y="466.1781" z="2938.3416" h="109"/>
+				</spawn>
+				<!-- Redemption Battle Energy
+				<Well Of Strength> -->
+				<spawn npc_id="883958">
+				    <spot x="2425.79" y="462.6022" z="2938.3416" h="70"/>
+				</spawn>
+				<!-- Redemption Defense Energy
+				<Well Of Protection> -->
+				<spawn npc_id="883959">
+				    <spot x="2364.0286" y="453.23087" z="2938.3416" h="118"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884038">
+				    <spot x="2387.7498" y="512.1005" z="2938.5012" h="33"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884039">
+				    <spot x="2351.1353" y="488.48846" z="2938.3105" h="15"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<6,000 Points> -->
+				<spawn npc_id="884040">
+				    <spot x="2428.592" y="500.13943" z="2938.3079" h="50"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<10,000 Points> -->
+				<spawn npc_id="884041">
+				    <spot x="2449.6318" y="459.2829" z="2938.0808" h="36"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<10,000 Points> -->
+				<spawn npc_id="884042">
+				    <spot x="2343.4214" y="444.5649" z="2938.1006" h="31"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<16,000 Points> -->
+				<spawn npc_id="884043">
+				    <spot x="2358.3833" y="400.6494" z="2938.309" h="47"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<16,000 Points> -->
+				<spawn npc_id="884044">
+				    <spot x="2445.504" y="411.46506" z="2938.3835" h="19"/>
+				</spawn>
+				<!-- Stolen Light Of Redemption
+				<30,000 Points> -->
+				<spawn npc_id="884045">
+				    <spot x="2398.7795" y="432.14362" z="2938.6125" h="34"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="NONE">
+            </landing_level>
+        </landing_spawn>
+        <!-- Harbinger's Landing -->
+        <landing_spawn id="2" name_id="404688">
+            <landing_level level="LVL1">
+				<!-- Enshar Corridor -->
+				<spawn npc_id="805618">
+				    <spot x="1286.1031" y="3150.0222" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805629">
+				    <spot x="1234.8268" y="3077.209" z="3035.314" h="115"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883931">
+				    <spot x="1351.0157" y="3000.5764" z="3034.8457" entity_id="2798"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884030">
+				    <spot x="1321.7474" y="2994.7356" z="3034.2583" h="94"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL2">
+                <!-- Enshar Corridor -->
+				<spawn npc_id="805618">
+				    <spot x="1286.1031" y="3150.0222" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805627">
+				    <spot x="1234.3691" y="3053.6924" z="3035.314" h="3"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805628">
+				    <spot x="1233.569" y="3065.8884" z="3035.314" h="0"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805629">
+				    <spot x="1234.8268" y="3077.209" z="3035.314" h="115"/>
+				</spawn>
+				<!-- Yonirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805664">
+				    <spot x="1314.0056" y="3131.1826" z="3033.7402" h="35"/>
+				</spawn>
+				<!-- Kalt
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805677">
+				    <spot x="1374.7782" y="3044.098" z="3035.1267" h="55"/>
+				</spawn>
+				<!-- Lukhana
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805678">
+				    <spot x="1375.3972" y="3046.8306" z="3035.1267" h="54"/>
+				</spawn>
+				<!-- Meinke
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805679">
+				    <spot x="1249.7151" y="3020.375" z="3035.3145" h="14"/>
+				</spawn>
+				<!-- Pandaemonium Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805747">
+				    <spot x="1301.313" y="3152.9873" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Jex (NPC Normal lvl:65) -->
+				<spawn npc_id="805815">
+				    <spot x="1235.9548" y="3047.1855" z="3035.3145" h="4"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883931">
+				    <spot x="1351.0157" y="3000.5764" z="3034.8457" entity_id="2798"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883932">
+				    <spot x="1390.8962" y="3057.8970" z="3035.8140" entity_id="2799"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884030">
+				    <spot x="1321.7474" y="2994.7356" z="3034.2583" h="94"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884031">
+				    <spot x="1354.5835" y="3027.2107" z="3034.0366" h="76"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL3">
+                <!-- Enshar Corridor -->
+				<spawn npc_id="805618">
+				    <spot x="1286.1031" y="3150.0222" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Gelkmaros Corridor
+				<Landing Level 3 Facility> -->
+				<spawn npc_id="805620">
+				    <spot x="1294.7217" y="3151.5369" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805627">
+				    <spot x="1234.3691" y="3053.6924" z="3035.314" h="3"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805628">
+				    <spot x="1233.569" y="3065.8884" z="3035.314" h="0"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805629">
+				    <spot x="1234.8268" y="3077.209" z="3035.314" h="115"/>
+				</spawn>
+				<!-- Yonirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805664">
+				    <spot x="1314.0056" y="3131.1826" z="3033.7402" h="35"/>
+				</spawn>
+				<!-- Roa
+				<General Goods Merchant> -->
+				<spawn npc_id="805667">
+				    <spot x="1317.014" y="3131.8718" z="3033.7402" h="34"/>
+				</spawn>
+				<!-- Vatram
+				<Blood Mark Weapon Officer> -->
+				<spawn npc_id="805674">
+				    <spot x="1302.48" y="3150.73" z="3041.26" h="31"/>
+				</spawn>
+				<!-- Perasa
+				<Blood Mark Armor Officer> -->
+				<spawn npc_id="805675">
+				    <spot x="1299.83" y="3150.50" z="3041.26" h="34"/>
+				</spawn>
+				<!-- Amara
+				<Blood Mark Accessory Officer> -->
+				<spawn npc_id="805676">
+				    <spot x="1305.02" y="3150.60" z="3041.26" h="23"/>
+				</spawn>
+				<!-- Kalt
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805677">
+				    <spot x="1374.7782" y="3044.098" z="3035.1267" h="55"/>
+				</spawn>
+				<!-- Lukhana
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805678">
+				    <spot x="1375.3972" y="3046.8306" z="3035.1267" h="54"/>
+				</spawn>
+				<!-- Meinke
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805679">
+				    <spot x="1249.7151" y="3020.375" z="3035.3145" h="14"/>
+				</spawn>
+				<!-- Lomhilde
+				<Special Crafting Merchant> -->
+				<spawn npc_id="805680">
+				    <spot x="1247.4384" y="3022.5652" z="3035.3142" h="14"/>
+				</spawn>
+				<!-- Tibelda
+				<Special Crafting Contributor> -->
+				<spawn npc_id="805681">
+				    <spot x="1245.3362" y="3024.7734" z="3035.3142" h="13"/>
+				</spawn>
+				<!-- Vaorunerk
+				<Ancient Coin Reward Officer> -->
+				<spawn npc_id="805682">
+				    <spot x="1244.0719" y="3027.4812" z="3035.3142" h="10"/>
+				</spawn>
+				<!-- Chaoshunerk
+				<Special Crafting Item Merchant> -->
+				<spawn npc_id="805683">
+				    <spot x="1242.0417" y="3031.058" z="3035.3142" h="9"/>
+				</spawn>
+				<!-- Shuorinrin
+				<Material Merchant> -->
+				<spawn npc_id="805684">
+				    <spot x="1240.1189" y="3034.4937" z="3035.3142" h="9"/>
+				</spawn>
+				<!-- Maoshunerk
+				<Draconic Design Merchant> -->
+				<spawn npc_id="805685">
+				    <spot x="1238.7537" y="3037.9414" z="3035.3142" h="7"/>
+				</spawn>
+				<!-- Valdhalt
+				<Blood Mark Equipment Officer> -->
+				<spawn npc_id="805689">
+				    <spot x="1377.8967" y="3057.6902" z="3035.1267" h="59"/>
+				</spawn>
+				<!-- Pandaemonium Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805747">
+				    <spot x="1301.313" y="3152.9873" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Jex (NPC Normal lvl:65) -->
+				<spawn npc_id="805815">
+				    <spot x="1235.9548" y="3047.1855" z="3035.3145" h="4"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883931">
+				    <spot x="1351.0157" y="3000.5764" z="3034.8457" entity_id="2798"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883932">
+				    <spot x="1390.8962" y="3057.8970" z="3035.8140" entity_id="2799"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883933">
+				    <spot x="1398.2656" y="3103.9651" z="3038.4456" entity_id="2800"/>
+				</spawn>
+				<!-- Harbinger Flight Energy
+				<Well Of Winds> -->
+				<spawn npc_id="883960">
+				    <spot x="1286.5867" y="3037.9758" z="3034.0679" h="17"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884030">
+				    <spot x="1321.7474" y="2994.7356" z="3034.2583" h="94"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884031">
+				    <spot x="1354.5835" y="3027.2107" z="3034.0366" h="76"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884032">
+				    <spot x="1279.4645" y="3009.4697" z="3034.0352" h="21"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL4">
+                <!-- Enshar Corridor -->
+				<spawn npc_id="805618">
+				    <spot x="1286.1031" y="3150.0222" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Gelkmaros Corridor
+				<Landing Level 3 Facility> -->
+				<spawn npc_id="805620">
+				    <spot x="1294.7217" y="3151.5369" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Kaldor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805621">
+				    <spot x="1278.159" y="3147.7449" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Levinshor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805622">
+				    <spot x="1272.0668" y="3146.1765" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Norsvold Corridor -->
+				<spawn npc_id="731703">
+				    <spot x="1304.8657" y="3147.4482" z="3033.7402" h="64"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805627">
+				    <spot x="1234.3691" y="3053.6924" z="3035.314" h="3"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805628">
+				    <spot x="1233.569" y="3065.8884" z="3035.314" h="0"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805629">
+				    <spot x="1234.8268" y="3077.209" z="3035.314" h="115"/>
+				</spawn>
+				<!-- Yonirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805664">
+				    <spot x="1314.0056" y="3131.1826" z="3033.7402" h="35"/>
+				</spawn>
+				<!-- Roa
+				<General Goods Merchant> -->
+				<spawn npc_id="805667">
+				    <spot x="1317.014" y="3131.8718" z="3033.7402" h="34"/>
+				</spawn>
+				<!-- Vatram
+				<Blood Mark Weapon Officer> -->
+				<spawn npc_id="805674">
+				    <spot x="1302.48" y="3150.73" z="3041.26" h="31"/>
+				</spawn>
+				<!-- Perasa
+				<Blood Mark Armor Officer> -->
+				<spawn npc_id="805675">
+				    <spot x="1299.83" y="3150.50" z="3041.26" h="34"/>
+				</spawn>
+				<!-- Amara
+				<Blood Mark Accessory Officer> -->
+				<spawn npc_id="805676">
+				    <spot x="1305.02" y="3150.60" z="3041.26" h="23"/>
+				</spawn>
+				<!-- Kalt
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805677">
+				    <spot x="1374.7782" y="3044.098" z="3035.1267" h="55"/>
+				</spawn>
+				<!-- Lukhana
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805678">
+				    <spot x="1375.3972" y="3046.8306" z="3035.1267" h="54"/>
+				</spawn>
+				<!-- Meinke
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805679">
+				    <spot x="1249.7151" y="3020.375" z="3035.3145" h="14"/>
+				</spawn>
+				<!-- Lomhilde
+				<Special Crafting Merchant> -->
+				<spawn npc_id="805680">
+				    <spot x="1247.4384" y="3022.5652" z="3035.3142" h="14"/>
+				</spawn>
+				<!-- Tibelda
+				<Special Crafting Contributor> -->
+				<spawn npc_id="805681">
+				    <spot x="1245.3362" y="3024.7734" z="3035.3142" h="13"/>
+				</spawn>
+				<!-- Vaorunerk
+				<Ancient Coin Reward Officer> -->
+				<spawn npc_id="805682">
+				    <spot x="1244.0719" y="3027.4812" z="3035.3142" h="10"/>
+				</spawn>
+				<!-- Chaoshunerk
+				<Special Crafting Item Merchant> -->
+				<spawn npc_id="805683">
+				    <spot x="1242.0417" y="3031.058" z="3035.3142" h="9"/>
+				</spawn>
+				<!-- Shuorinrin
+				<Material Merchant> -->
+				<spawn npc_id="805684">
+				    <spot x="1240.1189" y="3034.4937" z="3035.3142" h="9"/>
+				</spawn>
+				<!-- Maoshunerk
+				<Draconic Design Merchant> -->
+				<spawn npc_id="805685">
+				    <spot x="1238.7537" y="3037.9414" z="3035.3142" h="7"/>
+				</spawn>
+				<!-- Laorunerk
+				<Ancient Relics Supervisor> -->
+				<spawn npc_id="805687">
+				    <spot x="1376.467" y="3050.938" z="3035.1265" h="54"/>
+				</spawn>
+				<!-- Valdhalt
+				<Blood Mark Equipment Officer> -->
+				<spawn npc_id="805689">
+				    <spot x="1377.8967" y="3057.6902" z="3035.1267" h="59"/>
+				</spawn>
+				<!-- Pandaemonium Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805747">
+				    <spot x="1301.313" y="3152.9873" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Jex (NPC Normal lvl:65) -->
+				<spawn npc_id="805815">
+				    <spot x="1235.9548" y="3047.1855" z="3035.3145" h="4"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883931">
+				    <spot x="1351.0157" y="3000.5764" z="3034.8457" entity_id="2798"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883932">
+				    <spot x="1390.8962" y="3057.8970" z="3035.8140" entity_id="2799"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883933">
+				    <spot x="1398.2656" y="3103.9651" z="3038.4456" entity_id="2800"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<10,000 Points> -->
+				<spawn npc_id="883934">
+				    <spot x="1351.9868" y="3134.3972" z="3069.6389" entity_id="2801"/>
+				</spawn>
+				<!-- Harbinger Flight Energy
+				<Well Of Winds> -->
+				<spawn npc_id="883960">
+				    <spot x="1286.5867" y="3037.9758" z="3034.0679" h="17"/>
+				</spawn>
+				<!-- Harbinger Life Energy
+				<Well Of Renewal> -->
+				<spawn npc_id="883961">
+				    <spot x="1335.434" y="3049.3335" z="3034.0679" h="52"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884030">
+				    <spot x="1321.7474" y="2994.7356" z="3034.2583" h="94"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884031">
+				    <spot x="1354.5835" y="3027.2107" z="3034.0366" h="76"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884032">
+				    <spot x="1279.4645" y="3009.4697" z="3034.0352" h="21"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<10,000 Points> -->
+				<spawn npc_id="884033">
+				    <spot x="1253.614" y="3047.7297" z="3033.8064" h="98"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL5">
+                <!-- Enshar Corridor -->
+				<spawn npc_id="805618">
+				    <spot x="1286.1031" y="3150.0222" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Gelkmaros Corridor
+				<Landing Level 3 Facility> -->
+				<spawn npc_id="805620">
+				    <spot x="1294.7217" y="3151.5369" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Kaldor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805621">
+				    <spot x="1278.159" y="3147.7449" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Levinshor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805622">
+				    <spot x="1272.0668" y="3146.1765" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Norsvold Corridor -->
+				<spawn npc_id="731703">
+				    <spot x="1304.8657" y="3147.4482" z="3033.7402" h="64"/>
+				</spawn>
+				<!-- Trieste
+				<Landing Level 5 Illuminary Obelisk Entrance Officer> -->
+				<spawn npc_id="805623">
+				    <spot x="1377.6996" y="3075.3955" z="3035.1262" h="63"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805627">
+				    <spot x="1234.3691" y="3053.6924" z="3035.314" h="3"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805628">
+				    <spot x="1233.569" y="3065.8884" z="3035.314" h="0"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805629">
+				    <spot x="1234.8268" y="3077.209" z="3035.314" h="115"/>
+				</spawn>
+				<!-- Yonirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805664">
+				    <spot x="1314.0056" y="3131.1826" z="3033.7402" h="35"/>
+				</spawn>
+				<!-- Roa
+				<General Goods Merchant> -->
+				<spawn npc_id="805667">
+				    <spot x="1317.014" y="3131.8718" z="3033.7402" h="34"/>
+				</spawn>
+				<!-- Valdemar
+				<Stigma Master> -->
+				<spawn npc_id="805670">
+				    <spot x="1263.6973" y="3119.6367" z="3033.7422" h="34"/>
+				</spawn>
+				<!-- Ludwing
+				<Blood Medal Weapon Officer> -->
+				<spawn npc_id="805671">
+				    <spot x="1301.65" y="3158.16" z="3041.26" h="84"/>
+				</spawn>
+				<!-- Phinn
+				<Blood Medal Armor Officer> -->
+				<spawn npc_id="805672">
+				    <spot x="1304.50" y="3157.91" z="3041.26" h="90"/>
+				</spawn>
+				<!-- Vatram
+				<Blood Mark Weapon Officer> -->
+				<spawn npc_id="805674">
+				    <spot x="1302.48" y="3150.73" z="3041.26" h="31"/>
+				</spawn>
+				<!-- Perasa
+				<Blood Mark Armor Officer> -->
+				<spawn npc_id="805675">
+				    <spot x="1299.83" y="3150.50" z="3041.26" h="34"/>
+				</spawn>
+				<!-- Amara
+				<Blood Mark Accessory Officer> -->
+				<spawn npc_id="805676">
+				    <spot x="1305.02" y="3150.60" z="3041.26" h="23"/>
+				</spawn>
+				<!-- Kalt
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805677">
+				    <spot x="1374.7782" y="3044.098" z="3035.1267" h="55"/>
+				</spawn>
+				<!-- Lukhana
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805678">
+				    <spot x="1375.3972" y="3046.8306" z="3035.1267" h="54"/>
+				</spawn>
+				<!-- Meinke
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805679">
+				    <spot x="1249.7151" y="3020.375" z="3035.3145" h="14"/>
+				</spawn>
+				<!-- Lomhilde
+				<Special Crafting Merchant> -->
+				<spawn npc_id="805680">
+				    <spot x="1247.4384" y="3022.5652" z="3035.3142" h="14"/>
+				</spawn>
+				<!-- Tibelda
+				<Special Crafting Contributor> -->
+				<spawn npc_id="805681">
+				    <spot x="1245.3362" y="3024.7734" z="3035.3142" h="13"/>
+				</spawn>
+				<!-- Vaorunerk
+				<Ancient Coin Reward Officer> -->
+				<spawn npc_id="805682">
+				    <spot x="1244.0719" y="3027.4812" z="3035.3142" h="10"/>
+				</spawn>
+				<!-- Chaoshunerk
+				<Special Crafting Item Merchant> -->
+				<spawn npc_id="805683">
+				    <spot x="1242.0417" y="3031.058" z="3035.3142" h="9"/>
+				</spawn>
+				<!-- Shuorinrin
+				<Material Merchant> -->
+				<spawn npc_id="805684">
+				    <spot x="1240.1189" y="3034.4937" z="3035.3142" h="9"/>
+				</spawn>
+				<!-- Maoshunerk
+				<Draconic Design Merchant> -->
+				<spawn npc_id="805685">
+				    <spot x="1238.7537" y="3037.9414" z="3035.3142" h="7"/>
+				</spawn>
+				<!-- Laorunerk
+				<Ancient Relics Supervisor> -->
+				<spawn npc_id="805687">
+				    <spot x="1376.467" y="3050.938" z="3035.1265" h="54"/>
+				</spawn>
+				<!-- Edelgar
+				<Blood Medal Consumables Officer> -->
+				<spawn npc_id="805688">
+				    <spot x="1377.5337" y="3054.463" z="3035.1267" h="56"/>
+				</spawn>
+				<!-- Valdhalt
+				<Blood Mark Equipment Officer> -->
+				<spawn npc_id="805689">
+				    <spot x="1377.8967" y="3057.6902" z="3035.1267" h="59"/>
+				</spawn>
+				<!-- Pandaemonium Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805747">
+				    <spot x="1301.313" y="3152.9873" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Jex (NPC Normal lvl:65) -->
+				<spawn npc_id="805815">
+				    <spot x="1235.9548" y="3047.1855" z="3035.3145" h="4"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883931">
+				    <spot x="1351.0157" y="3000.5764" z="3034.8457" entity_id="2798"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883932">
+				    <spot x="1390.8962" y="3057.8970" z="3035.8140" entity_id="2799"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883933">
+				    <spot x="1398.2656" y="3103.9651" z="3038.4456" entity_id="2800"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<10,000 Points> -->
+				<spawn npc_id="883934">
+				    <spot x="1351.9868" y="3134.3972" z="3069.6389" entity_id="2801"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<10,000 Points> -->
+				<spawn npc_id="883935">
+				    <spot x="1361.5741" y="3160.9548" z="3070.2334" entity_id="2802"/>
+				</spawn>
+				<!-- Harbinger Flight Energy
+				<Well Of Winds> -->
+				<spawn npc_id="883960">
+				    <spot x="1286.5867" y="3037.9758" z="3034.0679" h="17"/>
+				</spawn>
+				<!-- Harbinger Life Energy
+				<Well Of Renewal> -->
+				<spawn npc_id="883961">
+				    <spot x="1335.434" y="3049.3335" z="3034.0679" h="52"/>
+				</spawn>
+				<!-- Harbinger Battle Energy
+				<Well Of Strength> -->
+				<spawn npc_id="883962">
+				    <spot x="1278.9531" y="3046.0562" z="3034.0679" h="11"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884030">
+				    <spot x="1321.7474" y="2994.7356" z="3034.2583" h="94"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884031">
+				    <spot x="1354.5835" y="3027.2107" z="3034.0366" h="76"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884032">
+				    <spot x="1279.4645" y="3009.4697" z="3034.0352" h="21"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<10,000 Points> -->
+				<spawn npc_id="884033">
+				    <spot x="1253.614" y="3047.7297" z="3033.8064" h="98"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<10,000 Points> -->
+				<spawn npc_id="884034">
+				    <spot x="1360.6919" y="3072.5977" z="3033.8267" h="92"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL6">
+                <!-- Enshar Corridor -->
+				<spawn npc_id="805618">
+				    <spot x="1286.1031" y="3150.0222" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Gelkmaros Corridor
+				<Landing Level 3 Facility> -->
+				<spawn npc_id="805620">
+				    <spot x="1294.7217" y="3151.5369" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Kaldor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805621">
+				    <spot x="1278.159" y="3147.7449" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Levinshor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805622">
+				    <spot x="1272.0668" y="3146.1765" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Norsvold Corridor -->
+				<spawn npc_id="731703">
+				    <spot x="1304.8657" y="3147.4482" z="3033.7402" h="64"/>
+				</spawn>
+				<!-- Trieste
+				<Landing Level 5 Illuminary Obelisk Entrance Officer> -->
+				<spawn npc_id="805623">
+				    <spot x="1377.6996" y="3075.3955" z="3035.1262" h="63"/>
+				</spawn>
+				<!-- Ankona
+				<Landing Level 6 Danuar Reliquary Entrance Officer> -->
+				<spawn npc_id="805624">
+				    <spot x="1375.1041" y="3085.837" z="3035.1265" h="67"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805627">
+				    <spot x="1234.3691" y="3053.6924" z="3035.314" h="3"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805628">
+				    <spot x="1233.569" y="3065.8884" z="3035.314" h="0"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805629">
+				    <spot x="1234.8268" y="3077.209" z="3035.314" h="115"/>
+				</spawn>
+				<!-- Yonirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805664">
+				    <spot x="1314.0056" y="3131.1826" z="3033.7402" h="35"/>
+				</spawn>
+				<!-- Roa
+				<General Goods Merchant> -->
+				<spawn npc_id="805667">
+				    <spot x="1317.014" y="3131.8718" z="3033.7402" h="34"/>
+				</spawn>
+				<!-- Valdemar
+				<Stigma Master> -->
+				<spawn npc_id="805670">
+				    <spot x="1263.6973" y="3119.6367" z="3033.7422" h="34"/>
+				</spawn>
+				<!-- Ludwing
+				<Blood Medal Weapon Officer> -->
+				<spawn npc_id="805671">
+				    <spot x="1301.65" y="3158.16" z="3041.26" h="84"/>
+				</spawn>
+				<!-- Phinn
+				<Blood Medal Armor Officer> -->
+				<spawn npc_id="805672">
+				    <spot x="1304.50" y="3157.91" z="3041.26" h="90"/>
+				</spawn>
+				<!-- Vatram
+				<Blood Mark Weapon Officer> -->
+				<spawn npc_id="805674">
+				    <spot x="1302.48" y="3150.73" z="3041.26" h="31"/>
+				</spawn>
+				<!-- Perasa
+				<Blood Mark Armor Officer> -->
+				<spawn npc_id="805675">
+				    <spot x="1299.83" y="3150.50" z="3041.26" h="34"/>
+				</spawn>
+				<!-- Amara
+				<Blood Mark Accessory Officer> -->
+				<spawn npc_id="805676">
+				    <spot x="1305.02" y="3150.60" z="3041.26" h="23"/>
+				</spawn>
+				<!-- Kalt
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805677">
+				    <spot x="1374.7782" y="3044.098" z="3035.1267" h="55"/>
+				</spawn>
+				<!-- Lukhana
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805678">
+				    <spot x="1375.3972" y="3046.8306" z="3035.1267" h="54"/>
+				</spawn>
+				<!-- Meinke
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805679">
+				    <spot x="1249.7151" y="3020.375" z="3035.3145" h="14"/>
+				</spawn>
+				<!-- Lomhilde
+				<Special Crafting Merchant> -->
+				<spawn npc_id="805680">
+				    <spot x="1247.4384" y="3022.5652" z="3035.3142" h="14"/>
+				</spawn>
+				<!-- Tibelda
+				<Special Crafting Contributor> -->
+				<spawn npc_id="805681">
+				    <spot x="1245.3362" y="3024.7734" z="3035.3142" h="13"/>
+				</spawn>
+				<!-- Vaorunerk
+				<Ancient Coin Reward Officer> -->
+				<spawn npc_id="805682">
+				    <spot x="1244.0719" y="3027.4812" z="3035.3142" h="10"/>
+				</spawn>
+				<!-- Chaoshunerk
+				<Special Crafting Item Merchant> -->
+				<spawn npc_id="805683">
+				    <spot x="1242.0417" y="3031.058" z="3035.3142" h="9"/>
+				</spawn>
+				<!-- Shuorinrin
+				<Material Merchant> -->
+				<spawn npc_id="805684">
+				    <spot x="1240.1189" y="3034.4937" z="3035.3142" h="9"/>
+				</spawn>
+				<!-- Maoshunerk
+				<Draconic Design Merchant> -->
+				<spawn npc_id="805685">
+				    <spot x="1238.7537" y="3037.9414" z="3035.3142" h="7"/>
+				</spawn>
+				<!-- Laorunerk
+				<Ancient Relics Supervisor> -->
+				<spawn npc_id="805687">
+				    <spot x="1376.467" y="3050.938" z="3035.1265" h="54"/>
+				</spawn>
+				<!-- Edelgar
+				<Blood Medal Consumables Officer> -->
+				<spawn npc_id="805688">
+				    <spot x="1377.5337" y="3054.463" z="3035.1267" h="56"/>
+				</spawn>
+				<!-- Valdhalt
+				<Blood Mark Equipment Officer> -->
+				<spawn npc_id="805689">
+				    <spot x="1377.8967" y="3057.6902" z="3035.1267" h="59"/>
+				</spawn>
+				<!-- Pandaemonium Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805747">
+				    <spot x="1301.313" y="3152.9873" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Jex (NPC Normal lvl:65) -->
+				<spawn npc_id="805815">
+				    <spot x="1235.9548" y="3047.1855" z="3035.3145" h="4"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883931">
+				    <spot x="1351.0157" y="3000.5764" z="3034.8457" entity_id="2798"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883932">
+				    <spot x="1390.8962" y="3057.8970" z="3035.8140" entity_id="2799"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883933">
+				    <spot x="1398.2656" y="3103.9651" z="3038.4456" entity_id="2800"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<10,000 Points> -->
+				<spawn npc_id="883934">
+				    <spot x="1351.9868" y="3134.3972" z="3069.6389" entity_id="2801"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<10,000 Points> -->
+				<spawn npc_id="883935">
+				    <spot x="1361.5741" y="3160.9548" z="3070.2334" entity_id="2802"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<16,000 Points> -->
+				<spawn npc_id="883936">
+				    <spot x="1293.5784" y="2987.7979" z="3034.7913" entity_id="2803"/>
+				</spawn>
+				<!-- Harbinger Flight Energy
+				<Well Of Winds> -->
+				<spawn npc_id="883960">
+				    <spot x="1286.5867" y="3037.9758" z="3034.0679" h="17"/>
+				</spawn>
+				<!-- Harbinger Life Energy
+				<Well Of Renewal> -->
+				<spawn npc_id="883961">
+				    <spot x="1335.434" y="3049.3335" z="3034.0679" h="52"/>
+				</spawn>
+				<!-- Harbinger Battle Energy
+				<Well Of Strength> -->
+				<spawn npc_id="883962">
+				    <spot x="1278.9531" y="3046.0562" z="3034.0679" h="11"/>
+				</spawn>
+				<!-- Harbinger Defense Energy
+				<Well Of Protection> -->
+				<spawn npc_id="883963">
+				    <spot x="1338.5833" y="3059.7112" z="3034.0679" h="57"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884030">
+				    <spot x="1321.7474" y="2994.7356" z="3034.2583" h="94"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884031">
+				    <spot x="1354.5835" y="3027.2107" z="3034.0366" h="76"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884032">
+				    <spot x="1279.4645" y="3009.4697" z="3034.0352" h="21"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<10,000 Points> -->
+				<spawn npc_id="884033">
+				    <spot x="1253.614" y="3047.7297" z="3033.8064" h="98"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<10,000 Points> -->
+				<spawn npc_id="884034">
+				    <spot x="1360.6919" y="3072.5977" z="3033.8267" h="92"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<16,000 Points> -->
+				<spawn npc_id="884035">
+				    <spot x="1339.9111" y="3114.8154" z="3034.035" h="109"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL7">
+                <!-- Enshar Corridor -->
+				<spawn npc_id="805618">
+				    <spot x="1286.1031" y="3150.0222" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Gelkmaros Corridor
+				<Landing Level 3 Facility> -->
+				<spawn npc_id="805620">
+				    <spot x="1294.7217" y="3151.5369" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Kaldor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805621">
+				    <spot x="1278.159" y="3147.7449" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Levinshor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805622">
+				    <spot x="1272.0668" y="3146.1765" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Norsvold Corridor -->
+				<spawn npc_id="731703">
+				    <spot x="1304.8657" y="3147.4482" z="3033.7402" h="64"/>
+				</spawn>
+				<!-- Trieste
+				<Landing Level 5 Illuminary Obelisk Entrance Officer> -->
+				<spawn npc_id="805623">
+				    <spot x="1377.6996" y="3075.3955" z="3035.1262" h="63"/>
+				</spawn>
+				<!-- Ankona
+				<Landing Level 6 Danuar Reliquary Entrance Officer> -->
+				<spawn npc_id="805624">
+				    <spot x="1375.1041" y="3085.837" z="3035.1265" h="67"/>
+				</spawn>
+				<!-- Lakuir
+				<Landing Level 7 Infinity Shard Entrance Officer> -->
+				<spawn npc_id="805625">
+				    <spot x="1370.5665" y="3097.3215" z="3035.1265" h="69"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805627">
+				    <spot x="1234.3691" y="3053.6924" z="3035.314" h="3"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805628">
+				    <spot x="1233.569" y="3065.8884" z="3035.314" h="0"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805629">
+				    <spot x="1234.8268" y="3077.209" z="3035.314" h="115"/>
+				</spawn>
+				<!-- Yonirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805664">
+				    <spot x="1314.0056" y="3131.1826" z="3033.7402" h="35"/>
+				</spawn>
+				<!-- Roa
+				<General Goods Merchant> -->
+				<spawn npc_id="805667">
+				    <spot x="1317.014" y="3131.8718" z="3033.7402" h="34"/>
+				</spawn>
+				<!-- Martel
+				<Magical Power Charger> -->
+				<spawn npc_id="805669">
+				    <spot x="1266.5736" y="3120.2458" z="3033.7402" h="35"/>
+				</spawn>
+				<!-- Valdemar
+				<Stigma Master> -->
+				<spawn npc_id="805670">
+				    <spot x="1263.6973" y="3119.6367" z="3033.7422" h="34"/>
+				</spawn>
+				<!-- Ludwing
+				<Blood Medal Weapon Officer> -->
+				<spawn npc_id="805671">
+				    <spot x="1301.65" y="3158.16" z="3041.26" h="84"/>
+				</spawn>
+				<!-- Phinn
+				<Blood Medal Armor Officer> -->
+				<spawn npc_id="805672">
+				    <spot x="1304.50" y="3157.91" z="3041.26" h="90"/>
+				</spawn>
+				<!-- Vatram
+				<Blood Mark Weapon Officer> -->
+				<spawn npc_id="805674">
+				    <spot x="1302.48" y="3150.73" z="3041.26" h="31"/>
+				</spawn>
+				<!-- Perasa
+				<Blood Mark Armor Officer> -->
+				<spawn npc_id="805675">
+				    <spot x="1299.83" y="3150.50" z="3041.26" h="34"/>
+				</spawn>
+				<!-- Amara
+				<Blood Mark Accessory Officer> -->
+				<spawn npc_id="805676">
+				    <spot x="1305.02" y="3150.60" z="3041.26" h="23"/>
+				</spawn>
+				<!-- Kalt
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805677">
+				    <spot x="1374.7782" y="3044.098" z="3035.1267" h="55"/>
+				</spawn>
+				<!-- Lukhana
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805678">
+				    <spot x="1375.3972" y="3046.8306" z="3035.1267" h="54"/>
+				</spawn>
+				<!-- Meinke
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805679">
+				    <spot x="1249.7151" y="3020.375" z="3035.3145" h="14"/>
+				</spawn>
+				<!-- Lomhilde
+				<Special Crafting Merchant> -->
+				<spawn npc_id="805680">
+				    <spot x="1247.4384" y="3022.5652" z="3035.3142" h="14"/>
+				</spawn>
+				<!-- Tibelda
+				<Special Crafting Contributor> -->
+				<spawn npc_id="805681">
+				    <spot x="1245.3362" y="3024.7734" z="3035.3142" h="13"/>
+				</spawn>
+				<!-- Vaorunerk
+				<Ancient Coin Reward Officer> -->
+				<spawn npc_id="805682">
+				    <spot x="1244.0719" y="3027.4812" z="3035.3142" h="10"/>
+				</spawn>
+				<!-- Chaoshunerk
+				<Special Crafting Item Merchant> -->
+				<spawn npc_id="805683">
+				    <spot x="1242.0417" y="3031.058" z="3035.3142" h="9"/>
+				</spawn>
+				<!-- Shuorinrin
+				<Material Merchant> -->
+				<spawn npc_id="805684">
+				    <spot x="1240.1189" y="3034.4937" z="3035.3142" h="9"/>
+				</spawn>
+				<!-- Maoshunerk
+				<Draconic Design Merchant> -->
+				<spawn npc_id="805685">
+				    <spot x="1238.7537" y="3037.9414" z="3035.3142" h="7"/>
+				</spawn>
+				<!-- Laorunerk
+				<Ancient Relics Supervisor> -->
+				<spawn npc_id="805687">
+				    <spot x="1376.467" y="3050.938" z="3035.1265" h="54"/>
+				</spawn>
+				<!-- Edelgar
+				<Blood Medal Consumables Officer> -->
+				<spawn npc_id="805688">
+				    <spot x="1377.5337" y="3054.463" z="3035.1267" h="56"/>
+				</spawn>
+				<!-- Valdhalt
+				<Blood Mark Equipment Officer> -->
+				<spawn npc_id="805689">
+				    <spot x="1377.8967" y="3057.6902" z="3035.1267" h="59"/>
+				</spawn>
+				<!-- Klaudelle
+				<Major Magical Power Charger> -->
+				<spawn npc_id="805691">
+				    <spot x="1378.3176" y="3064.8948" z="3035.1265" h="60"/>
+				</spawn>
+				<!-- Pandaemonium Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805747">
+				    <spot x="1301.313" y="3152.9873" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Jex (NPC Normal lvl:65) -->
+				<spawn npc_id="805815">
+				    <spot x="1235.9548" y="3047.1855" z="3035.3145" h="4"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883931">
+				    <spot x="1351.0157" y="3000.5764" z="3034.8457" entity_id="2798"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883932">
+				    <spot x="1390.8962" y="3057.8970" z="3035.8140" entity_id="2799"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883933">
+				    <spot x="1398.2656" y="3103.9651" z="3038.4456" entity_id="2800"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<10,000 Points> -->
+				<spawn npc_id="883934">
+				    <spot x="1351.9868" y="3134.3972" z="3069.6389" entity_id="2801"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<10,000 Points> -->
+				<spawn npc_id="883935">
+				    <spot x="1361.5741" y="3160.9548" z="3070.2334" entity_id="2802"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<16,000 Points> -->
+				<spawn npc_id="883936">
+				    <spot x="1293.5784" y="2987.7979" z="3034.7913" entity_id="2803"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<16,000 Points> -->
+				<spawn npc_id="883937">
+				    <spot x="1232.6797" y="3021.5959" z="3036.1721" entity_id="2804"/>
+				</spawn>
+				<!-- Harbinger Flight Energy
+				<Well Of Winds> -->
+				<spawn npc_id="883960">
+				    <spot x="1286.5867" y="3037.9758" z="3034.0679" h="17"/>
+				</spawn>
+				<!-- Harbinger Life Energy
+				<Well Of Renewal> -->
+				<spawn npc_id="883961">
+				    <spot x="1335.434" y="3049.3335" z="3034.0679" h="52"/>
+				</spawn>
+				<!-- Harbinger Battle Energy
+				<Well Of Strength> -->
+				<spawn npc_id="883962">
+				    <spot x="1278.9531" y="3046.0562" z="3034.0679" h="11"/>
+				</spawn>
+				<!-- Harbinger Defense Energy
+				<Well Of Protection> -->
+				<spawn npc_id="883963">
+				    <spot x="1338.5833" y="3059.7112" z="3034.0679" h="57"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884030">
+				    <spot x="1321.7474" y="2994.7356" z="3034.2583" h="94"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884031">
+				    <spot x="1354.5835" y="3027.2107" z="3034.0366" h="76"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884032">
+				    <spot x="1279.4645" y="3009.4697" z="3034.0352" h="21"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<10,000 Points> -->
+				<spawn npc_id="884033">
+				    <spot x="1253.614" y="3047.7297" z="3033.8064" h="98"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<10,000 Points> -->
+				<spawn npc_id="884034">
+				    <spot x="1360.6919" y="3072.5977" z="3033.8267" h="92"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<16,000 Points> -->
+				<spawn npc_id="884035">
+				    <spot x="1339.9111" y="3114.8154" z="3034.035" h="109"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<16,000 Points> -->
+				<spawn npc_id="884036">
+				    <spot x="1254.1152" y="3096.261" z="3034.1033" h="80"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="LVL8">
+                <!-- Enshar Corridor -->
+				<spawn npc_id="805618">
+				    <spot x="1286.1031" y="3150.0222" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Gelkmaros Corridor
+				<Landing Level 3 Facility> -->
+				<spawn npc_id="805620">
+				    <spot x="1294.7217" y="3151.5369" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Kaldor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805621">
+				    <spot x="1278.159" y="3147.7449" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Levinshor Corridor
+				<Landing Level 4 Facility> -->
+				<spawn npc_id="805622">
+				    <spot x="1272.0668" y="3146.1765" z="3033.7402" h="95"/>
+				</spawn>
+				<!-- Norsvold Corridor -->
+				<spawn npc_id="731703">
+				    <spot x="1304.8657" y="3147.4482" z="3033.7402" h="64"/>
+				</spawn>
+				<!-- Trieste
+				<Landing Level 5 Illuminary Obelisk Entrance Officer> -->
+				<spawn npc_id="805623">
+				    <spot x="1377.6996" y="3075.3955" z="3035.1262" h="63"/>
+				</spawn>
+				<!-- Ankona
+				<Landing Level 6 Danuar Reliquary Entrance Officer> -->
+				<spawn npc_id="805624">
+				    <spot x="1375.1041" y="3085.837" z="3035.1265" h="67"/>
+				</spawn>
+				<!-- Lakuir
+				<Landing Level 7 Infinity Shard Entrance Officer> -->
+				<spawn npc_id="805625">
+				    <spot x="1370.5665" y="3097.3215" z="3035.1265" h="69"/>
+				</spawn>
+				<!-- Romie
+				<Landing Level 8 Eternal Bastion Entrance Officer> -->
+				<spawn npc_id="805626">
+				    <spot x="1364.5934" y="3106.8652" z="3035.1265" h="73"/>
+				</spawn>
+				<!-- Krotan Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805627">
+				    <spot x="1234.3691" y="3053.6924" z="3035.314" h="3"/>
+				</spawn>
+				<!-- Miren Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805628">
+				    <spot x="1233.569" y="3065.8884" z="3035.314" h="0"/>
+				</spawn>
+				<!-- Kysis Fortress Corridor
+				<Landing Basic Facility> -->
+				<spawn npc_id="805629">
+				    <spot x="1234.8268" y="3077.209" z="3035.314" h="115"/>
+				</spawn>
+				<!-- Yonirunerk
+				<Trade Broker> -->
+				<spawn npc_id="805664">
+				    <spot x="1314.0056" y="3131.1826" z="3033.7402" h="35"/>
+				</spawn>
+				<!-- Roa
+				<General Goods Merchant> -->
+				<spawn npc_id="805667">
+				    <spot x="1317.014" y="3131.8718" z="3033.7402" h="34"/>
+				</spawn>
+				<!-- Collado
+				<Conditioning Officer> -->
+				<spawn npc_id="805668">
+				    <spot x="1269.5377" y="3120.9744" z="3033.7402" h="35"/>
+				</spawn>
+				<!-- Martel
+				<Magical Power Charger> -->
+				<spawn npc_id="805669">
+				    <spot x="1266.5736" y="3120.2458" z="3033.7402" h="35"/>
+				</spawn>
+				<!-- Valdemar
+				<Stigma Master> -->
+				<spawn npc_id="805670">
+				    <spot x="1263.6973" y="3119.6367" z="3033.7422" h="34"/>
+				</spawn>
+				<!-- Ludwing
+				<Blood Medal Weapon Officer> -->
+				<spawn npc_id="805671">
+				    <spot x="1301.65" y="3158.16" z="3041.26" h="84"/>
+				</spawn>
+				<!-- Phinn
+				<Blood Medal Armor Officer> -->
+				<spawn npc_id="805672">
+				    <spot x="1304.50" y="3157.91" z="3041.26" h="90"/>
+				</spawn>
+				<!-- Vatram
+				<Blood Mark Weapon Officer> -->
+				<spawn npc_id="805674">
+				    <spot x="1302.48" y="3150.73" z="3041.26" h="31"/>
+				</spawn>
+				<!-- Perasa
+				<Blood Mark Armor Officer> -->
+				<spawn npc_id="805675">
+				    <spot x="1299.83" y="3150.50" z="3041.26" h="34"/>
+				</spawn>
+				<!-- Amara
+				<Blood Mark Accessory Officer> -->
+				<spawn npc_id="805676">
+				    <spot x="1305.02" y="3150.60" z="3041.26" h="23"/>
+				</spawn>
+				<!-- Kalt
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805677">
+				    <spot x="1374.7782" y="3044.098" z="3035.1267" h="55"/>
+				</spawn>
+				<!-- Lukhana
+				<Consumable Items Contributor> -->
+				<spawn npc_id="805678">
+				    <spot x="1375.3972" y="3046.8306" z="3035.1267" h="54"/>
+				</spawn>
+				<!-- Meinke
+				<Refining Stone Merchant> -->
+				<spawn npc_id="805679">
+				    <spot x="1249.7151" y="3020.375" z="3035.3145" h="14"/>
+				</spawn>
+				<!-- Lomhilde
+				<Special Crafting Merchant> -->
+				<spawn npc_id="805680">
+				    <spot x="1247.4384" y="3022.5652" z="3035.3142" h="14"/>
+				</spawn>
+				<!-- Tibelda
+				<Special Crafting Contributor> -->
+				<spawn npc_id="805681">
+				    <spot x="1245.3362" y="3024.7734" z="3035.3142" h="13"/>
+				</spawn>
+				<!-- Vaorunerk
+				<Ancient Coin Reward Officer> -->
+				<spawn npc_id="805682">
+				    <spot x="1244.0719" y="3027.4812" z="3035.3142" h="10"/>
+				</spawn>
+				<!-- Chaoshunerk
+				<Special Crafting Item Merchant> -->
+				<spawn npc_id="805683">
+				    <spot x="1242.0417" y="3031.058" z="3035.3142" h="9"/>
+				</spawn>
+				<!-- Shuorinrin
+				<Material Merchant> -->
+				<spawn npc_id="805684">
+				    <spot x="1240.1189" y="3034.4937" z="3035.3142" h="9"/>
+				</spawn>
+				<!-- Maoshunerk
+				<Draconic Design Merchant> -->
+				<spawn npc_id="805685">
+				    <spot x="1238.7537" y="3037.9414" z="3035.3142" h="7"/>
+				</spawn>
+				<!-- Laorunerk
+				<Ancient Relics Supervisor> -->
+				<spawn npc_id="805687">
+				    <spot x="1376.467" y="3050.938" z="3035.1265" h="54"/>
+				</spawn>
+				<!-- Edelgar
+				<Blood Medal Consumables Officer> -->
+				<spawn npc_id="805688">
+				    <spot x="1377.5337" y="3054.463" z="3035.1267" h="56"/>
+				</spawn>
+				<!-- Valdhalt
+				<Blood Mark Equipment Officer> -->
+				<spawn npc_id="805689">
+				    <spot x="1377.8967" y="3057.6902" z="3035.1267" h="59"/>
+				</spawn>
+				<!-- Adarald
+				<Greater Conditioning Officer> -->
+				<spawn npc_id="805690">
+				    <spot x="1378.2438" y="3060.9963" z="3035.1265" h="59"/>
+				</spawn>
+				<!-- Klaudelle
+				<Major Magical Power Charger> -->
+				<spawn npc_id="805691">
+				    <spot x="1378.3176" y="3064.8948" z="3035.1265" h="60"/>
+				</spawn>
+				<!-- Pandaemonium Corridor
+				<Landing Level 2 Facility> -->
+				<spawn npc_id="805747">
+				    <spot x="1301.313" y="3152.9873" z="3033.7402" h="94"/>
+				</spawn>
+				<!-- Jex (NPC Normal lvl:65) -->
+				<spawn npc_id="805815">
+				    <spot x="1235.9548" y="3047.1855" z="3035.3145" h="4"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883931">
+				    <spot x="1351.0157" y="3000.5764" z="3034.8457" entity_id="2798"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883932">
+				    <spot x="1390.8962" y="3057.8970" z="3035.8140" entity_id="2799"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<6,000 Points> -->
+				<spawn npc_id="883933">
+				    <spot x="1398.2656" y="3103.9651" z="3038.4456" entity_id="2800"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<10,000 Points> -->
+				<spawn npc_id="883934">
+				    <spot x="1351.9868" y="3134.3972" z="3069.6389" entity_id="2801"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<10,000 Points> -->
+				<spawn npc_id="883935">
+				    <spot x="1361.5741" y="3160.9548" z="3070.2334" entity_id="2802"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<16,000 Points> -->
+				<spawn npc_id="883936">
+				    <spot x="1293.5784" y="2987.7979" z="3034.7913" entity_id="2803"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<16,000 Points> -->
+				<spawn npc_id="883937">
+				    <spot x="1232.6797" y="3021.5959" z="3036.1721" entity_id="2804"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<30,000 Points> -->
+				<spawn npc_id="883938">
+				    <spot x="1206.71000" y="3060.1311" z="3038.478" entity_id="2805"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<30,000 Points> -->
+				<spawn npc_id="883939">
+				    <spot x="1213.6837" y="3127.1809" z="3069.2742" entity_id="2806"/>
+				</spawn>
+				<!-- Harbinger's Equilibrium
+				<30,000 Points> -->
+				<spawn npc_id="883940">
+				    <spot x="1235.2476" y="3107.7612" z="3069.6738" entity_id="2807"/>
+				</spawn>
+				<!-- Harbinger Flight Energy
+				<Well Of Winds> -->
+				<spawn npc_id="883960">
+				    <spot x="1286.5867" y="3037.9758" z="3034.0679" h="17"/>
+				</spawn>
+				<!-- Harbinger Life Energy
+				<Well Of Renewal> -->
+				<spawn npc_id="883961">
+				    <spot x="1335.434" y="3049.3335" z="3034.0679" h="52"/>
+				</spawn>
+				<!-- Harbinger Battle Energy
+				<Well Of Strength> -->
+				<spawn npc_id="883962">
+				    <spot x="1278.9531" y="3046.0562" z="3034.0679" h="11"/>
+				</spawn>
+				<!-- Harbinger Defense Energy
+				<Well Of Protection> -->
+				<spawn npc_id="883963">
+				    <spot x="1338.5833" y="3059.7112" z="3034.0679" h="57"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884030">
+				    <spot x="1321.7474" y="2994.7356" z="3034.2583" h="94"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884031">
+				    <spot x="1354.5835" y="3027.2107" z="3034.0366" h="76"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<6,000 Points> -->
+				<spawn npc_id="884032">
+				    <spot x="1279.4645" y="3009.4697" z="3034.0352" h="21"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<10,000 Points> -->
+				<spawn npc_id="884033">
+				    <spot x="1253.614" y="3047.7297" z="3033.8064" h="98"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<10,000 Points> -->
+				<spawn npc_id="884034">
+				    <spot x="1360.6919" y="3072.5977" z="3033.8267" h="92"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<16,000 Points> -->
+				<spawn npc_id="884035">
+				    <spot x="1339.9111" y="3114.8154" z="3034.035" h="109"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<16,000 Points> -->
+				<spawn npc_id="884036">
+				    <spot x="1254.1152" y="3096.261" z="3034.1033" h="80"/>
+				</spawn>
+				<!-- Stolen Harbinger's Call
+				<30,000 Points> -->
+				<spawn npc_id="884037">
+				    <spot x="1302.6243" y="3079.5012" z="3034.3452" h="94"/>
+				</spawn>
+            </landing_level>
+            <landing_level level="NONE">
+            </landing_level>
+        </landing_spawn>
+    </spawn_map>
+</spawns>

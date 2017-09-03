@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+<!--
+    Quest 칼도르 4.7
+	Make By Encom
+ -->
+    <!-- QUEST ELYOS -->
+	<!-- [Urgent Order] Minus One (Elyos Only) -->
+	<kill_in_world id="13801" start_npc_ids="802431" end_npc_ids="802431" worlds="600090000" amount="1"/>
+	<!-- [Weekly] A Stone's Throw Away From Stonereach (Elyos Only) -->
+	<monster_hunt id="13802" start_npc_ids="802427">
+        <monster var="0" npc_ids="234074 234077 234080 234083 234086" end_var="5"/>
+		<monster var="0" npc_ids="234076 234079 234082 234085 234088" end_var="5"/>
+    </monster_hunt>
+	<!-- [Weekly] Watching Valiant's Watch (Elyos Only) -->
+	<monster_hunt id="13803" start_npc_ids="802427">
+        <monster var="0" npc_ids="234074 234077 234080 234083 234086" end_var="5"/>
+		<monster var="0" npc_ids="234076 234079 234082 234085 234088" end_var="5"/>
+    </monster_hunt>
+	<!-- [Weekly] Iron And Ire (Elyos Only) -->
+	<monster_hunt id="13804" start_npc_ids="802428">
+        <monster var="0" npc_ids="234089 234092 234095 234098 234101" end_var="5"/>
+		<monster var="0" npc_ids="234091 234094 234097 234100 234103" end_var="5"/>
+    </monster_hunt>
+	<!-- [Weekly] Cross Country Cross Up (Elyos Only) -->
+	<monster_hunt id="13805" start_npc_ids="802428">
+        <monster var="0" npc_ids="234089 234092 234095 234098 234101" end_var="5"/>
+		<monster var="0" npc_ids="234091 234094 234097 234100 234103" end_var="5"/>
+    </monster_hunt>
+	<!-- Hymrunerk Power And Associates (Elyos Only) -->
+	<item_collecting id="13806" start_npc_ids="802358" action_item_ids="702551"/>
+	<!-- The Flames Of Kaldor (Elyos Only) -->
+	<item_collecting id="13807" start_npc_ids="802432"/>
+	<!-- Obnoxious Obscuras (Elyos Only) -->
+	<monster_hunt id="13808" start_npc_ids="802431">
+        <monster var="0" npc_ids="234294 234530" end_var="5"/>
+		<monster var="1" npc_ids="234529" end_var="3"/>
+    </monster_hunt>
+	<!-- Legends Of Folly (Elyos Only) -->
+	<item_collecting id="13810" start_npc_ids="802428"/>
+	<!-- Remnants Of The Past (Elyos Only) -->
+	<monster_hunt id="13811" start_npc_ids="802427">
+        <monster var="0" npc_ids="234659 234660 234661" end_var="5"/>
+    </monster_hunt>
+	<!-- [Weekly] Rabble Unroused (Elyos Only) -->
+	<item_collecting id="13813" start_npc_ids="804584"/>
+	<!-- [Weekly] Jobs Beget Jobs (Elyos Only) -->
+	<monster_hunt id="13814" start_npc_ids="802585">
+        <monster var="0" npc_ids="234262 234263" end_var="15"/>
+    </monster_hunt>
+	<item_collecting id="13816" start_npc_ids="0"/>
+	<!-- [Weekly] Indirect Warfare (Elyos Only) -->
+	<kill_in_world id="13818" start_npc_ids="804588" end_npc_ids="804588" worlds="600090000" amount="6"/>
+	<!-- [Weekly] On The Heels Of Failure (Elyos Only) -->
+	<item_collecting id="13819" start_npc_ids="804588"/>
+	<!-- [Weekly] Keen Resource (Elyos Only) -->
+	<item_collecting id="13820" start_npc_ids="804584"/>
+	<!-- [Weekly] Ashen Duty (Elyos Only) -->
+	<item_collecting id="13821" start_npc_ids="804584"/>
+	
+	<!-- QUEST ASMODIANS -->
+	<!-- [Urgent Order] Feroz's Request (Asmodians Only) -->
+	<kill_in_world id="23801" start_npc_ids="802433" end_npc_ids="802433" worlds="600090000" amount="1"/>
+	<!-- [Weekly] Pathway Thrashing (Elyos Only) -->
+	<monster_hunt id="23802" start_npc_ids="802429">
+        <monster var="0" npc_ids="234074 234077 234080 234083 234086" end_var="5"/>
+		<monster var="0" npc_ids="234075 234078 234081 234084 234087" end_var="5"/>
+    </monster_hunt>
+	<!-- [Weekly] Selfless At Stonereach (Asmodians Only) -->
+	<monster_hunt id="23803" start_npc_ids="802429">
+        <monster var="0" npc_ids="234074 234077 234080 234083 234086" end_var="5"/>
+		<monster var="0" npc_ids="234075 234078 234081 234084 234087" end_var="5"/>
+    </monster_hunt>
+	<!-- [Weekly] Flamecrest Fallen (Asmodians Only) -->
+	<monster_hunt id="23804" start_npc_ids="802430">
+        <monster var="0" npc_ids="234089 234092 234095 234098 234101" end_var="5"/>
+		<monster var="0" npc_ids="234090 234093 234096 234099 234102" end_var="5"/>
+    </monster_hunt>
+	<!-- [Weekly] Vanguard Down (Asmodians Only) -->
+	<monster_hunt id="23805" start_npc_ids="802430">
+        <monster var="0" npc_ids="234089 234092 234095 234098 234101" end_var="5"/>
+		<monster var="0" npc_ids="234090 234093 234096 234099 234102" end_var="5"/>
+    </monster_hunt>
+	<!-- Talking 'Bout My Generators (Asmodians Only) -->
+	<item_collecting id="23806" start_npc_ids="802362" action_item_ids="702552"/>
+	<!-- An Ample Sample (Elyos Only) -->
+	<item_collecting id="23807" start_npc_ids="802434"/>
+	<!-- Keeping The Keep Clear (Asmodians Only) -->
+	<monster_hunt id="23808" start_npc_ids="802433">
+        <monster var="0" npc_ids="234294 234530" end_var="5"/>
+		<monster var="1" npc_ids="234529" end_var="3"/>
+    </monster_hunt>
+	<!-- Memory Of The Collapsed Rune (Asmodians Only) -->
+	<item_collecting id="23810" start_npc_ids="802430"/>
+	<!-- Cozy Conspiracy (Elyos Only) -->
+	<monster_hunt id="23811" start_npc_ids="802429">
+        <monster var="0" npc_ids="234659 234660 234661" end_var="5"/>
+    </monster_hunt>
+	<!-- [Weekly] Vanquish The Vicinity (Asmodians Only) -->
+	<item_collecting id="23813" start_npc_ids="804589"/>
+	<!-- [Weekly] Timberrrrrr (Asmodians Only) -->
+	<monster_hunt id="23814" start_npc_ids="802590">
+        <monster var="0" npc_ids="234262 234263" end_var="15"/>
+    </monster_hunt>
+	<item_collecting id="23816" start_npc_ids="0"/>
+	<!-- [Weekly] Spirit, Surprise, Strike (Asmodians Only) -->
+	<kill_in_world id="23818" start_npc_ids="804593" end_npc_ids="804593" worlds="600090000" amount="6"/>
+	<!-- [Weekly] Agitator Devastator (Asmodians Only) -->
+	<item_collecting id="23819" start_npc_ids="804593"/>
+	<!-- [Weekly] No Heckling Allowed (Asmodians Only) -->
+	<item_collecting id="23820" start_npc_ids="804589"/>
+	<!-- [Weekly] Due Diligence (Asmodians Only) -->
+	<item_collecting id="23821" start_npc_ids="804589"/>
+</quest_scripts>

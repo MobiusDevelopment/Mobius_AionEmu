@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+<!--
+    Quest The Jeridises
+	Make By Encom
+ -->
+	<!-- Temporary 1 -->
+	<item_collecting id="9521" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 2 -->
+	<item_collecting id="9522" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 3 -->
+	<item_collecting id="9523" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 4 -->
+	<item_collecting id="9524" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 5 -->
+	<item_collecting id="9525" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 6 -->
+	<item_collecting id="9526" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 7 -->
+	<item_collecting id="9527" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 8 -->
+	<item_collecting id="9528" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 9 -->
+	<item_collecting id="9529" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 10 -->
+	<item_collecting id="9530" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 11 -->
+	<item_collecting id="9531" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 12 -->
+	<item_collecting id="9532" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 13 -->
+	<item_collecting id="9533" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 14 -->
+	<item_collecting id="9534" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 15 -->
+	<item_collecting id="9535" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 16 -->
+	<item_collecting id="9536" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 17 -->
+	<item_collecting id="9537" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 18 -->
+	<item_collecting id="9538" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 19 -->
+	<item_collecting id="9539" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 20 -->
+	<item_collecting id="9540" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 21 -->
+	<item_collecting id="9541" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 22 -->
+	<item_collecting id="9542" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 23 -->
+	<item_collecting id="9543" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 24 -->
+	<item_collecting id="9544" start_npc_ids="0" end_npc_ids="203231"/>
+	<!-- Temporary 25 -->
+	<item_collecting id="9545" start_npc_ids="0" end_npc_ids="203231"/>
+ </quest_scripts>

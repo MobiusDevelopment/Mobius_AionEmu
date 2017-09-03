@@ -1,0 +1,228 @@
+/*
+ * This file is part of the Aion-Emu project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.aionemu.gameserver.services;
+
+import java.util.Collections;
+import java.util.Map;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+import com.aionemu.commons.services.CronService;
+import com.aionemu.gameserver.configs.main.CustomConfig;
+import com.aionemu.gameserver.configs.shedule.RiftSchedule;
+import com.aionemu.gameserver.configs.shedule.RiftSchedule.Rift;
+import com.aionemu.gameserver.dataholders.DataManager;
+import com.aionemu.gameserver.model.TaskId;
+import com.aionemu.gameserver.model.gameobjects.Npc;
+import com.aionemu.gameserver.model.gameobjects.VisibleObject;
+import com.aionemu.gameserver.model.rift.RiftLocation;
+import com.aionemu.gameserver.services.rift.RiftInformer;
+import com.aionemu.gameserver.services.rift.RiftManager;
+import com.aionemu.gameserver.services.rift.RiftOpenRunnable;
+import com.aionemu.gameserver.utils.ThreadPoolManager;
+
+import javolution.util.FastMap;
+
+public class RiftService
+{
+	private RiftSchedule riftSchedule;
+	private Map<Integer, RiftLocation> locations;
+	private final Lock closing = new ReentrantLock();
+	private static final int duration = CustomConfig.RIFT_DURATION;
+	private final FastMap<Integer, RiftLocation> activeRifts = new FastMap<>();
+	
+	public void initRiftLocations()
+	{
+		if (CustomConfig.RIFT_ENABLED)
+		{
+			locations = DataManager.RIFT_DATA.getRiftLocations();
+		}
+		else
+		{
+			locations = Collections.emptyMap();
+		}
+	}
+	
+	public void initRifts()
+	{
+		if (CustomConfig.RIFT_ENABLED)
+		{
+			riftSchedule = RiftSchedule.load();
+			for (final Rift rift : riftSchedule.getRiftsList())
+			{
+				for (final String openTimes : rift.getOpenTime())
+				{
+					CronService.getInstance().schedule(new RiftOpenRunnable(rift.getWorldId()), openTimes);
+				}
+			}
+		}
+	}
+	
+	public boolean isValidId(int id)
+	{
+		if (isRift(id))
+		{
+			return RiftService.getInstance().getRiftLocations().keySet().contains(id);
+		}
+		else
+		{
+			for (final RiftLocation loc : RiftService.getInstance().getRiftLocations().values())
+			{
+				if (loc.getWorldId() == id)
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	private boolean isRift(int id)
+	{
+		return id < 10000;
+	}
+	
+	public boolean openRifts(int id)
+	{
+		if (isValidId(id))
+		{
+			if (isRift(id))
+			{
+				final RiftLocation rift = getRiftLocation(id);
+				if (rift.getSpawned().isEmpty())
+				{
+					openRifts(rift);
+					RiftInformer.sendRiftsInfo(rift.getWorldId());
+					return true;
+				}
+			}
+			else
+			{
+				boolean opened = false;
+				for (final RiftLocation rift : getRiftLocations().values())
+				{
+					if ((rift.getWorldId() == id) && rift.getSpawned().isEmpty())
+					{
+						openRifts(rift);
+						opened = true;
+					}
+				}
+				RiftInformer.sendRiftsInfo(id);
+				return opened;
+			}
+		}
+		return false;
+	}
+	
+	public boolean closeRifts(int id)
+	{
+		if (isValidId(id))
+		{
+			if (isRift(id))
+			{
+				final RiftLocation rift = getRiftLocation(id);
+				if (!rift.getSpawned().isEmpty())
+				{
+					closeRift(rift);
+					return true;
+				}
+			}
+			else
+			{
+				boolean opened = false;
+				for (final RiftLocation rift : getRiftLocations().values())
+				{
+					if ((rift.getWorldId() == id) && !rift.getSpawned().isEmpty())
+					{
+						closeRift(rift);
+						opened = true;
+					}
+				}
+				return opened;
+			}
+		}
+		return false;
+	}
+	
+	public void openRifts(RiftLocation location)
+	{
+		location.setOpened(true);
+		RiftManager.getInstance().spawnRift(location);
+		activeRifts.putEntry(location.getId(), location);
+		ThreadPoolManager.getInstance().schedule(new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				closeRifts();
+			}
+		}, duration * 3600 * 1000);
+	}
+	
+	public void closeRift(RiftLocation location)
+	{
+		location.setOpened(false);
+		for (final VisibleObject npc : location.getSpawned())
+		{
+			((Npc) npc).getController().cancelTask(TaskId.RESPAWN);
+			npc.getController().onDelete();
+		}
+		location.getSpawned().clear();
+	}
+	
+	public void closeRifts()
+	{
+		closing.lock();
+		try
+		{
+			for (final RiftLocation rift : activeRifts.values())
+			{
+				closeRift(rift);
+			}
+			activeRifts.clear();
+		}
+		finally
+		{
+			closing.unlock();
+		}
+	}
+	
+	public int getDuration()
+	{
+		return duration;
+	}
+	
+	public RiftLocation getRiftLocation(int id)
+	{
+		return locations.get(id);
+	}
+	
+	public Map<Integer, RiftLocation> getRiftLocations()
+	{
+		return locations;
+	}
+	
+	public static RiftService getInstance()
+	{
+		return RiftServiceHolder.INSTANCE;
+	}
+	
+	private static class RiftServiceHolder
+	{
+		private static final RiftService INSTANCE = new RiftService();
+	}
+}

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Ereshkigal/Beritra Invasion
+	エレシュランタ 4.9
+	Spawn By Encom
+ -->
+<spawns>
+    <spawn_map map_id="400010000">
+		<beritra_spawn id="30">
+			<beritra_type bstate="INVASION">
+				<!-- 경보 지역 -->
+				<spawn npc_id="832819">
+					<spot x="2020.6847" y="2832.924" z="2830.972" h="51"/>
+				</spawn>
+				<!-- 이드포 투몬 정예 3급 병기 -->
+				<spawn npc_id="234589">
+					<spot x="2020.6847" y="2832.924" z="2830.972" h="51"/>
+				</spawn>
+			</beritra_type>
+			<beritra_type bstate="PEACE">
+			    <!-- WorldRaid_SP_Object -->
+				<spawn npc_id="702548">
+					<spot x="2020.6847" y="2832.924" z="2830.972" h="51"/>
+				</spawn>
+			</beritra_type>
+		</beritra_spawn>
+		<beritra_spawn id="31">
+			<beritra_type bstate="INVASION">
+				<!-- 경보 지역 -->
+				<spawn npc_id="832819">
+					<spot x="820.0" y="865.0" z="1671.1095" h="83"/>
+				</spawn>
+				<!-- 베노이드 정예 2급 병기 -->
+				<spawn npc_id="236750">
+					<spot x="820.0" y="865.0" z="1671.1095" h="83" walker_id="AB1_WORLDRAID_SANDWORM_WAY_01"/>
+				</spawn>
+			</beritra_type>
+			<beritra_type bstate="PEACE">
+			    <!-- WorldRaid_SP_Object -->
+				<spawn npc_id="702548">
+					<spot x="820.0" y="865.0" z="1671.1095" h="83"/>
+				</spawn>
+			</beritra_type>
+		</beritra_spawn>
+		<beritra_spawn id="32">
+			<beritra_type bstate="INVASION">
+				<!-- 경보 지역 -->
+				<spawn npc_id="832819">
+					<spot x="2280.3706" y="870.72766" z="2831.548" h="98"/>
+				</spawn>
+				<!-- 이드포 투몬 정예 3급 병기 -->
+				<spawn npc_id="234590">
+					<spot x="2280.3706" y="870.72766" z="2831.548" h="98"/>
+				</spawn>
+			</beritra_type>
+			<beritra_type bstate="PEACE">
+			    <!-- WorldRaid_SP_Object -->
+				<spawn npc_id="702548">
+					<spot x="2280.3706" y="870.72766" z="2831.548" h="98"/>
+				</spawn>
+			</beritra_type>
+		</beritra_spawn>
+		<beritra_spawn id="33">
+			<beritra_type bstate="INVASION">
+				<!-- 경보 지역 -->
+				<spawn npc_id="832819">
+					<spot x="3332.5474" y="1371.9772" z="2666.258" h="89"/>
+				</spawn>
+				<!-- 포격형 투몬 정예 1급 병기 -->
+				<spawn npc_id="234591">
+					<spot x="3332.5474" y="1371.9772" z="2666.258" h="89"/>
+				</spawn>
+			</beritra_type>
+			<beritra_type bstate="PEACE">
+			    <!-- WorldRaid_SP_Object -->
+				<spawn npc_id="702548">
+					<spot x="3332.5474" y="1371.9772" z="2666.258" h="89"/>
+				</spawn>
+			</beritra_type>
+		</beritra_spawn>
+		<beritra_spawn id="34">
+			<beritra_type bstate="INVASION">
+				<!-- 경보 지역 -->
+				<spawn npc_id="832819">
+					<spot x="1123.5983" y="2096.5151" z="2886.9402" h="96"/>
+				</spawn>
+				<!-- 포격형 투몬 정예 1급 병기 -->
+				<spawn npc_id="234592">
+					<spot x="1123.5983" y="2096.5151" z="2886.9402" h="96"/>
+				</spawn>
+			</beritra_type>
+			<beritra_type bstate="PEACE">
+			    <!-- WorldRaid_SP_Object -->
+				<spawn npc_id="702548">
+					<spot x="1123.5983" y="2096.5151" z="2886.9402" h="96"/>
+				</spawn>
+			</beritra_type>
+		</beritra_spawn>
+		
+		<!-- ERESUKIGAL INVASION 4.9 -->
+		<beritra_spawn id="35">
+			<beritra_type bstate="INVASION">
+				<!-- WorldRaid_Control_Effect -->
+				<spawn npc_id="702529">
+					<spot x="2065.3005" y="2473.1807" z="2900.1775" h="115"/>
+				</spawn>
+				<!-- WorldRaid_Advent_Effect -->
+				<spawn npc_id="702549">
+					<spot x="2065.3005" y="2473.1807" z="2900.1775" h="115"/>
+				</spawn>
+				<!-- 경보 지역 -->
+				<spawn npc_id="832819">
+					<spot x="2065.3005" y="2473.1807" z="2900.1775" h="115"/>
+				</spawn>
+				<!-- 빙갑 마법병기 디플로낙스 -->
+				<spawn npc_id="883659">
+					<spot x="2065.3005" y="2473.1807" z="2900.1775" h="115"/>
+				</spawn>
+			</beritra_type>
+			<beritra_type bstate="PEACE">
+			    <!-- WorldRaid_SP_Object -->
+				<spawn npc_id="702548">
+					<spot x="2065.3005" y="2473.1807" z="2900.1775" h="115"/>
+				</spawn>
+			</beritra_type>
+		</beritra_spawn>
+		<beritra_spawn id="36">
+			<beritra_type bstate="INVASION">
+				<!-- WorldRaid_Control_Effect -->
+				<spawn npc_id="702529">
+					<spot x="1722.8392" y="1903.1249" z="2892.1248" h="107"/>
+				</spawn>
+				<!-- WorldRaid_Advent_Effect -->
+				<spawn npc_id="702549">
+					<spot x="1722.8392" y="1903.1249" z="2892.1248" h="107"/>
+				</spawn>
+				<!-- 경보 지역 -->
+				<spawn npc_id="832819">
+					<spot x="1722.8392" y="1903.1249" z="2892.1248" h="107"/>
+				</spawn>
+				<!-- 빙갑 마법병기 디플로낙스 -->
+				<spawn npc_id="883659">
+					<spot x="1722.8392" y="1903.1249" z="2892.1248" h="107"/>
+				</spawn>
+			</beritra_type>
+			<beritra_type bstate="PEACE">
+			    <!-- WorldRaid_SP_Object -->
+				<spawn npc_id="702548">
+					<spot x="1722.8392" y="1903.1249" z="2892.1248" h="107"/>
+				</spawn>
+			</beritra_type>
+		</beritra_spawn>
+		<beritra_spawn id="37">
+			<beritra_type bstate="INVASION">
+				<!-- WorldRaid_Control_Effect -->
+				<spawn npc_id="702529">
+					<spot x="670.0000" y="2700.0000" z="2897.547" h="107"/>
+				</spawn>
+				<!-- WorldRaid_Advent_Effect -->
+				<spawn npc_id="702549">
+					<spot x="670.0000" y="2700.0000" z="2897.547" h="107"/>
+				</spawn>
+				<!-- 경보 지역 -->
+				<spawn npc_id="832819">
+					<spot x="670.0000" y="2700.0000" z="2897.547" h="107"/>
+				</spawn>
+				<!-- 빙갑 마법병기 디플로낙스 -->
+				<spawn npc_id="883659">
+					<spot x="670.0000" y="2700.0000" z="2897.547" h="107"/>
+				</spawn>
+			</beritra_type>
+			<beritra_type bstate="PEACE">
+			    <!-- WorldRaid_SP_Object -->
+				<spawn npc_id="702548">
+					<spot x="670.0000" y="2700.0000" z="2897.547" h="107"/>
+				</spawn>
+			</beritra_type>
+		</beritra_spawn>
+		<beritra_spawn id="38">
+			<beritra_type bstate="INVASION">
+				<!-- WorldRaid_Control_Effect -->
+				<spawn npc_id="702529">
+					<spot x="1813.9344" y="1827.3582" z="2885.6187" h="33"/>
+				</spawn>
+				<!-- WorldRaid_Advent_Effect -->
+				<spawn npc_id="702549">
+					<spot x="1813.9344" y="1827.3582" z="2885.6187" h="33"/>
+				</spawn>
+				<!-- 경보 지역 -->
+				<spawn npc_id="832819">
+					<spot x="1813.9344" y="1827.3582" z="2885.6187" h="33"/>
+				</spawn>
+				<!-- 빙갑 마법병기 디플로낙스 -->
+				<spawn npc_id="883322">
+					<spot x="1813.9344" y="1827.3582" z="2885.6187" h="33"/>
+				</spawn>
+			</beritra_type>
+			<beritra_type bstate="PEACE">
+			    <!-- WorldRaid_SP_Object -->
+				<spawn npc_id="702548">
+					<spot x="1813.9344" y="1827.3582" z="2885.6187" h="33"/>
+				</spawn>
+			</beritra_type>
+		</beritra_spawn>
+		<beritra_spawn id="39">
+			<beritra_type bstate="INVASION">
+				<!-- WorldRaid_Control_Effect -->
+				<spawn npc_id="702529">
+					<spot x="2606.2485" y="1892.8187" z="2908.7598" h="47"/>
+				</spawn>
+				<!-- WorldRaid_Advent_Effect -->
+				<spawn npc_id="702549">
+					<spot x="2606.2485" y="1892.8187" z="2908.7598" h="47"/>
+				</spawn>
+				<!-- 경보 지역 -->
+				<spawn npc_id="832819">
+					<spot x="2606.2485" y="1892.8187" z="2908.7598" h="47"/>
+				</spawn>
+				<!-- 빙갑 마법병기 디플로낙스 -->
+				<spawn npc_id="883322">
+					<spot x="2606.2485" y="1892.8187" z="2908.7598" h="47"/>
+				</spawn>
+			</beritra_type>
+			<beritra_type bstate="PEACE">
+			    <!-- WorldRaid_SP_Object -->
+				<spawn npc_id="702548">
+					<spot x="2606.2485" y="1892.8187" z="2908.7598" h="47"/>
+				</spawn>
+			</beritra_type>
+		</beritra_spawn>
+		<beritra_spawn id="40">
+			<beritra_type bstate="INVASION">
+				<!-- WorldRaid_Control_Effect -->
+				<spawn npc_id="702529">
+					<spot x="2773.0369" y="1152.2582" z="2801.5713" h="37"/>
+				</spawn>
+				<!-- WorldRaid_Advent_Effect -->
+				<spawn npc_id="702549">
+					<spot x="2773.0369" y="1152.2582" z="2801.5713" h="37"/>
+				</spawn>
+				<!-- 경보 지역 -->
+				<spawn npc_id="832819">
+					<spot x="2773.0369" y="1152.2582" z="2801.5713" h="37"/>
+				</spawn>
+				<!-- 빙갑 마법병기 디플로낙스 -->
+				<spawn npc_id="883322">
+					<spot x="2773.0369" y="1152.2582" z="2801.5713" h="37"/>
+				</spawn>
+			</beritra_type>
+			<beritra_type bstate="PEACE">
+			    <!-- WorldRaid_SP_Object -->
+				<spawn npc_id="702548">
+					<spot x="2773.0369" y="1152.2582" z="2801.5713" h="37"/>
+				</spawn>
+			</beritra_type>
+		</beritra_spawn>
+    </spawn_map>
+</spawns>

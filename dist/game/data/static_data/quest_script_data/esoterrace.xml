@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+<!--
+    Quest Esoterrace 2.5
+	Make By Encom
+ -->
+	<monster_hunt id="18401" start_npc_ids="799553">
+		<monster var="0" end_var="20" npc_ids="217228 217203 217200 217201 217282 217283"/>
+	</monster_hunt>
+	<item_collecting id="18403" start_npc_ids="799586"/>
+	<item_collecting id="18404" start_npc_ids="799586" action_item_ids="701016"/>
+	<item_collecting id="18408" start_npc_ids="799553"/>
+	<item_collecting id="18411" start_npc_ids="799586"/>
+	<item_collecting id="18413" start_npc_ids="799586"/>
+	<item_collecting id="18414" start_npc_ids="799586"/>
+	
+	<monster_hunt id="28401" start_npc_ids="799558">
+		<monster var="0" end_var="20" npc_ids="217228 217203 217200 217201 217282 217283"/>
+	</monster_hunt>
+	<item_collecting id="28403" start_npc_ids="799589"/>
+	<item_collecting id="28404" start_npc_ids="799589" action_item_ids="701016"/>
+	<item_collecting id="28408" start_npc_ids="799558"/>
+	<item_collecting id="28411" start_npc_ids="799589"/>
+	<item_collecting id="28413" start_npc_ids="799589"/>
+	<item_collecting id="28414" start_npc_ids="799589"/>
+</quest_scripts>

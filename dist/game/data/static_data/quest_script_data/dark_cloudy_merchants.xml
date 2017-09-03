@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quest_scripts>
+<!--
+    Quest Dark Cloudy Merchants 3.0
+	Make By Encom
+-->
+	<!-- [Daily] Periwinkle Pluma Pickle (Both Race) -->
+	<monster_hunt id="39501" start_npc_ids="0" end_npc_ids="205628">
+		<monster var="0" npc_ids="217936 219208" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Ribbit Responsibility (Both Race) -->
+	<monster_hunt id="39502" start_npc_ids="0" end_npc_ids="205628">
+		<monster var="0" npc_ids="218580" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Moonflower Mess (Both Race) -->
+	<monster_hunt id="39503" start_npc_ids="0" end_npc_ids="205628">
+		<monster var="0" npc_ids="217880 217881 217970 217971" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Snuffler Snarl (Both Race) -->
+	<monster_hunt id="39504" start_npc_ids="0" end_npc_ids="205628">
+		<monster var="0" npc_ids="217974 217975" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Backbiting Botheration (Both Race) -->
+	<monster_hunt id="39505" start_npc_ids="0" end_npc_ids="205628">
+		<monster var="0" npc_ids="218599 218601 218022 218024" end_var="2"/>
+	</monster_hunt>
+	<!-- [Daily] Crystal Spirit Complication (Both Race) -->
+	<monster_hunt id="39506" start_npc_ids="0" end_npc_ids="205629">
+		<monster var="0" npc_ids="218606 218607" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Impeding Laupedes (Both Race) -->
+	<monster_hunt id="39507" start_npc_ids="0" end_npc_ids="205629">
+		<monster var="0" npc_ids="218088 218089" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Tyrhund Tribulations(Both Race) -->
+	<monster_hunt id="39508" start_npc_ids="0" end_npc_ids="205629">
+		<monster var="0" npc_ids="218142 218143" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Serrator Stress (Both Race) -->
+	<monster_hunt id="39509" start_npc_ids="0" end_npc_ids="205629">
+		<monster var="0" npc_ids="218110 218111" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Zorinerk Versus The Shulacks (Both Race) -->
+	<monster_hunt id="39510" start_npc_ids="0" end_npc_ids="205629">
+		<monster var="0" npc_ids="218215" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Twister Torment(Both Race) -->
+	<monster_hunt id="39511" start_npc_ids="0" end_npc_ids="205884">
+		<monster var="0" npc_ids="218215" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Zanthay Zeal (Both Race) -->
+	<monster_hunt id="39512" start_npc_ids="0" end_npc_ids="205884">
+		<monster var="0" npc_ids="218220" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Wriggot Woe (Both Race) -->
+	<monster_hunt id="39513" start_npc_ids="0" end_npc_ids="205884">
+		<monster var="0" npc_ids="218264 218265" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Spirit-Ual Strife (Both Race) -->
+	<monster_hunt id="39514" start_npc_ids="0" end_npc_ids="205884">
+		<monster var="0" npc_ids="218350 218351" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Untruth Upset (Both Race) -->
+	<monster_hunt id="39515" start_npc_ids="0" end_npc_ids="205884">
+		<monster var="0" npc_ids="218215" end_var="1"/>
+	</monster_hunt>
+	<!-- [Daily] Undead Unrest (Both Race) -->
+	<monster_hunt id="39516" start_npc_ids="0" end_npc_ids="205885">
+		<monster var="0" npc_ids="218425 218426 218427 218428" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Boggart Boondoggle (Both Race) -->
+	<monster_hunt id="39517" start_npc_ids="0" end_npc_ids="205885">
+		<monster var="0" npc_ids="218437" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Sludger Scourge (Both Race) -->
+	<monster_hunt id="39518" start_npc_ids="0" end_npc_ids="205885">
+		<monster var="0" npc_ids="218478" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Enos Emergency (Both Race) -->
+	<monster_hunt id="39519" start_npc_ids="0" end_npc_ids="205885">
+		<monster var="0" npc_ids="218497 218498" end_var="5"/>
+	</monster_hunt>
+	<!-- [Daily] Vilmanerk Versus Dragonbound (Both Race) -->
+	<monster_hunt id="39520" start_npc_ids="0" end_npc_ids="205885">
+		<monster var="0" npc_ids="218387 218388 218389" end_var="5"/>
+		<monster var="0" npc_ids="218390 218391 218392" end_var="5"/>
+		<monster var="0" npc_ids="218393 218394 218395" end_var="5"/>
+		<monster var="0" npc_ids="218396 218397 218398" end_var="5"/>
+		<monster var="0" npc_ids="218399 218400 218401" end_var="5"/>
+	</monster_hunt>
+</quest_scripts>

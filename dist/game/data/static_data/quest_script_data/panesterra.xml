@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+<!--
+    Quest Panesterra 4.7
+	Belus/Aspida/Atanatos/Disilon
+	Make By Encom
+ -->
+	<!-- BELUS -->
+	<!-- [Daily] Snuff The Snoops -->
+	<monster_hunt id="41000" start_npc_ids="802476 802477 802478 802479" end_npc_ids="802476 802477 802478 802479">
+        <monster var="0" npc_ids="277696 277697 277720 277721 277744 277745" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Bye-Bye, Balaur -->
+	<monster_hunt id="41001" start_npc_ids="802476 802477 802478 802479" end_npc_ids="802476 802477 802478 802479">
+        <monster var="0" npc_ids="277700 277701 277724 277725 277748 277749" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Scout Wipeout -->
+	<monster_hunt id="41002" start_npc_ids="802480 802481 802482 802483" end_npc_ids="802480 802481 802482 802483">
+        <monster var="0" npc_ids="880496 880497 880580 880581" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Recon Unit Reckoning -->
+	<monster_hunt id="41003" start_npc_ids="802480 802481 802482 802483" end_npc_ids="802480 802481 802482 802483">
+        <monster var="0" npc_ids="880500 880501 880584 880585" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Base Threat Abatement -->
+	<monster_hunt id="41004" start_npc_ids="802484 802485 802485 802487" end_npc_ids="802484 802485 802485 802487">
+        <monster var="0" npc_ids="880524 880525 880608 880609 880692 880693" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Chastise The Spies -->
+	<monster_hunt id="41005" start_npc_ids="802484 802485 802485 802487" end_npc_ids="802484 802485 802485 802487">
+        <monster var="0" npc_ids="880528 880529 880612 880613 880696 880697" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Mar The Balaur -->
+	<monster_hunt id="41006" start_npc_ids="802488 802489 802490 802491" end_npc_ids="802488 802489 802490 802491">
+        <monster var="0" npc_ids="880552 880553 880636 880637 880720 880721" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Slay In The Fray -->
+	<monster_hunt id="41007" start_npc_ids="802488 802489 802490 802491" end_npc_ids="802488 802489 802490 802491">
+        <monster var="0" npc_ids="880556 880557 880640 880641 880724 880725" end_var="2"/>
+    </monster_hunt>
+	
+	<!-- ASPIDA -->
+	<!-- [Daily] Too Close For Comfort -->
+	<monster_hunt id="41008" start_npc_ids="802492 802493 802494 802495" end_npc_ids="802492 802493 802494 802495">
+        <monster var="0" npc_ids="277702 277703 277726 277727 277750 277751" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] The Balaur Among Us -->
+	<monster_hunt id="41009" start_npc_ids="802492 802493 802494 802495" end_npc_ids="802492 802493 802494 802495">
+        <monster var="0" npc_ids="277706 277707 277730 277731 277754 277755" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] The Floating Hills Have Eyes -->
+	<monster_hunt id="41010" start_npc_ids="802496 802497 802498 802499" end_npc_ids="802496 802497 802498 802499">
+        <monster var="0" npc_ids="880503 880504 880587 880588" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Balaur-Ectomy -->
+	<monster_hunt id="41011" start_npc_ids="802496 802497 802498 802499" end_npc_ids="802496 802497 802498 802499">
+        <monster var="0" npc_ids="880507 880508 880591 880592" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Deny The Spies -->
+	<monster_hunt id="41012" start_npc_ids="802500 802501 802502 802503" end_npc_ids="802500 802501 802502 802503">
+        <monster var="0" npc_ids="880531 880532 880615 880616 880699 880700" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Balaur Beware -->
+	<monster_hunt id="41013" start_npc_ids="802500 802501 802502 802503" end_npc_ids="802500 802501 802502 802503">
+        <monster var="0" npc_ids="880535 880536 880619 880620 880703 880704" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] I Spy A Spy -->
+	<monster_hunt id="41014" start_npc_ids="802504 802505 802506 802507" end_npc_ids="802504 802505 802506 802507">
+        <monster var="0" npc_ids="880559 880560 880643 880644 880727 880728" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Recon Unit Removal -->
+	<monster_hunt id="41015" start_npc_ids="802504 802505 802506 802507" end_npc_ids="802504 802505 802506 802507">
+        <monster var="0" npc_ids="880563 880564 880647 880648 880731 880732" end_var="2"/>
+    </monster_hunt>
+	
+	<!-- ATANATOS -->
+	<!-- [Daily] Scouts Dishonor -->
+	<monster_hunt id="41016" start_npc_ids="802508 802509 802510 802511" end_npc_ids="802508 802509 802510 802511">
+        <monster var="0" npc_ids="277708 277709 277732 277733 277756 277757" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Abase A Balaur Unit -->
+	<monster_hunt id="41017" start_npc_ids="802508 802509 802510 802511" end_npc_ids="802508 802509 802510 802511">
+        <monster var="0" npc_ids="277712 277713 277736 277737 277760 277761" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Spies Of Despise -->
+	<monster_hunt id="41018" start_npc_ids="802512 802513 802514 802515" end_npc_ids="802512 802513 802514 802515">
+        <monster var="0" npc_ids="880510 880511 880594 880595" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Compromise The Spies -->
+	<monster_hunt id="41019" start_npc_ids="802512 802513 802514 802515" end_npc_ids="802512 802513 802514 802515">
+        <monster var="0" npc_ids="880514 880515 880598 880599" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] It's A-Scout Time -->
+	<monster_hunt id="41020" start_npc_ids="802516 802517 802518 802519" end_npc_ids="802516 802517 802518 802519">
+        <monster var="0" npc_ids="880538 880539 880622 880623 880706 880707" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Balaur Gone Too Far -->
+	<monster_hunt id="41021" start_npc_ids="802516 802517 802518 802519" end_npc_ids="802516 802517 802518 802519">
+        <monster var="0" npc_ids="880542 880543 880626 880627 880710 880711" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Take Out A Scout -->
+	<monster_hunt id="41022" start_npc_ids="802520 802521 802522 802523" end_npc_ids="802520 802521 802522 802523">
+        <monster var="0" npc_ids="880566 880567 880650 880651 880734 880735" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Reproach The Encroachers -->
+	<monster_hunt id="41023" start_npc_ids="802520 802521 802522 802523" end_npc_ids="802520 802521 802522 802523">
+        <monster var="0" npc_ids="880570 880571 880654 880655 880738 880739" end_var="2"/>
+    </monster_hunt>
+	
+	<!-- DISILLON -->
+	<!-- [Daily] You Dirty Scouts -->
+	<monster_hunt id="41024" start_npc_ids="802524 802525 802526 802527" end_npc_ids="802524 802525 802526 802527">
+        <monster var="0" npc_ids="277714 277715 277738 277739 277762 277763" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Step By Step -->
+	<monster_hunt id="41025" start_npc_ids="802524 802525 802526 802527" end_npc_ids="802524 802525 802526 802527">
+        <monster var="0" npc_ids="277718 277719 277742 277743 277766 277767" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] No More Today, Please -->
+	<monster_hunt id="41026" start_npc_ids="802528 802529 802530 802531" end_npc_ids="802528 802529 802530 802531">
+        <monster var="0" npc_ids="880517 880518 880601 880602" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Persistence Is A Virtue -->
+	<monster_hunt id="41027" start_npc_ids="802528 802529 802530 802531" end_npc_ids="802528 802529 802530 802531">
+        <monster var="0" npc_ids="880521 880522 880605 880606" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Scout, Scout, Go Away -->
+	<monster_hunt id="41028" start_npc_ids="802532 802533 802534 802535" end_npc_ids="802532 802533 802534 802535">
+        <monster var="0" npc_ids="880545 880546 880629 880630 880713 880714" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Too Far, Balaur -->
+	<monster_hunt id="41029" start_npc_ids="802532 802533 802534 802535" end_npc_ids="802532 802533 802534 802535">
+        <monster var="0" npc_ids="880549 880550 880633 880634 880717 880718" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] Seize The Base -->
+	<monster_hunt id="41030" start_npc_ids="802536 802537 802538 802539" end_npc_ids="802536 802537 802538 802539">
+        <monster var="0" npc_ids="880573 880574 880657 880658 880741 880742" end_var="2"/>
+    </monster_hunt>
+	<!-- [Daily] They Think They Can -->
+	<monster_hunt id="41031" start_npc_ids="802536 802537 802538 802539" end_npc_ids="802536 802537 802538 802539">
+        <monster var="0" npc_ids="880577 880578 880661 880662 880745 880746" end_var="2"/>
+    </monster_hunt>
+</quest_scripts>

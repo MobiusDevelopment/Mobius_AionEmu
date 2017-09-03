@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="../modifiers.xsd"/>
+	<xs:element name="skill_enchants">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="skill_enchant" type="SkillEnchantTemplate" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="SkillEnchantTemplate">
+		<xs:sequence>
+			<xs:element name="modifiers" type="Modifiers" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:sequence>
+			<xs:element name="skill" type="SkillTemplate" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="SkillTemplate">
+		<xs:attribute name="id" type="xs:int" use="required"/>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Conquest/Offering 4.8
+    Shugo Emperor's Vault 4.7.5
+	Emperor Trillirunerk's Safe 4.9.1
+	Old Fire Temple 5.1
+	Made By Rinzler (Encom)
+ -->
+<conquest_schedule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="conquest_schedule.xsd">
+	<!-- [CONQUEST/OFFERING 4.8] -->
+	<!-- [INGGISON] -->
+	<conquest id="1">
+		<offeringTime>0 0 13 ? * MON-SUN *</offeringTime>
+		<offeringTime>0 0 18 ? * MON-SUN *</offeringTime>
+		<offeringTime>0 0 23 ? * MON-SUN *</offeringTime>
+		<offeringTime>0 0 4 ? * MON-SUN *</offeringTime>
+		<offeringTime>0 0 9 ? * MON-SUN *</offeringTime>
+	</conquest>
+	<!-- [GELKMAROS] -->
+	<conquest id="2">
+		<offeringTime>0 0 13 ? * MON-SUN *</offeringTime>
+		<offeringTime>0 0 18 ? * MON-SUN *</offeringTime>
+		<offeringTime>0 0 23 ? * MON-SUN *</offeringTime>
+		<offeringTime>0 0 4 ? * MON-SUN *</offeringTime>
+		<offeringTime>0 0 9 ? * MON-SUN *</offeringTime>
+	</conquest>
+	
+	<!-- [THE SHUGO EMPEROR VAULT 4.7.5 - Sanctum] -->
+	<conquest id="3">
+		<offeringTime>0 0 13 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 18 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 23 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 4 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 9 ? * WED,SAT *</offeringTime>
+	</conquest>
+	<!-- [EMPEROR TRILLIRUNERK SAFE 4.9.1 - Sanctum] -->
+	<conquest id="4">
+		<offeringTime>0 0 15 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 20 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 1 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 6 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 11 ? * WED,SAT *</offeringTime>
+	</conquest>
+	<!-- [THE SHUGO EMPEROR VAULT 4.7.5 - Pandaemonium] -->
+	<conquest id="5">
+		<offeringTime>0 0 13 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 18 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 23 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 4 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 9 ? * WED,SAT *</offeringTime>
+	</conquest>
+	<!-- [EMPEROR TRILLIRUNERK SAFE 4.9.1 - Pandaemonium] -->
+	<conquest id="6">
+		<offeringTime>0 0 15 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 20 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 1 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 6 ? * WED,SAT *</offeringTime>
+		<offeringTime>0 0 11 ? * WED,SAT *</offeringTime>
+	</conquest>
+	<!-- [OLD FIRE TEMPLE 5.1 - Sanctum] -->
+	<conquest id="7">
+		<offeringTime>0 0 13 ? * FRI,SUN *</offeringTime>
+		<offeringTime>0 0 18 ? * FRI,SUN *</offeringTime>
+		<offeringTime>0 0 23 ? * FRI,SUN *</offeringTime>
+		<offeringTime>0 0 4 ? * FRI,SUN *</offeringTime>
+		<offeringTime>0 0 9 ? * FRI,SUN *</offeringTime>
+	</conquest>
+	<!-- [OLD FIRE TEMPLE 5.1 - Pandaemonium] -->
+	<conquest id="8">
+		<offeringTime>0 0 13 ? * FRI,SUN *</offeringTime>
+		<offeringTime>0 0 18 ? * FRI,SUN *</offeringTime>
+		<offeringTime>0 0 23 ? * FRI,SUN *</offeringTime>
+		<offeringTime>0 0 4 ? * FRI,SUN *</offeringTime>
+		<offeringTime>0 0 9 ? * FRI,SUN *</offeringTime>
+	</conquest>
+</conquest_schedule>

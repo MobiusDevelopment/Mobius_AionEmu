@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Windstreams 5.1
+	Made By Encom
+ -->
+<windstreams xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="windstreams.xsd">
+	<!-- ZONES 2.0 -->
+	<!-- Inggison -->
+	<windstream mapid="210050000">
+		<locations>
+			<location id="77" state="1" fly_path="ONE_WAY"/>
+			<location id="78" state="1" fly_path="ONE_WAY"/>
+			<location id="80" state="1" fly_path="ONE_WAY"/>
+			<location id="81" state="1" fly_path="ONE_WAY"/>
+			<location id="89" state="1" fly_path="ONE_WAY"/>
+			<location id="90" state="1" fly_path="ONE_WAY"/>
+			<location id="92" state="1" fly_path="ONE_WAY"/>
+			<location id="93" state="1" fly_path="ONE_WAY"/>
+			<location id="94" state="1" fly_path="ONE_WAY"/>
+			<location id="95" state="1" fly_path="ONE_WAY"/>
+			<location id="146" state="1" fly_path="ONE_WAY"/>
+			<location id="152" state="1" fly_path="ONE_WAY"/>
+			<location id="153" state="1" fly_path="ONE_WAY"/>
+			<location id="154" state="1" fly_path="ONE_WAY"/>
+		</locations>
+	</windstream>
+	<!-- Gelkmaros -->
+	<windstream mapid="220070000">
+		<locations>
+			<location id="79" state="1" fly_path="ONE_WAY"/>
+			<location id="82" state="1" fly_path="ONE_WAY"/>
+			<location id="83" state="1" fly_path="ONE_WAY"/>
+			<location id="84" state="1" fly_path="ONE_WAY"/>
+			<location id="91" state="1" fly_path="ONE_WAY"/>
+			<location id="147" state="1" fly_path="ONE_WAY"/>
+			<location id="148" state="1" fly_path="ONE_WAY"/>
+			<location id="149" state="1" fly_path="ONE_WAY"/>
+			<location id="150" state="1" fly_path="ONE_WAY"/>
+			<location id="151" state="1" fly_path="ONE_WAY"/>
+			<location id="155" state="1" fly_path="ONE_WAY"/>
+			<location id="156" state="1" fly_path="ONE_WAY"/>
+			<location id="157" state="1" fly_path="ONE_WAY"/>
+		</locations>
+	</windstream>
+	
+	<!-- ZONES 4.8 -->
+	<!-- Cygnea -->
+	<windstream mapid="210070000">
+		<locations>
+			<location id="276" state="1" fly_path="ONE_WAY"/>
+		</locations>
+	</windstream>
+	<!-- Enshar -->
+	<windstream mapid="220080000">
+		<locations>
+			<location id="277" state="1" fly_path="ONE_WAY"/>
+			<location id="278" state="1" fly_path="ONE_WAY"/>
+		</locations>
+	</windstream>
+	
+	<!-- ZONES 5.0 -->
+	<!-- Iluma -->
+	<windstream mapid="210100000">
+		<locations>
+			<location id="302" state="0" fly_path="ONE_WAY"/>
+			<location id="311" state="1" fly_path="ONE_WAY"/>
+			<location id="312" state="1" fly_path="ONE_WAY"/>
+			<location id="313" state="1" fly_path="ONE_WAY"/>
+			<location id="314" state="1" fly_path="ONE_WAY"/>
+			<location id="315" state="1" fly_path="ONE_WAY"/>
+			<location id="316" state="1" fly_path="ONE_WAY"/>
+			<location id="317" state="1" fly_path="ONE_WAY"/>
+			<location id="318" state="1" fly_path="ONE_WAY"/>
+		</locations>
+	</windstream>
+	<!-- Norsvold -->
+	<windstream mapid="220110000">
+		<locations>
+			<location id="301" state="0" fly_path="ONE_WAY"/>
+			<location id="303" state="1" fly_path="ONE_WAY"/>
+			<location id="304" state="1" fly_path="ONE_WAY"/>
+			<location id="305" state="1" fly_path="ONE_WAY"/>
+			<location id="306" state="1" fly_path="ONE_WAY"/>
+			<location id="307" state="1" fly_path="ONE_WAY"/>
+			<location id="308" state="1" fly_path="ONE_WAY"/>
+			<location id="309" state="1" fly_path="ONE_WAY"/>
+			<location id="310" state="1" fly_path="ONE_WAY"/>
+		</locations>
+	</windstream>
+	
+	<!-- INSTANCES -->
+	<windstream mapid="300020000">
+		<locations>
+			<location id="158" state="1" fly_path="ONE_WAY"/>
+		</locations>
+	</windstream>
+	<!-- Esoterrace -->
+	<windstream mapid="300250000">
+		<locations>
+			<location id="159" state="1" fly_path="ONE_WAY"/>
+			<location id="160" state="0" fly_path="ONE_WAY"/>
+			<location id="161" state="0" fly_path="ONE_WAY"/>
+			<location id="162" state="1" fly_path="ONE_WAY"/>
+		</locations>
+	</windstream>
+	<!-- Drakenspire Depths 4.8 -->
+	<windstream mapid="301390000">
+		<locations>
+			<location id="287" state="1" fly_path="ONE_WAY"/>
+		</locations>
+	</windstream>
+	<!-- Drakenspire Depths 4.9.1 -->
+	<windstream mapid="301520000">
+		<locations>
+			<location id="300" state="1" fly_path="ONE_WAY"/>
+		</locations>
+	</windstream>
+	<!-- Cradle Of Eternity 5.1 -->
+	<windstream mapid="301550000">
+		<locations>
+			<location id="351" state="1" fly_path="ONE_WAY"/>
+			<location id="352" state="1" fly_path="ONE_WAY"/>
+			<location id="353" state="1" fly_path="ONE_WAY"/>
+			<location id="354" state="1" fly_path="ONE_WAY"/>
+			<location id="355" state="1" fly_path="ONE_WAY"/>
+			<location id="356" state="1" fly_path="ONE_WAY"/>
+		</locations>
+	</windstream>
+	<windstream mapid="900030000">
+		<locations>
+			<location id="76" state="1" fly_path="ONE_WAY"/>
+		</locations>
+	</windstream>
+</windstreams>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Item Custom Set 5.3
+   Made By Encom
+ -->
+<item_custom_sets>
+    <item_custom_set id="1" name="test_set1" custom_enchant_value="1"/>
+    <item_custom_set id="2" name="test_set2" custom_enchant_value="5"/>
+    <item_custom_set id="3" name="test_set3" custom_enchant_value="10"/>
+    <item_custom_set id="4" name="test_set4" custom_enchant_value="15"/>
+    <item_custom_set id="5" name="test_set5" custom_enchant_value="20"/>
+    <item_custom_set id="6" name="comeback_highdeva_set1" custom_enchant_value="10"/>
+    <item_custom_set id="7" name="comeback_highdeva_set2" custom_enchant_value="10"/>
+    <item_custom_set id="8" name="evolution_set1" custom_enchant_value="5"/>
+    <item_custom_set id="9" name="growth_sector_phy_set1" custom_enchant_value="5"/>
+    <item_custom_set id="10" name="growth_sector_mag_set1" custom_enchant_value="5"/>
+    <item_custom_set id="11" name="growth_sector_phy_set2" custom_enchant_value="5"/>
+    <item_custom_set id="12" name="growth_sector_mag_set2" custom_enchant_value="5"/>
+    <item_custom_set id="13" name="growth_sector_legend_set1" custom_enchant_value="5"/>
+    <item_custom_set id="14" name="growth_sector_unique_set1" custom_enchant_value="8"/>
+    <item_custom_set id="15" name="event_mystery_set1" custom_enchant_value="10"/>
+	<item_custom_set id="16" name="test_set6" custom_enchant_value="3"/>
+    <item_custom_set id="17" name="test_set7" custom_enchant_value="5"/>
+    <item_custom_set id="18" name="event_wing_set1" custom_enchant_value="3"/>
+    <item_custom_set id="19" name="event_wing_set2" custom_enchant_value="10"/>
+    <item_custom_set id="20" name="quest_mission_lv10_phy_set1" custom_enchant_value="10"/>
+    <item_custom_set id="21" name="quest_mission_lv10_mag_set1" custom_enchant_value="10"/>
+    <item_custom_set id="22" name="event_wing_set3" custom_enchant_value="5"/>
+    <item_custom_set id="23" name="starweapon3_set1" custom_enchant_value="5"/>
+</item_custom_sets>

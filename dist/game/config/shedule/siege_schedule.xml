@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Fortress 4.9
+	エレシュランタ
+	Made By Rinzler (Encom)
+ -->
+<siege_schedule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="siege_schedule.xsd">
+	<!-- RESHANTA 4.9 -->
+	<!-- Siel's Western Fortress -->
+	<fortress id="1131">
+		<siegeTime>0 0 18 ? * MON,TUE,WED,THU,FRI,SUN *</siegeTime>
+	</fortress>
+	<!-- Siel's Eastern Fortress -->
+	<fortress id="1132">
+		<siegeTime>0 0 18 ? * MON,TUE,WED,THU,FRI,SUN *</siegeTime>
+	</fortress>
+	<!-- Sulfur Fortress -->
+	<fortress id="1141">
+		<siegeTime>0 0 18 ? * MON,TUE,WED,THU,FRI,SUN *</siegeTime>
+	</fortress>
+	<!-- Krotan Refuge -->
+	<fortress id="1221">
+		<siegeTime>0 0 20 ? * TUE,THU,FRI,SUN *</siegeTime>
+	</fortress>
+	<!-- Kysis Fortress -->
+	<fortress id="1231">
+		<siegeTime>0 0 20 ? * TUE,WED,SUN *</siegeTime>
+		<siegeTime>0 0 21 ? * SAT *</siegeTime>
+	</fortress>
+	<!-- Miren Fortress -->
+	<fortress id="1241">
+		<siegeTime>0 0 20 ? * MON,THU,SUN *</siegeTime>
+		<siegeTime>0 0 21 ? * SAT *</siegeTime>
+	</fortress>
+	
+	<!-- INGGISON 2.0 -->
+	<!-- Temple Of Scales -->
+	<fortress id="2011">
+		<siegeTime>0 0 16 ? * SAT *</siegeTime>
+		<siegeTime>0 0 22 ? * TUE,THU,SUN *</siegeTime>
+	</fortress>
+	<!-- Altar Of Avarice -->
+	<fortress id="2021">
+		<siegeTime>0 0 16 ? * SAT *</siegeTime>
+		<siegeTime>0 0 22 ? * TUE,THU,SUN *</siegeTime>
+	</fortress>
+	
+	<!-- GELKMAROS 2.0 -->
+	<!-- Vorgaltem Citadel -->
+	<fortress id="3011">
+		<siegeTime>0 0 16 ? * SAT *</siegeTime>
+		<siegeTime>0 0 22 ? * MON,WED,FRI *</siegeTime>
+	</fortress>
+	<!-- Crimsom Temple -->
+	<fortress id="3021">
+		<siegeTime>0 0 16 ? * SAT *</siegeTime>
+		<siegeTime>0 0 22 ? * MON,WED,FRI *</siegeTime>
+	</fortress>
+	
+	<!-- KALDOR 4.7 -->
+	<!-- Wealhtheow's Keep -->
+	<fortress id="7011">
+		<siegeTime>0 0 16 ? * SUN *</siegeTime>
+	</fortress>
+	
+	<!-- PANESTERRA 4.7 -->
+	<!-- Arcadian Fortress -->
+	<fortress id="10111">
+		<siegeTime>0 0 10 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 14 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 18 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 23 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 2 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 6 ? * MON-SUN *</siegeTime>
+	</fortress>
+	<!-- Umbral Fortress -->
+	<fortress id="10211">
+		<siegeTime>0 0 10 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 14 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 18 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 23 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 2 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 6 ? * MON-SUN *</siegeTime>
+	</fortress>
+	<!-- Eternum Fortress -->
+	<fortress id="10311">
+		<siegeTime>0 0 10 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 14 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 18 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 23 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 2 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 6 ? * MON-SUN *</siegeTime>
+	</fortress>
+	<!-- Skyclash Fortress -->
+	<fortress id="10411">
+		<siegeTime>0 0 10 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 14 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 18 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 23 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 2 ? * MON-SUN *</siegeTime>
+		<siegeTime>0 0 6 ? * MON-SUN *</siegeTime>
+	</fortress>
+</siege_schedule>

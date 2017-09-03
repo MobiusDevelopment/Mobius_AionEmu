@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2017-02-09 12:57 -->
+<spawns>
+    <spawn_map map_id="302300000">
+        <!-- Jallat / Dreadgion_main_ctrl1393 -->
+        <spawn npc_id="210039">
+			<spot x="1685.494" y="1400.8719" z="196.89954" h="44"/>
+        </spawn>
+        <!-- Commander Jubeda / Dreadgion_main_ctrl4365 -->
+        <spawn npc_id="220705">
+			<spot x="1276.1292" y="1357.3651" z="209.26752" h="30"/>
+        </spawn>
+        <!-- Drakan Warrior of the 39th Legion / Dreadgion_main_ctrl191 -->
+        <spawn npc_id="220711">
+			<spot x="1613.9442" y="1381.2872" z="198.06664" h="90"/>
+        </spawn>
+        <!-- Drakan Raider of the 39th Legion / Dreadgion_main_ctrl210 -->
+        <spawn npc_id="220712">
+			<spot x="1338.5873" y="1271.2792" z="211.3243" h="60"/>
+			<spot x="1617.5721" y="1381.1152" z="198.06664" h="90"/>
+        </spawn>
+        <!-- Drakan Healer of the 39th Legion / Dreadgion_main_ctrl4542 -->
+        <spawn npc_id="220714">
+			<spot x="1408.2352" y="1331.719" z="206.47083" h="60"/>
+        </spawn>
+        <!-- Drakan Battle Mage of the 39th Legion / Dreadgion_main_ctrl212 -->
+        <spawn npc_id="220715">
+			<spot x="1349.7543" y="1293.7584" z="210.75075" h="30"/>
+        </spawn>
+        <!-- Drakan Instructor / Dreadgion_main_ctrl4338 -->
+        <spawn npc_id="220716">
+			<spot x="1276.2485" y="1204.9403" z="216.42407" h="60"/>
+        </spawn>
+        <!-- Drakan Instructor / Dreadgion_main_ctrl4361 -->
+        <spawn npc_id="220717">
+			<spot x="1331.8872" y="1500.3462" z="212.34407" h="60"/>
+        </spawn>
+        <!-- Drakan Instructor / Dreadgion_main_ctrl4309 -->
+        <spawn npc_id="220718">
+			<spot x="1465.3229" y="1358.0892" z="178.17006" h="60"/>
+        </spawn>
+        <!-- Drakan Battle Mage Officer of the 39th Legion / Dreadgion_main_ctrl163 -->
+        <spawn npc_id="220723">
+			<spot x="1467.3148" y="1373.6464" z="179.19197" h="90"/>
+        </spawn>
+        <!-- Drakan Searcher of the 39th Legion / Dreadgion_main_ctrl159 -->
+        <spawn npc_id="220726">
+			<spot x="1316.3425" y="1504.5669" z="213.36598" h="60"/>
+			<spot x="1319.3397" y="1511.8384" z="213.36598" h="60"/>
+			<spot x="1320.3396" y="1506.6011" z="213.36598" h="60"/>
+			<spot x="1481.5592" y="1344.9843" z="179.19197" h="30"/>
+        </spawn>
+        <!-- Drakan Battle Mage of the 39th Legion / Dreadgion_main_ctrl156 -->
+        <spawn npc_id="220728">
+			<spot x="1325.8229" y="1486.459" z="213.36598" h="60"/>
+			<spot x="1467.0137" y="1368.8645" z="179.19197" h="90"/>
+        </spawn>
+        <!-- Drakan Battle Overseer / Dreadgion_main_ctrl4190 -->
+        <spawn npc_id="220729">
+			<spot x="1618.324" y="1401.2987" z="198.58549" h="60"/>
+        </spawn>
+        <!-- Shock Cannon of the Captain's Cabin / Dreadgion_main_ctrl852 -->
+        <spawn npc_id="220753">
+			<spot x="1509.1855" y="2055.8018" z="2053.9097" h="30"/>
+        </spawn>
+        <!-- Mortar of the Captain's Cabin / Dreadgion_main_ctrl855 -->
+        <spawn npc_id="220756">
+			<spot x="1486.3247" y="2055.302" z="2054.7478" h="30"/>
+        </spawn>
+        <!-- Drakan Warrior of the 39th Legion / Dreadgion_main_ctrl1623 -->
+        <spawn npc_id="220757">
+			<spot x="1475.8093" y="1740.933" z="2032.5721" h="119"/>
+			<spot x="1488.2094" y="2096.7585" z="2053.2458" h="53"/>
+			<spot x="1493.2588" y="1715.8525" z="2033.5455" h="30"/>
+			<spot x="1498.662" y="1716.4469" z="2033.5455" h="30"/>
+			<spot x="1499.0718" y="1757.5586" z="2033.5455" h="90"/>
+			<spot x="1511.9969" y="1740.9722" z="2033.5455" h="119"/>
+			<spot x="1581.4735" y="1941.9067" z="2036.8842" h="15"/>
+			<spot x="1589.5928" y="1965.5908" z="2036.6359" h="86"/>
+			<spot x="1593.0815" y="1749.6489" z="2027.2787" h="74"/>
+			<spot x="1597.72" y="1746.3496" z="2027.2787" h="74"/>
+        </spawn>
+        <!-- Drakan Raider of the 39th Legion / Dreadgion_main_ctrl1669 -->
+        <spawn npc_id="220758">
+			<spot x="1330.7334" y="1667.5931" z="2049.645" h="105"/>
+			<spot x="1332.9927" y="1670.5588" z="2049.645" h="105"/>
+			<spot x="1355.8676" y="1664.3271" z="2042.3541" h="30"/>
+        </spawn>
+        <!-- Drakan Searcher of the 39th Legion / Dreadgion_main_ctrl792 -->
+        <spawn npc_id="220759">
+			<spot x="1350.6946" y="1681.7871" z="2046.6263" h="90"/>
+			<spot x="1374.3018" y="1630.4575" z="2046.6263" h="30"/>
+			<spot x="1398.8588" y="1725.7794" z="2032.228" h="15"/>
+			<spot x="1599.7446" y="1946.5753" z="2037.7091" h="51"/>
+			<spot x="1601.9768" y="1647.776" z="2046.0497" h="66"/>
+			<spot x="1605.1483" y="1667.0723" z="2047.5505" h="93"/>
+			<spot x="1645.2943" y="1679.3735" z="2047.5505" h="90"/>
+			<spot x="1664.4637" y="1658.1239" z="2047.5505" h="60"/>
+        </spawn>
+        <!-- Drakan Healer of the 39th Legion / Dreadgion_main_ctrl1668 -->
+        <spawn npc_id="220760">
+			<spot x="1348.5774" y="1654.2985" z="2042.3541" h="74"/>
+			<spot x="1482.4412" y="1550.2299" z="2040.4048" h="15"/>
+			<spot x="1496.5199" y="1718.6945" z="2033.5455" h="30"/>
+			<spot x="1596.4891" y="1749.7617" z="2027.2787" h="74"/>
+        </spawn>
+        <!-- Drakan Battle Mage of the 39th Legion / Dreadgion_main_ctrl1674 -->
+        <spawn npc_id="220761">
+			<spot x="1328.0837" y="1642.7025" z="2049.1406" h="15"/>
+			<spot x="1351.3262" y="1651.5571" z="2043.4757" h="74"/>
+			<spot x="1378.6476" y="1629.5585" z="2046.6263" h="30"/>
+			<spot x="1388.0419" y="1643.1516" z="2047.637" h="53"/>
+			<spot x="1391.3468" y="1650.3875" z="2047.9119" h="53"/>
+			<spot x="1402.0496" y="1724.6298" z="2032.228" h="15"/>
+			<spot x="1426.3405" y="1715.8101" z="2029.2004" h="30"/>
+			<spot x="1485.6731" y="1547.5468" z="2040.4048" h="15"/>
+			<spot x="1601.3351" y="1644.3625" z="2046.0497" h="66"/>
+			<spot x="1608.5437" y="1669.1377" z="2047.5505" h="93"/>
+			<spot x="1640.1292" y="1658.4403" z="2046.4573" h="119"/>
+			<spot x="1641.3954" y="1676.8418" z="2047.5505" h="90"/>
+			<spot x="1647.6914" y="1676.2203" z="2047.5505" h="90"/>
+			<spot x="1663.7351" y="1654.9707" z="2047.5505" h="60"/>
+        </spawn>
+        <!-- Cautious Ashulagen / Dreadgion_main_ctrl858 -->
+        <spawn npc_id="220762">
+			<spot x="1493.243" y="1559.8998" z="2038.3118" h="90"/>
+			<spot x="1635.6136" y="1659.0972" z="2050.7795" h="90"/>
+        </spawn>
+        <!-- Surkana Guard Tower / Dreadgion_main_ctrl2712 -->
+        <spawn npc_id="220769">
+			<spot x="2146.6401" y="1326.3693" z="210.87698" h="44"/>
+			<spot x="2157.2937" y="1334.3679" z="209.32576" h="44"/>
+			<spot x="2168.2278" y="1338.8076" z="206.43755" h="44"/>
+			<spot x="2181.9055" y="1355.4758" z="211.83275" h="44"/>
+			<spot x="2186.6724" y="1362.0836" z="210.62221" h="44"/>
+			<spot x="2191.636" y="1369.3153" z="211.00336" h="44"/>
+			<spot x="2194.981" y="1377.2411" z="211.9355" h="44"/>
+			<spot x="2195.9128" y="1265.5819" z="210.1747" h="100"/>
+			<spot x="2197.802" y="1384.5674" z="213.56125" h="44"/>
+			<spot x="2205.8821" y="1276.5243" z="212.78329" h="119"/>
+			<spot x="2211.8999" y="1289.3761" z="211.97858" h="106"/>
+			<spot x="2213.5791" y="1303.3361" z="208.73167" h="106"/>
+			<spot x="2220.241" y="1421.4014" z="214.6387" h="44"/>
+			<spot x="2225.3735" y="1429.6816" z="211.56677" h="44"/>
+			<spot x="2269.7981" y="1391.2389" z="213.6722" h="100"/>
+        </spawn>
+        <!-- Drakan Warrior of the 39th Legion / Dreadgion_main_ctrl2379 -->
+        <spawn npc_id="220773">
+			<spot x="2152.6138" y="1435.9036" z="205.0891" h="113"/>
+        </spawn>
+        <!-- Drakan Raider of the 39th Legion / Dreadgion_main_ctrl2284 -->
+        <spawn npc_id="220774">
+			<spot x="2250.5681" y="1302.3707" z="189.50882" h="106"/>
+        </spawn>
+        <!-- Drakan Battle Mage of the 39th Legion / Dreadgion_main_ctrl2375 -->
+        <spawn npc_id="220777">
+			<spot x="2143.8276" y="1374.5538" z="200.30864" h="51"/>
+        </spawn>
+        <!-- Scalable Defence Tower of Pandaemonium / Dreadgion_main_ctrl1888 -->
+        <spawn npc_id="220780">
+			<spot x="2240.7957" y="1287.2955" z="191.60155" h="44"/>
+        </spawn>
+        <!-- Defence Tower of Pandaemonium / Dreadgion_main_ctrl2036 -->
+        <spawn npc_id="220781">
+			<spot x="2128.9221" y="1354.3821" z="192.84021" h="113"/>
+			<spot x="2133.0007" y="1359.9037" z="193.41141" h="113"/>
+			<spot x="2171.3916" y="1419.9431" z="196.64331" h="113"/>
+			<spot x="2174.4897" y="1425.5765" z="195.74847" h="113"/>
+			<spot x="2234.0146" y="1275.6768" z="191.34137" h="44"/>
+			<spot x="2284.5522" y="1352.9056" z="193.49898" h="44"/>
+			<spot x="2288.7681" y="1358.5225" z="193.23105" h="44"/>
+			<spot x="2292.55" y="1363.9667" z="193.00632" h="44"/>
+        </spawn>
+        <!-- Defence Tower of Pandaemonium / Dreadgion_main_ctrl4578 -->
+        <spawn npc_id="220818">
+			<spot x="1000.8699" y="1534.0708" z="247.23642" h="105"/>
+        </spawn>
+        <!-- Defence Tower of Pandaemonium / Dreadgion_main_ctrl4577 -->
+        <spawn npc_id="220819">
+			<spot x="1000.7849" y="1534.1877" z="245.95374" h="105"/>
+        </spawn>
+        <!-- Dredgion Generator Core / Dreadgion_main_ctrl4166 -->
+        <spawn npc_id="220847">
+			<spot x="1292.661" y="1268.4506" z="1334.8489" h="93"/>
+        </spawn>
+        <!-- Surkana Guard Tower / Dreadgion_main_ctrl1352 -->
+        <spawn npc_id="220854">
+			<spot x="1221.5902" y="1365.0878" z="1360.2743" h="60"/>
+			<spot x="1223.689" y="1356.4363" z="1360.2528" h="60"/>
+			<spot x="1252.7928" y="1229.7688" z="1331.9551" h="60"/>
+			<spot x="1273.9346" y="1193.0669" z="1338.5166" h="74"/>
+			<spot x="1280.6927" y="1258.0771" z="1334.2825" h="93"/>
+			<spot x="1286.36" y="1251.6907" z="1334.261" h="93"/>
+			<spot x="1291.5895" y="1322.408" z="1359.5002" h="90"/>
+			<spot x="1292.881" y="1247.4731" z="1334.9054" h="93"/>
+			<spot x="1299.1483" y="1248.9951" z="1334.395" h="93"/>
+			<spot x="1303.4587" y="1255.2769" z="1332.4908" h="93"/>
+			<spot x="1305.5918" y="1405.713" z="1361.6047" h="60"/>
+			<spot x="1306.7305" y="1262.8986" z="1332.9242" h="93"/>
+			<spot x="1316.7238" y="1165.5082" z="1330.9335" h="90"/>
+			<spot x="1325.5447" y="1376.165" z="1359.4921" h="119"/>
+			<spot x="1337.0217" y="1204.0276" z="1335.2255" h="105"/>
+			<spot x="1341.7139" y="1245.9891" z="1330.6086" h="119"/>
+			<spot x="1343.0875" y="1234.6787" z="1330.5872" h="119"/>
+        </spawn>
+        <!-- Drakan Triaris of the 39th Legion / Dreadgion_main_ctrl1205 -->
+        <spawn npc_id="220857">
+			<spot x="1251.3114" y="1372.6206" z="1366.5123" h="60"/>
+			<spot x="1274.5219" y="1369.9458" z="1361.6064" h="90"/>
+			<spot x="1276.1571" y="1234.8813" z="1338.9899" h="60"/>
+			<spot x="1294.5172" y="1179.1339" z="1338.043" h="44"/>
+			<spot x="1298.6654" y="1231.2944" z="1334.1913" h="90"/>
+			<spot x="1318.7384" y="1239.5814" z="1335.6729" h="60"/>
+        </spawn>
+        <!-- Drakan Battle Mage Officer of the 39th Legion / Dreadgion_main_ctrl1208 -->
+        <spawn npc_id="220859">
+			<spot x="1246.6946" y="1358.6431" z="1364.6742" h="105"/>
+			<spot x="1270.2191" y="1217.2711" z="1337.256" h="105"/>
+			<spot x="1292.2761" y="1348.7034" z="1362.4286" h="15"/>
+			<spot x="1304.1945" y="1195.5862" z="1335.725" h="30"/>
+			<spot x="1320.4407" y="1185.4994" z="1334.99" h="15"/>
+			<spot x="1326.2106" y="1252.3656" z="1334.1655" h="44"/>
+			<spot x="1331.5237" y="1225.4645" z="1334.1611" h="74"/>
+        </spawn>
+        <!-- Drakan Warrior of the 39th Legion / Dreadgion_main_ctrl2156 -->
+        <spawn npc_id="220860">
+			<spot x="1266.2223" y="1218.7319" z="1336.6915" h="105"/>
+			<spot x="1328.3608" y="1255.7627" z="1334.0209" h="44"/>
+        </spawn>
+        <!-- Drakan Raider of the 39th Legion / Dreadgion_main_ctrl1215 -->
+        <spawn npc_id="220861">
+			<spot x="1233.5457" y="1381.4742" z="1365.1223" h="15"/>
+			<spot x="1331.3452" y="1253.6628" z="1333.8883" h="44"/>
+        </spawn>
+        <!-- Drakan Searcher of the 39th Legion / Dreadgion_main_ctrl1180 -->
+        <spawn npc_id="220862">
+			<spot x="1269.8755" y="1340.7046" z="1365.3168" h="44"/>
+			<spot x="1271.37" y="1233.7108" z="1339.2478" h="60"/>
+			<spot x="1274.7527" y="1230.8335" z="1339.1025" h="60"/>
+			<spot x="1295.1937" y="1233.5444" z="1334.3474" h="90"/>
+			<spot x="1296.6791" y="1172.9203" z="1337.9939" h="44"/>
+			<spot x="1298.04" y="1177.5006" z="1337.8782" h="44"/>
+			<spot x="1322.3722" y="1236.2703" z="1335.519" h="60"/>
+			<spot x="1323.7333" y="1240.8505" z="1335.4032" h="60"/>
+        </spawn>
+        <!-- Drakan Healer of the 39th Legion / Dreadgion_main_ctrl1213 -->
+        <spawn npc_id="220863">
+			<spot x="1236.3" y="1378.9299" z="1365.0061" h="15"/>
+			<spot x="1293.9142" y="1342.4736" z="1362.4066" h="15"/>
+			<spot x="1306.8024" y="1388.1725" z="1361.4276" h="44"/>
+			<spot x="1322.0789" y="1179.2697" z="1334.968" h="15"/>
+			<spot x="1329.6453" y="1250.0074" z="1334.0123" h="44"/>
+        </spawn>
+        <!-- Drakan Battle Mage of the 39th Legion / Dreadgion_main_ctrl1211 -->
+        <spawn npc_id="220864">
+			<spot x="1240.52" y="1357.0542" z="1366.9757" h="105"/>
+			<spot x="1247.7351" y="1374.8909" z="1366.4261" h="60"/>
+			<spot x="1264.8535" y="1338.9625" z="1365.9048" h="44"/>
+			<spot x="1267.7549" y="1213.5221" z="1339.3883" h="105"/>
+			<spot x="1272.5808" y="1237.1517" z="1338.9037" h="60"/>
+			<spot x="1273.8822" y="1356.1646" z="1365.2683" h="30"/>
+			<spot x="1297.8838" y="1237.1989" z="1333.9922" h="90"/>
+			<spot x="1302.0469" y="1192.9606" z="1337.8297" h="30"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl40 -->
+        <spawn npc_id="220891">
+			<spot x="1166.3092" y="1372.8923" z="216.85526" h="60"/>
+			<spot x="1175.5237" y="1372.3749" z="216.85526" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl1408 -->
+        <spawn npc_id="220892">
+			<spot x="1166.3114" y="1368.1982" z="216.85526" h="60"/>
+			<spot x="1170.8423" y="1367.9088" z="216.85526" h="60"/>
+			<spot x="1175.5259" y="1367.6808" z="216.85526" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl1409 -->
+        <spawn npc_id="220893">
+			<spot x="1166.3831" y="1362.8413" z="216.85526" h="60"/>
+			<spot x="1170.9139" y="1362.5519" z="216.85526" h="60"/>
+			<spot x="1175.5975" y="1362.3239" z="216.85526" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl4484 -->
+        <spawn npc_id="220894">
+			<spot x="1161.3069" y="1377.3812" z="216.85526" h="60"/>
+        </spawn>
+        <!-- Balder / Dreadgion_main_ctrl3344 -->
+        <spawn npc_id="220935">
+			<spot x="1275.5739" y="1170.9214" z="220.94273" h="30"/>
+        </spawn>
+        <!-- Narvi / Dreadgion_main_ctrl3328 -->
+        <spawn npc_id="220936">
+			<spot x="1280.1309" y="1171.7548" z="220.94273" h="30"/>
+        </spawn>
+        <!-- Bor / Dreadgion_main_ctrl3349 -->
+        <spawn npc_id="220937">
+			<spot x="1271.309" y="1172.0139" z="220.94273" h="30"/>
+        </spawn>
+        <!-- Ve / Dreadgion_main_ctrl3345 -->
+        <spawn npc_id="220939">
+			<spot x="1266.1617" y="1180.6735" z="220.94273" h="30"/>
+        </spawn>
+        <!-- Mesaina / Dreadgion_main_ctrl3354 -->
+        <spawn npc_id="220940">
+			<spot x="1285.8431" y="1180.5701" z="220.94273" h="30"/>
+        </spawn>
+        <!-- Godfrey / Dreadgion_main_ctrl3343 -->
+        <spawn npc_id="220941">
+			<spot x="1270.7369" y="1177.0745" z="220.94273" h="30"/>
+        </spawn>
+        <!-- Kvasir / Dreadgion_main_ctrl3339 -->
+        <spawn npc_id="220949">
+			<spot x="1468.2407" y="1342.8539" z="179.21751" h="30"/>
+        </spawn>
+        <!-- Fenris's Fangs Elite Soldier / Dreadgion_main_ctrl3338 -->
+        <spawn npc_id="220950">
+			<spot x="1462.7084" y="1344.4473" z="179.21751" h="30"/>
+			<spot x="1473.5386" y="1343.814" z="179.21751" h="30"/>
+        </spawn>
+        <!-- Thialfi / Dreadgion_main_ctrl3342 -->
+        <spawn npc_id="220951">
+			<spot x="1477.1078" y="1347.1139" z="179.21751" h="30"/>
+        </spawn>
+        <!-- Lyfjaberga / Dreadgion_main_ctrl3327 -->
+        <spawn npc_id="220952">
+			<spot x="1459.3933" y="1347.8934" z="179.21751" h="30"/>
+        </spawn>
+        <!-- Hadubrant / Dreadgion_main_ctrl3350 -->
+        <spawn npc_id="220953">
+			<spot x="1471.199" y="1348.9152" z="179.21751" h="30"/>
+        </spawn>
+        <!-- Sigyn / Dreadgion_main_ctrl3330 -->
+        <spawn npc_id="220954">
+			<spot x="1465.843" y="1349.0659" z="179.21751" h="30"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl1418 -->
+        <spawn npc_id="220955">
+			<spot x="1166.0527" y="1355.4628" z="216.85526" h="60"/>
+			<spot x="1170.9281" y="1355.1125" z="216.85526" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl1419 -->
+        <spawn npc_id="220956">
+			<spot x="1165.9961" y="1351.2511" z="216.85526" h="60"/>
+			<spot x="1166.0398" y="1351.2445" z="216.85526" h="60"/>
+			<spot x="1170.8715" y="1350.9009" z="216.85526" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl1420 -->
+        <spawn npc_id="220957">
+			<spot x="1165.9946" y="1346.7627" z="216.85526" h="60"/>
+			<spot x="1166.0383" y="1346.7561" z="216.85526" h="60"/>
+			<spot x="1170.87" y="1346.4125" z="216.85526" h="60"/>
+        </spawn>
+        <!-- Guard Soldier of Sanctum / Dreadgion_main_ctrl2660 -->
+        <spawn npc_id="220958">
+			<spot x="1916.8331" y="1483.1115" z="170.10147" h="119"/>
+			<spot x="1920.7604" y="1341.2598" z="146.37929" h="119"/>
+			<spot x="1921.8297" y="1347.4858" z="146.37929" h="119"/>
+			<spot x="1955.5758" y="1217.788" z="163.33887" h="119"/>
+			<spot x="1971.0703" y="1469.3605" z="228.61325" h="119"/>
+			<spot x="1972.1396" y="1475.5865" z="228.61325" h="119"/>
+			<spot x="2001.5264" y="1309.6128" z="170.10147" h="119"/>
+			<spot x="2002.5957" y="1315.8389" z="170.10147" h="119"/>
+			<spot x="2004.5812" y="1188.0913" z="193.96834" h="119"/>
+			<spot x="2007.2272" y="1447.6707" z="170.10147" h="119"/>
+			<spot x="2036.4452" y="1490.0857" z="170.10147" h="119"/>
+			<spot x="2037.2776" y="1169.7906" z="233.94186" h="119"/>
+			<spot x="2045.3015" y="1393.0079" z="161.1246" h="119"/>
+			<spot x="2110.2056" y="1562.3341" z="111.75522" h="119"/>
+			<spot x="2118.3726" y="1552.7805" z="217.71037" h="119"/>
+			<spot x="2243.3342" y="1085.4207" z="165.6563" h="119"/>
+			<spot x="2260.074" y="1627.6652" z="101.88557" h="119"/>
+			<spot x="2261.1433" y="1633.8912" z="101.88557" h="119"/>
+			<spot x="2342.1328" y="1605.1278" z="188.85651" h="119"/>
+        </spawn>
+        <!-- Guard Soldier of Pandaemonium / Dreadgion_main_ctrl2566 -->
+        <spawn npc_id="220959">
+			<spot x="1004.2372" y="1222.0641" z="204.19536" h="93"/>
+			<spot x="1007.285" y="1222.1329" z="204.19536" h="93"/>
+			<spot x="1033.4967" y="1208.396" z="204.97679" h="5"/>
+			<spot x="1034.9456" y="1200.0818" z="205.1006" h="5"/>
+			<spot x="1049.9246" y="1065.5439" z="204.98729" h="33"/>
+			<spot x="1053.3407" y="1065.5092" z="205.1111" h="33"/>
+			<spot x="1056.7402" y="1066.3477" z="205.1111" h="33"/>
+			<spot x="1066.3822" y="1113.9443" z="204.18083" h="65"/>
+			<spot x="1067.7291" y="1110.4249" z="204.30464" h="65"/>
+			<spot x="1068.3704" y="1107.1897" z="204.30464" h="65"/>
+			<spot x="1191.196" y="1114.0782" z="210.14917" h="30"/>
+			<spot x="1196.0083" y="1114.4109" z="210.27298" h="30"/>
+			<spot x="1199.7225" y="1114.3179" z="210.27298" h="30"/>
+        </spawn>
+        <!-- Defence Tower of Pandaemonium / Dreadgion_main_ctrl4570 -->
+        <spawn npc_id="220962">
+			<spot x="934.06079" y="1121.1111" z="210.13033" h="60"/>
+        </spawn>
+        <!-- Defence Tower of Pandaemonium / Dreadgion_main_ctrl4572 -->
+        <spawn npc_id="220963">
+			<spot x="933.94873" y="1121.1477" z="212.13187" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl3049 -->
+        <spawn npc_id="220964">
+			<spot x="1026.314" y="1510.9395" z="252.56482" h="30"/>
+        </spawn>
+        <!-- Dredgion / Dreadgion_main_ctrl2703 -->
+        <spawn npc_id="220967">
+			<spot x="1036.5698" y="1503.3289" z="243.0546" h="16"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl1865 -->
+        <spawn npc_id="220971">
+			<spot x="1169.8483" y="1386.2566" z="216.85526" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl1916 -->
+        <spawn npc_id="220973">
+			<spot x="1173.8589" y="1385.9889" z="216.85526" h="60"/>
+        </spawn>
+        <!-- Drakan Legate of the 39th Legion / Dreadgion_main_ctrl2459 -->
+        <spawn npc_id="220990">
+			<spot x="2155.2898" y="1433.1357" z="200.48515" h="113"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl3980 -->
+        <spawn npc_id="220995">
+			<spot x="1190.7728" y="924.93005" z="1333.5887" h="90"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl4046 -->
+        <spawn npc_id="220996">
+			<spot x="1193.6489" y="929.33447" z="1333.3967" h="90"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2734 -->
+        <spawn npc_id="221009">
+			<spot x="1347.3878" y="1277.7065" z="213.05373" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2733 -->
+        <spawn npc_id="221010">
+			<spot x="1332.9634" y="1399.2277" z="213.05373" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2632 -->
+        <spawn npc_id="221014">
+			<spot x="1181.5796" y="1380.9648" z="213.05373" h="60"/>
+			<spot x="1195.1859" y="1192.3259" z="214.91" h="60"/>
+			<spot x="1332.9585" y="1404.8823" z="213.05373" h="60"/>
+			<spot x="1346.9148" y="1283.3888" z="213.05373" h="60"/>
+			<spot x="1616.5133" y="1403.6467" z="198.4707" h="60"/>
+        </spawn>
+        <!-- Drakan Battle Overseer / Dreadgion_main_ctrl4318 -->
+        <spawn npc_id="221016">
+			<spot x="1335.3303" y="1405.2649" z="212.0479" h="74"/>
+        </spawn>
+        <!-- Drakan Battle Overseer / Dreadgion_main_ctrl4192 -->
+        <spawn npc_id="221017">
+			<spot x="1176.9175" y="1376.2683" z="213.57259" h="90"/>
+        </spawn>
+        <!-- Drakan Battle Overseer / Dreadgion_main_ctrl4362 -->
+        <spawn npc_id="221018">
+			<spot x="1192.5613" y="1187.8495" z="213.76189" h="60"/>
+        </spawn>
+        <!-- Defence Tower of Pandaemonium / Dreadgion_main_ctrl2044 -->
+        <spawn npc_id="221102">
+			<spot x="2177.636" y="1431.489" z="196.25864" h="113"/>
+        </spawn>
+        <!-- Drakan Legate of the 39th Legion / Dreadgion_main_ctrl915 -->
+        <spawn npc_id="221106">
+			<spot x="962.10339" y="1127.9056" z="211.82498" h="30"/>
+        </spawn>
+        <!-- Drakan Battle Mage of the 39th Legion / Dreadgion_main_ctrl917 -->
+        <spawn npc_id="221115">
+			<spot x="959.25208" y="1130.3383" z="212.74255" h="30"/>
+        </spawn>
+        <!-- Pandaemonium Tank / SPCanon_Path10 -->
+        <spawn npc_id="221145">
+			<spot x="1213.7853" y="1494.1969" z="217.36723" h="96"/>
+        </spawn>
+        <!-- Pandaemonium Tank / SPCanon_Path9 -->
+        <spawn npc_id="221146">
+			<spot x="1221.5358" y="1496.4424" z="217.8098" h="100"/>
+        </spawn>
+        <!-- Pandaemonium Tank / Dreadgion_main_ctrl1812 -->
+        <spawn npc_id="221147">
+			<spot x="965.78882" y="1568.8021" z="226.27278" h="30"/>
+        </spawn>
+        <!-- Pandaemonium Tank / Dreadgion_main_ctrl2628 -->
+        <spawn npc_id="221148">
+			<spot x="1005.1934" y="1138.037" z="206.51389" h="30"/>
+        </spawn>
+        <!-- Pandaemonium Tank / SPCanon_Path1 -->
+        <spawn npc_id="221153">
+			<spot x="1213.886" y="1494.5092" z="215.16325" h="96"/>
+        </spawn>
+        <!-- Pandaemonium Tank / SPCanon_Path2 -->
+        <spawn npc_id="221154">
+			<spot x="1221.5127" y="1496.5476" z="214.64777" h="100"/>
+        </spawn>
+        <!-- Surkana Guard Tower / Dreadgion_main_ctrl1353 -->
+        <spawn npc_id="221175">
+			<spot x="1255.6332" y="1396.8534" z="1360.9432" h="93"/>
+			<spot x="1260.9927" y="1390.734" z="1360.9219" h="93"/>
+			<spot x="1267.6963" y="1386.7559" z="1361.5662" h="93"/>
+			<spot x="1275.4086" y="1388.2144" z="1361.0559" h="93"/>
+			<spot x="1280.2476" y="1394.5421" z="1362.4603" h="93"/>
+			<spot x="1283.8682" y="1402.1187" z="1362.3297" h="93"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl1895 -->
+        <spawn npc_id="221222">
+			<spot x="2283.3511" y="1322.3568" z="202.02272" h="105"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2032 -->
+        <spawn npc_id="221223">
+			<spot x="2137.7859" y="1413.2175" z="193.66718" h="105"/>
+        </spawn>
+        <!-- Kalsten / Dreadgion_main_ctrl1424 -->
+        <spawn npc_id="221249">
+			<spot x="1281.2498" y="1176.8512" z="220.94273" h="30"/>
+        </spawn>
+        <!-- Vidar / Dreadgion_main_ctrl1428 -->
+        <spawn npc_id="221253">
+			<spot x="1341.0149" y="1524.7544" z="213.69632" h="78"/>
+        </spawn>
+        <!-- Skadi / Dreadgion_main_ctrl1429 -->
+        <spawn npc_id="221254">
+			<spot x="1335.8353" y="1525.1044" z="213.69632" h="78"/>
+        </spawn>
+        <!-- Njord / Dreadgion_main_ctrl1430 -->
+        <spawn npc_id="221255">
+			<spot x="1345.5293" y="1521.9072" z="213.69632" h="78"/>
+        </spawn>
+        <!-- Traufnir / Dreadgion_main_ctrl1431 -->
+        <spawn npc_id="221256">
+			<spot x="1331.5284" y="1524.6378" z="213.69632" h="78"/>
+        </spawn>
+        <!-- Brinhild / Dreadgion_main_ctrl1432 -->
+        <spawn npc_id="221257">
+			<spot x="1348.1726" y="1517.2047" z="213.69632" h="78"/>
+        </spawn>
+        <!-- Sif / Dreadgion_main_ctrl1434 -->
+        <spawn npc_id="221258">
+			<spot x="1341.9738" y="1516.0205" z="213.69632" h="78"/>
+        </spawn>
+        <!-- Freyr / Dreadgion_main_ctrl1433 -->
+        <spawn npc_id="221259">
+			<spot x="1334.5637" y="1518.6678" z="213.69632" h="78"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl1818 -->
+        <spawn npc_id="221276">
+			<spot x="922.2334" y="1112.797" z="220.84857" h="30"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2487 -->
+        <spawn npc_id="221303">
+			<spot x="1182.6351" y="912.96887" z="1334.1279" h="90"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2488 -->
+        <spawn npc_id="221304">
+			<spot x="1185.3613" y="916.70532" z="1333.9503" h="90"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2489 -->
+        <spawn npc_id="221305">
+			<spot x="1188.1711" y="920.70605" z="1333.7657" h="90"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2640 -->
+        <spawn npc_id="221339">
+			<spot x="1184.1283" y="906.18707" z="1334.3137" h="90"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2639 -->
+        <spawn npc_id="221340">
+			<spot x="1186.9731" y="910.13104" z="1334.1279" h="90"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2641 -->
+        <spawn npc_id="221345">
+			<spot x="2245.1521" y="1275.3103" z="193.80656" h="105"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2643 -->
+        <spawn npc_id="221347">
+			<spot x="2123.2686" y="1357.6716" z="194.97415" h="105"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2766 -->
+        <spawn npc_id="221352">
+			<spot x="1267.6816" y="1398.9429" z="1363.1501" h="44"/>
+			<spot x="1286.7648" y="1262.2405" z="1333.5636" h="44"/>
+			<spot x="1299.1709" y="1261.9316" z="1333.5636" h="44"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl2746 -->
+        <spawn npc_id="221353">
+			<spot x="1255.5562" y="1405.5494" z="1363.1501" h="44"/>
+        </spawn>
+        <!-- Scalable Defence Tower of Pandaemonium / Dreadgion_main_ctrl2037 -->
+        <spawn npc_id="221368">
+			<spot x="2125.2354" y="1348.5573" z="193.28194" h="113"/>
+        </spawn>
+        <!-- Scalable Defence Tower of Pandaemonium / Dreadgion_main_ctrl2041 -->
+        <spawn npc_id="221370">
+			<spot x="2174.5295" y="1425.5624" z="194.61157" h="113"/>
+        </spawn>
+        <!-- Scalable Defence Tower of Pandaemonium / Dreadgion_main_ctrl2039 -->
+        <spawn npc_id="221371">
+			<spot x="2171.4312" y="1419.9288" z="195.50641" h="113"/>
+        </spawn>
+        <!-- Drakan Healing Officer of the 39th Legion / Dreadgion_main_ctrl5955 -->
+        <spawn npc_id="221416">
+			<spot x="1182.6223" y="1102.0927" z="212.60217" h="44"/>
+        </spawn>
+        <!-- Drakan Warrior of the 39th Legion / Dreadgion_main_ctrl5953 -->
+        <spawn npc_id="221418">
+			<spot x="1216.9471" y="1100.8256" z="212.60217" h="44"/>
+			<spot x="1225.3287" y="1100.286" z="212.60217" h="44"/>
+        </spawn>
+        <!-- Guard Soldier of Pandaemonium / Dreadgion_main_ctrl4535 -->
+        <spawn npc_id="221430">
+			<spot x="1149.9783" y="1288.7335" z="211.36673" h="44"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5928 -->
+        <spawn npc_id="221431">
+			<spot x="2143.333" y="1312.7028" z="196.19876" h="44"/>
+			<spot x="2144.333" y="1323.4253" z="201.16385" h="44"/>
+			<spot x="2151.2363" y="1313.4213" z="188.45076" h="44"/>
+			<spot x="2152.2363" y="1324.1438" z="194.79979" h="44"/>
+			<spot x="2155.4565" y="1327.5215" z="196.41161" h="44"/>
+			<spot x="2163.3599" y="1328.24" z="188.6636" h="44"/>
+			<spot x="2190.6863" y="1275.8721" z="184.22559" h="44"/>
+			<spot x="2195.7229" y="1288.0662" z="184.22559" h="44"/>
+			<spot x="2198.8813" y="1275.7856" z="192.28409" h="44"/>
+			<spot x="2201.5649" y="1301.1804" z="184.22559" h="44"/>
+			<spot x="2203.918" y="1287.9797" z="192.28409" h="44"/>
+			<spot x="2209.76" y="1301.094" z="192.28409" h="44"/>
+			<spot x="2220.127" y="1406.8982" z="207.59106" h="44"/>
+			<spot x="2224.4773" y="1426.0453" z="207.59106" h="44"/>
+			<spot x="2225.6721" y="1414.1525" z="207.59106" h="44"/>
+			<spot x="2228.1106" y="1405.1747" z="197.64412" h="44"/>
+			<spot x="2232.4609" y="1424.3218" z="197.64412" h="44"/>
+			<spot x="2233.6558" y="1419.6643" z="197.64412" h="44"/>
+			<spot x="2249.1187" y="1387.3568" z="197.64412" h="44"/>
+			<spot x="2252.0908" y="1382.5968" z="207.42294" h="44"/>
+			<spot x="2255.0315" y="1395.5183" z="197.64412" h="44"/>
+			<spot x="2258.0037" y="1390.7583" z="207.42294" h="44"/>
+			<spot x="2267.3503" y="1400.4371" z="197.64412" h="44"/>
+			<spot x="2270.3225" y="1395.6771" z="207.42294" h="44"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl4499 -->
+        <spawn npc_id="221433">
+			<spot x="993.90771" y="1540.6625" z="249.84326" h="30"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl4508 -->
+        <spawn npc_id="221434">
+			<spot x="988.83856" y="1535.623" z="249.84326" h="30"/>
+			<spot x="989.00885" y="1540.5756" z="249.84326" h="30"/>
+			<spot x="993.67944" y="1531.0442" z="249.84326" h="30"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl4509 -->
+        <spawn npc_id="221438">
+			<spot x="993.74475" y="1535.9296" z="249.84326" h="30"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl4515 -->
+        <spawn npc_id="221439">
+			<spot x="952.1427" y="1116.2788" z="207.15363" h="30"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl4518 -->
+        <spawn npc_id="221440">
+			<spot x="947.46191" y="1115.7078" z="206.84778" h="30"/>
+			<spot x="951.89453" y="1100.9637" z="206.84778" h="30"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5960 -->
+        <spawn npc_id="221446">
+			<spot x="1268.3455" y="1405.5398" z="1405.9899" h="93"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5821 -->
+        <spawn npc_id="221480">
+			<spot x="1171.5398" y="1366.7434" z="216.1403" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5822 -->
+        <spawn npc_id="221481">
+			<spot x="1171.6726" y="1363.3018" z="216.1403" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5823 -->
+        <spawn npc_id="221482">
+			<spot x="1171.5026" y="1359.7332" z="216.1403" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5820 -->
+        <spawn npc_id="221483">
+			<spot x="1171.632" y="1366.7164" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5818 -->
+        <spawn npc_id="221484">
+			<spot x="1171.7648" y="1363.2748" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5819 -->
+        <spawn npc_id="221485">
+			<spot x="1171.5947" y="1359.7062" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5785 -->
+        <spawn npc_id="221486">
+			<spot x="1168.1003" y="1390.5046" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5786 -->
+        <spawn npc_id="221487">
+			<spot x="1168.0266" y="1386.8151" z="212.96806" h="60"/>
+			<spot x="1173.8456" y="1386.4785" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5787 -->
+        <spawn npc_id="221488">
+			<spot x="1167.9897" y="1383.1622" z="212.96806" h="60"/>
+			<spot x="1173.2539" y="1382.719" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5788 -->
+        <spawn npc_id="221489">
+			<spot x="1167.859" y="1379.381" z="212.96806" h="60"/>
+			<spot x="1173.678" y="1379.0444" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5789 -->
+        <spawn npc_id="221490">
+			<spot x="1167.8773" y="1375.8029" z="212.96806" h="60"/>
+			<spot x="1173.6963" y="1375.4663" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5790 -->
+        <spawn npc_id="221491">
+			<spot x="1167.785" y="1372.0405" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5791 -->
+        <spawn npc_id="221492">
+			<spot x="1164.0759" y="1390.7703" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5792 -->
+        <spawn npc_id="221493">
+			<spot x="1163.8369" y="1386.979" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5793 -->
+        <spawn npc_id="221494">
+			<spot x="1163.7637" y="1383.0273" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5817 -->
+        <spawn npc_id="221495">
+			<spot x="1163.7319" y="1379.3518" z="212.96806" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5877 -->
+        <spawn npc_id="221501">
+			<spot x="932.54816" y="1129.2288" z="214.18828" h="30"/>
+			<spot x="1000.8368" y="1519.7498" z="249.84326" h="30"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5879 -->
+        <spawn npc_id="221502">
+			<spot x="936.91992" y="1129.3468" z="214.18828" h="30"/>
+			<spot x="937.16437" y="1129.4697" z="212.15184" h="30"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5992 -->
+        <spawn npc_id="221517">
+			<spot x="1613.7913" y="1401.8739" z="202.32954" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5994 -->
+        <spawn npc_id="221518">
+			<spot x="1343.7126" y="1280.1808" z="214.91" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5993 -->
+        <spawn npc_id="221519">
+			<spot x="1329.1437" y="1401.9271" z="214.91" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5995 -->
+        <spawn npc_id="221520">
+			<spot x="1177.7656" y="1377.5801" z="214.91" h="60"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl5996 -->
+        <spawn npc_id="221521">
+			<spot x="1190.6638" y="1189.2119" z="214.91" h="60"/>
+        </spawn>
+        <!-- Shock Cannon Propulsion Surkana / Dreadgion_main_ctrl2728 -->
+        <spawn npc_id="703399">
+			<spot x="1636.7239" y="1656.4961" z="2045.666" h="44"/>
+        </spawn>
+        <!-- Hemerunerk / Dreadgion_main_ctrl2730 -->
+        <spawn npc_id="703402">
+			<spot x="1357.7408" y="1438.0219" z="219.5302" h="44"/>
+        </spawn>
+        <!-- Jallat / Dreadgion_main_ctrl2731 -->
+        <spawn npc_id="703404">
+			<spot x="1685.9943" y="1400.2408" z="201.31828" h="44"/>
+        </spawn>
+        <!-- Commander Jubeda / Dreadgion_main_ctrl4294 -->
+        <spawn npc_id="703405">
+			<spot x="1275.368" y="1357.0157" z="210.80881" h="44"/>
+        </spawn>
+        <!-- Drakan Instructor / Dreadgion_main_ctrl2738 -->
+        <spawn npc_id="703406">
+			<spot x="1276.0671" y="1203.4297" z="219.92053" h="44"/>
+			<spot x="1467.3745" y="1359.2172" z="182.13394" h="44"/>
+        </spawn>
+        <!-- Dredgion Destroyer Bomb / Dreadgion_main_ctrl2741 -->
+        <spawn npc_id="703407">
+			<spot x="1272.2332" y="1398.4579" z="1363.1501" h="44"/>
+        </spawn>
+        <!-- Dredgion Destroyer Bomb / Dreadgion_main_ctrl2743 -->
+        <spawn npc_id="703408">
+			<spot x="1293.1541" y="1264.5992" z="1334.0509" h="44"/>
+        </spawn>
+        <!-- Dredgion Destroyer Bomb / Dreadgion_main_ctrl2744 -->
+        <spawn npc_id="703409">
+			<spot x="1268.2609" y="1403.1055" z="1420.1555" h="44"/>
+        </spawn>
+        <!-- NONE / Dreadgion_main_ctrl4534 -->
+        <spawn npc_id="804485">
+			<spot x="1147.5503" y="1290.8473" z="211.36673" h="44"/>
+			<spot x="1396.1497" y="1421.627" z="209.18277" h="44"/>
+			<spot x="1435.0394" y="1300.2954" z="188.09923" h="44"/>
+        </spawn>
+        <!-- Saranerk / Dreadgion_main_ctrl2626 -->
+        <spawn npc_id="834257">
+			<spot x="1005.9378" y="1141.7957" z="206.3329" h="11"/>
+        </spawn>
+        <!-- Prison Camp / Dreadgion_main_ctrl5959 -->
+        <spawn npc_id="834288">
+			<spot x="1220.6729" y="1094.103" z="216.08911" h="44"/>
+        </spawn>
+        <!-- Memmu / Dreadgion_main_ctrl4557 -->
+        <spawn npc_id="834290">
+			<spot x="1220.5566" y="1094.181" z="214.71147" h="44"/>
+        </spawn>
+        <!-- Memmu / Dreadgion_main_ctrl5957 -->
+        <spawn npc_id="834291">
+			<spot x="1220.9902" y="1093.6444" z="212.688" h="44"/>
+        </spawn>
+        <!-- Magic Ward Activation Stone (Pandaemonium) / Dreadgion_main_ctrl5944 -->
+        <spawn npc_id="834303">
+			<spot x="922.85919" y="1580.1265" z="226.41783" h="44"/>
+			<spot x="956.65851" y="1210.9186" z="204.05943" h="44"/>
+			<spot x="1011.3372" y="1052.8218" z="203.52313" h="44"/>
+			<spot x="1195.1202" y="1553.7213" z="217.33485" h="44"/>
+        </spawn>
+        <!-- Magic Ward Activation Stone (Pandaemonium) / Dreadgion_main_ctrl5940 -->
+        <spawn npc_id="834304">
+			<spot x="1197.9163" y="1555.8466" z="217.33485" h="44"/>
+        </spawn>
+        <!-- Sanctum Protector / Dreadgion_main_ctrl1867 -->
+        <spawn npc_id="834309">
+			<spot x="1224.3744" y="1352.4994" z="208.94464" h="119"/>
+			<spot x="1247.3318" y="1326.8523" z="208.6378" h="26"/>
+			<spot x="1272.8652" y="1409.4475" z="210.40753" h="100"/>
+        </spawn>
+        <!-- Idorunerk / Dreadgion_main_ctrl1396 -->
+        <spawn npc_id="834320">
+			<spot x="1360.2517" y="1439.0234" z="212.56067" h="44"/>
+        </spawn>
+        <!-- Sanctum Protector / Dreadgion_main_ctrl1873 -->
+        <spawn npc_id="834323">
+			<spot x="1463.4821" y="1574.2883" z="1392.3335" h="90"/>
+        </spawn>
+        <!-- Sanctum Protector / Dreadgion_main_ctrl1874 -->
+        <spawn npc_id="834324">
+			<spot x="1013.6455" y="1274.2788" z="1388.3494" h="90"/>
+        </spawn>
+        <!-- Sanctum Protector / Dreadgion_main_ctrl1876 -->
+        <spawn npc_id="834326">
+			<spot x="1489.4048" y="931.41357" z="1319.5338" h="90"/>
+        </spawn>
+        <!-- Supply Box with Defence Tower Coolant / Dreadgion_main_ctrl4545 -->
+        <spawn npc_id="834329">
+			<spot x="1393.5795" y="1422.2186" z="209.18277" h="44"/>
+        </spawn>
+        <!-- Supply Box with Bomb Defusing Kit / Dreadgion_main_ctrl4548 -->
+        <spawn npc_id="834336">
+			<spot x="1432.6461" y="1302.2491" z="188.09923" h="44"/>
+        </spawn>
+        <!-- Bidrot / Dreadgion_main_ctrl4546 -->
+        <spawn npc_id="834346">
+			<spot x="1398.5776" y="1419.4637" z="209.18277" h="44"/>
+        </spawn>
+        <!-- Ritos / Dreadgion_main_ctrl4550 -->
+        <spawn npc_id="834347">
+			<spot x="1432.6121" y="1299.5188" z="188.65257" h="44"/>
+        </spawn>
+        <!-- Teleporter / Dreadgion_main_ctrl1394 -->
+        <spawn npc_id="834477">
+			<spot x="2287.0786" y="1291.5354" z="195.70183" h="44"/>
+        </spawn>
+        <!-- Airship Exit / Dreadgion_main_ctrl1404 -->
+        <spawn npc_id="834488">
+			<spot x="2120.9294" y="1414.6144" z="192.66861" h="113"/>
+			<spot x="2292.2722" y="1296.8093" z="194.84923" h="44"/>
+        </spawn>
+        <!-- Emergency Exit / Dreadgion_main_ctrl6000 -->
+        <spawn npc_id="834490">
+			<spot x="1239.3025" y="1169.7368" z="215.96837" h="30"/>
+			<spot x="1377.5579" y="1530.4622" z="213.0889" h="44"/>
+			<spot x="1444.1117" y="1459.4073" z="179.73149" h="105"/>
+        </spawn>
+        <!-- Emergency Exit / Dreadgion_main_ctrl1400 -->
+        <spawn npc_id="834858">
+			<spot x="1497.3748" y="2080.4871" z="2051.2808" h="90"/>
+        </spawn>
+        <!-- Emergency Exit / Dreadgion_main_ctrl2637 -->
+        <spawn npc_id="834860">
+			<spot x="842.80786" y="2344.7534" z="96.360207" h="60"/>
+        </spawn>
+        <!-- Emergency Exit / Dreadgion_main_ctrl1904 -->
+        <spawn npc_id="834861">
+			<spot x="1018.8995" y="1280.5715" z="1384.8391" h="90"/>
+			<spot x="1180.7594" y="921.70325" z="1335.0549" h="90"/>
+			<spot x="1485.8621" y="920.82971" z="1318.3817" h="90"/>
+			<spot x="1527.5009" y="1285.2163" z="1376.9771" h="90"/>
+        </spawn>
+        <!-- Magic Ward Activation Stone (Pandaemonium) / Dreadgion_main_ctrl5809 -->
+        <spawn npc_id="834953">
+			<spot x="1193.2877" y="1555.5099" z="216.82224" h="44"/>
+        </spawn>
+        <!-- Damp Ribbit / Dreadgion_main_ctrl4541 -->
+        <spawn npc_id="834955">
+			<spot x="1410.3857" y="1282.3588" z="209.57571" h="44"/>
+        </spawn>
+        <!-- Supply Box with Horn Flute for Summoning the Protectors / Dreadgion_main_ctrl4533 -->
+        <spawn npc_id="835055">
+			<spot x="1150.2816" y="1293.2135" z="211.36673" h="44"/>
+        </spawn>
+    </spawn_map>
+</spawns>

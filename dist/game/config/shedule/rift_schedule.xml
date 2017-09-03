@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Vortex ブルストホーニン 3.9
+	Volatile Rift ブルストホーニン 4.9
+	Made By Rinzler (Encom)
+ -->
+<rift_schedule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rift_schedule.xsd">
+	<!-- ELTNEN -->
+	<rift id="210020000">
+		<openTime>0 0 13 ? * MON,FRI *</openTime>
+		<openTime>0 0 15 ? * SUN *</openTime>
+		<openTime>0 0 17 ? * MON,THU,SAT *</openTime>
+	</rift>
+	<!-- HEIRON -->
+	<rift id="210040000">
+		<openTime>0 0 1 ? * MON,THU,SAT *</openTime>
+		<openTime>0 0 15 ? * MON,THU *</openTime>
+		<openTime>0 0 19 ? * MON,FRI,SUN *</openTime>
+	</rift>
+	<!-- INGGISON -->
+	<rift id="210050000">
+	    <openTime>0 0 1 ? * SAT *</openTime>
+		<openTime>0 0 3 ? * SUN *</openTime>
+		<openTime>0 0 11 ? * MON,THU *</openTime>
+		<openTime>0 0 13 ? * SAT *</openTime>
+		<openTime>0 0 16 ? * MON,FRI *</openTime>
+		<openTime>0 0 19 ? * SUN *</openTime>
+		<openTime>0 0 23 ? * MON,THU *</openTime>
+	</rift>
+	<!-- CYGNEA -->
+	<rift id="210070000">
+	    <openTime>0 0 0/2 1/1 * ? *</openTime>
+	</rift>
+	<!-- ILUMA -->
+	<rift id="210100000">
+		<openTime>0 0 0/2 1/1 * ? *</openTime>
+	</rift>
+	
+	<!-- MORHEIM -->
+	<rift id="220020000">
+		<openTime>0 0 13 ? * TUE,THU *</openTime>
+		<openTime>0 0 15 ? * SAT *</openTime>
+		<openTime>0 0 17 ? * TUE,FRI,SUN *</openTime>
+	</rift>
+	<!-- BELUSLAN -->
+	<rift id="220040000">
+		<openTime>0 0 1 ? * TUE,FRI,SUN *</openTime>
+		<openTime>0 0 15 ? * TUE,FRI *</openTime>
+		<openTime>0 0 19 ? * TUE,THU,SAT *</openTime>
+	</rift>
+	<!-- GELKMAROS -->
+	<rift id="220070000">
+		<openTime>0 0 1 ? * SUN *</openTime>
+		<openTime>0 0 3 ? * SAT *</openTime>
+		<openTime>0 0 11 ? * TUE,FRI *</openTime>
+		<openTime>0 0 13 ? * SUN *</openTime>
+		<openTime>0 0 16 ? * TUE,THU *</openTime>
+		<openTime>0 0 19 ? * SAT *</openTime>
+		<openTime>0 0 23 ? * TUE,FRI *</openTime>
+	</rift>
+	<!-- ENSHAR -->
+	<rift id="220080000">
+		<openTime>0 0 0/2 1/1 * ? *</openTime>
+	</rift>
+	<!-- NORSVOLD -->
+	<rift id="220110000">
+		<openTime>0 0 0/2 1/1 * ? *</openTime>
+	</rift>
+</rift_schedule>

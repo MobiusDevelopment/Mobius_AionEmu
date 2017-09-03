@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Resurrected Moltenus 4.9
+	エレシュランタ
+	Spawn By Encom
+	
+	일요일 4시 요새전이 중요
+	분노의 파편 메노티오스는 어비스 상층 중심부에서 등장한다.
+	때문에 상층 중심부의 요새를 차지했다면 그만큼 전투를 유리하게 끌고갈 수 있다.
+	
+	특히, 밀폐형 구조인 라미렌 요새를 차지했을 경우 키스크를
+	설치하는 거점으로 이용하기 좋아서 더욱 유용하다. 즉, 일요
+	일 오후 4시에 있는 요새전(상층 중앙 요새 3곳 진행)의 결
+	과가 분노의 파편 메노티오스 공략에 큰 영향을 끼친다는 얘기.
+	http://aion.power.plaync.com/wiki/%EB%B6%84%EB%85%B8%EC%9D%98+%ED%8C%8C%ED%8E%B8+%EB%A9%94%EB%85%B8%ED%8B%B0%EC%98%A4%EC%8A%A4
+ -->
+<spawns>
+	<spawn_map map_id="400010000">
+		<!-- [KROTAN ROCK] -->
+		<moltenus_spawn id="1">
+			<moltenus_type mstate="FIGHT">
+			    <!-- Resurrected Moltenus -->
+				<spawn npc_id="883324">
+				    <spot x="1703.5507" y="1769.9038" z="2895.5293" h="68"/>
+				</spawn>
+			</moltenus_type>
+			<moltenus_type mstate="PEACE">
+				<spawn npc_id="702548">
+					<spot x="1703.5507" y="1769.9038" z="2895.5293" h="68"/>
+				</spawn>
+			</moltenus_type>
+		</moltenus_spawn>
+		<!-- [KYSIS ISLE] -->
+		<moltenus_spawn id="2">
+			<moltenus_type mstate="FIGHT">
+			    <!-- Resurrected Moltenus -->
+				<spawn npc_id="883324">
+				    <spot x="2279.968" y="1748.351" z="2873.8682" h="109"/>
+				</spawn>
+			</moltenus_type>
+			<moltenus_type mstate="PEACE">
+			    <spawn npc_id="702548">
+					<spot x="2279.968" y="1748.351" z="2873.8682" h="109"/>
+				</spawn>
+			</moltenus_type>
+		</moltenus_spawn>
+		<!-- [MIREN ISLAND] -->
+		<moltenus_spawn id="3">
+			<moltenus_type mstate="FIGHT">
+			    <!-- Resurrected Moltenus -->
+				<spawn npc_id="883324">
+				    <spot x="2355.5378" y="2407.142" z="2876.0767" h="30"/>
+				</spawn>
+			</moltenus_type>
+			<moltenus_type mstate="PEACE">
+			    <spawn npc_id="702548">
+					<spot x="2355.5378" y="2407.142" z="2876.0767" h="30"/>
+				</spawn>
+			</moltenus_type>
+		</moltenus_spawn>
+    </spawn_map>
+</spawns>

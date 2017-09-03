@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<zones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="zones.xsd">
+	<!-- Asmodians Base -->
+	<zone zone_type="SUB" mapid="400010000" area_type="SPHERE" name="PRIMUM_FORTRESS">
+		<sphere x="878.6906" y="2950.4717" z="1646.4772" r="380"/>
+	</zone>
+	<!-- Elyos Base -->
+	<zone zone_type="SUB" mapid="400010000" area_type="SPHERE" name="TERMINON_LANDING">
+		<sphere x="2979.622" y="906.5588" z="1540.2731" r="380"/>
+	</zone>
+</zones>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Instance Rift 4.9
+	エレシュランタ
+	Spawn By Encom
+ -->
+<spawns>
+    <spawn_map map_id="400010000">
+		<!-- 뿌리의 섬 비밀창고 입구 -->
+		<instance_rift_spawn id="1">
+			<instance_rift_type estate="OPEN">
+				<spawn npc_id="731660">
+				    <spot x="715.3656" y="827.2030" z="1668.2776" h="24"/>
+				</spawn>
+			</instance_rift_type>
+			<instance_rift_type estate="CLOSED">
+			    <spawn npc_id="702548">
+				    <spot x="715.3656" y="827.2030" z="1668.2776" h="24"/>
+				</spawn>
+			</instance_rift_type>
+		</instance_rift_spawn>
+		<!-- 강철의 무덤 비밀창고 입구 -->
+		<instance_rift_spawn id="2">
+			<instance_rift_type estate="OPEN">
+				<spawn npc_id="731661">
+				    <spot x="2157.468" y="3418.266" z="1669.3538" h="62"/>
+				</spawn>
+			</instance_rift_type>
+			<instance_rift_type estate="CLOSED">
+			    <spawn npc_id="702548">
+				    <spot x="2157.468" y="3418.266" z="1669.3538" h="62"/>
+				</spawn>
+			</instance_rift_type>
+		</instance_rift_spawn>
+		<!-- 황혼의 전장 비밀창고 입구 -->
+		<instance_rift_spawn id="3">
+			<instance_rift_type estate="OPEN">
+				<spawn npc_id="731662">
+				    <spot x="2979.157" y="2076.912" z="1476.0685" h="48"/>
+				</spawn>
+			</instance_rift_type>
+			<instance_rift_type estate="CLOSED">
+			    <spawn npc_id="702548">
+				    <spot x="2979.157" y="2076.912" z="1476.0685" h="48"/>
+				</spawn>
+			</instance_rift_type>
+		</instance_rift_spawn>
+		<!-- 폭풍의 섬 비밀창고 입구 -->
+		<instance_rift_spawn id="4">
+			<instance_rift_type estate="OPEN">
+				<spawn npc_id="731663">
+				    <spot x="2185.503" y="2240.855" z="1550.9247" h="95"/>
+				</spawn>
+			</instance_rift_type>
+			<instance_rift_type estate="CLOSED">
+			    <spawn npc_id="702548">
+				    <spot x="2185.503" y="2240.855" z="1550.9247" h="95"/>
+				</spawn>
+			</instance_rift_type>
+		</instance_rift_spawn>
+		<!-- 서풍의 섬 비밀창고 입구 -->
+		<instance_rift_spawn id="5">
+			<instance_rift_type estate="OPEN">
+				<spawn npc_id="731664">
+				    <spot x="1873.791" y="1694.091" z="1550.1800" h="110"/>
+				</spawn>
+			</instance_rift_type>
+			<instance_rift_type estate="CLOSED">
+			    <spawn npc_id="702548">
+				    <spot x="1873.791" y="1694.091" z="1550.1800" h="110"/>
+				</spawn>
+			</instance_rift_type>
+		</instance_rift_spawn>
+    </spawn_map>
+</spawns>

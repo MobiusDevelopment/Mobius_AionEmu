@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<spawns>
+    <spawn_map map_id="120010000">
+        <spawn custom="true" respawn_time="295" npc_id="833022" difficult_id="0"/>
+        <spawn custom="true" respawn_time="295" npc_id="700413" difficult_id="0"/>
+        <spawn custom="true" respawn_time="295" npc_id="730188" difficult_id="0"/>
+        <spawn custom="true" respawn_time="295" npc_id="730187" difficult_id="0">
+            <spot h="61" z="208.04729" y="1381.954" x="1348.6332"/>
+        </spawn>
+        <spawn custom="true" respawn_time="295" npc_id="205472" difficult_id="0">
+            <spot h="3" z="193.12836" y="1394.0348" x="1599.7095"/>
+        </spawn>
+        <spawn custom="true" respawn_time="295" npc_id="832866" difficult_id="0"/>
+        <spawn custom="true" respawn_time="295" npc_id="832889" difficult_id="0"/>
+        <spawn custom="true" respawn_time="295" npc_id="216688" difficult_id="0">
+            <spot h="20" z="208.125" y="1408.2378" x="1295.1034"/>
+        </spawn>
+        <spawn custom="true" respawn_time="295" npc_id="834166" difficult_id="0">
+            <spot h="115" z="193.12746" y="1400.7144" x="1624.2617"/>
+        </spawn>
+        <spawn custom="true" respawn_time="295" npc_id="832885" difficult_id="0"/>
+        <spawn custom="true" respawn_time="295" npc_id="832884" difficult_id="0"/>
+    </spawn_map>
+</spawns>
