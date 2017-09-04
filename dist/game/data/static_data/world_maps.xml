@@ -205,12 +205,6 @@
 	<map id="710020000" name="Asmodian Legion Housing" death_level="0" water_level="16" world_size="3072" flags="RECALL"/>
 	<map id="720010000" name="Oriel Studio" instance="true" death_level="0" water_level="16" world_size="512" flags="RECALL"/>
 	<map id="730010000" name="Pernon Studio" instance="true" death_level="0" water_level="16" world_size="512" flags="RECALL"/>
-		<!-- Start New 5.3 -->
-    <map id="302200000" name="Sanctum Battlefield" instance="true" death_level="0" water_level="16" world_size="3072" flags="GLIDE PVP DUEL_SAME_RACE"/>
-    <map id="302300000" name="Pandaemonium Battlefield" instance="true" death_level="0" water_level="16" world_size="3072" flags="GLIDE PVP DUEL_SAME_RACE"/>
-    <map id="302310000" name="Gold Arena" instance="true" death_level="0" water_level="16" world_size="512" flags="GLIDE PVP DUEL_SAME_RACE"/>
-    <map id="302320000" name="Golden Crucible" instance="true" death_level="0" water_level="16" world_size="512" flags="GLIDE PVP DUEL_SAME_RACE"/>
-    <!-- End New 5.3 -->
 	<!-- Map Test -->
 	<map id="900020000" name="Test Basic" death_level="0" twin_count="10" beginner_twin_count="10" water_level="16" world_size="256" flags="RECALL"/>
 	<map id="900030000" name="Test Server" death_level="0" twin_count="5" beginner_twin_count="5" water_level="1" world_size="1024" flags="RECALL"/>
