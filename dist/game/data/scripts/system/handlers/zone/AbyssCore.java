@@ -18,6 +18,7 @@ package system.handlers.zone;
 
 import java.io.IOException;
 
+import com.aionemu.gameserver.configs.main.GeoDataConfig;
 import com.aionemu.gameserver.controllers.observer.CollisionDieActor;
 import com.aionemu.gameserver.geoEngine.GeoWorldLoader;
 import com.aionemu.gameserver.geoEngine.math.Matrix3f;
@@ -40,23 +41,26 @@ public class AbyssCore implements ZoneHandler
 	
 	public AbyssCore()
 	{
-		try
+		if (GeoDataConfig.GEO_ENABLE)
 		{
-			geometry = (Node) GeoWorldLoader.loadMeshs("data/geodata/models/na_ab_lmark_col_01a.mesh").values().toArray()[0];
-			geometry.setTransform(new Matrix3f(1.15f, 0, 0, 0, 1.15f, 0, 0, 0, 1.15f), new Vector3f(2140.104f, 1925.5823f, 2303.919f), 1f);
+			try
+			{
+				geometry = (Node) GeoWorldLoader.loadMeshs("data/geodata/models/na_ab_lmark_col_01a.mesh").values().toArray()[0];
+				geometry.setTransform(new Matrix3f(1.15f, 0, 0, 0, 1.15f, 0, 0, 0, 1.15f), new Vector3f(2140.104f, 1925.5823f, 2303.919f), 1f);
+			}
+			catch (IOException e)
+			{
+				e.printStackTrace();
+			}
+			geometry.updateModelBound();
 		}
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
-		geometry.updateModelBound();
 	}
 	
 	@Override
 	public void onEnterZone(Creature creature, ZoneInstance zone)
 	{
 		final Creature acting = creature.getActingCreature();
-		if ((acting instanceof Player) && !((Player) acting).isGM())
+		if ((acting instanceof Player) && !((Player) acting).isGM() && GeoDataConfig.GEO_ENABLE)
 		{
 			final CollisionDieActor observer = new CollisionDieActor(creature, geometry);
 			creature.getObserveController().addObserver(observer);
@@ -68,7 +72,7 @@ public class AbyssCore implements ZoneHandler
 	public void onLeaveZone(Creature creature, ZoneInstance zone)
 	{
 		final Creature acting = creature.getActingCreature();
-		if ((acting instanceof Player) && !((Player) acting).isGM())
+		if ((acting instanceof Player) && !((Player) acting).isGM() && GeoDataConfig.GEO_ENABLE)
 		{
 			final CollisionDieActor observer = observed.get(creature.getObjectId());
 			if (observer != null)
