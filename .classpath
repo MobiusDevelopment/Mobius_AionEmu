@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="dist/game/data/scripts"/>
-	<classpathentry kind="src" path="java"/>
 	<classpathentry kind="lib" path="dist/libs/asm-3.3.1.jar"/>
 	<classpathentry kind="lib" path="dist/libs/bonecp-0.8.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="dist/libs/cglib-2.2.2.jar"/>
@@ -24,5 +22,7 @@
 	<classpathentry kind="lib" path="dist/libs/quartz-2.3.0.jar"/>
 	<classpathentry kind="lib" path="dist/libs/slf4j-api-1.7.25.jar"/>
 	<classpathentry kind="lib" path="dist/libs/trove-3.0.3.jar"/>
+	<classpathentry kind="src" path="dist/game/data/scripts"/>
+	<classpathentry kind="src" path="java"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
