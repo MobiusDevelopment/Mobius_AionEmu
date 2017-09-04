@@ -104,6 +104,6 @@ public class BannedMacManager
 	
 	public void onEnd()
 	{
-		log.info("[BannedMacManager] Loaded " + bannedList.size() + " banned mac addresses");
+		log.info("[BannedMacManager] Loaded " + bannedList.size() + " banned mac addresses.");
 	}
 }

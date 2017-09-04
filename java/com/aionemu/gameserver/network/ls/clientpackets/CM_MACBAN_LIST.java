@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.ls.LsClientPacket;
  */
 public class CM_MACBAN_LIST extends LsClientPacket
 {
-	
 	public CM_MACBAN_LIST(int opCode)
 	{
 		super(opCode);
@@ -46,6 +45,5 @@ public class CM_MACBAN_LIST extends LsClientPacket
 	@Override
 	protected void runImpl()
 	{
-		// ?
 	}
 }

@@ -21,7 +21,6 @@ package com.aionemu.gameserver.network;
  */
 public class NetworkController
 {
-	
 	private static NetworkController instance = new NetworkController();
 	
 	public static NetworkController getInstance()

@@ -25,7 +25,6 @@ Changes:
 
 TODO:
 -Fix all code warnings.
--Server startup with BannedHDDManager.
 -Siege boss listeners initialization.
 
 Credits:

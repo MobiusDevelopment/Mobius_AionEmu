@@ -26,13 +26,11 @@ public class EncryptionKeyPair
 	
 	/**
 	 * keys index to access SERVER encryption key
-	 * @see EncryptionKeyPair.keys
 	 */
 	private static final int SERVER = 0;
 	
 	/**
 	 * keys index to access CLIENT encryption key
-	 * @see EncryptionKeyPair.keys
 	 */
 	private static final int CLIENT = 1;
 	
@@ -119,6 +117,8 @@ public class EncryptionKeyPair
 	
 	/**
 	 * Check if packet was correctly decoded, also check if packet was correctly coded by aion client
+	 * @param buf
+	 * @return
 	 */
 	private final boolean validateClientPacket(ByteBuffer buf)
 	{
@@ -127,6 +127,7 @@ public class EncryptionKeyPair
 	
 	/**
 	 * Decrypt client packet from this ByteBuffer If decryption is successful, update client key
+	 * @param buf
 	 * @return true if decryption was successful
 	 */
 	public boolean decrypt(ByteBuffer buf)
@@ -176,6 +177,7 @@ public class EncryptionKeyPair
 	
 	/**
 	 * Encrypt server packet from this ByteBuffer
+	 * @param buf
 	 */
 	public void encrypt(ByteBuffer buf)
 	{

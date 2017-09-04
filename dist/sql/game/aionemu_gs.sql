@@ -61,18 +61,6 @@ CREATE TABLE `announcements` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Table structure for banned_hdd
--- ----------------------------
-DROP TABLE IF EXISTS `banned_hdd`;
-CREATE TABLE `banned_hdd` (
-  `uniId` int(10) NOT NULL AUTO_INCREMENT,
-  `hdd_serial` varchar(50) NOT NULL,
-  `time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-  `details` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`uniId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
 -- Table structure for banned_ip
 -- ----------------------------
 DROP TABLE IF EXISTS `banned_ip`;
@@ -500,18 +488,6 @@ CREATE TABLE `mail` (
   PRIMARY KEY (`mail_unique_id`),
   KEY `mail_recipient_id` (`mail_recipient_id`),
   CONSTRAINT `FK_mail` FOREIGN KEY (`mail_recipient_id`) REFERENCES `players` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Table structure for network_ban
--- ----------------------------
-DROP TABLE IF EXISTS `network_ban`;
-CREATE TABLE `network_ban` (
-  `uniId` int(10) NOT NULL AUTO_INCREMENT,
-  `ip` varchar(50) NOT NULL,
-  `time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-  `details` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`uniId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------

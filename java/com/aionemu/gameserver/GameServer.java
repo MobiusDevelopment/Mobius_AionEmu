@@ -243,11 +243,7 @@ public class GameServer
 		DropRegistrationService.getInstance();
 		final GameServer gs = new GameServer();
 		DAOManager.getDAO(PlayerDAO.class).setPlayersOffline(false);
-		Util.printSection("HDDBan");
 		BannedMacManager.getInstance();
-		// FIXME?
-		// BannedHDDManager.getInstance();
-		// NetworkBannedManager.getInstance();
 		Util.printSection("Cleaning");
 		DatabaseCleaningService.getInstance();
 		AbyssRankCleaningService.getInstance();
