@@ -62,8 +62,8 @@ public class AEInfos
 		{ //
 			"Available CPU(s): " + Runtime.getRuntime().availableProcessors(), //
 			"Processor(s) Identifier: " + System.getenv("PROCESSOR_IDENTIFIER"), //
-			"..................................................", //
-			".................................................." //
+			"...................................................", //
+			"..................................................." //
 		};
 	}
 	
@@ -73,8 +73,8 @@ public class AEInfos
 		{ //
 			"OS: " + System.getProperty("os.name") + " Build: " + System.getProperty("os.version"), //
 			"OS Arch: " + System.getProperty("os.arch"), //
-			"..................................................", //
-			".................................................." //
+			"...................................................", //
+			"..................................................." //
 		};
 	}
 	
@@ -86,8 +86,8 @@ public class AEInfos
 			"Java Runtime  Name: " + System.getProperty("java.runtime.name"), //
 			"Java Version: " + System.getProperty("java.version"), //
 			"Java Class Version: " + System.getProperty("java.class.version"), //
-			"..................................................", //
-			".................................................." //
+			"...................................................", //
+			"..................................................." //
 		};
 	}
 	
@@ -101,8 +101,8 @@ public class AEInfos
 			"JVM version: " + System.getProperty("java.vm.version"), //
 			"JVM Vendor: " + System.getProperty("java.vm.vendor"), //
 			"JVM Info: " + System.getProperty("java.vm.info"), //
-			"..................................................", //
-			".................................................." //
+			"...................................................", //
+			"..................................................." //
 		};
 	}
 	

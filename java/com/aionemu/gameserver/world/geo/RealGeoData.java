@@ -57,7 +57,7 @@ public class RealGeoData implements GeoData
 	protected void loadWorldMaps(Map<String, Spatial> models)
 	{
 		log.info("Loading geo maps..");
-		Util.printProgressBarHeader(72);
+		Util.printProgressBarHeader(71);
 		final List<Integer> mapsWithErrors = new ArrayList<>();
 		final int totalSize = DataManager.WORLD_MAPS_DATA.size();
 		int currentProgress = 0;
@@ -80,7 +80,7 @@ public class RealGeoData implements GeoData
 			}
 			
 			currentProgress++;
-			if ((totalSize / currentProgress) < (142 / lastProgress))
+			if ((totalSize / currentProgress) < (140 / lastProgress))
 			{
 				Util.printCurrentProgress();
 				lastProgress++;

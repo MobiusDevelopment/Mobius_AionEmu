@@ -23,18 +23,15 @@ import java.nio.ByteBuffer;
  */
 public class Util
 {
-	
-	/**
-	 * @param s
-	 */
-	public static void printSection(String s)
+	public static void printSection(String sectionName)
 	{
-		s = "=[ " + s + " ]";
-		while (s.length() < 80)
+		final StringBuilder sb = new StringBuilder();
+		sb.append("-[ " + sectionName + " ]");
+		while (sb.length() < 79)
 		{
-			s = "-" + s;
+			sb.insert(0, "=");
 		}
-		System.out.println(s);
+		System.out.println(sb.toString());
 	}
 	
 	public static void printProgressBarHeader(int size)
@@ -56,7 +53,7 @@ public class Util
 	
 	public static void printEndProgress()
 	{
-		System.out.print(" Done. \n");
+		System.out.print("+ Done\n");
 	}
 	
 	/**

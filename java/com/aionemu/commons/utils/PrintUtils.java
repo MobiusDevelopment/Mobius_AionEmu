@@ -20,17 +20,6 @@ import java.nio.ByteBuffer;
 
 public class PrintUtils
 {
-	public static void printSection(String sectionName)
-	{
-		final StringBuilder sb = new StringBuilder();
-		sb.append("-[ " + sectionName + " ]");
-		while (sb.length() < 79)
-		{
-			sb.insert(0, "=");
-		}
-		System.out.println(sb.toString());
-	}
-	
 	public static byte[] hex2bytes(String string)
 	{
 		final String finalString = string.replaceAll("\\s+", "");

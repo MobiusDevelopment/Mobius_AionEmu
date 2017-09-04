@@ -153,7 +153,7 @@ public final class DataManager
 	private DataManager()
 	{
 		Util.printSection("Static Data");
-		log.info("##### START LOADING STATIC DATA 5.1 #####");
+		log.info("######### STARTED LOADING 5.1 STATIC DATA #########");
 		loader = XmlDataLoader.getInstance();
 		final long start = System.currentTimeMillis();
 		final StaticData data = loader.loadStaticData();
@@ -277,8 +277,8 @@ public final class DataManager
 		ITEM_CUSTOM_SET_DATA = data.itemCustomSet;
 		F2P_BONUS_DATA = data.f2pBonus;
 		final String timeMsg = (time / 1000) + " seconds";
-		log.info("##### [load time: " + timeMsg + "] #####");
-		log.info("##### END LOADING STATIC DATA 5.1 #####");
+		log.info("######### STATIC DATA LOADING IS FINISHED #########");
+		log.info("Static data load time: " + timeMsg);
 	}
 	
 	@SuppressWarnings("synthetic-access")
