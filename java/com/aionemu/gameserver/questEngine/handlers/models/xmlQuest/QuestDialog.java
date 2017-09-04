@@ -37,7 +37,6 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 })
 public class QuestDialog
 {
-	
 	protected QuestConditions conditions;
 	protected QuestOperations operations;
 	@XmlAttribute(required = true)

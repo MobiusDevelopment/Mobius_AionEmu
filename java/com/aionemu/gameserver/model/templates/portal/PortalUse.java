@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.Race;
 @XmlType(name = "PortalUse")
 public class PortalUse
 {
-	
 	@XmlElement(name = "portal_path")
 	protected List<PortalPath> portalPath;
 	

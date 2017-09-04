@@ -45,7 +45,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @XmlType(name = "HideEffect")
 public class HideEffect extends BuffEffect
 {
-	
 	@XmlAttribute
 	protected CreatureVisualState state;
 	@XmlAttribute(name = "buffcount")

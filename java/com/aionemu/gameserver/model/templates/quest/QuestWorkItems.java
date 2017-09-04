@@ -31,7 +31,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class QuestWorkItems
 {
-	
 	@XmlElement(name = "quest_work_item")
 	protected List<QuestItems> questWorkItem;
 	
@@ -47,6 +46,7 @@ public class QuestWorkItems
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestItems }
+	 * @return
 	 */
 	public List<QuestItems> getQuestWorkItem()
 	{
@@ -56,5 +56,4 @@ public class QuestWorkItems
 		}
 		return questWorkItem;
 	}
-	
 }

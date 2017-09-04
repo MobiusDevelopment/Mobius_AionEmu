@@ -25,7 +25,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "QuestReq")
 public class QuestReq
 {
-	
 	@XmlAttribute(name = "quest_id")
 	protected int questId;
 	

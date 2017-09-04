@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Semisphere")
 public class Semisphere extends Sphere
 {
-	
 	public Semisphere()
 	{
 		super();
@@ -37,5 +36,4 @@ public class Semisphere extends Sphere
 	{
 		super(x, y, z, radius);
 	}
-	
 }

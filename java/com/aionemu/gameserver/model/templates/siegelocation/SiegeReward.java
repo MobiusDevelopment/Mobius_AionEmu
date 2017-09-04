@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "SiegeReward")
 public class SiegeReward
 {
-	
 	@XmlAttribute(name = "top")
 	protected int top;
 	@XmlAttribute(name = "itemid")

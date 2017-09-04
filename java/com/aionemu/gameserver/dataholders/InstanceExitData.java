@@ -38,7 +38,6 @@ import com.aionemu.gameserver.model.templates.portal.InstanceExit;
 @XmlRootElement(name = "instance_exits")
 public class InstanceExitData
 {
-	
 	@XmlElement(name = "instance_exit")
 	protected List<InstanceExit> instanceExit;
 	

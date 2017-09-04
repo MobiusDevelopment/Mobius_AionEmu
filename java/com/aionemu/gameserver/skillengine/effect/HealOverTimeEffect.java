@@ -37,7 +37,6 @@ import com.aionemu.gameserver.skillengine.model.HealType;
 @XmlType(name = "HealOverTimeEffect")
 public abstract class HealOverTimeEffect extends AbstractOverTimeEffect
 {
-	
 	public void calculate(Effect effect, HealType healType)
 	{
 		if (!super.calculate(effect, null, null))

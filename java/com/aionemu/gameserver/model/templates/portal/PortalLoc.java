@@ -25,7 +25,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "PortalLoc")
 public class PortalLoc
 {
-	
 	@XmlAttribute(name = "world_id")
 	protected int worldId;
 	

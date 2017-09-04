@@ -33,7 +33,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "TargetStatusProperty")
 public class TargetStatusProperty
 {
-	
 	/**
 	 * @param skill
 	 * @param properties

@@ -32,7 +32,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class PetBonusAttr
 {
-	
 	@XmlElement(name = "penalty_attr")
 	protected List<PetPenaltyAttr> penaltyAttr;
 	

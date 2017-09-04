@@ -33,7 +33,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "QuestKill")
 public class QuestKill
 {
-	
 	@XmlAttribute(name = "seq")
 	private int seq;
 	
@@ -68,5 +67,4 @@ public class QuestKill
 		}
 		return npcIdSet;
 	}
-	
 }

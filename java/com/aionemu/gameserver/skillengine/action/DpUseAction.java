@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "DpUseAction")
 public class DpUseAction extends Action
 {
-	
 	@XmlAttribute(required = true)
 	protected int value;
 	

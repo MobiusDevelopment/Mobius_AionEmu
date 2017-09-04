@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.Race;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlType(name = "abyss_op")
 @XmlAccessorType(XmlAccessType.NONE)
 public class AbyssOp

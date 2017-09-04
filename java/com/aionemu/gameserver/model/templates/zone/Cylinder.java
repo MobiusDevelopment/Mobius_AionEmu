@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Cylinder")
 public class Cylinder
 {
-	
 	@XmlAttribute
 	protected Float top;
 	@XmlAttribute
@@ -77,5 +76,4 @@ public class Cylinder
 	{
 		return r;
 	}
-	
 }

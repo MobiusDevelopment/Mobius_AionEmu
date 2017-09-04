@@ -25,9 +25,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "TalkInfo")
 public class TalkInfo
 {
-	
 	@XmlAttribute(name = "distance")
-	private final int talkDistance = 2;
+	protected int talkDistance = 2;
 	
 	@XmlAttribute(name = "delay")
 	private int talkDelay;

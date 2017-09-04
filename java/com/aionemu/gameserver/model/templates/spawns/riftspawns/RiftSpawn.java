@@ -16,7 +16,6 @@
  */
 package com.aionemu.gameserver.model.templates.spawns.riftspawns;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -34,13 +33,12 @@ import com.aionemu.gameserver.model.templates.spawns.Spawn;
 @XmlType(name = "RiftSpawn")
 public class RiftSpawn
 {
-	
 	@XmlAttribute(name = "id")
 	private int id;
 	@XmlAttribute(name = "world")
 	private int world;
 	@XmlElement(name = "spawn")
-	private final List<Spawn> spawns = new ArrayList<>();
+	private List<Spawn> spawns;
 	
 	public int getId()
 	{
@@ -56,5 +54,4 @@ public class RiftSpawn
 	{
 		return spawns;
 	}
-	
 }

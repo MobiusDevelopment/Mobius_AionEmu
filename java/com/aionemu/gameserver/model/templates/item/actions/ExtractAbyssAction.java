@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  * Author Rinzler (Encom) Player receive "AP" everytime, if he uses any of these items: Abyss Armor 35% Extraction Tools. Abyss Accessory 35% Extraction Tools. Abyss Equipment 35% Extraction Tools. Abyss Weapon 35% Extraction Tools. Abyss Wing 35% Extraction Tools. Vindachinerk's Durable Abyss Armor
  * Extraction Tools. Vindachinerk's Durable Abyss Weapon Extraction Tools. Vindachinerk's Noble Abyss Armor Extraction Tools. Vindachinerk's Noble Abyss Weapon Extraction Tools.
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ExtractAbyssAction")
 public class ExtractAbyssAction extends AbstractItemAction

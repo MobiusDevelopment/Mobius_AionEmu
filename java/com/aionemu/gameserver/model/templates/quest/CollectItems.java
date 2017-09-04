@@ -34,7 +34,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class CollectItems
 {
-	
 	@XmlElement(name = "collect_item")
 	protected List<CollectItem> collectItem;
 	
@@ -50,6 +49,7 @@ public class CollectItems
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link CollectItem }
+	 * @return
 	 */
 	public List<CollectItem> getCollectItem()
 	{
@@ -59,5 +59,4 @@ public class CollectItems
 		}
 		return collectItem;
 	}
-	
 }

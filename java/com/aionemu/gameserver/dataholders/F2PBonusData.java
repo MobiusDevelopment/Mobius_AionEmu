@@ -33,7 +33,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =
 {
@@ -42,7 +41,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "f2p_bonus")
 public class F2PBonusData
 {
-	
 	@XmlElement(name = "f2p")
 	protected List<F2pBonusAttr> f2pBonusattr;
 	

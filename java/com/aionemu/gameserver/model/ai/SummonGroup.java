@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "SummonGroup")
 public class SummonGroup
 {
-	
 	@XmlAttribute(name = "npcId")
 	protected int npcId;
 	@XmlAttribute(name = "x")

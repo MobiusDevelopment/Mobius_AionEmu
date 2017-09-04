@@ -46,7 +46,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "portal_templates2")
 public class Portal2Data
 {
-	
 	@XmlElement(name = "portal_use")
 	protected List<PortalUse> portalUse;
 	

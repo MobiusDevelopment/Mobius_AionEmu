@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTargetSlot;
 @XmlType(name = "DispelDebuffMentalEffect")
 public class DispelDebuffMentalEffect extends AbstractDispelEffect
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

@@ -25,7 +25,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "InventoryItem")
 public class InventoryItem
 {
-	
 	@XmlAttribute(name = "item_id")
 	protected Integer itemId;
 	

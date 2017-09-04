@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.Race;
 @XmlType(name = "InstanceExit")
 public class InstanceExit
 {
-	
 	@XmlAttribute(name = "instance_id")
 	protected int instanceId;
 	

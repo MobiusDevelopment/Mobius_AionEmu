@@ -56,7 +56,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class ShoutList
 {
-	
 	@XmlElement(name = "shout", required = true)
 	protected List<NpcShout> npcShouts;
 	
@@ -78,6 +77,7 @@ public class ShoutList
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link NpcShout }
+	 * @return
 	 */
 	public List<NpcShout> getNpcShouts()
 	{
@@ -100,6 +100,7 @@ public class ShoutList
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link Integer }
+	 * @return
 	 */
 	public List<Integer> getNpcIds()
 	{
@@ -129,5 +130,4 @@ public class ShoutList
 		npcShouts = null;
 		restrictWorld = null;
 	}
-	
 }

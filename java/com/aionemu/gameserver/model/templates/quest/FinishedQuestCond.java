@@ -32,7 +32,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class FinishedQuestCond
 {
-	
 	@XmlAttribute(name = "quest_id", required = true)
 	protected int questId;
 	@XmlAttribute(name = "reward")

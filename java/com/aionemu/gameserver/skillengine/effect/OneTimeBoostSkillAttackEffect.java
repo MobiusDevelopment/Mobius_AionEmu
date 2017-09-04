@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.SkillType;
 @XmlType(name = "OneTimeBoostSkillAttackEffect")
 public class OneTimeBoostSkillAttackEffect extends BuffEffect
 {
-	
 	@XmlAttribute
 	private int count;
 	
@@ -53,7 +52,6 @@ public class OneTimeBoostSkillAttackEffect extends BuffEffect
 			case MAGICAL:
 				observer = new AttackCalcObserver()
 				{
-					
 					private int count = 0;
 					
 					@Override
@@ -63,11 +61,7 @@ public class OneTimeBoostSkillAttackEffect extends BuffEffect
 						{
 							return percent;
 						}
-						else
-						{
-							effect.getEffected().getEffectController().removeEffect(effect.getSkillId());
-						}
-						
+						effect.getEffected().getEffectController().removeEffect(effect.getSkillId());
 						return 1.0f;
 					}
 				};

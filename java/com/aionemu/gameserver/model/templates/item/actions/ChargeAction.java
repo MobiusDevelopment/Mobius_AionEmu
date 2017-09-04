@@ -34,7 +34,6 @@ import com.aionemu.gameserver.services.item.ItemChargeService;
 @XmlType(name = "ChargeItemAction")
 public class ChargeAction extends AbstractItemAction
 {
-	
 	@XmlAttribute
 	protected int capacity;
 	
@@ -55,5 +54,4 @@ public class ChargeAction extends AbstractItemAction
 		final Collection<Item> conditioningItems = ItemChargeService.filterItemsToCondition(player, null, parentItem.getImprovement().getChargeWay());
 		ItemChargeService.chargeItems(player, conditioningItems, capacity);
 	}
-	
 }

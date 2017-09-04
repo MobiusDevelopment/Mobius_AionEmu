@@ -32,7 +32,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class AbsoluteStatsTemplate
 {
-	
 	@XmlElement(required = true)
 	protected ModifiersTemplate modifiers;
 	
@@ -46,6 +45,7 @@ public class AbsoluteStatsTemplate
 	
 	/**
 	 * Gets the value of the id property.
+	 * @return
 	 */
 	public int getId()
 	{

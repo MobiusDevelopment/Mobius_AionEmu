@@ -37,7 +37,6 @@ import com.aionemu.gameserver.model.templates.curingzones.CuringTemplate;
 @XmlRootElement(name = "curing_objects")
 public class CuringObjectsData
 {
-	
 	@XmlElement(name = "curing_object")
 	protected List<CuringTemplate> curingObject;
 	

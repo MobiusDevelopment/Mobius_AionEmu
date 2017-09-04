@@ -23,11 +23,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.templates.RobotBound;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RobotInfo", propOrder =
 {

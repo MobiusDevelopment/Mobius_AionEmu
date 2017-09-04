@@ -33,9 +33,9 @@ public class QuestDrop
 	@XmlAttribute
 	protected Integer chance;
 	@XmlAttribute(name = "drop_each_member")
-	protected int dropEachMember = 0;
+	protected int dropEachMember;
 	@XmlAttribute(name = "collecting_step")
-	protected int collecting_step = 0;
+	protected int collecting_step;
 	
 	@XmlTransient
 	protected Integer questId;

@@ -31,7 +31,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "npcskills")
 public class NpcSkillTemplates
 {
-	
 	@XmlAttribute(name = "npcid")
 	protected int npcId;
 	@XmlElement(name = "npcskill")
@@ -46,5 +45,4 @@ public class NpcSkillTemplates
 	{
 		return npcSkills;
 	}
-	
 }

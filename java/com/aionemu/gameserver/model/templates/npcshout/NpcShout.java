@@ -53,7 +53,6 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
 @XmlType(name = "NpcShout")
 public class NpcShout
 {
-	
 	@XmlAttribute(name = "string_id", required = true)
 	protected int stringId;
 	
@@ -77,6 +76,7 @@ public class NpcShout
 	
 	/**
 	 * Gets the value of the stringId property.
+	 * @return
 	 */
 	public int getStringId()
 	{

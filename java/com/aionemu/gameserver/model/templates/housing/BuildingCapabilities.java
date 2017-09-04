@@ -30,7 +30,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "caps")
 public class BuildingCapabilities
 {
-	
 	@XmlAttribute(required = true)
 	protected boolean addon;
 	
@@ -78,5 +77,4 @@ public class BuildingCapabilities
 	{
 		return exterior;
 	}
-	
 }

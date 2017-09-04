@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.HealType;
 @XmlType(name = "FPHealEffect")
 public class FPHealEffect extends HealOverTimeEffect
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{

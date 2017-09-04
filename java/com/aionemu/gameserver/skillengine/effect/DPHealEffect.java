@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.HealType;
 @XmlType(name = "DPHealEffect")
 public class DPHealEffect extends HealOverTimeEffect
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{

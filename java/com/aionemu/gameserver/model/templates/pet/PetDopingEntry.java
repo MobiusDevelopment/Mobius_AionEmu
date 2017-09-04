@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.NONE)
 public class PetDopingEntry
 {
-	
 	@XmlAttribute(name = "id", required = true)
 	private short id;
 	
@@ -72,5 +71,4 @@ public class PetDopingEntry
 	{
 		return usescroll;
 	}
-	
 }

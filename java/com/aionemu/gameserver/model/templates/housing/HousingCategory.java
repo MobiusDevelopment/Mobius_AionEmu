@@ -26,7 +26,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum HousingCategory
 {
-	
 	BED,
 	BOOK,
 	CARPET,
@@ -47,5 +46,4 @@ public enum HousingCategory
 	{
 		return valueOf(value);
 	}
-	
 }

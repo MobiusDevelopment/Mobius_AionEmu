@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.Race;
 @XmlType(name = "RecipeTemplate")
 public class RecipeTemplate
 {
-	
 	protected List<ComboProduct> comboproduct;
 	@XmlAttribute(name = "max_production_count")
 	protected Integer maxProductionCount;

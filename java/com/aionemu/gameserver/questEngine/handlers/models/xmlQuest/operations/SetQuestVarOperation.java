@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "SetQuestVarOperation")
 public class SetQuestVarOperation extends QuestOperation
 {
-	
 	@XmlAttribute(name = "var_id", required = true)
 	protected int varId;
 	@XmlAttribute(required = true)

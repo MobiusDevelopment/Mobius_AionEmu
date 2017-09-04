@@ -31,7 +31,6 @@ import com.aionemu.gameserver.model.Race;
 @XmlType(name = "ResultedItem")
 public class ResultedItem
 {
-	
 	@XmlAttribute(name = "id")
 	public int itemId;
 	@XmlAttribute(name = "count")
@@ -89,10 +88,7 @@ public class ResultedItem
 				LoggerFactory.getLogger(ResultedItem.class).warn("Wronte rnd result item definition {} {}", rndMin, rndMax);
 				return 1;
 			}
-			else
-			{
-				return Rnd.get(rndMin, rndMax);
-			}
+			return Rnd.get(rndMin, rndMax);
 		}
 		else
 		{

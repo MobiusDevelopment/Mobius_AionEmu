@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "PetOrderUseUltraSkillEffect")
 public class PetOrderUseUltraSkillEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected boolean release;
 	
@@ -61,7 +60,7 @@ public class PetOrderUseUltraSkillEffect extends EffectTemplate
 		if (release)
 		{
 			final SummonController controller = effector.getSummon().getController();
-			if ((controller instanceof SummonController))
+			if (controller != null)
 			{
 				effector.getSummon().getController().setReleaseAfterSkill(petUseSkillId);
 			}

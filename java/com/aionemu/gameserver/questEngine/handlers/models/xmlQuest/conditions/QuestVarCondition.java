@@ -31,7 +31,6 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 @XmlType(name = "QuestVarCondition")
 public class QuestVarCondition extends QuestCondition
 {
-	
 	@XmlAttribute(required = true)
 	protected int value;
 	@XmlAttribute(name = "var_id", required = true)
@@ -68,5 +67,4 @@ public class QuestVarCondition extends QuestCondition
 				return false;
 		}
 	}
-	
 }

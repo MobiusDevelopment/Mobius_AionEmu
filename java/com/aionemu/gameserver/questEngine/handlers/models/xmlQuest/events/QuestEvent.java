@@ -45,7 +45,6 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 })
 public abstract class QuestEvent
 {
-	
 	protected QuestConditions conditions;
 	protected QuestOperations operations;
 	@XmlAttribute
@@ -68,6 +67,7 @@ public abstract class QuestEvent
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link Integer }
+	 * @return
 	 */
 	public List<Integer> getIds()
 	{

@@ -58,7 +58,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "zones")
 public class ZoneData
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(ZoneData.class);
 	
 	@XmlElement(name = "zone")
@@ -131,6 +130,8 @@ public class ZoneData
 	
 	/**
 	 * Weather zone ID it's an order number (starts from 1)
+	 * @param template
+	 * @return
 	 */
 	public int getWeatherZoneId(ZoneTemplate template)
 	{

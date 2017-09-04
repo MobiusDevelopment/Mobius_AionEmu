@@ -26,7 +26,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum StatBonusType
 {
-	
 	INVENTORY,
 	POLISH;
 	
@@ -39,5 +38,4 @@ public enum StatBonusType
 	{
 		return valueOf(v);
 	}
-	
 }

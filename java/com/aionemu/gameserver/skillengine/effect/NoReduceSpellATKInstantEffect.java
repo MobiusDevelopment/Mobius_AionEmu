@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "NoReduceSpellATKInstantEffect")
 public class NoReduceSpellATKInstantEffect extends DamageEffect
 {
-	
 	@XmlAttribute
 	protected boolean percent;
 	
@@ -52,5 +51,4 @@ public class NoReduceSpellATKInstantEffect extends DamageEffect
 		
 		AttackUtil.calculateMagicalSkillResult(effect, valueWithDelta, null, getElement(), false, true, true, getMode(), critProbMod2, critAddDmg, shared, false);
 	}
-	
 }

@@ -33,7 +33,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "SkillAtkDrainInstantEffect")
 public class SkillAtkDrainInstantEffect extends DamageEffect
 {
-	
 	@XmlAttribute(name = "hp_percent")
 	protected int hp_percent;
 	@XmlAttribute(name = "mp_percent")

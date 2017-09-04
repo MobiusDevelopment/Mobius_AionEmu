@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "HpCondition")
 public class HpCondition extends Condition
 {
-	
 	@XmlAttribute(required = true)
 	protected int value;
 	@XmlAttribute
@@ -60,5 +59,4 @@ public class HpCondition extends Condition
 	{
 		return value;
 	}
-	
 }

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "TargetTeleportEffect")
 public class TargetTeleportEffect extends EffectTemplate
 {
-	
 	@XmlAttribute(name = "same_map")
 	protected boolean isSameMap;
 	
@@ -43,5 +42,4 @@ public class TargetTeleportEffect extends EffectTemplate
 		// TODO Should be handled manually for each effect with isSameMap = false
 		// if in same map, should be teleported at the distance in front of NPC
 	}
-	
 }

@@ -48,7 +48,6 @@ import com.aionemu.gameserver.model.templates.materials.MaterialTemplate;
 @XmlRootElement(name = "material_templates")
 public class MaterialData
 {
-	
 	@XmlElement(name = "material")
 	protected List<MaterialTemplate> materialTemplates;
 	
@@ -92,5 +91,4 @@ public class MaterialData
 	{
 		return materialsById.size();
 	}
-	
 }

@@ -35,7 +35,6 @@ import com.aionemu.gameserver.model.templates.spawns.Spawn;
 @XmlType(name = "SiegeSpawn")
 public class SiegeSpawn
 {
-	
 	@XmlElement(name = "siege_race")
 	private List<SiegeRaceTemplate> siegeRaceTemplates;
 	@XmlAttribute(name = "siege_id")
@@ -55,7 +54,6 @@ public class SiegeSpawn
 	@XmlType(name = "SiegeRaceTemplate")
 	public static class SiegeRaceTemplate
 	{
-		
 		@XmlElement(name = "siege_mod")
 		private List<SiegeModTemplate> SiegeModTemplates;
 		@XmlAttribute(name = "race")

@@ -35,28 +35,22 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @XmlType(name = "DelayedSpellAttackInstantEffect")
 public class DelayedSpellAttackInstantEffect extends DamageEffect
 {
-	
 	@XmlAttribute
 	protected int delay;
 	
 	@Override
 	public void applyEffect(Effect effect)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			
-			@Override
-			public void run()
+			if (effect.getEffector().isEnemy(effect.getEffected()))
 			{
-				if (effect.getEffector().isEnemy(effect.getEffected()))
-				{
-					calculateAndApplyDamage(effect);
-				}
+				calculateAndApplyDamage(effect);
 			}
 		}, delay);
 	}
 	
-	private void calculateAndApplyDamage(Effect effect)
+	void calculateAndApplyDamage(Effect effect)
 	{
 		final int skillLvl = effect.getSkillLevel();
 		final int valueWithDelta = value + (delta * skillLvl);

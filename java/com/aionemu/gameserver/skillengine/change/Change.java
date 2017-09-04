@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.condition.Conditions;
 @XmlType(name = "Change")
 public class Change
 {
-	
 	@XmlAttribute(required = true)
 	private StatEnum stat;
 	@XmlAttribute(required = true)
@@ -68,5 +67,4 @@ public class Change
 	{
 		return conditions;
 	}
-	
 }

@@ -50,7 +50,6 @@ import com.aionemu.gameserver.model.templates.rewards.BonusType;
 @XmlType(name = "QuestBonuses")
 public class QuestBonuses
 {
-	
 	@XmlAttribute(required = true)
 	protected BonusType type;
 	@XmlAttribute

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "BuffBindEffect")
 public class BuffBindEffect extends BindEffect
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{

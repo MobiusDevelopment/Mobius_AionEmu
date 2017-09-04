@@ -79,8 +79,6 @@ public class InstanceCooltime
 	@XmlElement(name = "count_build_up_level")
 	protected Integer countBuildUpLevel;
 	
-	/**
-	*/
 	@XmlAttribute(required = true)
 	protected int id;
 	

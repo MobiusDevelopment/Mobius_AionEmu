@@ -29,7 +29,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "SignetEffect")
 public class SignetEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

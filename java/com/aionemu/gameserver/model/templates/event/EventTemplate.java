@@ -52,7 +52,6 @@ import com.aionemu.gameserver.world.World;
 /**
  * @author Rolandas
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EventTemplate")
 public class EventTemplate
@@ -283,5 +282,4 @@ public class EventTemplate
 		}
 		return theme;
 	}
-	
 }

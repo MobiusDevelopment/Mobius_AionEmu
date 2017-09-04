@@ -24,7 +24,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Iu")
 public class IuTemplate

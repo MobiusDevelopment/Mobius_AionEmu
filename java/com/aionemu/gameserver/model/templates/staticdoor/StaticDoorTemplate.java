@@ -35,7 +35,6 @@ import com.aionemu.gameserver.model.templates.VisibleObjectTemplate;
 @XmlType(name = "StaticDoor")
 public class StaticDoorTemplate extends VisibleObjectTemplate
 {
-	
 	@XmlAttribute
 	protected DoorType type = DoorType.DOOR;
 	@XmlAttribute
@@ -153,5 +152,4 @@ public class StaticDoorTemplate extends VisibleObjectTemplate
 	{
 		return type;
 	}
-	
 }

@@ -29,7 +29,6 @@ import com.aionemu.commons.utils.Rnd;
 @XmlType(name = "RandomItem")
 public class RandomItem
 {
-	
 	@XmlAttribute(name = "type")
 	protected RandomType type;
 	@XmlAttribute(name = "count")

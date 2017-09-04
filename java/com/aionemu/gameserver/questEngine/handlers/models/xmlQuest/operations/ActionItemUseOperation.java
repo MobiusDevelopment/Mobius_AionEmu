@@ -40,7 +40,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 })
 public class ActionItemUseOperation extends QuestOperation
 {
-	
 	@XmlElement(required = true)
 	protected QuestOperations finish;
 	
@@ -74,7 +73,5 @@ public class ActionItemUseOperation extends QuestOperation
 				finish.operate(env);
 			}
 		}, defaultUseTime);
-		
 	}
-	
 }

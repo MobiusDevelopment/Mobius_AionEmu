@@ -66,7 +66,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * @rework LightNing (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DecomposeAction")
 public class DecomposeAction extends AbstractItemAction
@@ -74,11 +73,10 @@ public class DecomposeAction extends AbstractItemAction
 	@XmlAttribute(name = "select")
 	public boolean isSelect;
 	
-	private static final Logger log = LoggerFactory.getLogger(DecomposeAction.class);
+	static final Logger log = LoggerFactory.getLogger(DecomposeAction.class);
 	private static final int USAGE_DELAY = 3000;
-	private static Map<Integer, List<ItemTemplate>> manastones;
-	private static Map<Race, int[]> chunkEarth = new HashMap<>();
-	
+	static Map<Integer, List<ItemTemplate>> manastones;
+	static Map<Race, int[]> chunkEarth = new HashMap<>();
 	static
 	{
 		chunkEarth.put(Race.ASMODIANS, new int[]
@@ -246,7 +244,7 @@ public class DecomposeAction extends AbstractItemAction
 		});
 	}
 	
-	private static Map<Race, int[]> chunkSand = new HashMap<>();
+	static Map<Race, int[]> chunkSand = new HashMap<>();
 	static
 	{
 		chunkSand.put(Race.ASMODIANS, new int[]
@@ -324,7 +322,7 @@ public class DecomposeAction extends AbstractItemAction
 		});
 	}
 	
-	private static int[] chunkRock =
+	static int[] chunkRock =
 	{
 		152000106,
 		152000206,
@@ -343,7 +341,7 @@ public class DecomposeAction extends AbstractItemAction
 		152000323,
 		152000325
 	};
-	private static int[] chunkGemstone =
+	static int[] chunkGemstone =
 	{
 		152000112,
 		152000213,
@@ -354,7 +352,7 @@ public class DecomposeAction extends AbstractItemAction
 		152000327,
 		152000328
 	};
-	private static int[] scrolls =
+	static int[] scrolls =
 	{
 		164002002,
 		164002058,
@@ -371,7 +369,7 @@ public class DecomposeAction extends AbstractItemAction
 		164000131,
 		164000118
 	};
-	private static int[] potion =
+	static int[] potion =
 	{
 		162000045,
 		162000079,
@@ -438,29 +436,22 @@ public class DecomposeAction extends AbstractItemAction
 				}
 			};
 			player.getObserveController().attach(observer);
-			player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable()
+			player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
+				final SelectItems selectitems = DataManager.DECOMPOSABLE_SELECT_ITEM_DATA.getSelectItem(player.getPlayerClass(), player.getRace(), parentItem.getItemId());
+				if (selectitems == null)
 				{
-					final SelectItems selectitems = DataManager.DECOMPOSABLE_SELECT_ITEM_DATA.getSelectItem(player.getPlayerClass(), player.getRace(), parentItem.getItemId());
-					if (selectitems == null)
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_DECOMPOSE_ITEM_INVALID_STANCE(parentItem.getNameId()));
+					return;
+				}
+				for (SelectItem resultItem : selectitems.getItems())
+				{
+					if (canAcquireSelect(player, resultItem))
 					{
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_DECOMPOSE_ITEM_INVALID_STANCE(parentItem.getNameId()));
-						return;
-					}
-					else
-					{
-						for (SelectItem resultItem : selectitems.getItems())
-						{
-							if (canAcquireSelect(player, resultItem))
-							{
-								selectedList.add(resultItem);
-							}
-						}
-						PacketSendUtility.sendPacket(player, new SM_SELECT_ITEM(player, selectedList, parentItem.getObjectId()));
+						selectedList.add(resultItem);
 					}
 				}
+				PacketSendUtility.sendPacket(player, new SM_SELECT_ITEM(player, selectedList, parentItem.getObjectId()));
 			}, 0));
 		}
 		else
@@ -754,10 +745,10 @@ public class DecomposeAction extends AbstractItemAction
 		}
 	}
 	
-	private boolean canAcquireSelect(Player player, SelectItem resultItem)
+	boolean canAcquireSelect(Player player, SelectItem resultItem)
 	{
 		final Race race = resultItem.getRace();
-		if (((race != Race.PC_ALL) || (race == null)) && !race.equals(player.getRace()))
+		if (((race != Race.PC_ALL) || (race == null)) && ((race != null) && !race.equals(player.getRace())))
 		{
 			return false;
 		}
@@ -801,7 +792,7 @@ public class DecomposeAction extends AbstractItemAction
 		return selectedCollection;
 	}
 	
-	private int calcMaxCountOfSlots(ExtractedItemsCollection itemsCollections, Player player, boolean special)
+	int calcMaxCountOfSlots(ExtractedItemsCollection itemsCollections, Player player, boolean special)
 	{
 		int maxCount = 0;
 		for (ResultedItem item : itemsCollections.getItems())

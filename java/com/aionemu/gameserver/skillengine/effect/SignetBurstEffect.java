@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "SignetBurstEffect")
 public class SignetBurstEffect extends DamageEffect
 {
-	
 	@XmlAttribute
 	protected int signetlvl;
 	@XmlAttribute
@@ -41,7 +40,6 @@ public class SignetBurstEffect extends DamageEffect
 	@Override
 	public void calculate(Effect effect)
 	{
-		
 		final Effect signetEffect = effect.getEffected().getEffectController().getAnormalEffect(signet);
 		if (!super.calculate(effect, DamageType.MAGICAL))
 		{
@@ -62,7 +60,6 @@ public class SignetBurstEffect extends DamageEffect
 		}
 		else
 		{
-			
 			final int level = signetEffect.getSkillLevel();
 			effect.setSignetBurstedCount(level);
 			switch (level)
@@ -108,13 +105,8 @@ public class SignetBurstEffect extends DamageEffect
 					break;
 			}
 			effect.setAccModBoost(accmod);
-			
 			AttackUtil.calculateMagicalSkillResult(effect, valueWithDelta, null, getElement(), true, true, false, getMode(), critProbMod2, critAddDmg, shared, false);
-			
-			if (signetEffect != null)
-			{
-				signetEffect.endEffect();
-			}
+			signetEffect.endEffect();
 		}
 	}
 }

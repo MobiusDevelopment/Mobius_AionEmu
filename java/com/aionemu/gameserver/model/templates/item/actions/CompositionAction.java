@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * Author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CompositionAction")
 public class CompositionAction extends AbstractItemAction
@@ -89,25 +88,21 @@ public class CompositionAction extends AbstractItemAction
 			}
 		};
 		player.getObserveController().attach(observer);
-		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable()
+		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			player.getObserveController().removeObserver(observer);
+			final boolean result = player.getInventory().decreaseByObjectId(tools.getObjectId(), 1);
+			final boolean result1 = player.getInventory().decreaseByObjectId(first.getObjectId(), 1);
+			final boolean result2 = player.getInventory().decreaseByObjectId(second.getObjectId(), 1);
+			if (result && result1 && result2)
 			{
-				player.getObserveController().removeObserver(observer);
-				final boolean result = player.getInventory().decreaseByObjectId(tools.getObjectId(), 1);
-				final boolean result1 = player.getInventory().decreaseByObjectId(first.getObjectId(), 1);
-				final boolean result2 = player.getInventory().decreaseByObjectId(second.getObjectId(), 1);
-				if (result && result1 && result2)
-				{
-					ItemService.addItem(player, getItemId(calcLevel(first.getItemTemplate().getLevel(), second.getItemTemplate().getLevel())), 1);
-				}
-				PacketSendUtility.sendPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), tools.getObjectId(), tools.getItemTemplate().getTemplateId(), 0, 1, 0));
+				ItemService.addItem(player, getItemId(calcLevel(first.getItemTemplate().getLevel(), second.getItemTemplate().getLevel())), 1);
 			}
+			PacketSendUtility.sendPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), tools.getObjectId(), tools.getItemTemplate().getTemplateId(), 0, 1, 0));
 		}, 5000));
 	}
 	
-	private int calcLevel(int first, int second)
+	int calcLevel(int first, int second)
 	{
 		int value = ((first + second) / 2);
 		if (value < 11)

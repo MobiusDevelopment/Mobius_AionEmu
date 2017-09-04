@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "MpCondition")
 public class MpCondition extends Condition
 {
-	
 	@XmlAttribute(required = true)
 	protected int value;
 	

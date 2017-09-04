@@ -43,7 +43,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 })
 public class OnKillEvent extends QuestEvent
 {
-	
 	@XmlElement(name = "monster")
 	protected List<Monster> monster;
 	protected QuestOperations complite;

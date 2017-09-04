@@ -23,11 +23,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.Race;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "LunaTeleport")
 public class LunaTeleport

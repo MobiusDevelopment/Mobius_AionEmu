@@ -26,7 +26,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum PlaceLocation
 {
-	
 	FLOOR,
 	STACK,
 	WALL;
@@ -40,5 +39,4 @@ public enum PlaceLocation
 	{
 		return valueOf(value);
 	}
-	
 }

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.model.Race;
 @XmlType(name = "CosmeticItemTemplate")
 public class CosmeticItemTemplate
 {
-	
 	@XmlAttribute(name = "type")
 	private String type;
 	@XmlAttribute(name = "cosmetic_name")

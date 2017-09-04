@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "FpAttackEffect")
 public class FpAttackEffect extends AbstractOverTimeEffect
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{

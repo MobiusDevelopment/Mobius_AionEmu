@@ -32,7 +32,6 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 @XmlType(name = "NpcIdCondition")
 public class NpcIdCondition extends QuestCondition
 {
-	
 	@XmlAttribute(required = true)
 	protected int values;
 	

@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "MaterialSkill")
 public class MaterialSkill
 {
-	
 	@XmlAttribute
 	protected MaterialActTime time;
 	
@@ -72,5 +71,4 @@ public class MaterialSkill
 	{
 		return id;
 	}
-	
 }

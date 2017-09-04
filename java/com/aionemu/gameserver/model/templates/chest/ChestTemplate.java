@@ -31,7 +31,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Chest")
 public class ChestTemplate
 {
-	
 	@XmlAttribute(name = "npcid")
 	protected int npcId;
 	@XmlAttribute(name = "name")

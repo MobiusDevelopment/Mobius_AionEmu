@@ -35,7 +35,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class PetRewards
 {
-	
 	@XmlElement(name = "result")
 	protected List<PetFeedResult> results;
 	
@@ -63,5 +62,4 @@ public class PetRewards
 	{
 		return loved;
 	}
-	
 }

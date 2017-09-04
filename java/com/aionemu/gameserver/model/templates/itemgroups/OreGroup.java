@@ -69,6 +69,7 @@ public class OreGroup extends BonusItemGroup
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link IdReward }
+	 * @return
 	 */
 	public List<ItemRaceEntry> getItems()
 	{
@@ -88,5 +89,4 @@ public class OreGroup extends BonusItemGroup
 	{
 		return getItems().toArray(new ItemRaceEntry[0]);
 	}
-	
 }

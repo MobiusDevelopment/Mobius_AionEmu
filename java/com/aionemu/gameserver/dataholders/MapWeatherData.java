@@ -41,7 +41,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "weather")
 public class MapWeatherData
 {
-	
 	@XmlElement(name = "map", required = true)
 	private List<WeatherTable> weatherData;
 	
@@ -70,5 +69,4 @@ public class MapWeatherData
 	{
 		return mapWeather.size();
 	}
-	
 }

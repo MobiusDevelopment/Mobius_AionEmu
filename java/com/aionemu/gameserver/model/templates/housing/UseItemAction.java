@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "UseItemAction")
 public class UseItemAction
 {
-	
 	@XmlAttribute(name = "final_reward_id")
 	protected Integer finalRewardId;
 	
@@ -60,5 +59,4 @@ public class UseItemAction
 	{
 		return checkType;
 	}
-	
 }

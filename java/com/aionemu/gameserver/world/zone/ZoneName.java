@@ -26,13 +26,11 @@ import javolution.util.FastMap;
  */
 public final class ZoneName
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(ZoneName.class);
 	
 	private static final FastMap<String, ZoneName> zoneNames = new FastMap<>();
 	public static final String NONE = "NONE";
 	public static final String ABYSS_CASTLE = "_ABYSS_CASTLE_AREA_";
-	
 	static
 	{
 		zoneNames.put(NONE, new ZoneName(NONE));
@@ -94,5 +92,4 @@ public final class ZoneName
 	{
 		return _name;
 	}
-	
 }

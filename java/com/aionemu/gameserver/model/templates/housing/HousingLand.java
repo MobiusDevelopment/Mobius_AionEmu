@@ -39,7 +39,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class HousingLand
 {
-	
 	@XmlElementWrapper(name = "addresses", required = true)
 	@XmlElement(name = "address")
 	protected List<HouseAddress> addresses;
@@ -160,5 +159,4 @@ public class HousingLand
 	{
 		return id;
 	}
-	
 }

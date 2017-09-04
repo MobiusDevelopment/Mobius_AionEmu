@@ -25,7 +25,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "AssembledItem")
 public class AssembledItem
 {
-	
 	@XmlAttribute(name = "id", required = true)
 	private int id;
 	

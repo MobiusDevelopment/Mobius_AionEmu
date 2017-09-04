@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "OnFlyCondition")
 public class OnFlyCondition extends Condition
 {
-	
 	@Override
 	public boolean validate(Skill env)
 	{

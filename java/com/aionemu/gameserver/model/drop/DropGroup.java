@@ -36,7 +36,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 })
 public class DropGroup implements DropCalculator
 {
-	
 	protected List<Drop> drop;
 	@XmlAttribute
 	protected Race race = Race.PC_ALL;

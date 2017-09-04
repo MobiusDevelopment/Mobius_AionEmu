@@ -33,7 +33,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "BoostSkillCostEffect")
 public class BoostSkillCostEffect extends BuffEffect
 {
-	
 	@XmlAttribute
 	protected boolean percent;
 	

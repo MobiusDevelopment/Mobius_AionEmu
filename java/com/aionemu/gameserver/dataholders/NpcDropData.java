@@ -37,7 +37,6 @@ import com.aionemu.gameserver.model.drop.NpcDrop;
 })
 public class NpcDropData
 {
-	
 	@XmlElement(name = "npc_drop")
 	protected List<NpcDrop> npcDrop;
 	

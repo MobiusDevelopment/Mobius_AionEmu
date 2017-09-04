@@ -30,7 +30,6 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 @XmlType(name = "KillOperation")
 public class KillOperation extends QuestOperation
 {
-	
 	/*
 	 * (non-Javadoc)
 	 * @seecom.aionemu.gameserver.questEngine.handlers.models.xmlQuest.operations.QuestOperation#doOperate(com.aionemu. gameserver.services.QuestService, com.aionemu.gameserver.questEngine.model.QuestEnv)
@@ -42,7 +41,5 @@ public class KillOperation extends QuestOperation
 		{
 			((Npc) env.getVisibleObject()).getController().onDie(env.getPlayer());
 		}
-		
 	}
-	
 }

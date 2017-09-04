@@ -34,11 +34,9 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "ShieldMasteryEffect")
 public class ShieldMasteryEffect extends BuffEffect
 {
-	
 	@Override
 	public void startEffect(Effect effect)
 	{
-		
 		final List<IStatFunction> modifiers = getModifiers(effect);
 		final List<IStatFunction> masteryModifiers = new ArrayList<>(modifiers.size());
 		for (IStatFunction modifier : modifiers)

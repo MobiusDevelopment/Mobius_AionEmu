@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 @XmlType(name = "AbstractItemAction")
 public abstract class AbstractItemAction
 {
-	
 	/**
 	 * Check if an item can be used.
 	 * @param player
@@ -46,5 +45,4 @@ public abstract class AbstractItemAction
 	 * @param targetItem
 	 */
 	public abstract void act(Player player, Item parentItem, Item targetItem);
-	
 }

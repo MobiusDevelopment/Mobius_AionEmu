@@ -29,9 +29,9 @@ import javax.xml.bind.annotation.XmlType;
 public class BombTemplate
 {
 	@XmlAttribute(name = "skillId")
-	private final int SkillId = 0;
+	private int SkillId;
 	@XmlAttribute(name = "cd")
-	private final int cd = 0;
+	private int cd;
 	
 	public int getCd()
 	{

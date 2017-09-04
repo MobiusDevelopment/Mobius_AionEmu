@@ -32,7 +32,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class HousingUseableItem extends PlaceableHouseObject
 {
-	
 	@XmlElement(required = true)
 	protected UseItemAction action;
 	
@@ -58,6 +57,7 @@ public class HousingUseableItem extends PlaceableHouseObject
 	
 	/**
 	 * Can the object be used only by the owner or visitors too
+	 * @return
 	 */
 	public boolean isOwnerOnly()
 	{
@@ -98,5 +98,4 @@ public class HousingUseableItem extends PlaceableHouseObject
 	{
 		return 1;
 	}
-	
 }

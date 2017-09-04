@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.utils3d.Point3D;
 @XmlType(name = "ShieldPoint")
 public class ShieldPoint
 {
-	
 	@XmlAttribute(name = "x")
 	private float x;
 	

@@ -53,7 +53,6 @@ import com.aionemu.gameserver.model.templates.rewards.CraftRecipe;
 @XmlType(name = "CraftRecipeGroup")
 public class CraftRecipeGroup extends CraftGroup
 {
-	
 	@XmlElement(name = "item")
 	protected List<CraftRecipe> items;
 	
@@ -69,6 +68,7 @@ public class CraftRecipeGroup extends CraftGroup
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link CraftRecipe }
+	 * @return
 	 */
 	public List<CraftRecipe> getItems()
 	{
@@ -88,5 +88,4 @@ public class CraftRecipeGroup extends CraftGroup
 	{
 		return getItems().toArray(new ItemRaceEntry[0]);
 	}
-	
 }

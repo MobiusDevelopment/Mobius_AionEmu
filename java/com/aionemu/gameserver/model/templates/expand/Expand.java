@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Expand")
 public class Expand
 {
-	
 	@XmlAttribute(name = "level", required = true)
 	protected int level;
 	@XmlAttribute(name = "price", required = true)

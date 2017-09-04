@@ -31,7 +31,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class InventoryItems
 {
-	
 	@XmlElement(name = "inventory_item")
 	protected List<InventoryItem> inventoryItem;
 	

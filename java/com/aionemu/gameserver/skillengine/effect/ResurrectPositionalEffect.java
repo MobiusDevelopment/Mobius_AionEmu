@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "ResurrectPositionalEffect")
 public class ResurrectPositionalEffect extends ResurrectEffect
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

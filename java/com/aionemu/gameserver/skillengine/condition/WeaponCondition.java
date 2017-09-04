@@ -38,7 +38,6 @@ import com.aionemu.gameserver.skillengine.model.Skill.SkillMethod;
 @XmlType(name = "WeaponCondition")
 public class WeaponCondition extends Condition
 {
-	
 	@XmlAttribute(name = "weapon")
 	private List<WeaponType> weaponType;
 	
@@ -73,5 +72,4 @@ public class WeaponCondition extends Condition
 		// for npcs we don't validate weapon, though in templates they are present
 		return true;
 	}
-	
 }

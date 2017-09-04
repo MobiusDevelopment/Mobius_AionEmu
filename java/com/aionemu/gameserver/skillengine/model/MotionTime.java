@@ -34,7 +34,6 @@ import com.aionemu.gameserver.model.Race;
 })
 public class MotionTime
 {
-	
 	protected Times am;
 	protected Times af;
 	protected Times em;
@@ -122,7 +121,6 @@ public class MotionTime
 	
 	public Times getTimes(Race race, Gender gender)
 	{
-		
 		switch (race)
 		{
 			case ASMODIANS:
@@ -130,28 +128,19 @@ public class MotionTime
 				{
 					return getAm();
 				}
-				else
-				{
-					return getAf();
-				}
+				return getAf();
 			case ELYOS:
 				if (gender == Gender.MALE)
 				{
 					return getEm();
 				}
-				else
-				{
-					return getEf();
-				}
-				
+				return getEf();
 		}
-		
 		return null;
 	}
 	
 	public int getTimeForWeapon(Race race, Gender gender, WeaponTypeWrapper weapon)
 	{
-		
 		switch (race)
 		{
 			case ASMODIANS:
@@ -159,23 +148,14 @@ public class MotionTime
 				{
 					return getAm().getTimeForWeapon(weapon);
 				}
-				else
-				{
-					return getAf().getTimeForWeapon(weapon);
-				}
+				return getAf().getTimeForWeapon(weapon);
 			case ELYOS:
 				if (gender == Gender.MALE)
 				{
 					return getEm().getTimeForWeapon(weapon);
 				}
-				else
-				{
-					return getEf().getTimeForWeapon(weapon);
-				}
-				
+				return getEf().getTimeForWeapon(weapon);
 		}
-		
 		return 0;
 	}
-	
 }

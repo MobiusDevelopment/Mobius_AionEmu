@@ -42,7 +42,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @XmlType(name = "SummonHomingEffect")
 public class SummonHomingEffect extends SummonEffect
 {
-	
 	@XmlAttribute(name = "npc_count", required = true)
 	protected int npcCount;
 	@XmlAttribute(name = "attack_count", required = true)
@@ -102,5 +101,4 @@ public class SummonHomingEffect extends SummonEffect
 			homing.getAi2().onCreatureEvent(AIEventType.ATTACK, effect.getEffected());
 		}
 	}
-	
 }

@@ -47,7 +47,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "CraftItem")
 public class CraftItem extends CraftReward
 {
-	
 	@XmlAttribute(name = "minLevel", required = true)
 	protected int minLevel;
 	
@@ -56,6 +55,7 @@ public class CraftItem extends CraftReward
 	
 	/**
 	 * Gets the value of the minLevel property.
+	 * @return
 	 */
 	public int getMinLevel()
 	{
@@ -64,10 +64,10 @@ public class CraftItem extends CraftReward
 	
 	/**
 	 * Gets the value of the maxLevel property.
+	 * @return
 	 */
 	public int getMaxLevel()
 	{
 		return maxLevel;
 	}
-	
 }

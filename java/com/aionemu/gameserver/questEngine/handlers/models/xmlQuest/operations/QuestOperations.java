@@ -34,7 +34,6 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 })
 public class QuestOperations
 {
-	
 	@XmlElements(
 	{
 		@XmlElement(name = "take_item", type = TakeItemOperation.class),
@@ -60,10 +59,7 @@ public class QuestOperations
 		{
 			return true;
 		}
-		else
-		{
-			return override;
-		}
+		return override;
 	}
 	
 	public boolean operate(QuestEnv env)

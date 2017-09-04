@@ -35,12 +35,10 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Nemiroff Date: 17.12.2009
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "QuestStartAction")
 public class QuestStartAction extends AbstractItemAction
 {
-	
 	@XmlAttribute
 	protected int questid;
 	

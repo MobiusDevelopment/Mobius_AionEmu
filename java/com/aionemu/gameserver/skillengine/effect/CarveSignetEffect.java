@@ -34,7 +34,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 @XmlType(name = "CarveSignetEffect")
 public class CarveSignetEffect extends DamageEffect
 {
-	
 	@XmlAttribute(required = true)
 	protected int signetlvlstart;
 	@XmlAttribute(required = true)

@@ -37,7 +37,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "WeaponMasteryEffect")
 public class WeaponMasteryEffect extends BuffEffect
 {
-	
 	@XmlAttribute(name = "weapon")
 	private WeaponType weaponType;
 	
@@ -65,5 +64,4 @@ public class WeaponMasteryEffect extends BuffEffect
 		}
 		effect.getEffected().getGameStats().addEffect(effect, masteryModifiers);
 	}
-	
 }

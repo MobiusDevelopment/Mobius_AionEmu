@@ -29,7 +29,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "MpAttackEffect")
 public class MpAttackEffect extends AbstractOverTimeEffect
 {
-	
 	// TODO bosses are resistent to this?
 	
 	@Override

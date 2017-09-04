@@ -29,7 +29,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Motion")
 public class Motion
 {
-	
 	@XmlAttribute(required = true)
 	protected String name;// TODO enum
 	

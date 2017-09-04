@@ -36,7 +36,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "ArmorCondition")
 public class ArmorCondition extends Condition
 {
-	
 	@XmlAttribute(name = "armor")
 	private ArmorType armorType;
 	
@@ -71,5 +70,4 @@ public class ArmorCondition extends Condition
 		}
 		return false;
 	}
-	
 }

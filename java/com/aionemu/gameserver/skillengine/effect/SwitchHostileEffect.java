@@ -29,11 +29,9 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "SwitchHostileEffect")
 public class SwitchHostileEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{
-		
 		final Creature effected = effect.getEffected();
 		final Creature effector = effect.getEffector();
 		final AggroList aggroList = effected.getAggroList();

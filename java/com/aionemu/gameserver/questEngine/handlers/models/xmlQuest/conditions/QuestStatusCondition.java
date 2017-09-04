@@ -33,7 +33,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 @XmlType(name = "QuestStatusCondition")
 public class QuestStatusCondition extends QuestCondition
 {
-	
 	@XmlAttribute(required = true)
 	protected QuestStatus value;
 	@XmlAttribute(name = "quest_id")

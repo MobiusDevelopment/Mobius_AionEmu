@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 @XmlType(name = "SummonHouseObjectAction")
 public class SummonHouseObjectAction extends AbstractItemAction
 {
-	
 	@XmlAttribute(name = "id")
 	private int objectId;
 	

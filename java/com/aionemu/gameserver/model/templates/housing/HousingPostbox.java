@@ -27,11 +27,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "HousingPostbox")
 public class HousingPostbox extends PlaceableHouseObject
 {
-	
 	@Override
 	public byte getTypeId()
 	{
 		return 3;
 	}
-	
 }

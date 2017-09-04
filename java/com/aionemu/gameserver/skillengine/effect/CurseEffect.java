@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "CurseEffect")
 public class CurseEffect extends BuffEffect
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{

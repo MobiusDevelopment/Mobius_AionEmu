@@ -24,7 +24,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @Author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DoorRepair")
 public class DoorRepair

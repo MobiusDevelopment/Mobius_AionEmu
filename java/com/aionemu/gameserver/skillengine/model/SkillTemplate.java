@@ -57,7 +57,6 @@ import com.aionemu.gameserver.skillengine.properties.Properties;
 })
 public class SkillTemplate
 {
-	
 	protected Properties properties;
 	protected Conditions startconditions;
 	protected Conditions useconditions;
@@ -211,6 +210,7 @@ public class SkillTemplate
 	
 	/**
 	 * Gets the value of the skillId property.
+	 * @return
 	 */
 	public int getSkillId()
 	{

@@ -29,11 +29,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-/****/
 /**
- * Author Rinzler (Encom) /** Modified by Ranastic /
- ****/
-
+ * @author Rinzler, Ranastic (Encom)
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BonusAddExpAction")
 public class BonusAddExpAction extends AbstractItemAction

@@ -38,7 +38,6 @@ import com.aionemu.gameserver.model.templates.item.ItemQuality;
 @XmlRootElement(name = "house_part")
 public class HousePart
 {
-	
 	@XmlAttribute(name = "building_tags", required = true)
 	private List<String> buildingTags;
 	
@@ -102,5 +101,4 @@ public class HousePart
 	{
 		return tagsSet.contains(building.getPartsMatchTag());
 	}
-	
 }

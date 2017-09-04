@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "DiseaseEffect")
 public class DiseaseEffect extends EffectTemplate
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{
@@ -61,5 +60,4 @@ public class DiseaseEffect extends EffectTemplate
 			effect.getEffected().getEffectController().unsetAbnormal(AbnormalState.DISEASE.getId());
 		}
 	}
-	
 }

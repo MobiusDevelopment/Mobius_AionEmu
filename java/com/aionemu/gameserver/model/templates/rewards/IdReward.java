@@ -55,7 +55,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 })
 public class IdReward
 {
-	
 	@XmlAttribute(name = "id", required = true)
 	protected int id;
 	
@@ -64,6 +63,7 @@ public class IdReward
 	
 	/**
 	 * Gets the value of the id property.
+	 * @return
 	 */
 	public int getId()
 	{
@@ -89,5 +89,4 @@ public class IdReward
 		final ItemTemplate template = DataManager.ITEM_DATA.getItemTemplate(id);
 		return ((template.getRace() == Race.PC_ALL) && ((race == null) || (race == playerRace))) || ((template.getRace() != Race.PC_ALL) && (template.getRace() == playerRace));
 	}
-	
 }

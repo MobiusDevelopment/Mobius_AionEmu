@@ -30,7 +30,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ResultedItemsCollection")
 public class ResultedItemsCollection
 {
-	
 	@XmlElement(name = "item")
 	protected ArrayList<ResultedItem> items;
 	@XmlElement(name = "random_item")
@@ -47,9 +46,6 @@ public class ResultedItemsCollection
 		{
 			return randomItems;
 		}
-		else
-		{
-			return new ArrayList<>();
-		}
+		return new ArrayList<>();
 	}
 }

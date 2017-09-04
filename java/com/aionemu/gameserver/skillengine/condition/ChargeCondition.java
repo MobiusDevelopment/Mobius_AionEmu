@@ -34,7 +34,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "ChargeCondition")
 public class ChargeCondition extends Condition
 {
-	
 	@XmlAttribute(name = "level")
 	private int level;
 	

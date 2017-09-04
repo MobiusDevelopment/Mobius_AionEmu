@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Sphere")
 public class Sphere
 {
-	
 	@XmlAttribute
 	protected Float x;
 	@XmlAttribute

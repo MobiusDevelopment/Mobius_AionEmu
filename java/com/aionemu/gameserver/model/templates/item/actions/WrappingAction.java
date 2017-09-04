@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * @author Ranastic
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "WrappingAction")
 public class WrappingAction extends AbstractItemAction

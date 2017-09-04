@@ -40,7 +40,6 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 })
 public abstract class QuestCondition
 {
-	
 	@XmlAttribute(required = true)
 	protected ConditionOperation op;
 	
@@ -54,5 +53,4 @@ public abstract class QuestCondition
 	}
 	
 	public abstract boolean doCheck(QuestEnv env);
-	
 }

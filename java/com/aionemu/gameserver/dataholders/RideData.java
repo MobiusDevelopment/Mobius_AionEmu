@@ -38,7 +38,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "rides")
 public class RideData
 {
-	
 	@XmlElement(name = "ride_info")
 	private List<RideInfo> rides;
 	

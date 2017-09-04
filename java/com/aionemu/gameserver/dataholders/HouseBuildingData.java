@@ -39,7 +39,6 @@ import com.aionemu.gameserver.model.templates.housing.Building;
 })
 public class HouseBuildingData
 {
-	
 	@XmlElement(name = "building")
 	protected List<Building> buildings;
 	

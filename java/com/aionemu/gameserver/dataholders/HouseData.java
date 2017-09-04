@@ -44,7 +44,6 @@ import com.aionemu.gameserver.model.templates.housing.HousingLand;
 @XmlRootElement(name = "house_lands")
 public class HouseData
 {
-	
 	@XmlElement(name = "land")
 	protected List<HousingLand> lands;
 	

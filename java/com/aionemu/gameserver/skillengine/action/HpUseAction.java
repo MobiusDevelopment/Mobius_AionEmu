@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "HpUseAction")
 public class HpUseAction extends Action
 {
-	
 	@XmlAttribute(required = true)
 	protected int value;
 	
@@ -53,5 +52,4 @@ public class HpUseAction extends Action
 		
 		effector.getLifeStats().reduceHp(valueWithDelta, effector);
 	}
-	
 }

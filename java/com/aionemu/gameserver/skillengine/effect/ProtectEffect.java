@@ -35,7 +35,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "ProtectEffect")
 public class ProtectEffect extends ShieldEffect
 {
-	
 	@Override
 	public void startEffect(Effect effect)
 	{

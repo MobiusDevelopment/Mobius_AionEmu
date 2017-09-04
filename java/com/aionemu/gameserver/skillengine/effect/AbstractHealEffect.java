@@ -36,7 +36,6 @@ import com.aionemu.gameserver.skillengine.model.HealType;
 @XmlType(name = "AbstractHealEffect")
 public abstract class AbstractHealEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected boolean percent;
 	

@@ -36,7 +36,6 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 })
 public class OnTalkEvent extends QuestEvent
 {
-	
 	protected List<QuestVar> var;
 	
 	@Override

@@ -55,7 +55,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class ShoutGroup
 {
-	
 	@XmlElement(name = "shout_npcs", required = true)
 	protected List<ShoutList> shoutNpcs;
 	
@@ -74,6 +73,7 @@ public class ShoutGroup
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link ShoutList }
+	 * @return
 	 */
 	public List<ShoutList> getShoutNpcs()
 	{
@@ -98,5 +98,4 @@ public class ShoutGroup
 		shoutNpcs = null;
 		clientAi = null;
 	}
-	
 }

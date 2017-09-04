@@ -37,7 +37,6 @@ import com.aionemu.gameserver.model.Race;
 @XmlType(name = "MailTemplate")
 public class MailTemplate
 {
-	
 	@XmlElements(
 	{
 		@XmlElement(name = "sender", type = Sender.class),

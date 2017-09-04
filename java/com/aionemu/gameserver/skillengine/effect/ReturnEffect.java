@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "ReturnEffect")
 public class ReturnEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

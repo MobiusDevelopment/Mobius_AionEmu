@@ -36,7 +36,6 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 })
 public class QuestVar
 {
-	
 	protected List<QuestNpc> npc;
 	@XmlAttribute(required = true)
 	protected int value;

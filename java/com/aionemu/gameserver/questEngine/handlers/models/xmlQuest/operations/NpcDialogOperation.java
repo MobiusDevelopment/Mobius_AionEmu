@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "NpcDialogOperation")
 public class NpcDialogOperation extends QuestOperation
 {
-	
 	@XmlAttribute(required = true)
 	protected int id;
 	@XmlAttribute(name = "quest_id")
@@ -63,5 +62,4 @@ public class NpcDialogOperation extends QuestOperation
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(obj.getObjectId(), id, qId));
 		}
 	}
-	
 }

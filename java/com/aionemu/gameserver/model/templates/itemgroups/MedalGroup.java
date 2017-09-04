@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.templates.rewards.MedalItem;
 @XmlType(name = "MedalGroup")
 public class MedalGroup extends BonusItemGroup
 {
-	
 	@XmlElement(name = "item")
 	protected List<MedalItem> items;
 	

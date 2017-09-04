@@ -50,7 +50,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
 @XmlType(name = "FearEffect")
 public class FearEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected int resistchance;
 	

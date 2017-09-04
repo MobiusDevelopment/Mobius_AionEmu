@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Ranastic (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PlayersBonusServiceAttr", propOrder =
 {

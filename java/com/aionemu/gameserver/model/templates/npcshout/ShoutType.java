@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ShoutType
 {
-	
 	BROADCAST,
 	SAY,
 	HEAR;
@@ -41,5 +40,4 @@ public enum ShoutType
 	{
 		return valueOf(v);
 	}
-	
 }

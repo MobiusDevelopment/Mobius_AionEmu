@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.templates.spawns.Spawn;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MoltenusSpawn")
 public class MoltenusSpawn
@@ -55,7 +54,6 @@ public class MoltenusSpawn
 	@XmlType(name = "MoltenusStateTemplate")
 	public static class MoltenusStateTemplate
 	{
-		
 		@XmlElement(name = "spawn")
 		private List<Spawn> spawns;
 		

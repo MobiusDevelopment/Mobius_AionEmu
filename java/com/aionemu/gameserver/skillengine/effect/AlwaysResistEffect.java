@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "AlwaysResistEffect")
 public class AlwaysResistEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{
@@ -44,7 +43,6 @@ public class AlwaysResistEffect extends EffectTemplate
 	{
 		final AttackCalcObserver acObserver = new AttackStatusObserver(value, AttackStatus.RESIST)
 		{
-			
 			@Override
 			public boolean checkStatus(AttackStatus status)
 			{
@@ -61,12 +59,8 @@ public class AlwaysResistEffect extends EffectTemplate
 					
 					return true;
 				}
-				else
-				{
-					return false;
-				}
+				return false;
 			}
-			
 		};
 		effect.getEffected().getObserveController().addAttackCalcObserver(acObserver);
 		effect.setAttackStatusObserver(acObserver, position);

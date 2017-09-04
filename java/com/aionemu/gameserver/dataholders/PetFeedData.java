@@ -38,7 +38,6 @@ import com.aionemu.gameserver.model.templates.pet.PetFlavour;
 @XmlRootElement(name = "pet_feed")
 public class PetFeedData
 {
-	
 	@XmlElement(name = "flavour")
 	protected List<PetFlavour> flavours;
 	

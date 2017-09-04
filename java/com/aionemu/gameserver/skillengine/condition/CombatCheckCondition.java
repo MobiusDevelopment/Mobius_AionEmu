@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "CombatCheckCondition")
 public class CombatCheckCondition extends Condition
 {
-	
 	@Override
 	public boolean validate(Skill skill)
 	{

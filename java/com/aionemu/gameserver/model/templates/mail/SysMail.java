@@ -38,7 +38,6 @@ import com.aionemu.gameserver.model.Race;
 })
 public class SysMail
 {
-	
 	@XmlElement(name = "template", required = true)
 	private List<MailTemplate> templates;
 	

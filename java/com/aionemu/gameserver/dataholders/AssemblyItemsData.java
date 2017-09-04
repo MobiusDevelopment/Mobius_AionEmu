@@ -37,7 +37,6 @@ import com.aionemu.gameserver.model.templates.item.AssemblyItem;
 @XmlRootElement(name = "assembly_items")
 public class AssemblyItemsData
 {
-	
 	@XmlElement(required = true)
 	protected List<AssemblyItem> item;
 	

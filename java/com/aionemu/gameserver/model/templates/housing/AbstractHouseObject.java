@@ -36,7 +36,6 @@ import com.aionemu.gameserver.model.templates.item.ItemQuality;
 })
 public abstract class AbstractHouseObject extends VisibleObjectTemplate
 {
-	
 	@XmlAttribute(name = "talking_distance", required = true)
 	protected float talkingDistance;
 	
@@ -92,5 +91,4 @@ public abstract class AbstractHouseObject extends VisibleObjectTemplate
 	{
 		return null;
 	}
-	
 }

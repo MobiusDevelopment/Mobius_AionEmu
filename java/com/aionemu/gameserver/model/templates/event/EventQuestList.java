@@ -40,7 +40,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EventQuestList
 {
-	
 	protected String startable;
 	
 	protected String maintainable;
@@ -106,5 +105,4 @@ public class EventQuestList
 		}
 		return maintainQuests;
 	}
-	
 }

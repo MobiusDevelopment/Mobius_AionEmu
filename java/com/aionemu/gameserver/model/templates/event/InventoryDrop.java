@@ -29,7 +29,6 @@ import javax.xml.bind.annotation.XmlValue;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InventoryDrop
 {
-	
 	@XmlValue
 	private int dropItem;
 	

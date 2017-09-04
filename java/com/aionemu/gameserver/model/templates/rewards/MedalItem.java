@@ -25,7 +25,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "MedalReward")
 public class MedalItem extends IdLevelReward
 {
-	
 	@XmlAttribute(name = "count")
 	protected int count;
 	

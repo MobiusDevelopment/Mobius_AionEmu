@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @XmlType(name = "DelayedFPAttackInstantEffect")
 public class DelayedFPAttackInstantEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected int delay;
 	@XmlAttribute
@@ -64,7 +63,6 @@ public class DelayedFPAttackInstantEffect extends EffectTemplate
 		
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
-			
 			@Override
 			public void run()
 			{

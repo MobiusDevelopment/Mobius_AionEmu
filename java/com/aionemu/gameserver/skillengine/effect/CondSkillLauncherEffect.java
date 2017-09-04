@@ -36,7 +36,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 @XmlType(name = "CondSkillLauncherEffect")
 public class CondSkillLauncherEffect extends EffectTemplate
 {
-	
 	@XmlAttribute(name = "skill_id")
 	protected int skillId;
 	@XmlAttribute

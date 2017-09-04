@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @Author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AbyssGroupAttr")
 public class AbyssGroupAttr

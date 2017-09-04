@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "FallEffect")
 public class FallEffect extends EffectTemplate
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{

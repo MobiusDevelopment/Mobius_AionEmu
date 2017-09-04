@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @XmlType(name = "AbstractOverTimeEffect")
 public abstract class AbstractOverTimeEffect extends EffectTemplate
 {
-	
 	@XmlAttribute(required = true)
 	protected int checktime;
 	@XmlAttribute
@@ -99,5 +98,4 @@ public abstract class AbstractOverTimeEffect extends EffectTemplate
 			effect.getEffected().getEffectController().unsetAbnormal(abnormal.getId());
 		}
 	}
-	
 }

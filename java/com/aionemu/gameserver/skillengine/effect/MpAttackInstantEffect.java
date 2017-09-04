@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "MpAttackInstantEffect")
 public class MpAttackInstantEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected boolean percent;
 	

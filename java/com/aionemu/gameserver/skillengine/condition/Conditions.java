@@ -40,7 +40,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 })
 public class Conditions
 {
-	
 	@XmlElements(
 	{
 		@XmlElement(name = "abnormal", type = AbnormalStateCondition.class),
@@ -76,6 +75,8 @@ public class Conditions
 	 * <pre>
 	 * getConditions().add(newItem);
 	 * </pre>
+	 * 
+	 * @return
 	 */
 	public List<Condition> getConditions()
 	{

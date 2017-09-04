@@ -28,12 +28,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "HousingNpc")
 public class HousingNpc extends PlaceableHouseObject
 {
-	
 	@XmlAttribute(name = "npc_id", required = true)
 	protected int npcId;
 	
 	/**
 	 * Gets the value of the npcId property.
+	 * @return
 	 */
 	public int getNpcId()
 	{
@@ -45,5 +45,4 @@ public class HousingNpc extends PlaceableHouseObject
 	{
 		return 7;
 	}
-	
 }

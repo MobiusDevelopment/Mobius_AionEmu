@@ -40,7 +40,6 @@ import com.aionemu.gameserver.services.toypet.PetHungryLevel;
 })
 public class PetFlavour
 {
-	
 	@XmlElement(required = true)
 	protected List<PetRewards> food;
 	
@@ -48,13 +47,13 @@ public class PetFlavour
 	protected int id;
 	
 	@XmlAttribute(name = "full_count")
-	protected int fullCount = 1;
+	protected int fullCount;
 	
 	@XmlAttribute(name = "loved_limit")
-	protected int lovedFoodLimit = 0;
+	protected int lovedFoodLimit;
 	
 	@XmlAttribute(name = "cd", required = true)
-	protected int cooldown = 0;
+	protected int cooldown;
 	
 	public List<PetRewards> getFood()
 	{
@@ -68,6 +67,7 @@ public class PetFlavour
 	/**
 	 * Returns a food group for the itemId. Null if doesn't match
 	 * @param itemId
+	 * @return
 	 */
 	public FoodType getFoodType(int itemId)
 	{
@@ -84,7 +84,9 @@ public class PetFlavour
 	/**
 	 * Returns reward details if earned, otherwise null. Updates progress automatically
 	 * @param progress
-	 * @param itemId
+	 * @param foodType
+	 * @param itemLevel
+	 * @param playerLevel
 	 * @return
 	 */
 	public PetFeedResult processFeedResult(PetFeedProgress progress, FoodType foodType, int itemLevel, int playerLevel)
@@ -159,5 +161,4 @@ public class PetFlavour
 	{
 		return cooldown;
 	}
-	
 }

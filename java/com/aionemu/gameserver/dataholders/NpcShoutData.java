@@ -65,7 +65,6 @@ import javolution.util.FastMap;
 @XmlRootElement(name = "npc_shouts")
 public class NpcShoutData
 {
-	
 	@XmlElement(name = "shout_group")
 	protected List<ShoutGroup> shoutGroups;
 	
@@ -73,7 +72,7 @@ public class NpcShoutData
 	private final TIntObjectHashMap<FastMap<Integer, List<NpcShout>>> shoutsByWorldNpcs = new TIntObjectHashMap<>();
 	
 	@XmlTransient
-	private int count = 0;
+	private int count;
 	
 	public void afterUnmarshal(Unmarshaller u, Object parent)
 	{
@@ -123,6 +122,8 @@ public class NpcShoutData
 	
 	/**
 	 * Get global npc shouts plus world specific shouts. Make sure to clean it after the use.
+	 * @param worldId
+	 * @param npcId
 	 * @return null if not found
 	 */
 	public List<NpcShout> getNpcShouts(int worldId, int npcId)
@@ -152,6 +153,9 @@ public class NpcShoutData
 	
 	/**
 	 * Lightweight check for shouts, doesn't use memory as {@link #getNpcShouts(int worldId, int npcId)})
+	 * @param worldId
+	 * @param npcId
+	 * @return
 	 */
 	public boolean hasAnyShout(int worldId, int npcId)
 	{
@@ -170,6 +174,10 @@ public class NpcShoutData
 	
 	/**
 	 * Lightweight check for shouts, doesn't use memory as {@link #getNpcShouts(int worldId, int npcId, ShoutEventType type, String pattern, int skillNo)})
+	 * @param worldId
+	 * @param npcId
+	 * @param type
+	 * @return
 	 */
 	public boolean hasAnyShout(int worldId, int npcId, ShoutEventType type)
 	{
@@ -196,6 +204,7 @@ public class NpcShoutData
 	 * @param type - shout event type
 	 * @param pattern - specific pattern; if null, returns all
 	 * @param skillNo - specific skill number; if 0, returns all
+	 * @return
 	 */
 	public List<NpcShout> getNpcShouts(int worldId, int npcId, ShoutEventType type, String pattern, int skillNo)
 	{
@@ -224,5 +233,4 @@ public class NpcShoutData
 		shouts.clear();
 		return result.size() > 0 ? result : null;
 	}
-	
 }

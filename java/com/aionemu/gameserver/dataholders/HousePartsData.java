@@ -44,7 +44,6 @@ import com.aionemu.gameserver.model.templates.housing.HousePart;
 @XmlRootElement(name = "house_parts")
 public class HousePartsData
 {
-	
 	@XmlElement(name = "house_part")
 	protected List<HousePart> houseParts;
 	
@@ -96,5 +95,4 @@ public class HousePartsData
 	{
 		return partsById.size();
 	}
-	
 }

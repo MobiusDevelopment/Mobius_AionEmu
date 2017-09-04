@@ -32,7 +32,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Points")
 public class Points
 {
-	
 	@XmlElement(required = true)
 	protected List<Point2D> point;
 	@XmlAttribute(name = "top")
@@ -74,5 +73,4 @@ public class Points
 	{
 		return bottom;
 	}
-	
 }

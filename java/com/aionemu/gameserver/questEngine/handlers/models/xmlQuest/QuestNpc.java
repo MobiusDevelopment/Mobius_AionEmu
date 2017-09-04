@@ -37,7 +37,6 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 })
 public class QuestNpc
 {
-	
 	protected List<QuestDialog> dialog;
 	@XmlAttribute(required = true)
 	protected int id;

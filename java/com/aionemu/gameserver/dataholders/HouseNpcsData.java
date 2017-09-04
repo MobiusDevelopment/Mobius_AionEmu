@@ -40,7 +40,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "house_npcs")
 public class HouseNpcsData
 {
-	
 	@XmlElement(name = "house")
 	protected List<HouseSpawns> houseSpawnsData;
 	

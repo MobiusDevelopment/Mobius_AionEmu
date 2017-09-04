@@ -32,7 +32,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ActionModifiers")
 public class ActionModifiers
 {
-	
 	@XmlElements(
 	{
 		@XmlElement(name = "frontdamage", type = FrontDamageModifier.class),
@@ -46,7 +45,8 @@ public class ActionModifiers
 	/**
 	 * Gets the value of the actionModifiers property.
 	 * <p>
-	 * Objects of the following type(s) are allowed in the list {@link StumbleDamageModifier } {@link FrontDamageModifier } {@link BackDamageModifier } {@link StunDamageModifier } {@link PoisonDamageModifier } {@link TargetRaceDamageModifier }
+	 * Objects of the following type(s) are allowed in the list {@link FrontDamageModifier } {@link BackDamageModifier } {@link TargetRaceDamageModifier }
+	 * @return
 	 */
 	public List<ActionModifier> getActionModifiers()
 	{

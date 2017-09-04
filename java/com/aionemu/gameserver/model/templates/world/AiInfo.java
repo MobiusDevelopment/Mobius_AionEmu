@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "AiInfo")
 public class AiInfo
 {
-	
 	public static final AiInfo DEFAULT = new AiInfo();
 	
 	@XmlAttribute(name = "chase_target")
@@ -45,5 +44,4 @@ public class AiInfo
 	{
 		return chaseHome;
 	}
-	
 }

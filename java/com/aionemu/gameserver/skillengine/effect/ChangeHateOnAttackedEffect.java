@@ -34,7 +34,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "ChangeHateOnAttackedEffect")
 public class ChangeHateOnAttackedEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected int value1;// delta
 	@XmlAttribute

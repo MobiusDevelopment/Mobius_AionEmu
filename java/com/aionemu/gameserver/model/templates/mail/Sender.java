@@ -30,7 +30,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Sender extends MailPart
 {
-	
 	@XmlAttribute(name = "type")
 	protected MailPartType type;
 	

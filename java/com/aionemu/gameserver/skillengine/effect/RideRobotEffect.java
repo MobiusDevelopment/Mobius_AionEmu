@@ -33,11 +33,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_USE_ROBOT;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RideRobotEffect")
 public class RideRobotEffect extends EffectTemplate

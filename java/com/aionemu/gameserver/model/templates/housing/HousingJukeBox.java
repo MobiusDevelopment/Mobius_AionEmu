@@ -27,12 +27,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "HousingJukeBox")
 public class HousingJukeBox extends PlaceableHouseObject
 {
-	
 	@Override
 	public byte getTypeId()
 	{
 		// TODO Not sniffed yet
 		return 6;
 	}
-	
 }

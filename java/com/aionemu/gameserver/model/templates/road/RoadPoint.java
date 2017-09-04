@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.utils3d.Point3D;
 @XmlType(name = "RoadPoint")
 public class RoadPoint
 {
-	
 	@XmlAttribute(name = "x")
 	private float x;
 	

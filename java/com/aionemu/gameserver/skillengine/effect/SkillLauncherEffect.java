@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 @XmlType(name = "SkillLauncherEffect")
 public class SkillLauncherEffect extends EffectTemplate
 {
-	
 	@XmlAttribute(name = "skill_id")
 	protected int skillId;
 	

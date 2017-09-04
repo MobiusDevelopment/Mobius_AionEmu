@@ -22,7 +22,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlType(name = "weapon_type")
 @XmlEnum
 public enum WeaponType

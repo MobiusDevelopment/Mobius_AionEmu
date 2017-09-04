@@ -43,7 +43,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "QuestStartConditions")
 public class XMLStartCondition
 {
-	
 	@XmlElement(name = "finished")
 	protected List<FinishedQuestCond> finished;
 	@XmlList
@@ -59,7 +58,11 @@ public class XMLStartCondition
 	@XmlElement(name = "equipped", type = Integer.class)
 	protected List<Integer> equipped;
 	
-	/** Check, if the player has finished listed quests */
+	/**
+	 * Check, if the player has finished listed quests
+	 * @param qsl
+	 * @return
+	 */
 	private boolean checkFinishedQuests(QuestStateList qsl)
 	{
 		if ((finished != null) && (finished.size() > 0))
@@ -86,7 +89,11 @@ public class XMLStartCondition
 		return true;
 	}
 	
-	/** Check, if the player has not finished listed quests */
+	/**
+	 * Check, if the player has not finished listed quests
+	 * @param qsl
+	 * @return
+	 */
 	private boolean checkUnfinishedQuests(QuestStateList qsl)
 	{
 		if ((unfinished != null) && (unfinished.size() > 0))
@@ -103,7 +110,11 @@ public class XMLStartCondition
 		return true;
 	}
 	
-	/** Check, if the player has not acquired listed quests */
+	/**
+	 * Check, if the player has not acquired listed quests
+	 * @param qsl
+	 * @return
+	 */
 	private boolean checkNoAcquiredQuests(QuestStateList qsl)
 	{
 		if ((noacquired != null) && (noacquired.size() > 0))
@@ -120,7 +131,11 @@ public class XMLStartCondition
 		return true;
 	}
 	
-	/** Check, if the player has acquired listed quests */
+	/**
+	 * Check, if the player has acquired listed quests
+	 * @param qsl
+	 * @return
+	 */
 	private boolean checkAcquiredQuests(QuestStateList qsl)
 	{
 		if ((acquired != null) && (acquired.size() > 0))
@@ -158,7 +173,12 @@ public class XMLStartCondition
 		return true;
 	}
 	
-	/** Check all conditions */
+	/**
+	 * Check all conditions
+	 * @param player
+	 * @param warn
+	 * @return
+	 */
 	public boolean check(Player player, boolean warn)
 	{
 		final QuestStateList qsl = player.getQuestStateList();

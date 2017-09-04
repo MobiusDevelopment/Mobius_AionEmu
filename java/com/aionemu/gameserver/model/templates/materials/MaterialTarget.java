@@ -31,7 +31,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 @XmlEnum
 public enum MaterialTarget
 {
-	
 	ALL,
 	NPC,
 	PLAYER,
@@ -67,5 +66,4 @@ public enum MaterialTarget
 		}
 		return false;
 	}
-	
 }

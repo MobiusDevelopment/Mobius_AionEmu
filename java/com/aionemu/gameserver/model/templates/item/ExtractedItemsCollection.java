@@ -25,7 +25,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ExtractedItemsCollection")
 public class ExtractedItemsCollection extends ResultedItemsCollection
 {
-	
 	@XmlAttribute(name = "chance")
 	protected float chance = 100;
 	@XmlAttribute(name = "minlevel")
@@ -47,5 +46,4 @@ public class ExtractedItemsCollection extends ResultedItemsCollection
 	{
 		return maxLevel;
 	}
-	
 }

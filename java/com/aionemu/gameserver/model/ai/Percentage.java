@@ -31,7 +31,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Percentage")
 public class Percentage
 {
-	
 	@XmlAttribute(name = "percent")
 	protected int percent;
 	@XmlAttribute(name = "skillId")

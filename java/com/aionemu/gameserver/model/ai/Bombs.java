@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Bombs")
 public class Bombs
 {
-	
 	@XmlElement(name = "bomb")
 	private BombTemplate bombTemplate;
 	

@@ -33,7 +33,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "Condition")
 public abstract class Condition implements StatCondition
 {
-	
 	/**
 	 * Validate condition specified in template
 	 * @param env
@@ -51,5 +50,4 @@ public abstract class Condition implements StatCondition
 	{
 		return true;
 	}
-	
 }

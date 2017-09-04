@@ -39,6 +39,5 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 })
 public abstract class QuestOperation
 {
-	
 	public abstract void doOperate(QuestEnv env);
 }

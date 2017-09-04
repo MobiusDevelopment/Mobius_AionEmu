@@ -46,16 +46,15 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "CraftRecipe")
 public class CraftRecipe extends CraftReward
 {
-	
 	@XmlAttribute(name = "level", required = true)
 	protected int level;
 	
 	/**
 	 * Gets the value of the level property.
+	 * @return
 	 */
 	public int getLevel()
 	{
 		return level;
 	}
-	
 }

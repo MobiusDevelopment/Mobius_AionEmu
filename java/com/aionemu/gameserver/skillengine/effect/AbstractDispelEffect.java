@@ -29,7 +29,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTargetSlot;
 @XmlType(name = "AbstractDispelEffect")
 public class AbstractDispelEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected int dpower;
 	

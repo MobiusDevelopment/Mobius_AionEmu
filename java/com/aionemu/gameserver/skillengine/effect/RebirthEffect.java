@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "RebirthEffect")
 public class RebirthEffect extends EffectTemplate
 {
-	
 	@XmlAttribute(name = "resurrect_percent", required = true)
 	protected int resurrectPercent;
 	

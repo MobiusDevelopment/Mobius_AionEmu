@@ -34,7 +34,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "TargetRaceDamageModifier")
 public class TargetRaceDamageModifier extends ActionModifier
 {
-	
 	@XmlAttribute(name = "race")
 	private Race skillTargetRace;
 	
@@ -72,10 +71,7 @@ public class TargetRaceDamageModifier extends ActionModifier
 			{
 				return newValue;
 			}
-			else
-			{
-				return 0;
-			}
+			return 0;
 		}
 		
 		return 0;
@@ -107,5 +103,4 @@ public class TargetRaceDamageModifier extends ActionModifier
 		
 		return false;
 	}
-	
 }

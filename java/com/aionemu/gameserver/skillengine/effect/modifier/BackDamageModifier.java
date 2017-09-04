@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.PositionUtil;
 @XmlType(name = "BackDamageModifier")
 public class BackDamageModifier extends ActionModifier
 {
-	
 	@Override
 	public int analyze(Effect effect)
 	{

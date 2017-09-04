@@ -36,7 +36,6 @@ import com.aionemu.gameserver.services.QuestService;
 })
 public class CollectItemQuestOperation extends QuestOperation
 {
-	
 	@XmlElement(name = "true", required = true)
 	protected QuestOperations _true;
 	@XmlElement(name = "false", required = true)
@@ -60,5 +59,4 @@ public class CollectItemQuestOperation extends QuestOperation
 			_false.operate(env);
 		}
 	}
-	
 }

@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "HousingEmblem")
 public class HousingEmblem extends PlaceableHouseObject
 {
-	
 	@XmlAttribute(name = "level", required = true)
 	private int level;
 	
@@ -42,5 +41,4 @@ public class HousingEmblem extends PlaceableHouseObject
 	{
 		return level;
 	}
-	
 }

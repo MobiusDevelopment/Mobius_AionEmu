@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.HealType;
 @XmlType(name = "ProcMPHealInstantEffect")
 public class ProcMPHealInstantEffect extends AbstractHealEffect
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{

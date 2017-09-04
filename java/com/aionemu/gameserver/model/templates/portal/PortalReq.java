@@ -30,7 +30,6 @@ import com.aionemu.gameserver.configs.main.GSConfig;
 @XmlType(name = "PortalReq")
 public class PortalReq
 {
-	
 	@XmlElement(name = "quest_req")
 	protected List<QuestReq> questReq;
 	

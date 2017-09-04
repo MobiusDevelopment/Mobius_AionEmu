@@ -72,7 +72,6 @@ public class AssembledNpcTemplate
 	@XmlType(name = "AssembledNpcPart")
 	public static class AssembledNpcPartTemplate
 	{
-		
 		@XmlAttribute(name = "npcId")
 		private int npcId;
 		

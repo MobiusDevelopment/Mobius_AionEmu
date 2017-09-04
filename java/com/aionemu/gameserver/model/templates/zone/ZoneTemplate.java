@@ -34,7 +34,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 @XmlType(name = "Zone")
 public class ZoneTemplate
 {
-	
 	@XmlElement
 	protected Points points;
 	
@@ -88,6 +87,7 @@ public class ZoneTemplate
 	
 	/**
 	 * Gets the value of the points property.
+	 * @return
 	 */
 	public Points getPoints()
 	{
@@ -119,6 +119,7 @@ public class ZoneTemplate
 	
 	/**
 	 * Gets the value of the name property.
+	 * @return
 	 */
 	public ZoneName getName()
 	{
@@ -127,6 +128,7 @@ public class ZoneTemplate
 	
 	/**
 	 * Gets the value of the mapid property.
+	 * @return
 	 */
 	public int getMapid()
 	{

@@ -31,7 +31,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "World")
 public class StaticDoorWorld
 {
-	
 	@XmlAttribute(name = "world")
 	protected int world;
 	@XmlElement(name = "staticdoor")

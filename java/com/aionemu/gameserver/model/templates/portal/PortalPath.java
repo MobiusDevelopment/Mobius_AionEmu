@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.Race;
 @XmlType(name = "PortalPath")
 public class PortalPath
 {
-	
 	@XmlElement(name = "portal_req")
 	protected PortalReq portalReq;
 	

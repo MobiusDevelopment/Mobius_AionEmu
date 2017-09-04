@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 @XmlType(name = "UseLimits")
 public class ItemUseLimits
 {
-	
 	@XmlAttribute(name = "usedelay")
 	private int useDelay;
 	
@@ -52,7 +51,7 @@ public class ItemUseLimits
 	private int minRank;
 	
 	@XmlAttribute(name = "rank_max")
-	private final int maxRank = AbyssRankEnum.SUPREME_COMMANDER.getId();
+	protected int maxRank = AbyssRankEnum.SUPREME_COMMANDER.getId();
 	
 	public int getDelayId()
 	{

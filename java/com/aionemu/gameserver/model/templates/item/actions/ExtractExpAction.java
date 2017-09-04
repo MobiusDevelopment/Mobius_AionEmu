@@ -30,11 +30,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ExtractExpAction")
 public class ExtractExpAction extends AbstractItemAction

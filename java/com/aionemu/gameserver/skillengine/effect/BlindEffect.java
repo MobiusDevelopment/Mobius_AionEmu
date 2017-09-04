@@ -34,7 +34,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "BlindEffect")
 public class BlindEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

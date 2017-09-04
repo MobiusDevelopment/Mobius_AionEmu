@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "TargetCondition")
 public class TargetCondition extends Condition
 {
-	
 	@XmlAttribute(required = true)
 	protected TargetAttribute value;
 	

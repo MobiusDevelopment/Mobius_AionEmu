@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ArtifactActivation")
 public class ArtifactActivation
 {
-	
 	@XmlAttribute(name = "itemid")
 	protected int itemId;
 	@XmlAttribute(name = "count")

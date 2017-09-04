@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "FactionCategory")
 public enum FactionCategory
 {
-	
 	MENTOR,
 	DAILY,
 	COMBINESKILL,

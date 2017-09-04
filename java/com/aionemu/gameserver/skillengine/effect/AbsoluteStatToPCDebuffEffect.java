@@ -29,12 +29,10 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "AbsoluteStatToPCDebuff")
 public class AbsoluteStatToPCDebuffEffect extends AbstractAbsoluteStatEffect
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{
 		// TODO: One skill. Removable by mental healing magic or potion.
 		// Relative values - what are they, kinda ADD func ?
 	}
-	
 }

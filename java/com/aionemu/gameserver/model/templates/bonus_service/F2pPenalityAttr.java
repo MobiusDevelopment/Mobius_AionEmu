@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.change.Func;
 @XmlType(name = "F2pPenalityAttr")
 public class F2pPenalityAttr
 {
-	
 	@XmlAttribute(required = true)
 	protected StatEnum stat;
 	

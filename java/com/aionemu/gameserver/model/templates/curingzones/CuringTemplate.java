@@ -25,7 +25,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "CuringTemplate")
 public class CuringTemplate
 {
-	
 	@XmlAttribute(name = "map_id")
 	protected int mapId;
 	

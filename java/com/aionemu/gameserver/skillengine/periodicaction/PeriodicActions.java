@@ -32,7 +32,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "PeriodicActions", propOrder = "periodicActions")
 public class PeriodicActions
 {
-	
 	@XmlElements(
 	{
 		@XmlElement(name = "hpuse", type = HpUsePeriodicAction.class),

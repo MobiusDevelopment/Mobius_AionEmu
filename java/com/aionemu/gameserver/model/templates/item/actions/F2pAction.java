@@ -31,11 +31,9 @@ import com.aionemu.gameserver.services.F2pService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
-/****/
 /**
- * Author Rinzler & Ranastic (Encom) /
- ****/
-
+ * @author Rinzler & Ranastic (Encom)
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "F2pAction")
 public class F2pAction extends AbstractItemAction

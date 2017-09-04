@@ -41,7 +41,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "instance_bonusattrs")
 public class InstanceBuffData
 {
-	
 	@XmlElement(name = "instance_bonusattr")
 	protected List<InstanceBonusAttr> instanceBonusattr;
 	@XmlTransient
@@ -66,5 +65,4 @@ public class InstanceBuffData
 	{
 		return templates.get(buffId);
 	}
-	
 }

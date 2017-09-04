@@ -39,7 +39,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "TransformEffect")
 public abstract class TransformEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected int model;
 	

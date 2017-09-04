@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "EscapeEffect")
 public class EscapeEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{
@@ -46,5 +45,4 @@ public class EscapeEffect extends EffectTemplate
 			effect.addSucessEffect(this);
 		}
 	}
-	
 }

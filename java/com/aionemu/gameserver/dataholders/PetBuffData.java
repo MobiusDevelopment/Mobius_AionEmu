@@ -38,7 +38,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "pet_bonusattrs")
 public class PetBuffData
 {
-	
 	@XmlElement(name = "pet_bonusattr")
 	protected List<PetBonusAttr> petBonusattr;
 	

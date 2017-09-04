@@ -51,7 +51,6 @@ public class LandingSpawn
 	@XmlType(name = "LandingStateTemplate")
 	public static class LandingStateTemplate
 	{
-		
 		@XmlElement(name = "spawn")
 		private List<Spawn> spawns;
 		

@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "pet_skill")
 public class PetSkillTemplate
 {
-	
 	@XmlAttribute(name = "skill_id")
 	protected int skillId;
 	@XmlAttribute(name = "pet_id")

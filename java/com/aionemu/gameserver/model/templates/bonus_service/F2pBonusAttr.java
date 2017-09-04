@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "F2pBonusAttr", propOrder =
 {

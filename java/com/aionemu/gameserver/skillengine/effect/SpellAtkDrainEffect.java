@@ -34,7 +34,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "SpellAtkDrainEffect")
 public class SpellAtkDrainEffect extends AbstractOverTimeEffect
 {
-	
 	@XmlAttribute(name = "hp_percent")
 	protected int hp_percent;
 	@XmlAttribute(name = "mp_percent")

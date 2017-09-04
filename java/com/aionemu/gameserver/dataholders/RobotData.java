@@ -30,11 +30,9 @@ import com.aionemu.gameserver.model.templates.robot.RobotInfo;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =
 {

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.zorshivdredgion.ZorshivDredgionStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ZorshivDredgionSpawn")
 public class ZorshivDredgionSpawn
@@ -55,7 +54,6 @@ public class ZorshivDredgionSpawn
 	@XmlType(name = "ZorshivDredgionStateTemplate")
 	public static class ZorshivDredgionStateTemplate
 	{
-		
 		@XmlElement(name = "spawn")
 		private List<Spawn> spawns;
 		

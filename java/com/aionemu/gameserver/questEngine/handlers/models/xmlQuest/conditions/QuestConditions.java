@@ -38,7 +38,6 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 })
 public class QuestConditions
 {
-	
 	@XmlElements(
 	{
 		@XmlElement(name = "quest_status", type = QuestStatusCondition.class),
@@ -77,5 +76,4 @@ public class QuestConditions
 		}
 		return inCondition;
 	}
-	
 }

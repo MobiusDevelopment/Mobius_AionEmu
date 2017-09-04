@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "SkillAttackInstantEffect")
 public class SkillAttackInstantEffect extends DamageEffect
 {
-	
 	@XmlAttribute
 	protected int rnddmg;// TODO should be enum and different types of random damage behaviour
 	@XmlAttribute
@@ -65,5 +64,4 @@ public class SkillAttackInstantEffect extends DamageEffect
 	{
 		return cannotmiss;
 	}
-	
 }

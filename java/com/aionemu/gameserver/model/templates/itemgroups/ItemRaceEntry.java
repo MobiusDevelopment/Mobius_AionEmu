@@ -35,7 +35,6 @@ import com.aionemu.gameserver.model.templates.rewards.IdLevelReward;
 })
 public class ItemRaceEntry
 {
-	
 	@XmlAttribute(name = "id", required = true)
 	protected int id;
 	

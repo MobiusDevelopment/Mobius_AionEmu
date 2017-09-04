@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "DecomposableItem")
 public class DecomposableItemInfo
 {
-	
 	@XmlAttribute(name = "item_id")
 	private int itemId;
 	@XmlElement(name = "items")

@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ComponentElement")
 public class ComponentElement
 {
-	
 	@XmlAttribute
 	protected int itemid;
 	@XmlAttribute

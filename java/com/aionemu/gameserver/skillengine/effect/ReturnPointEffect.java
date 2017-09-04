@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "ReturnPointEffect")
 public class ReturnPointEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{
@@ -51,5 +50,4 @@ public class ReturnPointEffect extends EffectTemplate
 			effect.addSucessEffect(this);
 		}
 	}
-	
 }

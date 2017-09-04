@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Point2D")
 public class Point2D
 {
-	
 	@XmlAttribute(name = "y")
 	protected float y;
 	@XmlAttribute(name = "x")

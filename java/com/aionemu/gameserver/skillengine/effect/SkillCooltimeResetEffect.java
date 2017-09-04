@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Dr.Nism
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SkillCooltimeResetEffect")
 public class SkillCooltimeResetEffect extends EffectTemplate

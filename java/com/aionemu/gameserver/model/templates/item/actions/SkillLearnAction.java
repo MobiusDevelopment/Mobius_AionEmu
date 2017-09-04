@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "SkillLearnAction")
 public class SkillLearnAction extends AbstractItemAction
 {
-	
 	@XmlAttribute
 	protected int skillid;
 	@XmlAttribute

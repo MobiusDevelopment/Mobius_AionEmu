@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "FormCondition")
 public class FormCondition extends Condition
 {
-	
 	@XmlAttribute(required = true)
 	protected TransformType value;
 	

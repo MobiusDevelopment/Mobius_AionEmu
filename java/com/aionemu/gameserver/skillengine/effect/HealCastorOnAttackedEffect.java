@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 @XmlType(name = "HealCastorOnAttackedEffect")
 public class HealCastorOnAttackedEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected HealType type;
 	@XmlAttribute

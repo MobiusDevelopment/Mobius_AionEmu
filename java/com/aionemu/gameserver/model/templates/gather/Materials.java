@@ -33,11 +33,11 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Materials
 {
-	
 	protected List<Material> material;
 	
 	/**
 	 * Gets the value of the material property.
+	 * @return
 	 */
 	public List<Material> getMaterial()
 	{

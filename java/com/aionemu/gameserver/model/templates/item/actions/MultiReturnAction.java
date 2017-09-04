@@ -33,11 +33,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION
 import com.aionemu.gameserver.services.teleport.MultiReturnService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MultiReturnAction")
 public class MultiReturnAction extends AbstractItemAction

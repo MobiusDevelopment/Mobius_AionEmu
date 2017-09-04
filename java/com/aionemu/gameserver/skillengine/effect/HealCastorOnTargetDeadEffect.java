@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 @XmlType(name = "HealCastorOnTargetDeadEffect")
 public class HealCastorOnTargetDeadEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected HealType type;// unhandled for now
 	@XmlAttribute

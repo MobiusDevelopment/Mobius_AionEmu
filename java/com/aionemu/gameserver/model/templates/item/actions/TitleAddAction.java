@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "TitleAddAction")
 public class TitleAddAction extends AbstractItemAction
 {
-	
 	@XmlAttribute
 	protected int titleid;
 	@XmlAttribute

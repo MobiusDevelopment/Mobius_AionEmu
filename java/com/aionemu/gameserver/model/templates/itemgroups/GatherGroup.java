@@ -53,7 +53,6 @@ import com.aionemu.gameserver.model.templates.rewards.IdReward;
 @XmlType(name = "GatherGroup")
 public class GatherGroup extends BonusItemGroup
 {
-	
 	@XmlElement(name = "item")
 	protected List<ItemRaceEntry> items;
 	
@@ -69,6 +68,7 @@ public class GatherGroup extends BonusItemGroup
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link IdReward }
+	 * @return
 	 */
 	public List<ItemRaceEntry> getItems()
 	{

@@ -28,14 +28,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "SubEffect")
 public class SubEffect
 {
-	
 	@XmlAttribute(name = "skill_id", required = true)
 	private int skillId;
 	@XmlAttribute
-	private final int chance = 100;
+	protected int chance = 100;
 	
 	@XmlAttribute(name = "addeffect")
-	private final boolean addEffect = false;
+	protected boolean addEffect = false;
 	
 	/**
 	 * @return the skillId

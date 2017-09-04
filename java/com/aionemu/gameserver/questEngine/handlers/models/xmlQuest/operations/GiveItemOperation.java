@@ -31,7 +31,6 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 @XmlType(name = "GiveItemOperation")
 public class GiveItemOperation extends QuestOperation
 {
-	
 	@XmlAttribute(name = "item_id", required = true)
 	protected int itemId;
 	@XmlAttribute(required = true)
@@ -47,5 +46,4 @@ public class GiveItemOperation extends QuestOperation
 		final Player player = env.getPlayer();
 		player.getController().addItems(itemId, count);
 	}
-	
 }

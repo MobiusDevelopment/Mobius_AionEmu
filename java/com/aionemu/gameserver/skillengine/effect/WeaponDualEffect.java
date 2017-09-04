@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "WeaponDualEffect")
 public class WeaponDualEffect extends BuffEffect
 {
-	
 	@Override
 	public void startEffect(Effect effect)
 	{
@@ -68,5 +67,4 @@ public class WeaponDualEffect extends BuffEffect
 		
 		super.endEffect(effect);
 	}
-	
 }

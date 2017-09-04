@@ -46,7 +46,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @XmlType(name = "SummonServantEffect")
 public class SummonServantEffect extends SummonEffect
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(SummonServantEffect.class);
 	
 	@XmlAttribute(name = "skill_id", required = true)
@@ -65,6 +64,11 @@ public class SummonServantEffect extends SummonEffect
 	/**
 	 * @param effect
 	 * @param time
+	 * @param npcObjectType
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @return
 	 */
 	protected Servant spawnServant(Effect effect, int time, NpcObjectType npcObjectType, float x, float y, float z)
 	{
@@ -87,15 +91,7 @@ public class SummonServantEffect extends SummonEffect
 		final SpawnTemplate spawn = SpawnEngine.addNewSingleTimeSpawn(worldId, npcId, x, y, z, heading);
 		final Servant servant = VisibleObjectSpawner.spawnServant(spawn, instanceId, effector, skillId, effect.getSkillLevel(), npcObjectType);
 		
-		final Future<?> task = ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				servant.getController().onDelete();
-			}
-		}, time * 1000);
+		final Future<?> task = ThreadPoolManager.getInstance().schedule(() -> servant.getController().onDelete(), time * 1000);
 		servant.getController().addTask(TaskId.DESPAWN, task);
 		servant.getAi2().onCreatureEvent(AIEventType.ATTACK, target != null ? target : effected);
 		return servant;

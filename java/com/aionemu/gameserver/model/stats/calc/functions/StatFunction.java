@@ -38,7 +38,6 @@ import com.aionemu.gameserver.skillengine.condition.Conditions;
 @XmlType(name = "SimpleModifier")
 public class StatFunction implements IStatFunction
 {
-	
 	@XmlAttribute(name = "name")
 	protected StatEnum stat;
 	@XmlAttribute
@@ -175,7 +174,11 @@ public class StatFunction implements IStatFunction
 				}
 			}
 			
-			final int finalValue = modifier.getValue() + rndBonus.getValue();
+			int finalValue = modifier.getValue();
+			if (rndBonus != null)
+			{
+				finalValue += rndBonus.getValue();
+			}
 			
 			if (modifier instanceof StatAddFunction)
 			{
@@ -208,5 +211,4 @@ public class StatFunction implements IStatFunction
 		
 		return allModifiers;
 	}
-	
 }

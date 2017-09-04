@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "npcskill")
 public class NpcSkillTemplate
 {
-	
 	@XmlAttribute(name = "id")
 	protected int id;
 	@XmlAttribute(name = "skillid")

@@ -25,9 +25,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Acquisition")
 public class Acquisition
 {
-	
 	@XmlAttribute(name = "ap", required = false)
-	private final int ap = 0;
+	private int ap;
 	
 	@XmlAttribute(name = "count", required = false)
 	private int itemCount;

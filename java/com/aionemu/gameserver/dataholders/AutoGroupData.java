@@ -38,7 +38,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "auto_groups")
 public class AutoGroupData
 {
-	
 	@XmlElement(name = "auto_group")
 	protected List<AutoGroup> autoGroup;
 	@XmlTransient

@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "KeyItem")
 public class KeyItem
 {
-	
 	@XmlAttribute(name = "id")
 	protected int id;
 	@XmlAttribute(name = "itemid")

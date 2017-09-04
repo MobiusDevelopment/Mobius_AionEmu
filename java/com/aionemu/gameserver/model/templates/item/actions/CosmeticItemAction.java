@@ -39,7 +39,6 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 @XmlType(name = "CosmeticItemAction")
 public class CosmeticItemAction extends AbstractItemAction
 {
-	
 	@XmlAttribute(name = "name")
 	protected String cosmeticName;
 	
@@ -124,7 +123,6 @@ public class CosmeticItemAction extends AbstractItemAction
 		PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
 		player.getKnownList().doOnAllPlayers(new Visitor<Player>()
 		{
-			
 			@Override
 			public void visit(Player rangePlayer)
 			{

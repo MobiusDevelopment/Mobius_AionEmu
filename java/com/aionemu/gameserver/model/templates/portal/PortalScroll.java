@@ -29,7 +29,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class PortalScroll
 {
-	
 	@XmlElement(name = "portal_path")
 	protected PortalPath portalPath;
 	

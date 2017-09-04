@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.HealType;
 @XmlType(name = "ProcFPHealInstantEffect")
 public class ProcFPHealInstantEffect extends AbstractHealEffect
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{
@@ -54,5 +53,4 @@ public class ProcFPHealInstantEffect extends AbstractHealEffect
 	{
 		return effect.getEffected().getLifeStats().getMaxFp();
 	}
-	
 }

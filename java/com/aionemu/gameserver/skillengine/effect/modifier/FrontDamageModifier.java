@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.PositionUtil;
 @XmlType(name = "FrontDamageModifier")
 public class FrontDamageModifier extends ActionModifier
 {
-	
 	@Override
 	public int analyze(Effect effect)
 	{
@@ -42,5 +41,4 @@ public class FrontDamageModifier extends ActionModifier
 	{
 		return PositionUtil.isInFrontOfTarget(effect.getEffector(), effect.getEffected());
 	}
-	
 }

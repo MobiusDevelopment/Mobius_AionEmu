@@ -40,7 +40,6 @@ import com.aionemu.gameserver.model.templates.rewards.BonusType;
 })
 public abstract class BonusItemGroup
 {
-	
 	@XmlAttribute(name = "bonusType", required = true)
 	protected BonusType bonusType;
 	

@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Material")
 public class Material implements Comparable<Material>
 {
-	
 	@XmlAttribute
 	protected String name;
 	@XmlAttribute
@@ -78,5 +77,4 @@ public class Material implements Comparable<Material>
 	{
 		return o.rate - rate;
 	}
-	
 }

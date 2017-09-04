@@ -26,7 +26,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum EquipType
 {
-	
 	ARMOR,
 	WEAPON,
 	STIGMA,
@@ -43,5 +42,4 @@ public enum EquipType
 	{
 		return valueOf(v);
 	}
-	
 }

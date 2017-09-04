@@ -30,12 +30,12 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 @XmlType(name = "DialogIdCondition")
 public class DialogIdCondition extends QuestCondition
 {
-	
 	@XmlAttribute(required = true)
 	protected int value;
 	
 	/**
 	 * Gets the value of the value property.
+	 * @return
 	 */
 	public int getValue()
 	{

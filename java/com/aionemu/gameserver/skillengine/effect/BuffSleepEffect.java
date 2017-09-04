@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "BuffSleepEffect")
 public class BuffSleepEffect extends SleepEffect
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{
@@ -45,5 +44,4 @@ public class BuffSleepEffect extends SleepEffect
 		effect.setAbnormal(AbnormalState.SLEEP.getId());
 		effected.getEffectController().setAbnormal(AbnormalState.SLEEP.getId());
 	}
-	
 }

@@ -63,13 +63,13 @@ public class ItemTemplate extends VisibleObjectTemplate
 	private int mask;
 	
 	@XmlAttribute(name = "category")
-	private final ItemCategory category = ItemCategory.NONE;
+	protected ItemCategory category = ItemCategory.NONE;
 	
 	@XmlAttribute(name = "slot")
 	private int itemSlot;
 	
 	@XmlAttribute(name = "equipment_type")
-	private final EquipType equipmentType = EquipType.NONE;
+	protected EquipType equipmentType = EquipType.NONE;
 	
 	@XmlAttribute(name = "weapon_boost")
 	private int weaponBoost;
@@ -87,10 +87,10 @@ public class ItemTemplate extends VisibleObjectTemplate
 	private int abyssPoint;
 	
 	@XmlAttribute(name = "max_stack_count")
-	private final int maxStackCount = 1;
+	protected int maxStackCount = 1;
 	
 	@XmlAttribute(name = "unit_sell_count")
-	private final int unitSellCount = 1;
+	protected int unitSellCount = 1;
 	
 	@XmlAttribute(name = "level")
 	private int level;
@@ -120,13 +120,13 @@ public class ItemTemplate extends VisibleObjectTemplate
 	private int optionSlotBonus;
 	
 	@XmlAttribute(name = "rnd_bonus")
-	private final int rnd_bonus = 0;
+	protected int rnd_bonus = 0;
 	
 	@XmlAttribute(name = "rnd_count")
-	private final int rnd_count = 0;
+	protected int rnd_count = 0;
 	
 	@XmlAttribute(name = "wrappable_count")
-	private final int wrappable_count = 0;
+	protected int wrappable_count = 0;
 	
 	@XmlAttribute(name = "max_authorize")
 	private int maxAuthorize;
@@ -135,7 +135,7 @@ public class ItemTemplate extends VisibleObjectTemplate
 	private int temperingTableId;
 	
 	@XmlAttribute(name = "robot_name")
-	private final int robotName = 0;
+	protected int robotName = 0;
 	
 	@XmlAttribute(name = "bonus_apply")
 	private String bonusApply;
@@ -240,10 +240,10 @@ public class ItemTemplate extends VisibleObjectTemplate
 	private int skill_enchant;
 	
 	@XmlAttribute(name = "enchant_base")
-	private final int enchant_base = 0;
+	protected int enchant_base = 0;
 	
 	@XmlAttribute(name = "item_custom_set")
-	private final int itemCustomSet = 0;
+	protected int itemCustomSet = 0;
 	
 	private static final WeaponStats emptyWeaponStats = new WeaponStats();
 	
@@ -322,7 +322,6 @@ public class ItemTemplate extends VisibleObjectTemplate
 	
 	/**
 	 * @param playerClass
-	 * @param level
 	 * @return
 	 */
 	public int getRequiredLevel(PlayerClass playerClass)
@@ -337,10 +336,7 @@ public class ItemTemplate extends VisibleObjectTemplate
 		{
 			return -1;
 		}
-		else
-		{
-			return requiredLevel;
-		}
+		return requiredLevel;
 	}
 	
 	public List<StatFunction> getModifiers()
@@ -437,10 +433,7 @@ public class ItemTemplate extends VisibleObjectTemplate
 			{
 				return CustomConfig.KINAH_CAP_VALUE;
 			}
-			else
-			{
-				return Long.MAX_VALUE;
-			}
+			return Long.MAX_VALUE;
 		}
 		if (isLuna())
 		{
@@ -448,10 +441,7 @@ public class ItemTemplate extends VisibleObjectTemplate
 			{
 				return CustomConfig.LUNA_CAP_VALUE;
 			}
-			else
-			{
-				return Long.MAX_VALUE;
-			}
+			return Long.MAX_VALUE;
 		}
 		return maxStackCount;
 	}
@@ -566,6 +556,7 @@ public class ItemTemplate extends VisibleObjectTemplate
 	
 	/**
 	 * Checks if the ItemTemplate belongs to an item set
+	 * @return
 	 */
 	public boolean isItemSet()
 	{

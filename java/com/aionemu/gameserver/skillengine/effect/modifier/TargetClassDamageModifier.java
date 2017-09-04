@@ -33,7 +33,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "TargetClassDamageModifier")
 public class TargetClassDamageModifier extends ActionModifier
 {
-	
 	@XmlAttribute(name = "class")
 	private PlayerClass skillTargetClass;
 	
@@ -63,5 +62,4 @@ public class TargetClassDamageModifier extends ActionModifier
 		}
 		return false;
 	}
-	
 }

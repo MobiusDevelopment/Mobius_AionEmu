@@ -52,7 +52,6 @@ public class LegionDominionSpawn
 	@XmlType(name = "LegionDominionRaceTemplate")
 	public static class LegionDominionRaceTemplate
 	{
-		
 		@XmlElement(name = "legion_mod")
 		private List<LegionDominionModTemplate> LegionDominionModTemplates;
 		

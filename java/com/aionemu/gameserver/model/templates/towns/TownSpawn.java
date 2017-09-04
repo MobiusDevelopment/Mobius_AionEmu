@@ -72,5 +72,4 @@ public class TownSpawn
 	{
 		return townLevelsData.valueCollection();
 	}
-	
 }

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.skillengine.change.Func;
 @XmlType(name = "PetPenaltyAttr")
 public class PetPenaltyAttr
 {
-	
 	@XmlAttribute(required = true)
 	protected StatEnum stat;
 	

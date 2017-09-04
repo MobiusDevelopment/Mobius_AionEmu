@@ -40,7 +40,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @XmlType(name = "MagicCounterAtkEffect")
 public class MagicCounterAtkEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected int maxdmg;
 	

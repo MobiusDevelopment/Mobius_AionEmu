@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "RecallInstantEffect")
 public class RecallInstantEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

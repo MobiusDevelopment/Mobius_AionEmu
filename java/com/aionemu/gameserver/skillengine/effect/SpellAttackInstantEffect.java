@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "SpellAttackInstantEffect")
 public class SpellAttackInstantEffect extends DamageEffect
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{

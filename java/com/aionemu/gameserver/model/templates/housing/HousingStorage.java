@@ -28,12 +28,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "HousingStorage")
 public class HousingStorage extends PlaceableHouseObject
 {
-	
 	@XmlAttribute(name = "warehouse_id", required = true)
 	protected int warehouseId;
 	
 	/**
 	 * Gets the value of the warehouseId property.
+	 * @return
 	 */
 	public int getWarehouseId()
 	{
@@ -45,5 +45,4 @@ public class HousingStorage extends PlaceableHouseObject
 	{
 		return 2;
 	}
-	
 }

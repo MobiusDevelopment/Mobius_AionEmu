@@ -29,7 +29,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "IGCategory")
 public class IGCategory
 {
-	
 	@XmlElement(name = "sub_category")
 	protected List<IGSubCategory> subCategories;
 	

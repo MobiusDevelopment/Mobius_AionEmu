@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.SkillType;
 @XmlType(name = "SilenceEffect")
 public class SilenceEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

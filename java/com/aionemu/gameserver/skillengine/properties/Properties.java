@@ -33,7 +33,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "Properties")
 public class Properties
 {
-	
 	@XmlAttribute(name = "first_target", required = true)
 	protected FirstTargetAttribute firstTarget;
 	
@@ -80,6 +79,7 @@ public class Properties
 	
 	/**
 	 * @param skill
+	 * @return
 	 */
 	public boolean validate(Skill skill)
 	{
@@ -134,6 +134,7 @@ public class Properties
 	
 	/**
 	 * @param skill
+	 * @return
 	 */
 	public boolean endCastValidate(Skill skill)
 	{

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.templates.spawns.Spawn;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "NightmareCircusSpawn")
 public class NightmareCircusSpawn
@@ -55,7 +54,6 @@ public class NightmareCircusSpawn
 	@XmlType(name = "NightmareCircusStateTemplate")
 	public static class NightmareCircusStateTemplate
 	{
-		
 		@XmlElement(name = "spawn")
 		private List<Spawn> spawns;
 		

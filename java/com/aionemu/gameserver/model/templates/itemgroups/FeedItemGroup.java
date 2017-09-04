@@ -29,7 +29,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "FeedItemGroup")
 public abstract class FeedItemGroup
 {
-	
 	@XmlAttribute(name = "group", required = true)
 	protected ItemGroupIndex index = ItemGroupIndex.NONE;
 	

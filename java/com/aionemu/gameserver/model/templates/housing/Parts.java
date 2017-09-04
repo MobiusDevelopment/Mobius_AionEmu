@@ -37,7 +37,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Parts
 {
-	
 	protected Integer fence;
 	protected Integer garden;
 	protected Integer frame;
@@ -94,6 +93,7 @@ public class Parts
 	
 	/**
 	 * Gets the value of the infloor property.
+	 * @return
 	 */
 	public int getInfloor()
 	{
@@ -102,6 +102,7 @@ public class Parts
 	
 	/**
 	 * Gets the value of the inwall property.
+	 * @return
 	 */
 	public int getInwall()
 	{
@@ -110,6 +111,7 @@ public class Parts
 	
 	/**
 	 * Gets the value of the door property.
+	 * @return
 	 */
 	public int getDoor()
 	{

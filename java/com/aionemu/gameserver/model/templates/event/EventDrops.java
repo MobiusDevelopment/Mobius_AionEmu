@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "EventDrops")
 public class EventDrops
 {
-	
 	@XmlElement(name = "event_drop")
 	protected List<EventDrop> eventDrops;
 	
@@ -40,5 +39,4 @@ public class EventDrops
 		}
 		return eventDrops;
 	}
-	
 }

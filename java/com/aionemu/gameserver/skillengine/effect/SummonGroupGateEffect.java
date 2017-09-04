@@ -38,11 +38,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @XmlType(name = "SummonGroupGateEffect")
 public class SummonGroupGateEffect extends SummonEffect
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{
-		
 		final Creature effector = effect.getEffector();
 		final float x = effector.getX();
 		final float y = effector.getY();
@@ -56,7 +54,6 @@ public class SummonGroupGateEffect extends SummonEffect
 		
 		final Future<?> task = ThreadPoolManager.getInstance().schedule(new Runnable()
 		{
-			
 			@Override
 			public void run()
 			{

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PositionUtil;
 @XmlType(name = "FrontCondition")
 public class FrontCondition extends Condition
 {
-	
 	@Override
 	public boolean validate(Skill env)
 	{
@@ -53,5 +52,4 @@ public class FrontCondition extends Condition
 		
 		return PositionUtil.isInFrontOfTarget(effect.getEffector(), effect.getEffected());
 	}
-	
 }

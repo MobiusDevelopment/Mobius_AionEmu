@@ -33,7 +33,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class TradeinList
 {
-	
 	@XmlElement(name = "tradein_item")
 	protected List<TradeinItem> tradeinItem;
 	
@@ -41,5 +40,4 @@ public class TradeinList
 	{
 		return tradeinItem;
 	}
-	
 }

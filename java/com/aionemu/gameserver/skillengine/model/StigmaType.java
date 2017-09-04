@@ -26,7 +26,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum StigmaType
 {
-	
 	NONE(0),
 	BASIC(1),
 	ADVANCED(2);

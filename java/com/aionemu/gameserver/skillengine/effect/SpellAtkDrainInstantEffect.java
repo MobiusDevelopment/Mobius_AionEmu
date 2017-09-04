@@ -33,7 +33,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "SpellAtkDrainInstantEffect")
 public class SpellAtkDrainInstantEffect extends DamageEffect
 {
-	
 	@XmlAttribute(name = "hp_percent")
 	protected int hp_percent;
 	@XmlAttribute(name = "mp_percent")
@@ -58,5 +57,4 @@ public class SpellAtkDrainInstantEffect extends DamageEffect
 	{
 		super.calculate(effect, DamageType.MAGICAL);
 	}
-	
 }

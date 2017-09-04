@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "AlwaysDodgeEffect")
 public class AlwaysDodgeEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{
@@ -44,7 +43,6 @@ public class AlwaysDodgeEffect extends EffectTemplate
 	{
 		final AttackCalcObserver acObserver = new AttackStatusObserver(value, AttackStatus.DODGE)
 		{
-			
 			@Override
 			public boolean checkStatus(AttackStatus status)
 			{
@@ -58,15 +56,10 @@ public class AlwaysDodgeEffect extends EffectTemplate
 					{
 						value--;
 					}
-					
 					return true;
 				}
-				else
-				{
-					return false;
-				}
+				return false;
 			}
-			
 		};
 		effect.getEffected().getObserveController().addAttackCalcObserver(acObserver);
 		effect.setAttackStatusObserver(acObserver, position);

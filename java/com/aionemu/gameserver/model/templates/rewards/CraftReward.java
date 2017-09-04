@@ -56,7 +56,6 @@ import com.aionemu.gameserver.model.templates.itemgroups.ItemRaceEntry;
 })
 public abstract class CraftReward extends ItemRaceEntry
 {
-	
 	@XmlAttribute(name = "skill")
 	protected Integer skill;
 	
@@ -68,5 +67,4 @@ public abstract class CraftReward extends ItemRaceEntry
 	{
 		return skill;
 	}
-	
 }

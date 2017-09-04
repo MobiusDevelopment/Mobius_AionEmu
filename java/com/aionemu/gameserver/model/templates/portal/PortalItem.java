@@ -29,7 +29,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "PortalItem")
 public class PortalItem
 {
-	
 	@XmlAttribute(name = "id")
 	protected int id;
 	@XmlAttribute(name = "itemid")

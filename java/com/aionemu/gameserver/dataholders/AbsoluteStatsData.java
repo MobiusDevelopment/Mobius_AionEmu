@@ -42,7 +42,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "absolute_stats")
 public class AbsoluteStatsData
 {
-	
 	@XmlElement(name = "stats_set", required = true)
 	protected List<AbsoluteStatsTemplate> absoluteStats;
 	
@@ -68,5 +67,4 @@ public class AbsoluteStatsData
 	{
 		return absoluteStatsData.size();
 	}
-	
 }

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 @XmlType(name = "EventDrop")
 public class EventDrop
 {
-	
 	@XmlAttribute(name = "item_id", required = true)
 	protected int itemId;
 	@XmlAttribute(name = "count", required = true)

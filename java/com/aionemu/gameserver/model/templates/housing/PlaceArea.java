@@ -26,7 +26,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum PlaceArea
 {
-	
 	ALL,
 	INTERIOR,
 	EXTERIOR;
@@ -40,5 +39,4 @@ public enum PlaceArea
 	{
 		return valueOf(value);
 	}
-	
 }

@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "PetFeedResult")
 public class PetFeedResult
 {
-	
 	@XmlAttribute(required = true)
 	protected int item;
 	
@@ -45,5 +44,4 @@ public class PetFeedResult
 	{
 		return name + " (" + item + ")";
 	}
-	
 }

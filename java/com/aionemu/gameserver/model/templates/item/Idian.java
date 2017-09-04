@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Idian")
 public class Idian
 {
-	
 	@XmlAttribute(name = "defend")
 	private int burnDefend;
 	

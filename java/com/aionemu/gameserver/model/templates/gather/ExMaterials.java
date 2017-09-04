@@ -34,7 +34,6 @@ import javolution.util.FastList;
 })
 public class ExMaterials
 {
-	
 	protected List<Material> material;
 	
 	public List<Material> getMaterial()

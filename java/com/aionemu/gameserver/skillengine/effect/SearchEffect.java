@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "SearchEffect")
 public class SearchEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected CreatureSeeState state;
 	
@@ -76,5 +75,4 @@ public class SearchEffect extends EffectTemplate
 		
 		PacketSendUtility.broadcastPacketAndReceive(effected, new SM_PLAYER_STATE(effected));
 	}
-	
 }

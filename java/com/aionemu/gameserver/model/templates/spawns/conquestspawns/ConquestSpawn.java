@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.templates.spawns.Spawn;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ConquestSpawn")
 public class ConquestSpawn
@@ -55,7 +54,6 @@ public class ConquestSpawn
 	@XmlType(name = "ConquestStateTemplate")
 	public static class ConquestStateTemplate
 	{
-		
 		@XmlElement(name = "spawn")
 		private List<Spawn> spawns;
 		

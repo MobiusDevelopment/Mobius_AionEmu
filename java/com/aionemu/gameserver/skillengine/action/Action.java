@@ -30,13 +30,11 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "Action")
 public abstract class Action
 {
-	
 	protected ActionModifiers modifiers;
 	
 	/**
 	 * Perform action specified in template
-	 * @param env
+	 * @param skill
 	 */
 	public abstract void act(Skill skill);
-	
 }

@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.SkillType;
 @XmlType(name = "BindEffect")
 public class BindEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

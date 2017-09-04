@@ -29,11 +29,9 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "AbsoluteStatToPCBuff")
 public class AbsoluteStatToPCBuffEffect extends AbstractAbsoluteStatEffect
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{
 		// TODO: Not removable by potions and healing
 	}
-	
 }

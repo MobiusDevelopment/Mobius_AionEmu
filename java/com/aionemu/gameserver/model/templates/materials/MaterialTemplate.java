@@ -35,7 +35,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class MaterialTemplate
 {
-	
 	@XmlElement(name = "skill", required = true)
 	protected List<MaterialSkill> skills;
 	
@@ -59,5 +58,4 @@ public class MaterialTemplate
 	{
 		return id;
 	}
-	
 }

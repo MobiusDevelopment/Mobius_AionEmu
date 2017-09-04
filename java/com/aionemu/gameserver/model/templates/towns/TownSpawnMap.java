@@ -72,5 +72,4 @@ public class TownSpawnMap
 	{
 		return townSpawnsData.valueCollection();
 	}
-	
 }

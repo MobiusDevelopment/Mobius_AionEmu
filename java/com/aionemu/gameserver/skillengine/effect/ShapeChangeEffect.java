@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "ShapeChangeEffect")
 public class ShapeChangeEffect extends TransformEffect
 {
-	
 	@Override
 	public void startEffect(Effect effect)
 	{

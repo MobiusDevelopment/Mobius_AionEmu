@@ -29,7 +29,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Ai")
 public class Ai
 {
-	
 	@XmlElement(name = "summons")
 	private Summons summons;
 	
@@ -53,5 +52,4 @@ public class Ai
 	{
 		return npcId;
 	}
-	
 }

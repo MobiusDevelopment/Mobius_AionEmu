@@ -33,7 +33,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "ShieldEffect")
 public class ShieldEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected int hitdelta;
 	@XmlAttribute
@@ -98,5 +97,4 @@ public class ShieldEffect extends EffectTemplate
 	{
 		return 2;
 	}
-	
 }

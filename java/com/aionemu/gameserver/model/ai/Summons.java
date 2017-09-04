@@ -30,7 +30,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Summons")
 public class Summons
 {
-	
 	@XmlElement(name = "percentage")
 	private List<Percentage> percentage;
 	

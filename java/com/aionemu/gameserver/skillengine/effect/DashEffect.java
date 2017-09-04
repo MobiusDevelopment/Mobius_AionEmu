@@ -35,7 +35,6 @@ import com.aionemu.gameserver.world.World;
 @XmlType(name = "DashEffect")
 public class DashEffect extends DamageEffect
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

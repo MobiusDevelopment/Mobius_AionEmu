@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "SlowEffect")
 public class SlowEffect extends BuffEffect
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

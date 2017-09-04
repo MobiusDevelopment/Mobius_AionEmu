@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "InvulnerableWingEffect")
 public class InvulnerableWingEffect extends EffectTemplate
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{

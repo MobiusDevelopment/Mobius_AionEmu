@@ -36,7 +36,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class MeshList
 {
-	
 	@XmlElement(name = "mesh", required = true)
 	protected List<MeshMaterial> meshMaterials;
 	

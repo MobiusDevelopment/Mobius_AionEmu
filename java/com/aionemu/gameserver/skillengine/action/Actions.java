@@ -35,7 +35,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Actions
 {
-	
 	@XmlElements(
 	{
 		@XmlElement(name = "itemuse", type = ItemUseAction.class),
@@ -57,6 +56,7 @@ public class Actions
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link ItemUseAction } {@link MpUseAction } {@link HpUseAction } {@link DpUseAction }
+	 * @return
 	 */
 	public List<Action> getActions()
 	{
@@ -66,5 +66,4 @@ public class Actions
 		}
 		return actions;
 	}
-	
 }

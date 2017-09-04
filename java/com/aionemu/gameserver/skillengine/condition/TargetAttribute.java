@@ -41,5 +41,4 @@ public enum TargetAttribute
 	{
 		return valueOf(v);
 	}
-	
 }

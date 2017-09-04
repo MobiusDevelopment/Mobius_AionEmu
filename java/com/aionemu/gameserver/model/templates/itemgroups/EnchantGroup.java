@@ -53,7 +53,6 @@ import com.aionemu.gameserver.model.templates.rewards.IdLevelReward;
 @XmlType(name = "EnchantGroup")
 public class EnchantGroup extends BonusItemGroup
 {
-	
 	@XmlElement(name = "item")
 	protected List<IdLevelReward> items;
 	
@@ -69,6 +68,7 @@ public class EnchantGroup extends BonusItemGroup
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link IdLevelReward }
+	 * @return
 	 */
 	public List<IdLevelReward> getItems()
 	{
@@ -88,5 +88,4 @@ public class EnchantGroup extends BonusItemGroup
 	{
 		return getItems().toArray(new ItemRaceEntry[0]);
 	}
-	
 }

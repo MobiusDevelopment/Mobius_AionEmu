@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "SetQuestStatusOperation")
 public class SetQuestStatusOperation extends QuestOperation
 {
-	
 	@XmlAttribute(required = true)
 	protected QuestStatus status;
 	

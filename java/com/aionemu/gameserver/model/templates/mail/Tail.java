@@ -30,7 +30,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Tail extends MailPart
 {
-	
 	@XmlAttribute(name = "type")
 	protected MailPartType type;
 	

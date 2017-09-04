@@ -33,7 +33,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "SpellAttackEffect")
 public class SpellAttackEffect extends AbstractOverTimeEffect
 {
-	
 	@Override
 	public void onPeriodicAction(Effect effect)
 	{

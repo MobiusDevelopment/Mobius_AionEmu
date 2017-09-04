@@ -34,7 +34,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "house")
 public class HouseSpawns implements Comparable<HouseSpawns>
 {
-	
 	@XmlElement(name = "spawn", required = true)
 	protected List<HouseSpawn> spawns;
 	

@@ -47,16 +47,15 @@ import com.aionemu.gameserver.model.templates.itemgroups.ItemRaceEntry;
 @XmlType(name = "IdLevelReward")
 public class IdLevelReward extends ItemRaceEntry
 {
-	
 	@XmlAttribute(name = "level", required = true)
 	protected int level;
 	
 	/**
 	 * Gets the value of the level property.
+	 * @return
 	 */
 	public int getLevel()
 	{
 		return level;
 	}
-	
 }

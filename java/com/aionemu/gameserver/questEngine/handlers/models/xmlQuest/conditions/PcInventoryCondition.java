@@ -31,7 +31,6 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 @XmlType(name = "PcInventoryCondition")
 public class PcInventoryCondition extends QuestCondition
 {
-	
 	@XmlAttribute(name = "item_id", required = true)
 	protected int itemId;
 	@XmlAttribute(required = true)
@@ -39,6 +38,7 @@ public class PcInventoryCondition extends QuestCondition
 	
 	/**
 	 * Gets the value of the itemId property.
+	 * @return
 	 */
 	public int getItemId()
 	{
@@ -47,6 +47,7 @@ public class PcInventoryCondition extends QuestCondition
 	
 	/**
 	 * Gets the value of the count property.
+	 * @return
 	 */
 	public long getCount()
 	{

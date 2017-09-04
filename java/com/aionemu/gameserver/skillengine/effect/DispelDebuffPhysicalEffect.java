@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTargetSlot;
 @XmlType(name = "DispelDebuffPhysicalEffect")
 public class DispelDebuffPhysicalEffect extends AbstractDispelEffect
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

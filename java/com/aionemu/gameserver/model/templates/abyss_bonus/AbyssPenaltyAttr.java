@@ -27,7 +27,6 @@ import com.aionemu.gameserver.skillengine.change.Func;
 /**
  * @Author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AbyssPenaltyAttr")
 public class AbyssPenaltyAttr

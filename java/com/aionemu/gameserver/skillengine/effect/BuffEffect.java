@@ -45,7 +45,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "BuffEffect")
 public abstract class BuffEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected boolean maxstat;
 	

@@ -36,7 +36,6 @@ import org.apache.commons.lang.StringUtils;
 })
 public abstract class MailPart extends StringParamList implements IMailFormatter
 {
-	
 	@XmlAttribute(name = "id")
 	protected Integer id;
 	

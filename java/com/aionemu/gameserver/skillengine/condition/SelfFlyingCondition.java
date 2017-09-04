@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "SelfFlyingCondition")
 public class SelfFlyingCondition extends Condition
 {
-	
 	@XmlAttribute(required = true)
 	protected FlyingRestriction restriction;
 	
@@ -73,5 +72,4 @@ public class SelfFlyingCondition extends Condition
 		
 		return true;
 	}
-	
 }

@@ -31,10 +31,8 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "ChainCondition")
 public class ChainCondition extends Condition
 {
-	
 	@XmlAttribute(name = "selfcount")
 	private int selfCount;
-	
 	@XmlAttribute(name = "precount")
 	private int preCount;
 	@XmlAttribute(name = "category")
@@ -77,10 +75,7 @@ public class ChainCondition extends Condition
 				{
 					return false;
 				}
-				else
-				{
-					env.setIsMultiCast(true);
-				}
+				env.setIsMultiCast(true);
 			}
 			else if (preCount > 0)
 			{

@@ -38,7 +38,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * @author Ranastic
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RetuningAction")
 public class RetuningAction extends AbstractItemAction

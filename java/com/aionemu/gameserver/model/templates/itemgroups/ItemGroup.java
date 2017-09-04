@@ -89,12 +89,8 @@ public abstract class ItemGroup
 		{
 			return 0.0F;
 		}
-		else
-		{
-			return chance;
-		}
+		return chance;
 	}
 	
 	public abstract IdReward[] getRewards();
-	
 }

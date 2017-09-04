@@ -19,11 +19,9 @@ package com.aionemu.gameserver.model.templates.teleport;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @XmlType(name = "MultiReturnLocationList")
 public class MultiReturnLocationList
 {

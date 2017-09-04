@@ -24,7 +24,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "instance_rift")
 public class InstanceRiftTemplate

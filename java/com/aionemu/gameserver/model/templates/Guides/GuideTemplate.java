@@ -37,7 +37,6 @@ import com.aionemu.gameserver.model.Race;
 @XmlType(name = "GuideTemplate")
 public class GuideTemplate
 {
-	
 	@XmlAttribute(name = "level")
 	private int level;
 	@XmlAttribute(name = "classType")
@@ -47,11 +46,11 @@ public class GuideTemplate
 	@XmlAttribute(name = "race")
 	private Race race;
 	@XmlElement(name = "reward_info")
-	private final String rewardInfo = StringUtils.EMPTY;
+	protected String rewardInfo = StringUtils.EMPTY;
 	@XmlElement(name = "message")
-	private final String message = StringUtils.EMPTY;
+	protected String message = StringUtils.EMPTY;
 	@XmlElement(name = "select")
-	private final String select = StringUtils.EMPTY;
+	protected String select = StringUtils.EMPTY;
 	@XmlElement(name = "survey")
 	private List<SurveyTemplate> surveys;
 	@XmlAttribute(name = "rewardCount")

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "ActionModifier")
 public abstract class ActionModifier
 {
-	
 	@XmlAttribute
 	protected int delta;
 	@XmlAttribute(required = true)
@@ -43,7 +42,6 @@ public abstract class ActionModifier
 	/**
 	 * Applies modifier to original value
 	 * @param effect
-	 * @param originalValue
 	 * @return int
 	 */
 	public abstract int analyze(Effect effect);

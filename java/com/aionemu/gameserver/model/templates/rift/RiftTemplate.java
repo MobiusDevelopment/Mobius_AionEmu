@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Rift")
 public class RiftTemplate
 {
-	
 	@XmlAttribute(name = "id")
 	protected int id;
 	@XmlAttribute(name = "world")
@@ -49,5 +48,4 @@ public class RiftTemplate
 	{
 		return world;
 	}
-	
 }

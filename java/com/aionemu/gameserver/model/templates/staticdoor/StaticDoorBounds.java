@@ -32,7 +32,6 @@ import com.aionemu.gameserver.geoEngine.math.Vector3f;
 @XmlType(name = "StaticDoorBounds")
 public class StaticDoorBounds
 {
-	
 	@XmlAttribute
 	private float x1;
 	

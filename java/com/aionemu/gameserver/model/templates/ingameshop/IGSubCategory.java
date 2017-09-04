@@ -25,7 +25,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "IGSubCategory")
 public class IGSubCategory
 {
-	
 	@XmlAttribute(required = true)
 	protected int id;
 	

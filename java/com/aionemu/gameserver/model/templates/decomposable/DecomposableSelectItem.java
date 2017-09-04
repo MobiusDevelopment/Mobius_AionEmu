@@ -25,7 +25,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "DecomposableSelectItem")
 public class DecomposableSelectItem
 {
-	
 	@XmlAttribute(name = "item_id")
 	private int itemId;
 	

@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "ItemUseAction")
 public class ItemUseAction extends Action
 {
-	
 	@XmlAttribute(required = true)
 	protected int itemid;
 	
@@ -53,5 +52,4 @@ public class ItemUseAction extends Action
 			}
 		}
 	}
-	
 }

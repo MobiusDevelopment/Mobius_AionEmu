@@ -31,7 +31,6 @@ import com.aionemu.gameserver.model.utils3d.Point3D;
 @XmlType(name = "Road")
 public class RoadTemplate
 {
-	
 	@XmlAttribute(name = "name")
 	protected String name;
 	
@@ -90,8 +89,7 @@ public class RoadTemplate
 	
 	public RoadTemplate()
 	{
-		
-	};
+	}
 	
 	public RoadTemplate(String name, int mapId, Point3D center, Point3D p1, Point3D p2)
 	{

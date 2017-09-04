@@ -30,7 +30,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "sale")
 public class Sale
 {
-	
 	@XmlAttribute(name = "point_price", required = true)
 	protected int pointPrice;
 	
@@ -54,5 +53,4 @@ public class Sale
 	{
 		return level;
 	}
-	
 }

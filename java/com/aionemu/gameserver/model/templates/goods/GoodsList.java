@@ -37,7 +37,6 @@ import javolution.util.FastList;
 @XmlType(name = "GoodsList")
 public class GoodsList
 {
-	
 	@XmlElement(name = "item")
 	private List<Item> items;
 	@XmlAttribute(name = "id")
@@ -63,6 +62,7 @@ public class GoodsList
 	
 	/**
 	 * return the limitedItems.
+	 * @return
 	 */
 	public FastList<LimitedItem> getLimitedItems()
 	{
@@ -82,6 +82,7 @@ public class GoodsList
 	
 	/**
 	 * Gets the value of the id property.
+	 * @return
 	 */
 	public int getId()
 	{
@@ -116,7 +117,6 @@ public class GoodsList
 	@XmlType(name = "")
 	public static class Item
 	{
-		
 		@XmlAttribute
 		private int id;
 		@XmlAttribute(name = "sell_limit")
@@ -126,6 +126,7 @@ public class GoodsList
 		
 		/**
 		 * Gets the value of the id property.
+		 * @return
 		 */
 		public int getId()
 		{
@@ -134,6 +135,7 @@ public class GoodsList
 		
 		/**
 		 * return sellLimit.
+		 * @return
 		 */
 		public Integer getSellLimit()
 		{
@@ -142,6 +144,7 @@ public class GoodsList
 		
 		/**
 		 * return buyLimit.
+		 * @return
 		 */
 		public Integer getBuyLimit()
 		{

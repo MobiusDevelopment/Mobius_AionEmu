@@ -39,7 +39,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 })
 public class NpcDrop implements DropCalculator
 {
-	
 	@XmlElement(name = "drop_group")
 	protected List<DropGroup> dropGroup;
 	@XmlAttribute(name = "npc_id", required = true)
@@ -56,6 +55,7 @@ public class NpcDrop implements DropCalculator
 	
 	/**
 	 * Gets the value of the npcId property.
+	 * @return
 	 */
 	public int getNpcId()
 	{

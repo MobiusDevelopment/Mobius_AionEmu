@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "ConfuseEffect")
 public class ConfuseEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{
@@ -48,5 +47,4 @@ public class ConfuseEffect extends EffectTemplate
 	{
 		super.startEffect(effect);
 	}
-	
 }

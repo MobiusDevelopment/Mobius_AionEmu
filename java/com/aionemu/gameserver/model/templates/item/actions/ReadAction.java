@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @XmlType(name = "ReadAction")
 public class ReadAction extends AbstractItemAction
 {
-	
 	@Override
 	public boolean canAct(Player player, Item parentItem, Item targetItem)
 	{
@@ -54,5 +53,4 @@ public class ReadAction extends AbstractItemAction
 			}
 		}, 50);
 	}
-	
 }

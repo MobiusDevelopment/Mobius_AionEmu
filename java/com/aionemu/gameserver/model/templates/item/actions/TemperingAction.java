@@ -35,11 +35,9 @@ import com.aionemu.gameserver.services.item.ItemPacketService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
-/****/
 /**
- * Author Ranastic (Encom) /
- ****/
-
+ * @author Ranastic (Encom)
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TemperingAction")
 public class TemperingAction extends AbstractItemAction
@@ -136,7 +134,6 @@ public class TemperingAction extends AbstractItemAction
 	public boolean isSuccess(Player player)
 	{
 		return Rnd.get(0, 100) < calcTemperingRate();
-		
 	}
 	
 	private float calcTemperingRate()

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "ShieldCondition")
 public class ShieldCondition extends Condition
 {
-	
 	@Override
 	public boolean validate(Skill env)
 	{

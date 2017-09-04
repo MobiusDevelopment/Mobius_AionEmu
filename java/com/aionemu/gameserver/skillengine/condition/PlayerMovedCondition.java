@@ -30,12 +30,12 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 @XmlType(name = "PlayerMovedCondition")
 public class PlayerMovedCondition extends Condition
 {
-	
 	@XmlAttribute(required = true)
 	protected boolean allow;
 	
 	/**
 	 * Gets the value of the allow property.
+	 * @return
 	 */
 	public boolean isAllow()
 	{

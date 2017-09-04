@@ -36,7 +36,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class StringParamList
 {
-	
 	protected List<Param> param;
 	
 	public List<Param> getParam()
@@ -52,7 +51,6 @@ public class StringParamList
 	@XmlType(name = "")
 	public static class Param
 	{
-		
 		@XmlAttribute(name = "id", required = true)
 		protected String id;
 		
@@ -60,6 +58,5 @@ public class StringParamList
 		{
 			return id;
 		}
-		
 	}
 }

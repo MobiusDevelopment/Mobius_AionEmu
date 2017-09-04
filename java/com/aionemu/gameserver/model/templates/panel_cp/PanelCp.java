@@ -24,7 +24,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlType(name = "panel_cp")
 @XmlAccessorType(XmlAccessType.NONE)
 public class PanelCp

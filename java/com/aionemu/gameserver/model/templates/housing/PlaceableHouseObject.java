@@ -41,7 +41,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public abstract class PlaceableHouseObject extends AbstractHouseObject
 {
-	
 	@XmlAttribute(name = "use_days")
 	protected Integer useDays;
 	
@@ -71,7 +70,7 @@ public abstract class PlaceableHouseObject extends AbstractHouseObject
 	 * Where the object is allowed to be placed on?
 	 * <p>
 	 * <tt>TODO: check if it is needed and not handled by the client</tt>
-	 * @return {@link LimitType.NONE} if no restriction
+	 * @return LimitType.NONE if no restriction
 	 */
 	public LimitType getPlacementLimit()
 	{
@@ -105,5 +104,4 @@ public abstract class PlaceableHouseObject extends AbstractHouseObject
 	}
 	
 	public abstract byte getTypeId();
-	
 }

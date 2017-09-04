@@ -30,7 +30,6 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 @XmlType(name = "StartQuestOperation")
 public class StartQuestOperation extends QuestOperation
 {
-	
 	@XmlAttribute(required = true)
 	protected int id;
 	
@@ -42,6 +41,5 @@ public class StartQuestOperation extends QuestOperation
 	public void doOperate(QuestEnv env)
 	{
 		// TODO Auto-generated method stub
-		
 	}
 }

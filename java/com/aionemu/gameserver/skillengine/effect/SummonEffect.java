@@ -39,7 +39,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @XmlType(name = "SummonEffect")
 public class SummonEffect extends EffectTemplate
 {
-	
 	@XmlAttribute(name = "npc_id", required = true)
 	protected int npcId;
 	@XmlAttribute(name = "time", required = true)

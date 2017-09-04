@@ -27,12 +27,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "HousingMoveableItem")
 public class HousingMoveableItem extends PlaceableHouseObject
 {
-	
 	@Override
 	public byte getTypeId()
 	{
 		// TODO Not sniffed yet
 		return 0;
 	}
-	
 }

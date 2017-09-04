@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "MeshMaterial")
 public class MeshMaterial
 {
-	
 	@XmlAttribute(name = "material_id", required = true)
 	protected int materialId;
 	
@@ -42,5 +41,4 @@ public class MeshMaterial
 	{
 		return zoneName;
 	}
-	
 }

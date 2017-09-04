@@ -22,7 +22,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Ranastic
  */
-
 @XmlType(name = "UseTarget")
 @XmlEnum
 public enum UseTarget

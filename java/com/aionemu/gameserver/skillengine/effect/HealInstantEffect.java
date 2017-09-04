@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.HealType;
 @XmlType(name = "HealInstantEffect")
 public class HealInstantEffect extends AbstractHealEffect
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

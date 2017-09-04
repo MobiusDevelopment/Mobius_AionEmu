@@ -27,7 +27,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 /**
  * @author Ranastic
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "IdianChargeCondition")
 public class IdianChargeCondition extends ChargeCondition

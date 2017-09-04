@@ -31,7 +31,6 @@ import com.aionemu.gameserver.model.templates.stats.ModifiersTemplate;
 @XmlType(name = "AbstractAbsoluteStatEffect")
 public abstract class AbstractAbsoluteStatEffect extends EffectTemplate
 {
-	
 	@XmlAttribute(name = "statsetid")
 	private int statSetId;
 	
@@ -42,5 +41,4 @@ public abstract class AbstractAbsoluteStatEffect extends EffectTemplate
 	{
 		return DataManager.ABSOLUTE_STATS_DATA.getTemplate(statSetId);
 	}
-	
 }

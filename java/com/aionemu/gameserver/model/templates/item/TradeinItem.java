@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "TradeinItem")
 public class TradeinItem
 {
-	
 	@XmlAttribute
 	protected int id;
 	@XmlAttribute

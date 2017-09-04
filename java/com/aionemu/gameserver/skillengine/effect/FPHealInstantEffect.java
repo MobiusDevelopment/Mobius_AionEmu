@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.HealType;
 @XmlType(name = "FPHealInstantEffect")
 public class FPHealInstantEffect extends AbstractHealEffect
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{
@@ -54,5 +53,4 @@ public class FPHealInstantEffect extends AbstractHealEffect
 	{
 		return effect.getEffected().getLifeStats().getMaxFp();
 	}
-	
 }

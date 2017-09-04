@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "QuestItems")
 public class QuestItems
 {
-	
 	@XmlAttribute(name = "item_id")
 	protected Integer itemId;
 	@XmlAttribute
@@ -66,5 +65,4 @@ public class QuestItems
 	{
 		return count;
 	}
-	
 }

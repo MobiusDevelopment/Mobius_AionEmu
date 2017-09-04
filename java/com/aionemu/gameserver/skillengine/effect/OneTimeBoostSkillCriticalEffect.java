@@ -34,7 +34,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 @XmlType(name = "OneTimeBoostSkillCriticalEffect")
 public class OneTimeBoostSkillCriticalEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	private int count;
 	@XmlAttribute
@@ -53,7 +52,6 @@ public class OneTimeBoostSkillCriticalEffect extends EffectTemplate
 		
 		final AttackerCriticalStatusObserver observer = new AttackerCriticalStatusObserver(AttackStatus.CRITICAL, count, value, percent)
 		{
-			
 			@Override
 			public AttackerCriticalStatus checkAttackerCriticalStatus(AttackStatus stat, boolean isSkill)
 			{

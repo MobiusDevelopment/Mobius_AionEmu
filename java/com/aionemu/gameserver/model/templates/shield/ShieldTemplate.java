@@ -31,7 +31,6 @@ import com.aionemu.gameserver.model.utils3d.Point3D;
 @XmlType(name = "Shield")
 public class ShieldTemplate
 {
-	
 	@XmlAttribute(name = "name")
 	protected String name;
 	
@@ -74,7 +73,7 @@ public class ShieldTemplate
 	
 	public ShieldTemplate()
 	{
-	};
+	}
 	
 	public ShieldTemplate(String name, int mapId, Point3D center)
 	{

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.Race;
 /**
  * @Author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AbyssServiceAttr", propOrder =
 {

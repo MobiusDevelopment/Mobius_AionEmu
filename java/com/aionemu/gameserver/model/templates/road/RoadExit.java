@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "RoadExit")
 public class RoadExit
 {
-	
 	@XmlAttribute(name = "mapid")
 	private int mapId;
 	

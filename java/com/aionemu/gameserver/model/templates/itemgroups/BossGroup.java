@@ -53,7 +53,6 @@ import com.aionemu.gameserver.model.templates.rewards.IdReward;
 @XmlType(name = "BossGroup")
 public class BossGroup extends BonusItemGroup
 {
-	
 	@XmlElement(name = "item")
 	protected List<ItemRaceEntry> items;
 	
@@ -69,6 +68,7 @@ public class BossGroup extends BonusItemGroup
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link IdReward }
+	 * @return
 	 */
 	public List<ItemRaceEntry> getItems()
 	{
@@ -88,5 +88,4 @@ public class BossGroup extends BonusItemGroup
 	{
 		return getItems().toArray(new ItemRaceEntry[0]);
 	}
-	
 }
