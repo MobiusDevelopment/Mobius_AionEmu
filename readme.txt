@@ -29,6 +29,7 @@ Changes:
 -Added config for bonus service buffs.
 -Addition of eclipse launcher files.
 -Fixed fly and teleport issues.
+-Updated libraries with latest revisions.
 
 TODO:
 -Fix all code warnings.

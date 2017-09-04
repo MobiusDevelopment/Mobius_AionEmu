@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.dataholders.DataManager;
-import com.mysql.jdbc.StringUtils;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =
@@ -105,7 +104,7 @@ public class Building
 	
 	public String getPartsMatchTag()
 	{
-		if (StringUtils.isNullOrEmpty(partsMatch))
+		if ((partsMatch == null) || partsMatch.isEmpty())
 		{
 			return DataManager.HOUSE_BUILDING_DATA.getBuilding(id).getPartsMatchTag();
 		}
@@ -114,7 +113,7 @@ public class Building
 	
 	public String getSize()
 	{
-		if (StringUtils.isNullOrEmpty(size))
+		if ((size == null) || size.isEmpty())
 		{
 			return DataManager.HOUSE_BUILDING_DATA.getBuilding(id).getSize();
 		}

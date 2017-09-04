@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.templates.housing.PartType;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.services.LegionService;
-import com.mysql.jdbc.StringUtils;
 
 public class SM_HOUSE_UPDATE extends AionServerPacket
 {
@@ -56,7 +55,7 @@ public class SM_HOUSE_UPDATE extends AionServerPacket
 		if (house.getButler() != null)
 		{
 			final SummonedHouseNpc butler = (SummonedHouseNpc) house.getButler();
-			if (!StringUtils.isNullOrEmpty(butler.getMasterName()))
+			if ((butler.getMasterName() != null) && !butler.getMasterName().isEmpty())
 			{
 				dataSize -= (butler.getMasterName().length() + 1) * 2;
 				writeS(butler.getMasterName());

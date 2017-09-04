@@ -41,8 +41,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
-import org.apache.xml.serialize.OutputFormat;
-import org.apache.xml.serialize.XMLSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -50,6 +48,8 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import com.aionemu.gameserver.model.templates.housing.LBox;
+import com.sun.org.apache.xml.internal.serialize.OutputFormat;
+import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "lboxes")

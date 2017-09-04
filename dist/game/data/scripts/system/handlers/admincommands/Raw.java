@@ -36,9 +36,8 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Raw extends AdminCommand
 {
-	private static final File ROOT = new File("data/packets/");
-	
 	private static final Logger logger = LoggerFactory.getLogger(Raw.class);
+	private static final File ROOT = new File("data/packets/");
 	
 	public Raw()
 	{
@@ -64,7 +63,7 @@ public class Raw extends AdminCommand
 		
 		try
 		{
-			final List<String> lines = FileUtils.readLines(file);
+			final List<String> lines = FileUtils.readLines(file, "UTF-8");
 			
 			SM_CUSTOM_PACKET packet = null;
 			PacketSendUtility.sendMessage(admin, "lines " + lines.size());
