@@ -50,11 +50,6 @@ public class ItemEnchantTemplate
 	@XmlTransient
 	private final TIntObjectHashMap<List<StatFunction>> enchants = new TIntObjectHashMap();
 	
-	@SuppressWarnings(
-	{
-		"unchecked",
-		"rawtypes"
-	})
 	public List<StatFunction> getStats(int level)
 	{
 		if (enchants.contains(level))

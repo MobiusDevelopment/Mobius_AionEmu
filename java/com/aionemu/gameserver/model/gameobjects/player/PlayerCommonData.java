@@ -231,6 +231,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 	
 	/**
 	 * @param value
+	 * @param npcNameId
 	 */
 	public void addExp(long value, int npcNameId)
 	{
@@ -443,7 +444,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 		long maxExp = DataManager.PLAYER_EXPERIENCE_TABLE.getStartExpForLevel(maxLevel);
 		if ((getPlayerClass() != null) && getPlayerClass().isStartingClass())
 		{
-			maxLevel = GSConfig.STARTING_LEVEL > GSConfig.STARTCLASS_MAXLEVEL ? GSConfig.STARTING_LEVEL : GSConfig.STARTCLASS_MAXLEVEL;;
+			maxLevel = GSConfig.STARTING_LEVEL > GSConfig.STARTCLASS_MAXLEVEL ? GSConfig.STARTING_LEVEL : GSConfig.STARTCLASS_MAXLEVEL;
 			if ((getLevel() == 9) && (getExp() >= 74059))
 			{
 				// You can advance to level 10 only after you have completed the class change quest.

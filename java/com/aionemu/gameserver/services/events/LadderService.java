@@ -19,7 +19,6 @@ package com.aionemu.gameserver.services.events;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
@@ -48,7 +47,6 @@ import com.aionemu.gameserver.services.events.bg.TwoTeamSmallBg;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -65,8 +63,8 @@ public class LadderService
 	private final Map<Integer, Battleground> bgMap = Collections.synchronizedMap(new FastMap<Integer, Battleground>());
 	private final Map<Integer, Event> normalBgMap = Collections.synchronizedMap(new FastMap<Integer, Event>());
 	private Battleground eventBg = null;
-	private ScheduledFuture<?> eventTask = null;
-	private ScheduledFuture<?> normalTask = null;
+	ScheduledFuture<?> eventTask = null;
+	ScheduledFuture<?> normalTask = null;
 	boolean normalReady = false;
 	boolean eventReady = false;
 	boolean normalTeamBased = false;
@@ -75,22 +73,8 @@ public class LadderService
 	
 	private LadderService()
 	{
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				UpdateRanks();
-			}
-		}, rankUpdateInterval * 60 * 1000, rankUpdateInterval * 60 * 1000);
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				HandleSoloQueue();
-			}
-		}, 60 * 1000, 60 * 1000);
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> UpdateRanks(), rankUpdateInterval * 60 * 1000, rankUpdateInterval * 60 * 1000);
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> HandleSoloQueue(), 60 * 1000, 60 * 1000);
 		log.info("<Ladder> initialized!");
 	}
 	
@@ -354,34 +338,19 @@ public class LadderService
 		normalTeamBased = Rnd.get(3) != 0;
 		normalQueueList.clear();
 		announceAll("[BG Open] Register you with the button located on the right of your skill bar. You have <2 Minutes> for register!!!");
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(pl ->
 		{
-			@Override
-			public void visit(Player pl)
+			if ((pl.getBattleground() == null) && !isInQueue(pl) && !FFAService.getInstance().isInArena(pl))
 			{
-				if ((pl.getBattleground() == null) && !isInQueue(pl) && !FFAService.getInstance().isInArena(pl))
-				{
-					PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(301550000, true));
-				}
+				PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(301550000, true));
 			}
 		});
-		normalTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+		normalTask = ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				HandleNormalQueue(event);
-				normalReady = false;
-				normalTask = null;
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player pl)
-					{
-						PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(301550000, false));
-					}
-				});
-			}
+			HandleNormalQueue(event);
+			normalReady = false;
+			normalTask = null;
+			World.getInstance().doOnAllPlayers(pl -> PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(301550000, false)));
 		}, (normalTeamBased ? 60 : 30) * 1000);
 		return true;
 	}
@@ -408,39 +377,24 @@ public class LadderService
 		{
 			announceAll("WARNING!!! " + bg.getName() + "The event start in 30 seconds ! Register you by using the right button on your skill bars!!!");
 		}
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(pl ->
 		{
-			@Override
-			public void visit(Player pl)
+			if ((pl.getBattleground() == null) && !isInQueue(pl))
 			{
-				if ((pl.getBattleground() == null) && !isInQueue(pl))
-				{
-					PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(300350000, true));
-				}
+				PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(300350000, true));
 			}
 		});
-		eventTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+		eventTask = ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player pl)
-					{
-						PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(300350000, false));
-					}
-				});
-				HandleEventQueue();
-				eventTask.cancel(false);
-				eventTask = null;
-			}
+			World.getInstance().doOnAllPlayers(pl -> PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(300350000, false)));
+			HandleEventQueue();
+			eventTask.cancel(false);
+			eventTask = null;
 		}, (eventTeamBased ? 60 : 30) * 1000);
 		return true;
 	}
 	
-	private void HandleNormalQueue(BattlegroundEvent event)
+	void HandleNormalQueue(BattlegroundEvent event)
 	{
 		final List<List<Player>> validGroups = new ArrayList<>();
 		final List<Integer> validParticipants = new ArrayList<>();
@@ -487,14 +441,7 @@ public class LadderService
 		if (normalTeamBased)
 		{
 			Collections.shuffle(validGroups);
-			Collections.sort(validGroups, new Comparator<List<Player>>()
-			{
-				@Override
-				public int compare(List<Player> o1, List<Player> o2)
-				{
-					return -Integer.valueOf(o1.size()).compareTo(Integer.valueOf(o2.size()));
-				}
-			});
+			Collections.sort(validGroups, (o1, o2) -> -Integer.valueOf(o1.size()).compareTo(Integer.valueOf(o2.size())));
 		}
 		else
 		{
@@ -619,7 +566,7 @@ public class LadderService
 		}
 	}
 	
-	private void HandleEventQueue()
+	void HandleEventQueue()
 	{
 		final List<List<Player>> validGroups = new ArrayList<>();
 		final List<Integer> validParticipants = new ArrayList<>();
@@ -662,14 +609,7 @@ public class LadderService
 		if (eventTeamBased)
 		{
 			Collections.shuffle(validGroups);
-			Collections.sort(validGroups, new Comparator<List<Player>>()
-			{
-				@Override
-				public int compare(List<Player> o1, List<Player> o2)
-				{
-					return -Integer.valueOf(o1.size()).compareTo(Integer.valueOf(o2.size()));
-				}
-			});
+			Collections.sort(validGroups, (o1, o2) -> -Integer.valueOf(o1.size()).compareTo(Integer.valueOf(o2.size())));
 		}
 		else
 		{
@@ -801,7 +741,7 @@ public class LadderService
 		eventTeamBased = false;
 	}
 	
-	private void HandleSoloQueue()
+	void HandleSoloQueue()
 	{
 		if (soloQueueList.size() < 1)
 		{
@@ -869,29 +809,18 @@ public class LadderService
 			eventQueueList.clear();
 			eventTask = null;
 			eventReady = false;
-			World.getInstance().doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player pl)
-				{
-					PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(300350000, false));
-				}
-			});
+			World.getInstance().doOnAllPlayers(pl -> PacketSendUtility.sendPacket(pl, new SM_AUTO_GROUP(300350000, false)));
 			announceAll("The event was canceled!!!");
 		}
 	}
 	
 	private void announceAll(String msg)
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if ((player.getBattleground() == null) && !FFAService.getInstance().isInArena(player))
 			{
-				if ((player.getBattleground() == null) && !FFAService.getInstance().isInArena(player))
-				{
-					PacketSendUtility.sendSys3Message(player, "\uE005", msg);
-				}
+				PacketSendUtility.sendSys3Message(player, "\uE005", msg);
 			}
 		});
 	}
@@ -1500,14 +1429,7 @@ public class LadderService
 	{
 		if (delay > 0)
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					PacketSendUtility.sendSys3Message(player, sender, msg);
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule(() -> PacketSendUtility.sendSys3Message(player, sender, msg), delay);
 		}
 		else
 		{

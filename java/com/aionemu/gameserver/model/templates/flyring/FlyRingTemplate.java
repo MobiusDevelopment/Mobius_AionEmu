@@ -78,7 +78,7 @@ public class FlyRingTemplate
 	
 	public FlyRingTemplate()
 	{
-	};
+	}
 	
 	public FlyRingTemplate(String name, int mapId, Point3D center, Point3D left, Point3D right, int radius)
 	{

@@ -106,10 +106,6 @@ public class TargetRangeProperty
 										skill.getEffectedList().add((Creature) nextCreature);
 									}
 								}
-								else
-								{
-									;
-								}
 							}
 						}
 						else if (MathUtil.isIn3dRange(firstTarget, nextCreature, distance + firstTarget.getObjectTemplate().getBoundRadius().getCollision()))

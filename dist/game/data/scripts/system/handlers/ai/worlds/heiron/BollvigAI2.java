@@ -115,61 +115,39 @@ public class BollvigAI2 extends AggressiveFirstSkillAI2
 		final int hpPercent = getLifeStats().getHpPercentage();
 		if ((50 >= hpPercent) && (hpPercent > 25))
 		{
-			firstTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			firstTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
-				{
-					useSkill(18034);
-					rndSpawnInRange(280804);
-				}
+				useSkill(18034);
+				rndSpawnInRange(280804);
 			}, 10000);
 		}
 		else if (hpPercent <= 25)
 		{
 			useSkill(18037);
 		}
-		secondTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				skillThree();
-			}
-		}, 31000);
+		secondTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> skillThree(), 31000);
 	}
 	
 	private void skillThree()
 	{
 		useSkill(17899);
-		thirdTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+		thirdTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			final int hpPercent = getLifeStats().getHpPercentage();
+			if ((75 >= hpPercent) && (hpPercent > 50))
 			{
-				final int hpPercent = getLifeStats().getHpPercentage();
-				if ((75 >= hpPercent) && (hpPercent > 50))
-				{
-					useSkill(18025);
-					firstSkill();
-				}
-				else if (50 >= hpPercent)
-				{
-					useSkill(18025);
-					firstSkill();
-				}
-				else if (25 >= hpPercent)
-				{
-					useSkill(18027);
-					lastTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							skillThree();
-						}
-					}, 11000);
-				}
+				useSkill(18025);
+				firstSkill();
+			}
+			else if (50 >= hpPercent)
+			{
+				useSkill(18025);
+				firstSkill();
+			}
+			else if (25 >= hpPercent)
+			{
+				useSkill(18027);
+				lastTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> skillThree(), 11000);
 			}
 		}, 5000);
 	}

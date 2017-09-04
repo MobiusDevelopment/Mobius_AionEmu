@@ -47,12 +47,12 @@ public class GodStone extends ItemStone
 {
 	private static final Logger log = LoggerFactory.getLogger(GodStone.class);
 	
-	private final GodstoneInfo godstoneInfo;
+	final GodstoneInfo godstoneInfo;
 	private ActionObserver actionListener;
 	private final int probability;
-	private boolean breakProc;
+	boolean breakProc;
 	private final int probabilityLeft;
-	private final ItemTemplate godItem;
+	final ItemTemplate godItem;
 	
 	public GodStone(int itemObjId, int itemId, PersistentState persistentState)
 	{
@@ -119,18 +119,14 @@ public class GodStone extends ItemStone
 						PacketSendUtility.playerSendPacketTime(player, new SM_SYSTEM_MESSAGE(1402538, new DescriptionId(equippedItem.getNameId()), new DescriptionId(godItem.getNameId()), 30), 570000);
 						PacketSendUtility.playerSendPacketTime(player, new SM_SYSTEM_MESSAGE(1402538, new DescriptionId(equippedItem.getNameId()), new DescriptionId(godItem.getNameId()), 10), 590000);
 						PacketSendUtility.playerSendPacketTime(player, new SM_SYSTEM_MESSAGE(1402237, new DescriptionId(equippedItem.getNameId()), new DescriptionId(godItem.getNameId())), 600000);
-						ThreadPoolManager.getInstance().schedule(new Runnable()
+						ThreadPoolManager.getInstance().schedule(() ->
 						{
-							@Override
-							public void run()
-							{
-								onUnEquip(player);
-								equippedItem.setGodStone(null);
-								setPersistentState(PersistentState.DELETED);
-								ItemPacketService.updateItemAfterInfoChange(player, equippedItem);
-								DAOManager.getDAO(InventoryDAO.class).store(equippedItem, player);
-								PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, equippedItem));
-							}
+							onUnEquip(player);
+							equippedItem.setGodStone(null);
+							setPersistentState(PersistentState.DELETED);
+							ItemPacketService.updateItemAfterInfoChange(player, equippedItem);
+							DAOManager.getDAO(InventoryDAO.class).store(equippedItem, player);
+							PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, equippedItem));
 						}, 600000);
 					}
 				}

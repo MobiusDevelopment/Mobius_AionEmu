@@ -49,7 +49,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -83,12 +82,12 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 		return (OblivionRiftPlayerReward) instanceReward.getPlayerReward(object);
 	}
 	
-	@SuppressWarnings("unchecked")
 	protected void addPlayerReward(Player player)
 	{
 		instanceReward.addPlayerReward(new OblivionRiftPlayerReward(player.getObjectId()));
 	}
 	
+	@SuppressWarnings("unused")
 	private boolean containPlayer(Integer object)
 	{
 		return instanceReward.containPlayer(object);
@@ -105,7 +104,6 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 	{
 		final Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		final int npcId = npc.getNpcId();
-		final int index = dropItems.size() + 1;
 		switch (npcId)
 		{
 			// Bonus Monster.
@@ -176,8 +174,6 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 	public void onDie(Npc npc)
 	{
 		int points = 0;
-		final int npcId = npc.getNpcId();
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			/*** Player Lvl 66 ***/
@@ -188,51 +184,36 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 				IDTransformSado66An++;
 				if (IDTransformSado66An == 4)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
+						switch (Rnd.get(1, 3))
 						{
-							switch (Rnd.get(1, 3))
-							{
-								case 1:
-									IDTransformEreshWarp66();
-									break;
-								case 2:
-									IDTransformVritraWarp66();
-									break;
-								case 3:
-									IDTransformTiamatWarp66();
-									break;
-							}
-							deleteNpc(245402);
-							spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
+							case 1:
+								IDTransformEreshWarp66();
+								break;
+							case 2:
+								IDTransformVritraWarp66();
+								break;
+							case 3:
+								IDTransformTiamatWarp66();
+								break;
 						}
+						deleteNpc(245402);
+						spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
 					}, 5000);
 				}
 				else if (IDTransformSado66An == 8)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245403);
-							spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
-							spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
-						}
+						deleteNpc(245403);
+						spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
+						spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
 					}, 5000);
 				}
 				else if (IDTransformSado66An == 12)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245404);
-						}
-					}, 5000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> deleteNpc(245404), 5000);
 				}
 				points = 250;
 				despawnNpc(npc);
@@ -245,51 +226,36 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 				IDTransformSado67An++;
 				if (IDTransformSado67An == 4)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
+						switch (Rnd.get(1, 3))
 						{
-							switch (Rnd.get(1, 3))
-							{
-								case 1:
-									IDTransformEreshWarp67();
-									break;
-								case 2:
-									IDTransformVritraWarp67();
-									break;
-								case 3:
-									IDTransformTiamatWarp67();
-									break;
-							}
-							deleteNpc(245402);
-							spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
+							case 1:
+								IDTransformEreshWarp67();
+								break;
+							case 2:
+								IDTransformVritraWarp67();
+								break;
+							case 3:
+								IDTransformTiamatWarp67();
+								break;
 						}
+						deleteNpc(245402);
+						spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
 					}, 5000);
 				}
 				else if (IDTransformSado67An == 8)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245403);
-							spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
-							spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
-						}
+						deleteNpc(245403);
+						spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
+						spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
 					}, 5000);
 				}
 				else if (IDTransformSado67An == 12)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245404);
-						}
-					}, 5000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> deleteNpc(245404), 5000);
 				}
 				points = 250;
 				despawnNpc(npc);
@@ -302,51 +268,36 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 				IDTransformSado68An++;
 				if (IDTransformSado68An == 4)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
+						switch (Rnd.get(1, 3))
 						{
-							switch (Rnd.get(1, 3))
-							{
-								case 1:
-									IDTransformEreshWarp68();
-									break;
-								case 2:
-									IDTransformVritraWarp68();
-									break;
-								case 3:
-									IDTransformTiamatWarp68();
-									break;
-							}
-							deleteNpc(245402);
-							spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
+							case 1:
+								IDTransformEreshWarp68();
+								break;
+							case 2:
+								IDTransformVritraWarp68();
+								break;
+							case 3:
+								IDTransformTiamatWarp68();
+								break;
 						}
+						deleteNpc(245402);
+						spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
 					}, 5000);
 				}
 				else if (IDTransformSado68An == 8)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245403);
-							spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
-							spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
-						}
+						deleteNpc(245403);
+						spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
+						spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
 					}, 5000);
 				}
 				else if (IDTransformSado68An == 12)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245404);
-						}
-					}, 5000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> deleteNpc(245404), 5000);
 				}
 				points = 250;
 				despawnNpc(npc);
@@ -359,51 +310,36 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 				IDTransformSado69An++;
 				if (IDTransformSado69An == 4)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
+						switch (Rnd.get(1, 3))
 						{
-							switch (Rnd.get(1, 3))
-							{
-								case 1:
-									IDTransformEreshWarp69();
-									break;
-								case 2:
-									IDTransformVritraWarp69();
-									break;
-								case 3:
-									IDTransformTiamatWarp69();
-									break;
-							}
-							deleteNpc(245402);
-							spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
+							case 1:
+								IDTransformEreshWarp69();
+								break;
+							case 2:
+								IDTransformVritraWarp69();
+								break;
+							case 3:
+								IDTransformTiamatWarp69();
+								break;
 						}
+						deleteNpc(245402);
+						spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
 					}, 5000);
 				}
 				else if (IDTransformSado69An == 8)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245403);
-							spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
-							spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
-						}
+						deleteNpc(245403);
+						spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
+						spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
 					}, 5000);
 				}
 				else if (IDTransformSado69An == 12)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245404);
-						}
-					}, 5000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> deleteNpc(245404), 5000);
 				}
 				points = 250;
 				despawnNpc(npc);
@@ -416,51 +352,36 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 				IDTransformSado70An++;
 				if (IDTransformSado70An == 4)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
+						switch (Rnd.get(1, 3))
 						{
-							switch (Rnd.get(1, 3))
-							{
-								case 1:
-									IDTransformEreshWarp70();
-									break;
-								case 2:
-									IDTransformVritraWarp70();
-									break;
-								case 3:
-									IDTransformTiamatWarp70();
-									break;
-							}
-							deleteNpc(245402);
-							spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
+							case 1:
+								IDTransformEreshWarp70();
+								break;
+							case 2:
+								IDTransformVritraWarp70();
+								break;
+							case 3:
+								IDTransformTiamatWarp70();
+								break;
 						}
+						deleteNpc(245402);
+						spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
 					}, 5000);
 				}
 				else if (IDTransformSado70An == 8)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245403);
-							spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
-							spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
-						}
+						deleteNpc(245403);
+						spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
+						spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
 					}, 5000);
 				}
 				else if (IDTransformSado70An == 12)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245404);
-						}
-					}, 5000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> deleteNpc(245404), 5000);
 				}
 				points = 250;
 				despawnNpc(npc);
@@ -473,51 +394,36 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 				IDTransformSado71An++;
 				if (IDTransformSado71An == 4)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
+						switch (Rnd.get(1, 3))
 						{
-							switch (Rnd.get(1, 3))
-							{
-								case 1:
-									IDTransformEreshWarp71();
-									break;
-								case 2:
-									IDTransformVritraWarp71();
-									break;
-								case 3:
-									IDTransformTiamatWarp71();
-									break;
-							}
-							deleteNpc(245402);
-							spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
+							case 1:
+								IDTransformEreshWarp71();
+								break;
+							case 2:
+								IDTransformVritraWarp71();
+								break;
+							case 3:
+								IDTransformTiamatWarp71();
+								break;
 						}
+						deleteNpc(245402);
+						spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
 					}, 5000);
 				}
 				else if (IDTransformSado71An == 8)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245403);
-							spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
-							spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
-						}
+						deleteNpc(245403);
+						spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
+						spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
 					}, 5000);
 				}
 				else if (IDTransformSado71An == 12)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245404);
-						}
-					}, 5000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> deleteNpc(245404), 5000);
 				}
 				points = 250;
 				despawnNpc(npc);
@@ -530,51 +436,36 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 				IDTransformSado72An++;
 				if (IDTransformSado72An == 4)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
+						switch (Rnd.get(1, 3))
 						{
-							switch (Rnd.get(1, 3))
-							{
-								case 1:
-									IDTransformEreshWarp72();
-									break;
-								case 2:
-									IDTransformVritraWarp72();
-									break;
-								case 3:
-									IDTransformTiamatWarp72();
-									break;
-							}
-							deleteNpc(245402);
-							spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
+							case 1:
+								IDTransformEreshWarp72();
+								break;
+							case 2:
+								IDTransformVritraWarp72();
+								break;
+							case 3:
+								IDTransformTiamatWarp72();
+								break;
 						}
+						deleteNpc(245402);
+						spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
 					}, 5000);
 				}
 				else if (IDTransformSado72An == 8)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245403);
-							spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
-							spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
-						}
+						deleteNpc(245403);
+						spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
+						spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
 					}, 5000);
 				}
 				else if (IDTransformSado72An == 12)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245404);
-						}
-					}, 5000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> deleteNpc(245404), 5000);
 				}
 				points = 250;
 				despawnNpc(npc);
@@ -587,51 +478,36 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 				IDTransformSado73An++;
 				if (IDTransformSado73An == 4)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
+						switch (Rnd.get(1, 3))
 						{
-							switch (Rnd.get(1, 3))
-							{
-								case 1:
-									IDTransformEreshWarp73();
-									break;
-								case 2:
-									IDTransformVritraWarp73();
-									break;
-								case 3:
-									IDTransformTiamatWarp73();
-									break;
-							}
-							deleteNpc(245402);
-							spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
+							case 1:
+								IDTransformEreshWarp73();
+								break;
+							case 2:
+								IDTransformVritraWarp73();
+								break;
+							case 3:
+								IDTransformTiamatWarp73();
+								break;
 						}
+						deleteNpc(245402);
+						spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
 					}, 5000);
 				}
 				else if (IDTransformSado73An == 8)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245403);
-							spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
-							spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
-						}
+						deleteNpc(245403);
+						spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
+						spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
 					}, 5000);
 				}
 				else if (IDTransformSado73An == 12)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245404);
-						}
-					}, 5000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> deleteNpc(245404), 5000);
 				}
 				points = 250;
 				despawnNpc(npc);
@@ -644,51 +520,36 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 				IDTransformSado74An++;
 				if (IDTransformSado74An == 4)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
+						switch (Rnd.get(1, 3))
 						{
-							switch (Rnd.get(1, 3))
-							{
-								case 1:
-									IDTransformEreshWarp74();
-									break;
-								case 2:
-									IDTransformVritraWarp74();
-									break;
-								case 3:
-									IDTransformTiamatWarp74();
-									break;
-							}
-							deleteNpc(245402);
-							spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
+							case 1:
+								IDTransformEreshWarp74();
+								break;
+							case 2:
+								IDTransformVritraWarp74();
+								break;
+							case 3:
+								IDTransformTiamatWarp74();
+								break;
 						}
+						deleteNpc(245402);
+						spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
 					}, 5000);
 				}
 				else if (IDTransformSado74An == 8)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245403);
-							spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
-							spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
-						}
+						deleteNpc(245403);
+						spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
+						spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
 					}, 5000);
 				}
 				else if (IDTransformSado74An == 12)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245404);
-						}
-					}, 5000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> deleteNpc(245404), 5000);
 				}
 				points = 250;
 				despawnNpc(npc);
@@ -701,51 +562,36 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 				IDTransformSado75An++;
 				if (IDTransformSado75An == 4)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
+						switch (Rnd.get(1, 3))
 						{
-							switch (Rnd.get(1, 3))
-							{
-								case 1:
-									IDTransformEreshWarp75();
-									break;
-								case 2:
-									IDTransformVritraWarp75();
-									break;
-								case 3:
-									IDTransformTiamatWarp75();
-									break;
-							}
-							deleteNpc(245402);
-							spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
+							case 1:
+								IDTransformEreshWarp75();
+								break;
+							case 2:
+								IDTransformVritraWarp75();
+								break;
+							case 3:
+								IDTransformTiamatWarp75();
+								break;
 						}
+						deleteNpc(245402);
+						spawn(245416, 855.54144f, 465.55255f, 351.57367f, (byte) 0, 54);
 					}, 5000);
 				}
 				else if (IDTransformSado75An == 8)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245403);
-							spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
-							spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
-						}
+						deleteNpc(245403);
+						spawn(245417, 594.41882f, 564.05542f, 352.56454f, (byte) 0, 58);
+						spawn(245418, 522.48053f, 573.51971f, 321.80389f, (byte) 0, 55);
 					}, 5000);
 				}
 				else if (IDTransformSado75An == 12)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							deleteNpc(245404);
-						}
-					}, 5000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> deleteNpc(245404), 5000);
 				}
 				points = 250;
 				despawnNpc(npc);
@@ -990,21 +836,7 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 				points = 1500;
 				despawnNpc(npc);
 				deleteNpc(245405);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								stopInstance(player);
-							}
-						});
-					}
-				}, 3000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player1 -> stopInstance(player1)), 3000);
 				break;
 			/*** Player Lvl 66 ***/
 			case 244892: // 바라나트 군단 드라칸 정예 강습사관.
@@ -1237,17 +1069,13 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 	
 	private void sendPacket(int nameId, int point)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (nameId != 0)
 			{
-				if (nameId != 0)
-				{
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
-				}
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
 			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
 		});
 	}
 	
@@ -1287,31 +1115,13 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 	protected void startInstanceTask()
 	{
 		instanceTime = System.currentTimeMillis();
-		oblivionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		oblivionTask.add(ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				doors.get(34).setOpen(true);
-				instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-				sendPacket(0, 0);
-			}
+			doors.get(34).setOpen(true);
+			instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+			sendPacket(0, 0);
 		}, 60000));
-		oblivionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						stopInstance(player);
-					}
-				});
-			}
-		}, 1800000)); // 30 Minutes.
+		oblivionTask.add(ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player -> stopInstance(player)), 1800000)); // 30 Minutes.
 	}
 	
 	@Override
@@ -19565,7 +19375,7 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void deleteNpc(int npcId)
+	void deleteNpc(int npcId)
 	{
 		if (getNpc(npcId) != null)
 		{
@@ -19611,18 +19421,14 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
-		oblivionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		oblivionTask.add(ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				spawn(npcId, x, y, z, h, entityId);
+				if (msg > 0)
 				{
-					spawn(npcId, x, y, z, h, entityId);
-					if (msg > 0)
-					{
-						sendMsgByRace(msg, race, 0);
-					}
+					sendMsgByRace(msg, race, 0);
 				}
 			}
 		}, time));
@@ -19630,53 +19436,31 @@ public class FissureOfOblivionInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
-		oblivionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		oblivionTask.add(ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
-				{
-					final Npc npc = (Npc) spawn(npcId, x, y, z, h);
-					npc.getSpawn().setWalkerId(walkerId);
-					WalkManager.startWalking((NpcAI2) npc.getAi2());
-				}
+				final Npc npc = (Npc) spawn(npcId, x, y, z, h);
+				npc.getSpawn().setWalkerId(walkerId);
+				WalkManager.startWalking((NpcAI2) npc.getAi2());
 			}
 		}, time));
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

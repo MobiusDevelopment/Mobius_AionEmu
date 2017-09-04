@@ -132,7 +132,6 @@ public class HouseScriptData
 		private static final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		private static DocumentBuilder db;
 		
-		@SuppressWarnings("restriction")
 		public static String format(String unformattedXml)
 		{
 			try

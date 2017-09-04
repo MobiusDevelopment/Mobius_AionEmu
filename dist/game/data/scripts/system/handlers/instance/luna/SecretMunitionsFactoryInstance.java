@@ -52,7 +52,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -66,6 +65,7 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 {
 	private int rank;
 	private long instanceTime;
+	@SuppressWarnings("unused")
 	private Future<?> instanceTimer;
 	private int destructionGolemKilled;
 	private int mechaInfantrymanKilled;
@@ -83,12 +83,12 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 		return (SecretMunitionsFactoryPlayerReward) instanceReward.getPlayerReward(object);
 	}
 	
-	@SuppressWarnings("unchecked")
 	protected void addPlayerReward(Player player)
 	{
 		instanceReward.addPlayerReward(new SecretMunitionsFactoryPlayerReward(player.getObjectId()));
 	}
 	
+	@SuppressWarnings("unused")
 	private boolean containPlayer(Integer object)
 	{
 		return instanceReward.containPlayer(object);
@@ -143,8 +143,6 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 	public void onDie(Npc npc)
 	{
 		int points = 0;
-		final int npcId = npc.getNpcId();
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 243993: // Mechaturerk’s Cannon.
@@ -188,21 +186,7 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 						spawn(834444, 149.65579f, 260.02966f, 191.8727f, (byte) 0); // Mechaturerk’s Special Treasure Box.
 						break;
 				}
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								stopInstance(player);
-							}
-						});
-					}
-				}, 8000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player1 -> stopInstance(player1)), 8000);
 				break;
 			case 243853: // Mechaturerk Maintenance Soldier.
 				maintenanceSoldierKilled++;
@@ -246,19 +230,15 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 				final float y0 = npc.getY();
 				final float z0 = npc.getZ();
 				final byte h0 = npc.getHeading();
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
+					if (!isInstanceDestroyed)
 					{
-						if (!isInstanceDestroyed)
+						if ((x0 > 0) && (y0 > 0) && (z0 > 0))
 						{
-							if ((x0 > 0) && (y0 > 0) && (z0 > 0))
-							{
-								// The recovery plant has emerged.
-								sendMsgByRace(1403824, Race.PC_ALL, 0);
-								spawn(703349, x0, y0, z0, h0); // Huge Healing Plant.
-							}
+							// The recovery plant has emerged.
+							sendMsgByRace(1403824, Race.PC_ALL, 0);
+							spawn(703349, x0, y0, z0, h0); // Huge Healing Plant.
 						}
 					}
 				}, 1000);
@@ -268,19 +248,15 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 				final float y1 = npc.getY();
 				final float z1 = npc.getZ();
 				final byte h1 = npc.getHeading();
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
+					if (!isInstanceDestroyed)
 					{
-						if (!isInstanceDestroyed)
+						if ((x1 > 0) && (y1 > 0) && (z1 > 0))
 						{
-							if ((x1 > 0) && (y1 > 0) && (z1 > 0))
-							{
-								// The recovery plant has emerged.
-								sendMsgByRace(1403824, Race.PC_ALL, 0);
-								spawn(703349, x1, y1, z1, h1); // Huge Healing Plant.
-							}
+							// The recovery plant has emerged.
+							sendMsgByRace(1403824, Race.PC_ALL, 0);
+							spawn(703349, x1, y1, z1, h1); // Huge Healing Plant.
 						}
 					}
 				}, 1000);
@@ -331,21 +307,17 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 	
 	private void munitionRaid(Npc npc)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						npc.setTarget(player);
-						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
-						npc.setState(1);
-						npc.getMoveController().moveToTargetObject();
-						PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
-					}
+					npc.setTarget(player);
+					((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
+					npc.setState(1);
+					npc.getMoveController().moveToTargetObject();
+					PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
 				}
 			}
 		}, 1000);
@@ -353,299 +325,179 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 	
 	private void startMunitionRaidA1_1()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA1();
-				startMunitionRaidA2();
-			}
+			startMunitionRaidA1();
+			startMunitionRaidA2();
 		}, 10000);
-		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA1();
-				startMunitionRaidA2();
-			}
+			startMunitionRaidA1();
+			startMunitionRaidA2();
 		}, 20000);
-		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA1();
-				startMunitionRaidA2();
-			}
+			startMunitionRaidA1();
+			startMunitionRaidA2();
 		}, 30000);
-		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA1();
-				startMunitionRaidA2();
-			}
+			startMunitionRaidA1();
+			startMunitionRaidA2();
 		}, 40000);
-		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA1();
-				startMunitionRaidA2();
-			}
+			startMunitionRaidA1();
+			startMunitionRaidA2();
 		}, 50000);
-		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA1();
-				startMunitionRaidA2();
-			}
+			startMunitionRaidA1();
+			startMunitionRaidA2();
 		}, 60000);
-		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA1();
-				startMunitionRaidA2();
-			}
+			startMunitionRaidA1();
+			startMunitionRaidA2();
 		}, 70000);
-		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA1();
-				startMunitionRaidA2();
-			}
+			startMunitionRaidA1();
+			startMunitionRaidA2();
 		}, 80000);
-		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA1();
-				startMunitionRaidA2();
-			}
+			startMunitionRaidA1();
+			startMunitionRaidA2();
 		}, 90000);
-		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA1();
-				startMunitionRaidA2();
-			}
+			startMunitionRaidA1();
+			startMunitionRaidA2();
 		}, 100000);
 	}
 	
 	private void startMunitionRaidA3_1()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA3();
-				startMunitionRaidA4();
-			}
+			startMunitionRaidA3();
+			startMunitionRaidA4();
 		}, 10000);
-		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA3();
-				startMunitionRaidA4();
-			}
+			startMunitionRaidA3();
+			startMunitionRaidA4();
 		}, 20000);
-		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA3();
-				startMunitionRaidA4();
-			}
+			startMunitionRaidA3();
+			startMunitionRaidA4();
 		}, 30000);
-		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA3();
-				startMunitionRaidA4();
-			}
+			startMunitionRaidA3();
+			startMunitionRaidA4();
 		}, 40000);
-		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA3();
-				startMunitionRaidA4();
-			}
+			startMunitionRaidA3();
+			startMunitionRaidA4();
 		}, 50000);
-		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA3();
-				startMunitionRaidA4();
-			}
+			startMunitionRaidA3();
+			startMunitionRaidA4();
 		}, 60000);
-		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA3();
-				startMunitionRaidA4();
-			}
+			startMunitionRaidA3();
+			startMunitionRaidA4();
 		}, 70000);
-		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA3();
-				startMunitionRaidA4();
-			}
+			startMunitionRaidA3();
+			startMunitionRaidA4();
 		}, 80000);
-		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA3();
-				startMunitionRaidA4();
-			}
+			startMunitionRaidA3();
+			startMunitionRaidA4();
 		}, 90000);
-		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA3();
-				startMunitionRaidA4();
-			}
+			startMunitionRaidA3();
+			startMunitionRaidA4();
 		}, 100000);
 	}
 	
 	private void startMunitionRaidA5_1()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA5();
-				startMunitionRaidA6();
-			}
+			startMunitionRaidA5();
+			startMunitionRaidA6();
 		}, 10000);
-		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA5();
-				startMunitionRaidA6();
-			}
+			startMunitionRaidA5();
+			startMunitionRaidA6();
 		}, 20000);
-		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA5();
-				startMunitionRaidA6();
-			}
+			startMunitionRaidA5();
+			startMunitionRaidA6();
 		}, 30000);
-		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA5();
-				startMunitionRaidA6();
-			}
+			startMunitionRaidA5();
+			startMunitionRaidA6();
 		}, 40000);
-		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA5();
-				startMunitionRaidA6();
-				// The Azure Living bomb has appeared!
-				sendMsgByRace(1403650, Race.PC_ALL, 0);
-				// Use the blue mechanical device!
-				sendMsgByRace(1403663, Race.PC_ALL, 5000);
-				// The Golden Living bomb has appeared!
-				sendMsgByRace(1403651, Race.PC_ALL, 10000);
-				// Use the yellow mechanical device!
-				sendMsgByRace(1403663, Race.PC_ALL, 15000);
-			}
+			startMunitionRaidA5();
+			startMunitionRaidA6();
+			// The Azure Living bomb has appeared!
+			sendMsgByRace(1403650, Race.PC_ALL, 0);
+			// Use the blue mechanical device!
+			sendMsgByRace(1403663, Race.PC_ALL, 5000);
+			// The Golden Living bomb has appeared!
+			sendMsgByRace(1403651, Race.PC_ALL, 10000);
+			// Use the yellow mechanical device!
+			sendMsgByRace(1403663, Race.PC_ALL, 15000);
 		}, 50000);
-		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA5();
-				startMunitionRaidA6();
-			}
+			startMunitionRaidA5();
+			startMunitionRaidA6();
 		}, 60000);
-		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA5();
-				startMunitionRaidA6();
-			}
+			startMunitionRaidA5();
+			startMunitionRaidA6();
 		}, 70000);
-		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA5();
-				startMunitionRaidA6();
-			}
+			startMunitionRaidA5();
+			startMunitionRaidA6();
 		}, 80000);
-		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA5();
-				startMunitionRaidA6();
-			}
+			startMunitionRaidA5();
+			startMunitionRaidA6();
 		}, 90000);
-		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		munitionRaidTaskA3 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startMunitionRaidA5();
-				startMunitionRaidA6();
-				// The Azure Living bomb has appeared!
-				sendMsgByRace(1403650, Race.PC_ALL, 0);
-				// Use the blue mechanical device!
-				sendMsgByRace(1403663, Race.PC_ALL, 5000);
-				// The Golden Living bomb has appeared!
-				sendMsgByRace(1403651, Race.PC_ALL, 10000);
-				// Use the yellow mechanical device!
-				sendMsgByRace(1403663, Race.PC_ALL, 15000);
-			}
+			startMunitionRaidA5();
+			startMunitionRaidA6();
+			// The Azure Living bomb has appeared!
+			sendMsgByRace(1403650, Race.PC_ALL, 0);
+			// Use the blue mechanical device!
+			sendMsgByRace(1403663, Race.PC_ALL, 5000);
+			// The Golden Living bomb has appeared!
+			sendMsgByRace(1403651, Race.PC_ALL, 10000);
+			// Use the yellow mechanical device!
+			sendMsgByRace(1403663, Race.PC_ALL, 15000);
 		}, 100000);
 	}
 	
@@ -670,7 +522,7 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 		munitionRaid((Npc) spawn(244135, 133.37782f, 229.28152f, 191.94075f, (byte) 15)); // Melee Support Destruction Golem.
 	}
 	
-	private void startMunitionRaidA4()
+	void startMunitionRaidA4()
 	{
 		munitionRaid((Npc) spawn(244136, 132.91176f, 289.63672f, 191.98668f, (byte) 106)); // Ranged Support Destruction Golem.
 	}
@@ -704,17 +556,13 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 	
 	private void sendPacket(int nameId, int point)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (nameId != 0)
 			{
-				if (nameId != 0)
-				{
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
-				}
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
 			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
 		});
 	}
 	
@@ -754,32 +602,14 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 	protected void startInstanceTask()
 	{
 		instanceTime = System.currentTimeMillis();
-		factoryTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		factoryTask.add(ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				deleteNpc(833868); // Rock Pile.
-				doors.get(27).setOpen(true);
-				instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-				sendPacket(0, 0);
-			}
+			deleteNpc(833868); // Rock Pile.
+			doors.get(27).setOpen(true);
+			instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+			sendPacket(0, 0);
 		}, 60000));
-		factoryTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						stopInstance(player);
-					}
-				});
-			}
-		}, 3600000)); // 1 Hour.
+		factoryTask.add(ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player -> stopInstance(player)), 3600000)); // 1 Hour.
 	}
 	
 	@Override
@@ -805,14 +635,7 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 				SkillEngine.getInstance().applyEffectDirectly(21348, player, player, 3000000 * 1);
 				break;
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawnLunaDetachment();
-			}
-		}, 20000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawnLunaDetachment(), 20000);
 		sendPacket(0, 0);
 	}
 	
@@ -944,36 +767,18 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

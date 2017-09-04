@@ -31,7 +31,7 @@ import system.handlers.ai.AggressiveNpcAI2;
 @AIName("divineartifact")
 public class DivineArtifactAI2 extends AggressiveNpcAI2
 {
-	private boolean cooldown = false;
+	boolean cooldown = false;
 	
 	@Override
 	protected void handleAttack(Creature creature)
@@ -47,13 +47,6 @@ public class DivineArtifactAI2 extends AggressiveNpcAI2
 	private void setCD()
 	{
 		cooldown = true;
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				cooldown = false;
-			}
-		}, 1000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> cooldown = false, 1000);
 	}
 }

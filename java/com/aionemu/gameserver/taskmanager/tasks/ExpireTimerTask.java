@@ -108,7 +108,6 @@ public class ExpireTimerTask extends AbstractPeriodicTaskManager
 		}
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
 		protected static final ExpireTimerTask _instance = new ExpireTimerTask();

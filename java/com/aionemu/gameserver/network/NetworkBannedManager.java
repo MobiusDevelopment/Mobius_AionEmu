@@ -34,14 +34,11 @@ import javolution.util.FastMap;
  */
 public class NetworkBannedManager
 {
-	
 	private Map<String, NetworkBanEntry> bannedList = new FastMap<>();
 	private final Logger log = LoggerFactory.getLogger(NetworkBannedManager.class);
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final NetworkBannedManager networkban = new NetworkBannedManager();
 	}
 	
@@ -75,11 +72,8 @@ public class NetworkBannedManager
 			{
 				return;
 			}
-			else
-			{
-				entry = bannedList.get(address);
-				entry.updateTime(newTime);
-			}
+			entry = bannedList.get(address);
+			entry.updateTime(newTime);
 		}
 		else
 		{
@@ -103,10 +97,7 @@ public class NetworkBannedManager
 			// LoginServer.getInstance().sendPacket(new SM_MACBAN_CONTROL((byte) 0, address, 0, details));
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	public final boolean isBanned(String address)
@@ -116,10 +107,7 @@ public class NetworkBannedManager
 			log.info("IP: " + address + " is such banned list!");
 			return bannedList.get(address).isActive();
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	public final void dbLoad(String address, long time, String details)

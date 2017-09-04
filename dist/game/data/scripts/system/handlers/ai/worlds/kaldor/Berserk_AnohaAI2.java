@@ -31,7 +31,6 @@ import com.aionemu.gameserver.ai2.AIState;
 import com.aionemu.gameserver.ai2.manager.EmoteManager;
 import com.aionemu.gameserver.model.actions.CreatureActions;
 import com.aionemu.gameserver.model.gameobjects.Creature;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.HTMLService;
@@ -41,7 +40,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldPosition;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
@@ -78,23 +76,12 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 	
 	private void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
-			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						AI2Actions.deleteOwner(Berserk_AnohaAI2.this);
-						// Berserk Anoha has disappeared.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_Anoha_DeSpawn);
-					}
-				});
-			}
-		}, 1800000); // 30 Minutes.
+			AI2Actions.deleteOwner(Berserk_AnohaAI2.this);
+			// Berserk Anoha has disappeared.
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_Anoha_DeSpawn);
+		}), 1800000); // 30 Minutes.
 	}
 	
 	@Override
@@ -130,22 +117,18 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 						sendMsg(1501393, getObjectId(), false, 0);
 						// Leave Ereshkigal's fortress!
 						sendMsg(1501394, getObjectId(), false, 5000);
-						ThreadPoolManager.getInstance().schedule(new Runnable()
+						ThreadPoolManager.getInstance().schedule((Runnable) () ->
 						{
-							@Override
-							public void run()
+							if (!isAlreadyDead())
 							{
-								if (!isAlreadyDead())
+								SkillEngine.getInstance().getSkill(getOwner(), 21767, 60, getOwner()).useNoAnimationSkill();
+								startThinkTask();
+								final int total = explosiveSacrifice(855262); // Explosive Sacrifice.
+								if ((total == 0) || ((6 - total) != 0))
 								{
-									SkillEngine.getInstance().getSkill(getOwner(), 21767, 60, getOwner()).useNoAnimationSkill();
-									startThinkTask();
-									final int total = explosiveSacrifice(855262); // Explosive Sacrifice.
-									if ((total == 0) || ((6 - total) != 0))
+									for (int i = 0; i < (6 - total); i++)
 									{
-										for (int i = 0; i < (6 - total); i++)
-										{
-											rndSpawn(855262); // Explosive Sacrifice.
-										}
+										rndSpawn(855262); // Explosive Sacrifice.
 									}
 								}
 							}
@@ -179,32 +162,28 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 	
 	private void startThinkTask()
 	{
-		thinkTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+		thinkTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead())
 			{
-				if (!isAlreadyDead())
+				think = true;
+				final Creature creature = getAggroList().getMostHated();
+				if ((creature == null) || creature.getLifeStats().isAlreadyDead() || !getOwner().canSee(creature))
 				{
-					think = true;
-					final Creature creature = getAggroList().getMostHated();
-					if ((creature == null) || creature.getLifeStats().isAlreadyDead() || !getOwner().canSee(creature))
-					{
-						setStateIfNot(AIState.FIGHT);
-						think();
-					}
-					else
-					{
-						getMoveController().abortMove();
-						getOwner().setTarget(creature);
-						getOwner().getGameStats().renewLastAttackTime();
-						getOwner().getGameStats().renewLastAttackedTime();
-						getOwner().getGameStats().renewLastChangeTargetTime();
-						getOwner().getGameStats().renewLastSkillTime();
-						setStateIfNot(AIState.FIGHT);
-						handleMoveValidate();
-						startSpecialSkillTask();
-					}
+					setStateIfNot(AIState.FIGHT);
+					think();
+				}
+				else
+				{
+					getMoveController().abortMove();
+					getOwner().setTarget(creature);
+					getOwner().getGameStats().renewLastAttackTime();
+					getOwner().getGameStats().renewLastAttackedTime();
+					getOwner().getGameStats().renewLastChangeTargetTime();
+					getOwner().getGameStats().renewLastSkillTime();
+					setStateIfNot(AIState.FIGHT);
+					handleMoveValidate();
+					startSpecialSkillTask();
 				}
 			}
 		}, 20000);
@@ -217,90 +196,66 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 		sendMsg(1501395, getObjectId(), false, 0);
 		// Freeze and face oblivion!
 		sendMsg(1501397, getObjectId(), false, 5000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead())
 			{
-				if (!isAlreadyDead())
+				deleteNpcs(282746); // Lava.
+				final int total = explosiveSacrifice(282746); // Lava.
+				if ((total == 0) || ((8 - total) != 0))
 				{
-					deleteNpcs(282746); // Lava.
-					final int total = explosiveSacrifice(282746); // Lava.
-					if ((total == 0) || ((8 - total) != 0))
+					for (int i = 0; i < (8 - total); i++)
 					{
-						for (int i = 0; i < (8 - total); i++)
-						{
-							rndSpawn(282746); // Lava.
-						}
+						rndSpawn(282746); // Lava.
 					}
-					startSpecialSkillTask();
 				}
+				startSpecialSkillTask();
 			}
 		}, 4000);
 	}
 	
 	private void startSpecialSkillTask()
 	{
-		specialSkillTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+		specialSkillTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead())
 			{
-				if (!isAlreadyDead())
+				SkillEngine.getInstance().getSkill(getOwner(), 21761, 60, getOwner()).useNoAnimationSkill();
+				specialSkillTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					SkillEngine.getInstance().getSkill(getOwner(), 21761, 60, getOwner()).useNoAnimationSkill();
-					specialSkillTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+					if (!isAlreadyDead())
 					{
-						@Override
-						public void run()
+						SkillEngine.getInstance().getSkill(getOwner(), 21762, 60, getOwner()).useNoAnimationSkill();
+						specialSkillTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 						{
 							if (!isAlreadyDead())
 							{
-								SkillEngine.getInstance().getSkill(getOwner(), 21762, 60, getOwner()).useNoAnimationSkill();
-								specialSkillTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+								SkillEngine.getInstance().getSkill(getOwner(), 21763, 60, getOwner()).useNoAnimationSkill();
+								if (curentPercent <= 63)
 								{
-									@Override
-									public void run()
+									specialSkillTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 									{
 										if (!isAlreadyDead())
 										{
-											SkillEngine.getInstance().getSkill(getOwner(), 21763, 60, getOwner()).useNoAnimationSkill();
-											if (curentPercent <= 63)
+											SkillEngine.getInstance().getSkill(getOwner(), 21764, 60, getOwner()).useNoAnimationSkill();
+											// Muhahaha! Experience true power!
+											sendMsg(1501157, getObjectId(), false, 0);
+											ThreadPoolManager.getInstance().schedule((Runnable) () ->
 											{
-												specialSkillTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+												if (!isAlreadyDead())
 												{
-													@Override
-													public void run()
-													{
-														if (!isAlreadyDead())
-														{
-															SkillEngine.getInstance().getSkill(getOwner(), 21764, 60, getOwner()).useNoAnimationSkill();
-															// Muhahaha! Experience true power!
-															sendMsg(1501157, getObjectId(), false, 0);
-															ThreadPoolManager.getInstance().schedule(new Runnable()
-															{
-																@Override
-																public void run()
-																{
-																	if (!isAlreadyDead())
-																	{
-																		deleteNpcs(282747); // Lava.
-																		rndSpawn(282747); // Lava.
-																		rndSpawn(282747); // Lava.
-																	}
-																}
-															}, 2000);
-														}
-													}
-												}, 21000);
-											}
+													deleteNpcs(282747); // Lava.
+													rndSpawn(282747); // Lava.
+													rndSpawn(282747); // Lava.
+												}
+											}, 2000);
 										}
-									}
-								}, 3500);
+									}, 21000);
+								}
 							}
-						}
-					}, 1500);
-				}
+						}, 3500);
+					}
+				}, 1500);
 			}
 		}, 12000);
 	}
@@ -317,15 +272,11 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 	{
 		if (getKnownList() != null)
 		{
-			getKnownList().doOnAllNpcs(new Visitor<Npc>()
+			getKnownList().doOnAllNpcs(npc ->
 			{
-				@Override
-				public void visit(Npc npc)
+				if (npc.getNpcId() == npcId)
 				{
-					if (npc.getNpcId() == npcId)
-					{
-						CreatureActions.delete(npc);
-					}
+					CreatureActions.delete(npc);
 				}
 			});
 		}
@@ -336,15 +287,11 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 		final AtomicInteger total = new AtomicInteger();
 		if (getKnownList() != null)
 		{
-			getKnownList().doOnAllNpcs(new Visitor<Npc>()
+			getKnownList().doOnAllNpcs(npc ->
 			{
-				@Override
-				public void visit(Npc npc)
+				if (npc.getNpcId() == npcId)
 				{
-					if (npc.getNpcId() == npcId)
-					{
-						total.incrementAndGet();
-					}
+					total.incrementAndGet();
 				}
 			});
 		}
@@ -410,30 +357,18 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 		{
 			sendBerserkAnohaGuide();
 		}
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// Berserk Anoha has been defeated.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_Anoha_Die);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_Anoha_Die));
 		AI2Actions.deleteOwner(this);
 		super.handleDied();
 	}
 	
 	private void sendBerserkAnohaGuide()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (MathUtil.isIn3dRange(player, getOwner(), 15))
 			{
-				if (MathUtil.isIn3dRange(player, getOwner(), 15))
-				{
-					HTMLService.sendGuideHtml(player, "Berserk_Anoha");
-				}
+				HTMLService.sendGuideHtml(player, "Berserk_Anoha");
 			}
 		});
 	}

@@ -40,7 +40,6 @@ import com.aionemu.gameserver.world.WorldMapInstance;
  */
 public class InstanceEngine implements GameEngine
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(InstanceEngine.class);
 	private static ScriptManager scriptManager = new ScriptManager();
 	public static final File INSTANCE_DESCRIPTOR_FILE = new File("./data/scripts/system/instancehandlers.xml");
@@ -135,10 +134,8 @@ public class InstanceEngine implements GameEngine
 		return SingletonHolder.instance;
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final InstanceEngine instance = new InstanceEngine();
 	}
 }

@@ -168,10 +168,7 @@ public class _1559WhatsintheBox extends QuestHandler
 							qs.setQuestVarById(0, var + 1);
 							qs.setStatus(QuestStatus.REWARD);
 							updateQuestStatus(env);
-							if (giveQuestItem(env, 182201824, 1))
-							{
-								;
-							}
+							giveQuestItem(env, 182201824, 1);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}

@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.services.events;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,19 +45,13 @@ import com.aionemu.gameserver.skillengine.model.TransformType;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * Created by wanke on 13/02/2017.
  */
-
 public class BanditService
 {
 	private static Logger log = LoggerFactory.getLogger(BanditService.class);
-	private final Map<Integer, Integer> zergMeters = new HashMap<>();
-	private final Map<Player, Long> outlaws = new HashMap<>();
-	private WorldMapInstance activeInstance;
 	
 	public void onInit()
 	{
@@ -87,39 +78,35 @@ public class BanditService
 			}
 		};
 		player.getObserveController().attach(observer);
-		player.getController().addTask(TaskId.PK, ThreadPoolManager.getInstance().schedule(new Runnable()
+		player.getController().addTask(TaskId.PK, ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			player.getObserveController().removeObserver(observer);
+			if (player.getLifeStats().isAlreadyDead())
 			{
-				player.getObserveController().removeObserver(observer);
-				if (player.getLifeStats().isAlreadyDead())
-				{
-					PlayerReviveService.skillRevive(player);
-				}
-				if (player.isInGroup2())
-				{
-					PlayerGroupService.removePlayer(player);
-				}
-				if (player.isInAlliance2())
-				{
-					PlayerAllianceService.removePlayer(player);
-				}
-				player.getEffectController().unsetAbnormal(AbnormalState.SLEEP.getId());
-				player.getEffectController().updatePlayerEffectIcons();
-				player.getEffectController().broadCastEffects();
-				player.setBandit(true);
-				player.setAdminEnmity(2);
-				player.setAdminNeutral(0);
-				morphBandit(player, false);
-				player.clearKnownlist();
-				sendAnnounce(player);
-				PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
-				PacketSendUtility.sendPacket(player, new SM_MOTION(player.getObjectId(), player.getMotions().getActiveMotions()));
-				player.getEffectController().updatePlayerEffectIcons();
-				player.updateKnownlist();
-				TeleportService2.teleportTo(player, player.getWorldId(), player.getInstanceId(), player.getX(), player.getY(), player.getZ(), player.getHeading());
+				PlayerReviveService.skillRevive(player);
 			}
+			if (player.isInGroup2())
+			{
+				PlayerGroupService.removePlayer(player);
+			}
+			if (player.isInAlliance2())
+			{
+				PlayerAllianceService.removePlayer(player);
+			}
+			player.getEffectController().unsetAbnormal(AbnormalState.SLEEP.getId());
+			player.getEffectController().updatePlayerEffectIcons();
+			player.getEffectController().broadCastEffects();
+			player.setBandit(true);
+			player.setAdminEnmity(2);
+			player.setAdminNeutral(0);
+			morphBandit(player, false);
+			player.clearKnownlist();
+			sendAnnounce(player);
+			PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
+			PacketSendUtility.sendPacket(player, new SM_MOTION(player.getObjectId(), player.getMotions().getActiveMotions()));
+			player.getEffectController().updatePlayerEffectIcons();
+			player.updateKnownlist();
+			TeleportService2.teleportTo(player, player.getWorldId(), player.getInstanceId(), player.getX(), player.getY(), player.getZ(), player.getHeading());
 		}, 5 * 1000));
 	}
 	
@@ -143,38 +130,34 @@ public class BanditService
 			}
 		};
 		player.getObserveController().attach(observer);
-		player.getController().addTask(TaskId.PK, ThreadPoolManager.getInstance().schedule(new Runnable()
+		player.getController().addTask(TaskId.PK, ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			player.getObserveController().removeObserver(observer);
+			if (player.getLifeStats().isAlreadyDead())
 			{
-				player.getObserveController().removeObserver(observer);
-				if (player.getLifeStats().isAlreadyDead())
-				{
-					PlayerReviveService.skillRevive(player);
-				}
-				if (player.isInGroup2())
-				{
-					PlayerGroupService.removePlayer(player);
-				}
-				if (player.isInAlliance2())
-				{
-					PlayerAllianceService.removePlayer(player);
-				}
-				player.getEffectController().unsetAbnormal(AbnormalState.SLEEP.getId());
-				player.getEffectController().updatePlayerEffectIcons();
-				player.getEffectController().broadCastEffects();
-				player.setBandit(false);
-				player.setAdminEnmity(0);
-				player.setAdminNeutral(0);
-				morphBandit(player, true);
-				player.clearKnownlist();
-				PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
-				PacketSendUtility.sendPacket(player, new SM_MOTION(player.getObjectId(), player.getMotions().getActiveMotions()));
-				player.getEffectController().updatePlayerEffectIcons();
-				player.updateKnownlist();
-				TeleportService2.teleportTo(player, player.getWorldId(), player.getInstanceId(), player.getX(), player.getY(), player.getZ(), player.getHeading());
+				PlayerReviveService.skillRevive(player);
 			}
+			if (player.isInGroup2())
+			{
+				PlayerGroupService.removePlayer(player);
+			}
+			if (player.isInAlliance2())
+			{
+				PlayerAllianceService.removePlayer(player);
+			}
+			player.getEffectController().unsetAbnormal(AbnormalState.SLEEP.getId());
+			player.getEffectController().updatePlayerEffectIcons();
+			player.getEffectController().broadCastEffects();
+			player.setBandit(false);
+			player.setAdminEnmity(0);
+			player.setAdminNeutral(0);
+			morphBandit(player, true);
+			player.clearKnownlist();
+			PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
+			PacketSendUtility.sendPacket(player, new SM_MOTION(player.getObjectId(), player.getMotions().getActiveMotions()));
+			player.getEffectController().updatePlayerEffectIcons();
+			player.updateKnownlist();
+			TeleportService2.teleportTo(player, player.getWorldId(), player.getInstanceId(), player.getX(), player.getY(), player.getZ(), player.getHeading());
 		}, 5 * 1000));
 	}
 	
@@ -194,29 +177,25 @@ public class BanditService
 		player.getEffectController().removeEffectByDispelCat(DispelCategoryType.ALL, SkillTargetSlot.DEBUFF, 100, 2, 100, false);
 		player.setTarget(null);
 		PacketSendUtility.sendPacket(player, new SM_TARGET_SELECTED(player));
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (player.isBandit())
 			{
-				if (player.isBandit())
+				if (player.getLifeStats().isAlreadyDead())
 				{
-					if (player.getLifeStats().isAlreadyDead())
-					{
-						PlayerReviveService.banditRevive(player);
-					}
-					player.setBandit(false);
-					player.setAdminEnmity(0);
-					player.setAdminNeutral(0);
-					player.clearKnownlist();
-					morphBandit(player, true);
-					sendDieAnnounce(player, (Player) lastAttacker);
-					PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
-					PacketSendUtility.sendPacket(player, new SM_MOTION(player.getObjectId(), player.getMotions().getActiveMotions()));
-					player.getEffectController().updatePlayerEffectIcons();
-					player.updateKnownlist();
-					TeleportService2.moveToBindLocation(player, true);
+					PlayerReviveService.banditRevive(player);
 				}
+				player.setBandit(false);
+				player.setAdminEnmity(0);
+				player.setAdminNeutral(0);
+				player.clearKnownlist();
+				morphBandit(player, true);
+				sendDieAnnounce(player, (Player) lastAttacker);
+				PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
+				PacketSendUtility.sendPacket(player, new SM_MOTION(player.getObjectId(), player.getMotions().getActiveMotions()));
+				player.getEffectController().updatePlayerEffectIcons();
+				player.updateKnownlist();
+				TeleportService2.moveToBindLocation(player, true);
 			}
 		}, 6000);
 	}
@@ -245,30 +224,22 @@ public class BanditService
 	
 	public void sendAnnounce(Player player)
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(pl ->
 		{
-			@Override
-			public void visit(Player pl)
+			if ((pl.getWorldId() == player.getWorldId()) && (pl != player))
 			{
-				if ((pl.getWorldId() == player.getWorldId()) && (pl != player))
-				{
-					PacketSendUtility.sendSys3Message(pl, "[PK] Bandit", "A player just passed <Outlaw>, RUN!");
-				}
+				PacketSendUtility.sendSys3Message(pl, "[PK] Bandit", "A player just passed <Outlaw>, RUN!");
 			}
 		});
 	}
 	
 	public void sendDieAnnounce(Player looser, Player killer)
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(pl ->
 		{
-			@Override
-			public void visit(Player pl)
+			if (pl.getWorldId() == looser.getWorldId())
 			{
-				if (pl.getWorldId() == looser.getWorldId())
-				{
-					PacketSendUtility.sendSys3Message(pl, "[PK] Bandit", killer.getName() + " stop the <Outlaw> (" + looser.getName() + ") !");
-				}
+				PacketSendUtility.sendSys3Message(pl, "[PK] Bandit", killer.getName() + " stop the <Outlaw> (" + looser.getName() + ") !");
 			}
 		});
 	}
@@ -286,7 +257,6 @@ public class BanditService
 		}
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
 		protected static final BanditService instance = new BanditService();

@@ -67,7 +67,6 @@ import javolution.util.FastMap;
  */
 public class BrokerService
 {
-	
 	private final Map<Integer, BrokerItem> elyosBrokerItems = new FastMap<Integer, BrokerItem>().shared();
 	private final Map<Integer, BrokerItem> elyosSettledItems = new FastMap<Integer, BrokerItem>().shared();
 	private final Map<Integer, BrokerItem> asmodianBrokerItems = new FastMap<Integer, BrokerItem>().shared();
@@ -87,14 +86,7 @@ public class BrokerService
 	{
 		initBrokerService();
 		saveManager = new BrokerPeriodicTaskManager(DELAY_BROKER_SAVE);
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				checkExpiredItems();
-			}
-		}, DELAY_BROKER_CHECK, DELAY_BROKER_CHECK);
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> checkExpiredItems(), DELAY_BROKER_CHECK, DELAY_BROKER_CHECK);
 	}
 	
 	private void initBrokerService()
@@ -440,6 +432,8 @@ public class BrokerService
 	 * @param race
 	 * @param brokerItem
 	 * @param TotalBuyPrice
+	 * @param BuyItemCount
+	 * @return
 	 */
 	private Item BuySplitSell(Race race, BrokerItem brokerItem, long TotalBuyPrice, long BuyItemCount)
 	{
@@ -489,6 +483,8 @@ public class BrokerService
 	
 	/**
 	 * Copy some item values like item stones and enchant level
+	 * @param sourceItem
+	 * @param newItem
 	 */
 	private static void copyItemInfo(Item sourceItem, Item newItem)
 	{
@@ -597,7 +593,8 @@ public class BrokerService
 	 * @param player
 	 * @param itemUniqueId
 	 * @param count
-	 * @param price
+	 * @param PricePerItem
+	 * @param isSplitSell
 	 */
 	public void registerItem(Player player, int itemUniqueId, long count, long PricePerItem, boolean isSplitSell)
 	{
@@ -723,6 +720,7 @@ public class BrokerService
 	 * @param player
 	 * @param sortType
 	 * @param itemUniqueId
+	 * @return
 	 */
 	public long GetItemAveLowHigh(Player player, int sortType, int itemUniqueId)
 	{
@@ -751,7 +749,7 @@ public class BrokerService
 				AveItemPrice += item.getPiecePrice();
 			}
 		}
-		if ((itemsFound == null) || (itemsFound.size() <= 0))
+		if (itemsFound.size() <= 0)
 		{
 			return 0;
 		}
@@ -899,7 +897,8 @@ public class BrokerService
 	}
 	
 	/**
-	 * @param PlayerCommonData
+	 * @param playerCommonData
+	 * @return
 	 */
 	public long getCollectedMoney(PlayerCommonData playerCommonData)
 	{
@@ -1027,7 +1026,7 @@ public class BrokerService
 		}
 	}
 	
-	private void checkExpiredItems()
+	void checkExpiredItems()
 	{
 		final Map<Integer, BrokerItem> asmoBrokerItems = getRaceBrokerItems(Race.ASMODIANS);
 		final Map<Integer, BrokerItem> elyosBrokerItems = getRaceBrokerItems(Race.ELYOS);
@@ -1169,7 +1168,7 @@ public class BrokerService
 		 * @param kinahItem
 		 * @param playerId
 		 */
-		private BrokerOpSaveTask(BrokerItem brokerItem, Item item, Item kinahItem, int playerId)
+		BrokerOpSaveTask(BrokerItem brokerItem, Item item, Item kinahItem, int playerId)
 		{
 			this.brokerItem = brokerItem;
 			this.item = item;
@@ -1204,10 +1203,8 @@ public class BrokerService
 		}
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final BrokerService instance = new BrokerService();
 	}
 }

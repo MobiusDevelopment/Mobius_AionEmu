@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class DropDistributionService
 {
-	
 	private static Logger log = LoggerFactory.getLogger(DropDistributionService.class);
 	
 	public static DropDistributionService getInstance()
@@ -45,7 +44,12 @@ public class DropDistributionService
 	}
 	
 	/**
-	 * @param Called from CM_GROUP_LOOT to handle rolls
+	 * Called from CM_GROUP_LOOT to handle rolls
+	 * @param player
+	 * @param roll
+	 * @param itemId
+	 * @param npcId
+	 * @param index
 	 */
 	public void handleRoll(Player player, int roll, int itemId, int npcId, int index)
 	{
@@ -93,7 +97,12 @@ public class DropDistributionService
 	}
 	
 	/**
-	 * @param Called from CM_GROUP_LOOT to handle bids
+	 * Called from CM_GROUP_LOOT to handle bids
+	 * @param player
+	 * @param bid
+	 * @param itemId
+	 * @param npcId
+	 * @param index
 	 */
 	public void handleBid(Player player, long bid, int itemId, int npcId, int index)
 	{
@@ -146,7 +155,11 @@ public class DropDistributionService
 	}
 	
 	/**
-	 * @param Checks all players have Rolled or Bid then Distributes items accordingly
+	 * Checks all players have Rolled or Bid then Distributes items accordingly
+	 * @param player
+	 * @param luckyPlayer
+	 * @param itemId
+	 * @param npcId
 	 */
 	private void distributeLoot(Player player, long luckyPlayer, int itemId, int npcId)
 	{
@@ -235,11 +248,8 @@ public class DropDistributionService
 		}
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final DropDistributionService instance = new DropDistributionService();
 	}
-	
 }

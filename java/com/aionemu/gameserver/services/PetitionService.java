@@ -39,7 +39,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class PetitionService
 {
-	
 	private static Logger log = LoggerFactory.getLogger(PetitionService.class);
 	
 	private static SortedMap<Integer, Petition> registeredPetitions = new TreeMap<>();
@@ -214,11 +213,8 @@ public class PetitionService
 		}
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final PetitionService instance = new PetitionService();
 	}
-	
 }

@@ -21,9 +21,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.controllers.observer.ActionObserver;
 import com.aionemu.gameserver.controllers.observer.ObserverType;
@@ -52,24 +49,23 @@ import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldMap;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.WorldPosition;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
 /**
  * Created by wanke on 12/02/2017.
  */
-
 public class FFAService
 {
-	private static final Logger log = LoggerFactory.getLogger(FFAService.class);
+	// private static final Logger log = LoggerFactory.getLogger(FFAService.class);
 	private final Map<Integer, WorldPosition> previousLocations = new FastMap<>();
 	private WorldMapInstance activeInstance;
 	private final List<ArenaMap> maps = new ArrayList<>();
 	private ArenaMap activeMap = null;
-	private int incrementCounter = 0;
+	int incrementCounter = 0;
 	@SuppressWarnings("unused")
 	private final Map<Integer, StaticDoor> doors;
+	@SuppressWarnings("unused")
 	private Object UnsummonType;
 	private static boolean isAvailable;
 	
@@ -2456,57 +2452,45 @@ public class FFAService
 		pickArenaMap();
 		activeInstance = getWorldMap().getMainWorldMapInstance();
 		doors = activeInstance.getDoors();
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
 		{
-			@Override
-			public void run()
+			incrementCounter++;
+			if ((incrementCounter % 300) == 0)
 			{
-				incrementCounter++;
-				if ((incrementCounter % 300) == 0)
+				announcePlayerCount();
+			}
+			if ((incrementCounter % 180) == 0)
+			{
+				announcePlayerCount();
+			}
+			if ((incrementCounter % 900) == 0)
+			{
+				final int players = activeInstance.getPlayersInside().size();
+				if (players > 0)
 				{
-					announcePlayerCount();
-				}
-				if ((incrementCounter % 180) == 0)
-				{
-					announcePlayerCount();
-				}
-				if ((incrementCounter % 900) == 0)
-				{
-					final int players = activeInstance.getPlayersInside().size();
-					if (players > 0)
+					World.getInstance().doOnAllPlayers(pl ->
 					{
-						World.getInstance().doOnAllPlayers(new Visitor<Player>()
+						if (!isInArena(pl) && (pl.getBattleground() == null))
 						{
-							@Override
-							public void visit(Player pl)
-							{
-								if (!isInArena(pl) && (pl.getBattleground() == null))
-								{
-									PacketSendUtility.sendSys3Message(pl, "\uE005", "Join the <FFA> map in writing: .ffa and play with " + players + " other players right now!!!");
-								}
-							}
-						});
-					}
-				}
-				if ((incrementCounter % 600) == 0)
-				{ // Change map every 10 Min.
-					pickArenaMap();
-				}
-				if ((incrementCounter % 3600) == 0)
-				{
-					incrementCounter = 0;
-					World.getInstance().doOnAllPlayers(new Visitor<Player>()
-					{
-						@Override
-						public void visit(Player pl)
-						{
-							if (!isInArena(pl) && (pl.getBattleground() == null))
-							{
-								PacketSendUtility.sendSys3Message(pl, "\uE005", "Join the <FFA> area, and try to win AP/GP. Write: .ffa!!!");
-							}
+							PacketSendUtility.sendSys3Message(pl, "\uE005", "Join the <FFA> map in writing: .ffa and play with " + players + " other players right now!!!");
 						}
 					});
 				}
+			}
+			if ((incrementCounter % 600) == 0)
+			{ // Change map every 10 Min.
+				pickArenaMap();
+			}
+			if ((incrementCounter % 3600) == 0)
+			{
+				incrementCounter = 0;
+				World.getInstance().doOnAllPlayers(pl ->
+				{
+					if (!isInArena(pl) && (pl.getBattleground() == null))
+					{
+						PacketSendUtility.sendSys3Message(pl, "\uE005", "Join the <FFA> area, and try to win AP/GP. Write: .ffa!!!");
+					}
+				});
 			}
 		}, 1 * 1000, 1 * 1000);
 	}
@@ -2531,14 +2515,10 @@ public class FFAService
 			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = "Map loading, please wait...";
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(pl ->
 				{
-					@Override
-					public void visit(Player pl)
-					{
-						PacketSendUtility.sendMessage(pl, msg);
-						enterArena(pl, true);
-					}
+					PacketSendUtility.sendMessage(pl, msg);
+					enterArena(pl, true);
 				});
 			}
 		}
@@ -2547,24 +2527,17 @@ public class FFAService
 		return true;
 	}
 	
-	private WorldMap getWorldMap()
+	WorldMap getWorldMap()
 	{
 		return World.getInstance().getWorldMap(activeMap.getMapId());
 	}
 	
-	private void announcePlayerCount()
+	void announcePlayerCount()
 	{
 		for (WorldMapInstance instance : getWorldMap().getInstances())
 		{
 			final String msg = "[FFA] There are currently: " + instance.getPlayersInside().size() + " player's on the map.";
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player pl)
-				{
-					PacketSendUtility.sendMessage(pl, msg);
-				}
-			});
+			instance.doOnAllPlayers(pl -> PacketSendUtility.sendMessage(pl, msg));
 		}
 	}
 	
@@ -2573,14 +2546,7 @@ public class FFAService
 		for (WorldMapInstance instance : getWorldMap().getInstances())
 		{
 			final String msg = killer.getPlayerClass() + " has killed " + victim.getPlayerClass() + "!";
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player pl)
-				{
-					PacketSendUtility.sendSys3Message(pl, "\uE005", msg);
-				}
-			});
+			instance.doOnAllPlayers(pl -> PacketSendUtility.sendSys3Message(pl, "\uE005", msg));
 		}
 	}
 	
@@ -2599,20 +2565,16 @@ public class FFAService
 		{
 			rewardKiller(player, (Player) lastAttacker);
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (isInArena(player) && player.isFFA())
 			{
-				if (isInArena(player) && player.isFFA())
+				if (player.getLifeStats().isAlreadyDead())
 				{
-					if (player.getLifeStats().isAlreadyDead())
-					{
-						PlayerReviveService.ffaRevive(player);
-					}
-					final Float[] spawn = getRandomSpawn();
-					TeleportService2.teleportTo(player, getWorldMap().getMapId(), player.getInstanceId(), spawn[0], spawn[1], spawn[2]);
+					PlayerReviveService.ffaRevive(player);
 				}
+				final Float[] spawn = getRandomSpawn();
+				TeleportService2.teleportTo(player, getWorldMap().getMapId(), player.getInstanceId(), spawn[0], spawn[1], spawn[2]);
 			}
 		}, 6000);
 	}
@@ -2638,14 +2600,7 @@ public class FFAService
 		for (WorldMapInstance instance : getWorldMap().getInstances())
 		{
 			final String msg = killer.getName() + " has killed " + player.getName() + "!";
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player pl)
-				{
-					PacketSendUtility.sendSys3Message(pl, "\uE005", msg);
-				}
-			});
+			instance.doOnAllPlayers(pl -> PacketSendUtility.sendSys3Message(pl, "\uE005", msg));
 		}
 	}
 	
@@ -2656,14 +2611,7 @@ public class FFAService
 			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Dominating> !";
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player pl)
-					{
-						PacketSendUtility.sendSys3Message(pl, "\uE07e", msg);
-					}
-				});
+				instance.doOnAllPlayers(pl -> PacketSendUtility.sendSys3Message(pl, "\uE07e", msg));
 			}
 		}
 		if (player.getKillStreak() == 4)
@@ -2671,14 +2619,7 @@ public class FFAService
 			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Killing Spree> !";
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player pl)
-					{
-						PacketSendUtility.sendSys3Message(pl, "\uE07e", msg);
-					}
-				});
+				instance.doOnAllPlayers(pl -> PacketSendUtility.sendSys3Message(pl, "\uE07e", msg));
 			}
 		}
 		if (player.getKillStreak() == 6)
@@ -2686,14 +2627,7 @@ public class FFAService
 			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Monster Kill> !";
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player pl)
-					{
-						PacketSendUtility.sendSys3Message(pl, "\uE07e", msg);
-					}
-				});
+				instance.doOnAllPlayers(pl -> PacketSendUtility.sendSys3Message(pl, "\uE07e", msg));
 			}
 		}
 		if (player.getKillStreak() == 8)
@@ -2701,14 +2635,7 @@ public class FFAService
 			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Unstoppable> !";
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player pl)
-					{
-						PacketSendUtility.sendSys3Message(pl, "\uE07e", msg);
-					}
-				});
+				instance.doOnAllPlayers(pl -> PacketSendUtility.sendSys3Message(pl, "\uE07e", msg));
 			}
 		}
 		if (player.getKillStreak() == 10)
@@ -2716,14 +2643,7 @@ public class FFAService
 			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Godlike> !";
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player pl)
-					{
-						PacketSendUtility.sendSys3Message(pl, "\uE07e", msg);
-					}
-				});
+				instance.doOnAllPlayers(pl -> PacketSendUtility.sendSys3Message(pl, "\uE07e", msg));
 			}
 		}
 		if (player.getKillStreak() == 12)
@@ -2731,14 +2651,7 @@ public class FFAService
 			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Holy Shit> !";
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player pl)
-					{
-						PacketSendUtility.sendSys3Message(pl, "\uE07e", msg);
-					}
-				});
+				instance.doOnAllPlayers(pl -> PacketSendUtility.sendSys3Message(pl, "\uE07e", msg));
 			}
 		}
 		if (player.getKillStreak() == 14)
@@ -2746,14 +2659,7 @@ public class FFAService
 			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Ludicrous Kill> !";
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player pl)
-					{
-						PacketSendUtility.sendSys3Message(pl, "\uE07e", msg);
-					}
-				});
+				instance.doOnAllPlayers(pl -> PacketSendUtility.sendSys3Message(pl, "\uE07e", msg));
 			}
 		}
 		if ((player.getKillStreak() >= 16) && (player.getKillStreak() <= 999))
@@ -2761,14 +2667,7 @@ public class FFAService
 			for (WorldMapInstance instance : getWorldMap().getInstances())
 			{
 				final String msg = player.getName() + " <Wicked Sick> !";
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player pl)
-					{
-						PacketSendUtility.sendSys3Message(pl, "\uE07e", msg);
-					}
-				});
+				instance.doOnAllPlayers(pl -> PacketSendUtility.sendSys3Message(pl, "\uE07e", msg));
 			}
 		}
 	}
@@ -2809,34 +2708,30 @@ public class FFAService
 			}
 		};
 		player.getObserveController().attach(observer);
-		player.getController().addTask(TaskId.FFA, ThreadPoolManager.getInstance().schedule(new Runnable()
+		player.getController().addTask(TaskId.FFA, ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			player.getObserveController().removeObserver(observer);
+			if (player.getLifeStats().isAlreadyDead())
 			{
-				player.getObserveController().removeObserver(observer);
-				if (player.getLifeStats().isAlreadyDead())
-				{
-					PlayerReviveService.skillRevive(player);
-				}
-				if (player.isInGroup2())
-				{
-					PlayerGroupService.removePlayer(player);
-				}
-				if (player.isInAlliance2())
-				{
-					PlayerAllianceService.removePlayer(player);
-				}
-				player.getEffectController().unsetAbnormal(AbnormalState.SLEEP.getId());
-				player.getEffectController().updatePlayerEffectIcons();
-				player.getEffectController().broadCastEffects();
-				player.getCommonData().setDp(0);
-				player.setFFA(true);
-				analyseInstanceBalance();
-				final Float[] spawn = getRandomSpawn();
-				// sendEventPacket(StageType.PVP_STAGE_1, 0);
-				TeleportService2.teleportTo(player, getWorldMap().getMapId(), activeInstance.getInstanceId(), spawn[0], spawn[1], spawn[2]);
+				PlayerReviveService.skillRevive(player);
 			}
+			if (player.isInGroup2())
+			{
+				PlayerGroupService.removePlayer(player);
+			}
+			if (player.isInAlliance2())
+			{
+				PlayerAllianceService.removePlayer(player);
+			}
+			player.getEffectController().unsetAbnormal(AbnormalState.SLEEP.getId());
+			player.getEffectController().updatePlayerEffectIcons();
+			player.getEffectController().broadCastEffects();
+			player.getCommonData().setDp(0);
+			player.setFFA(true);
+			analyseInstanceBalance();
+			final Float[] spawn = getRandomSpawn();
+			// sendEventPacket(StageType.PVP_STAGE_1, 0);
+			TeleportService2.teleportTo(player, getWorldMap().getMapId(), activeInstance.getInstanceId(), spawn[0], spawn[1], spawn[2]);
 		}, 10 * 1000));
 	}
 	
@@ -2846,32 +2741,28 @@ public class FFAService
 		player.getEffectController().setAbnormal(AbnormalState.SLEEP.getId());
 		player.getEffectController().updatePlayerEffectIcons();
 		player.getEffectController().broadCastEffects();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (player.getLifeStats().isAlreadyDead())
 			{
-				if (player.getLifeStats().isAlreadyDead())
-				{
-					PlayerReviveService.skillRevive(player);
-				}
-				player.getEffectController().unsetAbnormal(AbnormalState.SLEEP.getId());
-				player.getEffectController().updatePlayerEffectIcons();
-				player.getEffectController().broadCastEffects();
-				player.setFFA(false);
-				if (pos != null)
-				{
-					TeleportService2.teleportTo(player, pos.getMapId(), pos.getX(), pos.getY(), pos.getZ());
-				}
-				else
-				{
-					TeleportService2.moveToBindLocation(player, true);
-				}
+				PlayerReviveService.skillRevive(player);
+			}
+			player.getEffectController().unsetAbnormal(AbnormalState.SLEEP.getId());
+			player.getEffectController().updatePlayerEffectIcons();
+			player.getEffectController().broadCastEffects();
+			player.setFFA(false);
+			if (pos != null)
+			{
+				TeleportService2.teleportTo(player, pos.getMapId(), pos.getX(), pos.getY(), pos.getZ());
+			}
+			else
+			{
+				TeleportService2.moveToBindLocation(player, true);
 			}
 		}, 10 * 1000);
 	}
 	
-	private Float[] getRandomSpawn()
+	Float[] getRandomSpawn()
 	{
 		return activeMap.getSpawns().get(Rnd.get(activeMap.getSpawns().size()));
 	}
@@ -2912,7 +2803,6 @@ public class FFAService
 		return SingletonHolder.instance;
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	public static class SingletonHolder
 	{
 		protected static final FFAService instance = new FFAService();
@@ -2923,7 +2813,6 @@ public class FFAService
 		private final int mapId;
 		private final List<Float[]> spawns;
 		private final int playerCap;
-		private final List<Integer> staticDoors = null;
 		
 		public ArenaMap(int mapId, int playerCap, List<Float[]> spawns)
 		{

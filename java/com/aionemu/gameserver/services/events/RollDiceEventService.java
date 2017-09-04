@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.services.events;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EVENT_DICE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -26,10 +23,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Ranastic
  */
-
 public class RollDiceEventService
 {
-	private static final Logger log = LoggerFactory.getLogger(RollDiceEventService.class);
+	// private static final Logger log = LoggerFactory.getLogger(RollDiceEventService.class);
 	
 	public void initEvent()
 	{
@@ -45,7 +41,6 @@ public class RollDiceEventService
 		return SingletonHolder.instance;
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
 		protected static final RollDiceEventService instance = new RollDiceEventService();

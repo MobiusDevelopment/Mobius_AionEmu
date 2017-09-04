@@ -254,7 +254,7 @@ public abstract class EffectTemplate
 	}
 	
 	/**
-	 * @param value
+	 * @param effect
 	 * @return
 	 */
 	protected ActionModifier getActionModifiers(Effect effect)
@@ -305,6 +305,7 @@ public abstract class EffectTemplate
 	 * @param effect
 	 * @param statEnum
 	 * @param spellStatus
+	 * @return
 	 */
 	public boolean calculate(Effect effect, StatEnum statEnum, SpellStatus spellStatus)
 	{
@@ -426,6 +427,8 @@ public abstract class EffectTemplate
 	
 	/**
 	 * Check all condition statuses for effect template
+	 * @param effect
+	 * @return
 	 */
 	private boolean effectConditionsCheck(Effect effect)
 	{
@@ -463,7 +466,7 @@ public abstract class EffectTemplate
 	 */
 	public void startEffect(Effect effect)
 	{
-	};
+	}
 	
 	/**
 	 * @param effect
@@ -507,6 +510,8 @@ public abstract class EffectTemplate
 	
 	/**
 	 * Check all sub effect condition statuses for effect
+	 * @param effect
+	 * @return
 	 */
 	private boolean effectSubConditionsCheck(Effect effect)
 	{

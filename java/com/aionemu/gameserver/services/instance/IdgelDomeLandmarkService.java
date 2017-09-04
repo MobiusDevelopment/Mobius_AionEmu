@@ -18,9 +18,6 @@ package com.aionemu.gameserver.services.instance;
 
 import java.util.Iterator;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.commons.services.CronService;
 import com.aionemu.gameserver.configs.main.AutoGroupConfig;
@@ -33,14 +30,12 @@ import com.aionemu.gameserver.world.World;
 
 import javolution.util.FastList;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class IdgelDomeLandmarkService
 {
-	private static final Logger log = LoggerFactory.getLogger(IdgelDomeLandmarkService.class);
+	// private static final Logger log = LoggerFactory.getLogger(IdgelDomeLandmarkService.class);
 	private boolean registerAvailable;
 	private final FastList<Integer> playersWithCooldown = FastList.newInstance();
 	public static final byte minLevel = 66, capLevel = 84;
@@ -51,38 +46,27 @@ public class IdgelDomeLandmarkService
 		if (AutoGroupConfig.IDGEL_DOME_LANDMARK_ENABLED)
 		{
 			// Idgel Dome Landmark MON-WED-FRI "11PM-00AM"
-			CronService.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					startLandmarkRegistration();
-				}
-			}, AutoGroupConfig.IDGEL_DOME_LANDMARK_SCHEDULE_MIDNIGHT);
+			CronService.getInstance().schedule(() -> startLandmarkRegistration(), AutoGroupConfig.IDGEL_DOME_LANDMARK_SCHEDULE_MIDNIGHT);
 		}
 	}
 	
 	private void startUregisterLandmarkTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			registerAvailable = false;
+			playersWithCooldown.clear();
+			AutoGroupService.getInstance().unRegisterInstance(maskId);
+			final Iterator<Player> iter = World.getInstance().getPlayersIterator();
+			while (iter.hasNext())
 			{
-				registerAvailable = false;
-				playersWithCooldown.clear();
-				AutoGroupService.getInstance().unRegisterInstance(maskId);
-				final Iterator<Player> iter = World.getInstance().getPlayersIterator();
-				while (iter.hasNext())
+				final Player player = iter.next();
+				if (player.getLevel() > minLevel)
 				{
-					final Player player = iter.next();
-					if (player.getLevel() > minLevel)
+					final int instanceMaskId = getInstanceMaskId(player);
+					if (instanceMaskId > 0)
 					{
-						final int instanceMaskId = getInstanceMaskId(player);
-						if (instanceMaskId > 0)
-						{
-							PacketSendUtility.sendPacket(player, new SM_AUTO_GROUP(instanceMaskId, SM_AUTO_GROUP.wnd_EntryIcon, true));
-						}
+						PacketSendUtility.sendPacket(player, new SM_AUTO_GROUP(instanceMaskId, SM_AUTO_GROUP.wnd_EntryIcon, true));
 					}
 				}
 			}

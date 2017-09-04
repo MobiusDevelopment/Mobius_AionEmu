@@ -32,7 +32,7 @@ public class CM_COALESCENCE extends AionClientPacket
 	private int ItemSize;
 	private int upgradedItemObjectId;
 	private int Items;
-	private List<Integer> ItemsList = new ArrayList();
+	private List<Integer> ItemsList = new ArrayList<>();
 	
 	public CM_COALESCENCE(int opcode, State state, State... restStates)
 	{

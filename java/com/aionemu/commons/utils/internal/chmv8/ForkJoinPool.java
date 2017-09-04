@@ -16,6 +16,7 @@
  */
 package com.aionemu.commons.utils.internal.chmv8;
 
+import java.security.PrivilegedExceptionAction;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -28,6 +29,8 @@ import java.util.concurrent.Future;
 import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.RunnableFuture;
 import java.util.concurrent.TimeUnit;
+
+import sun.misc.Unsafe;
 
 /**
  * An {@link ExecutorService} for running {@link ForkJoinTask}s. A {@code ForkJoinPool} provides the entry point for submissions from non-{@code ForkJoinTask} clients, as well as management and monitoring operations.
@@ -94,7 +97,6 @@ import java.util.concurrent.TimeUnit;
  */
 public class ForkJoinPool extends AbstractExecutorService
 {
-	
 	/*
 	 * Implementation Overview This class and its nested classes provide the main functionality and control for a set of worker threads: Submissions from non-FJ threads enter into submission queues. Workers take these tasks and typically split them into subtasks that may be stolen by other workers.
 	 * Preference rules give first priority to processing tasks from their own queues (LIFO or FIFO, depending on mode), then to randomized FIFO steals of tasks in other queues. WorkQueues ========== Most operations occur within work-stealing queues (in nested class WorkQueue). These are special
@@ -185,6 +187,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		/**
 		 * Returns a new worker thread operating in the given pool.
 		 * @param pool the pool this thread works in
+		 * @return
 		 * @throws NullPointerException if the pool is null
 		 */
 		ForkJoinWorkerThread newThread(ForkJoinPool pool);
@@ -319,6 +322,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Returns the approximate number of tasks in the queue.
+		 * @return
 		 */
 		final int queueSize()
 		{
@@ -328,6 +332,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Provides a more accurate estimate of whether this queue has any tasks than does queueSize, by checking whether a near-empty queue has at least one unclaimed task.
+		 * @return
 		 */
 		final boolean isEmpty()
 		{
@@ -371,6 +376,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Initializes or doubles the capacity of array. Call either by owner or with lock held -- it is OK for base, but not top, to move while resizings are in progress.
+		 * @return
 		 */
 		final ForkJoinTask<?>[] growArray()
 		{
@@ -403,6 +409,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Takes next task, if one exists, in LIFO order. Call only by owner in unshared queues.
+		 * @return
 		 */
 		final ForkJoinTask<?> pop()
 		{
@@ -432,6 +439,8 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Takes a task in FIFO order if b is base of queue and a task can be claimed without contention. Specialized versions appear in ForkJoinPool methods scan and tryHelpStealer.
+		 * @param b
+		 * @return
 		 */
 		final ForkJoinTask<?> pollAt(int b)
 		{
@@ -452,6 +461,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Takes next task, if one exists, in FIFO order.
+		 * @return
 		 */
 		final ForkJoinTask<?> poll()
 		{
@@ -484,6 +494,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Takes next task, if one exists, in order specified by mode.
+		 * @return
 		 */
 		final ForkJoinTask<?> nextLocalTask()
 		{
@@ -492,6 +503,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Returns next task, if one exists, in order specified by mode.
+		 * @return
 		 */
 		final ForkJoinTask<?> peek()
 		{
@@ -508,6 +520,8 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Pops the given task only if it is at the current top. (A shared version is available only via FJP.tryExternalUnpush)
+		 * @param t
+		 * @return
 		 */
 		final boolean tryUnpush(ForkJoinTask<?> t)
 		{
@@ -537,6 +551,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Computes next value for random probes. Scans don't require a very high quality generator, but also not a crummy one. Marsaglia xor-shift is cheap and works well enough. Note: This is manually inlined in its usages in ForkJoinPool to avoid writes inside busy scan loops.
+		 * @return
 		 */
 		final int nextSeed()
 		{
@@ -579,6 +594,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * If present, removes from queue and executes the given task, or any other cancelled task. Returns (true) on any CAS or consistency check failure so caller can retry.
+		 * @param task
 		 * @return false if no progress can be made, else true
 		 */
 		final boolean tryRemoveAndExec(ForkJoinTask<?> task)
@@ -645,6 +661,8 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Polls for and executes the given task or any other task in its CountedCompleter computation.
+		 * @param root
+		 * @return
 		 */
 		final boolean pollAndExecCC(ForkJoinTask<?> root)
 		{
@@ -669,10 +687,7 @@ public class ForkJoinPool extends AbstractExecutorService
 							t.doExec();
 							return true;
 						}
-						else
-						{
-							break; // restart
-						}
+						break; // restart
 					}
 					r = r.completer;
 					if (r == null)
@@ -686,6 +701,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Executes a top-level task and any local tasks remaining after execution.
+		 * @param t
 		 */
 		final void runTask(ForkJoinTask<?> t)
 		{
@@ -710,6 +726,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Executes a non-top-level (stolen) task.
+		 * @param t
 		 */
 		final void runSubtask(ForkJoinTask<?> t)
 		{
@@ -723,6 +740,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Returns true if owned and not known to be blocked.
+		 * @return
 		 */
 		final boolean isApparentlyUnblocked()
 		{
@@ -733,6 +751,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		// Unsafe mechanics
 		private static final sun.misc.Unsafe U;
+		@SuppressWarnings("unused")
 		private static final long QLOCK;
 		private static final int ABASE;
 		private static final int ASHIFT;
@@ -792,6 +811,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	
 	/**
 	 * Returns the next sequence number. We don't expect this to ever contend, so use simple builtin sync.
+	 * @return
 	 */
 	private static synchronized int nextPoolId()
 	{
@@ -906,6 +926,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	/**
 	 * Acquires the plock lock to protect worker array and related updates. This method is called only if an initial CAS on plock fails. This acts as a spinlock for normal cases, but falls back to builtin monitor to block when (rarely) needed. This would be a terrible idea for a highly contended
 	 * lock, but works fine as a more conservative alternative to a pure spinlock.
+	 * @return
 	 */
 	private int acquirePlock()
 	{
@@ -977,6 +998,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	
 	/**
 	 * Unlocks and signals any thread waiting for plock. Called only when CAS of seq value for unlock fails.
+	 * @param ps
 	 */
 	private void releasePlock(int ps)
 	{
@@ -1224,6 +1246,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	 * <p/>
 	 * Secondary initialization occurs when plock is zero, to create workQueue array and set plock to a valid value. This lock body must also be exception-free. Because the plock seq value can eventually wrap around zero, this method harmlessly fails to reinitialize if workQueues exists, while still
 	 * advancing plock.
+	 * @param task
 	 */
 	private void fullExternalPush(ForkJoinTask<?> task)
 	{
@@ -1354,6 +1377,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		final int hint = q.poolIndex;
 		long c;
 		int e, u, i;
+		@SuppressWarnings("unused")
 		final int n;
 		WorkQueue[] ws;
 		WorkQueue w;
@@ -1401,6 +1425,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	
 	/**
 	 * Top-level runloop for workers, called by ForkJoinWorkerThread.run.
+	 * @param w
 	 */
 	final void runWorker(WorkQueue w)
 	{
@@ -1485,7 +1510,7 @@ public class ForkJoinPool extends AbstractExecutorService
 			}
 			else if (plock != ps)
 			{
-				; // skip
+				// skip
 			}
 			else if ((e = (int) (c = ctl)) < 0)
 			{
@@ -1765,12 +1790,14 @@ public class ForkJoinPool extends AbstractExecutorService
 	 * Analog of tryHelpStealer for CountedCompleters. Tries to steal and run tasks within the target's computation.
 	 * @param task the task to join
 	 * @param mode if shared, exit upon completing any task if all workers are active
+	 * @return
 	 */
 	private int helpComplete(ForkJoinTask<?> task, int mode)
 	{
 		WorkQueue[] ws;
 		WorkQueue q;
 		int m;
+		@SuppressWarnings("unused")
 		final int n;
 		int s, u;
 		if ((task != null) && ((ws = workQueues) != null) && ((m = ws.length - 1) >= 0))
@@ -1802,6 +1829,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	
 	/**
 	 * Tries to decrement active count (sometimes implicitly) and possibly release or create a compensating worker in preparation for blocking. Fails on contention or termination. Otherwise, adds a new thread if no idle workers are available and pool may become starved.
+	 * @return
 	 */
 	final boolean tryCompensate()
 	{
@@ -1816,7 +1844,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		{
 			if ((e != 0) && ((i = e & SMASK) < ws.length) && ((w = ws[i]) != null) && (w.eventCount == (e | INT_SIGN)))
 			{
-				final long nc = (w.nextWait & E_MASK | (c & (AC_MASK | TC_MASK)));
+				final long nc = ((w.nextWait & E_MASK) | (c & (AC_MASK | TC_MASK)));
 				if (U.compareAndSwapLong(this, CTL, c, nc))
 				{
 					w.eventCount = (e + E_SEQ) & E_MASK;
@@ -1971,6 +1999,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	/**
 	 * Returns a (probably) non-empty steal queue, if one is found during a scan, else null. This method must be retried by caller if, by the time it tries to use the queue, it is empty.
 	 * @param r a (random) seed for scanning
+	 * @return
 	 */
 	private WorkQueue findNonEmptyStealQueue(int r)
 	{
@@ -2001,6 +2030,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	
 	/**
 	 * Runs tasks until {@code isQuiescent()}. We piggyback on active count ctl maintenance, but rather than blocking when tasks cannot be found, we rescan until all others cannot find tasks either.
+	 * @param w
 	 */
 	final void helpQuiescePool(WorkQueue w)
 	{
@@ -2060,6 +2090,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	
 	/**
 	 * Gets and removes a local or stolen task for the given worker.
+	 * @param w
 	 * @return a task, if available
 	 */
 	final ForkJoinTask<?> nextTaskFor(WorkQueue w)
@@ -2106,6 +2137,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	 * non-steady-state conditions (ramp-up, ramp-down, other stalls). We can detect many of these by further considering the number of "idle" threads, that are known to have zero queued tasks, so compensate by a factor of (#idle/#active) threads.
 	 * <p/>
 	 * Note: The approximation of #busy workers as #active workers is not very good under current signalling scheme, and should be improved.
+	 * @return
 	 */
 	static int getSurplusQueuedTaskCount()
 	{
@@ -2240,7 +2272,7 @@ public class ForkJoinPool extends AbstractExecutorService
 						Thread p;
 						while (((e = (int) (cc = ctl) & E_MASK) != 0) && ((i = e & SMASK) < n) && (i >= 0) && ((w = ws[i]) != null))
 						{
-							final long nc = (w.nextWait & E_MASK | ((cc + AC_UNIT) & AC_MASK) | (cc & (TC_MASK | STOP_BIT)));
+							final long nc = ((w.nextWait & E_MASK) | ((cc + AC_UNIT) & AC_MASK) | (cc & (TC_MASK | STOP_BIT)));
 							if ((w.eventCount == (e | INT_SIGN)) && U.compareAndSwapLong(this, CTL, cc, nc))
 							{
 								w.eventCount = (e + E_SEQ) & E_MASK;
@@ -2260,6 +2292,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	
 	/**
 	 * Returns common pool queue for a thread that has submitted at least one task.
+	 * @return
 	 */
 	static WorkQueue commonSubmitterQueue()
 	{
@@ -2272,6 +2305,8 @@ public class ForkJoinPool extends AbstractExecutorService
 	
 	/**
 	 * Tries to pop the given task from submitter's queue in common pool.
+	 * @param t
+	 * @return
 	 */
 	static boolean tryExternalUnpush(ForkJoinTask<?> t)
 	{
@@ -2301,6 +2336,8 @@ public class ForkJoinPool extends AbstractExecutorService
 	
 	/**
 	 * Tries to pop and run local tasks within the same computation as the given root. On failure, tries to help complete from other queues via helpComplete.
+	 * @param q
+	 * @param root
 	 */
 	private void externalHelpComplete(WorkQueue q, ForkJoinTask<?> root)
 	{
@@ -2364,6 +2401,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	
 	/**
 	 * Tries to help execute or signal availability of the given task from submitter's queue in common pool.
+	 * @param t
 	 */
 	static void externalHelpJoin(ForkJoinTask<?> t)
 	{
@@ -2371,10 +2409,12 @@ public class ForkJoinPool extends AbstractExecutorService
 		ForkJoinPool p;
 		WorkQueue[] ws;
 		WorkQueue q;
+		@SuppressWarnings("unused")
 		final WorkQueue w;
 		Submitter z;
 		ForkJoinTask<?>[] a;
 		int m, s;
+		@SuppressWarnings("unused")
 		final int n;
 		if ((t != null) && ((z = submitters.get()) != null) && ((p = common) != null) && ((ws = p.workQueues) != null) && ((m = ws.length - 1) >= 0) && ((q = ws[m & z.seed & SQMASK]) != null) && ((a = q.array) != null))
 		{
@@ -2467,6 +2507,10 @@ public class ForkJoinPool extends AbstractExecutorService
 	
 	/**
 	 * Constructor for common pool, suitable only for static initialization. Basically the same as above, but uses smallest possible initial footprint.
+	 * @param parallelism
+	 * @param ctl
+	 * @param factory
+	 * @param handler
 	 */
 	ForkJoinPool(int parallelism, long ctl, ForkJoinWorkerThreadFactory factory, Thread.UncaughtExceptionHandler handler)
 	{
@@ -2492,6 +2536,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	/**
 	 * Performs the given task, returning its result upon completion. If the computation encounters an unchecked Exception or Error, it is rethrown as the outcome of this invocation. Rethrown exceptions behave in the same way as regular exceptions, but, when possible, contain stack traces (as
 	 * displayed for example using {@code ex.printStackTrace()}) of both the current thread as well as the thread actually encountering the exception; minimally only the latter.
+	 * @param <T>
 	 * @param task the task
 	 * @return the task's result
 	 * @throws NullPointerException if the task is null
@@ -2547,6 +2592,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	
 	/**
 	 * Submits a ForkJoinTask for execution.
+	 * @param <T>
 	 * @param task the task to submit
 	 * @return the task
 	 * @throws NullPointerException if the task is null
@@ -3212,6 +3258,7 @@ public class ForkJoinPool extends AbstractExecutorService
 		
 		/**
 		 * Returns {@code true} if blocking is unnecessary.
+		 * @return
 		 */
 		boolean isReleasable();
 	}
@@ -3397,7 +3444,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	 * Returns a sun.misc.Unsafe. Suitable for use in a 3rd party package. Replace with a simple call to Unsafe.getUnsafe when integrating into a jdk.
 	 * @return a sun.misc.Unsafe
 	 */
-	private static sun.misc.Unsafe getUnsafe()
+	static sun.misc.Unsafe getUnsafe()
 	{
 		try
 		{
@@ -3408,23 +3455,19 @@ public class ForkJoinPool extends AbstractExecutorService
 		}
 		try
 		{
-			return java.security.AccessController.doPrivileged(new java.security.PrivilegedExceptionAction<sun.misc.Unsafe>()
+			return java.security.AccessController.doPrivileged((PrivilegedExceptionAction<Unsafe>) () ->
 			{
-				@Override
-				public sun.misc.Unsafe run() throws Exception
+				final Class<sun.misc.Unsafe> k = sun.misc.Unsafe.class;
+				for (java.lang.reflect.Field f : k.getDeclaredFields())
 				{
-					final Class<sun.misc.Unsafe> k = sun.misc.Unsafe.class;
-					for (java.lang.reflect.Field f : k.getDeclaredFields())
+					f.setAccessible(true);
+					final Object x = f.get(null);
+					if (k.isInstance(x))
 					{
-						f.setAccessible(true);
-						final Object x = f.get(null);
-						if (k.isInstance(x))
-						{
-							return k.cast(x);
-						}
+						return k.cast(x);
 					}
-					throw new NoSuchFieldError("the Unsafe");
 				}
+				throw new NoSuchFieldError("the Unsafe");
 			});
 		}
 		catch (java.security.PrivilegedActionException e)

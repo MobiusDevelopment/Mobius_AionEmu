@@ -74,7 +74,7 @@ public class HousingBidService extends AbstractCronTask
 	private static final FastMap<Integer, HouseBidEntry> houseBids;
 	private static final FastMap<Integer, HouseBidEntry> playerBids;
 	private static final FastMap<Integer, HouseBidEntry> bidsByIndex;
-	private static int timeProlonged = 0;
+	static int timeProlonged = 0;
 	private static boolean isDataLoaded = false;
 	private static HousingBidService instance;
 	
@@ -341,7 +341,7 @@ public class HousingBidService extends AbstractCronTask
 				log.warn("Missing Player with ID:" + winData.getValue() + " for Housebid on address:" + winData.getKey().getAddress());
 				continue;
 			}
-			final AuctionResult result = completeHouseSell(getPlayerData(winData.getValue()), wonHouse);
+			completeHouseSell(getPlayerData(winData.getValue()), wonHouse);
 		}
 		long time = System.currentTimeMillis();
 		if (LoggingConfig.LOG_HOUSE_AUCTION)
@@ -383,7 +383,7 @@ public class HousingBidService extends AbstractCronTask
 				MailFormatter.sendHouseAuctionMail(soldHouse, sellerPcd, AuctionResult.SUCCESS_SALE, time, returnKinah);
 				soldHouse.revokeOwner();
 			}
-			final AuctionResult result = completeHouseSell(buyerPcd, soldHouse);
+			completeHouseSell(buyerPcd, soldHouse);
 		}
 		for (Entry<HouseBidEntry, Integer> notSoldData : failedSell.entrySet())
 		{
@@ -638,11 +638,8 @@ public class HousingBidService extends AbstractCronTask
 		{
 			house.setStatus(noSale ? HouseStatus.NOSALE : HouseStatus.ACTIVE);
 		}
-		if (lastPlayer != null)
-		{
-			pcd = getPlayerData(lastPlayer);
-			MailFormatter.sendHouseAuctionMail(house, pcd, AuctionResult.CANCELED_BID, System.currentTimeMillis(), playerBid.getBidPrice());
-		}
+		pcd = getPlayerData(lastPlayer);
+		MailFormatter.sendHouseAuctionMail(house, pcd, AuctionResult.CANCELED_BID, System.currentTimeMillis(), playerBid.getBidPrice());
 		DAOManager.getDAO(HouseBidsDAO.class).deleteHouseBids(house.getObjectId());
 		house.save();
 		return true;
@@ -718,14 +715,7 @@ public class HousingBidService extends AbstractCronTask
 		if ((minutesLeft < 5) && (timeProlonged < 30))
 		{
 			timeProlonged += 5;
-			ThreadPoolManager.getInstance().execute(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					DAOManager.getDAO(ServerVariablesDAO.class).store("auctionProlonged", timeProlonged);
-				}
-			});
+			ThreadPoolManager.getInstance().execute(() -> DAOManager.getDAO(ServerVariablesDAO.class).store("auctionProlonged", timeProlonged));
 		}
 		else if (!isBiddingAllowed())
 		{
@@ -909,4 +899,4 @@ public class HousingBidService extends AbstractCronTask
 	{
 		return player.getLevel() >= getMinBidLevel(player, mapId, landId);
 	}
-};
+}

@@ -48,7 +48,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * Author Rinzler (Encom) You start at the top of the instance so you need to move down as fast as you can. If you die inside you will restart at the entrance of the instance. The tower has two floors, bridges on east and west are connected to the second floor and north and south bridges are
@@ -59,10 +58,10 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
  * the other bridges. Once you charge a shield with one of the items, a wave of monster will appear, help that person and kill the mobs. Protect the shield units from monsters while you charge them up to the 3rd phase. Once all shields are at the 3rd phase no more monsters will spawn. Activate The
  * Seal: When all shield units have been charged up to the 3rd phase, you can activate the passage to the final boss. When you activate the seal the final boss will appear and the fight will begin.
  **/
-
 @InstanceID(301230000)
 public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 {
+	@SuppressWarnings("unused")
 	private long startTime;
 	private Future<?> instanceTimer;
 	private Map<Integer, StaticDoor> doors;
@@ -165,14 +164,7 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 			sendMsgByRace(1402134, Race.PC_ALL, 1500000);
 			// The weakened protective shield will disappear in 1 minute.
 			sendMsgByRace(1402135, Race.PC_ALL, 1740000);
-			instanceTimer = ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					openFirstDoors();
-				}
-			}, 60000);
+			instanceTimer = ThreadPoolManager.getInstance().schedule((Runnable) () -> openFirstDoors(), 60000);
 		}
 		switch (player.getRace())
 		{
@@ -210,7 +202,6 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 284851: // Beritra Ranger.
@@ -237,14 +228,7 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				deleteNpc(702219);
 				deleteNpc(702220);
 				sendMsgByRace(1402139, Race.PC_ALL, 0);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(702010, 255.47392f, 293.56177f, 321.18497f, (byte) 89); // Eastern Shield Generator.
-					}
-				}, 10000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702010, 255.47392f, 293.56177f, 321.18497f, (byte) 89), 10000);
 				break;
 			case 702011: // Western Shield Generator.
 				despawnNpc(npc);
@@ -263,14 +247,7 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				deleteNpc(702222);
 				deleteNpc(702223);
 				sendMsgByRace(1402140, Race.PC_ALL, 0);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(702011, 255.55742f, 216.03549f, 321.21344f, (byte) 30); // Western Shield Generator.
-					}
-				}, 10000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702011, 255.55742f, 216.03549f, 321.21344f, (byte) 30), 10000);
 				break;
 			case 702012: // Southern Shield Generator.
 				despawnNpc(npc);
@@ -289,14 +266,7 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				deleteNpc(702225);
 				deleteNpc(702226);
 				sendMsgByRace(1402141, Race.PC_ALL, 0);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(702012, 294.20718f, 254.60352f, 295.7729f, (byte) 60); // Southern Shield Generator.
-					}
-				}, 10000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702012, 294.20718f, 254.60352f, 295.7729f, (byte) 60), 10000);
 				break;
 			case 702013: // Northern Shield Generator.
 				despawnNpc(npc);
@@ -315,14 +285,7 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				deleteNpc(702228);
 				deleteNpc(702229);
 				sendMsgByRace(1402142, Race.PC_ALL, 0);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(702013, 216.97739f, 254.4616f, 295.77353f, (byte) 0); // Northern Shield Generator.
-					}
-				}, 10000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702013, 216.97739f, 254.4616f, 295.77353f, (byte) 0), 10000);
 				break;
 			
 			/****************************
@@ -335,22 +298,8 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				if (getNpcs(233723).isEmpty() && getNpcs(233724).isEmpty() && getNpcs(233725).isEmpty())
 				{
 					sendMsgByRace(1402194, Race.PC_ALL, 2000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							spawn(702218, 255.56438f, 297.59488f, 321.39154f, (byte) 29);
-						}
-					}, 2000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							startWaveEasternShieldGenerator2();
-						}
-					}, 8000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702218, 255.56438f, 297.59488f, 321.39154f, (byte) 29), 2000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> startWaveEasternShieldGenerator2(), 8000);
 				}
 				break;
 			case 284841:
@@ -361,22 +310,8 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				{
 					sendMsgByRace(1402194, Race.PC_ALL, 2000);
 					sendMsgByRace(1402198, Race.PC_ALL, 10000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							spawn(702219, 255.56438f, 297.59488f, 321.39154f, (byte) 29);
-						}
-					}, 2000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							startWaveEasternShieldGenerator3();
-						}
-					}, 8000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702219, 255.56438f, 297.59488f, 321.39154f, (byte) 29), 2000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> startWaveEasternShieldGenerator3(), 8000);
 				}
 				break;
 			case 233734:
@@ -387,14 +322,10 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				{
 					sendMsgByRace(1402194, Race.PC_ALL, 2000);
 					sendMsgByRace(1402203, Race.PC_ALL, 20000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							isDoneEasternRaid = true;
-							spawn(702220, 255.56438f, 297.59488f, 321.39154f, (byte) 29);
-						}
+						isDoneEasternRaid = true;
+						spawn(702220, 255.56438f, 297.59488f, 321.39154f, (byte) 29);
 					}, 2000);
 				}
 				break;
@@ -409,22 +340,8 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				if (getNpcs(233726).isEmpty() && getNpcs(233727).isEmpty() && getNpcs(233728).isEmpty())
 				{
 					sendMsgByRace(1402195, Race.PC_ALL, 2000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							spawn(702221, 255.38777f, 212.00926f, 321.37292f, (byte) 90);
-						}
-					}, 2000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							startWaveWesternShieldGenerator2();
-						}
-					}, 8000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702221, 255.38777f, 212.00926f, 321.37292f, (byte) 90), 2000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> startWaveWesternShieldGenerator2(), 8000);
 				}
 				break;
 			case 284844:
@@ -435,22 +352,8 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				{
 					sendMsgByRace(1402195, Race.PC_ALL, 2000);
 					sendMsgByRace(1402199, Race.PC_ALL, 10000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							spawn(702222, 255.38777f, 212.00926f, 321.37292f, (byte) 90);
-						}
-					}, 2000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							startWaveWesternShieldGenerator3();
-						}
-					}, 8000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702222, 255.38777f, 212.00926f, 321.37292f, (byte) 90), 2000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> startWaveWesternShieldGenerator3(), 8000);
 				}
 				break;
 			case 233736:
@@ -461,14 +364,10 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				{
 					sendMsgByRace(1402195, Race.PC_ALL, 2000);
 					sendMsgByRace(1402203, Race.PC_ALL, 20000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							isDoneWesternRaid = true;
-							spawn(702223, 255.38777f, 212.00926f, 321.37292f, (byte) 90);
-						}
+						isDoneWesternRaid = true;
+						spawn(702223, 255.38777f, 212.00926f, 321.37292f, (byte) 90);
 					}, 2000);
 				}
 				break;
@@ -483,22 +382,8 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				if (getNpcs(233729).isEmpty() && getNpcs(233730).isEmpty() && getNpcs(233731).isEmpty())
 				{
 					sendMsgByRace(1402196, Race.PC_ALL, 2000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							spawn(702224, 298.13452f, 254.48087f, 295.93027f, (byte) 119);
-						}
-					}, 2000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							startWaveSouthernShieldGenerator2();
-						}
-					}, 8000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702224, 298.13452f, 254.48087f, 295.93027f, (byte) 119), 2000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> startWaveSouthernShieldGenerator2(), 8000);
 				}
 				break;
 			case 284847:
@@ -509,22 +394,8 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				{
 					sendMsgByRace(1402196, Race.PC_ALL, 2000);
 					sendMsgByRace(1402200, Race.PC_ALL, 10000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							spawn(702225, 298.13452f, 254.48087f, 295.93027f, (byte) 119);
-						}
-					}, 2000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							startWaveSouthernShieldGenerator3();
-						}
-					}, 8000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702225, 298.13452f, 254.48087f, 295.93027f, (byte) 119), 2000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> startWaveSouthernShieldGenerator3(), 8000);
 				}
 				break;
 			case 233738:
@@ -535,14 +406,10 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				{
 					sendMsgByRace(1402196, Race.PC_ALL, 2000);
 					sendMsgByRace(1402203, Race.PC_ALL, 20000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							isDoneSouthernRaid = true;
-							spawn(702226, 298.13452f, 254.48087f, 295.93027f, (byte) 119);
-						}
+						isDoneSouthernRaid = true;
+						spawn(702226, 298.13452f, 254.48087f, 295.93027f, (byte) 119);
 					}, 2000);
 				}
 				break;
@@ -557,22 +424,8 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				if (getNpcs(233720).isEmpty() && getNpcs(233721).isEmpty() && getNpcs(233722).isEmpty())
 				{
 					sendMsgByRace(1402197, Race.PC_ALL, 2000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							spawn(702227, 212.96484f, 254.4526f, 295.90784f, (byte) 60);
-						}
-					}, 2000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							startWaveNorthernShieldGenerator2();
-						}
-					}, 8000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702227, 212.96484f, 254.4526f, 295.90784f, (byte) 60), 2000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> startWaveNorthernShieldGenerator2(), 8000);
 				}
 				break;
 			case 284838:
@@ -583,22 +436,8 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				{
 					sendMsgByRace(1402197, Race.PC_ALL, 2000);
 					sendMsgByRace(1402201, Race.PC_ALL, 10000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							spawn(702228, 212.96484f, 254.4526f, 295.90784f, (byte) 60);
-						}
-					}, 2000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							startWaveNorthernShieldGenerator3();
-						}
-					}, 8000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702228, 212.96484f, 254.4526f, 295.90784f, (byte) 60), 2000);
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> startWaveNorthernShieldGenerator3(), 8000);
 				}
 				break;
 			case 233732:
@@ -609,14 +448,10 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 				{
 					sendMsgByRace(1402197, Race.PC_ALL, 2000);
 					sendMsgByRace(1402203, Race.PC_ALL, 20000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							isDoneNorthernRaid = true;
-							spawn(702229, 212.96484f, 254.4526f, 295.90784f, (byte) 60);
-						}
+						isDoneNorthernRaid = true;
+						spawn(702229, 212.96484f, 254.4526f, 295.90784f, (byte) 60);
 					}, 2000);
 				}
 				break;
@@ -669,39 +504,27 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 	 ****************************/
 	private void startWaveEasternShieldGenerator2()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(284842, 252.68709f, 333.483f, 325.59268f, (byte) 90), 252.4865f, 296.63016f, 321.30084f, false);
-				attackGenerator((Npc) spawn(284841, 255.74022f, 333.2762f, 325.49332f, (byte) 90), 255.46408f, 297.3457f, 321.3599f, false);
-				attackGenerator((Npc) spawn(284843, 258.72256f, 333.27713f, 325.58722f, (byte) 90), 258.93884f, 295.81204f, 321.29742f, false);
-			}
+			attackGenerator((Npc) spawn(284842, 252.68709f, 333.483f, 325.59268f, (byte) 90), 252.4865f, 296.63016f, 321.30084f, false);
+			attackGenerator((Npc) spawn(284841, 255.74022f, 333.2762f, 325.49332f, (byte) 90), 255.46408f, 297.3457f, 321.3599f, false);
+			attackGenerator((Npc) spawn(284843, 258.72256f, 333.27713f, 325.58722f, (byte) 90), 258.93884f, 295.81204f, 321.29742f, false);
 		}, 1000);
 	}
 	
 	private void startWaveEasternShieldGenerator3()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(233734, 252.68709f, 333.483f, 325.59268f, (byte) 90), 252.4865f, 296.63016f, 321.30084f, false);
-				attackGenerator((Npc) spawn(233735, 255.74022f, 333.2762f, 325.49332f, (byte) 90), 255.46408f, 297.3457f, 321.3599f, false);
-				attackGenerator((Npc) spawn(284850, 258.72256f, 333.27713f, 325.58722f, (byte) 90), 258.93884f, 295.81204f, 321.29742f, false);
-			}
+			attackGenerator((Npc) spawn(233734, 252.68709f, 333.483f, 325.59268f, (byte) 90), 252.4865f, 296.63016f, 321.30084f, false);
+			attackGenerator((Npc) spawn(233735, 255.74022f, 333.2762f, 325.49332f, (byte) 90), 255.46408f, 297.3457f, 321.3599f, false);
+			attackGenerator((Npc) spawn(284850, 258.72256f, 333.27713f, 325.58722f, (byte) 90), 258.93884f, 295.81204f, 321.29742f, false);
 		}, 6000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(233857, 252.68709f, 333.483f, 325.59268f, (byte) 90), 252.4865f, 296.63016f, 321.30084f, false);
-				attackGenerator((Npc) spawn(284851, 255.74022f, 333.2762f, 325.49332f, (byte) 90), 255.46408f, 297.3457f, 321.3599f, false);
-				attackGenerator((Npc) spawn(233857, 258.72256f, 333.27713f, 325.58722f, (byte) 90), 258.93884f, 295.81204f, 321.29742f, false);
-			}
+			attackGenerator((Npc) spawn(233857, 252.68709f, 333.483f, 325.59268f, (byte) 90), 252.4865f, 296.63016f, 321.30084f, false);
+			attackGenerator((Npc) spawn(284851, 255.74022f, 333.2762f, 325.49332f, (byte) 90), 255.46408f, 297.3457f, 321.3599f, false);
+			attackGenerator((Npc) spawn(233857, 258.72256f, 333.27713f, 325.58722f, (byte) 90), 258.93884f, 295.81204f, 321.29742f, false);
 		}, 23000);
 	}
 	
@@ -710,39 +533,27 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 	 ****************************/
 	private void startWaveWesternShieldGenerator2()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(284844, 258.37912f, 176.03621f, 325.59268f, (byte) 30), 258.4031f, 212.42247f, 321.33325f, false);
-				attackGenerator((Npc) spawn(284845, 255.55922f, 176.17963f, 325.49332f, (byte) 29), 255.8037f, 212.23003f, 321.34384f, false);
-				attackGenerator((Npc) spawn(284846, 252.49738f, 176.27466f, 325.52942f, (byte) 29), 253.00607f, 213.30444f, 321.28207f, false);
-			}
+			attackGenerator((Npc) spawn(284844, 258.37912f, 176.03621f, 325.59268f, (byte) 30), 258.4031f, 212.42247f, 321.33325f, false);
+			attackGenerator((Npc) spawn(284845, 255.55922f, 176.17963f, 325.49332f, (byte) 29), 255.8037f, 212.23003f, 321.34384f, false);
+			attackGenerator((Npc) spawn(284846, 252.49738f, 176.27466f, 325.52942f, (byte) 29), 253.00607f, 213.30444f, 321.28207f, false);
 		}, 1000);
 	}
 	
 	private void startWaveWesternShieldGenerator3()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(233736, 258.37912f, 176.03621f, 325.59268f, (byte) 30), 258.4031f, 212.42247f, 321.33325f, false);
-				attackGenerator((Npc) spawn(233737, 255.55922f, 176.17963f, 325.49332f, (byte) 29), 255.8037f, 212.23003f, 321.34384f, false);
-				attackGenerator((Npc) spawn(284852, 252.49738f, 176.27466f, 325.52942f, (byte) 29), 253.00607f, 213.30444f, 321.28207f, false);
-			}
+			attackGenerator((Npc) spawn(233736, 258.37912f, 176.03621f, 325.59268f, (byte) 30), 258.4031f, 212.42247f, 321.33325f, false);
+			attackGenerator((Npc) spawn(233737, 255.55922f, 176.17963f, 325.49332f, (byte) 29), 255.8037f, 212.23003f, 321.34384f, false);
+			attackGenerator((Npc) spawn(284852, 252.49738f, 176.27466f, 325.52942f, (byte) 29), 253.00607f, 213.30444f, 321.28207f, false);
 		}, 6000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(233858, 258.37912f, 176.03621f, 325.59268f, (byte) 30), 258.4031f, 212.42247f, 321.33325f, false);
-				attackGenerator((Npc) spawn(284853, 255.55922f, 176.17963f, 325.49332f, (byte) 29), 255.8037f, 212.23003f, 321.34384f, false);
-				attackGenerator((Npc) spawn(233858, 252.49738f, 176.27466f, 325.52942f, (byte) 29), 253.00607f, 213.30444f, 321.28207f, false);
-			}
+			attackGenerator((Npc) spawn(233858, 258.37912f, 176.03621f, 325.59268f, (byte) 30), 258.4031f, 212.42247f, 321.33325f, false);
+			attackGenerator((Npc) spawn(284853, 255.55922f, 176.17963f, 325.49332f, (byte) 29), 255.8037f, 212.23003f, 321.34384f, false);
+			attackGenerator((Npc) spawn(233858, 252.49738f, 176.27466f, 325.52942f, (byte) 29), 253.00607f, 213.30444f, 321.28207f, false);
 		}, 23000);
 	}
 	
@@ -751,39 +562,27 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 	 *****************************/
 	private void startWaveSouthernShieldGenerator2()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(284847, 337.93338f, 257.88702f, 292.43845f, (byte) 60), 298.06833f, 257.82462f, 295.92047f, false);
-				attackGenerator((Npc) spawn(284848, 338.05304f, 254.6424f, 292.3325f, (byte) 60), 298.272f, 254.66296f, 295.94693f, false);
-				attackGenerator((Npc) spawn(284849, 338.13315f, 251.34738f, 292.48932f, (byte) 59), 297.2915f, 252.06613f, 295.854f, false);
-			}
+			attackGenerator((Npc) spawn(284847, 337.93338f, 257.88702f, 292.43845f, (byte) 60), 298.06833f, 257.82462f, 295.92047f, false);
+			attackGenerator((Npc) spawn(284848, 338.05304f, 254.6424f, 292.3325f, (byte) 60), 298.272f, 254.66296f, 295.94693f, false);
+			attackGenerator((Npc) spawn(284849, 338.13315f, 251.34738f, 292.48932f, (byte) 59), 297.2915f, 252.06613f, 295.854f, false);
 		}, 1000);
 	}
 	
 	private void startWaveSouthernShieldGenerator3()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(233738, 337.93338f, 257.88702f, 292.43845f, (byte) 60), 298.06833f, 257.82462f, 295.92047f, false);
-				attackGenerator((Npc) spawn(233739, 338.05304f, 254.6424f, 292.3325f, (byte) 60), 298.272f, 254.66296f, 295.94693f, false);
-				attackGenerator((Npc) spawn(284854, 338.13315f, 251.34738f, 292.48932f, (byte) 59), 297.2915f, 252.06613f, 295.854f, false);
-			}
+			attackGenerator((Npc) spawn(233738, 337.93338f, 257.88702f, 292.43845f, (byte) 60), 298.06833f, 257.82462f, 295.92047f, false);
+			attackGenerator((Npc) spawn(233739, 338.05304f, 254.6424f, 292.3325f, (byte) 60), 298.272f, 254.66296f, 295.94693f, false);
+			attackGenerator((Npc) spawn(284854, 338.13315f, 251.34738f, 292.48932f, (byte) 59), 297.2915f, 252.06613f, 295.854f, false);
 		}, 6000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(233880, 337.93338f, 257.88702f, 292.43845f, (byte) 60), 298.06833f, 257.82462f, 295.92047f, false);
-				attackGenerator((Npc) spawn(284855, 338.05304f, 254.6424f, 292.3325f, (byte) 60), 298.272f, 254.66296f, 295.94693f, false);
-				attackGenerator((Npc) spawn(233880, 338.13315f, 251.34738f, 292.48932f, (byte) 59), 297.2915f, 252.06613f, 295.854f, false);
-			}
+			attackGenerator((Npc) spawn(233880, 337.93338f, 257.88702f, 292.43845f, (byte) 60), 298.06833f, 257.82462f, 295.92047f, false);
+			attackGenerator((Npc) spawn(284855, 338.05304f, 254.6424f, 292.3325f, (byte) 60), 298.272f, 254.66296f, 295.94693f, false);
+			attackGenerator((Npc) spawn(233880, 338.13315f, 251.34738f, 292.48932f, (byte) 59), 297.2915f, 252.06613f, 295.854f, false);
 		}, 23000);
 	}
 	
@@ -792,39 +591,27 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 	 *****************************/
 	private void startWaveNorthernShieldGenerator2()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(284838, 174.50981f, 251.38982f, 292.43088f, (byte) 0), 211.6748f, 252.11331f, 295.82132f, false);
-				attackGenerator((Npc) spawn(284839, 174.9973f, 254.4739f, 292.3325f, (byte) 0), 211.53903f, 254.39848f, 295.99915f, false);
-				attackGenerator((Npc) spawn(284840, 174.84029f, 257.80832f, 292.4389f, (byte) 0), 211.44466f, 257.45963f, 295.74582f, false);
-			}
+			attackGenerator((Npc) spawn(284838, 174.50981f, 251.38982f, 292.43088f, (byte) 0), 211.6748f, 252.11331f, 295.82132f, false);
+			attackGenerator((Npc) spawn(284839, 174.9973f, 254.4739f, 292.3325f, (byte) 0), 211.53903f, 254.39848f, 295.99915f, false);
+			attackGenerator((Npc) spawn(284840, 174.84029f, 257.80832f, 292.4389f, (byte) 0), 211.44466f, 257.45963f, 295.74582f, false);
 		}, 1000);
 	}
 	
 	private void startWaveNorthernShieldGenerator3()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(233732, 174.50981f, 251.38982f, 292.43088f, (byte) 0), 211.6748f, 252.11331f, 295.82132f, false);
-				attackGenerator((Npc) spawn(233733, 174.9973f, 254.4739f, 292.3325f, (byte) 0), 211.53903f, 254.39848f, 295.99915f, false);
-				attackGenerator((Npc) spawn(284856, 174.84029f, 257.80832f, 292.4389f, (byte) 0), 211.44466f, 257.45963f, 295.74582f, false);
-			}
+			attackGenerator((Npc) spawn(233732, 174.50981f, 251.38982f, 292.43088f, (byte) 0), 211.6748f, 252.11331f, 295.82132f, false);
+			attackGenerator((Npc) spawn(233733, 174.9973f, 254.4739f, 292.3325f, (byte) 0), 211.53903f, 254.39848f, 295.99915f, false);
+			attackGenerator((Npc) spawn(284856, 174.84029f, 257.80832f, 292.4389f, (byte) 0), 211.44466f, 257.45963f, 295.74582f, false);
 		}, 6000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(233881, 174.50981f, 251.38982f, 292.43088f, (byte) 0), 211.6748f, 252.11331f, 295.82132f, false);
-				attackGenerator((Npc) spawn(284857, 174.9973f, 254.4739f, 292.3325f, (byte) 0), 211.53903f, 254.39848f, 295.99915f, false);
-				attackGenerator((Npc) spawn(233881, 174.84029f, 257.80832f, 292.4389f, (byte) 0), 211.44466f, 257.45963f, 295.74582f, false);
-			}
+			attackGenerator((Npc) spawn(233881, 174.50981f, 251.38982f, 292.43088f, (byte) 0), 211.6748f, 252.11331f, 295.82132f, false);
+			attackGenerator((Npc) spawn(284857, 174.9973f, 254.4739f, 292.3325f, (byte) 0), 211.53903f, 254.39848f, 295.99915f, false);
+			attackGenerator((Npc) spawn(233881, 174.84029f, 257.80832f, 292.4389f, (byte) 0), 211.44466f, 257.45963f, 295.74582f, false);
 		}, 23000);
 	}
 	
@@ -870,36 +657,18 @@ public class IlluminaryObeliskInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void sendMovie(Player player, int movie)

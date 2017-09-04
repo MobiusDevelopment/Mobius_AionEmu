@@ -20,6 +20,7 @@ import java.io.Serializable;
 import java.lang.ref.ReferenceQueue;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Constructor;
+import java.security.PrivilegedExceptionAction;
 import java.util.Collection;
 import java.util.List;
 import java.util.RandomAccess;
@@ -34,6 +35,8 @@ import java.util.concurrent.RunnableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.locks.ReentrantLock;
+
+import sun.misc.Unsafe;
 
 /**
  * Abstract base class for tasks that run within a {@link ForkJoinPool}. A {@code ForkJoinTask} is a thread-like entity that is much lighter weight than a normal thread. Huge numbers of tasks and subtasks may be hosted by a small number of actual threads in a ForkJoinPool, at the price of some usage
@@ -97,6 +100,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * <p/>
  * ForkJoinTasks are {@code Serializable}, which enables them to be used in extensions such as remote execution frameworks. It is sensible to serialize tasks only before or after, but not during, execution. Serialization is not relied on during execution itself.
  * @author Doug Lea
+ * @param <V>
  * @since 1.7
  */
 public abstract class ForkJoinTask<V> implements Future<V>, Serializable
@@ -231,6 +235,8 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * Blocks a non-worker-thread until completion or interruption.
+	 * @return
+	 * @throws InterruptedException
 	 */
 	private int externalInterruptibleAwaitDone() throws InterruptedException
 	{
@@ -292,7 +298,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	 */
 	private static final ExceptionNode[] exceptionTable;
 	private static final ReentrantLock exceptionTableLock;
-	private static final ReferenceQueue<Object> exceptionTableRefQueue;
+	static final ReferenceQueue<Object> exceptionTableRefQueue;
 	
 	/**
 	 * Fixed capacity for exceptionTable.
@@ -321,6 +327,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * Records exception and sets status.
+	 * @param ex
 	 * @return status on exit
 	 */
 	final int recordExceptionalCompletion(Throwable ex)
@@ -360,6 +367,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * Records exception and possibly propagates.
+	 * @param ex
 	 * @return status on exit
 	 */
 	private int setExceptionalCompletion(Throwable ex)
@@ -374,6 +382,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * Hook for exception propagation support for tasks with completers.
+	 * @param ex
 	 */
 	void internalPropagateException(Throwable ex)
 	{
@@ -381,6 +390,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * Cancels, ignoring any exceptions thrown by cancel. Used during worker and pool shutdown. Cancel is spec'ed not to throw any exceptions, but if it does anyway, we have no recourse during shutdown, so guard against this case.
+	 * @param t
 	 */
 	static void cancelIgnoringExceptions(ForkJoinTask<?> t)
 	{
@@ -561,6 +571,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * A version of "sneaky throw" to relay exceptions
+	 * @param ex
 	 */
 	static void rethrow(Throwable ex)
 	{
@@ -580,6 +591,9 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * The sneaky part of sneaky throw, relying on generics limitations to evade compiler complaints about rethrowing unchecked exceptions
+	 * @param t
+	 * @param <T>
+	 * @throws T
 	 */
 	@SuppressWarnings("unchecked")
 	static <T extends Throwable> void uncheckedThrow(Throwable t) throws T
@@ -592,6 +606,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * Throws exception, if any, associated with the given status.
+	 * @param s
 	 */
 	private void reportException(int s)
 	{
@@ -735,6 +750,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	 * Forks all tasks in the specified collection, returning when {@code isDone} holds for each task or an (unchecked) exception is encountered, in which case the exception is rethrown. If more than one task encounters an exception, then this method throws any one of these exceptions. If any task
 	 * encounters an exception, others may be cancelled. However, the execution status of individual tasks is not guaranteed upon exceptional return. The status of each task may be obtained using {@link #getException()} and related methods to check if they have been cancelled, completed normally or
 	 * exceptionally, or left unprocessed.
+	 * @param <T>
 	 * @param tasks the collection of tasks
 	 * @return the tasks argument, to simplify usage
 	 * @throws NullPointerException if tasks or any element are null
@@ -746,7 +762,6 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 			invokeAll(tasks.toArray(new ForkJoinTask<?>[tasks.size()]));
 			return tasks;
 		}
-		@SuppressWarnings("unchecked")
 		final List<? extends ForkJoinTask<?>> ts = (List<? extends ForkJoinTask<?>>) tasks;
 		Throwable ex = null;
 		final int last = ts.size() - 1;
@@ -1263,6 +1278,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * Adaptor for Runnables. This implements RunnableFuture to be compliant with AbstractExecutorService constraints when used in ForkJoinPool.
+	 * @param <T>
 	 */
 	static final class AdaptedRunnable<T>extends ForkJoinTask<T> implements RunnableFuture<T>
 	{
@@ -1354,6 +1370,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * Adaptor for Callables
+	 * @param <T>
 	 */
 	static final class AdaptedCallable<T>extends ForkJoinTask<T> implements RunnableFuture<T>
 	{
@@ -1425,6 +1442,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * Returns a new {@code ForkJoinTask} that performs the {@code run} method of the given {@code Runnable} as its action, and returns the given result upon {@link #join}.
+	 * @param <T>
 	 * @param runnable the runnable action
 	 * @param result the result upon completion
 	 * @return the task
@@ -1436,6 +1454,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * Returns a new {@code ForkJoinTask} that performs the {@code call} method of the given {@code Callable} as its action, and returns its result upon {@link #join}, translating any checked exceptions encountered into {@code RuntimeException}.
+	 * @param <T>
 	 * @param callable the callable action
 	 * @return the task
 	 */
@@ -1449,6 +1468,8 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * Saves this task to a stream (that is, serializes it).
+	 * @param s
+	 * @throws java.io.IOException
 	 * @serialData the current run status and the exception thrown during execution, or {@code null} if none
 	 */
 	private void writeObject(java.io.ObjectOutputStream s) throws java.io.IOException
@@ -1459,6 +1480,9 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	
 	/**
 	 * Reconstitutes this task from a stream (that is, deserializes it).
+	 * @param s
+	 * @throws java.io.IOException
+	 * @throws ClassNotFoundException
 	 */
 	private void readObject(java.io.ObjectInputStream s) throws java.io.IOException, ClassNotFoundException
 	{
@@ -1506,23 +1530,19 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 		}
 		try
 		{
-			return java.security.AccessController.doPrivileged(new java.security.PrivilegedExceptionAction<sun.misc.Unsafe>()
+			return java.security.AccessController.doPrivileged((PrivilegedExceptionAction<Unsafe>) () ->
 			{
-				@Override
-				public sun.misc.Unsafe run() throws Exception
+				final Class<sun.misc.Unsafe> k = sun.misc.Unsafe.class;
+				for (java.lang.reflect.Field f : k.getDeclaredFields())
 				{
-					final Class<sun.misc.Unsafe> k = sun.misc.Unsafe.class;
-					for (java.lang.reflect.Field f : k.getDeclaredFields())
+					f.setAccessible(true);
+					final Object x = f.get(null);
+					if (k.isInstance(x))
 					{
-						f.setAccessible(true);
-						final Object x = f.get(null);
-						if (k.isInstance(x))
-						{
-							return k.cast(x);
-						}
+						return k.cast(x);
 					}
-					throw new NoSuchFieldError("the Unsafe");
 				}
+				throw new NoSuchFieldError("the Unsafe");
 			});
 		}
 		catch (java.security.PrivilegedActionException e)

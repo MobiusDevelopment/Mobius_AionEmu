@@ -68,21 +68,21 @@ public class ActionObserver
 	
 	public void moved()
 	{
-	};
+	}
 	
 	/**
 	 * @param creature
 	 */
 	public void attacked(Creature creature)
 	{
-	};
+	}
 	
 	/**
 	 * @param creature
 	 */
 	public void attack(Creature creature)
 	{
-	};
+	}
 	
 	/**
 	 * @param item
@@ -90,7 +90,7 @@ public class ActionObserver
 	 */
 	public void equip(Item item, Player owner)
 	{
-	};
+	}
 	
 	/**
 	 * @param item
@@ -98,21 +98,21 @@ public class ActionObserver
 	 */
 	public void unequip(Item item, Player owner)
 	{
-	};
+	}
 	
 	/**
 	 * @param skill
 	 */
 	public void skilluse(Skill skill)
 	{
-	};
+	}
 	
 	/**
 	 * @param creature
 	 */
 	public void died(Creature creature)
 	{
-	};
+	}
 	
 	/**
 	 * @param creature
@@ -120,33 +120,30 @@ public class ActionObserver
 	 */
 	public void dotattacked(Creature creature, Effect dotEffect)
 	{
-	};
+	}
 	
 	/**
 	 * @param item
 	 */
 	public void itemused(Item item)
 	{
-	};
+	}
 	
 	/**
 	 * @param npc
 	 */
 	public void npcdialogrequested(Npc npc)
 	{
-	};
+	}
 	
 	/**
 	 * @param state
 	 */
 	public void abnormalsetted(AbnormalState state)
 	{
-	};
+	}
 	
-	/**
-	 * @param
-	 */
 	public void summonrelease()
 	{
-	};
+	}
 }

@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class RelinquishCraftStatus
 {
-	
 	private static final int expertMinValue = 399;
 	private static final int expertMaxValue = 499;
 	private static final int masterMinValue = 499;
@@ -211,7 +210,6 @@ public class RelinquishCraftStatus
 		return skillMessageId;
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
 		protected static final RelinquishCraftStatus instance = new RelinquishCraftStatus();

@@ -49,7 +49,7 @@ public class ChatProcessor implements GameEngine
 	private Map<String, ChatCommand> commands = new FastMap<>();
 	private final Map<String, Byte> accessLevel = new FastMap<>();
 	private ScriptManager sm = new ScriptManager();
-	private Exception loadException = null;
+	Exception loadException = null;
 	
 	public static ChatProcessor getInstance()
 	{
@@ -108,24 +108,19 @@ public class ChatProcessor implements GameEngine
 		for (int i = 0; i < files.length; i++)
 		{
 			final int index = i;
-			ThreadPoolManager.getInstance().execute(new Runnable()
+			ThreadPoolManager.getInstance().execute(() ->
 			{
-				
-				@Override
-				public void run()
+				try
 				{
-					try
-					{
-						scriptManager.load(files[index]);
-					}
-					catch (Exception e)
-					{
-						loadException = e;
-					}
-					finally
-					{
-						loadLatch.countDown();
-					}
+					scriptManager.load(files[index]);
+				}
+				catch (Exception e)
+				{
+					loadException = e;
+				}
+				finally
+				{
+					loadLatch.countDown();
 				}
 			});
 		}

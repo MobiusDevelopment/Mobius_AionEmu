@@ -24,10 +24,6 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.aionemu.commons.objects.filter.ObjectFilter;
 import com.aionemu.gameserver.configs.main.DropConfig;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.DescriptionId;
@@ -60,15 +56,13 @@ import com.aionemu.gameserver.taskmanager.tasks.TemporaryTradeTimeTask;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author ATracer, xTz
  */
 public class DropService
 {
-	
-	private static final Logger log = LoggerFactory.getLogger(DropService.class);
+	// private static final Logger log = LoggerFactory.getLogger(DropService.class);
 	
 	public static DropService getInstance()
 	{
@@ -80,21 +74,16 @@ public class DropService
 	 */
 	public void scheduleFreeForAll(int npcUniqueId)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			
-			@Override
-			public void run()
+			final DropNpc dropNpc = DropRegistrationService.getInstance().getDropRegistrationMap().get(npcUniqueId);
+			if (dropNpc != null)
 			{
-				final DropNpc dropNpc = DropRegistrationService.getInstance().getDropRegistrationMap().get(npcUniqueId);
-				if (dropNpc != null)
+				DropRegistrationService.getInstance().getDropRegistrationMap().get(npcUniqueId).startFreeForAll();
+				final VisibleObject npc = World.getInstance().findVisibleObject(npcUniqueId);
+				if ((npc != null) && npc.isSpawned())
 				{
-					DropRegistrationService.getInstance().getDropRegistrationMap().get(npcUniqueId).startFreeForAll();
-					final VisibleObject npc = World.getInstance().findVisibleObject(npcUniqueId);
-					if ((npc != null) && npc.isSpawned())
-					{
-						PacketSendUtility.broadcastPacket(npc, new SM_LOOT_STATUS(npcUniqueId, 0));
-					}
+					PacketSendUtility.broadcastPacket(npc, new SM_LOOT_STATUS(npcUniqueId, 0));
 				}
 			}
 		}, 240000);
@@ -235,15 +224,7 @@ public class DropService
 			}
 			else
 			{
-				PacketSendUtility.broadcastPacket(player, new SM_LOOT_STATUS(npcId, 0), true, new ObjectFilter<Player>()
-				{
-					
-					@Override
-					public boolean acceptObject(Player object)
-					{
-						return dropNpc.containsKey(object.getObjectId());
-					}
-				});
+				PacketSendUtility.broadcastPacket(player, new SM_LOOT_STATUS(npcId, 0), true, object -> dropNpc.containsKey(object.getObjectId()));
 			}
 		}
 	}
@@ -299,15 +280,12 @@ public class DropService
 					}
 					return false;
 				}
-				else
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LOOT_ALREADY_DISTRIBUTING_ITEM(new DescriptionId(ItemInfoService.getNameId(itemId))));
+				if (!containDropItem)
 				{
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LOOT_ALREADY_DISTRIBUTING_ITEM(new DescriptionId(ItemInfoService.getNameId(itemId))));
-					if (!containDropItem)
-					{
-						lootGrouRules.addItemToBeDistributed(requestedItem);
-					}
-					return false;
+					lootGrouRules.addItemToBeDistributed(requestedItem);
 				}
+				return false;
 			}
 		}
 		return true;
@@ -584,7 +562,10 @@ public class DropService
 	}
 	
 	/**
-	 * @param Displays messages when item gained via ROLLED
+	 * Displays messages when item gained via ROLLED
+	 * @param player
+	 * @param itemId
+	 * @param npcId
 	 */
 	private void winningRollActions(Player player, int itemId, int npcId)
 	{
@@ -603,7 +584,10 @@ public class DropService
 	}
 	
 	/**
-	 * @param Displays messages/removes and shares kinah when item gained via BID
+	 * Displays messages/removes and shares kinah when item gained via BID
+	 * @param player
+	 * @param npcId
+	 * @param highestValue
 	 */
 	private void winningBidActions(Player player, int npcId, long highestValue)
 	{
@@ -663,15 +647,7 @@ public class DropService
 		
 		if (dropNpc.containsKey(player.getObjectId()) || dropNpc.isFreeForAll())
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				
-				@Override
-				public void run()
-				{
-					PacketSendUtility.sendPacket(player, new SM_LOOT_STATUS(id, 0));
-				}
-			}, 5000);
+			ThreadPoolManager.getInstance().schedule(() -> PacketSendUtility.sendPacket(player, new SM_LOOT_STATUS(id, 0)), 5000);
 		}
 	}
 	
@@ -687,19 +663,15 @@ public class DropService
 				final int pRaceId = player.getRace().getRaceId();
 				final int pMapId = player.getWorldId();
 				final int pInstance = player.isInInstance() ? player.getInstanceId() : 0;
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
+				World.getInstance().doOnAllPlayers(other ->
 				{
-					@Override
-					public void visit(Player other)
+					final int oObjectId = other.getObjectId();
+					final int oRaceId = other.getRace().getRaceId();
+					final int oMapId = other.getWorldId();
+					final int oInstance = other.isInInstance() ? other.getInstanceId() : 0;
+					if ((oObjectId != pObjectId) && other.isSpawned() && (oRaceId == pRaceId) && (oMapId == pMapId) && (oInstance == pInstance))
 					{
-						final int oObjectId = other.getObjectId();
-						final int oRaceId = other.getRace().getRaceId();
-						final int oMapId = other.getWorldId();
-						final int oInstance = other.isInInstance() ? other.getInstanceId() : 0;
-						if ((oObjectId != pObjectId) && other.isSpawned() && (oRaceId == pRaceId) && (oMapId == pMapId) && (oInstance == pInstance))
-						{
-							PacketSendUtility.sendPacket(other, new SM_SYSTEM_MESSAGE(1390001, lastGetName, "[item: " + requestedItem.getDropTemplate().getItemId() + "]"));
-						}
+						PacketSendUtility.sendPacket(other, new SM_SYSTEM_MESSAGE(1390001, lastGetName, "[item: " + requestedItem.getDropTemplate().getItemId() + "]"));
 					}
 				});
 			}
@@ -711,7 +683,7 @@ public class DropService
 		
 		private final DropNpc dropNpc;
 		
-		private TempTradeDropPredicate(DropNpc dropNpc)
+		TempTradeDropPredicate(DropNpc dropNpc)
 		{
 			this.dropNpc = dropNpc;
 		}
@@ -734,10 +706,8 @@ public class DropService
 		
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final DropService instance = new DropService();
 	}
 }

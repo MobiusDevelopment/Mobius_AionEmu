@@ -74,10 +74,7 @@ public class _2600HumongousMalek extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -109,10 +106,7 @@ public class _2600HumongousMalek extends QuestHandler
 				case STEP_TO_1:
 					if (var == 0)
 					{
-						if (giveQuestItem(env, 182204528, 1))
-						{
-							;
-						}
+						giveQuestItem(env, 182204528, 1);
 						qs.setQuestVarById(0, var + 1);
 						updateQuestStatus(env);
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));

@@ -25,12 +25,10 @@ import javolution.util.FastMap;
  */
 public class BruteForceProtector
 {
-	
 	private final FastMap<String, FailedLoginInfo> failedConnections = new FastMap<>();
 	
 	class FailedLoginInfo
 	{
-		
 		private int count;
 		private final long time;
 		
@@ -86,18 +84,13 @@ public class BruteForceProtector
 				failedConnections.remove(ip);
 				return true;
 			}
-			else
-			{
-				failed.increseCount();
-			}
+			failed.increseCount();
 		}
 		return false;
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final BruteForceProtector instance = new BruteForceProtector();
 	}
 }

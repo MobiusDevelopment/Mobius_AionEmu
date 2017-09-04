@@ -32,10 +32,8 @@ import com.aionemu.gameserver.world.World;
 /**
  * @author synchro2
  */
-
 public class WeddingService
 {
-	
 	private final Map<Integer, Wedding> weddings = new HashMap<>();
 	
 	public static WeddingService getInstance()
@@ -243,10 +241,8 @@ public class WeddingService
 		return wedding.getPriest();
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final WeddingService instance = new WeddingService();
 	}
 }

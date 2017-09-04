@@ -58,7 +58,6 @@ public class NpcTemplate extends VisibleObjectTemplate
 	private NpcEquippedGear equipment;
 	@XmlElement(name = "kisk_stats")
 	private KiskStatsTemplate kiskStatsTemplate;
-	@SuppressWarnings("unused")
 	@XmlElement(name = "ammo_speed")
 	private final int ammoSpeed = 0;
 	@XmlAttribute(name = "rank")
@@ -180,7 +179,6 @@ public class NpcTemplate extends VisibleObjectTemplate
 		return "Npc Template id: " + npcId + " name: " + name;
 	}
 	
-	@SuppressWarnings("unused")
 	@XmlID
 	@XmlAttribute(name = "npc_id", required = true)
 	private void setXmlUid(String uid)

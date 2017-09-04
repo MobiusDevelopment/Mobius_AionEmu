@@ -82,19 +82,15 @@ public class BrigadeGeneralTerathAI2 extends AggressiveNpcAI2
 	
 	private void startSkillTask()
 	{
-		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelskillTask();
-				}
-				else
-				{
-					gravityDistortionEvent();
-				}
+				cancelskillTask();
+			}
+			else
+			{
+				gravityDistortionEvent();
 			}
 		}, 5000, 30000);
 	}
@@ -111,14 +107,7 @@ public class BrigadeGeneralTerathAI2 extends AggressiveNpcAI2
 	{
 		SkillEngine.getInstance().getSkill(getOwner(), 20739, 55, getOwner()).useNoAnimationSkill();
 		spawn(283096, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				SkillEngine.getInstance().getSkill(getOwner(), 20741, 55, getOwner()).useNoAnimationSkill();
-			}
-		}, 5000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> SkillEngine.getInstance().getSkill(getOwner(), 20741, 55, getOwner()).useNoAnimationSkill(), 5000);
 	}
 	
 	private synchronized void checkPercentage(int hpPercentage)
@@ -134,60 +123,48 @@ public class BrigadeGeneralTerathAI2 extends AggressiveNpcAI2
 				spawn(283158, 1056.8f, 297.6f, 409.9f, (byte) 0);
 				spawn(283158, 1002.07f, 297.4f, 409.85f, (byte) 0);
 				SkillEngine.getInstance().getSkill(getOwner(), 20737, 55, getOwner()).useNoAnimationSkill();
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						EmoteManager.emoteStopAttacking(getOwner());
-						setStateIfNot(AIState.WALKING);
-						getOwner().getMoveController().moveToPoint(getOwner().getSpawn().getX(), getOwner().getSpawn().getY(), getOwner().getSpawn().getZ());
-						WalkManager.startWalking(BrigadeGeneralTerathAI2.this);
-						getOwner().setState(1);
-						PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getOwner().getObjectId()));
-					}
+					EmoteManager.emoteStopAttacking(getOwner());
+					setStateIfNot(AIState.WALKING);
+					getOwner().getMoveController().moveToPoint(getOwner().getSpawn().getX(), getOwner().getSpawn().getY(), getOwner().getSpawn().getZ());
+					WalkManager.startWalking(BrigadeGeneralTerathAI2.this);
+					getOwner().setState(1);
+					PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getOwner().getObjectId()));
 				}, 4000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						spawn(283109, 1029.93f, 297.31f, 409.08f, (byte) 0);
-						spawn(283110, 1029.9f, 297.26f, 409.08f, (byte) 0);
-					}
+					spawn(283109, 1029.93f, 297.31f, 409.08f, (byte) 0);
+					spawn(283110, 1029.9f, 297.26f, 409.08f, (byte) 0);
 				}, 10000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
+					final WorldMapInstance instance = getPosition().getWorldMapInstance();
+					deleteNpcs(instance.getNpcs(283158));
+					deleteNpcs(instance.getNpcs(283109));
+					deleteNpcs(instance.getNpcs(283110));
+					getEffectController().removeEffect(20737);
+					canThink = true;
+					isGravityEvent = false;
+					startSkillTask();
+					final Creature creature = getAggroList().getMostHated();
+					if ((creature == null) || creature.getLifeStats().isAlreadyDead() || !getOwner().canSee(creature))
 					{
-						final WorldMapInstance instance = getPosition().getWorldMapInstance();
-						deleteNpcs(instance.getNpcs(283158));
-						deleteNpcs(instance.getNpcs(283109));
-						deleteNpcs(instance.getNpcs(283110));
-						getEffectController().removeEffect(20737);
-						canThink = true;
-						isGravityEvent = false;
-						startSkillTask();
-						final Creature creature = getAggroList().getMostHated();
-						if ((creature == null) || creature.getLifeStats().isAlreadyDead() || !getOwner().canSee(creature))
-						{
-							setStateIfNot(AIState.FIGHT);
-							think();
-						}
-						else
-						{
-							getMoveController().abortMove();
-							getOwner().setTarget(creature);
-							getOwner().getGameStats().renewLastAttackTime();
-							getOwner().getGameStats().renewLastAttackedTime();
-							getOwner().getGameStats().renewLastChangeTargetTime();
-							getOwner().getGameStats().renewLastSkillTime();
-							setStateIfNot(AIState.WALKING);
-							getOwner().setState(1);
-							getOwner().getMoveController().moveToTargetObject();
-							PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getOwner().getObjectId()));
-						}
+						setStateIfNot(AIState.FIGHT);
+						think();
+					}
+					else
+					{
+						getMoveController().abortMove();
+						getOwner().setTarget(creature);
+						getOwner().getGameStats().renewLastAttackTime();
+						getOwner().getGameStats().renewLastAttackedTime();
+						getOwner().getGameStats().renewLastChangeTargetTime();
+						getOwner().getGameStats().renewLastSkillTime();
+						setStateIfNot(AIState.WALKING);
+						getOwner().setState(1);
+						getOwner().getMoveController().moveToTargetObject();
+						PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getOwner().getObjectId()));
 					}
 				}, 30000);
 			}

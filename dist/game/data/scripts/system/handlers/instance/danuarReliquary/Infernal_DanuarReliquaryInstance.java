@@ -38,13 +38,10 @@ import com.aionemu.gameserver.services.player.PlayerReviveService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(301360000)
 public class Infernal_DanuarReliquaryInstance extends GeneralInstanceHandler
 {
@@ -96,30 +93,15 @@ public class Infernal_DanuarReliquaryInstance extends GeneralInstanceHandler
 		sendMsgByRace(1401676, Race.PC_ALL, 5000);
 		sendMessage(1401677, 10 * 60 * 1000); // 10 minutes elapsed.
 		sendMessage(1401678, 15 * 60 * 1000); // The bomb has detonated.
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
+				infernalReliquaryTask = ThreadPoolManager.getInstance().schedule(() ->
 				{
-					infernalReliquaryTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							instance.doOnAllPlayers(new Visitor<Player>()
-							{
-								@Override
-								public void visit(Player player)
-								{
-									onExitInstance(player);
-								}
-							});
-							onInstanceDestroy();
-						}
-					}, 900000); // 15 Minutes.
-				}
+					instance.doOnAllPlayers(player1 -> onExitInstance(player1));
+					onInstanceDestroy();
+				}, 900000); // 15 Minutes.
 			}
 		});
 	}
@@ -127,7 +109,6 @@ public class Infernal_DanuarReliquaryInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 284380:
@@ -153,16 +134,12 @@ public class Infernal_DanuarReliquaryInstance extends GeneralInstanceHandler
 				else if (ideanKilled == 3)
 				{
 					spawn(234690, 256.45197f, 257.91986f, 241.78688f, (byte) 90); // Vengeful Modor.
-					instance.doOnAllPlayers(new Visitor<Player>()
+					instance.doOnAllPlayers(player1 ->
 					{
-						@Override
-						public void visit(Player player)
+						if (player1.isOnline())
 						{
-							if (player.isOnline())
-							{
-								startInfernalReliquaryTimer();
-								PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 900)); // 15 Minutes.
-							}
+							startInfernalReliquaryTimer();
+							PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 900)); // 15 Minutes.
 						}
 					});
 				}
@@ -193,15 +170,11 @@ public class Infernal_DanuarReliquaryInstance extends GeneralInstanceHandler
 				sendMsg("[Congratulation]: you finish <[Infernal] Danuar Reliquary>");
 				spawn(730843, 256.45197f, 257.91986f, 241.78688f, (byte) 90); // [Infernal] Danuar Reliquary Exit.
 				spawn(701795, 256.39725f, 255.52034f, 241.78006f, (byte) 90); // [Infernal] Danuar Reliquary Box.
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 ->
 				{
-					@Override
-					public void visit(Player player)
+					if (player1.isOnline())
 					{
-						if (player.isOnline())
-						{
-							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 0));
-						}
+						PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 0));
 					}
 				});
 				break;
@@ -210,36 +183,18 @@ public class Infernal_DanuarReliquaryInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void sendMessage(int msgId, long delay)
@@ -250,14 +205,7 @@ public class Infernal_DanuarReliquaryInstance extends GeneralInstanceHandler
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					sendMsg(msgId);
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule(() -> sendMsg(msgId), delay);
 		}
 	}
 	

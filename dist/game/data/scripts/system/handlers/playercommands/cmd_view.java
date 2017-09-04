@@ -42,7 +42,7 @@ public class cmd_view extends PlayerCommand
 		{
 			itemId = Integer.parseInt(params[0]);
 		}
-		catch (@SuppressWarnings("unused") final Exception e)
+		catch (Exception e)
 		{
 			PacketSendUtility.sendMessage(admin, "Error! Item id's are numbers like 187000090 or [item:187000090]!");
 			return;

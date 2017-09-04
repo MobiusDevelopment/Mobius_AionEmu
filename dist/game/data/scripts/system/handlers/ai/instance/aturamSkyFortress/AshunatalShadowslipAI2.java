@@ -42,7 +42,7 @@ import system.handlers.ai.AggressiveNpcAI2;
 public class AshunatalShadowslipAI2 extends AggressiveNpcAI2
 {
 	private boolean isSummoned;
-	private boolean canThink = true;
+	boolean canThink = true;
 	private final AtomicBoolean isHome = new AtomicBoolean(true);
 	
 	@Override
@@ -107,46 +107,34 @@ public class AshunatalShadowslipAI2 extends AggressiveNpcAI2
 	{
 		if (!isAlreadyDead())
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
+					// Ashunatal has retreated to another room. Hunt her down!
+					NpcShoutsService.getInstance().sendMsg(getOwner(), 1401391, 0);
+					SkillEngine.getInstance().getSkill(getOwner(), 19417, 49, getOwner()).useNoAnimationSkill();
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						// Ashunatal has retreated to another room. Hunt her down!
-						NpcShoutsService.getInstance().sendMsg(getOwner(), 1401391, 0);
-						SkillEngine.getInstance().getSkill(getOwner(), 19417, 49, getOwner()).useNoAnimationSkill();
-						ThreadPoolManager.getInstance().schedule(new Runnable()
+						if (!isAlreadyDead())
 						{
-							@Override
-							public void run()
+							final WorldPosition p = getPosition();
+							spawn(219186, p.getX(), p.getY(), p.getZ(), p.getHeading());
+							canThink = false;
+							getSpawnTemplate().setWalkerId("3002400001");
+							setStateIfNot(AIState.WALKING);
+							think();
+							getOwner().setState(1);
+							PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getObjectId()));
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
 								if (!isAlreadyDead())
 								{
-									final WorldPosition p = getPosition();
-									spawn(219186, p.getX(), p.getY(), p.getZ(), p.getHeading());
-									canThink = false;
-									getSpawnTemplate().setWalkerId("3002400001");
-									setStateIfNot(AIState.WALKING);
-									think();
-									getOwner().setState(1);
-									PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getObjectId()));
-									ThreadPoolManager.getInstance().schedule(new Runnable()
-									{
-										@Override
-										public void run()
-										{
-											if (!isAlreadyDead())
-											{
-												despawn();
-											}
-										}
-									}, 4000);
+									despawn();
 								}
-							}
-						}, 3000);
-					}
+							}, 4000);
+						}
+					}, 3000);
 				}
 			}, 2000);
 		}

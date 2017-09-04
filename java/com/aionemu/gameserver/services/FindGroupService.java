@@ -21,7 +21,6 @@ import java.util.Collection;
 import java.util.Collections;
 
 import com.aionemu.commons.callbacks.util.GlobalCallbackHelper;
-import com.aionemu.commons.objects.filter.ObjectFilter;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.autogroup.AutoGroupType;
 import com.aionemu.gameserver.model.gameobjects.AionObject;
@@ -144,7 +143,7 @@ public class FindGroupService
 					case 0x04:
 						return elyosApplyFindGroups.values();
 					case 0xA:
-						return Collections.EMPTY_LIST;
+						return Collections.emptyList();
 				}
 				break;
 			case ASMODIANS:
@@ -155,7 +154,7 @@ public class FindGroupService
 					case 0x04:
 						return asmodianApplyFindGroups.values();
 					case 0xA:
-						return Collections.EMPTY_LIST;
+						return Collections.emptyList();
 				}
 				break;
 		}
@@ -206,15 +205,7 @@ public class FindGroupService
 		}
 		if (findGroup != null)
 		{
-			PacketSendUtility.broadcastFilteredPacket(new SM_FIND_GROUP(action + 1, playerObjId, findGroup.getUnk()), new ObjectFilter<Player>()
-			{
-				
-				@Override
-				public boolean acceptObject(Player object)
-				{
-					return race == object.getRace();
-				}
-			});
+			PacketSendUtility.broadcastFilteredPacket(new SM_FIND_GROUP(action + 1, playerObjId, findGroup.getUnk()), object -> race == object.getRace());
 		}
 		return findGroup;
 	}

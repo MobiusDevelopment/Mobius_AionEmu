@@ -600,6 +600,12 @@ public abstract class AbstractAI implements AI2
 	
 	/**
 	 * Spawn object in the same world and instance as AI's owner
+	 * @param npcId
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @param heading
+	 * @return
 	 */
 	protected VisibleObject spawn(int npcId, float x, float y, float z, byte heading)
 	{
@@ -608,6 +614,13 @@ public abstract class AbstractAI implements AI2
 	
 	/**
 	 * Spawn object with entityId in the same world and instance as AI's owner
+	 * @param npcId
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @param heading
+	 * @param entityId
+	 * @return
 	 */
 	protected VisibleObject spawn(int npcId, float x, float y, float z, byte heading, int entityId)
 	{

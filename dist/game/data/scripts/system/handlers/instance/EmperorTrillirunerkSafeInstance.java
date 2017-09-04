@@ -52,7 +52,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 import javolution.util.FastMap;
@@ -68,9 +67,10 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 	private int rank;
 	private Race spawnRace;
 	private long instanceTime;
+	@SuppressWarnings("unused")
 	private boolean isInstanceDestroyed;
-	private Map<Integer, StaticDoor> doors;
-	private ShugoEmperorVaultReward instanceReward;
+	Map<Integer, StaticDoor> doors;
+	ShugoEmperorVaultReward instanceReward;
 	private final FastList<Future<?>> vaultTask = FastList.newInstance();
 	private final FastMap<Integer, VisibleObject> objects = new FastMap<>();
 	
@@ -79,12 +79,12 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 		return (ShugoEmperorVaultPlayerReward) instanceReward.getPlayerReward(object);
 	}
 	
-	@SuppressWarnings("unchecked")
 	protected void addPlayerReward(Player player)
 	{
 		instanceReward.addPlayerReward(new ShugoEmperorVaultPlayerReward(player.getObjectId()));
 	}
 	
+	@SuppressWarnings("unused")
 	private boolean containPlayer(Integer object)
 	{
 		return instanceReward.containPlayer(object);
@@ -182,8 +182,6 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 	public void onDie(Npc npc)
 	{
 		int points = 0;
-		final int npcId = npc.getNpcId();
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 235629: // Intruder Skirmisher.
@@ -237,21 +235,7 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 				// All the intruders have fled. You've cleared the Vault!
 				sendMsgByRace(1402681, Race.PC_ALL, 2000);
 				spawn(832932, 360.03033f, 757.95233f, 398.42203f, (byte) 104); // The Shugo Emperor's Butler.
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								stopInstance(player);
-							}
-						});
-					}
-				}, 3000);
+				ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player -> stopInstance(player)), 3000);
 				break;
 			case 235649: // Intruder Sniper.
 				points = 760;
@@ -343,7 +327,7 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 		removeEffects(player);
 	}
 	
-	private int getTime()
+	int getTime()
 	{
 		final long result = System.currentTimeMillis() - instanceTime;
 		if (result < 60000)
@@ -357,19 +341,15 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 		return 0;
 	}
 	
-	private void sendPacket(int nameId, int point)
+	void sendPacket(int nameId, int point)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (nameId != 0)
 			{
-				if (nameId != 0)
-				{
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
-				}
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
 			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
 		});
 	}
 	
@@ -409,33 +389,18 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 	protected void startInstanceTask()
 	{
 		instanceTime = System.currentTimeMillis();
-		vaultTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		vaultTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				doors.get(430).setOpen(true);
-				// The member recruitment window has passed. You cannot recruit any more members.
-				sendMsgByRace(1401181, Race.PC_ALL, 0);
-				instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-				sendPacket(0, 0);
-			}
+			doors.get(430).setOpen(true);
+			// The member recruitment window has passed. You cannot recruit any more members.
+			sendMsgByRace(1401181, Race.PC_ALL, 0);
+			instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+			sendPacket(0, 0);
 		}, 60000));
-		vaultTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		vaultTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						stopInstance(player);
-					}
-				});
-				spawn(832950, 362.71112f, 760.5198f, 398.42203f, (byte) 104); // The Shugo Emperor's Exit.
-			}
+			instance.doOnAllPlayers(player -> stopInstance(player));
+			spawn(832950, 362.71112f, 760.5198f, 398.42203f, (byte) 104); // The Shugo Emperor's Exit.
 		}, 600000));
 	}
 	
@@ -470,13 +435,13 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 		sendPacket(0, 0);
 	}
 	
-	private void rewardGroup()
-	{
-		for (Player p : instance.getPlayersInside())
-		{
-			doReward(p);
-		}
-	}
+	// private void rewardGroup()
+	// {
+	// for (Player p : instance.getPlayersInside())
+	// {
+	// doReward(p);
+	// }
+	// }
 	
 	@Override
 	public void doReward(Player player)
@@ -552,36 +517,18 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

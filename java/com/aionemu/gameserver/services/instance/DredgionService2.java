@@ -59,58 +59,33 @@ public class DredgionService2
 		if (AutoGroupConfig.DREDGION_ENABLED)
 		{
 			// Dredgion MON-TUE-WED-THU-FRI-SAT-SUN "12PM-1PM"
-			CronService.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					startDredgionRegistration();
-				}
-			}, AutoGroupConfig.DREDGION_SCHEDULE_MIDDAY);
+			CronService.getInstance().schedule(() -> startDredgionRegistration(), AutoGroupConfig.DREDGION_SCHEDULE_MIDDAY);
 			// Dredgion MON-TUE-WED-THU-FRI-SAT-SUN "8PM-9PM"
-			CronService.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					startDredgionRegistration();
-				}
-			}, AutoGroupConfig.DREDGION_SCHEDULE_EVENING);
+			CronService.getInstance().schedule(() -> startDredgionRegistration(), AutoGroupConfig.DREDGION_SCHEDULE_EVENING);
 			// Dredgion MON-TUE-WED-THU-FRI-SAT-SUN "23PM-0AM"
-			CronService.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					startDredgionRegistration();
-				}
-			}, AutoGroupConfig.DREDGION_SCHEDULE_MIDNIGHT);
+			CronService.getInstance().schedule(() -> startDredgionRegistration(), AutoGroupConfig.DREDGION_SCHEDULE_MIDNIGHT);
 		}
 	}
 	
 	private void startUregisterDredgionTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			registerAvailable = false;
+			playersWithCooldown.clear();
+			AutoGroupService.getInstance().unRegisterInstance(maskLvlGradeA);
+			AutoGroupService.getInstance().unRegisterInstance(maskLvlGradeB);
+			AutoGroupService.getInstance().unRegisterInstance(maskLvlGradeC);
+			final Iterator<Player> iter = World.getInstance().getPlayersIterator();
+			while (iter.hasNext())
 			{
-				registerAvailable = false;
-				playersWithCooldown.clear();
-				AutoGroupService.getInstance().unRegisterInstance(maskLvlGradeA);
-				AutoGroupService.getInstance().unRegisterInstance(maskLvlGradeB);
-				AutoGroupService.getInstance().unRegisterInstance(maskLvlGradeC);
-				final Iterator<Player> iter = World.getInstance().getPlayersIterator();
-				while (iter.hasNext())
+				final Player player = iter.next();
+				if (player.getLevel() > minLevel)
 				{
-					final Player player = iter.next();
-					if (player.getLevel() > minLevel)
+					final int instanceMaskId = getInstanceMaskId(player);
+					if (instanceMaskId > 0)
 					{
-						final int instanceMaskId = getInstanceMaskId(player);
-						if (instanceMaskId > 0)
-						{
-							PacketSendUtility.sendPacket(player, autoGroupUnreg[instanceMaskId]);
-						}
+						PacketSendUtility.sendPacket(player, autoGroupUnreg[instanceMaskId]);
 					}
 				}
 			}

@@ -33,13 +33,9 @@ import javolution.util.FastMap;
  */
 public class TemporaryTradeTimeTask extends AbstractPeriodicTaskManager
 {
-	
 	private final FastMap<Item, Collection<Integer>> items = new FastMap<>();
 	private final FastMap<Integer, Item> itemById = new FastMap<>();
 	
-	/**
-	 * @param period
-	 */
 	public TemporaryTradeTimeTask()
 	{
 		super(1000);
@@ -143,10 +139,8 @@ public class TemporaryTradeTimeTask extends AbstractPeriodicTaskManager
 		}
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final TemporaryTradeTimeTask _instance = new TemporaryTradeTimeTask();
 	}
 }

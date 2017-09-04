@@ -49,7 +49,6 @@ import com.aionemu.gameserver.skillengine.model.DispelCategoryType;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
 /****/
@@ -92,18 +91,14 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 	
 	private void sendPacket(int nameId, int points)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
+				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(instanceReward));
+				if (nameId != 0)
 				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(instanceReward));
-					if (nameId != 0)
-					{
-						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), points));
-					}
+					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), points));
 				}
 			}
 		});
@@ -111,15 +106,11 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 	
 	private void sendEventPacket()
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_STAGE_INFO(2, stageType.getId(), stageType.getType()));
-				}
+				PacketSendUtility.sendPacket(player, new SM_INSTANCE_STAGE_INFO(2, stageType.getId(), stageType.getType()));
 			}
 		});
 	}
@@ -244,14 +235,7 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				sp(217847, 1307.2786f, 1734.3274f, 316f, (byte) 0, 2000);
 				// Stop Gomju from perpetrating a senseless massacre!
 				sendMsgByRace(1401086, Race.PC_ALL, 3000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						despawnNpcs(getNpcs(217848));
-					}
-				}, 20000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> despawnNpcs(getNpcs(217848)), 20000);
 				break;
 			case 217847:
 				despawnNpc(npc);
@@ -360,36 +344,32 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				sp(205678, 346.64798f, 349.25586f, 96.090965f, (byte) 0, 0);
 				break;
 			case 217819:
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
+					Player player = null;
+					if (!instance.getPlayersInside().isEmpty())
 					{
-						Player player = null;
-						if (!instance.getPlayersInside().isEmpty())
+						player = instance.getPlayersInside().get(0);
+					}
+					despawnNpc(npc);
+					if (player != null)
+					{
+						final QuestState qs = player.getQuestStateList().getQuestState(player.getRace() == Race.ASMODIANS ? 28208 : 18208);
+						if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 						{
-							player = instance.getPlayersInside().get(0);
-						}
-						despawnNpc(npc);
-						if (player != null)
-						{
-							final QuestState qs = player.getQuestStateList().getQuestState(player.getRace() == Race.ASMODIANS ? 28208 : 18208);
-							if ((qs != null) && (qs.getStatus() == QuestStatus.START))
-							{
-								if ((qs.getQuestVarById(0) == 1) || (qs.getQuestVarById(1) == 4))
-								{ // Kill x5 Vanktrist Spacetwine.
-									sp(730459, 1765.7104f, 1281.2388f, 389.11743f, (byte) 0, 2000);
-									return;
-								}
+							if ((qs.getQuestVarById(0) == 1) || (qs.getQuestVarById(1) == 4))
+							{ // Kill x5 Vanktrist Spacetwine.
+								sp(730459, 1765.7104f, 1281.2388f, 389.11743f, (byte) 0, 2000);
+								return;
 							}
 						}
-						setEvent(StageType.PASS_STAGE_6, 0);
-						// You have eliminated all enemies in Round %0.
-						sendMsgByRace(1400929, Race.PC_ALL, 2000);
-						// You have passed Stage %0!
-						sendMsgByRace(1400930, Race.PC_ALL, 4000);
-						sp(205679, 1765.522f, 1282.1051f, 389.11743f, (byte) 0, 2000);
 					}
+					setEvent(StageType.PASS_STAGE_6, 0);
+					// You have eliminated all enemies in Round %0.
+					sendMsgByRace(1400929, Race.PC_ALL, 2000);
+					// You have passed Stage %0!
+					sendMsgByRace(1400930, Race.PC_ALL, 4000);
+					sp(205679, 1765.522f, 1282.1051f, 389.11743f, (byte) 0, 2000);
 				}, 4000);
 				break;
 			case 217837:
@@ -471,15 +451,11 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				despawnNpc(npc);
 				if (getNpcs(fnpcId).size() == 2)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							// You have eliminated all enemies in Round %0.
-							sendMsgByRace(1400929, Race.PC_ALL, 0);
-							startStage3Round1_1(fnpcId);
-						}
+						// You have eliminated all enemies in Round %0.
+						sendMsgByRace(1400929, Race.PC_ALL, 0);
+						startStage3Round1_1(fnpcId);
 					}, 5000);
 				}
 				break;
@@ -541,55 +517,39 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 	
 	private void startBonusStage2()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				// Round %0 begins!
-				sendMsgByRace(1400928, Race.PC_ALL, 4000);
-				setEvent(StageType.START_BONUS_STAGE_2, 2000);
-			}
+			// Round %0 begins!
+			sendMsgByRace(1400928, Race.PC_ALL, 4000);
+			setEvent(StageType.START_BONUS_STAGE_2, 2000);
 		}, 2000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				// Poppy is running from the Dukaki Cooks. Eliminate them and help Poppy to reach the refuge.
-				sendMsgByRace(1401067, Race.PC_ALL, 1000);
-				startWalk((Npc) spawn(217802, 1780.5371f, 307.3513f, 469.25f, (byte) 0), "PoppyOnTheRun"); // Poppy.
-			}
+			// Poppy is running from the Dukaki Cooks. Eliminate them and help Poppy to reach the refuge.
+			sendMsgByRace(1401067, Race.PC_ALL, 1000);
+			startWalk((Npc) spawn(217802, 1780.5371f, 307.3513f, 469.25f, (byte) 0), "PoppyOnTheRun"); // Poppy.
 		}, 1000);
-		bonusTimer = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		bonusTimer = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			spawnCount++;
+			spawnBonus2();
+			if (spawnCount == 10)
 			{
-				spawnCount++;
-				spawnBonus2();
-				if (spawnCount == 10)
-				{
-					bonusTimer.cancel(false);
-				}
+				bonusTimer.cancel(false);
 			}
 		}, 12000, 4000);
 	}
 	
 	private void startWalk(Npc npc, String walkId)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
-				{
-					npc.getSpawn().setWalkerId(walkId);
-					WalkManager.startWalking((NpcAI2) npc.getAi2());
-					npc.setState(1);
-					PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
-				}
+				npc.getSpawn().setWalkerId(walkId);
+				WalkManager.startWalking((NpcAI2) npc.getAi2());
+				npc.setState(1);
+				PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
 			}
 		}, 2000);
 	}
@@ -703,14 +663,10 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 			place = 7;
 		}
 		getPlayerReward(player.getObjectId()).setSpawnPosition(place);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				onReviveEvent(player);
-				clearCrucibleDebuffs(player);
-			}
+			onReviveEvent(player);
+			clearCrucibleDebuffs(player);
 		}, 13000);
 		return true;
 	}
@@ -798,11 +754,6 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 	{
 		setEvent(type, 2000);
 		int npcId = 0, barrelId = 0;
-		Player player = null;
-		if (!instance.getPlayersInside().isEmpty())
-		{
-			player = instance.getPlayersInside().get(0);
-		}
 		switch (stageType)
 		{
 			case START_STAGE_1_ROUND_1:
@@ -944,15 +895,11 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 	
 	private void sp(int npcId, float x, float y, float z, byte h, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
-				{
-					spawn(npcId, x, y, z, h);
-				}
+				spawn(npcId, x, y, z, h);
 			}
 		}, time);
 	}
@@ -960,14 +907,7 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 	private void setEvent(StageType type, int time)
 	{
 		stageType = type;
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				sendEventPacket();
-			}
-		}, time);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> sendEventPacket(), time);
 	}
 	
 	@Override
@@ -975,7 +915,6 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 	{
 		final Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		final int npcId = npc.getNpcId();
-		final int itemId = 0;
 		final Integer object = instance.getSoloPlayerObj();
 		switch (npcId)
 		{

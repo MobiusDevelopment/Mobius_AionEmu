@@ -35,11 +35,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("goldeneyemantutu")
 public class GoldenEyeMantutuAI2 extends AggressiveNpcAI2
 {
@@ -92,42 +90,38 @@ public class GoldenEyeMantutuAI2 extends AggressiveNpcAI2
 	
 	private void startFeedTime(Npc npc)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead() && (npc != null))
 			{
-				if (!isAlreadyDead() && (npc != null))
+				switch (npc.getNpcId())
 				{
-					switch (npc.getNpcId())
-					{
-						case 281128: // Feed Supply Device.
-							getEffectController().removeEffect(20489);
-							spawn(701386, 716.508f, 508.571f, 939.607f, (byte) 119);
-							break;
-						case 281129: // Water Supply Device.
-							spawn(701387, 716.389f, 494.207f, 939.607f, (byte) 119);
-							getEffectController().removeEffect(20490);
-							break;
-					}
-					CreatureActions.delete(npc);
-					canThink = true;
-					final Creature creature = getAggroList().getMostHated();
-					if ((creature == null) || creature.getLifeStats().isAlreadyDead() || !getOwner().canSee(creature))
-					{
-						setStateIfNot(AIState.FIGHT);
-						think();
-					}
-					else
-					{
-						getOwner().setTarget(creature);
-						getOwner().getGameStats().renewLastAttackTime();
-						getOwner().getGameStats().renewLastAttackedTime();
-						getOwner().getGameStats().renewLastChangeTargetTime();
-						getOwner().getGameStats().renewLastSkillTime();
-						setStateIfNot(AIState.FIGHT);
-						handleMoveValidate();
-					}
+					case 281128: // Feed Supply Device.
+						getEffectController().removeEffect(20489);
+						spawn(701386, 716.508f, 508.571f, 939.607f, (byte) 119);
+						break;
+					case 281129: // Water Supply Device.
+						spawn(701387, 716.389f, 494.207f, 939.607f, (byte) 119);
+						getEffectController().removeEffect(20490);
+						break;
+				}
+				CreatureActions.delete(npc);
+				canThink = true;
+				final Creature creature = getAggroList().getMostHated();
+				if ((creature == null) || creature.getLifeStats().isAlreadyDead() || !getOwner().canSee(creature))
+				{
+					setStateIfNot(AIState.FIGHT);
+					think();
+				}
+				else
+				{
+					getOwner().setTarget(creature);
+					getOwner().getGameStats().renewLastAttackTime();
+					getOwner().getGameStats().renewLastAttackedTime();
+					getOwner().getGameStats().renewLastChangeTargetTime();
+					getOwner().getGameStats().renewLastSkillTime();
+					setStateIfNot(AIState.FIGHT);
+					handleMoveValidate();
 				}
 			}
 		}, 6000);
@@ -175,24 +169,20 @@ public class GoldenEyeMantutuAI2 extends AggressiveNpcAI2
 	
 	private void doSchedule()
 	{
-		hungerTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		hungerTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
 		{
-			@Override
-			public void run()
+			final int rnd = Rnd.get(1, 2);
+			int skill = 0;
+			switch (rnd)
 			{
-				final int rnd = Rnd.get(1, 2);
-				int skill = 0;
-				switch (rnd)
-				{
-					case 1:
-						skill = 20489; // Hunger.
-						break;
-					case 2:
-						skill = 20490; // Thirst.
-						break;
-				}
-				SkillEngine.getInstance().getSkill(getOwner(), skill, 20, getOwner()).useNoAnimationSkill();
+				case 1:
+					skill = 20489; // Hunger.
+					break;
+				case 2:
+					skill = 20490; // Thirst.
+					break;
 			}
+			SkillEngine.getInstance().getSkill(getOwner(), skill, 20, getOwner()).useNoAnimationSkill();
 		}, 10000, 30000);
 	}
 	

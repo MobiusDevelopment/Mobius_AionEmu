@@ -28,7 +28,6 @@ import javax.xml.parsers.SAXParserFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import com.aionemu.commons.network.IPRange;
@@ -38,7 +37,6 @@ import com.aionemu.commons.network.IPRange;
  */
 public class IPConfig
 {
-	
 	/**
 	 * Logger
 	 */
@@ -50,11 +48,11 @@ public class IPConfig
 	/**
 	 * List of all ip ranges
 	 */
-	private static final List<IPRange> ranges = new ArrayList<>();
+	static final List<IPRange> ranges = new ArrayList<>();
 	/**
 	 * Default address
 	 */
-	private static byte[] defaultAddress;
+	static byte[] defaultAddress;
 	
 	/**
 	 * Method that loads IPConfig
@@ -68,7 +66,7 @@ public class IPConfig
 			{
 				
 				@Override
-				public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException
+				public void startElement(String uri, String localName, String qName, Attributes attributes)
 				{
 					
 					if (qName.equals("ipconfig"))

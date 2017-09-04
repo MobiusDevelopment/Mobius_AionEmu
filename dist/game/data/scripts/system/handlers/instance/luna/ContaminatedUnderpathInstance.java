@@ -51,7 +51,6 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -65,13 +64,14 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 {
 	private int rank;
 	private long instanceTime;
+	@SuppressWarnings("unused")
 	private Future<?> instanceTimer;
 	private int IDLunaDefYZombie751ST;
 	private int IDLunaDefYZombieF751ST;
 	private int IDLunaDefZombieSpider753RD;
 	private int IDLunaDefZombieButcherAsN75;
 	private int IDLunaDefZombieVampireFD753RD;
-	private boolean isInstanceDestroyed;
+	boolean isInstanceDestroyed;
 	private Map<Integer, StaticDoor> doors;
 	private ContaminatedUnderpathReward instanceReward;
 	private final FastList<Future<?>> contaminedTask = FastList.newInstance();
@@ -81,12 +81,12 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 		return (ContaminatedUnderpathPlayerReward) instanceReward.getPlayerReward(object);
 	}
 	
-	@SuppressWarnings("unchecked")
 	protected void addPlayerReward(Player player)
 	{
 		instanceReward.addPlayerReward(new ContaminatedUnderpathPlayerReward(player.getObjectId()));
 	}
 	
+	@SuppressWarnings("unused")
 	private boolean containPlayer(Integer object)
 	{
 		return instanceReward.containPlayer(object);
@@ -143,7 +143,6 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 	{
 		int points = 0;
 		final int npcId = npc.getNpcId();
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 243647: // MAD-74C.
@@ -201,21 +200,7 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 				points = 500000;
 				spawn(703384, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading()); // Infected Bone Mound.
 				spawn(703385, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading()); // Infected Flesh Lump.
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								stopInstance(player);
-							}
-						});
-					}
-				}, 5000);
+				ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player -> stopInstance(player)), 5000);
 				break;
 		}
 		if (instanceReward.getInstanceScoreType().isStartProgress())
@@ -239,23 +224,19 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void undergroundRaid(Npc npc)
+	void undergroundRaid(Npc npc)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						npc.setTarget(player);
-						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
-						npc.setState(1);
-						npc.getMoveController().moveToTargetObject();
-						PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
-					}
+					npc.setTarget(player);
+					((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
+					npc.setState(1);
+					npc.getMoveController().moveToTargetObject();
+					PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
 				}
 			}
 		}, 1000);
@@ -263,227 +244,161 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 	
 	private void startUndergroundWave2()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245548, 222.75296f, 282.81735f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245548, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245548, 226.25397f, 283.0834f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245548, 227.87476f, 283.16495f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245548, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245548, 231.03639f, 283.3239f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245548, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245548, 234.50366f, 283.59793f, 160.3114f, (byte) 90));
-			}
+			undergroundRaid((Npc) spawn(245548, 222.75296f, 282.81735f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245548, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245548, 226.25397f, 283.0834f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245548, 227.87476f, 283.16495f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245548, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245548, 231.03639f, 283.3239f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245548, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245548, 234.50366f, 283.59793f, 160.3114f, (byte) 90));
 		}, 1000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245548, 222.73087f, 285.1328f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245548, 224.51028f, 285.3419f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245548, 226.20146f, 285.4962f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245548, 227.90823f, 285.6521f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245548, 229.46863f, 285.79477f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245548, 231.11894f, 285.9454f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245548, 232.91904f, 286.11008f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245548, 234.55264f, 286.2593f, 160.3114f, (byte) 91));
-			}
+			undergroundRaid((Npc) spawn(245548, 222.73087f, 285.1328f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245548, 224.51028f, 285.3419f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245548, 226.20146f, 285.4962f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245548, 227.90823f, 285.6521f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245548, 229.46863f, 285.79477f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245548, 231.11894f, 285.9454f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245548, 232.91904f, 286.11008f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245548, 234.55264f, 286.2593f, 160.3114f, (byte) 91));
 		}, 15000);
 	}
 	
 	private void startMAD74CWave()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(243647, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
-			}
-		}, 1000);
+		ThreadPoolManager.getInstance().schedule(() -> undergroundRaid((Npc) spawn(243647, 229.36754f, 283.24008f, 160.3114f, (byte) 90)), 1000);
 	}
 	
 	private void startGringolTheDevourerWave()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245556, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245556, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245556, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
-			}
+			undergroundRaid((Npc) spawn(245556, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245556, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245556, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
 		}, 1000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245556, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245556, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245556, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
-			}
+			undergroundRaid((Npc) spawn(245556, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245556, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245556, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
 		}, 15000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245557, 222.75296f, 282.81735f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245557, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245557, 226.25397f, 283.0834f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245557, 227.87476f, 283.16495f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245557, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245557, 231.03639f, 283.3239f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245557, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245557, 234.50366f, 283.59793f, 160.3114f, (byte) 90));
-			}
+			undergroundRaid((Npc) spawn(245557, 222.75296f, 282.81735f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245557, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245557, 226.25397f, 283.0834f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245557, 227.87476f, 283.16495f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245557, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245557, 231.03639f, 283.3239f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245557, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245557, 234.50366f, 283.59793f, 160.3114f, (byte) 90));
 		}, 25000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245558, 222.73087f, 285.1328f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245558, 224.51028f, 285.3419f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245558, 226.20146f, 285.4962f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245558, 227.90823f, 285.6521f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245558, 229.46863f, 285.79477f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245558, 231.11894f, 285.9454f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245558, 232.91904f, 286.11008f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245558, 234.55264f, 286.2593f, 160.3114f, (byte) 91));
-			}
+			undergroundRaid((Npc) spawn(245558, 222.73087f, 285.1328f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245558, 224.51028f, 285.3419f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245558, 226.20146f, 285.4962f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245558, 227.90823f, 285.6521f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245558, 229.46863f, 285.79477f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245558, 231.11894f, 285.9454f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245558, 232.91904f, 286.11008f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245558, 234.55264f, 286.2593f, 160.3114f, (byte) 91));
 		}, 35000);
 	}
 	
 	private void startUndergroundWave3()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245557, 222.75296f, 282.81735f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245557, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245557, 226.25397f, 283.0834f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245557, 227.87476f, 283.16495f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245557, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245557, 231.03639f, 283.3239f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245557, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245557, 234.50366f, 283.59793f, 160.3114f, (byte) 90));
-			}
+			undergroundRaid((Npc) spawn(245557, 222.75296f, 282.81735f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245557, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245557, 226.25397f, 283.0834f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245557, 227.87476f, 283.16495f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245557, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245557, 231.03639f, 283.3239f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245557, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245557, 234.50366f, 283.59793f, 160.3114f, (byte) 90));
 		}, 10000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245565, 222.73087f, 285.1328f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 224.51028f, 285.3419f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 226.20146f, 285.4962f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 227.90823f, 285.6521f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 229.46863f, 285.79477f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 231.11894f, 285.9454f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 232.91904f, 286.11008f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 234.55264f, 286.2593f, 160.3114f, (byte) 91));
-			}
+			undergroundRaid((Npc) spawn(245565, 222.73087f, 285.1328f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 224.51028f, 285.3419f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 226.20146f, 285.4962f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 227.90823f, 285.6521f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 229.46863f, 285.79477f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 231.11894f, 285.9454f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 232.91904f, 286.11008f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 234.55264f, 286.2593f, 160.3114f, (byte) 91));
 		}, 20000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245565, 222.75296f, 282.81735f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245565, 226.25397f, 283.0834f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245565, 227.87476f, 283.16495f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245565, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245565, 231.03639f, 283.3239f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245565, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245565, 234.50366f, 283.59793f, 160.3114f, (byte) 90));
-			}
+			undergroundRaid((Npc) spawn(245565, 222.75296f, 282.81735f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245565, 226.25397f, 283.0834f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245565, 227.87476f, 283.16495f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245565, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245565, 231.03639f, 283.3239f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245565, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245565, 234.50366f, 283.59793f, 160.3114f, (byte) 90));
 		}, 30000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245565, 222.73087f, 285.1328f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 224.51028f, 285.3419f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 226.20146f, 285.4962f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 227.90823f, 285.6521f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 229.46863f, 285.79477f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 231.11894f, 285.9454f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 232.91904f, 286.11008f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245565, 234.55264f, 286.2593f, 160.3114f, (byte) 91));
-			}
+			undergroundRaid((Npc) spawn(245565, 222.73087f, 285.1328f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 224.51028f, 285.3419f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 226.20146f, 285.4962f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 227.90823f, 285.6521f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 229.46863f, 285.79477f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 231.11894f, 285.9454f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 232.91904f, 286.11008f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245565, 234.55264f, 286.2593f, 160.3114f, (byte) 91));
 		}, 40000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245567, 222.75296f, 282.81735f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245567, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245567, 226.25397f, 283.0834f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245567, 227.87476f, 283.16495f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245567, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245567, 231.03639f, 283.3239f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245567, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245567, 234.50366f, 283.59793f, 160.3114f, (byte) 90));
-			}
+			undergroundRaid((Npc) spawn(245567, 222.75296f, 282.81735f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245567, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245567, 226.25397f, 283.0834f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245567, 227.87476f, 283.16495f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245567, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245567, 231.03639f, 283.3239f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245567, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245567, 234.50366f, 283.59793f, 160.3114f, (byte) 90));
 		}, 50000);
 	}
 	
 	private void startUndergroundWave4()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245571, 222.75296f, 282.81735f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245571, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245571, 226.25397f, 283.0834f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245571, 227.87476f, 283.16495f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245571, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245571, 231.03639f, 283.3239f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245571, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
-				undergroundRaid((Npc) spawn(245571, 234.50366f, 283.59793f, 160.3114f, (byte) 90));
-			}
+			undergroundRaid((Npc) spawn(245571, 222.75296f, 282.81735f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245571, 224.62003f, 282.99942f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245571, 226.25397f, 283.0834f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245571, 227.87476f, 283.16495f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245571, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245571, 231.03639f, 283.3239f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245571, 232.78214f, 283.41165f, 160.3114f, (byte) 90));
+			undergroundRaid((Npc) spawn(245571, 234.50366f, 283.59793f, 160.3114f, (byte) 90));
 		}, 1000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245572, 222.73087f, 285.1328f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245573, 224.51028f, 285.3419f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245572, 226.20146f, 285.4962f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245573, 227.90823f, 285.6521f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245572, 229.46863f, 285.79477f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245573, 231.11894f, 285.9454f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245572, 232.91904f, 286.11008f, 160.3114f, (byte) 91));
-				undergroundRaid((Npc) spawn(245573, 234.55264f, 286.2593f, 160.3114f, (byte) 91));
-			}
+			undergroundRaid((Npc) spawn(245572, 222.73087f, 285.1328f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245573, 224.51028f, 285.3419f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245572, 226.20146f, 285.4962f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245573, 227.90823f, 285.6521f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245572, 229.46863f, 285.79477f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245573, 231.11894f, 285.9454f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245572, 232.91904f, 286.11008f, 160.3114f, (byte) 91));
+			undergroundRaid((Npc) spawn(245573, 234.55264f, 286.2593f, 160.3114f, (byte) 91));
 		}, 15000);
 	}
 	
 	private void startMAADSWave()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				undergroundRaid((Npc) spawn(245575, 229.36754f, 283.24008f, 160.3114f, (byte) 90));
-			}
-		}, 1000);
+		ThreadPoolManager.getInstance().schedule(() -> undergroundRaid((Npc) spawn(245575, 229.36754f, 283.24008f, 160.3114f, (byte) 90)), 1000);
 	}
 	
 	private int getTime()
@@ -502,17 +417,13 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 	
 	private void sendPacket(int nameId, int point)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (nameId != 0)
 			{
-				if (nameId != 0)
-				{
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
-				}
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
 			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
 		});
 	}
 	
@@ -552,36 +463,18 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 	protected void startInstanceTask()
 	{
 		instanceTime = System.currentTimeMillis();
-		contaminedTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		contaminedTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// The defense turret platform has appeared.
-				// You can use Bright Aether to transform it for 15 seconds.
-				sendMsgByRace(1403696, Race.PC_ALL, 0);
-				// You’re hearing a sharp yell.
-				sendMsgByRace(1403657, Race.PC_ALL, 10000);
-				doors.get(28).setOpen(true);
-				instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-				sendPacket(0, 0);
-			}
+			// The defense turret platform has appeared.
+			// You can use Bright Aether to transform it for 15 seconds.
+			sendMsgByRace(1403696, Race.PC_ALL, 0);
+			// You’re hearing a sharp yell.
+			sendMsgByRace(1403657, Race.PC_ALL, 10000);
+			doors.get(28).setOpen(true);
+			instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+			sendPacket(0, 0);
 		}, 60000));
-		contaminedTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						stopInstance(player);
-					}
-				});
-			}
-		}, 3600000)); // 1 Hour.
+		contaminedTask.add(ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player -> stopInstance(player)), 3600000)); // 1 Hour.
 	}
 	
 	@Override
@@ -697,13 +590,13 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void deleteNpc(int npcId)
-	{
-		if (getNpc(npcId) != null)
-		{
-			getNpc(npcId).getController().onDelete();
-		}
-	}
+	// private void deleteNpc(int npcId)
+	// {
+	// if (getNpc(npcId) != null)
+	// {
+	// getNpc(npcId).getController().onDelete();
+	// }
+	// }
 	
 	@Override
 	public void onPlayerLogOut(Player player)
@@ -731,36 +624,18 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

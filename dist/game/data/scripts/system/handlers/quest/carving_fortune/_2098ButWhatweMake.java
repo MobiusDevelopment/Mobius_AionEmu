@@ -85,15 +85,12 @@ public class _2098ButWhatweMake extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else if (env.getDialog() == QuestDialog.STEP_TO_1)
+				else if ((qs != null) && (env.getDialog() == QuestDialog.STEP_TO_1))
 				{
 					qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
 					updateQuestStatus(env);
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
-					if (giveQuestItem(env, 182207089, 1))
-					{
-						;
-					}
+					giveQuestItem(env, 182207089, 1);
 					return true;
 				}
 				else
@@ -101,7 +98,7 @@ public class _2098ButWhatweMake extends QuestHandler
 					return sendQuestStartDialog(env);
 				}
 			}
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD)) // Reward
+			else if (qs.getStatus() == QuestStatus.REWARD) // Reward
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -220,10 +217,7 @@ public class _2098ButWhatweMake extends QuestHandler
 					qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
 					updateQuestStatus(env);
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
-					if (giveQuestItem(env, 182207090, 1))
-					{
-						;
-					}
+					giveQuestItem(env, 182207090, 1);
 					return true;
 				}
 				else
@@ -309,10 +303,7 @@ public class _2098ButWhatweMake extends QuestHandler
 					qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
 					updateQuestStatus(env);
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
-					if (giveQuestItem(env, 182207091, 1))
-					{
-						;
-					}
+					giveQuestItem(env, 182207091, 1);
 					return true;
 				}
 				else
@@ -419,10 +410,7 @@ public class _2098ButWhatweMake extends QuestHandler
 					qs.setStatus(QuestStatus.REWARD);
 					updateQuestStatus(env);
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
-					if (giveQuestItem(env, 182207092, 1))
-					{
-						;
-					}
+					giveQuestItem(env, 182207092, 1);
 					return true;
 				}
 				else

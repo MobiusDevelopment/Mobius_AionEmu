@@ -37,11 +37,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("hyperion")
 public class HyperionAI2 extends AggressiveNpcAI2
 {
@@ -78,140 +76,28 @@ public class HyperionAI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 4))
 		{
 			case 1:
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(276519, 108.55013f, 138.96940f, 132.60164f, (byte) 0);
-					}
-				}, 3000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231093, 126.54710f, 154.47961f, 131.47116f, (byte) 0);
-					}
-				}, 9000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231094, 146.72450f, 139.12267f, 132.68515f, (byte) 0);
-					}
-				}, 15000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231095, 129.41306f, 121.34766f, 131.47110f, (byte) 0);
-					}
-				}, 21000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(276519, 108.55013f, 138.96940f, 132.60164f, (byte) 0), 3000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231093, 126.54710f, 154.47961f, 131.47116f, (byte) 0), 9000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231094, 146.72450f, 139.12267f, 132.68515f, (byte) 0), 15000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231095, 129.41306f, 121.34766f, 131.47110f, (byte) 0), 21000);
 				break;
 			case 2:
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(276519, 129.41306f, 121.34766f, 131.47110f, (byte) 0);
-					}
-				}, 3000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231093, 108.55013f, 138.96940f, 132.60164f, (byte) 0);
-					}
-				}, 9000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231094, 126.54710f, 154.47961f, 131.47116f, (byte) 0);
-					}
-				}, 15000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231095, 146.72450f, 139.12267f, 132.68515f, (byte) 0);
-					}
-				}, 21000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(276519, 129.41306f, 121.34766f, 131.47110f, (byte) 0), 3000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231093, 108.55013f, 138.96940f, 132.60164f, (byte) 0), 9000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231094, 126.54710f, 154.47961f, 131.47116f, (byte) 0), 15000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231095, 146.72450f, 139.12267f, 132.68515f, (byte) 0), 21000);
 				break;
 			case 3:
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(276519, 146.72450f, 139.12267f, 132.68515f, (byte) 0);
-					}
-				}, 3000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231093, 129.41306f, 121.34766f, 131.47110f, (byte) 0);
-					}
-				}, 9000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231094, 108.55013f, 138.96940f, 132.60164f, (byte) 0);
-					}
-				}, 15000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231095, 126.54710f, 154.47961f, 131.47116f, (byte) 0);
-					}
-				}, 21000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(276519, 146.72450f, 139.12267f, 132.68515f, (byte) 0), 3000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231093, 129.41306f, 121.34766f, 131.47110f, (byte) 0), 9000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231094, 108.55013f, 138.96940f, 132.60164f, (byte) 0), 15000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231095, 126.54710f, 154.47961f, 131.47116f, (byte) 0), 21000);
 				break;
 			case 4:
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(276519, 126.54710f, 154.47961f, 131.47116f, (byte) 0);
-					}
-				}, 3000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231093, 146.72450f, 139.12267f, 132.68515f, (byte) 0);
-					}
-				}, 9000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231094, 129.41306f, 121.34766f, 131.47110f, (byte) 0);
-					}
-				}, 15000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231095, 108.55013f, 138.96940f, 132.60164f, (byte) 0);
-					}
-				}, 21000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(276519, 126.54710f, 154.47961f, 131.47116f, (byte) 0), 3000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231093, 146.72450f, 139.12267f, 132.68515f, (byte) 0), 9000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231094, 129.41306f, 121.34766f, 131.47110f, (byte) 0), 15000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231095, 108.55013f, 138.96940f, 132.60164f, (byte) 0), 21000);
 				break;
 		}
 	}
@@ -341,18 +227,14 @@ public class HyperionAI2 extends AggressiveNpcAI2
 	
 	private void startCast()
 	{
-		Cast = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		Cast = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (castc >= 3)
 			{
-				if (castc >= 3)
-				{
-					Cast.cancel(false);
-				}
-				Cast1();
-				castc++;
+				Cast.cancel(false);
 			}
+			Cast1();
+			castc++;
 		}, 1 * 1000 * 1, 5 * 1000 * 1);
 	}
 	
@@ -363,18 +245,14 @@ public class HyperionAI2 extends AggressiveNpcAI2
 	
 	private void startCast2()
 	{
-		Cast = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		Cast = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (castc >= 3)
 			{
-				if (castc >= 3)
-				{
-					Cast.cancel(false);
-				}
-				Cast2();
-				castc++;
+				Cast.cancel(false);
 			}
+			Cast2();
+			castc++;
 		}, 1 * 1000 * 1, 3 * 1000 * 1);
 	}
 	
@@ -393,18 +271,14 @@ public class HyperionAI2 extends AggressiveNpcAI2
 	
 	private void startCast3()
 	{
-		Cast = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		Cast = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (castc >= 4)
 			{
-				if (castc >= 4)
-				{
-					Cast.cancel(false);
-				}
-				Cast3();
-				castc++;
+				Cast.cancel(false);
 			}
+			Cast3();
+			castc++;
 		}, 1 * 1000 * 1, 3 * 1000 * 1);
 	}
 	
@@ -429,18 +303,14 @@ public class HyperionAI2 extends AggressiveNpcAI2
 	
 	private void startCast4()
 	{
-		Cast = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		Cast = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (castc >= 3)
 			{
-				if (castc >= 3)
-				{
-					Cast.cancel(false);
-				}
-				Cast4();
-				castc++;
+				Cast.cancel(false);
 			}
+			Cast4();
+			castc++;
 		}, 1 * 1000 * 1, 3 * 1000 * 1);
 	}
 	
@@ -462,18 +332,14 @@ public class HyperionAI2 extends AggressiveNpcAI2
 	
 	private void startCast5()
 	{
-		Cast = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		Cast = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (castc >= 3)
 			{
-				if (castc >= 3)
-				{
-					Cast.cancel(false);
-				}
-				Cast5();
-				castc++;
+				Cast.cancel(false);
 			}
+			Cast5();
+			castc++;
 		}, 1 * 1000 * 1, 5 * 1000 * 1);
 	}
 	

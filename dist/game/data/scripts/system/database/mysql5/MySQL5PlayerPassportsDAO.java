@@ -123,7 +123,7 @@ public class MySQL5PlayerPassportsDAO extends PlayerPassportsDAO
 			{
 				addPassports(con, player.getObjectId(), pList, player.getCommonData());
 			}
-			catch (@SuppressWarnings("unused") final Exception e)
+			catch (Exception e)
 			{
 				updatePassports(con, player.getObjectId(), pList, player.getCommonData());
 			}
@@ -162,7 +162,7 @@ public class MySQL5PlayerPassportsDAO extends PlayerPassportsDAO
 			ps.executeBatch();
 			con.commit();
 		}
-		catch (@SuppressWarnings("unused") final SQLException e)
+		catch (SQLException e)
 		{
 		}
 		finally
@@ -195,7 +195,7 @@ public class MySQL5PlayerPassportsDAO extends PlayerPassportsDAO
 			ps.executeBatch();
 			con.commit();
 		}
-		catch (@SuppressWarnings("unused") final SQLException e)
+		catch (SQLException e)
 		{
 			log.error("Failed to update existing passports for player " + playerId);
 		}

@@ -78,19 +78,12 @@ public class _1114TheNymphsGown extends QuestHandler
 				if (env.getDialogId() == 1002)
 				{
 					QuestService.startQuest(env);
-					if (!giveQuestItem(env, 182200226, 1))
-					{
-						;
-					}
-					removeQuestItem(env, 182200214, 1); // Namus's Diary with double-click to start the
-														// quest
+					giveQuestItem(env, 182200226, 1);
+					removeQuestItem(env, 182200214, 1); // Namus's Diary with double-click to start the quest
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
 					return true;
 				}
-				else
-				{
-					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
-				}
+				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
 			}
 		}
 		
@@ -202,10 +195,7 @@ public class _1114TheNymphsGown extends QuestHandler
 							((Npc) obj).getAggroList().addDamage(player, 50);
 						}
 						// Nymph's Dress
-						if (!giveQuestItem(env, 182200217, 1))
-						{
-							; // wtf ?
-						}
+						giveQuestItem(env, 182200217, 1);
 						qs.setQuestVarById(0, 2);
 						updateQuestStatus(env);
 					}

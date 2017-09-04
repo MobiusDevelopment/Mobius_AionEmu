@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicReference;
 
-import com.aionemu.gameserver.configs.main.GeoDataConfig;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.geoEngine.collision.CollisionIntention;
 import com.aionemu.gameserver.geoEngine.collision.CollisionResults;
@@ -133,14 +132,11 @@ public class CollisionMaterialActor extends AbstractCollisionObserver implements
 		{
 			return;
 		}
-		else
-		{
-			if (GeoDataConfig.GEO_MATERIALS_SHOWDETAILS && (creature instanceof Player))
-			{
-				final Player player = (Player) creature;
-			}
-			act();
-		}
+		// if (GeoDataConfig.GEO_MATERIALS_SHOWDETAILS && (creature instanceof Player))
+		// {
+		// final Player player = (Player) creature;
+		// }
+		act();
 	}
 	
 	@Override
@@ -157,21 +153,17 @@ public class CollisionMaterialActor extends AbstractCollisionObserver implements
 			{
 				return;
 			}
-			final Future<?> task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+			final Future<?> task = ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
 			{
-				@Override
-				public void run()
+				if (!creature.getEffectController().hasAbnormalEffect(actSkill.getId()))
 				{
-					if (!creature.getEffectController().hasAbnormalEffect(actSkill.getId()))
-					{
-						if (GeoDataConfig.GEO_MATERIALS_SHOWDETAILS && (creature instanceof Player))
-						{
-							final Player player = (Player) creature;
-						}
-						final Skill skill = SkillEngine.getInstance().getSkill(creature, actSkill.getId(), actSkill.getSkillLevel(), creature);
-						skill.getEffectedList().add(creature);
-						skill.useWithoutPropSkill();
-					}
+					// if (GeoDataConfig.GEO_MATERIALS_SHOWDETAILS && (creature instanceof Player))
+					// {
+					// final Player player = (Player) creature;
+					// }
+					final Skill skill = SkillEngine.getInstance().getSkill(creature, actSkill.getId(), actSkill.getSkillLevel(), creature);
+					skill.getEffectedList().add(creature);
+					skill.useWithoutPropSkill();
 				}
 			}, 0, (long) (actSkill.getFrequency() * 1000));
 			creature.getController().addTask(TaskId.MATERIAL_ACTION, task);
@@ -198,5 +190,5 @@ public class CollisionMaterialActor extends AbstractCollisionObserver implements
 	@Override
 	public void setEnabled(boolean enable)
 	{
-	};
+	}
 }

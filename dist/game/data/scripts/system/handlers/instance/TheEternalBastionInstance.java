@@ -54,7 +54,6 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -77,8 +76,10 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 	private int rank;
 	private Race spawnRace;
 	private long instanceTime;
+	@SuppressWarnings("unused")
 	private int dredgionSignalTower;
 	private Future<?> instanceTimer;
+	@SuppressWarnings("unused")
 	private boolean isInstanceDestroyed;
 	private Map<Integer, StaticDoor> doors;
 	private EternalBastionReward instanceReward;
@@ -89,12 +90,12 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		return (EternalBastionPlayerReward) instanceReward.getPlayerReward(object);
 	}
 	
-	@SuppressWarnings("unchecked")
 	protected void addPlayerReward(Player player)
 	{
 		instanceReward.addPlayerReward(new EternalBastionPlayerReward(player.getObjectId()));
 	}
 	
+	@SuppressWarnings("unused")
 	private boolean containPlayer(Integer object)
 	{
 		return instanceReward.containPlayer(object);
@@ -298,21 +299,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 				despawnNpc(npc);
 				break;
 			case 231130: // Grand Commander Pashid.
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								stopInstance(player);
-							}
-						});
-					}
-				}, 5000);
+				ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player1 -> stopInstance(player1)), 5000);
 				points = 24000;
 				despawnNpc(npc);
 				if (checkRank(instanceReward.getPoints()) == 1)
@@ -413,82 +400,51 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 	{
 		instanceTime = System.currentTimeMillis();
 		instanceReward.setInstanceStartTime();
-		bastionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		bastionTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				startAssaultPod2();
-				startRaidBastion1();
-			}
+			startAssaultPod2();
+			startRaidBastion1();
 		}, 120000)); // 2 Minutes.
-		bastionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		bastionTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// The Pashid Legion's 2nd Siege Troop is attacking the Bastion's gates.
-				sendMsgByRace(1401816, Race.PC_ALL, 2000);
-				// Another assault machine has been hit and will crash within the Bastion's wall.
-				sendMsgByRace(1401821, Race.PC_ALL, 5000);
-				startRaidBastion2();
-			}
+			// The Pashid Legion's 2nd Siege Troop is attacking the Bastion's gates.
+			sendMsgByRace(1401816, Race.PC_ALL, 2000);
+			// Another assault machine has been hit and will crash within the Bastion's wall.
+			sendMsgByRace(1401821, Race.PC_ALL, 5000);
+			startRaidBastion2();
 		}, 300000)); // 5 Minutes.
-		bastionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		bastionTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// The Pashid Legion's 3rd Siege Troop is attacking the Bastion's gates.
-				sendMsgByRace(1401817, Race.PC_ALL, 2000);
-				// Another assault machine has been hit and will crash within the Bastion's wall.
-				sendMsgByRace(1401822, Race.PC_ALL, 5000);
-				startAssaultPod3();
-				startRaidBastion3();
-			}
+			// The Pashid Legion's 3rd Siege Troop is attacking the Bastion's gates.
+			sendMsgByRace(1401817, Race.PC_ALL, 2000);
+			// Another assault machine has been hit and will crash within the Bastion's wall.
+			sendMsgByRace(1401822, Race.PC_ALL, 5000);
+			startAssaultPod3();
+			startRaidBastion3();
 		}, 480000)); // 8 Minutes.
-		bastionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		bastionTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// The Pashid Legion's Sheban Siege Troop is attacking the Bastion's gates.
-				sendMsgByRace(1401818, Race.PC_ALL, 2000);
-				startAssaultPod4();
-				startRaidBastion4();
-			}
+			// The Pashid Legion's Sheban Siege Troop is attacking the Bastion's gates.
+			sendMsgByRace(1401818, Race.PC_ALL, 2000);
+			startAssaultPod4();
+			startRaidBastion4();
 		}, 660000)); // 11 Minutes.
-		bastionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		bastionTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// The Eternal Bastion defenders have withdrawn in preparation of Pashid's assault.
-				sendMsgByRace(1401939, Race.PC_ALL, 2000);
-				// The commander of the garrison has been killed. The assault force is no longer coordinated and is in retreat.
-				sendMsgByRace(1401940, Race.PC_ALL, 5000);
-				startRaidBastion6();
-			}
+			// The Eternal Bastion defenders have withdrawn in preparation of Pashid's assault.
+			sendMsgByRace(1401939, Race.PC_ALL, 2000);
+			// The commander of the garrison has been killed. The assault force is no longer coordinated and is in retreat.
+			sendMsgByRace(1401940, Race.PC_ALL, 5000);
+			startRaidBastion6();
 		}, 840000)); // 14 Minutes.
-		bastionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		bastionTask.add(ThreadPoolManager.getInstance().schedule(() -> startRaidBastion7(), 1020000)); // 17 Minutes.
+		bastionTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				startRaidBastion7();
-			}
-		}, 1020000)); // 17 Minutes.
-		bastionTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				// Grand Commander Pashid has arrived with the Guard to assault the fortress.
-				sendMsgByRace(1401819, Race.PC_ALL, 0);
-				// The Governor is under attack.
-				sendMsgByRace(1401827, Race.PC_ALL, 5000);
-				spawn(231130, 744.06085f, 293.31564f, 233.70102f, (byte) 104); // Grand Commander Pashid.
-			}
+			// Grand Commander Pashid has arrived with the Guard to assault the fortress.
+			sendMsgByRace(1401819, Race.PC_ALL, 0);
+			// The Governor is under attack.
+			sendMsgByRace(1401827, Race.PC_ALL, 5000);
+			spawn(231130, 744.06085f, 293.31564f, 233.70102f, (byte) 104); // Grand Commander Pashid.
 		}, 1200000)); // 20 Minutes.
 	}
 	
@@ -565,7 +521,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		spawn(297352, 741.1732f, 302.49472f, 233.75148f, (byte) 96);
 	}
 	
-	private void startAssaultPod2()
+	void startAssaultPod2()
 	{
 		spawn(231157, 706.7695f, 261.6263f, 253.43394f, (byte) 40);
 		// FXMon_Smoke.
@@ -579,7 +535,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		spawn(297352, 699.1482f, 308.8426f, 249.30322f, (byte) 103);
 	}
 	
-	private void startAssaultPod4()
+	void startAssaultPod4()
 	{
 		spawn(231159, 626.0661f, 294.24414f, 238.0753f, (byte) 23);
 		spawn(231160, 754.409f, 400.14343f, 243.35422f, (byte) 63);
@@ -748,17 +704,13 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 	
 	private void sendPacket(int nameId, int point)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (nameId != 0)
 			{
-				if (nameId != 0)
-				{
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
-				}
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
 			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
 		});
 	}
 	
@@ -817,13 +769,13 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void rewardGroup()
-	{
-		for (Player p : instance.getPlayersInside())
-		{
-			doReward(p);
-		}
-	}
+	// private void rewardGroup()
+	// {
+	// for (Player p : instance.getPlayersInside())
+	// {
+	// doReward(p);
+	// }
+	// }
 	
 	@Override
 	public void doReward(Player player)
@@ -906,22 +858,18 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		if (instanceTimer == null)
 		{
 			instanceTime = System.currentTimeMillis();
-			instanceTimer = ThreadPoolManager.getInstance().schedule(new Runnable()
+			instanceTimer = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
+				if (!instanceReward.isRewarded() && canStart())
 				{
-					if (!instanceReward.isRewarded() && canStart())
-					{
-						deleteNpc(831334); // Outer Water Gate.
-						startAssaultPod1();
-						doors.get(311).setOpen(true);
-						instanceReward.addPoints(20000);
-						// The member recruitment window has passed. You cannot recruit any more members.
-						sendMsgByRace(1401181, Race.PC_ALL, 5000);
-						instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-						sendPacket(0, 0);
-					}
+					deleteNpc(831334); // Outer Water Gate.
+					startAssaultPod1();
+					doors.get(311).setOpen(true);
+					instanceReward.addPoints(20000);
+					// The member recruitment window has passed. You cannot recruit any more members.
+					sendMsgByRace(1401181, Race.PC_ALL, 5000);
+					instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+					sendPacket(0, 0);
 				}
 			}, 60000); // 60 Secondes.
 		}
@@ -963,36 +911,18 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

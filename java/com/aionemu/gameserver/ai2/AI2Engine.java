@@ -47,7 +47,6 @@ import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
  */
 public class AI2Engine implements GameEngine
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(AI2Engine.class);
 	private static ScriptManager scriptManager = new ScriptManager();
 	public static final File INSTANCE_DESCRIPTOR_FILE = new File("./data/scripts/system/aihandlers.xml");
@@ -148,10 +147,8 @@ public class AI2Engine implements GameEngine
 		return SingletonHolder.instance;
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final AI2Engine instance = new AI2Engine();
 	}
 }

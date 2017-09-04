@@ -81,7 +81,7 @@ public class _3093Secret_Dumpling_Recipe extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if ((qs.getStatus() == QuestStatus.REWARD))
 		{
 			if (env.getDialog() == QuestDialog.START_DIALOG)
 			{
@@ -99,7 +99,7 @@ public class _3093Secret_Dumpling_Recipe extends QuestHandler
 		}
 		else if (targetId == 798177)
 		{ // Gastak.
-			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
+			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -120,7 +120,7 @@ public class _3093Secret_Dumpling_Recipe extends QuestHandler
 		}
 		else if (targetId == 798179)
 		{ // Jabala.
-			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 2))
+			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 2))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -141,7 +141,7 @@ public class _3093Secret_Dumpling_Recipe extends QuestHandler
 		}
 		else if (targetId == 203784)
 		{ // Hestia.
-			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 3))
+			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 3))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -149,10 +149,7 @@ public class _3093Secret_Dumpling_Recipe extends QuestHandler
 				}
 				else if (env.getDialog() == QuestDialog.STEP_TO_3)
 				{
-					if (giveQuestItem(env, 182208052, 1))
-					{
-						;
-					}
+					giveQuestItem(env, 182208052, 1);
 					qs.setStatus(QuestStatus.REWARD);
 					updateQuestStatus(env);
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));

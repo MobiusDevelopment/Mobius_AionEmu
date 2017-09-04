@@ -59,55 +59,43 @@ public class Captain_MuruganAI2 extends AggressiveNpcAI2
 		{
 			SkillEngine.getInstance().getSkill(getOwner(), 19324, 1, target).useNoAnimationSkill();
 		}
-		task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		task = ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelTask();
+			}
+			else
+			{
+				// I'll get rid of the cursed ones first!
+				sendMsg(1500193, getObjectId(), false, 0);
+				SkillEngine.getInstance().getSkill(getOwner(), 19325, 1, getOwner()).useNoAnimationSkill();
+				if (getLifeStats().getHpPercentage() <= 50)
 				{
-					cancelTask();
-				}
-				else
-				{
-					// I'll get rid of the cursed ones first!
-					sendMsg(1500193, getObjectId(), false, 0);
-					SkillEngine.getInstance().getSkill(getOwner(), 19325, 1, getOwner()).useNoAnimationSkill();
-					if (getLifeStats().getHpPercentage() <= 50)
+					specialSkillTask = ThreadPoolManager.getInstance().schedule(() ->
 					{
-						specialSkillTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+						if (!isAlreadyDead())
 						{
-							@Override
-							public void run()
+							// I'll get rid of the cursed ones first!
+							sendMsg(1500193, getObjectId(), false, 0);
+							final VisibleObject target2 = getTarget();
+							if ((target2 != null) && (target2 instanceof Player))
+							{
+								SkillEngine.getInstance().getSkill(getOwner(), 19324, 1, target2).useNoAnimationSkill();
+							}
+							specialSkillTask = ThreadPoolManager.getInstance().schedule(() ->
 							{
 								if (!isAlreadyDead())
 								{
-									// I'll get rid of the cursed ones first!
-									sendMsg(1500193, getObjectId(), false, 0);
-									final VisibleObject target = getTarget();
-									if ((target != null) && (target instanceof Player))
+									final VisibleObject target1 = getTarget();
+									if ((target1 != null) && (target1 instanceof Player))
 									{
-										SkillEngine.getInstance().getSkill(getOwner(), 19324, 1, target).useNoAnimationSkill();
+										SkillEngine.getInstance().getSkill(getOwner(), 19324, 1, target1).useNoAnimationSkill();
 									}
-									specialSkillTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-									{
-										@Override
-										public void run()
-										{
-											if (!isAlreadyDead())
-											{
-												final VisibleObject target = getTarget();
-												if ((target != null) && (target instanceof Player))
-												{
-													SkillEngine.getInstance().getSkill(getOwner(), 19324, 1, target).useNoAnimationSkill();
-												}
-											}
-										}
-									}, 4000);
 								}
-							}
-						}, 10000);
-					}
+							}, 4000);
+						}
+					}, 10000);
 				}
 			}
 		}, 20000, 20000);

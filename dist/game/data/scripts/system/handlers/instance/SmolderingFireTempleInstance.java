@@ -53,7 +53,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 import javolution.util.FastMap;
@@ -69,9 +68,10 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 	private int rank;
 	private long instanceTime;
 	private int vengefulObscura;
+	@SuppressWarnings("unused")
 	private boolean isInstanceDestroyed;
-	private Map<Integer, StaticDoor> doors;
-	private SmolderingReward instanceReward;
+	Map<Integer, StaticDoor> doors;
+	SmolderingReward instanceReward;
 	private final FastList<Future<?>> smolderingTask = FastList.newInstance();
 	private final FastMap<Integer, VisibleObject> objects = new FastMap<>();
 	
@@ -80,12 +80,12 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 		return (SmolderingPlayerReward) instanceReward.getPlayerReward(object);
 	}
 	
-	@SuppressWarnings("unchecked")
 	protected void addPlayerReward(Player player)
 	{
 		instanceReward.addPlayerReward(new SmolderingPlayerReward(player.getObjectId()));
 	}
 	
+	@SuppressWarnings("unused")
 	private boolean containPlayer(Integer object)
 	{
 		return instanceReward.containPlayer(object);
@@ -158,8 +158,6 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 	public void onDie(Npc npc)
 	{
 		int points = 0;
-		final int npcId = npc.getNpcId();
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 244084: // Flame Spirit.
@@ -229,21 +227,7 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 				points = 500000;
 				despawnNpc(npc);
 				spawn(834068, 416.1324f, 97.165924f, 117.19401f, (byte) 50); // Old Fire Temple Fortune Server.
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								stopInstance(player);
-							}
-						});
-					}
-				}, 3000);
+				ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player -> stopInstance(player)), 3000);
 				break;
 		}
 		if (instanceReward.getInstanceScoreType().isStartProgress())
@@ -332,7 +316,7 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 		removeEffects(player);
 	}
 	
-	private int getTime()
+	int getTime()
 	{
 		final long result = System.currentTimeMillis() - instanceTime;
 		if (result < 60000)
@@ -346,19 +330,15 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 		return 0;
 	}
 	
-	private void sendPacket(int nameId, int point)
+	void sendPacket(int nameId, int point)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (nameId != 0)
 			{
-				if (nameId != 0)
-				{
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
-				}
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
 			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
 		});
 	}
 	
@@ -398,33 +378,15 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 	protected void startInstanceTask()
 	{
 		instanceTime = System.currentTimeMillis();
-		smolderingTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		smolderingTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				doors.get(2).setOpen(true);
-				// The member recruitment window has passed. You cannot recruit any more members.
-				sendMsgByRace(1401181, Race.PC_ALL, 0);
-				instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-				sendPacket(0, 0);
-			}
+			doors.get(2).setOpen(true);
+			// The member recruitment window has passed. You cannot recruit any more members.
+			sendMsgByRace(1401181, Race.PC_ALL, 0);
+			instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+			sendPacket(0, 0);
 		}, 60000));
-		smolderingTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						stopInstance(player);
-					}
-				});
-			}
-		}, 600000));
+		smolderingTask.add(ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player -> stopInstance(player)), 600000));
 	}
 	
 	@Override
@@ -453,13 +415,13 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 		sendPacket(0, 0);
 	}
 	
-	private void rewardGroup()
-	{
-		for (Player p : instance.getPlayersInside())
-		{
-			doReward(p);
-		}
-	}
+	// private void rewardGroup()
+	// {
+	// for (Player p : instance.getPlayersInside())
+	// {
+	// doReward(p);
+	// }
+	// }
 	
 	@Override
 	public void doReward(Player player)
@@ -539,36 +501,18 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

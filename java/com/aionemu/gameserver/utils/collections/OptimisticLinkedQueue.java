@@ -175,6 +175,8 @@ public class OptimisticLinkedQueue<E>extends AbstractQueue<E> implements Queue<E
 	
 	/**
 	 * Fixing the backwards pointers when needed
+	 * @param t
+	 * @param h
 	 */
 	private void fixList(Node<E> t, Node<E> h)
 	{
@@ -193,7 +195,6 @@ public class OptimisticLinkedQueue<E>extends AbstractQueue<E> implements Queue<E
 	{
 		while (poll() != null)
 		{
-			;
 		}
 	}
 	

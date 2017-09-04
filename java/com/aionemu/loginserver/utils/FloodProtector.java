@@ -32,10 +32,6 @@ import javolution.util.FastMap;
  */
 public class FloodProtector
 {
-	
-	/**
-	 * Logger for this class.
-	 */
 	private static final Logger log = LoggerFactory.getLogger(CM_LOGIN.class);
 	private final FastMap<String, Long> flood = new FastMap<>();
 	private final FastMap<String, Long> ban = new FastMap<>();
@@ -82,11 +78,8 @@ public class FloodProtector
 			{
 				return true;
 			}
-			else
-			{
-				ban.remove(ip);
-				return false;
-			}
+			ban.remove(ip);
+			return false;
 		}
 		final Long time = flood.get(ip);
 		if (time == null)
@@ -94,25 +87,17 @@ public class FloodProtector
 			flood.put(ip, System.currentTimeMillis() + (Config.FAST_RECONNECTION_TIME * 1000));
 			return false;
 		}
-		else
+		if (time > System.currentTimeMillis())
 		{
-			if (time > System.currentTimeMillis())
-			{
-				log.info("[AUDIT]FloodProtector:" + ip + " IP too fast connection attemp. blocked for " + Config.WRONG_LOGIN_BAN_TIME + " min");
-				ban.put(ip, System.currentTimeMillis() + (Config.WRONG_LOGIN_BAN_TIME * 60000));
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			log.info("[AUDIT]FloodProtector:" + ip + " IP too fast connection attemp. blocked for " + Config.WRONG_LOGIN_BAN_TIME + " min");
+			ban.put(ip, System.currentTimeMillis() + (Config.WRONG_LOGIN_BAN_TIME * 60000));
+			return true;
 		}
+		return false;
 	}
 	
-	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final FloodProtector instance = new FloodProtector();
 	}
 }
