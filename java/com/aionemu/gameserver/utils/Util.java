@@ -25,13 +25,12 @@ public class Util
 {
 	public static void printSection(String sectionName)
 	{
-		final StringBuilder sb = new StringBuilder();
-		sb.append("-[ " + sectionName + " ]");
-		while (sb.length() < 79)
+		sectionName = "=[ " + sectionName + " ]";
+		while (sectionName.length() < 79)
 		{
-			sb.insert(0, "=");
+			sectionName = "-" + sectionName;
 		}
-		System.out.println(sb.toString());
+		System.out.println(sectionName);
 	}
 	
 	public static void printProgressBarHeader(int size)
