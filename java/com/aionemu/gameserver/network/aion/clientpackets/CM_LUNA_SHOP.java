@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.model.ChatType;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
@@ -35,6 +32,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class CM_LUNA_SHOP extends AionClientPacket
 {
+	// private static final Logger log = LoggerFactory.getLogger(CM_LUNA_SHOP.class);
 	private int actionId;
 	private int indun_id;
 	private int indun_unk;
@@ -45,7 +43,6 @@ public class CM_LUNA_SHOP extends AionClientPacket
 	private int slot;
 	private int ItemObjId;
 	private int lunaCost;
-	private static final Logger log = LoggerFactory.getLogger(CM_LUNA_SHOP.class);
 	
 	public CM_LUNA_SHOP(int opcode, State state, State... restStates)
 	{
@@ -109,18 +106,12 @@ public class CM_LUNA_SHOP extends AionClientPacket
 				PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must leave your group or alliance to enter <Luna Instance>", ChatType.BRIGHT_YELLOW_CENTER), true);
 				return;
 			}
-			else
-			{
-				LunaShopService.getInstance().takiAdventureTeleport(player, indun_unk, indun_id);
-			}
-			if (player.getLevel() >= 10)
-			{
-				LunaShopService.getInstance().takiAdventureTeleport(player, indun_unk, indun_id);
-			}
-			else
+			else if (player.getLevel() < 10)
 			{
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_INSTANCE_ENTER_LEVEL);
+				return;
 			}
+			LunaShopService.getInstance().takiAdventureTeleport(player, indun_unk, indun_id);
 		}
 		else if (actionId == 2)
 		{// Karunerk's Workshop
