@@ -70,23 +70,31 @@ public final class BIHTriangle
 		switch (axis)
 		{
 			case 0:
+			{
 				v1 = pointa.x;
 				v2 = pointb.x;
 				v3 = pointc.x;
 				break;
+			}
 			case 1:
+			{
 				v1 = pointa.y;
 				v2 = pointb.y;
 				v3 = pointc.y;
 				break;
+			}
 			case 2:
+			{
 				v1 = pointa.z;
 				v2 = pointb.z;
 				v3 = pointc.z;
 				break;
+			}
 			default:
+			{
 				assert false;
 				return 0;
+			}
 		}
 		if (left)
 		{

@@ -158,10 +158,14 @@ public class AnohaService
 		switch (id)
 		{
 			case 1:
+			{
 				adventSwordEffect.put(702644, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(600090000, 702644, 791.27985f, 489.02353f, 142.90796f, (byte) 30), 1));
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	

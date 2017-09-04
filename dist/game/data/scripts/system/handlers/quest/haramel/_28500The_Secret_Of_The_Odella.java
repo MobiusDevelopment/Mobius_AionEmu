@@ -113,10 +113,12 @@ public class _28500The_Secret_Of_The_Odella extends QuestHandler
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
+						}
 						case STEP_TO_1:
 						{
 							return defaultCloseDialog(env, 0, 1);

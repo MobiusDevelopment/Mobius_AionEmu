@@ -64,30 +64,40 @@ public class Warden_SuramaAI2 extends AggressiveNpcAI2
 				switch (percent)
 				{
 					case 90:
+					{
 						sendMsg();
 						spawnAirWave();
 						startDranaReactor();
 						break;
+					}
 					case 70:
+					{
 						sendMsg();
 						spawnAirWave();
 						startDranaReactor();
 						break;
+					}
 					case 50:
+					{
 						sendMsg();
 						spawnAirWave();
 						startDranaReactor();
 						break;
+					}
 					case 30:
+					{
 						sendMsg();
 						spawnAirWave();
 						startDranaReactor();
 						break;
+					}
 					case 10:
+					{
 						sendMsg();
 						spawnAirWave();
 						startDranaReactor();
 						break;
+					}
 				}
 				percents.remove(percent);
 				break;

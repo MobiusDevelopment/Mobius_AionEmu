@@ -74,17 +74,23 @@ public class Watcher_Silikor_Of_MemoryAI2 extends AggressiveNpcAI2
 				switch (percent)
 				{
 					case 50:
+					{
 						sp(281054);
 						sp(281053);
 						break;
+					}
 					case 25:
+					{
 						sp(281054);
 						sp(281053);
 						break;
+					}
 					case 10:
+					{
 						sp(281054);
 						sp(281053);
 						break;
+					}
 				}
 			}
 		}
@@ -118,8 +124,10 @@ public class Watcher_Silikor_Of_MemoryAI2 extends AggressiveNpcAI2
 		switch (getNpcId())
 		{
 			case 237248: // Watcher Silikor Of Memory.
+			{
 				SkillEngine.getInstance().getSkill(getOwner(), 18481, 1, getOwner()).useSkill();
 				break;
+			}
 		}
 	}
 	

@@ -52,11 +52,17 @@ public class OutpostLocation extends SiegeLocation
 		switch (getLocationId())
 		{
 			case 3111:
+			{
 				return SiegeRace.ASMODIANS;
+			}
 			case 2111:
+			{
 				return SiegeRace.ELYOS;
+			}
 			default:
+			{
 				throw new RuntimeException("Please move this to datapack");
+			}
 		}
 	}
 	

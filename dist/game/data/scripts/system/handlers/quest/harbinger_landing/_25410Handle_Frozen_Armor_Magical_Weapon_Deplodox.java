@@ -111,6 +111,7 @@ public class _25410Handle_Frozen_Armor_Magical_Weapon_Deplodox extends QuestHand
 			switch (env.getTargetId())
 			{
 				case 883659:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -121,6 +122,7 @@ public class _25410Handle_Frozen_Armor_Magical_Weapon_Deplodox extends QuestHand
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

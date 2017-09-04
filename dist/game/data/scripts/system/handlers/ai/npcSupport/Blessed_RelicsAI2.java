@@ -58,8 +58,10 @@ public class Blessed_RelicsAI2 extends NpcAI2
 				case 831988: // Minor Blessed Relics.
 				case 831989: // Major Blessed Relics.
 				case 831990: // Greater Blessed Relics.
+				{
 					SkillEngine.getInstance().applyEffectDirectly(21650, player, player, 1800000 * 1); // Prestigious Blessing.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

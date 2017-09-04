@@ -101,14 +101,20 @@ public class PriestAsmodiansPreceptorAI2 extends AggressiveNpcAI2
 						switch (Rnd.get(1, 3))
 						{
 							case 1:
+							{
 								applySoulSickness((Npc) spawn(282369, p.getX(), p.getY(), p.getZ(), p.getHeading())); // Traufnir.
 								break;
+							}
 							case 2:
+							{
 								applySoulSickness((Npc) spawn(282370, p.getX(), p.getY(), p.getZ(), p.getHeading())); // Sigyn.
 								break;
+							}
 							case 3:
+							{
 								applySoulSickness((Npc) spawn(282371, p.getX(), p.getY(), p.getZ(), p.getHeading())); // Sif.
 								break;
+							}
 						}
 					}
 				}, 5000);

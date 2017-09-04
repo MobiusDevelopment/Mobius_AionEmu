@@ -228,9 +228,12 @@ public final class ZoneService implements GameEngine
 			switch (area.getZoneTemplate().getZoneType())
 			{
 				case FLY:
+				{
 					instance = new FlyZoneInstance(mapId, area);
 					break;
+				}
 				case FORT:
+				{
 					instance = new SiegeZoneInstance(mapId, area);
 					final SiegeLocation siege = DataManager.SIEGE_LOCATION_DATA.getSiegeLocations().get(area.getZoneTemplate().getSiegeId().get(0));
 					if (siege != null)
@@ -242,7 +245,9 @@ public final class ZoneService implements GameEngine
 						}
 					}
 					break;
+				}
 				case ARTIFACT:
+				{
 					instance = new SiegeZoneInstance(mapId, area);
 					for (int artifactId : area.getZoneTemplate().getSiegeId())
 					{
@@ -257,10 +262,14 @@ public final class ZoneService implements GameEngine
 						}
 					}
 					break;
+				}
 				case PVP:
+				{
 					instance = new PvPZoneInstance(mapId, area);
 					break;
+				}
 				default:
+				{
 					final InvasionZoneInstance invasionZone = getIZI(area);
 					if (invasionZone != null)
 					{
@@ -270,6 +279,7 @@ public final class ZoneService implements GameEngine
 					{
 						instance = new ZoneInstance(mapId, area);
 					}
+				}
 			}
 			instance.addHandler(getNewZoneHandler(area.getZoneTemplate().getName()));
 			zones.put(area.getZoneTemplate().getName(), instance);

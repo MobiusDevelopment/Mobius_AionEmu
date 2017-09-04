@@ -63,9 +63,13 @@ public class _25217Securing_Cloudtalon_Valley extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}

@@ -54,25 +54,39 @@ public class CM_REVIVE extends AionClientPacket
 		{
 			case BIND_REVIVE:
 			case VORTEX_REVIVE:
+			{
 				PlayerReviveService.bindRevive(activePlayer);
 				break;
+			}
 			case REBIRTH_REVIVE:
+			{
 				PlayerReviveService.rebirthRevive(activePlayer);
 				break;
+			}
 			case ITEM_SELF_REVIVE:
+			{
 				PlayerReviveService.itemSelfRevive(activePlayer);
 				break;
+			}
 			case SKILL_REVIVE:
+			{
 				PlayerReviveService.skillRevive(activePlayer);
 				break;
+			}
 			case KISK_REVIVE:
+			{
 				PlayerReviveService.kiskRevive(activePlayer);
 				break;
+			}
 			case INSTANCE_REVIVE:
+			{
 				PlayerReviveService.instanceRevive(activePlayer);
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 }

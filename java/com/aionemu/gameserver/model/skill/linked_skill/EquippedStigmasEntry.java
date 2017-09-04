@@ -42,6 +42,7 @@ public class EquippedStigmasEntry extends StigmaEntry
 		switch (persistentState)
 		{
 			case DELETED:
+			{
 				if (this.persistentState == PersistentState.NEW)
 				{
 					this.persistentState = PersistentState.NOACTION;
@@ -51,16 +52,23 @@ public class EquippedStigmasEntry extends StigmaEntry
 					this.persistentState = PersistentState.DELETED;
 				}
 				break;
+			}
 			case UPDATE_REQUIRED:
+			{
 				if (this.persistentState != PersistentState.NEW)
 				{
 					this.persistentState = PersistentState.UPDATE_REQUIRED;
 				}
 				break;
+			}
 			case NOACTION:
+			{
 				break;
+			}
 			default:
+			{
 				this.persistentState = persistentState;
+			}
 		}
 	}
 	

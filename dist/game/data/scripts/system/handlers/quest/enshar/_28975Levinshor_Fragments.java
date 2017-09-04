@@ -71,9 +71,13 @@ public class _28975Levinshor_Fragments extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}

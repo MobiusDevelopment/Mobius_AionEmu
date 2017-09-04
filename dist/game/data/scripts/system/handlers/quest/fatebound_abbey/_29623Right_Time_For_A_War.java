@@ -81,9 +81,13 @@ public class _29623Right_Time_For_A_War extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}
@@ -126,7 +130,9 @@ public class _29623Right_Time_For_A_War extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

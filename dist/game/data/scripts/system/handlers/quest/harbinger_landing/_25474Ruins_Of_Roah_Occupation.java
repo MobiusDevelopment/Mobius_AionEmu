@@ -133,6 +133,7 @@ public class _25474Ruins_Of_Roah_Occupation extends QuestHandler
 				case 883018:
 				case 883024:
 				case 883030:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -143,6 +144,7 @@ public class _25474Ruins_Of_Roah_Occupation extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

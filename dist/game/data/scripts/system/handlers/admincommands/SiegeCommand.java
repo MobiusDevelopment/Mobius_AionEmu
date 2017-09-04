@@ -262,8 +262,10 @@ public class SiegeCommand extends AdminCommand
 				case 2021:
 				case 3011:
 				case 3021:
+				{
 					SiegeService.getInstance().updateOutpostStatusByFortress((FortressLocation) loc);
 					break;
+				}
 			}
 		}
 		SiegeService.getInstance().broadcastUpdate(loc);

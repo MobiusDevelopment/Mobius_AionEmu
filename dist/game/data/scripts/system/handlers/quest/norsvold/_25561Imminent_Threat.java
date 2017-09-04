@@ -149,6 +149,7 @@ public class _25561Imminent_Threat extends QuestHandler
 				case 241475:
 				case 241476:
 				case 241477:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -159,6 +160,7 @@ public class _25561Imminent_Threat extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

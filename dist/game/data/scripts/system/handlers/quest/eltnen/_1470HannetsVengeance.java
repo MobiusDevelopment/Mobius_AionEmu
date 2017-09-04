@@ -98,11 +98,13 @@ public class _1470HannetsVengeance extends QuestHandler
 		{
 			case 212846:
 			case 214621:
+			{
 				qs.setQuestVarById(0, var + 1);
 				updateQuestStatus(env);
 				qs.setStatus(QuestStatus.REWARD);
 				updateQuestStatus(env);
 				return true;
+			}
 		}
 		return false;
 	}

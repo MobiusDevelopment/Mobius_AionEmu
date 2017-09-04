@@ -66,29 +66,39 @@ public class SM_ATTACK extends AionServerPacket
 			case 4:
 			case 5:
 			case 213:
+			{
 				writeH(32);
 				break;
+			}
 			case 194:
 			case 2:
 			case 3:
 			case 211:
+			{
 				writeH(64);
 				break;
+			}
 			case 192:
 			case 0:
 			case 1:
 			case 209:
+			{
 				writeH(128);
 				break;
+			}
 			case 198:
 			case 6:
 			case 7:
 			case 215:
+			{
 				writeH(256);
 				break;
+			}
 			default:
+			{
 				writeH(0);
 				break;
+			}
 		}
 		if (target instanceof Player)
 		{
@@ -109,15 +119,20 @@ public class SM_ATTACK extends AionServerPacket
 			{
 				case 0:
 				case 2:
+				{
 					break;
+				}
 				case 8:
 				case 10:
+				{
 					writeD(attack.getShieldMp());
 					writeD(attack.getProtectorId());
 					writeD(attack.getProtectedDamage());
 					writeD(attack.getProtectedSkillId());
 					break;
+				}
 				default:
+				{
 					writeD(attack.getProtectorId());
 					writeD(attack.getProtectedDamage());
 					writeD(attack.getProtectedSkillId());
@@ -126,6 +141,7 @@ public class SM_ATTACK extends AionServerPacket
 					writeD(0);
 					writeD(0);
 					break;
+				}
 			}
 		}
 		writeC(0);

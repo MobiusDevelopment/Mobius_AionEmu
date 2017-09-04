@@ -63,7 +63,9 @@ public class _21251Enhancing_The_Greatsword extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

@@ -71,7 +71,9 @@ public class _80593Into_The_Reliquary extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

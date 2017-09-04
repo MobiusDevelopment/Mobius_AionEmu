@@ -283,17 +283,29 @@ public enum StatEnum
 		switch (this)
 		{
 			case MAGICAL_ATTACK:
+			{
 				return itemSlot == ItemSlot.MAIN_HAND.getSlotIdMask() ? MAIN_HAND_MAGICAL_ATTACK : OFF_HAND_MAGICAL_ATTACK;
+			}
 			case MAGICAL_ACCURACY:
+			{
 				return itemSlot == ItemSlot.MAIN_HAND.getSlotIdMask() ? MAIN_HAND_MAGICAL_ACCURACY : OFF_HAND_MAGICAL_ACCURACY;
+			}
 			case PHYSICAL_ATTACK:
+			{
 				return itemSlot == ItemSlot.MAIN_HAND.getSlotIdMask() ? MAIN_HAND_POWER : OFF_HAND_POWER;
+			}
 			case PHYSICAL_ACCURACY:
+			{
 				return itemSlot == ItemSlot.MAIN_HAND.getSlotIdMask() ? MAIN_HAND_ACCURACY : OFF_HAND_ACCURACY;
+			}
 			case PHYSICAL_CRITICAL:
+			{
 				return itemSlot == ItemSlot.MAIN_HAND.getSlotIdMask() ? MAIN_HAND_CRITICAL : OFF_HAND_CRITICAL;
+			}
 			default:
+			{
 				return this;
+			}
 		}
 	}
 	
@@ -307,9 +319,13 @@ public enum StatEnum
 			case POWER:
 			case PHYSICAL_ACCURACY:
 			case PHYSICAL_CRITICAL:
+			{
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -324,25 +340,45 @@ public enum StatEnum
 		{
 			case 30001:
 			case 30002:
+			{
 				return BOOST_ESSENCETAPPING_XP_RATE;
+			}
 			case 30003:
+			{
 				return BOOST_AETHERTAPPING_XP_RATE;
+			}
 			case 40001:
+			{
 				return BOOST_COOKING_XP_RATE;
+			}
 			case 40002:
+			{
 				return BOOST_WEAPONSMITHING_XP_RATE;
+			}
 			case 40003:
+			{
 				return BOOST_ARMORSMITHING_XP_RATE;
+			}
 			case 40004:
+			{
 				return BOOST_TAILORING_XP_RATE;
+			}
 			case 40007:
+			{
 				return BOOST_ALCHEMY_XP_RATE;
+			}
 			case 40008:
+			{
 				return BOOST_HANDICRAFTING_XP_RATE;
+			}
 			case 40010:
+			{
 				return BOOST_MENUISIER_XP_RATE;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 }

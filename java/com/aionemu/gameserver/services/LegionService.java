@@ -789,16 +789,24 @@ public class LegionService
 			switch (rank)
 			{
 				case DEPUTY:
+				{
 					msgId = 1400902;
 					break;
+				}
 				case LEGIONARY:
+				{
 					msgId = 1300268;
 					break;
+				}
 				case CENTURION:
+				{
 					msgId = 1300267;
 					break;
+				}
 				case VOLUNTEER:
+				{
 					msgId = 1400903;
+				}
 			}
 			final LegionMember legionMember = getLegionMember(LM.getObjectId());
 			legionMember.setRank(rank);
@@ -823,16 +831,24 @@ public class LegionService
 			switch (rank)
 			{
 				case DEPUTY:
+				{
 					msgId = 1400902;
 					break;
+				}
 				case LEGIONARY:
+				{
 					msgId = 1300268;
 					break;
+				}
 				case CENTURION:
+				{
 					msgId = 1300267;
 					break;
+				}
 				case VOLUNTEER:
+				{
 					msgId = 1400903;
+				}
 			}
 			legionMember.setRank(rank);
 			PacketSendUtility.broadcastPacketToLegion(legion, new SM_LEGION_UPDATE_MEMBER(targetPlayer, msgId, targetPlayer.getName()));
@@ -1540,6 +1556,7 @@ public class LegionService
 			 * Invite to legion *
 			 */
 			case 0x01:
+			{
 				if (targetPlayer != null)
 				{
 					if (targetPlayer.getPlayerSettings().isInDeniedStatus(DeniedStatus.GUILD))
@@ -1554,10 +1571,12 @@ public class LegionService
 					PacketSendUtility.sendPacket(activePlayer, SM_SYSTEM_MESSAGE.STR_GUILD_INVITE_NO_USER_TO_INVITE);
 				}
 				break;
+			}
 			/**
 			 * Kick member from legion *
 			 */
 			case LEGION_ACTION_KICK:
+			{
 				/**
 				 * Check if player can be kicked
 				 */
@@ -1578,10 +1597,12 @@ public class LegionService
 					PacketSendUtility.sendPacket(activePlayer, new SM_ICON_INFO(1, false));
 				}
 				break;
+			}
 			/**
 			 * Appoint a new Brigade General *
 			 */
 			case 0x05:
+			{
 				if (targetPlayer != null)
 				{
 					appointBrigadeGeneral(activePlayer, targetPlayer);
@@ -1591,10 +1612,12 @@ public class LegionService
 					PacketSendUtility.sendPacket(activePlayer, SM_SYSTEM_MESSAGE.STR_GUILD_INVITE_NO_USER_TO_INVITE);
 				}
 				break;
+			}
 			/**
 			 * Appoint Centurion/Legionairy *
 			 */
 			case 0x06:
+			{
 				if (targetPlayer != null)
 				{
 					appointRank(activePlayer, targetPlayer, rank);
@@ -1604,12 +1627,15 @@ public class LegionService
 					appointRank(activePlayer, charName, rank);
 				}
 				break;
+			}
 			/**
 			 * Set nickname *
 			 */
 			case 0x0F:
+			{
 				changeNickname(activePlayer, charName, newNickname);
 				break;
+			}
 		}
 	}
 	
@@ -1627,14 +1653,18 @@ public class LegionService
 			 * Edit announcements *
 			 */
 			case 0x09:
+			{
 				changeAnnouncement(activePlayer, text);
 				break;
+			}
 			/**
 			 * Change self introduction *
 			 */
 			case 0x0A:
+			{
 				changeSelfIntro(activePlayer, text);
 				break;
+			}
 		}
 	}
 	
@@ -1650,6 +1680,7 @@ public class LegionService
 			 * Leave legion *
 			 */
 			case 0x02:
+			{
 				if (legionRestrictions.canLeave(activePlayer))
 				{
 					if (removeLegionMember(activePlayer.getName(), false, ""))
@@ -1664,12 +1695,15 @@ public class LegionService
 					}
 				}
 				break;
+			}
 			/**
 			 * Level legion up *
 			 */
 			case 0x0E:
+			{
 				requestChangeLevel(activePlayer);
 				break;
+			}
 		}
 	}
 	
@@ -2328,9 +2362,12 @@ public class LegionService
 		switch (type)
 		{
 			case 0:
+			{
 				matchingLegions = allCachedLegions.getAllLegions();
 				break;
+			}
 			case 1:
+			{
 				for (Legion legion : allCachedLegions.getAllLegions())
 				{
 					if (legion.getLegionName().toLowerCase().contains(legionName.toLowerCase()))
@@ -2339,6 +2376,7 @@ public class LegionService
 					}
 				}
 				break;
+			}
 		}
 		if (player.isLegionMember())
 		{
@@ -2434,6 +2472,7 @@ public class LegionService
 		switch (joinType)
 		{
 			case 0:
+			{
 				player.getCommonData().setJoinRequestLegionId(legionId);
 				sendLegionJoinRequestInfo(player, legionId);
 				final LegionJoinRequest ljr = new LegionJoinRequest(legionId, player, joinRequestMsg);
@@ -2444,9 +2483,12 @@ public class LegionService
 					PacketSendUtility.sendPacket(brigadeGeneral, new SM_LEGION_REQUEST_PLAYER(ljr));
 				}
 				break;
+			}
 			case 1:
+			{
 				directAddPlayer(legion, player);
 				break;
+			}
 		}
 	}
 	
@@ -2472,14 +2514,18 @@ public class LegionService
 		switch (pcd.getJoinRequestState())
 		{
 			case ACCEPTED:
+			{
 				directAddPlayer(pcd.getJoinRequestLegionId(), player);
 				handleJoinRequestCancel(player, player.getCommonData().getJoinRequestLegionId());
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LEGION_APPLICATION_ACCEPTED);
 				break;
+			}
 			case DENIED:
+			{
 				handleJoinRequestCancel(player, player.getCommonData().getJoinRequestLegionId());
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LEGION_APPLICATION_DENIED);
 				break;
+			}
 		}
 	}
 	

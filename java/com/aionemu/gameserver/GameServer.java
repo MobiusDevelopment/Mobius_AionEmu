@@ -588,13 +588,19 @@ public class GameServer
 			switch (race)
 			{
 				case ASMODIANS:
+				{
 					ASMOS_COUNT += i;
 					break;
+				}
 				case ELYOS:
+				{
 					ELYOS_COUNT += i;
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			computeRatios();
 		}
@@ -631,11 +637,17 @@ public class GameServer
 		switch (race)
 		{
 			case ASMODIANS:
+			{
 				return ASMOS_RATIO;
+			}
 			case ELYOS:
+			{
 				return ELYOS_RATIO;
+			}
 			default:
+			{
 				return 0.0;
+			}
 		}
 	}
 	
@@ -644,11 +656,17 @@ public class GameServer
 		switch (race)
 		{
 			case ASMODIANS:
+			{
 				return ASMOS_COUNT;
+			}
 			case ELYOS:
+			{
 				return ELYOS_COUNT;
+			}
 			default:
+			{
 				return 0;
+			}
 		}
 	}
 	

@@ -97,112 +97,171 @@ public class _4942Proving_Proficiency extends QuestHandler
 			switch (targetId)
 			{
 				case 204053:
+				{
 					if (var == 0)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 1011);
+							}
 							case STEP_TO_1:
+							{
 								return defaultCloseDialog(env, 0, 1);
+							}
 							case STEP_TO_2:
+							{
 								return defaultCloseDialog(env, 0, 2);
+							}
 							case STEP_TO_3:
+							{
 								return defaultCloseDialog(env, 0, 3);
+							}
 							case STEP_TO_4:
+							{
 								return defaultCloseDialog(env, 0, 4);
+							}
 							case STEP_TO_5:
+							{
 								return defaultCloseDialog(env, 0, 5);
+							}
 							case STEP_TO_6:
+							{
 								return defaultCloseDialog(env, 0, 6);
+							}
 						}
 					}
 					break;
+				}
 				case 204104:
+				{
 					if (var == 1)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 1352);
+							}
 							case STEP_TO_7:
+							{
 								return defaultCloseDialog(env, 1, 7, 152206598, 1, 0, 0);
+							}
 						}
 					}
 					break;
+				}
 				case 204108:
+				{
 					if (var == 2)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 1693);
+							}
 							case STEP_TO_7:
+							{
 								return defaultCloseDialog(env, 2, 7, 152206641, 1, 0, 0);
+							}
 						}
 					}
 					break;
+				}
 				case 204106:
+				{
 					if (var == 3)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 2034);
+							}
 							case STEP_TO_7:
+							{
 								return defaultCloseDialog(env, 3, 7, 152206617, 1, 0, 0);
+							}
 						}
 					}
 					break;
+				}
 				case 204110:
+				{
 					if (var == 4)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 2375);
+							}
 							case STEP_TO_7:
+							{
 								return defaultCloseDialog(env, 4, 7, 152206634, 1, 0, 0);
+							}
 						}
 					}
 					break;
+				}
 				case 204100:
+				{
 					if (var == 5)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 2716);
+							}
 							case STEP_TO_7:
+							{
 								return defaultCloseDialog(env, 5, 7, 152206646, 1, 0, 0);
+							}
 						}
 					}
 					break;
+				}
 				case 204102:
+				{
 					if (var == 6)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 3057);
+							}
 							case STEP_TO_7:
+							{
 								return defaultCloseDialog(env, 6, 7, 152206645, 1, 0, 0);
+							}
 						}
 					}
 					break;
+				}
 				case 798317:
+				{
 					if (var == 7)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 3398);
+							}
 							case CHECK_COLLECTED_ITEMS:
+							{
 								return checkItemExistence(env, 7, 8, false, 186000077, 1, true, 10000, 10001, 0, 0);
+							}
 						}
 					}
 					break;
+				}
 				case 204075:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -230,8 +289,11 @@ public class _4942Proving_Proficiency extends QuestHandler
 						}
 					}
 					break;
+				}
 				default:
+				{
 					return sendQuestStartDialog(env);
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

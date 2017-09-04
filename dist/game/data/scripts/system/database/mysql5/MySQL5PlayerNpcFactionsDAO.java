@@ -90,11 +90,15 @@ public class MySQL5PlayerNpcFactionsDAO extends PlayerNpcFactionsDAO
 			switch (npcFaction.getPersistentState())
 			{
 				case NEW:
+				{
 					insertNpcFaction(player.getObjectId(), npcFaction);
 					break;
+				}
 				case UPDATE_REQUIRED:
+				{
 					updateNpcFaction(player.getObjectId(), npcFaction);
 					break;
+				}
 			}
 		}
 	}

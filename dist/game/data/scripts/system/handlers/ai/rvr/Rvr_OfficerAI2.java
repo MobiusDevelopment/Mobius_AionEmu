@@ -42,30 +42,42 @@ public class Rvr_OfficerAI2 extends AggressiveNpcAI2
 		{
 			// Attacker Asmodians.
 			case 857733: // Officer Tarkan.
+			{
 				sendRvrGuide();
 				announceGeneralMiltarRescued();
 				break;
+			}
 			case 857734: // Officer Shagad.
+			{
 				sendRvrGuide();
 				announceGeneralKuparoRescued();
 				break;
+			}
 			case 857735: // Officer Argan.
+			{
 				sendRvrGuide();
 				announceGeneralLanstriRescued();
 				break;
+			}
 			// Attacker Elyos.
 			case 857740: // Officer Nars.
+			{
 				sendRvrGuide();
 				announceGeneralMagkenRescued();
 				break;
+			}
 			case 857741: // Officer Fasig.
+			{
 				sendRvrGuide();
 				announceGeneralHarkRescued();
 				break;
+			}
 			case 857742: // Officer Gadevir.
+			{
 				sendRvrGuide();
 				announceGeneralTombolkRescued();
 				break;
+			}
 		}
 		super.handleDied();
 	}

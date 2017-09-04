@@ -450,11 +450,15 @@ public class MySQL5LegionDAO extends LegionDAO
 			switch (legionEmblem.getPersistentState())
 			{
 				case UPDATE_REQUIRED:
+				{
 					updateLegionEmblem(legionId, legionEmblem);
 					break;
+				}
 				case NEW:
+				{
 					createLegionEmblem(legionId, legionEmblem);
 					break;
+				}
 			}
 		}
 		legionEmblem.setPersistentState(PersistentState.UPDATED);

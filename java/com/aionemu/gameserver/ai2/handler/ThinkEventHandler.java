@@ -64,16 +64,24 @@ public class ThinkEventHandler
 			switch (npcAI.getState())
 			{
 				case FIGHT:
+				{
 					thinkAttack(npcAI);
 					break;
+				}
 				case WALKING:
+				{
 					thinkWalking(npcAI);
 					break;
+				}
 				case IDLE:
+				{
 					thinkIdle(npcAI);
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		finally
@@ -98,13 +106,17 @@ public class ThinkEventHandler
 		switch (npcAI.getState())
 		{
 			case FIGHT:
+			{
 				thinkAttack(npcAI);
 				break;
+			}
 			default:
+			{
 				if (!npcAI.getOwner().isAtSpawnLocation())
 				{
 					npcAI.onGeneralEvent(AIEventType.NOT_AT_HOME);
 				}
+			}
 		}
 		
 	}

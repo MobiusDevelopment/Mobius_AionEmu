@@ -68,15 +68,21 @@ public class HaramelInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 217025: // Keymaster MuMu Dang.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000103, 1)); // Rusty Key.
 				break;
+			}
 			case 217108: // MuMu Mechanic.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000107, 1)); // Lubricating Oil.
 				break;
+			}
 			case 700829: // Ancient Treasure Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188052574, 1)); // Hamerun's Special Box.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053787, 1)); // Stigma Support Bundle.
 				break;
+			}
 		}
 	}
 	
@@ -87,13 +93,18 @@ public class HaramelInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 216915: // Boss Nukiti.
+			{
 				sendMsg("<Hamerun The Bleeder> appear");
 				spawn(216922, 224.39445f, 262.08163f, 144.89798f, (byte) 30); // Hamerun The Bleeder.
 				break;
+			}
 			case 700855: // Prison Doors.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 216922: // Hamerun The Bleeder.
+			{
 				despawnNpc(npc);
 				sendMovie(player, 457);
 				// Hamerun has dropped a treasure chest.
@@ -103,6 +114,7 @@ public class HaramelInstance extends GeneralInstanceHandler
 				spawn(700852, 223.93062f, 337.5487f, 142.43079f, (byte) 90); // Opened Dimensional Gate.
 				ItemService.addItem(player, 188900008, 1); // Secret Remedy Of Growth II.
 				break;
+			}
 		}
 	}
 	

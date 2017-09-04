@@ -38,11 +38,15 @@ public class CM_TUNE_RESULT extends AionClientPacket
 		switch (unk)
 		{
 			case 0:
+			{
 				accept = 0;
 				break;
+			}
 			case 1:
+			{
 				accept = 1;
 				break;
+			}
 		}
 	}
 	

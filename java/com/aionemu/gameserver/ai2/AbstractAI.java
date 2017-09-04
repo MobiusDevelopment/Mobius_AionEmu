@@ -142,23 +142,37 @@ public abstract class AbstractAI implements AI2
 		switch (currentState)
 		{
 			case DESPAWNED:
+			{
 				return StateEvents.DESPAWN_EVENTS.hasEvent(eventType);
+			}
 			case DIED:
+			{
 				return StateEvents.DEAD_EVENTS.hasEvent(eventType);
+			}
 			case CREATED:
+			{
 				return StateEvents.CREATED_EVENTS.hasEvent(eventType);
+			}
 			default:
+			{
 				break;
+			}
 		}
 		switch (eventType)
 		{
 			case DIALOG_START:
 			case DIALOG_FINISH:
+			{
 				return isNonFightingState();
+			}
 			case CREATURE_MOVED:
+			{
 				return getName().equals("trap") || ((currentState != AIState.FIGHT) && isNonFightingState());
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return true;
 	}
@@ -375,61 +389,99 @@ public abstract class AbstractAI implements AI2
 		switch (event)
 		{
 			case MOVE_VALIDATE:
+			{
 				handleMoveValidate();
 				break;
+			}
 			case MOVE_ARRIVED:
+			{
 				handleMoveArrived();
 				break;
+			}
 			case SPAWNED:
+			{
 				handleSpawned();
 				break;
+			}
 			case RESPAWNED:
+			{
 				handleRespawned();
 				break;
+			}
 			case DESPAWNED:
+			{
 				handleDespawned();
 				break;
+			}
 			case DIED:
+			{
 				handleDied();
 				break;
+			}
 			case ATTACK_COMPLETE:
+			{
 				handleAttackComplete();
 				break;
+			}
 			case ATTACK_FINISH:
+			{
 				handleFinishAttack();
 				break;
+			}
 			case TARGET_REACHED:
+			{
 				handleTargetReached();
 				break;
+			}
 			case TARGET_TOOFAR:
+			{
 				handleTargetTooFar();
 				break;
+			}
 			case TARGET_GIVEUP:
+			{
 				handleTargetGiveup();
 				break;
+			}
 			case NOT_AT_HOME:
+			{
 				handleNotAtHome();
 				break;
+			}
 			case BACK_HOME:
+			{
 				handleBackHome();
 				break;
+			}
 			case ACTIVATE:
+			{
 				handleActivate();
 				break;
+			}
 			case DEACTIVATE:
+			{
 				handleDeactivate();
 				break;
+			}
 			case FREEZE:
+			{
 				FreezeEventHandler.onFreeze(this);
 				break;
+			}
 			case UNFREEZE:
+			{
 				FreezeEventHandler.onUnfreeze(this);
 				break;
+			}
 			case DROP_REGISTERED:
+			{
 				handleDropRegistered();
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 	
@@ -459,6 +511,7 @@ public abstract class AbstractAI implements AI2
 		switch (event)
 		{
 			case ATTACK:
+			{
 				if (DataManager.TRIBE_RELATIONS_DATA.isFriendlyRelation(getOwner().getTribe(), creature.getTribe()))
 				{
 					return;
@@ -466,7 +519,9 @@ public abstract class AbstractAI implements AI2
 				handleAttack(creature);
 				logEvent(event);
 				break;
+			}
 			case CREATURE_NEEDS_SUPPORT:
+			{
 				if (!handleCreatureNeedsSupport(creature))
 				{
 					if (creature.getTarget() instanceof Creature)
@@ -479,40 +534,61 @@ public abstract class AbstractAI implements AI2
 				}
 				logEvent(event);
 				break;
+			}
 			case CREATURE_SEE:
+			{
 				handleCreatureSee(creature);
 				break;
+			}
 			case CREATURE_NOT_SEE:
+			{
 				handleCreatureNotSee(creature);
 				break;
+			}
 			case CREATURE_MOVED:
+			{
 				handleCreatureMoved(creature);
 				break;
+			}
 			case CREATURE_AGGRO:
+			{
 				handleCreatureAggro(creature);
 				logEvent(event);
 				break;
+			}
 			case TARGET_CHANGED:
+			{
 				handleTargetChanged(creature);
 				break;
+			}
 			case FOLLOW_ME:
+			{
 				handleFollowMe(creature);
 				logEvent(event);
 				break;
+			}
 			case STOP_FOLLOW_ME:
+			{
 				handleStopFollowMe(creature);
 				logEvent(event);
 				break;
+			}
 			case DIALOG_START:
+			{
 				handleDialogStart((Player) creature);
 				logEvent(event);
 				break;
+			}
 			case DIALOG_FINISH:
+			{
 				handleDialogFinish((Player) creature);
 				logEvent(event);
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 	
@@ -527,13 +603,21 @@ public abstract class AbstractAI implements AI2
 		switch (question)
 		{
 			case DESTINATION_REACHED:
+			{
 				return isDestinationReached();
+			}
 			case CAN_SPAWN_ON_DAYTIME_CHANGE:
+			{
 				return isCanSpawnOnDaytimeChange();
+			}
 			case CAN_SHOUT:
+			{
 				return isMayShout();
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return false;
 	}
@@ -561,18 +645,30 @@ public abstract class AbstractAI implements AI2
 		switch (state)
 		{
 			case FEAR:
+			{
 				return MathUtil.isNearCoordinates(getOwner(), owner.getMoveController().getTargetX2(), owner.getMoveController().getTargetY2(), owner.getMoveController().getTargetZ2(), 1);
+			}
 			case FIGHT:
+			{
 				return SimpleAttackManager.isTargetInAttackRange((Npc) owner);
+			}
 			case RETURNING:
+			{
 				final SpawnTemplate spawn = getOwner().getSpawn();
 				return MathUtil.isNearCoordinates(getOwner(), spawn.getX(), spawn.getY(), spawn.getZ(), 1);
+			}
 			case FOLLOWING:
+			{
 				return FollowEventHandler.isInRange(this, getOwner().getTarget());
+			}
 			case WALKING:
+			{
 				return (currentSubState == AISubState.TALK) || WalkManager.isArrivedAtPoint((NpcAI2) this);
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return true;
 	}

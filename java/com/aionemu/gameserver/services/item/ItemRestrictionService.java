@@ -42,6 +42,7 @@ public class ItemRestrictionService
 		switch (type)
 		{
 			case LEGION_WAREHOUSE:
+			{
 				if (!LegionService.getInstance().getLegionMember(player.getObjectId()).hasRights(LegionPermissionsMask.WH_WITHDRAWAL) || !LegionConfig.LEGION_WAREHOUSE || !player.isLegionMember())
 				{
 					// You do not have the authority to use the Legion warehouse.
@@ -49,6 +50,7 @@ public class ItemRestrictionService
 					return true;
 				}
 				break;
+			}
 		}
 		return false;
 	}
@@ -62,6 +64,7 @@ public class ItemRestrictionService
 		switch (type)
 		{
 			case REGULAR_WAREHOUSE:
+			{
 				if (!item.isStorableinWarehouse(player))
 				{
 					// You cannot store this in the warehouse.
@@ -69,7 +72,9 @@ public class ItemRestrictionService
 					return true;
 				}
 				break;
+			}
 			case ACCOUNT_WAREHOUSE:
+			{
 				if (!item.isStorableinAccWarehouse(player))
 				{
 					// You cannot store this item in the account warehouse.
@@ -77,7 +82,9 @@ public class ItemRestrictionService
 					return true;
 				}
 				break;
+			}
 			case LEGION_WAREHOUSE:
+			{
 				if (!item.isStorableinLegWarehouse(player) || !LegionConfig.LEGION_WAREHOUSE)
 				{
 					// You cannot store this item in the Legion warehouse.
@@ -91,6 +98,7 @@ public class ItemRestrictionService
 					return true;
 				}
 				break;
+			}
 		}
 		
 		return false;

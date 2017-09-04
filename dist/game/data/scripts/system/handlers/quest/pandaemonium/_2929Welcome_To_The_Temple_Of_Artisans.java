@@ -64,9 +64,13 @@ public class _2929Welcome_To_The_Temple_Of_Artisans extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}

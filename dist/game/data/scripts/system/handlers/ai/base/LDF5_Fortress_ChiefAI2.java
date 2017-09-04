@@ -42,38 +42,56 @@ public class LDF5_Fortress_ChiefAI2 extends AggressiveNpcAI2
 			 * Elyos
 			 */
 			case 251880: // Elyos Hero's Fall Defense Chief.
+			{
 				announceLDF5FortressLiCenter();
 				break;
+			}
 			case 251881: // Elyos Ashen Glade Defense Chief.
+			{
 				announceLDF5FortressLiUp();
 				break;
+			}
 			case 251882: // Elyos Smoldering Crag Defense Chief.
+			{
 				announceLDF5FortressLiDown();
 				break;
+			}
 			/**
 			 * Asmodians
 			 */
 			case 251960: // Asmodians Hero's Fall Defense Chief.
+			{
 				announceLDF5FortressDaCenter();
 				break;
+			}
 			case 251961: // Asmodians Ashen Glade Defense Chief.
+			{
 				announceLDF5FortressDaUp();
 				break;
+			}
 			case 251962: // Asmodians Smoldering Crag Defense Chief.
+			{
 				announceLDF5FortressDaDown();
 				break;
+			}
 			/**
 			 * Balaur
 			 */
 			case 252040: // Balaur Hero's Fall Defense Chief.
+			{
 				announceLDF5FortressDrCenter();
 				break;
+			}
 			case 252041: // Balaur Ashen Glade Defense Chief.
+			{
 				announceLDF5FortressDrUp();
 				break;
+			}
 			case 252042: // Balaur Smoldering Crag Defense Chief.
+			{
 				announceLDF5FortressDrDown();
 				break;
+			}
 		}
 		super.handleSpawned();
 	}

@@ -112,6 +112,7 @@ public class _18974Protect_Erivale extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 235881:
+				{
 					if (qs.getQuestVarById(1) < 6)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -122,6 +123,7 @@ public class _18974Protect_Erivale extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

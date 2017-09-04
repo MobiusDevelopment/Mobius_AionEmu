@@ -123,6 +123,7 @@ public class _28932All_Out_Dredgion_Assault extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 243816: // Frigate Commander Ashunatal.
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -133,6 +134,7 @@ public class _28932All_Out_Dredgion_Assault extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

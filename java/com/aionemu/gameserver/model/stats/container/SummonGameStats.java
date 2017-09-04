@@ -90,30 +90,41 @@ public class SummonGameStats extends CreatureGameStats<Summon>
 		switch (statEnum)
 		{
 			case MAXHP:
+			{
 				stat.setBonusRate(0.5f);
 				return owner.getMaster().getGameStats().getItemStatBoost(statEnum, stat);
+			}
 			case BOOST_MAGICAL_SKILL:
 			case MAGIC_SKILL_BOOST_RESIST:
+			{
 				stat.setBonusRate(0.8f);
 				return owner.getMaster().getGameStats().getItemStatBoost(statEnum, stat);
+			}
 			case PHYSICAL_ATTACK:
+			{
 				stat.setBonusRate(0.3f);
 				return owner.getMaster().getGameStats().getItemStatBoost(statEnum, stat);
+			}
 			case PHYSICAL_DEFENSE:
 			case EVASION:
 			case MAGICAL_ACCURACY:
 			case MAGICAL_RESIST:
+			{
 				stat.setBonusRate(0.5f);
 				return owner.getMaster().getGameStats().getItemStatBoost(statEnum, stat);
+			}
 			case PHYSICAL_ACCURACY:
+			{
 				stat.setBonusRate(0.5f);
 				owner.getMaster().getGameStats().getItemStatBoost(StatEnum.MAIN_HAND_ACCURACY, stat);
 				return owner.getMaster().getGameStats().getItemStatBoost(statEnum, stat);
+			}
 			case PHYSICAL_CRITICAL:
+			{
 				stat.setBonusRate(0.5f);
 				owner.getMaster().getGameStats().getItemStatBoost(StatEnum.MAIN_HAND_CRITICAL, stat);
 				return owner.getMaster().getGameStats().getItemStatBoost(statEnum, stat);
-			
+			}
 		}
 		return stat;
 	}

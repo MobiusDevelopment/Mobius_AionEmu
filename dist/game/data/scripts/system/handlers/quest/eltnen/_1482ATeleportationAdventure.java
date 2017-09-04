@@ -136,7 +136,9 @@ public class _1482ATeleportationAdventure extends QuestHandler
 							return true;
 						}
 						default:
+						{
 							return sendQuestStartDialog(env);
+						}
 					}
 				}
 			}

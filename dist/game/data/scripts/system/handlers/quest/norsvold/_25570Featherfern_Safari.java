@@ -115,6 +115,7 @@ public class _25570Featherfern_Safari extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 241197:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -125,6 +126,7 @@ public class _25570Featherfern_Safari extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

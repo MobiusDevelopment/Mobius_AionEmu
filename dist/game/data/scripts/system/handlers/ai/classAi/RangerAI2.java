@@ -129,17 +129,25 @@ public class RangerAI2 extends AggressiveNpcAI2
 						switch (Rnd.get(1, 4))
 						{
 							case 1:
+							{
 								spawn(282372, x, y, z, (byte) 0); // Spike Bite Trap I.
 								break;
+							}
 							case 2:
+							{
 								spawn(294706, x, y, z, (byte) 0); // Trap Of Slowing III.
 								break;
+							}
 							case 3:
+							{
 								spawn(294707, x, y, z, (byte) 0); // Sleep Trap I.
 								break;
+							}
 							case 4:
+							{
 								spawn(294708, x, y, z, (byte) 0); // Explosive I.
 								break;
+							}
 						}
 					}
 				}
@@ -180,8 +188,10 @@ public class RangerAI2 extends AggressiveNpcAI2
 		switch (getNpcId())
 		{
 			case 214846:
+			{
 				anuhartBravery();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -351,8 +361,10 @@ public class RangerAI2 extends AggressiveNpcAI2
 			case 883253:
 			case 883259:
 			case 883265:
+			{
 				conquerorPassion();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -372,8 +384,10 @@ public class RangerAI2 extends AggressiveNpcAI2
 			case 883067:
 			case 883073:
 			case 883643:
+			{
 				ereshkigalRage();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -389,8 +403,10 @@ public class RangerAI2 extends AggressiveNpcAI2
 			case 883037:
 			case 883043:
 			case 883049:
+			{
 				brokenMorale();
 				break;
+			}
 		}
 	}
 	

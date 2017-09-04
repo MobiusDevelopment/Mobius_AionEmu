@@ -67,24 +67,30 @@ public class ArenaOfHarmonyInstance extends HarmonyArenaInstance
 			switch (rank)
 			{
 				case 0:
+				{
 					rankingAP = 681;
 					rankingGP = 481;
 					rankingCoI = 49;
 					rankingCiI = 49;
 					group.setGloryTicket(1);
 					break;
+				}
 				case 1:
+				{
 					rankingAP = 487;
 					rankingGP = 287;
 					rankingCoI = 20;
 					rankingCiI = 20;
 					break;
+				}
 				case 2:
+				{
 					rankingAP = 251;
 					rankingGP = 151;
 					rankingCoI = 1;
 					rankingCiI = 1;
 					break;
+				}
 			}
 			rankingAP *= percent;
 			rankingGP *= percent;

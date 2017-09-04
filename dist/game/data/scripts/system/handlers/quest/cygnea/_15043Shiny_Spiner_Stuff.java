@@ -63,9 +63,13 @@ public class _15043Shiny_Spiner_Stuff extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}

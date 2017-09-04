@@ -62,7 +62,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -119,6 +118,7 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 243816: // Frigate Commander Ashunatal.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -130,15 +130,20 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 243807: // Supervisor Gayaba.
 			case 243808: // Chief Navigator Yatri.
 			case 243809: // Assistant Navigator Magoyart.
@@ -153,6 +158,7 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 			case 243820: // Supply Vice Captain Aketaton.
 			case 243822: // Large Bagitara.
 			case 243852: // Auditor Agwe.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -163,8 +169,10 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 243818: // Raima The Cruel.
 			case 243823: // Lieutenant Renuka.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -175,16 +183,22 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 243821: // Gatekeeper Menes.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000189, 1)); // Secret Cache Key.
@@ -196,6 +210,7 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -221,35 +236,39 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 	protected void startInstanceTask()
 	{
 		instanceTime = System.currentTimeMillis();
-		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			openFirstDoors();
+			// The bulkhead has been activated and the passage between the First Armory and Gravity Control has been sealed.
+			sendMsgByRace(1400604, Race.PC_ALL, 5000);
+			// The bulkhead has been activated and the passage between the Second Armory and Gravity Control has been sealed.
+			sendMsgByRace(1400605, Race.PC_ALL, 10000);
+			dredgionReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+			sendPacket();
+			switch (Rnd.get(1, 2))
 			{
-				openFirstDoors();
-				// The bulkhead has been activated and the passage between the First Armory and Gravity Control has been sealed.
-				sendMsgByRace(1400604, Race.PC_ALL, 5000);
-				// The bulkhead has been activated and the passage between the Second Armory and Gravity Control has been sealed.
-				sendMsgByRace(1400605, Race.PC_ALL, 10000);
-				dredgionReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-				sendPacket();
-				switch (Rnd.get(1, 2))
+				case 1:
 				{
-					case 1:
-						spawn(243807, 415.2769f, 282.0216f, 409.7311f, (byte) 118); // Supervisor Gayaba.
-						break;
-					case 2:
-						spawn(243807, 556.53534f, 279.2918f, 409.7311f, (byte) 33); // Supervisor Gayaba.
-						break;
+					spawn(243807, 415.2769f, 282.0216f, 409.7311f, (byte) 118); // Supervisor Gayaba.
+					break;
 				}
-				switch (Rnd.get(1, 2))
+				case 2:
 				{
-					case 1:
-						spawn(243815, 485.25455f, 877.04614f, 405.01407f, (byte) 90); // Vice Captain Anggiras.
-						break;
-					case 2:
-						spawn(243852, 485.25455f, 877.04614f, 405.01407f, (byte) 90); // Auditor Agwe.
-						break;
+					spawn(243807, 556.53534f, 279.2918f, 409.7311f, (byte) 33); // Supervisor Gayaba.
+					break;
+				}
+			}
+			switch (Rnd.get(1, 2))
+			{
+				case 1:
+				{
+					spawn(243815, 485.25455f, 877.04614f, 405.01407f, (byte) 90); // Vice Captain Anggiras.
+					break;
+				}
+				case 2:
+				{
+					spawn(243852, 485.25455f, 877.04614f, 405.01407f, (byte) 90); // Auditor Agwe.
+					break;
 				}
 			}
 		}, 60000));
@@ -257,38 +276,23 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 		 * "Ashunatal Dredgion" Teleportation Devices: There are numerous teleportation devices located inside the "Ashunatal Dredgion" These teleportation devices allow players to teleport to different areas of the Dredgion with ease. Side Teleporter: This teleporter activates 10 minutes after the
 		 * Instanced Dungeon has begun.
 		 */
-		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// The teleportation device at the Emergency Exit is now operational.
-				sendMsgByRace(1401903, Race.PC_ALL, 0);
-				spawn(801989, 415.07663f, 173.85265f, 432.53436f, (byte) 0, 34); // Port Side Teleporter.
-				spawn(801990, 554.83081f, 173.87158f, 432.52448f, (byte) 0, 9); // Starboard Side Teleporter.
-			}
+			// The teleportation device at the Emergency Exit is now operational.
+			sendMsgByRace(1401903, Race.PC_ALL, 0);
+			spawn(801989, 415.07663f, 173.85265f, 432.53436f, (byte) 0, 34); // Port Side Teleporter.
+			spawn(801990, 554.83081f, 173.87158f, 432.52448f, (byte) 0, 9); // Starboard Side Teleporter.
 		}, 600000));
 		/**
 		 * Large Bagitara: Location: Gravity Control Time Elapsed: 15 Minutes Valor: 1,000 Points
 		 */
-		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(() -> spawn(243822, 485.4811f, 313.925f, 403.71857f, (byte) 36), 900000));
+		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!dredgionReward.isRewarded())
 			{
-				spawn(243822, 485.4811f, 313.925f, 403.71857f, (byte) 36); // Large Bagitara.
-			}
-		}, 900000));
-		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				if (!dredgionReward.isRewarded())
-				{
-					final Race winningRace = dredgionReward.getWinningRaceByScore();
-					stopInstance(winningRace);
-				}
+				final Race winningRace = dredgionReward.getWinningRaceByScore();
+				stopInstance(winningRace);
 			}
 		}, 3600000));
 	}
@@ -309,59 +313,80 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 			 * There are six weapons locker located near the "Ashunatal Dredgion" entrance, and each chest awards 100 points if destroyed. These locker are also related to Quests for both Elyos and Asmodians.
 			 */
 			case 801972: // Weapons Locker.
+			{
 				point = 100;
 				despawnNpc(npc);
 				break;
+			}
 			/**
 			 * The Surkana: 1. Destroy Surkana in each room can obtain a higher score. 2. When you add monsters to attack Surkana is around 20m range. First, it is safe to be cleaned up monsters. 3. When you destroy a race that destroyed Surkana is displayed on the map. It is through you can guess
 			 * the path of the opposing faction. 4. Captain Room Teleport appeared to be destroyed 5 Surkana.
 			 */
 			case 801974: // Armory Surkana.
 			case 801975: // Armory Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 500);
 				break;
+			}
 			case 801976: // Gravity Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 900);
 				break;
+			}
 			case 801977: // Nuclear Surkana.
 			case 801978: // Nuclear Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 1100);
 				break;
+			}
 			case 801979: // Main Cannon Surkana.
 			case 801980: // Main Cannon Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 800);
 				break;
+			}
 			case 801981: // Drop Authority Surkana.
 			case 801982: // Drop Authority Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 600);
 				break;
+			}
 			case 801983: // Combatant Enhancing Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 700);
 				break;
+			}
 			case 801984: // Flywheel Surkana.
 			case 801985: // Flywheel Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 500);
 				break;
+			}
 			case 801986: // Bridge Power Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 700);
 				break;
+			}
 			case 801987: // Basic Systems Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 1100);
 				break;
+			}
 			/**
 			 * Captain’s Cabin Passage: There are paths to the left and right of the Captain’s Cabin’s on the second floor, but the doors are blocked. These doors cannot be demolished, and can only be opened with a key dropped by a specific Named Monster. Groups desiring the Captain’s Cabin Passage
 			 * Key will need to defeat "Lieutenant Renuka" in the center of the Dredgion. Only one Group can loot the key. The Captain’s Cabin Teleport Device is located just beyond the Barracks, and can make reaching Captain Anusa much easier.
 			 */
 			case 243823: // Lieutenant Renuka.
+			{
 				if (race.equals(Race.ELYOS))
 				{
 					// A teleportation device to the Captain's Cabin is now available at the end of the Atrium.
@@ -376,21 +401,26 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 				}
 				point = 1000;
 				break;
+			}
 			/**
 			 * Supply Room Teleporter: This teleporter activates after the destruction of the Teleporter Generator in the Barracks.
 			 */
 			case 802001: // Portside Teleporter Generator.
+			{
 				despawnNpc(npc);
 				// A teleport device to the Logistics area has been created at the Escape Hatch.
 				sendMsgByRace(1401897, Race.PC_ALL, 0);
 				spawn(801991, 397.11661f, 184.29782f, 432.8032f, (byte) 0, 42); // Port Supply Room Teleporter.
 				break;
+			}
 			case 802002: // Starboard Teleporter Generator.
+			{
 				despawnNpc(npc);
 				// A teleport device to the Logistics area has been created at the Secondary Escape Hatch.
 				sendMsgByRace(1401900, Race.PC_ALL, 0);
 				spawn(801992, 572.10443f, 185.23933f, 432.56024f, (byte) 0, 10); // Starboard Supply Room Teleporter.
 				break;
+			}
 			/**
 			 * Defense Shield Generator: When the Defense Shield Generator on the Weapons Deck or Lower Weapons deck is demolished, a shield appears in Ready Room 1 or 2. This shield blocks access to the center of the "Ashunatal Dredgion" The Ready Room is the shortest route to the center of the
 			 * Dredgion, and the quickest route to the opposing race’s area. Different tactics can be used in this area to maximize the Group’s accumulation of points. For example, if one Group decides to destroy the opposing Group’s Shield Generator, it will make it difficult for the opposing Group
@@ -398,18 +428,24 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 			 */
 			case 801997: // Portside Defense Shield.
 			case 801998: // Starboard Defense Shield.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 802003: // Portside Defense Shield Generator.
+			{
 				despawnNpc(npc);
 				// The Portside Defense Shield has been generated in Ready Room 1.
 				sendMsgByRace(1400226, Race.PC_ALL, 0);
 				break;
+			}
 			case 802004: // Starboard Defense Shield Generator.
+			{
 				despawnNpc(npc);
 				// The Starboard Defense Shield has been generated in Ready Room 2.
 				sendMsgByRace(1400227, Race.PC_ALL, 0);
 				break;
+			}
 			/**
 			 * The Bulkhead: These shields are activated by the Durga Sentinel when first encountered at the beginning of the battle. These shields block the entrance from the Armories to Gravity Control, and can be demolished with attacks, but also have a significant amount of health. Groups often
 			 * opt to move around the shields instead of demolishing them. It’s worth noting that after a certain amount of time has passed, Officer Kamanya spawns in the Gravity Control room, and gives 1,000 points when defeated. There is also a chance that Rajaya the Inquisitor, a Hero grade Named
@@ -417,6 +453,7 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 			 */
 			case 802005: // Port Bulkhead.
 			case 802006: // Starboard Bulkhead.
+			{
 				bulkhead++;
 				if (bulkhead == 2)
 				{
@@ -424,6 +461,7 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 				}
 				despawnNpc(npc);
 				break;
+			}
 			case 243808: // Chief Navigator Yatri.
 			case 243809: // Assistant Navigator Magoyart.
 			case 243810: // Arebusqeirs Sub Captain Darma.
@@ -433,6 +471,7 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 			case 243814: // Technician Mursillis.
 			case 243819: // Supply Captain Varuk.
 			case 243820: // Supply Vice Captain Aketaton.
+			{
 				secretCache++;
 				if (secretCache == 5)
 				{
@@ -441,41 +480,48 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 					spawn(701455, 482.82455f, 496.16556f, 397.28323f, (byte) 92); // Dredgion Opportunity Bundle.
 				}
 				break;
+			}
 			case 243815: // Vice Captain Anggiras.
 			case 243852: // Auditor Agwe.
+			{
 				point = 500;
 				break;
+			}
 			case 243807: // Supervisor Gayaba.
 			case 243821: // Gatekeeper Menes.
 			case 243822: // Large Bagitara.
+			{
 				point = 1000;
 				break;
+			}
 			/**
 			 * Aion 5.3 You can now gain "Glory Points" from killing major monsters in the Ashunatal Dredgion.
 			 */
 			case 243817: // Menehune The Sprightly.
+			{
 				point = 1000;
 				AbyssPointsService.addGp(mostPlayerDamage, 300);
 				break;
+			}
 			case 243818: // Raima The Cruel.
+			{
 				AbyssPointsService.addGp(mostPlayerDamage, 300);
 				break;
+			}
 			case 243816: // Frigate Commander Ashunatal.
+			{
 				point = 1000;
 				AbyssPointsService.addGp(mostPlayerDamage, 540);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
+					if (!dredgionReward.isRewarded())
 					{
-						if (!dredgionReward.isRewarded())
-						{
-							final Race winningRace = dredgionReward.getWinningRaceByScore();
-							stopInstance(winningRace);
-						}
+						final Race winningRace = dredgionReward.getWinningRaceByScore();
+						stopInstance(winningRace);
 					}
 				}, 30000);
 				break;
+			}
 		}
 		updateScore(mostPlayerDamage, npc, point, false);
 	}
@@ -545,23 +591,19 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 		{
 			npc.getController().onDelete();
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
+					if (CreatureActions.isAlreadyDead(player))
 					{
-						if (CreatureActions.isAlreadyDead(player))
-						{
-							PlayerReviveService.duelRevive(player);
-						}
-						onExitInstance(player);
+						PlayerReviveService.duelRevive(player);
 					}
-					AutoGroupService.getInstance().unRegisterInstance(instanceId);
+					onExitInstance(player);
 				}
+				AutoGroupService.getInstance().unRegisterInstance(instanceId);
 			}
 		}, 120000);
 	}
@@ -727,14 +769,7 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 	
 	private void sendPacket()
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), dredgionReward, instance.getPlayersInside()));
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), dredgionReward, instance.getPlayersInside())));
 	}
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time)
@@ -749,18 +784,14 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
-		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				spawn(npcId, x, y, z, h, entityId);
+				if (msg > 0)
 				{
-					spawn(npcId, x, y, z, h, entityId);
-					if (msg > 0)
-					{
-						sendMsgByRace(msg, race, 0);
-					}
+					sendMsgByRace(msg, race, 0);
 				}
 			}
 		}, time));
@@ -768,53 +799,31 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
-		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
-				{
-					final Npc npc = (Npc) spawn(npcId, x, y, z, h);
-					npc.getSpawn().setWalkerId(walkerId);
-					WalkManager.startWalking((NpcAI2) npc.getAi2());
-				}
+				final Npc npc = (Npc) spawn(npcId, x, y, z, h);
+				npc.getSpawn().setWalkerId(walkerId);
+				WalkManager.startWalking((NpcAI2) npc.getAi2());
 			}
 		}, time));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		asyunatarTask.add(ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time));
+		}), time));
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void stopInstanceTask()

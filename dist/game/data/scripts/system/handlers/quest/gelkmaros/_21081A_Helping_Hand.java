@@ -61,7 +61,9 @@ public class _21081A_Helping_Hand extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					default:
 					{
 						return sendQuestStartDialog(env, 182214016, 1);
@@ -136,7 +138,9 @@ public class _21081A_Helping_Hand extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

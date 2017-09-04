@@ -78,7 +78,9 @@ public class _3018Fork_Ear_Rokes extends QuestHandler
 						return true;
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

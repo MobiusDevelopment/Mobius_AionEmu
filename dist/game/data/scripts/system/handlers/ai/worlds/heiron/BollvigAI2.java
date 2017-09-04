@@ -86,13 +86,17 @@ public class BollvigAI2 extends AggressiveFirstSkillAI2
 				{
 					case 75:
 					case 50:
+					{
 						cancelTask();
 						useFirstSkillTree();
 						break;
+					}
 					case 25:
+					{
 						cancelTask();
 						firstSkill();
 						break;
+					}
 				}
 				percents.remove(percent);
 				break;

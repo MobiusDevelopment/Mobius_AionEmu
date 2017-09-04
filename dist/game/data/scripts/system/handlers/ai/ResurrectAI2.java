@@ -85,8 +85,10 @@ public class ResurrectAI2 extends NpcAI2
 		{
 			case 600090000: // Kaldor.
 			case 600100000: // Levinshor.
+			{
 				newBind(player, bindPointTemplate);
 				break;
+			}
 		}
 		bindHere(player, bindPointTemplate);
 	}

@@ -63,7 +63,9 @@ public class _21302Enhancing_The_Harp extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

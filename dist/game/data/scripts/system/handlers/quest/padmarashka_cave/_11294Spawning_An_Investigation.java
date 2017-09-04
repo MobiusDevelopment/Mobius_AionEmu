@@ -125,7 +125,9 @@ public class _11294Spawning_An_Investigation extends QuestHandler
 							return sendQuestEndDialog(env);
 						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 			}
@@ -141,7 +143,9 @@ public class _11294Spawning_An_Investigation extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

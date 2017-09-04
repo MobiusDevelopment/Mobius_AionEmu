@@ -67,25 +67,33 @@ public class PeregrineAI2 extends GeneralNpcAI2
 			switch (getNpcId())
 			{
 				case 806149: // Peregrine.
+				{
 					switch (Rnd.get(1, 3))
 					{
 						case 1:
+						{
 							getPosition().getWorldMapInstance().getDoors().get(349).setOpen(true);
 							// The door to the Archives of Eternity has opened.
 							PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_01_Road_Set, 0);
 							break;
+						}
 						case 2:
+						{
 							getPosition().getWorldMapInstance().getDoors().get(352).setOpen(true);
 							// The door to the Archives of Eternity has opened.
 							PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_01_Road_Set, 0);
 							break;
+						}
 						case 3:
+						{
 							getPosition().getWorldMapInstance().getDoors().get(359).setOpen(true);
 							// The door to the Archives of Eternity has opened.
 							PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_01_Road_Set, 0);
 							break;
+						}
 					}
 					break;
+				}
 			}
 		}
 		else if ((dialogId == 1011) && (questId != 0))

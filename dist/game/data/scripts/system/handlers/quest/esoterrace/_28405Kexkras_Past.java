@@ -72,6 +72,7 @@ public class _28405Kexkras_Past extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 799558:
+				{
 					if (qs.getQuestVarById(0) == 0)
 					{
 						if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -83,7 +84,9 @@ public class _28405Kexkras_Past extends QuestHandler
 							return defaultCloseDialog(env, 0, 1, 182215025, 1, 182215014, 1);
 						}
 					}
+				}
 				case 799557:
+				{
 					if (qs.getQuestVarById(0) == 1)
 					{
 						if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -96,6 +99,7 @@ public class _28405Kexkras_Past extends QuestHandler
 						}
 						return defaultCloseDialog(env, 1, 2, true, true);
 					}
+				}
 			}
 		}
 		return sendQuestRewardDialog(env, 799557, 0);

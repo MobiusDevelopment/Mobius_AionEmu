@@ -137,6 +137,7 @@ public class _15504A_Tourist_In_Norsvold extends QuestHandler
 				case 241517:
 				case 241518:
 				case 241519:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -147,6 +148,7 @@ public class _15504A_Tourist_In_Norsvold extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

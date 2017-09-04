@@ -117,6 +117,7 @@ public class _15439Shield_Brokenblade_Artifact_Outpost extends QuestHandler
 				case 883072:
 				case 883073:
 				case 883075:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _15439Shield_Brokenblade_Artifact_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

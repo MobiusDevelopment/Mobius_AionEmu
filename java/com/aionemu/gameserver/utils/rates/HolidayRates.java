@@ -36,14 +36,20 @@ public class HolidayRates
 			switch (membership)
 			{
 				case 0:
+				{
 					rate = RateConfig.HOLIDAY_RATE_REGULAR;
 					break;
+				}
 				case 1:
+				{
 					rate = RateConfig.HOLIDAY_RATE_PREMIUM;
 					break;
+				}
 				case 2:
+				{
 					rate = RateConfig.HOLIDAY_RATE_VIP;
 					break;
+				}
 			}
 			
 			for (String level : RateConfig.HOLIDAY_RATE_DAYS.split(","))

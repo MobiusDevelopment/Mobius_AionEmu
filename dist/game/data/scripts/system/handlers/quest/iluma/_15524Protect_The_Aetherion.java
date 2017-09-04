@@ -165,6 +165,7 @@ public class _15524Protect_The_Aetherion extends QuestHandler
 				case 242995:
 				case 242999:
 				case 243003:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -175,6 +176,7 @@ public class _15524Protect_The_Aetherion extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

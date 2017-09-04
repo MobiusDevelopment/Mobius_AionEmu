@@ -150,7 +150,9 @@ public class _1463MessageToASpy extends QuestHandler
 							return true;
 						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 			}

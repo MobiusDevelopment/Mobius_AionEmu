@@ -100,19 +100,27 @@ public class ArenaOfGloryInstance extends PvPArenaInstance
 				switch (rank)
 				{
 					case 0:
+					{
 						reward.setGloriousInsignia(1);
 						reward.setMithrilMedal(5);
 						break;
+					}
 					case 1:
+					{
 						reward.setGloriousInsignia(1);
 						reward.setplatinumMedal(3);
 						break;
+					}
 					case 2:
+					{
 						reward.setplatinumMedal(3);
 						break;
+					}
 					case 3:
+					{
 						reward.setLifeSerum(1);
 						break;
+					}
 				}
 			}
 		}

@@ -112,11 +112,14 @@ public class _11117MedicationforSetzkiki extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -125,6 +128,7 @@ public class _11117MedicationforSetzkiki extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 798984)
@@ -132,11 +136,14 @@ public class _11117MedicationforSetzkiki extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1693);
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						if (!giveQuestItem(env, 182206793, 1))
@@ -149,6 +156,7 @@ public class _11117MedicationforSetzkiki extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		return false;

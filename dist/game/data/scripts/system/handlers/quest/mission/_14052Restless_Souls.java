@@ -105,6 +105,7 @@ public class _14052Restless_Souls extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1011);
@@ -113,7 +114,9 @@ public class _14052Restless_Souls extends QuestHandler
 					{
 						return sendQuestDialog(env, 1693);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -121,7 +124,9 @@ public class _14052Restless_Souls extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -130,6 +135,7 @@ public class _14052Restless_Souls extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 204625)
@@ -137,6 +143,7 @@ public class _14052Restless_Souls extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1352);
@@ -149,7 +156,9 @@ public class _14052Restless_Souls extends QuestHandler
 					{
 						return sendQuestDialog(env, 2375);
 					}
+				}
 				case CHECK_COLLECTED_ITEMS:
+				{
 					if (QuestService.collectItemCheck(env, true))
 					{
 						if (!giveQuestItem(env, 182215344, 1))
@@ -164,7 +173,9 @@ public class _14052Restless_Souls extends QuestHandler
 					{
 						return sendQuestDialog(env, 10001);
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -172,7 +183,9 @@ public class _14052Restless_Souls extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 				case SET_REWARD:
+				{
 					if (var == 4)
 					{
 						qs.setStatus(QuestStatus.REWARD);
@@ -181,6 +194,7 @@ public class _14052Restless_Souls extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 204628)
@@ -188,11 +202,14 @@ public class _14052Restless_Souls extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 2)
 					{
 						return sendQuestDialog(env, 1694);
 					}
+				}
 				case STEP_TO_3:
+				{
 					if (var == 2)
 					{
 						if (player.getInventory().getItemCountByItemId(182215340) == 0)
@@ -206,6 +223,7 @@ public class _14052Restless_Souls extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 204627)
@@ -213,11 +231,14 @@ public class _14052Restless_Souls extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 2)
 					{
 						return sendQuestDialog(env, 1781);
 					}
+				}
 				case STEP_TO_3:
+				{
 					if (var == 2)
 					{
 						if (player.getInventory().getItemCountByItemId(182215341) == 0)
@@ -231,6 +252,7 @@ public class _14052Restless_Souls extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 204626)
@@ -238,11 +260,14 @@ public class _14052Restless_Souls extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 2)
 					{
 						return sendQuestDialog(env, 1864);
 					}
+				}
 				case STEP_TO_3:
+				{
 					if (var == 2)
 					{
 						if (player.getInventory().getItemCountByItemId(182215342) == 0)
@@ -256,6 +281,7 @@ public class _14052Restless_Souls extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 204622)
@@ -263,11 +289,14 @@ public class _14052Restless_Souls extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 2)
 					{
 						return sendQuestDialog(env, 1949);
 					}
+				}
 				case STEP_TO_3:
+				{
 					if (var == 2)
 					{
 						if (player.getInventory().getItemCountByItemId(182215343) == 0)
@@ -281,6 +310,7 @@ public class _14052Restless_Souls extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 700270)

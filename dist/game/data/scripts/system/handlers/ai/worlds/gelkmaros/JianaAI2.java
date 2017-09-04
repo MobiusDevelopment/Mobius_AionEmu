@@ -64,8 +64,10 @@ public class JianaAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 799445: // Jiana.
+				{
 					ItemService.addItem(player, 182207849, 1); // Shining Scroll.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

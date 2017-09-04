@@ -43,6 +43,7 @@ public class SM_IN_GAME_SHOP_CATEGORY_LIST extends AionServerPacket
 		switch (type)
 		{
 			case 0:
+			{
 				writeH(ing.size());
 				for (IGCategory category : ing.getCategories())
 				{
@@ -50,7 +51,9 @@ public class SM_IN_GAME_SHOP_CATEGORY_LIST extends AionServerPacket
 					writeS(category.getName());
 				}
 				break;
+			}
 			case 2:
+			{
 				if (categoryId < ing.size())
 				{
 					final IGCategory iGCategory = ing.getCategories().get(categoryId);
@@ -62,6 +65,7 @@ public class SM_IN_GAME_SHOP_CATEGORY_LIST extends AionServerPacket
 					}
 				}
 				break;
+			}
 		}
 	}
 }

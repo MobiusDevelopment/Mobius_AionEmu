@@ -39,9 +39,11 @@ public class AccountantCabinExitAI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 730766: // Accountant's Cabin Exit.
+			{
 				switch (player.getWorldId())
 				{
 					case 300100000: // Steel Rake 1.5
+					{
 						if (player.getCommonData().getRace() == Race.ASMODIANS)
 						{
 							PacketSendUtility.sendMessage(player, "you enter <Pandaemonium>");
@@ -53,7 +55,9 @@ public class AccountantCabinExitAI2 extends ActionItemNpcAI2
 							TeleportService2.teleportTo(player, 110010000, 1867.000f, 2068.000f, 517.000f, (byte) 60, TeleportAnimation.BEAM_ANIMATION);
 						}
 						break;
+					}
 					case 300460000: // Steel Rake Cabin 3.0
+					{
 						if (player.getCommonData().getRace() == Race.ASMODIANS)
 						{
 							PacketSendUtility.sendMessage(player, "you enter <Pandaemonium>");
@@ -65,8 +69,10 @@ public class AccountantCabinExitAI2 extends ActionItemNpcAI2
 							TeleportService2.teleportTo(player, 110010000, 1867.000f, 2068.000f, 517.000f, (byte) 60, TeleportAnimation.BEAM_ANIMATION);
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 }

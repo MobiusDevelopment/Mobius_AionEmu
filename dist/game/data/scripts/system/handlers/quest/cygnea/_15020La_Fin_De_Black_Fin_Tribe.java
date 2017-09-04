@@ -113,6 +113,7 @@ public class _15020La_Fin_De_Black_Fin_Tribe extends QuestHandler
 			{
 				case 235826:
 				case 235827:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -123,6 +124,7 @@ public class _15020La_Fin_De_Black_Fin_Tribe extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

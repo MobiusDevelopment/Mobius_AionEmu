@@ -44,14 +44,18 @@ public class MagnorionAI2 extends AggressiveNpcAI2
 		{
 			// Elite Magnorion II.
 			case 234611:
+			{
 				addGpPlayer();
 				announceMagnorionDie();
 				break;
+			}
 			case 234589:
+			{
 				addGpPlayer();
 				announceMagnorionDie();
 				updateMagnorionLanding();
 				break;
+			}
 		}
 		super.handleDied();
 	}

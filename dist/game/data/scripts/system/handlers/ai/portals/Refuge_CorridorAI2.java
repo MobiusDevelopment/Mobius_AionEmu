@@ -63,16 +63,22 @@ public class Refuge_CorridorAI2 extends NpcAI2
 			{
 				case 805613: // Krotan Refuge Corridor [Elyos]
 				case 805627: // Krotan Refuge Corridor [Asmodians]
+				{
 					TeleportService2.teleportTo(player, 400010000, 2037.4211f, 1182.3617f, 2956.788f, (byte) 28, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 				case 805614: // Miren Refuge Corridor [Elyos]
 				case 805628: // Miren Refuge Corridor [Asmodians]
+				{
 					TeleportService2.teleportTo(player, 400010000, 1875.548f, 2219.9028f, 2944.6953f, (byte) 60, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 				case 805615: // Kysis Refuge Corridor [Elyos]
 				case 805629: // Kysis Refuge Corridor [Asmodians]
+				{
 					TeleportService2.teleportTo(player, 400010000, 2364.0742f, 2119.0916f, 3042.8743f, (byte) 112, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

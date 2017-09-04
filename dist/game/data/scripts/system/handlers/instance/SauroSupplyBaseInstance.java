@@ -41,7 +41,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -69,9 +68,12 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 233258: // Deranak The Reaver.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053219, 1)); // [Event] Sauro Commander's Accessory Box.
 				break;
+			}
 			case 230846: // Sauro Base Grave Robber.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -81,7 +83,9 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 230847: // Mystery Box Key.
+			{
 				// Be careful in your selection. The key cannot be changed once it is chosen.
 				sendMsgByRace(1401946, Race.PC_ALL, 0);
 				for (Player player : instance.getPlayersInside())
@@ -92,7 +96,9 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 230852: // Commander Ranodim.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -103,30 +109,42 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 3))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000176, 1)); // Red Storeroom Key.
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000177, 1)); // Blue Storeroom Key.
 							break;
+						}
 						case 3:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000178, 1)); // Green Storeroom Key.
 							break;
+						}
 					}
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case 230849: // Guard Captain Rohuka.
 			case 230850: // Research Teselik.
 			case 230851: // Chief Gunner Kurmata.
 			case 230853: // Chief Of Staff Moriata.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -137,16 +155,22 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case 230857: // Guard Captain Ahuradim.
 			case 230858: // Brigade General Sheba.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -161,36 +185,51 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053211, 1)); // [Event] Sauro Commander's Weapon Box.
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053219, 1)); // [Event] Sauro Commander's Accessory Box.
 							break;
+						}
 					}
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case 702658: // Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053579, 1)); // [Event] Abbey Bundle.
 				break;
+			}
 			case 702659: // Noble Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); // [Event] Noble Abbey Bundle.
 				break;
+			}
 			case 802181: // Sauro Supply Base Opportunity Bundle.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000051, 30)); // Major Ancient Crown.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000052, 30)); // Greater Ancient Crown.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000236, 50)); // Blood Mark.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000237, 50)); // Ancient Coin.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000242, 50)); // Ceramium Medal.
 				break;
+			}
 		}
 	}
 	
@@ -215,20 +254,30 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 5))
 		{
 			case 1:
+			{
 				spawn(230846, 464.07788f, 401.3575f, 182.15321f, (byte) 10);
 				break;
+			}
 			case 2:
+			{
 				spawn(230846, 496.30792f, 412.814f, 182.13792f, (byte) 73);
 				break;
+			}
 			case 3:
+			{
 				spawn(230846, 497.15717f, 392.34656f, 182.14955f, (byte) 75);
 				break;
+			}
 			case 4:
+			{
 				spawn(230846, 496.2902f, 358.0765f, 182.14955f, (byte) 48);
 				break;
+			}
 			case 5:
+			{
 				spawn(230846, 464.15985f, 389.7157f, 182.15321f, (byte) 109);
 				break;
+			}
 		}
 	}
 	
@@ -242,106 +291,135 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 			 * Area 1: Guardroom And Rune Hall.
 			 */
 			case 230849: // Guard Captain Rohuka.
+			{
 				doors.get(383).setOpen(true);
 				// The door to the Defiled Danuar Temple has opened.
 				sendMsgByRace(1401914, Race.PC_ALL, 0);
 				break;
+			}
 			case 230851: // Chief Gunner Kurmata.
+			{
 				doors.get(59).setOpen(true);
 				// The door to the Danuar Meditation Garden has opened.
 				sendMsgByRace(1401915, Race.PC_ALL, 0);
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						doors.get(382).setOpen(true);
 						// With the gatekeeper down, the door on the left is open!
 						sendMsgByRace(1401229, Race.PC_ALL, 5000);
 						spawn(230797, 610.7328f, 518.80884f, 191.2776f, (byte) 75); // Sheban Legion Elite Ambusher.
 						break;
+					}
 					case 2:
+					{
 						doors.get(387).setOpen(true);
 						// With the gatekeeper down, the door on the right is open!
 						sendMsgByRace(1401230, Race.PC_ALL, 5000);
 						spawn(230797, 611.1872f, 452.91882f, 191.2776f, (byte) 39); // Sheban Legion Elite Ambusher.
 						break;
+					}
 				}
 				break;
+			}
 			
 			/**
 			 * Area 2: Rune Cloister And Logistic Base.
 			 */
 			case 230818: // Sheban Legion Elite Gunner.
+			{
 				doors.get(372).setOpen(true);
 				// The door to the Head Researcher's Office has opened.
 				sendMsgByRace(1401916, Race.PC_ALL, 0);
 				break;
+			}
 			case 230850: // Research Teselik.
+			{
 				doors.get(375).setOpen(true);
 				// The door to the Lost Tree of Devotion has opened.
 				sendMsgByRace(1401917, Race.PC_ALL, 0);
 				break;
-			
+			}
 			/**
 			 * Area 3: Rune Bridge And Logistic Base Arsenal.
 			 */
 			case 233255: // Gatekeeper Stranir.
+			{
 				doors.get(378).setOpen(true);
 				// The door to the Sauro Armory has opened.
 				sendMsgByRace(1401918, Race.PC_ALL, 0);
 				break;
+			}
 			case 230852: // Commander Ranodim.
+			{
 				doors.get(388).setOpen(true);
 				// The door to the Heavy Storage Area has opened.
 				sendMsgByRace(1401919, Race.PC_ALL, 0);
 				break;
-			
+			}
 			/**
 			 * Area 4: Chiefs Chamber.
 			 */
 			case 230791: // Sheban Legion Elite Assaulter.
+			{
 				doors.get(376).setOpen(true);
 				// The door to Moriata's Quarters has opened.
 				sendMsgByRace(1401920, Race.PC_ALL, 0);
 				break;
+			}
 			case 230853: // Chief Of Staff Moriata.
+			{
 				// A device leading to the Danuar Omphanium has been activated.
 				sendMsgByRace(1401921, Race.PC_ALL, 0);
 				// The passage to the Danuar Omphanium will be open for five minutes.
 				sendMsgByRace(1401922, Race.PC_ALL, 5000);
 				spawn(730872, 127.77696f, 432.75684f, 151.69659f, (byte) 0, 3);
 				break;
-			
+			}
 			/**
 			 * Area 5: Final Boss.
 			 */
 			case 230857: // Guard Captain Ahuradim.
+			{
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						spawn(702658, 703.3344f, 883.07666f, 411.5939f, (byte) 90); // Abbey Box.
 						break;
+					}
 					case 2:
+					{
 						spawn(702659, 703.3344f, 883.07666f, 411.5939f, (byte) 90); // Noble Abbey Box.
 						break;
+					}
 				}
 				spawn(801967, 708.9197f, 884.59625f, 411.57986f, (byte) 45); // Sauro Supply Base Exit.
 				spawn(802181, 710.25726f, 889.6806f, 411.59103f, (byte) 0); // Sauro Supply Base Opportunity Bundle.
 				sendMsg("[Congratulation]: you finish <Sauro Supply Base>");
 				break;
+			}
 			case 230858: // Brigade General Sheba.
+			{
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						spawn(702658, 900.2497f, 896.3568f, 411.3568f, (byte) 30); // Abbey Box.
 						break;
+					}
 					case 2:
+					{
 						spawn(702659, 900.2497f, 896.3568f, 411.3568f, (byte) 30); // Noble Abbey Box.
 						break;
+					}
 				}
 				spawn(801967, 905.3781f, 895.2461f, 411.57785f, (byte) 75); // Sauro Supply Base Exit.
 				spawn(802181, 906.9721f, 889.6604f, 411.59854f, (byte) 0); // Sauro Supply Base Opportunity Bundle.
 				sendMsg("[Congratulation]: you finish <Sauro Supply Base>");
 				break;
+			}
 		}
 	}
 	
@@ -356,36 +434,18 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

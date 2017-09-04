@@ -45,9 +45,11 @@ public class Linkgate_Foundry_Teleport_DeviceAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 702591: // Linkgate Foundry Teleport Device.
+			{
 				switch (player.getWorldId())
 				{
 					case 301270000: // Linkgate Foundry 4.7
+					{
 						if (dialogId == 10000)
 						{
 							// The Secret Lab's location was revealed three times. Nothing remains in the lab and the reserachers have fled.
@@ -67,8 +69,10 @@ public class Linkgate_Foundry_Teleport_DeviceAI2 extends NpcAI2
 							TeleportService2.teleportTo(player, 301270000, instanceId, 174.68114f, 258.55096f, 393.1969f, (byte) 93);
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return true;
 	}

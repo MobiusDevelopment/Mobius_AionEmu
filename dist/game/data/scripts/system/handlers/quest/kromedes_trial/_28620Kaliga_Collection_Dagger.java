@@ -123,14 +123,18 @@ public class _28620Kaliga_Collection_Dagger extends QuestHandler
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 5);
 							}
+						}
 						case SELECT_NO_REWARD:
+						{
 							QuestService.finishQuest(env, qs.getQuestVars().getQuestVars() - 1);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
 				}
 			}

@@ -84,9 +84,11 @@ public class MuruganAI2 extends GeneralNpcAI2
 		switch (owner)
 		{
 			case 800435:
+			{
 				NpcShoutsService.getInstance().sendMsg(getOwner(), 390837, getOwner().getObjectId(), 0, 0);
 				NpcShoutsService.getInstance().sendMsg(getOwner(), 390838, getOwner().getObjectId(), 0, 4000);
 				break;
+			}
 		}
 		setStateIfNot(AIState.WALKING);
 		getOwner().setState(1);

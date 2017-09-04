@@ -57,6 +57,7 @@ public class Kysis_OverlordAI2 extends AggressiveNpcAI2
 			case 279349:
 			case 279643:
 			case 279935:
+			{
 				treasureChest();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -72,6 +73,7 @@ public class Kysis_OverlordAI2 extends AggressiveNpcAI2
 					}
 				}, 10000);
 				break;
+			}
 		}
 		super.handleDied();
 	}

@@ -57,6 +57,7 @@ public class SensoryAreaAI2 extends AggressiveNpcAI2
 					switch (player.getWorldId())
 					{
 						case 300280000: // Rentus Base
+						{
 							// Xasta flies past overhead.
 							PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_IDYun_Rasta_Spawn_01, 9000);
 							// Use the anti-aircraft gun to attack Xasta flying overhead.
@@ -73,10 +74,12 @@ public class SensoryAreaAI2 extends AggressiveNpcAI2
 							}, 10000);
 							AI2Actions.deleteOwner(SensoryAreaAI2.this);
 							break;
+						}
 					}
 					switch (player.getWorldId())
 					{
 						case 300620000: // [Occupied] Rentus Base 4.8
+						{
 							// Xasta flies past overhead.
 							PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_IDYun_Rasta_Spawn_01, 9000);
 							// Use the anti-aircraft gun to attack Xasta flying overhead.
@@ -93,6 +96,7 @@ public class SensoryAreaAI2 extends AggressiveNpcAI2
 							}, 10000);
 							AI2Actions.deleteOwner(SensoryAreaAI2.this);
 							break;
+						}
 					}
 				}
 			}

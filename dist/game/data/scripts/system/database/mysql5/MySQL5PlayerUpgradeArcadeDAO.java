@@ -210,11 +210,15 @@ public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 			switch (bind.getPersistentState())
 			{
 				case UPDATE_REQUIRED:
+				{
 					insert = updateUpgradeArcade(con, player);
 					log.info("DB updated.");
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			bind.setPersistentState(PersistentState.UPDATED);
 		}

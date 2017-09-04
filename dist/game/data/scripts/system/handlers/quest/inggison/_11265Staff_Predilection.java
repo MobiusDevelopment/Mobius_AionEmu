@@ -63,7 +63,9 @@ public class _11265Staff_Predilection extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

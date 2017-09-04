@@ -65,11 +65,15 @@ public class _18837EyeCutting extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 2375);
+					}
 					case SELECT_REWARD:
+					{
 						changeQuestStep(env, 0, 0, true);
 						removeQuestItem(env, 182213204, 1);
 						return sendQuestDialog(env, 5);
+					}
 				}
 			}
 		}

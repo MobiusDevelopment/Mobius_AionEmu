@@ -42,19 +42,27 @@ public class Harbinger_EquilibriumAI2 extends NpcAI2
 			case 883931: // Harbinger's Equilibrium <6,000 Points>
 			case 883932: // Harbinger's Equilibrium <6,000 Points>
 			case 883933: // Harbinger's Equilibrium <6,000 Points>
+			{
 				updateEquilibriumLanding1();
 				break;
+			}
 			case 883934: // Harbinger's Equilibrium <10,000 Points>
 			case 883935: // Harbinger's Equilibrium <10,000 Points>
+			{
 				updateEquilibriumLanding2();
 				break;
+			}
 			case 883936: // Harbinger's Equilibrium <16,000 Points>
 			case 883937: // Harbinger's Equilibrium <16,000 Points>
+			{
 				updateEquilibriumLanding3();
 				break;
+			}
 			case 883938: // Harbinger's Equilibrium <30,000 Points>
+			{
 				updateEquilibriumLanding4();
 				break;
+			}
 		}
 		super.handleDied();
 		AI2Actions.deleteOwner(this);

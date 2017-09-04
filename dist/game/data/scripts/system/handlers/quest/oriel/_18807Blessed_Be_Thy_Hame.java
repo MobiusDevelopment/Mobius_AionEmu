@@ -59,10 +59,14 @@ public class _18807Blessed_Be_Thy_Hame extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						playQuestMovie(env, 803);
 						return sendQuestDialog(env, 1011);
+					}
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -75,11 +79,17 @@ public class _18807Blessed_Be_Thy_Hame extends QuestHandler
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							return sendQuestDialog(env, 1352);
+						}
 						case SELECT_ACTION_1353:
+						{
 							return sendQuestDialog(env, 1353);
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 					}
 					break;
 				}
@@ -92,8 +102,10 @@ public class _18807Blessed_Be_Thy_Hame extends QuestHandler
 							return sendQuestDialog(env, 2375);
 						}
 						case SELECT_REWARD:
+						{
 							changeQuestStep(env, 1, 1, true);
 							return sendQuestDialog(env, 5);
+						}
 					}
 				}
 			}

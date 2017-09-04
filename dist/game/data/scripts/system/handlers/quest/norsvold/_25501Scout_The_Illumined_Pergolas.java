@@ -133,6 +133,7 @@ public class _25501Scout_The_Illumined_Pergolas extends QuestHandler
 				case 241663:
 				case 241664:
 				case 241665:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -143,6 +144,7 @@ public class _25501Scout_The_Illumined_Pergolas extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -43,7 +43,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -70,41 +69,64 @@ public class TheobomosLabInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 237108: // Frozen Harint.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000016, 1)); // Fire Key.
 				break;
+			}
 			case 237110: // Naughty Pocaching.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000025, 1)); // Laboratory Key.
 				break;
+			}
 			case 237112: // Wistful Syripne.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000023, 1)); // Syripne's Key.
 				break;
+			}
 			case 237113: // Soul Spirit Nomura.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000022, 1)); // Nomura's Key.
 				break;
+			}
 			case 237114: // Water Spirit Undine.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000021, 1)); // Undine's Key.
 				break;
+			}
 			case 702658: // Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053579, 1)); // [Event] Abbey Bundle.
 				break;
+			}
 			case 702659: // Noble Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); // [Event] Noble Abbey Bundle.
 				break;
+			}
 			case 237247: // Watcher Cracked Nuhas.
+			{
 				switch (Rnd.get(1, 3))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000018, 1)); // Water Key.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000019, 1)); // Earth Key.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000020, 1)); // Wind Key.
 						break;
+					}
 				}
 				break;
+			}
 			case 237251: // Corrupted Ifrit.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -117,76 +139,119 @@ public class TheobomosLabInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188054176, 1)); // Master Triroan's Weapon Box.
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188054180, 1)); // Master Accessory Relic Boxx.
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case 237118: // Titan Protector.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000015, 1)); // Laboratory Chest Key.
 				break;
+			}
 			case 237119: // Antique Treasure Chest.
+			{
 				switch (Rnd.get(1, 8))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050023, 2)); // Noble Blue Idian: Physical Attack.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050024, 2)); // Noble Blue Idian: Magical Attack.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050025, 2)); // Noble Blue Idian: Physical Defense.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050026, 2)); // Noble Blue Idian: Magical Defense.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050027, 2)); // Noble Blue Idian: Assistance.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050028, 2)); // Noble Blue Idian: Resistance.
 						break;
+					}
 					case 7:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050029, 2)); // Noble Blue Idian: Physical Magical Attack.
 						break;
+					}
 					case 8:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050030, 2)); // Noble Blue Idian: Physical Magical Defense.
 						break;
+					}
 				}
 				break;
+			}
 			case 237120: // Antique Treasure Chest.
 			case 237121: // Antique Treasure Chest.
+			{
 				switch (Rnd.get(1, 8))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050031, 2)); // Esoteric Idian: Physical Attack.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050032, 2)); // Esoteric Idian: Magical Attack.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050033, 2)); // Esoteric Idian: Physical Defense.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050034, 2)); // Esoteric Idian: Magical Defense.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050035, 2)); // Esoteric Idian: Assistance.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050036, 2)); // Esoteric Idian: Resistance.
 						break;
+					}
 					case 7:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050037, 2)); // Esoteric Idian: Physical Magical Attack.
 						break;
+					}
 					case 8:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050038, 2)); // Esoteric Idian: Physical Magical Defense.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -198,14 +263,20 @@ public class TheobomosLabInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 3))
 		{
 			case 1:
+			{
 				spawn(237119, 455.78845f, 774.0474f, 157.89963f, (byte) 0); // Antique Treasure Chest.
 				break;
+			}
 			case 2:
+			{
 				spawn(237120, 455.78845f, 774.0474f, 157.89963f, (byte) 0); // Antique Treasure Chest.
 				break;
+			}
 			case 3:
+			{
 				spawn(237121, 455.78845f, 774.0474f, 157.89963f, (byte) 0); // Antique Treasure Chest.
 				break;
+			}
 		}
 	}
 	
@@ -220,15 +291,11 @@ public class TheobomosLabInstance extends GeneralInstanceHandler
 			isStartTimer = true;
 			System.currentTimeMillis();
 			elementSealingStone.add((Npc) spawn(237253, 477.88632f, 230.60364f, 173.06987f, (byte) 90)); // Fiery Sealing Stone.
-			elementSealingStoneTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			elementSealingStoneTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					// The Element Sealing Stone has disappeared.
-					sendMsg(1403062);
-					elementSealingStone.get(0).getController().onDelete();
-				}
+				// The Element Sealing Stone has disappeared.
+				sendMsg(1403062);
+				elementSealingStone.get(0).getController().onDelete();
 			}, 180000);
 		}
 	}
@@ -240,6 +307,7 @@ public class TheobomosLabInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 237253: // Fiery Sealing Stone.
+			{
 				elementSealingStoneTask.cancel(true);
 				// If you do not perform the proper order of the ritual, the Brilliant Elemental will lose its power.
 				sendMsgByRace(1403039, Race.PC_ALL, 4000);
@@ -247,24 +315,34 @@ public class TheobomosLabInstance extends GeneralInstanceHandler
 				sendMsgByRace(1403021, Race.PC_ALL, 6000);
 				spawn(237258, 477.88632f, 230.60364f, 173.06987f, (byte) 90); // Demon Lord Mulion.
 				break;
+			}
 			case 237246: // Watcher Queen Arachne.
+			{
 				// The blinding light is beaming towards the Central Control Room.
 				sendMsgByRace(1403022, Race.PC_ALL, 2000);
 				break;
+			}
 			case 237247: // Watcher Cracked Nuhas.
+			{
 				// The Brilliant Elemental is beaming towards the Elemental Core Generation Room where the Silicanimum of Memory is located.
 				sendMsgByRace(1403023, Race.PC_ALL, 2000);
 				break;
+			}
 			case 237248: // Watcher Silikor Of Memory.
+			{
 				// The Brilliant Elemental is beaming towards the Library of Theobomos where Jilitia of Innocence is located.
 				sendMsgByRace(1403024, Race.PC_ALL, 2000);
 				break;
+			}
 			case 237249: // Watcher Jilitia.
+			{
 				// The Brilliant Elemental is beaming towards the Elemental Core Testing Room where Unstable Triroan is located.
 				sendMsgByRace(1403025, Race.PC_ALL, 2000);
 				break;
+			}
 			case 280971: // First Silikor Guard.
 			case 280972: // Second Silikor Guard.
+			{
 				silikorGuard++;
 				if (silikorGuard == 1)
 				{
@@ -274,34 +352,39 @@ public class TheobomosLabInstance extends GeneralInstanceHandler
 					spawn(237248, 392.5771f, 744.2743f, 189.38637f, (byte) 41); // Watcher Silikor Of Memory.
 				}
 				break;
+			}
 			case 237250: // Sealed Unstable Triroan.
+			{
 				despawnNpc(npc);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
-					{
-						// Fractured Elemental Lord has appeared.
-						sendMsgByRace(1403026, Race.PC_ALL, 0);
-						spawn(237251, 616.169f, 488.758f, 196.015f, (byte) 62); // Corrupted Ifrit.
-					}
+					// Fractured Elemental Lord has appeared.
+					sendMsgByRace(1403026, Race.PC_ALL, 0);
+					spawn(237251, 616.169f, 488.758f, 196.015f, (byte) 62); // Corrupted Ifrit.
 				}, 3000);
 				break;
+			}
 			case 237251: // Corrupted Ifrit.
+			{
 				sendMsg("Congratulation]: you finish <Theobomos Lab 4.9>");
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						spawn(702658, 602.04486f, 488.82837f, 196.01512f, (byte) 60); // Abbey Box.
 						break;
+					}
 					case 2:
+					{
 						spawn(702659, 602.04486f, 488.82837f, 196.01512f, (byte) 60); // Noble Abbey Box.
 						break;
+					}
 				}
 				final SpawnTemplate unstableExitFragement = SpawnEngine.addNewSingleTimeSpawn(310110000, 730178, 637.3241f, 475.9548f, 195.96295f, (byte) 0);
 				unstableExitFragement.setEntityId(244);
 				objects.put(730178, SpawnEngine.spawnObject(unstableExitFragement, instanceId));
 				break;
+			}
 		}
 	}
 	
@@ -315,36 +398,18 @@ public class TheobomosLabInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

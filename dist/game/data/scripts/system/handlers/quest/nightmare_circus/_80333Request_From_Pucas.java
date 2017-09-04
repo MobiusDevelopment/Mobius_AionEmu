@@ -75,12 +75,18 @@ public class _80333Request_From_Pucas extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					case ASK_ACCEPTION:
+					{
 						return sendQuestDialog(env, 4);
+					}
 					case ACCEPT_QUEST:
+					{
 						QuestService.startQuest(env);
 						return sendQuestDialog(env, 1003);
+					}
 				}
 			}
 		}

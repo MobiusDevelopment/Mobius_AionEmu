@@ -112,19 +112,23 @@ public class _23705We_Dont_Need_No_Stinking_Road extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 233937:
+				{
 					if (qs.getQuestVarById(0) < 3)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 				case 233938:
+				{
 					if (qs.getQuestVarById(1) < 3)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

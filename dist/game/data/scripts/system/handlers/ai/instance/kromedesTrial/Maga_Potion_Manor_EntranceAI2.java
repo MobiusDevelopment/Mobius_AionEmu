@@ -46,6 +46,7 @@ public class Maga_Potion_Manor_EntranceAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 730341: // Maga's Potion.
+				{
 					if (player.getInventory().getItemCountByItemId(164000143) < 1)
 					{
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1012));
@@ -57,6 +58,7 @@ public class Maga_Potion_Manor_EntranceAI2 extends NpcAI2
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 27));
 					}
 					break;
+				}
 			}
 		}
 		return true;

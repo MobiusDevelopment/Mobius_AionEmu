@@ -227,7 +227,9 @@ public class _14026A_Lone_Defense extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

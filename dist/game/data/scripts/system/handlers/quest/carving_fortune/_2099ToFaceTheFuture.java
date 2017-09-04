@@ -185,7 +185,9 @@ public class _2099ToFaceTheFuture extends QuestHandler
 						}
 						case STEP_TO_2:
 						case STEP_TO_3:
+						{
 							return defaultCloseDialog(env, 53, 53, true, false);
+						}
 					}
 				}
 			}

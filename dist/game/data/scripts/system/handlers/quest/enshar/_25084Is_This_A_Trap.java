@@ -136,6 +136,7 @@ public class _25084Is_This_A_Trap extends QuestHandler
 		switch (targetId)
 		{
 			case 220037:
+			{
 				if (qs.getQuestVarById(0) == 2)
 				{
 					qs.setStatus(QuestStatus.REWARD);
@@ -143,6 +144,7 @@ public class _25084Is_This_A_Trap extends QuestHandler
 					return true;
 				}
 				break;
+			}
 		}
 		return false;
 	}

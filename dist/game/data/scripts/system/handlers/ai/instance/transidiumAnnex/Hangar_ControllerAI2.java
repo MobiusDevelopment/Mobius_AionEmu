@@ -45,17 +45,25 @@ public class Hangar_ControllerAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 297310: // Chariot Hangar I Controller.
+				{
 					announceGAB1SubTankA();
 					break;
+				}
 				case 297311: // Chariot Hangar II Controller.
+				{
 					announceGAB1SubTankB();
 					break;
+				}
 				case 297312: // Ignus Engine Hangar I Controller.
+				{
 					announceGAB1SubTankC();
 					break;
+				}
 				case 297313: // Ignus Engine Hangar II Controller.
+				{
 					announceGAB1SubTankD();
 					break;
+				}
 			}
 		}
 	}

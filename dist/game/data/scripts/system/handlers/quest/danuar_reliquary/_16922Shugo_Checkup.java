@@ -64,7 +64,9 @@ public class _16922Shugo_Checkup extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

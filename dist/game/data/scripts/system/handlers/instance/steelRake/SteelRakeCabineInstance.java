@@ -38,7 +38,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -60,14 +59,20 @@ public class SteelRakeCabineInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 3))
 		{
 			case 1:
+			{
 				spawn(219026, 353.814f, 491.557f, 949.466f, (byte) 119); // Sweeper Nunukin.
 				break;
+			}
 			case 2:
+			{
 				spawn(219032, 462.71558f, 512.5599f, 952.5455f, (byte) 1); // Madame Bovariki.
 				break;
+			}
 			case 3:
+			{
 				spawn(219032, 506.1134f, 545.7197f, 952.4226f, (byte) 74); // Madame Bovariki.
 				break;
+			}
 		}
 	}
 	
@@ -79,37 +84,55 @@ public class SteelRakeCabineInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 219040: // Tamer Anikiki [Steel Rake Cabin]
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182209084, 1)); // Taming A Manduri.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182209099, 1)); // Taming A Manduri.
 				break;
+			}
 			case 219033: // Golden Eye Mantutu.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053787, 1)); // Stigma Support Bundle.
 				break;
+			}
 			case 215489: // Treasure Box.
 			case 700553: // Treasure Box.
 			case 700554: // Pirate Ship Treasure Box.
+			{
 				switch (Rnd.get(1, 6))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050017, 2)); // Blue Idian: Physical Attack.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050018, 2)); // Blue Idian: Magical Attack.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050019, 2)); // Blue Idian: Physical Defense.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050020, 2)); // Blue Idian: Magical Defense.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050021, 2)); // Blue Idian: Assistance.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166050022, 2)); // Blue Idian: Resistance.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -120,9 +143,12 @@ public class SteelRakeCabineInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 700549: // Air Vent Cover.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 219033: // Golden Eye Mantutu.
+			{
 				sendMsg("[Congratulation]: you finish <Steel Rake Cabine>");
 				spawn(700554, 736.64728f, 493.73834f, 941.4781f, (byte) 45); // Pirate Ship Treasure Box.
 				spawn(700554, 720.41028f, 511.63718f, 939.7604f, (byte) 90); // Pirate Ship Treasure Box.
@@ -132,19 +158,13 @@ public class SteelRakeCabineInstance extends GeneralInstanceHandler
 				hiddenPassage.setEntityId(61);
 				objects.put(730766, SpawnEngine.spawnObject(hiddenPassage, instanceId)); // Hidden Passage.
 				break;
+			}
 		}
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void despawnNpc(Npc npc)

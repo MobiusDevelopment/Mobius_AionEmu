@@ -71,7 +71,9 @@ public class _13701A_New_Land_A_New_War extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

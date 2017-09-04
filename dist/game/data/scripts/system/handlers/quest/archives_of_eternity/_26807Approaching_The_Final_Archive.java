@@ -78,7 +78,9 @@ public class _26807Approaching_The_Final_Archive extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -156,6 +158,7 @@ public class _26807Approaching_The_Final_Archive extends QuestHandler
 				case 220325:
 				case 220328:
 				case 220331:
+				{
 					if (qs.getQuestVarById(1) < 30)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -166,6 +169,7 @@ public class _26807Approaching_The_Final_Archive extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

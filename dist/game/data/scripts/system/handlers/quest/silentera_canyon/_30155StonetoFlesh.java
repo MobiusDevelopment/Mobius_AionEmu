@@ -86,12 +86,14 @@ public class _30155StonetoFlesh extends QuestHandler
 				switch (dialog)
 				{
 					case SELECT_NO_REWARD:
+					{
 						if (var == 2)
 						{
 							QuestService.finishQuest(env, qs.getQuestVars().getQuestVars() - 2);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 				}
 			}
 		}
@@ -103,17 +105,22 @@ public class _30155StonetoFlesh extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							return sendQuestDialog(env, 1693);
 						}
+					}
 					case STEP_TO_2:
+					{
 						if (var == 1)
 						{
 							changeQuestStep(env, 1, 2, false);
 							return sendQuestDialog(env, 2375);
 						}
+					}
 					case SELECT_REWARD:
+					{
 						if (var == 2)
 						{
 							removeQuestItem(env, 182209252, 1);
@@ -121,6 +128,7 @@ public class _30155StonetoFlesh extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 6);
 						}
+					}
 				}
 			}
 			else if (targetId == 204433)
@@ -128,15 +136,19 @@ public class _30155StonetoFlesh extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							return defaultCloseDialog(env, 0, 1, false, false, 182209252, 1, 0, 0);
 						}
+					}
 				}
 			}
 			else if (targetId == 204304)
@@ -144,23 +156,29 @@ public class _30155StonetoFlesh extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							return sendQuestDialog(env, 2034);
 						}
+					}
 					case STEP_TO_3:
+					{
 						if (var == 1)
 						{
 							changeQuestStep(env, 1, 3, false);
 						}
 						return sendQuestDialog(env, 2375);
+					}
 					case SELECT_REWARD:
+					{
 						if (var == 3)
 						{
 							removeQuestItem(env, 182209252, 1);
 							qs.setStatus(QuestStatus.REWARD);
 							updateQuestStatus(env);
 						}
+					}
 				}
 			}
 		}

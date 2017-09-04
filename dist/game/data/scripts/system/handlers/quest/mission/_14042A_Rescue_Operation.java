@@ -85,12 +85,16 @@ public class _14042A_Rescue_Operation extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 					}
 					break;
 				}
@@ -99,13 +103,17 @@ public class _14042A_Rescue_Operation extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_2:
+						{
 							TeleportService2.teleportTo(player, 400010000, 888.9064f, 788.36975f, 1675.3873f, (byte) 62, TeleportAnimation.BEAM_ANIMATION);
 							return defaultCloseDialog(env, 1, 2);
+						}
 					}
 					break;
 				}
@@ -114,13 +122,17 @@ public class _14042A_Rescue_Operation extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 2)
 							{
 								return sendQuestDialog(env, 1693);
 							}
+						}
 						case STEP_TO_3:
+						{
 							TeleportService2.teleportTo(player, 400010000, 1528.386f, 1383.2511f, 1536.7948f, (byte) 15, TeleportAnimation.BEAM_ANIMATION);
 							return defaultCloseDialog(env, 2, 3);
+						}
 					}
 					break;
 				}
@@ -129,10 +141,12 @@ public class _14042A_Rescue_Operation extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 3)
 							{
 								return sendQuestDialog(env, 2034);
 							}
+						}
 						case SELECT_ACTION_2035:
 						{
 							playQuestMovie(env, 269);

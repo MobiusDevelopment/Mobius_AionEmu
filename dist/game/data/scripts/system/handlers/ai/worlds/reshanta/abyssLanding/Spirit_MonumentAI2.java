@@ -41,24 +41,36 @@ public class Spirit_MonumentAI2 extends NpcAI2
 		{
 			// Elyos Monument.
 			case 883922: // Krotan Guardian Spirit's Monument <20,000 Points>
+			{
 				updateGuardianLanding(1);
 				break;
+			}
 			case 883923: // Miren Guardian Spirit's Monument <20,000 Points>
+			{
 				updateGuardianLanding(2);
 				break;
+			}
 			case 883924: // Kysis Guardian Spirit's Monument <20,000 Points>
+			{
 				updateGuardianLanding(3);
 				break;
+			}
 			// Asmodians Monument.
 			case 883941: // Krotan Guardian Spirit's Monument <20,000 Points>
+			{
 				updateGuardianLanding(13);
 				break;
+			}
 			case 883942: // Miren Guardian Spirit's Monument <20,000 Points>
+			{
 				updateGuardianLanding(14);
 				break;
+			}
 			case 883943: // Kysis Guardian Spirit's Monument <20,000 Points>
+			{
 				updateGuardianLanding(15);
 				break;
+			}
 		}
 		super.handleDied();
 		AI2Actions.deleteOwner(this);

@@ -53,8 +53,10 @@ public class LocksmithAI2 extends NpcAI2
 			{
 				case 810011:
 				case 810012:
+				{
 					// Need find a way, coz is this both npc open "Lockedbox", no player alone.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

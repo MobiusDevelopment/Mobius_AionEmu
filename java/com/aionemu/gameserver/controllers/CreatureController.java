@@ -295,16 +295,24 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 		switch (hopType)
 		{
 			case HP:
+			{
 				getOwner().getLifeStats().increaseHp(TYPE.HP, value);
 				break;
+			}
 			case MP:
+			{
 				getOwner().getLifeStats().increaseMp(TYPE.MP, value);
 				break;
+			}
 			case FP:
+			{
 				getOwner().getLifeStats().increaseFp(TYPE.FP, value);
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 	

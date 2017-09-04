@@ -34,7 +34,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -72,23 +71,21 @@ public class Western_Shield_GeneratorAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 702011: // Western Shield Generator.
+				{
 					announceIDF5U3Defence02();
 					break;
+				}
 			}
 		}
 	}
 	
 	private void announceIDF5U3Defence02()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+		getPosition().getWorldMapInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
-				{
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDF5_U3_DEFENCE_02_ATTACKED);
-				}
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDF5_U3_DEFENCE_02_ATTACKED);
 			}
 		});
 	}
@@ -100,9 +97,11 @@ public class Western_Shield_GeneratorAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 702011: // Western Shield Generator.
+			{
 				switch (player.getWorldId())
 				{
 					case 301230000: // Illuminary Obelisk 4.5
+					{
 						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(164000289, 3))
 						{
 							startWWSG1();
@@ -112,10 +111,12 @@ public class Western_Shield_GeneratorAI2 extends NpcAI2
 							objects.put(702015, SpawnEngine.spawnObject(RecvShadowPLSM, instanceId));
 						}
 						break;
+					}
 				}
 				switch (player.getWorldId())
 				{
 					case 301370000: // [Infernal] Illuminary Obelisk 4.7
+					{
 						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(164000289, 3))
 						{
 							startIWWSG1();
@@ -125,8 +126,10 @@ public class Western_Shield_GeneratorAI2 extends NpcAI2
 							objects.put(702015, SpawnEngine.spawnObject(RecvShadowPLSM, instanceId));
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));
 		return true;
@@ -134,28 +137,20 @@ public class Western_Shield_GeneratorAI2 extends NpcAI2
 	
 	private void startWWSG1()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(233726, 258.37912f, 176.03621f, 325.59268f, (byte) 30), 258.4031f, 212.42247f, 321.33325f, false);
-				attackGenerator((Npc) spawn(233727, 255.55922f, 176.17963f, 325.49332f, (byte) 29), 255.8037f, 212.23003f, 321.34384f, false);
-				attackGenerator((Npc) spawn(233728, 252.49738f, 176.27466f, 325.52942f, (byte) 29), 253.00607f, 213.30444f, 321.28207f, false);
-			}
+			attackGenerator((Npc) spawn(233726, 258.37912f, 176.03621f, 325.59268f, (byte) 30), 258.4031f, 212.42247f, 321.33325f, false);
+			attackGenerator((Npc) spawn(233727, 255.55922f, 176.17963f, 325.49332f, (byte) 29), 255.8037f, 212.23003f, 321.34384f, false);
+			attackGenerator((Npc) spawn(233728, 252.49738f, 176.27466f, 325.52942f, (byte) 29), 253.00607f, 213.30444f, 321.28207f, false);
 		}, 1000);
 	}
 	
 	private void startIWWSG1()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(234726, 258.37912f, 176.03621f, 325.59268f, (byte) 30), 258.4031f, 212.42247f, 321.33325f, false);
-				attackGenerator((Npc) spawn(234727, 252.49738f, 176.27466f, 325.52942f, (byte) 29), 253.00607f, 213.30444f, 321.28207f, false);
-			}
+			attackGenerator((Npc) spawn(234726, 258.37912f, 176.03621f, 325.59268f, (byte) 30), 258.4031f, 212.42247f, 321.33325f, false);
+			attackGenerator((Npc) spawn(234727, 252.49738f, 176.27466f, 325.52942f, (byte) 29), 253.00607f, 213.30444f, 321.28207f, false);
 		}, 1000);
 	}
 	

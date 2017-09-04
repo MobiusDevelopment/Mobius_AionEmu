@@ -111,12 +111,14 @@ public class _25090They_Chose_Poorly extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 220042:
+				{
 					if (qs.getQuestVarById(0) < 1)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

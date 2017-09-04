@@ -38,11 +38,17 @@ public class PlayerActions extends CreatureActions
 		switch (mode)
 		{
 			case RIDE:
+			{
 				return player.ride != null;
+			}
 			case IN_ROLL:
+			{
 				return player.inRoll != null;
+			}
 			case WINDSTREAM:
+			{
 				return player.windstreamPath != null;
+			}
 		}
 		return false;
 	}
@@ -52,14 +58,20 @@ public class PlayerActions extends CreatureActions
 		switch (mode)
 		{
 			case RIDE:
+			{
 				player.ride = (RideInfo) obj;
 				break;
+			}
 			case IN_ROLL:
+			{
 				player.inRoll = (InRoll) obj;
 				break;
+			}
 			case WINDSTREAM:
+			{
 				player.windstreamPath = (WindstreamPath) obj;
 				break;
+			}
 		}
 	}
 	
@@ -68,6 +80,7 @@ public class PlayerActions extends CreatureActions
 		switch (mode)
 		{
 			case RIDE:
+			{
 				final RideInfo ride = player.ride;
 				if (ride == null)
 				{
@@ -91,20 +104,25 @@ public class PlayerActions extends CreatureActions
 				}
 				player.getRideObservers().clear();
 				return true;
+			}
 			case IN_ROLL:
+			{
 				if (player.inRoll == null)
 				{
 					return false;
 				}
 				player.inRoll = null;
 				return true;
+			}
 			case WINDSTREAM:
+			{
 				if (player.windstreamPath == null)
 				{
 					return false;
 				}
 				player.windstreamPath = null;
 				return true;
+			}
 		}
 		return false;
 	}

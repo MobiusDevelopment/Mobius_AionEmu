@@ -73,18 +73,23 @@ public class DispelEffect extends EffectTemplate
 		switch (dispeltype)
 		{
 			case EFFECTID:
+			{
 				for (Integer effectId : effectids)
 				{
 					effect.getEffected().getEffectController().removeEffectByEffectId(effectId);
 				}
 				break;
+			}
 			case EFFECTIDRANGE:
+			{
 				for (int i = effectids.get(0); i <= effectids.get(1); i++)
 				{
 					effect.getEffected().getEffectController().removeEffectByEffectId(i);
 				}
 				break;
+			}
 			case EFFECTTYPE:
+			{
 				for (String type : effecttype)
 				{
 					EffectType temp = null;
@@ -102,12 +107,15 @@ public class DispelEffect extends EffectTemplate
 					}
 				}
 				break;
+			}
 			case SLOTTYPE:
+			{
 				for (String type : slottype)
 				{
 					effect.getEffected().getEffectController().removeAbnormalEffectsByTargetSlot(SkillTargetSlot.valueOf(type));
 				}
 				break;
+			}
 		}
 	}
 }

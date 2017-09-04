@@ -103,85 +103,117 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 				switch (percent)
 				{
 					case 90:
+					{
 						Teleport();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 85:
+					{
 						VengefullOrbEvent();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 75:
+					{
 						Teleport2();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 70:
+					{
 						VengefullOrbEvent();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 65:
+					{
 						Teleport3();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 60:
+					{
 						VengefullOrbEvent();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 50:
+					{
 						skillfear();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 45:
+					{
 						VengefullOrbEvent();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 40:
+					{
 						Teleport4();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 35:
+					{
 						VengefullOrbEvent();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 30:
+					{
 						Teleport5();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 25:
+					{
 						VengefullOrbEvent();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 20:
+					{
 						Teleport6();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 15:
+					{
 						VengefullOrbEvent();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 10:
+					{
 						Teleport7();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 5:
+					{
 						Teleport8();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 				}
 				percents.remove(percent);
 				break;
@@ -221,13 +253,17 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				AI2Actions.targetSelf(Crazed_ModorAI2.this);
 				SkillEngine.getInstance().getSkill(getOwner(), 21171, 60, getOwner()).useNoAnimationSkill();
 				break;
+			}
 			case 2:
+			{
 				AI2Actions.targetSelf(Crazed_ModorAI2.this);
 				SkillEngine.getInstance().getSkill(getOwner(), 21176, 60, getOwner()).useNoAnimationSkill();
 				break;
+			}
 		}
 	}
 	

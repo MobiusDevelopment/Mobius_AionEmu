@@ -57,7 +57,9 @@ public class Elyos_Elite_Combat_MageAI2 extends NpcAI2
 				case 220577: // Elyos Elite Combat Mage.
 				case 220579: // Elyos Elite Combat Mage.
 				case 220581: // Elyos Elite Combat Mage.
+				{
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

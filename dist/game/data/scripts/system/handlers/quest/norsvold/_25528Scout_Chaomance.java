@@ -167,6 +167,7 @@ public class _25528Scout_Chaomance extends QuestHandler
 				case 243055:
 				case 243059:
 				case 243063:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -177,6 +178,7 @@ public class _25528Scout_Chaomance extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

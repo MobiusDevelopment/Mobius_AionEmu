@@ -91,14 +91,18 @@ public class SummonerAI2 extends AggressiveNpcAI2
 		{
 			case 215240:
 			case 215241:
+			{
 				anuhartBravery();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
 			case 235975:
+			{
 				bellowingRoar();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -109,10 +113,14 @@ public class SummonerAI2 extends AggressiveNpcAI2
 			case 237246:
 			case 237247:
 			case 237250:
+			{
 				// 5.0
+			}
 			case 220425:
+			{
 				elementalLordship();
 				break;
+			}
 		}
 		percentage = DataManager.AI_DATA.getAiTemplate().get(getNpcId()).getSummons().getPercentage();
 	}
@@ -140,16 +148,20 @@ public class SummonerAI2 extends AggressiveNpcAI2
 		{
 			// Tarmat & Prime Tarmat.
 			case 234610:
+			{
 				addGpPlayer();
 				announceTarmatDie();
 				break;
+			}
 			case 219998:
 			case 220001:
 			case 236727:
 			case 236728:
 			case 236732:
+			{
 				announceTarmatDie();
 				break;
+			}
 		}
 		removeHelpersSpawn();
 		spawnedNpc.clear();

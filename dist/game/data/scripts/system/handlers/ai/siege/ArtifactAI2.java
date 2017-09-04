@@ -278,17 +278,21 @@ public class ArtifactAI2 extends NpcAI2
 					switch (skill.getProperties().getTargetRelation())
 					{
 						case FRIEND:
+						{
 							if (player.isEnemy(creature))
 							{
 								continue;
 							}
 							break;
+						}
 						case ENEMY:
+						{
 							if (!player.isEnemy(creature))
 							{
 								continue;
 							}
 							break;
+						}
 					}
 					AI2Actions.applyEffect(ArtifactAI2.this, skill, creature);
 				}

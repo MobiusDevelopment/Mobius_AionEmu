@@ -142,31 +142,41 @@ public class Equipment
 			switch (item.getEquipmentType())
 			{
 				case ARMOR:
+				{
 					if (!validateEquippedArmor(item, true))
 					{
 						item.setEquipmentSlot(oldSlot);
 						return null;
 					}
 					break;
+				}
 				case WEAPON:
+				{
 					if (!validateEquippedWeapon(item, true))
 					{
 						item.setEquipmentSlot(oldSlot);
 						return null;
 					}
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			long itemSlotMask = 0;
 			switch (item.getEquipmentType())
 			{
 				case STIGMA:
+				{
 					itemSlotMask = slot;
 					break;
+				}
 				default:
+				{
 					itemSlotMask = itemTemplate.getItemSlot();
 					break;
+				}
 			}
 			final ItemSlot[] possibleSlots = ItemSlot.getSlotsFor(itemSlotMask);
 			for (ItemSlot possibleSlot : possibleSlots)
@@ -256,13 +266,19 @@ public class Equipment
 			switch (item.getEquipmentType())
 			{
 				case ARMOR:
+				{
 					validateEquippedArmor(item, false);
 					break;
+				}
 				case WEAPON:
+				{
 					validateEquippedWeapon(item, false);
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			
 			if (equipment.get(allSlots[0].getSlotIdMask()) != null)

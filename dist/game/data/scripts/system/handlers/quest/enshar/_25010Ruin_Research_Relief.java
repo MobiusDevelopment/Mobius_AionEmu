@@ -113,6 +113,7 @@ public class _25010Ruin_Research_Relief extends QuestHandler
 			{
 				case 219676:
 				case 219677:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -123,6 +124,7 @@ public class _25010Ruin_Research_Relief extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

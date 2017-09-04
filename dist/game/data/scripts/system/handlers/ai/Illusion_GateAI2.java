@@ -115,11 +115,15 @@ public class Illusion_GateAI2 extends NpcAI2
 						{
 							// 4.8
 							case 833208: // Illusion Gate (Illusion Gate I)
+							{
 								TeleportService2.teleportTo(responder, 110010000, 1444.9f, 1577.2f, 572.9f, (byte) 0);
 								break;
+							}
 							case 833207: // Illusion Gate (Illusion Gate I)
+							{
 								TeleportService2.teleportTo(responder, 120010000, 1657.5f, 1398.7f, 194.7f, (byte) 0);
 								break;
+							}
 						}
 						decisionTaken = true;
 					}

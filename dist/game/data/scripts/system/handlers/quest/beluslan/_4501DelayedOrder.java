@@ -82,14 +82,18 @@ public class _4501DelayedOrder extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 2)
 						{
 							qs.setStatus(QuestStatus.REWARD);
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 2375);
 						}
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 			if (targetId == 204340)
@@ -97,11 +101,14 @@ public class _4501DelayedOrder extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -109,6 +116,7 @@ public class _4501DelayedOrder extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 				}
 			}
 			if (targetId == 204348)
@@ -116,11 +124,14 @@ public class _4501DelayedOrder extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							return sendQuestDialog(env, 1693);
 						}
+					}
 					case STEP_TO_2:
+					{
 						if (var == 1)
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -128,6 +139,7 @@ public class _4501DelayedOrder extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 				}
 			}
 		}

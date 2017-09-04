@@ -50,6 +50,7 @@ public class EnragedGuardianGeneralAI2 extends AggressiveNpcAI2
 		switch (getNpcId())
 		{
 			case 277410: // Enraged Guardian General.
+			{
 				killedTheGuardianGeneral();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -70,7 +71,9 @@ public class EnragedGuardianGeneralAI2 extends AggressiveNpcAI2
 					}
 				}, 480000);
 				break;
+			}
 			case 277425: // Enraged Guardian General.
+			{
 				killedTheGuardianGeneral();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -91,7 +94,9 @@ public class EnragedGuardianGeneralAI2 extends AggressiveNpcAI2
 					}
 				}, 480000);
 				break;
+			}
 			case 277440: // Enraged Guardian General.
+			{
 				killedTheGuardianGeneral();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -112,7 +117,9 @@ public class EnragedGuardianGeneralAI2 extends AggressiveNpcAI2
 					}
 				}, 480000);
 				break;
+			}
 			case 277455: // Enraged Guardian General.
+			{
 				killedTheGuardianGeneral();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -133,6 +140,7 @@ public class EnragedGuardianGeneralAI2 extends AggressiveNpcAI2
 					}
 				}, 480000);
 				break;
+			}
 		}
 		super.handleDied();
 	}

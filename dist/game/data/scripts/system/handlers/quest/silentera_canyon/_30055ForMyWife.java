@@ -81,15 +81,19 @@ public class _30055ForMyWife extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							return defaultCloseDialog(env, 0, 1, false, false, 182209222, 1, 0, 0);
 						}
+					}
 				}
 			}
 			if (targetId == 798929)
@@ -97,15 +101,19 @@ public class _30055ForMyWife extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							return sendQuestDialog(env, 2375);
 						}
+					}
 					case SELECT_REWARD:
+					{
 						if (var == 1)
 						{
 							return defaultCloseDialog(env, 1, 2, true, true, 0, 0, 182209222, 1);
 						}
+					}
 				}
 			}
 		}

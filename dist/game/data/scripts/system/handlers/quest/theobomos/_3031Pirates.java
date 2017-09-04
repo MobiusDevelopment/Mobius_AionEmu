@@ -81,7 +81,9 @@ public class _3031Pirates extends QuestHandler
 						return true;
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -148,7 +150,6 @@ public class _3031Pirates extends QuestHandler
 				{
 					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
 					updateQuestStatus(env);
-					
 					if ((qs.getQuestVarById(1) == 15) && (qs.getQuestVarById(2) == 12))
 					{
 						qs.setStatus(QuestStatus.REWARD);
@@ -178,7 +179,6 @@ public class _3031Pirates extends QuestHandler
 				{
 					qs.setQuestVarById(2, qs.getQuestVarById(2) + 1);
 					updateQuestStatus(env);
-					
 					if ((qs.getQuestVarById(1) == 15) && (qs.getQuestVarById(2) == 12))
 					{
 						qs.setStatus(QuestStatus.REWARD);

@@ -111,77 +111,109 @@ public class Influence
 			{
 				// ======[ABYSS]==========
 				case 400010000:
+				{
 					t_abyss += sLoc.getInfluenceValue();
 					switch (sLoc.getRace())
 					{
 						case ELYOS:
+						{
 							e_abyss += sLoc.getInfluenceValue();
 							break;
+						}
 						case ASMODIANS:
+						{
 							a_abyss += sLoc.getInfluenceValue();
 							break;
+						}
 						case BALAUR:
+						{
 							b_abyss += sLoc.getInfluenceValue();
 							break;
+						}
 					}
 					break;
+				}
 				// =======[INGGISON]======
 				case 210050000:
+				{
 					if (sLoc instanceof FortressLocation)
 					{
 						t_inggison += sLoc.getInfluenceValue();
 						switch (sLoc.getRace())
 						{
 							case ELYOS:
+							{
 								e_inggison += sLoc.getInfluenceValue();
 								break;
+							}
 							case ASMODIANS:
+							{
 								a_inggison += sLoc.getInfluenceValue();
 								break;
+							}
 							case BALAUR:
+							{
 								b_inggison += sLoc.getInfluenceValue();
 								break;
+							}
 						}
 					}
 					break;
+				}
 				// ======[GELKMAROS]======
 				case 220070000:
+				{
 					if (sLoc instanceof FortressLocation)
 					{
 						t_gelkmaros += sLoc.getInfluenceValue();
 						switch (sLoc.getRace())
 						{
 							case ELYOS:
+							{
 								e_gelkmaros += sLoc.getInfluenceValue();
 								break;
+							}
 							case ASMODIANS:
+							{
 								a_gelkmaros += sLoc.getInfluenceValue();
 								break;
+							}
 							case BALAUR:
+							{
 								b_gelkmaros += sLoc.getInfluenceValue();
 								break;
+							}
 						}
 					}
 					break;
+				}
 				// ======[KALDOR]======
 				case 600090000:
+				{
 					if (sLoc instanceof FortressLocation)
 					{
 						t_kaldor += sLoc.getInfluenceValue();
 						switch (sLoc.getRace())
 						{
 							case ELYOS:
+							{
 								e_kaldor += sLoc.getInfluenceValue();
 								break;
+							}
 							case ASMODIANS:
+							{
 								a_kaldor += sLoc.getInfluenceValue();
 								break;
+							}
 							case BALAUR:
+							{
 								b_kaldor += sLoc.getInfluenceValue();
 								break;
+							}
 						}
 					}
 					break;
+				}
 			}
 		}
 		// ======[ABYSS]=========
@@ -366,6 +398,7 @@ public class Influence
 	}
 	
 	/**
+	 * @param attRace
 	 * @return float containing dmg modifier for disadvantaged race
 	 */
 	public float getPvpRaceBonus(Race attRace)
@@ -376,6 +409,7 @@ public class Influence
 		switch (attRace)
 		{
 			case ASMODIANS:
+			{
 				if ((elyos >= 0.81f) && (asmo <= 0.10f))
 				{
 					bonus = 1.2f;
@@ -389,7 +423,9 @@ public class Influence
 					bonus = 1.1f;
 				}
 				break;
+			}
 			case ELYOS:
+			{
 				if ((asmo >= 0.81f) && (elyos <= 0.10f))
 				{
 					bonus = 1.2f;
@@ -403,8 +439,11 @@ public class Influence
 					bonus = 1.1f;
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return bonus;
 	}

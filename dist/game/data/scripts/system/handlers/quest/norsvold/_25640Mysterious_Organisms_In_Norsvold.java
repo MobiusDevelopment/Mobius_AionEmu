@@ -241,6 +241,7 @@ public class _25640Mysterious_Organisms_In_Norsvold extends QuestHandler
 				case 242535:
 				case 242539:
 				case 242543:
+				{
 					if (qs.getQuestVarById(1) < 30)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -251,6 +252,7 @@ public class _25640Mysterious_Organisms_In_Norsvold extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

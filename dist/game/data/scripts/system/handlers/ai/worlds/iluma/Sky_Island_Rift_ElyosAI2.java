@@ -50,8 +50,10 @@ public class Sky_Island_Rift_ElyosAI2 extends NpcAI2
 			case 805904: // Sky Island Rift.
 			case 805905: // Sky Island Rift.
 			case 805906: // Sky Island Rift.
+			{
 				startLifeTask();
 				break;
+			}
 		}
 	}
 	
@@ -89,35 +91,55 @@ public class Sky_Island_Rift_ElyosAI2 extends NpcAI2
 			{
 				// ELYOS
 				case 805897: // Sky Island Rift.
+				{
 					TeleportService2.teleportTo(player, 210100000, 2317.9f, 2258.29f, 1116.813f, (byte) 108, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 				case 805898: // Sky Island Rift.
+				{
 					TeleportService2.teleportTo(player, 210100000, 2642.66f, 2747.09f, 1117.5881f, (byte) 6, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 				case 805899: // Sky Island Rift.
+				{
 					TeleportService2.teleportTo(player, 210100000, 2581.79f, 1429.55f, 1116.9115f, (byte) 35, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 				case 805900: // Sky Island Rift.
+				{
 					TeleportService2.teleportTo(player, 210100000, 2571.52f, 499.2f, 1116.8452f, (byte) 16, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 				case 805901: // Sky Island Rift.
+				{
 					TeleportService2.teleportTo(player, 210100000, 1539.2189f, 311.21225f, 1067.249f, (byte) 8, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 				case 805902: // Sky Island Rift.
+				{
 					TeleportService2.teleportTo(player, 210100000, 715.2502f, 966.5452f, 1117.2305f, (byte) 67, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 				case 805903: // Sky Island Rift.
+				{
 					TeleportService2.teleportTo(player, 210100000, 305.39f, 435.61f, 1117.0474f, (byte) 4, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 				case 805904: // Sky Island Rift.
+				{
 					TeleportService2.teleportTo(player, 210100000, 500.43f, 1683.58f, 1117.03f, (byte) 1, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 				case 805905: // Sky Island Rift.
+				{
 					TeleportService2.teleportTo(player, 210100000, 677.18f, 2593.64f, 1116.9187f, (byte) 64, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 				case 805906: // Sky Island Rift.
+				{
 					TeleportService2.teleportTo(player, 210100000, 1651.76f, 2645.18f, 1116.8591f, (byte) 117, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

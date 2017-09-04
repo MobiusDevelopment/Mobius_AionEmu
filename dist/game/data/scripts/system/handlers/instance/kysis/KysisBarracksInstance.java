@@ -44,7 +44,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****/
 /**
@@ -82,33 +81,47 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 			case 233671: // Treasurer Swaraja.
 			case 233672: // Treasurer Chandra.
 			case 233673: // Treasurer Dragagh.
+			{
 				switch (Rnd.get(1, 3))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000061, 1)); // Kysis Armory Key.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000062, 1)); // Kysis Supply Base Key.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000063, 1)); // Kysis Operations Room Key.
 						break;
+					}
 				}
 				break;
+			}
 			case 233675: // Weakened Kysis Duke.
 			case 233676: // Enraged Kysis Duke.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000065, 1)); // Kysis Gold Room Key.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053619, 1)); // Ancient Manastone Bundle.
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -120,26 +133,38 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 4))
 		{
 			case 1:
+			{
 				spawn(233670, 527.769f, 212.12146f, 178.46744f, (byte) 90); // Treasurer Darmaraja.
 				break;
+			}
 			case 2:
+			{
 				spawn(233671, 527.769f, 212.12146f, 178.46744f, (byte) 90); // Treasurer Swaraja.
 				break;
+			}
 			case 3:
+			{
 				spawn(233672, 527.769f, 212.12146f, 178.46744f, (byte) 90); // Treasurer Chandra.
 				break;
+			}
 			case 4:
+			{
 				spawn(233673, 527.769f, 212.12146f, 178.46744f, (byte) 90); // Treasurer Dragagh.
 				break;
+			}
 		}
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawn(233675, 526.6656f, 845.7792f, 199.44875f, (byte) 90); // Weakened Kysis Duke.
 				break;
+			}
 			case 2:
+			{
 				spawn(233676, 526.6656f, 845.7792f, 199.44875f, (byte) 90); // Enraged Kysis Duke.
 				break;
+			}
 		}
 	}
 	
@@ -150,55 +175,36 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 237303: // Ereshkigal Saldi Warden.
+			{
 				// A heavy door has opened somewhere.
 				sendMsgByRace(1401839, Race.PC_ALL, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						deleteNpc(731580);
-					}
-				}, 5000);
+				ThreadPoolManager.getInstance().schedule(() -> deleteNpc(731580), 5000);
 				break;
+			}
 			case 237305: // Ereshkigal Saldi Cryoslinger.
+			{
 				// A heavy door has opened somewhere.
 				sendMsgByRace(1401839, Race.PC_ALL, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						deleteNpc(700545);
-					}
-				}, 5000);
+				ThreadPoolManager.getInstance().schedule(() -> deleteNpc(700545), 5000);
 				break;
+			}
 			case 233669: // Ranx Medico.
+			{
 				// A heavy door has opened somewhere.
 				sendMsgByRace(1401839, Race.PC_ALL, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						deleteNpc(700546);
-					}
-				}, 5000);
+				ThreadPoolManager.getInstance().schedule(() -> deleteNpc(700546), 5000);
 				break;
+			}
 			case 233674: // Ebonlord Nukuam.
+			{
 				// A heavy door has opened somewhere.
 				sendMsgByRace(1401839, Race.PC_ALL, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						deleteNpc(700547);
-					}
-				}, 5000);
+				ThreadPoolManager.getInstance().schedule(() -> deleteNpc(700547), 5000);
 				break;
+			}
 			case 233675: // Weakened Kysis Duke.
 			case 233676: // Enraged Kysis Duke.
+			{
 				doors.get(11).setOpen(true);
 				doors.get(15).setOpen(true);
 				doors.get(17).setOpen(true);
@@ -212,18 +218,15 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 				doors.get(80).setOpen(true);
 				chestKysisBarracksTask.cancel(true);
 				sendMsg("[Congratulation]: you finish <Kysis Barracks>");
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 ->
 				{
-					@Override
-					public void visit(Player player)
+					if (player1.isOnline())
 					{
-						if (player.isOnline())
-						{
-							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 0));
-						}
+						PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 0));
 					}
 				});
 				break;
+			}
 		}
 	}
 	
@@ -235,15 +238,11 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		{
 			isStartTimer1 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player1 ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player1.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 300));
 				}
 			});
 			kysisBarracksChest.add((Npc) spawn(702292, 478.56662f, 815.6565f, 199.76048f, (byte) 70));
@@ -258,15 +257,11 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 			kysisBarracksChest.add((Npc) spawn(702295, 578.9111f, 874.7958f, 199.76036f, (byte) 9));
 			kysisBarracksChest.add((Npc) spawn(702295, 585.83545f, 855.7736f, 199.76036f, (byte) 3));
 			kysisBarracksChest.add((Npc) spawn(702295, 586.7527f, 835.4556f, 199.76036f, (byte) 116));
-			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer2();
-					sendMsg(1400245);
-					kysisBarracksChest.get(0).getController().onDelete();
-				}
+				StartTimer2();
+				sendMsg(1400245);
+				kysisBarracksChest.get(0).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -277,26 +272,18 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		{
 			isStartTimer2 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer3();
-					sendMsg(1400245);
-					kysisBarracksChest.get(1).getController().onDelete();
-				}
+				StartTimer3();
+				sendMsg(1400245);
+				kysisBarracksChest.get(1).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -307,26 +294,18 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		{
 			isStartTimer3 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer4();
-					sendMsg(1400245);
-					kysisBarracksChest.get(2).getController().onDelete();
-				}
+				StartTimer4();
+				sendMsg(1400245);
+				kysisBarracksChest.get(2).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -337,26 +316,18 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		{
 			isStartTimer4 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer5();
-					sendMsg(1400245);
-					kysisBarracksChest.get(3).getController().onDelete();
-				}
+				StartTimer5();
+				sendMsg(1400245);
+				kysisBarracksChest.get(3).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -367,26 +338,18 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		{
 			isStartTimer5 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer6();
-					sendMsg(1400245);
-					kysisBarracksChest.get(4).getController().onDelete();
-				}
+				StartTimer6();
+				sendMsg(1400245);
+				kysisBarracksChest.get(4).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -397,26 +360,18 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		{
 			isStartTimer6 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer7();
-					sendMsg(1400245);
-					kysisBarracksChest.get(5).getController().onDelete();
-				}
+				StartTimer7();
+				sendMsg(1400245);
+				kysisBarracksChest.get(5).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -427,26 +382,18 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		{
 			isStartTimer7 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer8();
-					sendMsg(1400245);
-					kysisBarracksChest.get(6).getController().onDelete();
-				}
+				StartTimer8();
+				sendMsg(1400245);
+				kysisBarracksChest.get(6).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -457,26 +404,18 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		{
 			isStartTimer8 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer9();
-					sendMsg(1400245);
-					kysisBarracksChest.get(7).getController().onDelete();
-				}
+				StartTimer9();
+				sendMsg(1400245);
+				kysisBarracksChest.get(7).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -487,26 +426,18 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		{
 			isStartTimer9 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer10();
-					sendMsg(1400245);
-					kysisBarracksChest.get(8).getController().onDelete();
-				}
+				StartTimer10();
+				sendMsg(1400245);
+				kysisBarracksChest.get(8).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -517,26 +448,18 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		{
 			isStartTimer10 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer11();
-					sendMsg(1400245);
-					kysisBarracksChest.get(9).getController().onDelete();
-				}
+				StartTimer11();
+				sendMsg(1400245);
+				kysisBarracksChest.get(9).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -547,26 +470,18 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		{
 			isStartTimer11 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer12();
-					sendMsg(1400245);
-					kysisBarracksChest.get(10).getController().onDelete();
-				}
+				StartTimer12();
+				sendMsg(1400245);
+				kysisBarracksChest.get(10).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -577,26 +492,18 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 		{
 			isStartTimer12 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestKysisBarracksTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					sendMsg(1400244);
-					sendMsg(1400245);
-					kysisBarracksChest.get(11).getController().onDelete();
-				}
+				sendMsg(1400244);
+				sendMsg(1400245);
+				kysisBarracksChest.get(11).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -625,36 +532,18 @@ public class KysisBarracksInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void deleteNpc(int npcId)

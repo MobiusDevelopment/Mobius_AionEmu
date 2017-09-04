@@ -102,17 +102,25 @@ public abstract class HealOverTimeEffect extends AbstractOverTimeEffect
 		switch (healType)
 		{
 			case HP:
+			{
 				effected.getLifeStats().increaseHp(TYPE.HP, healValue, effect.getSkillId(), LOG.HEAL);
 				break;
+			}
 			case MP:
+			{
 				effected.getLifeStats().increaseMp(TYPE.MP, healValue, effect.getSkillId(), LOG.MPHEAL);
 				break;
+			}
 			case FP:
+			{
 				((Player) effected).getLifeStats().increaseFp(TYPE.FP, healValue, effect.getSkillId(), LOG.FPHEAL);
 				break;
+			}
 			case DP:
+			{
 				((Player) effected).getCommonData().addDp(healValue);
 				break;
+			}
 		}
 		
 	}

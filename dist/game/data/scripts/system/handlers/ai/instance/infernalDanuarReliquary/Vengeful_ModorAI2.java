@@ -119,31 +119,41 @@ public class Vengeful_ModorAI2 extends AggressiveNpcAI2
 				switch (percent)
 				{
 					case 75:
+					{
 						Teleport();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 70:
+					{
 						Teleport2();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 65:
+					{
 						Teleport3();
 						startSkillTask();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 60:
+					{
 						Teleport4();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 					case 50:
+					{
 						Teleport5();
 						// Modor has disappeared into another dimension.
 						announceAnotherDimension();
 						break;
+					}
 				}
 				percents.remove(percent);
 				break;
@@ -183,13 +193,17 @@ public class Vengeful_ModorAI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				AI2Actions.targetSelf(Vengeful_ModorAI2.this);
 				SkillEngine.getInstance().getSkill(getOwner(), 21171, 60, getOwner()).useNoAnimationSkill();
 				break;
+			}
 			case 2:
+			{
 				AI2Actions.targetSelf(Vengeful_ModorAI2.this);
 				SkillEngine.getInstance().getSkill(getOwner(), 21229, 60, getOwner()).useNoAnimationSkill();
 				break;
+			}
 		}
 	}
 	

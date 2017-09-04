@@ -183,6 +183,7 @@ public class _25515Protect_The_Calydon_Canyon extends QuestHandler
 				case 242075:
 				case 242079:
 				case 242083:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -193,6 +194,7 @@ public class _25515Protect_The_Calydon_Canyon extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

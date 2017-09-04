@@ -66,12 +66,18 @@ public class _9547Ready_For_The_Abyss extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					case ASK_ACCEPTION:
+					{
 						return sendQuestDialog(env, 4);
+					}
 					case ACCEPT_QUEST:
+					{
 						QuestService.startQuest(env);
 						return sendQuestDialog(env, 1003);
+					}
 				}
 			}
 		}

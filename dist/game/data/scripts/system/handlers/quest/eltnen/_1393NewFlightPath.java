@@ -69,7 +69,9 @@ public class _1393NewFlightPath extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -96,7 +98,9 @@ public class _1393NewFlightPath extends QuestHandler
 						return true;
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

@@ -39,10 +39,14 @@ public class Dynamic_Norsvold_MonsterAI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawnDF6EventDoor();
 				break;
+			}
 			case 2:
+			{
 				break;
+			}
 		}
 		super.handleDied();
 	}
@@ -53,17 +57,25 @@ public class Dynamic_Norsvold_MonsterAI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 4))
 		{
 			case 1:
+			{
 				spawn(240971, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0); // Guardian Warrior.
 				break;
+			}
 			case 2:
+			{
 				spawn(240972, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0); // Guardian Mage.
 				break;
+			}
 			case 3:
+			{
 				spawn(240973, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0); // Guardian Scout.
 				break;
+			}
 			case 4:
+			{
 				spawn(240974, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0); // Guardian Marksman.
 				break;
+			}
 		}
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

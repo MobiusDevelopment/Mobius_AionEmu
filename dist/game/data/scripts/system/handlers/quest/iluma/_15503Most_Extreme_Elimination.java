@@ -141,6 +141,7 @@ public class _15503Most_Extreme_Elimination extends QuestHandler
 				case 241677:
 				case 241678:
 				case 241679:
+				{
 					if (qs.getQuestVarById(1) < 40)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -151,6 +152,7 @@ public class _15503Most_Extreme_Elimination extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

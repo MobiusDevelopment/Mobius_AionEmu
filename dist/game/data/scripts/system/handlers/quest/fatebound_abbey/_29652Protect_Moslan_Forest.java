@@ -92,9 +92,13 @@ public class _29652Protect_Moslan_Forest extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}
@@ -115,7 +119,9 @@ public class _29652Protect_Moslan_Forest extends QuestHandler
 							return sendQuestEndDialog(env);
 						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 			}
@@ -131,7 +137,9 @@ public class _29652Protect_Moslan_Forest extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}
@@ -155,6 +163,7 @@ public class _29652Protect_Moslan_Forest extends QuestHandler
 			case 210427:
 			case 210656:
 			case 210657:
+			{
 				if (qs.getQuestVarById(1) < 10)
 				{
 					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -166,6 +175,7 @@ public class _29652Protect_Moslan_Forest extends QuestHandler
 					updateQuestStatus(env);
 				}
 				break;
+			}
 		}
 		return false;
 	}

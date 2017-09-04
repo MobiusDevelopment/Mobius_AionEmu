@@ -108,11 +108,14 @@ public class _1722RastinsHomesickness extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1011);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -121,6 +124,7 @@ public class _1722RastinsHomesickness extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 278517)
@@ -128,11 +132,14 @@ public class _1722RastinsHomesickness extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -141,6 +148,7 @@ public class _1722RastinsHomesickness extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 278544)
@@ -148,11 +156,14 @@ public class _1722RastinsHomesickness extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 2)
 					{
 						return sendQuestDialog(env, 1693);
 					}
+				}
 				case SELECT_REWARD:
+				{
 					if (var == 2)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -161,6 +172,7 @@ public class _1722RastinsHomesickness extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 278532)
@@ -168,11 +180,14 @@ public class _1722RastinsHomesickness extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 3)
 					{
 						return sendQuestDialog(env, 2034);
 					}
+				}
 				case STEP_TO_4:
+				{
 					if (var == 3)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -181,6 +196,7 @@ public class _1722RastinsHomesickness extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 278539)
@@ -188,11 +204,14 @@ public class _1722RastinsHomesickness extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 4)
 					{
 						return sendQuestDialog(env, 2375);
 					}
+				}
 				case STEP_TO_5:
+				{
 					if (var == 4)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -201,6 +220,7 @@ public class _1722RastinsHomesickness extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 278524)
@@ -208,11 +228,14 @@ public class _1722RastinsHomesickness extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 5)
 					{
 						return sendQuestDialog(env, 2716);
 					}
+				}
 				case STEP_TO_6:
+				{
 					if (var == 5)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -221,6 +244,7 @@ public class _1722RastinsHomesickness extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 278555)
@@ -228,11 +252,14 @@ public class _1722RastinsHomesickness extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 6)
 					{
 						return sendQuestDialog(env, 3057);
 					}
+				}
 				case STEP_TO_7:
+				{
 					if (var == 6)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -241,6 +268,7 @@ public class _1722RastinsHomesickness extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 278567)
@@ -248,11 +276,14 @@ public class _1722RastinsHomesickness extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 7)
 					{
 						return sendQuestDialog(env, 3398);
 					}
+				}
 				case SET_REWARD:
+				{
 					if (var == 7)
 					{
 						if (!giveQuestItem(env, 182202101, 1))
@@ -265,6 +296,7 @@ public class _1722RastinsHomesickness extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		return false;

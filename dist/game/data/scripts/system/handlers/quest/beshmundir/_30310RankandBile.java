@@ -104,11 +104,17 @@ public class _30310RankandBile extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 10002);
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestDialog(env, 5);
+					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

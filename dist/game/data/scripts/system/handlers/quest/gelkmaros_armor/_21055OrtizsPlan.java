@@ -53,7 +53,9 @@ public class _21055OrtizsPlan extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					case SELECT_ACTION_1012:
 					{
 						return sendQuestDialog(env, 1012);

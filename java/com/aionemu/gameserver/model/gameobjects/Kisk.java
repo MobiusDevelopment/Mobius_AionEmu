@@ -143,34 +143,46 @@ public class Kisk extends SummonedObject<Player>
 			{
 				case 0:
 				case 1:
+				{
 					if (ownerRace != player.getRace())
 					{
 						return false;
 					}
 					break;
+				}
 				case 2:
+				{
 					if ((ownerLegion == null) || !ownerLegion.isMember(player.getObjectId()))
 					{
 						return false;
 					}
 					break;
+				}
 				case 3:
+				{
 					return false;
+				}
 				case 4:
+				{
 					if (!player.isInTeam() || !player.getCurrentGroup().hasMember(getCreatorId()))
 					{
 						return false;
 					}
 					break;
+				}
 				case 5:
 				case 6:
+				{
 					if (!player.isInTeam() || (player.isInAlliance2() && !player.getPlayerAlliance2().hasMember(getCreatorId())) || (player.isInGroup2() && !player.getPlayerGroup2().hasMember(getCreatorId())))
 					{
 						return false;
 					}
 					break;
+				}
 				default:
+				{
 					return false;
+				}
 			}
 		}
 		if (getCurrentMemberCount() >= getMaxMembers())

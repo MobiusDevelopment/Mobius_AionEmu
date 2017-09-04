@@ -56,13 +56,17 @@ public class CM_ABYSS_RANKING_PLAYERS extends AionClientPacket
 		switch (raceId)
 		{
 			case 0:
+			{
 				queriedRace = Race.ELYOS;
 				updateType = AbyssRankUpdateType.PLAYER_ELYOS;
 				break;
+			}
 			case 1:
+			{
 				queriedRace = Race.ASMODIANS;
 				updateType = AbyssRankUpdateType.PLAYER_ASMODIANS;
 				break;
+			}
 		}
 	}
 	

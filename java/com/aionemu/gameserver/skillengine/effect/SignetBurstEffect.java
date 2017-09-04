@@ -65,20 +65,30 @@ public class SignetBurstEffect extends DamageEffect
 			switch (level)
 			{
 				case 1:
+				{
 					valueWithDelta *= 0.2f;
 					break;
+				}
 				case 2:
+				{
 					valueWithDelta *= 0.5f;
 					break;
+				}
 				case 3:
+				{
 					valueWithDelta *= 1.0f;
 					break;
+				}
 				case 4:
+				{
 					valueWithDelta *= 1.2f;
 					break;
+				}
 				case 5:
+				{
 					valueWithDelta *= 1.5f;
 					break;
+				}
 			}
 			
 			/**
@@ -89,20 +99,30 @@ public class SignetBurstEffect extends DamageEffect
 			switch (level)
 			{
 				case 1:
+				{
 					accmod = (int) (-0.8f * mAccurancy);
 					break;
+				}
 				case 2:
+				{
 					accmod = (int) (-0.5f * mAccurancy);
 					break;
+				}
 				case 3:
+				{
 					accmod = 0;
 					break;
+				}
 				case 4:
+				{
 					accmod = (int) (0.2f * mAccurancy);
 					break;
+				}
 				case 5:
+				{
 					accmod = (int) (0.5f * mAccurancy);
 					break;
+				}
 			}
 			effect.setAccModBoost(accmod);
 			AttackUtil.calculateMagicalSkillResult(effect, valueWithDelta, null, getElement(), true, true, false, getMode(), critProbMod2, critAddDmg, shared, false);

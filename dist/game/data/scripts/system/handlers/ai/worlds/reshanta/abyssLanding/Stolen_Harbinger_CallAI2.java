@@ -51,19 +51,27 @@ public class Stolen_Harbinger_CallAI2 extends NpcAI2
 			case 884030: // Stolen Harbinger's Call <6,000 Points>
 			case 884031: // Stolen Harbinger's Call <6,000 Points>
 			case 884032: // Stolen Harbinger's Call <6,000 Points>
+			{
 				updateHarbingerLanding1();
 				break;
+			}
 			case 884033: // Stolen Harbinger's Call <10,000 Points>
 			case 884034: // Stolen Harbinger's Call <10,000 Points>
+			{
 				updateHarbingerLanding2();
 				break;
+			}
 			case 884035: // Stolen Harbinger's Call <16,000 Points>
 			case 884036: // Stolen Harbinger's Call <16,000 Points>
+			{
 				updateHarbingerLanding3();
 				break;
+			}
 			case 884037: // Stolen Harbinger's Call <30,000 Points>
+			{
 				updateHarbingerLanding4();
 				break;
+			}
 		}
 		super.handleDied();
 		AI2Actions.deleteOwner(this);

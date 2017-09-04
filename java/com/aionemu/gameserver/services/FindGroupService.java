@@ -81,31 +81,43 @@ public class FindGroupService
 		switch (player.getRace())
 		{
 			case ELYOS:
+			{
 				switch (action)
 				{
 					case 0x02:
+					{
 						elyosRecruitFindGroups.put(objectId, findGroup);
 						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400392));
 						break;
+					}
 					case 0x06:
+					{
 						elyosApplyFindGroups.put(objectId, findGroup);
 						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400393));
 						break;
+					}
 				}
 				break;
+			}
 			case ASMODIANS:
+			{
 				switch (action)
 				{
 					case 0x02:
+					{
 						asmodianRecruitFindGroups.put(objectId, findGroup);
 						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400392));
 						break;
+					}
 					case 0x06:
+					{
 						asmodianApplyFindGroups.put(objectId, findGroup);
 						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400393));
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		final Collection<FindGroup> findGroupList = new ArrayList<>();
@@ -121,13 +133,17 @@ public class FindGroupService
 		switch (player.getRace())
 		{
 			case ELYOS:
+			{
 				findGroup = elyosRecruitFindGroups.get(objectId);
 				findGroup.setMessage(message);
 				break;
+			}
 			case ASMODIANS:
+			{
 				findGroup = asmodianRecruitFindGroups.get(objectId);
 				findGroup.setMessage(message);
 				break;
+			}
 		}
 	}
 	
@@ -136,27 +152,43 @@ public class FindGroupService
 		switch (race)
 		{
 			case ELYOS:
+			{
 				switch (action)
 				{
 					case 0x00:
+					{
 						return elyosRecruitFindGroups.values();
+					}
 					case 0x04:
+					{
 						return elyosApplyFindGroups.values();
+					}
 					case 0xA:
+					{
 						return Collections.emptyList();
+					}
 				}
 				break;
+			}
 			case ASMODIANS:
+			{
 				switch (action)
 				{
 					case 0x00:
+					{
 						return asmodianRecruitFindGroups.values();
+					}
 					case 0x04:
+					{
 						return asmodianApplyFindGroups.values();
+					}
 					case 0xA:
+					{
 						return Collections.emptyList();
+					}
 				}
 				break;
+			}
 		}
 		return null;
 	}
@@ -181,27 +213,39 @@ public class FindGroupService
 		switch (race)
 		{
 			case ELYOS:
+			{
 				switch (action)
 				{
 					case 0x00:
+					{
 						findGroup = elyosRecruitFindGroups.remove(playerObjId);
 						break;
+					}
 					case 0x04:
+					{
 						findGroup = elyosApplyFindGroups.remove(playerObjId);
 						break;
+					}
 				}
 				break;
+			}
 			case ASMODIANS:
+			{
 				switch (action)
 				{
 					case 0x00:
+					{
 						findGroup = asmodianRecruitFindGroups.remove(playerObjId);
 						break;
+					}
 					case 0x04:
+					{
 						findGroup = asmodianApplyFindGroups.remove(playerObjId);
 						break;
+					}
 				}
 				break;
+			}
 		}
 		if (findGroup != null)
 		{

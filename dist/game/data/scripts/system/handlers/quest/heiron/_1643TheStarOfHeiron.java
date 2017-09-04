@@ -84,7 +84,9 @@ public class _1643TheStarOfHeiron extends QuestHandler
 						}
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -150,7 +152,6 @@ public class _1643TheStarOfHeiron extends QuestHandler
 							final Npc npc = (Npc) env.getVisibleObject();
 							ThreadPoolManager.getInstance().schedule(new Runnable()
 							{
-								
 								@Override
 								public void run()
 								{

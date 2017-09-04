@@ -117,6 +117,7 @@ public class _15422Protect_Anchorbrak_Artifact_Outpost extends QuestHandler
 				case 883252:
 				case 883253:
 				case 883255:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _15422Protect_Anchorbrak_Artifact_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

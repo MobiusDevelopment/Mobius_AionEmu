@@ -121,6 +121,7 @@ public class _25412Handle_The_Intruder_To_Protect_Triple_Island extends QuestHan
 				case 884018:
 				case 884019:
 				case 884020:
+				{
 					if (qs.getQuestVarById(1) < 2)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -131,6 +132,7 @@ public class _25412Handle_The_Intruder_To_Protect_Triple_Island extends QuestHan
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

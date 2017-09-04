@@ -118,7 +118,6 @@ public class _24021Ghosts_In_The_Desert extends QuestHandler
 						{
 							return defaultCloseDialog(env, 1, 2);
 						}
-						
 					}
 				}
 				case 802046:
@@ -152,7 +151,9 @@ public class _24021Ghosts_In_The_Desert extends QuestHandler
 							}
 						}
 						case FINISH_DIALOG:
+						{
 							return sendQuestSelectionDialog(env);
+						}
 					}
 				}
 			}

@@ -136,6 +136,7 @@ public class _80930Protect_The_Morninglight_Plains_2 extends QuestHandler
 				case 240378:
 				case 241177:
 				case 241178:
+				{
 					if (qs.getQuestVarById(1) < 27)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -146,6 +147,7 @@ public class _80930Protect_The_Morninglight_Plains_2 extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

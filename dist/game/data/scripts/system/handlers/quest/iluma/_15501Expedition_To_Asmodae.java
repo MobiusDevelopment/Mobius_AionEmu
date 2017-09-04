@@ -137,6 +137,7 @@ public class _15501Expedition_To_Asmodae extends QuestHandler
 				case 240378:
 				case 241177:
 				case 241178:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -147,6 +148,7 @@ public class _15501Expedition_To_Asmodae extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

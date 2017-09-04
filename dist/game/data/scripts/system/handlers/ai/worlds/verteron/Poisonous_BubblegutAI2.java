@@ -53,6 +53,7 @@ public class Poisonous_BubblegutAI2 extends AggressiveNpcAI2
 		switch (getNpcId())
 		{
 			case 210318: // Poisonous Bubblegut.
+			{
 				if (p != null)
 				{
 					spawn(203195, p.getX(), p.getY(), p.getZ(), (byte) 0); // Kato.
@@ -66,6 +67,7 @@ public class Poisonous_BubblegutAI2 extends AggressiveNpcAI2
 					}
 				}, 60000);
 				break;
+			}
 		}
 		super.handleDied();
 	}

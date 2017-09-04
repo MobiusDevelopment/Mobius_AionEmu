@@ -118,11 +118,14 @@ public class _2136TheLostAxe extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1011);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 1)
 					{
 						qs.setStatus(QuestStatus.REWARD);
@@ -131,7 +134,9 @@ public class _2136TheLostAxe extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 0));
 						return sendQuestDialog(env, 6);
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						qs.setStatus(QuestStatus.REWARD);
@@ -140,6 +145,7 @@ public class _2136TheLostAxe extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 0));
 						return sendQuestDialog(env, 5);
 					}
+				}
 			}
 		}
 		else if (targetId == 700146)
@@ -147,6 +153,7 @@ public class _2136TheLostAxe extends QuestHandler
 			switch (env.getDialog())
 			{
 				case USE_OBJECT:
+				{
 					if (var == 0)
 					{
 						playQuestMovie(env, 59);
@@ -155,6 +162,7 @@ public class _2136TheLostAxe extends QuestHandler
 						QuestService.addNewSpawn(220010000, player.getInstanceId(), 790009, 1088.5f, 2371.8f, 258.375f, (byte) 87);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

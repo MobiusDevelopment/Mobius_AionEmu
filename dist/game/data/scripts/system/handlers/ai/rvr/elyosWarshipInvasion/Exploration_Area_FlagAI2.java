@@ -49,74 +49,98 @@ public class Exploration_Area_FlagAI2 extends ActionItemNpcAI2
 			 * Othia Fragment Redoubt
 			 */
 			case 805889: // Exploration Area Flag.
+			{
 				announceF6Invasion();
 				explorationAreaStart1_1();
 				spawn(805890, 1308.3436f, 1031.3064f, 320.10107f, (byte) 0, 625);
 				break;
+			}
 			case 805940: // Exploration Area Flag.
+			{
 				announceF6Invasion();
 				explorationAreaStart1_2();
 				spawn(805941, 1256.1188f, 980.66156f, 322.22174f, (byte) 0, 500);
 				break;
+			}
 			case 805948: // Exploration Area Flag.
+			{
 				announceF6Invasion();
 				explorationAreaStart1_3();
 				spawn(805949, 1264.2919f, 1046.5237f, 323.42804f, (byte) 0, 579);
 				break;
+			}
 			/**
 			 * Candellus Fragment Redoubt
 			 */
 			case 805891: // Exploration Area Flag.
+			{
 				announceF6Invasion();
 				explorationAreaStart2_1();
 				spawn(805892, 1706.7684f, 875.67474f, 305.81323f, (byte) 0, 1846);
 				break;
+			}
 			case 805942: // Exploration Area Flag.
+			{
 				announceF6Invasion();
 				explorationAreaStart2_2();
 				spawn(805943, 1736.994f, 792.06250f, 309.298130f, (byte) 0, 2276);
 				break;
+			}
 			case 805950: // Exploration Area Flag.
+			{
 				announceF6Invasion();
 				explorationAreaStart2_3();
 				spawn(805951, 1755.5957f, 872.9082f, 307.162750f, (byte) 0, 494);
 				break;
+			}
 			/**
 			 * Philos Redoubt
 			 */
 			case 805893: // Exploration Area Flag.
+			{
 				announceF6Invasion();
 				explorationAreaStart3_1();
 				spawn(805894, 1477.2379f, 1783.2937f, 315.10504f, (byte) 0, 696);
 				break;
+			}
 			case 805944: // Exploration Area Flag.
+			{
 				announceF6Invasion();
 				explorationAreaStart3_2();
 				spawn(805945, 1533.2758f, 1782.7814f, 313.42178f, (byte) 0, 353);
 				break;
+			}
 			case 805952: // Exploration Area Flag.
+			{
 				announceF6Invasion();
 				explorationAreaStart3_3();
 				spawn(805953, 1542.8401f, 1835.7413f, 316.32877f, (byte) 0, 47);
 				break;
+			}
 			/**
 			 * Anemos Fragment Redoubt
 			 */
 			case 805895: // Exploration Area Flag.
+			{
 				announceF6Invasion();
 				explorationAreaStart4_1();
 				spawn(805896, 1887.7408f, 1454.496f, 291.563420f, (byte) 0, 425);
 				break;
+			}
 			case 805946: // Exploration Area Flag.
+			{
 				announceF6Invasion();
 				explorationAreaStart4_2();
 				spawn(805947, 1934.3413f, 1449.7533f, 291.42267f, (byte) 0, 427);
 				break;
+			}
 			case 805954: // Exploration Area Flag.
+			{
 				announceF6Invasion();
 				explorationAreaStart4_3();
 				spawn(805955, 1913.5474f, 1388.1427f, 295.92883f, (byte) 0, 466);
 				break;
+			}
 		}
 		AI2Actions.deleteOwner(this);
 	}

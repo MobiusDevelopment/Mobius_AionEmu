@@ -102,6 +102,7 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 						switch (stoneType)
 						{
 							case 0:
+							{
 								if (item.getSockets(false) <= item.getItemStonesSize())
 								{
 									if (EnchantsConfig.CLEAN_STONE)
@@ -112,10 +113,14 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 								}
 								item.getItemStones().add(new ManaStone(item.getObjectId(), itemId, slot, PersistentState.UPDATED));
 								break;
+							}
 							case 1:
+							{
 								item.setGodStone(new GodStone(item.getObjectId(), itemId, PersistentState.UPDATED));
 								break;
+							}
 							case 2:
+							{
 								if (item.getSockets(true) <= item.getFusionStonesSize())
 								{
 									if (EnchantsConfig.CLEAN_STONE)
@@ -126,9 +131,12 @@ public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 								}
 								item.getFusionStones().add(new ManaStone(item.getObjectId(), itemId, slot, PersistentState.UPDATED));
 								break;
+							}
 							case 3:
+							{
 								item.setIdianStone(new IdianStone(itemId, PersistentState.UPDATE_REQUIRED, item, rset.getInt("polishNumber"), rset.getInt("polishCharge")));
 								break;
+							}
 						}
 					}
 					rset.close();

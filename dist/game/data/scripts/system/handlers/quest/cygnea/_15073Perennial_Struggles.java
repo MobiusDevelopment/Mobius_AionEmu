@@ -117,6 +117,7 @@ public class _15073Perennial_Struggles extends QuestHandler
 				case 235889:
 				case 235892:
 				case 235893:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _15073Perennial_Struggles extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

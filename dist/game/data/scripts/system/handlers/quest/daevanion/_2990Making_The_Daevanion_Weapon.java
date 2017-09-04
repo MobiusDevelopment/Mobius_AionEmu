@@ -121,6 +121,7 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1011);
@@ -137,7 +138,9 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 						{
 							return sendQuestDialog(env, 2034);
 						}
+					}
 					case CHECK_COLLECTED_ITEMS:
+					{
 						if (var == 0)
 						{
 							if (QuestService.collectItemCheck(env, true))
@@ -152,12 +155,16 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 							}
 						}
 						break;
+					}
 					case SELECT_ACTION_1352:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case SELECT_ACTION_2035:
+					{
 						if (var == 3)
 						{
 							if ((player.getCommonData().getDp() == 4000) && (player.getInventory().getItemCountByItemId(186000040) > 0))
@@ -174,7 +181,9 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 							}
 						}
 						break;
+					}
 					case STEP_TO_2:
+					{
 						if (var == 1)
 						{
 							qs.setQuestVarById(0, var + 1);
@@ -183,7 +192,9 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 							return true;
 						}
 						break;
+					}
 					case STEP_TO_3:
+					{
 						if (var == 2)
 						{
 							qs.setQuestVar(3);
@@ -192,6 +203,7 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 							return true;
 						}
 						break;
+					}
 				}
 			}
 			return false;
@@ -235,6 +247,7 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 			{
 				case 253696: // Smoking Ember.
 				case 256617: // Strange Lake Spirit.
+				{
 					if ((var1 >= 0) && (var1 < 60))
 					{
 						++var1;
@@ -242,8 +255,10 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 						updateQuestStatus(env);
 					}
 					break;
+				}
 				case 253720: // Lava Hoverstone.
 				case 253721: // Lava Hoverstone.
+				{
 					if ((var2 >= 0) && (var2 < 120))
 					{
 						++var2;
@@ -251,12 +266,14 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 						updateQuestStatus(env);
 					}
 					break;
+				}
 				case 253682: // Sulphur Oculazen.
 				case 253683: // Sulphur Oculazen.
 				case 253684: // Sulphur Oculazen.
 				case 253685: // Sulphur Oculazen.
 				case 254513: // Disturbed Resident.
 				case 254514: // Disturbed Resident.
+				{
 					if ((var3 >= 0) && (var3 < 240))
 					{
 						++var3;
@@ -264,6 +281,7 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 						updateQuestStatus(env);
 					}
 					break;
+				}
 			}
 		}
 		if ((qs.getQuestVarById(0) == 2) && (var1 == 60) && (var2 == 120) && (var3 == 240))

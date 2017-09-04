@@ -115,6 +115,7 @@ public class _13769Halt_The_Healers extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 235364:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -125,6 +126,7 @@ public class _13769Halt_The_Healers extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

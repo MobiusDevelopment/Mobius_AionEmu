@@ -135,8 +135,10 @@ public class StatCapUtil
 			case SOAR_SPEED:
 			case MAXHP:
 			case MAXMP:
+			{
 				value = 0;
 				break;
+			}
 		}
 		return value;
 	}
@@ -151,20 +153,26 @@ public class StatCapUtil
 		switch (stat)
 		{
 			case SPEED:
+			{
 				value = 12000;
 				break;
+			}
 			case FLY_SPEED:
 			case SOAR_SPEED:
+			{
 				value = 16000;
 				break;
+			}
 			case PVP_ATTACK_RATIO:
 			case PVP_ATTACK_RATIO_PHYSICAL:
 			case PVP_ATTACK_RATIO_MAGICAL:
 			case PVP_DEFEND_RATIO:
 			case PVP_DEFEND_RATIO_PHYSICAL:
 			case PVP_DEFEND_RATIO_MAGICAL:
+			{
 				value = 900;
 				break;
+			}
 			case MAXHP:
 			case MAXMP:
 			case HEAL_BOOST:
@@ -174,8 +182,10 @@ public class StatCapUtil
 			case BOOST_MAGICAL_SKILL:
 			case BOOST_DURATION_BUFF:
 			case MAGIC_SKILL_BOOST_RESIST:
+			{
 				value = Integer.MAX_VALUE;
 				break;
+			}
 		}
 		return value;
 	}

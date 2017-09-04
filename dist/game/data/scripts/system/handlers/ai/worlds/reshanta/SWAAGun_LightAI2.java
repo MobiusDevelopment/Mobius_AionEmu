@@ -57,7 +57,9 @@ public class SWAAGun_LightAI2 extends NpcAI2
 				case 251725:
 				case 251745:
 				case 251765:
+				{
 					// Elyos Defense Turret [Kaldor]
+				}
 				case 252164:
 				case 252165:
 				case 252166:
@@ -65,10 +67,14 @@ public class SWAAGun_LightAI2 extends NpcAI2
 				case 252168:
 				case 252169:
 				case 252170:
+				{
 					// Empty Aetheric Cannon [Reshanta]
+				}
 				case 881981:
+				{
 					SkillEngine.getInstance().getSkill(player, 21517, 1, player).useNoAnimationSkill();
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

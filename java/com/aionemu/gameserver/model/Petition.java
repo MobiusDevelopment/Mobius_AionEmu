@@ -48,29 +48,45 @@ public class Petition
 		switch (petitionTypeId)
 		{
 			case 256:
+			{
 				type = PetitionType.CHARACTER_STUCK;
 				break;
+			}
 			case 512:
+			{
 				type = PetitionType.CHARACTER_RESTORATION;
 				break;
+			}
 			case 768:
+			{
 				type = PetitionType.BUG;
 				break;
+			}
 			case 1024:
+			{
 				type = PetitionType.QUEST;
 				break;
+			}
 			case 1280:
+			{
 				type = PetitionType.UNACCEPTABLE_BEHAVIOR;
 				break;
+			}
 			case 1536:
+			{
 				type = PetitionType.SUGGESTION;
 				break;
+			}
 			case 65280:
+			{
 				type = PetitionType.INQUIRY;
 				break;
+			}
 			default:
+			{
 				type = PetitionType.INQUIRY;
 				break;
+			}
 		}
 		this.title = title;
 		this.contentText = contentText;
@@ -78,17 +94,25 @@ public class Petition
 		switch (petitionStatus)
 		{
 			case 0:
+			{
 				status = PetitionStatus.PENDING;
 				break;
+			}
 			case 1:
+			{
 				status = PetitionStatus.IN_PROGRESS;
 				break;
+			}
 			case 2:
+			{
 				status = PetitionStatus.REPLIED;
 				break;
+			}
 			default:
+			{
 				status = PetitionStatus.PENDING;
 				break;
+			}
 		}
 	}
 	

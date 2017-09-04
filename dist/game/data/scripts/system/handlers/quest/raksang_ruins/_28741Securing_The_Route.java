@@ -137,6 +137,7 @@ public class _28741Securing_The_Route extends QuestHandler
 				case 236096:
 				case 236097:
 				case 236098:
+				{
 					if (qs.getQuestVarById(1) < 50)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -147,6 +148,7 @@ public class _28741Securing_The_Route extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

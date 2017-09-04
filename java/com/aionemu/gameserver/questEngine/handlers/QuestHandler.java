@@ -117,6 +117,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 			case 48:
 			case 49:
 			case 50:
+			{
 				final Player player = env.getPlayer();
 				final QuestState qs = player.getQuestStateList().getQuestState(questId);
 				if ((qs == null) || (qs.getStatus() != QuestStatus.REWARD))
@@ -124,6 +125,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 					return false;
 				}
 				break;
+			}
 		}
 		sendDialogPacket(env, dialogId);
 		return true;
@@ -205,7 +207,9 @@ public abstract class QuestHandler extends AbstractQuestHandler
 			case REFUSE_QUEST:
 			case REFUSE_QUEST_2:
 			case REFUSE_QUEST_SIMPLE:
+			{
 				return closeDialogWindow(env);
+			}
 			case FINISH_DIALOG:
 			{
 				return sendQuestSelectionDialog(env);

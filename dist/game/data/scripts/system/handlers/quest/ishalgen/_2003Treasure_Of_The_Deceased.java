@@ -82,6 +82,7 @@ public class _2003Treasure_Of_The_Deceased extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1011);
@@ -90,10 +91,14 @@ public class _2003Treasure_Of_The_Deceased extends QuestHandler
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case SELECT_ACTION_1012:
+					{
 						playQuestMovie(env, 53);
 						break;
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							qs.setQuestVarById(0, var + 1);
@@ -101,7 +106,9 @@ public class _2003Treasure_Of_The_Deceased extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 					case CHECK_COLLECTED_ITEMS:
+					{
 						if (var == 1)
 						{
 							if (QuestService.collectItemCheck(env, true))
@@ -115,6 +122,7 @@ public class _2003Treasure_Of_The_Deceased extends QuestHandler
 								return sendQuestDialog(env, 1693);
 							}
 						}
+					}
 				}
 			}
 		}

@@ -76,29 +76,41 @@ public class _1932AMatterOfReputation extends QuestHandler
 			switch (targetId)
 			{
 				case 203946:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 					}
 					break;
+				}
 				case 203893:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 2375);
 							}
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							return checkQuestItems(env, 1, 2, true, 5, 2716);
+						}
 					}
 					break;
+				}
 			}
 		}
 		return sendQuestRewardDialog(env, 203893, 0);

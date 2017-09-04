@@ -71,6 +71,7 @@ public class SM_PTRANSFER_RESPONSE extends GsServerPacket
 		switch (result)
 		{
 			case SEND_INFO:
+			{
 				writeD(request.targetAccountId);
 				writeD(taskId);
 				writeS(request.name);
@@ -78,14 +79,20 @@ public class SM_PTRANSFER_RESPONSE extends GsServerPacket
 				writeD(request.db.length);
 				writeB(request.db);
 				break;
+			}
 			case OK:
+			{
 				writeD(taskId);
 				break;
+			}
 			case ERROR:
+			{
 				writeD(taskId);
 				writeS(reason);
 				break;
+			}
 			case PERFORM_ACTION:
+			{
 				writeC(task.sourceServerId);
 				writeC(task.targetServerId);
 				writeD(task.sourceAccountId);
@@ -93,6 +100,7 @@ public class SM_PTRANSFER_RESPONSE extends GsServerPacket
 				writeD(task.playerId);
 				writeD(task.id);
 				break;
+			}
 		}
 	}
 }

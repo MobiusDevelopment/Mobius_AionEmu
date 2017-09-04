@@ -80,6 +80,7 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket
 		switch (actionId)
 		{
 			case 0:
+			{
 				writeH(0x57);
 				writeC(actionId);
 				for (int value : rifts.values())
@@ -87,13 +88,17 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket
 					writeD(value);
 				}
 				break;
+			}
 			case 1:
+			{
 				writeH(0x09);
 				writeC(actionId);
 				writeD(gelkmaros);
 				writeD(inggison);
 				break;
+			}
 			case 2:
+			{
 				writeH(0x39);
 				writeC(actionId);
 				writeD(rift.getOwner().getObjectId());
@@ -108,7 +113,9 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket
 				writeC(rift.isMaster() ? 1 : 0);
 				writeD(rift.getOwner().getWorldId());
 				break;
+			}
 			case 3:
+			{
 				writeH(0x15);
 				writeC(actionId);
 				writeD(rift.getOwner().getObjectId());
@@ -117,18 +124,23 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket
 				writeC(rift.isVortex() ? 1 : 0);
 				writeC(rift.isMaster() ? 1 : 0);
 				break;
+			}
 			case 4:
+			{
 				writeH(0x07);
 				writeC(actionId);
 				writeD(objectId);
 				writeC(rift.isVortex() ? 1 : 0);
 				writeC(rift.isMaster() ? 1 : 0);
 				break;
+			}
 			case 5:
+			{
 				writeH(0x05);
 				writeC(actionId);
 				writeD(0x00);
 				break;
+			}
 		}
 	}
 }

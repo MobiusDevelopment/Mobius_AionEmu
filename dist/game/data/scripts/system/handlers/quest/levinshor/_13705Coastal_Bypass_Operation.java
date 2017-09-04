@@ -112,19 +112,23 @@ public class _13705Coastal_Bypass_Operation extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 233919:
+				{
 					if (qs.getQuestVarById(0) < 3)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 				case 233920:
+				{
 					if (qs.getQuestVarById(1) < 3)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

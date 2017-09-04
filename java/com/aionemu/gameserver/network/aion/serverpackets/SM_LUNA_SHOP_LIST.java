@@ -87,18 +87,24 @@ public class SM_LUNA_SHOP_LIST extends AionServerPacket
 		switch (actionId)
 		{
 			case 0:// luna point handler id
+			{
 				writeQ(con.getAccount().getLuna());
 				break;
+			}
 			case 1:// taki advanture update
+			{
 				writeH(tableId);// size?
 				writeD(costId);
 				writeD(1);
 				break;
+			}
 			case 2:
+			{
 				writeC(tableId);// tabId
 				switch (tableId)
 				{
 					case 0:
+					{
 						writeD(1474466400);// Start time
 						writeD(0);
 						writeD(1476280799);// End time
@@ -109,7 +115,9 @@ public class SM_LUNA_SHOP_LIST extends AionServerPacket
 							writeD(idList.get(i));// luna recipe id
 						}
 						break;
+					}
 					case 1:
+					{
 						writeD(1482393600);
 						writeD(0); // test
 						writeD(1482480000);
@@ -120,20 +128,30 @@ public class SM_LUNA_SHOP_LIST extends AionServerPacket
 							writeD(randomDailyCraft.get(i));// luna recipe id
 						}
 						break;
+					}
 				}
 				break;
+			}
 			case 4:// munirunerk's keys
+			{
 				writeD(con.getActivePlayer().getMuniKeys());
 				break;
+			}
 			case 5:// luna consume point spent
+			{
 				writeD(con.getActivePlayer().getLunaConsumePoint());
 				break;
+			}
 			case 6:// update taki's mission?
+			{
 				break;
+			}
 			case 7:
+			{
 				writeC(0);
 				writeH(100);
 				break;
+			}
 		}
 	}
 }

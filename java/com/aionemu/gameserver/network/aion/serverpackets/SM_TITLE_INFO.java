@@ -95,6 +95,7 @@ public class SM_TITLE_INFO extends AionServerPacket
 		switch (action)
 		{
 			case 0:
+			{
 				writeC(0x00);
 				writeC(0x01);// 5.0
 				writeH(titleList.size());
@@ -104,23 +105,34 @@ public class SM_TITLE_INFO extends AionServerPacket
 					writeD(title.getRemainingTime());
 				}
 				break;
+			}
 			case 1: // self set
+			{
 				writeH(titleId);
 				break;
+			}
 			case 3: // broad set
+			{
 				writeD(playerObjId);
 				writeH(titleId);
 				break;
+			}
 			case 4: // Mentor flag self
+			{
 				writeH(titleId);
 				break;
+			}
 			case 5: // broad set mentor fleg
+			{
 				writeD(playerObjId);
 				writeH(titleId);
 				break;
+			}
 			case 6: // bonus title
+			{
 				writeH(bonusTitleId);
 				break;
+			}
 		}
 	}
 }

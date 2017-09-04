@@ -42,10 +42,14 @@ public class Venge_Full_OrbAI2 extends AggressiveNpcAI2
 		switch (getNpcId())
 		{
 			case 284443: // Sorcerer Queen Modor.
+			{
 				skill = 21178;
 				break;
+			}
 			default:
+			{
 				skill = 0;
+			}
 		}
 		if (skill == 0)
 		{

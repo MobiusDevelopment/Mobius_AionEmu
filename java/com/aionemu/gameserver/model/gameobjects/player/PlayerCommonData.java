@@ -312,6 +312,7 @@ public class PlayerCommonData extends VisibleObjectTemplate
 				case GROUP_HUNTING:
 				case CRAFTING:
 				case GATHERING:
+				{
 					if (npcNameId == 0)
 					{
 						PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP2(reward));
@@ -333,7 +334,9 @@ public class PlayerCommonData extends VisibleObjectTemplate
 						}
 					}
 					break;
+				}
 				case QUEST:
+				{
 					if (npcNameId == 0)
 					{
 						PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP2(reward));
@@ -355,7 +358,9 @@ public class PlayerCommonData extends VisibleObjectTemplate
 						PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP_DESC(new DescriptionId((npcNameId * 2) + 1), reward));
 					}
 					break;
+				}
 				case PVP_KILL:
+				{
 					if ((repose > 0) && (salvation > 0))
 					{
 						PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP_VITAL_MAKEUP_BONUS(name, reward, repose, salvation));
@@ -373,8 +378,11 @@ public class PlayerCommonData extends VisibleObjectTemplate
 						PacketSendUtility.sendPacket(getPlayer(), SM_SYSTEM_MESSAGE.STR_GET_EXP(name, reward));
 					}
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			if (isArchDaeva())
 			{

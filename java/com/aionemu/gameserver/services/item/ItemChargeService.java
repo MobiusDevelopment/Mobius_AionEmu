@@ -33,7 +33,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
 import com.aionemu.gameserver.utils.PacketSendUtility;
-import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 
 public class ItemChargeService
@@ -44,14 +43,7 @@ public class ItemChargeService
 		{
 			return Collections.singletonList(selectedItem);
 		}
-		return Collections2.filter(player.getEquipment().getEquippedItems(), new Predicate<Item>()
-		{
-			@Override
-			public boolean apply(Item item)
-			{
-				return (item.getChargeLevelMax() != 0) && (item.getImprovement() != null) && (item.getImprovement().getChargeWay() == chargeWay) && (item.getChargePoints() < ChargeInfo.LEVEL2);
-			}
-		});
+		return Collections2.filter(player.getEquipment().getEquippedItems(), item -> (item.getChargeLevelMax() != 0) && (item.getImprovement() != null) && (item.getImprovement().getChargeWay() == chargeWay) && (item.getChargePoints() < ChargeInfo.LEVEL2));
 	}
 	
 	public static void startChargingEquippedItems(Player player, int senderObj, int chargeWay)
@@ -119,9 +111,12 @@ public class ItemChargeService
 		switch (level)
 		{
 			case 1:
+			{
 				item.getConditioningInfo().updateChargePoints(ChargeInfo.LEVEL1 - currentCharge);
 				break;
+			}
 			case 2:
+			{
 				if (!verifyRecomendRank(player, item))
 				{
 					return;
@@ -131,26 +126,24 @@ public class ItemChargeService
 					item.getConditioningInfo().updateChargePoints(ChargeInfo.LEVEL2 - currentCharge);
 				}
 				break;
+			}
 		}
 		if (!verifyRecomendRank(player, item))
 		{
 			return;
 		}
+		PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, item, ItemUpdateType.CHARGE));
+		player.getEquipment().setPersistentState(PersistentState.UPDATE_REQUIRED);
+		player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
+		if (chargeWay == 1)
+		{
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ITEM_CHARGE_SUCCESS(new DescriptionId(item.getNameId()), level));
+		}
 		else
 		{
-			PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, item, ItemUpdateType.CHARGE));
-			player.getEquipment().setPersistentState(PersistentState.UPDATE_REQUIRED);
-			player.getInventory().setPersistentState(PersistentState.UPDATE_REQUIRED);
-			if (chargeWay == 1)
-			{
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ITEM_CHARGE_SUCCESS(new DescriptionId(item.getNameId()), level));
-			}
-			else
-			{
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ITEM_CHARGE2_SUCCESS(new DescriptionId(item.getNameId()), level));
-			}
-			player.getGameStats().updateStatsVisually();
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ITEM_CHARGE2_SUCCESS(new DescriptionId(item.getNameId()), level));
 		}
+		player.getGameStats().updateStatsVisually();
 	}
 	
 	public static boolean processPayment(Player player, Item item, int level)
@@ -163,9 +156,13 @@ public class ItemChargeService
 		switch (chargeWay)
 		{
 			case 1:
+			{
 				return processKinahPayment(player, amount);
+			}
 			case 2:
+			{
 				return processAPPayment(player, amount);
+			}
 		}
 		return false;
 	}
@@ -200,19 +197,27 @@ public class ItemChargeService
 		switch (chargeLevel)
 		{
 			case 1:
+			{
 				money = firstLevel;
 				break;
+			}
 			case 2:
+			{
 				switch (getNextChargeLevel(item))
 				{
 					case 1:
+					{
 						money = (firstLevel + updateLevel);
 						break;
+					}
 					case 2:
+					{
 						money = updateLevel;
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return (long) money;
 	}

@@ -171,6 +171,7 @@ public class _25524Protect_The_Echoes_Of_The_Past extends QuestHandler
 				case 243278:
 				case 243279:
 				case 243280:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -181,6 +182,7 @@ public class _25524Protect_The_Echoes_Of_The_Past extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -186,31 +186,41 @@ public class BoundingSphere extends BoundingVolume
 			switch (b)
 			{
 				case 0:
+				{
 					radius = 0;
 					center.set(0, 0, 0);
 					break;
+				}
 				case 1:
+				{
 					radius = 1f - RADIUS_EPSILON;
 					BufferUtils.populateFromBuffer(center, points, ap - 1);
 					break;
+				}
 				case 2:
+				{
 					BufferUtils.populateFromBuffer(tempA, points, ap - 1);
 					BufferUtils.populateFromBuffer(tempB, points, ap - 2);
 					setSphere(tempA, tempB);
 					break;
+				}
 				case 3:
+				{
 					BufferUtils.populateFromBuffer(tempA, points, ap - 1);
 					BufferUtils.populateFromBuffer(tempB, points, ap - 2);
 					BufferUtils.populateFromBuffer(tempC, points, ap - 3);
 					setSphere(tempA, tempB, tempC);
 					break;
+				}
 				case 4:
+				{
 					BufferUtils.populateFromBuffer(tempA, points, ap - 1);
 					BufferUtils.populateFromBuffer(tempB, points, ap - 2);
 					BufferUtils.populateFromBuffer(tempC, points, ap - 3);
 					BufferUtils.populateFromBuffer(tempD, points, ap - 4);
 					setSphere(tempA, tempB, tempC, tempD);
 					return;
+				}
 			}
 			for (int i = 0; i < p; i++)
 			{
@@ -422,7 +432,6 @@ public class BoundingSphere extends BoundingVolume
 		
 		switch (volume.getType())
 		{
-			
 			case Sphere:
 			{
 				final BoundingSphere sphere = (BoundingSphere) volume;
@@ -431,7 +440,6 @@ public class BoundingSphere extends BoundingVolume
 				final BoundingSphere rVal = new BoundingSphere();
 				return merge(temp_radius, temp_center, rVal);
 			}
-			
 			case AABB:
 			{
 				final BoundingBox box = (BoundingBox) volume;
@@ -440,15 +448,15 @@ public class BoundingSphere extends BoundingVolume
 				final BoundingSphere rVal = new BoundingSphere();
 				return merge(radVect.length(), temp_center, rVal);
 			}
-			
 			// case OBB: {
 			// OrientedBoundingBox box = (OrientedBoundingBox) volume;
 			// BoundingSphere rVal = (BoundingSphere) this.clone(null);
 			// return rVal.mergeOBB(box);
 			// }
 			default:
+			{
 				return null;
-			
+			}
 		}
 	}
 	
@@ -467,7 +475,6 @@ public class BoundingSphere extends BoundingVolume
 		
 		switch (volume.getType())
 		{
-			
 			case Sphere:
 			{
 				final BoundingSphere sphere = (BoundingSphere) volume;
@@ -475,7 +482,6 @@ public class BoundingSphere extends BoundingVolume
 				final Vector3f temp_center = sphere.center;
 				return merge(temp_radius, temp_center, this);
 			}
-			
 			case AABB:
 			{
 				final BoundingBox box = (BoundingBox) volume;
@@ -486,12 +492,13 @@ public class BoundingSphere extends BoundingVolume
 				Vector3f.recycle(radVect);
 				return merge(len, temp_center, this);
 			}
-			
 			// case OBB: {
 			// return mergeOBB((OrientedBoundingBox) volume);
 			// }
 			default:
+			{
 				return null;
+			}
 		}
 	}
 	

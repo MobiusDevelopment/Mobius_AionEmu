@@ -112,13 +112,16 @@ public class _80732Black_Star_Zetaring_Member extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 230858:
+				{
 					if (qs.getQuestVarById(1) < 3)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 				case 231073:
+				{
 					if (qs.getQuestVarById(2) < 2)
 					{
 						qs.setQuestVarById(2, qs.getQuestVarById(2) + 1);
@@ -126,6 +129,7 @@ public class _80732Black_Star_Zetaring_Member extends QuestHandler
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

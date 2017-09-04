@@ -111,6 +111,7 @@ public class _80734Black_Star_Megaring_Member extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 213780:
+				{
 					if (qs.getQuestVarById(1) < 6)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -118,6 +119,7 @@ public class _80734Black_Star_Megaring_Member extends QuestHandler
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

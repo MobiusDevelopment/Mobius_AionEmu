@@ -156,10 +156,13 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 			switch (Rnd.get(1, 2))
 			{
 				case 1:
+				{
 					despawnNpcs(284436); // Enslaved Danuar.
 					spawn(284436, 900.12497f, 889.17401f, 412.1f, (byte) 0);
 					break;
+				}
 				case 2:
+				{
 					despawnNpcs(284436);
 					spawn(284436, 913.12497f, 876.17401f, 412.1f, (byte) 45); // Enslaved Danuar.
 					spawn(284436, 900.12497f, 870.17401f, 412.1f, (byte) 30); // Enslaved Danuar.
@@ -169,6 +172,7 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 					spawn(284436, 913.12497f, 902.17401f, 412.1f, (byte) 78); // Enslaved Danuar.
 					spawn(284436, 918.12497f, 890.17401f, 412.1f, (byte) 61); // Enslaved Danuar.
 					break;
+				}
 			}
 			scheduleDelayStage4(delay);
 		}

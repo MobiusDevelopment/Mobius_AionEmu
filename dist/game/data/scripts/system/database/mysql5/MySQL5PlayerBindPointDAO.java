@@ -154,11 +154,15 @@ public class MySQL5PlayerBindPointDAO extends PlayerBindPointDAO
 		switch (bind.getPersistentState())
 		{
 			case NEW:
+			{
 				insert = insertBindPoint(player);
 				break;
+			}
 			case UPDATE_REQUIRED:
+			{
 				insert = updateBindPoint(player);
 				break;
+			}
 		}
 		bind.setPersistentState(PersistentState.UPDATED);
 		return insert;

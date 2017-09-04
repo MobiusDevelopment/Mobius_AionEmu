@@ -71,7 +71,9 @@ public class _80537Be_A_Better_Daeva_25th_Edition extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

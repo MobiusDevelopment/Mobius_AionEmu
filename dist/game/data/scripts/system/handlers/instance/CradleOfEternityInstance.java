@@ -73,6 +73,7 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 			case 220526: // Insightful Eye.
 			case 220534: // Fallen Sea Jotun.
 			case 220540: // Typhon.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -87,15 +88,20 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 220470: // Covetous Fallen Guardian.
 			case 220471: // Covetous Fallen Guardian.
 			case 220472: // Covetous Fallen Guardian.
 			case 220594: // Covetous Fallen Guardian.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000266, 1)); // Earthen Malachite.
 				break;
+			}
 			case 834091: // Box With Sun Seal.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000267, 1)); // Sun Quartz.
 				break;
+			}
 		}
 	}
 	
@@ -156,6 +162,7 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 			case 220471: // Covetous Fallen Guardian.
 			case 220472: // Covetous Fallen Guardian.
 			case 220594: // Covetous Fallen Guardian.
+			{
 				covetousFallen++;
 				if (covetousFallen == 1)
 				{
@@ -182,46 +189,61 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 					spawn(834015, 713.17285f, 1191.156f, 1036.5265f, (byte) 0); // The Garden Temple's.
 				}
 				break;
+			}
 			case 220480: // Fallen Jotun Warrior.
+			{
 				// The door to the Sanctuary of Domination was activated.
 				sendMsgByRace(1403507, Race.PC_ALL, 0);
 				spawn(834000, 1196.7842f, 774.28778f, 1037.6906f, (byte) 0, 297);
 				spawn(834000, 1152.3800f, 728.48621f, 1036.1700f, (byte) 60, 301);
 				break;
+			}
 			case 220526: // Insightful Eye.
+			{
 				// The detection of the Insightful Eye has disappeared.
 				sendMsgByRace(1403544, Race.PC_ALL, 0);
 				spawn(834003, 1069.1040f, 783.19177f, 511.93161f, (byte) 0, 323);
 				spawn(834088, 1162.5231f, 790.3289f, 505.0359f, (byte) 60);
 				break;
+			}
 			case 220534: // Fallen Sea Jotun.
+			{
 				spawn(834004, 209.23192f, 1234.7489f, 825.43243f, (byte) 0, 414);
 				spawn(834089, 234.61803f, 1227.7375f, 825.46594f, (byte) 56);
 				spawn(834045, 563.11910f, 1428.8512f, 826.44550f, (byte) 0); // The Library Gap's.
 				spawn(834016, 761.55054f, 859.54266f, 578.24963f, (byte) 63); // The All-Knowing Tree Center's.
 				break;
+			}
 			case 220539: // Fiery Typhon.
+			{
 				// The Fiery Glycon is dead, quickly kill the Vile Glycon!
 				sendMsgByRace(1403530, Race.PC_ALL, 0);
 				break;
+			}
 			case 220540: // Typhon.
+			{
 				final int Peregrine_Viola = spawnRace == Race.ASMODIANS ? 806290 : 806285;
 				spawn(Peregrine_Viola, 595.3497f, 540.4742f, 509.43015f, (byte) 22);
 				spawn(834005, 599.93695f, 538.61847f, 509.43015f, (byte) 22);
 				spawn(834090, 604.9655f, 536.7014f, 509.43015f, (byte) 24);
 				sendMsg("[Congratulation]: you finish <Cradle Of Eternity 5.1>");
 				break;
+			}
 			case 220541: // Vile Typhon.
+			{
 				// The Vile Glycon is dead, quickly kill the Fiery Glycon!
 				sendMsgByRace(1403529, Race.PC_ALL, 0);
 				break;
+			}
 			case 220597: // Locked Door To The Vile Library.
+			{
 				doors.get(509).setOpen(true);
 				// You can use a Wind Road to get to the center of the All-knowing Tree.
 				sendMsgByRace(1403520, Race.PC_ALL, 5000);
 				// Glyon has appeared.
 				sendMsgByRace(1403533, Race.PC_ALL, 10000);
 				break;
+			}
 		}
 	}
 	
@@ -235,6 +257,7 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 			case 703023: // Heavy Door Lever.
 			case 703024: // Heavy Door Lever.
 			case 703025: // Heavy Door Lever.
+			{
 				despawnNpc(npc);
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -249,7 +272,9 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 					}
 				}, 10000);
 				break;
+			}
 			case 834007: // Altar Of Sun.
+			{
 				if (player.getInventory().decreaseByItemId(185000267, 1))
 				{ // Sun Quartz.
 					ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -275,12 +300,15 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403448));
 				}
 				break;
+			}
 			case 834008: // Bridge Activation Device.
+			{
 				despawnNpc(npc);
 				doors.get(112).setOpen(true);
 				doors.get(114).setOpen(true);
 				doors.get(115).setOpen(true);
 				break;
+			}
 		}
 	}
 	

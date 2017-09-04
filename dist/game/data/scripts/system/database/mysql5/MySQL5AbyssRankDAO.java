@@ -127,11 +127,15 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 		switch (rank.getPersistentState())
 		{
 			case NEW:
+			{
 				result = addRank(player.getObjectId(), rank);
 				break;
+			}
 			case UPDATE_REQUIRED:
+			{
 				result = updateRank(player.getObjectId(), rank);
 				break;
+			}
 		}
 		rank.setPersistentState(PersistentState.UPDATED);
 		return result;

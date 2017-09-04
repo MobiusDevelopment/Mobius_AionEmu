@@ -59,18 +59,24 @@ public class ExceedToolBuyerAI2 extends NpcAI2
 			{
 				case 805718: // Leipos.
 				case 805719: // Menanor.
+				{
 					// 소유하고 있는 손상된 돌파석이 있다면 저에게 가져오십시오.
 					// 섭섭치 않은 가격에 매입하겠습니다.
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							ItemService.addItem(player, 166020000, 1); // Omega Enchantment Stone.
 							break;
+						}
 						case 2:
+						{
 							ItemService.addItem(player, 166022002, 1); // [Event] Shining Empyrean Lord's Enchantment Stone.
 							break;
+						}
 					}
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

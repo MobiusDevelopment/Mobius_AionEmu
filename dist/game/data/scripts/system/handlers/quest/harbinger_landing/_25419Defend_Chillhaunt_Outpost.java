@@ -119,6 +119,7 @@ public class _25419Defend_Chillhaunt_Outpost extends QuestHandler
 				case 883139:
 				case 883140:
 				case 883141:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _25419Defend_Chillhaunt_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

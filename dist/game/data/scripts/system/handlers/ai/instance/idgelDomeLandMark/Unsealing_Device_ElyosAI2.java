@@ -55,20 +55,28 @@ public class Unsealing_Device_ElyosAI2 extends ActionItemNpcAI2
 			switch (getNpcId())
 			{
 				case 806343: // Unsealing Device.
+				{
 					spawn(806327, 264.12469f, 273.46167f, 85.796768f, (byte) 0, 77);
 					spawn(806279, 264.74783f, 259.22983f, 88.351212f, (byte) 0, 200);
 					break;
+				}
 				case 806344: // Unsealing Device.
+				{
 					spawn(806279, 264.74783f, 259.22983f, 89.924179f, (byte) 0, 201);
 					spawn(806328, 265.26395f, 245.08080f, 85.796768f, (byte) 0, 101);
 					break;
+				}
 				case 806345: // Unsealing Device.
+				{
 					spawn(806279, 264.74783f, 259.22983f, 91.488808f, (byte) 0, 202);
 					spawn(806329, 250.50882f, 258.67883f, 85.796768f, (byte) 0, 78);
 					break;
+				}
 				case 806346: // Unsealing Device.
+				{
 					spawn(806330, 278.85132f, 259.72498f, 85.796768f, (byte) 0, 103);
 					break;
+				}
 			}
 		}
 	}

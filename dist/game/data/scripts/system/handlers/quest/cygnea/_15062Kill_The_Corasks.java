@@ -113,6 +113,7 @@ public class _15062Kill_The_Corasks extends QuestHandler
 			{
 				case 235878:
 				case 235879:
+				{
 					if (qs.getQuestVarById(1) < 7)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -123,6 +124,7 @@ public class _15062Kill_The_Corasks extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

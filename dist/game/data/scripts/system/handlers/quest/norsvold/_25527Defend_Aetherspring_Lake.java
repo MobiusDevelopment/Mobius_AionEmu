@@ -167,6 +167,7 @@ public class _25527Defend_Aetherspring_Lake extends QuestHandler
 				case 243281:
 				case 243282:
 				case 243283:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -177,6 +178,7 @@ public class _25527Defend_Aetherspring_Lake extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -170,11 +170,15 @@ public class Account implements Iterable<PlayerAccountData>
 		switch (accPlData.getPlayerCommonData().getRace())
 		{
 			case ASMODIANS:
+			{
 				numberOfAsmos++;
 				break;
+			}
 			case ELYOS:
+			{
 				numberOfElyos++;
 				break;
+			}
 		}
 	}
 	
@@ -254,9 +258,13 @@ public class Account implements Iterable<PlayerAccountData>
 		switch (race)
 		{
 			case ASMODIANS:
+			{
 				return numberOfAsmos;
+			}
 			case ELYOS:
+			{
 				return numberOfElyos;
+			}
 		}
 		return 0;
 	}
@@ -266,11 +274,15 @@ public class Account implements Iterable<PlayerAccountData>
 		switch (race)
 		{
 			case ASMODIANS:
+			{
 				numberOfAsmos--;
 				break;
+			}
 			case ELYOS:
+			{
 				numberOfElyos--;
 				break;
+			}
 		}
 	}
 	

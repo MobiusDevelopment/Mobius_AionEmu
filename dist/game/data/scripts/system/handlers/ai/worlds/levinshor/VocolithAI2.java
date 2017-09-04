@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****/
 /**
@@ -58,180 +57,260 @@ public class VocolithAI2 extends NpcAI2
 			{
 				// Vocolith [North Warden]
 				case 804573:
+				{
 					switch (Rnd.get(1, 4))
 					{
 						case 1:
+						{
 							announceLevinshorBoss();
 							spawn(235217, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Lava Arm Cruego.
 							break;
+						}
 						case 2:
+						{
 							announceLevinshorBoss();
 							spawn(235218, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Cruel Lamia.
 							break;
+						}
 						case 3:
+						{
 							announceLevinshorBoss();
 							spawn(235219, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Destoyer Feld.
 							break;
+						}
 						case 4:
+						{
 							announceLevinshorBoss();
 							spawn(235220, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Ruthless Tyranicca.
 							break;
+						}
 					}
 					break;
+				}
 				// Vocolith [Coast Warden]
 				case 804574:
+				{
 					switch (Rnd.get(1, 4))
 					{
 						case 1:
+						{
 							announceLevinshorBoss();
 							spawn(235217, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Lava Arm Cruego.
 							break;
+						}
 						case 2:
+						{
 							announceLevinshorBoss();
 							spawn(235218, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Cruel Lamia.
 							break;
+						}
 						case 3:
+						{
 							announceLevinshorBoss();
 							spawn(235219, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Destoyer Feld.
 							break;
+						}
 						case 4:
+						{
 							announceLevinshorBoss();
 							spawn(235220, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Ruthless Tyranicca.
 							break;
+						}
 					}
 					break;
+				}
 				// Vocolith [South Warden]
 				case 804575:
+				{
 					switch (Rnd.get(1, 4))
 					{
 						case 1:
+						{
 							announceLevinshorBoss();
 							spawn(235217, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Lava Arm Cruego.
 							break;
+						}
 						case 2:
+						{
 							announceLevinshorBoss();
 							spawn(235218, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Cruel Lamia.
 							break;
+						}
 						case 3:
+						{
 							announceLevinshorBoss();
 							spawn(235219, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Destoyer Feld.
 							break;
+						}
 						case 4:
+						{
 							announceLevinshorBoss();
 							spawn(235220, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Ruthless Tyranicca.
 							break;
+						}
 					}
 					break;
+				}
 				// Vocolith [East Woods Warden]
 				case 804579:
+				{
 					switch (Rnd.get(1, 4))
 					{
 						case 1:
+						{
 							announceLevinshorBoss();
 							spawn(235217, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Lava Arm Cruego.
 							break;
+						}
 						case 2:
+						{
 							announceLevinshorBoss();
 							spawn(235218, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Cruel Lamia.
 							break;
+						}
 						case 3:
+						{
 							announceLevinshorBoss();
 							spawn(235219, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Destoyer Feld.
 							break;
+						}
 						case 4:
+						{
 							announceLevinshorBoss();
 							spawn(235220, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Ruthless Tyranicca.
 							break;
+						}
 					}
 					break;
+				}
 				// Vocolith [North Woods Warden]
 				case 804580:
+				{
 					switch (Rnd.get(1, 4))
 					{
 						case 1:
+						{
 							announceLevinshorBoss();
 							spawn(235217, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Lava Arm Cruego.
 							break;
+						}
 						case 2:
+						{
 							announceLevinshorBoss();
 							spawn(235218, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Cruel Lamia.
 							break;
+						}
 						case 3:
+						{
 							announceLevinshorBoss();
 							spawn(235219, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Destoyer Feld.
 							break;
+						}
 						case 4:
+						{
 							announceLevinshorBoss();
 							spawn(235220, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Ruthless Tyranicca.
 							break;
+						}
 					}
 					break;
+				}
 				// Vocolith [Cut Warden]
 				case 804581:
+				{
 					switch (Rnd.get(1, 4))
 					{
 						case 1:
+						{
 							announceLevinshorBoss();
 							spawn(235217, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Lava Arm Cruego.
 							break;
+						}
 						case 2:
+						{
 							announceLevinshorBoss();
 							spawn(235218, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Cruel Lamia.
 							break;
+						}
 						case 3:
+						{
 							announceLevinshorBoss();
 							spawn(235219, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Destoyer Feld.
 							break;
+						}
 						case 4:
+						{
 							announceLevinshorBoss();
 							spawn(235220, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Ruthless Tyranicca.
 							break;
+						}
 					}
 					break;
+				}
 				// Vocolith [West Warden]
 				case 804582:
+				{
 					switch (Rnd.get(1, 4))
 					{
 						case 1:
+						{
 							announceLevinshorBoss();
 							spawn(235217, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Lava Arm Cruego.
 							break;
+						}
 						case 2:
+						{
 							announceLevinshorBoss();
 							spawn(235218, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Cruel Lamia.
 							break;
+						}
 						case 3:
+						{
 							announceLevinshorBoss();
 							spawn(235219, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Destoyer Feld.
 							break;
+						}
 						case 4:
+						{
 							announceLevinshorBoss();
 							spawn(235220, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Ruthless Tyranicca.
 							break;
+						}
 					}
 					break;
+				}
 				// Vocolith [East Warden]
 				case 804583:
+				{
 					switch (Rnd.get(1, 4))
 					{
 						case 1:
+						{
 							announceLevinshorBoss();
 							spawn(235217, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Lava Arm Cruego.
 							break;
+						}
 						case 2:
+						{
 							announceLevinshorBoss();
 							spawn(235218, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Cruel Lamia.
 							break;
+						}
 						case 3:
+						{
 							announceLevinshorBoss();
 							spawn(235219, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Destoyer Feld.
 							break;
+						}
 						case 4:
+						{
 							announceLevinshorBoss();
 							spawn(235220, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Ruthless Tyranicca.
 							break;
+						}
 					}
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF4_Advance_FNamed_Spawn_Item);
@@ -250,25 +329,11 @@ public class VocolithAI2 extends NpcAI2
 	
 	private void announceLevinshorBossReturn()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF4_Advance_Summon_Named_Time);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF4_Advance_Summon_Named_Time));
 	}
 	
 	private void announceLevinshorBoss()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF4_Advance_FNamed_Spawn);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF4_Advance_FNamed_Spawn));
 	}
 }

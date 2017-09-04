@@ -36,33 +36,61 @@ public class DisplayService
 				switch (item.getItemTemplate().getWeaponType())
 				{
 					case SWORD_1H: // Boundless Long Sword Of Glory.
+					{
 						return 100002013;
+					}
 					case MACE_1H: // Boundless Mace Of Glory.
+					{
 						return 100101495;
+					}
 					case DAGGER_1H: // Boundless Dagger Of Glory.
+					{
 						return 100201676;
+					}
 					case ORB_2H: // Boundless Orb Of Glory.
+					{
 						return 100501453;
+					}
 					case BOOK_2H: // Boundless Spellbook Of Glory.
+					{
 						return 100601571;
+					}
 					case SWORD_2H: // Boundless Great Sword Of Glory.
+					{
 						return 100901530;
+					}
 					case POLEARM_2H: // Boundless Polearm Of Glory.
+					{
 						return 101301414;
+					}
 					case STAFF_2H: // Boundless Staff Of Glory.
+					{
 						return 101501516;
+					}
 					case BOW: // Boundless Bow Of Glory.
+					{
 						return 101701511;
+					}
 					case GUN_1H: // Boundless Magic Gun Of Glory.
+					{
 						return 101801346;
+					}
 					case CANNON_2H: // Boundless Magic Cannon Of Glory.
+					{
 						return 101901251;
+					}
 					case HARP_2H: // Boundless String Instrument Of Glory.
+					{
 						return 102001374;
+					}
 					case KEYBLADE_2H: // Boundless Keyblade Of Glory.
+					{
 						return 102101189;
+					}
 					default:
+					{
 						return 100002013; // is by default.
+					}
 				}
 			}
 			else if (player.isFFA() && (item.getEquipmentSlot() == 8))

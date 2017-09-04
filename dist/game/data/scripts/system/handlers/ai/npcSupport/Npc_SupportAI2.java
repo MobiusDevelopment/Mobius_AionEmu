@@ -42,7 +42,9 @@ public class Npc_SupportAI2 extends GeneralNpcAI2
 			case 831025: // Luella.
 			case 831030: // Netalion.
 			case 831031: // Nebrith.
+			{
 				// Asmodians.
+			}
 			case 831026: // Rikanellie.
 			case 831027: // Karzanke.
 			case 831028: // Erdat.

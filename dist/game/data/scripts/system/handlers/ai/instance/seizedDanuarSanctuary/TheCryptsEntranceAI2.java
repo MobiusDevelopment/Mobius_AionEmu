@@ -51,25 +51,31 @@ public class TheCryptsEntranceAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 701872: // The Crypts Entrance.
+			{
 				switch (player.getWorldId())
 				{
 					case 301140000: // Seized Danuar Sanctuary 4.8
+					{
 						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000182, 1))
 						{ // The Crypts Key.
 							TeleportService2.teleportTo(player, 301140000, instanceId, 823.4411f, 956.04785f, 304.96292f, (byte) 93);
 						}
 						break;
+					}
 				}
 				switch (player.getWorldId())
 				{
 					case 301380000: // Danuar Sanctuary 4.8
+					{
 						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000182, 1))
 						{ // The Crypts Key.
 							TeleportService2.teleportTo(player, 301380000, instanceId, 823.4411f, 956.04785f, 304.96292f, (byte) 93);
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));
 		return true;

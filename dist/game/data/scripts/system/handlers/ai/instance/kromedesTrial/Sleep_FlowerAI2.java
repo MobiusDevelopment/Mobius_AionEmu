@@ -46,6 +46,7 @@ public class Sleep_FlowerAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 730325: // Sleep Flower.
+				{
 					if (player.getInventory().getItemCountByItemId(164000142) < 1)
 					{
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1012));
@@ -57,6 +58,7 @@ public class Sleep_FlowerAI2 extends NpcAI2
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 27));
 					}
 					break;
+				}
 			}
 		}
 		return true;

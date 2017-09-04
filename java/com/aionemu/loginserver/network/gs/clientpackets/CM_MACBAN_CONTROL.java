@@ -46,11 +46,15 @@ public class CM_MACBAN_CONTROL extends GsClientPacket
 		switch (type)
 		{
 			case 0:// unban
+			{
 				bmm.unban(address, details);
 				break;
+			}
 			case 1:// ban
+			{
 				bmm.ban(address, time, details);
 				break;
+			}
 		}
 	}
 }

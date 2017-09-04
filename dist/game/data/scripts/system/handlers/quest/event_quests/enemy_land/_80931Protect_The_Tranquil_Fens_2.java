@@ -137,6 +137,7 @@ public class _80931Protect_The_Tranquil_Fens_2 extends QuestHandler
 				case 240390:
 				case 241518:
 				case 241519:
+				{
 					if (qs.getQuestVarById(1) < 27)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -147,6 +148,7 @@ public class _80931Protect_The_Tranquil_Fens_2 extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

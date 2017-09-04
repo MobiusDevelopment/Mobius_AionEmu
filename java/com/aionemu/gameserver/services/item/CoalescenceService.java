@@ -79,6 +79,7 @@ public class CoalescenceService
 						switch (ItemsList.size())
 						{
 							case 1:
+							{
 								if (template.getArmorType() == firstItem.getItemTemplate().getArmorType())
 								{
 									if (template.getLevel() <= Rnd.get(66, 68))
@@ -87,7 +88,9 @@ public class CoalescenceService
 									}
 								}
 								break;
+							}
 							case 2:
+							{
 								if (template.getArmorType() == firstItem.getItemTemplate().getArmorType())
 								{
 									if (template.getLevel() <= Rnd.get(67, 69))
@@ -96,7 +99,9 @@ public class CoalescenceService
 									}
 								}
 								break;
+							}
 							case 3:
+							{
 								if (template.getArmorType() == firstItem.getItemTemplate().getArmorType())
 								{
 									if (template.getLevel() <= Rnd.get(68, 70))
@@ -104,7 +109,9 @@ public class CoalescenceService
 										list.add(template.getTemplateId());
 									}
 								}
+							}
 							case 4:
+							{
 								if (template.getItemQuality() == firstItem.getItemTemplate().getItemQuality())
 								{
 									if (template.getArmorType() == firstItem.getItemTemplate().getArmorType())
@@ -116,7 +123,9 @@ public class CoalescenceService
 									}
 								}
 								break;
+							}
 							case 5:
+							{
 								if (template.getItemQuality() == firstItem.getItemTemplate().getItemQuality())
 								{
 									if (template.getArmorType() == firstItem.getItemTemplate().getArmorType())
@@ -128,7 +137,9 @@ public class CoalescenceService
 									}
 								}
 								break;
+							}
 							case 6:
+							{
 								if (template.getItemQuality() == firstItem.getItemTemplate().getItemQuality())
 								{
 									if (template.getArmorType() == firstItem.getItemTemplate().getArmorType())
@@ -140,6 +151,7 @@ public class CoalescenceService
 									}
 								}
 								break;
+							}
 						}
 					}
 				}

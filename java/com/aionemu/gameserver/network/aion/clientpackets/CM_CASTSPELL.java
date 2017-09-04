@@ -56,14 +56,19 @@ public class CM_CASTSPELL extends AionClientPacket
 			case 3:
 			case 4:
 			case 87:
+			{
 				targetObjectId = readD();
 				break;
+			}
 			case 1:
+			{
 				x = readF();
 				y = readF();
 				z = readF();
 				break;
+			}
 			case 2:
+			{
 				x = readF();
 				y = readF();
 				z = readF();
@@ -76,8 +81,11 @@ public class CM_CASTSPELL extends AionClientPacket
 				readF();
 				readF();
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		hitTime = readH();
 		unk = readD();

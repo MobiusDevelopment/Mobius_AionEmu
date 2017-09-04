@@ -55,17 +55,25 @@ public class Legion_Advance_CorridorAI2 extends NpcAI2
 						switch (getNpcId())
 						{
 							case 703093: // Directportal_Start_LF3_DF3 In.
+							{
 								transferRvrElyos1(responder);
 								break;
+							}
 							case 703094: // Directportal_Start_LF3_LF3 In.
+							{
 								transferRvrElyos2(responder);
 								break;
+							}
 							case 703095: // Directportal_Start_DF3_LF3 In.
+							{
 								transferRvrAsmodians1(responder);
 								break;
+							}
 							case 703096: // Directportal_Start_DF3_DF3 In.
+							{
 								transferRvrAsmodians2(responder);
 								break;
+							}
 						}
 						decisionTaken = true;
 					}

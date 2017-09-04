@@ -101,24 +101,33 @@ public class _14021To_Cure_A_Curse extends QuestHandler
 			switch (targetId)
 			{
 				case 203902:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 					}
 					break;
+				}
 				case 700179:
+				{
 					if (var == 7)
 					{
 						switch (env.getDialog())
 						{
 							case USE_OBJECT:
+							{
 								return sendQuestDialog(env, 1693);
+							}
 							case STEP_TO_3:
 							{
 								changeQuestStep(env, 7, 8, false);
@@ -127,31 +136,44 @@ public class _14021To_Cure_A_Curse extends QuestHandler
 						}
 					}
 					break;
+				}
 				case 204043:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 8)
 							{
 								return sendQuestDialog(env, 2034);
 							}
+						}
 						case STEP_TO_4:
+						{
 							changeQuestStep(env, 8, 9, false);
 							return sendQuestDialog(env, 0);
+						}
 					}
 					break;
+				}
 				case 204030:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 9)
 							{
 								return sendQuestDialog(env, 2375);
 							}
+						}
 						case STEP_TO_5:
+						{
 							return defaultCloseDialog(env, 9, 9, true, false);
+						}
 					}
 					break;
+				}
 			}
 		}
 		if (qs.getStatus() == QuestStatus.REWARD)
@@ -194,12 +216,14 @@ public class _14021To_Cure_A_Curse extends QuestHandler
 			case 210764:
 			case 210759:
 			case 210770:
+			{
 				if ((var >= 1) && (var <= 6))
 				{
 					qs.setQuestVarById(0, var + 1);
 					updateQuestStatus(env);
 					return true;
 				}
+			}
 		}
 		return false;
 	}

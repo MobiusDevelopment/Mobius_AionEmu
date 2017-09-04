@@ -105,6 +105,7 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 235643: // Indirunerk Jonakak's Supply Box.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -118,35 +119,52 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 832929: // Emperor's Treasure Box.
 			case 832930: // Emperor's Quality Treasure Box.
+			{
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054631, 1)); // Middle Grade Reward Bundle.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054632, 1)); // Low Grade Reward Bundle.
 						break;
+					}
 				}
 				break;
+			}
 			case 832931: // Emperor's Premium Treasure Box.
+			{
 				switch (Rnd.get(1, 4))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054629, 1)); // Highest Grade Reward Bundle.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054630, 1)); // High Grade Reward Bundle.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054631, 1)); // Middle Grade Reward Bundle.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054632, 1)); // Low Grade Reward Bundle.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -186,18 +204,25 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 		{
 			case 235629: // Intruder Skirmisher.
 			case 235630: // Intruder Scout.
+			{
 				points = 180;
 				despawnNpc(npc);
 				break;
+			}
 			case 235631: // Brainwashed Peon.
+			{
 				points = 160;
 				despawnNpc(npc);
 				break;
+			}
 			case 235633: // Intruder Marksman.
+			{
 				points = 1070;
 				despawnNpc(npc);
 				break;
+			}
 			case 235634: // Watchman Hokuruki.
+			{
 				points = 2040;
 				despawnNpc(npc);
 				// Use the open entrance to move to the next area.
@@ -207,16 +232,22 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 				objects.put(832924, SpawnEngine.spawnObject(OpenedVaultDoor, instanceId));
 				spawn(235643, 486.0f, 638.0f, 395.875f, (byte) 108); // Indirunerk Jonakak's Supply Box.
 				break;
+			}
 			case 235635: // Intruder Challenger.
 			case 235650: // Intruder Assassin.
+			{
 				points = 700;
 				despawnNpc(npc);
 				break;
+			}
 			case 235637: // Intruder Guard.
+			{
 				points = 820;
 				despawnNpc(npc);
 				break;
+			}
 			case 235640: // Captain Mirez.
+			{
 				points = 12000;
 				despawnNpc(npc);
 				// Gradi's second officer has appeared! Prepare for Longknife Zodica!
@@ -225,11 +256,15 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402885, Race.PC_ALL, 2000);
 				spawn(235685, 360.03033f, 757.95233f, 398.42203f, (byte) 104); // Longknife Zodica.
 				break;
+			}
 			case 235641: // Shugo Turncoat.
+			{
 				points = 660;
 				despawnNpc(npc);
 				break;
+			}
 			case 235647: // Grand Commander Gradi.
+			{
 				points = 400000;
 				despawnNpc(npc);
 				// All the intruders have fled. You've cleared the Vault!
@@ -237,20 +272,28 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 				spawn(832932, 360.03033f, 757.95233f, 398.42203f, (byte) 104); // The Shugo Emperor's Butler.
 				ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player -> stopInstance(player)), 3000);
 				break;
+			}
 			case 235649: // Intruder Sniper.
+			{
 				points = 760;
 				despawnNpc(npc);
 				break;
+			}
 			case 235651: // Intruder Gladiator.
+			{
 				points = 1400;
 				despawnNpc(npc);
 				break;
+			}
 			case 235652: // Intruder Warrior.
 			case 235653: // Intruder Sharpeye.
+			{
 				points = 250;
 				despawnNpc(npc);
 				break;
+			}
 			case 235660: // Ruthless Jabaraki.
+			{
 				points = 1740;
 				despawnNpc(npc);
 				// Gradi's first officer has appeared! Prepare for Captain Mirez!
@@ -259,12 +302,16 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402884, Race.PC_ALL, 2000);
 				spawn(235640, 360.03033f, 757.95233f, 398.42203f, (byte) 104); // Captain Mirez.
 				break;
+			}
 			case 235680: // Intruder Brawler.
 			case 235681: // Intruder Lookout.
+			{
 				points = 530;
 				despawnNpc(npc);
 				break;
+			}
 			case 235683: // Elite Captain Rupasha.
+			{
 				points = 272000;
 				despawnNpc(npc);
 				// Greedy Gradi, the intruder commander, has appeared. Get ready for a fight!
@@ -273,7 +320,9 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402888, Race.PC_ALL, 2000);
 				spawn(235647, 360.03033f, 757.95233f, 398.42203f, (byte) 104); // Grand Commander Gradi.
 				break;
+			}
 			case 235684: // Sorcerer Budyn.
+			{
 				points = 48000;
 				despawnNpc(npc);
 				// Gradi's final officer has appeared! Prepare for Elite Captain Rupasha!
@@ -282,7 +331,9 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402887, Race.PC_ALL, 2000);
 				spawn(235683, 360.03033f, 757.95233f, 398.42203f, (byte) 104); // Elite Captain Rupasha.
 				break;
+			}
 			case 235685: // Longknife Zodica.
+			{
 				points = 14400;
 				despawnNpc(npc);
 				// Gradi's third officer has appeared! Prepare for Sorcerer Budyn!
@@ -291,6 +342,7 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402886, Race.PC_ALL, 2000);
 				spawn(235684, 360.03033f, 757.95233f, 398.42203f, (byte) 104); // Sorcerer Budyn.
 				break;
+			}
 		}
 		if (instanceReward.getInstanceScoreType().isStartProgress())
 		{
@@ -454,25 +506,37 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 			switch (vaultRank)
 			{
 				case 1: // Rank S
+				{
 					playerReward.setRustedVaultKey(6);
 					ItemService.addItem(player, 185000222, 6); // Rusted Vault Key.
 					break;
+				}
 				case 2: // Rank A
+				{
 					playerReward.setRustedVaultKey(4);
 					ItemService.addItem(player, 185000222, 4); // Rusted Vault Key.
 					break;
+				}
 				case 3: // Rank B
+				{
 					playerReward.setRustedVaultKey(3);
 					ItemService.addItem(player, 185000222, 3); // Rusted Vault Key.
 					break;
+				}
 				case 4: // Rank C
+				{
 					playerReward.setRustedVaultKey(2);
 					ItemService.addItem(player, 185000222, 2); // Rusted Vault Key.
 					break;
+				}
 				case 5: // Rank D
+				{
 					break;
+				}
 				case 6: // Rank F
+				{
 					break;
+				}
 			}
 		}
 	}

@@ -81,10 +81,14 @@ public class CM_AETHERFORGING extends AionClientPacket
 		switch (actionId)
 		{
 			case 0:
+			{
 				CraftService.stopAetherforging(player, recipeId);
 				break;
+			}
 			case 1:
+			{
 				CraftService.startAetherforging(player, recipeId, craftType);
+			}
 		}
 	}
 }

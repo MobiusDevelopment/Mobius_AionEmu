@@ -143,35 +143,62 @@ public final class Matrix3f implements Cloneable, Reusable
 		switch (i)
 		{
 			case 0:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						return m00;
+					}
 					case 1:
+					{
 						return m01;
+					}
 					case 2:
+					{
 						return m02;
+					}
 				}
+				break;
+			}
 			case 1:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						return m10;
+					}
 					case 1:
+					{
 						return m11;
+					}
 					case 2:
+					{
 						return m12;
+					}
 				}
+				break;
+			}
 			case 2:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						return m20;
+					}
 					case 1:
+					{
 						return m21;
+					}
 					case 2:
+					{
 						return m22;
+					}
 				}
+				break;
+			}
 		}
 		
 		logger.warning("Invalid matrix index.");
@@ -270,23 +297,31 @@ public final class Matrix3f implements Cloneable, Reusable
 		switch (i)
 		{
 			case 0:
+			{
 				store.x = m00;
 				store.y = m10;
 				store.z = m20;
 				break;
+			}
 			case 1:
+			{
 				store.x = m01;
 				store.y = m11;
 				store.z = m21;
 				break;
+			}
 			case 2:
+			{
 				store.x = m02;
 				store.y = m12;
 				store.z = m22;
 				break;
+			}
 			default:
+			{
 				logger.warning("Invalid column index.");
 				throw new IllegalArgumentException("Invalid column index. " + i);
+			}
 		}
 		return store;
 	}
@@ -316,23 +351,31 @@ public final class Matrix3f implements Cloneable, Reusable
 		switch (i)
 		{
 			case 0:
+			{
 				store.x = m00;
 				store.y = m01;
 				store.z = m02;
 				break;
+			}
 			case 1:
+			{
 				store.x = m10;
 				store.y = m11;
 				store.z = m12;
 				break;
+			}
 			case 2:
+			{
 				store.x = m20;
 				store.y = m21;
 				store.z = m22;
 				break;
+			}
 			default:
+			{
 				logger.warning("Invalid row index.");
 				throw new IllegalArgumentException("Invalid row index. " + i);
+			}
 		}
 		return store;
 	}
@@ -355,6 +398,7 @@ public final class Matrix3f implements Cloneable, Reusable
 	/**
 	 * <code>fillFloatBuffer</code> fills a FloatBuffer object with the matrix data.
 	 * @param fb the buffer to fill, starting at current position. Must have room for 9 more floats.
+	 * @param columnMajor
 	 * @return matrix data as a FloatBuffer. (position is advanced by 9 and any limit set is not changed).
 	 */
 	public FloatBuffer fillFloatBuffer(FloatBuffer fb, boolean columnMajor)
@@ -391,23 +435,31 @@ public final class Matrix3f implements Cloneable, Reusable
 		switch (i)
 		{
 			case 0:
+			{
 				m00 = column.x;
 				m10 = column.y;
 				m20 = column.z;
 				break;
+			}
 			case 1:
+			{
 				m01 = column.x;
 				m11 = column.y;
 				m21 = column.z;
 				break;
+			}
 			case 2:
+			{
 				m02 = column.x;
 				m12 = column.y;
 				m22 = column.z;
 				break;
+			}
 			default:
+			{
 				logger.warning("Invalid column index.");
 				throw new IllegalArgumentException("Invalid column index. " + i);
+			}
 		}
 		return this;
 	}
@@ -429,23 +481,31 @@ public final class Matrix3f implements Cloneable, Reusable
 		switch (i)
 		{
 			case 0:
+			{
 				m00 = row.x;
 				m01 = row.y;
 				m02 = row.z;
 				break;
+			}
 			case 1:
+			{
 				m10 = row.x;
 				m11 = row.y;
 				m12 = row.z;
 				break;
+			}
 			case 2:
+			{
 				m20 = row.x;
 				m21 = row.y;
 				m22 = row.z;
 				break;
+			}
 			default:
+			{
 				logger.warning("Invalid row index.");
 				throw new IllegalArgumentException("Invalid row index. " + i);
+			}
 		}
 		return this;
 	}
@@ -462,44 +522,71 @@ public final class Matrix3f implements Cloneable, Reusable
 		switch (i)
 		{
 			case 0:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						m00 = value;
 						return this;
+					}
 					case 1:
+					{
 						m01 = value;
 						return this;
+					}
 					case 2:
+					{
 						m02 = value;
 						return this;
+					}
 				}
+				break;
+			}
 			case 1:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						m10 = value;
 						return this;
+					}
 					case 1:
+					{
 						m11 = value;
 						return this;
+					}
 					case 2:
+					{
 						m12 = value;
 						return this;
+					}
 				}
+				break;
+			}
 			case 2:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						m20 = value;
 						return this;
+					}
 					case 1:
+					{
 						m21 = value;
 						return this;
+					}
 					case 2:
+					{
 						m22 = value;
 						return this;
+					}
 				}
+				break;
+			}
 		}
 		
 		logger.warning("Invalid matrix index.");

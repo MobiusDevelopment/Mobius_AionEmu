@@ -70,7 +70,9 @@ public class _3013AClueLeftByTheDead extends QuestHandler
 						return sendQuestDialog(env, 4762);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -150,7 +152,9 @@ public class _3013AClueLeftByTheDead extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

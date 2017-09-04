@@ -60,6 +60,7 @@ public class MercuriusAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 804842: // Mercurius
+				{
 					announceLightLegionPortal();
 					spawn(702721, 1390.3015f, 658.4547f, 582.9584f, (byte) 92);
 					ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -71,6 +72,7 @@ public class MercuriusAI2 extends NpcAI2
 						}
 					}, 300000); // 5 Minutes.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

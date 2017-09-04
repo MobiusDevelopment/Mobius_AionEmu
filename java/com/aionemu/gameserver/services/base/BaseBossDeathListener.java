@@ -130,6 +130,7 @@ public class BaseBossDeathListener extends OnDieEventCallback
 				switch (player.getWorldId())
 				{
 					case 400010000: // Reshanta.
+					{
 						if ((team != null) && (kill == null))
 						{
 							// %0 has occupied %1 Base and the Landing is now enhanced.
@@ -141,6 +142,7 @@ public class BaseBossDeathListener extends OnDieEventCallback
 							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403186, kill.getRace().getRaceDescriptionId(), baseName));
 						}
 						break;
+					}
 				}
 			}
 		});
@@ -177,18 +179,24 @@ public class BaseBossDeathListener extends OnDieEventCallback
 			case 210040000: // Heiron.
 			case 220020000: // Morheim.
 			case 220040000: // Beluslan.
+			{
 				HTMLService.sendGuideHtml(player, "adventurers_base1");
 				break;
+			}
 			case 600090000: // Kaldor.
 			case 600100000: // Levinshor.
+			{
 				HTMLService.sendGuideHtml(player, "adventurers_base2");
 				break;
+			}
 			case 400020000: // Belus.
 			case 400040000: // Aspida.
 			case 400050000: // Atanatos.
 			case 400060000: // Disillon.
+			{
 				HTMLService.sendGuideHtml(player, "adventurers_base3");
 				break;
+			}
 		}
 	}
 	

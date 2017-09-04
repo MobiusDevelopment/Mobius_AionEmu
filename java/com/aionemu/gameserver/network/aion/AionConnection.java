@@ -311,9 +311,13 @@ public class AionConnection extends AConnection
 								switch (SecurityConfig.PFF_LEVEL)
 								{
 									case 1: // disconnect
+									{
 										return false;
+									}
 									case 2:
+									{
 										break;
+									}
 								}
 							}
 							else

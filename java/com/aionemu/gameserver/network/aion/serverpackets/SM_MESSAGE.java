@@ -131,16 +131,20 @@ public class SM_MESSAGE extends AionServerPacket
 			case WHITE_CENTER:
 			case YELLOW_CENTER:
 			case BRIGHT_YELLOW_CENTER:
+			{
 				writeH(0x00); // unknown
 				writeS(message);
 				break;
+			}
 			case SHOUT:
+			{
 				writeS(senderName);
 				writeS(message);
 				writeF(x);
 				writeF(y);
 				writeF(z);
 				break;
+			}
 			case ALLIANCE:
 			case GROUP:
 			case GROUP_LEADER:
@@ -159,9 +163,11 @@ public class SM_MESSAGE extends AionServerPacket
 			case CH9:
 			case CH10:
 			case COMMAND:
+			{
 				writeS(senderName);
 				writeS(message);
 				break;
+			}
 		}
 	}
 }

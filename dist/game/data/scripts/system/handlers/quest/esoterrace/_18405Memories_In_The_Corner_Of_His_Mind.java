@@ -72,6 +72,7 @@ public class _18405Memories_In_The_Corner_Of_His_Mind extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 799553:
+				{
 					if (qs.getQuestVarById(0) == 0)
 					{
 						if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -83,7 +84,9 @@ public class _18405Memories_In_The_Corner_Of_His_Mind extends QuestHandler
 							return defaultCloseDialog(env, 0, 1, 182215024, 1, 182215002, 1);
 						}
 					}
+				}
 				case 799552:
+				{
 					if (qs.getQuestVarById(0) == 1)
 					{
 						if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -96,6 +99,7 @@ public class _18405Memories_In_The_Corner_Of_His_Mind extends QuestHandler
 						}
 						return defaultCloseDialog(env, 1, 2, true, true);
 					}
+				}
 			}
 		}
 		return sendQuestRewardDialog(env, 799552, 0);

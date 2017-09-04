@@ -53,19 +53,27 @@ public class Shimmering_SpringAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 833501: // Shimmering Spring.
+				{
 					switch (Rnd.get(1, 3))
 					{
 						case 1:
+						{
 							ItemService.addItem(player, 186000407, 1);
 							break;
+						}
 						case 2:
+						{
 							ItemService.addItem(player, 188054028, 1);
 							break;
+						}
 						case 3:
+						{
 							ItemService.addItem(player, 188054029, 1);
 							break;
+						}
 					}
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

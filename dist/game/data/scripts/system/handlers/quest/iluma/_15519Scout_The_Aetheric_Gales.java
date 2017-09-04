@@ -175,6 +175,7 @@ public class _15519Scout_The_Aetheric_Gales extends QuestHandler
 				case 242135:
 				case 242139:
 				case 242143:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -185,6 +186,7 @@ public class _15519Scout_The_Aetheric_Gales extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

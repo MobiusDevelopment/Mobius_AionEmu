@@ -109,6 +109,7 @@ public abstract class AbstractHealEffect extends EffectTemplate
 		switch (healType)
 		{
 			case HP:
+			{
 				if ((this instanceof ProcHealInstantEffect) || effect.getSkillTemplate().getEffects().isEffectTypePresent(EffectType.HEALINSTANT))// item heal, eg potions
 				{
 					effected.getLifeStats().increaseHp(TYPE.HP, healValue, 0, LOG.REGULAR);
@@ -123,7 +124,9 @@ public abstract class AbstractHealEffect extends EffectTemplate
 					effected.getLifeStats().reduceHp(-healValue, effected);
 				}
 				break;
+			}
 			case MP:
+			{
 				if (this instanceof ProcMPHealInstantEffect)// item heal, eg potions
 				{
 					effected.getLifeStats().increaseMp(TYPE.MP, healValue, 0, LOG.REGULAR);
@@ -133,12 +136,17 @@ public abstract class AbstractHealEffect extends EffectTemplate
 					effected.getLifeStats().increaseMp(TYPE.HEAL_MP, healValue, 0, LOG.REGULAR);
 				}
 				break;
+			}
 			case FP:
+			{
 				effected.getLifeStats().increaseFp(TYPE.FP, healValue);
 				break;
+			}
 			case DP:
+			{
 				((Player) effected).getCommonData().addDp(healValue);
 				break;
+			}
 		}
 	}
 	

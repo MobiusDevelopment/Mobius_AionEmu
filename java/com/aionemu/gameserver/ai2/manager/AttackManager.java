@@ -85,16 +85,24 @@ public class AttackManager
 		switch (attackIntention)
 		{
 			case SIMPLE_ATTACK:
+			{
 				SimpleAttackManager.performAttack(npcAI, delay);
 				break;
+			}
 			case SKILL_ATTACK:
+			{
 				SkillAttackManager.performAttack(npcAI, delay);
 				break;
+			}
 			case FINISH_ATTACK:
+			{
 				npcAI.think();
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 	

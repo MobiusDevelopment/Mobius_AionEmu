@@ -86,9 +86,13 @@ public class _30157VilisMind extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 2375);
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}
@@ -100,11 +104,13 @@ public class _30157VilisMind extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						if (var == 0)
 						{
 							QuestService.addNewSpawn(600010000, 1, 799339, (float) 545.3877, (float) 1232.0298, (float) 304.3357, (byte) 76);
 							return useQuestObject(env, 0, 0, false, 0, 0, 0, 182209254, 1);
 						}
+					}
 				}
 			}
 			if (targetId == 799339)
@@ -112,11 +118,14 @@ public class _30157VilisMind extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							defaultCloseDialog(env, 0, 0, true, false);
@@ -131,6 +140,7 @@ public class _30157VilisMind extends QuestHandler
 							}, 40000);
 							return true;
 						}
+					}
 				}
 			}
 		}

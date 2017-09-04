@@ -119,6 +119,7 @@ public class _25415Defend_Sliversleet_Outpost extends QuestHandler
 				case 883091:
 				case 883092:
 				case 883093:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _25415Defend_Sliversleet_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

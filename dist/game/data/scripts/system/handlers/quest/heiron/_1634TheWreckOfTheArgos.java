@@ -165,7 +165,9 @@ public class _1634TheWreckOfTheArgos extends QuestHandler
 						removeQuestItem(env, 182201760, 1);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

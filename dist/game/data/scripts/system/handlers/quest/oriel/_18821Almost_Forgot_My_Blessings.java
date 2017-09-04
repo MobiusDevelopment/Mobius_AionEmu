@@ -86,9 +86,13 @@ public class _18821Almost_Forgot_My_Blessings extends QuestHandler
 			switch (dialog)
 			{
 				case START_DIALOG:
+				{
 					return sendQuestDialog(env, 1011);
+				}
 				case ACCEPT_QUEST:
+				{
 					return sendQuestStartDialog(env);
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -96,12 +100,18 @@ public class _18821Almost_Forgot_My_Blessings extends QuestHandler
 			switch (dialog)
 			{
 				case START_DIALOG:
+				{
 					return sendQuestDialog(env, 2375);
+				}
 				case SELECT_REWARD:
+				{
 					changeQuestStep(env, 0, 0, true);
 					return sendQuestDialog(env, 5);
+				}
 				case SELECT_NO_REWARD:
+				{
 					return sendQuestEndDialog(env);
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
@@ -109,10 +119,14 @@ public class _18821Almost_Forgot_My_Blessings extends QuestHandler
 			switch (dialog)
 			{
 				case USE_OBJECT:
+				{
 					return sendQuestDialog(env, 5);
+				}
 				case SELECT_NO_REWARD:
+				{
 					sendQuestEndDialog(env);
 					return true;
+				}
 			}
 		}
 		return false;

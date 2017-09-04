@@ -49,6 +49,7 @@ public class SummonTotemEffect extends SummonServantEffect
 			case 660:
 			case 661:
 			case 662:
+			{
 				if (effect.getEffector().getTarget() == null)
 				{
 					effect.getEffector().setTarget(effect.getEffector());
@@ -79,11 +80,14 @@ public class SummonTotemEffect extends SummonServantEffect
 				}, time * 1000);
 				servant.getController().addTask(TaskId.DESPAWN, task);
 				return;
+			}
 			default:
+			{
 				final float x1 = effector.getX();
 				final float y1 = effector.getY();
 				final float z1 = effector.getZ();
 				spawnServant(effect, time, NpcObjectType.TOTEM, x1, y1, z1);
+			}
 		}
 	}
 }

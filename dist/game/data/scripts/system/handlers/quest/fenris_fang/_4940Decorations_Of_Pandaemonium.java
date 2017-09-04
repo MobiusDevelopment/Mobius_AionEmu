@@ -83,9 +83,11 @@ public class _4940Decorations_Of_Pandaemonium extends QuestHandler
 			switch (targetId)
 			{
 				case 204050:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
@@ -94,9 +96,13 @@ public class _4940Decorations_Of_Pandaemonium extends QuestHandler
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							final long itemCount1 = player.getInventory().getItemCountByItemId(182207117);
 							final long itemCount2 = player.getInventory().getItemCountByItemId(182207118);
 							final long itemCount3 = player.getInventory().getItemCountByItemId(182207119);
@@ -114,10 +120,14 @@ public class _4940Decorations_Of_Pandaemonium extends QuestHandler
 							{
 								return sendQuestDialog(env, 10001);
 							}
+						}
 					}
 					break;
+				}
 				default:
+				{
 					return sendQuestStartDialog(env);
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

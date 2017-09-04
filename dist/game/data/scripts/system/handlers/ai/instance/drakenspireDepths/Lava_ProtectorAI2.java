@@ -60,6 +60,7 @@ public class Lava_ProtectorAI2 extends AggressiveNpcAI2
 			switch (getNpcId())
 			{
 				case 236227: // Lava Protector.
+				{
 					lavaProtectorTask = ThreadPoolManager.getInstance().schedule(new Runnable()
 					{
 						@Override
@@ -71,6 +72,7 @@ public class Lava_ProtectorAI2 extends AggressiveNpcAI2
 						}
 					}, 300000);
 					break;
+				}
 			}
 		}
 		checkPercentage(getLifeStats().getHpPercentage());
@@ -83,8 +85,10 @@ public class Lava_ProtectorAI2 extends AggressiveNpcAI2
 		switch (getNpcId())
 		{
 			case 236227:
+			{
 				shareSource();
 				break;
+			}
 		}
 	}
 	

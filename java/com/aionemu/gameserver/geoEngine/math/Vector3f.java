@@ -909,11 +909,17 @@ public final class Vector3f implements Cloneable, Reusable
 		switch (index)
 		{
 			case 0:
+			{
 				return x;
+			}
 			case 1:
+			{
 				return y;
+			}
 			case 2:
+			{
 				return z;
+			}
 		}
 		throw new IllegalArgumentException("index must be either 0, 1 or 2");
 	}
@@ -928,14 +934,20 @@ public final class Vector3f implements Cloneable, Reusable
 		switch (index)
 		{
 			case 0:
+			{
 				x = value;
 				return;
+			}
 			case 1:
+			{
 				y = value;
 				return;
+			}
 			case 2:
+			{
 				z = value;
 				return;
+			}
 		}
 		throw new IllegalArgumentException("index must be either 0, 1 or 2");
 	}

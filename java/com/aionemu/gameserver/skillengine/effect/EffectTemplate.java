@@ -376,39 +376,53 @@ public abstract class EffectTemplate
 			switch (effect.getSkillTemplate().getSubType())
 			{
 				case DEBUFF:
+				{
 					boostResist = effect.getEffector().getGameStats().getStat(StatEnum.BOOST_RESIST_DEBUFF, 0).getCurrent();
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			
 			final int accMod = accMod2 + (accMod1 * effect.getSkillLevel()) + effect.getAccModBoost() + boostResist;
 			switch (skillType)
 			{
 				case PHYSICAL:
+				{
 					switch (effect.getEffector().getAttackType())
 					{
 						case PHYSICAL:
+						{
 							if (StatFunctions.calculatePhysicalDodgeRate(effect.getEffector(), effect.getEffected(), accMod))
 							{
 								return false;
 							}
 							break;
+						}
 						default:
+						{
 							if (Rnd.get(0, 1000) < StatFunctions.calculateMagicalResistRate(effect.getEffector(), effect.getEffected(), accMod))
 							{
 								return false;
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case MAGICAL:
+				{
 					if (Rnd.get(0, 1000) < StatFunctions.calculateMagicalResistRate(effect.getEffector(), effect.getEffected(), accMod))
 					{
 						return false;
 					}
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		
@@ -540,13 +554,19 @@ public abstract class EffectTemplate
 			switch (hopType)
 			{
 				case DAMAGE:
+				{
 					currentHate += effect.getReserved1();
 					break;
+				}
 				case SKILLLV:
+				{
 					final int skillLvl = effect.getSkillLevel();
 					currentHate += hopB + (hopA * skillLvl); // Agro-value of the effect
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		if (currentHate == 0)
@@ -712,7 +732,9 @@ public abstract class EffectTemplate
 			case STAGGER_RESISTANCE:
 			case STUMBLE_RESISTANCE:
 			case STUN_RESISTANCE:
+			{
 				return true;
+			}
 		}
 		return false;
 	}
@@ -722,47 +744,89 @@ public abstract class EffectTemplate
 		switch (statEnum)
 		{
 			case BLEED_RESISTANCE:
+			{
 				return StatEnum.BLEED_RESISTANCE_PENETRATION;
+			}
 			case BLIND_RESISTANCE:
+			{
 				return StatEnum.BLIND_RESISTANCE_PENETRATION;
+			}
 			case CHARM_RESISTANCE:
+			{
 				return StatEnum.CHARM_RESISTANCE_PENETRATION;
+			}
 			case CONFUSE_RESISTANCE:
+			{
 				return StatEnum.CONFUSE_RESISTANCE_PENETRATION;
+			}
 			case CURSE_RESISTANCE:
+			{
 				return StatEnum.CURSE_RESISTANCE_PENETRATION;
+			}
 			case DISEASE_RESISTANCE:
+			{
 				return StatEnum.DISEASE_RESISTANCE_PENETRATION;
+			}
 			case FEAR_RESISTANCE:
+			{
 				return StatEnum.FEAR_RESISTANCE_PENETRATION;
+			}
 			case OPENAREIAL_RESISTANCE:
+			{
 				return StatEnum.OPENAREIAL_RESISTANCE_PENETRATION;
+			}
 			case PARALYZE_RESISTANCE:
+			{
 				return StatEnum.PARALYZE_RESISTANCE_PENETRATION;
+			}
 			case PERIFICATION_RESISTANCE:
+			{
 				return StatEnum.PERIFICATION_RESISTANCE_PENETRATION;
+			}
 			case POISON_RESISTANCE:
+			{
 				return StatEnum.POISON_RESISTANCE_PENETRATION;
+			}
 			case ROOT_RESISTANCE:
+			{
 				return StatEnum.ROOT_RESISTANCE_PENETRATION;
+			}
 			case SILENCE_RESISTANCE:
+			{
 				return StatEnum.SILENCE_RESISTANCE_PENETRATION;
+			}
 			case SLEEP_RESISTANCE:
+			{
 				return StatEnum.SLEEP_RESISTANCE_PENETRATION;
+			}
 			case SLOW_RESISTANCE:
+			{
 				return StatEnum.SLOW_RESISTANCE_PENETRATION;
+			}
 			case SNARE_RESISTANCE:
+			{
 				return StatEnum.SNARE_RESISTANCE_PENETRATION;
+			}
 			case SPIN_RESISTANCE:
+			{
 				return StatEnum.SPIN_RESISTANCE_PENETRATION;
+			}
 			case STAGGER_RESISTANCE:
+			{
 				return StatEnum.STAGGER_RESISTANCE_PENETRATION;
+			}
 			case STUMBLE_RESISTANCE:
+			{
 				return StatEnum.STUMBLE_RESISTANCE_PENETRATION;
+			}
 			case STUN_RESISTANCE:
+			{
 				return StatEnum.STUN_RESISTANCE_PENETRATION;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 	

@@ -113,6 +113,7 @@ public class _14203Enraged_Excavating extends QuestHandler
 			{
 				case 214337:
 				case 214338:
+				{
 					if (qs.getQuestVarById(1) < 8)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -123,6 +124,7 @@ public class _14203Enraged_Excavating extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

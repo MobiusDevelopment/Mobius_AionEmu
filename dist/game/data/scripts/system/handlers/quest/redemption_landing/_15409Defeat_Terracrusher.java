@@ -111,6 +111,7 @@ public class _15409Defeat_Terracrusher extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 883322:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -121,6 +122,7 @@ public class _15409Defeat_Terracrusher extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

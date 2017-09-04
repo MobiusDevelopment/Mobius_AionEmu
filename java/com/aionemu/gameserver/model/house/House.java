@@ -656,31 +656,41 @@ public class House extends VisibleObject
 		switch (getHouseType())
 		{
 			case HOUSE:
+			{
 				if (HousingConfig.HOUSE_MIN_BID > 0)
 				{
 					return HousingConfig.HOUSE_MIN_BID;
 				}
 				break;
+			}
 			case MANSION:
+			{
 				if (HousingConfig.MANSION_MIN_BID > 0)
 				{
 					return HousingConfig.MANSION_MIN_BID;
 				}
 				break;
+			}
 			case ESTATE:
+			{
 				if (HousingConfig.ESTATE_MIN_BID > 0)
 				{
 					return HousingConfig.ESTATE_MIN_BID;
 				}
 				break;
+			}
 			case PALACE:
+			{
 				if (HousingConfig.PALACE_MIN_BID > 0)
 				{
 					return HousingConfig.PALACE_MIN_BID;
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return saleOptions.getGoldPrice();
 	}

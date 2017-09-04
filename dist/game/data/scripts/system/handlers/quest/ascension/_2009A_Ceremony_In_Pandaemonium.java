@@ -91,11 +91,14 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1011);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							qs.setQuestVar(1);
@@ -104,6 +107,7 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 							TeleportService2.teleportTo(player, 120010000, 1685f, 1400f, 195f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
 							return true;
 						}
+					}
 				}
 			}
 			else if (targetId == 204182)
@@ -111,18 +115,24 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case SELECT_ACTION_1353:
+					{
 						if (var == 1)
 						{
 							playQuestMovie(env, 121);
 							return false;
 						}
+					}
 					case STEP_TO_2:
+					{
 						return defaultCloseDialog(env, 1, 2);
+					}
 				}
 			}
 			else if (targetId == 204075)
@@ -130,17 +140,22 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 2)
 						{
 							return sendQuestDialog(env, 1693);
 						}
+					}
 					case SELECT_ACTION_1694:
+					{
 						if (var == 2)
 						{
 							playQuestMovie(env, 122);
 							return false;
 						}
+					}
 					case STEP_TO_3:
+					{
 						if (var == 2)
 						{
 							final PlayerClass playerClass = PlayerClass.getStartingClassFor(player.getCommonData().getPlayerClass());
@@ -178,6 +193,7 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestSelectionDialog(env);
 						}
+					}
 				}
 			}
 		}
@@ -188,9 +204,13 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 				switch (env.getDialogId())
 				{
 					case -1:
+					{
 						return sendQuestDialog(env, 2034);
+					}
 					case 1009:
+					{
 						return sendQuestDialog(env, 5);
+					}
 					case 8:
 					case 9:
 					case 10:
@@ -201,10 +221,12 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 					case 15:
 					case 16:
 					case 23:
+					{
 						if (QuestService.finishQuest(env, 0))
 						{
 							return sendQuestSelectionDialog(env);
 						}
+					}
 				}
 			}
 			else if ((targetId == 204081) && (var == 20))
@@ -212,9 +234,13 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 				switch (env.getDialogId())
 				{
 					case -1:
+					{
 						return sendQuestDialog(env, 2375);
+					}
 					case 1009:
+					{
 						return sendQuestDialog(env, 6);
+					}
 					case 8:
 					case 9:
 					case 10:
@@ -225,10 +251,12 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 					case 15:
 					case 16:
 					case 23:
+					{
 						if (QuestService.finishQuest(env, 1))
 						{
 							return sendQuestSelectionDialog(env);
 						}
+					}
 				}
 			}
 			else if ((targetId == 204082) && (var == 30))
@@ -236,9 +264,13 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 				switch (env.getDialogId())
 				{
 					case -1:
+					{
 						return sendQuestDialog(env, 2716);
+					}
 					case 1009:
+					{
 						return sendQuestDialog(env, 7);
+					}
 					case 8:
 					case 9:
 					case 10:
@@ -249,10 +281,12 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 					case 15:
 					case 16:
 					case 23:
+					{
 						if (QuestService.finishQuest(env, 2))
 						{
 							return sendQuestSelectionDialog(env);
 						}
+					}
 				}
 			}
 			else if ((targetId == 204083) && (var == 40))
@@ -260,9 +294,13 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 				switch (env.getDialogId())
 				{
 					case -1:
+					{
 						return sendQuestDialog(env, 3057);
+					}
 					case 1009:
+					{
 						return sendQuestDialog(env, 8);
+					}
 					case 8:
 					case 9:
 					case 10:
@@ -273,10 +311,12 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 					case 15:
 					case 16:
 					case 23:
+					{
 						if (QuestService.finishQuest(env, 3))
 						{
 							return sendQuestSelectionDialog(env);
 						}
+					}
 				}
 			}
 			else if ((targetId == 801220) && (var == 50))
@@ -284,9 +324,13 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 				switch (env.getDialogId())
 				{
 					case -1:
+					{
 						return sendQuestDialog(env, 3398);
+					}
 					case 1009:
+					{
 						return sendQuestDialog(env, 45);
+					}
 					case 8:
 					case 9:
 					case 10:
@@ -297,10 +341,12 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 					case 15:
 					case 16:
 					case 23:
+					{
 						if (QuestService.finishQuest(env, 4))
 						{
 							return sendQuestSelectionDialog(env);
 						}
+					}
 				}
 			}
 			else if ((targetId == 801221) && (var == 60))
@@ -308,9 +354,13 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 				switch (env.getDialogId())
 				{
 					case -1:
+					{
 						return sendQuestDialog(env, 3739);
+					}
 					case 1009:
+					{
 						return sendQuestDialog(env, 46);
+					}
 					case 8:
 					case 9:
 					case 10:
@@ -321,10 +371,12 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 					case 15:
 					case 16:
 					case 23:
+					{
 						if (QuestService.finishQuest(env, 5))
 						{
 							return sendQuestSelectionDialog(env);
 						}
+					}
 				}
 			}
 		}

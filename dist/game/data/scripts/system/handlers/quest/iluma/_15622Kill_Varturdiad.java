@@ -125,6 +125,7 @@ public class _15622Kill_Varturdiad extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 241167:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -135,6 +136,7 @@ public class _15622Kill_Varturdiad extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

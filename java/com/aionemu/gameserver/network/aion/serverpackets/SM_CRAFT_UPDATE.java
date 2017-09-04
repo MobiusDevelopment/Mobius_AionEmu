@@ -55,6 +55,7 @@ public class SM_CRAFT_UPDATE extends AionServerPacket
 		switch (action)
 		{
 			case 0:
+			{
 				writeD(success);
 				writeD(failure);
 				writeD(0);
@@ -64,9 +65,11 @@ public class SM_CRAFT_UPDATE extends AionServerPacket
 				writeD(nameId);
 				writeH(0);
 				break;
+			}
 			case 1:
 			case 2:
 			case 5:
+			{
 				writeD(success);
 				writeD(failure);
 				writeD(executionDelay);
@@ -74,7 +77,9 @@ public class SM_CRAFT_UPDATE extends AionServerPacket
 				writeD(0);
 				writeH(0);
 				break;
+			}
 			case 3:
+			{
 				writeD(success);
 				writeD(failure);
 				writeD(0);
@@ -84,7 +89,9 @@ public class SM_CRAFT_UPDATE extends AionServerPacket
 				writeD(nameId);
 				writeH(0);
 				break;
+			}
 			case 4:
+			{
 				writeD(success);
 				writeD(failure);
 				writeD(0);
@@ -92,7 +99,9 @@ public class SM_CRAFT_UPDATE extends AionServerPacket
 				writeD(1330051);
 				writeH(0);
 				break;
+			}
 			case 6:
+			{
 				writeD(success);
 				writeD(failure);
 				writeD(executionDelay);
@@ -102,7 +111,9 @@ public class SM_CRAFT_UPDATE extends AionServerPacket
 				writeD(nameId);
 				writeH(0);
 				break;
+			}
 			case 7:
+			{
 				writeD(success);
 				writeD(failure);
 				writeD(0);
@@ -112,6 +123,7 @@ public class SM_CRAFT_UPDATE extends AionServerPacket
 				writeD(nameId);
 				writeH(0);
 				break;
+			}
 		}
 	}
 }

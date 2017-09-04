@@ -75,7 +75,9 @@ public class _2106VanarsFlattery extends QuestHandler
 						return sendQuestDialog(env, 1004);
 					}
 					case FINISH_DIALOG:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}
@@ -90,9 +92,11 @@ public class _2106VanarsFlattery extends QuestHandler
 						return sendQuestDialog(env, 1003);
 					}
 					case STEP_TO_1:
+					{
 						TeleportService2.teleportTo(player, 220010000, 576, 2538, 272, (byte) 9, TeleportAnimation.BEAM_ANIMATION);
 						changeQuestStep(env, 0, 1, true);
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}

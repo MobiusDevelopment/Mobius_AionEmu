@@ -44,7 +44,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -99,11 +98,15 @@ public class DanuarSanctuaryInstance extends GeneralInstanceHandler
 		switch (player.getRace())
 		{
 			case ELYOS:
+			{
 				sendMovie(player, 910);
 				break;
+			}
 			case ASMODIANS:
+			{
 				sendMovie(player, 911);
 				break;
+			}
 		}
 		if (spawnRace == null)
 		{
@@ -142,20 +145,29 @@ public class DanuarSanctuaryInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 702658: // Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053579, 1)); // [Event] Abbey Bundle.
 				break;
+			}
 			case 702659: // Noble Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); // [Event] Noble Abbey Bundle.
 				break;
+			}
 			case 235600: // Shulack Mercenary Cannon Chief.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000254, 1)); // Seal Breaking Magic Cannonball.
 				break;
+			}
 			case 235658: // Bodyguard Yatakin.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000174, 1)); // Sentry Post Of Eternity Key.
 				break;
+			}
 			case 235624: // Warmage Suyaroka.
 			case 235625: // Chief Medic Tagnu.
 			case 235626: // Virulent Ukahim.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -169,15 +181,21 @@ public class DanuarSanctuaryInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case 233391: // Sanctuary Keybox.
+			{
 				// Be careful in your selection. The key cannot be changed once it is chosen.
 				sendMsgByRace(1401946, Race.PC_ALL, 0);
 				for (Player player : instance.getPlayersInside())
@@ -190,68 +208,105 @@ public class DanuarSanctuaryInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 233185: // Danuar Sanctuary Jar.
 			case 233190: // Stone Treasure Box I.
 			case 233191: // Stone Treasure Box II.
 			case 233192: // Stone Treasure Box III.
+			{
 				switch (Rnd.get(1, 5))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 169405254, 2)); // Earth Trace.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012592, 2)); // Earth Scrap.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012613, 2)); // Burning Vitality.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 169405267, 2)); // Flame Vitality.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 169405268, 2)); // Lightning Vitality.
 						break;
+					}
 				}
 				switch (Rnd.get(1, 12))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012580, 2)); // Fire Mote.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012581, 2)); // Fire Breath.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012582, 2)); // Fire Fragment.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012583, 2)); // Fire Source.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012584, 2)); // Water Source.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012585, 2)); // Wind Mote.
 						break;
+					}
 					case 7:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012586, 2)); // Wind Breath.
 						break;
+					}
 					case 8:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012587, 2)); // Wind Eternity.
 						break;
+					}
 					case 9:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012589, 2)); // Wind Source.
 						break;
+					}
 					case 10:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012588, 2)); // Wind Fragment.
 						break;
+					}
 					case 11:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012590, 2)); // Wind Origin.
 						break;
+					}
 					case 12:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152012591, 2)); // Water Fragment.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -261,6 +316,7 @@ public class DanuarSanctuaryInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 701859: // Metallic Mystic KeyStone.
+			{
 				if (player.getInventory().isFull())
 				{
 					sendMsgByRace(1390149, Race.PC_ALL, 0);
@@ -268,7 +324,9 @@ public class DanuarSanctuaryInstance extends GeneralInstanceHandler
 				despawnNpc(npc);
 				ItemService.addItem(player, 188052613, 1); // Sanctuary Treasure Crate.
 				break;
+			}
 			case 701860: // Golden Mystic KeyStone.
+			{
 				if (player.getInventory().isFull())
 				{
 					sendMsgByRace(1390149, Race.PC_ALL, 0);
@@ -276,51 +334,65 @@ public class DanuarSanctuaryInstance extends GeneralInstanceHandler
 				despawnNpc(npc);
 				ItemService.addItem(player, 188052613, 1); // Sanctuary Treasure Crate.
 				break;
+			}
 			case 701863: // Spherical Mystic KeyStone.
+			{
 				// A door has opened somewhere.
 				sendMsgByRace(1401838, Race.PC_ALL, 0);
 				break;
+			}
 			case 701864: // Pyramidal Mystic KeyStone.
+			{
 				// A heavy door has opened somewhere.
 				sendMsgByRace(1401839, Race.PC_ALL, 0);
 				break;
+			}
 		}
 	}
 	
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 233084: // Ancien Danuar Coffin.
+			{
 				despawnNpc(npc);
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						spawn(233085, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading()); // Ancient Danuar Remains.
 						break;
+					}
 					case 2:
+					{
 						break;
+					}
 				}
 				break;
+			}
 			/**
 			 * Attack the rocks to activate the updraft.
 			 */
 			case 233188: // Sturdy Boulder.
+			{
 				despawnNpc(npc);
 				spawnInfernalBoulder();
 				// An ascending air current is rising from the spot where the egg was.
 				// You can fly vertically up by spreading your wings and riding the current.
 				sendMsgByRace(1400477, Race.PC_ALL, 2000);
 				break;
+			}
 			case 235624: // Warmage Suyaroka.
 			case 235625: // Chief Medic Tagnu.
 			case 235626: // Virulent Ukahim.
+			{
 				spawnAbbeyNobleBox();
 				sendMsg("[Congratulation]: you finish <Danuar Sanctuary 4.8>");
 				spawn(701876, 1057.1633f, 557.6902f, 284.73123f, (byte) 30); // Danuar Sanctuary Exit.
 				break;
+			}
 		}
 	}
 	
@@ -329,11 +401,15 @@ public class DanuarSanctuaryInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawn(702658, 1053.4221f, 565.259f, 282.28778f, (byte) 19); // Abbey Box.
 				break;
+			}
 			case 2:
+			{
 				spawn(702659, 1060.8652f, 565.46436f, 282.2873f, (byte) 41); // Noble Abbey Box.
 				break;
+			}
 		}
 	}
 	
@@ -342,14 +418,20 @@ public class DanuarSanctuaryInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 3))
 		{
 			case 1:
+			{
 				spawn(235624, 1056.5698f, 693.86584f, 282.0391f, (byte) 30); // Warmage Suyaroka.
 				break;
+			}
 			case 2:
+			{
 				spawn(235625, 1045.4534f, 682.2679f, 282.0391f, (byte) 60); // Chief Medic Tagnu.
 				break;
+			}
 			case 3:
+			{
 				spawn(235626, 1056.4889f, 670.9826f, 282.0391f, (byte) 91); // Virulent Ukahim.
 				break;
+			}
 		}
 	}
 	
@@ -370,36 +452,18 @@ public class DanuarSanctuaryInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void sendMovie(Player player, int movie)

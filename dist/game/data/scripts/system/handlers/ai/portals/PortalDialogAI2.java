@@ -39,7 +39,6 @@ import com.aionemu.gameserver.services.teleport.PortalService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****/
 /**
@@ -81,24 +80,21 @@ public class PortalDialogAI2 extends PortalAI2
 			case 832996: // Tiamat Stronghold [Asmodians].
 			case 832997: // [Anguished] Dragon Lord Refuge.
 			case 832998: // Dragon Lord Refuge.
+			{
 				startLifeTask();
 				break;
+			}
 			case 730883: // [Infernal] Illuminary Obelisk.
+			{
 				announceIlluminaryObeliskOpen();
 				break;
+			}
 		}
 	}
 	
 	private void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(PortalDialogAI2.this);
-			}
-		}, 120000); // 2 Minutes.
+		ThreadPoolManager.getInstance().schedule(() -> AI2Actions.deleteOwner(PortalDialogAI2.this), 120000); // 2 Minutes.
 	}
 	
 	@Override
@@ -222,125 +218,153 @@ public class PortalDialogAI2 extends PortalAI2
 				case 832992: // Occupied Rentus Base [Asmodians]
 				case 730721: // Sealed Danuar Mysticarium - Argent Manor [Elyos]
 				case 730722: // Sealed Danuar Mysticarium - Argent Manor [Asmodians]
+				{
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10, 0));
 					break;
+				}
 				case 731549: // Seized Danuar Sanctuary.
+				{
 					switch (player.getWorldId())
 					{
 						case 210070000: // Cygnea.
+						{
 							// Enter Seized Danuar Sanctuary.
 							if (player.getCommonData().getRace() == Race.ASMODIANS)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011, 0));
 							}
 							break;
+						}
 						case 220080000: // Enshar.
+						{
 							// Enter Seized Danuar Sanctuary.
 							if (player.getCommonData().getRace() == Race.ELYOS)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011, 0));
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case 731570: // Danuar Sanctuary.
+				{
 					switch (player.getWorldId())
 					{
 						case 210070000: // Cygnea.
+						{
 							// Enter Danuar Sanctuary.
 							if (player.getCommonData().getRace() == Race.ELYOS)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011, 0));
 							}
 							break;
+						}
 						case 220080000: // Enshar.
+						{
 							// Enter Danuar Sanctuary.
 							if (player.getCommonData().getRace() == Race.ASMODIANS)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011, 0));
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case 832995: // Tiamat Stronghold [Elyos]
+				{
 					switch (player.getWorldId())
 					{
 						case 210070000: // Cygnea.
+						{
 							// Enter Tiamat Stronghold.
 							if (player.getCommonData().getRace() == Race.ELYOS)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011, 0));
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case 832996: // Tiamat Stronghold [Asmodian]
+				{
 					switch (player.getWorldId())
 					{
 						case 220080000: // Enshar.
+						{
 							// Enter Tiamat Stronghold.
 							if (player.getCommonData().getRace() == Race.ASMODIANS)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1352, 0));
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case 832997: // [Anguished] Dragon Lord Refuge.
+				{
 					switch (player.getWorldId())
 					{
 						case 210070000: // Cygnea.
+						{
 							// Enter the Anguished Dragon Lord's Refuge.
 							if (player.getCommonData().getRace() == Race.ASMODIANS)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011, 0));
 							}
 							break;
+						}
 						case 220080000: // Enshar.
+						{
 							// Enter the Anguished Dragon Lord's Refuge.
 							if (player.getCommonData().getRace() == Race.ELYOS)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011, 0));
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case 832998: // Dragon Lord Refuge.
+				{
 					switch (player.getWorldId())
 					{
 						case 210070000: // Cygnea.
+						{
 							// Enter Dragon Lord's Refuge.
 							if (player.getCommonData().getRace() == Race.ELYOS)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1352, 0));
 							}
 							break;
+						}
 						case 220080000: // Enshar.
+						{
 							// Enter Dragon Lord's Refuge.
 							if (player.getCommonData().getRace() == Race.ASMODIANS)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1352, 0));
 							}
 							break;
+						}
 					}
 					break;
+				}
 				default:
+				{
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), teleportationDialogId, 0));
 					break;
+				}
 			}
 		}
 	}
 	
 	private void announceIlluminaryObeliskOpen()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// The entrance to the Infernal Illuminary Obelisk has opened.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDF5_U3_Hard_Door_Open);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDF5_U3_Hard_Door_Open));
 	}
 }

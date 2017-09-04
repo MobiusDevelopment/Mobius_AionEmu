@@ -110,24 +110,36 @@ public class EnchantService
 		{
 			case 0: // JUNK.
 			case 1: // COMMON.
+			{
 				number = Rnd.get(50, 200);
 				break;
+			}
 			case 2: // RARE.
+			{
 				number = Rnd.get(200, 400);
 				break;
+			}
 			case 3: // LEGEND.
+			{
 				number = Rnd.get(400, 600);
 				break;
+			}
 			case 4: // UNIQUE.
+			{
 				number = Rnd.get(600, 800);
 				break;
+			}
 			case 5: // EPIC.
+			{
 				number = Rnd.get(800, 1000);
 				break;
+			}
 			case 6: // MYTHIC.
 			case 7:
+			{
 				number = Rnd.get(1000, 2000);
 				break;
+			}
 		}
 		// Extracting Archdaeva equipment will give Enchantment Stone Dust and Archdaeva crafting materials.
 		if (targetItem.isArchDaevaItem())
@@ -233,23 +245,35 @@ public class EnchantService
 		{
 			case JUNK:
 			case COMMON:
+			{
 				qualityCap = 5;
 				break;
+			}
 			case RARE:
+			{
 				qualityCap = 10;
 				break;
+			}
 			case LEGEND:
+			{
 				qualityCap = 15;
 				break;
+			}
 			case UNIQUE:
+			{
 				qualityCap = 20;
 				break;
+			}
 			case EPIC:
+			{
 				qualityCap = 25;
 				break;
+			}
 			case MYTHIC:
+			{
 				qualityCap = 30;
 				break;
+			}
 		}
 		float success = EnchantsConfig.ENCHANT_ITEM;
 		switch (parentItem.getItemId())
@@ -257,8 +281,10 @@ public class EnchantService
 			// Enhances the basic attributes of armor or weapons.
 			// Activate by double-clicking and selecting an item to enchant.
 			case 166000196: // Enchantment Stone.
+			{
 				enchantStoneLevel = Rnd.get(105, 190);
 				break;
+			}
 		}
 		final int levelDiff = enchantStoneLevel - targetItemLevel;
 		success += levelDiff > 0 ? (levelDiff * 3f) / qualityCap : 0;
@@ -294,18 +320,26 @@ public class EnchantService
 			switch (parentItem.getItemTemplate().getItemQuality())
 			{
 				case RARE:
+				{
 					addSuccessRate *= EnchantsConfig.LESSER_SUP;
 					break;
+				}
 				case LEGEND:
 				case UNIQUE:
+				{
 					addSuccessRate *= EnchantsConfig.REGULAR_SUP;
 					break;
+				}
 				case EPIC:
 				case MYTHIC:
+				{
 					addSuccessRate *= EnchantsConfig.GREATER_SUP;
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			success += addSuccessRate;
 			player.subtractSupplements(supplementUseCount, supplementTemplate.getTemplateId());
@@ -351,6 +385,7 @@ public class EnchantService
 			case 166020004: // [Event] Empyrean Lord's Enchantment Stone (7 Days)
 			case 166020005: // [Event] Enchantment Stone Of The Empyrean Lord.
 			case 166020006: // Omega Enchantment Stone.
+			{
 				if (rnd < 10)
 				{
 					addLevel = 3;
@@ -360,11 +395,13 @@ public class EnchantService
 					addLevel = 2;
 				}
 				break;
+			}
 			case 166022000: // Irridescent Omega Enchantment Stone.
 			case 166022001: // [Event] Irridescent Omega Enchantment Stone (7 Days)
 			case 166022002: // [Event] Irridescent Omega Enchantment Stone.
 			case 166022003: // Omega Enchantment Stone.
 			case 166022007: // Omega Enchantment Stone.
+			{
 				if (rnd < 7)
 				{
 					addLevel = 3;
@@ -379,7 +416,9 @@ public class EnchantService
 					addLevel = 2;
 				}
 				break;
+			}
 			default:
+			{
 				if (rnd < 2)
 				{
 					addLevel = 3;
@@ -389,6 +428,7 @@ public class EnchantService
 					addLevel = 2;
 					critLevel = 2;
 				}
+			}
 		}
 		final ItemQuality targetQuality = targetItem.getItemTemplate().getItemQuality();
 		if (!player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1))
@@ -414,6 +454,7 @@ public class EnchantService
 				case COMMON:
 				case RARE:
 				case LEGEND:
+				{
 					if ((currentEnchant > 10) && !targetItem.isAmplified())
 					{
 						currentEnchant = 10;
@@ -447,9 +488,11 @@ public class EnchantService
 						currentEnchant += 1;
 					}
 					break;
+				}
 				case UNIQUE:
 				case EPIC:
 				case MYTHIC:
+				{
 					if ((currentEnchant > 15) && !targetItem.isAmplified())
 					{
 						currentEnchant = 15;
@@ -483,6 +526,7 @@ public class EnchantService
 						currentEnchant += 1;
 					}
 					break;
+				}
 			}
 		}
 		else
@@ -919,19 +963,33 @@ public class EnchantService
 			case HARP:
 			case KEYBLADE:
 			case SHIELD:
+			{
 				return RndArray.get(skills4WeaponShield);
+			}
 			case JACKET:
+			{
 				return RndArray.get(skills4Jacket);
+			}
 			case PANTS:
+			{
 				return RndArray.get(skills4Pant);
+			}
 			case SHOULDERS:
+			{
 				return RndArray.get(skills4Shoulder);
+			}
 			case GLOVES:
+			{
 				return RndArray.get(skills4Glove);
+			}
 			case SHOES:
+			{
 				return RndArray.get(skills4Shoes);
+			}
 			default:
+			{
 				return 0;
+			}
 		}
 	}
 	
@@ -962,27 +1020,49 @@ public class EnchantService
 				case 14:
 				case 15:
 				case 16:
+				{
 					return 2500000;
+				}
 				case 17:
+				{
 					return 5000000;
+				}
 				case 18:
+				{
 					return 10000000;
+				}
 				case 19:
+				{
 					return 12500000;
+				}
 				case 20:
+				{
 					return 15000000;
+				}
 				case 21:
+				{
 					return 20000000;
+				}
 				case 22:
+				{
 					return 25000000;
+				}
 				case 23:
+				{
 					return 30000000;
+				}
 				case 24:
+				{
 					return 35000000;
+				}
 				case 25:
+				{
 					return 40000000;
+				}
 				default:
+				{
 					return 40000000;
+				}
 			}
 		}
 		if (item.getItemTemplate().getItemQuality() == ItemQuality.LEGEND)
@@ -1005,29 +1085,53 @@ public class EnchantService
 				case 13:
 				case 14:
 				case 15:
+				{
 					return 2500000;
+				}
 				case 16:
+				{
 					return 5000000;
+				}
 				case 17:
+				{
 					return 10000000;
+				}
 				case 18:
+				{
 					return 12500000;
+				}
 				case 19:
+				{
 					return 15000000;
+				}
 				case 20:
+				{
 					return 20000000;
+				}
 				case 21:
+				{
 					return 25000000;
+				}
 				case 22:
+				{
 					return 30000000;
+				}
 				case 23:
+				{
 					return 35000000;
+				}
 				case 24:
+				{
 					return 40000000;
+				}
 				case 25:
+				{
 					return 45000000;
+				}
 				default:
+				{
 					return 40000000;
+				}
 			}
 		}
 		if (item.getItemTemplate().getItemQuality() == ItemQuality.EPIC)
@@ -1050,29 +1154,53 @@ public class EnchantService
 				case 13:
 				case 14:
 				case 15:
+				{
 					return 5000000;
+				}
 				case 16:
+				{
 					return 10000000;
+				}
 				case 17:
+				{
 					return 20000000;
+				}
 				case 18:
+				{
 					return 25000000;
+				}
 				case 19:
+				{
 					return 30000000;
+				}
 				case 20:
+				{
 					return 40000000;
+				}
 				case 21:
+				{
 					return 50000000;
+				}
 				case 22:
+				{
 					return 60000000;
+				}
 				case 23:
+				{
 					return 70000000;
+				}
 				case 24:
+				{
 					return 80000000;
+				}
 				case 25:
+				{
 					return 90000000;
+				}
 				default:
+				{
 					return 90000000;
+				}
 			}
 		}
 		else if (item.getItemTemplate().getItemQuality() == ItemQuality.MYTHIC)
@@ -1095,29 +1223,53 @@ public class EnchantService
 				case 13:
 				case 14:
 				case 15:
+				{
 					return 10000000;
+				}
 				case 16:
+				{
 					return 20000000;
+				}
 				case 17:
+				{
 					return 40000000;
+				}
 				case 18:
+				{
 					return 50000000;
+				}
 				case 19:
+				{
 					return 60000000;
+				}
 				case 20:
+				{
 					return 80000000;
+				}
 				case 21:
+				{
 					return 100000000;
+				}
 				case 22:
+				{
 					return 120000000;
+				}
 				case 23:
+				{
 					return 140000000;
+				}
 				case 24:
+				{
 					return 160000000;
+				}
 				case 25:
+				{
 					return 180000000;
+				}
 				default:
+				{
 					return 180000000;
+				}
 			}
 		}
 		else
@@ -1200,18 +1352,26 @@ public class EnchantService
 			switch (parentItem.getItemTemplate().getItemQuality())
 			{
 				case RARE:
+				{
 					addSuccessRate *= EnchantsConfig.LESSER_SUP;
 					break;
+				}
 				case LEGEND:
 				case UNIQUE:
+				{
 					addSuccessRate *= EnchantsConfig.REGULAR_SUP;
 					break;
+				}
 				case EPIC:
 				case MYTHIC:
+				{
 					addSuccessRate *= EnchantsConfig.GREATER_SUP;
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			if (isManastoneOnly)
 			{
@@ -1287,17 +1447,22 @@ public class EnchantService
 					case HARP_2H: // 4.3
 					case CANNON_2H: // 4.3
 					case KEYBLADE_2H: // 4.5
+					{
 						modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
 						modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ATTACK, 0));
 						break;
+					}
 					case MACE_1H:
 					case STAFF_2H:
+					{
 						modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ATTACK, 0));
 						modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
 						modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
 						break;
+					}
 					case SWORD_1H:
 					case DAGGER_1H:
+					{
 						if (item.getEquipmentSlot() == ItemSlot.MAIN_HAND.getSlotIdMask())
 						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAIN_HAND_POWER, 0));
@@ -1307,11 +1472,14 @@ public class EnchantService
 							modifiers.add(new StatEnchantFunction(item, StatEnum.OFF_HAND_POWER, 0));
 						}
 						break;
+					}
 					case SWORD_2H:
 					case BOW:
 					case POLEARM_2H:
+					{
 						modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
 						break;
+					}
 				}
 			}
 			else if (item.getItemTemplate().isArmor())
@@ -1340,78 +1508,110 @@ public class EnchantService
 					switch (plumeId)
 					{
 						case 10051:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
+						}
 						case 10052:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
+						}
 						// Plume 4.9
 						case 10056:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
+						}
 						case 10057:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
+						}
 						case 10063:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
+						}
 						case 10064:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
+						}
 						case 10065:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
+						}
 						case 10066:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							break;
+						}
 						// Plume 5.1
 						case 10103:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ACCURACY, 0));
 							break;
+						}
 						case 10104:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_CRITICAL, 0));
 							break;
+						}
 						case 10105:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ACCURACY, 0));
 							break;
+						}
 						// Pure Plume 5.1
 						case 10106:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_CRITICAL, 0));
 							break;
+						}
 						case 10107:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
 							break;
+						}
 						case 10108:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
 							break;
+						}
 						case 10109:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
 							break;
+						}
 						case 10110:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 							modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
 							break;
+						}
 					}
 				}
 				else
@@ -1448,12 +1648,16 @@ public class EnchantService
 						case HELMET:
 						case EARRINGS:
 						case NECKLACE:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PVP_ATTACK_RATIO, 0));
 							break;
+						}
 						case RINGS:
 						case BELT:
+						{
 							modifiers.add(new StatEnchantFunction(item, StatEnum.PVP_DEFEND_RATIO, 0));
 							break;
+						}
 					}
 				}
 			}
@@ -1583,7 +1787,9 @@ public class EnchantService
 			case 101801341:
 			case 100002007:
 			case 100002008:
+			{
 				return true;
+			}
 		}
 		return false;
 	}

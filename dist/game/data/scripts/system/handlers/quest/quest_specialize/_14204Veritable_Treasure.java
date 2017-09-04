@@ -113,6 +113,7 @@ public class _14204Veritable_Treasure extends QuestHandler
 			{
 				case 214250:
 				case 214251:
+				{
 					if (qs.getQuestVarById(1) < 8)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -123,6 +124,7 @@ public class _14204Veritable_Treasure extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

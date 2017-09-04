@@ -98,26 +98,38 @@ public class AdjutantAnuhartAI2 extends AggressiveNpcAI2
 				switch (percent)
 				{
 					case 90:
+					{
 						swiftAttack(20940);
 						startBladeStormTask();
 						break;
+					}
 					case 70:
+					{
 						swiftAttack(20939);
 						break;
+					}
 					case 50:
+					{
 						swiftAttack(20938);
 						startBladeStormTask();
 						break;
+					}
 					case 30:
+					{
 						swiftAttack(20940);
 						break;
+					}
 					case 20:
+					{
 						swiftAttack(20939);
 						startBladeStormTask();
 						break;
+					}
 					case 10:
+					{
 						swiftAttack(20938);
 						break;
+					}
 				}
 				percents.remove(percent);
 				break;

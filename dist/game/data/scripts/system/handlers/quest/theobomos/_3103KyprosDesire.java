@@ -74,7 +74,9 @@ public class _3103KyprosDesire extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

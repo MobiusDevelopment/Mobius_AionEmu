@@ -114,6 +114,7 @@ public class _16901Kaidan_Capture extends QuestHandler
 			{
 				case 231552:
 				case 231554:
+				{
 					if (qs.getQuestVarById(0) < 1)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -121,6 +122,7 @@ public class _16901Kaidan_Capture extends QuestHandler
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

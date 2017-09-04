@@ -67,20 +67,25 @@ public class CM_CHAT_MESSAGE_PUBLIC extends AionClientPacket
 			switch (type)
 			{
 				case GROUP:
+				{
 					if (!player.isInTeam())
 					{
 						return;
 					}
 					broadcastToGroupMembers(player);
 					break;
+				}
 				case ALLIANCE:
+				{
 					if (!player.isInAlliance2())
 					{
 						return;
 					}
 					broadcastToAllianceMembers(player);
 					break;
+				}
 				case GROUP_LEADER:
+				{
 					if (!player.isInTeam())
 					{
 						return;
@@ -94,19 +99,25 @@ public class CM_CHAT_MESSAGE_PUBLIC extends AionClientPacket
 						broadcastToAllianceMembers(player);
 					}
 					break;
+				}
 				case LEGION:
+				{
 					broadcastToLegionMembers(player);
 					break;
+				}
 				case LEAGUE:
 				case LEAGUE_ALERT:
+				{
 					if (!player.isInLeague())
 					{
 						return;
 					}
 					broadcastToLeagueMembers(player);
 					break;
+				}
 				case NORMAL:
 				case SHOUT:
+				{
 					if (player.isGM())
 					{
 						broadcastFromGm(player);
@@ -123,13 +134,17 @@ public class CM_CHAT_MESSAGE_PUBLIC extends AionClientPacket
 						}
 					}
 					break;
+				}
 				case COMMAND:
+				{
 					if ((player.getAbyssRank().getRank() == AbyssRankEnum.COMMANDER) || (player.getAbyssRank().getRank() == AbyssRankEnum.SUPREME_COMMANDER))
 					{
 						broadcastFromCommander(player);
 					}
 					break;
+				}
 				default:
+				{
 					if (player.isGM())
 					{
 						broadcastFromGm(player);
@@ -139,6 +154,7 @@ public class CM_CHAT_MESSAGE_PUBLIC extends AionClientPacket
 						AuditLogger.info(player, String.format("Send message type %s. Message: %s", type, message));
 					}
 					break;
+				}
 			}
 		}
 	}

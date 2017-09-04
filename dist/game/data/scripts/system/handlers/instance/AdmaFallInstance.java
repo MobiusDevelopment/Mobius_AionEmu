@@ -39,7 +39,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * Author Rinzler (Encom) Source: https://www.youtube.com/watch?v=wqwUrBYN85A
@@ -59,9 +58,12 @@ public class AdmaFallInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 220418: // IDF6_Adma_Princess_SN_67_Ae.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000263, 1)); // key_idf6_adma_reward.
 				break;
+			}
 			case 220427: // IDF6_Adma_EvilSpirit_67_Ah.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -72,26 +74,37 @@ public class AdmaFallInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188054906, 1)); // 악령의 무기 상자.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188054907, 1)); // 악령의 방어구 상자.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 806220: // IDF6_Adma_Tbox.
+			{
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 110000048, 1)); // 카르미웬의 소중한 드레스.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 125004517, 1)); // 카르미웬의 소중한 머리 장식.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -109,20 +122,26 @@ public class AdmaFallInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 220417: // IDF6_Adma_Zombie_SN_67_Ae.
+			{
 				doors.get(1).setOpen(true);
 				// A heavy door has opened somewhere.
 				sendMsgByRace(1401839, Race.PC_ALL, 2000);
 				break;
+			}
 			case 220418: // IDF6_Adma_Princess_SN_67_Ae.
+			{
 				doors.get(28).setOpen(true);
 				// A heavy door has opened somewhere.
 				sendMsgByRace(1401839, Race.PC_ALL, 2000);
 				break;
+			}
 			case 220427: // IDF6_Adma_EvilSpirit_67_Ah.
+			{
 				spawn(806205, 532.3307f, 510.2517f, 197.94453f, (byte) 60); // IDF6_Adma_Out_Portal.
 				spawn(806220, 525.2205f, 510.08893f, 197.72095f, (byte) 44); // IDF6_Adma_Tbox.
 				sendMsg("[Congratulation]: you finish <Adma's Fall 5.0>");
 				break;
+			}
 		}
 	}
 	
@@ -138,36 +157,18 @@ public class AdmaFallInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

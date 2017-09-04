@@ -96,6 +96,7 @@ public class _18402Rooting_Out_Corruption extends QuestHandler
 		switch (targetId)
 		{
 			case 701015:
+			{
 				if (qs.getQuestVarById(1) < 5)
 				{
 					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -107,6 +108,7 @@ public class _18402Rooting_Out_Corruption extends QuestHandler
 					updateQuestStatus(env);
 				}
 				break;
+			}
 		}
 		return false;
 	}

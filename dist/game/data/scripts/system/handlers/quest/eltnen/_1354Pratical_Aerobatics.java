@@ -150,6 +150,7 @@ public class _1354Pratical_Aerobatics extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (qs.getQuestVarById(0) == 0)
 						{
 							return sendQuestDialog(env, 1003);
@@ -158,14 +159,19 @@ public class _1354Pratical_Aerobatics extends QuestHandler
 						{
 							return sendQuestDialog(env, 2375);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (qs.getQuestVarById(0) == 0)
 						{
 							QuestService.questTimerStart(env, 300); // 5 Minutes.
 							return defaultCloseDialog(env, 0, 1);
 						}
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

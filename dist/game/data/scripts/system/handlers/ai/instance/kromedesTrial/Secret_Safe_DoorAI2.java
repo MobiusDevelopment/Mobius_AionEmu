@@ -53,8 +53,10 @@ public class Secret_Safe_DoorAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 700924: // Secret Safe Door.
+				{
 					TeleportService2.teleportTo(player, 300230000, instanceId, 593.46f, 774.000f, 215.58f, (byte) 0);
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

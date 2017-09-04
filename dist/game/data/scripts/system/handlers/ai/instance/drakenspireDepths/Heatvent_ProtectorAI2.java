@@ -63,6 +63,7 @@ public class Heatvent_ProtectorAI2 extends AggressiveNpcAI2
 			switch (getNpcId())
 			{
 				case 236228: // Heatvent Protector.
+				{
 					// If the Protectors are not defeated in 5 minutes, the Detachment's Rush Squad will sacrifice themselves to destroy the Fount.
 					NpcShoutsService.getInstance().sendMsg(getOwner(), 1402684, 0);
 					// In 1 minute, the Detachment's Rush Squad will resolve to sacrifice themselves and attempt to destroy the Fount.
@@ -80,6 +81,7 @@ public class Heatvent_ProtectorAI2 extends AggressiveNpcAI2
 						}
 					}, 300000);
 					break;
+				}
 			}
 		}
 		checkPercentage(getLifeStats().getHpPercentage());
@@ -92,8 +94,10 @@ public class Heatvent_ProtectorAI2 extends AggressiveNpcAI2
 		switch (getNpcId())
 		{
 			case 236228:
+			{
 				shareSource();
 				break;
+			}
 		}
 	}
 	

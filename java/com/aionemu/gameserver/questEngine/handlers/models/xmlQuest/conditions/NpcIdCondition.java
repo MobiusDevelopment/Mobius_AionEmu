@@ -51,19 +51,33 @@ public class NpcIdCondition extends QuestCondition
 		switch (getOp())
 		{
 			case EQUAL:
+			{
 				return id == values;
+			}
 			case GREATER:
+			{
 				return id > values;
+			}
 			case GREATER_EQUAL:
+			{
 				return id >= values;
+			}
 			case LESSER:
+			{
 				return id < values;
+			}
 			case LESSER_EQUAL:
+			{
 				return id <= values;
+			}
 			case NOT_EQUAL:
+			{
 				return id != values;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 }

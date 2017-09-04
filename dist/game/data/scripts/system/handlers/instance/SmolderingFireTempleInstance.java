@@ -106,6 +106,7 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 244435: // Potion Chest.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -119,26 +120,37 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 834058: // Smoldering Fire Temple Treasure Chest.
 			case 834059: // Smoldering Fire Temple Premium Treasure Chest.
 			case 834060: // Smoldering Fire Temple Treasure Chest.
 			case 834061: // Smoldering Fire Temple Quality Treasure Chest.
+			{
 				switch (Rnd.get(1, 4))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054631, 1)); // Middle Grade Reward Bundle.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054632, 1)); // Low Grade Reward Bundle.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054629, 1)); // Highest Grade Reward Bundle.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054630, 1)); // High Grade Reward Bundle.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -163,20 +175,27 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 			case 244084: // Flame Spirit.
 			case 244085: // Fire Spirit.
 			case 244091: // Flame Spirit.
+			{
 				points = 180;
 				despawnNpc(npc);
 				break;
+			}
 			case 244086: // Kalgolem.
 			case 244092: // Fire Spirit.
+			{
 				points = 160;
 				despawnNpc(npc);
 				break;
+			}
 			case 244087: // Enhanced Kalgolem.
 			case 244088: // Vengeful Obscura.
+			{
 				points = 250;
 				despawnNpc(npc);
 				break;
+			}
 			case 244093: // Vengeful Obscura.
+			{
 				points = 250;
 				despawnNpc(npc);
 				vengefulObscura++;
@@ -185,27 +204,37 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 					spawn(244097, 416.1324f, 97.165924f, 117.19401f, (byte) 50); // Temple Guardian.
 				}
 				break;
+			}
 			case 244089: // Vengeful Obscura.
+			{
 				points = 660;
 				despawnNpc(npc);
 				break;
+			}
 			case 244094: // Enhanced Orange Crystal Molgat.
+			{
 				points = 1740;
 				despawnNpc(npc);
 				break;
+			}
 			case 244095: // Enhanced Silver Blade Rotan.
+			{
 				points = 2040;
 				despawnNpc(npc);
 				doors.get(8).setOpen(true);
 				break;
+			}
 			case 244096: // Enhanced Tough Sipus.
+			{
 				points = 12000;
 				despawnNpc(npc);
 				final SpawnTemplate kromedeOpenRoom1 = SpawnEngine.addNewSingleTimeSpawn(302000000, 834067, 292.34671f, 166.54131f, 119.53692f, (byte) 0);
 				kromedeOpenRoom1.setEntityId(40);
 				objects.put(834067, SpawnEngine.spawnObject(kromedeOpenRoom1, instanceId));
 				break;
+			}
 			case 244097: // Temple Guardian.
+			{
 				points = 14400;
 				despawnNpc(npc);
 				final SpawnTemplate kromedeOpenRoom2 = SpawnEngine.addNewSingleTimeSpawn(302000000, 834066, 169.24069f, 417.35110f, 140.77321f, (byte) 0);
@@ -213,22 +242,29 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 				objects.put(834066, SpawnEngine.spawnObject(kromedeOpenRoom2, instanceId));
 				spawn(244098, 416.1324f, 97.165924f, 117.19401f, (byte) 50); // Enraged Lady Angerr.
 				break;
+			}
 			case 244098: // Enraged Lady Angerr.
+			{
 				points = 48000;
 				despawnNpc(npc);
 				spawn(244099, 416.1324f, 97.165924f, 117.19401f, (byte) 50); // Enraged Judge Kaliga.
 				break;
+			}
 			case 244099: // Enraged Judge Kaliga.
+			{
 				points = 272000;
 				despawnNpc(npc);
 				spawn(244100, 416.1324f, 97.165924f, 117.19401f, (byte) 50); // Enraged Kromede.
 				break;
+			}
 			case 244100: // Enraged Kromede.
+			{
 				points = 500000;
 				despawnNpc(npc);
 				spawn(834068, 416.1324f, 97.165924f, 117.19401f, (byte) 50); // Old Fire Temple Fortune Server.
 				ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player -> stopInstance(player)), 3000);
 				break;
+			}
 		}
 		if (instanceReward.getInstanceScoreType().isStartProgress())
 		{
@@ -245,6 +281,7 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 834055: // GM Stomper.
+			{
 				if (player.getCommonData().getRace() == Race.ELYOS)
 				{
 					effectController.removeEffect(21376);
@@ -258,7 +295,9 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 					SkillEngine.getInstance().getSkill(npc, 21378, 1, player).useNoAnimationSkill();
 				}
 				break;
+			}
 			case 834056: // GM Shine.
+			{
 				if (player.getCommonData().getRace() == Race.ELYOS)
 				{
 					effectController.removeEffect(21375);
@@ -272,7 +311,9 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 					SkillEngine.getInstance().getSkill(npc, 21379, 1, player).useNoAnimationSkill();
 				}
 				break;
+			}
 			case 834057: // GM Iris.
+			{
 				if (player.getCommonData().getRace() == Race.ELYOS)
 				{
 					effectController.removeEffect(21375);
@@ -286,6 +327,7 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 					SkillEngine.getInstance().getSkill(npc, 21380, 1, player).useNoAnimationSkill();
 				}
 				break;
+			}
 		}
 	}
 	
@@ -434,29 +476,41 @@ public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 			switch (smolderingRank)
 			{
 				case 1: // Rank S
+				{
 					playerReward.setSmolderingKey(6);
 					// Smoldering Fire Temple Treasure Key.
 					ItemService.addItem(player, 185000270, 6);
 					break;
+				}
 				case 2: // Rank A
+				{
 					playerReward.setSmolderingKey(4);
 					// Smoldering Fire Temple Treasure Key.
 					ItemService.addItem(player, 185000270, 4);
 					break;
+				}
 				case 3: // Rank B
+				{
 					playerReward.setSmolderingKey(3);
 					// Smoldering Fire Temple Treasure Key.
 					ItemService.addItem(player, 185000270, 3);
 					break;
+				}
 				case 4: // Rank C
+				{
 					playerReward.setSmolderingKey(2);
 					// Smoldering Fire Temple Treasure Key.
 					ItemService.addItem(player, 185000270, 2);
 					break;
+				}
 				case 5: // Rank D
+				{
 					break;
+				}
 				case 6: // Rank F
+				{
 					break;
+				}
 			}
 		}
 	}

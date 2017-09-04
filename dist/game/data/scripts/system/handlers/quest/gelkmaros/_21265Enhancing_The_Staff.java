@@ -63,7 +63,9 @@ public class _21265Enhancing_The_Staff extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

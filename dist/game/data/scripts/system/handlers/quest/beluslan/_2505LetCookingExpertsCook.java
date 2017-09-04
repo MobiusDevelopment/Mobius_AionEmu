@@ -122,11 +122,14 @@ public class _2505LetCookingExpertsCook extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						removeQuestItem(env, 182204404, 1);
@@ -139,6 +142,7 @@ public class _2505LetCookingExpertsCook extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		return false;

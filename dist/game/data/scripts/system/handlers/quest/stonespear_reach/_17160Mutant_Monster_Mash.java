@@ -114,6 +114,7 @@ public class _17160Mutant_Monster_Mash extends QuestHandler
 				case 235830:
 				case 235912:
 				case 235916:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -124,6 +125,7 @@ public class _17160Mutant_Monster_Mash extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

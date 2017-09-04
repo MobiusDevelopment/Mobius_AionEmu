@@ -56,6 +56,7 @@ public class Wealhtheow_Keep_Rune_EliteAI2 extends AggressiveNpcAI2
 			// Wealhtheow's Keep.
 			case 251825:
 			case 251830:
+			{
 				treasureChest();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -68,6 +69,7 @@ public class Wealhtheow_Keep_Rune_EliteAI2 extends AggressiveNpcAI2
 					}
 				}, 10000);
 				break;
+			}
 		}
 		super.handleDied();
 	}

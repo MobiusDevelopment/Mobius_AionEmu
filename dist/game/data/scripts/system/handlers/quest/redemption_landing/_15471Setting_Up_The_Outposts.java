@@ -133,6 +133,7 @@ public class _15471Setting_Up_The_Outposts extends QuestHandler
 				case 882982:
 				case 882994:
 				case 883006:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -143,6 +144,7 @@ public class _15471Setting_Up_The_Outposts extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

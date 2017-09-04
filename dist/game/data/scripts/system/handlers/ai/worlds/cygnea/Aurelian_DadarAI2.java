@@ -97,6 +97,7 @@ public class Aurelian_DadarAI2 extends AggressiveNpcAI2
 					case 70:
 					case 44:
 					case 23:
+					{
 						cancelspecialSkillTask();
 						think = false;
 						EmoteManager.emoteStopAttacking(getOwner());
@@ -111,6 +112,7 @@ public class Aurelian_DadarAI2 extends AggressiveNpcAI2
 							}
 						}, 3500);
 						break;
+					}
 					case 84:
 					case 79:
 					case 75:
@@ -129,8 +131,10 @@ public class Aurelian_DadarAI2 extends AggressiveNpcAI2
 					case 16:
 					case 11:
 					case 6:
+					{
 						startPhaseTask();
 						break;
+					}
 				}
 				percents.remove(percent);
 				break;

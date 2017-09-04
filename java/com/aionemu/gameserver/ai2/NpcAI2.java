@@ -194,15 +194,25 @@ public class NpcAI2 extends AITemplate
 		switch (question)
 		{
 			case SHOULD_DECAY:
+			{
 				return NpcAIPolls.shouldDecay(this);
+			}
 			case SHOULD_RESPAWN:
+			{
 				return NpcAIPolls.shouldRespawn(this);
+			}
 			case SHOULD_REWARD:
+			{
 				return AIAnswers.POSITIVE;
+			}
 			case CAN_SHOUT:
+			{
 				return isMayShout() ? AIAnswers.POSITIVE : AIAnswers.NEGATIVE;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 	

@@ -61,19 +61,33 @@ public class QuestStatusCondition extends QuestCondition
 		switch (getOp())
 		{
 			case EQUAL:
+			{
 				return qstatus == value.value();
+			}
 			case GREATER:
+			{
 				return qstatus > value.value();
+			}
 			case GREATER_EQUAL:
+			{
 				return qstatus >= value.value();
+			}
 			case LESSER:
+			{
 				return qstatus < value.value();
+			}
 			case LESSER_EQUAL:
+			{
 				return qstatus <= value.value();
+			}
 			case NOT_EQUAL:
+			{
 				return qstatus != value.value();
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 }

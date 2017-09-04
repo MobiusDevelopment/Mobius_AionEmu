@@ -153,7 +153,9 @@ public class _11000WisplightMoralTour extends QuestHandler
 							return sendQuestEndDialog(env);
 						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 			}
@@ -169,7 +171,9 @@ public class _11000WisplightMoralTour extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

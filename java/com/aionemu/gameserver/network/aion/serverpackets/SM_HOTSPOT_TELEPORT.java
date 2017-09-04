@@ -59,20 +59,28 @@ public class SM_HOTSPOT_TELEPORT extends AionServerPacket
 		switch (action)
 		{
 			case 0:
+			{
 				writeD(playerObjId);
 				break;
+			}
 			case 1:
+			{
 				writeD(playerObjId);
 				writeD(teleportId);
 				break;
+			}
 			case 2:
+			{
 				writeD(playerObjId);
 				break;
+			}
 			case 3:
+			{
 				writeD(playerObjId);
 				writeD(teleportId);
 				writeD(cooldown);
 				break;
+			}
 		}
 	}
 }

@@ -129,9 +129,13 @@ public class _18602Nightmare_In_Shining_Armor extends QuestHandler
 		switch (targetId)
 		{
 			case 217005: // Shadow Judge Kaliga.
+			{
 				return defaultOnKillEvent(env, targetId, 3, true);
+			}
 			case 217006: // Kaliga The Unjust.
+			{
 				return defaultOnKillEvent(env, targetId, 3, true);
+			}
 		}
 		return false;
 	}

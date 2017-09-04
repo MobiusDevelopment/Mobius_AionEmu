@@ -50,7 +50,6 @@ import com.aionemu.gameserver.skillengine.model.DispelCategoryType;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****/
 /**
@@ -185,42 +184,27 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 	
 	private void sendPacket(AionServerPacket packet)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, packet);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, packet));
 	}
 	
 	private void spawnBlessedRelics(int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed && !instanceReward.isRewarded())
 			{
-				if (!isInstanceDestroyed && !instanceReward.isRewarded())
-				{
-					spawn(Rnd.get(1, 2) == 1 ? 701173 : 701187, 1841.951f, 1733.968f, 300.242f, (byte) 0);
-				}
+				spawn(Rnd.get(1, 2) == 1 ? 701173 : 701187, 1841.951f, 1733.968f, 300.242f, (byte) 0);
 			}
 		}, time);
 	}
 	
 	private void spawnCursedRelics(int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed && !instanceReward.isRewarded())
 			{
-				if (!isInstanceDestroyed && !instanceReward.isRewarded())
-				{
-					spawn(Rnd.get(1, 2) == 1 ? 701174 : 701188, 674.517f, 1778.428f, 204.693f, (byte) 0);
-				}
+				spawn(Rnd.get(1, 2) == 1 ? 701174 : 701188, 674.517f, 1778.428f, 204.693f, (byte) 0);
 			}
 		}, time);
 	}
@@ -233,18 +217,30 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 			case 243675: // Red Sand Brax.
 			case 243676: // Red Sand Tog.
 			case 243667: // Mutated Drakan Fighter.
+			{
 				return 100;
+			}
 			case 243681: // Casus Manor Chief Maid.
+			{
 				return 400;
+			}
 			case 243671: // Casus Manor Butler.
+			{
 				return 650;
+			}
 			case 243672: // Casus Manor Noble.
+			{
 				return 750;
+			}
 			case 243665: // Mumu Rake Gatherer.
+			{
 				return 1250;
+			}
 			case 243673: // Pale Carmina.
 			case 243674: // Corrupt Casus.
+			{
 				return 1500;
+			}
 			// Blessed Relics/Cursed Relics
 			case 701173:
 			case 701174:
@@ -254,9 +250,13 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 			case 701202:
 			case 701834:
 			case 701835:
+			{
 				return 1750;
+			}
 			default:
+			{
 				return 0;
+			}
 		}
 	}
 	
@@ -291,64 +291,48 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 			spawnBlessedRelics(0);
 		}
 		instanceReward.setInstanceStartTime();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed && !instanceReward.isRewarded() && canStart())
 			{
-				if (!isInstanceDestroyed && !instanceReward.isRewarded() && canStart())
+				openDoors();
+				// The member recruitment window has passed. You cannot recruit any more members.
+				sendMsgByRace(1401181, Race.PC_ALL, 0);
+				instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+				sendPacket();
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					openDoors();
-					// The member recruitment window has passed. You cannot recruit any more members.
-					sendMsgByRace(1401181, Race.PC_ALL, 0);
-					instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-					sendPacket();
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					if (!isInstanceDestroyed && !instanceReward.isRewarded())
 					{
-						@Override
-						public void run()
+						instanceReward.setRound(2);
+						instanceReward.setRndZone();
+						sendPacket();
+						changeZone();
+						// If you defeat a higher rank group in this round, you can earn additional points.
+						sendMsgByRace(1401491, Race.PC_ALL, 2000);
+						ThreadPoolManager.getInstance().schedule((Runnable) () ->
 						{
 							if (!isInstanceDestroyed && !instanceReward.isRewarded())
 							{
-								instanceReward.setRound(2);
+								instanceReward.setRound(3);
 								instanceReward.setRndZone();
 								sendPacket();
 								changeZone();
 								// If you defeat a higher rank group in this round, you can earn additional points.
 								sendMsgByRace(1401491, Race.PC_ALL, 2000);
-								ThreadPoolManager.getInstance().schedule(new Runnable()
+								ThreadPoolManager.getInstance().schedule((Runnable) () ->
 								{
-									@Override
-									public void run()
+									if (!isInstanceDestroyed && !instanceReward.isRewarded())
 									{
-										if (!isInstanceDestroyed && !instanceReward.isRewarded())
-										{
-											instanceReward.setRound(3);
-											instanceReward.setRndZone();
-											sendPacket();
-											changeZone();
-											// If you defeat a higher rank group in this round, you can earn additional points.
-											sendMsgByRace(1401491, Race.PC_ALL, 2000);
-											ThreadPoolManager.getInstance().schedule(new Runnable()
-											{
-												@Override
-												public void run()
-												{
-													if (!isInstanceDestroyed && !instanceReward.isRewarded())
-													{
-														instanceReward.setInstanceScoreType(InstanceScoreType.END_PROGRESS);
-														reward();
-														sendPacket();
-													}
-												}
-											}, 180000);
-										}
+										instanceReward.setInstanceScoreType(InstanceScoreType.END_PROGRESS);
+										reward();
+										sendPacket();
 									}
 								}, 180000);
 							}
-						}
-					}, 180000);
-				}
+						}, 180000);
+					}
+				}, 180000);
 			}
 		}, 120000);
 	}
@@ -370,24 +354,13 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override
@@ -479,17 +452,13 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 	
 	private void changeZone()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			for (Player player : instance.getPlayersInside())
 			{
-				for (Player player : instance.getPlayersInside())
-				{
-					instanceReward.portToPosition(player);
-				}
-				sendPacket();
+				instanceReward.portToPosition(player);
 			}
+			sendPacket();
 		}, 1000);
 	}
 	
@@ -560,19 +529,15 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 		{
 			npc.getController().onDelete();
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						onExitInstance(player);
-					}
-					AutoGroupService.getInstance().unRegisterInstance(instanceId);
+					onExitInstance(player);
 				}
+				AutoGroupService.getInstance().unRegisterInstance(instanceId);
 			}
 		}, 10000);
 	}
@@ -603,29 +568,39 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 701169: // Plaza Flame Thrower.
+			{
 				despawnNpc(npc);
 				spawn(702405, 1798.8951f, 1727.2413f, 302.81836f, (byte) 62);
 				spawn(702405, 1808.9938f, 1703.7997f, 302.73233f, (byte) 74);
 				break;
+			}
 			case 701170: // Plaza Flame Thrower.
+			{
 				despawnNpc(npc);
 				spawn(702405, 1848.1892f, 1689.1056f, 302.74982f, (byte) 92);
 				spawn(702405, 1871.4725f, 1699.5228f, 303.0393f, (byte) 104);
 				break;
+			}
 			case 701171: // Plaza Flame Thrower.
+			{
 				despawnNpc(npc);
 				spawn(702405, 1886.8333f, 1738.3987f, 302.5374f, (byte) 3);
 				spawn(702405, 1876.5596f, 1761.9902f, 302.6582f, (byte) 14);
 				break;
+			}
 			case 701172: // Plaza Flame Thrower.
+			{
 				despawnNpc(npc);
 				spawn(702405, 1837.242f, 1776.3717f, 302.7615f, (byte) 32);
 				spawn(702405, 1814.1249f, 1766.2068f, 302.61606f, (byte) 43);
 				break;
+			}
 			case 207102: // Recovery Relics.
+			{
 				player.getLifeStats().increaseHp(SM_ATTACK_STATUS.TYPE.HP, 10000);
 				player.getLifeStats().increaseMp(SM_ATTACK_STATUS.TYPE.MP, 10000);
 				break;
+			}
 			/**
 			 * Treasure Box [Arena Of Chaos/Chaos Training Grounds]
 			 */
@@ -635,14 +610,17 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 			case 218787:
 			case 218788:
 			case 218789:
+			{
 				/**
 				 * Treasure Box [Arena Of Discipline/Discipline Training Grounds]
 				 */
+			}
 			case 218791:
 			case 218792:
 			case 218793:
 			case 218794:
 			case 218795:
+			{
 				if (player.getInventory().isFull())
 				{
 					sendMsgByRace(1390149, Race.PC_ALL, 0);
@@ -650,29 +628,44 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 				switch (Rnd.get(1, 7))
 				{
 					case 1:
+					{
 						ItemService.addItem(player, 186000096, 10); // Platinum Medal.
 						break;
+					}
 					case 2:
+					{
 						ItemService.addItem(player, 186000130, 10); // Crucible Insignia.
 						break;
+					}
 					case 3:
+					{
 						ItemService.addItem(player, 186000137, 10); // Courage Insignia.
 						break;
+					}
 					case 4:
+					{
 						ItemService.addItem(player, 186000147, 10); // Mithril Medal.
 						break;
+					}
 					case 5:
+					{
 						ItemService.addItem(player, 186000165, 10); // Opportunity Token.
 						break;
+					}
 					case 6:
+					{
 						ItemService.addItem(player, 186000442, 10); // Valor Insignia.
 						break;
+					}
 					case 7:
+					{
 						ItemService.addItem(player, 182213259, 10); // Glorious Insignia.
 						break;
+					}
 				}
 				despawnNpc(npc);
 				break;
+			}
 		}
 		if (!instanceReward.isStartProgress())
 		{

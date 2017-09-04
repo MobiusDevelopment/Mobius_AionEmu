@@ -87,6 +87,7 @@ public class _24025Crisis_In_Morheim extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
@@ -95,9 +96,13 @@ public class _24025Crisis_In_Morheim extends QuestHandler
 							{
 								return sendQuestDialog(env, 1693);
 							}
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							if (var == 2)
 							{
 								if (QuestService.collectItemCheck(env, true))
@@ -106,6 +111,7 @@ public class _24025Crisis_In_Morheim extends QuestHandler
 									return defaultCloseDialog(env, 2, 3);
 								}
 							}
+						}
 					}
 					break;
 				}
@@ -114,9 +120,13 @@ public class _24025Crisis_In_Morheim extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							return sendQuestDialog(env, 1352);
+						}
 						case STEP_TO_2:
+						{
 							return defaultCloseDialog(env, 1, 2);
+						}
 					}
 					break;
 				}
@@ -125,9 +135,13 @@ public class _24025Crisis_In_Morheim extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							return sendQuestDialog(env, 2034);
+						}
 						case SET_REWARD:
+						{
 							return defaultCloseDialog(env, 3, 3, true, false);
+						}
 					}
 					break;
 				}

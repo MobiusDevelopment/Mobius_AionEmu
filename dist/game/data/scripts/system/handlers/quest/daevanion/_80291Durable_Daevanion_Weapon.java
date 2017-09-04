@@ -94,21 +94,27 @@ public class _80291Durable_Daevanion_Weapon extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1011);
 						}
+					}
 					case CHECK_COLLECTED_ITEMS:
+					{
 						if (var == 0)
 						{
 							return checkQuestItems(env, 0, 1, true, 5, 0);
 						}
 						break;
+					}
 					case SELECT_ACTION_1352:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 				}
 			}
 			return false;

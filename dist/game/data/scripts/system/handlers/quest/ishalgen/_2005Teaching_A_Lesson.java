@@ -84,6 +84,7 @@ public class _2005Teaching_A_Lesson extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
@@ -93,10 +94,14 @@ public class _2005Teaching_A_Lesson extends QuestHandler
 								return sendQuestDialog(env, 1352);
 							}
 							break;
+						}
 						case SELECT_ACTION_1012:
+						{
 							playQuestMovie(env, 54);
 							break;
+						}
 						case STEP_TO_1:
+						{
 							if (var == 0)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -105,7 +110,9 @@ public class _2005Teaching_A_Lesson extends QuestHandler
 								return true;
 							}
 							break;
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							if (var == 1)
 							{
 								if (QuestService.collectItemCheck(env, true))
@@ -120,6 +127,7 @@ public class _2005Teaching_A_Lesson extends QuestHandler
 								}
 							}
 							break;
+						}
 					}
 				}
 			}

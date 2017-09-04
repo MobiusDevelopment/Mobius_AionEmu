@@ -94,14 +94,20 @@ public class ItemInfoBlob extends PacketWriteHelper
 				switch (itemTemplate.getArmorType())
 				{
 					case WING:
+					{
 						blob.addBlobEntry(ItemBlobType.SLOTS_WING);
 						break;
+					}
 					case SHIELD:
+					{
 						blob.addBlobEntry(ItemBlobType.SLOTS_SHIELD);
 						break;
+					}
 					default:
+					{
 						blob.addBlobEntry(ItemBlobType.SLOTS_ARMOR);
 						break;
+					}
 				}
 			}
 			else if (itemTemplate.isWeapon())

@@ -74,8 +74,10 @@ public class GatherableController extends VisibleObjectController<Gatherable>
 				case 400651: // Young Azpha.
 				case 400701: // Mela Sapling.
 				case 400751: // Raydam Sapling.
+				{
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GATHER_INCORRECT_SKILL);
 					break;
+				}
 			}
 			finishGathering(player);
 		}
@@ -138,11 +140,15 @@ public class GatherableController extends VisibleObjectController<Gatherable>
 		switch (result)
 		{
 			case 1:
+			{
 				materials = template.getExtraMaterials().getMaterial();
 				break;
+			}
 			case 2:
+			{
 				materials = template.getMaterials().getMaterial();
 				break;
+			}
 		}
 		mats = new RndSelector<>();
 		for (Material mat : materials)

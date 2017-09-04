@@ -96,6 +96,7 @@ public class _1562CrossedDestiny extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if ((qs.getQuestVarById(0) == 1) && (player.getInventory().getItemCountByItemId(182201780) == 1))
 							{
 								return sendQuestDialog(env, 1352);
@@ -104,19 +105,26 @@ public class _1562CrossedDestiny extends QuestHandler
 							{
 								return sendQuestDialog(env, 1438);
 							}
+						}
 						case FINISH_DIALOG:
+						{
 							return defaultCloseDialog(env, 0, 0);
+						}
 						case STEP_TO_2:
+						{
 							if (qs.getQuestVarById(0) == 1)
 							{
 								defaultStartFollowEvent(env, (Npc) env.getVisibleObject(), 204589, 0, 0);
 								return defaultCloseDialog(env, 1, 2, false, false, 0, 0, 182201780, 1); // 2
 							}
+						}
 						case USE_OBJECT:
+						{
 							if (qs.getQuestVarById(0) == 1)
 							{
 								return defaultStartFollowEvent(env, (Npc) env.getVisibleObject(), 204589, 1, 2);
 							}
+						}
 					}
 				}
 			}

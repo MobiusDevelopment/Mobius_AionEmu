@@ -58,9 +58,11 @@ public class Artifact_Overlord_KrobanAI2 extends AggressiveNpcAI2
 			switch (getNpcId())
 			{
 				case 243684: // Artifact Overlord Kroban.
+				{
 					// The Fractured Elemental is building up power. Gather together to disperse the damage.
 					PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_Teo_T_Boss_Skill_02, 4000);
 					break;
+				}
 			}
 		}
 		checkPercentage(getLifeStats().getHpPercentage());

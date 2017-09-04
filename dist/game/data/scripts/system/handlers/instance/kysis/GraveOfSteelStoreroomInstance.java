@@ -45,7 +45,6 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -79,9 +78,11 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 215414: // Kysis Chamber Artifact.
+			{
 				sendMsg("You win effect <Shield Of Compassion>");
 				SkillEngine.getInstance().getSkill(npc, 276, 10, player).useNoAnimationSkill();
 				break;
+			}
 		}
 	}
 	
@@ -97,23 +98,33 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 			case 215174: // Treasurer Swaraja.
 			case 215175: // Treasurer Chandra.
 			case 215176: // Treasurer Dragagh.
+			{
 				switch (Rnd.get(1, 3))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000061, 1)); // Kysis Armory Key.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000062, 1)); // Kysis Supply Base Key.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000063, 1)); // Kysis Operations Room Key.
 						break;
+					}
 				}
 				break;
+			}
 			case 215178: // Weakened Kysis Duke.
 			case 215179: // Awakened Kysis Duke.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000065, 1)); // Kysis Gold Room Key.
 				break;
+			}
 		}
 	}
 	
@@ -125,28 +136,40 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 4))
 		{
 			case 1:
+			{
 				spawn(215173, 527.769f, 212.12146f, 178.46744f, (byte) 90); // Treasurer Darmaraja.
 				break;
+			}
 			case 2:
+			{
 				spawn(215174, 527.769f, 212.12146f, 178.46744f, (byte) 90); // Treasurer Swaraja.
 				break;
+			}
 			case 3:
+			{
 				spawn(215175, 527.769f, 212.12146f, 178.46744f, (byte) 90); // Treasurer Chandra.
 				break;
+			}
 			case 4:
+			{
 				spawn(215176, 527.769f, 212.12146f, 178.46744f, (byte) 90); // Treasurer Dragagh.
 				break;
+			}
 		}
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				sendMsg("<Weakened Kysis Duke> appear!!!");
 				spawn(215178, 526.6656f, 845.7792f, 199.44875f, (byte) 90); // Weakened Kysis Duke.
 				break;
+			}
 			case 2:
+			{
 				sendMsg("<Awakened Kysis Duke> appear!!!");
 				spawn(215179, 526.6656f, 845.7792f, 199.44875f, (byte) 90); // Awakened Kysis Duke.
 				break;
+			}
 		}
 	}
 	
@@ -157,55 +180,36 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 215147: // Ranx Deathbow.
+			{
 				// A heavy door has opened somewhere.
 				sendMsgByRace(1401839, Race.PC_ALL, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						deleteNpc(731580);
-					}
-				}, 5000);
+				ThreadPoolManager.getInstance().schedule(() -> deleteNpc(731580), 5000);
 				break;
+			}
 			case 215159: // Ranx High Mage.
+			{
 				// A heavy door has opened somewhere.
 				sendMsgByRace(1401839, Race.PC_ALL, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						deleteNpc(700545);
-					}
-				}, 5000);
+				ThreadPoolManager.getInstance().schedule(() -> deleteNpc(700545), 5000);
 				break;
+			}
 			case 215172: // Ranx Medico.
+			{
 				// A heavy door has opened somewhere.
 				sendMsgByRace(1401839, Race.PC_ALL, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						deleteNpc(700546);
-					}
-				}, 5000);
+				ThreadPoolManager.getInstance().schedule(() -> deleteNpc(700546), 5000);
 				break;
+			}
 			case 215177: // Ebonlord Nukuam.
+			{
 				// A heavy door has opened somewhere.
 				sendMsgByRace(1401839, Race.PC_ALL, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						deleteNpc(700547);
-					}
-				}, 5000);
+				ThreadPoolManager.getInstance().schedule(() -> deleteNpc(700547), 5000);
 				break;
+			}
 			case 215178: // Weakened Kysis Duke.
 			case 215179: // Awakened Kysis Duke.
+			{
 				doors.get(11).setOpen(true);
 				doors.get(15).setOpen(true);
 				doors.get(17).setOpen(true);
@@ -219,18 +223,15 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 				doors.get(80).setOpen(true);
 				graveOfSteelStoreroomTask.cancel(true);
 				sendMsg("[Congratulation]: you finish <Kysis Chamber>");
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 ->
 				{
-					@Override
-					public void visit(Player player)
+					if (player1.isOnline())
 					{
-						if (player.isOnline())
-						{
-							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 0));
-						}
+						PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 0));
 					}
 				});
 				break;
+			}
 		}
 	}
 	
@@ -242,15 +243,11 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		{
 			isStartTimer1 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player1 ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player1.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 300));
 				}
 			});
 			graveOfSteelStoreroomChest.add((Npc) spawn(254574, 478.56662f, 815.6565f, 199.76048f, (byte) 70));
@@ -265,15 +262,11 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 			graveOfSteelStoreroomChest.add((Npc) spawn(254574, 578.9111f, 874.7958f, 199.76036f, (byte) 9));
 			graveOfSteelStoreroomChest.add((Npc) spawn(254574, 585.83545f, 855.7736f, 199.76036f, (byte) 3));
 			graveOfSteelStoreroomChest.add((Npc) spawn(254574, 586.7527f, 835.4556f, 199.76036f, (byte) 116));
-			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer2();
-					sendMsg(1400245);
-					graveOfSteelStoreroomChest.get(0).getController().onDelete();
-				}
+				StartTimer2();
+				sendMsg(1400245);
+				graveOfSteelStoreroomChest.get(0).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -284,26 +277,18 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		{
 			isStartTimer2 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer3();
-					sendMsg(1400245);
-					graveOfSteelStoreroomChest.get(1).getController().onDelete();
-				}
+				StartTimer3();
+				sendMsg(1400245);
+				graveOfSteelStoreroomChest.get(1).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -314,26 +299,18 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		{
 			isStartTimer3 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer4();
-					sendMsg(1400245);
-					graveOfSteelStoreroomChest.get(2).getController().onDelete();
-				}
+				StartTimer4();
+				sendMsg(1400245);
+				graveOfSteelStoreroomChest.get(2).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -344,26 +321,18 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		{
 			isStartTimer4 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer5();
-					sendMsg(1400245);
-					graveOfSteelStoreroomChest.get(3).getController().onDelete();
-				}
+				StartTimer5();
+				sendMsg(1400245);
+				graveOfSteelStoreroomChest.get(3).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -374,26 +343,18 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		{
 			isStartTimer5 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer6();
-					sendMsg(1400245);
-					graveOfSteelStoreroomChest.get(4).getController().onDelete();
-				}
+				StartTimer6();
+				sendMsg(1400245);
+				graveOfSteelStoreroomChest.get(4).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -404,26 +365,18 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		{
 			isStartTimer6 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer7();
-					sendMsg(1400245);
-					graveOfSteelStoreroomChest.get(5).getController().onDelete();
-				}
+				StartTimer7();
+				sendMsg(1400245);
+				graveOfSteelStoreroomChest.get(5).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -434,26 +387,18 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		{
 			isStartTimer7 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer8();
-					sendMsg(1400245);
-					graveOfSteelStoreroomChest.get(6).getController().onDelete();
-				}
+				StartTimer8();
+				sendMsg(1400245);
+				graveOfSteelStoreroomChest.get(6).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -464,26 +409,18 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		{
 			isStartTimer8 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer9();
-					sendMsg(1400245);
-					graveOfSteelStoreroomChest.get(7).getController().onDelete();
-				}
+				StartTimer9();
+				sendMsg(1400245);
+				graveOfSteelStoreroomChest.get(7).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -494,26 +431,18 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		{
 			isStartTimer9 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer10();
-					sendMsg(1400245);
-					graveOfSteelStoreroomChest.get(8).getController().onDelete();
-				}
+				StartTimer10();
+				sendMsg(1400245);
+				graveOfSteelStoreroomChest.get(8).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -524,26 +453,18 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		{
 			isStartTimer10 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer11();
-					sendMsg(1400245);
-					graveOfSteelStoreroomChest.get(9).getController().onDelete();
-				}
+				StartTimer11();
+				sendMsg(1400245);
+				graveOfSteelStoreroomChest.get(9).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -554,26 +475,18 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		{
 			isStartTimer11 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer12();
-					sendMsg(1400245);
-					graveOfSteelStoreroomChest.get(10).getController().onDelete();
-				}
+				StartTimer12();
+				sendMsg(1400245);
+				graveOfSteelStoreroomChest.get(10).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -584,26 +497,18 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 		{
 			isStartTimer12 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			graveOfSteelStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					sendMsg(1400244);
-					sendMsg(1400245);
-					graveOfSteelStoreroomChest.get(11).getController().onDelete();
-				}
+				sendMsg(1400244);
+				sendMsg(1400245);
+				graveOfSteelStoreroomChest.get(11).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -632,36 +537,18 @@ public class GraveOfSteelStoreroomInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void deleteNpc(int npcId)

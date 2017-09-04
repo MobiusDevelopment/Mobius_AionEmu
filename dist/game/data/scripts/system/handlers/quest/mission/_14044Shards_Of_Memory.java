@@ -75,11 +75,14 @@ public class _14044Shards_Of_Memory extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
+						}
 						case STEP_TO_1:
+						{
 							if (var == 0)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -87,6 +90,7 @@ public class _14044Shards_Of_Memory extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+						}
 					}
 				}
 					break;
@@ -95,11 +99,14 @@ public class _14044Shards_Of_Memory extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 2)
 							{
 								return sendQuestDialog(env, 1693);
 							}
+						}
 						case STEP_TO_3:
+						{
 							if (var == 2)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -108,21 +115,27 @@ public class _14044Shards_Of_Memory extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 0));
 								return true;
 							}
+						}
 					}
 				}
 					break;
 				case 700355:
+				{
 					return useQuestObject(env, 3, 3, true, false);
+				}
 				case 790001:
 				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_2:
+						{
 							if (var == 1)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -130,6 +143,7 @@ public class _14044Shards_Of_Memory extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+						}
 					}
 				}
 			}

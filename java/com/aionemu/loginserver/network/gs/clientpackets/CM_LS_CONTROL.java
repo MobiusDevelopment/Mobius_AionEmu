@@ -57,11 +57,15 @@ public class CM_LS_CONTROL extends GsClientPacket
 		switch (type)
 		{
 			case 1:
+			{
 				account.setAccessLevel((byte) param);
 				break;
+			}
 			case 2:
+			{
 				account.setMembership((byte) param);
 				break;
+			}
 		}
 		result = DAOManager.getDAO(AccountDAO.class).updateAccount(account);
 		sendPacket(new SM_LS_CONTROL_RESPONSE(type, result, playerName, account.getId(), param, adminName));

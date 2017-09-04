@@ -45,9 +45,13 @@ public class ExpandInventoryAction extends AbstractItemAction
 		switch (storage)
 		{
 			case CUBE:
+			{
 				return CubeExpandService.canExpandByTicket(player, level);
+			}
 			case WAREHOUSE:
+			{
 				return WarehouseService.canExpand(player);
+			}
 		}
 		return false;
 	}
@@ -64,11 +68,15 @@ public class ExpandInventoryAction extends AbstractItemAction
 		switch (storage)
 		{
 			case CUBE:
+			{
 				CubeExpandService.expand(player, false);
 				break;
+			}
 			case WAREHOUSE:
+			{
 				WarehouseService.expand(player);
 				break;
+			}
 		}
 	}
 }

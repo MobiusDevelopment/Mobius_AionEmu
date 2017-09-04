@@ -111,6 +111,7 @@ public class _24016A_Strange_New_Threat extends QuestHandler
 			switch (targetId)
 			{
 				case 203557: // Suthran.
+				{
 					if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 0))
 					{
 						return sendQuestDialog(env, 1011);
@@ -127,10 +128,14 @@ public class _24016A_Strange_New_Threat extends QuestHandler
 						return sendQuestDialog(env, 1013);
 					}
 					break;
+				}
 				case 700184: // Abyss Gate.
+				{
 					playQuestMovie(env, 154);
 					return useQuestObject(env, 4, 4, true, false);
+				}
 				case 700140: // Abyss Gate Guardian Stone.
+				{
 					if (dialog == QuestDialog.USE_OBJECT)
 					{
 						QuestService.addNewSpawn(320030000, player.getInstanceId(), 233876, (float) 251.91177, (float) 262.239, (float) 228.30093, (byte) 89);
@@ -139,6 +144,7 @@ public class _24016A_Strange_New_Threat extends QuestHandler
 					final Npc npc = (Npc) env.getVisibleObject();
 					npc.getController().onDelete();
 					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

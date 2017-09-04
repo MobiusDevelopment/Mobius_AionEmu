@@ -128,6 +128,7 @@ public class InstanceCooltimeData
 					case 301330000: // Lucky Danuar Reliquary.
 					case 301400000: // The Shugo Emperor's Vault.
 					case 301590000: // Emperor Trillirunerk's Safe.
+					{
 						final DateTime now = DateTime.now();
 						DateTime repeatDate = new DateTime(now.getYear(), now.getMonthOfYear(), now.getDayOfMonth(), 9, 0, 0);
 						if (now.isAfter(repeatDate))
@@ -137,6 +138,7 @@ public class InstanceCooltimeData
 						instanceCoolTime = repeatDate.getMillis();
 						instanceCoolTime = System.currentTimeMillis() + (clt.getEntCoolTime() * 60 * 1000);
 						break;
+					}
 				}
 			}
 		}

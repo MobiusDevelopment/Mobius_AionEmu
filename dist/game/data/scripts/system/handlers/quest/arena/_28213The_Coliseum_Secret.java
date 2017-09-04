@@ -71,26 +71,37 @@ public class _28213The_Coliseum_Secret extends QuestHandler
 			switch (targetId)
 			{
 				case 205320:
+				{
 					if (var == 0)
 					{
 						switch (env.getDialog())
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 1352);
+							}
 							case STEP_TO_1:
+							{
 								return defaultCloseDialog(env, 0, 1);
+							}
 						}
 					}
 					break;
+				}
 				case 798804:
+				{
 					if (var == 1)
 					{
 						switch (env.getDialog())
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 1693);
+							}
 							case STEP_TO_2:
+							{
 								return defaultCloseDialog(env, 1, 3);
+							}
 						}
 					}
 					else if (var == 3)
@@ -98,12 +109,17 @@ public class _28213The_Coliseum_Secret extends QuestHandler
 						switch (env.getDialog())
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 2375);
+							}
 							case SELECT_REWARD:
+							{
 								return defaultCloseDialog(env, 3, 3, true, false);
+							}
 						}
 					}
 					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

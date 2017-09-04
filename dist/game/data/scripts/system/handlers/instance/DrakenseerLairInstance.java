@@ -43,7 +43,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -69,6 +68,7 @@ public class DrakenseerLairInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 220450: // Akhal The Oracle.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -80,15 +80,20 @@ public class DrakenseerLairInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188054910, 1)); // 아크할의 무기 상자.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188054911, 1)); // 아크할의 방어구 상자.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -115,18 +120,14 @@ public class DrakenseerLairInstance extends GeneralInstanceHandler
 			{
 				isStartTimer = true;
 				System.currentTimeMillis();
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 ->
 				{
-					@Override
-					public void visit(Player player)
+					if (player1.isOnline())
 					{
-						if (player.isOnline())
-						{
-							startDrakenseerLairTimer();
-							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 600));
-							// Destroy the Shielding Conduits within 10 minutes and defeat Akhal.
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403377));
-						}
+						startDrakenseerLairTimer();
+						PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 600));
+						// Destroy the Shielding Conduits within 10 minutes and defeat Akhal.
+						PacketSendUtility.sendPacket(player1, new SM_SYSTEM_MESSAGE(1403377));
 					}
 				});
 			}
@@ -146,21 +147,10 @@ public class DrakenseerLairInstance extends GeneralInstanceHandler
 		sendMessage(1403375, 1 * 60 * 1000);
 		// You have one minute left to destroy the remaining Shielding Conduits.
 		sendMessage(1403382, 9 * 60 * 1000);
-		drakenseerLairTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		drakenseerLairTask.add(ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						onExitInstance(player);
-					}
-				});
-				onInstanceDestroy();
-			}
+			instance.doOnAllPlayers(player -> onExitInstance(player));
+			onInstanceDestroy();
 		}, 600000)); // 10 Minutes.
 	}
 	
@@ -173,6 +163,7 @@ public class DrakenseerLairInstance extends GeneralInstanceHandler
 			case 857974: // Balaur Abyss Gate Enhancer A.
 			case 857975: // Balaur Abyss Gate Enhancer B.
 			case 857976: // Balaur Abyss Gate Enhancer C.
+			{
 				abyssGateEnhancerKilled++;
 				if (abyssGateEnhancerKilled == 1)
 				{
@@ -191,24 +182,23 @@ public class DrakenseerLairInstance extends GeneralInstanceHandler
 					sendMsgByRace(1403381, Race.PC_ALL, 2000);
 					final Npc akhalTheOracle = instance.getNpc(220450); // Akhal The Oracle.
 					akhalTheOracle.getEffectController().removeEffect(21791); // Turning Tide.
-					instance.doOnAllPlayers(new Visitor<Player>()
+					instance.doOnAllPlayers(player1 ->
 					{
-						@Override
-						public void visit(Player player)
+						if (player1.isOnline())
 						{
-							if (player.isOnline())
-							{
-								PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 0));
-							}
+							PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 0));
 						}
 					});
 				}
 				despawnNpc(npc);
 				break;
+			}
 			case 220450: // Akhal The Oracle.
+			{
 				spawn(806240, 299.1905f, 258.07004f, 319.67477f, (byte) 110); // Drakenseer's Lair Exit.
 				sendMsg("[Congratulation]: you finish <Drakenseer's Lair 5.0>");
 				break;
+			}
 		}
 	}
 	
@@ -230,36 +220,18 @@ public class DrakenseerLairInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void sendMessage(int msgId, long delay)
@@ -270,14 +242,7 @@ public class DrakenseerLairInstance extends GeneralInstanceHandler
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					sendMsg(msgId);
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> sendMsg(msgId), delay);
 		}
 	}
 	

@@ -65,16 +65,24 @@ public final class MailFormatter
 		switch (warnCount)
 		{
 			case 1:
+			{
 				templateName = "$$HS_OVERDUE_FIRST";
 				break;
+			}
 			case 2:
+			{
 				templateName = "$$HS_OVERDUE_SECOND";
 				break;
+			}
 			case 3:
+			{
 				templateName = "$$HS_OVERDUE_FINAL";
 				break;
+			}
 			default:
+			{
 				return;
+			}
 		}
 		final MailTemplate template = DataManager.SYSTEM_MAIL_TEMPLATES.getMailTemplate(templateName, "", ownedHouse.getPlayerRace());
 		final MailPart formatter = new MailPart()

@@ -53,15 +53,21 @@ public class SM_INVENTORY_UPDATE_ITEM extends AionServerPacket
 		switch (updateType)
 		{
 			case EQUIP_UNEQUIP:
+			{
 				itemInfoBlob = new ItemInfoBlob(player, item);
 				itemInfoBlob.addBlobEntry(ItemBlobType.EQUIPPED_SLOT);
 				break;
+			}
 			case CHARGE:
+			{
 				itemInfoBlob = new ItemInfoBlob(player, item);
 				itemInfoBlob.addBlobEntry(ItemBlobType.CONDITIONING_INFO);
+			}
 			default:
+			{
 				itemInfoBlob = ItemInfoBlob.getFullBlob(player, item);
 				break;
+			}
 		}
 		itemInfoBlob.writeMe(getBuf());
 		if (updateType.isSendable())

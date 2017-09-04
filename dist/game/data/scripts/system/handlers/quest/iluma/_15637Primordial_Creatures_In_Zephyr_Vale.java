@@ -119,6 +119,7 @@ public class _15637Primordial_Creatures_In_Zephyr_Vale extends QuestHandler
 				case 243366:
 				case 243367:
 				case 243368:
+				{
 					if (qs.getQuestVarById(1) < 3)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _15637Primordial_Creatures_In_Zephyr_Vale extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -63,7 +63,9 @@ public class _21263Enhancing_The_Polearm extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

@@ -119,6 +119,7 @@ public class _15429Protect_Moltenspike_Outpost extends QuestHandler
 				case 883217:
 				case 883218:
 				case 883219:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _15429Protect_Moltenspike_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

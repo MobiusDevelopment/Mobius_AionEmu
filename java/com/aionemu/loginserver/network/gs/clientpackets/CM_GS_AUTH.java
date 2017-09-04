@@ -99,6 +99,7 @@ public class CM_GS_AUTH extends GsClientPacket
 		switch (resp)
 		{
 			case AUTHED:
+			{
 				log.info("Gameserver #" + gameServerId + " is now online.");
 				client.setState(State.AUTHED);
 				client.sendPacket(new SM_GS_AUTH_RESPONSE(resp));
@@ -111,9 +112,11 @@ public class CM_GS_AUTH extends GsClientPacket
 					}
 				}, 500);
 				break;
-			
+			}
 			default:
+			{
 				client.close(new SM_GS_AUTH_RESPONSE(resp), false);
+			}
 		}
 	}
 }

@@ -35,7 +35,6 @@ import com.aionemu.gameserver.services.player.PlayerReviveService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****/
 /**
@@ -52,13 +51,17 @@ public class FireTempleInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 212846: // Kromede The Corrupt.
+			{
 				spawnKromedeTreasureChest();
 				sendMsg("[Congratulation]: you finish <Fire Temple>");
 				break;
+			}
 			case 214621: // Vile Judge Kromede.
+			{
 				spawnKromedeTreasureChest();
 				sendMsg("[Congratulation]: you finish <Fire Temple>");
 				break;
+			}
 		}
 	}
 	
@@ -67,14 +70,20 @@ public class FireTempleInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 3))
 		{
 			case 1:
+			{
 				spawn(833523, 418.16385f, 95.81711f, 117.3052f, (byte) 50); // Kromede's Ornate Treasure Chest.
 				break;
+			}
 			case 2:
+			{
 				spawn(833524, 418.16385f, 95.81711f, 117.3052f, (byte) 50); // Kromede's Brilliant Treasure Chest.
 				break;
+			}
 			case 3:
+			{
 				spawn(833525, 418.16385f, 95.81711f, 117.3052f, (byte) 50); // Kromede's Dazzling Treasure Chest.
 				break;
+			}
 		}
 	}
 	
@@ -88,6 +97,7 @@ public class FireTempleInstance extends GeneralInstanceHandler
 		{
 			case 212846: // Kromede The Corrupt.
 			case 214621: // Vile Judge Kromede.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -97,9 +107,11 @@ public class FireTempleInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 833523: // Kromede's Ornate Treasure Chest.
 			case 833524: // Kromede's Brilliant Treasure Chest.
 			case 833525: // Kromede's Dazzling Treasure Chest.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -111,7 +123,9 @@ public class FireTempleInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 212840: // Lava Gatneri.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -120,7 +134,9 @@ public class FireTempleInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 212842: // Black Smoke Asparn.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -129,20 +145,29 @@ public class FireTempleInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 212844: // Silver Blade Rotan.
+			{
 				switch (Rnd.get(1, 3))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 190000016, 1)); // Sawteeth Rotan Egg.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 190000037, 1)); // Sawteeth Rotan Egg.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 190000038, 1)); // Sawteeth Rotan Egg.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -154,33 +179,51 @@ public class FireTempleInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 9))
 		{
 			case 1:
+			{
 				spawn(212839, 153.20758f, 161.87619f, 101.83779f, (byte) 32); // Blue Crystal Molgat.
 				break;
+			}
 			case 2:
+			{
 				spawn(212840, 151.76723f, 302.36328f, 122.874084f, (byte) 24); // Lava Gatneri.
 				break;
+			}
 			case 3:
+			{
 				spawn(212784, 151.76723f, 302.36328f, 122.874084f, (byte) 24); // Inferno Spirit.
 				break;
+			}
 			case 4:
+			{
 				spawn(212841, 350.2237f, 354.806f, 146.613f, (byte) 65); // Flame Branch Flavi.
 				break;
+			}
 			case 5:
+			{
 				spawn(212842, 304.33118f, 419.86487f, 133.9806f, (byte) 17); // Black Smoke Asparn.
 				break;
+			}
 			case 6:
+			{
 				spawn(212843, 297.6783f, 202.19652f, 119.36518f, (byte) 61); // Tough Sipus.
 				break;
+			}
 			case 7:
+			{
 				spawn(212845, 293.1684f, 97.34582f, 128.40712f, (byte) 91); // Broken Wing Kutisen.
 				break;
+			}
 			case 8:
+			{
 				deleteNpc(212846); // Kromede The Corrupt.
 				spawn(214621, 421.96918f, 93.555084f, 117.30522f, (byte) 51); // Vile Judge Kromede.
 				break;
+			}
 			case 9:
+			{
 				spawn(798109, 144.581f, 162.128f, 100.931f, (byte) 23); // Liurerk.
 				break;
+			}
 		}
 	}
 	
@@ -194,14 +237,7 @@ public class FireTempleInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	@Override

@@ -115,6 +115,7 @@ public class _15100Desert_Vermin extends QuestHandler
 				case 235941:
 				case 235942:
 				case 235946:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -125,6 +126,7 @@ public class _15100Desert_Vermin extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

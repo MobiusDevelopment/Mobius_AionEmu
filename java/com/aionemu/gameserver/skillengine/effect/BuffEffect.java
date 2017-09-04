@@ -119,14 +119,20 @@ public abstract class BuffEffect extends EffectTemplate
 			switch (changeItem.getFunc())
 			{
 				case ADD:
+				{
 					modifiers.add(new StatAddFunction(changeItem.getStat(), valueWithDelta, true).withConditions(conditions));
 					break;
+				}
 				case PERCENT:
+				{
 					modifiers.add(new StatRateFunction(changeItem.getStat(), valueWithDelta, true).withConditions(conditions));
 					break;
+				}
 				case REPLACE:
+				{
 					modifiers.add(new StatSetFunction(changeItem.getStat(), valueWithDelta, true).withConditions(conditions));
 					break;
+				}
 			}
 		}
 		return modifiers;

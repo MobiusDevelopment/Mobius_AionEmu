@@ -113,6 +113,7 @@ public class _25002Kill_The_Kerubs extends QuestHandler
 			{
 				case 219658:
 				case 219659:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -123,6 +124,7 @@ public class _25002Kill_The_Kerubs extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

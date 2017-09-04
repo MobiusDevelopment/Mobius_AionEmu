@@ -71,12 +71,14 @@ public class Walk_Of_HonorAI2 extends GeneralNpcAI2
 			{
 				case 731193: // Walk Of Honor
 				case 731194: // Walk Of Glory
+				{
 					final AutoGroupType agt = AutoGroupType.getAutoGroup(player.getLevel(), getNpcId());
 					if (agt != null)
 					{
 						PacketSendUtility.sendPacket(player, new SM_FIND_GROUP(0x1A, agt.getInstanceMapId()));
 					}
 					break;
+				}
 			}
 		}
 		else if (dialogId == 10)

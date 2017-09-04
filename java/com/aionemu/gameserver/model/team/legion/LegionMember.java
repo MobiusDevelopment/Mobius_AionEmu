@@ -168,19 +168,29 @@ public class LegionMember
 		switch (getRank())
 		{
 			case BRIGADE_GENERAL:
+			{
 				return true;
+			}
 			case DEPUTY:
+			{
 				legionarPermission = legion.getDeputyPermission();
 				break;
+			}
 			case CENTURION:
+			{
 				legionarPermission = legion.getCenturionPermission();
 				break;
+			}
 			case LEGIONARY:
+			{
 				legionarPermission = legion.getLegionaryPermission();
 				break;
+			}
 			case VOLUNTEER:
+			{
 				legionarPermission = legion.getVolunteerPermission();
 				break;
+			}
 		}
 		return permissions.can(legionarPermission);
 	}

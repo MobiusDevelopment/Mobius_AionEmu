@@ -123,11 +123,14 @@ public class _11105WifesNagging extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						removeQuestItem(env, 182206778, 1);
@@ -140,6 +143,7 @@ public class _11105WifesNagging extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 798980)
@@ -147,11 +151,14 @@ public class _11105WifesNagging extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1693);
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						removeQuestItem(env, 182206779, 1);
@@ -162,6 +169,7 @@ public class _11105WifesNagging extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		return false;

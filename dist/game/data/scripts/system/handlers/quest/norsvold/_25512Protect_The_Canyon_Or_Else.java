@@ -161,6 +161,7 @@ public class _25512Protect_The_Canyon_Or_Else extends QuestHandler
 				case 241995:
 				case 241999:
 				case 242003:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -171,6 +172,7 @@ public class _25512Protect_The_Canyon_Or_Else extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

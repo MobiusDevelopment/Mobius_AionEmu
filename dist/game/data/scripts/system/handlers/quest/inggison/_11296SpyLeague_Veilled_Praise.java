@@ -71,12 +71,18 @@ public class _11296SpyLeague_Veilled_Praise extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 4762);
+					}
 					case ASK_ACCEPTION:
+					{
 						return sendQuestDialog(env, 4);
+					}
 					case ACCEPT_QUEST:
+					{
 						QuestService.startQuest(env);
 						return sendQuestDialog(env, 1003);
+					}
 				}
 			}
 			else if (qs.getStatus() == QuestStatus.REWARD)
@@ -119,6 +125,7 @@ public class _11296SpyLeague_Veilled_Praise extends QuestHandler
 		{
 			case 257905: // Guardian General Of Vorgaltem Citadel.
 			case 257912: // Guardian General Of Crimson Temple.
+			{
 				if (qs.getQuestVarById(0) < 1)
 				{
 					qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -127,6 +134,7 @@ public class _11296SpyLeague_Veilled_Praise extends QuestHandler
 					return true;
 				}
 				break;
+			}
 		}
 		return false;
 	}

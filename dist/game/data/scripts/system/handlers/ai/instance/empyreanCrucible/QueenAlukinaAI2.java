@@ -83,16 +83,21 @@ public class QueenAlukinaAI2 extends AggressiveNpcAI2
 		switch (percent)
 		{
 			case 75:
+			{
 				scheduleSkill(17900, 4500);
 				NpcShoutsService.getInstance().sendMsg(getOwner(), 340487, getObjectId(), 0, 10000);
 				scheduleSkill(17899, 14000);
 				scheduleSkill(17900, 18000);
 				break;
+			}
 			case 50:
+			{
 				scheduleSkill(17280, 4500);
 				scheduleSkill(17902, 8000);
 				break;
+			}
 			case 25:
+			{
 				task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
 				{
 					@Override
@@ -111,6 +116,7 @@ public class QueenAlukinaAI2 extends AggressiveNpcAI2
 					}
 				}, 4500, 20000);
 				break;
+			}
 		}
 	}
 	

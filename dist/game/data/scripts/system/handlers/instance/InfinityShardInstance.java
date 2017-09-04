@@ -40,7 +40,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -65,6 +64,7 @@ public class InfinityShardInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 231073: // Hyperion.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -77,36 +77,51 @@ public class InfinityShardInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 4))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188052387, 1)); // Hyperion's Equipment Box.
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188052718, 1)); // Hyperion's Weapons Chest.
 							break;
+						}
 						case 3:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053005, 1)); // Hyperion's Wing Chest.
 							break;
+						}
 						case 4:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053154, 1)); // Hyperion's Accessory Box.
 							break;
+						}
 					}
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case 802184: // Infinity Shard Opportunity Bundle.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000051, 30)); // Major Ancient Crown.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000052, 30)); // Greater Ancient Crown.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000236, 50)); // Blood Mark.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000237, 50)); // Ancient Coin.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000242, 50)); // Ceramium Medal.
 				break;
+			}
 		}
 	}
 	
@@ -131,12 +146,15 @@ public class InfinityShardInstance extends GeneralInstanceHandler
 			case 231103: // Summoned Ancien Tyrhund.
 			case 233297: // Hyperion Defense Assaulter.
 			case 233298: // Hyperion Defense Assassin.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 231074: // Ide Forcefield Generator I.
 			case 231078: // Ide Forcefield Generator II.
 			case 231082: // Ide Forcefield Generator III.
 			case 231086: // Ide Forcefield Generator IV.
+			{
 				ideForcefieldGenerator++;
 				if (ideForcefieldGenerator == 1)
 				{
@@ -157,11 +175,14 @@ public class InfinityShardInstance extends GeneralInstanceHandler
 				// The Hyperion's shields are faltering.
 				sendMsgByRace(1401795, Race.PC_ALL, 0);
 				break;
+			}
 			case 231073: // Hyperion.
+			{
 				sendMsg("[Congratulation]: you finish <Infinity Shard>");
 				spawn(730842, 124.669853f, 137.840668f, 113.942917f, (byte) 0); // Infinity Shard Exit.
 				spawn(802184, 127.32316f, 131.72421f, 112.17429f, (byte) 25); // Infinity Shard Opportunity Bundle.
 				break;
+			}
 		}
 	}
 	
@@ -199,36 +220,18 @@ public class InfinityShardInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

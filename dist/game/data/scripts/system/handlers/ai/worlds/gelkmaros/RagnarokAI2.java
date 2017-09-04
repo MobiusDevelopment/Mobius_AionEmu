@@ -147,13 +147,17 @@ public class RagnarokAI2 extends AggressiveNpcAI2
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								spawn(281950, x, y, z, (byte) 0); // Ragnarok's Parasite.
 								break;
+							}
 							case 2:
+							{
 								// Ragnarok's acidic fluid appears.
 								NpcShoutsService.getInstance().sendMsg(getOwner(), 1400612, 2000);
 								spawn(281951, x, y, z, (byte) 0); // Ragnarok Slime.
 								break;
+							}
 						}
 					}
 				}

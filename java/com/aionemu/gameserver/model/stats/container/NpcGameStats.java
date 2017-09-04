@@ -505,20 +505,30 @@ public class NpcGameStats extends CreatureGameStats<Npc>
 			switch (npcRating)
 			{
 				case JUNK:
+				{
 					accuracy *= 1.00f;
 					break;
+				}
 				case NORMAL:
+				{
 					accuracy *= 1.05f;
 					break;
+				}
 				case ELITE:
+				{
 					accuracy *= 1.15f;
 					break;
+				}
 				case HERO:
+				{
 					accuracy *= 1.25f;
 					break;
+				}
 				case LEGENDARY:
+				{
 					accuracy *= 1.35f;
 					break;
+				}
 			}
 		}
 		pAccuracy = Math.round(owner.getAi2().modifyMaccuracy((int) accuracy));

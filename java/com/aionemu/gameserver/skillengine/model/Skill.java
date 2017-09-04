@@ -590,7 +590,9 @@ public class Skill
 			case 4594: // Shadowfall
 			case 4595: // Shadowfall
 			case 4596: // Shadowfall
+			{
 				return cooldown - (6 * SkillLevel);
+			}
 			case 600: // Magical Defense
 			case 641: // Unraveling Assault
 			case 642: // Unraveling Assault
@@ -623,7 +625,9 @@ public class Skill
 			case 4185: // Enfeebling Burst
 			case 4186: // Enfeebling Burst
 			case 4187: // Enfeebling Burst
+			{
 				return cooldown - (9 * SkillLevel);
+			}
 			case 539: // Exhausting Wave
 			case 540: // Exhausting Wave
 			case 541: // Exhausting Wave
@@ -785,7 +789,9 @@ public class Skill
 			case 4636: // Healing Conduit
 			case 4637: // Healing Conduit
 			case 4638: // Healing Conduit
+			{
 				return cooldown - (24 * SkillLevel);
+			}
 			case 657: // Battle Banner
 			case 658: // Battle Banner
 			case 659: // Battle Banner
@@ -966,7 +972,9 @@ public class Skill
 			case 4191: // Noble Grace
 			case 4192: // Noble Grace
 			case 4614: // Sensory Boost
+			{
 				return cooldown - (36 * SkillLevel);
+			}
 			case 683: // Howl
 			case 684: // Howl
 			case 685: // Howl
@@ -1016,21 +1024,29 @@ public class Skill
 			case 3909: // Summon Vexing Energy
 			case 3910: // Summon Vexing Energy
 			case 3911: // Summon Vexing Energy
+			{
 				return cooldown - (60 * SkillLevel);
+			}
 			case 2922: // Empyrean Providence
 			case 3904: // Reverse Condition
+			{
 				return cooldown - (120 * SkillLevel);
+			}
 			// ArchDaeva Transformation 5.1 [Elyos]
 			case 4752: // Transformation: Avatar Of Fire.
 			case 4757: // Transformation: Avatar Of Water.
 			case 4762: // Transformation: Avatar Of Earth.
 			case 4768: // Transformation: Avatar Of Wind.
+			{
 				// ArchDaeva Transformation 5.1 [Asmodians]
+			}
 			case 4804: // Transformation: Avatar Of Fire.
 			case 4805: // Transformation: Avatar Of Water.
 			case 4806: // Transformation: Avatar Of Earth.
 			case 4807: // Transformation: Avatar Of Wind.
+			{
 				return cooldown - (300 * SkillLevel);
+			}
 		}
 		return cooldown;
 	}
@@ -1048,25 +1064,37 @@ public class Skill
 		switch (skillTemplate.getSubType())
 		{
 			case SUMMON:
+			{
 				duration = effector.getGameStats().getPositiveReverseStat(StatEnum.BOOST_CASTING_TIME_SUMMON, duration);
 				break;
+			}
 			case SUMMONHOMING:
+			{
 				duration = effector.getGameStats().getPositiveReverseStat(StatEnum.BOOST_CASTING_TIME_SUMMONHOMING, duration);
 				break;
+			}
 			case SUMMONTRAP:
+			{
 				duration = effector.getGameStats().getPositiveReverseStat(StatEnum.BOOST_CASTING_TIME_TRAP, duration);
 				break;
+			}
 			case HEAL:
+			{
 				duration = effector.getGameStats().getPositiveReverseStat(StatEnum.BOOST_CASTING_TIME_HEAL, duration);
 				break;
+			}
 			case ATTACK:
+			{
 				if (skillTemplate.getType() == SkillType.MAGICAL)
 				{
 					duration = effector.getGameStats().getPositiveReverseStat(StatEnum.BOOST_CASTING_TIME_ATTACK, duration);
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		
 		// 70% of base skill duration cap
@@ -1147,7 +1175,9 @@ public class Skill
 			case 3894: // Prayer Of Focus VI
 			case 4783: // [ArchDaeva] Prayer Of Focus 5.1
 			case 11580: // Stigma Prayer Of Focus I
+			{
 				return true;
+			}
 		}
 		if (getSkillTemplate().getSubType() == SkillSubType.SUMMONTRAP)
 		{
@@ -1279,6 +1309,7 @@ public class Skill
 			switch (targetType)
 			{
 				case 0: // PlayerObjectId as Target
+				{
 					PacketSendUtility.broadcastPacketAndReceive(effector, new SM_CASTSPELL(effector.getObjectId(), skillTemplate.getSkillId(), skillLevel, targetType, targetObjId, duration));
 					if ((effector instanceof Npc) && (firstTarget instanceof Player))
 					{
@@ -1289,14 +1320,17 @@ public class Skill
 						}
 					}
 					break;
-				
+				}
 				case 3: // Target not in sight?
+				{
 					PacketSendUtility.broadcastPacketAndReceive(effector, new SM_CASTSPELL(effector.getObjectId(), skillTemplate.getSkillId(), skillLevel, targetType, 0, duration));
 					break;
-				
+				}
 				case 1: // XYZ as Target
+				{
 					PacketSendUtility.broadcastPacketAndReceive(effector, new SM_CASTSPELL(effector.getObjectId(), skillTemplate.getSkillId(), skillLevel, targetType, x, y, z, duration));
 					break;
+				}
 			}
 		}
 		else if ((skillMethod == SkillMethod.ITEM) && (duration > 0))
@@ -1590,16 +1624,20 @@ public class Skill
 			switch (targetType)
 			{
 				case 0: // PlayerObjectId as Target
+				{
 					PacketSendUtility.broadcastPacketAndReceive(effector, new SM_CASTSPELL_RESULT(this, effects, serverTime, chainSuccess, spellStatus, dashStatus));
 					break;
-				
+				}
 				case 3: // Target not in sight?
+				{
 					PacketSendUtility.broadcastPacketAndReceive(effector, new SM_CASTSPELL_RESULT(this, effects, serverTime, chainSuccess, spellStatus, dashStatus));
 					break;
-				
+				}
 				case 1: // XYZ as Target
+				{
 					PacketSendUtility.broadcastPacketAndReceive(effector, new SM_CASTSPELL_RESULT(this, effects, serverTime, chainSuccess, spellStatus, dashStatus, targetType));
 					break;
+				}
 			}
 		}
 		else if (skillMethod == SkillMethod.ITEM)
@@ -1957,34 +1995,46 @@ public class Skill
 			case 1417: // Curse Of Roots
 			case 3589: // Fear Shriek
 			case 3775: // Fear
+			{
 				// ArchDaeva Transformation 5.1 [Elyos]
+			}
 			case 4752: // Transformation: Avatar Of Fire.
 			case 4757: // Transformation: Avatar Of Water.
 			case 4762: // Transformation: Avatar Of Earth.
 			case 4768: // Transformation: Avatar Of Wind.
+			{
 				// ArchDaeva Transformation 5.1 [Asmodians]
+			}
 			case 4804: // Transformation: Avatar Of Fire.
 			case 4805: // Transformation: Avatar Of Water.
 			case 4806: // Transformation: Avatar Of Earth.
 			case 4807: // Transformation: Avatar Of Wind.
+			{
 				// Fissure Of Oblivion 5.1
+			}
 			case 4808: // Transformation: Avatar Of Fire.
 			case 4813: // Transformation: Avatar Of Water.
 			case 4818: // Transformation: Avatar Of Earth.
 			case 4824: // Transformation: Avatar Of Wind.
+			{
 				// Elyos [Guardian General]
+			}
 			case 11885: // Transformation: Guardian General I
 			case 11886: // Transformation: Guardian General II
 			case 11887: // Transformation: Guardian General III
 			case 11888: // Transformation: Guardian General IV
 			case 11889: // Transformation: Guardian General V
+			{
 				// Asmodians [Guardian General]
+			}
 			case 11890: // Transformation: Guardian General I
 			case 11891: // Transformation: Guardian General II
 			case 11892: // Transformation: Guardian General III
 			case 11893: // Transformation: Guardian General IV
 			case 11894: // Transformation: Guardian General V
+			{
 				return true;
+			}
 		}
 		return false;
 	}

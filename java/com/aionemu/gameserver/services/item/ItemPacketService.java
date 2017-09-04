@@ -98,13 +98,21 @@ public class ItemPacketService
 			switch (itemAddType)
 			{
 				case BUY:
+				{
 					return ItemUpdateType.INC_KINAH_SELL;
+				}
 				case ITEM_COLLECT:
+				{
 					return ItemUpdateType.INC_KINAH_COLLECT;
+				}
 				case QUEST_WORK_ITEM:
+				{
 					return ItemUpdateType.INC_KINAH_QUEST;
+				}
 				default:
+				{
 					return ItemUpdateType.INC_KINAH_MERGE;
+				}
 			}
 		}
 	}
@@ -164,13 +172,21 @@ public class ItemPacketService
 			switch (updateType)
 			{
 				case DEC_ITEM_SPLIT:
+				{
 					return SPLIT;
+				}
 				case DEC_ITEM_USE:
+				{
 					return USE;
+				}
 				case DEC_ITEM_SPLIT_MOVE:
+				{
 					return MOVE;
+				}
 				default:
+				{
 					return QUEST_REWARD;
+				}
 			}
 		}
 		
@@ -179,13 +195,21 @@ public class ItemPacketService
 			switch (questStatus)
 			{
 				case START:
+				{
 					return QUEST_START;
+				}
 				case REWARD:
+				{
 					return QUEST_REWARD;
+				}
 				case COMPLETE:
+				{
 					return QUEST_COMPLETE;
+				}
 				default:
+				{
 					return QUEST_REWARD;
+				}
 			}
 		}
 	}
@@ -225,10 +249,14 @@ public class ItemPacketService
 		switch (storageType)
 		{
 			case CUBE:
+			{
 				PacketSendUtility.sendPacket(player, new SM_DELETE_ITEM(item.getObjectId(), deleteType));
 				break;
+			}
 			default:
+			{
 				PacketSendUtility.sendPacket(player, new SM_DELETE_WAREHOUSE_ITEM(storageType.getId(), item.getObjectId(), deleteType));
+			}
 		}
 		PacketSendUtility.sendPacket(player, SM_CUBE_UPDATE.cubeSize(storageType, player));
 	}
@@ -241,16 +269,22 @@ public class ItemPacketService
 		switch (storageType)
 		{
 			case CUBE:
+			{
 				PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, item, updateType));
 				break;
+			}
 			case LEGION_WAREHOUSE:
+			{
 				if (item.getItemTemplate().isKinah())
 				{
 					PacketSendUtility.sendPacket(player, new SM_LEGION_EDIT(0x04, player.getLegion()));
 					break;
 				}
+			}
 			default:
+			{
 				PacketSendUtility.sendPacket(player, new SM_WAREHOUSE_UPDATE_ITEM(player, item, storageType.getId(), updateType));
+			}
 		}
 	}
 	
@@ -267,16 +301,22 @@ public class ItemPacketService
 		switch (storageType)
 		{
 			case CUBE:
+			{
 				PacketSendUtility.sendPacket(player, new SM_INVENTORY_ADD_ITEM(Collections.singletonList(item), player, addType));
 				break;
+			}
 			case LEGION_WAREHOUSE:
+			{
 				if (item.getItemTemplate().isKinah())
 				{
 					PacketSendUtility.sendPacket(player, new SM_LEGION_EDIT(0x04, player.getLegion()));
 					break;
 				}
+			}
 			default:
+			{
 				PacketSendUtility.sendPacket(player, new SM_WAREHOUSE_ADD_ITEM(item, storageType.getId(), player, addType));
+			}
 		}
 		PacketSendUtility.sendPacket(player, SM_CUBE_UPDATE.cubeSize(storageType, player));
 	}

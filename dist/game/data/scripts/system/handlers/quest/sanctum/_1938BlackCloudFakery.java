@@ -76,29 +76,41 @@ public class _1938BlackCloudFakery extends QuestHandler
 			switch (targetId)
 			{
 				case 279001:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 					}
 					break;
+				}
 				case 279008:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1693);
 							}
+						}
 						case STEP_TO_2:
+						{
 							return defaultCloseDialog(env, 1, 2, true, false);
+						}
 					}
 					break;
+				}
 			}
 		}
 		return sendQuestRewardDialog(env, 203703, 2375);

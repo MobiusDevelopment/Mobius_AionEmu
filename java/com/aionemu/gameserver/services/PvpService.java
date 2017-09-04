@@ -264,6 +264,7 @@ public class PvpService
 					switch (PvPConfig.GENOCIDE_SPECIAL_REWARDING)
 					{
 						case 1:
+						{
 							if ((winner.getSpreeLevel() <= 2) || ((Rnd.get() * 100) >= PvPConfig.SPECIAL_REWARD_CHANCE))
 							{
 								break;
@@ -272,7 +273,9 @@ public class PvpService
 							ItemService.addItem(winner, abyssId, 1L);
 							log.info("[PvP][Advanced] {Player : " + winner.getName() + "} has won " + abyssId + " for killing {Player : " + victim.getName() + "}");
 							break;
+						}
 						default:
+						{
 							if ((winner.getSpreeLevel() <= 2) || ((Rnd.get() * 100) >= PvPConfig.SPECIAL_REWARD_CHANCE))
 							{
 								break;
@@ -280,6 +283,7 @@ public class PvpService
 							ItemService.addItem(winner, PvPConfig.GENOCIDE_SPECIAL_REWARDING, 1L);
 							log.info("[PvP][Advanced] {Player : " + winner.getName() + "} has won " + PvPConfig.GENOCIDE_SPECIAL_REWARDING + " for killing {Player : " + victim.getName() + "}");
 							break;
+						}
 					}
 				}
 			}

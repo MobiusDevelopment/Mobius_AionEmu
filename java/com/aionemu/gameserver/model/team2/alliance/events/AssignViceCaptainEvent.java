@@ -52,9 +52,12 @@ public class AssignViceCaptainEvent extends AbstractTeamPlayerEvent<PlayerAllian
 		switch (assignType)
 		{
 			case DEMOTE:
+			{
 				team.getViceCaptainIds().remove(eventPlayer.getObjectId());
 				break;
+			}
 			case PROMOTE:
+			{
 				if (team.getViceCaptainIds().size() == 4)
 				{
 					PacketSendUtility.sendPacket(team.getLeaderObject(), SM_SYSTEM_MESSAGE.STR_FORCE_CANNOT_PROMOTE_MANAGER);
@@ -62,9 +65,12 @@ public class AssignViceCaptainEvent extends AbstractTeamPlayerEvent<PlayerAllian
 				}
 				team.getViceCaptainIds().add(eventPlayer.getObjectId());
 				break;
+			}
 			case DEMOTE_CAPTAIN_TO_VICECAPTAIN:
+			{
 				team.getViceCaptainIds().add(eventPlayer.getObjectId());
 				break;
+			}
 		}
 		team.applyOnMembers(this);
 	}
@@ -76,11 +82,15 @@ public class AssignViceCaptainEvent extends AbstractTeamPlayerEvent<PlayerAllian
 		switch (assignType)
 		{
 			case PROMOTE:
+			{
 				messageId = SM_ALLIANCE_INFO.FORCE_PROMOTE_MANAGER;
 				break;
+			}
 			case DEMOTE:
+			{
 				messageId = SM_ALLIANCE_INFO.FORCE_DEMOTE_MANAGER;
 				break;
+			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_ALLIANCE_INFO(team, messageId, eventPlayer.getName()));
 		return true;

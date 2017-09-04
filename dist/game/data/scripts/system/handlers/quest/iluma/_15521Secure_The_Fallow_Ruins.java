@@ -161,6 +161,7 @@ public class _15521Secure_The_Fallow_Ruins extends QuestHandler
 				case 242915:
 				case 242919:
 				case 242923:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -171,6 +172,7 @@ public class _15521Secure_The_Fallow_Ruins extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

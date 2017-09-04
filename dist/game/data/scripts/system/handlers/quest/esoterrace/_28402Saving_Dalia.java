@@ -95,6 +95,7 @@ public class _28402Saving_Dalia extends QuestHandler
 		switch (targetId)
 		{
 			case 701015:
+			{
 				if (qs.getQuestVarById(1) < 5)
 				{
 					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -106,6 +107,7 @@ public class _28402Saving_Dalia extends QuestHandler
 					updateQuestStatus(env);
 				}
 				break;
+			}
 		}
 		return false;
 	}

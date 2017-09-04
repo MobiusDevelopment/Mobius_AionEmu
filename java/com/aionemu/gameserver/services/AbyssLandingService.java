@@ -137,26 +137,40 @@ public class AbyssLandingService
 			switch (type)
 			{
 				case BASE:
+				{
 					loc.setBasePoints(loc.getBasePoints() + points);
 					break;
+				}
 				case SIEGE:
+				{
 					loc.setSiegePoints(loc.getSiegePoints() + points);
 					break;
+				}
 				case COMMANDER:
+				{
 					loc.setCommanderPoints(loc.getCommanderPoints() + points);
 					break;
+				}
 				case ARTIFACT:
+				{
 					loc.setArtifactPoints(loc.getArtifactPoints() + points);
 					break;
+				}
 				case QUEST:
+				{
 					loc.setQuestPoints(loc.getQuestPoints() + (points * questRate));
 					break;
+				}
 				case MONUMENT:
+				{
 					loc.setMonumentsPoints(loc.getMonumentsPoints() + points);
 					break;
+				}
 				case FACILITY:
+				{
 					loc.setFacilityPoints(loc.getFacilityPoints() + points);
 					break;
+				}
 			}
 		}
 		else
@@ -164,6 +178,7 @@ public class AbyssLandingService
 			switch (type)
 			{
 				case BASE:
+				{
 					if (loc.getBasePoints() < points)
 					{
 						return;
@@ -173,7 +188,9 @@ public class AbyssLandingService
 						loc.setBasePoints(loc.getBasePoints() - points);
 					}
 					break;
+				}
 				case SIEGE:
+				{
 					if (loc.getSiegePoints() < points)
 					{
 						return;
@@ -183,7 +200,9 @@ public class AbyssLandingService
 						loc.setSiegePoints(loc.getSiegePoints() - points);
 					}
 					break;
+				}
 				case COMMANDER:
+				{
 					if (loc.getCommanderPoints() < points)
 					{
 						return;
@@ -193,7 +212,9 @@ public class AbyssLandingService
 						loc.setCommanderPoints(loc.getCommanderPoints() - points);
 					}
 					break;
+				}
 				case ARTIFACT:
+				{
 					if (loc.getArtifactPoints() < points)
 					{
 						return;
@@ -203,7 +224,9 @@ public class AbyssLandingService
 						loc.setArtifactPoints(loc.getArtifactPoints() - points);
 					}
 					break;
+				}
 				case QUEST:
+				{
 					if (loc.getQuestPoints() < (points * questRate))
 					{
 						return;
@@ -213,7 +236,9 @@ public class AbyssLandingService
 						loc.setQuestPoints(loc.getQuestPoints() - (points * questRate));
 					}
 					break;
+				}
 				case MONUMENT:
+				{
 					if (loc.getMonumentsPoints() < points)
 					{
 						return;
@@ -223,7 +248,9 @@ public class AbyssLandingService
 						loc.setMonumentsPoints(loc.getMonumentsPoints() - points);
 					}
 					break;
+				}
 				case FACILITY:
+				{
 					if (loc.getFacilityPoints() < points)
 					{
 						return;
@@ -233,6 +260,7 @@ public class AbyssLandingService
 						loc.setFacilityPoints(loc.getFacilityPoints() - points);
 					}
 					break;
+				}
 			}
 		}
 		final int totalScore = loc.getArtifactPoints() + loc.getCommanderPoints() + loc.getFacilityPoints() + loc.getBasePoints() + loc.getMonumentsPoints() + loc.getQuestPoints() + loc.getSiegePoints();
@@ -256,26 +284,40 @@ public class AbyssLandingService
 			switch (type)
 			{
 				case BASE:
+				{
 					loc.setBasePoints(loc.getBasePoints() + points);
 					break;
+				}
 				case SIEGE:
+				{
 					loc.setSiegePoints(loc.getSiegePoints() + points);
 					break;
+				}
 				case COMMANDER:
+				{
 					loc.setCommanderPoints(loc.getCommanderPoints() + points);
 					break;
+				}
 				case ARTIFACT:
+				{
 					loc.setArtifactPoints(loc.getArtifactPoints() + points);
 					break;
+				}
 				case QUEST:
+				{
 					loc.setQuestPoints(loc.getQuestPoints() + (points * questRate));
 					break;
+				}
 				case MONUMENT:
+				{
 					loc.setMonumentsPoints(loc.getMonumentsPoints() + points);
 					break;
+				}
 				case FACILITY:
+				{
 					loc.setFacilityPoints(loc.getFacilityPoints() + points);
 					break;
+				}
 			}
 		}
 		else
@@ -283,6 +325,7 @@ public class AbyssLandingService
 			switch (type)
 			{
 				case BASE:
+				{
 					if (loc.getBasePoints() < points)
 					{
 						return;
@@ -292,7 +335,9 @@ public class AbyssLandingService
 						loc.setBasePoints(loc.getBasePoints() - points);
 					}
 					break;
+				}
 				case SIEGE:
+				{
 					if (loc.getSiegePoints() < points)
 					{
 						return;
@@ -302,7 +347,9 @@ public class AbyssLandingService
 						loc.setSiegePoints(loc.getSiegePoints() - points);
 					}
 					break;
+				}
 				case COMMANDER:
+				{
 					if (loc.getCommanderPoints() < points)
 					{
 						return;
@@ -312,7 +359,9 @@ public class AbyssLandingService
 						loc.setCommanderPoints(loc.getCommanderPoints() - points);
 					}
 					break;
+				}
 				case ARTIFACT:
+				{
 					if (loc.getArtifactPoints() < points)
 					{
 						return;
@@ -322,7 +371,9 @@ public class AbyssLandingService
 						loc.setArtifactPoints(loc.getArtifactPoints() - points);
 					}
 					break;
+				}
 				case QUEST:
+				{
 					if (loc.getQuestPoints() < (points * questRate))
 					{
 						return;
@@ -332,7 +383,9 @@ public class AbyssLandingService
 						loc.setQuestPoints(loc.getQuestPoints() - (points * questRate));
 					}
 					break;
+				}
 				case MONUMENT:
+				{
 					if (loc.getMonumentsPoints() < points)
 					{
 						return;
@@ -342,7 +395,9 @@ public class AbyssLandingService
 						loc.setMonumentsPoints(loc.getMonumentsPoints() - points);
 					}
 					break;
+				}
 				case FACILITY:
+				{
 					if (loc.getFacilityPoints() < points)
 					{
 						return;
@@ -352,6 +407,7 @@ public class AbyssLandingService
 						loc.setFacilityPoints(loc.getFacilityPoints() - points);
 					}
 					break;
+				}
 			}
 		}
 		final int totalScore = loc.getArtifactPoints() + loc.getCommanderPoints() + loc.getFacilityPoints() + loc.getBasePoints() + loc.getMonumentsPoints() + loc.getQuestPoints() + loc.getSiegePoints();
@@ -377,19 +433,25 @@ public class AbyssLandingService
 				switch (type)
 				{
 					case SIEGE:
+					{
 						// %0 has occupied %0 and the Landing is now enhanced.
 						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_OCCUPY(race, name));
 						break;
+					}
 					case BASE:
+					{
 						// %0 has occupied %1 Base and the Landing is now enhanced.
 						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_OCCUPY_BASECAMP(race, name.toString()));
 						break;
+					}
 					case QUEST:
+					{
 						// Completed quest has contributed %0 points to the Landing.
 						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUILDUP_POINT_QUEST_GAIN(points));
 						// %0's completed quest has enhanced the Landing.
 						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_QUEST(pl.getName()));
 						break;
+					}
 				}
 			}
 		});

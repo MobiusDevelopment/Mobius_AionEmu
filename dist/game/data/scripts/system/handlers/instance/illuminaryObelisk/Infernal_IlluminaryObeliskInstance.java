@@ -92,6 +92,7 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 702018: // Supply Box.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -104,39 +105,55 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188052830, 1)); // Dynatoum's Brazen Weapon Box.
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188052831, 1)); // Dynatoum's Brazen Armor Box.
 							break;
+						}
 					}
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case 702658: // Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053579, 1)); // [Event] Abbey Bundle.
 				break;
+			}
 			case 702659: // Noble Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); // [Event] Noble Abbey Bundle.
 				break;
-			
+			}
 			/**
 			 * Collect Items: Each "Shield Generator" unit needs 3 ide items, 12 items in total, you can find them all around the instance. Bombs to use the cannons appear in chests around the instance in a different place every time, collect them too.
 			 */
 			case 730884: // Flourishing Idium.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000289, 3));
 				break;
+			}
 			case 730885: // Danuar Cannonballs.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000290, 3));
 				break;
+			}
 		}
 	}
 	
@@ -170,11 +187,15 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 		switch (player.getRace())
 		{
 			case ELYOS:
+			{
 				sendMovie(player, 894);
 				break;
+			}
 			case ASMODIANS:
+			{
 				sendMovie(player, 895);
 				break;
+			}
 		}
 	}
 	
@@ -191,9 +212,11 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 			case 702021: // Danuar Cannon.
 			case 702022: // Danuar Cannon.
 			case 702023: // Danuar Cannon.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21511, 60, player).useNoAnimationSkill();
 				break;
+			}
 		}
 	}
 	
@@ -206,6 +229,7 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 702010: // Eastern Shield Generator.
+			{
 				despawnNpc(npc);
 				deleteNpc(234682);
 				deleteNpc(234687);
@@ -219,7 +243,9 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402139, Race.PC_ALL, 0);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702010, 255.47392f, 293.56177f, 321.18497f, (byte) 89), 10000);
 				break;
+			}
 			case 702011: // Western Shield Generator.
+			{
 				despawnNpc(npc);
 				deleteNpc(234683);
 				deleteNpc(234726);
@@ -232,7 +258,9 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402140, Race.PC_ALL, 0);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702011, 255.55742f, 216.03549f, 321.21344f, (byte) 30), 10000);
 				break;
+			}
 			case 702012: // Southern Shield Generator.
+			{
 				despawnNpc(npc);
 				deleteNpc(234684);
 				deleteNpc(234688);
@@ -246,7 +274,9 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402141, Race.PC_ALL, 0);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702012, 294.20718f, 254.60352f, 295.7729f, (byte) 60), 10000);
 				break;
+			}
 			case 702013: // Northern Shield Generator.
+			{
 				despawnNpc(npc);
 				deleteNpc(234685);
 				deleteNpc(234689);
@@ -260,13 +290,14 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402142, Race.PC_ALL, 0);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(702013, 216.97739f, 254.4616f, 295.77353f, (byte) 0), 10000);
 				break;
-			
+			}
 			/****************************
 			 * Eastern Shield Generator *
 			 ****************************/
 			case 234723:
 			case 234724:
 			case 234725:
+			{
 				despawnNpc(npc);
 				if (getNpcs(234723).isEmpty() && getNpcs(234724).isEmpty() && getNpcs(234725).isEmpty())
 				{
@@ -275,8 +306,10 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					ThreadPoolManager.getInstance().schedule((Runnable) () -> startHWESG2(), 8000);
 				}
 				break;
+			}
 			case 234687:
 			case 234734:
+			{
 				despawnNpc(npc);
 				if (getNpcs(234687).isEmpty() && getNpcs(234734).isEmpty())
 				{
@@ -286,7 +319,9 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					ThreadPoolManager.getInstance().schedule((Runnable) () -> startHWESG3(), 8000);
 				}
 				break;
+			}
 			case 234682:
+			{
 				startHSCRT();
 				despawnNpc(npc);
 				if (getNpcs(234682).isEmpty())
@@ -300,12 +335,13 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					}, 2000);
 				}
 				break;
-			
+			}
 			/****************************
 			 * Western Shield Generator *
 			 ****************************/
 			case 234726:
 			case 234727:
+			{
 				despawnNpc(npc);
 				if (getNpcs(234726).isEmpty() && getNpcs(234727).isEmpty())
 				{
@@ -314,8 +350,10 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					ThreadPoolManager.getInstance().schedule((Runnable) () -> startHWWSG2(), 8000);
 				}
 				break;
+			}
 			case 234728:
 			case 234735:
+			{
 				despawnNpc(npc);
 				if (getNpcs(234728).isEmpty() && getNpcs(234735).isEmpty())
 				{
@@ -325,7 +363,9 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					ThreadPoolManager.getInstance().schedule((Runnable) () -> startHWWSG3(), 8000);
 				}
 				break;
+			}
 			case 234683:
+			{
 				startHSCRT();
 				despawnNpc(npc);
 				if (getNpcs(234683).isEmpty())
@@ -339,13 +379,14 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					}, 2000);
 				}
 				break;
-			
+			}
 			/*****************************
 			 * Southern Shield Generator *
 			 *****************************/
 			case 234729:
 			case 234730:
 			case 234731:
+			{
 				despawnNpc(npc);
 				if (getNpcs(234729).isEmpty() && getNpcs(234730).isEmpty() && getNpcs(234731).isEmpty())
 				{
@@ -354,8 +395,10 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					ThreadPoolManager.getInstance().schedule((Runnable) () -> startHWSSG2(), 8000);
 				}
 				break;
+			}
 			case 234688:
 			case 234732:
+			{
 				despawnNpc(npc);
 				if (getNpcs(234688).isEmpty() && getNpcs(234732).isEmpty())
 				{
@@ -365,7 +408,9 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					ThreadPoolManager.getInstance().schedule((Runnable) () -> startHWSSG3(), 8000);
 				}
 				break;
+			}
 			case 234684:
+			{
 				startHSCRT();
 				despawnNpc(npc);
 				if (getNpcs(234684).isEmpty())
@@ -379,13 +424,14 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					}, 2000);
 				}
 				break;
-			
+			}
 			/*****************************
 			 * Northern Shield Generator *
 			 *****************************/
 			case 234720:
 			case 234721:
 			case 234722:
+			{
 				despawnNpc(npc);
 				if (getNpcs(234720).isEmpty() && getNpcs(234721).isEmpty() && getNpcs(234722).isEmpty())
 				{
@@ -394,8 +440,10 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					ThreadPoolManager.getInstance().schedule((Runnable) () -> startHWNSG2(), 8000);
 				}
 				break;
+			}
 			case 234689:
 			case 234733:
+			{
 				despawnNpc(npc);
 				if (getNpcs(234689).isEmpty() && getNpcs(234733).isEmpty())
 				{
@@ -405,7 +453,9 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					ThreadPoolManager.getInstance().schedule((Runnable) () -> startHWNSG3(), 8000);
 				}
 				break;
+			}
 			case 234685:
+			{
 				startHSCRT();
 				despawnNpc(npc);
 				if (getNpcs(234685).isEmpty())
@@ -419,11 +469,12 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 					}, 2000);
 				}
 				break;
-			
+			}
 			/**
 			 * Final Boss.
 			 */
 			case 234686: // Remodeled Dynatoum.
+			{
 				despawnNpc(npc);
 				sendMsg("[Congratulation]: you finish <[Infernal] Illuminary Obelisk>");
 				spawn(702018, 258.888f, 251.14882f, 455.12198f, (byte) 105); // Supply Box.
@@ -431,13 +482,18 @@ public class Infernal_IlluminaryObeliskInstance extends GeneralInstanceHandler
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						spawn(702658, 259.3773f, 250.84984f, 455.1222f, (byte) 45); // Abbey Box.
 						break;
+					}
 					case 2:
+					{
 						spawn(702659, 259.3773f, 250.84984f, 455.1222f, (byte) 45); // Noble Abbey Box.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	

@@ -44,21 +44,31 @@ public class AutoBan
 		switch (PunishmentConfig.PUNISHMENT_TYPE)
 		{
 			case 1:
+			{
 				player.getClientConnection().close(new SM_QUIT_RESPONSE(), false);
 				break;
+			}
 			case 2:
+			{
 				PunishmentService.banChar(playerId, dayCount, reason);
 				break;
+			}
 			case 3:
+			{
 				LoginServer.getInstance().sendBanPacket((byte) 1, accountId, accountIp, time, 0);
 				break;
+			}
 			case 4:
+			{
 				LoginServer.getInstance().sendBanPacket((byte) 2, accountId, accountIp, time, 0);
 				break;
+			}
 			case 5:
+			{
 				player.getClientConnection().closeNow();
 				BannedMacManager.getInstance().banAddress(address, System.currentTimeMillis() + (time * 60000), reason);
 				break;
+			}
 		}
 	}
 }

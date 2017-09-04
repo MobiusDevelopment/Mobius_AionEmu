@@ -77,6 +77,7 @@ public class _1346Killing_For_Castor extends QuestHandler
 			case 210844:
 			case 210898:
 			case 210878:
+			{
 				if (qs.getQuestVarById(0) < 9)
 				{
 					qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -84,6 +85,7 @@ public class _1346Killing_For_Castor extends QuestHandler
 					return true;
 				}
 				break;
+			}
 		}
 		return false;
 	}

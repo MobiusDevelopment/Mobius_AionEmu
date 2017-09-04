@@ -57,7 +57,9 @@ public class SWAAGun_DarkAI2 extends NpcAI2
 				case 251735:
 				case 251755:
 				case 251775:
+				{
 					// Asmodian Defense Turret [Kaldor]
+				}
 				case 252171:
 				case 252172:
 				case 252173:
@@ -65,10 +67,14 @@ public class SWAAGun_DarkAI2 extends NpcAI2
 				case 252175:
 				case 252176:
 				case 252177:
+				{
 					// Empty Aetheric Cannon [Reshanta]
+				}
 				case 881982:
+				{
 					SkillEngine.getInstance().getSkill(player, 21518, 1, player).useNoAnimationSkill();
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

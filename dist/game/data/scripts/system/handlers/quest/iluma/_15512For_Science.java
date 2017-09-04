@@ -167,6 +167,7 @@ public class _15512For_Science extends QuestHandler
 				case 242715:
 				case 242719:
 				case 242723:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -177,6 +178,7 @@ public class _15512For_Science extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

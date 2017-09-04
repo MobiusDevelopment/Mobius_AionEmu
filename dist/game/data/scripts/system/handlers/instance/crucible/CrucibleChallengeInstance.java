@@ -126,39 +126,53 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 			case 217803: // Dukaki Cook.
 			case 217842: // Starved Karnif.
 			case 217844: // Thirsty Bladestorm Spirit.
+			{
 				points += 250;
 				break;
+			}
 			case 217784: // Contorted Malodor.
 			case 217785: // Contorted Malodor.
+			{
 				points += 500;
 				break;
+			}
 			case 217783: // Grissil Of Verdure.
+			{
 				points += 1000;
 				break;
+			}
 			case 217797: // Tirratirra.
 			case 217798: // Graceful Mira.
 			case 217799: // Beautiful Himara.
 			case 217800: // Trainee Shoruken.
 			case 217801: // Trainee Attatuken.
+			{
 				points += 2000;
 				break;
+			}
 			case 217843: // Head Greentooth.
 			case 217845: // Whihazad.
 			case 217847: // Fiery Gomju.
+			{
 				points += 3500;
 				break;
+			}
 			case 217788: // Research Leader MuMu Ham.
 			case 217789: // Bossman Nukiti.
 			case 217790: // Drudgelord Kakiti.
 			case 217794: // Hamerun Leechsoul.
+			{
 				points += 5000;
 				break;
+			}
 			case 217791: // Justicetaker Wyr.
 			case 217792: // Hamam The Torturer.
 			case 217793: // Lady Angerr.
 			case 217795: // Kaliga The Unjust.
+			{
 				points += 5000;
 				break;
+			}
 			case 218562: // Genoti.
 			case 218564: // Bustant.
 			case 218565: // Angparinerk.
@@ -174,13 +188,17 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 			case 217815: // Berus.
 			case 217816: // Polyidus.
 			case 217818: // Roskva.
+			{
 				points += 7000;
 				break;
+			}
 			case 218192: // Rank 5, Elyos Soldier Odos.
 			case 218200: // Rank 5 Asmodian Soldier Mediatec.
 			case 217819: // Vanktrist Spacetwine.
+			{
 				points += 10000;
 				break;
+			}
 		}
 		if (points != 0)
 		{
@@ -192,6 +210,7 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 		{
 			case 217785:
 			case 217784:
+			{
 				npcId = npc.getNpcId();
 				stage1Count++;
 				if (stage1Count == 2)
@@ -208,7 +227,9 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 					sp(217783, 337.82263f, 1662.9073f, 95.27217f, (byte) 0, 2000);
 				}
 				break;
+			}
 			case 217783:
+			{
 				despawnNpc(npc);
 				setEvent(StageType.PASS_STAGE_1, 0);
 				// You have eliminated all enemies in Round %0.
@@ -218,8 +239,10 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				sp(217758, 347.24026f, 1660.2524f, 95.35922f, (byte) 0, 0); // Worthiness Ticket.
 				sp(205674, 345.52954f, 1662.6697f, 95.25f, (byte) 0, 0);
 				break;
+			}
 			case 217843:
 			case 217845:
+			{
 				despawnNpc(npc);
 				sp(217848, 1309.2858f, 1732.6802f, 316.0825f, (byte) 0, 1000);
 				sp(217848, 1306.1871f, 1731.7861f, 316.25168f, (byte) 0, 1000);
@@ -237,7 +260,9 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				sendMsgByRace(1401086, Race.PC_ALL, 3000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> despawnNpcs(getNpcs(217848)), 20000);
 				break;
+			}
 			case 217847:
+			{
 				despawnNpc(npc);
 				setEvent(StageType.PASS_STAGE_3, 0);
 				// You have eliminated all enemies in Round %0.
@@ -246,9 +271,11 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				sendMsgByRace(1400930, Race.PC_ALL, 4000);
 				sp(205676, 1307.6722f, 1732.9865f, 316.07373f, (byte) 6, 0);
 				break;
+			}
 			case 217788:
 			case 217789:
 			case 217790:
+			{
 				despawnNpc(npc);
 				despawnNpcs(getNpcs(217786)); // Dukaki Guard.
 				setEvent(StageType.START_STAGE_4_ROUND_2, 2000);
@@ -258,9 +285,11 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				sendMsgByRace(1400929, Race.PC_ALL, 0);
 				sp(217794, 1271f, 791.5752f, 436.63998f, (byte) 0, 2000);
 				break;
+			}
 			case 217791:
 			case 217792:
 			case 217793:
+			{
 				despawnNpc(npc);
 				despawnNpcs(getNpcs(217787)); // Kaliga's Servant.
 				setEvent(StageType.START_STAGE_4_ROUND_2, 2000);
@@ -270,7 +299,9 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				sendMsgByRace(1400929, Race.PC_ALL, 0);
 				sp(217795, 1258.8425f, 237.91522f, 405.3968f, (byte) 0, 2000);
 				break;
+			}
 			case 217794:
+			{
 				despawnNpc(npc);
 				sp(217820, 1266.9661f, 791.5348f, 436.64014f, (byte) 0, 2000);
 				// Round %0 begins!
@@ -279,7 +310,9 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				sendMsgByRace(1400929, Race.PC_ALL, 0);
 				setEvent(StageType.START_BONUS_STAGE_4, 2000);
 				break;
+			}
 			case 217795:
+			{
 				despawnNpc(npc);
 				sp(217820, 1251.1598f, 237.97736f, 405.3968f, (byte) 0, 2000);
 				// Round %0 begins!
@@ -288,10 +321,13 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				sendMsgByRace(1400929, Race.PC_ALL, 0);
 				setEvent(StageType.START_BONUS_STAGE_4, 2000);
 				break;
+			}
 			case 217786:
 			case 217787:
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 217807:
 			case 217808:
 			case 217809:
@@ -300,6 +336,7 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 			case 217812:
 			case 217813:
 			case 217814:
+			{
 				despawnNpc(npc);
 				setEvent(StageType.START_STAGE_5_ROUND_2, 2000);
 				// Round %0 begins!
@@ -309,32 +346,46 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				switch (Rnd.get(1, 6))
 				{
 					case 1:
+					{
 						npcId = 217806;
 						break;
+					}
 					case 2:
+					{
 						npcId = 217815;
 						break;
+					}
 					case 3:
+					{
 						npcId = 217818;
 						break;
+					}
 					case 4:
+					{
 						npcId = 218562;
 						break;
+					}
 					case 5:
+					{
 						npcId = 218564;
 						break;
+					}
 					case 6:
+					{
 						npcId = 218565;
 						break;
+					}
 				}
 				sp(npcId, 332.3786f, 349.31204f, 96.090935f, (byte) 0, 2000);
 				break;
+			}
 			case 217806:
 			case 217815:
 			case 217818:
 			case 218562:
 			case 218564:
 			case 218565:
+			{
 				despawnNpc(npc);
 				setEvent(StageType.PASS_STAGE_5, 0);
 				// You have eliminated all enemies in Round %0.
@@ -343,7 +394,9 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				sendMsgByRace(1400930, Race.PC_ALL, 4000);
 				sp(205678, 346.64798f, 349.25586f, 96.090965f, (byte) 0, 0);
 				break;
+			}
 			case 217819:
+			{
 				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
 					Player player = null;
@@ -372,8 +425,10 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 					sp(205679, 1765.522f, 1282.1051f, 389.11743f, (byte) 0, 2000);
 				}, 4000);
 				break;
+			}
 			case 217837:
 			case 217838:
+			{
 				final Player player = npc.getAggroList().getMostPlayerDamage();
 				if (player != null)
 				{
@@ -388,8 +443,10 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				}
 				despawnNpc(npc);
 				break;
+			}
 			case 217800: // Shoruken.
 			case 217801: // Attatuken.
+			{
 				despawnNpc(npc);
 				if (getNpcs(217800).isEmpty() && getNpcs(217801).isEmpty())
 				{
@@ -398,7 +455,9 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 					startBonusStage2();
 				}
 				break;
+			}
 			case 217802:
+			{
 				despawnNpc(npc);
 				despawnNpcs(getNpcs(217803));
 				// Poppy was captured by the Dukaki Cooks... and roasted whole!
@@ -407,9 +466,11 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				bonusTimer.cancel(false);
 				passStage2();
 				break;
+			}
 			case 217797:
 			case 217798:
 			case 217799:
+			{
 				despawnNpc(npc);
 				if (getNpcs(217797).isEmpty() && getNpcs(217798).isEmpty() && getNpcs(217799).isEmpty())
 				{
@@ -418,7 +479,9 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 					startBonusStage2();
 				}
 				break;
+			}
 			case 217803:
+			{
 				despawnNpc(npc);
 				dieCount++;
 				if (dieCount == 5)
@@ -445,8 +508,10 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 					}
 				}
 				break;
+			}
 			case 217844:
 			case 217842:
+			{
 				final int fnpcId = npc.getNpcId();
 				despawnNpc(npc);
 				if (getNpcs(fnpcId).size() == 2)
@@ -459,20 +524,25 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 					}, 5000);
 				}
 				break;
+			}
 			case 218192: // Rank 5, Elyos Soldier Odos.
+			{
 				despawnNpc(npc);
 				// You have eliminated all enemies in Round %0.
 				sendMsgByRace(1400929, Race.PC_ALL, 0);
 				sp(217833, 1765.1195f, 313.09018f, 469.25f, (byte) 119, 2000); // Box Bonus (Stage Bonus 6)
 				sp(730460, 1804.46f, 309.16406f, 469.25f, (byte) 63, 2000); // Crucible Rift Exit.
 				break;
+			}
 			case 218200: // Rank 5, Asmodian Soldier Mediatec.
+			{
 				despawnNpc(npc);
 				// You have eliminated all enemies in Round %0.
 				sendMsgByRace(1400929, Race.PC_ALL, 0);
 				sp(217833, 1765.1195f, 313.09018f, 469.25f, (byte) 119, 2000); // Box Bonus (Stage Bonus 6)
 				sp(730460, 1804.46f, 309.16406f, 469.25f, (byte) 63, 2000); // Crucible Rift Exit.
 				break;
+			}
 		}
 	}
 	
@@ -482,11 +552,15 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 		switch (npcId)
 		{
 			case 217844:
+			{
 				bossId = 217845;
 				break;
+			}
 			case 217842:
+			{
 				bossId = 217843;
 				break;
+			}
 		}
 		sp(bossId, 1287.6239f, 1724.2721f, 317.1485f, (byte) 6, 2000);
 		despawnNpcs(getNpcs(npcId));
@@ -559,39 +633,59 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 		switch (spawnCount)
 		{
 			case 1:
+			{
 				sp(217803, 1789.923f, 310.853f, 469.25f, (byte) 0, 0);
 				break;
+			}
 			case 2:
+			{
 				sp(217803, 1780.9126f, 315.63382f, 469.25f, (byte) 0, 0);
 				break;
+			}
 			case 3:
+			{
 				// The Dukaki Cooks attacked and wounded Poppy!
 				sendMsgByRace(1401082, Race.PC_ALL, 0);
 				sp(217803, 1784.4752f, 300.1912f, 469.25f, (byte) 0, 0);
 				break;
+			}
 			case 4:
+			{
 				sp(217803, 1793.2847f, 312.59842f, 469.25f, (byte) 0, 0);
 				break;
+			}
 			case 5:
+			{
 				sp(217803, 1777.6609f, 316.1443f, 469.25f, (byte) 0, 0);
 				break;
+			}
 			case 6:
+			{
 				sp(217803, 1776.5625f, 299.30347f, 469.25f, (byte) 0, 0);
 				break;
+			}
 			case 7:
+			{
 				sp(217803, 1793.6469f, 301.40973f, 469.25f, (byte) 0, 0);
 				break;
+			}
 			case 8:
+			{
 				// Poppy was attacked by the Dukaki Cooks. They're planning to roast Poppy for dinner!
 				sendMsgByRace(1401083, Race.PC_ALL, 0);
 				sp(217803, 1797.4891f, 310.50418f, 469.25f, (byte) 0, 0);
 				break;
+			}
 			case 9:
+			{
 				sp(217803, 1782.552f, 319.43973f, 469.25f, (byte) 0, 0);
 				break;
+			}
 			case 10:
+			{
 				sp(217803, 1776.1577f, 305.80396f, 469.25f, (byte) 0, 0);
 				break;
+			}
 		}
 	}
 	
@@ -683,26 +777,40 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 		switch (getPlayerReward(player.getObjectId()).getSpawnPosition())
 		{
 			case 1:
+			{
 				teleport(player, 380.35417f, 1663.3583f, 97.60156f, (byte) 0);
 				break;
+			}
 			case 2:
+			{
 				teleport(player, 1819.8119f, 304.92932f, 469.4142f, (byte) 0);
 				break;
+			}
 			case 3:
+			{
 				teleport(player, 1354.9386f, 1748.1531f, 318.6173f, (byte) 70);
 				break;
+			}
 			case 4:
+			{
 				teleport(player, 1294.1417f, 234.49684f, 406.0368f, (byte) 0);
 				break;
+			}
 			case 5:
+			{
 				teleport(player, 1307.3776f, 790.7324f, 437.29678f, (byte) 0);
 				break;
+			}
 			case 6:
+			{
 				teleport(player, 381.7477f, 346.63913f, 96.74763f, (byte) 0);
 				break;
+			}
 			case 7:
+			{
 				teleport(player, 1750.2677f, 1253.5453f, 389.11765f, (byte) 10);
 				break;
+			}
 		}
 		return true;
 	}
@@ -757,54 +865,71 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 		switch (stageType)
 		{
 			case START_STAGE_1_ROUND_1:
+			{
 				// Round %0 begins!
 				sendMsgByRace(1400928, Race.PC_ALL, 2000);
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						npcId = 217784;
 						break;
+					}
 					case 2:
+					{
 						npcId = 217785;
 						break;
+					}
 				}
 				sp(npcId, 334.85098f, 1657.8495f, 95.77262f, (byte) 0, 2000);
 				sp(npcId, 334.74506f, 1668.7478f, 95.67427f, (byte) 0, 3000);
 				sp(npcId, 350.63846f, 1663.84f, 95.385f, (byte) 0, 4000);
 				break;
+			}
 			case START_STAGE_2_ROUND_1:
+			{
 				// Round %0 begins!
 				sendMsgByRace(1400928, Race.PC_ALL, 2000);
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						sp(217800, 1779.9993f, 305.76697f, 469.25f, (byte) 30, 2000);
 						sp(217801, 1779.9845f, 308.82013f, 469.25f, (byte) 90, 2000);
 						break;
+					}
 					case 2:
+					{
 						sp(217797, 1771.5549f, 307.09192f, 469.25f, (byte) 30, 2000);
 						sp(217798, 1775.9717f, 317.69516f, 469.25f, (byte) 90, 3000);
 						sp(217799, 1775.9646f, 296.3559f, 469.25f, (byte) 90, 4000);
 						break;
+					}
 				}
 				break;
+			}
 			case START_STAGE_3_ROUND_1:
+			{
 				// Round %0 begins!
 				sendMsgByRace(1400928, Race.PC_ALL, 2000);
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						// Smash the Meat Barrel to lure and destroy the Starved Karnifs.
 						sendMsgByRace(1401084, Race.PC_ALL, 0);
 						npcId = 217842;
 						barrelId = 217840;
 						break;
+					}
 					case 2:
+					{
 						// Smash the Aether Barrel to lure and destroy the Thirsty Spirits.
 						sendMsgByRace(1401085, Race.PC_ALL, 0);
 						npcId = 217844;
 						barrelId = 218560;
 						break;
+					}
 				}
 				sp(barrelId, 1302.4689f, 1732.1583f, 316.4486f, (byte) 0, 2000);
 				sp(npcId, 1288.6692f, 1730.5212f, 316.85333f, (byte) 0, 2000);
@@ -813,83 +938,120 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				sp(npcId, 1292.1957f, 1726.921f, 316.875f, (byte) 0, 2000);
 				sp(npcId, 1293.0376f, 1722.3871f, 316.93515f, (byte) 0, 2000);
 				break;
+			}
 			case START_HARAMEL_STAGE_4_ROUND_1:
+			{
 				// Round %0 begins!
 				sendMsgByRace(1400928, Race.PC_ALL, 2000);
 				switch (Rnd.get(1, 3))
 				{
 					case 1:
+					{
 						npcId = 217788;
 						break;
+					}
 					case 2:
+					{
 						npcId = 217789;
 						break;
+					}
 					case 3:
+					{
 						npcId = 217790;
 						break;
+					}
 				}
 				sp(217786, 1263.4213f, 791.8533f, 436.64014f, (byte) 60, 2000);
 				sp(217786, 1267.2097f, 804.04456f, 436.64008f, (byte) 60, 3000);
 				sp(217786, 1267.0653f, 781.0253f, 436.64017f, (byte) 60, 4000);
 				sp(npcId, 1253.5984f, 791.6149f, 436.64008f, (byte) 0, 8000);
 				break;
+			}
 			case START_KROMEDE_STAGE_4_ROUND_1:
+			{
 				// Round %0 begins!
 				sendMsgByRace(1400928, Race.PC_ALL, 2000);
 				switch (Rnd.get(1, 3))
 				{
 					case 1:
+					{
 						npcId = 217791;
 						break;
+					}
 					case 2:
+					{
 						npcId = 217792;
 						break;
+					}
 					case 3:
+					{
 						npcId = 217793;
 						break;
+					}
 				}
 				sp(217787, 1252.525f, 248.50781f, 405.38016f, (byte) 60, 2000);
 				sp(217787, 1250.0901f, 237.69656f, 405.39676f, (byte) 60, 3000);
 				sp(217787, 1253.0117f, 225.77977f, 405.3801f, (byte) 60, 4000);
 				sp(npcId, 1242.3618f, 237.89081f, 405.3801f, (byte) 0, 8000);
 				break;
+			}
 			case START_STAGE_5_ROUND_1:
+			{
 				// Round %0 begins!
 				sendMsgByRace(1400928, Race.PC_ALL, 2000);
 				switch (Rnd.get(1, 8))
 				{
 					case 1:
+					{
 						npcId = 217807;
 						break;
+					}
 					case 2:
+					{
 						npcId = 217808;
 						break;
+					}
 					case 3:
+					{
 						npcId = 217809;
 						break;
+					}
 					case 4:
+					{
 						npcId = 217810;
 						break;
+					}
 					case 5:
+					{
 						npcId = 217811;
 						break;
+					}
 					case 6:
+					{
 						npcId = 217812;
 						break;
+					}
 					case 7:
+					{
 						npcId = 217813;
 						break;
+					}
 					case 8:
+					{
 						npcId = 217814;
 						break;
+					}
 				}
 				sp(npcId, 335.7365f, 337.93097f, 96.0909f, (byte) 0, 2000);
 				break;
+			}
 			case START_STAGE_6_ROUND_1:
+			{
 				// Round %0 begins!
 				sendMsgByRace(1400928, Race.PC_ALL, 2000);
 				sp(217819, 1769.4579f, 1290.9342f, 389.11728f, (byte) 80, 2000);
 				break;
+			}
 		}
 	}
 	
@@ -922,123 +1084,188 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 			 * Give to a "Crucible Arbiter" in order to rejoin the battle and prove your worthiness.
 			 */
 			case 217758: // Worthiness Ticket Box (Fin Stage 1)
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000124, 1)); // Worthiness Ticket.
 				break;
+			}
 			case 217833: // Bonus Box (Fin Stage 6 Bonus)
+			{
 				switch (Rnd.get(1, 6))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 168000135, 1)); // Godstone: Inggness's Calmness.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 168000136, 1)); // Godstone: Vanktrist's Tears.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 168000137, 1)); // Godstone: Tymora's Training.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 168000138, 1)); // Godstone: Mazion's Order.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 168000139, 1)); // Godstone: Kijan's Outcry.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 168000140, 1)); // Godstone: Walzen's Vow.
 						break;
+					}
 				}
 				break;
+			}
 			case 218571: // Poppy Present (Fin Stage 2 Bonus)
+			{
 				switch (Rnd.get(1, 8))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 170490013, 1)); // [Souvenir] Barbecued Poppy.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 190000075, 1)); // Runaway Poppy Egg.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 170490009, 1)); // [Souvenir] Returned Poppy.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 170495012, 1)); // [Souvenir] Returned Poppy.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 170495013, 1)); // [Souvenir] Returned Poppy.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182006429, 1)); // Poppy Snack.
 						break;
+					}
 					case 7:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182006430, 1)); // Tasty Poppy Snack.
 						break;
+					}
 					case 8:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182006431, 1)); // Nutritious Poppy Snack.
 						break;
+					}
 				}
 				break;
+			}
 			case 217827: // Arminos' Treasure Chest.
 			case 217828: // Arminos' Treasure Chest.
 			case 217829: // Arminos' Treasure Chest.
+			{
 				int count = 0;
 				switch (rewardCount)
 				{
 					case 0:
+					{
 						switch (Rnd.get(1, 3))
 						{
 							case 1:
+							{
 								count = 1;
 								break;
+							}
 							case 2:
+							{
 								count = 10;
 								break;
+							}
 							case 3:
+							{
 								count = 0;
 								break;
+							}
 						}
 						break;
+					}
 					case 1:
+					{
 						switch (Rnd.get(1, 3))
 						{
 							case 1:
+							{
 								count = 2;
 								break;
+							}
 							case 2:
+							{
 								count = 18;
 								break;
+							}
 							case 3:
+							{
 								count = 0;
 								break;
+							}
 						}
 						break;
+					}
 					case 2:
+					{
 						switch (Rnd.get(1, 3))
 						{
 							case 1:
+							{
 								count = 3;
 								break;
+							}
 							case 2:
+							{
 								count = 26;
 								break;
+							}
 							case 3:
+							{
 								count = 250;
 								break;
+							}
 						}
 						break;
+					}
 				}
 				switch (npcId)
 				{
 					case 217827: // Arminos' Treasure Chest.
+					{
 						despawnNpc(getNpc(217828));
 						despawnNpc(getNpc(217829));
 						break;
+					}
 					case 217828: // Arminos' Treasure Chest.
+					{
 						despawnNpc(getNpc(217827));
 						despawnNpc(getNpc(217829));
 						break;
+					}
 					case 217829: // Arminos' Treasure Chest.
+					{
 						despawnNpc(getNpc(217827));
 						despawnNpc(getNpc(217828));
 						break;
+					}
 				}
 				if (count == 0)
 				{
@@ -1083,6 +1310,7 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 				dropItems.clear();
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, object, npcId, 186000130, count));
 				break;
+			}
 		}
 	}
 }

@@ -68,14 +68,19 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket
 			case 0:
 			case 3:
 			case 4:
+			{
 				writeD(target.getObjectId());
 				break;
+			}
 			case 1:
+			{
 				writeF(skill.getX());
 				writeF(skill.getY());
 				writeF(skill.getZ());
 				break;
+			}
 			case 2:
+			{
 				writeF(skill.getX());
 				writeF(skill.getY());
 				writeF(skill.getZ());
@@ -88,6 +93,7 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket
 				writeF(0);
 				writeF(0);
 				break;
+			}
 		}
 		writeH(skill.getSkillTemplate().getSkillId());
 		writeC(skill.getSkillTemplate().getLvl());
@@ -120,13 +126,17 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket
 			case 3:
 			case 4:
 			case 6:
+			{
 				writeC(skill.getH());
 				writeF(skill.getX());
 				writeF(skill.getY());
 				writeF(skill.getZ());
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		writeH(effects.size());
 		for (Effect effect : effects)
@@ -156,26 +166,36 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket
 				case 2:
 				case 4:
 				case 8:
+				{
 					writeF(effect.getTargetX());
 					writeF(effect.getTargetY());
 					writeF(effect.getTargetZ());
 					break;
+				}
 				case 16:
 				case 3:
+				{
 					writeC(effect.getEffector().getHeading());
 					break;
+				}
 				default:
+				{
 					switch (effect.getSkillMoveType())
 					{
 						case PULL:
 						case KNOCKBACK:
+						{
 							writeF(effect.getTargetX());
 							writeF(effect.getTargetY());
 							writeF(effect.getTargetZ());
+						}
 						default:
+						{
 							break;
+						}
 					}
 					break;
+				}
 			}
 			writeC(1);
 			{
@@ -202,21 +222,27 @@ public class SM_CASTSPELL_RESULT extends AionServerPacket
 				{
 					case 0:
 					case 2:
+					{
 						break;
+					}
 					case 8:
 					case 10:
+					{
 						writeD(effect.getMpShield());
 						writeD(effect.getProtectorId());
 						writeD(effect.getProtectedDamage());
 						writeD(effect.getProtectedSkillId());
 						break;
+					}
 					default:
+					{
 						writeD(effect.getProtectorId());
 						writeD(effect.getProtectedDamage());
 						writeD(effect.getProtectedSkillId());
 						writeD(effect.getReflectedDamage());
 						writeD(effect.getReflectedSkillId());
 						break;
+					}
 				}
 			}
 		}

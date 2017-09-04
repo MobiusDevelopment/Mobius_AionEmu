@@ -46,8 +46,10 @@ public class Warship_Invasion_VortexAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 833766: // F6_INVADE_Direct_Portal_Start.
+			{
 				startLifeTask();
 				break;
+			}
 		}
 	}
 	
@@ -81,6 +83,7 @@ public class Warship_Invasion_VortexAI2 extends NpcAI2
 						switch (getNpcId())
 						{
 							case 833766: // F6_INVADE_Direct_Portal_Start.
+							{
 								if (responder.getCommonData().getRace() == Race.ELYOS)
 								{
 									transferInvasion1(responder);
@@ -90,6 +93,7 @@ public class Warship_Invasion_VortexAI2 extends NpcAI2
 									transferInvasion2(responder);
 								}
 								break;
+							}
 						}
 						decisionTaken = true;
 					}

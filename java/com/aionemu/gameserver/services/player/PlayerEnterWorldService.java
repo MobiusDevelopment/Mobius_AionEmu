@@ -310,19 +310,29 @@ public final class PlayerEnterWorldService
 							switch (player.getActiveHouse().getHouseType())
 							{
 								case STUDIO:
+								{
 									addResposeEnergy = (long) (addResposeEnergy * 1.05);
 									break;
+								}
 								case MANSION:
+								{
 									addResposeEnergy = (long) (addResposeEnergy * 1.08);
 									break;
+								}
 								case ESTATE:
+								{
 									addResposeEnergy = (long) (addResposeEnergy * 1.15);
 									break;
+								}
 								case PALACE:
+								{
 									addResposeEnergy = (long) (addResposeEnergy * 1.50);
 									break;
+								}
 								default:
+								{
 									addResposeEnergy = (long) (addResposeEnergy * 1.1);
+								}
 							}
 						}
 						pcd.addReposteEnergy(addResposeEnergy > maxRespose ? maxRespose : addResposeEnergy);
@@ -895,11 +905,15 @@ public final class PlayerEnterWorldService
 			switch (account.getMembership())
 			{
 				case 1:
+				{
 					accountType = "premium";
 					break;
+				}
 				case 2:
+				{
 					accountType = "VIP";
 					break;
+				}
 			}
 			client.sendPacket(new SM_MESSAGE(0, null, "Your account is " + accountType, ChatType.GOLDEN_YELLOW));
 		}

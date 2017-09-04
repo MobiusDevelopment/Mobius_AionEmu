@@ -58,11 +58,13 @@ public class Inferno_DemonAI2 extends AggressiveNpcAI2
 			switch (getNpcId())
 			{
 				case 237373: // Inferno Demon.
+				{
 					// You have 15 minutes to find the Brilliant Elemental before it flees.
 					PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_Teo_T_TimeAttack_01, 0);
 					// The Fractured Elemental is building up power. Gather together to disperse the damage.
 					PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_Teo_T_Boss_Skill_02, 4000);
 					break;
+				}
 			}
 		}
 		checkPercentage(getLifeStats().getHpPercentage());
@@ -171,13 +173,17 @@ public class Inferno_DemonAI2 extends AggressiveNpcAI2
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								spawn(237374, x, y, z, (byte) 0); // Mutated Dimensional Intruder.
 								spawn(856597, x, y, z, (byte) 0);
 								break;
+							}
 							case 2:
+							{
 								spawn(237381, x, y, z, (byte) 0); // Wary Dimensional Intruder.
 								spawn(856597, x, y, z, (byte) 0);
 								break;
+							}
 						}
 					}
 				}

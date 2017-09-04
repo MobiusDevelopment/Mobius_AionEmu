@@ -114,6 +114,7 @@ public class _16903Observation_Overlord extends QuestHandler
 			{
 				case 231561:
 				case 231563:
+				{
 					if (qs.getQuestVarById(0) < 1)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -121,6 +122,7 @@ public class _16903Observation_Overlord extends QuestHandler
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

@@ -117,6 +117,7 @@ public class _15001Lending_Both_Hands extends QuestHandler
 				case 235791:
 				case 235799:
 				case 235800:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _15001Lending_Both_Hands extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

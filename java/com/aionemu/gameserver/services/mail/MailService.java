@@ -161,26 +161,32 @@ public class MailService
 			{
 				case JUNK:
 				case COMMON:
+				{
 					qualityPriceRate = 0.02f;
 					break;
-				
+				}
 				case RARE:
+				{
 					qualityPriceRate = 0.03f;
 					break;
-				
+				}
 				case LEGEND:
 				case UNIQUE:
+				{
 					qualityPriceRate = 0.04f;
 					break;
-				
+				}
 				case MYTHIC:
 				case EPIC:
+				{
 					qualityPriceRate = 0.05f;
 					break;
-				
+				}
 				default:
+				{
 					qualityPriceRate = 0.02f;
 					break;
+				}
 			}
 			
 			if (senderItem.getItemCount() < attachedItemCount)
@@ -376,7 +382,6 @@ public class MailService
 				{
 					return;
 				}
-				
 				PacketSendUtility.sendPacket(player, new SM_MAIL_SERVICE(letterId, attachmentType));
 				letter.removeAttachedItem();
 				break;
@@ -430,26 +435,32 @@ public class MailService
 			{
 				case JUNK:
 				case COMMON:
+				{
 					qualityPriceRate = 0.02f;
 					break;
-				
+				}
 				case RARE:
+				{
 					qualityPriceRate = 0.03f;
 					break;
-				
+				}
 				case LEGEND:
 				case UNIQUE:
+				{
 					qualityPriceRate = 0.04f;
 					break;
-				
+				}
 				case MYTHIC:
 				case EPIC:
+				{
 					qualityPriceRate = 0.05f;
 					break;
-				
+				}
 				default:
+				{
 					qualityPriceRate = 0.02f;
 					break;
+				}
 			}
 			
 			itemMailCommission = Math.round((senderItem.getItemTemplate().getPrice() * attachedItemCount) * qualityPriceRate);

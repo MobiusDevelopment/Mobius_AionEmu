@@ -82,8 +82,11 @@ public class _2247TheGergersDisguise extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1352);
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -95,6 +98,7 @@ public class _2247TheGergersDisguise extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 				}
 			}
 			if (targetId == 203645)
@@ -102,6 +106,7 @@ public class _2247TheGergersDisguise extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							qs.setQuestVar(2);
@@ -109,12 +114,15 @@ public class _2247TheGergersDisguise extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 2375);
 						}
+					}
 					case SELECT_REWARD:
+					{
 						if (var == 2)
 						{
 							removeQuestItem(env, 182203231, 1);
 							return sendQuestEndDialog(env);
 						}
+					}
 				}
 			}
 		}

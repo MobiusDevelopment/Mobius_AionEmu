@@ -113,7 +113,9 @@ public class _3329Dinners_On_Me extends QuestHandler
 						return sendQuestDialog(env, 2375);
 					}
 					case SELECT_REWARD:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

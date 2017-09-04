@@ -73,13 +73,21 @@ public class Triangle extends AbstractTriangle implements Reusable
 		switch (i)
 		{
 			case 0:
+			{
 				return pointa;
+			}
 			case 1:
+			{
 				return pointb;
+			}
 			case 2:
+			{
 				return pointc;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 	
@@ -111,14 +119,20 @@ public class Triangle extends AbstractTriangle implements Reusable
 		switch (i)
 		{
 			case 0:
+			{
 				pointa.set(point);
 				break;
+			}
 			case 1:
+			{
 				pointb.set(point);
 				break;
+			}
 			case 2:
+			{
 				pointc.set(point);
 				break;
+			}
 		}
 	}
 	
@@ -132,14 +146,20 @@ public class Triangle extends AbstractTriangle implements Reusable
 		switch (i)
 		{
 			case 0:
+			{
 				pointa.set(x, y, z);
 				break;
+			}
 			case 1:
+			{
 				pointb.set(x, y, z);
 				break;
+			}
 			case 2:
+			{
 				pointc.set(x, y, z);
 				break;
+			}
 		}
 	}
 	

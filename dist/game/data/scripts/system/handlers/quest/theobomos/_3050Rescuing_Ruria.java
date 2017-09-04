@@ -72,7 +72,9 @@ public class _3050Rescuing_Ruria extends QuestHandler
 						return sendQuestDialog(env, 4762);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -97,10 +99,12 @@ public class _3050Rescuing_Ruria extends QuestHandler
 							}
 						}
 						case USE_OBJECT:
+						{
 							if (qs.getQuestVarById(0) == 0)
 							{
 								return defaultStartFollowEvent(env, (Npc) env.getVisibleObject(), ZoneName.get("LF2A_SENSORYAREA_Q3050_206082_2_210060000"), 0, 1);
 							}
+						}
 						case SELECT_ACTION_1012:
 						{
 							removeQuestItem(env, 182208035, 1);

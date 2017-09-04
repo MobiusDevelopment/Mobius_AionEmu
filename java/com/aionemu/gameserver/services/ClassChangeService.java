@@ -46,25 +46,39 @@ public class ClassChangeService
 					switch (playerClass)
 					{
 						case WARRIOR:
+						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 2375, 1006));
 							break;
+						}
 						case SCOUT:
+						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 2716, 1006));
 							break;
+						}
 						case MAGE:
+						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 3057, 1006));
 							break;
+						}
 						case PRIEST:
+						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 3398, 1006));
 							break;
+						}
 						case TECHNIST:
+						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 3739, 1006));
 							break;
+						}
 						case MUSE:
+						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 4080, 1006));
 							break;
+						}
 						default:
+						{
 							break;
+						}
 					}
 				}
 				else if (playerRace == Race.ASMODIANS)
@@ -72,25 +86,39 @@ public class ClassChangeService
 					switch (playerClass)
 					{
 						case WARRIOR:
+						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 3057, 2008));
 							break;
+						}
 						case SCOUT:
+						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 3398, 2008));
 							break;
+						}
 						case MAGE:
+						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 3739, 2008));
 							break;
+						}
 						case PRIEST:
+						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 4080, 2008));
 							break;
+						}
 						case TECHNIST:
+						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 3569, 2008));
 							break;
+						}
 						case MUSE:
+						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 3910, 2008));
 							break;
+						}
 						default:
+						{
 							break;
+						}
 					}
 				}
 			}
@@ -107,38 +135,60 @@ public class ClassChangeService
 				switch (dialogId)
 				{
 					case 2376:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("1")));
 						break;
+					}
 					case 2461:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("2")));
 						break;
+					}
 					case 2717:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("4")));
 						break;
+					}
 					case 2802:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("5")));
 						break;
+					}
 					case 3058:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("7")));
 						break;
+					}
 					case 3143:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("8")));
 						break;
+					}
 					case 3399:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("10")));
 						break;
+					}
 					case 3484:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("11")));
 						break;
+					}
 					case 3825:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("13")));
 						break;
+					}
 					case 3740:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("14")));
 						break;
+					}
 					case 4081:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("16")));
 						break;
+					}
 				}
 				completeQuest(player, 1006);
 				completeQuest(player, 1007);
@@ -153,38 +203,60 @@ public class ClassChangeService
 				switch (dialogId)
 				{
 					case 3058:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("1")));
 						break;
+					}
 					case 3143:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("2")));
 						break;
+					}
 					case 3399:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("4")));
 						break;
+					}
 					case 3484:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("5")));
 						break;
+					}
 					case 3740:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("7")));
 						break;
+					}
 					case 3825:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("8")));
 						break;
+					}
 					case 4081:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("10")));
 						break;
+					}
 					case 4166:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("11")));
 						break;
+					}
 					case 3591:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("13")));
 						break;
+					}
 					case 3570:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("14")));
 						break;
+					}
 					case 3911:
+					{
 						setClass(player, PlayerClass.getPlayerClassById(Byte.parseByte("16")));
 						break;
+					}
 				}
 				completeQuest(player, 2008);
 				completeQuest(player, 2009);
@@ -244,38 +316,52 @@ public class ClassChangeService
 		switch (oldClass)
 		{
 			case WARRIOR:
+			{
 				if ((playerClass == PlayerClass.GLADIATOR) || (playerClass == PlayerClass.TEMPLAR))
 				{
 					break;
 				}
+			}
 			case SCOUT:
+			{
 				if ((playerClass == PlayerClass.ASSASSIN) || (playerClass == PlayerClass.RANGER))
 				{
 					break;
 				}
+			}
 			case MAGE:
+			{
 				if ((playerClass == PlayerClass.SORCERER) || (playerClass == PlayerClass.SPIRIT_MASTER))
 				{
 					break;
 				}
+			}
 			case PRIEST:
+			{
 				if ((playerClass == PlayerClass.CLERIC) || (playerClass == PlayerClass.CHANTER))
 				{
 					break;
 				}
+			}
 			case TECHNIST:
+			{
 				if ((playerClass == PlayerClass.GUNSLINGER) || (playerClass == PlayerClass.AETHERTECH))
 				{
 					break;
 				}
+			}
 			case MUSE:
+			{
 				if (playerClass == PlayerClass.SONGWEAVER)
 				{
 					break;
 				}
+			}
 			default:
+			{
 				PacketSendUtility.sendMessage(player, "Invalid class switch chosen");
 				return false;
+			}
 		}
 		return true;
 	}

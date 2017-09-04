@@ -133,6 +133,7 @@ public class _25408Handle_The_Remaining_Beritra_In_Asteria extends QuestHandler
 				case 883039:
 				case 883045:
 				case 883051:
+				{
 					if (qs.getQuestVarById(1) < 4)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -143,6 +144,7 @@ public class _25408Handle_The_Remaining_Beritra_In_Asteria extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

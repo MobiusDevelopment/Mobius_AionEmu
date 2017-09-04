@@ -90,11 +90,14 @@ public class _1535TheColdColdGround extends QuestHandler
 			{
 				case USE_OBJECT:
 				case START_DIALOG:
+				{
 					if (abexSkins || worgSkins || karnifSkins)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (abexSkins)
 					{
 						qs.setQuestVarById(0, 1);
@@ -103,7 +106,9 @@ public class _1535TheColdColdGround extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					break;
+				}
 				case STEP_TO_2:
+				{
 					if (worgSkins)
 					{
 						qs.setQuestVarById(0, 2);
@@ -112,7 +117,9 @@ public class _1535TheColdColdGround extends QuestHandler
 						return sendQuestDialog(env, 6);
 					}
 					break;
+				}
 				case STEP_TO_3:
+				{
 					if (karnifSkins)
 					{
 						qs.setQuestVarById(0, 3);
@@ -121,6 +128,7 @@ public class _1535TheColdColdGround extends QuestHandler
 						return sendQuestDialog(env, 7);
 					}
 					break;
+				}
 			}
 			return sendQuestDialog(env, 1693);
 		}

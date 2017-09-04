@@ -47,11 +47,17 @@ public enum SiegeRace
 		switch (race)
 		{
 			case ASMODIANS:
+			{
 				return SiegeRace.ASMODIANS;
+			}
 			case ELYOS:
+			{
 				return SiegeRace.ELYOS;
+			}
 			default:
+			{
 				return SiegeRace.BALAUR;
+			}
 		}
 	}
 	

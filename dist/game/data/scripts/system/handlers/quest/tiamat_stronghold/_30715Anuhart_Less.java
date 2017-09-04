@@ -111,6 +111,7 @@ public class _30715Anuhart_Less extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 219357:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -121,6 +122,7 @@ public class _30715Anuhart_Less extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

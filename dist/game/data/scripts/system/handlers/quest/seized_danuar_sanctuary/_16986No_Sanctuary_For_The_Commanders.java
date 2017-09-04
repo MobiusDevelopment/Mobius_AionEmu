@@ -122,6 +122,7 @@ public class _16986No_Sanctuary_For_The_Commanders extends QuestHandler
 				case 235624:
 				case 235625:
 				case 235626:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -132,6 +133,7 @@ public class _16986No_Sanctuary_For_The_Commanders extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

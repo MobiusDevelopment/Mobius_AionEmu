@@ -47,53 +47,69 @@ public class DF6_FieldAttractionAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 805765: // DF6_A1_F1_Attraction_D.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(329001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 329001, 0));
 					break;
+				}
 				case 805766: // DF6_F1_A1_Attraction_D.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(330001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 330001, 0));
 					break;
+				}
 				case 805767: // DF6_A1_D_Attraction_D.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(327001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 327001, 0));
 					break;
+				}
 				case 805768: // DF6_D_A1_Attraction_D.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(328001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 328001, 0));
 					break;
+				}
 				case 805769: // DF6_A2_B1_Attraction_D.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(333001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 333001, 0));
 					break;
+				}
 				case 805770: // DF6_B1_A2_Attraction_D.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(334001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 334001, 0));
 					break;
+				}
 				case 805771: // DF6_A2_H_Attraction_D.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(331001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 331001, 0));
 					break;
+				}
 				case 805772: // DF6_H_A2_Attraction_D.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(332001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 332001, 0));
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

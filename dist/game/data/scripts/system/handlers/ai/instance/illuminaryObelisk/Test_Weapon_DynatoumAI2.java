@@ -59,6 +59,7 @@ public class Test_Weapon_DynatoumAI2 extends AggressiveNpcAI2
 			switch (getNpcId())
 			{
 				case 233740: // Test Weapon Dynatoum.
+				{
 					/**
 					 * You have about 6 minutes to finish the boss, so all party members must be ready before activating the seal.
 					 */
@@ -79,6 +80,7 @@ public class Test_Weapon_DynatoumAI2 extends AggressiveNpcAI2
 						}
 					}, 360000);
 					break;
+				}
 			}
 		}
 		checkPercentage(getLifeStats().getHpPercentage());
@@ -223,8 +225,10 @@ public class Test_Weapon_DynatoumAI2 extends AggressiveNpcAI2
 		switch (getNpcId())
 		{
 			case 233740:
+			{
 				boost();
 				break;
+			}
 		}
 	}
 	

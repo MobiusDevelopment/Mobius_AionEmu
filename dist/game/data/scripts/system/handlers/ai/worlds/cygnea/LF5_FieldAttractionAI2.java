@@ -47,29 +47,37 @@ public class LF5_FieldAttractionAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 804811: // Seashell Watersled.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(279001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 279001, 0));
 					break;
+				}
 				case 804812: // King Conch Elevator.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(281001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 281001, 0));
 					break;
+				}
 				case 804813: // Sinking Waterdrop.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(280001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 280001, 0));
 					break;
+				}
 				case 804814: // Rising Waterdrop.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(282001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 282001, 0));
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

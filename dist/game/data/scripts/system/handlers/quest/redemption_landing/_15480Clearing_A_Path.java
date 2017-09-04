@@ -167,6 +167,7 @@ public class _15480Clearing_A_Path extends QuestHandler
 				case 884024:
 				case 884025:
 				case 884026:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -177,6 +178,7 @@ public class _15480Clearing_A_Path extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -123,11 +123,15 @@ public class MySQL5PlayerLunaShopDAO extends PlayerLunaShopDAO
 			{
 				case UPDATE_REQUIRED:
 				case NEW:
+				{
 					insert = updateLunaShop(con, player);
 					log.info("DB updated.");
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			bind.setPersistentState(PersistentState.UPDATED);
 		}

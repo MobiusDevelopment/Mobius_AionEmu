@@ -125,6 +125,7 @@ public class _18743Not_So_Fast_Nasto extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 236306: // Reviver Nasto.
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -135,6 +136,7 @@ public class _18743Not_So_Fast_Nasto extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

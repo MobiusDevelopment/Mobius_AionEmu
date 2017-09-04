@@ -399,9 +399,13 @@ public class Effect implements StatOwner
 			case 889: // Bestial Fury.
 			case 1053: // Aiming.
 			case 1099: // Hunter's Eye.
+			{
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -795,25 +799,35 @@ public class Effect implements StatOwner
 		switch (AttackStatus.getBaseStatus(getAttackStatus()))
 		{
 			case DODGE:
+			{
 				setSpellStatus(SpellStatus.DODGE);
 				break;
+			}
 			case PARRY:
+			{
 				if (getSpellStatus() == SpellStatus.NONE)
 				{
 					setSpellStatus(SpellStatus.PARRY);
 				}
 				break;
+			}
 			case BLOCK:
+			{
 				if (getSpellStatus() == SpellStatus.NONE)
 				{
 					setSpellStatus(SpellStatus.BLOCK);
 				}
 				break;
+			}
 			case RESIST:
+			{
 				setSpellStatus(SpellStatus.RESIST);
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 	
@@ -1202,10 +1216,14 @@ public class Effect implements StatOwner
 		switch (skillTemplate.getSubType())
 		{
 			case BUFF:
+			{
 				duration = effector.getGameStats().getStat(StatEnum.BOOST_DURATION_BUFF, duration).getCurrent();
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		
 		// adjust with pvp duration
@@ -1629,7 +1647,9 @@ public class Effect implements StatOwner
 			case 1072: // Silence Arrow VII
 			case 1073: // Silence Arrow VIII
 			case 1074: // Silence Arrow IX
+			{
 				return 20;
+			}
 			case 2932: // Unwavering Devotion I
 			case 3127: // Iron Skin I
 			case 2922: // Empyrean Providence I
@@ -1671,18 +1691,24 @@ public class Effect implements StatOwner
 			case 4149: // Chain Of Suffering VI
 			case 1754: // Stilling Word I
 			case 3854: // Wing Root I
+			{
 				// Npc Skill
+			}
 			case 18214: // Protective Shield
 			case 18232: // Explosion Of Wrath
 			case 18239: // Soul Petrify
+			{
 				return 30;
+			}
 			case 3790: // Cursecloud I
 			case 3791: // Cursecloud II
 			case 3792: // Cursecloud III
 			case 3793: // Cursecloud IV
 			case 3794: // Cursecloud V
 			case 3795: // Cursecloud VI
+			{
 				return 40;
+			}
 			// Npc Skill
 			case 18889: // Submissive Strike I
 			case 18892: // Weeping Curtain I
@@ -1698,7 +1724,9 @@ public class Effect implements StatOwner
 			case 19516: // Sap Damage V
 			case 19644: // Total Exhaustion I
 			case 19647: // Weaken I
+			{
 				return 255;
+			}
 		}
 		return 10;
 	}
@@ -1847,7 +1875,9 @@ public class Effect implements StatOwner
 			case 21476:
 			case 21529:
 			case 21911:
+			{
 				return true;
+			}
 		}
 		return false;
 	}

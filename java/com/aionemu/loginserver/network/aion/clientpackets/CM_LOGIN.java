@@ -106,12 +106,15 @@ public class CM_LOGIN extends AionClientPacket
 		switch (response)
 		{
 			case AUTHED:
+			{
 				client.setState(State.AUTHED_LOGIN);
 				client.setSessionKey(new SessionKey(client.getAccount()));
 				client.sendPacket(new SM_LOGIN_OK(client.getSessionKey()));
 				log.debug("" + user + " got authed state");
 				break;
+			}
 			case INVALID_PASSWORD:
+			{
 				if (Config.ENABLE_BRUTEFORCE_PROTECTION)
 				{
 					final String ip = client.getIP();
@@ -134,10 +137,13 @@ public class CM_LOGIN extends AionClientPacket
 					client.sendPacket(new SM_LOGIN_FAIL(response));
 				}
 				break;
+			}
 			default:
+			{
 				log.debug(user + " got unknown (" + response.toString() + ") attemp state");
 				client.close(new SM_LOGIN_FAIL(response), false);
 				break;
+			}
 		}
 	}
 }

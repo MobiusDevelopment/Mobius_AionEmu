@@ -136,22 +136,30 @@ public class _28952Drakenspire_Domination extends QuestHandler
 		{
 			case 236227:
 			case 236228:
+			{
 				qs.setQuestVarById(0, var + 1);
 				updateQuestStatus(env);
 				return true;
+			}
 			case 236229:
 			case 236232:
+			{
 				qs.setQuestVarById(0, var + 1);
 				updateQuestStatus(env);
 				return true;
+			}
 			case 236238:
+			{
 				qs.setQuestVarById(0, var + 1);
 				updateQuestStatus(env);
 				return true;
+			}
 			case 236247:
+			{
 				qs.setStatus(QuestStatus.REWARD);
 				updateQuestStatus(env);
 				return true;
+			}
 		}
 		return false;
 	}

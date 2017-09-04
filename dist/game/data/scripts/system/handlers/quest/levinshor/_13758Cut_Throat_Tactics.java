@@ -117,6 +117,7 @@ public class _13758Cut_Throat_Tactics extends QuestHandler
 			{
 				case 235346:
 				case 235347:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _13758Cut_Throat_Tactics extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

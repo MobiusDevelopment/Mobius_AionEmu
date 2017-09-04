@@ -116,6 +116,7 @@ public class _25565Protect_Azphel_Sanctuary extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 241627:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -126,6 +127,7 @@ public class _25565Protect_Azphel_Sanctuary extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

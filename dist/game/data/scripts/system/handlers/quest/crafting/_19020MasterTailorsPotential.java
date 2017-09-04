@@ -84,11 +84,15 @@ public class _19020MasterTailorsPotential extends QuestHandler
 			switch (targetId)
 			{
 				case 203794:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							return sendQuestDialog(env, 1011);
+						}
 						case STEP_TO_10:
+						{
 							if (!giveQuestItem(env, 152201962, 1))
 							{
 								return true;
@@ -97,7 +101,9 @@ public class _19020MasterTailorsPotential extends QuestHandler
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 						case STEP_TO_20:
+						{
 							if (!giveQuestItem(env, 152201963, 1))
 							{
 								return true;
@@ -106,11 +112,16 @@ public class _19020MasterTailorsPotential extends QuestHandler
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
+					break;
+				}
 				case 203793:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							final long itemCount1 = player.getInventory().getItemCountByItemId(182206766);
 							if (itemCount1 > 0)
 							{
@@ -123,7 +134,10 @@ public class _19020MasterTailorsPotential extends QuestHandler
 							{
 								return sendQuestDialog(env, 10001);
 							}
+						}
 					}
+					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

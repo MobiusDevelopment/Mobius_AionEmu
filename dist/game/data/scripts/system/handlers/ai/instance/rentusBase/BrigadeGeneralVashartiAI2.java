@@ -101,25 +101,35 @@ public class BrigadeGeneralVashartiAI2 extends AggressiveNpcAI2
 				switch (percent)
 				{
 					case 80:
+					{
 						npcId1 = 283010;
 						npcId2 = 283002;
 						break;
+					}
 					case 70:
+					{
 						npcId1 = 283011;
 						npcId2 = 283003;
 						break;
+					}
 					case 50:
+					{
 						npcId1 = 283011;
 						npcId2 = 283004;
 						break;
+					}
 					case 40:
+					{
 						npcId1 = 283012;
 						npcId2 = 283004;
 						break;
+					}
 					case 25:
+					{
 						npcId1 = 283012;
 						npcId2 = 283006;
 						break;
+					}
 				}
 				spawn(npcId2, 188.16568f, 414.03534f, 260.75488f, (byte) 0);
 				spawn(npcId1, 188.33f, 414.61f, 260.61f, (byte) 244);

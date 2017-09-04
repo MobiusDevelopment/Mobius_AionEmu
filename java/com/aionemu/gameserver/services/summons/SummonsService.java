@@ -67,16 +67,22 @@ public class SummonsService
 		switch (unsummonType)
 		{
 			case COMMAND:
+			{
 				PacketSendUtility.sendPacket(master, SM_SYSTEM_MESSAGE.STR_SKILL_SUMMON_UNSUMMON_FOLLOWER(summon.getNameId()));
 				PacketSendUtility.sendPacket(master, new SM_SUMMON_UPDATE(summon));
 				break;
+			}
 			case DISTANCE:
+			{
 				PacketSendUtility.sendPacket(master, SM_SYSTEM_MESSAGE.STR_SKILL_SUMMON_UNSUMMON_BY_TOO_DISTANCE);
 				PacketSendUtility.sendPacket(master, new SM_SUMMON_UPDATE(summon));
 				break;
+			}
 			case UNSPECIFIED:
 			case LOGOUT:
+			{
 				break;
+			}
 		}
 		summon.getObserveController().notifySummonReleaseObservers();
 		summon.setReleaseTask(ThreadPoolManager.getInstance().schedule(new ReleaseSummonTask(summon, unsummonType, isAttacked), 5000));
@@ -151,22 +157,32 @@ public class SummonsService
 		switch (summonMode)
 		{
 			case REST:
+			{
 				summonController.restMode();
 				break;
+			}
 			case ATTACK:
+			{
 				summonController.attackMode(targetObjId);
 				break;
+			}
 			case GUARD:
+			{
 				summonController.guardMode();
 				break;
+			}
 			case RELEASE:
+			{
 				if (unsummonType != null)
 				{
 					summonController.release(unsummonType);
 				}
 				break;
+			}
 			case UNK:
+			{
 				break;
+			}
 		}
 	}
 	
@@ -198,6 +214,7 @@ public class SummonsService
 				case COMMAND:
 				case DISTANCE:
 				case UNSPECIFIED:
+				{
 					PacketSendUtility.sendPacket(master, SM_SYSTEM_MESSAGE.STR_SKILL_SUMMON_UNSUMMONED(owner.getNameId()));
 					PacketSendUtility.sendPacket(master, new SM_SUMMON_OWNER_REMOVE(owner.getObjectId()));
 					PacketSendUtility.sendPacket(master, new SM_SUMMON_PANEL_REMOVE());
@@ -217,8 +234,11 @@ public class SummonsService
 						}
 					}
 					break;
+				}
 				case LOGOUT:
+				{
 					break;
+				}
 			}
 		}
 	}

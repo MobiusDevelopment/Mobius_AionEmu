@@ -300,19 +300,25 @@ public class NpcFactions
 			switch (faction.getState())
 			{
 				case COMPLETE:
+				{
 					if (faction.getTime() > (System.currentTimeMillis() / 1000))
 					{
 						continue;
 					}
 					break;
+				}
 				case START:
+				{
 					continue;
+				}
 				case NOTING:
+				{
 					if (faction.getTime() > (System.currentTimeMillis() / 1000))
 					{
 						questId = faction.getQuestId();
 					}
 					break;
+				}
 			}
 			if (questId == 0)
 			{

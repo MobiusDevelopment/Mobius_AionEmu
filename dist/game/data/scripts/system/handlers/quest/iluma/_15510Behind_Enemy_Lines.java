@@ -161,6 +161,7 @@ public class _15510Behind_Enemy_Lines extends QuestHandler
 				case 241935:
 				case 241939:
 				case 241943:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -171,6 +172,7 @@ public class _15510Behind_Enemy_Lines extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

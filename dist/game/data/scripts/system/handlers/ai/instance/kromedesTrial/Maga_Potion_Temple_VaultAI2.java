@@ -53,8 +53,10 @@ public class Maga_Potion_Temple_VaultAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 730308: // Maga's Potion.
+				{
 					TeleportService2.teleportTo(player, 300230000, instanceId, 687.56116f, 681.68225f, 200.28648f, (byte) 30);
 					break;
+				}
 			}
 		}
 		else if (dialogId == 1012)

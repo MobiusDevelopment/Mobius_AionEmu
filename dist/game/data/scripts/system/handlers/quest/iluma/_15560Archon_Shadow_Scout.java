@@ -151,6 +151,7 @@ public class _15560Archon_Shadow_Scout extends QuestHandler
 				case 241471:
 				case 241472:
 				case 241473:
+				{
 					if (qs.getQuestVarById(1) < 3)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -161,6 +162,7 @@ public class _15560Archon_Shadow_Scout extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -83,22 +83,30 @@ public class _24014Stomp_Out_The_Plot extends QuestHandler
 			switch (targetId)
 			{
 				case 203665:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
 							break;
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 					}
 					break;
+				}
 				case 203668:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
@@ -112,7 +120,9 @@ public class _24014Stomp_Out_The_Plot extends QuestHandler
 								return sendQuestDialog(env, 2034);
 							}
 							break;
+						}
 						case STEP_TO_2:
+						{
 							if (var == 1)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -120,10 +130,14 @@ public class _24014Stomp_Out_The_Plot extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							return checkQuestItems(env, 5, 5, true, 5, 2120);
+						}
 					}
 					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

@@ -81,7 +81,9 @@ public class _3100AShugosBestFriend extends QuestHandler
 						}
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

@@ -43,11 +43,17 @@ public class FollowingNpcAI2 extends GeneralNpcAI2
 		switch (getState())
 		{
 			case DESPAWNED:
+			{
 				return StateEvents.DESPAWN_EVENTS.hasEvent(eventType);
+			}
 			case DIED:
+			{
 				return StateEvents.DEAD_EVENTS.hasEvent(eventType);
+			}
 			case CREATED:
+			{
 				return StateEvents.CREATED_EVENTS.hasEvent(eventType);
+			}
 		}
 		if (eventType == AIEventType.CREATURE_MOVED)
 		{

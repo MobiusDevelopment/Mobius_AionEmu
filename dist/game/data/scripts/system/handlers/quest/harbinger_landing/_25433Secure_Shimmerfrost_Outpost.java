@@ -119,6 +119,7 @@ public class _25433Secure_Shimmerfrost_Outpost extends QuestHandler
 				case 883001:
 				case 883002:
 				case 883003:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _25433Secure_Shimmerfrost_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

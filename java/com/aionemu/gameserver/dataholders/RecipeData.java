@@ -59,14 +59,20 @@ public class RecipeData
 			switch (it.getRace())
 			{
 				case ASMODIANS:
+				{
 					asmos.add(it);
 					break;
+				}
 				case ELYOS:
+				{
 					elyos.add(it);
 					break;
+				}
 				case PC_ALL:
+				{
 					any.add(it);
 					break;
+				}
 			}
 		}
 		list = null;
@@ -78,6 +84,7 @@ public class RecipeData
 		switch (race)
 		{
 			case ASMODIANS:
+			{
 				for (RecipeTemplate recipe : asmos)
 				{
 					if ((recipe.getSkillid() == skillId) && (recipe.getSkillpoint() <= maxLevel))
@@ -86,7 +93,9 @@ public class RecipeData
 					}
 				}
 				break;
+			}
 			case ELYOS:
+			{
 				for (RecipeTemplate recipe : elyos)
 				{
 					if ((recipe.getSkillid() == skillId) && (recipe.getSkillpoint() <= maxLevel))
@@ -95,6 +104,7 @@ public class RecipeData
 					}
 				}
 				break;
+			}
 		}
 		
 		for (RecipeTemplate recipe : any)

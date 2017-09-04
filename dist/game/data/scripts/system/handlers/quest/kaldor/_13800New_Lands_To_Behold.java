@@ -121,7 +121,9 @@ public class _13800New_Lands_To_Behold extends QuestHandler
 							return sendQuestEndDialog(env);
 						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 			}
@@ -137,7 +139,9 @@ public class _13800New_Lands_To_Behold extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

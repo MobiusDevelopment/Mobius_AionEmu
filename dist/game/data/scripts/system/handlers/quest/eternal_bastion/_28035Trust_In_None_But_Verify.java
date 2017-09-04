@@ -62,8 +62,10 @@ public class _28035Trust_In_None_But_Verify extends QuestHandler
 				switch (env.getDialog())
 				{
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						QuestService.startQuest(env);
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

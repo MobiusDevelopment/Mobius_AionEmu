@@ -120,6 +120,7 @@ public class _15202Take_Out_The_Elites extends QuestHandler
 			{
 				case 235845:
 				case 235846:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -130,6 +131,7 @@ public class _15202Take_Out_The_Elites extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

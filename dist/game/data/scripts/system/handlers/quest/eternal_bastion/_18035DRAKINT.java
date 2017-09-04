@@ -62,8 +62,10 @@ public class _18035DRAKINT extends QuestHandler
 				switch (env.getDialog())
 				{
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						QuestService.startQuest(env);
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

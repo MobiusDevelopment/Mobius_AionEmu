@@ -133,6 +133,7 @@ public class _15475Occupiers_Groundwork extends QuestHandler
 				case 883036:
 				case 883042:
 				case 883048:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -143,6 +144,7 @@ public class _15475Occupiers_Groundwork extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

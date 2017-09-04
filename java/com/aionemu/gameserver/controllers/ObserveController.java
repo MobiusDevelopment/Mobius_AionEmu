@@ -168,43 +168,69 @@ public class ObserveController
 		switch (type)
 		{
 			case ATTACK:
+			{
 				observer.attack((Creature) object[0]);
 				break;
+			}
 			case ATTACKED:
+			{
 				observer.attacked((Creature) object[0]);
 				break;
+			}
 			case DEATH:
+			{
 				observer.died((Creature) object[0]);
 				break;
+			}
 			case EQUIP:
+			{
 				observer.equip((Item) object[0], (Player) object[1]);
 				break;
+			}
 			case UNEQUIP:
+			{
 				observer.unequip((Item) object[0], (Player) object[1]);
 				break;
+			}
 			case MOVE:
+			{
 				observer.moved();
 				break;
+			}
 			case SKILLUSE:
+			{
 				observer.skilluse((Skill) object[0]);
 				break;
+			}
 			case DOT_ATTACKED:
+			{
 				observer.dotattacked((Creature) object[0], (Effect) object[1]);
 				break;
+			}
 			case ITEMUSE:
+			{
 				observer.itemused((Item) object[0]);
 				break;
+			}
 			case NPCDIALOGREQUEST:
+			{
 				observer.npcdialogrequested((Npc) object[0]);
 				break;
+			}
 			case ABNORMALSETTED:
+			{
 				observer.abnormalsetted((AbnormalState) object[0]);
 				break;
+			}
 			case SUMMONRELEASE:
+			{
 				observer.summonrelease();
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 	

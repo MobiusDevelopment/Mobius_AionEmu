@@ -72,11 +72,15 @@ public class TelepathyControllerAI2 extends AggressiveNpcAI2
 				switch (nrNpc)
 				{
 					case 1:
+					{
 						nrNpc = 281150; // Anuhart Escort.
 						break;
+					}
 					case 2:
+					{
 						nrNpc = 281334; // Bionic Clodworm.
 						break;
+					}
 				}
 				rndSpawnInRange(nrNpc, distance);
 			}

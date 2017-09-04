@@ -54,11 +54,13 @@ public class KahrunAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 800429: // Kahrun (Reian Leader).
+				{
 					final SpawnTemplate template = SpawnEngine.addNewSingleTimeSpawn(300520000, 730625, 503.219757f, 516.651733f, 242.604065f, (byte) 0); // Blood Red Jewel.
 					template.setEntityId(4);
 					portal.put(730625, SpawnEngine.spawnObject(template, instanceId));
 					AI2Actions.deleteOwner(KahrunAI2.this);
 					break;
+				}
 			}
 		}
 		return true;

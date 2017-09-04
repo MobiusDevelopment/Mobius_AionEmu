@@ -133,6 +133,7 @@ public class _15500Singing_The_Hymn_Of_Aion extends QuestHandler
 				case 241663:
 				case 241664:
 				case 241665:
+				{
 					if (qs.getQuestVarById(1) < 40)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -143,6 +144,7 @@ public class _15500Singing_The_Hymn_Of_Aion extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -40,29 +40,41 @@ public class CreativityStatsService
 			switch (id)
 			{
 				case 1:
+				{
 					player.setCPSlot1(point);
 					Power.getInstance().onChange(player, point);
 					break;
+				}
 				case 2:
+				{
 					player.setCPSlot2(point);
 					Health.getInstance().onChange(player, point);
 					break;
+				}
 				case 3:
+				{
 					player.setCPSlot3(point);
 					Agility.getInstance().onChange(player, point);
 					break;
+				}
 				case 4:
+				{
 					player.setCPSlot4(point);
 					Precision.getInstance().onChange(player, point);
 					break;
+				}
 				case 5:
+				{
 					player.setCPSlot5(point);
 					Knowledge.getInstance().onChange(player, point);
 					break;
+				}
 				case 6:
+				{
 					player.setCPSlot6(point);
 					Will.getInstance().onChange(player, point);
 					break;
+				}
 			}
 			PacketSendUtility.sendPacket(player, new SM_PLAYER_ESSENCE_CONTROL(type, size, id, point));
 		}

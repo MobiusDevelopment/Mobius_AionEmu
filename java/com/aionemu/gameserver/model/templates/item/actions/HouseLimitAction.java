@@ -68,7 +68,9 @@ public class HouseLimitAction extends AbstractItemAction
 			case COOKING:
 			case PICTURE:
 			case JUKEBOX:
+			{
 				break;
+			}
 		}
 	}
 }

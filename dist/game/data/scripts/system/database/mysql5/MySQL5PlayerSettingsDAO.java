@@ -62,20 +62,30 @@ public class MySQL5PlayerSettingsDAO extends PlayerSettingsDAO
 				switch (type)
 				{
 					case 0:
+					{
 						playerSettings.setUiSettings(resultSet.getBytes("settings"));
 						break;
+					}
 					case 1:
+					{
 						playerSettings.setShortcuts(resultSet.getBytes("settings"));
 						break;
+					}
 					case 2:
+					{
 						playerSettings.setHouseBuddies(resultSet.getBytes("settings"));
 						break;
+					}
 					case -1:
+					{
 						playerSettings.setDisplay(resultSet.getInt("settings"));
 						break;
+					}
 					case -2:
+					{
 						playerSettings.setDeny(resultSet.getInt("settings"));
 						break;
+					}
 				}
 			}
 			resultSet.close();

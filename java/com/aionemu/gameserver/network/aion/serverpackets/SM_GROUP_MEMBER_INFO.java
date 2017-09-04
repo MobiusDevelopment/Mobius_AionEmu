@@ -88,16 +88,23 @@ public class SM_GROUP_MEMBER_INFO extends AionServerPacket
 		{
 			case MOVEMENT:
 			case DISCONNECTED:
+			{
 				break;
+			}
 			case LEAVE:
+			{
 				writeH(0x00);
 				writeC(0x00);
 				break;
+			}
 			case ENTER_OFFLINE:
 			case JOIN:
+			{
 				writeS(pcd.getName());
 				break;
+			}
 			default:
+			{
 				writeS(pcd.getName());
 				writeD(0x00);
 				writeD(0x00);
@@ -114,7 +121,9 @@ public class SM_GROUP_MEMBER_INFO extends AionServerPacket
 				}
 				writeB(new byte[32]);
 				break;
+			}
 			case UPDATE:
+			{
 				writeS(pcd.getName());
 				writeD(0x00);
 				writeD(0x00);
@@ -131,6 +140,7 @@ public class SM_GROUP_MEMBER_INFO extends AionServerPacket
 				}
 				writeB(new byte[32]);
 				break;
+			}
 		}
 	}
 }

@@ -46,6 +46,7 @@ public class TargetEventHandler
 		switch (currentState)
 		{
 			case FIGHT:
+			{
 				npcAI.getOwner().getMoveController().abortMove();
 				AttackManager.scheduleNextAttack(npcAI);
 				if (npcAI.getOwner().getMoveController().isFollowingTarget())
@@ -53,7 +54,9 @@ public class TargetEventHandler
 					npcAI.getOwner().getMoveController().storeStep();
 				}
 				break;
+			}
 			case RETURNING:
+			{
 				npcAI.getOwner().getMoveController().abortMove();
 				npcAI.getOwner().getMoveController().recallPreviousStep();
 				if (npcAI.getOwner().isAtSpawnLocation())
@@ -65,20 +68,29 @@ public class TargetEventHandler
 					npcAI.onGeneralEvent(AIEventType.NOT_AT_HOME);
 				}
 				break;
+			}
 			case WALKING:
+			{
 				WalkManager.targetReached(npcAI);
 				checkAggro(npcAI);
 				break;
+			}
 			case FOLLOWING:
+			{
 				npcAI.getOwner().getMoveController().abortMove();
 				npcAI.getOwner().getMoveController().storeStep();
 				break;
+			}
 			case FEAR: // TO DO remove this state
+			{
 				npcAI.getOwner().getMoveController().abortMove();
 				npcAI.getOwner().getMoveController().storeStep();
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 	
@@ -94,18 +106,26 @@ public class TargetEventHandler
 		switch (npcAI.getState())
 		{
 			case FIGHT:
+			{
 				AttackManager.targetTooFar(npcAI);
 				break;
+			}
 			case FOLLOWING:
+			{
 				FollowManager.targetTooFar(npcAI);
 				break;
+			}
 			case FEAR:
+			{
 				break;
+			}
 			default:
+			{
 				if (npcAI.isLogging())
 				{
 					AI2Logger.info(npcAI, "default onTargetTooFar");
 				}
+			}
 		}
 	}
 	

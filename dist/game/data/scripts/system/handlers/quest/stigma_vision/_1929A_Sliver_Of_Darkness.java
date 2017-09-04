@@ -133,7 +133,6 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 							TeleportService2.teleportTo(player, 210030000, 2315.0986f, 1798.2798f, 195.26416f, (byte) 25, TeleportAnimation.BEAM_ANIMATION);
 							changeQuestStep(env, 1, 2, false);
 							return closeDialogWindow(env);
-							
 						}
 					}
 					break;

@@ -113,6 +113,7 @@ public class _30566Recapture_Rentus_Base extends QuestHandler
 			{
 				case 217313:
 				case 236300:
+				{
 					if (qs.getQuestVarById(0) < 1)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -120,6 +121,7 @@ public class _30566Recapture_Rentus_Base extends QuestHandler
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

@@ -99,11 +99,14 @@ public class _2600HumongousMalek extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						giveQuestItem(env, 182204528, 1);
@@ -111,9 +114,9 @@ public class _2600HumongousMalek extends QuestHandler
 						updateQuestStatus(env);
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
-						
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 700512)
@@ -121,6 +124,7 @@ public class _2600HumongousMalek extends QuestHandler
 			switch (env.getDialog())
 			{
 				case USE_OBJECT:
+				{
 					if (var == 1)
 					{
 						if (player.getInventory().getItemCountByItemId(182204528) == 1)
@@ -131,6 +135,7 @@ public class _2600HumongousMalek extends QuestHandler
 						}
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 204734)
@@ -138,11 +143,14 @@ public class _2600HumongousMalek extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 2375);
 					}
+				}
 				case SELECT_REWARD:
+				{
 					if (var == 1)
 					{
 						removeQuestItem(env, 182204529, 1);
@@ -152,6 +160,7 @@ public class _2600HumongousMalek extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					return false;
+				}
 			}
 		}
 		return false;

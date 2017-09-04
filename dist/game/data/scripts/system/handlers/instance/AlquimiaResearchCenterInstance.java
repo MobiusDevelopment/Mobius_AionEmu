@@ -51,12 +51,17 @@ public class AlquimiaResearchCenterInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 214027: // Researcher Zoik's.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000006, 1)); // Daevic Genesis Lab Key.
 				break;
+			}
 			case 214034: // Key Protector Nimue.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000007, 1)); // Lepharist Sanctuary Key.
 				break;
+			}
 			case 214028: // High Priest Esras.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -66,6 +71,7 @@ public class AlquimiaResearchCenterInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	

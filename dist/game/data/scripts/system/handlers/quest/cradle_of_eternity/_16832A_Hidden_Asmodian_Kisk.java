@@ -101,6 +101,7 @@ public class _16832A_Hidden_Asmodian_Kisk extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 834042:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -111,6 +112,7 @@ public class _16832A_Hidden_Asmodian_Kisk extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

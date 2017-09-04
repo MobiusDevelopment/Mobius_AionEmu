@@ -128,6 +128,7 @@ public class _15201The_Black_Fin_Threat extends QuestHandler
 				case 235843:
 				case 235848:
 				case 235849:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -138,6 +139,7 @@ public class _15201The_Black_Fin_Threat extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -107,7 +107,9 @@ public class _30311GroupAQuartzIsaQuartz extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

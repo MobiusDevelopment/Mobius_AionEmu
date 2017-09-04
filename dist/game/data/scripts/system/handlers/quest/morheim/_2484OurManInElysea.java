@@ -86,12 +86,14 @@ public class _2484OurManInElysea extends QuestHandler
 			switch (targetId)
 			{
 				case 700267:
+				{
 					if ((qs.getQuestVarById(0) == 0) && (env.getDialog() == QuestDialog.USE_OBJECT))
 					{
 						qs.setQuestVarById(0, 1);
 						updateQuestStatus(env);
 						removeQuestItem(env, 182204205, 1);
 					}
+				}
 				case 203331:
 				{
 					if (qs.getQuestVarById(0) == 1)

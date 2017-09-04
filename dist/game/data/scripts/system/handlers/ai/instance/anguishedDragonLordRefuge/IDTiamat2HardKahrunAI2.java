@@ -53,11 +53,13 @@ public class IDTiamat2HardKahrunAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 833483: // Kahrun (Reian Leader)
+				{
 					final SpawnTemplate template = SpawnEngine.addNewSingleTimeSpawn(300630000, 730625, 503.219757f, 516.651733f, 242.604065f, (byte) 0);
 					template.setEntityId(4);
 					portal.put(730625, SpawnEngine.spawnObject(template, instanceId));
 					AI2Actions.deleteOwner(IDTiamat2HardKahrunAI2.this);
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));

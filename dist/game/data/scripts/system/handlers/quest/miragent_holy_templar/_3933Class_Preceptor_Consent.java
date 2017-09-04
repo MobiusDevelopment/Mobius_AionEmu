@@ -96,69 +96,112 @@ public class _3933Class_Preceptor_Consent extends QuestHandler
 			switch (targetId)
 			{
 				case 203704:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							return sendQuestDialog(env, 1011);
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 					}
+					break;
+				}
 				case 203705:
+				{
 					if (var == 1)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 1352);
+							}
 							case STEP_TO_2:
+							{
 								return defaultCloseDialog(env, 1, 2);
+							}
 						}
 					}
+					break;
+				}
 				case 203706:
+				{
 					if (var == 2)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 1693);
+							}
 							case STEP_TO_3:
+							{
 								return defaultCloseDialog(env, 2, 3);
+							}
 						}
 					}
+					break;
+				}
 				case 203707:
+				{
 					if (var == 3)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 2034);
+							}
 							case STEP_TO_4:
+							{
 								return defaultCloseDialog(env, 3, 4);
+							}
 						}
 					}
+					break;
+				}
 				case 801214:
+				{
 					if (var == 4)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 2375);
+							}
 							case STEP_TO_5:
+							{
 								return defaultCloseDialog(env, 4, 5);
+							}
 						}
 					}
+					break;
+				}
 				case 801215:
+				{
 					if (var == 5)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 2716);
+							}
 							case STEP_TO_6:
+							{
 								return defaultCloseDialog(env, 5, 6);
+							}
 						}
 					}
+					break;
+				}
 				case 203752:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -175,10 +218,7 @@ public class _3933Class_Preceptor_Consent extends QuestHandler
 								removeQuestItem(env, 186000080, 1);
 								return defaultCloseDialog(env, 6, 6, true, false, 0);
 							}
-							else
-							{
-								return sendQuestDialog(env, 3143);
-							}
+							return sendQuestDialog(env, 3143);
 						}
 						case FINISH_DIALOG:
 						{
@@ -186,8 +226,11 @@ public class _3933Class_Preceptor_Consent extends QuestHandler
 						}
 					}
 					break;
+				}
 				default:
+				{
 					return sendQuestStartDialog(env);
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
@@ -198,10 +241,7 @@ public class _3933Class_Preceptor_Consent extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

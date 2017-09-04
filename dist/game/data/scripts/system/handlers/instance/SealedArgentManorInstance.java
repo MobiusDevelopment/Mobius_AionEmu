@@ -101,12 +101,15 @@ public class SealedArgentManorInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 237190: // Manor Usher.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000242, 1)); // Rechargeable Electric Fuel.
 				break;
+			}
 			/**
 			 * Apart from the rank rewards there are many additional items awaiting in the "Argent Manor Treasure Box"
 			 */
 			case 702816: // Argent Manor Treasure Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054117, 1)); // Argent Manor Composite Manastone Bundle.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054118, 1)); // Argent Manor Ancient Coin Bundle.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166100008, 5)); // Greater Supplements (Eternal).
@@ -116,6 +119,7 @@ public class SealedArgentManorInstance extends GeneralInstanceHandler
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 162000120, 2)); // Superior Mana Potion.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 162000123, 2)); // Superior Mana Serum.
 				break;
+			}
 		}
 	}
 	
@@ -125,18 +129,27 @@ public class SealedArgentManorInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 701001: // Transformation Bonfire.
+			{
 				SkillEngine.getInstance().getSkill(npc, 19316, 60, player).useNoAnimationSkill();
 				break;
+			}
 			case 701002: // Spirit's Bucket.
+			{
 				SkillEngine.getInstance().getSkill(npc, 19317, 60, player).useNoAnimationSkill();
 				break;
+			}
 			case 701003: // Magic Pinwheel.
+			{
 				SkillEngine.getInstance().getSkill(npc, 19318, 60, player).useNoAnimationSkill();
 				break;
+			}
 			case 701004: // Magical Soil Mound.
+			{
 				SkillEngine.getInstance().getSkill(npc, 19319, 60, player).useNoAnimationSkill();
 				break;
+			}
 			case 856547: // Drained Hetgolem.
+			{
 				final float x = npc.getX();
 				final float y = npc.getY();
 				final float z = npc.getZ();
@@ -162,6 +175,7 @@ public class SealedArgentManorInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402976));
 				}
 				break;
+			}
 		}
 	}
 	
@@ -172,18 +186,25 @@ public class SealedArgentManorInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 282208: // Eldritch Surkana.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 237195: // Elemental Iron Prison.
+			{
 				despawnNpc(npc);
 				deleteNpc(701000); // Nameless Wall.
 				break;
+			}
 			case 237180: // Sturdy Hetgolem.
 			case 237181: // Agile Hetgolem.
 			case 237182: // Mystic Hetgolem.
+			{
 				points = 300;
 				break;
+			}
 			case 237200: // Hard Hetgolem.
+			{
 				hardHetgolem++;
 				if (hardHetgolem == 4)
 				{
@@ -191,15 +212,20 @@ public class SealedArgentManorInstance extends GeneralInstanceHandler
 				}
 				points = 400;
 				break;
+			}
 			case 237196: // Perfectly Restored Hetgolem.
+			{
 				points = 1000;
 				break;
+			}
 			case 237193: // Forgotten Zadra.
 			case 237194: // Lost Zadra.
+			{
 				ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player -> stopInstance(player)), 3000);
 				points = 1500;
 				despawnNpc(npc);
 				break;
+			}
 		}
 		if (instanceReward.getInstanceScoreType().isStartProgress())
 		{
@@ -304,15 +330,19 @@ public class SealedArgentManorInstance extends GeneralInstanceHandler
 			case CHANTER:
 			case ASSASSIN:
 			case GLADIATOR:
+			{
 				spawn(237193, 819.55664f, 1420.614f, 194.97882f, (byte) 30); // Forgotten Zadra.
 				break;
+			}
 			case SORCERER:
 			case GUNSLINGER:
 			case SONGWEAVER:
 			case AETHERTECH:
 			case SPIRIT_MASTER:
+			{
 				spawn(237194, 819.55664f, 1420.614f, 194.97882f, (byte) 30); // Lost Zadra.
 				break;
+			}
 		}
 		sendPacket(0, 0);
 	}
@@ -339,32 +369,44 @@ public class SealedArgentManorInstance extends GeneralInstanceHandler
 			switch (manorRank)
 			{
 				case 1: // Rank S
+				{
 					playerReward.setScoreAP(14000);
 					playerReward.setGreaterArgentManorBox(1);
 					ItemService.addItem(player, 188054114, 1); // Greater Argent Manor Box.
 					break;
+				}
 				case 2: // Rank A
+				{
 					playerReward.setScoreAP(12000);
 					playerReward.setArgentManorBox(1);
 					ItemService.addItem(player, 188054115, 1); // Argent Manor Box.
 					break;
+				}
 				case 3: // Rank B
+				{
 					playerReward.setScoreAP(10000);
 					playerReward.setLesserArgentManorBox(1);
 					ItemService.addItem(player, 188054116, 1); // Lesser Argent Manor Box.
 					break;
+				}
 				case 4: // Rank C
+				{
 					playerReward.setScoreAP(5000);
 					playerReward.setLesserArgentManorBox(1);
 					ItemService.addItem(player, 188054116, 1); // Lesser Argent Manor Box.
 					break;
+				}
 				case 5: // Rank D
+				{
 					playerReward.setScoreAP(2500);
 					playerReward.setLesserArgentManorBox(1);
 					ItemService.addItem(player, 188054116, 1); // Lesser Argent Manor Box.
 					break;
+				}
 				case 6: // Rank F
+				{
 					break;
+				}
 			}
 			AbyssPointsService.addAp(player, playerReward.getScoreAP());
 		}
@@ -409,17 +451,25 @@ public class SealedArgentManorInstance extends GeneralInstanceHandler
 			switch (Rnd.get(1, 4))
 			{
 				case 1: // Resistance: Water.
+				{
 					SkillEngine.getInstance().getSkill(npc, 19312, 60, npc).useNoAnimationSkill();
 					break;
+				}
 				case 2: // Resistance: Fire.
+				{
 					SkillEngine.getInstance().getSkill(npc, 19313, 60, npc).useNoAnimationSkill();
 					break;
+				}
 				case 3: // Resistance: Earth.
+				{
 					SkillEngine.getInstance().getSkill(npc, 19314, 60, npc).useNoAnimationSkill();
 					break;
+				}
 				case 4: // Resistance: Wind.
+				{
 					SkillEngine.getInstance().getSkill(npc, 19315, 60, npc).useNoAnimationSkill();
 					break;
+				}
 			}
 		}
 	}

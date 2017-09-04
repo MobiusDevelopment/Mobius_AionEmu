@@ -54,6 +54,7 @@ public class Empress_AdmirerAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 831111: // Empress Admirer.
+				{
 					startTombWaveB1();
 					// Pillagers incoming. Guard the Empress' Monument!
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401583));
@@ -61,6 +62,7 @@ public class Empress_AdmirerAI2 extends NpcAI2
 					spawn(831304, 337.75626f, 415.45035f, 294.76086f, (byte) 56); // Empress' Monument.
 					spawn(831305, 342.7412f, 436.7674f, 294.75598f, (byte) 56); // Empress' Monument.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

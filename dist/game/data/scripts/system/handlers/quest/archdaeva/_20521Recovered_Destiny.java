@@ -431,6 +431,7 @@ public class _20521Recovered_Destiny extends QuestHandler
 							switch (player.getGender())
 							{
 								case MALE:
+								{
 									PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(0, 923));
 									ThreadPoolManager.getInstance().schedule(new Runnable()
 									{
@@ -443,7 +444,9 @@ public class _20521Recovered_Destiny extends QuestHandler
 										}
 									}, 50000);
 									break;
+								}
 								case FEMALE:
+								{
 									PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(0, 924));
 									ThreadPoolManager.getInstance().schedule(new Runnable()
 									{
@@ -456,6 +459,7 @@ public class _20521Recovered_Destiny extends QuestHandler
 										}
 									}, 50000);
 									break;
+								}
 							}
 							changeQuestStep(env, 12, 13, false);
 							return closeDialogWindow(env);

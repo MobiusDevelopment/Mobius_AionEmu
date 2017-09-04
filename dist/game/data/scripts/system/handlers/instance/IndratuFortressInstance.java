@@ -58,6 +58,7 @@ public class IndratuFortressInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 214159: // Brigadier Indratu.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -67,6 +68,7 @@ public class IndratuFortressInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -76,8 +78,10 @@ public class IndratuFortressInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 700515: // Indratu Artifact.
+			{
 				spawn(215384, 494.15323f, 514.3521f, 968.9094f, (byte) 114); // Avatar Malak.
 				break;
+			}
 		}
 	}
 	

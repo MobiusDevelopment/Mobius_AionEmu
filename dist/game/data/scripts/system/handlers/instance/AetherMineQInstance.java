@@ -53,11 +53,15 @@ public class AetherMineQInstance extends GeneralInstanceHandler
 		switch (player.getRace())
 		{
 			case ELYOS:
+			{
 				spawnIDLF6_Q_Advance_Teleporter_Q10529A();
 				break;
+			}
 			case ASMODIANS:
+			{
 				spawnIDLF6_Q_Advance_Teleporter_Q20529A();
 				break;
+			}
 		}
 		if (spawnRace == null)
 		{
@@ -78,8 +82,10 @@ public class AetherMineQInstance extends GeneralInstanceHandler
 			case 244127: // DF6_Mission_Light_Fi_75_An.
 			case 244128: // DF6_Mission_Light_Wi_75_An.
 			case 244129: // DF6_Mission_Light_Fi_Named_75_An.
+			{
 				despawnNpc(npc);
 				break;
+			}
 		}
 	}
 	

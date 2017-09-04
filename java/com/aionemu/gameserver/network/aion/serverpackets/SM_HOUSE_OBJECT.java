@@ -86,13 +86,19 @@ public class SM_HOUSE_OBJECT extends AionServerPacket
 		switch (typeId)
 		{
 			case 1:
+			{
 				((UseableItemObject) houseObject).writeUsageData(getBuf());
 				break;
+			}
 			case 7:
+			{
 				final NpcObject npcObj = (NpcObject) houseObject;
 				writeD(npcObj.getNpcObjectId());
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 }

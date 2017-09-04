@@ -67,10 +67,7 @@ public class _3963GrowthFlorasThirdCharm extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -83,24 +80,33 @@ public class _3963GrowthFlorasThirdCharm extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1, 182206110, 1, 0, 0); // 1
+						}
 					}
+					break;
 				}
 				case 798384: // Flora
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								removeQuestItem(env, 182206110, 1);
 								return sendQuestDialog(env, 2375);
 							}
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							final long itemAmount = player.getInventory().getItemCountByItemId(186000089);
 							if ((var == 1) && player.getInventory().tryDecreaseKinah(70000) && (itemAmount >= 1))
 							{
@@ -109,13 +115,15 @@ public class _3963GrowthFlorasThirdCharm extends QuestHandler
 								changeQuestStep(env, 1, 1, true); // reward
 								return sendQuestDialog(env, 5);
 							}
-							else
-							{
-								return sendQuestDialog(env, 2716);
-							}
+							return sendQuestDialog(env, 2716);
+						}
 						case FINISH_DIALOG:
+						{
 							return defaultCloseDialog(env, 1, 1);
+						}
 					}
+					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

@@ -79,9 +79,13 @@ public class _28831justaSteptotheLeft extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -96,7 +100,9 @@ public class _28831justaSteptotheLeft extends QuestHandler
 			switch (dialog)
 			{
 				case USE_OBJECT:
+				{
 					return sendQuestDialog(env, 2375);
+				}
 				case SELECT_REWARD:
 				{
 					changeQuestStep(env, 0, 0, true);

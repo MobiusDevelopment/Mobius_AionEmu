@@ -51,8 +51,10 @@ public class Enraged_VeilleAI2 extends AggressiveNpcAI2
 			switch (getNpcId())
 			{
 				case 258200: // Enraged Veille.
+				{
 					announceAgentUnderAttack();
 					break;
+				}
 			}
 		}
 		checkPercentage(getLifeStats().getHpPercentage());

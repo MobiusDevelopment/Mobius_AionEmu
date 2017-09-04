@@ -75,17 +75,25 @@ public class Shadow_Of_Oblivion_72AI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 4))
 		{
 			case 1:
+			{
 				spawn(244737, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading());
 				break;
+			}
 			case 2:
+			{
 				spawn(244738, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading());
 				break;
+			}
 			case 3:
+			{
 				spawn(244739, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading());
 				break;
+			}
 			case 4:
+			{
 				spawn(244740, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading());
 				break;
+			}
 		}
 	}
 }

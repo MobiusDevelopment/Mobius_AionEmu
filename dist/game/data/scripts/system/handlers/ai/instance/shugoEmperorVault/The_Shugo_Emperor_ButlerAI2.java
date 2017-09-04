@@ -47,16 +47,22 @@ public class The_Shugo_Emperor_ButlerAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 832932: // The Shugo Emperor's Butler.
+				{
 					switch (player.getWorldId())
 					{
 						case 301400000: // The Shugo Emperor's Vault 4.7.5
+						{
 							TeleportService2.teleportTo(player, 301400000, instanceId, 174.95818f, 371.1251f, 395.49478f, (byte) 73, TeleportAnimation.BEAM_ANIMATION);
 							break;
+						}
 						case 301590000: // Emperor Trillirunerk's Safe 4.9.1
+						{
 							TeleportService2.teleportTo(player, 301590000, instanceId, 174.95818f, 371.1251f, 395.49478f, (byte) 73, TeleportAnimation.BEAM_ANIMATION);
 							break;
+						}
 					}
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

@@ -70,6 +70,7 @@ public class _21027FearlessKantele extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1011);
@@ -78,10 +79,15 @@ public class _21027FearlessKantele extends QuestHandler
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case CHECK_COLLECTED_ITEMS:
+					{
 						return checkQuestItems(env, 1, 2, true, 10000, 10001);
+					}
 					case STEP_TO_1:
+					{
 						return defaultCloseDialog(env, 0, 1);
+					}
 				}
 			}
 		}

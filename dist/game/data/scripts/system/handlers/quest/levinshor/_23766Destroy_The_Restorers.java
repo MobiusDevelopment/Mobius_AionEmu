@@ -115,6 +115,7 @@ public class _23766Destroy_The_Restorers extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 235376:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -125,6 +126,7 @@ public class _23766Destroy_The_Restorers extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

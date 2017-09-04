@@ -56,16 +56,17 @@ public class TargetRangeProperty
 		switch (value)
 		{
 			case ONLYONE:
+			{
 				break;
+			}
 			case AREA:
+			{
 				final Creature firstTarget = skill.getFirstTarget();
-				
 				if (firstTarget == null)
 				{
 					log.warn("CHECKPOINT: first target is null for skillid " + skill.getSkillTemplate().getSkillId());
 					return false;
 				}
-				
 				// Create a sorted map of the objects in knownlist
 				// and filter them properly
 				for (VisibleObject nextCreature : firstTarget.getKnownList().getKnownObjects().values())
@@ -118,7 +119,9 @@ public class TargetRangeProperty
 					}
 				}
 				break;
+			}
 			case PARTY:
+			{
 				// fix for Bodyguard(417)
 				if (maxcount == 1)
 				{
@@ -168,7 +171,9 @@ public class TargetRangeProperty
 					}
 				}
 				break;
+			}
 			case PARTY_WITHPET:
+			{
 				if (skill.getEffector() instanceof Player)
 				{
 					final Player effector = (Player) skill.getEffector();
@@ -223,7 +228,9 @@ public class TargetRangeProperty
 					}
 				}
 				break;
+			}
 			case POINT:
+			{
 				for (VisibleObject nextCreature : skill.getEffector().getKnownList().getKnownObjects().values())
 				{
 					if (!(nextCreature instanceof Creature))
@@ -234,21 +241,21 @@ public class TargetRangeProperty
 					{
 						continue;
 					}
-					
 					// Players in blinking state must not be counted
 					if ((nextCreature instanceof Player) && (((Player) nextCreature).isProtectionActive()))
 					{
 						continue;
 					}
-					
 					if (MathUtil.getDistance(skill.getX(), skill.getY(), skill.getZ(), nextCreature.getX(), nextCreature.getY(), nextCreature.getZ()) <= (distance + 1))
 					{
 						effectedList.add((Creature) nextCreature);
 					}
 				}
+			}
 			case NONE:
+			{
 				break;
-			
+			}
 			// TODO other enum values
 		}
 		return true;

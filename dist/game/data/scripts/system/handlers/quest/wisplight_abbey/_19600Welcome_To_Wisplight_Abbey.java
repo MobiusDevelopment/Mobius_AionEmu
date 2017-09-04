@@ -86,8 +86,10 @@ public class _19600Welcome_To_Wisplight_Abbey extends QuestHandler
 						}
 					}
 					case SELECT_ACTION_1012:
+					{
 						playQuestMovie(env, 908);
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -130,7 +132,9 @@ public class _19600Welcome_To_Wisplight_Abbey extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

@@ -80,13 +80,19 @@ public class ChallengeTaskService
 			switch (challengeType)
 			{
 				case LEGION:
+				{
 					ownerLevel = player.getLegion().getLegionLevel();
 					break;
+				}
 				case TOWN:
+				{
 					ownerLevel = TownService.getInstance().getTownById(ownerId).getLevel();
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			final List<ChallengeTask> availableTasks = buildTaskList(player, challengeType, ownerId, ownerLevel);
 			PacketSendUtility.sendPacket(player, new SM_CHALLENGE_LIST(2, ownerId, challengeType, availableTasks));
@@ -174,11 +180,15 @@ public class ChallengeTaskService
 		switch (taskTemplate.getType())
 		{
 			case TOWN:
+			{
 				onCityTaskFinish(player, taskTemplate, questId);
 				break;
+			}
 			case LEGION:
+			{
 				onLegionTaskFinish(player, taskTemplate, questId);
 				break;
+			}
 		}
 	}
 	
@@ -218,12 +228,18 @@ public class ChallengeTaskService
 					switch (taskTemplate.getReward().getType())
 					{
 						case POINT:
+						{
 							town.increasePoints(taskTemplate.getReward().getValue());
 							break;
+						}
 						case SPAWN:
+						{
 							break;
+						}
 						default:
+						{
 							break;
+						}
 					}
 				}
 				if (town.getLevel() != oldLevel)

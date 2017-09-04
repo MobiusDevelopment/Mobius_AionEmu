@@ -118,15 +118,19 @@ public class _14046Piecing_The_Memory extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1011);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						return defaultCloseDialog(env, 0, 1);
 					}
+				}
 			}
 		}
 		else if (targetId == 203834)
@@ -134,6 +138,7 @@ public class _14046Piecing_The_Memory extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1352);
@@ -146,25 +151,34 @@ public class _14046Piecing_The_Memory extends QuestHandler
 					{
 						return sendQuestDialog(env, 2716);
 					}
+				}
 				case SELECT_ACTION_1353:
+				{
 					playQuestMovie(env, 102);
 					break;
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						return defaultCloseDialog(env, 1, 2);
 					}
+				}
 				case STEP_TO_4:
+				{
 					if (var == 3)
 					{
 						return defaultCloseDialog(env, 3, 4);
 					}
+				}
 				case STEP_TO_6:
+				{
 					if (var == 5)
 					{
 						removeQuestItem(env, 182215354, 1);
 						return defaultCloseDialog(env, 5, 6);
 					}
+				}
 			}
 		}
 		else if (targetId == 203786)
@@ -172,12 +186,16 @@ public class _14046Piecing_The_Memory extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 2)
 					{
 						return sendQuestDialog(env, 1693);
 					}
+				}
 				case CHECK_COLLECTED_ITEMS:
+				{
 					return checkQuestItems(env, 2, 3, false, 10000, 10001, 182215354, 1);
+				}
 			}
 		}
 		else if (targetId == 203754)
@@ -185,15 +203,19 @@ public class _14046Piecing_The_Memory extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 6)
 					{
 						return sendQuestDialog(env, 3057);
 					}
+				}
 				case SET_REWARD:
+				{
 					if (var == 6)
 					{
 						return defaultCloseDialog(env, 6, 6, true, false);
 					}
+				}
 			}
 		}
 		return false;

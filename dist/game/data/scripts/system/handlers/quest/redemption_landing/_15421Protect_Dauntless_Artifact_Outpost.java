@@ -117,6 +117,7 @@ public class _15421Protect_Dauntless_Artifact_Outpost extends QuestHandler
 				case 883240:
 				case 883241:
 				case 883243:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _15421Protect_Dauntless_Artifact_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

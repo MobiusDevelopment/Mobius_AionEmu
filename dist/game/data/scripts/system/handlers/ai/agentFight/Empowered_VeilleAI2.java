@@ -59,8 +59,10 @@ public class Empowered_VeilleAI2 extends AggressiveNpcAI2
 			switch (getNpcId())
 			{
 				case 235064: // Empowered Veille.
+				{
 					announceAgentUnderAttack();
 					break;
+				}
 			}
 		}
 		checkPercentage(getLifeStats().getHpPercentage());

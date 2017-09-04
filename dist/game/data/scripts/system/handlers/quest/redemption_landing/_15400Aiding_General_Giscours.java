@@ -172,8 +172,10 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 						switch (player.getRace())
 						{
 							case ELYOS:
+							{
 								giveQuestItem(env, 182215897, 1); // Beritra Supply Mark.
 								break;
+							}
 						}
 						return closeDialogWindow(env);
 					}
@@ -188,8 +190,10 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 						switch (player.getRace())
 						{
 							case ELYOS:
+							{
 								giveQuestItem(env, 182215898, 1); // Repair Device Gear.
 								break;
+							}
 						}
 						return closeDialogWindow(env);
 					}
@@ -204,8 +208,10 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 						switch (player.getRace())
 						{
 							case ELYOS:
+							{
 								giveQuestItem(env, 182215899, 1); // Ereshkigal Legion Mark.
 								break;
+							}
 						}
 						return closeDialogWindow(env);
 					}

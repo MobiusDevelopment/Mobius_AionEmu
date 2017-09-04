@@ -90,22 +90,32 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 				switch (percent)
 				{
 					case 75:
+					{
 						cancelTask();
 						Teleport();
 						break;
+					}
 					case 70:
+					{
 						Teleport2();
 						break;
+					}
 					case 65:
+					{
 						startSkillTask();
 						Teleport3();
 						break;
+					}
 					case 60:
+					{
 						Teleport4();
 						break;
+					}
 					case 50:
+					{
 						Teleport5();
 						break;
+					}
 				}
 				percents.remove(percent);
 				break;
@@ -145,14 +155,18 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				AI2Actions.targetSelf(Cursed_Queen_ModorAI2.this);
 				SkillEngine.getInstance().getSkill(getOwner(), 21171, 60, getOwner()).useNoAnimationSkill();
 				break;
+			}
 			case 2:
+			{
 				sendMsg(1500745);
 				AI2Actions.targetSelf(Cursed_Queen_ModorAI2.this);
 				SkillEngine.getInstance().getSkill(getOwner(), 21229, 60, getOwner()).useNoAnimationSkill();
 				break;
+			}
 		}
 	}
 	

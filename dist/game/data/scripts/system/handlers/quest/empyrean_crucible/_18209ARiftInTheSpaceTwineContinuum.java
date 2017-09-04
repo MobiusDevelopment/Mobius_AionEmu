@@ -74,9 +74,13 @@ public class _18209ARiftInTheSpaceTwineContinuum extends QuestHandler
 				switch (env.getDialog())
 				{
 					case SELECT_REWARD:
+					{
 						return sendQuestDialog(env, 5);
+					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

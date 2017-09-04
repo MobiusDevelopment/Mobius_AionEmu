@@ -164,20 +164,30 @@ public class Misc extends AdminCommand
 			switch (rng)
 			{
 				case 1:
+				{
 					msg = "You've been kicked on the face by someone!!";
 					break;
+				}
 				case 2:
+				{
 					msg = "Knock Down Bish!! :D";
 					break;
+				}
 				case 3:
+				{
 					msg = "Stay down, will ya!!!";
 					break;
+				}
 				case 4:
+				{
 					msg = "You better stay like that *.*";
 					break;
+				}
 				case 5:
+				{
 					msg = "Thats much better!!";
 					break;
+				}
 			}
 		}
 		else if (state.equalsIgnoreCase("slap"))
@@ -185,20 +195,30 @@ public class Misc extends AdminCommand
 			switch (rng)
 			{
 				case 1:
+				{
 					msg = "How dare you!! :@";
 					break;
+				}
 				case 2:
+				{
 					msg = "In your face!!";
 					break;
+				}
 				case 3:
+				{
 					msg = "Slaaaaaaaaaap!!";
 					break;
+				}
 				case 4:
+				{
 					msg = "Slap slap slap slooopp!!";
 					break;
+				}
 				case 5:
+				{
 					msg = "Monster Slaaapp!!!";
 					break;
+				}
 			}
 		}
 		return msg;

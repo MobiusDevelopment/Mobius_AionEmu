@@ -106,13 +106,18 @@ public class SM_MAIL_SERVICE extends MailServicePacket
 		switch (serviceId)
 		{
 			case 0:
+			{
 				mailbox.isMailListUpdateRequired = true;
 				writeMailboxState(totalCount, unreadCount, unreadExpressCount, unreadBlackCloudCount);
 				break;
+			}
 			case 1:
+			{
 				writeMailMessage(mailMessage);
 				break;
+			}
 			case 2:
+			{
 				Collection<Letter> _letters;
 				if (!letters.isEmpty())
 				{
@@ -125,16 +130,23 @@ public class SM_MAIL_SERVICE extends MailServicePacket
 				}
 				writeLettersList(_letters, player, isExpress, unreadExpressCount + unreadBlackCloudCount);
 				break;
+			}
 			case 3:
+			{
 				writeLetterRead(letter, time, totalCount, unreadCount, unreadExpressCount, unreadBlackCloudCount);
 				break;
+			}
 			case 5:
+			{
 				writeLetterState(letterId, attachmentType);
 				break;
+			}
 			case 6:
+			{
 				mailbox.isMailListUpdateRequired = true;
 				writeLetterDelete(totalCount, unreadCount, unreadExpressCount, unreadBlackCloudCount, letterIds);
 				break;
+			}
 		}
 	}
 }

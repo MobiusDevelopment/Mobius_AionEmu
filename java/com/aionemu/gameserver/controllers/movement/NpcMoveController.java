@@ -173,6 +173,7 @@ public class NpcMoveController extends CreatureMoveController<Npc>
 		switch (destination)
 		{
 			case TARGET_OBJECT:
+			{
 				final Npc npc = owner;
 				final VisibleObject target = owner.getTarget();// todo no target
 				if (target == null)
@@ -193,10 +194,13 @@ public class NpcMoveController extends CreatureMoveController<Npc>
 				}
 				moveToLocation(pointX, pointY, pointZ, offset);
 				break;
+			}
 			case POINT:
+			{
 				offset = 0.1f;
 				moveToLocation(pointX, pointY, pointZ, offset);
 				break;
+			}
 		}
 		updateLastMove();
 	}

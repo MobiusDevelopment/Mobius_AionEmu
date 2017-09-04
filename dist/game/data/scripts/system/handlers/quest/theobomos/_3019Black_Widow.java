@@ -78,7 +78,9 @@ public class _3019Black_Widow extends QuestHandler
 						return true;
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

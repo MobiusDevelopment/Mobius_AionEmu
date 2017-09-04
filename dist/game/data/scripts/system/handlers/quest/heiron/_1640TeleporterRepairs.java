@@ -86,7 +86,9 @@ public class _1640TeleporterRepairs extends QuestHandler
 						return true;
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

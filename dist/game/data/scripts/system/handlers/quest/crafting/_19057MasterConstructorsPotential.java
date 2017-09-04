@@ -97,6 +97,7 @@ public class _19057MasterConstructorsPotential extends QuestHandler
 			switch (targetId)
 			{
 				case 798451:
+				{
 					final long kinah = player.getInventory().getKinah();
 					switch (dialog)
 					{
@@ -105,12 +106,17 @@ public class _19057MasterConstructorsPotential extends QuestHandler
 							switch (var)
 							{
 								case 0:
+								{
 									return sendQuestDialog(env, 1011);
+								}
 								case 2:
+								{
 									return sendQuestDialog(env, 4080);
+								}
 							}
 						}
 						case STEP_TO_10:
+						{
 							if (kinah >= 167500) // Need check how many kinah decrased
 							{
 								if (!giveQuestItem(env, 152203543, 1))
@@ -127,7 +133,9 @@ public class _19057MasterConstructorsPotential extends QuestHandler
 							{
 								return sendQuestDialog(env, 4400);
 							}
+						}
 						case STEP_TO_20:
+						{
 							if (kinah >= 223000)
 							{
 								if (!giveQuestItem(env, 152203544, 1))
@@ -144,8 +152,12 @@ public class _19057MasterConstructorsPotential extends QuestHandler
 							{
 								return sendQuestDialog(env, 4400);
 							}
+						}
 					}
+					break;
+				}
 				case 798450:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -153,6 +165,7 @@ public class _19057MasterConstructorsPotential extends QuestHandler
 							return sendQuestDialog(env, 1352);
 						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							if (QuestService.collectItemCheck(env, true))
 							{
 								qs.setStatus(QuestStatus.REWARD);
@@ -170,7 +183,6 @@ public class _19057MasterConstructorsPotential extends QuestHandler
 								{
 									checkFailId = 3057;
 								}
-								
 								if (checkFailId == 3398)
 								{
 									qs.setQuestVar(2);
@@ -178,7 +190,10 @@ public class _19057MasterConstructorsPotential extends QuestHandler
 								}
 								return sendQuestDialog(env, checkFailId);
 							}
+						}
 					}
+					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

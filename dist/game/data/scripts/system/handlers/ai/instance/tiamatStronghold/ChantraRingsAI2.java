@@ -98,13 +98,21 @@ public class ChantraRingsAI2 extends NpcAI2
 		switch (question)
 		{
 			case SHOULD_DECAY:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			case SHOULD_RESPAWN:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			case SHOULD_REWARD:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 }

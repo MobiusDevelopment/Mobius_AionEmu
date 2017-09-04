@@ -88,16 +88,22 @@ public class CM_BUY_ITEM extends AionClientPacket
 				case 1: // [Sell To Shop]
 				case 17: // [Pet Seller]
 				case 18: // Inventory Shop
+				{
 					tradeList.addSellItem(itemId, count);
 					break;
+				}
 				case 2: // [Repurchase]
+				{
 					repurchaseList.addRepurchaseItem(player, itemId, count);
 					break;
+				}
 				case 13: // [Buy From Shop]
 				case 14: // [Buy From Abyss Shop]
 				case 15: // [Buy From Reward Shop]
+				{
 					tradeList.addBuyItem(itemId, count);
 					break;
+				}
 			}
 		}
 	}
@@ -128,6 +134,7 @@ public class CM_BUY_ITEM extends AionClientPacket
 			switch (tradeActionId)
 			{
 				case 1: // Sell To Shop [Panesterra 4.7]
+				{
 					if ((npc.getObjectTemplate().getTitleId() == 357001) || // Belus Relic Supervisor.
 						(npc.getObjectTemplate().getTitleId() == 357002) || // Belus Abyss Equipment Merchand.
 						(npc.getObjectTemplate().getTitleId() == 357013) || // Aspida Relic Supervisor.
@@ -169,33 +176,46 @@ public class CM_BUY_ITEM extends AionClientPacket
 						TradeService.performSellToShop(player, tradeList);
 					}
 					break;
+				}
 				case 2: // [Repurchase]
+				{
 					RepurchaseService.getInstance().repurchaseFromShop(player, repurchaseList);
 					break;
+				}
 				case 13: // [Buy From Shop]
+				{
 					if ((tlist != null) && (tlist.getTradeNpcType() == TradeNpcType.NORMAL))
 					{
 						TradeService.performBuyFromShop(npc, player, tradeList);
 					}
 					break;
+				}
 				case 14: // [Buy From Abyss Shop]
+				{
 					if ((tlist != null) && (tlist.getTradeNpcType() == TradeNpcType.ABYSS))
 					{
 						TradeService.performBuyFromAbyssShop(npc, player, tradeList);
 					}
 					break;
+				}
 				case 15: // [Buy From Reward Shop]
+				{
 					if ((tlist != null) && (tlist.getTradeNpcType() == TradeNpcType.REWARD))
 					{
 						TradeService.performBuyFromRewardShop(npc, player, tradeList);
 					}
 					break;
+				}
 				case 17: // [Pet Seller]
+				{
 					TradeService.performSellForKinahToShop(player, tradeList, purchaseTemplate);
 					break;
+				}
 				default:
+				{
 					log.info(String.format("Unhandle shop action unk1: %d", tradeActionId));
 					break;
+				}
 			}
 		}
 		if (tradeActionId == 18)

@@ -78,12 +78,15 @@ public class _1916Dispatch_To_Verteron_Chanter_Cleric extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1352);
 							}
 							break;
+						}
 						case STEP_TO_1:
+						{
 							if (var == 0)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -92,19 +95,24 @@ public class _1916Dispatch_To_Verteron_Chanter_Cleric extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 0));
 								return true;
 							}
+						}
 					}
 				}
 				case 203097:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								qs.setStatus(QuestStatus.REWARD);
 								updateQuestStatus(env);
 								return sendQuestDialog(env, 2375);
 							}
+						}
 					}
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

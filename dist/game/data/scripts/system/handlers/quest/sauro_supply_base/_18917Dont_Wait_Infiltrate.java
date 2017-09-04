@@ -120,7 +120,9 @@ public class _18917Dont_Wait_Infiltrate extends QuestHandler
 							return sendQuestEndDialog(env);
 						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 			}
@@ -136,7 +138,9 @@ public class _18917Dont_Wait_Infiltrate extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

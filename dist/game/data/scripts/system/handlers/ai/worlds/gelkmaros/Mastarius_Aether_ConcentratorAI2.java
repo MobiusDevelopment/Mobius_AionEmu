@@ -60,6 +60,7 @@ public class Mastarius_Aether_ConcentratorAI2 extends ActionItemNpcAI2
 		{
 			// Mastarius's Aether Concentrator I
 			case 296913:
+			{
 				if (player.getInventory().decreaseByItemId(164000103, 1))
 				{ // Blessing Of Concentration.
 					announceMastariusI();
@@ -73,8 +74,10 @@ public class Mastarius_Aether_ConcentratorAI2 extends ActionItemNpcAI2
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_GODELITE_DEATHBLOW_FAIL);
 				}
 				break;
+			}
 			// Mastarius's Aether Concentrator II
 			case 296914:
+			{
 				if (player.getInventory().decreaseByItemId(164000103, 1))
 				{ // Blessing Of Concentration.
 					announceMastariusII();
@@ -88,8 +91,10 @@ public class Mastarius_Aether_ConcentratorAI2 extends ActionItemNpcAI2
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_GODELITE_DEATHBLOW_FAIL);
 				}
 				break;
+			}
 			// Mastarius's Aether Concentrator III
 			case 296915:
+			{
 				if (player.getInventory().decreaseByItemId(164000103, 1))
 				{ // Blessing Of Concentration.
 					announceMastariusII();
@@ -103,6 +108,7 @@ public class Mastarius_Aether_ConcentratorAI2 extends ActionItemNpcAI2
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_GODELITE_DEATHBLOW_FAIL);
 				}
 				break;
+			}
 		}
 		announceMastariusIII();
 	}

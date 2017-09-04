@@ -93,81 +93,107 @@ public class LDF4_Advance_ChiefAI2 extends AggressiveNpcAI2
 				case 234619: // West Picket Garrison Warcaptain.
 				case 234627: // West Picket Squad Warcaptain.
 				case 234635: // West Picket Force Warcaptain.
+				{
 					announceBattleV01();
 					checkForSupport(creature);
 					break;
+				}
 				case 235066: // North Picket Force Subjugator.
 				case 235146: // North Picket Garrison Warcaptain.
 				case 235159: // North Picket Defense Warcaptain.
+				{
 					announceBattleV02();
 					checkForSupport(creature);
 					break;
+				}
 				case 234616: // North Outpost Garrison Warcaptain.
 				case 234624: // North Outpost Squad Warcaptain.
 				case 234632: // North Outpost Force Warcaptain.
+				{
 					announceBattleV03();
 					checkForSupport(creature);
 					break;
+				}
 				case 234164: // North Relay Force Commander.
 				case 234640: // North Relay Garrison Warcaptain.
 				case 234643: // North Relay Squad Warcaptain.
+				{
 					announceBattleV04();
 					checkForSupport(creature);
 					break;
+				}
 				case 234618: // East Relay Garrison Warcaptain.
 				case 234626: // East Relay Squad Warcaptain.
 				case 234634: // East Relay Force Warcaptain.
+				{
 					announceBattleV05();
 					checkForSupport(creature);
 					break;
+				}
 				case 234617: // East Outpost Garrison Warcaptain.
 				case 234625: // East Outpost Squad Warcaptain.
 				case 234633: // East Outpost Force Warcaptain.
+				{
 					announceBattleV06();
 					checkForSupport(creature);
 					break;
+				}
 				case 234623: // East Picket Garrison Warcaptain.
 				case 234631: // East Picket Squad Warcaptain.
 				case 234639: // East Picket Force Warcaptain.
+				{
 					announceBattleV07();
 					checkForSupport(creature);
 					break;
+				}
 				case 235072: // South Picket Force Warcaptain.
 				case 235152: // South Picket Garrison Warcaptain.
 				case 235165: // South Picket Defense Warcaptain.
+				{
 					announceBattleV08();
 					checkForSupport(creature);
 					break;
+				}
 				case 234620: // South Outpost Garrison Warcaptain.
 				case 234628: // South Outpost Squad Warcaptain.
 				case 234636: // South Outpost Force Warcaptain.
+				{
 					announceBattleV09();
 					checkForSupport(creature);
 					break;
+				}
 				case 234622: // West Relay Garrison Warcaptain.
 				case 234630: // West Relay Squad Warcaptain.
 				case 234638: // West Relay Force Warcaptain.
+				{
 					announceBattleV10();
 					checkForSupport(creature);
 					break;
+				}
 				case 234621: // West Outpost Garrison Warcaptain.
 				case 234629: // West Outpost Squad Warcaptain.
 				case 234637: // West Outpost Force Warcaptain.
+				{
 					announceBattleV11();
 					checkForSupport(creature);
 					break;
+				}
 				case 234166: // South Relay Force Commander.
 				case 234641: // South Relay Garrison Warcaptain.
 				case 234644: // South Relay Squad Warcaptain.
+				{
 					announceBattleV12();
 					checkForSupport(creature);
 					break;
+				}
 				case 234162: // Shrine Force Commander.
 				case 234642: // Shrine Garrison Warcaptain.
 				case 234645: // Shrine Squad Warcaptain.
+				{
 					announceBattleV13();
 					checkForSupport(creature);
 					break;
+				}
 			}
 		}
 	}

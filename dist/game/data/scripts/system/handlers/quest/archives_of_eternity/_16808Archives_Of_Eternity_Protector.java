@@ -73,7 +73,9 @@ public class _16808Archives_Of_Eternity_Protector extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -146,6 +148,7 @@ public class _16808Archives_Of_Eternity_Protector extends QuestHandler
 				case 857460:
 				case 857462:
 				case 857464:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -156,6 +159,7 @@ public class _16808Archives_Of_Eternity_Protector extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

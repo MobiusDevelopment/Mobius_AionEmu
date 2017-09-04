@@ -60,17 +60,25 @@ public class CM_DISTRIBUTION_SETTINGS extends AionClientPacket
 		switch (lootrul)
 		{
 			case 0:
+			{
 				lootrules = LootRuleType.FREEFORALL;
 				break;
+			}
 			case 1:
+			{
 				lootrules = LootRuleType.ROUNDROBIN;
 				break;
+			}
 			case 2:
+			{
 				lootrules = LootRuleType.LEADER;
 				break;
+			}
 			default:
+			{
 				lootrules = LootRuleType.FREEFORALL;
 				break;
+			}
 		}
 		misc = readD();
 		common_item_above = readD();
@@ -84,17 +92,25 @@ public class CM_DISTRIBUTION_SETTINGS extends AionClientPacket
 		switch (autodistr)
 		{
 			case 0:
+			{
 				autodistribution = LootDistribution.NORMAL;
 				break;
+			}
 			case 2:
+			{
 				autodistribution = LootDistribution.ROLL_DICE;
 				break;
+			}
 			case 3:
+			{
 				autodistribution = LootDistribution.BID;
 				break;
+			}
 			default:
+			{
 				autodistribution = LootDistribution.NORMAL;
 				break;
+			}
 		}
 	}
 	

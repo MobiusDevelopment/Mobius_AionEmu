@@ -38,7 +38,6 @@ import com.aionemu.gameserver.services.player.PlayerReviveService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****/
 /**
@@ -59,27 +58,40 @@ public class AetherogeneticsLabInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 212341: // The Keykeeper.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000001, 1)); // Lepharist Research Center Key 1.
 				break;
+			}
 			case 212175: // Expert Lab Scholar.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000002, 1)); // Lepharist Research Center Key 2.
 				break;
+			}
 			case 212193: // Pretor Key Keeper.
+			{
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000003, 1)); // Lepharist Research Center Key 3.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000004, 1)); // Lepharist Research Center Key 4.
 						break;
+					}
 				}
 				break;
+			}
 			case 212202: // Gatekeeper.
 			case 212342: // Key Eater.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000005, 1)); // Lepharist Research Center Key 5.
 				break;
+			}
 			case 212211: // RM-78C.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -89,6 +101,7 @@ public class AetherogeneticsLabInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -100,23 +113,28 @@ public class AetherogeneticsLabInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawn(212193, 206.10997f, 245.62978f, 132.8339f, (byte) 0); // Pretor Key Keeper.
 				break;
+			}
 			case 2:
+			{
 				spawn(212193, 205.3984f, 215.02821f, 132.83458f, (byte) 0); // Pretor Key Keeper.
 				break;
+			}
 		}
 	}
 	
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 212211: // RM-78C.
-				sendMsg("Congratulation]: you finish <Aetherogenetics Lab>");
+			{
+				sendMsg("Congratulations: you finish <Aetherogenetics Lab>");
 				break;
+			}
 		}
 	}
 	
@@ -144,14 +162,7 @@ public class AetherogeneticsLabInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	@Override

@@ -167,6 +167,7 @@ public class _25536Protect_Zenzen_Tribal_Grounds extends QuestHandler
 				case 242395:
 				case 242399:
 				case 242403:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -177,6 +178,7 @@ public class _25536Protect_Zenzen_Tribal_Grounds extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

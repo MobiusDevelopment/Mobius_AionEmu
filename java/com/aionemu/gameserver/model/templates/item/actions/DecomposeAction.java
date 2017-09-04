@@ -565,6 +565,7 @@ public class DecomposeAction extends AbstractItemAction
 										case MANASTONE_LEGEND_GRADE_50:
 										case MANASTONE_LEGEND_GRADE_60:
 										case MANASTONE_LEGEND_GRADE_65:
+										{
 											if (manastones == null)
 											{
 												manastones = DataManager.ITEM_DATA.getManastones();
@@ -600,6 +601,7 @@ public class DecomposeAction extends AbstractItemAction
 												return;
 											}
 											break;
+										}
 										case CHUNK_EARTH:
 										{
 											final int[] earth = chunkEarth.get(player.getRace());

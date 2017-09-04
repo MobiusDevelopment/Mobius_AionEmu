@@ -117,6 +117,7 @@ public class _15041Flak_From_The_Brohum extends QuestHandler
 				case 235853:
 				case 235854:
 				case 235855:
+				{
 					if (qs.getQuestVarById(1) < 8)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _15041Flak_From_The_Brohum extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

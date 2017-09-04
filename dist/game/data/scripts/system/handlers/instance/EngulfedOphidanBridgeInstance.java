@@ -110,6 +110,7 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 			case 701974: // Supply Box.
 			case 701975: // Emergency Supply Box.
 			case 701976: // Hidden Supply Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000279, 1)); // Advance Route Teleport Scroll.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 162000148, 1)); // Special Baily Juice.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000278, 1)); // Bombing Device Activation Key.
@@ -117,6 +118,7 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 162000149, 1)); // Ambush Scroll.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 162000147, 1)); // Emergency Support Recovery Potion.
 				break;
+			}
 		}
 	}
 	
@@ -211,6 +213,7 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 				switch (Rnd.get(1, 4))
 				{
 					case 1:
+					{
 						// The Balaur raiders have appeared at some of the sentry posts.
 						sendMsgByRace(1401966, Race.PC_ALL, 0);
 						// The Balaur have arrived at the Northern Approach Post.
@@ -220,7 +223,9 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 						sp(233491, 532.19055f, 445.263f, 620.25f, (byte) 105, 0); // Captain Avran.
 						sp(801956, 532.19055f, 445.263f, 620.25f, (byte) 105, 0); // Assault Team Commander Flag.
 						break;
+					}
 					case 2:
+					{
 						// The Balaur raiders have appeared at some of the sentry posts.
 						sendMsgByRace(1401966, Race.PC_ALL, 0);
 						// The Balaur have arrived at the Southern Approach Post.
@@ -230,7 +235,9 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 						sp(233491, 620.5344f, 562.1826f, 590.91034f, (byte) 81, 0); // Captain Avran.
 						sp(801956, 620.5344f, 562.1826f, 590.91034f, (byte) 81, 0); // Assault Team Commander Flag.
 						break;
+					}
 					case 3:
+					{
 						// The Balaur raiders have appeared at some of the sentry posts.
 						sendMsgByRace(1401966, Race.PC_ALL, 0);
 						// The Balaur have arrived at the Defense Post.
@@ -240,7 +247,9 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 						sp(233491, 688.96906f, 484.00226f, 599.91016f, (byte) 94, 0); // Captain Avran.
 						sp(801956, 688.96906f, 484.00226f, 599.91016f, (byte) 94, 0); // Assault Team Commander Flag.
 						break;
+					}
 					case 4:
+					{
 						// The Balaur raiders have appeared at some of the sentry posts.
 						sendMsgByRace(1401966, Race.PC_ALL, 0);
 						// The Balaur have arrived at the Guard Post.
@@ -250,6 +259,7 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 						sp(233491, 499.92856f, 520.9595f, 597.6485f, (byte) 20, 0); // Captain Avran.
 						sp(801956, 499.92856f, 520.9595f, 597.6485f, (byte) 20, 0); // Assault Team Commander Flag.
 						break;
+					}
 				}
 			}
 		}, 900000));
@@ -620,9 +630,11 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 		{
 			case 233473: // Beritra's Sentinel.
 			case 233856: // Beritra Barricade.
+			{
 				point = 100;
 				despawnNpc(npc);
 				break;
+			}
 			case 233474: // Defense Post Magus.
 			case 233475: // Defense Post Combatant.
 			case 233476: // Defense Post Scout.
@@ -633,41 +645,54 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 			case 233484: // Guard Post Magus.
 			case 233485: // Guard Post Combatant.
 			case 233486: // Guard Post Scout.
+			{
 				point = 200;
 				despawnNpc(npc);
 				break;
+			}
 			case 233477: // Defense Post Rearguard.
 			case 233480: // Northern Approach Post Magician.
 			case 233483: // Southern Approach Post Assaulter.
 			case 233487: // Guard Post Rearguard.
+			{
 				point = 300;
 				despawnNpc(npc);
 				break;
+			}
 			case 233846: // Templar Rearguard.
 			case 233847: // Cleric Rearguard.
 			case 233848: // Sorcerer Rearguard.
 			case 233849: // Templar Rearguard.
 			case 233850: // Cleric Rearguard.
 			case 233851: // Sorcerer Rearguard.
+			{
 				point = 1500;
 				despawnNpc(npc);
 				break;
+			}
 			case 233491: // Captain Avran.
+			{
 				point = 5000;
 				despawnNpc(npc);
 				deleteNpc(801956);
 				break;
+			}
 			case 701988: // Rearguard Telekesis.
+			{
 				despawnNpc(npc);
 				// The Elyos Empyrean Lord has died.
 				sendMsgByRace(1401959, Race.PC_ALL, 0);
 				break;
+			}
 			case 701989: // Rearguard Freidr.
+			{
 				despawnNpc(npc);
 				// The Asmodian Empyrean Lord has died.
 				sendMsgByRace(1401960, Race.PC_ALL, 0);
 				break;
+			}
 			case 701943: // Elyos Power Generator.
+			{
 				despawnNpc(npc);
 				point = 5000;
 				if (powerGenerator == 1)
@@ -745,7 +770,9 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 701944: // Asmodians Power Generator.
+			{
 				point = 5000;
 				despawnNpc(npc);
 				if (powerGenerator == 1)
@@ -823,7 +850,9 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 701945: // Balaur Power Generator.
+			{
 				point = 5000;
 				despawnNpc(npc);
 				if (powerGenerator == 1)
@@ -991,6 +1020,7 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 		updateScore(mostPlayerDamage, npc, point, false);
 	}
@@ -1002,6 +1032,7 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 		{
 			case 701947: // Elyos Field Gun.
 			case 701949: // Elyos Field Gun.
+			{
 				if (player.getInventory().decreaseByItemId(164000277, 1))
 				{ // Power Breaker.
 					// You've used one Power Breaker.
@@ -1014,8 +1045,10 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402006));
 				}
 				break;
+			}
 			case 701948: // Asmodians Field Gun.
 			case 701950: // Asmodians Field Gun.
+			{
 				if (player.getInventory().decreaseByItemId(164000277, 1))
 				{ // Power Breaker.
 					// You've used one Power Breaker.
@@ -1028,7 +1061,9 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402006));
 				}
 				break;
+			}
 			case 701969: // Chokepoint Defense Post Mortar.
+			{
 				if (player.getInventory().decreaseByItemId(164000278, 1))
 				{ // Bombing Device Activation Key.
 					// Bombardment has been activated on the siege base.\nBombing will begin soon.
@@ -1049,7 +1084,9 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402005));
 				}
 				break;
+			}
 			case 701970: // Northern Approach Post Mortar.
+			{
 				if (player.getInventory().decreaseByItemId(164000278, 1))
 				{ // Bombing Device Activation Key.
 					// Bombardment has been activated on the siege base.\nBombing will begin soon.
@@ -1070,7 +1107,9 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402005));
 				}
 				break;
+			}
 			case 701971: // Southern Approach Post Mortar.
+			{
 				if (player.getInventory().decreaseByItemId(164000278, 1))
 				{ // Bombing Device Activation Key.
 					// Bombardment has been activated on the siege base.\nBombing will begin soon.
@@ -1093,7 +1132,9 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402005));
 				}
 				break;
+			}
 			case 701972: // Bridge Watchpost Mortar.
+			{
 				if (player.getInventory().decreaseByItemId(164000278, 1))
 				{ // Bombing Device Activation Key.
 					// Bombardment has been activated on the siege base.\nBombing will begin soon.
@@ -1116,6 +1157,7 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402005));
 				}
 				break;
+			}
 		}
 	}
 	

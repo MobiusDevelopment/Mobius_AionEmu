@@ -136,12 +136,15 @@ public class _3502Nereus_Need_You extends QuestHandler
 			switch (targetId)
 			{
 				case 214894: // Telepathy Controller.
+				{
 					if (var == 1)
 					{
 						return defaultOnKillEvent(env, 214894, 1, 2, 0);
 					}
 					break;
+				}
 				case 214895: // Main Power Generator.
+				{
 					if ((var == 2) && (var1 != 1))
 					{
 						defaultOnKillEvent(env, 214895, 0, 1, 1);
@@ -152,7 +155,9 @@ public class _3502Nereus_Need_You extends QuestHandler
 						return true;
 					}
 					break;
+				}
 				case 214896: // Auxiliary Power Generator.
+				{
 					if ((var == 2) && (var2 != 1))
 					{
 						defaultOnKillEvent(env, 214896, 0, 1, 2);
@@ -163,7 +168,9 @@ public class _3502Nereus_Need_You extends QuestHandler
 						return true;
 					}
 					break;
+				}
 				case 214897: // Emergency Generator.
+				{
 					if ((var == 2) && (var3 != 1))
 					{
 						defaultOnKillEvent(env, 214897, 0, 1, 3);
@@ -174,12 +181,15 @@ public class _3502Nereus_Need_You extends QuestHandler
 						return true;
 					}
 					break;
+				}
 				case 214904: // Brigade General Anuhart.
+				{
 					if ((var == 2) && (var1 == 1) && (var2 == 1) && (var3 == 1))
 					{
 						return defaultOnKillEvent(env, 214904, 2, true);
 					}
 					break;
+				}
 			}
 		}
 		return false;

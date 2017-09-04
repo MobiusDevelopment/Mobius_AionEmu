@@ -63,7 +63,9 @@ public class _21261Enhancing_The_Orb extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

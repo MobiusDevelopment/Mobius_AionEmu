@@ -87,35 +87,49 @@ public class _11010AngelToTheWounded extends QuestHandler
 			switch (targetId)
 			{
 				case 799071:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1); // 1
+						}
 					}
 					break;
+				}
 				case 798906:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1693);
 							}
+						}
 						case STEP_TO_2:
+						{
 							return defaultCloseDialog(env, 1, 2); // 2
+						}
 					}
 					break;
+				}
 				case 730323:
+				{
 					if (env.getDialog() == QuestDialog.USE_OBJECT)
 					{
 						return useQuestObject(env, 2, 3, true, 0); // reward
 					}
 					return false;
+				}
 			}
 		}
 		if (qs.getStatus() == QuestStatus.REWARD)

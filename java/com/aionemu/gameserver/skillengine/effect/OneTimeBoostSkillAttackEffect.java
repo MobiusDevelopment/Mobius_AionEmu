@@ -50,10 +50,10 @@ public class OneTimeBoostSkillAttackEffect extends BuffEffect
 		switch (type)
 		{
 			case MAGICAL:
+			{
 				observer = new AttackCalcObserver()
 				{
 					private int count = 0;
-					
 					@Override
 					public float getBaseMagicalDamageMultiplier()
 					{
@@ -66,12 +66,12 @@ public class OneTimeBoostSkillAttackEffect extends BuffEffect
 					}
 				};
 				break;
+			}
 			case PHYSICAL:
+			{
 				observer = new AttackCalcObserver()
 				{
-					
 					private int count = 0;
-					
 					@Override
 					public float getBasePhysicalDamageMultiplier(boolean isSkill)
 					{
@@ -79,7 +79,6 @@ public class OneTimeBoostSkillAttackEffect extends BuffEffect
 						{
 							return 1f;
 						}
-						
 						if (count++ < stopCount)
 						{
 							if (count == stopCount)
@@ -88,11 +87,11 @@ public class OneTimeBoostSkillAttackEffect extends BuffEffect
 							}
 							return percent;
 						}
-						
 						return 1.0f;
 					}
 				};
 				break;
+			}
 		}
 		
 		effect.getEffected().getObserveController().addAttackCalcObserver(observer);

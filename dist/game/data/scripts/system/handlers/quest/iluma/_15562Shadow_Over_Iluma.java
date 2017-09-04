@@ -149,6 +149,7 @@ public class _15562Shadow_Over_Iluma extends QuestHandler
 				case 241471:
 				case 241472:
 				case 241473:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -159,6 +160,7 @@ public class _15562Shadow_Over_Iluma extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

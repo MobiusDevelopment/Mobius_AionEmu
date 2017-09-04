@@ -115,6 +115,7 @@ public class IdeResonatorAI2 extends AggressiveNpcAI2
 		switch (getNpcId())
 		{
 			case 276519: // Ide Resonator.
+			{
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
 					@Override
@@ -124,7 +125,9 @@ public class IdeResonatorAI2 extends AggressiveNpcAI2
 					}
 				}, 300000);
 				break;
+			}
 			case 231093: // Ide Resonator.
+			{
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
 					@Override
@@ -134,7 +137,9 @@ public class IdeResonatorAI2 extends AggressiveNpcAI2
 					}
 				}, 300000);
 				break;
+			}
 			case 231094: // Ide Resonator.
+			{
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
 					@Override
@@ -144,7 +149,9 @@ public class IdeResonatorAI2 extends AggressiveNpcAI2
 					}
 				}, 300000);
 				break;
+			}
 			case 231095: // Ide Resonator.
+			{
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
 					@Override
@@ -154,6 +161,7 @@ public class IdeResonatorAI2 extends AggressiveNpcAI2
 					}
 				}, 300000);
 				break;
+			}
 		}
 		super.handleDied();
 		AI2Actions.deleteOwner(this);

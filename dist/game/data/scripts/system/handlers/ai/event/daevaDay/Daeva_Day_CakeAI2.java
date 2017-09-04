@@ -58,25 +58,33 @@ public class Daeva_Day_CakeAI2 extends NpcAI2
 			{
 				case 832180: // Daeva's Day Cake E.
 				case 832181: // Daeva's Day Cake A.
+				{
 					switch (Rnd.get(1, 3))
 					{
 						case 1:
+						{
 							SkillEngine.getInstance().applyEffectDirectly(20884, player, player, 14400000 * 1);
 							effectController.removeEffect(20885);
 							effectController.removeEffect(20886);
 							break;
+						}
 						case 2:
+						{
 							SkillEngine.getInstance().applyEffectDirectly(20885, player, player, 14400000 * 1);
 							effectController.removeEffect(20884);
 							effectController.removeEffect(20886);
 							break;
+						}
 						case 3:
+						{
 							SkillEngine.getInstance().applyEffectDirectly(20886, player, player, 14400000 * 1);
 							effectController.removeEffect(20884);
 							effectController.removeEffect(20885);
 							break;
+						}
 					}
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

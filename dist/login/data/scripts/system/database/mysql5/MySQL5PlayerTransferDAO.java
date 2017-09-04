@@ -75,12 +75,16 @@ public class MySQL5PlayerTransferDAO extends PlayerTransferDAO
 		switch (task.status)
 		{
 			case PlayerTransferTask.STATUS_ACTIVE:
+			{
 				table = ", time_performed=NOW()";
 				break;
+			}
 			case PlayerTransferTask.STATUS_DONE:
 			case PlayerTransferTask.STATUS_ERROR:
+			{
 				table = ", time_done=NOW()";
 				break;
+			}
 		}
 		return DB.insertUpdate("UPDATE player_transfers SET status=?, comment=?" + table + " WHERE id=?", preparedStatement ->
 		{

@@ -43,7 +43,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -86,6 +85,7 @@ public class EsoterraceInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 217206: // Warden Surama.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -95,32 +95,49 @@ public class EsoterraceInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 217185: // Dalia Charlands.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000111, 1)); // Dalia Key.
 				break;
+			}
 			case 701025: // Esoterrace Sundries Box.
+			{
 				switch (Rnd.get(1, 6))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 190000050, 1)); // Whitebeard Manduri Egg.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 190020089, 1)); // Blue Merek.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 190020148, 1)); // Infernal Diabol.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 190020204, 1)); // Cheering Dandi's.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 190070004, 1)); // Su-ro Kim Summoning Lamp.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 190070012, 1)); // Pink Merek Egg.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -130,10 +147,12 @@ public class EsoterraceInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 282295: // Command Gate Control.
+			{
 				doors.get(39).setOpen(true);
 				// A heavy door has opened somewhere.
 				sendMsgByRace(1401839, Race.PC_ALL, 0);
 				break;
+			}
 		}
 	}
 	
@@ -148,6 +167,7 @@ public class EsoterraceInstance extends GeneralInstanceHandler
 			 * Monster.
 			 */
 			case 282291: // Surkana Feeder.
+			{
 				despawnNpc(npc);
 				deleteNpc(217204); // Kexkra.
 				// The Surkana Supplier has overloaded.
@@ -156,6 +176,7 @@ public class EsoterraceInstance extends GeneralInstanceHandler
 				sendMsgByRace(1401037, Race.PC_ALL, 4000);
 				spawn(217205, 1315.99f, 1170.77f, 51.8004f, (byte) 87); // Kexkra Prototype.
 				break;
+			}
 			/**
 			 * Dalia Charlands is the first Named Monster of Esoterrace. Before engaging the boss, be sure to clear out the surrounding area of patrolling monsters. Dalia is a straightforward encounter that doesn't have a lot of gimmicks, just be sure to watch out for the occasional area of effect
 			 * attack. When Dalia is defeated, Dalia's Watcher will appear, follow it to find the path to the next area. Be sure each player in the Group loots the Dalia Key from Dalia Charlands. Like a Quest item, each player can loot this key, and earn access to one of the Entwined Treasure Chests
@@ -163,6 +184,7 @@ public class EsoterraceInstance extends GeneralInstanceHandler
 			 * beginning of the Instanced Dungeon will now transport players directly to the Dalia Garden.
 			 */
 			case 217185: // Dalia Charlands.
+			{
 				// Dalia Charlands has vanished.
 				sendMsgByRace(1401036, Race.PC_ALL, 0);
 				// The Surkana Steam Jet has generated an updraft.
@@ -173,9 +195,11 @@ public class EsoterraceInstance extends GeneralInstanceHandler
 				spawn(217195, 789.48f, 1115.29f, 363.131f, (byte) 89); // Captain Murugan.
 				spawn(701023, 1264.862061f, 644.995178f, 296.831818f, (byte) 0, 112);
 				break;
+			}
 			case 217282: // Esoterrace Investigator.
 			case 217283: // Senior Lab Researcher.
 			case 217284: // Lab Supervisor.
+			{
 				labManagerKilled++;
 				if (labManagerKilled == 1)
 				{
@@ -192,33 +216,43 @@ public class EsoterraceInstance extends GeneralInstanceHandler
 					sendMsgByRace(1400920, Race.PC_ALL, 0);
 				}
 				break;
+			}
 			case 217281: // Lab Gatekeeper.
+			{
 				doors.get(70).setOpen(true);
 				// The door to the Laboratory Air Conditioning Room is now open.
 				sendMsgByRace(1400921, Race.PC_ALL, 0);
 				break;
+			}
 			case 286930: // Esoterrace Mage.
+			{
 				despawnNpc(npc);
 				spawn(799580, 1034.11f, 985.01f, 327.35095f, (byte) 105); // Keening Sirokin.
 				spawn(701025, 1038.636963f, 987.741455f, 328.356415f, (byte) 0, 725); // Esoterrace Sundries Box.
 				break;
+			}
 			/**
 			 * Inside the Laboratory Air Conditioning Room, players will encounter the second Named Monster of Esoterrace, Captain Murugan. Be wary of Captain Murugan's deadly combo skills; expect the primary target to take massive damage throughout the encounter! When Captain Murugan is defeated,
 			 * two doors will open in the Laboratory Air Conditioning Room, granting access to Chilled Treasure chests which contain Abyss relics.
 			 */
 			case 217195: // Captain Murugan.
+			{
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						doors.get(45).setOpen(true);
 						// With the gatekeeper down, the door on the left is open!
 						sendMsgByRace(1401229, Race.PC_ALL, 0);
 						break;
+					}
 					case 2:
+					{
 						doors.get(67).setOpen(true);
 						// With the gatekeeper down, the door on the right is open!
 						sendMsgByRace(1401230, Race.PC_ALL, 0);
 						break;
+					}
 				}
 				// The Laboratory Ventilator is now open.
 				sendMsgByRace(1400922, Race.PC_ALL, 3000);
@@ -230,42 +264,53 @@ public class EsoterraceInstance extends GeneralInstanceHandler
 				spawn(701024, 751.67f, 1136.08f, 365.031f, (byte) 105, 41); // Chilled Treasure.
 				spawn(701024, 827.596f, 1136.16f, 365.031f, (byte) 73, 77); // Chilled Treasure.
 				break;
+			}
 			case 282293: // Esoterrace Ventilator.
+			{
 				despawnNpc(npc);
 				// The Drana Production Lab walkway is now open.
 				sendMsgByRace(1400923, Race.PC_ALL, 0);
 				break;
+			}
 			case 217289: // Esoterrace Biolab Watchman.
+			{
 				doors.get(122).setOpen(true);
 				// The outer wall of the Bio Lab has collapsed.
 				sendMsgByRace(1400924, Race.PC_ALL, 0);
 				break;
+			}
 			/**
 			 * When Kexkra is defeated, a treasure chest will spawn containing Abyss relics and Platinum Medals. In addition, the treasure chest has a chance to contain Fabled armor from the Surama set.
 			 */
 			case 217204: // Kexkra.
+			{
 				despawnNpc(npc);
 				sendMsg("[Congratulation]: you finish <Esoterrace>");
 				spawn(701044, 1341.19f, 1181.25f, 51.515f, (byte) 67); // Esoterrace Dimensional Rift Exit.
 				spawn(701027, 1326.7705f, 1173.1145f, 51.493996f, (byte) 70, 726); // Laboratory Treasure Chest.
 				spawn(701027, 1321.9897f, 1179.5394f, 51.493996f, (byte) 79, 727); // Laboratory Treasure Chest.
 				break;
+			}
 			case 217205: // Kexkra Prototype.
+			{
 				despawnNpc(npc);
 				sendMovie(player, 472);
 				spawn(217206, 1315.99f, 1170.77f, 51.8004f, (byte) 87); // Warden Surama.
 				spawn(701047, 1316.5045f, 1171.0127f, 52.589924f, (byte) 0, 180); // Flame Wall.
 				break;
+			}
 			/**
 			 * Players will start this encounter facing the Kexkra Prototype. As the encounter wears on, an event will cause Warden Surama to join the battle. When Warden Surama is defeated, two treasure chests will spawn, one of which has a chance to contain Fabled armor from the Surama series, and
 			 * the other Fabled weapons from the Surama series.
 			 */
 			case 217206: // Warden Surama.
+			{
 				sendMsg("[Congratulation]: you finish <Esoterrace>");
 				spawn(701044, 1341.19f, 1181.25f, 51.515f, (byte) 67); // Esoterrace Dimensional Rift Exit.
 				spawn(701027, 1326.7705f, 1173.1145f, 51.493996f, (byte) 70, 726); // Laboratory Treasure Chest.
 				spawn(701027, 1321.9897f, 1179.5394f, 51.493996f, (byte) 79, 727); // Laboratory Treasure Chest.
 				break;
+			}
 		}
 	}
 	
@@ -287,36 +332,18 @@ public class EsoterraceInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

@@ -104,11 +104,15 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 834168: // Bomb Support Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000413, 1)); // Support Bomb.
 				break;
+			}
 			case 834169: // Bomb Restraint Support Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000414, 1)); // Support Restraining Bomb.
 				break;
+			}
 		}
 	}
 	
@@ -502,9 +506,11 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		{
 			case 243965: // Rotten Clodworm.
 			case 243966: // Rotten Mudthorn.
+			{
 				point = 50;
 				despawnNpc(npc);
 				break;
+			}
 		}
 		updateScore(mostPlayerDamage, npc, point, false);
 	}
@@ -516,31 +522,40 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 833898: // Sealed Reian Relic.
+			{
 				point = 1000;
 				despawnNpc(npc);
 				break;
+			}
 			/**
 			 * Unsealing Device [Elyos]
 			 */
 			case 806343: // Unsealing Device.
+			{
 				point = 200;
 				despawnNpc(npc);
 				// The Elyos activated stage 1 of the device.
 				sendMsgByRace(1403428, Race.PC_ALL, 0);
 				break;
+			}
 			case 806344: // Unsealing Device.
+			{
 				point = 1000;
 				despawnNpc(npc);
 				// The Elyos activated stage 2 of the device.
 				sendMsgByRace(1403429, Race.PC_ALL, 0);
 				break;
+			}
 			case 806345: // Unsealing Device.
+			{
 				point = 500;
 				despawnNpc(npc);
 				// The Elyos activated stage 3 of the device.
 				sendMsgByRace(1403430, Race.PC_ALL, 0);
 				break;
+			}
 			case 806346: // Unsealing Device.
+			{
 				point = 50000;
 				despawnNpc(npc);
 				// The Elyos are activating the last stage of the device.
@@ -548,28 +563,36 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 				// The Elyos successfully occupied this area.
 				sendMsgByRace(1403434, Race.PC_ALL, 10000);
 				break;
+			}
 			/**
 			 * Unsealing Device [Asmodians]
 			 */
 			case 806375: // Unsealing Device.
+			{
 				point = 200;
 				despawnNpc(npc);
 				// The Asmodians activated stage 1 of the device.
 				sendMsgByRace(1403435, Race.PC_ALL, 0);
 				break;
+			}
 			case 806376: // Unsealing Device.
+			{
 				point = 1000;
 				despawnNpc(npc);
 				// The Asmodians activated stage 2 of the device.
 				sendMsgByRace(1403436, Race.PC_ALL, 0);
 				break;
+			}
 			case 806377: // Unsealing Device.
+			{
 				point = 500;
 				despawnNpc(npc);
 				// The Asmodians activated stage 3 of the device.
 				sendMsgByRace(1403437, Race.PC_ALL, 0);
 				break;
+			}
 			case 806378: // Unsealing Device.
+			{
 				point = 50000;
 				despawnNpc(npc);
 				// The Asmodians are activating the last stage of the device.
@@ -577,7 +600,9 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 				// The Asmodians successfully occupied this area.
 				sendMsgByRace(1403441, Race.PC_ALL, 10000);
 				break;
+			}
 			case 802192: // Flame Vent [Elyos].
+			{
 				// The Asmodian Flame Vent has been activated.\nThe Asmodians are trapped!
 				sendMsgByRace(1402368, Race.PC_ALL, 0);
 				sp(702404, 234.43842f, 194.1041f, 79.23065f, (byte) 105, 0);
@@ -586,7 +611,9 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 				sp(702405, 234.42247f, 194.1363f, 79.23065f, (byte) 16, 0);
 				sp(702405, 234.53394f, 194.27177f, 79.23065f, (byte) 75, 0);
 				break;
+			}
 			case 802193: // Flame Vent [Asmodians]
+			{
 				// The Elyos Flame Vent has been activated.\nThe Elyos are trapped!
 				sendMsgByRace(1402369, Race.PC_ALL, 0);
 				sp(702404, 294.57443f, 324.22205f, 79.23065f, (byte) 45, 0);
@@ -595,6 +622,7 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 				sp(702405, 294.4634f, 323.84235f, 79.23065f, (byte) 15, 0);
 				sp(702405, 294.70172f, 324.23065f, 79.23065f, (byte) 45, 0);
 				break;
+			}
 		}
 		updateScore(player, npc, point, false);
 	}

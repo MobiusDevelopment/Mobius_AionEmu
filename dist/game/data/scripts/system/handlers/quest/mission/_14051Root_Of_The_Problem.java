@@ -101,11 +101,14 @@ public class _14051Root_Of_The_Problem extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1011);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -113,6 +116,7 @@ public class _14051Root_Of_The_Problem extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 			}
 		}
 		else if (targetId == 204549)
@@ -120,6 +124,7 @@ public class _14051Root_Of_The_Problem extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1352);
@@ -128,7 +133,9 @@ public class _14051Root_Of_The_Problem extends QuestHandler
 					{
 						return sendQuestDialog(env, 1693);
 					}
+				}
 				case CHECK_COLLECTED_ITEMS:
+				{
 					if (QuestService.collectItemCheck(env, true))
 					{
 						giveQuestItem(env, 182215339, 1);
@@ -140,7 +147,9 @@ public class _14051Root_Of_The_Problem extends QuestHandler
 					{
 						return sendQuestDialog(env, 10001);
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -148,7 +157,9 @@ public class _14051Root_Of_The_Problem extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 				case STEP_TO_3:
+				{
 					if (var == 2)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -157,6 +168,7 @@ public class _14051Root_Of_The_Problem extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 730026)
@@ -164,11 +176,14 @@ public class _14051Root_Of_The_Problem extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 3)
 					{
 						return sendQuestDialog(env, 2034);
 					}
+				}
 				case STEP_TO_4:
+				{
 					if (var == 3)
 					{
 						removeQuestItem(env, 182215339, 1);
@@ -178,6 +193,7 @@ public class _14051Root_Of_The_Problem extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		return false;

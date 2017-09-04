@@ -110,6 +110,7 @@ public class _16825Escape_From_The_Contaminated_Library extends QuestHandler
 			{
 				case 220534: // 타락한 물의 느빌림.
 				case 220597: // 오염된 제3 서고 입구 잠금장치.
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -120,6 +121,7 @@ public class _16825Escape_From_The_Contaminated_Library extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

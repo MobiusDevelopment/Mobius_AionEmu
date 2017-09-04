@@ -116,6 +116,7 @@ public class _26988Expunge_The_Expeditionary_Squad extends QuestHandler
 				case 233126:
 				case 233127:
 				case 233128:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -126,6 +127,7 @@ public class _26988Expunge_The_Expeditionary_Squad extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

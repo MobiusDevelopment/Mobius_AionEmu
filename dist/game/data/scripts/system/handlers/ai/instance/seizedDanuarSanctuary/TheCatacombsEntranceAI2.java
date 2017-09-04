@@ -51,25 +51,31 @@ public class TheCatacombsEntranceAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 701873: // The Catacombs Entrance.
+			{
 				switch (player.getWorldId())
 				{
 					case 301140000: // Seized Danuar Sanctuary 4.8
+					{
 						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000181, 1))
 						{ // The Catacombs Key.
 							TeleportService2.teleportTo(player, 301140000, instanceId, 1032.0134f, 369.56287f, 297.8753f, (byte) 32);
 						}
 						break;
+					}
 				}
 				switch (player.getWorldId())
 				{
 					case 301380000: // Danuar Sanctuary 4.8
+					{
 						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000181, 1))
 						{ // The Catacombs Key.
 							TeleportService2.teleportTo(player, 301380000, instanceId, 1032.0134f, 369.56287f, 297.8753f, (byte) 32);
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));
 		return true;

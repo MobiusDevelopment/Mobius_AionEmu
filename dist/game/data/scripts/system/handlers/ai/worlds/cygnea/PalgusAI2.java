@@ -60,6 +60,7 @@ public class PalgusAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 804844: // Palgus
+				{
 					announceLightLegionPortal();
 					spawn(702721, 2392.9177f, 1553.1038f, 438.97025f, (byte) 88);
 					ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -71,6 +72,7 @@ public class PalgusAI2 extends NpcAI2
 						}
 					}, 300000); // 5 Minutes.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

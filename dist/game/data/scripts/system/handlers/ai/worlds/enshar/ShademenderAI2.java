@@ -64,8 +64,10 @@ public class ShademenderAI2 extends AggressiveNpcAI2
 			case 219912:
 			case 219919:
 			case 219925:
+			{
 				conquerorPassion();
 				break;
+			}
 		}
 	}
 	

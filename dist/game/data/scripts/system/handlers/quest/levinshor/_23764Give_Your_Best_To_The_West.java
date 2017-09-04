@@ -117,6 +117,7 @@ public class _23764Give_Your_Best_To_The_West extends QuestHandler
 			{
 				case 235374:
 				case 235375:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _23764Give_Your_Best_To_The_West extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

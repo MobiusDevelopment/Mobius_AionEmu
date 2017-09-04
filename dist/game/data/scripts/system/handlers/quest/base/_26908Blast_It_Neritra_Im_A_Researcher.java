@@ -114,6 +114,7 @@ public class _26908Blast_It_Neritra_Im_A_Researcher extends QuestHandler
 			{
 				case 231570:
 				case 231571:
+				{
 					if (qs.getQuestVarById(0) < 1)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -121,6 +122,7 @@ public class _26908Blast_It_Neritra_Im_A_Researcher extends QuestHandler
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

@@ -53,6 +53,7 @@ public class StigmaLinkedService
 		switch (player.getPlayerClass())
 		{
 			case GLADIATOR:
+			{
 				if ((list.size() == 6) && !check)
 				{
 					// 140001106 발목 베기
@@ -77,7 +78,9 @@ public class StigmaLinkedService
 					}
 				}
 				return;
+			}
 			case TEMPLAR:
+			{
 				if ((list.size() == 6) && !check)
 				{
 					// 140001134 주신의 보호
@@ -102,7 +105,9 @@ public class StigmaLinkedService
 					}
 				}
 				return;
+			}
 			case ASSASSIN:
+			{
 				if ((list.size() == 6) && !check)
 				{
 					// 140001152 비수의 서약
@@ -127,7 +132,9 @@ public class StigmaLinkedService
 					}
 				}
 				return;
+			}
 			case RANGER:
+			{
 				if ((list.size() == 6) && !check)
 				{
 					// 140001172 고통의 화살
@@ -159,7 +166,9 @@ public class StigmaLinkedService
 					}
 				}
 				return;
+			}
 			case SORCERER:
+			{
 				if ((list.size() == 6) && !check)
 				{
 					// 140001191 빙설의 갑주
@@ -184,7 +193,9 @@ public class StigmaLinkedService
 					}
 				}
 				return;
+			}
 			case SPIRIT_MASTER:
+			{
 				if ((list.size() == 6) && !check)
 				{
 					// 140001209 황천의 저주
@@ -209,7 +220,9 @@ public class StigmaLinkedService
 					}
 				}
 				return;
+			}
 			case CLERIC:
+			{
 				if ((list.size() == 6) && !check)
 				{
 					// 140001246 생명의 권능
@@ -234,7 +247,9 @@ public class StigmaLinkedService
 					}
 				}
 				return;
+			}
 			case CHANTER:
+			{
 				if ((list.size() == 6) && !check)
 				{
 					// 140001226 철벽의 주문
@@ -259,7 +274,9 @@ public class StigmaLinkedService
 					}
 				}
 				return;
+			}
 			case AETHERTECH:
+			{
 				if ((list.size() == 6) && !check)
 				{
 					// 140001279 도약격파
@@ -284,7 +301,9 @@ public class StigmaLinkedService
 					}
 				}
 				return;
+			}
 			case GUNSLINGER:
+			{
 				if ((list.size() == 6) && !check)
 				{
 					// 140001262 미간 정조준
@@ -309,7 +328,9 @@ public class StigmaLinkedService
 					}
 				}
 				return;
+			}
 			case SONGWEAVER:
+			{
 				if ((list.size() == 6) && !check)
 				{
 					// 140001297 면죄의 선율
@@ -334,8 +355,11 @@ public class StigmaLinkedService
 					}
 				}
 				return;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		check = false;
 	}

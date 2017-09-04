@@ -47,11 +47,13 @@ public class Suspicious_CannonAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 730207: // Suspicious Cannon.
+				{
 					player.setState(CreatureState.FLIGHT_TELEPORT);
 					player.unsetState(CreatureState.ACTIVE);
 					player.setFlightTeleportId(73001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 73001, 0));
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

@@ -110,13 +110,17 @@ public class SM_SIEGE_LOCATION_INFO extends AionServerPacket
 			{
 				case 2111: // Veille.
 				case 3111: // Mastarius.
+				{
 					writeD(SiegeService.getInstance().getRemainingSiegeTimeInSeconds(loc.getLocationId()));
 					writeD(0x00);// unk
 					break;
+				}
 				default:
+				{
 					writeD(10000);
 					writeD(0x00);// unk
 					break;
+				}
 			}
 		}
 	}

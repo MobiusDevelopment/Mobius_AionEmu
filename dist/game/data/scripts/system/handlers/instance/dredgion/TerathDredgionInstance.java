@@ -62,7 +62,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -119,6 +118,7 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 219264: // Captain Anusa.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -130,15 +130,20 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 219255: // Supervisor Chitan.
 			case 219256: // Chief Navigator Adhari.
 			case 219257: // Assistant Navigator Kurta.
@@ -153,6 +158,7 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 			case 219268: // Quartermaster Gashar.
 			case 219270: // Enforcer Udara.
 			case 219286: // Auditor Zhantri.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -163,8 +169,10 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 219266: // Archivist Davorkar.
 			case 219271: // Master At Arms Vandukar.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 123001270, 1)); // Ksanat's Belt.
@@ -176,19 +184,25 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			/**
 			 * Obtain the Captain’s Key by killing Gatekeeper Payad. The Captain’s Key opens the door to the Captain’s Cabin.
 			 */
 			case 219269: // Gatekeeper Payad.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000117, 1)); // Captain's Cabin Passage Key.
@@ -201,6 +215,7 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -226,35 +241,39 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 	protected void startInstanceTask()
 	{
 		instanceTime = System.currentTimeMillis();
-		terathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		terathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			openFirstDoors();
+			// The bulkhead has been activated and the passage between the First Armory and Gravity Control has been sealed.
+			sendMsgByRace(1400604, Race.PC_ALL, 5000);
+			// The bulkhead has been activated and the passage between the Second Armory and Gravity Control has been sealed.
+			sendMsgByRace(1400605, Race.PC_ALL, 10000);
+			dredgionReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+			sendPacket();
+			switch (Rnd.get(1, 2))
 			{
-				openFirstDoors();
-				// The bulkhead has been activated and the passage between the First Armory and Gravity Control has been sealed.
-				sendMsgByRace(1400604, Race.PC_ALL, 5000);
-				// The bulkhead has been activated and the passage between the Second Armory and Gravity Control has been sealed.
-				sendMsgByRace(1400605, Race.PC_ALL, 10000);
-				dredgionReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-				sendPacket();
-				switch (Rnd.get(1, 2))
+				case 1:
 				{
-					case 1:
-						spawn(219255, 415.2769f, 282.0216f, 409.7311f, (byte) 118); // Supervisor Chitan.
-						break;
-					case 2:
-						spawn(219255, 556.53534f, 279.2918f, 409.7311f, (byte) 33); // Supervisor Chitan.
-						break;
+					spawn(219255, 415.2769f, 282.0216f, 409.7311f, (byte) 118); // Supervisor Chitan.
+					break;
 				}
-				switch (Rnd.get(1, 2))
+				case 2:
 				{
-					case 1:
-						spawn(219263, 485.25455f, 877.04614f, 405.01407f, (byte) 90); // First Mate Kamital.
-						break;
-					case 2:
-						spawn(219286, 485.25455f, 877.04614f, 405.01407f, (byte) 90); // Auditor Zhantri.
-						break;
+					spawn(219255, 556.53534f, 279.2918f, 409.7311f, (byte) 33); // Supervisor Chitan.
+					break;
+				}
+			}
+			switch (Rnd.get(1, 2))
+			{
+				case 1:
+				{
+					spawn(219263, 485.25455f, 877.04614f, 405.01407f, (byte) 90); // First Mate Kamital.
+					break;
+				}
+				case 2:
+				{
+					spawn(219286, 485.25455f, 877.04614f, 405.01407f, (byte) 90); // Auditor Zhantri.
+					break;
 				}
 			}
 		}, 60000));
@@ -262,40 +281,28 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 		 * Terath Dredgion Teleportation Devices: There are numerous teleportation devices located inside the Terath Dredgion. These teleportation devices allow players to teleport to different areas of the Dredgion with ease. Central Teleporter: This teleporter activates 10 minutes after the
 		 * Instanced Dungeon has begun.
 		 */
-		terathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		terathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// A teleport device has been activated in the Emergency Exit.
-				sendMsgByRace(1401424, Race.PC_ALL, 0);
-				spawn(730558, 415.07663f, 173.85265f, 432.53436f, (byte) 0, 34); // Port Midship Teleporter.
-				spawn(730559, 554.83081f, 173.87158f, 432.52448f, (byte) 0, 9); // Starboard Midship Teleporter.
-			}
+			// A teleport device has been activated in the Emergency Exit.
+			sendMsgByRace(1401424, Race.PC_ALL, 0);
+			spawn(730558, 415.07663f, 173.85265f, 432.53436f, (byte) 0, 34); // Port Midship Teleporter.
+			spawn(730559, 554.83081f, 173.87158f, 432.52448f, (byte) 0, 9); // Starboard Midship Teleporter.
 		}, 600000));
 		/**
 		 * Enforcer Udara: Location: Gravity Control Time Elapsed: 15 Minutes Valor: 1,000 Points
 		 */
-		terathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		terathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// Enforcer Udara has appeared in the Gravity Control Room.
-				sendMsgByRace(1401417, Race.PC_ALL, 0);
-				spawn(219270, 485.4811f, 313.925f, 403.71857f, (byte) 36); // Enforcer Udara.
-			}
+			// Enforcer Udara has appeared in the Gravity Control Room.
+			sendMsgByRace(1401417, Race.PC_ALL, 0);
+			spawn(219270, 485.4811f, 313.925f, 403.71857f, (byte) 36); // Enforcer Udara.
 		}, 900000));
-		terathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		terathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!dredgionReward.isRewarded())
 			{
-				if (!dredgionReward.isRewarded())
-				{
-					final Race winningRace = dredgionReward.getWinningRaceByScore();
-					stopInstance(winningRace);
-				}
+				final Race winningRace = dredgionReward.getWinningRaceByScore();
+				stopInstance(winningRace);
 			}
 		}, 3600000));
 	}
@@ -316,59 +323,80 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 			 * There are six weapons locker located near the Terath Dredgion entrance, and each chest awards 100 points if destroyed. These locker are also related to Quests for both Elyos and Asmodians.
 			 */
 			case 701439: // Weapons Locker.
+			{
 				point = 100;
 				despawnNpc(npc);
 				break;
+			}
 			/**
 			 * The Surkana: Destroy Surkana in each room can obtain a higher score. 2. When you add monsters to attack Surkana is around 20m range. First, it is safe to be cleaned up monsters. 3. When you destroy a race that destroyed Surkana is displayed on the map. It is through you can guess the
 			 * path of the opposing faction. 4. Captain Room Teleport appeared to be destroyed 5 Surkana.
 			 */
 			case 701441: // Armory Maintenance Surkana.
 			case 701442: // Armory Maintenance Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 500);
 				break;
+			}
 			case 701443: // Gravity Control Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 900);
 				break;
+			}
 			case 701444: // Port Thrust Control Surkana.
 			case 701445: // Starboard Thrust Control Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 1100);
 				break;
+			}
 			case 701446: // Cannon Control Surkana.
 			case 701447: // Cannon Control Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 800);
 				break;
+			}
 			case 701448: // Drop Authority Surkana.
 			case 701449: // Drop Authority Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 600);
 				break;
+			}
 			case 701450: // Weapons Charge Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 700);
 				break;
+			}
 			case 701451: // Flywheel Surkana.
 			case 701452: // Flywheel Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 500);
 				break;
+			}
 			case 701453: // Bridge Power Surkana .
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 700);
 				break;
+			}
 			case 701454: // Cabin Power Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 1100);
 				break;
+			}
 			/**
 			 * Captain’s Cabin Passage: There are paths to the left and right of the Captain’s Cabin’s on the second floor, but the doors are blocked. These doors cannot be demolished, and can only be opened with a key dropped by a specific Named Monster. Groups desiring the Captain’s Cabin Passage
 			 * Key will need to defeat "Master At Arms Vandukar" in the center of the Dredgion. Only one Group can loot the key. The Captain’s Cabin Teleport Device is located just beyond the Barracks, and can make reaching Captain Anusa much easier.
 			 */
 			case 219271: // Master At Arms Vandukar.
+			{
 				if (race.equals(Race.ELYOS))
 				{
 					// A teleport device has been activated in the Captain's Cabin.
@@ -383,21 +411,26 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 				}
 				point = 1000;
 				break;
+			}
 			/**
 			 * Supply Room Teleporter: This teleporter activates after the destruction of the Teleporter Generator in the Barracks.
 			 */
 			case 730570: // Port Teleporter Generator.
+			{
 				despawnNpc(npc);
 				// A teleport device has been activated in the Supplies Storage Room.
 				sendMsgByRace(1401415, Race.PC_ALL, 0);
 				spawn(730560, 397.11661f, 184.29782f, 432.8032f, (byte) 0, 42); // Port Supply Room Teleporter.
 				break;
+			}
 			case 730571: // Starboard Teleporter Generator.
+			{
 				despawnNpc(npc);
 				// A second teleport device has been activated in the Supplies Storage room.
 				sendMsgByRace(1401418, Race.PC_ALL, 0);
 				spawn(730561, 572.10443f, 185.23933f, 432.56024f, (byte) 0, 10); // Starboard Supply Room Teleporter.
 				break;
+			}
 			/**
 			 * Defense Shield Generator: When the Defense Shield Generator on the Weapons Deck or Lower Weapons deck is demolished, a shield appears in Ready Room 1 or 2. This shield blocks access to the center of the Terath Dredgion. The Ready Room is the shortest route to the center of the
 			 * Dredgion, and the quickest route to the opposing race’s area. Different tactics can be used in this area to maximize the Group’s accumulation of points. For example, if one Group decides to destroy the opposing Group’s Shield Generator, it will make it difficult for the opposing Group
@@ -405,18 +438,24 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 			 */
 			case 730566: // Portside Defense Shield.
 			case 730567: // Starboard Defense Shield.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 730572: // Portside Defense Shield Generator.
+			{
 				despawnNpc(npc);
 				// The Portside Defense Shield has been generated in Ready Room 1.
 				sendMsgByRace(1400226, Race.PC_ALL, 0);
 				break;
+			}
 			case 730573: // Starboard Defense Shield Generator.
+			{
 				despawnNpc(npc);
 				// The Starboard Defense Shield has been generated in Ready Room 2.
 				sendMsgByRace(1400227, Race.PC_ALL, 0);
 				break;
+			}
 			/**
 			 * The Bulkhead: These shields are activated by the Terath Sentinel when first encountered at the beginning of the battle. These shields block the entrance from the Armories to Gravity Control, and can be demolished with attacks, but also have a significant amount of health. Groups often
 			 * opt to move around the shields instead of demolishing them. It’s worth noting that after a certain amount of time has passed, Enforcer Udara spawns in the Gravity Control room, and gives 1,000 points when defeated. There is also a chance that Bosun Kuchuran, a Hero grade Named
@@ -424,6 +463,7 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 			 */
 			case 730574: // Port Bulkhead.
 			case 730575: // Starboard Bulkhead.
+			{
 				bulkhead++;
 				if (bulkhead == 2)
 				{
@@ -431,6 +471,7 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 				}
 				despawnNpc(npc);
 				break;
+			}
 			case 219256: // Chief Navigator Adhari.
 			case 219257: // Assistant Navigator Kurta.
 			case 219258: // Vice Gun Captain Faniran.
@@ -441,6 +482,7 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 			case 219266: // Archivist Davorkar.
 			case 219267: // Supply Captain Marahane.
 			case 219268: // Quartermaster Gashar.
+			{
 				secretCache++;
 				if (secretCache == 6)
 				{
@@ -450,31 +492,34 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 				}
 				point = 200;
 				break;
+			}
 			case 219263: // First Mate Kamital.
 			case 219286: // Auditor Zhantri.
+			{
 				point = 500;
 				break;
+			}
 			case 219255: // Supervisor Chitan.
 			case 219265: // Bosun Kuchuran.
 			case 219269: // Gatekeeper Payad.
 			case 219270: // Enforcer Udara.
+			{
 				point = 1000;
 				break;
+			}
 			case 219264: // Captain Anusa.
+			{
 				point = 1000;
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
+					if (!dredgionReward.isRewarded())
 					{
-						if (!dredgionReward.isRewarded())
-						{
-							final Race winningRace = dredgionReward.getWinningRaceByScore();
-							stopInstance(winningRace);
-						}
+						final Race winningRace = dredgionReward.getWinningRaceByScore();
+						stopInstance(winningRace);
 					}
 				}, 30000);
 				break;
+			}
 		}
 		updateScore(mostPlayerDamage, npc, point, false);
 	}
@@ -544,23 +589,19 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 		{
 			npc.getController().onDelete();
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
+					if (CreatureActions.isAlreadyDead(player))
 					{
-						if (CreatureActions.isAlreadyDead(player))
-						{
-							PlayerReviveService.duelRevive(player);
-						}
-						onExitInstance(player);
+						PlayerReviveService.duelRevive(player);
 					}
-					AutoGroupService.getInstance().unRegisterInstance(instanceId);
+					onExitInstance(player);
 				}
+				AutoGroupService.getInstance().unRegisterInstance(instanceId);
 			}
 		}, 120000);
 	}
@@ -726,14 +767,7 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 	
 	private void sendPacket()
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), dredgionReward, instance.getPlayersInside()));
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), dredgionReward, instance.getPlayersInside())));
 	}
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time)
@@ -748,18 +782,14 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
-		terathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		terathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				spawn(npcId, x, y, z, h, entityId);
+				if (msg > 0)
 				{
-					spawn(npcId, x, y, z, h, entityId);
-					if (msg > 0)
-					{
-						sendMsgByRace(msg, race, 0);
-					}
+					sendMsgByRace(msg, race, 0);
 				}
 			}
 		}, time));
@@ -767,53 +797,31 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
-		terathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		terathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
-				{
-					final Npc npc = (Npc) spawn(npcId, x, y, z, h);
-					npc.getSpawn().setWalkerId(walkerId);
-					WalkManager.startWalking((NpcAI2) npc.getAi2());
-				}
+				final Npc npc = (Npc) spawn(npcId, x, y, z, h);
+				npc.getSpawn().setWalkerId(walkerId);
+				WalkManager.startWalking((NpcAI2) npc.getAi2());
 			}
 		}, time));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		terathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		terathTask.add(ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time));
+		}), time));
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void stopInstanceTask()

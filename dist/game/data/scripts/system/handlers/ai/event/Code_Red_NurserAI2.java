@@ -79,24 +79,32 @@ public class Code_Red_NurserAI2 extends GeneralNpcAI2
 			{
 				case 831435: // Jorpine.
 				case 831441: // Hylian.
+				{
 					skillId = 21280;
 					effectController.removeEffect(21281);
 					break;
+				}
 				case 831436: // Yennu.
 				case 831442: // Rordah.
+				{
 					skillId = 21281;
 					effectController.removeEffect(21280);
 					break;
+				}
 				case 831437: // Dalloren.
 				case 831524: // Desha.
+				{
 					skillId = 21309;
 					effectController.removeEffect(21283);
 					break;
+				}
 				case 831518: // Dalliea.
 				case 831443: // Mazka.
+				{
 					skillId = 21283;
 					effectController.removeEffect(21309);
 					break;
+				}
 			}
 			SkillEngine.getInstance().getSkill(getOwner(), skillId, 1, player).useNoAnimationSkill();
 		}
@@ -118,6 +126,7 @@ public class Code_Red_NurserAI2 extends GeneralNpcAI2
 			case 831436: // Yennu.
 			case 831441: // Hylian.
 			case 831442: // Rordah.
+			{
 				if ((currentDay >= 1) && (currentDay <= 4))
 				{
 					super.handleSpawned();
@@ -130,10 +139,12 @@ public class Code_Red_NurserAI2 extends GeneralNpcAI2
 					}
 				}
 				break;
+			}
 			case 831437: // Dalloren.
 			case 831518: // Dalliea.
 			case 831443: // Mazka.
 			case 831524: // Deshna.
+			{
 				if ((currentDay >= 5) && (currentDay <= 7))
 				{
 					super.handleSpawned();
@@ -146,6 +157,7 @@ public class Code_Red_NurserAI2 extends GeneralNpcAI2
 					}
 				}
 				break;
+			}
 		}
 	}
 }

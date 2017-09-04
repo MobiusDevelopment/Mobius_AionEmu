@@ -56,6 +56,7 @@ public class Crown_Prince_AdmirerAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 831110: // Crown Prince's Admirer.
+				{
 					startTombWaveA1();
 					despawnNpc(831095); // Shugo Warrior Transformation Device.
 					// Pillagers incoming. Guard the Crown Prince's Monument!
@@ -64,6 +65,7 @@ public class Crown_Prince_AdmirerAI2 extends NpcAI2
 					spawn(831250, 184.92825f, 229.44f, 536.16974f, (byte) 54); // Imperial Obelisk.
 					spawn(831251, 170.58969f, 237.13005f, 536.16974f, (byte) 108); // Imperial Obelisk.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

@@ -129,19 +129,33 @@ public class ArmsfusionService
 		switch (rarity)
 		{
 			case COMMON:
+			{
 				return 1.0;
+			}
 			case RARE:
+			{
 				return 1.25;
+			}
 			case LEGEND:
+			{
 				return 1.5;
+			}
 			case UNIQUE:
+			{
 				return 2.0;
+			}
 			case EPIC:
+			{
 				return 2.5;
+			}
 			case MYTHIC:
+			{
 				return 3.0;
+			}
 			default:
+			{
 				return 1.0;
+			}
 		}
 	}
 	

@@ -141,6 +141,7 @@ public class _25504Scout_The_Ellosim_Garden extends QuestHandler
 				case 241677:
 				case 241678:
 				case 241679:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -151,6 +152,7 @@ public class _25504Scout_The_Ellosim_Garden extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

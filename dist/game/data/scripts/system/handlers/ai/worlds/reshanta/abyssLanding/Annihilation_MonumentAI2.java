@@ -40,23 +40,35 @@ public class Annihilation_MonumentAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 883925: // Ide Cannon Tumon 1 Annihilation Monument <10,000 Points>
+			{
 				updateAnnihilationLanding1(7);
 				break;
+			}
 			case 883926: // Ide Cannon Tumon 2 Annihilation Monument <10,000 Points>
+			{
 				updateAnnihilationLanding1(8);
 				break;
+			}
 			case 883927: // Artillery Tumon 1 Annihilation Monument <10,000 Points>
+			{
 				updateAnnihilationLanding1(9);
 				break;
+			}
 			case 883928: // Artillery Tumon 2 Annihilation Monument <10,000 Points>
+			{
 				updateAnnihilationLanding1(10);
 				break;
+			}
 			case 883929: // Wurg The Glacier Annihilation Monument <15,000 Points>
+			{
 				updateAnnihilationLanding2(11);
 				break;
+			}
 			case 883930: // Terracrusher Annihilation Monument <15,000 Points>
+			{
 				updateAnnihilationLanding2(12);
 				break;
+			}
 		}
 		super.handleDied();
 		AI2Actions.deleteOwner(this);

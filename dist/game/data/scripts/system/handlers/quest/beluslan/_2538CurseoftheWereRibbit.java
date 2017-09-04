@@ -81,14 +81,18 @@ public class _2538CurseoftheWereRibbit extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 3)
 						{
 							qs.setStatus(QuestStatus.REWARD);
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 2375);
 						}
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestDialog(env, 5);
+					}
 				}
 			}
 			if (targetId == 790002)
@@ -96,6 +100,7 @@ public class _2538CurseoftheWereRibbit extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
@@ -104,7 +109,9 @@ public class _2538CurseoftheWereRibbit extends QuestHandler
 						{
 							return sendQuestDialog(env, 2034);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -112,7 +119,9 @@ public class _2538CurseoftheWereRibbit extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 					case STEP_TO_3:
+					{
 						if (var == 2)
 						{
 							removeQuestItem(env, 182204517, 1);
@@ -125,6 +134,7 @@ public class _2538CurseoftheWereRibbit extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 				}
 			}
 			if (targetId == 204805)
@@ -132,11 +142,14 @@ public class _2538CurseoftheWereRibbit extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							return sendQuestDialog(env, 1693);
 						}
+					}
 					case STEP_TO_2:
+					{
 						if (var == 1)
 						{
 							if (!giveQuestItem(env, 182204517, 1))
@@ -148,6 +161,7 @@ public class _2538CurseoftheWereRibbit extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 				}
 			}
 		}

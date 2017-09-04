@@ -82,7 +82,9 @@ public class _3085TheRiddlePoem extends QuestHandler
 						}
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

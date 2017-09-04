@@ -91,29 +91,37 @@ public class Town
 		switch (level)
 		{
 			case 1:
+			{
 				if ((points + amount) >= 1000)
 				{
 					increaseLevel();
 				}
 				break;
+			}
 			case 2:
+			{
 				if ((points + amount) >= 2000)
 				{
 					increaseLevel();
 				}
 				break;
+			}
 			case 3:
+			{
 				if ((points + amount) >= 3000)
 				{
 					increaseLevel();
 				}
 				break;
+			}
 			case 4:
+			{
 				if ((points + amount) >= 4000)
 				{
 					increaseLevel();
 				}
 				break;
+			}
 		}
 		points += amount;
 		setPersistentState(PersistentState.UPDATE_REQUIRED);

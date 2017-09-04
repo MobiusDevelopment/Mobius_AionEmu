@@ -91,9 +91,13 @@ public class _29662Protect_Kidorun_Campsite extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}
@@ -114,7 +118,9 @@ public class _29662Protect_Kidorun_Campsite extends QuestHandler
 							return sendQuestEndDialog(env);
 						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 			}
@@ -130,7 +136,9 @@ public class _29662Protect_Kidorun_Campsite extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}
@@ -153,6 +161,7 @@ public class _29662Protect_Kidorun_Campsite extends QuestHandler
 			case 213264:
 			case 213278:
 			case 213279:
+			{
 				if (qs.getQuestVarById(1) < 10)
 				{
 					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -164,6 +173,7 @@ public class _29662Protect_Kidorun_Campsite extends QuestHandler
 					updateQuestStatus(env);
 				}
 				break;
+			}
 		}
 		return false;
 	}

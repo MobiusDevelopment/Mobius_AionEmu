@@ -56,6 +56,7 @@ public class MentorMonsterHunt extends MonsterHunt
 			switch (qt.getMentorType())
 			{
 				case MENTOR:
+				{
 					if (player.isMentor())
 					{
 						final PlayerGroup group = player.getPlayerGroup2();
@@ -68,7 +69,9 @@ public class MentorMonsterHunt extends MonsterHunt
 						}
 					}
 					break;
+				}
 				case MENTE:
+				{
 					if (player.isInGroup2())
 					{
 						final PlayerGroup group = player.getPlayerGroup2();
@@ -81,6 +84,7 @@ public class MentorMonsterHunt extends MonsterHunt
 						}
 					}
 					break;
+				}
 			}
 		}
 		return false;

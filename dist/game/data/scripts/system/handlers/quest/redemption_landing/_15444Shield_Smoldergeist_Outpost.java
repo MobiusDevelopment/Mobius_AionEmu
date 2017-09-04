@@ -119,6 +119,7 @@ public class _15444Shield_Smoldergeist_Outpost extends QuestHandler
 				case 883043:
 				case 883044:
 				case 883045:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _15444Shield_Smoldergeist_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -81,14 +81,18 @@ public class _1097Sword_Of_Transcendence extends QuestHandler
 			switch (targetId)
 			{
 				case 790001:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
+						}
 						case STEP_TO_1:
+						{
 							if (var == 0)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -96,17 +100,23 @@ public class _1097Sword_Of_Transcendence extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+						}
 					}
 					break;
+				}
 				case 798316:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_2:
+						{
 							if (var == 1)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -114,23 +124,31 @@ public class _1097Sword_Of_Transcendence extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+						}
 					}
 					break;
+				}
 				case 279034:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 2)
 							{
 								return sendQuestDialog(env, 1693);
 							}
+						}
 						case STEP_TO_3:
+						{
 							if (var == 2)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							if (var == 2)
 							{
 								if (QuestService.collectItemCheck(env, true))
@@ -148,22 +166,28 @@ public class _1097Sword_Of_Transcendence extends QuestHandler
 									return sendQuestDialog(env, 10001);
 								}
 							}
+						}
 					}
 					break;
+				}
 				case 700509:
+				{
 					if (dialog == QuestDialog.USE_OBJECT)
 					{
 						giveQuestItem(env, 182206059, 1);
 						return true;
 					}
 					break;
+				}
 				case 700510:
+				{
 					if (dialog == QuestDialog.USE_OBJECT)
 					{
 						giveQuestItem(env, 182206060, 1);
 						return true;
 					}
 					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
@@ -174,11 +198,8 @@ public class _1097Sword_Of_Transcendence extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					removeQuestItem(env, 182206058, 1);
-					return sendQuestEndDialog(env);
-				}
+				removeQuestItem(env, 182206058, 1);
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

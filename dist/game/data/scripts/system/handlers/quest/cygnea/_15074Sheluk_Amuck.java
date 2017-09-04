@@ -113,6 +113,7 @@ public class _15074Sheluk_Amuck extends QuestHandler
 			{
 				case 235894:
 				case 235895:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -123,6 +124,7 @@ public class _15074Sheluk_Amuck extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -38,18 +38,24 @@ public class IDTiamatFOBJTeleportT2AI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 730625: // Blood Red Jewel.
+			{
 				switch (player.getWorldId())
 				{
 					case 300520000: // Dragon Lord's Refuge 3.9
+					{
 						PacketSendUtility.sendMessage(player, "you enter <Dragon Lord's Refuge 3.9>");
 						TeleportService2.teleportTo(player, 300520000, 512.75183f, 515.7632f, 417.40436f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
 						break;
+					}
 					case 300630000: // [Anguished] Dragon Lord's Refuge 4.8
+					{
 						PacketSendUtility.sendMessage(player, "you enter <[Anguished] Dragon Lord's Refuge 4.8>");
 						TeleportService2.teleportTo(player, 300630000, 512.75183f, 515.7632f, 417.40436f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 }

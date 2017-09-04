@@ -35,10 +35,14 @@ public class Mine_MageAI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawnArchmageMegran();
 				break;
+			}
 			case 2:
+			{
 				break;
+			}
 		}
 		super.handleDied();
 	}

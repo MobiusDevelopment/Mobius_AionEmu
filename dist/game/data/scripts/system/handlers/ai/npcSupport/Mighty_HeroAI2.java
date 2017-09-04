@@ -68,11 +68,15 @@ public class Mighty_HeroAI2 extends GeneralNpcAI2
 			switch (getNpcId())
 			{
 				case 832884: // Mighty Lovely.
+				{
 					skillId = 21796; // Mighty's Passionate Cheer I.
 					break;
+				}
 				case 832885: // Mighty Mister.
+				{
 					skillId = 21797; // Mighty's Energetic Cheer I.
 					break;
+				}
 			}
 			SkillEngine.getInstance().getSkill(getOwner(), skillId, 1, player).useNoAnimationSkill();
 		}

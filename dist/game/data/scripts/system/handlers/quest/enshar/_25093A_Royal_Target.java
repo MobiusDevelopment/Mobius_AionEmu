@@ -111,12 +111,14 @@ public class _25093A_Royal_Target extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 220044:
+				{
 					if (qs.getQuestVarById(0) < 1)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

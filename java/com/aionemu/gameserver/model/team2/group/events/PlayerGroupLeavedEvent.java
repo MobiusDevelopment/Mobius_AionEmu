@@ -67,6 +67,7 @@ public class PlayerGroupLeavedEvent extends PlayerLeavedEvent<PlayerGroupMember,
 		{
 			case BAN:
 			case LEAVE:
+			{
 				// PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_PARTY_SECEDE); // client side?
 				if (team.onlineMembers() <= 1)
 				{
@@ -84,9 +85,12 @@ public class PlayerGroupLeavedEvent extends PlayerLeavedEvent<PlayerGroupMember,
 					PacketSendUtility.sendPacket(leavedPlayer, SM_SYSTEM_MESSAGE.STR_PARTY_YOU_ARE_BANISHED);
 				}
 				break;
+			}
 			case DISBAND:
+			{
 				PacketSendUtility.sendPacket(leavedPlayer, SM_SYSTEM_MESSAGE.STR_PARTY_IS_DISPERSED);
 				break;
+			}
 		}
 		
 		if (leavedPlayer.isInInstance())
@@ -118,12 +122,16 @@ public class PlayerGroupLeavedEvent extends PlayerLeavedEvent<PlayerGroupMember,
 		{
 			case LEAVE:
 			case DISBAND:
+			{
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_PARTY_HE_LEAVE_PARTY(leavedPlayer.getName()));
 				break;
+			}
 			case BAN:
+			{
 				// TODO find out empty strings (Retail has +2 empty strings
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_PARTY_HE_IS_BANISHED(leavedPlayer.getName()));
 				break;
+			}
 		}
 		
 		return true;

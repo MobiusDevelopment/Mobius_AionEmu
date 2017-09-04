@@ -115,6 +115,7 @@ public class _13760Northern_Healer_Hindrance extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 235348:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -125,6 +126,7 @@ public class _13760Northern_Healer_Hindrance extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

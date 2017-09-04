@@ -199,17 +199,23 @@ public class QuestState
 		switch (persistentState)
 		{
 			case DELETED:
+			{
 				if (this.persistentState == PersistentState.NEW)
 				{
 					throw new IllegalArgumentException("Cannot change state to DELETED from NEW");
 				}
+			}
 			case UPDATE_REQUIRED:
+			{
 				if (this.persistentState == PersistentState.NEW)
 				{
 					break;
 				}
+			}
 			default:
+			{
 				this.persistentState = persistentState;
+			}
 		}
 	}
 }

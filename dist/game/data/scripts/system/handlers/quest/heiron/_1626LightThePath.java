@@ -84,7 +84,9 @@ public class _1626LightThePath extends QuestHandler
 						}
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

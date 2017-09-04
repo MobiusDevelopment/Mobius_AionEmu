@@ -52,8 +52,10 @@ public class MAAD_SAI2 extends AggressiveNpcAI2
 		switch (getNpcId())
 		{
 			case 245575: // MAAD-S.
+			{
 				spawnMAD99SCore(246352);
 				break;
+			}
 		}
 		super.handleDied();
 	}

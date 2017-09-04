@@ -86,31 +86,47 @@ public enum PlayerClass
 		{
 			case ASSASSIN:
 			case RANGER:
+			{
 				return SCOUT;
+			}
 			case GLADIATOR:
 			case TEMPLAR:
+			{
 				return WARRIOR;
+			}
 			case CHANTER:
 			case CLERIC:
+			{
 				return PRIEST;
+			}
 			case SORCERER:
 			case SPIRIT_MASTER:
+			{
 				return MAGE;
+			}
 			// News Class 4.3/4.5
 			case SONGWEAVER:
+			{
 				return MUSE;
+			}
 			case AETHERTECH:
 			case GUNSLINGER:
+			{
 				return TECHNIST;
+			}
 			case SCOUT:
 			case WARRIOR:
 			case PRIEST:
 			case MAGE:
 			case MUSE:
 			case TECHNIST:
+			{
 				return pc;
+			}
 			default:
+			{
 				throw new IllegalArgumentException("Given player class is starting class: " + pc);
+			}
 		}
 	}
 	

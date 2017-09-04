@@ -50,8 +50,10 @@ public class InvisibleNpcAI2 extends AggressiveNpcAI2
 			case 215225:
 			case 215228:
 			case 215231:
+			{
 				anuhartBravery();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -169,8 +171,10 @@ public class InvisibleNpcAI2 extends AggressiveNpcAI2
 			case 883254:
 			case 883260:
 			case 883266:
+			{
 				conquerorPassion();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -186,8 +190,10 @@ public class InvisibleNpcAI2 extends AggressiveNpcAI2
 			case 235603:
 			case 235606:
 			case 235607:
+			{
 				midnightRobe();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -195,8 +201,10 @@ public class InvisibleNpcAI2 extends AggressiveNpcAI2
 			case 235568:
 			case 235591:
 			case 235594:
+			{
 				firmBelief();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -215,8 +223,10 @@ public class InvisibleNpcAI2 extends AggressiveNpcAI2
 			case 883062:
 			case 883068:
 			case 883074:
+			{
 				ereshkigalRage();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -239,8 +249,10 @@ public class InvisibleNpcAI2 extends AggressiveNpcAI2
 			case 883038:
 			case 883044:
 			case 883050:
+			{
 				brokenMorale();
 				break;
+			}
 		}
 		getOwner().getEffectController().setAbnormal(AbnormalState.HIDE.getId());
 		getOwner().setVisualState(CreatureVisualState.HIDE1);

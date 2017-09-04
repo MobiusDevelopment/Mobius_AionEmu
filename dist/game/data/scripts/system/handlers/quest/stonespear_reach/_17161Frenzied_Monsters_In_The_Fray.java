@@ -114,6 +114,7 @@ public class _17161Frenzied_Monsters_In_The_Fray extends QuestHandler
 				case 219699:
 				case 219776:
 				case 219787:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -124,6 +125,7 @@ public class _17161Frenzied_Monsters_In_The_Fray extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

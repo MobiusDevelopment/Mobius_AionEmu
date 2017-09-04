@@ -48,19 +48,33 @@ public enum SkillElement
 		switch (element)
 		{
 			case FIRE:
+			{
 				return StatEnum.FIRE_RESISTANCE;
+			}
 			case WATER:
+			{
 				return StatEnum.WATER_RESISTANCE;
+			}
 			case WIND:
+			{
 				return StatEnum.WIND_RESISTANCE;
+			}
 			case EARTH:
+			{
 				return StatEnum.EARTH_RESISTANCE;
+			}
 			case LIGHT:
+			{
 				return StatEnum.ELEMENTAL_RESISTANCE_LIGHT;
+			}
 			case DARK:
+			{
 				return StatEnum.ELEMENTAL_RESISTANCE_DARK;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return null;
 		

@@ -42,24 +42,36 @@ public class Siege_CommanderAI2 extends AggressiveNpcAI2
 		{
 			// Elyos Commander.
 			case 883635: // Krotan Commander <15,000 Points>
+			{
 				updateCommanderLanding1(4);
 				break;
+			}
 			case 883665: // Miren Commander <15,000 Points>
+			{
 				updateCommanderLanding1(5);
 				break;
+			}
 			case 883666: // Kysis Commander <20,000 Points>
+			{
 				updateCommanderLanding2(6);
 				break;
+			}
 			// Asmodians Commander.
 			case 883636: // Krotan Commander <15,000 Points>
+			{
 				updateCommanderLanding1(16);
 				break;
+			}
 			case 883667: // Miren Commander <15,000 Points>
+			{
 				updateCommanderLanding1(17);
 				break;
+			}
 			case 883668: // Kysis Commander <20,000 Points>
+			{
 				updateCommanderLanding2(18);
 				break;
+			}
 		}
 		
 		super.handleDied();

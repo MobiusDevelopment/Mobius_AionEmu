@@ -88,9 +88,13 @@ public class _18830MovingIn extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -103,9 +107,13 @@ public class _18830MovingIn extends QuestHandler
 			switch (dialog)
 			{
 				case USE_OBJECT:
+				{
 					return sendQuestDialog(env, 1352);
+				}
 				case STEP_TO_1:
+				{
 					return defaultCloseDialog(env, 0, 1);
+				}
 			}
 		}
 		else if ((qs.getStatus() == QuestStatus.REWARD) && (targetId == 830645))
@@ -113,12 +121,18 @@ public class _18830MovingIn extends QuestHandler
 			switch (dialog)
 			{
 				case USE_OBJECT:
+				{
 					return sendQuestDialog(env, 2375);
+				}
 				case SELECT_REWARD:
+				{
 					return sendQuestDialog(env, 5);
+				}
 				case SELECT_NO_REWARD:
+				{
 					sendQuestEndDialog(env);
 					return true;
+				}
 			}
 		}
 		

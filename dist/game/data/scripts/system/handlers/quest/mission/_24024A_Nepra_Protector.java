@@ -113,16 +113,20 @@ public class _24024A_Nepra_Protector extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
+						}
 						case STEP_TO_1:
+						{
 							if (var == 0)
 							{
 								playQuestMovie(env, 80);
 								return defaultCloseDialog(env, 0, 1);
 							}
+						}
 					}
 				}
 					break;
@@ -131,16 +135,19 @@ public class _24024A_Nepra_Protector extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_2:
+						{
 							if (var == 1)
 							{
 								return defaultCloseDialog(env, 1, 2);
 							}
-							
+						}
 					}
 				}
 					break;

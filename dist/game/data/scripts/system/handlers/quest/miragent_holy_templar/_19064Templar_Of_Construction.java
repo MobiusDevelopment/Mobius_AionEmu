@@ -91,15 +91,22 @@ public class _19064Templar_Of_Construction extends QuestHandler
 			switch (targetId)
 			{
 				case 798450:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							return sendQuestDialog(env, 1352);
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 					}
 					break;
+				}
 				case 203752:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -120,6 +127,7 @@ public class _19064Templar_Of_Construction extends QuestHandler
 						}
 					}
 					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

@@ -117,12 +117,14 @@ public class _16974Monster_Abridged extends QuestHandler
 				case 235769:
 				case 235770:
 				case 235771:
+				{
 					if (qs.getQuestVarById(0) < 1)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

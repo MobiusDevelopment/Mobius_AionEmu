@@ -117,6 +117,7 @@ public class _13770Central_Control extends QuestHandler
 				case 235379:
 				case 235380:
 				case 235381:
+				{
 					if (qs.getQuestVarById(1) < 12)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _13770Central_Control extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

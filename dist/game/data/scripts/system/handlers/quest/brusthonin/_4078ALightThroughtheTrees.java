@@ -91,11 +91,17 @@ public class _4078ALightThroughtheTrees extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 10002);
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestDialog(env, 5);
+					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}
@@ -109,11 +115,14 @@ public class _4078ALightThroughtheTrees extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1011);
 					}
+				}
 				case CHECK_COLLECTED_ITEMS:
+				{
 					if (player.getInventory().getItemCountByItemId(182209049) >= 9)
 					{
 						if (!giveQuestItem(env, 182209050, 1))
@@ -129,6 +138,7 @@ public class _4078ALightThroughtheTrees extends QuestHandler
 					{
 						return sendQuestDialog(env, 10001);
 					}
+				}
 			}
 		}
 		else if (targetId == 700428)
@@ -136,6 +146,7 @@ public class _4078ALightThroughtheTrees extends QuestHandler
 			switch (env.getDialog())
 			{
 				case USE_OBJECT:
+				{
 					if (var == 1)
 					{
 						if (player.getInventory().getItemCountByItemId(182209050) == 1)
@@ -144,6 +155,7 @@ public class _4078ALightThroughtheTrees extends QuestHandler
 						}
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 700427)
@@ -151,6 +163,7 @@ public class _4078ALightThroughtheTrees extends QuestHandler
 			switch (env.getDialog())
 			{
 				case USE_OBJECT:
+				{
 					if (var == 2)
 					{
 						if (player.getInventory().getItemCountByItemId(182209050) == 1)
@@ -159,6 +172,7 @@ public class _4078ALightThroughtheTrees extends QuestHandler
 						}
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 700429)
@@ -166,6 +180,7 @@ public class _4078ALightThroughtheTrees extends QuestHandler
 			switch (env.getDialog())
 			{
 				case USE_OBJECT:
+				{
 					if (var == 3)
 					{
 						if (player.getInventory().getItemCountByItemId(182209050) == 1)
@@ -174,6 +189,7 @@ public class _4078ALightThroughtheTrees extends QuestHandler
 						}
 					}
 					return false;
+				}
 			}
 		}
 		return false;

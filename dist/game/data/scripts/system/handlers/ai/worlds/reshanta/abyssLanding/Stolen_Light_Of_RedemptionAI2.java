@@ -51,19 +51,27 @@ public class Stolen_Light_Of_RedemptionAI2 extends NpcAI2
 			case 884038: // Stolen Light Of Redemption <6,000 Points>
 			case 884039: // Stolen Light Of Redemption <6,000 Points>
 			case 884040: // Stolen Light Of Redemption <6,000 Points>
+			{
 				updateRedemptionLanding1();
 				break;
+			}
 			case 884041: // Stolen Light Of Redemption <10,000 Points>
 			case 884042: // Stolen Light Of Redemption <10,000 Points>
+			{
 				updateRedemptionLanding2();
 				break;
+			}
 			case 884043: // Stolen Light Of Redemption <16,000 Points>
 			case 884044: // Stolen Light Of Redemption <16,000 Points>
+			{
 				updateRedemptionLanding3();
 				break;
+			}
 			case 884045: // Stolen Light Of Redemption <30,000 Points>
+			{
 				updateRedemptionLanding4();
 				break;
+			}
 		}
 		super.handleDied();
 		AI2Actions.deleteOwner(this);

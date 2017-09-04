@@ -42,7 +42,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****/
 /**
@@ -84,28 +83,42 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 219609: // Captain Jarka.
+			{
 				switch (Rnd.get(1, 6))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000130, 1)); // Balaur Warehouse No.1 Key.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000131, 1)); // Balaur Warehouse No.2 Key.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000132, 1)); // Balaur Warehouse No.3 Key.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000133, 1)); // Balaur Warehouse No.4 Key.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000134, 1)); // Balaur Warehouse No.5 Key.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000135, 1)); // Balaur Warehouse No.6 Key.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -116,23 +129,22 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 219617: // Balaur Barricade.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 219609: // Captain Jarka.
+			{
 				sendMsg("[Congratulation]: you finish <The Hexway>");
 				if (!isStartTimer1)
 				{
 					isStartTimer1 = true;
 					System.currentTimeMillis();
-					instance.doOnAllPlayers(new Visitor<Player>()
+					instance.doOnAllPlayers(player1 ->
 					{
-						@Override
-						public void visit(Player player)
+						if (player1.isOnline())
 						{
-							if (player.isOnline())
-							{
-								PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-							}
+							PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 300));
 						}
 					});
 					theHexwayTreasureBox.add((Npc) spawn(701664, 212.09007f, 741.0567f, 366.20367f, (byte) 10));
@@ -147,18 +159,15 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					theHexwayTreasureBox.add((Npc) spawn(701664, 197.46051f, 471.78418f, 365.32578f, (byte) 82));
 					theHexwayTreasureBox.add((Npc) spawn(701664, 223.41487f, 409.03143f, 365.01053f, (byte) 26));
 					theHexwayTreasureBox.add((Npc) spawn(701664, 213.39343f, 425.5012f, 366.57892f, (byte) 8));
-					chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+					chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
 					{
-						@Override
-						public void run()
-						{
-							StartTimer2();
-							sendMsg(1400245);
-							theHexwayTreasureBox.get(0).getController().onDelete();
-						}
+						StartTimer2();
+						sendMsg(1400245);
+						theHexwayTreasureBox.get(0).getController().onDelete();
 					}, 300000);
 				}
 				break;
+			}
 		}
 	}
 	
@@ -168,26 +177,18 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		{
 			isStartTimer2 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer3();
-					sendMsg(1400245);
-					theHexwayTreasureBox.get(1).getController().onDelete();
-				}
+				StartTimer3();
+				sendMsg(1400245);
+				theHexwayTreasureBox.get(1).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -198,26 +199,18 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		{
 			isStartTimer3 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer4();
-					sendMsg(1400245);
-					theHexwayTreasureBox.get(2).getController().onDelete();
-				}
+				StartTimer4();
+				sendMsg(1400245);
+				theHexwayTreasureBox.get(2).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -228,26 +221,18 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		{
 			isStartTimer4 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer5();
-					sendMsg(1400245);
-					theHexwayTreasureBox.get(3).getController().onDelete();
-				}
+				StartTimer5();
+				sendMsg(1400245);
+				theHexwayTreasureBox.get(3).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -258,26 +243,18 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		{
 			isStartTimer5 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer6();
-					sendMsg(1400245);
-					theHexwayTreasureBox.get(4).getController().onDelete();
-				}
+				StartTimer6();
+				sendMsg(1400245);
+				theHexwayTreasureBox.get(4).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -288,26 +265,18 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		{
 			isStartTimer6 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer7();
-					sendMsg(1400245);
-					theHexwayTreasureBox.get(5).getController().onDelete();
-				}
+				StartTimer7();
+				sendMsg(1400245);
+				theHexwayTreasureBox.get(5).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -318,26 +287,18 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		{
 			isStartTimer7 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer8();
-					sendMsg(1400245);
-					theHexwayTreasureBox.get(6).getController().onDelete();
-				}
+				StartTimer8();
+				sendMsg(1400245);
+				theHexwayTreasureBox.get(6).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -348,26 +309,18 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		{
 			isStartTimer8 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer9();
-					sendMsg(1400245);
-					theHexwayTreasureBox.get(7).getController().onDelete();
-				}
+				StartTimer9();
+				sendMsg(1400245);
+				theHexwayTreasureBox.get(7).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -378,26 +331,18 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		{
 			isStartTimer9 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer10();
-					sendMsg(1400245);
-					theHexwayTreasureBox.get(8).getController().onDelete();
-				}
+				StartTimer10();
+				sendMsg(1400245);
+				theHexwayTreasureBox.get(8).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -408,26 +353,18 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		{
 			isStartTimer10 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer11();
-					sendMsg(1400245);
-					theHexwayTreasureBox.get(9).getController().onDelete();
-				}
+				StartTimer11();
+				sendMsg(1400245);
+				theHexwayTreasureBox.get(9).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -438,26 +375,18 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		{
 			isStartTimer11 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer12();
-					sendMsg(1400245);
-					theHexwayTreasureBox.get(10).getController().onDelete();
-				}
+				StartTimer12();
+				sendMsg(1400245);
+				theHexwayTreasureBox.get(10).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -468,40 +397,25 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 		{
 			isStartTimer12 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					sendMsg(1400244);
-					sendMsg(1400245);
-					theHexwayTreasureBox.get(11).getController().onDelete();
-				}
+				sendMsg(1400244);
+				sendMsg(1400245);
+				theHexwayTreasureBox.get(11).getController().onDelete();
 			}, 300000);
 		}
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void despawnNpc(Npc npc)

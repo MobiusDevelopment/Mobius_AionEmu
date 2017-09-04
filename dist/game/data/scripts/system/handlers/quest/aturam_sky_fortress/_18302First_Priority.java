@@ -97,13 +97,19 @@ public class _18302First_Priority extends QuestHandler
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
+						{
 							return sendQuestDialog(env, 1352);
+						}
 						case SET_REWARD:
+						{
 							qs.setStatus(QuestStatus.REWARD);
 							updateQuestStatus(env);
 							return closeDialogWindow(env);
+						}
 						default:
+						{
 							return sendQuestDialog(env, 2716);
+						}
 					}
 				}
 			}

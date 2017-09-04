@@ -85,11 +85,15 @@ public class MySQL5TownDAO extends TownDAO
 		switch (town.getPersistentState())
 		{
 			case NEW:
+			{
 				insertTown(town);
 				break;
+			}
 			case UPDATE_REQUIRED:
+			{
 				updateTown(town);
 				break;
+			}
 		}
 	}
 	

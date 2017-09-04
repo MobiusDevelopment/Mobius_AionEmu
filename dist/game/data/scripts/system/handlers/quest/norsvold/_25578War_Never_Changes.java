@@ -121,6 +121,7 @@ public class _25578War_Never_Changes extends QuestHandler
 				case 241224:
 				case 241225:
 				case 241226:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -131,6 +132,7 @@ public class _25578War_Never_Changes extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

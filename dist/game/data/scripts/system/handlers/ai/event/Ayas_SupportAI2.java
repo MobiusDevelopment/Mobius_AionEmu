@@ -43,7 +43,9 @@ public class Ayas_SupportAI2 extends GeneralNpcAI2
 			// Elyos.
 			case 833671: // Helpful Ayas.
 			case 833672: // Friendly Ayas.
+			{
 				// Asmodians.
+			}
 			case 833673: // Helpful Ayas.
 			case 833674:
 			{ // Friendly Ayas.
@@ -75,14 +77,18 @@ public class Ayas_SupportAI2 extends GeneralNpcAI2
 			{
 				case 833671: // Helpful Ayas E.
 				case 833673: // Helpful Ayas A.
+				{
 					skillId = 11047; // Helpful Ayas' Cheer.
 					effectController.removeEffect(11049);
 					break;
+				}
 				case 833672: // Friendly Ayas E.
 				case 833674: // Friendly Ayas A.
+				{
 					skillId = 11049; // Friendly Ayas' Cheer.
 					effectController.removeEffect(11047);
 					break;
+				}
 			}
 			SkillEngine.getInstance().getSkill(getOwner(), skillId, 1, player).useNoAnimationSkill();
 		}

@@ -63,7 +63,9 @@ public class _21300Enhancing_The_Aethercannon extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

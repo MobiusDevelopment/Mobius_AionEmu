@@ -121,6 +121,7 @@ public class _15412Protect_Bloodburn_Reach extends QuestHandler
 				case 884018:
 				case 884019:
 				case 884020:
+				{
 					if (qs.getQuestVarById(1) < 2)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -131,6 +132,7 @@ public class _15412Protect_Bloodburn_Reach extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

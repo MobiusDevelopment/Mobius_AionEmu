@@ -46,25 +46,35 @@ public class PvPRewardService
 		{
 			case TEMPLAR:
 			case GLADIATOR:
+			{
 				rewardString = plate;
 				break;
+			}
 			case CLERIC:
 			case CHANTER:
 			case AETHERTECH:
+			{
 				rewardString = chain;
 				break;
+			}
 			case RANGER:
 			case ASSASSIN:
 			case GUNSLINGER:
+			{
 				rewardString = leather;
 				break;
+			}
 			case SORCERER:
 			case SONGWEAVER:
 			case SPIRIT_MASTER:
+			{
 				rewardString = cloth;
 				break;
+			}
 			default:
+			{
 				rewardString = null;
+			}
 		}
 		if (rewardString != null)
 		{
@@ -154,14 +164,20 @@ public class PvPRewardService
 		switch (victim.getSpreeLevel())
 		{
 			case 1:
+			{
 				rewardQuantity += 5;
 				break;
+			}
 			case 2:
+			{
 				rewardQuantity += 10;
 				break;
+			}
 			case 3:
+			{
 				rewardQuantity += 15;
 				break;
+			}
 		}
 		return rewardQuantity;
 	}
@@ -196,14 +212,20 @@ public class PvPRewardService
 		switch (victim.getSpreeLevel())
 		{
 			case 1:
+			{
 				tollQuantity += 5;
 				break;
+			}
 			case 2:
+			{
 				tollQuantity += 10;
 				break;
+			}
 			case 3:
+			{
 				tollQuantity += 15;
 				break;
+			}
 		}
 		return tollQuantity;
 	}

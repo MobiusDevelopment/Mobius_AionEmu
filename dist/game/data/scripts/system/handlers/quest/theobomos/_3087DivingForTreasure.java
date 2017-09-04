@@ -71,7 +71,9 @@ public class _3087DivingForTreasure extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -105,7 +107,6 @@ public class _3087DivingForTreasure extends QuestHandler
 									return true;
 								}
 							}
-							
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
 							qs.setStatus(QuestStatus.REWARD);
 							updateQuestStatus(env);

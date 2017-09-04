@@ -90,35 +90,47 @@ public class SM_QUEST_ACTION extends AionServerPacket
 		switch (action)
 		{
 			case 1:
+			{
 				writeC(status);
 				writeC(0x0);
 				writeD(step);
 				writeH(0);
 				writeC(0);
 				break;
+			}
 			case 2:
+			{
 				writeC(status);
 				writeC(0x0);
 				writeD(step);
 				writeH(0);
 				break;
+			}
 			case 3:
+			{
 				writeD(0);
 				break;
+			}
 			case 4:
+			{
 				writeD(timer);
 				writeC(0x01);
 				writeH(0x0);
 				writeC(0x01);
 				break;
+			}
 			case 5:
+			{
 				writeD(sharerId);
 				writeD(0);
 				break;
+			}
 			case 6:
+			{
 				writeH(0x01);
 				writeH(0x0);
 				break;
+			}
 		}
 	}
 }

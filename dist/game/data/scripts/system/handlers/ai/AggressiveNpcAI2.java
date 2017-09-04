@@ -329,7 +329,9 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 242025:
 			case 242026:
 			case 242027:
+			{
 				////////////
+			}
 			case 220308:
 			case 220309:
 			case 220310:
@@ -338,7 +340,9 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 220313:
 			case 220334:
 			case 220335:
+			{
 				////////////
+			}
 			case 243299:
 			case 243300:
 			case 243301:
@@ -366,15 +370,19 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 243367:
 			case 243368:
 			case 243369:
+			{
 				////////////
+			}
 			case 220458:
 			case 220465:
 			case 220475:
 			case 220498:
 			case 220504:
 			case 220673:
+			{
 				typeB();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -479,7 +487,9 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 242057:
 			case 242058:
 			case 242059:
+			{
 				////////////
+			}
 			case 220314:
 			case 220315:
 			case 220316:
@@ -488,7 +498,9 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 220331:
 			case 220332:
 			case 220333:
+			{
 				////////////
+			}
 			case 243310:
 			case 243311:
 			case 243312:
@@ -509,15 +521,19 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 243356:
 			case 243357:
 			case 243364:
+			{
 				////////////
+			}
 			case 220480:
 			case 220487:
 			case 220488:
 			case 220491:
 			case 220492:
 			case 220494:
+			{
 				typeC();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -677,14 +693,18 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 241861:
 			case 241862:
 			case 241863:
+			{
 				////////////
+			}
 			case 220317:
 			case 220318:
 			case 220319:
 			case 220326:
 			case 220327:
 			case 220328:
+			{
 				////////////
+			}
 			case 243293:
 			case 243294:
 			case 243295:
@@ -711,7 +731,9 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 243373:
 			case 243374:
 			case 243375:
+			{
 				////////////
+			}
 			case 220459:
 			case 220462:
 			case 220466:
@@ -725,8 +747,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 220503:
 			case 220597:
 			case 220674:
+			{
 				typeD();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -850,14 +874,18 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 242009:
 			case 242010:
 			case 242011:
+			{
 				////////////
+			}
 			case 220305:
 			case 220306:
 			case 220307:
 			case 220323:
 			case 220324:
 			case 220325:
+			{
 				////////////
+			}
 			case 243286:
 			case 243287:
 			case 243288:
@@ -879,7 +907,9 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 243377:
 			case 243378:
 			case 243379:
+			{
 				////////////
+			}
 			case 220460:
 			case 220467:
 			case 220470:
@@ -893,8 +923,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 220671:
 			case 220672:
 			case 220675:
+			{
 				typeA();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -914,8 +946,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 212673:
 			case 212811:
 			case 212993:
+			{
 				iceClawBlessing();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -947,8 +981,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 212867:
 			case 212981:
 			case 212982:
+			{
 				mistShadeBlessing();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1022,8 +1058,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 215429:
 			case 215430:
 			case 215452:
+			{
 				anuhartBravery();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1116,8 +1154,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 236701:
 			case 236702:
 			case 236703:
+			{
 				survivalInstinct();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1402,8 +1442,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 883257:
 			case 883262:
 			case 883263:
+			{
 				conquerorPassion();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1428,8 +1470,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 235604:
 			case 235608:
 			case 235609:
+			{
 				midnightRobe();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1450,8 +1494,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 235600:
 			case 235614:
 			case 235615:
+			{
 				firmBelief();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1460,8 +1506,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 233255:
 			case 233256:
 			case 233257:
+			{
 				beritraFavor();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1482,8 +1530,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 235970:
 			case 235971:
 			case 235972:
+			{
 				darkLordBlessing();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1511,8 +1561,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 883065:
 			case 883070:
 			case 883071:
+			{
 				ereshkigalRage();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1520,10 +1572,14 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 237110:
 			case 237248:
 			case 237249:
+			{
 				// 5.0
+			}
 			case 220424:
+			{
 				elementalLordship();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1531,14 +1587,18 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 233303:
 			case 233304:
 			case 233305:
+			{
 				malevolence();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
 			case 231130:
+			{
 				exultation();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1554,8 +1614,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 236236:
 			case 236237:
 			case 236238:
+			{
 				orderPerfectObeisance();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1604,8 +1666,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 883041:
 			case 883046:
 			case 883047:
+			{
 				brokenMorale();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1613,8 +1677,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 857792:
 			case 857796:
 			case 857800:
+			{
 				IDEternityQHDFireBuff();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1622,8 +1688,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 857793:
 			case 857797:
 			case 857801:
+			{
 				IDEternityQHDWaterBuff();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1631,8 +1699,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 857794:
 			case 857798:
 			case 857802:
+			{
 				IDEternityQHDEarthBuff();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -1640,8 +1710,10 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 			case 857795:
 			case 857799:
 			case 857803:
+			{
 				IDEternityQHDAirBuff();
 				break;
+			}
 		}
 	}
 	
@@ -1766,21 +1838,37 @@ public class AggressiveNpcAI2 extends GeneralNpcAI2
 		switch (question)
 		{
 			case CAN_SPAWN_ON_DAYTIME_CHANGE:
+			{
 				return AIAnswers.POSITIVE;
+			}
 			case SHOULD_DECAY:
+			{
 				return AIAnswers.POSITIVE;
+			}
 			case SHOULD_RESPAWN:
+			{
 				return AIAnswers.POSITIVE;
+			}
 			case SHOULD_REWARD:
+			{
 				return AIAnswers.POSITIVE;
+			}
 			case SHOULD_REWARD_AP:
+			{
 				return AIAnswers.POSITIVE;
+			}
 			case CAN_RESIST_ABNORMAL:
+			{
 				return AIAnswers.POSITIVE;
+			}
 			case CAN_ATTACK_PLAYER:
+			{
 				return AIAnswers.POSITIVE;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 	

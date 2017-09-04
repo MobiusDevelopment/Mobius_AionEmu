@@ -58,6 +58,7 @@ public class Krotan_Crystal_SwordAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 702840: // Krotan's Crystal Sword [Elyos]
+				{
 					announceSpiritOfKrotan30Min();
 					ThreadPoolManager.getInstance().schedule(new Runnable()
 					{
@@ -68,7 +69,9 @@ public class Krotan_Crystal_SwordAI2 extends NpcAI2
 						}
 					}, 1800000); // 30 Minutes.
 					break;
+				}
 				case 702841: // Krotan's Crystal Sword [Asmodians]
+				{
 					announceSpiritOfKrotan30Min();
 					ThreadPoolManager.getInstance().schedule(new Runnable()
 					{
@@ -79,6 +82,7 @@ public class Krotan_Crystal_SwordAI2 extends NpcAI2
 						}
 					}, 1800000); // 30 Minutes.
 					break;
+				}
 			}
 		}
 		// Spirit Of Krotan's Pendant has broken the seal.

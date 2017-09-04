@@ -78,7 +78,9 @@ public class _3056InSearchOfZirius extends QuestHandler
 						return true;
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

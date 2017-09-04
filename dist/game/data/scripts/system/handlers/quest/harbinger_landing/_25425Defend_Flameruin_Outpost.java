@@ -119,6 +119,7 @@ public class _25425Defend_Flameruin_Outpost extends QuestHandler
 				case 883163:
 				case 883164:
 				case 883165:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _25425Defend_Flameruin_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

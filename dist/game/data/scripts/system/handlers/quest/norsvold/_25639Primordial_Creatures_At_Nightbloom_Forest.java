@@ -119,6 +119,7 @@ public class _25639Primordial_Creatures_At_Nightbloom_Forest extends QuestHandle
 				case 243330:
 				case 243331:
 				case 243333:
+				{
 					if (qs.getQuestVarById(1) < 3)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _25639Primordial_Creatures_At_Nightbloom_Forest extends QuestHandle
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

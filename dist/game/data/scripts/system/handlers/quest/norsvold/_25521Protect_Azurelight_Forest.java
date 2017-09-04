@@ -165,6 +165,7 @@ public class _25521Protect_Azurelight_Forest extends QuestHandler
 				case 242195:
 				case 242199:
 				case 242203:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -175,6 +176,7 @@ public class _25521Protect_Azurelight_Forest extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

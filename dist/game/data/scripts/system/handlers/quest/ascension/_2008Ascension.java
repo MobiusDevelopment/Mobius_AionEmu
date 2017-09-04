@@ -93,14 +93,20 @@ public class _2008Ascension extends QuestHandler
 				switch (var)
 				{
 					case 51:
+					{
 						mobs.add((Npc) QuestService.addNewSpawn(320020000, instanceId, 205040, 305f, 279f, 206.5f, (byte) 0));
 						break;
+					}
 					case 52:
+					{
 						mobs.add((Npc) QuestService.addNewSpawn(320020000, instanceId, 205040, 298f, 253f, 205.7f, (byte) 0));
 						break;
+					}
 					case 53:
+					{
 						mobs.add((Npc) QuestService.addNewSpawn(320020000, instanceId, 205040, 306f, 251f, 206f, (byte) 0));
 						break;
+					}
 				}
 				qs.setQuestVar(qs.getQuestVars().getQuestVars() + 1);
 				updateQuestStatus(env);
@@ -160,6 +166,7 @@ public class _2008Ascension extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1011);
@@ -172,7 +179,9 @@ public class _2008Ascension extends QuestHandler
 						{
 							return sendQuestDialog(env, 2716);
 						}
+					}
 					case SELECT_ACTION_2376:
+					{
 						if (var == 4)
 						{
 							playQuestMovie(env, 57);
@@ -181,12 +190,16 @@ public class _2008Ascension extends QuestHandler
 							removeQuestItem(env, 182203011, 1);
 							return false;
 						}
+					}
 					case STEP_TO_1:
+					{
 						qs.setQuestVar(1);
 						updateQuestStatus(env);
 						TeleportService2.teleportTo(player, 220010000, 585.5074f, 2416.0312f, 278.625f, (byte) 102, TeleportAnimation.BEAM_ANIMATION);
 						return true;
+					}
 					case STEP_TO_5:
+					{
 						if (var == 4)
 						{
 							qs.setQuestVar(99);
@@ -197,7 +210,9 @@ public class _2008Ascension extends QuestHandler
 							TeleportService2.teleportTo(player, 320020000, newInstance.getInstanceId(), 457.65f, 426.8f, 230.4f);
 							return true;
 						}
+					}
 					case STEP_TO_6:
+					{
 						if (var == 6)
 						{
 							final PlayerClass playerClass = player.getCommonData().getPlayerClass();
@@ -226,61 +241,84 @@ public class _2008Ascension extends QuestHandler
 								return sendQuestDialog(env, 3910);
 							}
 						}
+					}
 					case STEP_TO_7:
+					{
 						if (var == 6)
 						{
 							return setPlayerClass(env, qs, PlayerClass.GLADIATOR);
 						}
+					}
 					case STEP_TO_8:
+					{
 						if (var == 6)
 						{
 							return setPlayerClass(env, qs, PlayerClass.TEMPLAR);
 						}
+					}
 					case STEP_TO_9:
+					{
 						if (var == 6)
 						{
 							return setPlayerClass(env, qs, PlayerClass.ASSASSIN);
 						}
+					}
 					case STEP_TO_10:
+					{
 						if (var == 6)
 						{
 							return setPlayerClass(env, qs, PlayerClass.RANGER);
 						}
+					}
 					case STEP_TO_11:
+					{
 						if (var == 6)
 						{
 							return setPlayerClass(env, qs, PlayerClass.SORCERER);
 						}
+					}
 					case STEP_TO_12:
+					{
 						if (var == 6)
 						{
 							return setPlayerClass(env, qs, PlayerClass.SPIRIT_MASTER);
 						}
+					}
 					case STEP_TO_13:
+					{
 						if (var == 6)
 						{
 							return setPlayerClass(env, qs, PlayerClass.CHANTER);
 						}
+					}
 					case STEP_TO_14:
+					{
 						if (var == 6)
 						{
 							return setPlayerClass(env, qs, PlayerClass.CLERIC);
 						}
+					}
 					case STEP_TO_15:
+					{
 						if (var == 6)
 						{
 							return setPlayerClass(env, qs, PlayerClass.GUNSLINGER);
 						}
+					}
 					case STEP_TO_16:
+					{
 						if (var == 6)
 						{
 							return setPlayerClass(env, qs, PlayerClass.SONGWEAVER);
 						}
+					}
 					case STEP_TO_17:
+					{
 						if (var == 6)
 						{
 							return setPlayerClass(env, qs, PlayerClass.AETHERTECH);
 						}
+					}
 				}
 			}
 			else if (targetId == 790003)
@@ -288,11 +326,14 @@ public class _2008Ascension extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case STEP_TO_2:
+					{
 						if (var == 1)
 						{
 							if (player.getInventory().getItemCountByItemId(182203009) == 0)
@@ -307,6 +348,7 @@ public class _2008Ascension extends QuestHandler
 							TeleportService2.teleportTo(player, 220010000, 940.74475f, 2295.5305f, 265.65674f, (byte) 46, TeleportAnimation.BEAM_ANIMATION);
 							return true;
 						}
+					}
 				}
 			}
 			else if (targetId == 790002)
@@ -314,11 +356,14 @@ public class _2008Ascension extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 2)
 						{
 							return sendQuestDialog(env, 1693);
 						}
+					}
 					case STEP_TO_3:
+					{
 						if (var == 2)
 						{
 							if (player.getInventory().getItemCountByItemId(182203010) == 0)
@@ -333,6 +378,7 @@ public class _2008Ascension extends QuestHandler
 							TeleportService2.teleportTo(player, 220010000, 1111.5637f, 1719.2745f, 270.114256f, (byte) 114, TeleportAnimation.BEAM_ANIMATION);
 							return true;
 						}
+					}
 				}
 			}
 			else if (targetId == 203546)
@@ -340,11 +386,14 @@ public class _2008Ascension extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 3)
 						{
 							return sendQuestDialog(env, 2034);
 						}
+					}
 					case STEP_TO_4:
+					{
 						if (var == 3)
 						{
 							if (player.getInventory().getItemCountByItemId(182203011) == 0)
@@ -359,6 +408,7 @@ public class _2008Ascension extends QuestHandler
 							TeleportService2.teleportTo(player, 220010000, 383.10248f, 1895.3093f, 327.625f, (byte) 59, TeleportAnimation.BEAM_ANIMATION);
 							return true;
 						}
+					}
 				}
 			}
 			else if (targetId == 205020)
@@ -366,6 +416,7 @@ public class _2008Ascension extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 99)
 						{
 							player.setState(CreatureState.FLIGHT_TELEPORT);
@@ -392,8 +443,11 @@ public class _2008Ascension extends QuestHandler
 							return true;
 						}
 						return false;
+					}
 					default:
+					{
 						return false;
+					}
 				}
 			}
 		}

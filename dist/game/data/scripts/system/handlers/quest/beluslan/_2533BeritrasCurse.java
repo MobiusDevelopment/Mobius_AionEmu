@@ -109,12 +109,14 @@ public class _2533BeritrasCurse extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							qs.setStatus(QuestStatus.REWARD);
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case SELECT_REWARD:
 					{
 						QuestService.questTimerEnd(env);

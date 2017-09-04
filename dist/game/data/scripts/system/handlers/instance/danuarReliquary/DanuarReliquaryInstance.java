@@ -61,6 +61,7 @@ public class DanuarReliquaryInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 701795: // Danuar Reliquary Box.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -75,21 +76,28 @@ public class DanuarReliquaryInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case 802183: // Danuar Reliquary Opportunity Bundle.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000051, 30)); // Major Ancient Crown.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000052, 30)); // Greater Ancient Crown.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000236, 50)); // Blood Mark.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000237, 50)); // Ancient Coin.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000242, 50)); // Ceramium Medal.
 				break;
+			}
 		}
 	}
 	
@@ -128,11 +136,14 @@ public class DanuarReliquaryInstance extends GeneralInstanceHandler
 			case 284662:
 			case 284663:
 			case 284664:
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 284377: // Danuar Reliquary Novun.
 			case 284378: // Idean Lapilima.
 			case 284379: // Idean Obscura.
+			{
 				ideanKilled++;
 				if (ideanKilled == 1)
 				{
@@ -154,7 +165,9 @@ public class DanuarReliquaryInstance extends GeneralInstanceHandler
 				}
 				despawnNpc(npc);
 				break;
+			}
 			case 284383: // Clone's Modor.
+			{
 				cloneModorKilled++;
 				if (cloneModorKilled == 1)
 				{
@@ -174,7 +187,9 @@ public class DanuarReliquaryInstance extends GeneralInstanceHandler
 				}
 				despawnNpc(npc);
 				break;
+			}
 			case 231305: // Enraged Queen's Modor.
+			{
 				danuarReliquaryTask.cancel(true);
 				sendMsg("[Congratulation]: you finish <Danuar Reliquary>");
 				spawn(730843, 256.45197f, 257.91986f, 241.78688f, (byte) 90); // Danuar Reliquary Exit.
@@ -188,6 +203,7 @@ public class DanuarReliquaryInstance extends GeneralInstanceHandler
 					}
 				});
 				break;
+			}
 		}
 	}
 	

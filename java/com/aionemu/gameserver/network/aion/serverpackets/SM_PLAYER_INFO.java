@@ -138,11 +138,15 @@ public class SM_PLAYER_INFO extends AionServerPacket
 				switch (player.getClientConnection().getAccount().getMembership())
 				{
 					case 1:
+					{
 						nameFormat = sb.replace(0, sb.length(), MembershipConfig.TAG_PREMIUM).toString();
 						break;
+					}
 					case 2:
+					{
 						nameFormat = sb.replace(0, sb.length(), MembershipConfig.TAG_VIP).toString();
 						break;
+					}
 				}
 			}
 			
@@ -159,35 +163,55 @@ public class SM_PLAYER_INFO extends AionServerPacket
 				switch (player.getClientConnection().getAccount().getAccessLevel())
 				{
 					case 1:
+					{
 						nameFormat = AdminConfig.ADMIN_TAG_1.replace("%s", sb.toString());
 						break;
+					}
 					case 2:
+					{
 						nameFormat = AdminConfig.ADMIN_TAG_2.replace("%s", sb.toString());
 						break;
+					}
 					case 3:
+					{
 						nameFormat = AdminConfig.ADMIN_TAG_3.replace("%s", sb.toString());
 						break;
+					}
 					case 4:
+					{
 						nameFormat = AdminConfig.ADMIN_TAG_4.replace("%s", sb.toString());
 						break;
+					}
 					case 5:
+					{
 						nameFormat = AdminConfig.ADMIN_TAG_5.replace("%s", sb.toString());
 						break;
+					}
 					case 6:
+					{
 						nameFormat = AdminConfig.ADMIN_TAG_6.replace("%s", sb.toString());
 						break;
+					}
 					case 7:
+					{
 						nameFormat = AdminConfig.ADMIN_TAG_7.replace("%s", sb.toString());
 						break;
+					}
 					case 8:
+					{
 						nameFormat = AdminConfig.ADMIN_TAG_8.replace("%s", sb.toString());
 						break;
+					}
 					case 9:
+					{
 						nameFormat = AdminConfig.ADMIN_TAG_9.replace("%s", sb.toString());
 						break;
+					}
 					case 10:
+					{
 						nameFormat = AdminConfig.ADMIN_TAG_10.replace("%s", sb.toString());
 						break;
+					}
 				}
 			}
 		}

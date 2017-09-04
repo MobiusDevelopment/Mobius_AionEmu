@@ -59,13 +59,19 @@ public class CM_PLAYER_STATUS_INFO extends AionClientPacket
 		switch (command)
 		{
 			case GROUP_SET_LFG:
+			{
 				activePlayer.setLookingForGroup(playerObjId == 2);
 				break;
+			}
 			case ALLIANCE_CHANGE_GROUP:
+			{
 				PlayerAllianceService.changeMemberGroup(activePlayer, playerObjId, secondObjectId, allianceGroupId);
 				break;
+			}
 			default:
+			{
 				PlayerTeamCommandService.executeCommand(activePlayer, command, playerObjId);
+			}
 		}
 	}
 }

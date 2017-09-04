@@ -63,9 +63,11 @@ public class Empyrean_Record_Keeper2AI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 799567:
+			{
 				// Ready to start running Crucible, nyerk?
 				sendMsg(1111450, getObjectId(), false, 2000);
 				break;
+			}
 		}
 		super.handleSpawned();
 	}

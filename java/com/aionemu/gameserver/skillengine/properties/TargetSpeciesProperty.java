@@ -35,28 +35,32 @@ public class TargetSpeciesProperty
 		switch (value)
 		{
 			case NPC:
+			{
 				for (Iterator<Creature> iter = effectedList.iterator(); iter.hasNext();)
 				{
 					final Creature nextEffected = iter.next();
-					
 					if (!(nextEffected instanceof Npc))
 					{
 						iter.remove();
 					}
 				}
 				break;
+			}
 			case PC:
+			{
 				for (Iterator<Creature> iter = effectedList.iterator(); iter.hasNext();)
 				{
 					final Creature nextEffected = iter.next();
-					
 					if (!(nextEffected instanceof Player))
 					{
 						iter.remove();
 					}
 				}
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return true;
 	}

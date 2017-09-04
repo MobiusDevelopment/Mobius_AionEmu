@@ -165,9 +165,11 @@ public class StonespearReachInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 855833:
+			{
 				points = 2000;
 				despawnNpc(npc);
 				break;
+			}
 		}
 		if (instanceReward.getInstanceScoreType().isStartProgress())
 		{

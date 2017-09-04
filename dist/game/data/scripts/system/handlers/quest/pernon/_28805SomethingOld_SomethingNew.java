@@ -125,7 +125,9 @@ public class _28805SomethingOld_SomethingNew extends QuestHandler
 			{
 				case 830662: // Logirunerk.
 				case 830663: // Davinrinerk.
+				{
 					return sendQuestEndDialog(env);
+				}
 			}
 		}
 		return false;

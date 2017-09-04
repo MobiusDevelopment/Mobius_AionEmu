@@ -73,7 +73,9 @@ public class _26808A_Long_Overdue_Battle extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -146,6 +148,7 @@ public class _26808A_Long_Overdue_Battle extends QuestHandler
 				case 857460:
 				case 857462:
 				case 857464:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -156,6 +159,7 @@ public class _26808A_Long_Overdue_Battle extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

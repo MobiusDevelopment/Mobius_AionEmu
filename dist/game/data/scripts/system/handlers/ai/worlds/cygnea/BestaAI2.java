@@ -60,6 +60,7 @@ public class BestaAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 804843: // Besta
+				{
 					announceLightLegionPortal();
 					spawn(702721, 1214.9753f, 1564.4226f, 468.49017f, (byte) 50);
 					ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -71,6 +72,7 @@ public class BestaAI2 extends NpcAI2
 						}
 					}, 300000); // 5 Minutes.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

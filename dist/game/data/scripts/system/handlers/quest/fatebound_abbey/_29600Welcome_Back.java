@@ -86,8 +86,10 @@ public class _29600Welcome_Back extends QuestHandler
 						}
 					}
 					case SELECT_ACTION_1012:
+					{
 						playQuestMovie(env, 909);
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -130,7 +132,9 @@ public class _29600Welcome_Back extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

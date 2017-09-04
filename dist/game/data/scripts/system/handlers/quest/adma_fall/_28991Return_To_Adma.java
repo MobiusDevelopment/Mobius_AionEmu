@@ -118,6 +118,7 @@ public class _28991Return_To_Adma extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 220427: // 아티팩트를 지배하는 악령.
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -128,6 +129,7 @@ public class _28991Return_To_Adma extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

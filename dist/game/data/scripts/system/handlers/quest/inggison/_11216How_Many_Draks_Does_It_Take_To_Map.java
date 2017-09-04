@@ -96,7 +96,9 @@ public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}
@@ -165,6 +167,7 @@ public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
@@ -173,6 +176,7 @@ public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case SELECT_ACTION_1012:
 						{
 							return defaultCloseDialog(env, 0, 1);

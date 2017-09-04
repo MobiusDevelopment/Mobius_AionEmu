@@ -160,26 +160,42 @@ public class Petitions extends AdminCommand
 		switch (type)
 		{
 			case CHARACTER_STUCK:
+			{
 				result = "Character Stuck";
 				break;
+			}
 			case CHARACTER_RESTORATION:
+			{
 				result = "Character Restoration";
 				break;
+			}
 			case BUG:
+			{
 				result = "Bug";
 				break;
+			}
 			case QUEST:
+			{
 				result = "Quest";
 				break;
+			}
 			case UNACCEPTABLE_BEHAVIOR:
+			{
 				result = "Unacceptable Behavior";
 				break;
+			}
 			case SUGGESTION:
+			{
 				result = "Suggestion";
+			}
 			case INQUIRY:
+			{
 				result = "Inquiry about the game";
+			}
 			default:
+			{
 				result = "Unknown";
+			}
 		}
 		return result;
 	}
@@ -190,12 +206,17 @@ public class Petitions extends AdminCommand
 		switch (type)
 		{
 			case CHARACTER_STUCK:
+			{
 				result = "Character Location: " + additionalData;
 				break;
+			}
 			case CHARACTER_RESTORATION:
+			{
 				result = "Category: " + additionalData;
 				break;
+			}
 			case BUG:
+			{
 				final String[] bugData = additionalData.split("/");
 				result = "Time Occured: " + bugData[0] + "\n";
 				result += "Zone and Coords: " + bugData[1];
@@ -204,25 +225,36 @@ public class Petitions extends AdminCommand
 					result += "\nHow to Replicate: " + bugData[2];
 				}
 				break;
+			}
 			case QUEST:
+			{
 				result = "Quest Title: " + additionalData;
 				break;
+			}
 			case UNACCEPTABLE_BEHAVIOR:
+			{
 				final String[] bData = additionalData.split("/");
 				result = "Time Occured: " + bData[0] + "\n";
 				result += "Character Name: " + bData[1] + "\n";
 				result += "Category: " + bData[2];
 				break;
+			}
 			case SUGGESTION:
+			{
 				//
 				result = "Category: " + additionalData;
 				break;
+			}
 			case INQUIRY:
+			{
 				//
 				result = "Petition Category: " + additionalData;
 				break;
+			}
 			default:
+			{
 				result = additionalData;
+			}
 		}
 		return result;
 	}

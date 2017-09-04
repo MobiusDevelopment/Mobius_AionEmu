@@ -115,7 +115,9 @@ public class _1994A_New_Choice extends QuestHandler
 					case 1097:
 					case 1182:
 					case 1267:
+					{
 						return sendQuestDialog(env, dialogId);
+					}
 					case 1013:
 					case 1034:
 					case 1055:

@@ -103,6 +103,7 @@ public class _1573SomeTastyMushrooms extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1011);
@@ -114,10 +115,15 @@ public class _1573SomeTastyMushrooms extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 10002);
 						}
+					}
 					case CHECK_COLLECTED_ITEMS:
+					{
 						return checkQuestItems(env, 0, 1, false, 0, 10001, 182201784, 1);
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

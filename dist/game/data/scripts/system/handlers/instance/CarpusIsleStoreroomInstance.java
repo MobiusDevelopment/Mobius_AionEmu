@@ -82,6 +82,7 @@ public class CarpusIsleStoreroomInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 214762: // Dakaer Tactician.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -90,7 +91,9 @@ public class CarpusIsleStoreroomInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 214766: // Dakaer Chanter.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -99,7 +102,9 @@ public class CarpusIsleStoreroomInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 215444: // Ebonlord Kiriel.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -108,6 +113,7 @@ public class CarpusIsleStoreroomInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	

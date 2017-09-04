@@ -63,7 +63,9 @@ public class _11299Aethercannon_Predilection extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

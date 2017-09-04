@@ -113,6 +113,7 @@ public class _15050Guardians_In_The_Gardens extends QuestHandler
 			{
 				case 235863:
 				case 235864:
+				{
 					if (qs.getQuestVarById(1) < 7)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -123,6 +124,7 @@ public class _15050Guardians_In_The_Gardens extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -79,12 +79,18 @@ public class _14112Pollution_Resolution extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}
@@ -105,7 +111,9 @@ public class _14112Pollution_Resolution extends QuestHandler
 							return sendQuestEndDialog(env);
 						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 			}
@@ -127,7 +135,9 @@ public class _14112Pollution_Resolution extends QuestHandler
 							return sendQuestEndDialog(env);
 						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 			}
@@ -143,7 +153,9 @@ public class _14112Pollution_Resolution extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}
@@ -163,6 +175,7 @@ public class _14112Pollution_Resolution extends QuestHandler
 		switch (targetId)
 		{
 			case 210318:
+			{
 				if (qs.getQuestVarById(1) < 1)
 				{
 					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -174,6 +187,7 @@ public class _14112Pollution_Resolution extends QuestHandler
 					updateQuestStatus(env);
 				}
 				break;
+			}
 		}
 		return false;
 	}

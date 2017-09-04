@@ -125,6 +125,7 @@ public class _28743Take_Out_The_Mastermind extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 236306: // Reviver Nasto.
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -135,6 +136,7 @@ public class _28743Take_Out_The_Mastermind extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

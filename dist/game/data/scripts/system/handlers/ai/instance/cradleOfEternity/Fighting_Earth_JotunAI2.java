@@ -65,7 +65,9 @@ public class Fighting_Earth_JotunAI2 extends GeneralNpcAI2
 			switch (getNpcId())
 			{
 				case 220588: // Fighting Earth Jotun.
+				{
 					break;
+				}
 			}
 		}
 		else if ((dialogId == 1011) && (questId != 0))

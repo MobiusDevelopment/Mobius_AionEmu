@@ -65,8 +65,10 @@ public class SomiaAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 799091: // Somia.
+				{
 					ItemService.addItem(player, 182206847, 1); // Violet Orb.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

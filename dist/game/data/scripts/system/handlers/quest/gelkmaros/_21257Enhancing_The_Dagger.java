@@ -63,7 +63,9 @@ public class _21257Enhancing_The_Dagger extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

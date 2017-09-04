@@ -58,10 +58,14 @@ public class Field_GunAI2 extends ActionItemNpcAI2
 		{
 			case 209472: // Baltasar Hill Field Gun.
 			case 831339: // Asmodians Field Gun.
+			{
 				return 0x4F8D3C;
+			}
 			case 209471: // Jamanok Inn Field Gun.
 			case 831338: // Elyos Field Gun.
+			{
 				return 0x4F8C3C;
+			}
 		}
 		return 0;
 	}

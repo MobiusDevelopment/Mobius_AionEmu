@@ -106,15 +106,19 @@ public class _1345BearerOfBadNews extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							return defaultCloseDialog(env, 0, 1);
 						}
+					}
 				}
 			}
 		}

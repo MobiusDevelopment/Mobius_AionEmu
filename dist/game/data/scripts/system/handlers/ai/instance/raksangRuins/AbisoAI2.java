@@ -69,14 +69,20 @@ public class AbisoAI2 extends GeneralNpcAI2
 			switch (getNpcId())
 			{
 				case 206378: // Abiso Way A.
+				{
 					TeleportService2.teleportTo(player, 300610000, instanceId, 519.06165f, 419.07617f, 927.697644f, (byte) 74);
 					break;
+				}
 				case 206379: // Abiso Way B.
+				{
 					TeleportService2.teleportTo(player, 300610000, instanceId, 810.93933f, 830.2498f, 733.6704f, (byte) 3);
 					break;
+				}
 				case 206380: // Abiso Way C.
+				{
 					TeleportService2.teleportTo(player, 300610000, instanceId, 384.6957f, 451.9979f, 120.786255f, (byte) 64);
 					break;
+				}
 			}
 		}
 		else if ((dialogId == 1011) && (questId != 0))

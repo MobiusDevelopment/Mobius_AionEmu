@@ -82,16 +82,24 @@ public class ZoneData
 			switch (zone.getAreaType())
 			{
 				case POLYGON:
+				{
 					area = new PolyArea(zone.getName(), zone.getMapid(), zone.getPoints().getPoint(), zone.getPoints().getBottom(), zone.getPoints().getTop());
 					break;
+				}
 				case CYLINDER:
+				{
 					area = new CylinderArea(zone.getName(), zone.getMapid(), zone.getCylinder().getX(), zone.getCylinder().getY(), zone.getCylinder().getR(), zone.getCylinder().getBottom(), zone.getCylinder().getTop());
 					break;
+				}
 				case SPHERE:
+				{
 					area = new SphereArea(zone.getName(), zone.getMapid(), zone.getSphere().getX(), zone.getSphere().getY(), zone.getSphere().getZ(), zone.getSphere().getR());
 					break;
+				}
 				case SEMISPHERE:
+				{
 					area = new SemisphereArea(zone.getName(), zone.getMapid(), zone.getSemisphere().getX(), zone.getSemisphere().getY(), zone.getSemisphere().getZ(), zone.getSemisphere().getR());
+				}
 			}
 			if (area != null)
 			{

@@ -59,16 +59,22 @@ public class LeagueLeftEvent extends AlwaysTrueTeamEvent implements Predicate<Le
 		switch (reason)
 		{
 			case LEAVE:
+			{
 				alliance.sendPacket(new SM_ALLIANCE_INFO(alliance));
 				checkDisband();
 				break;
+			}
 			case EXPEL:
+			{
 				alliance.sendPacket(new SM_ALLIANCE_INFO(alliance, SM_ALLIANCE_INFO.UNION_BAN_ME, league.getLeaderObject().getLeader().getName()));
 				checkDisband();
 				break;
+			}
 			case DISBAND:
+			{
 				alliance.sendPacket(new SM_ALLIANCE_INFO(alliance));
 				break;
+			}
 		}
 	}
 	
@@ -92,11 +98,15 @@ public class LeagueLeftEvent extends AlwaysTrueTeamEvent implements Predicate<Le
 				switch (reason)
 				{
 					case LEAVE:
+					{
 						PacketSendUtility.sendPacket(member, new SM_ALLIANCE_INFO(alliance, SM_ALLIANCE_INFO.UNION_LEAVE, alliance.getLeader().getName()));
 						break;
+					}
 					case EXPEL:
+					{
 						PacketSendUtility.sendPacket(member, new SM_ALLIANCE_INFO(alliance, SM_ALLIANCE_INFO.UNION_BAN_HIM, alliance.getLeader().getName()));
 						break;
+					}
 				}
 				return true;
 			}

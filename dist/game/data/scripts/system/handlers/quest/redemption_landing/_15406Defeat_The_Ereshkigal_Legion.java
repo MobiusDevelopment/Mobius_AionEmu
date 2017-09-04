@@ -113,6 +113,7 @@ public class _15406Defeat_The_Ereshkigal_Legion extends QuestHandler
 			{
 				case 882984:
 				case 882985:
+				{
 					if (qs.getQuestVarById(1) < 4)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -123,6 +124,7 @@ public class _15406Defeat_The_Ereshkigal_Legion extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

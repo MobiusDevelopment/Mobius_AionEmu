@@ -88,8 +88,11 @@ public class _19008MasterWeaponsmithsPotential extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							return sendQuestDialog(env, 1011);
+						}
 						case STEP_TO_10:
+						{
 							if (!giveQuestItem(env, 152201706, 1))
 							{
 								return true;
@@ -102,7 +105,9 @@ public class _19008MasterWeaponsmithsPotential extends QuestHandler
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 						case STEP_TO_20:
+						{
 							if (!giveQuestItem(env, 152201707, 1))
 							{
 								return true;
@@ -115,6 +120,7 @@ public class _19008MasterWeaponsmithsPotential extends QuestHandler
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
 				}
 				case 203788:
@@ -122,6 +128,7 @@ public class _19008MasterWeaponsmithsPotential extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							final long itemCount1 = player.getInventory().getItemCountByItemId(182206764);
 							if (itemCount1 > 0)
 							{
@@ -134,6 +141,7 @@ public class _19008MasterWeaponsmithsPotential extends QuestHandler
 							{
 								return sendQuestDialog(env, 10001);
 							}
+						}
 					}
 				}
 			}

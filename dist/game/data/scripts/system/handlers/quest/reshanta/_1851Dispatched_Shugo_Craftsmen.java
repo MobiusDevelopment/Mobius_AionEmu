@@ -135,7 +135,9 @@ public class _1851Dispatched_Shugo_Craftsmen extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

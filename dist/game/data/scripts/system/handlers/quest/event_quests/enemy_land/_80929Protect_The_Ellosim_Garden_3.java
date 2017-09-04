@@ -139,6 +139,7 @@ public class _80929Protect_The_Ellosim_Garden_3 extends QuestHandler
 				case 241678:
 				case 241679:
 				case 243285:
+				{
 					if (qs.getQuestVarById(1) < 27)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -149,6 +150,7 @@ public class _80929Protect_The_Ellosim_Garden_3 extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

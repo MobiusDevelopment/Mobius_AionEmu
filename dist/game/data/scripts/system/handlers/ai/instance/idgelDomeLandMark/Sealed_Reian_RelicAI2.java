@@ -60,28 +60,27 @@ public class Sealed_Reian_RelicAI2 extends ActionItemNpcAI2
 			switch (getNpcId())
 			{
 				case 833898: // Sealed Reian Relic.
+				{
 					switch (player.getRace())
 					{
 						case ELYOS:
+						{
 							IDFortressWarElyos();
 							// The Elyos removed the last stage of the device.
 							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403432));
 							break;
+						}
 						case ASMODIANS:
+						{
 							IDFortressWarAsmodians();
 							// The Asmodians removed the last stage of the device.
 							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403439));
 							break;
-					}
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							spawn(833898, 264.65891f, 259.27396f, 88.502739f, (byte) 0, 60); // Sealed Reian Relic.
 						}
-					}, 30000);
+					}
+					ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(833898, 264.65891f, 259.27396f, 88.502739f, (byte) 0, 60), 30000);
 					break;
+				}
 			}
 		}
 	}
@@ -102,38 +101,10 @@ public class Sealed_Reian_RelicAI2 extends ActionItemNpcAI2
 		despawnNpc(806378); // IDFortressWar_Sub_Jewel_D04.
 		spawn(806276, 264.65891f, 259.27396f, 88.502739f, (byte) 0); // IDFortressWar_v01_Flag_L.
 		spawn(806325, 264.65494f, 259.27081f, 88.502739f, (byte) 0, 147); // IDFortressWar_Main_Cycle_L01.
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(806343, 264.20355f, 273.34286f, 85.728119f, (byte) 0, 191); // IDFortressWar_Sub_Jewel_L01.
-			}
-		}, 5000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(806344, 265.11926f, 245.07037f, 85.728119f, (byte) 0, 158); // IDFortressWar_Sub_Jewel_L02.
-			}
-		}, 10000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(806345, 250.49094f, 258.72949f, 85.728119f, (byte) 0, 163); // IDFortressWar_Sub_Jewel_L03.
-			}
-		}, 15000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(806346, 278.78870f, 259.61780f, 85.728119f, (byte) 0, 155); // IDFortressWar_Sub_Jewel_L04.
-			}
-		}, 20000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(806343, 264.20355f, 273.34286f, 85.728119f, (byte) 0, 191), 5000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(806344, 265.11926f, 245.07037f, 85.728119f, (byte) 0, 158), 10000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(806345, 250.49094f, 258.72949f, 85.728119f, (byte) 0, 163), 15000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(806346, 278.78870f, 259.61780f, 85.728119f, (byte) 0, 155), 20000);
 	}
 	
 	private void IDFortressWarAsmodians()
@@ -152,38 +123,10 @@ public class Sealed_Reian_RelicAI2 extends ActionItemNpcAI2
 		despawnNpc(806346); // IDFortressWar_Sub_Jewel_L04.
 		spawn(806277, 264.65891f, 259.27396f, 88.502739f, (byte) 0); // IDFortressWar_v01_Flag_D.
 		spawn(806326, 264.65494f, 259.27081f, 88.502739f, (byte) 0, 115); // IDFortressWar_Main_Cycle_D01.
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(806375, 264.20355f, 273.34286f, 85.728119f, (byte) 0, 190); // IDFortressWar_Sub_Jewel_D01.
-			}
-		}, 5000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(806376, 265.11926f, 245.07037f, 85.728119f, (byte) 0, 157); // IDFortressWar_Sub_Jewel_D02.
-			}
-		}, 10000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(806377, 250.49094f, 258.72949f, 85.728119f, (byte) 0, 159); // IDFortressWar_Sub_Jewel_D03.
-			}
-		}, 15000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(806378, 278.78870f, 259.61780f, 85.728119f, (byte) 0, 156); // IDFortressWar_Sub_Jewel_D04.
-			}
-		}, 20000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(806375, 264.20355f, 273.34286f, 85.728119f, (byte) 0, 190), 5000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(806376, 265.11926f, 245.07037f, 85.728119f, (byte) 0, 157), 10000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(806377, 250.49094f, 258.72949f, 85.728119f, (byte) 0, 159), 15000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(806378, 278.78870f, 259.61780f, 85.728119f, (byte) 0, 156), 20000);
 	}
 	
 	private void despawnNpc(int npcId)

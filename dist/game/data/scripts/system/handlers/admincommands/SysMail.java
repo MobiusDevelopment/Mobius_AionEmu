@@ -59,13 +59,21 @@ public class SysMail extends AdminCommand
 			switch (this)
 			{
 				case ELYOS:
+				{
 					return race == Race.ELYOS;
+				}
 				case ASMO:
+				{
 					return race == Race.ASMODIANS;
+				}
 				case ALL:
+				{
 					return (race == Race.ELYOS) || (race == Race.ASMODIANS);
+				}
 				default:
+				{
 					return false;
+				}
 			}
 		}
 	}

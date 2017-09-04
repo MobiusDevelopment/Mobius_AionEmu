@@ -39,7 +39,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****/
 /**
@@ -96,14 +95,20 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 3))
 		{
 			case 1:
+			{
 				spawn(abiso1, 817.48f, 927.9041f, 1207.4312f, (byte) 19);
 				break;
+			}
 			case 2:
+			{
 				spawn(abiso2, 817.48f, 927.9041f, 1207.4312f, (byte) 19);
 				break;
+			}
 			case 3:
+			{
 				spawn(abiso3, 817.48f, 927.9041f, 1207.4312f, (byte) 19);
 				break;
+			}
 		}
 	}
 	
@@ -116,42 +121,58 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 		{
 			// http://aion.power.plaync.com/wiki/%EB%A6%AC%EB%A9%98%ED%88%AC+-+%EB%93%9C%EB%A1%AD+%EC%95%84%EC%9D%B4%ED%85%9C
 			case 236306: // Reviver Nasto.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053789, 1)); // Major Stigma Support Bundle.
 				switch (Rnd.get(1, 7))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053678, 1)); // Nasto's Unique Weapon Box.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053679, 1)); // Nasto's Unique Jacket Box.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053680, 1)); // Nasto's Unique Pants Box.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053681, 1)); // Nasto's Unique Pauldrons Box.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053682, 1)); // Nasto's Unique Gloves Box.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053683, 1)); // Nasto's Unique Shoes Chest.
 						break;
+					}
 					case 7:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053684, 1)); // Nasto's Hero Accessory Box.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 236010: // Trained Porgus.
+			{
 				rakshaSoloSpakleA161An++;
 				if (rakshaSoloSpakleA161An == 3)
 				{
@@ -169,7 +190,9 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 					sendMsgByRace(1402834, Race.PC_ALL, 5000);
 				}
 				break;
+			}
 			case 236012: // Crumbling Skelesword.
+			{
 				rakshaSoloSkeletonS61An++;
 				if (rakshaSoloSkeletonS61An == 4)
 				{
@@ -178,7 +201,9 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 					sendMsgByRace(1402832, Race.PC_ALL, 0);
 				}
 				break;
+			}
 			case 236014: // Ragelich Adept.
+			{
 				rakshaSoloGraveWitchSN61An++;
 				if (rakshaSoloGraveWitchSN61An == 4)
 				{
@@ -187,12 +212,16 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 					sendMsgByRace(1402781, Race.PC_ALL, 0);
 				}
 				break;
+			}
 			case 236019: // Trained Lava Petrahulk.
+			{
 				hellpathFirstWave();
 				// Prepare for combat! Enemies approaching!
 				sendMsgByRace(1402785, Race.PC_ALL, 0);
 				break;
+			}
 			case 236020: // Trained Clodworm.
+			{
 				rakshaSoloClodwormC161An++;
 				if (rakshaSoloClodwormC161An == 6)
 				{
@@ -200,7 +229,9 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 					doors.get(107).setOpen(true);
 				}
 				break;
+			}
 			case 236074: // Crumbling Skeleton.
+			{
 				rakshaSoloSkeletonB161An++;
 				if (rakshaSoloSkeletonB161An == 6)
 				{
@@ -208,7 +239,9 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 					doors.get(457).setOpen(true);
 				}
 				break;
+			}
 			case 236077: // Crumbling Skeleton.
+			{
 				rakshaSoloSkeletonB261An++;
 				if (rakshaSoloSkeletonB261An == 6)
 				{
@@ -218,7 +251,9 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 					sendMsgByRace(1402784, Race.PC_ALL, 0);
 				}
 				break;
+			}
 			case 236084: // Classified Drill Camp Instructor.
+			{
 				startRaksangRaidA1();
 				doors.get(307).setOpen(true);
 				// Prepare for combat! Enemies approaching!
@@ -226,7 +261,9 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 				// The door cannot be opened yet.
 				sendMsgByRace(1402831, Race.PC_ALL, 10000);
 				break;
+			}
 			case 236096: // Trained Clodworm.
+			{
 				rakshaSoloClodwormC261An++;
 				if (rakshaSoloClodwormC261An == 4)
 				{
@@ -236,19 +273,28 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 					sendMsgByRace(1402786, Race.PC_ALL, 0);
 				}
 				break;
+			}
 			case 236303: // Drill Instructor Diplito.
+			{
 				doors.get(294).setOpen(true);
 				break;
+			}
 			case 236304: // Drill Instructor Pratica.
+			{
 				doors.get(118).setOpen(true);
 				break;
+			}
 			case 236305: // Drill Instructor Exico.
+			{
 				hellpathSecondWave();
 				break;
+			}
 			case 236306: // Reviver Nasto.
+			{
 				sendMsg("[Congratulation]: you finish <Raksang Ruins 4.8>");
 				spawn(730445, 648.5508f, 700.05725f, 522.0487f, (byte) 80); // Raksang Exit.
 				break;
+			}
 		}
 	}
 	
@@ -257,69 +303,53 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 	 */
 	private void startRaksangRaidA1()
 	{
-		raksangRaidTaskA1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		raksangRaidTaskA1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				raksangRaid((Npc) spawn(236010, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
-				raksangRaid((Npc) spawn(236010, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
-				raksangRaid((Npc) spawn(236010, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
-				raksangRaid((Npc) spawn(236011, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
-				raksangRaid((Npc) spawn(236011, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
-				raksangRaid((Npc) spawn(236011, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
-			}
+			raksangRaid((Npc) spawn(236010, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
+			raksangRaid((Npc) spawn(236010, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
+			raksangRaid((Npc) spawn(236010, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
+			raksangRaid((Npc) spawn(236011, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
+			raksangRaid((Npc) spawn(236011, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
+			raksangRaid((Npc) spawn(236011, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
 		}, 20000);
 	}
 	
 	private void startRaksangRaidA1Bis()
 	{
-		raksangRaidTaskA1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		raksangRaidTaskA1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				raksangRaid((Npc) spawn(236010, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
-				raksangRaid((Npc) spawn(236010, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
-				raksangRaid((Npc) spawn(236010, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
-				raksangRaid((Npc) spawn(236011, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
-				raksangRaid((Npc) spawn(236011, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
-				raksangRaid((Npc) spawn(236011, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
-			}
+			raksangRaid((Npc) spawn(236010, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
+			raksangRaid((Npc) spawn(236010, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
+			raksangRaid((Npc) spawn(236010, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
+			raksangRaid((Npc) spawn(236011, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
+			raksangRaid((Npc) spawn(236011, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
+			raksangRaid((Npc) spawn(236011, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
 		}, 20000);
 	}
 	
 	private void startRaksangRaidA2()
 	{
-		raksangRaidTaskA2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		raksangRaidTaskA2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				raksangRaid((Npc) spawn(236012, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
-				raksangRaid((Npc) spawn(236013, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
-				raksangRaid((Npc) spawn(236014, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
-				raksangRaid((Npc) spawn(236012, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
-				raksangRaid((Npc) spawn(236013, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
-				raksangRaid((Npc) spawn(236014, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
-			}
+			raksangRaid((Npc) spawn(236012, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
+			raksangRaid((Npc) spawn(236013, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
+			raksangRaid((Npc) spawn(236014, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
+			raksangRaid((Npc) spawn(236012, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
+			raksangRaid((Npc) spawn(236013, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
+			raksangRaid((Npc) spawn(236014, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
 		}, 20000);
 	}
 	
 	private void startRaksangRaidA2Bis()
 	{
-		raksangRaidTaskA2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		raksangRaidTaskA2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				raksangRaid((Npc) spawn(236012, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
-				raksangRaid((Npc) spawn(236013, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
-				raksangRaid((Npc) spawn(236014, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
-				raksangRaid((Npc) spawn(236012, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
-				raksangRaid((Npc) spawn(236013, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
-				raksangRaid((Npc) spawn(236014, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
-			}
+			raksangRaid((Npc) spawn(236012, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
+			raksangRaid((Npc) spawn(236013, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
+			raksangRaid((Npc) spawn(236014, 581.06055f, 224.19353f, 927.9906f, (byte) 42));
+			raksangRaid((Npc) spawn(236012, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
+			raksangRaid((Npc) spawn(236013, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
+			raksangRaid((Npc) spawn(236014, 596.07947f, 241.60663f, 927.9906f, (byte) 57));
 		}, 20000);
 	}
 	
@@ -332,6 +362,7 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 702673: // Tombstone Of Liberation.
+			{
 				despawnNpc(npc);
 				// The switch is now operational.
 				sendMsgByRace(1402782, Race.PC_ALL, 0);
@@ -341,24 +372,12 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402833, Race.PC_ALL, 30000);
 				// Only a few enemies left!
 				sendMsgByRace(1402834, Race.PC_ALL, 50000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startRaksangRaidB1();
-					}
-				}, 5000);
-				raksangRaidTaskB1 = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startRaksangRaidB1Bis();
-					}
-				}, 60000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaksangRaidB1(), 5000);
+				raksangRaidTaskB1 = ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaksangRaidB1Bis(), 60000);
 				break;
+			}
 			case 702674: // Tombstone Of Liberation.
+			{
 				despawnNpc(npc);
 				// The switch is now operational.
 				sendMsgByRace(1402782, Race.PC_ALL, 0);
@@ -368,24 +387,12 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402833, Race.PC_ALL, 30000);
 				// Only a few enemies left!
 				sendMsgByRace(1402834, Race.PC_ALL, 50000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startRaksangRaidB2();
-					}
-				}, 5000);
-				raksangRaidTaskB1 = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startRaksangRaidB2Bis();
-					}
-				}, 60000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaksangRaidB2(), 5000);
+				raksangRaidTaskB1 = ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaksangRaidB2Bis(), 60000);
 				break;
+			}
 			case 702675: // Tombstone Of Liberation.
+			{
 				despawnNpc(npc);
 				// The switch is now operational.
 				sendMsgByRace(1402782, Race.PC_ALL, 0);
@@ -395,24 +402,12 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402833, Race.PC_ALL, 30000);
 				// Only a few enemies left!
 				sendMsgByRace(1402834, Race.PC_ALL, 50000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startRaksangRaidB3();
-					}
-				}, 5000);
-				raksangRaidTaskB1 = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startRaksangRaidB3Bis();
-					}
-				}, 60000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaksangRaidB3(), 5000);
+				raksangRaidTaskB1 = ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaksangRaidB3Bis(), 60000);
 				break;
+			}
 			case 702690: // Tombstone Of Liberation.
+			{
 				despawnNpc(npc);
 				// The switch is now operational.
 				sendMsgByRace(1402782, Race.PC_ALL, 0);
@@ -422,24 +417,12 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402833, Race.PC_ALL, 30000);
 				// Only a few enemies left!
 				sendMsgByRace(1402834, Race.PC_ALL, 50000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startRaksangRaidB4();
-					}
-				}, 5000);
-				raksangRaidTaskB2 = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startRaksangRaidB4Bis();
-					}
-				}, 60000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaksangRaidB4(), 5000);
+				raksangRaidTaskB2 = ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaksangRaidB4Bis(), 60000);
 				break;
+			}
 			case 702691: // Tombstone Of Liberation.
+			{
 				despawnNpc(npc);
 				// The switch is now operational.
 				sendMsgByRace(1402782, Race.PC_ALL, 0);
@@ -449,24 +432,12 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402833, Race.PC_ALL, 30000);
 				// Only a few enemies left!
 				sendMsgByRace(1402834, Race.PC_ALL, 50000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startRaksangRaidB6();
-					}
-				}, 5000);
-				raksangRaidTaskB2 = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startRaksangRaidB6Bis();
-					}
-				}, 60000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaksangRaidB6(), 5000);
+				raksangRaidTaskB2 = ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaksangRaidB6Bis(), 60000);
 				break;
+			}
 			case 702692: // Tombstone Of Liberation.
+			{
 				despawnNpc(npc);
 				// The switch is now operational.
 				sendMsgByRace(1402782, Race.PC_ALL, 0);
@@ -476,23 +447,10 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402833, Race.PC_ALL, 30000);
 				// Only a few enemies left!
 				sendMsgByRace(1402834, Race.PC_ALL, 50000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startRaksangRaidB5();
-					}
-				}, 5000);
-				raksangRaidTaskB2 = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startRaksangRaidB5Bis();
-					}
-				}, 60000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaksangRaidB5(), 5000);
+				raksangRaidTaskB2 = ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaksangRaidB5Bis(), 60000);
 				break;
+			}
 		}
 	}
 	
@@ -592,31 +550,23 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 		sendMsgByRace(1402833, Race.PC_ALL, 60000);
 		// Only a few enemies left!
 		sendMsgByRace(1402834, Race.PC_ALL, 110000);
-		raksangRaidTaskC1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		raksangRaidTaskC1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				raksangRaid((Npc) spawn(236020, 311.0131f, 607.05383f, 146.51385f, (byte) 13));
-				raksangRaid((Npc) spawn(236020, 311.0131f, 607.05383f, 146.51385f, (byte) 13));
-				raksangRaid((Npc) spawn(236020, 311.0131f, 607.05383f, 146.51385f, (byte) 13));
-				raksangRaid((Npc) spawn(236021, 325.99796f, 635.8432f, 146.51385f, (byte) 93));
-				raksangRaid((Npc) spawn(236021, 325.99796f, 635.8432f, 146.51385f, (byte) 93));
-				raksangRaid((Npc) spawn(236021, 325.99796f, 635.8432f, 146.51385f, (byte) 93));
-			}
+			raksangRaid((Npc) spawn(236020, 311.0131f, 607.05383f, 146.51385f, (byte) 13));
+			raksangRaid((Npc) spawn(236020, 311.0131f, 607.05383f, 146.51385f, (byte) 13));
+			raksangRaid((Npc) spawn(236020, 311.0131f, 607.05383f, 146.51385f, (byte) 13));
+			raksangRaid((Npc) spawn(236021, 325.99796f, 635.8432f, 146.51385f, (byte) 93));
+			raksangRaid((Npc) spawn(236021, 325.99796f, 635.8432f, 146.51385f, (byte) 93));
+			raksangRaid((Npc) spawn(236021, 325.99796f, 635.8432f, 146.51385f, (byte) 93));
 		}, 5000);
-		raksangRaidTaskC1 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		raksangRaidTaskC1 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				raksangRaid((Npc) spawn(236021, 311.0131f, 607.05383f, 146.51385f, (byte) 13));
-				raksangRaid((Npc) spawn(236021, 311.0131f, 607.05383f, 146.51385f, (byte) 13));
-				raksangRaid((Npc) spawn(236021, 311.0131f, 607.05383f, 146.51385f, (byte) 13));
-				raksangRaid((Npc) spawn(236020, 325.99796f, 635.8432f, 146.51385f, (byte) 93));
-				raksangRaid((Npc) spawn(236020, 325.99796f, 635.8432f, 146.51385f, (byte) 93));
-				raksangRaid((Npc) spawn(236020, 325.99796f, 635.8432f, 146.51385f, (byte) 93));
-			}
+			raksangRaid((Npc) spawn(236021, 311.0131f, 607.05383f, 146.51385f, (byte) 13));
+			raksangRaid((Npc) spawn(236021, 311.0131f, 607.05383f, 146.51385f, (byte) 13));
+			raksangRaid((Npc) spawn(236021, 311.0131f, 607.05383f, 146.51385f, (byte) 13));
+			raksangRaid((Npc) spawn(236020, 325.99796f, 635.8432f, 146.51385f, (byte) 93));
+			raksangRaid((Npc) spawn(236020, 325.99796f, 635.8432f, 146.51385f, (byte) 93));
+			raksangRaid((Npc) spawn(236020, 325.99796f, 635.8432f, 146.51385f, (byte) 93));
 		}, 120000);
 	}
 	
@@ -628,51 +578,39 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 		sendMsgByRace(1402833, Race.PC_ALL, 60000);
 		// Only a few enemies left!
 		sendMsgByRace(1402834, Race.PC_ALL, 110000);
-		raksangRaidTaskC2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		raksangRaidTaskC2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				raksangRaid((Npc) spawn(236096, 322.56607f, 777.8472f, 148.35696f, (byte) 13));
-				raksangRaid((Npc) spawn(236097, 322.56607f, 777.8472f, 148.35696f, (byte) 13));
-				raksangRaid((Npc) spawn(236098, 322.56607f, 777.8472f, 148.35696f, (byte) 13));
-				raksangRaid((Npc) spawn(236096, 334.89322f, 801.4367f, 146.65071f, (byte) 92));
-				raksangRaid((Npc) spawn(236097, 334.89322f, 801.4367f, 146.65071f, (byte) 92));
-				raksangRaid((Npc) spawn(236098, 334.89322f, 801.4367f, 146.65071f, (byte) 92));
-			}
+			raksangRaid((Npc) spawn(236096, 322.56607f, 777.8472f, 148.35696f, (byte) 13));
+			raksangRaid((Npc) spawn(236097, 322.56607f, 777.8472f, 148.35696f, (byte) 13));
+			raksangRaid((Npc) spawn(236098, 322.56607f, 777.8472f, 148.35696f, (byte) 13));
+			raksangRaid((Npc) spawn(236096, 334.89322f, 801.4367f, 146.65071f, (byte) 92));
+			raksangRaid((Npc) spawn(236097, 334.89322f, 801.4367f, 146.65071f, (byte) 92));
+			raksangRaid((Npc) spawn(236098, 334.89322f, 801.4367f, 146.65071f, (byte) 92));
 		}, 5000);
-		raksangRaidTaskC2 = ThreadPoolManager.getInstance().schedule(new Runnable()
+		raksangRaidTaskC2 = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				raksangRaid((Npc) spawn(236096, 322.56607f, 777.8472f, 148.35696f, (byte) 13));
-				raksangRaid((Npc) spawn(236097, 322.56607f, 777.8472f, 148.35696f, (byte) 13));
-				raksangRaid((Npc) spawn(236099, 322.56607f, 777.8472f, 148.35696f, (byte) 13));
-				raksangRaid((Npc) spawn(236096, 334.89322f, 801.4367f, 146.65071f, (byte) 92));
-				raksangRaid((Npc) spawn(236097, 334.89322f, 801.4367f, 146.65071f, (byte) 92));
-				raksangRaid((Npc) spawn(236099, 334.89322f, 801.4367f, 146.65071f, (byte) 92));
-			}
+			raksangRaid((Npc) spawn(236096, 322.56607f, 777.8472f, 148.35696f, (byte) 13));
+			raksangRaid((Npc) spawn(236097, 322.56607f, 777.8472f, 148.35696f, (byte) 13));
+			raksangRaid((Npc) spawn(236099, 322.56607f, 777.8472f, 148.35696f, (byte) 13));
+			raksangRaid((Npc) spawn(236096, 334.89322f, 801.4367f, 146.65071f, (byte) 92));
+			raksangRaid((Npc) spawn(236097, 334.89322f, 801.4367f, 146.65071f, (byte) 92));
+			raksangRaid((Npc) spawn(236099, 334.89322f, 801.4367f, 146.65071f, (byte) 92));
 		}, 120000);
 	}
 	
 	private void raksangRaid(Npc npc)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						npc.setTarget(player);
-						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
-						npc.setState(1);
-						npc.getMoveController().moveToTargetObject();
-						PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
-					}
+					npc.setTarget(player);
+					((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
+					npc.setState(1);
+					npc.getMoveController().moveToTargetObject();
+					PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
 				}
 			}
 		}, 1000);
@@ -680,36 +618,18 @@ public class RaksangRuinsInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void despawnNpc(Npc npc)

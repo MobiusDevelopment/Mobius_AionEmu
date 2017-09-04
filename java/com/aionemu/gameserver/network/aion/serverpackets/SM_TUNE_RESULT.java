@@ -46,11 +46,15 @@ public class SM_TUNE_RESULT extends AionServerPacket
 		switch (item.getEquipmentType())
 		{
 			case ARMOR:
+			{
 				writeH(5);
 				break;
+			}
 			case WEAPON:
+			{
 				writeH(10);
 				break;
+			}
 		}
 		writeC(item.getEnchantLevel());
 		writeD(itemId);

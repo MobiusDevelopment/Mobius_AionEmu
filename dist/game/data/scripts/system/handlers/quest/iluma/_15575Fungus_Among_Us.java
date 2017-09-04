@@ -117,6 +117,7 @@ public class _15575Fungus_Among_Us extends QuestHandler
 			{
 				case 241276:
 				case 241277:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _15575Fungus_Among_Us extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -79,8 +79,10 @@ public class FortressSiege extends Siege<FortressLocation>
 			switch (getSiegeLocation().getLocationId())
 			{
 				case 10111:
+				{
 					templeGateMsg();
 					break;
+				}
 			}
 		}
 	}
@@ -152,6 +154,7 @@ public class FortressSiege extends Siege<FortressLocation>
 				{
 					// Krotan Refuge.
 					case 1221:
+					{
 						if (getSiegeLocation().getRace() == SiegeRace.ASMODIANS)
 						{
 							AbyssLandingSpecialService.getInstance().startLanding(16);
@@ -163,8 +166,10 @@ public class FortressSiege extends Siege<FortressLocation>
 							AbyssLandingService.getInstance().updateRedemptionLanding(35000, LandingPointsEnum.SIEGE, true);
 						}
 						break;
+					}
 					// Kysis Fortress.
 					case 1231:
+					{
 						if (getSiegeLocation().getRace() == SiegeRace.ASMODIANS)
 						{
 							AbyssLandingSpecialService.getInstance().startLanding(18);
@@ -176,8 +181,10 @@ public class FortressSiege extends Siege<FortressLocation>
 							AbyssLandingService.getInstance().updateRedemptionLanding(40000, LandingPointsEnum.SIEGE, true);
 						}
 						break;
+					}
 					// Miren Fortress.
 					case 1241:
+					{
 						if (getSiegeLocation().getRace() == SiegeRace.ASMODIANS)
 						{
 							AbyssLandingSpecialService.getInstance().startLanding(17);
@@ -189,6 +196,7 @@ public class FortressSiege extends Siege<FortressLocation>
 							AbyssLandingService.getInstance().updateRedemptionLanding(35000, LandingPointsEnum.SIEGE, true);
 						}
 						break;
+					}
 				}
 				AbyssLandingService.getInstance().AnnounceToPoints(player, getSiegeLocation().getRace().getDescriptionId(), getSiegeLocation().getNameAsDescriptionId(), 0, LandingPointsEnum.SIEGE);
 			}
@@ -198,6 +206,7 @@ public class FortressSiege extends Siege<FortressLocation>
 				{
 					// Krotan Refuge.
 					case 1221:
+					{
 						if (looser == SiegeRace.ASMODIANS)
 						{
 							AbyssLandingSpecialService.getInstance().stopLanding(16);
@@ -209,8 +218,10 @@ public class FortressSiege extends Siege<FortressLocation>
 							AbyssLandingService.getInstance().updateRedemptionLanding(35000, LandingPointsEnum.SIEGE, false);
 						}
 						break;
+					}
 					// Kysis Fortress.
 					case 1231:
+					{
 						if (looser == SiegeRace.ASMODIANS)
 						{
 							AbyssLandingSpecialService.getInstance().stopLanding(18);
@@ -222,8 +233,10 @@ public class FortressSiege extends Siege<FortressLocation>
 							AbyssLandingService.getInstance().updateRedemptionLanding(40000, LandingPointsEnum.SIEGE, false);
 						}
 						break;
+					}
 					// Miren Fortress.
 					case 1241:
+					{
 						if (looser == SiegeRace.ASMODIANS)
 						{
 							AbyssLandingSpecialService.getInstance().stopLanding(17);
@@ -235,6 +248,7 @@ public class FortressSiege extends Siege<FortressLocation>
 							AbyssLandingService.getInstance().updateRedemptionLanding(35000, LandingPointsEnum.SIEGE, false);
 						}
 						break;
+					}
 				}
 			}
 		}

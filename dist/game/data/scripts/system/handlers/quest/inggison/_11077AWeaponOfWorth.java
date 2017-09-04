@@ -61,7 +61,9 @@ public class _11077AWeaponOfWorth extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					default:
 					{
 						if (!giveQuestItem(env, 182214016, 1))
@@ -140,7 +142,9 @@ public class _11077AWeaponOfWorth extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

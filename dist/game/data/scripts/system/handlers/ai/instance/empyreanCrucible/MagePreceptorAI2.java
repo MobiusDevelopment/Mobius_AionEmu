@@ -59,63 +59,61 @@ public class MagePreceptorAI2 extends AggressiveNpcAI2
 		switch (percent)
 		{
 			case 75:
+			{
 				SkillEngine.getInstance().getSkill(getOwner(), 19605, 46, getTargetPlayer()).useNoAnimationSkill();
 				break;
+			}
 			case 50:
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+			{
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
+					if (!isAlreadyDead())
 					{
-						if (!isAlreadyDead())
+						SkillEngine.getInstance().getSkill(getOwner(), 19609, 46, getOwner()).useNoAnimationSkill();
+						ThreadPoolManager.getInstance().schedule((Runnable) () ->
 						{
-							SkillEngine.getInstance().getSkill(getOwner(), 19609, 46, getOwner()).useNoAnimationSkill();
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							final WorldPosition p = getPosition();
+							switch (Rnd.get(1, 2))
 							{
-								@Override
-								public void run()
+								case 1:
 								{
-									final WorldPosition p = getPosition();
-									switch (Rnd.get(1, 2))
-									{
-										case 1:
-											spawn(282363, p.getX(), p.getY(), p.getZ(), p.getHeading()); // Summoned Tran Of Fire.
-											break;
-										case 2:
-											spawn(282364, p.getX(), p.getY(), p.getZ(), p.getHeading()); // Summoned Tran Of Wind.
-											break;
-									}
-									scheduleSkill(2000);
+									spawn(282363, p.getX(), p.getY(), p.getZ(), p.getHeading()); // Summoned Tran Of Fire.
+									break;
 								}
-							}, 4500);
-						}
+								case 2:
+								{
+									spawn(282364, p.getX(), p.getY(), p.getZ(), p.getHeading()); // Summoned Tran Of Wind.
+									break;
+								}
+							}
+							scheduleSkill(2000);
+						}, 4500);
 					}
 				}, 3000);
 				break;
+			}
 			case 25:
+			{
 				scheduleSkill(3000);
 				scheduleSkill(9000);
 				scheduleSkill(15000);
 				break;
+			}
 		}
 	}
 	
-	private void scheduleSkill(int delay)
+	void scheduleSkill(int delay)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead())
 			{
-				if (!isAlreadyDead())
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 19605, 46, getTargetPlayer()).useNoAnimationSkill();
-				}
+				SkillEngine.getInstance().getSkill(getOwner(), 19605, 46, getTargetPlayer()).useNoAnimationSkill();
 			}
 		}, delay);
 	}
 	
-	private Player getTargetPlayer()
+	Player getTargetPlayer()
 	{
 		final List<Player> players = new ArrayList<>();
 		for (Player player : getKnownList().getKnownPlayers().values())

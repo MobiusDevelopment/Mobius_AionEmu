@@ -186,10 +186,14 @@ public class CraftingTask extends AbstractCraftTask
 						case HOUSE:
 						case STUDIO:
 						case PALACE:
+						{
 							chance += 5;
 							break;
+						}
 						default:
+						{
 							break;
+						}
 					}
 				}
 			}

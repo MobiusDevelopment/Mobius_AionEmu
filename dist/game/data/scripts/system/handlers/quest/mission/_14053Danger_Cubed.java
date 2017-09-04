@@ -94,6 +94,7 @@ public class _14053Danger_Cubed extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1011);
@@ -106,7 +107,9 @@ public class _14053Danger_Cubed extends QuestHandler
 					{
 						return sendQuestDialog(env, 2034);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						TeleportService2.teleportTo(player, 210020000, 1601f, 1528f, 318.6f, (byte) 118, TeleportAnimation.BEAM_ANIMATION);
@@ -115,7 +118,9 @@ public class _14053Danger_Cubed extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 				case CHECK_COLLECTED_ITEMS:
+				{
 					if (QuestService.collectItemCheck(env, true))
 					{
 						qs.setStatus(QuestStatus.REWARD);
@@ -126,10 +131,14 @@ public class _14053Danger_Cubed extends QuestHandler
 					{
 						return sendQuestDialog(env, 10001);
 					}
+				}
 				case SELECT_ACTION_1694:
+				{
 					playQuestMovie(env, 191);
 					break;
+				}
 				case STEP_TO_3:
+				{
 					if (var == 2)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -137,6 +146,7 @@ public class _14053Danger_Cubed extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 			}
 		}
 		else if (targetId == 204020)
@@ -144,11 +154,14 @@ public class _14053Danger_Cubed extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						TeleportService2.teleportTo(player, 210040000, 2450f, 244f, 422.6f, (byte) 99, TeleportAnimation.BEAM_ANIMATION);
@@ -157,6 +170,7 @@ public class _14053Danger_Cubed extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 			}
 		}
 		return false;

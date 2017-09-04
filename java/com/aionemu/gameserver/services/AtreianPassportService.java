@@ -294,14 +294,20 @@ public class AtreianPassportService
 			switch (atp.getAttendType())
 			{
 				case DAILY:
+				{
 					getDailyPassports(atp.getId(), atp);
 					break;
+				}
 				case CUMULATIVE:
+				{
 					getCumulativePassports(atp.getId(), atp);
 					break;
+				}
 				case ANNIVERSARY:
+				{
 					getAnniversaryPassports(atp.getId(), atp);
 					break;
+				}
 			}
 		}
 	}
@@ -338,31 +344,57 @@ public class AtreianPassportService
 		switch (calendar.get(Calendar.MONTH))
 		{
 			case Calendar.NOVEMBER:
+			{
 				return 1;
+			}
 			case Calendar.DECEMBER:
+			{
 				return 2;
+			}
 			case Calendar.JANUARY:
+			{
 				return 3;
+			}
 			case Calendar.FEBRUARY:
+			{
 				return 4;
+			}
 			case Calendar.MARCH:
+			{
 				return 5;
+			}
 			case Calendar.APRIL:
+			{
 				return 6;
+			}
 			case Calendar.MAY:
+			{
 				return 7;
+			}
 			case Calendar.JUNE:
+			{
 				return 8;
+			}
 			case Calendar.JULY:
+			{
 				return 9;
+			}
 			case Calendar.AUGUST:
+			{
 				return 10;
+			}
 			case Calendar.SEPTEMBER:
+			{
 				return 11;
+			}
 			case Calendar.OCTOBER:
+			{
 				return 12;
+			}
 			default:
+			{
 				return 0;
+			}
 		}
 	}
 	

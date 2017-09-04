@@ -149,18 +149,24 @@ public class IsbariyaTheResoluteAI2 extends AggressiveNpcAI2
 		switch (stage)
 		{
 			case 1:
+			{
 				SkillEngine.getInstance().getSkill(getOwner(), 18959, 50, getTargetPlayer()).useNoAnimationSkill();
 				spawnSouls();
 				delay = 25000;
 				break;
+			}
 			case 2:
+			{
 				rndSpawn(281660, 5);
 				break;
+			}
 			case 3:
+			{
 				rndSpawn(281659, 1);
 				AI2Actions.useSkill(this, 18993);
 				delay = 20000;
 				break;
+			}
 		}
 		scheduleSpecial(delay);
 	}

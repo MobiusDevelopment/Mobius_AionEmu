@@ -39,6 +39,7 @@ public class Toxic_Caverns_Teleport_DeviceAI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 700966: // Toxic Caverns Teleport Device.
+			{
 				if (player.getInventory().decreaseByItemId(186000110, 1))
 				{ // Surkana Crystal.
 					TeleportService2.teleportTo(player, 300160000, 1338.5336f, 806.8095f, 113.52537f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
@@ -48,6 +49,7 @@ public class Toxic_Caverns_Teleport_DeviceAI2 extends ActionItemNpcAI2
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 27));
 				}
 				break;
+			}
 		}
 	}
 }

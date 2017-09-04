@@ -77,9 +77,12 @@ public class BeshmundirInstance extends GeneralInstanceHandler
 			 * PATH TO WATCHER'S NEXUS
 			 */
 			case 216238: // Captain Lakhara.
+			{
 				doors.get(470).setOpen(true);
 				break;
+			}
 			case 216739: // Warrior Monument.
+			{
 				warriorMonument++;
 				if (warriorMonument < 15)
 				{
@@ -101,27 +104,37 @@ public class BeshmundirInstance extends GeneralInstanceHandler
 				// The Warrior Monument has been destroyed. Ahbana the Wicked is on alert.
 				sendMsgByRace(1400465, Race.PC_ALL, 0);
 				break;
+			}
 			case 799342: // Traitor Kumbanda.
+			{
 				sendMovie(player, 447);
 				break;
+			}
 			case 216239: // Ahbana The Wicked.
+			{
 				doors.get(471).setOpen(true);
 				break;
-			
+			}
 			/**
 			 * PATH TO MACUNBELLO'S REFUGE
 			 */
 			case 216583: // Brutal Soulwatcher (1st Island)
+			{
 				spawn(799518, 933.982971f, 444.269104f, 222.00f, (byte) 21); // Plegeton Boatman II.
 				break;
+			}
 			case 216584: // Brutal Soulwatcher (2nd Island)
+			{
 				spawn(799519, 788.744690f, 442.353271f, 222.00f, (byte) 0); // Plegeton Boatman III.
 				break;
+			}
 			case 216585: // Brutal Soulwatcher (3th Island)
+			{
 				sendMovie(player, 445);
 				doors.get(467).setOpen(true);
 				spawn(799520, 818.57874f, 277.74527f, 220.19385f, (byte) 53); // Plegeton Boatman IV.
 				break;
+			}
 			case 216206: // Elyos Spiritblade.
 			case 216207: // Elyos Spiritmage.
 			case 216208: // Elyos Spiritbow.
@@ -130,6 +143,7 @@ public class BeshmundirInstance extends GeneralInstanceHandler
 			case 216211: // Asmodian Soulspell.
 			case 216212: // Asmodian Soulranger.
 			case 216213: // Asmodian Soulmedic.
+			{
 				macunbelloSouls++;
 				if (macunbelloSouls == 12)
 				{
@@ -147,14 +161,17 @@ public class BeshmundirInstance extends GeneralInstanceHandler
 					sendMsgByRace(1400468, Race.PC_ALL, 2000);
 				}
 				break;
-			
+			}
 			/**
 			 * PATH TO GARDEN OF THE ENTOMBED
 			 */
 			case 216246: // The Great Virhana.
+			{
 				doors.get(473).setOpen(true);
 				break;
+			}
 			case 216250: // Dorakiki The Bold.
+			{
 				deleteNpc(281648); // Sorcerer Haskin.
 				deleteNpc(281649); // Chopper.
 				// Hiding Lupukin has appeared.
@@ -168,15 +185,18 @@ public class BeshmundirInstance extends GeneralInstanceHandler
 					}
 				}, 3000);
 				break;
+			}
 			case 216248: // Taros Lifebane.
+			{
 				doors.get(533).setOpen(true);
 				doors.get(535).setOpen(true);
 				break;
-			
+			}
 			/**
 			 * PATH TO THE PRISON OF ICE
 			 */
 			case 216263: // Isbariya The Resolute.
+			{
 				sendMovie(player, 439);
 				// The Seal Protector has fallen. The Rift Orb shines while the seal weakens.
 				sendMsgByRace(1400480, Race.PC_ALL, 0);
@@ -186,7 +206,9 @@ public class BeshmundirInstance extends GeneralInstanceHandler
 				objects.put(730275, SpawnEngine.spawnObject(RiftOrb, instanceId));
 				spawn(216264, 556.59375f, 1367.2274f, 224.79459f, (byte) 75); // Stormwing.
 				break;
+			}
 			case 216264: // Stormwing.
+			{
 				deleteNpc(281794);
 				deleteNpc(281795);
 				deleteNpc(281796);
@@ -201,6 +223,7 @@ public class BeshmundirInstance extends GeneralInstanceHandler
 					}
 				}, 3000);
 				break;
+			}
 		}
 	}
 	

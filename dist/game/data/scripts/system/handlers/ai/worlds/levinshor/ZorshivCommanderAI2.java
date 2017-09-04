@@ -53,8 +53,10 @@ public class ZorshivCommanderAI2 extends AggressiveNpcAI2
 			{
 				case 267814:
 				case 267815:
+				{
 					announcePublicQuest();
 					break;
+				}
 			}
 		}
 	}

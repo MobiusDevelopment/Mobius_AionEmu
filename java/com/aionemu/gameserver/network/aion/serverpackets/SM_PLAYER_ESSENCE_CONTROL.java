@@ -69,13 +69,17 @@ public class SM_PLAYER_ESSENCE_CONTROL extends AionServerPacket
 		switch (type)
 		{
 			case 0:
+			{
 				writeD(id);
 				writeH(slotPoint);
 				break;
+			}
 			case 1:
+			{
 				writeD(id);
 				writeH(slotPoint);
 				break;
+			}
 		}
 	}
 }

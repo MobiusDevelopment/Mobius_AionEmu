@@ -159,6 +159,7 @@ public class _1003Illegal_Logging extends QuestHandler
 			case 210092:
 			case 210154:
 			case 210685:
+			{
 				if ((var >= 1) && (var <= 6))
 				{
 					qs.setQuestVarById(0, var + 1);
@@ -166,7 +167,9 @@ public class _1003Illegal_Logging extends QuestHandler
 					return true;
 				}
 				break;
+			}
 			case 210160:
+			{
 				if ((var >= 8) && (var <= 9))
 				{
 					qs.setQuestVarById(0, var + 1);
@@ -179,6 +182,7 @@ public class _1003Illegal_Logging extends QuestHandler
 					updateQuestStatus(env);
 					return true;
 				}
+			}
 		}
 		return false;
 	}

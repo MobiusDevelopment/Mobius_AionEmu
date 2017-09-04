@@ -39,10 +39,14 @@ public class Dynamic_Iluma_MonsterAI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawnLF6EventDoor();
 				break;
+			}
 			case 2:
+			{
 				break;
+			}
 		}
 		super.handleDied();
 	}
@@ -53,17 +57,25 @@ public class Dynamic_Iluma_MonsterAI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 4))
 		{
 			case 1:
+			{
 				spawn(240887, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0); // Archon Warrior.
 				break;
+			}
 			case 2:
+			{
 				spawn(240888, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0); // Archon Mage.
 				break;
+			}
 			case 3:
+			{
 				spawn(240889, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0); // Archon Scout.
 				break;
+			}
 			case 4:
+			{
 				spawn(240890, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0); // Archon Marksman.
 				break;
+			}
 		}
 		ThreadPoolManager.getInstance().schedule(new Runnable()
 		{

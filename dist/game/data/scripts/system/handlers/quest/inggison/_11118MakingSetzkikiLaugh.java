@@ -112,6 +112,7 @@ public class _11118MakingSetzkikiLaugh extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1011);
@@ -120,7 +121,9 @@ public class _11118MakingSetzkikiLaugh extends QuestHandler
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -128,7 +131,9 @@ public class _11118MakingSetzkikiLaugh extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 				case CHECK_COLLECTED_ITEMS:
+				{
 					if (var == 1)
 					{
 						if (player.getInventory().getItemCountByItemId(182206794) >= 20)
@@ -147,6 +152,7 @@ public class _11118MakingSetzkikiLaugh extends QuestHandler
 						}
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 798984)
@@ -154,11 +160,14 @@ public class _11118MakingSetzkikiLaugh extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 2)
 					{
 						return sendQuestDialog(env, 2034);
 					}
+				}
 				case SET_REWARD:
+				{
 					if (var == 2)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -168,6 +177,7 @@ public class _11118MakingSetzkikiLaugh extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		return false;

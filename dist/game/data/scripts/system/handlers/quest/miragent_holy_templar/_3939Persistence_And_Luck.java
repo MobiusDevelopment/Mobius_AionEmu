@@ -97,6 +97,7 @@ public class _3939Persistence_And_Luck extends QuestHandler
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
@@ -105,12 +106,19 @@ public class _3939Persistence_And_Luck extends QuestHandler
 							{
 								return sendQuestDialog(env, 1693);
 							}
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							return checkQuestItems(env, 2, 3, false, 10000, 10001, 182206099, 1);
+						}
 						case FINISH_DIALOG:
+						{
 							return defaultCloseDialog(env, var, var);
+						}
 					}
 					break;
 				}
@@ -119,10 +127,12 @@ public class _3939Persistence_And_Luck extends QuestHandler
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case SELECT_ACTION_1354:
 						{
 							if ((var == 1) && player.getInventory().tryDecreaseKinah(3400000))
@@ -135,16 +145,20 @@ public class _3939Persistence_And_Luck extends QuestHandler
 							}
 						}
 						case FINISH_DIALOG:
+						{
 							return defaultCloseDialog(env, 1, 1);
+						}
 					}
 					break;
 				}
 				case 700537:
+				{
 					if ((dialog == QuestDialog.USE_OBJECT) && (var == 2))
 					{
 						return useQuestObject(env, 2, 2, false, 0);
 					}
 					break;
+				}
 				case 203752:
 				{ // Jucleas.
 					switch (dialog)
@@ -176,7 +190,9 @@ public class _3939Persistence_And_Luck extends QuestHandler
 					break;
 				}
 				default:
+				{
 					return sendQuestStartDialog(env);
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

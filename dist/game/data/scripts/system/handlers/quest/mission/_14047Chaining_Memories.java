@@ -107,11 +107,14 @@ public class _14047Chaining_Memories extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1011);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -119,6 +122,7 @@ public class _14047Chaining_Memories extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 			}
 		}
 		else if (targetId == 798154)
@@ -126,11 +130,14 @@ public class _14047Chaining_Memories extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -138,6 +145,7 @@ public class _14047Chaining_Memories extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 			}
 		}
 		else if (targetId == 204574)
@@ -145,11 +153,14 @@ public class _14047Chaining_Memories extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 2)
 					{
 						return sendQuestDialog(env, 1693);
 					}
+				}
 				case STEP_TO_3:
+				{
 					if (var == 2)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -157,6 +168,7 @@ public class _14047Chaining_Memories extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 			}
 		}
 		else if (targetId == 802051)
@@ -164,6 +176,7 @@ public class _14047Chaining_Memories extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 3)
 					{
 						return sendQuestDialog(env, 2034);
@@ -176,7 +189,9 @@ public class _14047Chaining_Memories extends QuestHandler
 					{
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10009));
 					}
+				}
 				case STEP_TO_10:
+				{
 					if (var == 3)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -188,7 +203,9 @@ public class _14047Chaining_Memories extends QuestHandler
 					player.setFlightTeleportId(71001);
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 71001, 0));
 					return true;
+				}
 				case SET_REWARD:
+				{
 					if (var == 6)
 					{
 						qs.setStatus(QuestStatus.REWARD);
@@ -196,6 +213,7 @@ public class _14047Chaining_Memories extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 			}
 		}
 		else if (targetId == 802052)
@@ -203,6 +221,7 @@ public class _14047Chaining_Memories extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 4)
 					{
 						return sendQuestDialog(env, 2375);
@@ -211,13 +230,17 @@ public class _14047Chaining_Memories extends QuestHandler
 					{
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10010));
 					}
+				}
 				case SELECT_ACTION_2376:
+				{
 					if (var == 4)
 					{
 						playQuestMovie(env, 421);
 						break;
 					}
+				}
 				case STEP_TO_11:
+				{
 					if (var == 4)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -226,6 +249,7 @@ public class _14047Chaining_Memories extends QuestHandler
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 0));
 					PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 72001, 0));
 					return true;
+				}
 			}
 		}
 		return false;

@@ -51,8 +51,10 @@ public class Cryptograph_CubeAI2 extends GeneralNpcAI2
 			{
 				case 806152: // Cryptograph Cube.
 				case 806153: // Cryptograph Cube.
+				{
 					ItemService.addItem(player, 125004516, 1); // 선택받은 수호자의 두건.
 					break;
+				}
 			}
 		}
 		AI2Actions.deleteOwner(this);

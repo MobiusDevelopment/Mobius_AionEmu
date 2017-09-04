@@ -53,14 +53,23 @@ public class _2230AFriendlyWager extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					case ASK_ACCEPTION:
+					{
 						return sendQuestDialog(env, 4);
+					}
 					case ACCEPT_QUEST:
+					{
 						return sendQuestDialog(env, 1003);
+					}
 					case REFUSE_QUEST:
+					{
 						return sendQuestDialog(env, 1004);
+					}
 					case STEP_TO_1:
+					{
 						if (QuestService.startQuest(env))
 						{
 							QuestService.questTimerStart(env, 1800);
@@ -70,6 +79,7 @@ public class _2230AFriendlyWager extends QuestHandler
 						{
 							return false;
 						}
+					}
 				}
 			}
 		}
@@ -85,11 +95,14 @@ public class _2230AFriendlyWager extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 2375);
 						}
+					}
 					case CHECK_COLLECTED_ITEMS:
+					{
 						if (var == 0)
 						{
 							if (QuestService.collectItemCheck(env, true))
@@ -104,6 +117,7 @@ public class _2230AFriendlyWager extends QuestHandler
 								return sendQuestDialog(env, 2716);
 							}
 						}
+					}
 				}
 			}
 		}

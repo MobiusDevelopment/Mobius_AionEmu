@@ -71,16 +71,22 @@ public class LinkgateFoundryInstance extends GeneralInstanceHandler
 			case 233898: // Volatile Belsagos.
 			case 234990: // Wounded Belsagos.
 			case 234991: // Furious Belsagos.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053789, 1)); // Major Stigma Support Bundle.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000236, 3)); // Blood Mark.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053295, 1)); // Empyrean Plume Chest.
 				break;
+			}
 			case 234194: // Linkgate Foundry Supply Chest.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053238, 1)); // Scroll Bundle (Linkgate Foundry).
 				break;
+			}
 			case 234195: // Linkgate Foundry Supply Chest.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053239, 1)); // Scroll Bundle (Linkgate Foundry).
 				break;
+			}
 		}
 	}
 	
@@ -213,9 +219,11 @@ public class LinkgateFoundryInstance extends GeneralInstanceHandler
 			case 233898: // Volatile Belsagos.
 			case 234990: // Wounded Belsagos.
 			case 234991: // Furious Belsagos.
+			{
 				sendMsg("[Congratulation]: you finish <Linkgate Foundry >");
 				spawn(702338, 225.60777f, 259.7162f, 312.62796f, (byte) 119); // Linkgate Foundry Exit.
 				break;
+			}
 		}
 	}
 	

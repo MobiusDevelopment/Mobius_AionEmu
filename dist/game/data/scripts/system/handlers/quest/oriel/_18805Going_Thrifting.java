@@ -125,7 +125,9 @@ public class _18805Going_Thrifting extends QuestHandler
 			{
 				case 830660: // Gomirunerk
 				case 830661: // Lisandinerk.
+				{
 					return sendQuestEndDialog(env);
+				}
 			}
 		}
 		return false;

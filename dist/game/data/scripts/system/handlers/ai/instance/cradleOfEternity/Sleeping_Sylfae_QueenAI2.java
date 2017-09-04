@@ -67,8 +67,10 @@ public class Sleeping_Sylfae_QueenAI2 extends GeneralNpcAI2
 			switch (getNpcId())
 			{
 				case 834039: // Sleeping Sylfae Queen.
+				{
 					effectController.removeEffect(21340); // Sylfae Queens Blessing.
 					break;
+				}
 			}
 		}
 		else if ((dialogId == 1011) && (questId != 0))

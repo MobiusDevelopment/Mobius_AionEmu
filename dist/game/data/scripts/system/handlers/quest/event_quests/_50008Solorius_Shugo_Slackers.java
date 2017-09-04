@@ -128,6 +128,7 @@ public class _50008Solorius_Shugo_Slackers extends QuestHandler
 		switch (targetId)
 		{
 			case 219290: // Lazy Shugo Couriers.
+			{
 				if (qs.getQuestVarById(0) < 2)
 				{
 					qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -135,6 +136,7 @@ public class _50008Solorius_Shugo_Slackers extends QuestHandler
 					return true;
 				}
 				break;
+			}
 		}
 		return false;
 	}

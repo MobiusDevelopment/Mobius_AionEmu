@@ -120,6 +120,7 @@ public class _28314What_Not_To_Forget_During_A_Mission extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 702656: // Balaur Spy Crystal.
+				{
 					if (qs.getQuestVarById(1) < 7)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -130,6 +131,7 @@ public class _28314What_Not_To_Forget_During_A_Mission extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -51,13 +51,16 @@ public class CM_READ_EXPRESS_MAIL extends AionClientPacket
 		switch (action)
 		{
 			case 0:
+			{
 				if (player.getPostman() != null)
 				{
 					player.getPostman().getController().onDelete();
 					player.setPostman(null);
 				}
 				break;
+			}
 			case 1:
+			{
 				if (player.getPostman() != null)
 				{
 					// An express courier has already arrived.
@@ -95,6 +98,7 @@ public class CM_READ_EXPRESS_MAIL extends AionClientPacket
 					player.getController().addTask(TaskId.EXPRESS_MAIL_USE, task);
 				}
 				break;
+			}
 		}
 	}
 }

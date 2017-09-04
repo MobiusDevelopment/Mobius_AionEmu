@@ -44,7 +44,6 @@ import com.aionemu.gameserver.skillengine.effect.AbnormalState;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -67,16 +66,12 @@ public class PadmarashkaCaveInstance extends GeneralInstanceHandler
 		super.onInstanceCreate(instance);
 		// You must defeat the protector within the time limit to wake Padmarashka from the Protective Slumber.
 		sendMsgByRace(1400711, Race.PC_ALL, 10000);
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player1 ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player1.isOnline())
 			{
-				if (player.isOnline())
-				{
-					startPadmarashkaTimer();
-					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 7200)); // 2Hrs.
-				}
+				startPadmarashkaTimer();
+				PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 7200)); // 2Hrs.
 			}
 		});
 	}
@@ -102,6 +97,7 @@ public class PadmarashkaCaveInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 218756: // Padmarashka.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -112,59 +108,92 @@ public class PadmarashkaCaveInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188052946, 1)); // Padmarashka's Raging Weapon Box.
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188052727, 1)); // Padmarashka's Weapon Chest.
 							break;
+						}
 					}
 					switch (Rnd.get(1, 14))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 100001640, 1)); // Padmarashka's Raging Sword Skin.
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 100101258, 1)); // Padmarashka's Raging Warhammer Skin.
 							break;
+						}
 						case 3:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 100201433, 1)); // Padmarashka's Raging Dagger Skin.
 							break;
+						}
 						case 4:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 100501248, 1)); // Padmarashka's Raging Jewel Skin.
 							break;
+						}
 						case 5:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 100601352, 1)); // Padmarashka's Raging Spellbook Skin.
 							break;
+						}
 						case 6:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 100901276, 1)); // Padmarashka's Raging Greatsword Skin.
 							break;
+						}
 						case 7:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 101301191, 1)); // Padmarashka's Raging Polearm Skin.
 							break;
+						}
 						case 8:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 101501280, 1)); // Padmarashka's Raging Staff Skin.
 							break;
+						}
 						case 9:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 101701299, 1)); // Padmarashka's Raging Longbow Skin.
 							break;
+						}
 						case 10:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 101801148, 1)); // Padmarashka's Raging Pistol Skin.
 							break;
+						}
 						case 11:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 101901059, 1)); // Padmarashka's Raging Aethercannon Skin.
 							break;
+						}
 						case 12:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 102001175, 1)); // Padmarashka's Raging Harp Skin.
 							break;
+						}
 						case 13:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 115001680, 1)); // Padmarashka's Raging Shield Skin.
 							break;
+						}
 						case 14:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 115001794, 1)); // Padmarashka's Raging Shield Skin.
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -175,24 +204,23 @@ public class PadmarashkaCaveInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 218756: // Padmarashka.
+			{
 				dramataTask.cancel(true);
 				// Padmarashka has died. You will be removed from Padmarashka's Cave in 30 minutes.
 				sendMsgByRace(1400675, Race.PC_ALL, 10000);
 				sendMsg("[Congratulation]: you finish <Padmarashka Cave>");
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 ->
 				{
-					@Override
-					public void visit(Player player)
+					if (player1.isOnline())
 					{
-						if (player.isOnline())
-						{
-							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 0));
-						}
+						PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 0));
 					}
 				});
 				break;
+			}
 			case 282613: // Padmarashka's Eggs.
 			case 282614: // Huge Padmarashka's Eggs.
+			{
 				dramataDramataEgg55++;
 				if (dramataDramataEgg55 == 2)
 				{
@@ -205,10 +233,12 @@ public class PadmarashkaCaveInstance extends GeneralInstanceHandler
 					sendMsgByRace(1401213, Race.PC_ALL, 0);
 				}
 				break;
+			}
 			case 218670: // Padmarashka's Elite Commander.
 			case 218671: // Padmarashka Sartip.
 			case 218673: // Padmarashka's Elite Captain.
 			case 218674: // Padmarashka's Chief Medic.
+			{
 				final Npc dramataDramata55Al = instance.getNpc(218756); // Padmarashka.
 				dramataDrakanFi55Ae++;
 				if (dramataDramata55Al != null)
@@ -231,6 +261,7 @@ public class PadmarashkaCaveInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -256,15 +287,11 @@ public class PadmarashkaCaveInstance extends GeneralInstanceHandler
 		sendMessage(1400514, 118 * 60 * 1000);
 		// You will be removed from Padmarashka's Cave in 1 minute.
 		sendMessage(1400515, 119 * 60 * 1000);
-		dramataTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+		dramataTask = ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// You have been forcibly removed from Padmarashka's Cave by Padmarashka's defensive magic.
-				sendMsgByRace(1400524, Race.PC_ALL, 0);
-				deleteNpc(218756); // Padmarashka.
-			}
+			// You have been forcibly removed from Padmarashka's Cave by Padmarashka's defensive magic.
+			sendMsgByRace(1400524, Race.PC_ALL, 0);
+			deleteNpc(218756); // Padmarashka.
 		}, 7200000);
 	}
 	
@@ -278,14 +305,7 @@ public class PadmarashkaCaveInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void sendMessage(int msgId, long delay)
@@ -296,37 +316,19 @@ public class PadmarashkaCaveInstance extends GeneralInstanceHandler
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					sendMsg(msgId);
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule(() -> sendMsg(msgId), delay);
 		}
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void sendMovie(Player player, int movie)

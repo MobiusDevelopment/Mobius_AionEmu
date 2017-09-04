@@ -57,7 +57,9 @@ public class Asmodian_Elite_Combat_MageAI2 extends NpcAI2
 				case 220576: // Asmodian Elite Combat Mage.
 				case 220578: // Asmodian Elite Combat Mage.
 				case 220580: // Asmodian Elite Combat Mage.
+				{
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

@@ -55,9 +55,11 @@ public class Central_Lab_EntranceAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 702339: // Central Lab Entrance.
+			{
 				switch (player.getWorldId())
 				{
 					case 301270000: // Linkgate Foundry 4.7
+					{
 						if ((dialogId == 20007) && player.getInventory().decreaseByItemId(185000196, 1))
 						{
 							startWoundedBelsagos();
@@ -80,8 +82,10 @@ public class Central_Lab_EntranceAI2 extends NpcAI2
 							TeleportService2.teleportTo(player, 301270000, instanceId, 212.77286f, 259.47467f, 313.61807f, (byte) 1);
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return true;
 	}

@@ -84,11 +84,15 @@ public class _29032MasterAlchemistsPotential extends QuestHandler
 			switch (targetId)
 			{
 				case 204103:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							return sendQuestDialog(env, 1011);
+						}
 						case STEP_TO_10:
+						{
 							if (!giveQuestItem(env, 152207149, 1))
 							{
 								return true;
@@ -101,7 +105,9 @@ public class _29032MasterAlchemistsPotential extends QuestHandler
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 						case STEP_TO_20:
+						{
 							if (!giveQuestItem(env, 152207150, 1))
 							{
 								return true;
@@ -114,11 +120,16 @@ public class _29032MasterAlchemistsPotential extends QuestHandler
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
+					break;
+				}
 				case 204102:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							final long itemCount1 = player.getInventory().getItemCountByItemId(182207902);
 							if (itemCount1 > 0)
 							{
@@ -131,7 +142,10 @@ public class _29032MasterAlchemistsPotential extends QuestHandler
 							{
 								return sendQuestDialog(env, 10001);
 							}
+						}
 					}
+					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

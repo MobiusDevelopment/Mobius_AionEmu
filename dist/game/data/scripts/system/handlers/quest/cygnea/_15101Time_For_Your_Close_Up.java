@@ -129,6 +129,7 @@ public class _15101Time_For_Your_Close_Up extends QuestHandler
 			{
 				case 235939:
 				case 235940:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -139,6 +140,7 @@ public class _15101Time_For_Your_Close_Up extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

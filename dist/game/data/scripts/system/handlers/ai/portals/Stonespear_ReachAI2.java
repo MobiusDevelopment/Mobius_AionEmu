@@ -67,9 +67,11 @@ public class Stonespear_ReachAI2 extends NpcAI2
 				case 833044: // Stonespear Reach Elyos [Asmodians]
 				case 833045: // Stonespear Reach Elyos [Elyos]
 				case 833046: // Stonespear Reach Elyos [Asmodians]
+				{
 					// To Do...
 					PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "This feature dont exist yet!!!", ChatType.BRIGHT_YELLOW_CENTER), true);
 					break;
+				}
 			}
 		}
 		return true;

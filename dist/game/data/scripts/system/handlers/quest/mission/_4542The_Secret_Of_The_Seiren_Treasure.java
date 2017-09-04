@@ -61,10 +61,14 @@ public class _4542The_Secret_Of_The_Seiren_Treasure extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 4762);
+					}
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						giveQuestItem(env, 182215327, 1);
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -74,9 +78,11 @@ public class _4542The_Secret_Of_The_Seiren_Treasure extends QuestHandler
 			switch (targetId)
 			{
 				case 204743:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
@@ -85,22 +91,29 @@ public class _4542The_Secret_Of_The_Seiren_Treasure extends QuestHandler
 							{
 								return sendQuestDialog(env, 3057);
 							}
+						}
 						case STEP_TO_1:
+						{
 							if (var == 0)
 							{
 								giveQuestItem(env, 182215328, 1);
 								removeQuestItem(env, 182215327, 1);
 								return defaultCloseDialog(env, 0, 1);
 							}
+						}
 						case STEP_TO_3:
+						{
 							return defaultCloseDialog(env, 2, 3);
+						}
 						case SELECT_REWARD:
 						{
 							removeQuestItem(env, 182215330, 1);
 							return defaultCloseDialog(env, 6, 6, true, true);
 						}
 						case SELECT_ACTION_3143:
+						{
 							return sendQuestDialog(env, 3143);
+						}
 						case STEP_TO_7:
 						{
 							playQuestMovie(env, 239);
@@ -109,10 +122,13 @@ public class _4542The_Secret_Of_The_Seiren_Treasure extends QuestHandler
 						}
 					}
 					break;
+				}
 				case 204768:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
@@ -121,19 +137,27 @@ public class _4542The_Secret_Of_The_Seiren_Treasure extends QuestHandler
 							{
 								return sendQuestDialog(env, 2716);
 							}
+						}
 						case STEP_TO_2:
+						{
 							removeQuestItem(env, 182215328, 1);
 							playQuestMovie(env, 239);
 							return defaultCloseDialog(env, 1, 2);
+						}
 						case SELECT_REWARD:
+						{
 							removeQuestItem(env, 182215330, 1);
 							return defaultCloseDialog(env, 5, 5, true, false);
+						}
 					}
 					break;
+				}
 				case 204808:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 2)
 							{
 								return sendQuestDialog(env, 1693);
@@ -146,17 +170,26 @@ public class _4542The_Secret_Of_The_Seiren_Treasure extends QuestHandler
 							{
 								return sendQuestDialog(env, 2376);
 							}
+						}
 						case STEP_TO_3:
+						{
 							if (var == 2)
 							{
 								playQuestMovie(env, 240);
 								return defaultCloseDialog(env, 2, 3);
 							}
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							return checkQuestItems(env, 3, 4, false, 10000, 10001);
+						}
 						case STEP_TO_5:
+						{
 							return defaultCloseDialog(env, 4, 5, false, false, 182215330, 1, 0, 0);
+						}
 					}
+					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

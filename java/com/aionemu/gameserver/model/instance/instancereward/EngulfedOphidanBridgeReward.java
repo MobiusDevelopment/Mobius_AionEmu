@@ -224,11 +224,15 @@ public class EngulfedOphidanBridgeReward extends InstanceReward<EngulfedOphidanB
 				switch (player.getWorldId())
 				{
 					case 301210000: // Engulfed Ophidan Bridge 4.7
+					{
 						PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(type, getTime(), getInstanceReward(), object));
 						break;
+					}
 					case 301670000: // Ophidan Warpath 5.1
+					{
 						PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(type, getTime2(), getInstanceReward(), object));
 						break;
+					}
 				}
 			}
 		});

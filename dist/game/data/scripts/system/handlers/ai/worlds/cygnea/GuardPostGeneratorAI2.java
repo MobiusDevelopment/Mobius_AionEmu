@@ -62,6 +62,7 @@ public class GuardPostGeneratorAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 230413: // Guard Post Generator.
+			{
 				final SpawnTemplate deviceBroken1 = SpawnEngine.addNewSingleTimeSpawn(210070000, 230417, 1513.6941f, 2400.3616f, 190.09221f, (byte) 0);
 				deviceBroken1.setEntityId(951);
 				objects.put(230417, SpawnEngine.spawnObject(deviceBroken1, 1));
@@ -78,7 +79,9 @@ public class GuardPostGeneratorAI2 extends NpcAI2
 					}
 				}, 300000); // 5 Minutes.
 				break;
+			}
 			case 230416: // Guard Post Generator.
+			{
 				final SpawnTemplate deviceBroken3 = SpawnEngine.addNewSingleTimeSpawn(210070000, 230417, 1755.8412f, 1714.2434f, 199.66138f, (byte) 0);
 				deviceBroken3.setEntityId(1192);
 				objects.put(230417, SpawnEngine.spawnObject(deviceBroken3, 1));
@@ -95,6 +98,7 @@ public class GuardPostGeneratorAI2 extends NpcAI2
 					}
 				}, 300000); // 5 Minutes.
 				break;
+			}
 		}
 	}
 	

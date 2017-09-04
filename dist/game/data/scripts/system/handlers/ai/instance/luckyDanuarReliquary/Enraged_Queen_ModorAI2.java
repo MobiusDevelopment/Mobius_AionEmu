@@ -101,53 +101,85 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 				switch (percent)
 				{
 					case 90:
+					{
 						Teleport();
 						break;
+					}
 					case 85:
+					{
 						VengefullOrbEvent();
 						break;
+					}
 					case 75:
+					{
 						Teleport2();
 						break;
+					}
 					case 70:
+					{
 						VengefullOrbEvent();
 						break;
+					}
 					case 65:
+					{
 						Teleport3();
 						break;
+					}
 					case 60:
+					{
 						VengefullOrbEvent();
 						break;
+					}
 					case 50:
+					{
 						skillfear();
 						break;
+					}
 					case 45:
+					{
 						VengefullOrbEvent();
 						break;
+					}
 					case 40:
+					{
 						Teleport4();
 						break;
+					}
 					case 35:
+					{
 						VengefullOrbEvent();
 						break;
+					}
 					case 30:
+					{
 						Teleport5();
 						break;
+					}
 					case 25:
+					{
 						VengefullOrbEvent();
 						break;
+					}
 					case 20:
+					{
 						Teleport6();
 						break;
+					}
 					case 15:
+					{
 						VengefullOrbEvent();
 						break;
+					}
 					case 10:
+					{
 						Teleport7();
 						break;
+					}
 					case 5:
+					{
 						Teleport8();
 						break;
+					}
 				}
 				percents.remove(percent);
 				break;
@@ -187,14 +219,18 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				AI2Actions.targetSelf(Enraged_Queen_ModorAI2.this);
 				SkillEngine.getInstance().getSkill(getOwner(), 21171, 60, getOwner()).useNoAnimationSkill();
 				break;
+			}
 			case 2:
+			{
 				sendMsg(1500745);
 				AI2Actions.targetSelf(Enraged_Queen_ModorAI2.this);
 				SkillEngine.getInstance().getSkill(getOwner(), 21176, 60, getOwner()).useNoAnimationSkill();
 				break;
+			}
 		}
 	}
 	

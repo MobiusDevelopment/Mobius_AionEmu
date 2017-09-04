@@ -63,7 +63,9 @@ public class _21298Enhancing_The_Gun extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

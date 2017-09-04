@@ -178,10 +178,13 @@ public class AntiHackService
 		switch (SecurityConfig.PUNISH)
 		{
 			case 1:
+			{
 				AuditLogger.info(player, message);
 				moveBack(player, x, y, type, pkt);
 				return false;
+			}
 			case 2:
+			{
 				AuditLogger.info(player, message);
 				moveBack(player, x, y, type, pkt);
 				if ((player.speedHackCounter > (SecurityConfig.SPEEDHACK_COUNTER * 3)) || (player.abnormalHackCounter > (SecurityConfig.ABNORMAL_COUNTER * 3)))
@@ -189,13 +192,18 @@ public class AntiHackService
 					player.getClientConnection().close(new SM_QUIT_RESPONSE(), false);
 				}
 				return false;
+			}
 			case 3:
+			{
 				AuditLogger.info(player, message);
 				player.getClientConnection().close(new SM_QUIT_RESPONSE(), false);
 				return false;
+			}
 			default:
+			{
 				AuditLogger.info(player, message);
 				return false;
+			}
 		}
 	}
 	

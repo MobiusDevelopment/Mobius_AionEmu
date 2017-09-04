@@ -54,6 +54,7 @@ public class Emperor_AdmirerAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 831112: // Emperor's Admirer.
+				{
 					startTombWaveC1();
 					// Pillagers incoming. Guard the Emperor's Monument!
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401584));
@@ -61,6 +62,7 @@ public class Emperor_AdmirerAI2 extends NpcAI2
 					spawn(831250, 452.92874f, 85.73192f, 214.3359f, (byte) 75); // Imperial Obelisk.
 					spawn(831251, 435.34854f, 120.64044f, 214.336f, (byte) 62); // Imperial Obelisk.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

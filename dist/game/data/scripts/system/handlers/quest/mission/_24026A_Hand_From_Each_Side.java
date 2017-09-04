@@ -130,14 +130,18 @@ public class _24026A_Hand_From_Each_Side extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
+						}
 						case STEP_TO_1:
+						{
 							giveQuestItem(env, 182215371, 1);
 							TeleportService2.teleportTo(player, 220020000, 2795.9f, 478.37f, 265.86f, (byte) 51, TeleportAnimation.BEAM_ANIMATION);
 							return defaultCloseDialog(env, 0, 1);
+						}
 					}
 					break;
 				}
@@ -146,14 +150,18 @@ public class _24026A_Hand_From_Each_Side extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_2:
+						{
 							giveQuestItem(env, 182215372, 1);
 							TeleportService2.teleportTo(player, 220020000, 3025.54f, 868.31f, 363.22f, (byte) 14, TeleportAnimation.BEAM_ANIMATION);
 							return defaultCloseDialog(env, 1, 2);
+						}
 					}
 					break;
 				}

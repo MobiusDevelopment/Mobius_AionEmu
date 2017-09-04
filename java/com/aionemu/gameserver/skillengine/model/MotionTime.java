@@ -124,17 +124,21 @@ public class MotionTime
 		switch (race)
 		{
 			case ASMODIANS:
+			{
 				if (gender == Gender.MALE)
 				{
 					return getAm();
 				}
 				return getAf();
+			}
 			case ELYOS:
+			{
 				if (gender == Gender.MALE)
 				{
 					return getEm();
 				}
 				return getEf();
+			}
 		}
 		return null;
 	}
@@ -144,17 +148,21 @@ public class MotionTime
 		switch (race)
 		{
 			case ASMODIANS:
+			{
 				if (gender == Gender.MALE)
 				{
 					return getAm().getTimeForWeapon(weapon);
 				}
 				return getAf().getTimeForWeapon(weapon);
+			}
 			case ELYOS:
+			{
 				if (gender == Gender.MALE)
 				{
 					return getEm().getTimeForWeapon(weapon);
 				}
 				return getEf().getTimeForWeapon(weapon);
+			}
 		}
 		return 0;
 	}

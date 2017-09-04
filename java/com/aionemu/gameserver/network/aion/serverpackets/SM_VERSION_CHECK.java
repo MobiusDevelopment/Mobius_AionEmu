@@ -131,20 +131,30 @@ public class SM_VERSION_CHECK extends AionServerPacket
 		switch (EventsConfig.ENABLE_DECOR)
 		{
 			case 1:
+			{
 				writeC(0x01); // Christmast.
 				break;
+			}
 			case 2:
+			{
 				writeC(0x02); // Halloween.
 				break;
+			}
 			case 3:
+			{
 				writeC(0x08); // Brax Cafe.
 				break;
+			}
 			case 4:
+			{
 				writeC(0x04); // Valentine.
 				break;
+			}
 			default:
+			{
 				writeC(EventsConfig.ENABLE_DECOR);
 				break;
+			}
 		}
 		if (GSConfig.SERVER_COUNTRY_CODE == 1)
 		{

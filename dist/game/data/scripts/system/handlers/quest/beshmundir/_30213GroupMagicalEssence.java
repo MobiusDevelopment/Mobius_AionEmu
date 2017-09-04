@@ -109,7 +109,9 @@ public class _30213GroupMagicalEssence extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

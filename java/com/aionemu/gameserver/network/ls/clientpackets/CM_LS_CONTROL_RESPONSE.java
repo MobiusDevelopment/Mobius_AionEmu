@@ -63,6 +63,7 @@ public class CM_LS_CONTROL_RESPONSE extends LsClientPacket
 		switch (type)
 		{
 			case 1:
+			{
 				if (!result)
 				{
 					if (admin != null)
@@ -82,7 +83,9 @@ public class CM_LS_CONTROL_RESPONSE extends LsClientPacket
 					}
 				}
 				break;
+			}
 			case 2:
+			{
 				if (!result)
 				{
 					if (admin != null)
@@ -103,6 +106,7 @@ public class CM_LS_CONTROL_RESPONSE extends LsClientPacket
 					}
 				}
 				break;
+			}
 		}
 	}
 }

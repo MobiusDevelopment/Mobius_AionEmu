@@ -40,23 +40,35 @@ public class Defeat_MonumentAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 883944: // Ide Cannon Tumon 1 Defeat Monument <10,000 Points>
+			{
 				updateDefeatLanding1(19);
 				break;
+			}
 			case 883945: // Ide Cannon Tumon 2 Defeat Monument <10,000 Points>
+			{
 				updateDefeatLanding1(20);
 				break;
+			}
 			case 883946: // Artillery Tumon 1 Defeat Monument <10,000 Points>
+			{
 				updateDefeatLanding1(21);
 				break;
+			}
 			case 883947: // Artillery Tumon 1 Defeat Monument <10,000 Points>
+			{
 				updateDefeatLanding1(22);
 				break;
+			}
 			case 883948: // Wurg The Glacier Defeat Monument <15,000 Points>
+			{
 				updateDefeatLanding2(23);
 				break;
+			}
 			case 883949: // Terracrusher Defeat Monument <15,000 Points>
+			{
 				updateDefeatLanding2(24);
 				break;
+			}
 		}
 		super.handleDied();
 		AI2Actions.deleteOwner(this);

@@ -120,6 +120,7 @@ public class _15203Dangerous_Wildlife extends QuestHandler
 				switch (targetId)
 				{
 					case 235829:
+					{
 						if (var1 < 4)
 						{
 							return defaultOnKillEvent(env, 235829, 0, 4, 1);
@@ -139,7 +140,9 @@ public class _15203Dangerous_Wildlife extends QuestHandler
 							}
 						}
 						break;
+					}
 					case 235831:
+					{
 						if (var2 < 2)
 						{
 							return defaultOnKillEvent(env, 235831, 0, 2, 2);
@@ -159,7 +162,9 @@ public class _15203Dangerous_Wildlife extends QuestHandler
 							}
 						}
 						break;
+					}
 					case 235851:
+					{
 						if (var3 < 1)
 						{
 							return defaultOnKillEvent(env, 235851, 0, 1, 3);
@@ -179,6 +184,7 @@ public class _15203Dangerous_Wildlife extends QuestHandler
 							}
 						}
 						break;
+					}
 				}
 			}
 		}

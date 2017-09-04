@@ -46,16 +46,22 @@ public class OpenedVaultDoorAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 832924: // Opened Vault Door.
+				{
 					switch (player.getWorldId())
 					{
 						case 301400000: // The Shugo Emperor's Vault.
+						{
 							TeleportService2.teleportTo(player, 301400000, instanceId, 426.50177f, 694.3207f, 398.42203f, (byte) 44);
 							break;
+						}
 						case 301590000: // Emperor Trillirunerk's Safe.
+						{
 							TeleportService2.teleportTo(player, 301590000, instanceId, 426.50177f, 694.3207f, 398.42203f, (byte) 44);
 							break;
+						}
 					}
 					break;
+				}
 			}
 		}
 		return true;

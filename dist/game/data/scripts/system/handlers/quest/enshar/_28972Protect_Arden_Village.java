@@ -114,6 +114,7 @@ public class _28972Protect_Arden_Village extends QuestHandler
 			{
 				case 219686:
 				case 219687:
+				{
 					if (qs.getQuestVarById(1) < 6)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -124,6 +125,7 @@ public class _28972Protect_Arden_Village extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -71,12 +71,15 @@ public class CM_CHARACTER_PASSKEY extends AionClientPacket
 		switch (type)
 		{
 			case 0:
+			{
 				chaPasskey.setIsPass(false);
 				chaPasskey.setWrongCount(0);
 				DAOManager.getDAO(PlayerPasskeyDAO.class).insertPlayerPasskey(client.getAccount().getId(), passkey);
 				client.sendPacket(new SM_CHARACTER_SELECT(2, type, chaPasskey.getWrongCount()));
 				break;
+			}
 			case 2:
+			{
 				final boolean isSuccess = DAOManager.getDAO(PlayerPasskeyDAO.class).updatePlayerPasskey(client.getAccount().getId(), passkey, newPasskey);
 				chaPasskey.setIsPass(false);
 				if (isSuccess)
@@ -91,7 +94,9 @@ public class CM_CHARACTER_PASSKEY extends AionClientPacket
 					client.sendPacket(new SM_CHARACTER_SELECT(2, type, chaPasskey.getWrongCount()));
 				}
 				break;
+			}
 			case 3:
+			{
 				final boolean isPass = DAOManager.getDAO(PlayerPasskeyDAO.class).checkPlayerPasskey(client.getAccount().getId(), passkey);
 				if (isPass)
 				{
@@ -117,6 +122,7 @@ public class CM_CHARACTER_PASSKEY extends AionClientPacket
 					client.sendPacket(new SM_CHARACTER_SELECT(2, type, chaPasskey.getWrongCount()));
 				}
 				break;
+			}
 		}
 	}
 	

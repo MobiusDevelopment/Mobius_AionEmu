@@ -42,19 +42,27 @@ public class Redemption_LightAI2 extends NpcAI2
 			case 883912: // Redemption's Light <6,000 Points>
 			case 883913: // Redemption's Light <6,000 Points>
 			case 883914: // Redemption's Light <6,000 Points>
+			{
 				updateRedemptionLanding1();
 				break;
+			}
 			case 883915: // Redemption's Light <10,000 Points>
 			case 883916: // Redemption's Light <10,000 Points>
+			{
 				updateRedemptionLanding2();
 				break;
+			}
 			case 883917: // Redemption's Light <16,000 Points>
 			case 883918: // Redemption's Light <16,000 Points>
+			{
 				updateRedemptionLanding3();
 				break;
+			}
 			case 883919: // Redemption's Light <30,000 Points>
+			{
 				updateRedemptionLanding4();
 				break;
+			}
 		}
 		super.handleDied();
 		AI2Actions.deleteOwner(this);

@@ -117,6 +117,7 @@ public class _13767Southern_Brawlers extends QuestHandler
 			{
 				case 235362:
 				case 235363:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _13767Southern_Brawlers extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

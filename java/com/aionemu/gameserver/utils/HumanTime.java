@@ -54,8 +54,10 @@ public class HumanTime implements Externalizable, Comparable<HumanTime>, Cloneab
 			case '7':
 			case '8':
 			case '9':
+			{
 				out = State.NUMBER;
 				break;
+			}
 			case 's':
 			case 'm':
 			case 'h':
@@ -66,10 +68,14 @@ public class HumanTime implements Externalizable, Comparable<HumanTime>, Cloneab
 			case 'H':
 			case 'D':
 			case 'Y':
+			{
 				out = State.UNIT;
 				break;
+			}
 			default:
+			{
 				out = State.IGNORED;
+			}
 		}
 		return out;
 	}

@@ -255,19 +255,33 @@ public class CraftService
 		switch (skillId)
 		{
 			case 40001: // Cooking.
+			{
 				return 169401081;
+			}
 			case 40002: // Weaponsmithing.
+			{
 				return 169401076;
+			}
 			case 40003: // Armorsmithing.
+			{
 				return 169401077;
+			}
 			case 40004: // Tailoring.
+			{
 				return 169401078;
+			}
 			case 40007: // Alchemy.
+			{
 				return 169401080;
+			}
 			case 40008: // Handicrafting.
+			{
 				return 169401079;
+			}
 			case 40010: // Menuisier.
+			{
 				return 169401082;
+			}
 		}
 		return 0;
 	}

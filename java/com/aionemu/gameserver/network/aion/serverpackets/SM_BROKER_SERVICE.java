@@ -123,26 +123,40 @@ public class SM_BROKER_SERVICE extends AionServerPacket
 		switch (type)
 		{
 			case SEARCHED_ITEMS:
+			{
 				writeSearchedItems();
 				break;
+			}
 			case REGISTERED_ITEMS:
+			{
 				writeRegisteredItems();
 				break;
+			}
 			case REGISTER_ITEM:
+			{
 				writeRegisterItem();
 				break;
+			}
 			case SHOW_SETTLED_ICON:
+			{
 				writeShowSettledIcon();
 				break;
+			}
 			case REMOVE_SETTLED_ICON:
+			{
 				writeRemoveSettledIcon();
 				break;
+			}
 			case SETTLED_ITEMS:
+			{
 				writeShowSettledItems();
 				break;
+			}
 			case AVE_LOW_HIGH_ITEM:
+			{
 				writeItemAveLowHigh();
 				break;
+			}
 		}
 	}
 	

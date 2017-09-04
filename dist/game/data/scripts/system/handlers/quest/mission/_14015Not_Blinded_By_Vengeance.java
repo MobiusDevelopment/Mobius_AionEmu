@@ -78,11 +78,14 @@ public class _14015Not_Blinded_By_Vengeance extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1011);
 					}
+				}
 				case CHECK_COLLECTED_ITEMS:
+				{
 					if (QuestService.collectItemCheck(env, true))
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -94,6 +97,7 @@ public class _14015Not_Blinded_By_Vengeance extends QuestHandler
 					{
 						return sendQuestDialog(env, 1097);
 					}
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

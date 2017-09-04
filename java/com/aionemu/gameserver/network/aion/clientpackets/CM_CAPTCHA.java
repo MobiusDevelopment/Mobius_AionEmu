@@ -60,12 +60,16 @@ public class CM_CAPTCHA extends AionClientPacket
 		switch (type)
 		{
 			case 0x02:
+			{
 				count = readC();
 				word = readS();
 				break;
+			}
 			default:
+			{
 				log.warn("Unknown CAPTCHA packet type? 0x" + Integer.toHexString(type).toUpperCase());
 				break;
+			}
 		}
 	}
 	
@@ -77,20 +81,18 @@ public class CM_CAPTCHA extends AionClientPacket
 		switch (type)
 		{
 			case 0x02:
+			{
 				if (player.getCaptchaWord().equalsIgnoreCase(word))
 				{
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400270));
 					PacketSendUtility.sendPacket(player, new SM_CAPTCHA(true, 0));
-					
 					PunishmentService.setIsNotGatherable(player, 0, false, 0);
-					
 					// fp bonus (like retail)
 					player.getLifeStats().increaseFp(TYPE.FP, SecurityConfig.CAPTCHA_BONUS_FP_TIME);
 				}
 				else
 				{
 					final int banTime = SecurityConfig.CAPTCHA_EXTRACTION_BAN_TIME + (SecurityConfig.CAPTCHA_EXTRACTION_BAN_ADD_TIME * count);
-					
 					if (count < 3)
 					{
 						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400271, 3 - count));
@@ -104,6 +106,7 @@ public class CM_CAPTCHA extends AionClientPacket
 					}
 				}
 				break;
+			}
 		}
 	}
 }

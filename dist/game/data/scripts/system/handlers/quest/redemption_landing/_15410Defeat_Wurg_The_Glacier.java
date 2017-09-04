@@ -111,6 +111,7 @@ public class _15410Defeat_Wurg_The_Glacier extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 883659:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -121,6 +122,7 @@ public class _15410Defeat_Wurg_The_Glacier extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

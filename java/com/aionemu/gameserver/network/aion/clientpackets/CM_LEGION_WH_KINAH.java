@@ -61,6 +61,7 @@ public class CM_LEGION_WH_KINAH extends AionClientPacket
 			switch (operation)
 			{
 				case 0:
+				{
 					if (!LM.hasRights(LegionPermissionsMask.WH_DEPOSIT))
 					{
 						// You do not have the authority to use the Legion warehouse.
@@ -73,7 +74,9 @@ public class CM_LEGION_WH_KINAH extends AionClientPacket
 						LegionService.getInstance().addHistory(legion, activePlayer.getName(), LegionHistoryType.KINAH_WITHDRAW, 2, Long.toString(amount));
 					}
 					break;
+				}
 				case 1:
+				{
 					if (!LM.hasRights(LegionPermissionsMask.WH_WITHDRAWAL))
 					{
 						// You do not have the authority to use the Legion warehouse.
@@ -86,6 +89,7 @@ public class CM_LEGION_WH_KINAH extends AionClientPacket
 						LegionService.getInstance().addHistory(legion, activePlayer.getName(), LegionHistoryType.KINAH_DEPOSIT, 2, Long.toString(amount));
 					}
 					break;
+				}
 			}
 		}
 	}

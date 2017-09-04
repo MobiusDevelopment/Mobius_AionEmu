@@ -117,6 +117,7 @@ public class _23767Excitement_In_The_North extends QuestHandler
 			{
 				case 235350:
 				case 235351:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _23767Excitement_In_The_North extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

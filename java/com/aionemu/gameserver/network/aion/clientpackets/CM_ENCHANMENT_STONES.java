@@ -66,23 +66,31 @@ public class CM_ENCHANMENT_STONES extends AionClientPacket
 		{
 			case 1:
 			case 2:
+			{
 				stoneUniqueId = readD();
 				supplementUniqueId = readD();
 				break;
+			}
 			case 3:
+			{
 				slotNum = readC();
 				readC();
 				readH();
 				npcObjId = readD();
 				break;
+			}
 			case 4:
+			{
 				stoneUniqueId = readD();
 				unk = readD();
 				break;
+			}
 			case 8:
+			{
 				toppedItemObjId = readD();
 				stoneUniqueId = readD();
 				break;
+			}
 		}
 	}
 	
@@ -95,6 +103,7 @@ public class CM_ENCHANMENT_STONES extends AionClientPacket
 		{
 			case 1: // Enchant Stone.
 			case 2: // Add Manastone.
+			{
 				final EnchantItemAction action = new EnchantItemAction();
 				final Item manastone = player.getInventory().getItemByObjId(stoneUniqueId);
 				final Item targetStone = player.getInventory().getItemByObjId(targetItemUniqueId);
@@ -125,7 +134,9 @@ public class CM_ENCHANMENT_STONES extends AionClientPacket
 					}
 				}
 				break;
+			}
 			case 3: // Remove Manastone.
+			{
 				final long price = PricesService.getPriceForService(500, player.getRace());
 				if (player.getInventory().getKinah() < price)
 				{
@@ -145,12 +156,17 @@ public class CM_ENCHANMENT_STONES extends AionClientPacket
 					}
 				}
 				break;
+			}
 			case 4: // Godstone Socket.
+			{
 				ItemSocketService.socketGodstone(player, targetItemUniqueId, stoneUniqueId);
 				break;
+			}
 			case 8: // Amplification.
+			{
 				ItemSocketService.amplification(player, targetItemUniqueId, toppedItemObjId, stoneUniqueId);
 				break;
+			}
 		}
 	}
 }

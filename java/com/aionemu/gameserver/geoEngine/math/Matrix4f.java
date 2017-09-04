@@ -192,53 +192,97 @@ public final class Matrix4f implements Cloneable
 		switch (i)
 		{
 			case 0:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						return m00;
+					}
 					case 1:
+					{
 						return m01;
+					}
 					case 2:
+					{
 						return m02;
+					}
 					case 3:
+					{
 						return m03;
+					}
 				}
+				break;
+			}
 			case 1:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						return m10;
+					}
 					case 1:
+					{
 						return m11;
+					}
 					case 2:
+					{
 						return m12;
+					}
 					case 3:
+					{
 						return m13;
+					}
 				}
+				break;
+			}
 			case 2:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						return m20;
+					}
 					case 1:
+					{
 						return m21;
+					}
 					case 2:
+					{
 						return m22;
+					}
 					case 3:
+					{
 						return m23;
+					}
 				}
+				break;
+			}
 			case 3:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						return m30;
+					}
 					case 1:
+					{
 						return m31;
+					}
 					case 2:
+					{
 						return m32;
+					}
 					case 3:
+					{
 						return m33;
+					}
 				}
+				break;
+			}
 		}
 		
 		logger.warning("Invalid matrix index.");
@@ -270,32 +314,42 @@ public final class Matrix4f implements Cloneable
 		switch (i)
 		{
 			case 0:
+			{
 				store[0] = m00;
 				store[1] = m10;
 				store[2] = m20;
 				store[3] = m30;
 				break;
+			}
 			case 1:
+			{
 				store[0] = m01;
 				store[1] = m11;
 				store[2] = m21;
 				store[3] = m31;
 				break;
+			}
 			case 2:
+			{
 				store[0] = m02;
 				store[1] = m12;
 				store[2] = m22;
 				store[3] = m32;
 				break;
+			}
 			case 3:
+			{
 				store[0] = m03;
 				store[1] = m13;
 				store[2] = m23;
 				store[3] = m33;
 				break;
+			}
 			default:
+			{
 				logger.warning("Invalid column index.");
 				throw new IllegalArgumentException("Invalid column index. " + i);
+			}
 		}
 		return store;
 	}
@@ -316,32 +370,42 @@ public final class Matrix4f implements Cloneable
 		switch (i)
 		{
 			case 0:
+			{
 				m00 = column[0];
 				m10 = column[1];
 				m20 = column[2];
 				m30 = column[3];
 				break;
+			}
 			case 1:
+			{
 				m01 = column[0];
 				m11 = column[1];
 				m21 = column[2];
 				m31 = column[3];
 				break;
+			}
 			case 2:
+			{
 				m02 = column[0];
 				m12 = column[1];
 				m22 = column[2];
 				m32 = column[3];
 				break;
+			}
 			case 3:
+			{
 				m03 = column[0];
 				m13 = column[1];
 				m23 = column[2];
 				m33 = column[3];
 				break;
+			}
 			default:
+			{
 				logger.warning("Invalid column index.");
 				throw new IllegalArgumentException("Invalid column index. " + i);
+			}
 		}
 	}
 	
@@ -356,69 +420,113 @@ public final class Matrix4f implements Cloneable
 		switch (i)
 		{
 			case 0:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						m00 = value;
 						return;
+					}
 					case 1:
+					{
 						m01 = value;
 						return;
+					}
 					case 2:
+					{
 						m02 = value;
 						return;
+					}
 					case 3:
+					{
 						m03 = value;
 						return;
+					}
 				}
+				break;
+			}
 			case 1:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						m10 = value;
 						return;
+					}
 					case 1:
+					{
 						m11 = value;
 						return;
+					}
 					case 2:
+					{
 						m12 = value;
 						return;
+					}
 					case 3:
+					{
 						m13 = value;
 						return;
+					}
 				}
+				break;
+			}
 			case 2:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						m20 = value;
 						return;
+					}
 					case 1:
+					{
 						m21 = value;
 						return;
+					}
 					case 2:
+					{
 						m22 = value;
 						return;
+					}
 					case 3:
+					{
 						m23 = value;
 						return;
+					}
 				}
+				break;
+			}
 			case 3:
+			{
 				switch (j)
 				{
 					case 0:
+					{
 						m30 = value;
 						return;
+					}
 					case 1:
+					{
 						m31 = value;
 						return;
+					}
 					case 2:
+					{
 						m32 = value;
 						return;
+					}
 					case 3:
+					{
 						m33 = value;
 						return;
+					}
 				}
+				break;
+			}
 		}
 		
 		logger.warning("Invalid matrix index.");

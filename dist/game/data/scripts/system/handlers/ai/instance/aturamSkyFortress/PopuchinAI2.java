@@ -155,9 +155,13 @@ public class PopuchinAI2 extends AggressiveNpcAI2
 		switch (question)
 		{
 			case CAN_RESIST_ABNORMAL:
+			{
 				return AIAnswers.POSITIVE;
+			}
 			default:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 		}
 	}
 	

@@ -104,18 +104,26 @@ public class Advance_Corridor_ReturnAI2 extends NpcAI2
 						{
 							case 730961: // Panesterra To Kaisinel Academy.
 							case 730963: // Panesterra To Kaisinel Academy.
+							{
 								TeleportService2.teleportTo(responder, 110070000, 503.6976f, 376.76648f, 126.78958f, (byte) 32);
 								break;
+							}
 							case 730962: // Panesterra To Marchutan Priory.
 							case 730964: // Panesterra To Marchutan Priory.
+							{
 								TeleportService2.teleportTo(responder, 120080000, 428.67438f, 250.68222f, 93.129425f, (byte) 59);
 								break;
+							}
 							case 730965: // Panesterra To Sanctum.
+							{
 								TeleportService2.teleportTo(responder, 110010000, 1542.8284f, 1529.326f, 565.9319f, (byte) 105);
 								break;
+							}
 							case 730966: // Panesterra To Pandaemonium.
+							{
 								TeleportService2.teleportTo(responder, 120010000, 1222.1316f, 1360.4116f, 208.125f, (byte) 55);
 								break;
+							}
 						}
 						decisionTaken = true;
 					}

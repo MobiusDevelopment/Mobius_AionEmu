@@ -333,14 +333,20 @@ public class _1006Ascension extends QuestHandler
 				switch (var)
 				{
 					case 51:
+					{
 						mobs.add((Npc) QuestService.addNewSpawn(310010000, instanceId, 211042, (float) 233.5, (float) 241.04, (float) 206.365, (byte) 0));
 						break;
+					}
 					case 52:
+					{
 						mobs.add((Npc) QuestService.addNewSpawn(310010000, instanceId, 211042, (float) 229.6, (float) 265.7, (float) 205.7, (byte) 0));
 						break;
+					}
 					case 53:
+					{
 						mobs.add((Npc) QuestService.addNewSpawn(310010000, instanceId, 211042, (float) 222.8, (float) 262.5, (float) 205.7, (byte) 0));
 						break;
+					}
 				}
 				return defaultOnKillEvent(env, 211042, 51, 54);
 			}

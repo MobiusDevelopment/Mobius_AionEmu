@@ -122,6 +122,7 @@ public class _28997Kroban_Who_Occupies_The_Artifact extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 243684: // 아티팩트를 지배하는 크로반.
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -132,6 +133,7 @@ public class _28997Kroban_Who_Occupies_The_Artifact extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -56,8 +56,10 @@ public class Internal_Teleport_DeviceAI2 extends NpcAI2
 			{
 				case 731583: // Internal Teleport Device E.
 				case 731584: // Internal Teleport Device A.
+				{
 					TeleportService2.teleportTo(player, 300480000, instanceId, 146.07611f, 186.12431f, 240.29831f, (byte) 115);
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

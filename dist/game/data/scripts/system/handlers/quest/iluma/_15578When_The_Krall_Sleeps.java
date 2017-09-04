@@ -117,6 +117,7 @@ public class _15578When_The_Krall_Sleeps extends QuestHandler
 			{
 				case 241250:
 				case 241252:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _15578When_The_Krall_Sleeps extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

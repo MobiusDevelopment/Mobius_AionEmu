@@ -117,11 +117,14 @@ public class _1559WhatsintheBox extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -130,6 +133,7 @@ public class _1559WhatsintheBox extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 204571)
@@ -137,11 +141,14 @@ public class _1559WhatsintheBox extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1693);
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -150,6 +157,7 @@ public class _1559WhatsintheBox extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 798013)
@@ -157,11 +165,14 @@ public class _1559WhatsintheBox extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 2)
 					{
 						return sendQuestDialog(env, 2034);
 					}
+				}
 				case STEP_TO_3:
+				{
 					if (var == 2)
 					{
 						{
@@ -174,6 +185,7 @@ public class _1559WhatsintheBox extends QuestHandler
 						}
 					}
 					return false;
+				}
 			}
 		}
 		return false;

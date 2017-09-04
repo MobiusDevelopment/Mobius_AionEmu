@@ -125,6 +125,7 @@ public class SM_PET extends AionServerPacket
 		switch (actionId)
 		{
 			case 0:
+			{
 				writeC(0);
 				writeH(pets.size());
 				for (PetCommonData petCommonData : pets)
@@ -216,7 +217,9 @@ public class SM_PET extends AionServerPacket
 					writeD(0);
 				}
 				break;
+			}
 			case 1:
+			{
 				writeS(commonData.getName());
 				writeD(commonData.getPetId());
 				writeD(commonData.getObjectId());
@@ -270,13 +273,17 @@ public class SM_PET extends AionServerPacket
 				writeD(0);
 				writeD(0);
 				break;
+			}
 			case 2:
+			{
 				writeD(commonData.getPetId());
 				writeD(commonData.getObjectId());
 				writeD(0);
 				writeD(0);
 				break;
+			}
 			case 3:
+			{
 				writeS(pet.getName());
 				writeD(pet.getPetId());
 				writeD(pet.getObjectId());
@@ -307,63 +314,84 @@ public class SM_PET extends AionServerPacket
 				writeD(0);
 				writeD(0);
 				break;
+			}
 			case 4:
+			{
 				writeD(pet.getObjectId());
 				writeC(0x01);
 				break;
+			}
 			case 9:
+			{
 				writeH(1);
 				writeC(1);
 				writeC(subType);
 				switch (subType)
 				{
 					case 1:
+					{
 						writeD(commonData.getFeedProgress().getDataForPacket());
 						writeD(0);
 						writeD(itemObjectId);
 						writeD(count);
 						break;
+					}
 					case 2:
+					{
 						writeD(commonData.getFeedProgress().getDataForPacket());
 						writeD(0);
 						writeD(itemObjectId);
 						writeD(count);
 						writeC(0);
 						break;
+					}
 					case 3:
 					case 4:
 					case 5:
+					{
 						writeD(commonData.getFeedProgress().getDataForPacket());
 						writeD((int) commonData.getTime() / 1000);
 						break;
+					}
 					case 6:
+					{
 						writeD(commonData.getFeedProgress().getDataForPacket());
 						writeD(0);
 						writeD(itemObjectId);
 						writeC(0);
 						break;
+					}
 					case 7:
+					{
 						writeD(commonData.getFeedProgress().getDataForPacket());
 						writeD((int) commonData.getTime() / 1000);
 						writeD(itemObjectId);
 						writeD(0);
 						break;
+					}
 					case 8:
+					{
 						writeD(commonData.getFeedProgress().getDataForPacket());
 						writeD((int) commonData.getTime() / 1000);
 						writeD(itemObjectId);
 						writeD(count);
 						break;
+					}
 				}
 				break;
+			}
 			case 10:
+			{
 				writeD(pet.getObjectId());
 				writeS(pet.getName());
 				break;
+			}
 			case 12:
+			{
 				switch (subType)
 				{
 					case 0:
+					{
 						writeC(subType);
 						if (commonData.getLastSentPoints() < commonData.getMoodPoints(true))
 						{
@@ -375,7 +403,9 @@ public class SM_PET extends AionServerPacket
 							commonData.setLastSentPoints(commonData.getMoodPoints(true));
 						}
 						break;
+					}
 					case 2:
+					{
 						writeC(subType);
 						writeD(0);
 						writeD(pet.getCommonData().getMoodPoints(true));
@@ -383,21 +413,28 @@ public class SM_PET extends AionServerPacket
 						commonData.setLastSentPoints(pet.getCommonData().getMoodPoints(true));
 						commonData.setMoodCdStarted(System.currentTimeMillis());
 						break;
+					}
 					case 3:
+					{
 						writeC(subType);
 						writeD(pet.getPetTemplate().getConditionReward());
 						commonData.setGiftCdStarted(System.currentTimeMillis());
 						break;
+					}
 					case 4:
+					{
 						writeC(subType);
 						writeD(commonData.getMoodPoints(true));
 						writeD(commonData.getMoodRemainingTime());
 						writeD(commonData.getGiftRemainingTime());
 						commonData.setLastSentPoints(pet.getCommonData().getMoodPoints(true));
 						break;
+					}
 				}
 				break;
+			}
 			case 13:
+			{
 				writeC(subType);
 				if (subType == 2)
 				{
@@ -405,17 +442,25 @@ public class SM_PET extends AionServerPacket
 					switch (dopeAction)
 					{
 						case 0:
+						{
 							writeD(itemObjectId);
 							writeD(dopeSlot);
 							break;
+						}
 						case 1:
+						{
 							writeD(0);
 							break;
+						}
 						case 2:
+						{
 							break;
+						}
 						case 3:
+						{
 							writeD(itemObjectId);
 							break;
+						}
 					}
 				}
 				else if (subType == 3)
@@ -441,8 +486,11 @@ public class SM_PET extends AionServerPacket
 					writeC(isActing ? 0 : 1);
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 }

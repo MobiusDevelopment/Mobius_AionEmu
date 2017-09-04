@@ -117,6 +117,7 @@ public class _30514Reian_Last_Hope extends QuestHandler
 				case 217317:
 				case 236297:
 				case 236302:
+				{
 					if (qs.getQuestVarById(0) < 1)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -124,6 +125,7 @@ public class _30514Reian_Last_Hope extends QuestHandler
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

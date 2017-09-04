@@ -175,7 +175,9 @@ public class _1001The_Kerub_Threat extends QuestHandler
 					}
 						return true;
 					default:
+					{
 						return false;
+					}
 				}
 			}
 		}

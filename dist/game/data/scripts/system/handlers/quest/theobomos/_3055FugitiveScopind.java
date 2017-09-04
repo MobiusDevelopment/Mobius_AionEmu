@@ -81,7 +81,9 @@ public class _3055FugitiveScopind extends QuestHandler
 						return true;
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

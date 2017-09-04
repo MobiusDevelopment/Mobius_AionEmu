@@ -91,8 +91,11 @@ public class _1122DeliveringPernossRobe extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1352);
+					}
 					case STEP_TO_1:
+					{
 						itemCount = player.getInventory().getItemCountByItemId(182200218);
 						if (itemCount > 0)
 						{
@@ -107,8 +110,9 @@ public class _1122DeliveringPernossRobe extends QuestHandler
 						{
 							return sendQuestDialog(env, 1608);
 						}
-						
+					}
 					case STEP_TO_2:
+					{
 						itemCount = player.getInventory().getItemCountByItemId(182200219);
 						if (itemCount > 0)
 						{
@@ -123,7 +127,9 @@ public class _1122DeliveringPernossRobe extends QuestHandler
 						{
 							return sendQuestDialog(env, 1608);
 						}
+					}
 					case STEP_TO_3:
+					{
 						itemCount = player.getInventory().getItemCountByItemId(182200220);
 						if (itemCount > 0)
 						{
@@ -138,8 +144,11 @@ public class _1122DeliveringPernossRobe extends QuestHandler
 						{
 							return sendQuestDialog(env, 1608);
 						}
+					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))

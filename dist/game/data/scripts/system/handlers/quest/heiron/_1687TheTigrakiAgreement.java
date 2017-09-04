@@ -82,7 +82,9 @@ public class _1687TheTigrakiAgreement extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					case CHECK_COLLECTED_ITEMS:
 					{
 						final long collect1 = player.getInventory().getItemCountByItemId(186000035);
@@ -99,7 +101,9 @@ public class _1687TheTigrakiAgreement extends QuestHandler
 						}
 					}
 					case FINISH_DIALOG:
+					{
 						return defaultCloseDialog(env, var, var);
+					}
 					case STEP_TO_10:
 					{
 						rewardGroup = 0;

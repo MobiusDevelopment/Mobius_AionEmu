@@ -119,6 +119,7 @@ public class _15442Shield_Stokebellow_Outpost extends QuestHandler
 				case 883031:
 				case 883032:
 				case 883033:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _15442Shield_Stokebellow_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -843,9 +843,13 @@ public abstract class Creature extends VisibleObject
 				case RANGER:
 				case CLERIC:
 				case CHANTER:
+				{
 					return true;
+				}
 				default:
+				{
 					return false;
+				}
 			}
 		}
 		return false;
@@ -862,9 +866,13 @@ public abstract class Creature extends VisibleObject
 				case GUNSLINGER:
 				case SONGWEAVER:
 				case AETHERTECH:
+				{
 					return true;
+				}
 				default:
+				{
 					return false;
+				}
 			}
 		}
 		return false;

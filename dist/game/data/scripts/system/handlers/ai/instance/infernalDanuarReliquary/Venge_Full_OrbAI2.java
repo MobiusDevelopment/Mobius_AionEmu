@@ -44,10 +44,14 @@ public class Venge_Full_OrbAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 284443: // Sorcerer Queen Modor.
+			{
 				skill = 21178;
 				break;
+			}
 			default:
+			{
 				skill = 0;
+			}
 		}
 		if (skill == 0)
 		{
@@ -84,13 +88,21 @@ public class Venge_Full_OrbAI2 extends NpcAI2
 		switch (question)
 		{
 			case SHOULD_DECAY:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			case SHOULD_RESPAWN:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			case SHOULD_REWARD:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 }

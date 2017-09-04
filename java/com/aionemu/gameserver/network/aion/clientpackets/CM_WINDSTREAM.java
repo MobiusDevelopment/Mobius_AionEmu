@@ -62,6 +62,7 @@ public class CM_WINDSTREAM extends AionClientPacket
 			case 0:
 			case 7:
 			case 8:
+			{
 				if (state == 0)
 				{
 					player.unsetPlayerMode(PlayerMode.RIDE);
@@ -76,7 +77,9 @@ public class CM_WINDSTREAM extends AionClientPacket
 				}
 				PacketSendUtility.sendPacket(player, new SM_WINDSTREAM(state, 1));
 				break;
+			}
 			case 1:
+			{
 				if (player.isInPlayerMode(PlayerMode.WINDSTREAM))
 				{
 					return;
@@ -92,9 +95,11 @@ public class CM_WINDSTREAM extends AionClientPacket
 					QuestEngine.getInstance().onEnterWindStream(new QuestEnv(null, player, 0, 0), teleportId);
 				}
 				break;
+			}
 			case 2:
 			case 3:
 			case 4:
+			{
 				if (!player.isInPlayerMode(PlayerMode.WINDSTREAM))
 				{
 					return;
@@ -110,7 +115,6 @@ public class CM_WINDSTREAM extends AionClientPacket
 				{
 					player.setState(CreatureState.GLIDING);
 					player.getLifeStats().triggerFpReduce();
-					
 					PacketSendUtility.broadcastPacketAndReceive(player, new SM_TRANSFORM(player, player.getTransformedModelId(), true, player.getTransformedItemId()));
 					PacketSendUtility.broadcastPacketAndReceive(player, new SM_TRANSFORM(player, true));
 					player.getEffectController().updatePlayerEffectIcons();
@@ -120,6 +124,7 @@ public class CM_WINDSTREAM extends AionClientPacket
 				PacketSendUtility.sendPacket(player, new SM_WINDSTREAM(state, 1));
 				player.unsetPlayerMode(PlayerMode.WINDSTREAM);
 				break;
+			}
 		}
 	}
 }

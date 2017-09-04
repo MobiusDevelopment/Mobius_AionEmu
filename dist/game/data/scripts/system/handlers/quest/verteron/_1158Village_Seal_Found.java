@@ -64,7 +64,9 @@ public class _1158Village_Seal_Found extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -80,9 +82,13 @@ public class _1158Village_Seal_Found extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 1352);
+					}
 					case SELECT_ACTION_1353:
+					{
 						return sendQuestDialog(env, 1353);
+					}
 					case STEP_TO_1:
 					{
 						if (!giveQuestItem(env, 182200502, 1))
@@ -104,12 +110,18 @@ public class _1158Village_Seal_Found extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 2375);
+					}
 					case SELECT_REWARD:
+					{
 						removeQuestItem(env, 182200502, 1);
 						return sendQuestDialog(env, 5);
+					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 			return false;

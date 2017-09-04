@@ -79,7 +79,9 @@ public class _16805Silence_In_The_Library extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -158,6 +160,7 @@ public class _16805Silence_In_The_Library extends QuestHandler
 				case 220326:
 				case 220327:
 				case 220329:
+				{
 					if (qs.getQuestVarById(1) < 30)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -168,6 +171,7 @@ public class _16805Silence_In_The_Library extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -161,6 +161,7 @@ public class RvrService
 		switch (id)
 		{
 			case 1:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -187,8 +188,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -198,6 +202,7 @@ public class RvrService
 		switch (id)
 		{
 			case 3:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -208,8 +213,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -218,6 +226,7 @@ public class RvrService
 		switch (id)
 		{
 			case 3:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -228,8 +237,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -238,6 +250,7 @@ public class RvrService
 		switch (id)
 		{
 			case 3:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -248,8 +261,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -258,6 +274,7 @@ public class RvrService
 		switch (id)
 		{
 			case 3:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -270,8 +287,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -280,6 +300,7 @@ public class RvrService
 		switch (id)
 		{
 			case 3:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -292,8 +313,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -302,6 +326,7 @@ public class RvrService
 		switch (id)
 		{
 			case 3:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -316,8 +341,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -326,6 +354,7 @@ public class RvrService
 		switch (id)
 		{
 			case 3:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -342,8 +371,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -353,6 +385,7 @@ public class RvrService
 		switch (id)
 		{
 			case 4:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -363,8 +396,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -373,6 +409,7 @@ public class RvrService
 		switch (id)
 		{
 			case 4:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -383,8 +420,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -393,6 +433,7 @@ public class RvrService
 		switch (id)
 		{
 			case 4:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -403,8 +444,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -413,6 +457,7 @@ public class RvrService
 		switch (id)
 		{
 			case 4:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -425,8 +470,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -435,6 +483,7 @@ public class RvrService
 		switch (id)
 		{
 			case 4:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -447,8 +496,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -457,6 +509,7 @@ public class RvrService
 		switch (id)
 		{
 			case 4:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -471,8 +524,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -481,6 +537,7 @@ public class RvrService
 		switch (id)
 		{
 			case 4:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -497,8 +554,11 @@ public class RvrService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	

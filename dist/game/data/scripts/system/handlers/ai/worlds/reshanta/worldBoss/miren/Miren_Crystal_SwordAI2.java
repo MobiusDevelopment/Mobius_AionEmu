@@ -58,6 +58,7 @@ public class Miren_Crystal_SwordAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 702842: // Miren's Crystal Sword [Elyos]
+				{
 					announceSpiritOfMiren30Min();
 					ThreadPoolManager.getInstance().schedule(new Runnable()
 					{
@@ -68,7 +69,9 @@ public class Miren_Crystal_SwordAI2 extends NpcAI2
 						}
 					}, 1800000); // 30 Minutes.
 					break;
+				}
 				case 702843: // Miren's Crystal Sword [Asmodians]
+				{
 					announceSpiritOfMiren30Min();
 					ThreadPoolManager.getInstance().schedule(new Runnable()
 					{
@@ -79,6 +82,7 @@ public class Miren_Crystal_SwordAI2 extends NpcAI2
 						}
 					}, 1800000); // 30 Minutes.
 					break;
+				}
 			}
 		}
 		// Spirit Of Miren's Pendant has broken the seal.

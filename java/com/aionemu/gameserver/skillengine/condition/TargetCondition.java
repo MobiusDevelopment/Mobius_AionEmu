@@ -71,12 +71,18 @@ public class TargetCondition extends Condition
 		switch (value)
 		{
 			case NPC:
+			{
 				result = skill.getFirstTarget() instanceof Npc;
 				break;
+			}
 			case PC:
+			{
 				result = skill.getFirstTarget() instanceof Player;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		
 		if ((!result) && ((skill.getEffector() instanceof Player)))

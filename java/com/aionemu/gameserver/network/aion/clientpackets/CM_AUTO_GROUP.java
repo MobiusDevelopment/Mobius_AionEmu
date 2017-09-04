@@ -65,6 +65,7 @@ public class CM_AUTO_GROUP extends AionClientPacket
 		switch (windowId)
 		{
 			case 100:
+			{
 				final EntryRequestType ert = EntryRequestType.getTypeById(entryRequestId);
 				if (ert == null)
 				{
@@ -72,16 +73,24 @@ public class CM_AUTO_GROUP extends AionClientPacket
 				}
 				AutoGroupService.getInstance().startLooking(player, instanceMaskId, ert);
 				break;
+			}
 			case 101:
+			{
 				AutoGroupService.getInstance().unregisterLooking(player, instanceMaskId);
 				break;
+			}
 			case 102:
+			{
 				AutoGroupService.getInstance().pressEnter(player, instanceMaskId);
 				break;
+			}
 			case 103:
+			{
 				AutoGroupService.getInstance().cancelEnter(player, instanceMaskId);
 				break;
+			}
 			case 104:
+			{
 				AsyunatarService.getInstance().showWindow(player, instanceMaskId);
 				DredgionService2.getInstance().showWindow(player, instanceMaskId);
 				KamarBattlefieldService.getInstance().showWindow(player, instanceMaskId);
@@ -91,8 +100,11 @@ public class CM_AUTO_GROUP extends AionClientPacket
 				IdgelDomeService.getInstance().showWindow(player, instanceMaskId);
 				IdgelDomeLandmarkService.getInstance().showWindow(player, instanceMaskId);
 				break;
+			}
 			case 105:
+			{
 				break;
+			}
 		}
 		if (PvPModConfig.BG_ENABLED)
 		{

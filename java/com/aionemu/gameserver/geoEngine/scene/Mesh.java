@@ -193,39 +193,49 @@ public class Mesh
 				switch (vb.getFormat())
 				{
 					case Float:
+					{
 						final FloatBuffer fb = (FloatBuffer) vb.getData();
 						for (int comp = 0; comp < vb.components; comp++)
 						{
 							dataBuf.putFloat(fb.get());
 						}
 						break;
+					}
 					case Byte:
 					case UnsignedByte:
+					{
 						final ByteBuffer bb = (ByteBuffer) vb.getData();
 						for (int comp = 0; comp < vb.components; comp++)
 						{
 							dataBuf.put(bb.get());
 						}
 						break;
+					}
 					case Half:
 					case Short:
 					case UnsignedShort:
+					{
 						final ShortBuffer sb = (ShortBuffer) vb.getData();
 						for (int comp = 0; comp < vb.components; comp++)
 						{
 							dataBuf.putShort(sb.get());
 						}
 						break;
+					}
 					case Int:
 					case UnsignedInt:
+					{
 						final IntBuffer ib = (IntBuffer) vb.getData();
 						for (int comp = 0; comp < vb.components; comp++)
 						{
 							dataBuf.putInt(ib.get());
 						}
 						break;
+					}
 					default:
+					{
 						break;
+					}
 				}
 			}
 		}
@@ -247,20 +257,34 @@ public class Mesh
 		switch (mode)
 		{
 			case Triangles:
+			{
 				return bufSize / 3;
+			}
 			case TriangleFan:
 			case TriangleStrip:
+			{
 				return bufSize - 2;
+			}
 			case Points:
+			{
 				return bufSize;
+			}
 			case Lines:
+			{
 				return bufSize / 2;
+			}
 			case LineLoop:
+			{
 				return bufSize;
+			}
 			case LineStrip:
+			{
 				return bufSize - 1;
+			}
 			default:
+			{
 				throw new UnsupportedOperationException();
+			}
 		}
 	}
 	

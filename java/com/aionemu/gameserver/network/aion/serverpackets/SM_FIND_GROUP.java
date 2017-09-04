@@ -64,6 +64,7 @@ public class SM_FIND_GROUP extends AionServerPacket
 		{
 			case 0x00:
 			case 0x02:
+			{
 				writeH(groupSize); // groupSize
 				writeH(groupSize); // groupSize
 				writeD(lastUpdate); // objId?
@@ -80,13 +81,17 @@ public class SM_FIND_GROUP extends AionServerPacket
 					writeD(findGroup.getLastUpdate()); // objId?
 				}
 				break;
+			}
 			case 0x01:
 			case 0x03:
+			{
 				writeD(lastUpdate); // player object id
 				writeD(unk); // unk (0 or 65557)
 				break;
+			}
 			case 0x04:
 			case 0x06:
+			{
 				writeH(groupSize); // groupSize
 				writeH(groupSize); // groupSize
 				writeD(lastUpdate); // objId?
@@ -101,10 +106,14 @@ public class SM_FIND_GROUP extends AionServerPacket
 					writeD(findGroup.getLastUpdate()); // objId?
 				}
 				break;
+			}
 			case 0x05:
+			{
 				writeD(lastUpdate); // player object id
 				break;
+			}
 			case 0x0A: // registered Groups
+			{
 				writeH(groupSize);// size
 				writeH(groupSize);// size
 				writeD(lastUpdate);
@@ -128,7 +137,9 @@ public class SM_FIND_GROUP extends AionServerPacket
 					writeS(findGroup.getMessage());// Message
 				}
 				break;
+			}
 			case 0x0E: // register new InstanceGroup
+			{
 				writeC(1);// packetNumber 0 || 1 || 2
 				for (FindGroup findGroup : findGroups)
 				{
@@ -152,7 +163,9 @@ public class SM_FIND_GROUP extends AionServerPacket
 					writeS(findGroup.getMessage());// register message
 				}
 				break;
+			}
 			case 0x10:
+			{
 				writeH(groupSize);// size
 				writeH(groupSize);// size
 				writeD(lastUpdate);// systemcurrentimemillis
@@ -168,11 +181,15 @@ public class SM_FIND_GROUP extends AionServerPacket
 					writeC(findGroup.getClassId());// classId?
 					writeS(findGroup.getName());// writerName
 				}
+			}
 			case 0x16:
+			{
 				writeD(0);// GroupEntryId
 				writeD(0);// instanceId
 				break;
+			}
 			case 0x18:
+			{
 				writeD(0);// GroupObjId
 				writeD(0);// instanceId
 				writeC(0);// classId?
@@ -189,10 +206,13 @@ public class SM_FIND_GROUP extends AionServerPacket
 					writeS(findGroup.getName());// writerName
 				}
 				break;
+			}
 			case 0x1A:
+			{
 				writeH(1);// unk
 				writeD(instanceId);
 				break;
+			}
 		}
 	}
 }

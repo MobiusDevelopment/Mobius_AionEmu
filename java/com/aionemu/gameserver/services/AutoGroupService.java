@@ -666,18 +666,23 @@ public class AutoGroupService
 		switch (ert)
 		{
 			case NEW_GROUP_ENTRY:
+			{
 				if (!agt.hasRegisterNew())
 				{
 					return false;
 				}
 				break;
+			}
 			case FAST_GROUP_ENTRY:
+			{
 				if (!agt.hasRegisterFast())
 				{
 					return false;
 				}
 				break;
+			}
 			case SPECIAL_PURPOSE:
+			{
 				if (!agt.hasSpecialPurpose())
 				{
 					return false;
@@ -713,7 +718,9 @@ public class AutoGroupService
 					}
 				}
 				break;
+			}
 			case GROUP_ENTRY:
+			{
 				if (!agt.hasRegisterGroup())
 				{
 					return false;
@@ -802,6 +809,7 @@ public class AutoGroupService
 					}
 				}
 				break;
+			}
 		}
 		return true;
 	}

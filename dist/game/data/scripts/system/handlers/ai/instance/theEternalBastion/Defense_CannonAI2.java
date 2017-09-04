@@ -67,8 +67,10 @@ public class Defense_CannonAI2 extends NpcAI2
 				case 701605:
 				case 701606:
 				case 701607:
+				{
 					SkillEngine.getInstance().getSkill(player, 21065, 1, player).useNoAnimationSkill();
 					break;
+				}
 				// Defense Cannon Asmodians.
 				case 701610:
 				case 701611:
@@ -82,8 +84,10 @@ public class Defense_CannonAI2 extends NpcAI2
 				case 701619:
 				case 701620:
 				case 701621:
+				{
 					SkillEngine.getInstance().getSkill(player, 21066, 1, player).useNoAnimationSkill();
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

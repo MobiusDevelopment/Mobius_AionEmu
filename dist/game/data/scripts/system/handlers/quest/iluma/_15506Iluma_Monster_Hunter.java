@@ -161,6 +161,7 @@ public class _15506Iluma_Monster_Hunter extends QuestHandler
 				case 242595:
 				case 242599:
 				case 242603:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -171,6 +172,7 @@ public class _15506Iluma_Monster_Hunter extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

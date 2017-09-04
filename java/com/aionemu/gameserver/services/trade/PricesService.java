@@ -44,14 +44,20 @@ public class PricesService
 		switch (playerRace)
 		{
 			case ASMODIANS:
+			{
 				influenceValue = Influence.getInstance().getGlobalAsmodiansInfluence();
 				break;
+			}
 			case ELYOS:
+			{
 				influenceValue = Influence.getInstance().getGlobalElyosInfluence();
 				break;
+			}
 			default:
+			{
 				influenceValue = 0.5f;
 				break;
+			}
 		}
 		if (influenceValue == 0.5f)
 		{
@@ -95,14 +101,20 @@ public class PricesService
 		switch (playerRace)
 		{
 			case ASMODIANS:
+			{
 				influenceValue = Influence.getInstance().getGlobalAsmodiansInfluence();
 				break;
+			}
 			case ELYOS:
+			{
 				influenceValue = Influence.getInstance().getGlobalElyosInfluence();
 				break;
+			}
 			default:
+			{
 				influenceValue = 0.5f;
 				break;
+			}
 		}
 		if (influenceValue >= 0.5f)
 		{

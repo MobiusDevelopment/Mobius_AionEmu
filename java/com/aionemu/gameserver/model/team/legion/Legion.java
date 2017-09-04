@@ -301,19 +301,33 @@ public class Legion
 		switch (getLegionLevel())
 		{
 			case 1:
+			{
 				return memberSize >= LegionConfig.LEGION_LEVEL2_REQUIRED_MEMBERS;
+			}
 			case 2:
+			{
 				return memberSize >= LegionConfig.LEGION_LEVEL3_REQUIRED_MEMBERS;
+			}
 			case 3:
+			{
 				return memberSize >= LegionConfig.LEGION_LEVEL4_REQUIRED_MEMBERS;
+			}
 			case 4:
+			{
 				return memberSize >= LegionConfig.LEGION_LEVEL5_REQUIRED_MEMBERS;
+			}
 			case 5:
+			{
 				return memberSize >= LegionConfig.LEGION_LEVEL6_REQUIRED_MEMBERS;
+			}
 			case 6:
+			{
 				return memberSize >= LegionConfig.LEGION_LEVEL7_REQUIRED_MEMBERS;
+			}
 			case 7:
+			{
 				return memberSize >= LegionConfig.LEGION_LEVEL8_REQUIRED_MEMBERS;
+			}
 		}
 		return false;
 	}
@@ -327,19 +341,33 @@ public class Legion
 		switch (getLegionLevel())
 		{
 			case 1:
+			{
 				return LegionConfig.LEGION_LEVEL2_REQUIRED_KINAH;
+			}
 			case 2:
+			{
 				return LegionConfig.LEGION_LEVEL3_REQUIRED_KINAH;
+			}
 			case 3:
+			{
 				return LegionConfig.LEGION_LEVEL4_REQUIRED_KINAH;
+			}
 			case 4:
+			{
 				return LegionConfig.LEGION_LEVEL5_REQUIRED_KINAH;
+			}
 			case 5:
+			{
 				return LegionConfig.LEGION_LEVEL6_REQUIRED_KINAH;
+			}
 			case 6:
+			{
 				return LegionConfig.LEGION_LEVEL7_REQUIRED_KINAH;
+			}
 			case 7:
+			{
 				return LegionConfig.LEGION_LEVEL8_REQUIRED_KINAH;
+			}
 		}
 		return 0;
 	}
@@ -353,19 +381,33 @@ public class Legion
 		switch (getLegionLevel())
 		{
 			case 1:
+			{
 				return LegionConfig.LEGION_LEVEL2_REQUIRED_CONTRIBUTION;
+			}
 			case 2:
+			{
 				return LegionConfig.LEGION_LEVEL3_REQUIRED_CONTRIBUTION;
+			}
 			case 3:
+			{
 				return LegionConfig.LEGION_LEVEL4_REQUIRED_CONTRIBUTION;
+			}
 			case 4:
+			{
 				return LegionConfig.LEGION_LEVEL5_REQUIRED_CONTRIBUTION;
+			}
 			case 5:
+			{
 				return LegionConfig.LEGION_LEVEL6_REQUIRED_CONTRIBUTION;
+			}
 			case 6:
+			{
 				return LegionConfig.LEGION_LEVEL7_REQUIRED_CONTRIBUTION;
+			}
 			case 7:
+			{
 				return LegionConfig.LEGION_LEVEL8_REQUIRED_CONTRIBUTION;
+			}
 		}
 		return 0;
 	}
@@ -380,21 +422,37 @@ public class Legion
 		switch (getLegionLevel())
 		{
 			case 1:
+			{
 				return memberSize < LegionConfig.LEGION_LEVEL1_MAX_MEMBERS;
+			}
 			case 2:
+			{
 				return memberSize < LegionConfig.LEGION_LEVEL2_MAX_MEMBERS;
+			}
 			case 3:
+			{
 				return memberSize < LegionConfig.LEGION_LEVEL3_MAX_MEMBERS;
+			}
 			case 4:
+			{
 				return memberSize < LegionConfig.LEGION_LEVEL4_MAX_MEMBERS;
+			}
 			case 5:
+			{
 				return memberSize < LegionConfig.LEGION_LEVEL5_MAX_MEMBERS;
+			}
 			case 6:
+			{
 				return memberSize < LegionConfig.LEGION_LEVEL6_MAX_MEMBERS;
+			}
 			case 7:
+			{
 				return memberSize < LegionConfig.LEGION_LEVEL7_MAX_MEMBERS;
+			}
 			case 8:
+			{
 				return memberSize < LegionConfig.LEGION_LEVEL8_MAX_MEMBERS;
+			}
 		}
 		return false;
 	}
@@ -518,21 +576,37 @@ public class Legion
 		switch (getLegionLevel())
 		{
 			case 1:
+			{
 				return LegionConfig.LWH_LEVEL1_SLOTS;
+			}
 			case 2:
+			{
 				return LegionConfig.LWH_LEVEL2_SLOTS;
+			}
 			case 3:
+			{
 				return LegionConfig.LWH_LEVEL3_SLOTS;
+			}
 			case 4:
+			{
 				return LegionConfig.LWH_LEVEL4_SLOTS;
+			}
 			case 5:
+			{
 				return LegionConfig.LWH_LEVEL5_SLOTS;
+			}
 			case 6:
+			{
 				return LegionConfig.LWH_LEVEL6_SLOTS;
+			}
 			case 7:
+			{
 				return LegionConfig.LWH_LEVEL7_SLOTS;
+			}
 			case 8:
+			{
 				return LegionConfig.LWH_LEVEL8_SLOTS;
+			}
 		}
 		return LegionConfig.LWH_LEVEL1_SLOTS;
 	}

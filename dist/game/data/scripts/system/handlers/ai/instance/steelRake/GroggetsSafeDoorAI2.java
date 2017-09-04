@@ -37,9 +37,11 @@ public class GroggetsSafeDoorAI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 730199: // Groggets Safe Door.
+			{
 				switch (player.getWorldId())
 				{
 					case 300100000: // Steel Rake.
+					{
 						if (player.getInventory().decreaseByItemId(185000046, 1))
 						{ // Grogget's Safe Key.
 							PacketSendUtility.sendMessage(player, "you enter <Inside Steel Rake>");
@@ -50,15 +52,19 @@ public class GroggetsSafeDoorAI2 extends ActionItemNpcAI2
 							PacketSendUtility.sendMessage(player, "you must have <Grogget's Safe Key> for use this teleporter");
 						}
 						break;
+					}
 				}
 				switch (player.getWorldId())
 				{
 					case 300460000: // Steel Rake Cabin 3.0
+					{
 						PacketSendUtility.sendMessage(player, "you enter <Inside Steel Rake Cabin>");
 						TeleportService2.teleportTo(player, 300460000, 702.11993f, 500.80948f, 939.60675f, (byte) 0);
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 }

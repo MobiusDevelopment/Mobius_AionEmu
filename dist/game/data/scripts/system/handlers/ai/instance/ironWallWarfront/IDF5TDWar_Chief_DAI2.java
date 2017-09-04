@@ -46,35 +46,55 @@ public class IDF5TDWar_Chief_DAI2 extends AggressiveNpcAI2
 			switch (getNpcId())
 			{
 				case 233498: // Asmodians Supply Base Beta Officer.
+				{
 					announceIDF5TDWarDV01();
 					break;
+				}
 				case 233499: // Asmodians Military Supply Base Officer.
+				{
 					announceIDF5TDWarDV02();
 					break;
+				}
 				case 233500: // Asmodians Supply Base Alpha Officer.
+				{
 					announceIDF5TDWarDV03();
 					break;
+				}
 				case 233501: // Asmodians Artillery Base Officer.
+				{
 					announceIDF5TDWarDV04();
 					break;
+				}
 				case 233502: // Asmodians Sentry Post Alpha Officer.
+				{
 					announceIDF5TDWarDV05();
 					break;
+				}
 				case 233503: // Asmodians Sentry Post Beta Officer.
+				{
 					announceIDF5TDWarDV06();
 					break;
+				}
 				case 233504: // Asmodians Holy Grounds Officer.
+				{
 					announceIDF5TDWarDV07();
 					break;
+				}
 				case 233505: // Asmodians Command Center Officer.
+				{
 					announceIDF5TDWarDV08();
 					break;
+				}
 				case 233506: // Asmodians Headquarters Alpha Officer.
+				{
 					announceIDF5TDWarDV09();
 					break;
+				}
 				case 233507: // Asmodians Headquarters Beta Officer.
+				{
 					announceIDF5TDWarDV10();
 					break;
+				}
 			}
 		}
 	}

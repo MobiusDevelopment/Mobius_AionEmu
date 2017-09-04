@@ -57,6 +57,7 @@ public class CM_PLAYER_ESSENCE extends AionClientPacket
 		switch (type)
 		{
 			case 0: // Apply
+			{
 				plusSize = readH();
 				for (int i = 0; i < plusSize; i++)
 				{
@@ -84,11 +85,16 @@ public class CM_PLAYER_ESSENCE extends AionClientPacket
 				}
 				PacketSendUtility.sendPacket(activePlayer, new SM_STATS_INFO(activePlayer));
 				break;
+			}
 			case 1: // Reset
+			{
 				plusSize = readH();
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 	

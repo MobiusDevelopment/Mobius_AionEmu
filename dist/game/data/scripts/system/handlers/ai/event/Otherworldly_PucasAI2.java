@@ -90,12 +90,14 @@ public class Otherworldly_PucasAI2 extends GeneralNpcAI2
 				case 831546:
 				case 831547:
 				case 831548:
+				{
 					final AutoGroupType agt = AutoGroupType.getAutoGroup(player.getLevel(), getNpcId());
 					if (agt != null)
 					{
 						PacketSendUtility.sendPacket(player, new SM_FIND_GROUP(0x1A, agt.getInstanceMapId()));
 					}
 					break;
+				}
 			}
 		}
 		else if ((dialogId == 1011) && (questId != 0))

@@ -240,9 +240,13 @@ public final class RunnableStatsManager
 				switch (SortBy.this)
 				{
 					case METHOD:
+					{
 						return NAME.comparator.compare(o1, o2);
+					}
 					default:
+					{
 						return 0;
+					}
 				}
 			}
 		};
@@ -253,21 +257,37 @@ public final class RunnableStatsManager
 			switch (this)
 			{
 				case AVG:
+				{
 					return stat.total / stat.count;
+				}
 				case COUNT:
+				{
 					return stat.count;
+				}
 				case TOTAL:
+				{
 					return stat.total;
+				}
 				case NAME:
+				{
 					return stat.className;
+				}
 				case METHOD:
+				{
 					return stat.methodName;
+				}
 				case MIN:
+				{
 					return stat.min;
+				}
 				case MAX:
+				{
 					return stat.max;
+				}
 				default:
+				{
 					throw new InternalError();
+				}
 			}
 		}
 		
@@ -351,16 +371,19 @@ public final class RunnableStatsManager
 				{
 					case NAME:
 					case METHOD:
+					{
 						appendAttribute(sb, SortBy.NAME, values[SortBy.NAME.ordinal()][k], maxLength[SortBy.NAME.ordinal()]);
 						set.remove(SortBy.NAME);
-						
 						appendAttribute(sb, SortBy.METHOD, values[SortBy.METHOD.ordinal()][k], maxLength[SortBy.METHOD.ordinal()]);
 						set.remove(SortBy.METHOD);
 						break;
+					}
 					default:
+					{
 						appendAttribute(sb, sortBy, values[sortBy.ordinal()][k], maxLength[sortBy.ordinal()]);
 						set.remove(sortBy);
 						break;
+					}
 				}
 			}
 			

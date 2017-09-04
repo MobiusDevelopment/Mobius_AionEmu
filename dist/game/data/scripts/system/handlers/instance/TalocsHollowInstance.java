@@ -82,6 +82,7 @@ public class TalocsHollowInstance extends GeneralInstanceHandler
 		switch (player.getRace())
 		{
 			case ELYOS:
+			{
 				if (player.getInventory().isFull())
 				{
 					sendMsgByRace(1390149, Race.PC_ALL, 0);
@@ -90,7 +91,9 @@ public class TalocsHollowInstance extends GeneralInstanceHandler
 				addTalocTearsE(player);
 				sendMovie(player, 434);
 				break;
+			}
 			case ASMODIANS:
+			{
 				if (player.getInventory().isFull())
 				{
 					sendMsgByRace(1390149, Race.PC_ALL, 0);
@@ -99,6 +102,7 @@ public class TalocsHollowInstance extends GeneralInstanceHandler
 				addTalocTearsA(player);
 				sendMovie(player, 438);
 				break;
+			}
 		}
 		// You must destroy the enemies of Taloc. It allows you to acquire objects with great power.
 		sendMsgByRace(1400704, Race.PC_ALL, 5000);
@@ -123,16 +127,22 @@ public class TalocsHollowInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 215456: // Shishir.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000088, 1)); // Shishir's Corrosive Fluid.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000137, 1)); // Shishir's Powerstone.
 				break;
+			}
 			case 215478: // Neith.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000108, 1)); // Dorkin's Pocket Knife.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000139, 1)); // Neith's Sleepstone.
 				break;
+			}
 			case 215482: // Gellmar.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000138, 1)); // Gellmar's Wardstone.
 				break;
+			}
 		}
 	}
 	
@@ -174,15 +184,19 @@ public class TalocsHollowInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 700940: // Healing Plant.
+			{
 				despawnNpc(npc);
 				player.getLifeStats().increaseHp(SM_ATTACK_STATUS.TYPE.HP, 20000);
 				player.getLifeStats().increaseHp(SM_ATTACK_STATUS.TYPE.MP, 20000);
 				break;
+			}
 			case 700941: // Huge Healing Plant.
+			{
 				despawnNpc(npc);
 				player.getLifeStats().increaseHp(SM_ATTACK_STATUS.TYPE.HP, 30000);
 				player.getLifeStats().increaseHp(SM_ATTACK_STATUS.TYPE.MP, 30000);
 				break;
+			}
 		}
 	}
 	
@@ -197,17 +211,22 @@ public class TalocsHollowInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 215457: // Ancient Octanus.
+			{
 				// You sense a movement in Taloc's Roots. You won't be able to meet him unless you hurry.
 				sendMsgByRace(1400659, Race.PC_ALL, 0);
 				break;
+			}
 			case 215480: // Queen Mosqua.
+			{
 				deleteNpc(700738); // Huge Insect Egg.
 				sendMovie(player, 435);
 				spawnCrackedHugeInsectEgg();
 				sendMsg("<Celestius> appear in <Mosqua Nest>");
 				spawn(215488, 543.03f, 834.08f, 1377.29f, (byte) 00); // Celestius.
 				break;
+			}
 			case 215488: // Celestius.
+			{
 				deleteNpc(700740); // Contaminated Fragment Of Aion Tower.
 				sendMovie(player, 437);
 				spawnPurifiedFragmentOfAionTower();
@@ -216,7 +235,9 @@ public class TalocsHollowInstance extends GeneralInstanceHandler
 				sendMsg("[Congratulation]: you finish <Taloc's Hollow>");
 				spawn(799503, 539.94135f, 813.3849f, 1377.4283f, (byte) 27); // Taloc's Mirage.
 				break;
+			}
 			case 700739: // Cracked Huge Insect Egg.
+			{
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
 					@Override
@@ -232,9 +253,12 @@ public class TalocsHollowInstance extends GeneralInstanceHandler
 				// You can fly vertically up by spreading your wings and riding the current.
 				sendMsgByRace(1400477, Race.PC_ALL, 5000);
 				break;
+			}
 			case 700942: // Bug Fluid.
+			{
 				despawnNpc(npc);
 				break;
+			}
 		}
 	}
 	

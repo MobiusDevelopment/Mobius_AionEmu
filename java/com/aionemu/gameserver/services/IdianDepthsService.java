@@ -163,13 +163,17 @@ public class IdianDepthsService
 				switch (responder.getRace())
 				{
 					case ELYOS:
+					{
 						// Levinshor <Aetherbrak>
 						TeleportService2.teleportTo(responder, 600100000, 717.06506f, 268.116f, 291.07382f, (byte) 61);
 						break;
+					}
 					case ASMODIANS:
+					{
 						// Enshar <The Blood Grains>
 						TeleportService2.teleportTo(responder, 220080000, 1764.2205f, 557.8873f, 207.97919f, (byte) 95);
 						break;
+					}
 				}
 			}
 			

@@ -41,13 +41,21 @@ class NpcSkillTemplateEntry extends NpcSkillEntry
 		switch (template.getConjunctionType())
 		{
 			case XOR:
+			{
 				return (hpReady(hpPercentage) && !timeReady(fightingTimeInMSec)) || (!hpReady(hpPercentage) && timeReady(fightingTimeInMSec));
+			}
 			case OR:
+			{
 				return hpReady(hpPercentage) || timeReady(fightingTimeInMSec);
+			}
 			case AND:
+			{
 				return hpReady(hpPercentage) && timeReady(fightingTimeInMSec);
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	

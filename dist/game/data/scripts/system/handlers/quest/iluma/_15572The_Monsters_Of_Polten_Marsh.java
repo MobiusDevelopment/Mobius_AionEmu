@@ -115,6 +115,7 @@ public class _15572The_Monsters_Of_Polten_Marsh extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 241154:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -125,6 +126,7 @@ public class _15572The_Monsters_Of_Polten_Marsh extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

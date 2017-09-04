@@ -44,6 +44,7 @@ public class TalkEventHandler
 			{
 				case 462877: // Village Trade Broker.
 				case 462878: // Village Guestbloom.
+				{
 					// case 462881: //Village Quest Board.
 					final int playerTownId = TownService.getInstance().getTownResidence(player);
 					final int currentTownId = TownService.getInstance().getTownIdByPosition(player);
@@ -57,9 +58,12 @@ public class TalkEventHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(npcAI.getOwner().getObjectId(), 10));
 						return;
 					}
+				}
 				default:
+				{
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(npcAI.getOwner().getObjectId(), 10));
 					break;
+				}
 			}
 		}
 	}

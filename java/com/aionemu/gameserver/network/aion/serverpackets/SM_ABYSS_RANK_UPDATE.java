@@ -44,12 +44,17 @@ public class SM_ABYSS_RANK_UPDATE extends AionServerPacket
 		switch (action)
 		{
 			case 0:
+			{
 				writeD(player.getAbyssRank().getRank().getId());
 				break;
+			}
 			case 1:
+			{
 				writeD(1049798);
 				break;
+			}
 			case 2:
+			{
 				if (player.isMentor())
 				{
 					writeD(1);
@@ -59,6 +64,7 @@ public class SM_ABYSS_RANK_UPDATE extends AionServerPacket
 					writeD(0);
 				}
 				break;
+			}
 		}
 	}
 }

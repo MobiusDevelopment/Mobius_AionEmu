@@ -63,7 +63,9 @@ public class _21304Enhancing_The_Cipher_Blade extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

@@ -104,12 +104,16 @@ public class BindPointPosition
 		switch (persistentState)
 		{
 			case UPDATE_REQUIRED:
+			{
 				if (this.persistentState == PersistentState.NEW)
 				{
 					break;
 				}
+			}
 			default:
+			{
 				this.persistentState = persistentState;
+			}
 		}
 	}
 }

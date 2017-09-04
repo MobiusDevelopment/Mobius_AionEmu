@@ -125,6 +125,7 @@ public class _15577Aether_Fury extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 243392:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -135,6 +136,7 @@ public class _15577Aether_Fury extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

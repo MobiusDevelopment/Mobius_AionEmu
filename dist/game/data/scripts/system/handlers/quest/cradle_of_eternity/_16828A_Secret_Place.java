@@ -107,6 +107,7 @@ public class _16828A_Secret_Place extends QuestHandler
 				case 220471:
 				case 220472:
 				case 220594:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -117,6 +118,7 @@ public class _16828A_Secret_Place extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

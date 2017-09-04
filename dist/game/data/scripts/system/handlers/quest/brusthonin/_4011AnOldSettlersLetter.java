@@ -112,11 +112,14 @@ public class _4011AnOldSettlersLetter extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 0)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -125,6 +128,7 @@ public class _4011AnOldSettlersLetter extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 203522)
@@ -132,11 +136,14 @@ public class _4011AnOldSettlersLetter extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1693);
 					}
+				}
 				case SET_REWARD:
+				{
 					if (var == 1)
 					{
 						qs.setStatus(QuestStatus.REWARD);
@@ -145,6 +152,7 @@ public class _4011AnOldSettlersLetter extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		return false;

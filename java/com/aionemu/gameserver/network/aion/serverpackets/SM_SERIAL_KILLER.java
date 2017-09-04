@@ -47,13 +47,16 @@ public class SM_SERIAL_KILLER extends AionServerPacket
 		{
 			case 0:
 			case 1:
+			{
 				writeD(type);
 				writeD(0x01);
 				writeD(0x01);
 				writeH(0x01);
 				writeD(debuffLvl);
 				break;
+			}
 			case 4:
+			{
 				writeD(type);
 				writeD(0x01);
 				writeD(0x01);
@@ -73,7 +76,9 @@ public class SM_SERIAL_KILLER extends AionServerPacket
 					writeH(4);
 				}
 				break;
+			}
 			case 5:
+			{
 				writeH(players.size());
 				for (Player player : players)
 				{
@@ -90,6 +95,7 @@ public class SM_SERIAL_KILLER extends AionServerPacket
 					writeH(0);
 				}
 				break;
+			}
 		}
 	}
 }

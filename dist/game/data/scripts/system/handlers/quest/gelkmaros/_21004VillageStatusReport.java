@@ -72,12 +72,16 @@ public class _21004VillageStatusReport extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case STEP_TO_1:
+					{
 						return defaultCloseDialog(env, 0, 1);
+					}
 				}
 			}
 			else if (env.getTargetId() == 799269)
@@ -85,12 +89,16 @@ public class _21004VillageStatusReport extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							return sendQuestDialog(env, 1693);
 						}
+					}
 					case STEP_TO_2:
+					{
 						return defaultCloseDialog(env, 1, 2, true, false);
+					}
 				}
 			}
 		}

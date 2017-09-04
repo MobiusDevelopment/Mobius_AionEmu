@@ -55,8 +55,10 @@ public class Prestige_Society_Medical_AttendantAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 833764: // Prestige Society Medical Attendant.
+				{
 					SkillEngine.getInstance().applyEffectDirectly(21650, player, player, 1800000 * 1); // Prestigious Blessing.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

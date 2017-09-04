@@ -43,11 +43,15 @@ public class GeoService
 		switch (getConfiguredGeoType())
 		{
 			case GEO_MESHES:
+			{
 				geoData = new RealGeoData();
 				break;
+			}
 			case NO_GEO:
+			{
 				geoData = new DummyGeoData();
 				break;
+			}
 		}
 		log.info("Configured Geo type: " + getConfiguredGeoType());
 		geoData.loadGeoMaps();

@@ -39,11 +39,15 @@ public class BarrelAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 217840: // Meat Barrel.
+			{
 				npcId = 217841; // Wafer Thin Meet.
 				break;
+			}
 			case 218560: // Aether Barrel.
+			{
 				npcId = 218561; // Aether Lump.
 				break;
+			}
 		}
 		spawn(npcId, 1298.4448f, 1728.3262f, 316.8472f, (byte) 63);
 		AI2Actions.deleteOwner(this);
@@ -55,13 +59,21 @@ public class BarrelAI2 extends NpcAI2
 		switch (question)
 		{
 			case SHOULD_DECAY:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			case SHOULD_RESPAWN:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			case SHOULD_REWARD:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 }

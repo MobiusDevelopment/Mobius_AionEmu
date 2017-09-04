@@ -53,11 +53,13 @@ public class Sealed_FairyAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 834009: // Sealed Fairy.
+				{
 					// Once you leave the garden, the Sylfae Queen’s power will disappear.
 					PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_02_SYSTEM_MSG_41, 5000);
 					SkillEngine.getInstance().applyEffectDirectly(21340, player, player, 3600000 * 1); // Sealed Fairy.
 					SkillEngine.getInstance().applyEffectDirectly(21344, player, player, 3600000 * 1); // Beguiling Visions.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

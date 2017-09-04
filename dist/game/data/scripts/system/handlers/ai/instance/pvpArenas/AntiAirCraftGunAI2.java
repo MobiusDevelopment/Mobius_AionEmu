@@ -54,15 +54,21 @@ public class AntiAirCraftGunAI2 extends ActionItemNpcAI2
 		{
 			case 701185:
 			case 701321:
+			{
 				morphSkill = 0x4E502E;
 				break;
+			}
 			case 701322:
+			{
 				morphSkill = 0x4E5133;
 				break;
+			}
 			case 701213:
 			case 701323:
+			{
 				morphSkill = 0x4E5238;
 				break;
+			}
 		}
 		SkillEngine.getInstance().getSkill(getOwner(), morphSkill >> 8, morphSkill & 0xFF, player).useNoAnimationSkill();
 		AI2Actions.scheduleRespawn(this);

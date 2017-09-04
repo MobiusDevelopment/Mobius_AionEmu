@@ -114,6 +114,7 @@ public class _26906Bloodscent_Of_Violent_Death extends QuestHandler
 			{
 				case 231558:
 				case 231559:
+				{
 					if (qs.getQuestVarById(0) < 1)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -121,6 +122,7 @@ public class _26906Bloodscent_Of_Violent_Death extends QuestHandler
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

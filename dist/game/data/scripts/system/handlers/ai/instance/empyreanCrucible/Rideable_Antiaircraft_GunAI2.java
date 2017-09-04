@@ -60,7 +60,9 @@ public class Rideable_Antiaircraft_GunAI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 701199: // Rideable Antiaircraft Gun.
+			{
 				return 0x4E5133;
+			}
 		}
 		return 0;
 	}
@@ -77,13 +79,21 @@ public class Rideable_Antiaircraft_GunAI2 extends ActionItemNpcAI2
 		switch (question)
 		{
 			case SHOULD_DECAY:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			case SHOULD_RESPAWN:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			case SHOULD_REWARD:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 }

@@ -35,14 +35,20 @@ public class PetMoodService
 		switch (type)
 		{
 			case 0:
+			{
 				startCheckingMood(pet);
 				break;
+			}
 			case 1:
+			{
 				interactWithPet(pet, shuggleEmotion);
 				break;
+			}
 			case 3:
+			{
 				requestPresent(pet);
 				break;
+			}
 		}
 	}
 	

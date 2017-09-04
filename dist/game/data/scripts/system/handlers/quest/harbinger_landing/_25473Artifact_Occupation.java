@@ -141,6 +141,7 @@ public class _25473Artifact_Occupation extends QuestHandler
 				case 883060:
 				case 883066:
 				case 883072:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -151,6 +152,7 @@ public class _25473Artifact_Occupation extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

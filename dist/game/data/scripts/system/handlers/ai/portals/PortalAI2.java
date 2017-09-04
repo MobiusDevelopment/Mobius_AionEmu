@@ -64,6 +64,7 @@ public class PortalAI2 extends ActionItemNpcAI2
 			case 802221: // Advance Corridor [Umbral Fortress].
 			case 802223: // Advance Corridor [Eternum Fortress].
 			case 802225: // Advance Corridor [Skyclash Fortress].
+			{
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
 					@Override
@@ -73,6 +74,7 @@ public class PortalAI2 extends ActionItemNpcAI2
 					}
 				}, 1000);
 				break;
+			}
 		}
 	}
 	

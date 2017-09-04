@@ -131,6 +131,7 @@ public class _25203Creatures_Of_Cloudtalon_Valley extends QuestHandler
 				case 219696:
 				case 219697:
 				case 219698:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -141,6 +142,7 @@ public class _25203Creatures_Of_Cloudtalon_Valley extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

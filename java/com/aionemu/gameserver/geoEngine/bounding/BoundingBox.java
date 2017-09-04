@@ -339,14 +339,15 @@ public class BoundingBox extends BoundingVolume
 				final BoundingBox vBox = (BoundingBox) volume;
 				return merge(vBox.center, vBox.xExtent, vBox.yExtent, vBox.zExtent, new BoundingBox(new Vector3f(0, 0, 0), 0, 0, 0));
 			}
-			
 			// case OBB: {
 			// OrientedBoundingBox box = (OrientedBoundingBox) volume;
 			// BoundingBox rVal = (BoundingBox) this.clone(null);
 			// return rVal.mergeOBB(box);
 			// }
 			default:
+			{
 				return null;
+			}
 		}
 	}
 	
@@ -370,12 +371,13 @@ public class BoundingBox extends BoundingVolume
 				final BoundingBox vBox = (BoundingBox) volume;
 				return merge(vBox.center, vBox.xExtent, vBox.yExtent, vBox.zExtent, this);
 			}
-			
 			// case OBB: {
 			// return mergeOBB((OrientedBoundingBox) volume);
 			// }
 			default:
+			{
 				return null;
+			}
 		}
 	}
 	

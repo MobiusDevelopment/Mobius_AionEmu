@@ -119,6 +119,7 @@ public class _15632Primordial_Creatures_In_Polten_Marsh extends QuestHandler
 				case 243343:
 				case 243344:
 				case 243345:
+				{
 					if (qs.getQuestVarById(1) < 3)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _15632Primordial_Creatures_In_Polten_Marsh extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

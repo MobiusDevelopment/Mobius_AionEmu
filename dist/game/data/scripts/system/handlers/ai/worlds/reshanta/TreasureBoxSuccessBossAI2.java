@@ -49,6 +49,7 @@ public class TreasureBoxSuccessBossAI2 extends AggressiveNpcAI2
 			case 263001:
 			case 263006:
 			case 263011:
+			{
 				treasureChest();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -64,10 +65,12 @@ public class TreasureBoxSuccessBossAI2 extends AggressiveNpcAI2
 					}
 				}, 10000);
 				break;
+			}
 			// Siel's Eastern Fortress.
 			case 263301:
 			case 263306:
 			case 263311:
+			{
 				treasureChest();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -83,10 +86,12 @@ public class TreasureBoxSuccessBossAI2 extends AggressiveNpcAI2
 					}
 				}, 10000);
 				break;
+			}
 			// Sulfur Fortress.
 			case 264501:
 			case 264506:
 			case 264511:
+			{
 				treasureChest();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -102,10 +107,12 @@ public class TreasureBoxSuccessBossAI2 extends AggressiveNpcAI2
 					}
 				}, 10000);
 				break;
+			}
 			// Temple Of Scales.
 			case 257000:
 			case 257005:
 			case 257010:
+			{
 				treasureChest();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -119,10 +126,12 @@ public class TreasureBoxSuccessBossAI2 extends AggressiveNpcAI2
 					}
 				}, 10000);
 				break;
+			}
 			// Altar Of Avarice.
 			case 257300:
 			case 257305:
 			case 257310:
+			{
 				treasureChest();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -136,10 +145,12 @@ public class TreasureBoxSuccessBossAI2 extends AggressiveNpcAI2
 					}
 				}, 10000);
 				break;
+			}
 			// Vorgaltem Citadel.
 			case 257600:
 			case 257605:
 			case 257610:
+			{
 				treasureChest();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -153,10 +164,12 @@ public class TreasureBoxSuccessBossAI2 extends AggressiveNpcAI2
 					}
 				}, 10000);
 				break;
+			}
 			// Crimsom Temple.
 			case 257900:
 			case 257905:
 			case 257910:
+			{
 				treasureChest();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -170,6 +183,7 @@ public class TreasureBoxSuccessBossAI2 extends AggressiveNpcAI2
 					}
 				}, 10000);
 				break;
+			}
 		}
 		super.handleDied();
 	}

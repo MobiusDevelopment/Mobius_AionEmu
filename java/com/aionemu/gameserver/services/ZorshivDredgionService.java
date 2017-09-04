@@ -157,6 +157,7 @@ public class ZorshivDredgionService
 		{
 			case 1:
 			case 2:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -172,8 +173,11 @@ public class ZorshivDredgionService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -182,6 +186,7 @@ public class ZorshivDredgionService
 		switch (id)
 		{
 			case 3:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -197,8 +202,11 @@ public class ZorshivDredgionService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	

@@ -51,9 +51,11 @@ public class RiftOrbAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 730275: // Rift Orb.
+				{
 					sendMovie(player, 443);
 					spawn(730276, 1604.6683f, 1606.5886f, 306.8665f, (byte) 90); // Prison Of Ice Entrance.
 					break;
+				}
 			}
 		}
 		return true;

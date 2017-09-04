@@ -118,6 +118,7 @@ public class _18993Return_To_The_Test_Chamber extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 220426: // 아티팩트를 지배하는 원소 군주.
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -128,6 +129,7 @@ public class _18993Return_To_The_Test_Chamber extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

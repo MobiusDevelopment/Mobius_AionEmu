@@ -48,11 +48,15 @@ public class SanctuaryDungeonInstance extends GeneralInstanceHandler
 		switch (player.getRace())
 		{
 			case ELYOS:
+			{
 				spawnIDF6_OP_L_Door_Out();
 				break;
+			}
 			case ASMODIANS:
+			{
 				spawnIDF6_OP_D_Door_Out();
 				break;
+			}
 		}
 		if (spawnRace == null)
 		{

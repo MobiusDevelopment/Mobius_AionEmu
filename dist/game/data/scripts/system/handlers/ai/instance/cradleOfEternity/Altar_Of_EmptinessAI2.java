@@ -64,10 +64,12 @@ public class Altar_Of_EmptinessAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 833999: // Altar Of Emptiness.
+				{
 					handleUseItemStart(player);
 					// The Altar of Emptiness is moving.
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403506));
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

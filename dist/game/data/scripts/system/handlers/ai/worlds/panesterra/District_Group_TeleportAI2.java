@@ -69,73 +69,113 @@ public class District_Group_TeleportAI2 extends NpcAI2
 				switch (getNpcId())
 				{
 					case 833268:
+					{
 						switch (responder.getWorldId())
 						{
 							case 400020000: // Belus.
+							{
 								TeleportService2.teleportTo(responder, 400020000, 240.24854f, 1610.5688f, 1463.8889f, (byte) 86); // [Sylvan District]
 								break;
+							}
 							case 400040000: // Aspida.
+							{
 								TeleportService2.teleportTo(responder, 400040000, 240.24854f, 1610.5688f, 1463.8889f, (byte) 86); // [Nebulum District]
 								break;
+							}
 							case 400050000: // Atanatos.
+							{
 								TeleportService2.teleportTo(responder, 400050000, 240.24854f, 1610.5688f, 1463.8889f, (byte) 86); // [Bronzium District]
 								break;
+							}
 							case 400060000: // Disillon.
+							{
 								TeleportService2.teleportTo(responder, 400060000, 240.24854f, 1610.5688f, 1463.8889f, (byte) 86); // [Divinatum District]
 								break;
+							}
 						}
 						break;
+					}
 					case 833269:
+					{
 						switch (responder.getWorldId())
 						{
 							case 400020000: // Belus.
+							{
 								TeleportService2.teleportTo(responder, 400020000, 1609.0776f, 1810.1611f, 1463.9395f, (byte) 112); // [Heirloom District]
 								break;
+							}
 							case 400040000: // Aspida.
+							{
 								TeleportService2.teleportTo(responder, 400040000, 1609.0776f, 1810.1611f, 1463.9395f, (byte) 112); // [Blaekmor District]
 								break;
+							}
 							case 400050000: // Atanatos.
+							{
 								TeleportService2.teleportTo(responder, 400050000, 1609.0776f, 1810.1611f, 1463.9395f, (byte) 112); // [Aureus District]
 								break;
+							}
 							case 400060000: // Disillon.
+							{
 								TeleportService2.teleportTo(responder, 400060000, 1609.0776f, 1810.1611f, 1463.9395f, (byte) 112); // [Fulminaer District]
 								break;
+							}
 						}
 						break;
+					}
 					case 833270:
+					{
 						switch (responder.getWorldId())
 						{
 							case 400020000: // Belus.
+							{
 								TeleportService2.teleportTo(responder, 400020000, 1812.733f, 431.72452f, 1463.8632f, (byte) 85); // [Vernalium District]
 								break;
+							}
 							case 400040000: // Aspida.
+							{
 								TeleportService2.teleportTo(responder, 400040000, 1812.733f, 431.72452f, 1463.8632f, (byte) 85); // [Myrkin District]
 								break;
+							}
 							case 400050000: // Atanatos.
+							{
 								TeleportService2.teleportTo(responder, 400050000, 1812.733f, 431.72452f, 1463.8632f, (byte) 85); // [Cyprian District]
 								break;
+							}
 							case 400060000: // Disillon.
+							{
 								TeleportService2.teleportTo(responder, 400060000, 1812.733f, 431.72452f, 1463.8632f, (byte) 85); // [Thonderen District]
 								break;
+							}
 						}
 						break;
+					}
 					case 833271:
+					{
 						switch (responder.getWorldId())
 						{
 							case 400020000: // Belus.
+							{
 								TeleportService2.teleportTo(responder, 400020000, 438.7579f, 234.54915f, 1464.1918f, (byte) 58); // [Evergreen District]
 								break;
+							}
 							case 400040000: // Aspida.
+							{
 								TeleportService2.teleportTo(responder, 400040000, 438.7579f, 234.54915f, 1464.1918f, (byte) 58); // [Shaedwian District]
 								break;
+							}
 							case 400050000: // Atanatos.
+							{
 								TeleportService2.teleportTo(responder, 400050000, 438.7579f, 234.54915f, 1464.1918f, (byte) 58); // [Braesen District]
 								break;
+							}
 							case 400060000: // Disillon.
+							{
 								TeleportService2.teleportTo(responder, 400060000, 438.7579f, 234.54915f, 1464.1918f, (byte) 58); // [Severus District]
 								break;
+							}
 						}
 						break;
+					}
 				}
 			}
 			

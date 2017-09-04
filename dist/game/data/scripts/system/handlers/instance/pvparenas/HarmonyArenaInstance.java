@@ -196,16 +196,26 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 			case 207102:
 			case 207116:
 			case 243678: // Roaming Volcanic Petrahulk.
+			{
 				return 400;
+			}
 			case 207099:
+			{
 				return 200;
+			}
 			case 243679: // Heated Negotiator Grangvolkan.
+			{
 				return 100;
+			}
 			case 219328: // Plaza Wall.
 			case 243680: // Lurking Fangwing.
+			{
 				return 50;
+			}
 			default:
+			{
 				return 0;
+			}
 		}
 	}
 	

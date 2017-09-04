@@ -153,23 +153,35 @@ public class LunaShopService
 		switch (rnd)
 		{
 			case 1:
+			{
 				SpecialCraft.addAll(weapons);
 				break;
+			}
 			case 2:
+			{
 				SpecialCraft.addAll(armors);
 				break;
+			}
 			case 3:
+			{
 				SpecialCraft.addAll(pants);
 				break;
+			}
 			case 4:
+			{
 				SpecialCraft.addAll(shoes);
 				break;
+			}
 			case 5:
+			{
 				SpecialCraft.addAll(gloves);
 				break;
+			}
 			case 6:
+			{
 				SpecialCraft.addAll(shoulders);
 				break;
+			}
 		}
 		if (!specialGenerated)
 		{
@@ -489,13 +501,17 @@ public class LunaShopService
 		switch (action)
 		{
 			case 6:
+			{
 				PacketSendUtility.sendMessage(player, "teleportId : " + teleportId);
 				PacketSendUtility.sendPacket(player, new SM_LUNA_SHOP(6));
 				break;
+			}
 			case 7:
+			{
 				PacketSendUtility.sendMessage(player, "teleportId : " + teleportId);
 				PacketSendUtility.sendPacket(player, new SM_LUNA_SHOP(7));
 				break;
+			}
 		}
 	}
 	

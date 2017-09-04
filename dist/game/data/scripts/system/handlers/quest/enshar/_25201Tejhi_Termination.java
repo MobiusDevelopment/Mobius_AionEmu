@@ -141,6 +141,7 @@ public class _25201Tejhi_Termination extends QuestHandler
 				case 219811:
 				case 219812:
 				case 219813:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -151,6 +152,7 @@ public class _25201Tejhi_Termination extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

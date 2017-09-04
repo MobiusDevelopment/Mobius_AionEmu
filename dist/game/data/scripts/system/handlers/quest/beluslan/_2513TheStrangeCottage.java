@@ -82,11 +82,14 @@ public class _2513TheStrangeCottage extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1011);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							qs.setStatus(QuestStatus.REWARD);
@@ -94,6 +97,7 @@ public class _2513TheStrangeCottage extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 				}
 			}
 			if (targetId == 204827)
@@ -101,11 +105,14 @@ public class _2513TheStrangeCottage extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case STEP_TO_2:
+					{
 						if (var == 0)
 						{
 							qs.setStatus(QuestStatus.REWARD);
@@ -113,6 +120,7 @@ public class _2513TheStrangeCottage extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 				}
 			}
 			if (targetId == 790022)
@@ -120,11 +128,14 @@ public class _2513TheStrangeCottage extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1693);
 						}
+					}
 					case STEP_TO_3:
+					{
 						if (var == 0)
 						{
 							qs.setStatus(QuestStatus.REWARD);
@@ -132,6 +143,7 @@ public class _2513TheStrangeCottage extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 				}
 			}
 		}
@@ -142,11 +154,17 @@ public class _2513TheStrangeCottage extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 10002);
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestDialog(env, 5);
+					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

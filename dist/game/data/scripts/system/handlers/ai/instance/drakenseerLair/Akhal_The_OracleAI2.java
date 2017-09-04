@@ -156,11 +156,15 @@ public class Akhal_The_OracleAI2 extends AggressiveNpcAI2
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								spawn(220452, x, y, z, (byte) 0); // IDF6_Dragon_Messenger_Summon1_69_An.
 								break;
+							}
 							case 2:
+							{
 								spawn(220453, x, y, z, (byte) 0); // IDF6_Dragon_Messenger_Summon2_69_An.
 								break;
+							}
 						}
 					}
 				}

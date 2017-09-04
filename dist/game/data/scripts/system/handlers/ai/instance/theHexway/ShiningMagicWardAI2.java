@@ -38,9 +38,11 @@ public class ShiningMagicWardAI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 700455: // Shining Magic Ward.
+			{
 				switch (player.getWorldId())
 				{
 					case 300080000: // Left Wing Chamber.
+					{
 						if (player.getCommonData().getRace() == Race.ASMODIANS)
 						{
 							PacketSendUtility.sendMessage(player, "you enter <Primum Landing>");
@@ -52,15 +54,19 @@ public class ShiningMagicWardAI2 extends ActionItemNpcAI2
 							TeleportService2.teleportTo(player, 400010000, 2872.6626f, 1029.0958f, 1527.9968f, (byte) 103);
 						}
 						break;
+					}
 				}
 				switch (player.getWorldId())
 				{
 					case 300700000: // The Hexway 4.3.
+					{
 						PacketSendUtility.sendMessage(player, "you enter in <Silentera Canyon>");
 						TeleportService2.teleportTo(player, 600010000, 528.7647f, 766.7518f, 299.61633f, (byte) 1);
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 }

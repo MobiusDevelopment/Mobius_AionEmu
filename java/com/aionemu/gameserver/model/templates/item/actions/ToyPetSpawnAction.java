@@ -87,7 +87,9 @@ public class ToyPetSpawnAction extends AbstractItemAction
 			case 210080000: // Griffoen.
 			case 210110000: // Tower Of Eternity E.
 			case 700010000: // Oriel.
+			{
 				// Restriction Asmodians Spawn Kisk.
+			}
 			case 120010000: // Pandaemonium.
 			case 120020000: // Convent Of Marchutan.
 			case 120080000: // Marchutan Priory.
@@ -96,10 +98,14 @@ public class ToyPetSpawnAction extends AbstractItemAction
 			case 220120000: // Tower Of Eternity A.
 			case 220090000: // Habrok.
 			case 710010000: // Pernon.
+			{
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_USE_ITEM_INVALID_LOCATION);
 				return false;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return true;
 	}

@@ -80,11 +80,17 @@ public class PlayerInitialData
 		switch (race)
 		{
 			case ASMODIANS:
+			{
 				return asmodianSpawnLocation;
+			}
 			case ELYOS:
+			{
 				return elyosSpawnLocation;
+			}
 			default:
+			{
 				throw new IllegalArgumentException();
+			}
 		}
 	}
 	

@@ -54,6 +54,7 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 834006: // Altar Of Earth.
+			{
 				// The Malachite of Earth emits a light and starts to float.
 				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_02_SYSTEM_MSG_37, 5000);
 				ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -67,7 +68,9 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 					}
 				}, 5000);
 				break;
+			}
 			case 834019: // Altar Of Earth.
+			{
 				// The Malachite of Earth emits a light and starts to float.
 				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_02_SYSTEM_MSG_37, 5000);
 				ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -81,7 +84,9 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 					}
 				}, 5000);
 				break;
+			}
 			case 834020: // Altar Of Earth.
+			{
 				// The Malachite of Earth emits a light and starts to float.
 				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_02_SYSTEM_MSG_37, 5000);
 				ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -95,7 +100,9 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 					}
 				}, 5000);
 				break;
+			}
 			case 834021: // Altar Of Earth.
+			{
 				// The Malachite of Earth emits a light and starts to float.
 				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_02_SYSTEM_MSG_37, 5000);
 				ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -109,7 +116,9 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 					}
 				}, 5000);
 				break;
+			}
 			case 834022: // Altar Of Earth.
+			{
 				// The Malachite of Earth emits a light and starts to float.
 				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_02_SYSTEM_MSG_37, 5000);
 				ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -125,6 +134,7 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 					}
 				}, 5000);
 				break;
+			}
 		}
 	}
 	

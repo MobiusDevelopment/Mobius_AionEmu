@@ -212,6 +212,7 @@ public class WalkManager
 			switch (npcAI.getSubState())
 			{
 				case WALK_PATH:
+				{
 					npcAI.getOwner().updateKnownlist();
 					if (npcAI.getOwner().getWalkerGroup() != null)
 					{
@@ -222,18 +223,27 @@ public class WalkManager
 						chooseNextRouteStep(npcAI);
 					}
 					break;
+				}
 				case WALK_WAIT_GROUP:
+				{
 					npcAI.setSubStateIfNot(AISubState.WALK_PATH);
 					chooseNextRouteStep(npcAI);
 					break;
+				}
 				case WALK_RANDOM:
+				{
 					chooseNextRandomPoint(npcAI);
 					break;
+				}
 				case TALK:
+				{
 					npcAI.getOwner().getMoveController().abortMove();
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 	}

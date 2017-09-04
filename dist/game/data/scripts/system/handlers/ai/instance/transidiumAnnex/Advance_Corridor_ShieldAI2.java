@@ -45,17 +45,25 @@ public class Advance_Corridor_ShieldAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 297306: // Belus Advance Corridor Shield.
+				{
 					announceBelusAdvance();
 					break;
+				}
 				case 297307: // Aspida Advance Corridor Shield.
+				{
 					announceAspidaAdvance();
 					break;
+				}
 				case 297308: // Atanatos Advance Corridor Shield.
+				{
 					announceAtanatosAdvance();
 					break;
+				}
 				case 297309: // Disillon Advance Corridor Shield.
+				{
 					announceDisillonAdvance();
 					break;
+				}
 			}
 		}
 	}

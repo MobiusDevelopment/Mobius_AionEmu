@@ -61,12 +61,15 @@ public class CM_PET_EMOTE extends AionClientPacket
 		switch (emote)
 		{
 			case MOVE_STOP:
+			{
 				x1 = readF();
 				y1 = readF();
 				z1 = readF();
 				h = readSC();
 				break;
+			}
 			case MOVETO:
+			{
 				x1 = readF();
 				y1 = readF();
 				z1 = readF();
@@ -75,9 +78,12 @@ public class CM_PET_EMOTE extends AionClientPacket
 				y2 = readF();
 				z2 = readF();
 				break;
+			}
 			default:
+			{
 				emotionId = readC();
 				unk2 = readC();
+			}
 		}
 	}
 	
@@ -103,23 +109,34 @@ public class CM_PET_EMOTE extends AionClientPacket
 		switch (emote)
 		{
 			case UNKNOWN:
+			{
 				break;
+			}
 			case ALARM:
+			{
 				PacketSendUtility.broadcastPacket(player, new SM_PET_EMOTE(pet, emote), true);
 				break;
+			}
 			case MOVE_STOP:
+			{
 				World.getInstance().updatePosition(pet, x1, y1, z1, h);
 				PacketSendUtility.broadcastPacket(player, new SM_PET_EMOTE(pet, emote, x1, y1, z1, h), true);
 				break;
+			}
 			case MOVETO:
+			{
 				World.getInstance().updatePosition(pet, x1, y1, z1, h);
 				pet.getMoveController().setNewDirection(x2, y2, z2, h);
 				PacketSendUtility.broadcastPacket(player, new SM_PET_EMOTE(pet, emote, x1, y1, z2, x2, y2, z2, h), true);
 				break;
+			}
 			case FLY:
+			{
 				PacketSendUtility.broadcastPacket(player, new SM_PET_EMOTE(pet, emote, emotionId, unk2), true);
 				break;
+			}
 			default:
+			{
 				if (emotionId > 0)
 				{
 					PacketSendUtility.sendPacket(player, new SM_PET_EMOTE(pet, emote, emotionId, unk2));
@@ -128,6 +145,7 @@ public class CM_PET_EMOTE extends AionClientPacket
 				{
 					PacketSendUtility.broadcastPacket(player, new SM_PET_EMOTE(pet, emote, 0, unk2), true);
 				}
+			}
 		}
 	}
 }

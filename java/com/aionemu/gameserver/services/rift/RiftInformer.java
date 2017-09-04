@@ -194,38 +194,68 @@ public class RiftInformer
 			 * Elyos
 			 */
 			case 110070000: // Kaisinel Academy -> Brusthonin
+			{
 				return 220050000;
+			}
 			case 210020000: // Eltnen -> Morheim
+			{
 				return 220020000;
+			}
 			case 210040000: // Heiron -> Beluslan
+			{
 				return 220040000;
+			}
 			case 210050000: // Inggison -> Gelkmaros
+			{
 				return 220070000;
+			}
 			case 210070000: // Cygnea -> Enshar
+			{
 				return 220080000;
+			}
 			case 210060000: // Theobomos -> Marchutan Priory
+			{
 				return 120080000;
+			}
 			case 210100000: // Iluma -> Norsvold
+			{
 				return 220110000;
+			}
 			/**
 			 * Asmodians
 			 */
 			case 120080000: // Marchutan Priory -> Theobomos
+			{
 				return 210060000;
+			}
 			case 220020000: // Morheim -> Eltnen
+			{
 				return 210020000;
+			}
 			case 220040000: // Beluslan -> Heiron
+			{
 				return 210040000;
+			}
 			case 220050000: // Brusthonin -> Kaisinel Academy
+			{
 				return 110070000;
+			}
 			case 220070000: // Gelkmaros -> Inggison
+			{
 				return 210050000;
+			}
 			case 220080000: // Enshar -> Cygnea
+			{
 				return 210070000;
+			}
 			case 220110000: // Norsvold -> Iluma
+			{
 				return 210100000;
+			}
 			default:
+			{
 				return 0;
+			}
 		}
 	}
 }

@@ -37,6 +37,7 @@ public class MaxCountProperty
 		switch (value)
 		{
 			case AREA:
+			{
 				int areaCounter = 0;
 				final Creature firstTarget = skill.getFirstTarget();
 				if (firstTarget == null)
@@ -58,8 +59,11 @@ public class MaxCountProperty
 					skill.getEffectedList().add(creature);
 					areaCounter++;
 				}
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return true;
 	}

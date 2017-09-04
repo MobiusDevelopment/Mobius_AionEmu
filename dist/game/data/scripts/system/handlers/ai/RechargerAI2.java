@@ -41,9 +41,11 @@ public class RechargerAI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 730397:
+			{
 				reseter(player);
 				super.handleUseItemFinish(player);
 				break;
+			}
 		}
 	}
 	

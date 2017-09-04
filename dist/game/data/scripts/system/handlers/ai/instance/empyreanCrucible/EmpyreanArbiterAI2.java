@@ -57,33 +57,47 @@ public class EmpyreanArbiterAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 799573:
+				{
 					announceReentered();
 					TeleportService2.teleportTo(player, 300300000, instanceId, 358.2547f, 349.26443f, 96.09108f, (byte) 59);
 					break;
+				}
 				case 205426:
+				{
 					announceReentered();
 					TeleportService2.teleportTo(player, 300300000, instanceId, 1260.15f, 812.34f, 358.6056f, (byte) 90);
 					break;
+				}
 				case 205427:
+				{
 					announceReentered();
 					TeleportService2.teleportTo(player, 300300000, instanceId, 1616.0248f, 154.43837f, 126f, (byte) 10);
 					break;
+				}
 				case 205428:
+				{
 					announceReentered();
 					TeleportService2.teleportTo(player, 300300000, instanceId, 1793.9233f, 796.92f, 469.36542f, (byte) 60);
 					break;
+				}
 				case 205429:
+				{
 					announceReentered();
 					TeleportService2.teleportTo(player, 300300000, instanceId, 1776.4169f, 1749.9952f, 303.69553f, (byte) 0);
 					break;
+				}
 				case 205430:
+				{
 					announceReentered();
 					TeleportService2.teleportTo(player, 300300000, instanceId, 1328.935f, 1742.0771f, 316.74188f, (byte) 0);
 					break;
+				}
 				case 205431:
+				{
 					announceReentered();
 					TeleportService2.teleportTo(player, 300300000, instanceId, 1760.9441f, 1278.033f, 394.23764f, (byte) 0);
 					break;
+				}
 			}
 			final InstanceReward<?> instance = getPosition().getWorldMapInstance().getInstanceHandler().getInstanceReward();
 			if (instance != null)

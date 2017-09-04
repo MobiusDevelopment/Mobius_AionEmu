@@ -169,6 +169,7 @@ public class _15530Protect_Tarha_Krall_Village extends QuestHandler
 				case 243195:
 				case 243199:
 				case 243203:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -179,6 +180,7 @@ public class _15530Protect_Tarha_Krall_Village extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

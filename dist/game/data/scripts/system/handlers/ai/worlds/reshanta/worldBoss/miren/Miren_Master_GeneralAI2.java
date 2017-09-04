@@ -57,6 +57,7 @@ public class Miren_Master_GeneralAI2 extends AggressiveNpcAI2
 			case 279251:
 			case 279545:
 			case 279838:
+			{
 				treasureChest();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -72,6 +73,7 @@ public class Miren_Master_GeneralAI2 extends AggressiveNpcAI2
 					}
 				}, 10000);
 				break;
+			}
 		}
 		super.handleDied();
 	}

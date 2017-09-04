@@ -161,6 +161,7 @@ public class _25534Infiltrate_Kojol_Valley extends QuestHandler
 				case 243255:
 				case 243259:
 				case 243263:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -171,6 +172,7 @@ public class _25534Infiltrate_Kojol_Valley extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

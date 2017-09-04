@@ -121,6 +121,7 @@ public class _25411Handle_The_Intruder_To_Protect_The_Ancient_City_Of_Rhoo exten
 				case 884012:
 				case 884013:
 				case 884014:
+				{
 					if (qs.getQuestVarById(1) < 2)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -131,6 +132,7 @@ public class _25411Handle_The_Intruder_To_Protect_The_Ancient_City_Of_Rhoo exten
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

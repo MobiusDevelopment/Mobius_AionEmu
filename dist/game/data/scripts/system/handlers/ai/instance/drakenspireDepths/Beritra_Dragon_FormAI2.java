@@ -47,6 +47,7 @@ public class Beritra_Dragon_FormAI2 extends AggressiveNpcAI2
 			switch (getNpcId())
 			{
 				case 236247:
+				{
 					// Beritra will disappear when the relic is completely extracted in 7 minutes.
 					NpcShoutsService.getInstance().sendMsg(getOwner(), 1402722, 0);
 					// Beritra will disappear when the relic is completely extracted in 5 minutes.
@@ -66,6 +67,7 @@ public class Beritra_Dragon_FormAI2 extends AggressiveNpcAI2
 						}
 					}, 420000);
 					break;
+				}
 			}
 		}
 	}

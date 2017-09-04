@@ -69,6 +69,7 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 277224: // Ahserion.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -79,6 +80,7 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -157,6 +159,7 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 		{
 			// Belus Advance Corridor Shield.
 			case 297306:
+			{
 				// The Belus Advance Corridor Shield has been destroyed.
 				// The Daevas from the Belus camp have returned to the Arcadian Fortress.
 				sendMsgByRace(1402270, Race.PC_ALL, 2000);
@@ -182,8 +185,10 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 					}
 				}, 15000);
 				break;
+			}
 			// Aspida Advance Corridor Shield.
 			case 297307:
+			{
 				// The Aspida Advance Corridor Shield is under attack.
 				// The Daevas from the Aspida camp have returned to the Umbral Fortress.
 				sendMsgByRace(1402271, Race.PC_ALL, 2000);
@@ -209,8 +214,10 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 					}
 				}, 15000);
 				break;
+			}
 			// Atanatos Advance Corridor Shield.
 			case 297308:
+			{
 				// The Atanatos Advance Corridor Shield is under attack.
 				// The Daevas from the Atanatos camp have returned to the Eternum Fortress.
 				sendMsgByRace(1402272, Race.PC_ALL, 2000);
@@ -236,8 +243,10 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 					}
 				}, 15000);
 				break;
+			}
 			// Disillon Advance Corridor Shield.
 			case 297309:
+			{
 				// The Disillon Advance Corridor Shield has been destroyed.
 				// The Daevas from the Disillon camp have returned to the Skyclash Fortress.
 				sendMsgByRace(1402273, Race.PC_ALL, 2000);
@@ -263,7 +272,9 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 					}
 				}, 15000);
 				break;
+			}
 			case 297310: // Chariot Hangar I Controller.
+			{
 				despawnNpc(npc);
 				if (transidiumAnnexBase == 1)
 				{
@@ -283,7 +294,9 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 297311: // Chariot Hangar II Controller.
+			{
 				despawnNpc(npc);
 				if (transidiumAnnexBase == 2)
 				{
@@ -303,7 +316,9 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 297312: // Ignus Engine Hangar I Controller.
+			{
 				despawnNpc(npc);
 				if (transidiumAnnexBase == 3)
 				{
@@ -323,7 +338,9 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 297313: // Ignus Engine Hangar II Controller.
+			{
 				despawnNpc(npc);
 				if (transidiumAnnexBase == 4)
 				{
@@ -343,7 +360,9 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 277229: // Hangar Barricade.
+			{
 				final Npc ahserion = instance.getNpc(277224); // Ereshkigal's Reign.
 				hangarBarricade++;
 				if (ahserion != null)
@@ -364,9 +383,12 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 				}
 				despawnNpc(npc);
 				break;
+			}
 			case 277224: // Ahserion.
+			{
 				sendMsg("[Congratulation]: you finish <Transidium Annex>");
 				break;
+			}
 		}
 	}
 	
@@ -405,57 +427,81 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 277225: // Belus Camp Defense Cannon.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21731, 60, player).useNoAnimationSkill();
 				break;
+			}
 			case 277226: // Aspida Camp Defense Cannon.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21728, 60, player).useNoAnimationSkill();
 				break;
+			}
 			case 277227: // Atanatos Camp Defense Cannon.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21729, 60, player).useNoAnimationSkill();
 				break;
+			}
 			case 277228: // Disilon Camp Defense Cannon.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21730, 60, player).useNoAnimationSkill();
 				break;
+			}
 			// **/////////**//
 			// **/////////**//
 			case 297331: // Belus Chariot.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21582, 60, player).useNoAnimationSkill(); // Board The Chariot.
 				break;
+			}
 			case 297332: // Aspida Chariot.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21589, 60, player).useNoAnimationSkill(); // Board The Chariot.
 				break;
+			}
 			case 297333: // Atanatos Chariot.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21590, 60, player).useNoAnimationSkill(); // Board The Chariot.
 				break;
+			}
 			case 297334: // Disilon Chariot.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21591, 60, player).useNoAnimationSkill(); // Board The Chariot.
 				break;
+			}
 			// **/////////**//
 			// **/////////**//
 			case 297472: // Belus Chariot.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21579, 60, player).useNoAnimationSkill(); // Board The Ignus Engine.
 				break;
+			}
 			case 297473: // Aspida Chariot.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21586, 60, player).useNoAnimationSkill(); // Board The Ignus Engine.
 				break;
+			}
 			case 297474: // Atanatos Chariot.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21587, 60, player).useNoAnimationSkill(); // Board The Ignus Engine.
 				break;
+			}
 			case 297475: // Disilon Chariot.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21588, 60, player).useNoAnimationSkill(); // Board The Ignus Engine.
 				break;
+			}
 		}
 	}
 	

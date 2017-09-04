@@ -91,7 +91,9 @@ public class _26806They_Dont_Make_Em_Like_They_Used_To extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -169,6 +171,7 @@ public class _26806They_Dont_Make_Em_Like_They_Used_To extends QuestHandler
 				case 220324:
 				case 220327:
 				case 220330:
+				{
 					if (qs.getQuestVarById(1) < 30)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -179,12 +182,14 @@ public class _26806They_Dont_Make_Em_Like_They_Used_To extends QuestHandler
 						updateQuestStatus(env);
 					}
 					break;
+				}
 				case 857450:
 				case 857452:
 				case 857454:
 				case 857456:
 				case 857458:
 				case 857459:
+				{
 					if (qs.getQuestVarById(2) < 2)
 					{
 						qs.setQuestVarById(2, qs.getQuestVarById(2) + 1);
@@ -196,6 +201,7 @@ public class _26806They_Dont_Make_Em_Like_They_Used_To extends QuestHandler
 						updateQuestStatus(env);
 					}
 					break;
+				}
 			}
 		}
 		return false;

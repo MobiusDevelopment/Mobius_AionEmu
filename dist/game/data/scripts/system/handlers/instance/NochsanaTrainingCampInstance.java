@@ -68,6 +68,7 @@ public class NochsanaTrainingCampInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 256693: // Nochsana General.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -77,6 +78,7 @@ public class NochsanaTrainingCampInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -87,16 +89,20 @@ public class NochsanaTrainingCampInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 256689: // Nochsana Guard.
+			{
 				despawnNpc(npc);
 				sendMsg("<Nochsana General> appear");
 				spawn(256693, 331.097f, 269.36f, 384.553f, (byte) 25); // Nochsana General.
 				break;
+			}
 			case 256693: // Nochsana General.
+			{
 				sendMsg("<Nochsana Abyss Gate> is now open");
 				final SpawnTemplate abyssGate = SpawnEngine.addNewSingleTimeSpawn(300030000, 700438, 466.7858f, 706.5129f, 346.2541f, (byte) 91); // Nochsana Abyss Gate.
 				abyssGate.setEntityId(14);
 				objects.put(700438, SpawnEngine.spawnObject(abyssGate, instanceId));
 				break;
+			}
 		}
 	}
 	
@@ -106,9 +112,11 @@ public class NochsanaTrainingCampInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 700437: // Nochsana Artifact.
+			{
 				sendMsg("You win effect <Shield Of Compassion>");
 				SkillEngine.getInstance().getSkill(npc, 276, 10, player).useNoAnimationSkill();
 				break;
+			}
 		}
 	}
 	

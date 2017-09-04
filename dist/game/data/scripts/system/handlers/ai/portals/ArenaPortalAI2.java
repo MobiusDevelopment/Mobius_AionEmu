@@ -43,14 +43,20 @@ public class ArenaPortalAI2 extends PortalDialogAI2
 		switch (dialogId)
 		{
 			case 10000:
+			{
 				worldId = 300430000;
 				break;
+			}
 			case 10001:
+			{
 				worldId = 300420000;
 				break;
+			}
 			case 10002:
+			{
 				worldId = 300570000;
 				break;
+			}
 		}
 		final AutoGroupType agt = AutoGroupType.getAutoGroupByWorld(player.getLevel(), worldId);
 		if (agt != null)

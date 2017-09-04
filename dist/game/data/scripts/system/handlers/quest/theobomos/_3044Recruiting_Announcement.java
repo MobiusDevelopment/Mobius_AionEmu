@@ -72,7 +72,9 @@ public class _3044Recruiting_Announcement extends QuestHandler
 						return true;
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

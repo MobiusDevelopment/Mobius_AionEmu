@@ -84,10 +84,14 @@ public class AttackUtil
 		{
 			case RESIST:
 			case CRITICAL_RESIST:
+			{
 				damage = 0;
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		attackList.add(new AttackResult(damage, status));
 		if ((attacker instanceof Player) && (((Player) attacker).getEquipment().getOffHandWeaponType() != null))
@@ -107,10 +111,14 @@ public class AttackUtil
 			{
 				case RESIST:
 				case CRITICAL_RESIST:
+				{
 					offHandDamage = 0;
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			attackList.add(new AttackResult(offHandDamage, status));
 		}
@@ -167,6 +175,7 @@ public class AttackUtil
 		switch (AttackStatus.getBaseStatus(status))
 		{
 			case BLOCK:
+			{
 				int reduce = damage - attacked.getGameStats().getPositiveReverseStat(StatEnum.DAMAGE_REDUCE, damage);
 				if (attacked instanceof Player)
 				{
@@ -182,14 +191,21 @@ public class AttackUtil
 				}
 				damage -= reduce;
 				break;
+			}
 			case DODGE:
+			{
 				damage = 0;
 				break;
+			}
 			case PARRY:
+			{
 				damage *= 0.6;
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		
 		if (status.isCritical())
@@ -242,27 +258,39 @@ public class AttackUtil
 			{
 				case GUN_1H:
 				case DAGGER_1H:
+				{
 					coeficient = 2.3f;
 					break;
+				}
 				case SWORD_1H:
+				{
 					coeficient = 2.2f;
 					break;
+				}
 				case MACE_1H:
+				{
 					coeficient = 2f;
 					break;
+				}
 				case SWORD_2H:
 				case CANNON_2H:
 				case POLEARM_2H:
 				case KEYBLADE_2H:
+				{
 					coeficient = 1.8f;
 					break;
+				}
 				case STAFF_2H:
 				case BOW:
+				{
 					coeficient = 1.7f;
 					break;
+				}
 				default:
+				{
 					coeficient = 1.5f;
 					break;
+				}
 			}
 			
 			if (stat.equals(StatEnum.MAGICAL_CRITICAL_DAMAGE_REDUCE))
@@ -279,11 +307,15 @@ public class AttackUtil
 			{
 				case PHYSICAL_CRITICAL_DAMAGE_REDUCE:
 				case MAGICAL_CRITICAL_DAMAGE_REDUCE:
+				{
 					fortitude = player.getGameStats().getStat(stat, 0).getCurrent();
 					coeficient -= Math.round(fortitude / 1000f);
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		
@@ -344,13 +376,19 @@ public class AttackUtil
 			switch (func)
 			{
 				case ADD:
+				{
 					damage += skillDamage;
 					break;
+				}
 				case PERCENT:
+				{
 					damage += (baseAttack * skillDamage) / 100f;
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		if (modifier != null)
@@ -359,13 +397,19 @@ public class AttackUtil
 			switch (modifier.getFunc())
 			{
 				case ADD:
+				{
 					damage += bonus;
 					break;
+				}
 				case PERCENT:
+				{
 					damage += (baseAttack * bonus) / 100f;
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		damage = (int) StatFunctions.adjustDamages(effect.getEffector(), effect.getEffected(), damage, effect.getPvpDamage(), true);
@@ -383,6 +427,7 @@ public class AttackUtil
 			switch (randomDamage)
 			{
 				case 1:
+				{
 					if (randomChance <= 40)
 					{
 						damage /= 2;
@@ -392,21 +437,28 @@ public class AttackUtil
 						damage *= 1.5;
 					}
 					break;
+				}
 				case 2:
+				{
 					if (randomChance <= 25)
 					{
 						damage *= 3;
 					}
 					break;
+				}
 				case 6:
+				{
 					if (randomChance <= 30)
 					{
 						damage *= 2;
 					}
 					break;
+				}
 				default:
+				{
 					damage *= (Rnd.get(25, 100) * 0.02f);
 					break;
+				}
 			}
 		}
 		AttackStatus status = AttackStatus.NORMALHIT;
@@ -421,6 +473,7 @@ public class AttackUtil
 		switch (AttackStatus.getBaseStatus(status))
 		{
 			case BLOCK:
+			{
 				int reduce = damage - effected.getGameStats().getPositiveReverseStat(StatEnum.DAMAGE_REDUCE, damage);
 				if (effected instanceof Player)
 				{
@@ -436,11 +489,16 @@ public class AttackUtil
 				}
 				damage -= reduce;
 				break;
+			}
 			case PARRY:
+			{
 				damage *= 0.6;
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		if (status.isCritical())
 		{
@@ -510,16 +568,24 @@ public class AttackUtil
 		{
 			case RESIST:
 			case DODGE:
+			{
 				damage = 0;
 				break;
+			}
 			case PARRY:
+			{
 				damage *= 0.6;
 				break;
+			}
 			case BLOCK:
+			{
 				damage /= 2;
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		attackList.add(new AttackResult(damage, status));
 		attacked.getObserveController().checkShieldStatus(attackList, null, attacker);
@@ -555,6 +621,7 @@ public class AttackUtil
 		switch (status)
 		{
 			case CRITICAL:
+			{
 				if (effector instanceof Player)
 				{
 					final WeaponType weaponType = ((Player) effector).getEquipment().getMainHandWeaponType();
@@ -565,8 +632,11 @@ public class AttackUtil
 					damage = (int) calculateWeaponCritical(effected, damage, null, critAddDmg, StatEnum.MAGICAL_CRITICAL_DAMAGE_REDUCE);
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		
 		if (damage <= 0)
@@ -619,15 +689,21 @@ public class AttackUtil
 			switch (modifier.getFunc())
 			{
 				case ADD:
+				{
 					break;
+				}
 				case PERCENT:
+				{
 					if (effector instanceof Npc)
 					{
 						bonus = Math.round((baseAttack * bonus) / 100f);
 					}
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		
@@ -637,6 +713,7 @@ public class AttackUtil
 		switch (status)
 		{
 			case CRITICAL:
+			{
 				if (effector instanceof Player)
 				{
 					final WeaponType weaponType = ((Player) effector).getEquipment().getMainHandWeaponType();
@@ -647,8 +724,11 @@ public class AttackUtil
 					damage = (int) calculateWeaponCritical(effected, damage, null, critAddDmg, StatEnum.MAGICAL_CRITICAL_DAMAGE_REDUCE);
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		if (shared && !effect.getSkill().getEffectedList().isEmpty())
 		{
@@ -706,6 +786,7 @@ public class AttackUtil
 			switch (status)
 			{
 				case BLOCK:
+				{
 					if (isMainHand)
 					{
 						status = AttackStatus.CRITICAL_BLOCK;
@@ -715,7 +796,9 @@ public class AttackUtil
 						status = AttackStatus.OFFHAND_CRITICAL_BLOCK;
 					}
 					break;
+				}
 				case PARRY:
+				{
 					if (isMainHand)
 					{
 						status = AttackStatus.CRITICAL_PARRY;
@@ -725,7 +808,9 @@ public class AttackUtil
 						status = AttackStatus.OFFHAND_CRITICAL_PARRY;
 					}
 					break;
+				}
 				case DODGE:
+				{
 					if (isMainHand)
 					{
 						status = AttackStatus.CRITICAL_DODGE;
@@ -735,7 +820,9 @@ public class AttackUtil
 						status = AttackStatus.OFFHAND_CRITICAL_DODGE;
 					}
 					break;
+				}
 				default:
+				{
 					if (isMainHand)
 					{
 						status = AttackStatus.CRITICAL;
@@ -745,6 +832,7 @@ public class AttackUtil
 						status = AttackStatus.OFFHAND_CRITICAL;
 					}
 					break;
+				}
 			}
 		}
 		
@@ -960,9 +1048,11 @@ public class AttackUtil
 			case 4522: // Sonic Gust I.
 			case 4523: // Sonic Gust II.
 			case 4790: // [ArchDaeva] Sonic Gust 5.1
+			{
 				/********************
 				 * [Stumble Effect] *
 				 ********************/
+			}
 			case 519: // Explosion Of Rage I.
 			case 520: // Explosion Of Rage II.
 			case 521: // Explosion Of Rage III.
@@ -1098,9 +1188,11 @@ public class AttackUtil
 			case 4594: // Shadowfall V.
 			case 4595: // Shadowfall VI.
 			case 4596: // Shadowfall VII.
+			{
 				/***********************
 				 * [Openaerial Effect] *
 				 ***********************/
+			}
 			case 545: // Aerial Lockdown I.
 			case 546: // Aerial Lockdown II.
 			case 547: // Aerial Lockdown III.
@@ -1133,9 +1225,11 @@ public class AttackUtil
 			case 3412: // Binding Rune VII.
 			case 3413: // Binding Rune VIII.
 			case 3414: // Binding Rune IX.
+			{
 				/*******************
 				 * [Pulled Effect] *
 				 *******************/
+			}
 			case 326: // Sweeping Hook.
 			case 2967: // Illusion Chains.
 			case 4721: // [ArchDaeva] Illusion Chains 5.1
@@ -1147,7 +1241,9 @@ public class AttackUtil
 			case 3165: // Divine Grasp IV.
 			case 3166: // Divine Grasp V.
 			case 3167: // Divine Grasp VI.
+			{
 				return true;
+			}
 		}
 		return false;
 	}
@@ -1165,13 +1261,19 @@ public class AttackUtil
 				case STAFF_2H:
 				case SWORD_2H:
 				case KEYBLADE_2H:
+				{
 					skillId = 8218;
 					break;
+				}
 				case BOW:
+				{
 					skillId = 8217;
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		if (skillId == 0)

@@ -78,9 +78,12 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 219617: // Balaur Barricade.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 215424: // Treasurer Nabatma.
+			{
 				sendMsg("[Congratulation]: you finish <Left Wing Chamber>");
 				if (!isStartTimer1)
 				{
@@ -121,6 +124,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					}, 300000);
 				}
 				break;
+			}
 		}
 	}
 	

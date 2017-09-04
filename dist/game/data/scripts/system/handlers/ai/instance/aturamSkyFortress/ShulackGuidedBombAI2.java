@@ -141,9 +141,13 @@ public class ShulackGuidedBombAI2 extends AggressiveNpcAI2
 		switch (question)
 		{
 			case CAN_RESIST_ABNORMAL:
+			{
 				return AIAnswers.POSITIVE;
+			}
 			default:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 		}
 	}
 	
@@ -153,13 +157,21 @@ public class ShulackGuidedBombAI2 extends AggressiveNpcAI2
 		switch (question)
 		{
 			case SHOULD_DECAY:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			case SHOULD_RESPAWN:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			case SHOULD_REWARD:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 }

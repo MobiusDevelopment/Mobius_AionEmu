@@ -172,8 +172,10 @@ public class _25400Pontekane_Plight extends QuestHandler
 						switch (player.getRace())
 						{
 							case ASMODIANS:
+							{
 								giveQuestItem(env, 182215900, 1); // Beritra Supply Mark.
 								break;
+							}
 						}
 						return closeDialogWindow(env);
 					}
@@ -188,8 +190,10 @@ public class _25400Pontekane_Plight extends QuestHandler
 						switch (player.getRace())
 						{
 							case ASMODIANS:
+							{
 								giveQuestItem(env, 182215901, 1); // Repair Device Gear.
 								break;
+							}
 						}
 						return closeDialogWindow(env);
 					}
@@ -204,8 +208,10 @@ public class _25400Pontekane_Plight extends QuestHandler
 						switch (player.getRace())
 						{
 							case ASMODIANS:
+							{
 								giveQuestItem(env, 182215902, 1); // Ereshkigal Legion Mark.
 								break;
+							}
 						}
 						return closeDialogWindow(env);
 					}

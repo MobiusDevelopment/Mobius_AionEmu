@@ -118,10 +118,14 @@ public class SM_ATTACK_STATUS extends AionServerPacket
 		{
 			case DAMAGE:
 			case DELAYDAMAGE:
+			{
 				writeD(-value);
 				break;
+			}
 			default:
+			{
 				writeD(value);
+			}
 		}
 		writeD(0x00);// 5.0
 		writeC(type.getValue());

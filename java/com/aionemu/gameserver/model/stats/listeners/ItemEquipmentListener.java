@@ -311,9 +311,13 @@ public class ItemEquipmentListener
 				case PVP_ATTACK_RATIO:
 				case PVP_DEFEND_RATIO:
 				case BOOST_CASTING_TIME:
+				{
 					continue;
+				}
 				default:
+				{
 					allModifiers.add(modifier);
+				}
 			}
 		}
 		return allModifiers;

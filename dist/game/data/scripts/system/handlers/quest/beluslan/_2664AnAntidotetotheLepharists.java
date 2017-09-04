@@ -109,6 +109,7 @@ public class _2664AnAntidotetotheLepharists extends QuestHandler
 			switch (env.getDialog())
 			{
 				case USE_OBJECT:
+				{
 					if ((var >= 0) && (var < 4))
 					{
 						if (player.getInventory().getItemCountByItemId(182204489) >= 1)
@@ -125,6 +126,7 @@ public class _2664AnAntidotetotheLepharists extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		return false;

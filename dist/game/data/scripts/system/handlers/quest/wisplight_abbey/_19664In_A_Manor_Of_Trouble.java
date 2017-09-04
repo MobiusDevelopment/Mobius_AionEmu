@@ -90,9 +90,13 @@ public class _19664In_A_Manor_Of_Trouble extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}
@@ -113,7 +117,9 @@ public class _19664In_A_Manor_Of_Trouble extends QuestHandler
 							return sendQuestEndDialog(env);
 						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 			}
@@ -129,7 +135,9 @@ public class _19664In_A_Manor_Of_Trouble extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}
@@ -151,6 +159,7 @@ public class _19664In_A_Manor_Of_Trouble extends QuestHandler
 			case 211933:
 			case 211964:
 			case 212110:
+			{
 				if (qs.getQuestVarById(1) < 10)
 				{
 					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -162,6 +171,7 @@ public class _19664In_A_Manor_Of_Trouble extends QuestHandler
 					updateQuestStatus(env);
 				}
 				break;
+			}
 		}
 		return false;
 	}

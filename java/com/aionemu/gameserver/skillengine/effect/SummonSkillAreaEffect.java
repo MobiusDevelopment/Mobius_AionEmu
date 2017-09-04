@@ -70,13 +70,17 @@ public class SummonSkillAreaEffect extends SummonServantEffect
 			case 1321:
 			case 1322:
 			case 1323:
+			{
 				useTime = 15;
 				break;
+			}
 			// Mounting Explosion 4.8
 			case 1431:
 			case 1432:
+			{
 				useTime = 30;
 				break;
+			}
 			// Manifest Tornado 4.8
 			case 1460:
 			case 1461:
@@ -94,19 +98,25 @@ public class SummonSkillAreaEffect extends SummonServantEffect
 			case 1473:
 			case 1474:
 			case 1475:
+			{
 				useTime = 3;
 				break;
+			}
 			// Battle Call 4.8
 			case 3036:
 			case 3037:
+			{
 				useTime = 11;
 				break;
+			}
 			// Field Of Lightning 5.1
 			case 4770:
 			case 4771:
 			case 4826:
+			{
 				useTime = 9;
 				break;
+			}
 		}
 		final Servant servant = spawnServant(effect, useTime, NpcObjectType.SKILLAREA, x, y, z);
 		final int finalSkillId = servant.getSkillList() != null ? servant.getSkillList().getRandomSkill().getSkillId() : 0;

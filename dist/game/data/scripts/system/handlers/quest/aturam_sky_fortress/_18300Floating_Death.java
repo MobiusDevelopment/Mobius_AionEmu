@@ -60,9 +60,13 @@ public class _18300Floating_Death extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 4762);
+					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -78,10 +82,14 @@ public class _18300Floating_Death extends QuestHandler
 						return closeDialogWindow(env);
 					}
 					case SELECT_ACTION_1013:
+					{
 						return sendQuestDialog(env, 1013);
+					}
 					case STEP_TO_1:
+					{
 						changeQuestStep(env, 0, 1, false);
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}
@@ -92,11 +100,17 @@ public class _18300Floating_Death extends QuestHandler
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 10002);
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestDialog(env, 5);
+					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

@@ -82,6 +82,7 @@ public class _2239MalodorAntidote extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
@@ -90,7 +91,9 @@ public class _2239MalodorAntidote extends QuestHandler
 						{
 							return sendQuestDialog(env, 1693);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -98,7 +101,9 @@ public class _2239MalodorAntidote extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 					case CHECK_COLLECTED_ITEMS:
+					{
 						if (var == 1)
 						{
 							if (QuestService.collectItemCheck(env, true))
@@ -117,6 +122,7 @@ public class _2239MalodorAntidote extends QuestHandler
 								return sendQuestDialog(env, 1694);
 							}
 						}
+					}
 				}
 			}
 			if (targetId == 203613)
@@ -124,17 +130,21 @@ public class _2239MalodorAntidote extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 3)
 						{
 							return sendQuestDialog(env, 2034);
 						}
+					}
 					case STEP_TO_3:
+					{
 						if (var == 3)
 						{
 							qs.setStatus(QuestStatus.REWARD);
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 5);
 						}
+					}
 				}
 			}
 		}

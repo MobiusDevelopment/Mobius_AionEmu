@@ -510,11 +510,15 @@ public class DropService
 			switch (dropNpc.getDistributionId())
 			{
 				case 2:
+				{
 					winningRollActions(requestedItem.getWinningPlayer(), itemId, npcId);
 					break;
+				}
 				case 3:
+				{
 					winningBidActions(requestedItem.getWinningPlayer(), npcId, requestedItem.getHighestValue());
 					break;
+				}
 			}
 			
 			uniqueDropAnnounce(player, requestedItem);

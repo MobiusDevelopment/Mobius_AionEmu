@@ -42,13 +42,17 @@ public class CrucibleRiftAI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 730459: // Crucible Rift.
+			{
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 				break;
+			}
 			case 730460: // Crucible Rift.
+			{
 				TeleportService2.teleportTo(player, 300320000, getPosition().getInstanceId(), 1759.5004f, 1273.5414f, 389.11743f, (byte) 10);
 				spawn(205679, 1765.522f, 1282.1051f, 389.11743f, (byte) 0);
 				AI2Actions.deleteOwner(this);
 				break;
+			}
 		}
 	}
 	
@@ -58,6 +62,7 @@ public class CrucibleRiftAI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 730459: // Crucible Rift.
+			{
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
 					@Override
@@ -83,6 +88,7 @@ public class CrucibleRiftAI2 extends ActionItemNpcAI2
 					}
 				}, 10000);
 				break;
+			}
 		}
 		super.handleSpawned();
 	}
@@ -97,11 +103,15 @@ public class CrucibleRiftAI2 extends ActionItemNpcAI2
 			switch (player.getRace())
 			{
 				case ELYOS:
+				{
 					spawn(218200, 1765.4385f, 315.67407f, 469.25f, (byte) 114); // Rank 5, Asmodian Soldier Mediatec.
 					break;
+				}
 				case ASMODIANS:
+				{
 					spawn(218192, 1765.4385f, 315.67407f, 469.25f, (byte) 114); // Rank 5, Elyos Soldier Odos.
 					break;
+				}
 			}
 			AI2Actions.deleteOwner(this);
 		}

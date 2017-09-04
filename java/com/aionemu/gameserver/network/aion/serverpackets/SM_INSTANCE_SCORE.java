@@ -145,6 +145,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 			case 300450000: // Arena Of Harmony 3.9
 			case 300570000: // Harmony Training Grounds 3.9
 			case 301100000: // Unity Training Grounds 3.9
+			{
 				final HarmonyArenaReward harmonyArena = (HarmonyArenaReward) instanceReward;
 				if (object == null)
 				{
@@ -155,22 +156,29 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				switch (type)
 				{
 					case 2:
+					{
 						writeD(0);
 						writeD(harmonyArena.getRound());
 						break;
+					}
 					case 3:
+					{
 						writeD(harmonyGroupReward.getOwner());
 						writeS(harmonyGroupReward.getAGPlayer(object).getName(), 52);
 						writeD(harmonyGroupReward.getId());
 						writeD(object);
 						break;
+					}
 					case 4:
+					{
 						writeD(harmonyArena.getPlayerReward(object).getRemaningTime());
 						writeD(0);
 						writeD(0);
 						writeD(object);
 						break;
+					}
 					case 5:
+					{
 						writeD(harmonyGroupReward.getBasicAP());
 						writeD(harmonyGroupReward.getBasicGP());
 						writeD(harmonyGroupReward.getScoreAP());
@@ -204,7 +212,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 						writeD((int) harmonyGroupReward.getParticipation() * 100);
 						writeD(harmonyGroupReward.getPoints());
 						break;
+					}
 					case 6:
+					{
 						writeD(3);
 						writeD(harmonyArena.getCapPoints());
 						writeD(3);
@@ -239,18 +249,23 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 							}
 						}
 						break;
+					}
 					case 10:
+					{
 						writeC(harmonyArena.getRank(harmonyGroupReward.getPoints()));
 						writeD(harmonyGroupReward.getPvPKills());
 						writeD(harmonyGroupReward.getPoints());
 						writeD(harmonyGroupReward.getOwner());
 						break;
+					}
 				}
 				break;
+			}
 			case 300110000: // Baranath Dredgion.
 			case 300210000: // Chantra Dredgion.
 			case 300440000: // Terath Dredgion.
 			case 301650000: // Ashunatal Dredgion.
+			{
 				fillTableWithGroup(Race.ELYOS);
 				fillTableWithGroup(Race.ASMODIANS);
 				final DredgionReward dredgionReward = (DredgionReward) instanceReward;
@@ -265,7 +280,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					writeC(dredgionRoom.getState());
 				}
 				break;
+			}
 			case 301120000: // Kamar Battlefield 4.3
+			{
 				final KamarBattlefieldReward kbr = (KamarBattlefieldReward) instanceReward;
 				if (object == null)
 				{
@@ -276,21 +293,28 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				switch (type)
 				{
 					case 2:
+					{
 						writeD(0);
 						writeD(kbr.getTime());
 						break;
+					}
 					case 3:
+					{
 						writeD(10);
 						writeD(value1);
 						writeD(object);
 						writeD(value2);
 						break;
+					}
 					case 4:
+					{
 						writeD(10);
 						writeD(value1);
 						writeD(object);
 						break;
+					}
 					case 5:
+					{
 						writeD((int) kbpr.getParticipation() * 100);
 						writeD(kbpr.getRewardExp());
 						writeD(kbpr.getBonusExp());
@@ -310,7 +334,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 						writeD(kbpr.getAdditionalRewardCount());
 						writeC(1);
 						break;
+					}
 					case 6:
+					{
 						int counter = 0;
 						writeD(100);
 						for (Player player : players)
@@ -355,31 +381,42 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 						writeD(1);
 						writeD((kbr.getInstanceScoreType() == InstanceScoreType.PREPARING ? 65535 : 1));
 						break;
+					}
 					case 7:
+					{
 						kamarBattlefieldTable(Race.ELYOS);
 						kamarBattlefieldTable(Race.ASMODIANS);
 						break;
+					}
 					case 8:
+					{
 						writeD(object);
 						break;
+					}
 					case 10:
+					{
 						writeC(0);
 						writeD(kbr.getPvpKillsByRace(kbpr.getRace()).intValue());
 						writeD(kbr.getPointsByRace(kbpr.getRace()).intValue());
 						writeD(kbpr.getRace().getRaceId());
 						writeD(object);
 						break;
+					}
 					case 11:
+					{
 						writeC(0);
 						writeD(kbr.getPvpKillsByRace(kbpr.getRace()).intValue());
 						writeD(kbr.getPointsByRace(kbpr.getRace()).intValue());
 						writeD(kbpr.getRace().getRaceId());
 						writeD(object);
 						break;
+					}
 				}
 				break;
+			}
 			case 301210000: // Engulfed Ophidan Bridge 4.5
 			case 301670000: // Ophidan Warpath 5.1
+			{
 				final EngulfedOphidanBridgeReward eobr = (EngulfedOphidanBridgeReward) instanceReward;
 				if (object == null)
 				{
@@ -390,32 +427,43 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				switch (type)
 				{
 					case 2:
+					{
 						writeD(0);
 						for (Player player : players)
 						{
 							switch (player.getWorldId())
 							{
 								case 301210000: // Engulfed Ophidan Bridge 4.7
+								{
 									writeD(eobr.getTime());
 									break;
+								}
 								case 301670000: // Ophidan Warpath 5.1
+								{
 									writeD(eobr.getTime2());
 									break;
+								}
 							}
 						}
 						break;
+					}
 					case 3:
+					{
 						writeD(10);
 						writeD(value1);
 						writeD(object);
 						writeD(value2);
 						break;
+					}
 					case 4:
+					{
 						writeD(10);
 						writeD(value1);
 						writeD(object);
 						break;
+					}
 					case 5:
+					{
 						writeD((int) eobpr.getParticipation() * 100);
 						writeD(eobpr.getRewardExp());
 						writeD(eobpr.getBonusExp());
@@ -435,7 +483,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 						writeD(eobpr.getAdditionalRewardCount());
 						writeC(1);
 						break;
+					}
 					case 6:
+					{
 						int counter = 0;
 						writeD(100);
 						for (Player player : players)
@@ -480,30 +530,41 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 						writeD(1);
 						writeD((eobr.getInstanceScoreType() == InstanceScoreType.PREPARING ? 65535 : 1));
 						break;
+					}
 					case 7:
+					{
 						engulfedOphidanBridgeTable(Race.ELYOS);
 						engulfedOphidanBridgeTable(Race.ASMODIANS);
 						break;
+					}
 					case 8:
+					{
 						writeD(object);
 						break;
+					}
 					case 10:
+					{
 						writeC(0);
 						writeD(eobr.getPvpKillsByRace(eobpr.getRace()).intValue());
 						writeD(eobr.getPointsByRace(eobpr.getRace()).intValue());
 						writeD(eobpr.getRace().getRaceId());
 						writeD(object);
 						break;
+					}
 					case 11:
+					{
 						writeC(0);
 						writeD(eobr.getPvpKillsByRace(eobpr.getRace()).intValue());
 						writeD(eobr.getPointsByRace(eobpr.getRace()).intValue());
 						writeD(eobpr.getRace().getRaceId());
 						writeD(object);
 						break;
+					}
 				}
 				break;
+			}
 			case 301220000: // Iron Wall Warfront 4.5
+			{
 				final IronWallWarfrontReward iwwr = (IronWallWarfrontReward) instanceReward;
 				if (object == null)
 				{
@@ -514,21 +575,28 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				switch (type)
 				{
 					case 2:
+					{
 						writeD(0);
 						writeD(iwwr.getTime());
 						break;
+					}
 					case 3:
+					{
 						writeD(10);
 						writeD(value1);
 						writeD(object);
 						writeD(value2);
 						break;
+					}
 					case 4:
+					{
 						writeD(10);
 						writeD(value1);
 						writeD(object);
 						break;
+					}
 					case 5:
+					{
 						writeD((int) iwwpr.getParticipation() * 100);
 						writeD(iwwpr.getRewardExp());
 						writeD(iwwpr.getBonusExp());
@@ -548,7 +616,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 						writeD(iwwpr.getAdditionalRewardCount());
 						writeC(1);
 						break;
+					}
 					case 6:
+					{
 						int counter = 0;
 						writeD(100);
 						for (Player player : players)
@@ -593,30 +663,41 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 						writeD(1);
 						writeD((iwwr.getInstanceScoreType() == InstanceScoreType.PREPARING ? 65535 : 1));
 						break;
+					}
 					case 7:
+					{
 						ironWallWarfrontTable(Race.ELYOS);
 						ironWallWarfrontTable(Race.ASMODIANS);
 						break;
+					}
 					case 8:
+					{
 						writeD(object);
 						break;
+					}
 					case 10:
+					{
 						writeC(0);
 						writeD(iwwr.getPvpKillsByRace(iwwpr.getRace()).intValue());
 						writeD(iwwr.getPointsByRace(iwwpr.getRace()).intValue());
 						writeD(iwwpr.getRace().getRaceId());
 						writeD(object);
 						break;
+					}
 					case 11:
+					{
 						writeC(0);
 						writeD(iwwr.getPvpKillsByRace(iwwpr.getRace()).intValue());
 						writeD(iwwr.getPointsByRace(iwwpr.getRace()).intValue());
 						writeD(iwwpr.getRace().getRaceId());
 						writeD(object);
 						break;
+					}
 				}
 				break;
+			}
 			case 301310000: // Idgel Dome 4.7
+			{
 				final IdgelDomeReward idr = (IdgelDomeReward) instanceReward;
 				if (object == null)
 				{
@@ -627,21 +708,28 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				switch (type)
 				{
 					case 2:
+					{
 						writeD(0);
 						writeD(idr.getTime());
 						break;
+					}
 					case 3:
+					{
 						writeD(10);
 						writeD(value1);
 						writeD(object);
 						writeD(value2);
 						break;
+					}
 					case 4:
+					{
 						writeD(10);
 						writeD(value1);
 						writeD(object);
 						break;
+					}
 					case 5:
+					{
 						writeD((int) idpr.getParticipation() * 100);
 						writeD(idpr.getRewardExp());
 						writeD(idpr.getBonusExp());
@@ -661,7 +749,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 						writeD(idpr.getAdditionalRewardCount());
 						writeC(1);
 						break;
+					}
 					case 6:
+					{
 						int counter = 0;
 						writeD(100);
 						for (Player player : players)
@@ -706,30 +796,41 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 						writeD(1);
 						writeD((idr.getInstanceScoreType() == InstanceScoreType.PREPARING ? 65535 : 1));
 						break;
+					}
 					case 7:
+					{
 						idgelDomeTable(Race.ELYOS);
 						idgelDomeTable(Race.ASMODIANS);
 						break;
+					}
 					case 8:
+					{
 						writeD(object);
 						break;
+					}
 					case 10:
+					{
 						writeC(0);
 						writeD(idr.getPvpKillsByRace(idpr.getRace()).intValue());
 						writeD(idr.getPointsByRace(idpr.getRace()).intValue());
 						writeD(idpr.getRace().getRaceId());
 						writeD(object);
 						break;
+					}
 					case 11:
+					{
 						writeC(0);
 						writeD(idr.getPvpKillsByRace(idpr.getRace()).intValue());
 						writeD(idr.getPointsByRace(idpr.getRace()).intValue());
 						writeD(idpr.getRace().getRaceId());
 						writeD(object);
 						break;
+					}
 				}
 				break;
+			}
 			case 301680000: // Idgel Dome Landmark 5.1
+			{
 				final LandMarkReward lmr = (LandMarkReward) instanceReward;
 				if (object == null)
 				{
@@ -740,21 +841,28 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				switch (type)
 				{
 					case 2:
+					{
 						writeD(0);
 						writeD(lmr.getTime());
 						break;
+					}
 					case 3:
+					{
 						writeD(10);
 						writeD(value1);
 						writeD(object);
 						writeD(value2);
 						break;
+					}
 					case 4:
+					{
 						writeD(10);
 						writeD(value1);
 						writeD(object);
 						break;
+					}
 					case 5:
+					{
 						writeD((int) lmpr.getParticipation() * 100);
 						writeD(lmpr.getRewardExp());
 						writeD(lmpr.getBonusExp());
@@ -774,7 +882,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 						writeD(lmpr.getAdditionalRewardCount());
 						writeC(1);
 						break;
+					}
 					case 6:
+					{
 						int counter = 0;
 						writeD(100);
 						for (Player player : players)
@@ -819,31 +929,42 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 						writeD(1);
 						writeD((lmr.getInstanceScoreType() == InstanceScoreType.PREPARING ? 65535 : 1));
 						break;
+					}
 					case 7:
+					{
 						landMarkTable(Race.ELYOS);
 						landMarkTable(Race.ASMODIANS);
 						break;
+					}
 					case 8:
+					{
 						writeD(object);
 						break;
+					}
 					case 10:
+					{
 						writeC(0);
 						writeD(lmr.getPvpKillsByRace(lmpr.getRace()).intValue());
 						writeD(lmr.getPointsByRace(lmpr.getRace()).intValue());
 						writeD(lmpr.getRace().getRaceId());
 						writeD(object);
 						break;
+					}
 					case 11:
+					{
 						writeC(0);
 						writeD(lmr.getPvpKillsByRace(lmpr.getRace()).intValue());
 						writeD(lmr.getPointsByRace(lmpr.getRace()).intValue());
 						writeD(lmpr.getRace().getRaceId());
 						writeD(object);
 						break;
+					}
 				}
 				break;
+			}
 			case 300300000: // Empyrean Crucible 2.5
 			case 300320000: // Empyrean Crucible Challenge 2.6
+			{
 				for (CruciblePlayerReward playerReward : (FastList<CruciblePlayerReward>) instanceReward.getInstanceRewards())
 				{
 					writeD(playerReward.getOwner());
@@ -857,14 +978,18 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					writeB(new byte[16 * (6 - playerCount)]);
 				}
 				break;
+			}
 			case 300040000: // Dark Poeta.
+			{
 				final DarkPoetaReward dpr = (DarkPoetaReward) instanceReward;
 				writeD(dpr.getPoints());
 				writeD(dpr.getNpcKills());
 				writeD(dpr.getGatherCollections());
 				writeD(dpr.getRank());
 				break;
+			}
 			case 300540000: // Eternal Bastion 4.8
+			{
 				for (EternalBastionPlayerReward playerReward : (FastList<EternalBastionPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final EternalBastionReward etr = (EternalBastionReward) instanceReward;
@@ -909,8 +1034,10 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					}
 				}
 				break;
+			}
 			case 301400000: // The Shugo Emperor's Vault 4.7.5
 			case 301590000: // Emperor Trillirunerk's Safe 4.9.1
+			{
 				for (ShugoEmperorVaultPlayerReward playerReward : (FastList<ShugoEmperorVaultPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final ShugoEmperorVaultReward sevr = (ShugoEmperorVaultReward) instanceReward;
@@ -949,7 +1076,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					}
 				}
 				break;
+			}
 			case 301500000: // Stonespear Reach 4.8
+			{
 				for (StonespearReachPlayerReward playerReward : (FastList<StonespearReachPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final StonespearReachReward srr = (StonespearReachReward) instanceReward;
@@ -958,7 +1087,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					writeD(srr.getRank());
 				}
 				break;
+			}
 			case 301510000: // Sealed Argent Manor 4.9.1
+			{
 				for (SealedArgentManorPlayerReward playerReward : (FastList<SealedArgentManorPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final SealedArgentManorReward samr = (SealedArgentManorReward) instanceReward;
@@ -998,7 +1129,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					}
 				}
 				break;
+			}
 			case 301630000: // Contaminated Underpath 5.0.5
+			{
 				for (ContaminatedUnderpathPlayerReward playerReward : (FastList<ContaminatedUnderpathPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final ContaminatedUnderpathReward cur = (ContaminatedUnderpathReward) instanceReward;
@@ -1038,7 +1171,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					}
 				}
 				break;
+			}
 			case 301640000: // Secret Munitions Factory 5.0.5
+			{
 				for (SecretMunitionsFactoryPlayerReward playerReward : (FastList<SecretMunitionsFactoryPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final SecretMunitionsFactoryReward smfr = (SecretMunitionsFactoryReward) instanceReward;
@@ -1078,7 +1213,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					}
 				}
 				break;
+			}
 			case 302000000: // Smoldering Fire Temple 5.1
+			{
 				for (SmolderingPlayerReward playerReward : (FastList<SmolderingPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final SmolderingReward sr = (SmolderingReward) instanceReward;
@@ -1117,7 +1254,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					}
 				}
 				break;
+			}
 			case 302100000: // Fissure Of Oblivion 5.1
+			{
 				for (OblivionRiftPlayerReward playerReward : (FastList<OblivionRiftPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final OblivionRiftReward or = (OblivionRiftReward) instanceReward;
@@ -1156,11 +1295,13 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					}
 				}
 				break;
+			}
 			case 300350000: // Arena Of Chaos.
 			case 300360000: // Arena Of Discipline.
 			case 300420000: // Chaos Training Grounds.
 			case 300430000: // Discipline Training Grounds.
 			case 300550000: // Arena Of Glory.
+			{
 				final PvPArenaReward arenaReward = (PvPArenaReward) instanceReward;
 				final PvPArenaPlayerReward rewardedPlayer = arenaReward.getPlayerReward(ownerObject);
 				int rank, points;
@@ -1277,6 +1418,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 				writeD(3);
 				writeD(0);
 				break;
+			}
 		}
 	}
 	

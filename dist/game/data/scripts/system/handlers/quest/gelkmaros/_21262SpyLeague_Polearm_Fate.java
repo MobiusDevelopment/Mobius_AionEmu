@@ -71,12 +71,18 @@ public class _21262SpyLeague_Polearm_Fate extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 4762);
+					}
 					case ASK_ACCEPTION:
+					{
 						return sendQuestDialog(env, 4);
+					}
 					case ACCEPT_QUEST:
+					{
 						QuestService.startQuest(env);
 						return sendQuestDialog(env, 1003);
+					}
 				}
 			}
 			else if (qs.getStatus() == QuestStatus.REWARD)
@@ -119,6 +125,7 @@ public class _21262SpyLeague_Polearm_Fate extends QuestHandler
 		{
 			case 257300: // Guardian General Temple Of Scales.
 			case 257312: // Guardian General Altar Of Avarice.
+			{
 				if (qs.getQuestVarById(0) < 1)
 				{
 					qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -127,6 +134,7 @@ public class _21262SpyLeague_Polearm_Fate extends QuestHandler
 					return true;
 				}
 				break;
+			}
 		}
 		return false;
 	}

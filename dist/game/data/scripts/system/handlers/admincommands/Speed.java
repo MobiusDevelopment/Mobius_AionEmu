@@ -101,11 +101,15 @@ public class Speed extends AdminCommand implements StatOwner
 			switch (this.stat)
 			{
 				case SPEED:
+				{
 					stat.setBase(speed + ((speed * modifier) / 100));
 					break;
+				}
 				case FLY_SPEED:
+				{
 					stat.setBase(flyspeed + ((flyspeed * modifier) / 100));
 					break;
+				}
 			}
 		}
 		

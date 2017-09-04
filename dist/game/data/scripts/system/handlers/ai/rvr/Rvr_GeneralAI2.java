@@ -42,30 +42,42 @@ public class Rvr_GeneralAI2 extends AggressiveNpcAI2
 		{
 			// Defender Elyos.
 			case 857737: // General Miltar.
+			{
 				sendRvrGuide();
 				announceGeneralMiltarDie();
 				break;
+			}
 			case 857738: // General Kuparo.
+			{
 				sendRvrGuide();
 				announceGeneralKuparoDie();
 				break;
+			}
 			case 857739: // General Lanstri.
+			{
 				sendRvrGuide();
 				announceGeneralLanstriDie();
 				break;
+			}
 			// Defender Asmodians.
 			case 857744: // General Magken.
+			{
 				sendRvrGuide();
 				announceGeneralMagkenDie();
 				break;
+			}
 			case 857745: // General Hark.
+			{
 				sendRvrGuide();
 				announceGeneralHarkDie();
 				break;
+			}
 			case 857746: // General Tombolk.
+			{
 				sendRvrGuide();
 				announceGeneralTombolkDie();
 				break;
+			}
 		}
 		super.handleDied();
 	}

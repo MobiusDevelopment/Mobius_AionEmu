@@ -93,7 +93,9 @@ public class SM_ALLIANCE_MEMBER_INFO extends AionServerPacket
 			case BANNED:
 			case MOVEMENT:
 			case DISCONNECTED:
+			{
 				break;
+			}
 			case JOIN:
 			case ENTER:
 			case ENTER_OFFLINE:
@@ -102,6 +104,7 @@ public class SM_ALLIANCE_MEMBER_INFO extends AionServerPacket
 			case APPOINT_VICE_CAPTAIN:
 			case DEMOTE_VICE_CAPTAIN:
 			case APPOINT_CAPTAIN:
+			{
 				writeS(pcd.getName());
 				writeD(0);
 				writeD(0);
@@ -138,11 +141,16 @@ public class SM_ALLIANCE_MEMBER_INFO extends AionServerPacket
 					writeB(new byte[32]);
 				}
 				break;
+			}
 			case MEMBER_GROUP_CHANGE:
+			{
 				writeS(pcd.getName());
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 }

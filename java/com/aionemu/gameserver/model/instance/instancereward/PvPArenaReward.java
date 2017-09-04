@@ -267,27 +267,45 @@ public class PvPArenaReward extends InstanceReward<PvPArenaPlayerReward>
 			case 701176:
 			case 701177:
 			case 701178:
+			{
 				return 0x4E5732;
+			}
 			case 701189:
 			case 701190:
 			case 701191:
 			case 701192:
+			{
 				return 0x4FDB3C;
+			}
 			case 701317:
+			{
 				return 0x4f8532;
+			}
 			case 701318:
+			{
 				return 0x4f8537;
+			}
 			case 701319:
+			{
 				return 0x4f853C;
+			}
 			case 701220:
+			{
 				return 0x4E5537;
+			}
 			case 207118:
 			case 207119:
+			{
 				return 0x50C101;
+			}
 			case 207100:
+			{
 				return 0x50BE01;
+			}
 			default:
+			{
 				return 0;
+			}
 		}
 	}
 	

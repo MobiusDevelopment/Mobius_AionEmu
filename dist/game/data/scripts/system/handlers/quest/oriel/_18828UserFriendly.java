@@ -92,9 +92,13 @@ public class _18828UserFriendly extends QuestHandler
 			switch (dialog)
 			{
 				case START_DIALOG:
+				{
 					return sendQuestDialog(env, 1011);
+				}
 				case ACCEPT_QUEST_SIMPLE:
+				{
 					return sendQuestStartDialog(env, 182213191, 1);
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
@@ -102,12 +106,18 @@ public class _18828UserFriendly extends QuestHandler
 			switch (dialog)
 			{
 				case USE_OBJECT:
+				{
 					return sendQuestDialog(env, 2375);
+				}
 				case SELECT_REWARD:
+				{
 					removeQuestItem(env, 182213191, 1);
+				}
 				case SELECT_NO_REWARD:
+				{
 					sendQuestEndDialog(env);
 					return true;
+				}
 			}
 		}
 		return false;

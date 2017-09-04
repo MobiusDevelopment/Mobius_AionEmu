@@ -97,9 +97,13 @@ public class _19667Protection_The_Illumined_Pergolas extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}
@@ -164,6 +168,7 @@ public class _19667Protection_The_Illumined_Pergolas extends QuestHandler
 			case 241663:
 			case 241664:
 			case 241665:
+			{
 				if (qs.getQuestVarById(1) < 12)
 				{
 					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -175,6 +180,7 @@ public class _19667Protection_The_Illumined_Pergolas extends QuestHandler
 					updateQuestStatus(env);
 				}
 				break;
+			}
 		}
 		return false;
 	}

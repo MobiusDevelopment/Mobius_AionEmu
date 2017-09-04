@@ -114,6 +114,7 @@ public class _26829Left_Behind_Archon_Shadow_Agent extends QuestHandler
 				case 220476:
 				case 220477:
 				case 220479:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -124,6 +125,7 @@ public class _26829Left_Behind_Archon_Shadow_Agent extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

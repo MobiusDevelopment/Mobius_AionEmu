@@ -115,6 +115,7 @@ public class _15623Kill_Tentaklis extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 241175:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -125,6 +126,7 @@ public class _15623Kill_Tentaklis extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

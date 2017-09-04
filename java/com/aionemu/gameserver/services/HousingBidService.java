@@ -181,31 +181,41 @@ public class HousingBidService extends AbstractCronTask
 		switch (type)
 		{
 			case HOUSE:
+			{
 				if (bidsCount >= HousingConfig.FILL_AUTO_HOUSES_COUNT)
 				{
 					return false;
 				}
 				break;
+			}
 			case MANSION:
+			{
 				if (bidsCount >= HousingConfig.FILL_AUTO_MANSION_COUNT)
 				{
 					return false;
 				}
 				break;
+			}
 			case ESTATE:
+			{
 				if (bidsCount >= HousingConfig.FILL_AUTO_ESTATE_COUNT)
 				{
 					return false;
 				}
 				break;
+			}
 			case PALACE:
+			{
 				if (bidsCount >= HousingConfig.FILL_AUTO_PALACE_COUNT)
 				{
 					return false;
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return true;
 	}
@@ -866,31 +876,41 @@ public class HousingBidService extends AbstractCronTask
 		switch (houseType)
 		{
 			case HOUSE:
+			{
 				if (HousingConfig.HOUSE_MIN_BID_LEVEL > 0)
 				{
 					return HousingConfig.HOUSE_MIN_BID_LEVEL;
 				}
 				break;
+			}
 			case MANSION:
+			{
 				if (HousingConfig.MANSION_MIN_BID_LEVEL > 0)
 				{
 					return HousingConfig.MANSION_MIN_BID_LEVEL;
 				}
 				break;
+			}
 			case ESTATE:
+			{
 				if (HousingConfig.ESTATE_MIN_BID_LEVEL > 0)
 				{
 					return HousingConfig.ESTATE_MIN_BID_LEVEL;
 				}
 				break;
+			}
 			case PALACE:
+			{
 				if (HousingConfig.PALACE_MIN_BID_LEVEL > 0)
 				{
 					return HousingConfig.PALACE_MIN_BID_LEVEL;
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return saleOptions.getMinLevel();
 	}

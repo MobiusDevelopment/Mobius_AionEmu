@@ -104,6 +104,7 @@ public class ItemStone implements StatOwner
 		switch (persistentState)
 		{
 			case DELETED:
+			{
 				if (this.persistentState == PersistentState.NEW)
 				{
 					this.persistentState = PersistentState.NOACTION;
@@ -113,13 +114,18 @@ public class ItemStone implements StatOwner
 					this.persistentState = PersistentState.DELETED;
 				}
 				break;
+			}
 			case UPDATE_REQUIRED:
+			{
 				if (this.persistentState == PersistentState.NEW)
 				{
 					break;
 				}
+			}
 			default:
+			{
 				this.persistentState = persistentState;
+			}
 		}
 	}
 }

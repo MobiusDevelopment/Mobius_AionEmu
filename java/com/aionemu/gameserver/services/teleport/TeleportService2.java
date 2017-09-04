@@ -609,17 +609,21 @@ public class TeleportService2
 		switch (player.getWorldId())
 		{
 			case 210100000: // Iluma.
+			{
 				if (player.getCommonData().getRace() == Race.ASMODIANS)
 				{
 					TeleportService2.teleportTo(player, 220110000, 1813.9795f, 1982.6705f, 199.1976f, (byte) 52);
 				}
 				break;
+			}
 			case 220110000: // Norsvold.
+			{
 				if (player.getCommonData().getRace() == Race.ELYOS)
 				{
 					TeleportService2.teleportTo(player, 210100000, 1417.6694f, 1282.3623f, 336.125f, (byte) 8);
 				}
 				break;
+			}
 		}
 	}
 	

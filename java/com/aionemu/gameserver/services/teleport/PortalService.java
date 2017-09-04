@@ -147,15 +147,20 @@ public class PortalService
 			switch (playerSize)
 			{
 				case 0:
+				{
 					instance = InstanceService.getRegisteredInstance(mapId, player.getObjectId());
 					break;
+				}
 				case 6:
+				{
 					if (player.getPlayerGroup2() != null)
 					{
 						instance = InstanceService.getRegisteredInstance(mapId, player.getPlayerGroup2().getTeamId());
 					}
 					break;
+				}
 				default:
+				{
 					if (player.isInAlliance2())
 					{
 						if (player.isInLeague())
@@ -168,6 +173,7 @@ public class PortalService
 						}
 					}
 					break;
+				}
 			}
 			if (instance == null)
 			{
@@ -196,6 +202,7 @@ public class PortalService
 		switch (playerSize)
 		{
 			case 0:
+			{
 				if ((group != null) && !instanceGroupReq)
 				{
 					instance = InstanceService.getRegisteredInstance(mapId, group.getTeamId());
@@ -230,7 +237,9 @@ public class PortalService
 				}
 				port(player, loc, reenter, isInstance);
 				break;
+			}
 			case 6:
+			{
 				if ((group != null) || !instanceGroupReq)
 				{
 					if (group != null)
@@ -267,7 +276,9 @@ public class PortalService
 					transfer(player, loc, instance, reenter);
 				}
 				break;
+			}
 			default:
+			{
 				final PlayerAlliance allianceGroup = player.getPlayerAlliance2();
 				if ((allianceGroup != null) || !instanceGroupReq)
 				{
@@ -350,6 +361,7 @@ public class PortalService
 					}
 				}
 				break;
+			}
 		}
 	}
 	

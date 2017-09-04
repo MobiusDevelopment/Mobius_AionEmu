@@ -58,17 +58,25 @@ public class AgrintAI2 extends AggressiveNpcAI2
 		switch (getNpcId())
 		{
 			case 218850: // Spring Agrint.
+			{
 				announceSpringAgrint();
 				break;
+			}
 			case 218851: // Summer Agrint.
+			{
 				announceSummerAgrint();
 				break;
+			}
 			case 218852: // Fall Agrint.
+			{
 				announceFallAgrint();
 				break;
+			}
 			case 218853: // Winter Agrint.
+			{
 				announceWinterAgrint();
 				break;
+			}
 		}
 	}
 	
@@ -79,38 +87,54 @@ public class AgrintAI2 extends AggressiveNpcAI2
 		{
 			// AGRINT ORIEL.
 			case 218850: // Spring Agrint.
+			{
 				spawnUmbronite(218866); // Vernal Umbronite.
 				spawnUmbronite(218867); // Sprout Umbronite.
 				break;
+			}
 			case 218851: // Summer Agrint.
+			{
 				spawnUmbronite(218868); // Sweltering Umbronite.
 				spawnUmbronite(218869); // Rain Umbronite.
 				break;
+			}
 			case 218852: // Fall Agrint.
+			{
 				spawnUmbronite(218870); // Maple Umbronite.
 				spawnUmbronite(218871); // Dusk Umbronite.
 				break;
+			}
 			case 218853: // Winter Agrint.
+			{
 				spawnUmbronite(218872); // Ice Umbronite.
 				spawnUmbronite(218873); // Snowflower Umbronite.
 				break;
+			}
 			// AGRINT PERNON.
 			case 218862: // Spring Agrint.
+			{
 				spawnUmbronite(218882); // Vernal Umbronite.
 				spawnUmbronite(218883); // Sprout Umbronite.
 				break;
+			}
 			case 218863: // Summer Agrint.
+			{
 				spawnUmbronite(218884); // Sweltering Umbronite.
 				spawnUmbronite(218885); // Rain Umbronite.
 				break;
+			}
 			case 218864: // Fall Agrint.
+			{
 				spawnUmbronite(218886); // Maple Umbronite.
 				spawnUmbronite(218887); // Dusk Umbronite.
 				break;
+			}
 			case 218865: // Winter Agrint.
+			{
 				spawnUmbronite(218888); // Ice Umbronite.
 				spawnUmbronite(218889); // Snowflower Umbronite.
 				break;
+			}
 		}
 		super.handleDied();
 	}

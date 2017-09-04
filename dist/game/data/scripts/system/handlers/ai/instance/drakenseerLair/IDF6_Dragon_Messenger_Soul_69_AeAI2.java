@@ -42,6 +42,7 @@ public class IDF6_Dragon_Messenger_Soul_69_AeAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 220451: // IDF6_Dragon_Messenger_Soul_69_Ae.
+			{
 				// You shame us, Bakarma! Fallen to a flock of weak-fleshed Daevas? Your honor is in shambles.
 				sendMsg(1403082, getObjectId(), false, 2000);
 				// The Balaur have ignited the Fire of Eternity in Drakenseer's Lair. Approach the flames at your peril.
@@ -59,6 +60,7 @@ public class IDF6_Dragon_Messenger_Soul_69_AeAI2 extends NpcAI2
 					}
 				}, 18000);
 				break;
+			}
 		}
 	}
 	

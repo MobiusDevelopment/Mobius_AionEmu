@@ -40,6 +40,7 @@ public class Idian_Depths_CorridorAI2 extends ActionItemNpcAI2
 		{
 			case 731631: // Cygnea To Idian Depths.
 			case 731641: // Levinshor To Idian Depths.
+			{
 				if (player.getLevel() >= 65)
 				{
 					TeleportService2.teleportTo(player, 210090000, 691.99f, 811.69055f, 514.86566f, (byte) 29, TeleportAnimation.BEAM_ANIMATION);
@@ -49,8 +50,10 @@ public class Idian_Depths_CorridorAI2 extends ActionItemNpcAI2
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_Telepoter_Under_User);
 				}
 				break;
+			}
 			case 731632: // Enshar To Idian Depths.
 			case 731642: // Kaldor To Idian Depths.
+			{
 				if (player.getLevel() >= 65)
 				{
 					TeleportService2.teleportTo(player, 220100000, 691.99f, 811.69055f, 514.86566f, (byte) 29, TeleportAnimation.BEAM_ANIMATION);
@@ -60,6 +63,7 @@ public class Idian_Depths_CorridorAI2 extends ActionItemNpcAI2
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_Telepoter_Under_User);
 				}
 				break;
+			}
 		}
 	}
 }

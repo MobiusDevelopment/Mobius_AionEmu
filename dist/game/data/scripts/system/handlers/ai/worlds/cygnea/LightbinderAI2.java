@@ -64,8 +64,10 @@ public class LightbinderAI2 extends AggressiveNpcAI2
 			case 236061:
 			case 236067:
 			case 236073:
+			{
 				conquerorPassion();
 				break;
+			}
 		}
 	}
 	

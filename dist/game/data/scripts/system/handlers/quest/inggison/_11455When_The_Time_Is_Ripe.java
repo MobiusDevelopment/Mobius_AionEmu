@@ -123,11 +123,14 @@ public class _11455When_The_Time_Is_Ripe extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						removeQuestItem(env, 182209503, 1);
@@ -141,6 +144,7 @@ public class _11455When_The_Time_Is_Ripe extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		return false;

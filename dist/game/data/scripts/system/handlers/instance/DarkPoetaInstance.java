@@ -53,7 +53,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -84,6 +83,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 215281: // Calindi Flamelord.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -95,7 +95,9 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 215282: // Vanuka Infernus.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -107,8 +109,10 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 215283: // Asaratu Bloodshade.
 			case 215284: // Chramati Firetail.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166500000, 1)); // Amplification Stone.
 				for (Player player : instance.getPlayersInside())
 				{
@@ -119,7 +123,9 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 214864: // Noah's Furious Shade.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 166500000, 1)); // Amplification Stone.
 				for (Player player : instance.getPlayersInside())
 				{
@@ -129,7 +135,9 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 214904: // Brigade General Anuhart.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -139,16 +147,22 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 123000929, 1)); // Brigade General Anuhart's Leather Belt.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 123000930, 1)); // Brigade General Anuhart's Sash.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 215389: // Spaller Dhatra.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -156,18 +170,24 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053287, 1)); // Dhatra's Fabled Earrings Box.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053292, 1)); // Dhatra's Earrings Box.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 214849: // Marabata Of Strength.
 			case 214850: // Marabata Of Aether.
 			case 214851: // Marabata Of Poisoning.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -175,16 +195,22 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053286, 1)); // Marabata's Fabled Ring Box.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053291, 1)); // Marabata's Ring Box.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 215280: // Tahabata Pyrelord.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -198,29 +224,43 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 6))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188051398, 1)); // Tahabata's Eternal Weapon Chest.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053276, 1)); // Anuhart's Fabled Pants Box.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053277, 1)); // Anuhart's Fabled Shoes Box.
 								break;
+							}
 							case 4:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053278, 1)); // Anuhart's Fabled Gloves Box.
 								break;
+							}
 							case 5:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053279, 1)); // Anuhart's Fabled Chest Box.
 								break;
+							}
 							case 6:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053280, 1)); // Anuhart's Fabled Shoulders Box.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 237372: // Enraged Inferno Demon.
 			case 237373: // Inferno Demon.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -231,24 +271,35 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 3))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188054178, 1)); // Master Tahabata's Weapon Box.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188054179, 1)); // Master Anuhart Elite's Weapon Box.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188054183, 1)); // Master Armor Treasure Box.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 702658: // Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053579, 1)); // [Event] Abbey Bundle.
 				break;
+			}
 			case 702659: // Noble Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); // [Event] Noble Abbey Bundle.
 				break;
+			}
 		}
 	}
 	
@@ -261,8 +312,10 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 701869: // Camouflaging Stone Wall.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 281088: // Light Generator Core.
 			case 281089: // Wave Generator Core.
 			case 281090: // Torpidity Generator Core.
@@ -271,11 +324,15 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 			case 281095: // Aquar.
 			case 281096: // Pura.
 			case 281097: // Hydros.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 214885: // Mutated Fungie.
+			{
 				points = 21;
 				break;
+			}
 			case 214827: // Anuhart Legionary.
 			case 214828: // Anuhart Trooper.
 			case 214829: // Anuhart Sentinel.
@@ -360,79 +417,111 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 			case 215275: // Anuhart Seneschal.
 			case 215276: // Anuhart Transporter.
 			case 215452: // Anuhart Proconsul.
+			{
 				points = 142;
 				break;
+			}
 			case 700517: // Balaur Barricade.
 			case 700520: // Drana.
 			case 700556: // Balaur Barricade.
 			case 700558: // Balaur Barricade.
+			{
 				points = 157;
 				despawnNpc(npc);
 				break;
+			}
 			case 215431: // Vengeful Spirit Of Elyos Combat Captain.
 			case 215432: // Spectral Arcanist Captain.
+			{
 				points = 164;
 				break;
+			}
 			case 214877: // Thrall Digger.
 			case 214878: // Thrall Vigilante.
 			case 214887: // Brainwashed Sentinel.
 			case 215433: // Thrall Digger Leader.
 			case 215434: // Thrall Vigilante Leader.
+			{
 				points = 173;
 				break;
+			}
 			case 214841: // Anuhart Tearlach.
 			case 214842: // Anuhart Kurinark.
 			case 215428: // Anuhart Mage Captain.
+			{
 				points = 190;
 				break;
+			}
 			case 215429: // Anuhart Scalewatch Captain.
+			{
 				points = 208;
 				break;
+			}
 			case 214849: // Marabata Of Strength.
 			case 214850: // Marabata Of Aether.
 			case 214851: // Marabata Of Poisoning.
+			{
 				points = 319;
 				break;
+			}
 			case 215430: // Anuhart Drakeblade Captain.
+			{
 				points = 357;
 				break;
+			}
 			case 214895: // Main Power Generator.
+			{
 				points = 377;
 				deleteNpc(214898);
 				deleteNpc(214899);
 				break;
+			}
 			case 214896: // Auxiliary Power Generator.
+			{
 				points = 377;
 				deleteNpc(214900);
 				deleteNpc(214901);
 				break;
+			}
 			case 214897: // Emergency Generator.
+			{
 				points = 377;
 				deleteNpc(214902);
 				deleteNpc(214903);
 				break;
+			}
 			case 214871: // Wounded Scar.
 			case 215386: // Professor Hewahewa.
+			{
 				points = 409;
 				break;
+			}
 			case 214843: // Spiritmaster Atmach.
+			{
 				points = 456;
 				break;
+			}
 			case 214864: // Noah's Furious Shade.
 			case 214880: // Spaller Echtra.
 			case 215387: // Spectral Elim Elder.
 			case 215388: // Spaller Rakanatra.
 			case 215389: // Spaller Dhatra.
+			{
 				points = 789;
 				break;
+			}
 			case 214894: // Telepathy Controller.
+			{
 				sendMovie(player, 426);
 				deleteNpc(281121); // Controller Protection Device.
 				points = 789;
 				break;
+			}
 			case 214904: // Brigade General Anuhart.
+			{
 				points = 954;
 				break;
+			}
 		}
 		switch (npc.getNpcId())
 		{
@@ -445,23 +534,31 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 			case 700445: // Marabata Attack Booster.
 			case 700446: // Marabata Defense Booster.
 			case 700447: // Marabata Property Controller.
+			{
 				toScheduleMarbataController(npcId);
 				return;
+			}
 			case 214849: // Marabata Of Strength.
+			{
 				deleteNpc(700439); // Marabata Attack Booster.
 				deleteNpc(700440); // Marabata Defense Booster.
 				deleteNpc(700441); // Marabata Property Controller.
 				break;
+			}
 			case 214850: // Marabata Of Aether.
+			{
 				deleteNpc(700442); // Marabata Attack Booster.
 				deleteNpc(700443); // Marabata Defense Booster.
 				deleteNpc(700444); // Marabata Property Controller.
 				break;
+			}
 			case 214851: // Marabata Of Poisoning.
+			{
 				deleteNpc(700445); // Marabata Attack Booster.
 				deleteNpc(700446); // Marabata Defense Booster.
 				deleteNpc(700447); // Marabata Property Controller.
 				break;
+			}
 		}
 		if (instanceReward.getInstanceScoreType().isStartProgress())
 		{
@@ -474,6 +571,7 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 			case 214895: // Main Power Generator.
 			case 214896: // Auxiliary Power Generator.
 			case 214897: // Emergency Generator.
+			{
 				powerGenerator++;
 				if (powerGenerator == 1)
 				{
@@ -487,50 +585,67 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 					spawn(214904, 275.34537f, 323.02072f, 130.9302f, (byte) 52); // Brigade General Anuhart.
 				}
 				break;
+			}
 			// **[Ver.] 4.9**//
 			case 857435: // Tahabata's Heart.
+			{
 				despawnNpc(npc);
 				spawn(237372, 1176f, 1227f, 145f, (byte) 14); // Enraged Inferno Demon.
 				break;
+			}
 			case 857434: // Calindi's Heart.
+			{
 				despawnNpc(npc);
 				spawn(237373, 1176f, 1227f, 145f, (byte) 14); // Inferno Demon.
 				break;
+			}
 			case 215280: // Tahabata Pyrelord.
+			{
 				sendMsg("Congratulation]: you finish <Dark Poeta SP 4.9>");
 				spawn(857435, 1176.877f, 1230.9423f, 144.3876f, (byte) 19); // Tahabata's Heart.
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						spawn(702658, 1180.83f, 1228.874f, 144.45352f, (byte) 23); // Abbey Box.
 						break;
+					}
 					case 2:
+					{
 						spawn(702659, 1180.83f, 1228.874f, 144.45352f, (byte) 23); // Noble Abbey Box.
 						break;
+					}
 				}
 				final SpawnTemplate IDLF1Exit1 = SpawnEngine.addNewSingleTimeSpawn(300040000, 731666, 1179f, 1223f, 146f, (byte) 0);
 				IDLF1Exit1.setEntityId(223);
 				objects.put(731666, SpawnEngine.spawnObject(IDLF1Exit1, instanceId));
 				break;
+			}
 			case 215281: // Calindi Flamelord.
+			{
 				sendMsg("Congratulation]: you finish <Dark Poeta SP 4.9>");
 				spawn(857434, 1176.877f, 1230.9423f, 144.3876f, (byte) 19); // Calindi's Heart.
 				final SpawnTemplate IDLF1Exit2 = SpawnEngine.addNewSingleTimeSpawn(300040000, 731666, 1179f, 1223f, 146f, (byte) 0);
 				IDLF1Exit2.setEntityId(223);
 				objects.put(731666, SpawnEngine.spawnObject(IDLF1Exit2, instanceId));
 				break;
+			}
 			case 215282: // Vanuka Infernus.
 			case 215283: // Asaratu Bloodshade.
 			case 215284: // Chramati Firetail.
+			{
 				final SpawnTemplate IDLF1Exit3 = SpawnEngine.addNewSingleTimeSpawn(300040000, 731666, 1179f, 1223f, 146f, (byte) 0);
 				IDLF1Exit3.setEntityId(223);
 				objects.put(731666, SpawnEngine.spawnObject(IDLF1Exit3, instanceId));
 				break;
+			}
 			case 214904: // Brigade General Anuhart.
+			{
 				instanceReward.setInstanceScoreType(InstanceScoreType.END_PROGRESS);
 				instanceReward.setRank(checkRank(instanceReward.getPoints()));
 				sendPacket(npc.getObjectTemplate().getNameId(), points);
 				break;
+			}
 		}
 	}
 	
@@ -550,17 +665,13 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 	
 	private void sendPacket(int nameId, int point)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (nameId != 0)
 			{
-				if (nameId != 0)
-				{
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
-				}
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
 			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
 		});
 	}
 	
@@ -618,19 +729,15 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 		if (instanceTimer == null)
 		{
 			instanceTime = System.currentTimeMillis();
-			instanceTimer = ThreadPoolManager.getInstance().schedule(new Runnable()
+			instanceTimer = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
+				if (canStart())
 				{
-					if (canStart())
-					{
-						openFirstDoors();
-						// The member recruitment window has passed. You cannot recruit any more members.
-						sendMsgByRace(1401181, Race.PC_ALL, 5000);
-						instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-						sendPacket(0, 0);
-					}
+					openFirstDoors();
+					// The member recruitment window has passed. You cannot recruit any more members.
+					sendMsgByRace(1401181, Race.PC_ALL, 5000);
+					instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+					sendPacket(0, 0);
 				}
 			}, 60000); // 60 Secondes.
 		}
@@ -706,20 +813,28 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawn(215429, 565.488f, 256.224f, 108.999f, (byte) 52); // Anuhart Scalewatch Captain.
 				break;
+			}
 			case 2:
+			{
 				spawn(215429, 660.261f, 224.124f, 103.751f, (byte) 20); // Anuhart Scalewatch Captain.
 				break;
+			}
 		}
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawn(215430, 610.018f, 213.538f, 103.249f, (byte) 108); // Anuhart Drakeblade Captain.
 				break;
+			}
 			case 2:
+			{
 				spawn(215430, 470.792f, 378.285f, 118.125f, (byte) 117); // Anuhart Drakeblade Captain.
 				break;
+			}
 		}
 	}
 	
@@ -771,60 +886,80 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 	
 	private void toScheduleMarbataController(int npcId)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			Npc boss = null;
+			switch (npcId)
 			{
-				Npc boss = null;
+				case 700439: // Marabata Attack Booster.
+				case 700440: // Marabata Defense Booster.
+				case 700441: // Marabata Property Controller.
+				{
+					boss = getNpc(214850); // Marabata Of Strength.
+					break;
+				}
+				case 700442: // Marabata Attack Booster.
+				case 700443: // Marabata Defense Booster.
+				case 700444: // Marabata Property Controller.
+				{
+					boss = getNpc(214851); // Marabata Of Aether.
+					break;
+				}
+				case 700445: // Marabata Attack Booster.
+				case 700446: // Marabata Defense Booster.
+				case 700447: // Marabata Property Controller.
+				{
+					boss = getNpc(214849); // Marabata Of Poisoning.
+				}
+			}
+			if (!isInstanceDestroyed && (boss != null) && !boss.getLifeStats().isAlreadyDead())
+			{
 				switch (npcId)
 				{
 					case 700439: // Marabata Attack Booster.
-					case 700440: // Marabata Defense Booster.
-					case 700441: // Marabata Property Controller.
-						boss = getNpc(214850); // Marabata Of Strength.
-						break;
-					case 700442: // Marabata Attack Booster.
-					case 700443: // Marabata Defense Booster.
-					case 700444: // Marabata Property Controller.
-						boss = getNpc(214851); // Marabata Of Aether.
-						break;
-					case 700445: // Marabata Attack Booster.
-					case 700446: // Marabata Defense Booster.
-					case 700447: // Marabata Property Controller.
-						boss = getNpc(214849); // Marabata Of Poisoning.
-				}
-				if (!isInstanceDestroyed && (boss != null) && !boss.getLifeStats().isAlreadyDead())
-				{
-					switch (npcId)
 					{
-						case 700439: // Marabata Attack Booster.
-							spawn(npcId, 665.37400f, 372.75100f, 99.375000f, (byte) 90);
-							break;
-						case 700440: // Marabata Defense Booster.
-							spawn(npcId, 681.851013f, 408.625000f, 100.472000f, (byte) 13);
-							break;
-						case 700441: // Marabata Property Controller.
-							spawn(npcId, 646.549988f, 406.088013f, 99.375000f, (byte) 49);
-							break;
-						case 700442: // Marabata Attack Booster.
-							spawn(npcId, 636.117981f, 325.536987f, 99.375000f, (byte) 49);
-							break;
-						case 700443: // Marabata Defense Booster.
-							spawn(npcId, 676.257019f, 319.649994f, 99.375000f, (byte) 4);
-							break;
-						case 700444: // Marabata Property Controller.
-							spawn(npcId, 655.851013f, 292.710999f, 99.375000f, (byte) 90);
-							break;
-						case 700445: // Marabata Attack Booster.
-							spawn(npcId, 605.625000f, 380.479004f, 99.375000f, (byte) 14);
-							break;
-						case 700446: // Marabata Defense Booster.
-							spawn(npcId, 598.706000f, 345.978000f, 99.375000f, (byte) 98);
-							break;
-						case 700447: // Marabata Property Controller.
-							spawn(npcId, 567.775024f, 366.207001f, 99.375000f, (byte) 59);
-							break;
+						spawn(npcId, 665.37400f, 372.75100f, 99.375000f, (byte) 90);
+						break;
+					}
+					case 700440: // Marabata Defense Booster.
+					{
+						spawn(npcId, 681.851013f, 408.625000f, 100.472000f, (byte) 13);
+						break;
+					}
+					case 700441: // Marabata Property Controller.
+					{
+						spawn(npcId, 646.549988f, 406.088013f, 99.375000f, (byte) 49);
+						break;
+					}
+					case 700442: // Marabata Attack Booster.
+					{
+						spawn(npcId, 636.117981f, 325.536987f, 99.375000f, (byte) 49);
+						break;
+					}
+					case 700443: // Marabata Defense Booster.
+					{
+						spawn(npcId, 676.257019f, 319.649994f, 99.375000f, (byte) 4);
+						break;
+					}
+					case 700444: // Marabata Property Controller.
+					{
+						spawn(npcId, 655.851013f, 292.710999f, 99.375000f, (byte) 90);
+						break;
+					}
+					case 700445: // Marabata Attack Booster.
+					{
+						spawn(npcId, 605.625000f, 380.479004f, 99.375000f, (byte) 14);
+						break;
+					}
+					case 700446: // Marabata Defense Booster.
+					{
+						spawn(npcId, 598.706000f, 345.978000f, 99.375000f, (byte) 98);
+						break;
+					}
+					case 700447: // Marabata Property Controller.
+					{
+						spawn(npcId, 567.775024f, 366.207001f, 99.375000f, (byte) 59);
+						break;
 					}
 				}
 			}
@@ -871,35 +1006,17 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 }

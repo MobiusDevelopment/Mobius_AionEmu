@@ -45,7 +45,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -88,30 +87,31 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 4))
 		{
 			case 1:
+			{
 				deleteNpc(219363);
 				spawn(219364, 763.0683f, 1446.5114f, 495.65198f, (byte) 90);
 				break;
+			}
 			case 2:
+			{
 				deleteNpc(219363);
 				spawn(219364, 763.0781f, 1191.3202f, 495.64584f, (byte) 30);
 				break;
+			}
 			case 3:
+			{
 				deleteNpc(219363);
 				spawn(219364, 893.29297f, 1190.8209f, 495.6457f, (byte) 30);
 				break;
+			}
 			case 4:
+			{
 				deleteNpc(219363);
 				spawn(219364, 893.3504f, 1446.1143f, 495.64215f, (byte) 91);
 				break;
-		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				protectorateFirstWave();
 			}
-		}, 60000);
+		}
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> protectorateFirstWave(), 60000);
 	}
 	
 	@Override
@@ -128,6 +128,7 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 			case 219356: // Brigade General Laksyaka.
 			case 219357: // Adjudant Anuhart.
 			case 701541: // Brigade General Tahabata Chest.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -140,7 +141,9 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 219354: // Brigade General Terath.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -154,31 +157,47 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 3))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 100001398, 1)); // Terath's Sword.
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 100501087, 1)); // Terath's Orb.
 							break;
+						}
 						case 3:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 101301030, 1)); // Terath's Polearm.
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case 219392: // Laksyaka Elite Guard Captain.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000120, 1)); // Military Ward Key.
 				break;
+			}
 			case 219364: // Laksyaka Colonel.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000121, 1)); // Eternal Prison Key.
 				break;
+			}
 			case 702658: // Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053579, 1)); // [Event] Abbey Bundle.
 				break;
+			}
 			case 702659: // Noble Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); // [Event] Noble Abbey Bundle.
 				break;
+			}
 			case 701501: // Balaur Medal Box.
 			case 701527: // Stronghold Treasure Chest.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -187,13 +206,16 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 802179: // Tiamat Stronghold Opportunity Bundle.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000051, 30)); // Major Ancient Crown.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000052, 30)); // Greater Ancient Crown.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000236, 50)); // Blood Mark.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000237, 50)); // Ancient Coin.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000242, 50)); // Ceramium Medal.
 				break;
+			}
 		}
 	}
 	
@@ -203,10 +225,14 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 701523: // Research Center Acces Controler.
+			{
 				doors.get(22).setOpen(true);
 				break;
+			}
 			case 701495:
+			{
 				break;
+			}
 		}
 	}
 	
@@ -221,6 +247,7 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 			case 219371: // Protectorate Elite Scout.
 			case 219372: // Protectorate Elite Healer.
 			case 219373: // Protectorate Elite Mounted Officer.
+			{
 				protectorate++;
 				if (protectorate == 4)
 				{
@@ -231,46 +258,56 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 					protectorateThirdWave();
 				}
 				break;
+			}
 			case 219352: // Invincible Shabokan.
+			{
 				// A Balaur Medal Chest appeared in the Noble's Garden.
 				sendMsgByRace(1401614, Race.PC_ALL, 2000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						doors.get(48).setOpen(true);
-						doors.get(369).setOpen(true);
-						doors.get(706).setOpen(true);
-						spawnStrongholdGatewaySecure();
-					}
+					doors.get(48).setOpen(true);
+					doors.get(369).setOpen(true);
+					doors.get(706).setOpen(true);
+					spawnStrongholdGatewaySecure();
 				}, 5000);
 				break;
+			}
 			case 219355: // Traitor Kumbanda.
+			{
 				// A Balaur Medal Chest appeared in the Noble's Garden.
 				sendMsgByRace(1401614, Race.PC_ALL, 2000);
 				break;
+			}
 			case 219356: // Brigade General Laksyaka.
+			{
 				final SpawnTemplate CastShadowPLSM = SpawnEngine.addNewSingleTimeSpawn(300510000, 730622, 644.15436f, 1319.6982f, 487.51764f, (byte) 0);
 				CastShadowPLSM.setEntityId(15);
 				objects.put(730622, SpawnEngine.spawnObject(CastShadowPLSM, instanceId));
 				break;
+			}
 			case 219357: // Adjudant Anuhart.
+			{
 				deleteNpc(283099); // Blade Storm.
 				doors.get(37).setOpen(true);
 				doors.get(610).setOpen(true);
 				// A Balaur Medal Chest appeared in the Noble's Garden.
 				sendMsgByRace(1401614, Race.PC_ALL, 2000);
 				break;
+			}
 			case 219358: // Brigade General Tahabata.
+			{
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						spawn(702658, 678.0355f, 1071.9641f, 497.75186f, (byte) 85); // Abbey Box.
 						break;
+					}
 					case 2:
+					{
 						spawn(702659, 678.0355f, 1071.9641f, 497.75186f, (byte) 85); // Noble Abbey Box.
 						break;
+					}
 				}
 				// A Balaur Medal Chest appeared in the Noble's Garden.
 				sendMsgByRace(1401614, Race.PC_ALL, 2000);
@@ -278,12 +315,16 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 				CastShadowPSSM.setEntityId(82);
 				objects.put(730622, SpawnEngine.spawnObject(CastShadowPSSM, instanceId));
 				break;
+			}
 			case 219353: // Brigade General Chantra.
+			{
 				doors.get(711).setOpen(true);
 				// A Balaur Medal Chest appeared in the Noble's Garden.
 				sendMsgByRace(1401614, Race.PC_ALL, 2000);
 				break;
+			}
 			case 219354: // Brigade General Terath.
+			{
 				spawnBalaurMedalBox();
 				spawnStrongholdTreasureChest();
 				// A Balaur Medal Chest appeared in the Noble's Garden.
@@ -299,6 +340,7 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 				RecvShadowPLSM.setEntityId(555);
 				objects.put(730629, SpawnEngine.spawnObject(RecvShadowPLSM, instanceId));
 				break;
+			}
 		}
 	}
 	
@@ -357,52 +399,48 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 		PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
 		if (despawn)
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (npc.getNpcId() == 800336)
 				{
-					if (npc.getNpcId() == 800336)
-					{
-						spawn(800338, 1104f, 1069f, 497f, (byte) 61);
-						final Npc kahrun = getNpc(800338);
-						final Npc garnon = getNpc(800347);
-						// The Reian Soldiers will secure this area. You must press on. Hurry!
-						NpcShoutsService.getInstance().sendMsg(kahrun, 1500597, kahrun.getObjectId(), 0, 5000);
-						// I'm impressed! I thought the gatekeeper would be a greater challenge.
-						// I see we chose our champions well.
-						NpcShoutsService.getInstance().sendMsg(kahrun, 1500598, kahrun.getObjectId(), 0, 10000);
-						// There are reinforcements further in. We must deal with them.
-						NpcShoutsService.getInstance().sendMsg(kahrun, 1500599, kahrun.getObjectId(), 0, 15000);
-						// What are you waiting for? Get going!
-						NpcShoutsService.getInstance().sendMsg(kahrun, 1500600, kahrun.getObjectId(), 0, 20000);
-						// This makes no sense. There must be a way to get to Tiamat's throne from here!
-						NpcShoutsService.getInstance().sendMsg(kahrun, 1500601, kahrun.getObjectId(), 0, 25000);
-						// Garnon? How did you get here?
-						NpcShoutsService.getInstance().sendMsg(kahrun, 1500602, kahrun.getObjectId(), 0, 30000);
-						// You've found it? Where in the world was it?
-						NpcShoutsService.getInstance().sendMsg(kahrun, 1500603, kahrun.getObjectId(), 0, 35000);
-						// Let's not waste time. The final battle is upon us.
-						NpcShoutsService.getInstance().sendMsg(kahrun, 1500604, kahrun.getObjectId(), 0, 40000);
-						// Lord Kahrun!
-						NpcShoutsService.getInstance().sendMsg(garnon, 1500605, garnon.getObjectId(), 0, 45000);
-						// We've found the entrance to the Dragon Lord's Refuge!
-						NpcShoutsService.getInstance().sendMsg(garnon, 1500606, garnon.getObjectId(), 0, 50000);
-						// The scouts we sent to Tiamaranta's Eye are the ones you should be asking.
-						NpcShoutsService.getInstance().sendMsg(garnon, 1500607, garnon.getObjectId(), 0, 55000);
-						// Tiamat. Hand over Siel's Relics and leave Tiamaranta.
-						NpcShoutsService.getInstance().sendMsg(garnon, 1500608, garnon.getObjectId(), 0, 60000);
-						// My forces are on their way.
-						// Do you truly wish to face us in all-out battle? Such a choice will lead to tragedy for us all.
-						NpcShoutsService.getInstance().sendMsg(kahrun, 1500609, kahrun.getObjectId(), 0, 65000);
-						// Well then, you've chosen the path of destruction. Now you will see the true power of the Reian Tribe
-						NpcShoutsService.getInstance().sendMsg(kahrun, 1500610, kahrun.getObjectId(), 0, 70000);
-						// Aarrghh! Si...Siel's Relics...
-						// They are more powerful than we ever imagined! Run! You must not try to face this alone.
-						NpcShoutsService.getInstance().sendMsg(kahrun, 1500611, kahrun.getObjectId(), 0, 75000);
-					}
-					npc.getController().onDelete();
+					spawn(800338, 1104f, 1069f, 497f, (byte) 61);
+					final Npc kahrun = getNpc(800338);
+					final Npc garnon = getNpc(800347);
+					// The Reian Soldiers will secure this area. You must press on. Hurry!
+					NpcShoutsService.getInstance().sendMsg(kahrun, 1500597, kahrun.getObjectId(), 0, 5000);
+					// I'm impressed! I thought the gatekeeper would be a greater challenge.
+					// I see we chose our champions well.
+					NpcShoutsService.getInstance().sendMsg(kahrun, 1500598, kahrun.getObjectId(), 0, 10000);
+					// There are reinforcements further in. We must deal with them.
+					NpcShoutsService.getInstance().sendMsg(kahrun, 1500599, kahrun.getObjectId(), 0, 15000);
+					// What are you waiting for? Get going!
+					NpcShoutsService.getInstance().sendMsg(kahrun, 1500600, kahrun.getObjectId(), 0, 20000);
+					// This makes no sense. There must be a way to get to Tiamat's throne from here!
+					NpcShoutsService.getInstance().sendMsg(kahrun, 1500601, kahrun.getObjectId(), 0, 25000);
+					// Garnon? How did you get here?
+					NpcShoutsService.getInstance().sendMsg(kahrun, 1500602, kahrun.getObjectId(), 0, 30000);
+					// You've found it? Where in the world was it?
+					NpcShoutsService.getInstance().sendMsg(kahrun, 1500603, kahrun.getObjectId(), 0, 35000);
+					// Let's not waste time. The final battle is upon us.
+					NpcShoutsService.getInstance().sendMsg(kahrun, 1500604, kahrun.getObjectId(), 0, 40000);
+					// Lord Kahrun!
+					NpcShoutsService.getInstance().sendMsg(garnon, 1500605, garnon.getObjectId(), 0, 45000);
+					// We've found the entrance to the Dragon Lord's Refuge!
+					NpcShoutsService.getInstance().sendMsg(garnon, 1500606, garnon.getObjectId(), 0, 50000);
+					// The scouts we sent to Tiamaranta's Eye are the ones you should be asking.
+					NpcShoutsService.getInstance().sendMsg(garnon, 1500607, garnon.getObjectId(), 0, 55000);
+					// Tiamat. Hand over Siel's Relics and leave Tiamaranta.
+					NpcShoutsService.getInstance().sendMsg(garnon, 1500608, garnon.getObjectId(), 0, 60000);
+					// My forces are on their way.
+					// Do you truly wish to face us in all-out battle? Such a choice will lead to tragedy for us all.
+					NpcShoutsService.getInstance().sendMsg(kahrun, 1500609, kahrun.getObjectId(), 0, 65000);
+					// Well then, you've chosen the path of destruction. Now you will see the true power of the Reian Tribe
+					NpcShoutsService.getInstance().sendMsg(kahrun, 1500610, kahrun.getObjectId(), 0, 70000);
+					// Aarrghh! Si...Siel's Relics...
+					// They are more powerful than we ever imagined! Run! You must not try to face this alone.
+					NpcShoutsService.getInstance().sendMsg(kahrun, 1500611, kahrun.getObjectId(), 0, 75000);
 				}
+				npc.getController().onDelete();
 			}, 13000);
 		}
 	}
@@ -439,36 +477,18 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

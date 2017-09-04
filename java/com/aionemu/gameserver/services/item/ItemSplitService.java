@@ -155,31 +155,28 @@ public class ItemSplitService
 			{
 				final IStorage destination = player.getStorage(StorageType.ACCOUNT_WAREHOUSE.getId());
 				final long chksum = (source.getKinah() - splitAmount) + (destination.getKinah() + splitAmount);
-				
 				if (chksum != (source.getKinah() + destination.getKinah()))
 				{
 					return;
 				}
-				
 				updateKinahCount(source, splitAmount, destination);
 				break;
 			}
-			
 			case ACCOUNT_WAREHOUSE:
 			{
 				final IStorage destination = player.getStorage(StorageType.CUBE.getId());
 				final long chksum = (source.getKinah() - splitAmount) + (destination.getKinah() + splitAmount);
-				
 				if (chksum != (source.getKinah() + destination.getKinah()))
 				{
 					return;
 				}
-				
 				updateKinahCount(source, splitAmount, destination);
 				break;
 			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 	

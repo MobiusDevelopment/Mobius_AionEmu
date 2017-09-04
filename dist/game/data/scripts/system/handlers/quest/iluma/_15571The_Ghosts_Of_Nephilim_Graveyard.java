@@ -117,6 +117,7 @@ public class _15571The_Ghosts_Of_Nephilim_Graveyard extends QuestHandler
 			{
 				case 241151:
 				case 241152:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _15571The_Ghosts_Of_Nephilim_Graveyard extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

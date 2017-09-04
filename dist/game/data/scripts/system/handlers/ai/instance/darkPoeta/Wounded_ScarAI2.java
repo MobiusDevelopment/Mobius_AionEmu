@@ -44,7 +44,9 @@ public class Wounded_ScarAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 214871: // Wounded Scar.
+				{
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

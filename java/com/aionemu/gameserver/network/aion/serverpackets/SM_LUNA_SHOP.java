@@ -117,44 +117,63 @@ public class SM_LUNA_SHOP extends AionServerPacket
 		switch (actionId)
 		{
 			case 0:
+			{
 				writeC(0);
 				writeD(indun_id);
 				break;
+			}
 			case 2:
+			{
 				writeC(fail);
 				switch (fail)
 				{
 					case 0:
+					{
 						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1330059, new Object[0]));
 						break;
+					}
 					case 1:
+					{
 						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1330050, new Object[]
 						{
 							item.getName()
 						}));
 						break;
+					}
 				}
 				break;
+			}
 			case 3:
+			{
 				writeC(1);// success ? 0x00 : 0x01
 				writeH(1);// unk 0x01
 				writeD(craftItemID);// productid
 				writeQ(craftItemCount);// quantity
 				break;
+			}
 			case 4:
+			{
 				break;
+			}
 			case 5:
+			{
 				writeC(0);
 				writeC(0);
 				writeC(0);
 				break;
+			}
 			case 6:
+			{
 				writeD(53);
 				break;
+			}
 			case 7:
+			{
 				writeD(55);
 				break;
+			}
 			case 8:// dorinerk's wardrobe
+			{
 				writeC(0x00);
 				writeC(slotSize);
 				writeH(itemSize);
@@ -169,18 +188,24 @@ public class SM_LUNA_SHOP extends AionServerPacket
 					}
 				}
 				break;
+			}
 			case 10:
+			{
 				writeC(isApply);
 				writeC(applySlot);
 				writeD(itemId);
 				writeD(unk1);
 				break;
+			}
 			case 11:
+			{
 				writeC(0x00);
 				writeC(indun_id);
 				writeD(0x01);
 				break;
+			}
 			case 12:// open chest
+			{
 				writeC(0);// unk
 				writeH(3);// size always 3
 				for (Map.Entry<Integer, Long> e : munirunerk_treasure.entrySet())
@@ -189,10 +214,13 @@ public class SM_LUNA_SHOP extends AionServerPacket
 					writeQ(e.getValue());
 				}
 				break;
+			}
 			case 14:
+			{
 				writeC(1); // free enter = 1
 				writeD(indun_id);
 				break;
+			}
 		}
 	}
 }

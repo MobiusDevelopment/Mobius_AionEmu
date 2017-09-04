@@ -222,12 +222,15 @@ public class MySQL5MailDAO extends MailDAO
 		switch (letter.getLetterPersistentState())
 		{
 			case NEW:
+			{
 				result = saveLetter(time, letter);
 				break;
-			
+			}
 			case UPDATE_REQUIRED:
+			{
 				result = updateLetter(time, letter);
 				break;
+			}
 			/*
 			 * case DELETED: return deleteLetter(letter);
 			 */

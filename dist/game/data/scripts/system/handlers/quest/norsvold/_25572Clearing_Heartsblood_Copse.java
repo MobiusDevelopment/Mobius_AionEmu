@@ -115,6 +115,7 @@ public class _25572Clearing_Heartsblood_Copse extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 241201:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -125,6 +126,7 @@ public class _25572Clearing_Heartsblood_Copse extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

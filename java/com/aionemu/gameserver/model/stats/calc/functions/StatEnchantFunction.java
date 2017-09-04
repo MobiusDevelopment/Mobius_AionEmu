@@ -100,24 +100,35 @@ public class StatEnchantFunction extends StatAddFunction
 			case MAIN_HAND_POWER:
 			case OFF_HAND_POWER:
 			case PHYSICAL_ATTACK:
+			{
 				switch (item.getItemTemplate().getWeaponType())
 				{
 					case GUN_1H:
 					case SWORD_1H:
 					case DAGGER_1H:
+					{
 						return 2 * enchantLvl;
+					}
 					case BOW:
 					case SWORD_2H:
 					case POLEARM_2H:
+					{
 						return 3 * enchantLvl;
+					}
 					case MACE_1H:
 					case STAFF_2H:
+					{
 						return 3 * enchantLvl;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				return 0;
+			}
 			case BOOST_MAGICAL_SKILL:
+			{
 				switch (item.getItemTemplate().getWeaponType())
 				{
 					case ORB_2H:
@@ -128,29 +139,46 @@ public class StatEnchantFunction extends StatAddFunction
 					case STAFF_2H:
 					case CANNON_2H:
 					case KEYBLADE_2H:
+					{
 						return 20 * enchantLvl;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				return 0;
+			}
 			case MAGICAL_ATTACK:
+			{
 				switch (item.getItemTemplate().getWeaponType())
 				{
 					case GUN_1H:
+					{
 						return 2 * enchantLvl;
+					}
 					case ORB_2H:
 					case BOOK_2H:
 					case HARP_2H:
+					{
 						return 3 * enchantLvl;
+					}
 					case CANNON_2H:
 					case KEYBLADE_2H:
+					{
 						return 3 * enchantLvl;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				return 0;
+			}
 			default:
+			{
 				return 0;
+			}
 		}
 	}
 	
@@ -167,9 +195,13 @@ public class StatEnchantFunction extends StatAddFunction
 					case HELMET:
 					case EARRINGS:
 					case NECKLACE:
+					{
 						return 5 * autorizeLvl;
+					}
 					default:
+					{
 						break;
+					}
 				}
 			}
 			case PVP_DEFEND_RATIO:
@@ -180,13 +212,19 @@ public class StatEnchantFunction extends StatAddFunction
 				{
 					case RINGS:
 					case BELT:
+					{
 						return 7 * autorizeLvl;
+					}
 					default:
+					{
 						break;
+					}
 				}
 			}
 			default:
+			{
 				break;
+			}
 		}
 		return 0;
 	}
@@ -206,336 +244,587 @@ public class StatEnchantFunction extends StatAddFunction
 			 * 4.9 Enchant Stats
 			 */
 			case ROBE:
+			{
 				switch (equipmentSlot)
 				{
 					case 1 << 5:
 					case 1 << 11:
 					case 1 << 4:
+					{
 						switch (stat)
 						{
 							case PHYSICAL_ATTACK:
+							{
 								return enchantLvl;
+							}
 							case BOOST_MAGICAL_SKILL:
+							{
 								return 2 * enchantLvl;
+							}
 							case PHYSICAL_DEFENSE:
+							{
 								return enchantLvl;
+							}
 							case MAXHP:
+							{
 								return 20 * enchantLvl;
+							}
 							case PHYSICAL_CRITICAL_RESIST:
+							{
 								return 2 * enchantLvl;
+							}
 							case MAGICAL_DEFEND:
+							{
 								return 2 * enchantLvl;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						return 0;
+					}
 					case 1 << 12:
+					{
 						switch (stat)
 						{
 							case PHYSICAL_ATTACK:
+							{
 								return enchantLvl;
+							}
 							case BOOST_MAGICAL_SKILL:
+							{
 								return 2 * enchantLvl;
+							}
 							case PHYSICAL_DEFENSE:
+							{
 								return 2 * enchantLvl;
+							}
 							case MAXHP:
+							{
 								return 22 * enchantLvl;
+							}
 							case PHYSICAL_CRITICAL_RESIST:
+							{
 								return 3 * enchantLvl;
+							}
 							case MAGICAL_DEFEND:
+							{
 								return 2 * enchantLvl;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						return 0;
+					}
 					case 1 << 3:
+					{
 						switch (stat)
 						{
 							case PHYSICAL_ATTACK:
+							{
 								return enchantLvl;
+							}
 							case BOOST_MAGICAL_SKILL:
+							{
 								return 2 * enchantLvl;
+							}
 							case PHYSICAL_DEFENSE:
+							{
 								return 3 * enchantLvl;
+							}
 							case MAXHP:
+							{
 								return 24 * enchantLvl;
+							}
 							case PHYSICAL_CRITICAL_RESIST:
+							{
 								return 4 * enchantLvl;
+							}
 							case MAGICAL_DEFEND:
+							{
 								return 3 * enchantLvl;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						return 0;
+					}
 				}
 				return 0;
+			}
 			case LEATHER:
+			{
 				switch (equipmentSlot)
 				{
 					case 1 << 5:
 					case 1 << 11:
 					case 1 << 4:
+					{
 						switch (stat)
 						{
 							case PHYSICAL_ATTACK:
+							{
 								return enchantLvl;
+							}
 							case BOOST_MAGICAL_SKILL:
+							{
 								return 2 * enchantLvl;
+							}
 							case PHYSICAL_DEFENSE:
+							{
 								return 2 * enchantLvl;
+							}
 							case MAXHP:
+							{
 								return 18 * enchantLvl;
+							}
 							case PHYSICAL_CRITICAL_RESIST:
+							{
 								return 2 * enchantLvl;
+							}
 							case MAGICAL_DEFEND:
+							{
 								return 2 * enchantLvl;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						return 0;
+					}
 					case 1 << 12:
+					{
 						switch (stat)
 						{
 							case PHYSICAL_ATTACK:
+							{
 								return enchantLvl;
+							}
 							case BOOST_MAGICAL_SKILL:
+							{
 								return 2 * enchantLvl;
+							}
 							case PHYSICAL_DEFENSE:
+							{
 								return 3 * enchantLvl;
+							}
 							case MAXHP:
+							{
 								return 20 * enchantLvl;
+							}
 							case PHYSICAL_CRITICAL_RESIST:
+							{
 								return 3 * enchantLvl;
+							}
 							case MAGICAL_DEFEND:
+							{
 								return 2 * enchantLvl;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						return 0;
+					}
 					case 1 << 3:
+					{
 						switch (stat)
 						{
 							case PHYSICAL_ATTACK:
+							{
 								return enchantLvl;
+							}
 							case BOOST_MAGICAL_SKILL:
+							{
 								return 2 * enchantLvl;
+							}
 							case PHYSICAL_DEFENSE:
+							{
 								return 4 * enchantLvl;
+							}
 							case MAXHP:
+							{
 								return 22 * enchantLvl;
+							}
 							case PHYSICAL_CRITICAL_RESIST:
+							{
 								return 4 * enchantLvl;
+							}
 							case MAGICAL_DEFEND:
+							{
 								return 3 * enchantLvl;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						return 0;
+					}
 				}
 				return 0;
+			}
 			case CHAIN:
+			{
 				switch (equipmentSlot)
 				{
 					case 1 << 5:
 					case 1 << 11:
 					case 1 << 4:
+					{
 						switch (stat)
 						{
 							case PHYSICAL_ATTACK:
+							{
 								return enchantLvl;
+							}
 							case BOOST_MAGICAL_SKILL:
+							{
 								return 2 * enchantLvl;
+							}
 							case PHYSICAL_DEFENSE:
+							{
 								return 3 * enchantLvl;
+							}
 							case MAXHP:
+							{
 								return 16 * enchantLvl;
+							}
 							case PHYSICAL_CRITICAL_RESIST:
+							{
 								return 2 * enchantLvl;
+							}
 							case MAGICAL_DEFEND:
+							{
 								return 2 * enchantLvl;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						return 0;
+					}
 					case 1 << 12:
+					{
 						switch (stat)
 						{
 							case PHYSICAL_ATTACK:
+							{
 								return enchantLvl;
+							}
 							case BOOST_MAGICAL_SKILL:
+							{
 								return 2 * enchantLvl;
+							}
 							case PHYSICAL_DEFENSE:
+							{
 								return 4 * enchantLvl;
+							}
 							case MAXHP:
+							{
 								return 18 * enchantLvl;
+							}
 							case PHYSICAL_CRITICAL_RESIST:
+							{
 								return 3 * enchantLvl;
+							}
 							case MAGICAL_DEFEND:
+							{
 								return 2 * enchantLvl;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						return 0;
+					}
 					case 1 << 3:
+					{
 						switch (stat)
 						{
 							case PHYSICAL_ATTACK:
+							{
 								return enchantLvl;
+							}
 							case BOOST_MAGICAL_SKILL:
+							{
 								return 2 * enchantLvl;
+							}
 							case PHYSICAL_DEFENSE:
+							{
 								return 5 * enchantLvl;
+							}
 							case MAXHP:
+							{
 								return 20 * enchantLvl;
+							}
 							case PHYSICAL_CRITICAL_RESIST:
+							{
 								return 4 * enchantLvl;
+							}
 							case MAGICAL_DEFEND:
+							{
 								return 3 * enchantLvl;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						return 0;
+					}
 				}
 				return 0;
+			}
 			case PLATE:
+			{
 				switch (equipmentSlot)
 				{
 					case 1 << 5:
 					case 1 << 11:
 					case 1 << 4:
+					{
 						switch (stat)
 						{
 							case PHYSICAL_ATTACK:
+							{
 								return enchantLvl;
+							}
 							case BOOST_MAGICAL_SKILL:
+							{
 								return 2 * enchantLvl;
+							}
 							case PHYSICAL_DEFENSE:
+							{
 								return 4 * enchantLvl;
+							}
 							case MAXHP:
+							{
 								return 14 * enchantLvl;
+							}
 							case PHYSICAL_CRITICAL_RESIST:
+							{
 								return 2 * enchantLvl;
+							}
 							case MAGICAL_DEFEND:
+							{
 								return 2 * enchantLvl;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						return 0;
+					}
 					case 1 << 12:
+					{
 						switch (stat)
 						{
 							case PHYSICAL_ATTACK:
+							{
 								return enchantLvl;
+							}
 							case BOOST_MAGICAL_SKILL:
+							{
 								return 2 * enchantLvl;
+							}
 							case PHYSICAL_DEFENSE:
+							{
 								return 5 * enchantLvl;
+							}
 							case MAXHP:
+							{
 								return 16 * enchantLvl;
+							}
 							case PHYSICAL_CRITICAL_RESIST:
+							{
 								return 3 * enchantLvl;
+							}
 							case MAGICAL_DEFEND:
+							{
 								return 2 * enchantLvl;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						return 0;
+					}
 					case 1 << 3:
+					{
 						switch (stat)
 						{
 							case PHYSICAL_ATTACK:
+							{
 								return enchantLvl;
+							}
 							case BOOST_MAGICAL_SKILL:
+							{
 								return 2 * enchantLvl;
+							}
 							case PHYSICAL_DEFENSE:
+							{
 								return 6 * enchantLvl;
+							}
 							case MAXHP:
+							{
 								return 18 * enchantLvl;
+							}
 							case PHYSICAL_CRITICAL_RESIST:
+							{
 								return 4 * enchantLvl;
+							}
 							case MAGICAL_DEFEND:
+							{
 								return 3 * enchantLvl;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						return 0;
+					}
 				}
 				return 0;
+			}
 			case SHIELD:
+			{
 				switch (stat)
 				{
 					case DAMAGE_REDUCE:
+					{
 						final float reduceRate = enchantLvl > 10 ? 0.2f : enchantLvl * 0.02f;
 						return Math.round(reduceRate * applyStat.getBase());
+					}
 					case BLOCK:
+					{
 						if (enchantLvl > 10)
 						{
 							return 30 * (enchantLvl - 10);
 						}
 						return 0;
+					}
 					default:
+					{
 						break;
+					}
 				}
-				
+			}
 			case PLUME:
+			{
 				switch (stat)
 				{
 					case MAXHP:
+					{
 						return 150 * enchantLvl;
+					}
 					case PHYSICAL_ATTACK:
+					{
 						return 4 * enchantLvl;
+					}
 					case BOOST_MAGICAL_SKILL:
+					{
 						return 20 * enchantLvl;
+					}
 					case PHYSICAL_CRITICAL:
+					{
 						return 12 * enchantLvl;
+					}
 					case PHYSICAL_ACCURACY:
+					{
 						return 16 * enchantLvl;
+					}
 					case MAGICAL_ACCURACY:
+					{
 						return 8 * enchantLvl;
+					}
 					case MAGICAL_CRITICAL:
+					{
 						return 8 * enchantLvl;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				return 0;
+			}
 			/**
 			 * 5.0 Wings Enchant
 			 */
 			case WING:
+			{
 				switch (stat)
 				{
 					case PHYSICAL_ATTACK:
+					{
 						return 1 * enchantLvl;
+					}
 					case BOOST_MAGICAL_SKILL:
+					{
 						return 4 * enchantLvl;
+					}
 					case MAXHP:
+					{
 						return 20 * enchantLvl;
+					}
 					case PHYSICAL_CRITICAL_RESIST:
+					{
 						return 2 * enchantLvl;
+					}
 					case FLY_TIME:
+					{
 						return 10 * enchantLvl;
+					}
 					case MAGICAL_CRITICAL_RESIST:
+					{
 						return 1 * enchantLvl;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				return 0;
+			}
 			/**
 			 * 5.1 Bracelet Enchant
 			 */
 			case BRACELET:
+			{
 				switch (stat)
 				{
 					case PVP_DEFEND_RATIO_PHYSICAL:
+					{
 						return 3 * enchantLvl;
+					}
 					case PVP_DEFEND_RATIO_MAGICAL:
+					{
 						return 3 * enchantLvl;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				return 0;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return 0;
 	}

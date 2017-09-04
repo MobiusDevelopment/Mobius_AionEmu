@@ -53,7 +53,9 @@ public class _21052DragonHuntin extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					case SELECT_ACTION_1012:
 					{
 						return sendQuestDialog(env, 1012);

@@ -245,7 +245,9 @@ public class EffectController
 			case 2776:
 			case 2777:
 			case 2778:
+			{
 				// Kinetic Battery
+			}
 			case 2440:
 			case 2441:
 			case 2442:
@@ -256,20 +258,28 @@ public class EffectController
 			case 2447:
 			case 2448:
 			case 2449:
+			{
 				// Kinetic Bulwark
+			}
 			case 2579:
 			case 2580:
 			case 2581:
+			{
 				// Mobility Thrusters
+			}
 			case 2421:
 			case 2422:
+			{
 				// Stability Thrusters
+			}
 			case 2736:
 			case 2737:
 			case 2738:
 			case 2739:
 			case 2740:
+			{
 				// Mounting Frustration
+			}
 			case 2838:
 			case 2839:
 			case 2840:
@@ -281,7 +291,9 @@ public class EffectController
 			case 2846:
 			case 2847:
 			case 2848:
+			{
 				return true;
+			}
 		}
 		return false;
 	}
@@ -497,13 +509,17 @@ public class EffectController
 			{
 				case ALL:
 				case BUFF: // DispelBuffCounterAtkEffect
+				{
 					if (effect.getReqDispelLevel() <= dispelLevel)
 					{
 						number++;
 					}
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		
@@ -547,49 +563,65 @@ public class EffectController
 			switch (dispelCat)
 			{
 				case ALL:
+				{
 					if (((effect.getDispelCategory() == DispelCategoryType.ALL) || (effect.getDispelCategory() == DispelCategoryType.DEBUFF_MENTAL) || (effect.getDispelCategory() == DispelCategoryType.DEBUFF_PHYSICAL)) && (effect.getReqDispelLevel() <= dispelLevel))
 					{
 						remove = true;
 					}
 					break;
+				}
 				case DEBUFF_MENTAL:
+				{
 					if (((effect.getDispelCategory() == DispelCategoryType.ALL) || (effect.getDispelCategory() == DispelCategoryType.DEBUFF_MENTAL)) && (effect.getReqDispelLevel() <= dispelLevel))
 					{
 						remove = true;
 					}
 					break;
+				}
 				case DEBUFF_PHYSICAL:
+				{
 					if (((effect.getDispelCategory() == DispelCategoryType.ALL) || (effect.getDispelCategory() == DispelCategoryType.DEBUFF_PHYSICAL)) && (effect.getReqDispelLevel() <= dispelLevel))
 					{
 						remove = true;
 					}
 					break;
+				}
 				case BUFF:
+				{
 					if ((effect.getDispelCategory() == DispelCategoryType.BUFF) && (effect.getReqDispelLevel() <= dispelLevel))
 					{
 						remove = true;
 					}
 					break;
+				}
 				case STUN:
+				{
 					if (effect.getDispelCategory() == DispelCategoryType.STUN)
 					{
 						remove = true;
 					}
 					break;
+				}
 				case NPC_BUFF:
+				{
 					if (effect.getDispelCategory() == DispelCategoryType.NPC_BUFF)
 					{
 						remove = true;
 					}
 					break;
+				}
 				case NPC_DEBUFF_PHYSICAL:
+				{
 					if (effect.getDispelCategory() == DispelCategoryType.NPC_DEBUFF_PHYSICAL)
 					{
 						remove = true;
 					}
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			
 			if (remove)
@@ -643,13 +675,17 @@ public class EffectController
 			{
 				case ALL:
 				case BUFF:
+				{
 					if (effect.getReqDispelLevel() <= dispelLevel)
 					{
 						remove = true;
 					}
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			
 			if (remove)
@@ -686,10 +722,14 @@ public class EffectController
 			case 20531:
 			case 19345:
 			case 19346:
+			{
 				// TODO
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -1037,8 +1077,10 @@ public class EffectController
 			case 2024:
 			case 2026:
 			case 2028:
+			{
 				size = 2;
 				break;
+			}
 		}
 		rDelay = delayId;
 		

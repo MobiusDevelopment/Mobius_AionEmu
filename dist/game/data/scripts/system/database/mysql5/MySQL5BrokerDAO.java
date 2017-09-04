@@ -159,24 +159,29 @@ public class MySQL5BrokerDAO extends BrokerDAO
 		switch (item.getPersistentState())
 		{
 			case NEW:
+			{
 				result = insertBrokerItem(item);
 				if (item.getItem() != null)
 				{
 					DAOManager.getDAO(InventoryDAO.class).store(item.getItem(), item.getSellerId());
 				}
 				break;
-			
+			}
 			case DELETED:
+			{
 				result = deleteBrokerItem(item);
 				break;
-			
+			}
 			case UPDATE_ITEM_BROKER:
+			{
 				result = updateItem(item);
 				break;
-			
+			}
 			case UPDATE_REQUIRED:
+			{
 				result = updateBrokerItem(item);
 				break;
+			}
 		}
 		
 		if (result)

@@ -114,6 +114,7 @@ public class _27161Free_From_Frenzied_Mutants extends QuestHandler
 				case 235832:
 				case 235914:
 				case 235918:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -124,6 +125,7 @@ public class _27161Free_From_Frenzied_Mutants extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

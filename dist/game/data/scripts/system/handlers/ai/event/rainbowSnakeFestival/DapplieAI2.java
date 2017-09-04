@@ -72,22 +72,28 @@ public class DapplieAI2 extends GeneralNpcAI2
 			{
 				case 832964: // Dapplie E.
 				case 832975: // Dapplie A.
+				{
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							skillId = 10978;
 							effectController.removeEffect(10976);
 							effectController.removeEffect(10977);
 							effectController.removeEffect(10979);
 							break;
+						}
 						case 2:
+						{
 							skillId = 10979;
 							effectController.removeEffect(10976);
 							effectController.removeEffect(10977);
 							effectController.removeEffect(10978);
 							break;
+						}
 					}
 					break;
+				}
 			}
 			SkillEngine.getInstance().getSkill(getOwner(), skillId, 1, player).useNoAnimationSkill();
 		}

@@ -80,7 +80,9 @@ public class _1540BaittheHooks extends QuestHandler
 						}
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

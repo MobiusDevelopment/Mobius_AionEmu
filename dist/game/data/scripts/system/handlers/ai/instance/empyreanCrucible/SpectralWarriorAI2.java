@@ -75,13 +75,17 @@ public class SpectralWarriorAI2 extends AggressiveNpcAI2
 				switch (npc.getNpcId())
 				{
 					case 205413:
+					{
 						spawn(217576, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading());
 						CreatureActions.delete(npc);
 						break;
+					}
 					case 205414:
+					{
 						spawn(217577, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading());
 						CreatureActions.delete(npc);
 						break;
+					}
 				}
 			}
 		}

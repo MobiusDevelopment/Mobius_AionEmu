@@ -108,34 +108,52 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 245185: // Mechaturerk’s Core.
+			{
 				switch (Rnd.get(1, 7))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152150000, 5)); // Uncut Crystal.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152150001, 5)); // Chipped Crystal.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152150002, 5)); // Cloudy Crystal.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152150003, 5)); // Clear Crystal.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152150004, 5)); // Flawless Crystal.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152150005, 5)); // Luna’s Light.
 						break;
+					}
 					case 7:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 152150006, 5)); // Luna’s Blessing.
 						break;
+					}
 				}
 				break;
+			}
 			case 834443: // Mechaturerk’s Treasure Box.
 			case 834444: // Mechaturerk’s Special Treasure Box.
+			{
 				break;
+			}
 		}
 	}
 	
@@ -146,15 +164,20 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 243993: // Mechaturerk’s Cannon.
+			{
 				despawnNpc(npc);
 				// A dark energy is spreading.
 				sendMsgByRace(1403662, Race.PC_ALL, 0);
 				spawn(833835, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading()); // Mechaturerk's Cannon.
 				break;
+			}
 			case 245759: // Siege Factory Watcher.
+			{
 				startMunitionRaidA1_1();
 				break;
+			}
 			case 243663: // Mechaturerk Machine Monster.
+			{
 				despawnNpc(npc);
 				deleteNpc(833896); // Factory Gate.
 				// The Destruction Golem has appeared!
@@ -164,7 +187,9 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 				spawn(703380, 138.84042f, 256.166f, 191.8727f, (byte) 0); // Machine Monster’s Footlocker.
 				spawn(243664, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading()); // Mechaturerk.
 				break;
+			}
 			case 243664: // Mechaturerk.
+			{
 				points = 878600;
 				munitionRaidTaskA1.cancel(true);
 				munitionRaidTaskA2.cancel(true);
@@ -180,15 +205,21 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						spawn(834443, 149.65579f, 260.02966f, 191.8727f, (byte) 0); // Mechaturerk’s Treasure Box.
 						break;
+					}
 					case 2:
+					{
 						spawn(834444, 149.65579f, 260.02966f, 191.8727f, (byte) 0); // Mechaturerk’s Special Treasure Box.
 						break;
+					}
 				}
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player1 -> stopInstance(player1)), 8000);
 				break;
+			}
 			case 243853: // Mechaturerk Maintenance Soldier.
+			{
 				maintenanceSoldierKilled++;
 				if (maintenanceSoldierKilled == 10)
 				{
@@ -199,24 +230,32 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 					spawn(703376, 138.75412f, 269.4629f, 191.8727f, (byte) 0); // Maintenance Soldier’s Footlocker.
 				}
 				break;
+			}
 			case 243968: // Remirunerk.
+			{
 				points = 500;
 				// Remirunrunerk’s Footlocker has appeared inside the Munitions Factory.
 				sendMsgByRace(1403643, Race.PC_ALL, 2000);
 				spawn(703378, 138.79507f, 263.1448f, 191.8727f, (byte) 0); // Remirunrunerk’s Footlocker.
 				break;
+			}
 			case 243969: // Bomirunrunerk.
+			{
 				points = 500;
 				// Bomirunrunerk’s Footlocker has appeared inside the Munitions Factory.
 				sendMsgByRace(1403644, Race.PC_ALL, 2000);
 				spawn(703379, 138.76562f, 259.84332f, 191.8727f, (byte) 0); // Bomirunrunerk’s Footlocker.
 				break;
+			}
 			case 244028: // Mechaturerk Gunner.
+			{
 				// The Gunner’s Footlocker has appeared inside the Munitions Factory.
 				sendMsgByRace(1403642, Race.PC_ALL, 2000);
 				spawn(703377, 138.77333f, 266.49652f, 191.8727f, (byte) 0); // Gunner’s Footlocker.
 				break;
+			}
 			case 244035: // Damaged Mecha Infantryman.
+			{
 				mechaInfantrymanKilled++;
 				if (mechaInfantrymanKilled == 2)
 				{
@@ -225,7 +264,9 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 					spawn(703375, 138.73476f, 272.44095f, 191.8727f, (byte) 0); // Armored Soldier’s Footlocker.
 				}
 				break;
+			}
 			case 244135: // Melee Support Destruction Golem.
+			{
 				final float x0 = npc.getX();
 				final float y0 = npc.getY();
 				final float z0 = npc.getZ();
@@ -243,7 +284,9 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 					}
 				}, 1000);
 				break;
+			}
 			case 244136: // Ranged Support Destruction Golem.
+			{
 				final float x1 = npc.getX();
 				final float y1 = npc.getY();
 				final float z1 = npc.getZ();
@@ -275,6 +318,7 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 					sendMsgByRace(1403663, Race.PC_ALL, 15000);
 				}
 				break;
+			}
 		}
 		if (instanceReward.getInstanceScoreType().isStartProgress())
 		{
@@ -290,11 +334,14 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 703349: // Huge Healing Plant.
+			{
 				despawnNpc(npc);
 				player.getLifeStats().increaseHp(SM_ATTACK_STATUS.TYPE.HP, 30000);
 				player.getLifeStats().increaseHp(SM_ATTACK_STATUS.TYPE.MP, 30000);
 				break;
+			}
 			case 243660: // Oil Cask.
+			{
 				despawnNpc(npc);
 				if (player.getInventory().isFull())
 				{
@@ -302,6 +349,7 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 				}
 				ItemService.addItem(player, 164002362, 3); // Mechaturerk Oil Cask.
 				break;
+			}
 		}
 	}
 	
@@ -627,13 +675,17 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 		switch (player.getRace())
 		{
 			case ELYOS:
+			{
 				// Luna Detachment Transformation.
 				SkillEngine.getInstance().applyEffectDirectly(21347, player, player, 3000000 * 1);
 				break;
+			}
 			case ASMODIANS:
+			{
 				// Luna Detachment Transformation.
 				SkillEngine.getInstance().applyEffectDirectly(21348, player, player, 3000000 * 1);
 				break;
+			}
 		}
 		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawnLunaDetachment(), 20000);
 		sendPacket(0, 0);
@@ -670,29 +722,41 @@ public class SecretMunitionsFactoryInstance extends GeneralInstanceHandler
 			switch (factoryRank)
 			{
 				case 1: // Rank S
+				{
 					playerReward.setMechaturerkSecretBox(1);
 					// Mechaturerk's Secret Box.
 					ItemService.addItem(player, 188055475, 1);
 					break;
+				}
 				case 2: // Rank A
+				{
 					playerReward.setMechaturerkNormalTreasureChest(1);
 					// Mechaturerk’s Normal Treasure Chest.
 					ItemService.addItem(player, 188055647, 1);
 					break;
+				}
 				case 3: // Rank B
+				{
 					playerReward.setMechaturerkSpecialTreasureBox(1);
 					// Mechaturerk’s Special Treasure Box.
 					ItemService.addItem(player, 188055648, 1);
 					break;
+				}
 				case 4: // Rank C
+				{
 					playerReward.setMechaturerkSpecialTreasureBox(1);
 					// Mechaturerk’s Special Treasure Box.
 					ItemService.addItem(player, 188055648, 1);
 					break;
+				}
 				case 5: // Rank D
+				{
 					break;
+				}
 				case 6: // Rank F
+				{
 					break;
+				}
 			}
 		}
 	}

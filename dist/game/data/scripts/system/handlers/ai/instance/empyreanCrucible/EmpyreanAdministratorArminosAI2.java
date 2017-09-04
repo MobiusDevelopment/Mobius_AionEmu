@@ -40,11 +40,14 @@ public class EmpyreanAdministratorArminosAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 217744: // Administrator Arminos. [3th Floor]
+			{
 				sendMsg(1500247, getObjectId(), false, 8000);
 				sendMsg(1500250, getObjectId(), false, 20000);
 				sendMsg(1500251, getObjectId(), false, 60000);
 				break;
+			}
 			case 217749: // Administrator Arminos. [4th Floor]
+			{
 				sendMsg(1500252, getObjectId(), false, 8000);
 				sendMsg(1500253, getObjectId(), false, 16000);
 				sendMsg(1400982, 0, false, 25000);
@@ -56,6 +59,7 @@ public class EmpyreanAdministratorArminosAI2 extends NpcAI2
 				sendMsg(1401015, 0, false, 118000);
 				sendMsg(1500255, getObjectId(), true, 118000);
 				break;
+			}
 		}
 	}
 	

@@ -323,38 +323,52 @@ public class Set extends AdminCommand
 		switch (oldClass.ordinal())
 		{
 			case 0: // Warrior.
+			{
 				if ((newClassId == 1) || (newClassId == 2))
 				{
 					break;
 				}
+			}
 			case 3: // Scout.
+			{
 				if ((newClassId == 4) || (newClassId == 5))
 				{
 					break;
 				}
+			}
 			case 6: // Mage.
+			{
 				if ((newClassId == 7) || (newClassId == 8))
 				{
 					break;
 				}
+			}
 			case 9: // Priest.
+			{
 				if ((newClassId == 10) || (newClassId == 11))
 				{
 					break;
 				}
+			}
 			case 12: // Technist.
+			{
 				if ((newClassId == 13) || (newClassId == 14))
 				{
 					break;
 				}
+			}
 			case 15: // Muse.
+			{
 				if (newClassId == 16)
 				{
 					break;
 				}
+			}
 			default:
+			{
 				PacketSendUtility.sendMessage(player, "Invalid class switch chosen");
 				return;
+			}
 		}
 		player.getCommonData().setPlayerClass(playerClass);
 		player.getController().upgradePlayer();

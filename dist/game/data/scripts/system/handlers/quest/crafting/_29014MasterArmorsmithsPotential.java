@@ -84,11 +84,15 @@ public class _29014MasterArmorsmithsPotential extends QuestHandler
 			switch (targetId)
 			{
 				case 204107:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							return sendQuestDialog(env, 1011);
+						}
 						case STEP_TO_10:
+						{
 							if (!giveQuestItem(env, 152206808, 1))
 							{
 								return true;
@@ -97,7 +101,9 @@ public class _29014MasterArmorsmithsPotential extends QuestHandler
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 						case STEP_TO_20:
+						{
 							if (!giveQuestItem(env, 152206809, 1))
 							{
 								return true;
@@ -106,11 +112,16 @@ public class _29014MasterArmorsmithsPotential extends QuestHandler
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
+					break;
+				}
 				case 204106:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							final long itemCount1 = player.getInventory().getItemCountByItemId(182207899);
 							if (itemCount1 > 0)
 							{
@@ -123,7 +134,10 @@ public class _29014MasterArmorsmithsPotential extends QuestHandler
 							{
 								return sendQuestDialog(env, 10001);
 							}
+						}
 					}
+					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

@@ -42,6 +42,7 @@ public class WrithingCocoonAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 730232: // Writhing Cocoon.
+				{
 					final Npc npc = getPosition().getWorldMapInstance().getNpc(730233);
 					if (npc != null)
 					{
@@ -50,7 +51,9 @@ public class WrithingCocoonAI2 extends NpcAI2
 					spawn(799500, getPosition().getX(), getPosition().getY(), getPosition().getZ(), getPosition().getHeading()); // Engeius.
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(390510));
 					break;
+				}
 				case 730233: // Writhing Cocoon.
+				{
 					final Npc npc1 = getPosition().getWorldMapInstance().getNpc(730232);
 					if (npc1 != null)
 					{
@@ -59,6 +62,7 @@ public class WrithingCocoonAI2 extends NpcAI2
 					spawn(799501, getPosition().getX(), getPosition().getY(), getPosition().getZ(), getPosition().getHeading()); // Abyla.
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(390511));
 					break;
+				}
 			}
 			AI2Actions.deleteOwner(this);
 		}

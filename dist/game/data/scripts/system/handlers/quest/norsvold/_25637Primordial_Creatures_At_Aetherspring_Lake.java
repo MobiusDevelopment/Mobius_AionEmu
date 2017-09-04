@@ -119,6 +119,7 @@ public class _25637Primordial_Creatures_At_Aetherspring_Lake extends QuestHandle
 				case 243318:
 				case 243319:
 				case 243320:
+				{
 					if (qs.getQuestVarById(1) < 3)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _25637Primordial_Creatures_At_Aetherspring_Lake extends QuestHandle
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

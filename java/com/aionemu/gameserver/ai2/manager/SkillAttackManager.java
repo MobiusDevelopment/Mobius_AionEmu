@@ -82,25 +82,33 @@ public class SkillAttackManager
 			switch (template.getSubType())
 			{
 				case BUFF:
+				{
 					switch (template.getProperties().getFirstTarget())
 					{
 						case ME:
+						{
 							if (npcAI.getOwner().getEffectController().isAbnormalPresentBySkillId(skillId))
 							{
 								afterUseSkill(npcAI);
 								return;
 							}
 							break;
+						}
 						default:
+						{
 							if (target.getEffectController().isAbnormalPresentBySkillId(skillId))
 							{
 								afterUseSkill(npcAI);
 								return;
 							}
+						}
 					}
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			final boolean success = npcAI.getOwner().getController().useSkill(skillId, skillLevel);
 			if (!success)

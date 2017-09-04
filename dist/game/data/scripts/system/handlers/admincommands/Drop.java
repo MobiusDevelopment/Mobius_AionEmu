@@ -40,25 +40,35 @@ public class Drop extends AdminCommand
 		switch (num)
 		{
 			case 1:
+			{
 				min = 200000;
 				max = 212500;
 				break;
+			}
 			case 2:
+			{
 				min = 212501;
 				max = 215000;
 				break;
+			}
 			case 3:
+			{
 				min = 215001;
 				max = 217500;
 				break;
+			}
 			case 4:
+			{
 				min = 217501;
 				max = 260000;
 				break;
+			}
 			case 5:
+			{
 				min = 260001;
 				max = 840000;
 				break;
+			}
 		}
 		DropLists.Xmlmian(min, max);
 	}

@@ -67,11 +67,15 @@ public class CM_GM_BOOKMARK extends AionClientPacket
 		switch (command)
 		{
 			case GM_DIALOG_TELEPORTTO:
+			{
 				TeleportService2.teleportTo(admin, player.getWorldId(), player.getX(), player.getY(), player.getZ());
 				break;
+			}
 			case GM_DIALOG_RECALL:
+			{
 				TeleportService2.teleportTo(player, admin.getWorldId(), admin.getX(), admin.getY(), admin.getZ());
 				break;
+			}
 			//
 			case GM_DIALOG:
 			case GM_DIALOG_POS:
@@ -97,10 +101,14 @@ public class CM_GM_BOOKMARK extends AionClientPacket
 			case GM_DIALOG_OPTION:
 			case GM_DIALOG_BUILDER_CONTROL:
 			case GM_DIALOG_BUILDER_COMMAND:
+			{
 				break;
+			}
 			default:
+			{
 				PacketSendUtility.sendMessage(admin, "Invalid command: " + command.name());
 				break;
+			}
 		}
 	}
 }

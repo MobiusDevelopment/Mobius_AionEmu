@@ -70,6 +70,7 @@ public class Corrupted_IfritAI2 extends AggressiveNpcAI2
 			switch (getNpcId())
 			{
 				case 237251: // Corrupted Ifrit.
+				{
 					// You have 15 minutes to find the Brilliant Elemental before it flees.
 					PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_Teo_T_TimeAttack_01, 0);
 					// Fractured Elemental Lord is boiling over. Gather together to spread the damage out.
@@ -77,6 +78,7 @@ public class Corrupted_IfritAI2 extends AggressiveNpcAI2
 					// The Fractured Elemental is building up power. Gather together to disperse the damage.
 					PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_Teo_T_Boss_Skill_02, 40000);
 					break;
+				}
 			}
 		}
 		checkPercentage(getLifeStats().getHpPercentage());

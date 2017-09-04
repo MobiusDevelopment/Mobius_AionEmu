@@ -57,10 +57,12 @@ public class Live_Party_Concert_HallAI2 extends NpcAI2
 						switch (getNpcId())
 						{
 							case 831592: // Live Party Concert Hall 4.3
+							{
 								final WorldMapInstance newInstance = InstanceService.getNextAvailableInstance(600080000);
 								InstanceService.registerPlayerWithInstance(newInstance, responder);
 								TeleportService2.teleportTo(responder, 600080000, newInstance.getInstanceId(), 1507.4276f, 1484.457f, 565.8799f, (byte) 16, TeleportAnimation.BEAM_ANIMATION);
 								break;
+							}
 						}
 						decisionTaken = true;
 					}

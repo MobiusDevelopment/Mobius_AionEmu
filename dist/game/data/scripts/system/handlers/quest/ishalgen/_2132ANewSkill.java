@@ -79,23 +79,35 @@ public class _2132ANewSkill extends QuestHandler
 			switch (playerClass)
 			{
 				case WARRIOR:
+				{
 					qs.setQuestVar(1);
 					break;
+				}
 				case SCOUT:
+				{
 					qs.setQuestVar(2);
 					break;
+				}
 				case MAGE:
+				{
 					qs.setQuestVar(3);
 					break;
+				}
 				case PRIEST:
+				{
 					qs.setQuestVar(4);
 					break;
+				}
 				case TECHNIST:
+				{
 					qs.setQuestVar(5);
 					break;
+				}
 				case MUSE:
+				{
 					qs.setQuestVar(6);
 					break;
+				}
 			}
 			updateQuestStatus(env);
 		}
@@ -120,6 +132,7 @@ public class _2132ANewSkill extends QuestHandler
 		switch (targetId)
 		{
 			case 203527:
+			{
 				if (playerClass == PlayerClass.WARRIOR)
 				{
 					if (env.getDialog() == QuestDialog.USE_OBJECT)
@@ -136,7 +149,9 @@ public class _2132ANewSkill extends QuestHandler
 					}
 				}
 				return false;
+			}
 			case 203528:
+			{
 				if (playerClass == PlayerClass.SCOUT)
 				{
 					if (env.getDialog() == QuestDialog.USE_OBJECT)
@@ -153,7 +168,9 @@ public class _2132ANewSkill extends QuestHandler
 					}
 				}
 				return false;
+			}
 			case 203529:
+			{
 				if (playerClass == PlayerClass.MAGE)
 				{
 					if (env.getDialog() == QuestDialog.USE_OBJECT)
@@ -170,7 +187,9 @@ public class _2132ANewSkill extends QuestHandler
 					}
 				}
 				return false;
+			}
 			case 203530:
+			{
 				if (playerClass == PlayerClass.PRIEST)
 				{
 					if (env.getDialog() == QuestDialog.USE_OBJECT)
@@ -187,7 +206,9 @@ public class _2132ANewSkill extends QuestHandler
 					}
 				}
 				return false;
+			}
 			case 801218:
+			{
 				if (playerClass == PlayerClass.TECHNIST)
 				{
 					if (env.getDialog() == QuestDialog.USE_OBJECT)
@@ -204,7 +225,9 @@ public class _2132ANewSkill extends QuestHandler
 					}
 				}
 				return false;
+			}
 			case 801219:
+			{
 				if (playerClass == PlayerClass.MUSE)
 				{
 					if (env.getDialog() == QuestDialog.USE_OBJECT)
@@ -221,6 +244,7 @@ public class _2132ANewSkill extends QuestHandler
 					}
 				}
 				return false;
+			}
 		}
 		return false;
 	}

@@ -77,7 +77,9 @@ public class _3096ExamineTheExtractionDevices extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

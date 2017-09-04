@@ -46,13 +46,17 @@ public class CM_GROUP_DATA_EXCHANGE extends AionClientPacket
 		switch (action)
 		{
 			case 1:
+			{
 				dataSize = readD();
 				break;
+			}
 			default:
+			{
 				groupType = readC();
 				unk2 = readC();
 				dataSize = readD();
 				break;
+			}
 		}
 		if ((dataSize > 0) && (dataSize <= 5086))
 		{
@@ -79,23 +83,29 @@ public class CM_GROUP_DATA_EXCHANGE extends AionClientPacket
 		switch (groupType)
 		{
 			case 0:
+			{
 				if (player.isInGroup2())
 				{
 					players = player.getPlayerGroup2().getOnlineMembers();
 				}
 				break;
+			}
 			case 1:
+			{
 				if (player.isInAlliance2())
 				{
 					players = player.getPlayerAllianceGroup2().getOnlineMembers();
 				}
 				break;
+			}
 			case 2:
+			{
 				if (player.isInLeague())
 				{
 					players = player.getPlayerAllianceGroup2().getOnlineMembers();
 				}
 				break;
+			}
 		}
 		
 		if (players != null)

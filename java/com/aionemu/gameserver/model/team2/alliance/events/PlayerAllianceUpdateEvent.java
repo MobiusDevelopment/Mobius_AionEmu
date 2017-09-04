@@ -51,11 +51,15 @@ public class PlayerAllianceUpdateEvent extends AlwaysTrueTeamEvent implements Pr
 		{
 			case MOVEMENT:
 			case UPDATE:
+			{
 				alliance.apply(this);
 				break;
+			}
 			default:
+			{
 				// Unsupported
 				break;
+			}
 		}
 		
 	}

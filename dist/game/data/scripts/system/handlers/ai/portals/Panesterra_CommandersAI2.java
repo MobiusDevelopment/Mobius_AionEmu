@@ -71,12 +71,14 @@ public class Panesterra_CommandersAI2 extends GeneralNpcAI2
 			{
 				case 730940: // Advance Corridor For Commanders
 				case 730941: // Advance Corridor For Commanders
+				{
 					final AutoGroupType agt = AutoGroupType.getAutoGroup(player.getLevel(), getNpcId());
 					if (agt != null)
 					{
 						PacketSendUtility.sendPacket(player, new SM_FIND_GROUP(0x1A, agt.getInstanceMapId()));
 					}
 					break;
+				}
 			}
 		}
 		else if (dialogId == 10)

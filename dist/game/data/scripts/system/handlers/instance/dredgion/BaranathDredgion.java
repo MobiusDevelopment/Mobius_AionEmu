@@ -62,7 +62,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -119,6 +118,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 214823: // Captain Adhati.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -130,15 +130,20 @@ public class BaranathDredgion extends GeneralInstanceHandler
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 215082: // Technician Sarpa.
 			case 215083: // Navigator Nevikah.
 			case 215084: // Assistant Malakun.
@@ -150,6 +155,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 			case 215092: // Gun Captain Ankrana.
 			case 215390: // Auditor Nirshaka.
 			case 215391: // Quartermaster Vujara.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -160,7 +166,9 @@ public class BaranathDredgion extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 215087: // Sentinel Garkusa.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000040, 1)); // Brig Key.
@@ -172,7 +180,9 @@ public class BaranathDredgion extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 215088: // Prison Guard Mahnena.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000072, 1)); // Secondary Brig Key.
@@ -184,7 +194,9 @@ public class BaranathDredgion extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 215093: // Adjutant Kalanadi.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -195,31 +207,45 @@ public class BaranathDredgion extends GeneralInstanceHandler
 						switch (Rnd.get(1, 4))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 121000836, 1)); // Kalanadi's Necklace.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 122001053, 1)); // Kalanadi's Ring.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 123000941, 1)); // Kalanadi's Belt.
 								break;
+							}
 							case 4:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 123000942, 1)); // Kalanadi's Band.
 								break;
+							}
 						}
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 215427: // Supervisor Lakhane.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000189, 1)); // Secret Cache Key.
@@ -231,27 +257,38 @@ public class BaranathDredgion extends GeneralInstanceHandler
 						switch (Rnd.get(1, 3))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 125001995, 1)); // Lakhane's Kerchief.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 121000837, 1)); // Lakhane's Necklace.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 122001054, 1)); // Lakhane's Ring.
 								break;
+							}
 						}
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -277,35 +314,39 @@ public class BaranathDredgion extends GeneralInstanceHandler
 	protected void startInstanceTask()
 	{
 		instanceTime = System.currentTimeMillis();
-		baranathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		baranathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			openFirstDoors();
+			// The bulkhead has been activated and the passage between the First Armory and Gravity Control has been sealed.
+			sendMsgByRace(1400595, Race.PC_ALL, 5000);
+			// The bulkhead has been activated and the passage between the Second Armory and Gravity Control has been sealed.
+			sendMsgByRace(1400596, Race.PC_ALL, 10000);
+			dredgionReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+			sendPacket();
+			switch (Rnd.get(1, 2))
 			{
-				openFirstDoors();
-				// The bulkhead has been activated and the passage between the First Armory and Gravity Control has been sealed.
-				sendMsgByRace(1400595, Race.PC_ALL, 5000);
-				// The bulkhead has been activated and the passage between the Second Armory and Gravity Control has been sealed.
-				sendMsgByRace(1400596, Race.PC_ALL, 10000);
-				dredgionReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-				sendPacket();
-				switch (Rnd.get(1, 2))
+				case 1:
 				{
-					case 1:
-						spawn(215391, 415.2769f, 282.0216f, 409.7311f, (byte) 118); // Quartermaster Vujara.
-						break;
-					case 2:
-						spawn(215391, 556.53534f, 279.2918f, 409.7311f, (byte) 33); // Quartermaster Vujara.
-						break;
+					spawn(215391, 415.2769f, 282.0216f, 409.7311f, (byte) 118); // Quartermaster Vujara.
+					break;
 				}
-				switch (Rnd.get(1, 2))
+				case 2:
 				{
-					case 1:
-						spawn(215086, 485.25455f, 877.04614f, 405.01407f, (byte) 90); // First Mate Aznaya.
-						break;
-					case 2:
-						spawn(215390, 485.25455f, 877.04614f, 405.01407f, (byte) 90); // Auditor Nirshaka.
-						break;
+					spawn(215391, 556.53534f, 279.2918f, 409.7311f, (byte) 33); // Quartermaster Vujara.
+					break;
+				}
+			}
+			switch (Rnd.get(1, 2))
+			{
+				case 1:
+				{
+					spawn(215086, 485.25455f, 877.04614f, 405.01407f, (byte) 90); // First Mate Aznaya.
+					break;
+				}
+				case 2:
+				{
+					spawn(215390, 485.25455f, 877.04614f, 405.01407f, (byte) 90); // Auditor Nirshaka.
+					break;
 				}
 			}
 		}, 60000));
@@ -313,27 +354,19 @@ public class BaranathDredgion extends GeneralInstanceHandler
 		 * Baranath Dredgion Teleportation Devices: There are numerous teleportation devices located inside the Baranath Dredgion. These teleportation devices allow players to teleport to different areas of the Dredgion with ease. Central Teleporter: This teleporter activates 10 minutes after the
 		 * Instanced Dungeon has begun.
 		 */
-		baranathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		baranathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// A Nuclear Control Room Teleporter has been created at the Emergency Exit.
-				sendMsgByRace(1400265, Race.PC_ALL, 0);
-				spawn(730187, 398.45651f, 160.15234f, 432.2988f, (byte) 0, 10); // Portside Central Teleporter.
-				spawn(730188, 571.88f, 160.62f, 432.29999f, (byte) 0, 9); // Starboard Central Teleporter.
-			}
+			// A Nuclear Control Room Teleporter has been created at the Emergency Exit.
+			sendMsgByRace(1400265, Race.PC_ALL, 0);
+			spawn(730187, 398.45651f, 160.15234f, 432.2988f, (byte) 0, 10); // Portside Central Teleporter.
+			spawn(730188, 571.88f, 160.62f, 432.29999f, (byte) 0, 9); // Starboard Central Teleporter.
 		}, 600000));
-		baranathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		baranathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!dredgionReward.isRewarded())
 			{
-				if (!dredgionReward.isRewarded())
-				{
-					final Race winningRace = dredgionReward.getWinningRaceByScore();
-					stopInstance(winningRace);
-				}
+				final Race winningRace = dredgionReward.getWinningRaceByScore();
+				stopInstance(winningRace);
 			}
 		}, 3600000));
 	}
@@ -360,86 +393,116 @@ public class BaranathDredgion extends GeneralInstanceHandler
 			case 798327: // Captured Asmodian Scholar.
 			case 798328: // Captured Archon.
 			case 798329: // Captured Archon.
+			{
 				point = 100;
 				despawnNpc(npc);
 				break;
+			}
 			/**
 			 * The Surkana: 1. Destroy Surkana in each room can obtain a higher score. 2. When you add monsters to attack Surkana is around 20m range. First, it is safe to be cleaned up monsters. 3. When you destroy a race that destroyed Surkana is displayed on the map, it is through you can guess
 			 * the path of the opposing faction.
 			 */
 			case 700485: // Armory Maintenance Surkana.
 			case 700486: // Armory Maintenance Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 500);
 				break;
+			}
 			case 700487: // Gravity Control Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 900);
 				break;
+			}
 			case 700488: // Nuclear Control Surkana.
 			case 700489: // Nuclear Control Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 1100);
 				break;
+			}
 			case 700490: // Main Cannon Control Surkana.
 			case 700491: // Main Cannon Control Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 800);
 				break;
+			}
 			case 700492: // Drop Device Surkana.
 			case 700493: // Drop Device Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 600);
 				break;
+			}
 			case 700494: // Fighter Enhancing Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 700);
 				break;
+			}
 			case 700495: // Brig Power Surkana.
 			case 700496: // Brig Power Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 500);
 				break;
+			}
 			case 700497: // Bridge Power Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 700);
 				break;
+			}
 			case 700498: // Captain's Cabin Power Surkana.
+			{
 				despawnNpc(npc);
 				onDieSurkan(npc, mostPlayerDamage, 1100);
 				break;
+			}
 			case 700503: // Portside Door Of Captain's Cabin.
+			{
 				// The Port Captain's Cabin Door has been destroyed.
 				sendMsgByRace(1400230, Race.PC_ALL, 0);
 				break;
+			}
 			case 700504: // Starboard Door Of Captain's Cabin.
+			{
 				// The Starboard Captain's Cabin Door has been destroyed.
 				sendMsgByRace(1400231, Race.PC_ALL, 0);
 				break;
+			}
 			/**
 			 * Captain’s Cabin Teleport Device: This teleporter activates when "Supervisor Lakhane" is defeated in the Barracks. Only the race that defeated "Supervisor Lakhane" can use this teleporter.
 			 */
 			case 215427: // Supervisor Lakhane.
+			{
 				point = 1000;
 				// A Captain's Cabin Teleport Device that lasts for 3 minutes has been generated at the end of the Atrium.
 				sendMsgByRace(1400234, Race.PC_ALL, 0);
 				spawn(730197, 484.72f, 761.41998f, 388.66f, (byte) 0, 91); // Captain's Cabin Teleport Device.
 				break;
+			}
 			/**
 			 * Supply Room Teleporter: This teleporter activates after the destruction of the Teleporter Generator in the Barracks.
 			 */
 			case 700505: // Portside Teleporter Generator.
+			{
 				despawnNpc(npc);
 				// A Portside Central Teleporter has been generated at the Escape Hatch.
 				sendMsgByRace(1400228, Race.PC_ALL, 0);
 				spawn(730213, 402.33429f, 175.11707f, 432.2988f, (byte) 0, 64); // No.1 Nuclear Control Room Teleporter.
 				break;
+			}
 			case 700506: // Starboard Teleporter Generator.
+			{
 				despawnNpc(npc);
 				// A Starboard Central Teleporter has been generated at the Secondary Escape Hatch.
 				sendMsgByRace(1400229, Race.PC_ALL, 0);
 				spawn(730214, 567.59119f, 175.19655f, 432.29999f, (byte) 0, 65); // No.2 Nuclear Control Room Teleporter.
 				break;
+			}
 			/**
 			 * Defense Shield Generator: When the Defense Shield Generator on the Weapons Deck or Lower Weapons deck is demolished, a shield appears in Ready Room 1 or 2. This shield blocks access to the center of the Baranath Dredgion. The Ready Room is the shortest route to the center of the
 			 * Dredgion, and the quickest route to the opposing race’s area. Different tactics can be used in this area to maximize the Group’s accumulation of points. For example, if one Group decides to destroy the opposing Group’s Shield Generator, it will make it difficult for the opposing Group
@@ -447,18 +510,24 @@ public class BaranathDredgion extends GeneralInstanceHandler
 			 */
 			case 700501: // Portside Defense Shield.
 			case 700502: // Starboard Defense Shield.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 700507: // Portside Defense Shield Generator.
+			{
 				despawnNpc(npc);
 				// The Portside Defense Shield has been generated in Ready Room 1.
 				sendMsgByRace(1400226, Race.PC_ALL, 0);
 				break;
+			}
 			case 700508: // Starboard Defense Shield Generator.
+			{
 				despawnNpc(npc);
 				// The Starboard Defense Shield has been generated in Ready Room 2.
 				sendMsgByRace(1400227, Race.PC_ALL, 0);
 				break;
+			}
 			/**
 			 * The Bulkhead: These shields are activated by the Baranath Churl when first encountered at the beginning of the battle. These shields block the entrance from the Armories to Gravity Control, and can be demolished with attacks, but also have a significant amount of health. Groups often
 			 * opt to move around the shields instead of demolishing them. It’s worth noting that after a certain amount of time has passed, Technician Sarpa spawns in the Gravity Control room, and gives 1,000 points when defeated. There is also a chance that Adjutant Kalanadi, a Hero grade Named
@@ -466,21 +535,27 @@ public class BaranathDredgion extends GeneralInstanceHandler
 			 */
 			case 700598: // Port Bulkhead.
 			case 700599: // Starboard Bulkhead.
+			{
 				bulkhead++;
 				if (bulkhead == 2)
 				{
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							spawn(215082, 456.3946f, 319.65912f, 402.69315f, (byte) 28); // Technician Sarpa.
 							break;
+						}
 						case 2:
+						{
 							spawn(215093, 513.9867f, 319.86224f, 402.68634f, (byte) 4); // Adjutant Kalanadi.
 							break;
+						}
 					}
 				}
 				despawnNpc(npc);
 				break;
+			}
 			case 215083: // Navigator Nevikah.
 			case 215084: // Assistant Malakun.
 			case 215085: // Adjutant Kundhan.
@@ -490,6 +565,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 			case 215090: // Vice Air Captain Kai.
 			case 215091: // Vice Gun Captain Zha.
 			case 215092: // Gun Captain Ankrana.
+			{
 				secretCache++;
 				if (secretCache == 5)
 				{
@@ -499,28 +575,29 @@ public class BaranathDredgion extends GeneralInstanceHandler
 				}
 				point = 200;
 				break;
+			}
 			case 215082: // Technician Sarpa.
 			case 215086: // First Mate Aznaya.
 			case 215093: // Adjutant Kalanadi.
 			case 215390: // Auditor Nirshaka.
 			case 215391: // Quartermaster Vujara.
+			{
 				point = 1000;
 				break;
+			}
 			case 214823: // Captain Adhati.
+			{
 				point = 1000;
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
+					if (!dredgionReward.isRewarded())
 					{
-						if (!dredgionReward.isRewarded())
-						{
-							final Race winningRace = dredgionReward.getWinningRaceByScore();
-							stopInstance(winningRace);
-						}
+						final Race winningRace = dredgionReward.getWinningRaceByScore();
+						stopInstance(winningRace);
 					}
 				}, 30000);
 				break;
+			}
 		}
 		updateScore(mostPlayerDamage, npc, point, false);
 	}
@@ -590,23 +667,19 @@ public class BaranathDredgion extends GeneralInstanceHandler
 		{
 			npc.getController().onDelete();
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
+					if (CreatureActions.isAlreadyDead(player))
 					{
-						if (CreatureActions.isAlreadyDead(player))
-						{
-							PlayerReviveService.duelRevive(player);
-						}
-						onExitInstance(player);
+						PlayerReviveService.duelRevive(player);
 					}
-					AutoGroupService.getInstance().unRegisterInstance(instanceId);
+					onExitInstance(player);
 				}
+				AutoGroupService.getInstance().unRegisterInstance(instanceId);
 			}
 		}, 120000);
 	}
@@ -772,14 +845,7 @@ public class BaranathDredgion extends GeneralInstanceHandler
 	
 	private void sendPacket()
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), dredgionReward, instance.getPlayersInside()));
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), dredgionReward, instance.getPlayersInside())));
 	}
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time)
@@ -794,18 +860,14 @@ public class BaranathDredgion extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
-		baranathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		baranathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				spawn(npcId, x, y, z, h, entityId);
+				if (msg > 0)
 				{
-					spawn(npcId, x, y, z, h, entityId);
-					if (msg > 0)
-					{
-						sendMsgByRace(msg, race, 0);
-					}
+					sendMsgByRace(msg, race, 0);
 				}
 			}
 		}, time));
@@ -813,53 +875,31 @@ public class BaranathDredgion extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
-		baranathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		baranathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
-				{
-					final Npc npc = (Npc) spawn(npcId, x, y, z, h);
-					npc.getSpawn().setWalkerId(walkerId);
-					WalkManager.startWalking((NpcAI2) npc.getAi2());
-				}
+				final Npc npc = (Npc) spawn(npcId, x, y, z, h);
+				npc.getSpawn().setWalkerId(walkerId);
+				WalkManager.startWalking((NpcAI2) npc.getAi2());
 			}
 		}, time));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		baranathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		baranathTask.add(ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time));
+		}), time));
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void stopInstanceTask()

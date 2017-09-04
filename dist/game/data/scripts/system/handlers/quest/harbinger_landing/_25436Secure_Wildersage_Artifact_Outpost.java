@@ -117,6 +117,7 @@ public class _25436Secure_Wildersage_Artifact_Outpost extends QuestHandler
 				case 883054:
 				case 883055:
 				case 883057:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _25436Secure_Wildersage_Artifact_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

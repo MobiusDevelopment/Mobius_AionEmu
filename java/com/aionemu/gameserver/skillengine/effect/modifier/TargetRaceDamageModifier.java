@@ -50,18 +50,24 @@ public class TargetRaceDamageModifier extends ActionModifier
 			switch (skillTargetRace)
 			{
 				case ASMODIANS:
+				{
 					if (player.getRace() == Race.ASMODIANS)
 					{
 						return newValue;
 					}
 					break;
+				}
 				case ELYOS:
+				{
 					if (player.getRace() == Race.ELYOS)
 					{
 						return newValue;
 					}
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		else if (effected instanceof Npc)

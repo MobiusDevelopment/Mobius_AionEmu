@@ -60,6 +60,7 @@ public class NegartonAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 804840: // Negarton.
+				{
 					announceDarkLegionPortal();
 					spawn(702721, 1474.6984f, 1796.5096f, 330.69998f, (byte) 103);
 					ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -71,6 +72,7 @@ public class NegartonAI2 extends NpcAI2
 						}
 					}, 300000); // 5 Minutes.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

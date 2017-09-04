@@ -66,13 +66,17 @@ public class _80009TheCakeIsTheTruth extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 2375);
 						}
+					}
 					case SELECT_REWARD:
+					{
 						removeQuestItem(env, 182214007, 1);
 						return defaultCloseDialog(env, 0, 1, true, true);
+					}
 				}
 			}
 		}

@@ -62,6 +62,7 @@ public class Runaway_HirakikiAI2 extends GeneralNpcAI2
 			switch (getNpcId())
 			{
 				case 235763: // Runaway Hirakiki Leader.
+				{
 					// The fugitive will get away in 8 minutes!
 					NpcShoutsService.getInstance().sendMsg(getOwner(), 1402860, 0);
 					// The fugitive will get away in 4 minutes!
@@ -77,6 +78,7 @@ public class Runaway_HirakikiAI2 extends GeneralNpcAI2
 						}
 					}, 480000);
 					break;
+				}
 			}
 		}
 	}
@@ -117,17 +119,21 @@ public class Runaway_HirakikiAI2 extends GeneralNpcAI2
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						spawn(235761, 524.93365f, 437.3637f, 620.2102f, (byte) 114);
 						// Fugitive Hirakiki is attempting to flee to one of the two sentry posts. Follow the fugitive to continue the pursuit.
 						PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_IDLDF5_U_01_RA_Pr_Point_01, 0);
 						getOwner().getMoveController().moveToPoint(653.04736f, 437.94086f, 603.3876f);
 						break;
+					}
 					case 2:
+					{
 						spawn(235788, 606.0667f, 556.59625f, 590.5f, (byte) 105);
 						// Fugitive Hirakiki is attempting to flee to one of the two sentry posts. Follow the fugitive to continue the pursuit.
 						PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_IDLDF5_U_01_RA_Pr_Point_01, 0);
 						getOwner().getMoveController().moveToPoint(673.487f, 510.5843f, 596.98785f);
 						break;
+					}
 				}
 				canThink = false;
 				WalkManager.startWalking(this);

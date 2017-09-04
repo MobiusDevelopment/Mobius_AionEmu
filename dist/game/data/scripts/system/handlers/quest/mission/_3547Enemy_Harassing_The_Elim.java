@@ -79,6 +79,7 @@ public class _3547Enemy_Harassing_The_Elim extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
@@ -87,6 +88,7 @@ public class _3547Enemy_Harassing_The_Elim extends QuestHandler
 						{
 							return sendQuestDialog(env, 2375);
 						}
+					}
 					case STEP_TO_1:
 					{
 						return defaultCloseDialog(env, 0, 1);

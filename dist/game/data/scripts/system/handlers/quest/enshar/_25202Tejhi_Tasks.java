@@ -141,6 +141,7 @@ public class _25202Tejhi_Tasks extends QuestHandler
 				case 219824:
 				case 219825:
 				case 219826:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -151,6 +152,7 @@ public class _25202Tejhi_Tasks extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

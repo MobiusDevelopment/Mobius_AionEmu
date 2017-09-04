@@ -56,38 +56,58 @@ public class CM_LUNA_SHOP extends AionClientPacket
 		switch (actionId)
 		{
 			case 0: // Taki's Missions Teleport.
+			{
 				indun_id = readD();
 				indun_unk = readC();
 				break;
+			}
 			case 2: // Karunerk's Workshop.
+			{
 				recipe_id = readD();
 				break;
+			}
 			case 4: // Buy Necessary Materials.
+			{
 				material_item_id = readD();
 				material_item_count = readQ();
 				break;
+			}
 			case 6:
 			case 7:
+			{
 				teleportId = readD();
 				break;
+			}
 			case 8: // Dorinerk's Wardrobe.
+			{
 				break;
+			}
 			case 9: // Expand wardrobe slot
+			{
 				break;
+			}
 			case 10: // Apply wardrobe appearance
+			{
 				slot = readC();
 				ItemObjId = readD();
 				break;
+			}
 			case 11: // Modify appearance
+			{
 				slot = readC();
 				ItemObjId = readD();
 				lunaCost = readC();
 				break;
+			}
 			case 12: // Open Chest.
+			{
 				break;
+			}
 			case 14: // Taki's Adventure.
+			{
 				indun_id = readD();
 				break;
+			}
 		}
 	}
 	

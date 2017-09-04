@@ -94,35 +94,52 @@ public class _3935Shoulder_The_Burden extends QuestHandler
 			switch (targetId)
 			{
 				case 203316:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							return sendQuestDialog(env, 1011);
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 					}
 					break;
+				}
 				case 203702:
+				{
 					if (var == 1)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 1352);
+							}
 							case STEP_TO_2:
+							{
 								return defaultCloseDialog(env, 1, 2);
+							}
 						}
 					}
 					break;
+				}
 				case 203329:
+				{
 					if (var == 2)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 1693);
+							}
 							case STEP_TO_3:
+							{
 								return defaultCloseDialog(env, 2, 3);
+							}
 						}
 					}
 					if (var == 3)
@@ -130,8 +147,11 @@ public class _3935Shoulder_The_Burden extends QuestHandler
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 2034);
+							}
 							case CHECK_COLLECTED_ITEMS:
+							{
 								if (QuestService.collectItemCheck(env, true))
 								{
 									changeQuestStep(env, 3, 4, false);
@@ -141,10 +161,13 @@ public class _3935Shoulder_The_Burden extends QuestHandler
 								{
 									return sendQuestDialog(env, 10001);
 								}
+							}
 						}
 					}
 					break;
+				}
 				case 203752:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -172,8 +195,11 @@ public class _3935Shoulder_The_Burden extends QuestHandler
 						}
 					}
 					break;
+				}
 				default:
+				{
 					return sendQuestStartDialog(env);
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

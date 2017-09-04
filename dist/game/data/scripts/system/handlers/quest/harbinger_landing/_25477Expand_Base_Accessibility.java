@@ -140,6 +140,7 @@ public class _25477Expand_Base_Accessibility extends QuestHandler
 				case 883304:
 				case 883305:
 				case 883308:
+				{
 					if (qs.getQuestVarById(1) < 8)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -150,6 +151,7 @@ public class _25477Expand_Base_Accessibility extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

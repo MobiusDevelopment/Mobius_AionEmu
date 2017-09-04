@@ -83,7 +83,9 @@ public class _11466AHardSeedtoCrack extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 2375);
+					}
 					case SELECT_REWARD:
 					{
 						removeQuestItem(env, 182209524, 1);

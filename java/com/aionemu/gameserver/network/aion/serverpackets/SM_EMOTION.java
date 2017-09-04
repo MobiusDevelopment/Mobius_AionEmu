@@ -119,30 +119,41 @@ public class SM_EMOTION extends AionServerPacket
 			case PET_EMOTION_2:
 			case PET_EMOTION_3:
 			case PET_EMOTION_4:
+			{
 				break;
+			}
 			case DIE:
 			case START_LOOT:
 			case END_LOOT:
 			case END_QUESTLOOT:
 			case OPEN_DOOR:
+			{
 				writeD(targetObjectId);
 				break;
+			}
 			case CHAIR_SIT:
 			case CHAIR_UP:
+			{
 				writeF(x);
 				writeF(y);
 				writeF(z);
 				writeC(heading);
 				break;
+			}
 			case START_FLYTELEPORT:
+			{
 				writeD(emotion);
 				break;
+			}
 			case WINDSTREAM:
+			{
 				writeD(emotion);
 				writeD(targetObjectId);
 				break;
+			}
 			case RIDE:
 			case RIDE_END:
+			{
 				if (targetObjectId != 0)
 				{
 					writeD(targetObjectId);
@@ -153,27 +164,38 @@ public class SM_EMOTION extends AionServerPacket
 				writeD(0x3F);
 				writeC(0x40);
 				break;
+			}
 			case START_SPRINT:
+			{
 				writeD(0);
 				break;
+			}
 			case RESURRECT:
+			{
 				writeD(0);
 				break;
+			}
 			case EMOTE:
+			{
 				writeD(targetObjectId);
 				writeH(emotion);
 				writeC(1);
 				break;
+			}
 			case START_EMOTE2:
+			{
 				writeH(baseAttackSpeed);
 				writeH(currentAttackSpeed);
 				writeC(0);
 				break;
+			}
 			default:
+			{
 				if (targetObjectId != 0)
 				{
 					writeD(targetObjectId);
 				}
+			}
 		}
 	}
 }

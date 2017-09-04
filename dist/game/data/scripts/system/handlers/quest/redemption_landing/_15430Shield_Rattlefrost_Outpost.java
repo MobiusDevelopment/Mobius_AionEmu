@@ -119,6 +119,7 @@ public class _15430Shield_Rattlefrost_Outpost extends QuestHandler
 				case 882983:
 				case 882984:
 				case 882985:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _15430Shield_Rattlefrost_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

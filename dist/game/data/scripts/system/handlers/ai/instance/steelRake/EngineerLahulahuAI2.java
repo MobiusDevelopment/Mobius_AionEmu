@@ -118,6 +118,7 @@ public class EngineerLahulahuAI2 extends AggressiveNpcAI2
 			switch (Rnd.get(1, 8))
 			{
 				case 1:
+				{
 					if (npc != null)
 					{
 						npc.setTarget(npc);
@@ -129,7 +130,9 @@ public class EngineerLahulahuAI2 extends AggressiveNpcAI2
 						npc1.getController().useSkill(skill);
 					}
 					break;
+				}
 				case 2:
+				{
 					if (npc2 != null)
 					{
 						npc2.setTarget(npc2);
@@ -141,7 +144,9 @@ public class EngineerLahulahuAI2 extends AggressiveNpcAI2
 						npc3.getController().useSkill(skill);
 					}
 					break;
+				}
 				case 3:
+				{
 					if (npc4 != null)
 					{
 						npc4.setTarget(npc4);
@@ -153,7 +158,9 @@ public class EngineerLahulahuAI2 extends AggressiveNpcAI2
 						npc5.getController().useSkill(skill);
 					}
 					break;
+				}
 				case 4:
+				{
 					if (npc6 != null)
 					{
 						npc6.setTarget(npc6);
@@ -165,34 +172,43 @@ public class EngineerLahulahuAI2 extends AggressiveNpcAI2
 						npc7.getController().useSkill(skill);
 					}
 					break;
+				}
 				case 5:
+				{
 					if (npc8 != null)
 					{
 						npc8.setTarget(npc8);
 						npc8.getController().useSkill(skill);
 					}
 					break;
+				}
 				case 6:
+				{
 					if (npc9 != null)
 					{
 						npc9.setTarget(npc9);
 						npc9.getController().useSkill(skill);
 					}
 					break;
+				}
 				case 7:
+				{
 					if (npc10 != null)
 					{
 						npc10.setTarget(npc10);
 						npc10.getController().useSkill(skill);
 					}
 					break;
+				}
 				case 8:
+				{
 					if (npc11 != null)
 					{
 						npc11.setTarget(npc11);
 						npc11.getController().useSkill(skill);
 					}
 					break;
+				}
 			}
 			doSchedule();
 		}

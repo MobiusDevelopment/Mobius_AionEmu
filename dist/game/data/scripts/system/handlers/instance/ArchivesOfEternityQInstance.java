@@ -74,22 +74,29 @@ public class ArchivesOfEternityQInstance extends GeneralInstanceHandler
 			 * MALE ELYOS
 			 */
 			case 857788: // IDEternity_Q_HD_Wind_Li_M_N_65_An.
+			{
 				despawnNpc(npc);
 				// You are graced with the aura of Blessed Spring.
 				sendMsg(1403365);
 				spawn(857786, 231.63109f, 511.9707f, 468.80215f, (byte) 0); // IDEternity_Q_HD_Water_Li_M_N_65_An.
 				break;
+			}
 			case 857786: // IDEternity_Q_HD_Water_Li_M_N_65_An.
+			{
 				despawnNpc(npc);
 				// You are graced with the aura of Blessed Earth.
 				sendMsg(1403366);
 				spawn(857787, 231.63109f, 511.9707f, 468.80215f, (byte) 0); // IDEternity_Q_HD_Earth_Li_M_N_65_An.
 				break;
+			}
 			case 857787: // IDEternity_Q_HD_Earth_Li_M_N_65_An.
+			{
 				despawnNpc(npc);
 				spawn(857785, 231.63109f, 511.9707f, 468.80215f, (byte) 0); // IDEternity_Q_HD_Fire_Li_M_N_65_An.
 				break;
+			}
 			case 857785: // IDEternity_Q_HD_Fire_Li_M_N_65_An.
+			{
 				despawnNpc(npc);
 				doors.get(90).setOpen(true);
 				deleteNpc(703130); // IDEternity_Q_FOBJ_Q10521_D.
@@ -97,26 +104,34 @@ public class ArchivesOfEternityQInstance extends GeneralInstanceHandler
 				spawnIDEternityQ_Out_Portal_L();
 				sendMsg("[Congratulation]: you are a <Archdaeva>");
 				break;
+			}
 			/**
 			 * FEMALE ELYOS
 			 */
 			case 857795: // IDEternity_Q_HD_Wind_Li_F_N_65_An.
+			{
 				despawnNpc(npc);
 				// You are graced with the aura of Blessed Spring.
 				sendMsg(1403365);
 				spawn(857793, 231.63109f, 511.9707f, 468.80215f, (byte) 0); // IDEternity_Q_HD_Water_Li_F_N_65_An.
 				break;
+			}
 			case 857793: // IDEternity_Q_HD_Water_Li_F_N_65_An.
+			{
 				despawnNpc(npc);
 				// You are graced with the aura of Blessed Earth.
 				sendMsg(1403366);
 				spawn(857794, 231.63109f, 511.9707f, 468.80215f, (byte) 0); // IDEternity_Q_HD_Earth_Li_F_N_65_An.
 				break;
+			}
 			case 857794: // IDEternity_Q_HD_Earth_Li_F_N_65_An.
+			{
 				despawnNpc(npc);
 				spawn(857792, 231.63109f, 511.9707f, 468.80215f, (byte) 0); // IDEternity_Q_HD_Fire_Li_F_N_65_An.
 				break;
+			}
 			case 857792: // IDEternity_Q_HD_Fire_Li_F_N_65_An.
+			{
 				despawnNpc(npc);
 				doors.get(90).setOpen(true);
 				deleteNpc(703130); // IDEternity_Q_FOBJ_Q10521_D.
@@ -124,26 +139,34 @@ public class ArchivesOfEternityQInstance extends GeneralInstanceHandler
 				spawnIDEternityQ_Out_Portal_L();
 				sendMsg("[Congratulation]: you are a <Archdaeva>");
 				break;
+			}
 			/**
 			 * MALE ASMODIANS
 			 */
 			case 857799: // IDEternity_Q_HD_Wind_Da_M_N_65_An.
+			{
 				despawnNpc(npc);
 				// You are graced with the aura of Blessed Spring.
 				sendMsg(1403365);
 				spawn(857797, 231.63109f, 511.9707f, 468.80215f, (byte) 0); // IDEternity_Q_HD_Water_Da_M_N_65_An.
 				break;
+			}
 			case 857797: // IDEternity_Q_HD_Water_Da_M_N_65_An.
+			{
 				despawnNpc(npc);
 				// You are graced with the aura of Blessed Earth.
 				sendMsg(1403366);
 				spawn(857798, 231.63109f, 511.9707f, 468.80215f, (byte) 0); // IDEternity_Q_HD_Earth_Da_M_N_65_An.
 				break;
+			}
 			case 857798: // IDEternity_Q_HD_Earth_Da_M_N_65_An.
+			{
 				despawnNpc(npc);
 				spawn(857796, 231.63109f, 511.9707f, 468.80215f, (byte) 0); // IDEternity_Q_HD_Fire_Da_M_N_65_An.
 				break;
+			}
 			case 857796: // IDEternity_Q_HD_Fire_Da_M_N_65_An.
+			{
 				despawnNpc(npc);
 				doors.get(90).setOpen(true);
 				deleteNpc(703130); // IDEternity_Q_FOBJ_Q10521_D.
@@ -151,26 +174,34 @@ public class ArchivesOfEternityQInstance extends GeneralInstanceHandler
 				spawnIDEternityQ_Out_Portal_D();
 				sendMsg("[Congratulation]: you are a <Archdaeva>");
 				break;
+			}
 			/**
 			 * FEMALE ASMODIANS
 			 */
 			case 857803: // IDEternity_Q_HD_Wind_Da_F_N_65_An.
+			{
 				despawnNpc(npc);
 				// You are graced with the aura of Blessed Spring.
 				sendMsg(1403365);
 				spawn(857801, 231.63109f, 511.9707f, 468.80215f, (byte) 0); // IDEternity_Q_HD_Water_Da_F_N_65_An.
 				break;
+			}
 			case 857801: // IDEternity_Q_HD_Water_Da_F_N_65_An.
+			{
 				despawnNpc(npc);
 				// You are graced with the aura of Blessed Earth.
 				sendMsg(1403366);
 				spawn(857802, 231.63109f, 511.9707f, 468.80215f, (byte) 0); // IDEternity_Q_HD_Earth_Da_F_N_65_An.
 				break;
+			}
 			case 857802: // IDEternity_Q_HD_Earth_Da_F_N_65_An.
+			{
 				despawnNpc(npc);
 				spawn(857800, 231.63109f, 511.9707f, 468.80215f, (byte) 0); // IDEternity_Q_HD_Fire_Da_F_N_65_An.
 				break;
+			}
 			case 857800: // IDEternity_Q_HD_Fire_Da_F_N_65_An.
+			{
 				despawnNpc(npc);
 				doors.get(90).setOpen(true);
 				deleteNpc(703130); // IDEternity_Q_FOBJ_Q10521_D.
@@ -178,6 +209,7 @@ public class ArchivesOfEternityQInstance extends GeneralInstanceHandler
 				spawnIDEternityQ_Out_Portal_D();
 				sendMsg("[Congratulation]: you are a <Archdaeva>");
 				break;
+			}
 		}
 	}
 	

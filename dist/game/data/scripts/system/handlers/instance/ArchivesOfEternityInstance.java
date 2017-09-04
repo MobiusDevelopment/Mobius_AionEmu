@@ -39,7 +39,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * Author Rinzler (Encom) Video: https://www.youtube.com/watch?v=HjAJng-e72I Source: http://aionpowerbook.com/powerbook/Library_of_Knowledge
@@ -65,6 +64,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 			case 857460: // Ancient Relic Techgolem.
 			case 857462: // Fleshgolem Captain.
 			case 857464: // Mountainous Shardgolem.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -77,10 +77,12 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			/**
 			 * Chosen "Guardian's Set" Appearance change items obtainable from "Archives Of Eternity" Can be used on any type of item. Headgear can be obtained from "환영의 상자" Pants, Shoes, Pauldrons and Gloves can be obtained from "Cryptograph Cube"
 			 */
 			case 806139: // Cryptograph Cube.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -88,28 +90,40 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 5))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 110000047, 1)); // Library Guardian's Tunic.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 111000092, 1)); // Library Guardian's Gloves.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 112000051, 1)); // Library Guardian's Pauldrons.
 								break;
+							}
 							case 4:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 113000059, 1)); // Library Guardian's Leggings.
 								break;
+							}
 							case 5:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 114000097, 1)); // Library Guardian's Shoes.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			/**
 			 * Elyos
 			 */
 			case 703131: // Histories Of Atreia.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -117,25 +131,37 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 5))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100300, 1)); // History Of Southern Atreia Chapter 1.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100301, 1)); // History Of Southern Atreia Chapter 2.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100302, 1)); // History Of Southern Atreia Chapter 3.
 								break;
+							}
 							case 4:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100303, 1)); // History Of Southern Atreia Chapter 4.
 								break;
+							}
 							case 5:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100304, 1)); // History Of Southern Atreia Chapter 5.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 703132: // Records From The Era Of Men.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -143,25 +169,37 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 5))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100310, 1)); // Records Of The Human Races Chapter 1.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100311, 1)); // Records Of The Human Races Chapter 2.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100312, 1)); // Records Of The Human Races Chapter 3.
 								break;
+							}
 							case 4:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100313, 1)); // Records Of The Human Races Chapter 4.
 								break;
+							}
 							case 5:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100314, 1)); // Records Of The Human Races Chapter 5.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 703133: // Empyrean Histories.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -169,28 +207,40 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 5))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100320, 1)); // History Of The Empyrean Lords Chapter 1.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100321, 1)); // History Of The Empyrean Lords Chapter 2.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100322, 1)); // History Of The Empyrean Lords Chapter 3.
 								break;
+							}
 							case 4:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100323, 1)); // History Of The Empyrean Lords Chapter 4.
 								break;
+							}
 							case 5:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100324, 1)); // History Of The Empyrean Lords Chapter 5.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			/**
 			 * Asmodians
 			 */
 			case 703149: // Histories Of Atreia.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -198,25 +248,37 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 5))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100305, 1)); // History Of Northern Atreia Chapter 1.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100306, 1)); // History Of Northern Atreia Chapter 2.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100307, 1)); // History Of Northern Atreia Chapter 3.
 								break;
+							}
 							case 4:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100308, 1)); // History Of Northern Atreia Chapter 4.
 								break;
+							}
 							case 5:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100309, 1)); // History Of Northern Atreia Chapter 5.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 703150: // Records From The Era Of Men.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -224,25 +286,37 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 5))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100315, 1)); // Records Of The Human Races Chapter 1.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100316, 1)); // Records Of The Human Races Chapter 2.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100317, 1)); // Records Of The Human Races Chapter 3.
 								break;
+							}
 							case 4:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100318, 1)); // Records Of The Human Races Chapter 4.
 								break;
+							}
 							case 5:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100319, 1)); // Records Of The Human Races Chapter 5.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 703151: // Empyrean Histories.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -250,25 +324,37 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 5))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100325, 1)); // History Of The Empyrean Lords Chapter 1.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100326, 1)); // History Of The Empyrean Lords Chapter 2.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100327, 1)); // History Of The Empyrean Lords Chapter 3.
 								break;
+							}
 							case 4:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100328, 1)); // History Of The Empyrean Lords Chapter 4.
 								break;
+							}
 							case 5:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100329, 1)); // History Of The Empyrean Lords Chapter 5.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 703134: // Annals Of Life [Q18627/Q28627].
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -276,24 +362,35 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 5))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100330, 1)); // Records Of Life Chapter 1.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100331, 1)); // Records Of Life Chapter 2.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100332, 1)); // Records Of Life Chapter 3.
 								break;
+							}
 							case 4:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100333, 1)); // Records Of Life Chapter 4.
 								break;
+							}
 							case 5:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188100334, 1)); // Records Of Life Chapter 5.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -369,91 +466,121 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 3))
 		{
 			case 1:
+			{
 				spawn(857452, 552.1911f, 511.7292f, 468.97675f, (byte) 0); // Relic Techgolem.
 				spawn(857456, 460.161f, 672.068f, 468.97745f, (byte) 92); // Augmented Fleshgolem.
 				spawn(857459, 460.66083f, 351.61194f, 468.9799f, (byte) 21); // Crystalized Shardgolem.
 				break;
+			}
 			case 2:
+			{
 				spawn(857456, 552.1911f, 511.7292f, 468.97675f, (byte) 0); // Augmented Fleshgolem.
 				spawn(857459, 460.161f, 672.068f, 468.97745f, (byte) 92); // Crystalized Shardgolem.
 				spawn(857452, 460.66083f, 351.61194f, 468.9799f, (byte) 21); // Relic Techgolem.
 				break;
+			}
 			case 3:
+			{
 				spawn(857459, 552.1911f, 511.7292f, 468.97675f, (byte) 0); // Crystalized Shardgolem.
 				spawn(857452, 460.161f, 672.068f, 468.97745f, (byte) 92); // Relic Techgolem.
 				spawn(857456, 460.66083f, 351.61194f, 468.9799f, (byte) 21); // Augmented Fleshgolem.
 				break;
+			}
 		}
 		switch (Rnd.get(1, 3))
 		{
 			case 1:
+			{
 				spawn(857460, 255.67651f, 512.3747f, 468.84964f, (byte) 0); // Ancient Relic Techgolem.
 				break;
+			}
 			case 2:
+			{
 				spawn(857462, 255.67651f, 512.3747f, 468.84964f, (byte) 0); // Fleshgolem Captain.
 				break;
+			}
 			case 3:
+			{
 				spawn(857464, 255.67651f, 512.3747f, 468.84964f, (byte) 0); // Mountainous Shardgolem.
 				break;
+			}
 		}
 	}
 	
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 701432: // IDEternity_01_Secret_Door_01.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 703009: // Shedim Eternity Relic.
+			{
 				despawnNpc(npc);
 				// Shedim Seal has been destroyed.
 				sendMsgByRace(1403269, Race.PC_ALL, 0);
 				break;
+			}
 			case 703010: // Seraphim Eternity Relic.
+			{
 				despawnNpc(npc);
 				// Seraphim Seal has been destroyed.
 				sendMsgByRace(1403270, Race.PC_ALL, 0);
 				deleteNpc(703017);
 				break;
+			}
 			case 703011: // Shedim Eternity Relic.
+			{
 				despawnNpc(npc);
 				// Shedim Seal has been destroyed.
 				sendMsgByRace(1403269, Race.PC_ALL, 0);
 				break;
+			}
 			case 703012: // Seraphim Eternity Relic.
+			{
 				despawnNpc(npc);
 				// Seraphim Seal has been destroyed.
 				sendMsgByRace(1403270, Race.PC_ALL, 0);
 				deleteNpc(703018);
 				break;
+			}
 			case 703013: // Shedim Eternity Relic.
+			{
 				despawnNpc(npc);
 				// Shedim Seal has been destroyed.
 				sendMsgByRace(1403269, Race.PC_ALL, 0);
 				break;
+			}
 			case 703014: // Seraphim Eternity Relic.
+			{
 				despawnNpc(npc);
 				// Seraphim Seal has been destroyed.
 				sendMsgByRace(1403270, Race.PC_ALL, 0);
 				deleteNpc(703019);
 				break;
+			}
 			case 703015: // Shedim Eternity Relic.
+			{
 				despawnNpc(npc);
 				// Shedim Seal has been destroyed.
 				sendMsgByRace(1403269, Race.PC_ALL, 0);
 				break;
+			}
 			case 703016: // Seraphim Eternity Relic.
+			{
 				despawnNpc(npc);
 				// Seraphim Seal has been destroyed.
 				sendMsgByRace(1403270, Race.PC_ALL, 0);
 				deleteNpc(703020);
 				break;
+			}
 			case 857460: // Ancient Relic Techgolem.
 			case 857462: // Fleshgolem Captain.
 			case 857464: // Mountainous Shardgolem.
+			{
 				doors.get(33).setOpen(true);
 				// The Antiquarian of Atreia is defeated and the Eternity Relics ceased functioning.
 				sendMsgByRace(1403214, Race.PC_ALL, 0);
@@ -464,6 +591,7 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 				spawn(806153, 245.83438f, 512.4957f, 468.80215f, (byte) 119); // Cryptograph Cube.
 				sendMsg("[Congratulation]: you finish <Archives Of Eternity 5.0>");
 				break;
+			}
 		}
 	}
 	
@@ -479,36 +607,18 @@ public class ArchivesOfEternityInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void deleteNpc(int npcId)

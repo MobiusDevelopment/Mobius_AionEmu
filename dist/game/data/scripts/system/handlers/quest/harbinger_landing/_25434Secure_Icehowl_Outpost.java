@@ -119,6 +119,7 @@ public class _25434Secure_Icehowl_Outpost extends QuestHandler
 				case 883007:
 				case 883008:
 				case 883009:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _25434Secure_Icehowl_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -106,16 +106,24 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 703384: // Infected Bone Mound.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182216109, 1)); // Maad-S Molar.
 				break;
+			}
 			case 703385: // Infected Flesh Lump.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182216110, 1)); // Maad-S Skin Tissue.
 				break;
+			}
 			case 833866: // Bright Aether Supply Chest.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182007405, 3)); // Bright Aether.
 				break;
+			}
 			case 834253: // Maedrunerk Legion Treasures.
+			{
 				break;
+			}
 		}
 	}
 	
@@ -131,10 +139,12 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 833812: // Flame Switch.
+			{
 				despawnNpc(npc);
 				spawn(833813, 232.31128f, 239.1524f, 160.36285f, (byte) 90); // Contaminated Underpath Fire.
 				spawn(833813, 225.83708f, 239.09781f, 160.36285f, (byte) 90); // Contaminated Underpath Fire.
 				break;
+			}
 		}
 	}
 	
@@ -146,10 +156,13 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 243647: // MAD-74C.
+			{
 				points = 50;
 				startGringolTheDevourerWave();
 				break;
+			}
 			case 245547: // Experimental Reian.
+			{
 				points = 600;
 				IDLunaDefYZombie751ST++;
 				if (IDLunaDefYZombie751ST == 16)
@@ -157,7 +170,9 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 					startUndergroundWave2();
 				}
 				break;
+			}
 			case 245548: // Experimental Reian.
+			{
 				points = 600;
 				IDLunaDefYZombieF751ST++;
 				if (IDLunaDefYZombieF751ST == 16)
@@ -167,7 +182,9 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 					sendMsgByRace(1403656, Race.PC_ALL, 0);
 				}
 				break;
+			}
 			case 245556: // Gringol The Devourer.
+			{
 				points = 2500;
 				IDLunaDefZombieButcherAsN75++;
 				if (IDLunaDefZombieButcherAsN75 == 6)
@@ -177,11 +194,15 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 					sendMsgByRace(1403655, Race.PC_ALL, 0);
 				}
 				break;
+			}
 			case 245557: // Experimental Reian.
 			case 245558: // Experimental Reian.
+			{
 				points = 600;
 				break;
+			}
 			case 245565: // Zombie Transfectant.
+			{
 				points = 150;
 				IDLunaDefZombieSpider753RD++;
 				if (IDLunaDefZombieSpider753RD == 24)
@@ -189,19 +210,24 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 					startUndergroundWave4();
 				}
 				break;
+			}
 			case 245573: // Floating Zombie Test Subject.
+			{
 				IDLunaDefZombieVampireFD753RD++;
 				if (IDLunaDefZombieVampireFD753RD == 4)
 				{
 					startMAADSWave();
 				}
 				break;
+			}
 			case 245575: // MAAD-S.
+			{
 				points = 500000;
 				spawn(703384, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading()); // Infected Bone Mound.
 				spawn(703385, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading()); // Infected Flesh Lump.
 				ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player -> stopInstance(player)), 5000);
 				break;
+			}
 		}
 		if (instanceReward.getInstanceScoreType().isStartProgress())
 		{
@@ -212,15 +238,19 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 833863: // Frontal Barricade.
+			{
 				// The barricade in the front was destroyed.
 				sendMsgByRace(1403609, Race.PC_ALL, 0);
 				instanceReward.addPoints(-500);
 				break;
+			}
 			case 833864: // Rear Barricade.
+			{
 				// The barricade in the back was destroyed. Atreia is in danger.
 				sendMsgByRace(1403610, Race.PC_ALL, 0);
 				instanceReward.addPoints(-25000);
 				break;
+			}
 		}
 	}
 	
@@ -492,13 +522,17 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 		switch (player.getRace())
 		{
 			case ELYOS:
+			{
 				// Luna Detachment Transformation.
 				SkillEngine.getInstance().applyEffectDirectly(21345, player, player, 3000000 * 1);
 				break;
+			}
 			case ASMODIANS:
+			{
 				// Luna Detachment Transformation.
 				SkillEngine.getInstance().applyEffectDirectly(21346, player, player, 3000000 * 1);
 				break;
+			}
 		}
 		sendPacket(0, 0);
 	}
@@ -525,29 +559,41 @@ public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 			switch (contaminatedRank)
 			{
 				case 1: // Rank S
+				{
 					playerReward.setContaminatedPremiumRewardBundle(1);
 					// Contaminated Premium Reward Bundle.
 					ItemService.addItem(player, 188055598, 1);
 					break;
+				}
 				case 2: // Rank A
+				{
 					playerReward.setContaminatedHighestRewardBundle(1);
 					// Contaminated Highest Reward Bundle.
 					ItemService.addItem(player, 188055599, 1);
 					break;
+				}
 				case 3: // Rank B
+				{
 					playerReward.setContaminatedUnderpathSpecialPouch(1);
 					// Contaminated Underpath Special Pouch.
 					ItemService.addItem(player, 188055664, 1);
 					break;
+				}
 				case 4: // Rank C
+				{
 					playerReward.setContaminatedUnderpathSpecialPouch(1);
 					// Contaminated Underpath Special Pouch.
 					ItemService.addItem(player, 188055664, 1);
 					break;
+				}
 				case 5: // Rank D
+				{
 					break;
+				}
 				case 6: // Rank F
+				{
 					break;
+				}
 			}
 		}
 	}

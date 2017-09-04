@@ -77,12 +77,14 @@ public class _2252ChasingtheLegend extends QuestHandler
 		switch (targetId)
 		{
 			case 210634: // Minusha's Spirit
+			{
 				if (var == 0)
 				{
 					qs.setQuestVarById(0, var + 1);
 					updateQuestStatus(env);
 					return true;
 				}
+			}
 		}
 		return false;
 	}
@@ -124,6 +126,7 @@ public class _2252ChasingtheLegend extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							qs.setQuestVar(2);
@@ -131,11 +134,14 @@ public class _2252ChasingtheLegend extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case SELECT_REWARD:
+					{
 						if (var == 2)
 						{
 							return sendQuestEndDialog(env);
 						}
+					}
 				}
 			}
 			if (targetId == 700060)
@@ -143,6 +149,7 @@ public class _2252ChasingtheLegend extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						if (var == 0)
 						{
 							final int targetObjectId = env.getVisibleObject().getObjectId();
@@ -169,6 +176,7 @@ public class _2252ChasingtheLegend extends QuestHandler
 								}
 							}, 3000);
 						}
+					}
 				}
 			}
 		}

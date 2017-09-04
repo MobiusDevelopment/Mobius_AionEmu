@@ -75,29 +75,41 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawn(214780, 381.35986f, 510.61307f, 102.618126f, (byte) 111); // Dakaer Diabolist.
 				break;
+			}
 			case 2:
+			{
 				spawn(214781, 381.35986f, 510.61307f, 102.618126f, (byte) 111); // Dakaer Bloodmender.
 				break;
+			}
 		}
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawn(214782, 625.4933f, 455.0907f, 102.63267f, (byte) 47); // Dakaer Adjutant.
 				break;
+			}
 			case 2:
+			{
 				spawn(214784, 625.4933f, 455.0907f, 102.63267f, (byte) 47); // Dakaer Physician.
 				break;
+			}
 		}
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawn(215449, 503.947f, 623.82227f, 103.695724f, (byte) 90); // Relic Protector Kael.
 				break;
+			}
 			case 2:
+			{
 				spawn(215450, 503.947f, 623.82227f, 103.695724f, (byte) 90); // Ebonlord Vasana.
 				break;
+			}
 		}
 	}
 	
@@ -111,6 +123,7 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 		{
 			case 214780: // Dakaer Diabolist.
 			case 214781: // Dakaer Bloodmender.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -119,8 +132,10 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 214782: // Dakaer Adjutant.
 			case 214784: // Dakaer Physician.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -129,8 +144,10 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			case 215449: // Relic Protector Kael.
 			case 215450: // Ebonlord Vasana.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -139,6 +156,7 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	

@@ -99,11 +99,15 @@ public class ItemData extends ReloadableData
 			switch (result)
 			{
 				case 1:
+				{
 					item.modifyMask(true, mask);
 					break;
+				}
 				case 0:
+				{
 					item.modifyMask(false, mask);
 					break;
+				}
 			}
 		}
 	}

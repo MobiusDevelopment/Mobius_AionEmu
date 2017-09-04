@@ -61,7 +61,9 @@ public class Kamar_CannonAI2 extends ActionItemNpcAI2
 		{
 			case 701806: // Kamar Cannon.
 			case 701902: // Kamar Cannon.
+			{
 				return 0x4E5133;
+			}
 		}
 		return 0;
 	}
@@ -78,13 +80,21 @@ public class Kamar_CannonAI2 extends ActionItemNpcAI2
 		switch (question)
 		{
 			case SHOULD_DECAY:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			case SHOULD_RESPAWN:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			case SHOULD_REWARD:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 }

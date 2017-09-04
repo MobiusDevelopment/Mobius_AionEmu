@@ -34,10 +34,13 @@ public class FirstTargetProperty
 		switch (value)
 		{
 			case ME:
+			{
 				skill.setFirstTargetRangeCheck(false);
 				skill.setFirstTarget(skill.getEffector());
 				break;
+			}
 			case TARGETORME:
+			{
 				boolean changeTargetToMe = false;
 				if (skill.getFirstTarget() == null)
 				{
@@ -88,7 +91,9 @@ public class FirstTargetProperty
 					skill.setFirstTarget(skill.getEffector());
 				}
 				break;
+			}
 			case TARGET:
+			{
 				if ((skill.getSkillId() <= 8217) || (skill.getSkillId() >= 9180))
 				{ // 5.1
 					if ((skill.getSkillTemplate().getDispelCategory() != DispelCategoryType.NPC_BUFF) && (skill.getSkillTemplate().getDispelCategory() != DispelCategoryType.NPC_DEBUFF_PHYSICAL))
@@ -109,7 +114,9 @@ public class FirstTargetProperty
 					}
 				}
 				break;
+			}
 			case MYPET:
+			{
 				final Creature effector = skill.getEffector();
 				if (effector instanceof Player)
 				{
@@ -128,7 +135,9 @@ public class FirstTargetProperty
 					return false;
 				}
 				break;
+			}
 			case MYMASTER:
+			{
 				final Creature peteffector = skill.getEffector();
 				if (peteffector instanceof Summon)
 				{
@@ -147,10 +156,14 @@ public class FirstTargetProperty
 					return false;
 				}
 				break;
+			}
 			case PASSIVE:
+			{
 				skill.setFirstTarget(skill.getEffector());
 				break;
+			}
 			case TARGET_MYPARTY_NONVISIBLE:
+			{
 				final Creature effected = skill.getFirstTarget();
 				if ((effected == null) || (skill.getEffector() == null))
 				{
@@ -178,12 +191,17 @@ public class FirstTargetProperty
 				}
 				skill.setFirstTargetRangeCheck(false);
 				break;
+			}
 			case POINT:
+			{
 				skill.setFirstTarget(skill.getEffector());
 				skill.setFirstTargetRangeCheck(false);
 				return true;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		if (skill.getFirstTarget() != null)
 		{

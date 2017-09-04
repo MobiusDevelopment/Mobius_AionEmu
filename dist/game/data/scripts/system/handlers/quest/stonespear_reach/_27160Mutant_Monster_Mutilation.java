@@ -114,6 +114,7 @@ public class _27160Mutant_Monster_Mutilation extends QuestHandler
 				case 219700:
 				case 219777:
 				case 219788:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -124,6 +125,7 @@ public class _27160Mutant_Monster_Mutilation extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

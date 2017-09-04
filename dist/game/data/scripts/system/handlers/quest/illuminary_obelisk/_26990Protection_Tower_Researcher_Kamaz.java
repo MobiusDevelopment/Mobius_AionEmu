@@ -71,7 +71,9 @@ public class _26990Protection_Tower_Researcher_Kamaz extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

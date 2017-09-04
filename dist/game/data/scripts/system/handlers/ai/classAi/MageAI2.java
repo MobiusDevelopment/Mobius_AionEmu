@@ -129,17 +129,25 @@ public class MageAI2 extends AggressiveNpcAI2
 						switch (Rnd.get(1, 4))
 						{
 							case 1:
+							{
 								spawn(285470, x, y, z, (byte) 0); // Water Spirit.
 								break;
+							}
 							case 2:
+							{
 								spawn(285473, x, y, z, (byte) 0); // Fire Spirit.
 								break;
+							}
 							case 3:
+							{
 								spawn(285469, x, y, z, (byte) 0); // Earth Spirit.
 								break;
+							}
 							case 4:
+							{
 								spawn(285471, x, y, z, (byte) 0); // Wind Spirit.
 								break;
+							}
 						}
 					}
 				}
@@ -186,29 +194,37 @@ public class MageAI2 extends AggressiveNpcAI2
 		switch (getNpcId())
 		{
 			case 212810:
+			{
 				iceClawBlessing();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
 			case 211596:
 			case 212734:
+			{
 				mistShadeBlessing();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
 			case 214867:
 			case 214874:
 			case 215428:
+			{
 				anuhartBravery();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
 			case 233912:
+			{
 				survivalInstinct();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -352,8 +368,10 @@ public class MageAI2 extends AggressiveNpcAI2
 			case 883255:
 			case 883261:
 			case 883267:
+			{
 				conquerorPassion();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -361,8 +379,10 @@ public class MageAI2 extends AggressiveNpcAI2
 			case 230799:
 			case 233336:
 			case 233337:
+			{
 				midnightRobe();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -381,8 +401,10 @@ public class MageAI2 extends AggressiveNpcAI2
 			case 883063:
 			case 883069:
 			case 883075:
+			{
 				ereshkigalRage();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -398,8 +420,10 @@ public class MageAI2 extends AggressiveNpcAI2
 			case 883039:
 			case 883045:
 			case 883051:
+			{
 				brokenMorale();
 				break;
+			}
 		}
 	}
 	

@@ -50,7 +50,9 @@ public class Strange_BoxAI2 extends GeneralNpcAI2
 			{
 				case 834140: // Strange Box.
 				case 834153: // Strange Box.
+				{
 					break;
+				}
 			}
 		}
 		AI2Actions.deleteOwner(this);

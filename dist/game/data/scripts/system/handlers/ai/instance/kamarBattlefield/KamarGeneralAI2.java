@@ -48,16 +48,22 @@ public class KamarGeneralAI2 extends AggressiveNpcAI2
 				case 233321: // General Varga.
 				case 233322: // General Varga.
 				case 233323: // General Varga.
+				{
 					announceIDKamarDrakanGeneral();
 					break;
+				}
 				case 233327: // Acting Commander Cripsin.
 				case 233329: // Acting Commander Cripsin.
+				{
 					announceIDKamarLightGeneral();
 					break;
+				}
 				case 233328: // Acting Commander Tepes.
 				case 233330: // Acting Commander Tepes.
+				{
 					announceIDKamarDarkGeneral();
 					break;
+				}
 			}
 		}
 	}

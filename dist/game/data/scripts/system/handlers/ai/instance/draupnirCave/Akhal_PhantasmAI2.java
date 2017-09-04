@@ -42,6 +42,7 @@ public class Akhal_PhantasmAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 237276: // Akhal's Phantasm.
+			{
 				// You shame us, Bakarma! Fallen to a flock of weak-fleshed Daevas? Your honor is in shambles.
 				sendMsg(1403082, getObjectId(), false, 2000);
 				// The Draupnir defense flame at Beritra's Oracle Chamber has been activated. If you approach the flame area, prepare to burn.
@@ -59,6 +60,7 @@ public class Akhal_PhantasmAI2 extends NpcAI2
 					}
 				}, 18000);
 				break;
+			}
 		}
 	}
 	

@@ -119,6 +119,7 @@ public class _25416Defend_Coldforge_Outpost extends QuestHandler
 				case 883103:
 				case 883104:
 				case 883105:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _25416Defend_Coldforge_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -67,17 +67,23 @@ public class CM_SUMMON_EMOTION extends AionClientPacket
 		{
 			case FLY:
 			case LAND:
+			{
 				PacketSendUtility.broadcastPacket(summon, new SM_EMOTION(summon, EmotionType.START_EMOTE2));
 				PacketSendUtility.broadcastPacket(summon, new SM_EMOTION(summon, emotionType));
 				break;
+			}
 			case ATTACKMODE:
+			{
 				summon.setState(CreatureState.WEAPON_EQUIPPED);
 				PacketSendUtility.broadcastPacket(summon, new SM_EMOTION(summon, emotionType));
 				break;
+			}
 			case NEUTRALMODE:
+			{
 				summon.unsetState(CreatureState.WEAPON_EQUIPPED);
 				PacketSendUtility.broadcastPacket(summon, new SM_EMOTION(summon, emotionType));
 				break;
+			}
 		}
 	}
 }

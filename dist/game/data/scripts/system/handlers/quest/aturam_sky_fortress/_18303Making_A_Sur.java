@@ -61,10 +61,14 @@ public class _18303Making_A_Sur extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						playQuestMovie(env, 470);
 						return sendQuestDialog(env, 4762);
+					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -75,13 +79,21 @@ public class _18303Making_A_Sur extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 1007);
+					}
 					case STEP_TO_1:
+					{
 						return closeDialogWindow(env);
+					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 			else if (targetId == 700980)
@@ -96,11 +108,17 @@ public class _18303Making_A_Sur extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 10002);
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestDialog(env, 5);
+					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

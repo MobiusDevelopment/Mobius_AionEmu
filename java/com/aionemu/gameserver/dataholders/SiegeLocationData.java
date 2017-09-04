@@ -66,24 +66,32 @@ public class SiegeLocationData
 			switch (template.getType())
 			{
 				case FORTRESS:
+				{
 					final FortressLocation fortress = new FortressLocation(template);
 					fortressLocations.put(template.getId(), fortress);
 					siegeLocations.put(template.getId(), fortress);
 					artifactLocations.put(template.getId(), new ArtifactLocation(template));
 					break;
+				}
 				case ARTIFACT:
+				{
 					final ArtifactLocation artifact = new ArtifactLocation(template);
 					artifactLocations.put(template.getId(), artifact);
 					siegeLocations.put(template.getId(), artifact);
 					break;
+				}
 				case BOSSRAID_LIGHT:
 				case BOSSRAID_DARK:
+				{
 					final OutpostLocation protector = new OutpostLocation(template);
 					outpostLocations.put(template.getId(), protector);
 					siegeLocations.put(template.getId(), protector);
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 	}

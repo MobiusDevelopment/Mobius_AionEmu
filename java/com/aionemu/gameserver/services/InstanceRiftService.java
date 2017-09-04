@@ -153,6 +153,7 @@ public class InstanceRiftService
 		switch (id)
 		{
 			case 1:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -162,8 +163,11 @@ public class InstanceRiftService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	

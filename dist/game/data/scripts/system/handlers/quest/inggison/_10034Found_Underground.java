@@ -301,6 +301,7 @@ public class _10034Found_Underground extends QuestHandler
 		switch (env.getTargetId())
 		{
 			case 216531:
+			{
 				if (var == 5)
 				{
 					QuestService.addNewSpawn(300160000, instanceId, 730229, 740.4573f, 874.8399f, 152.78526f, (byte) 23); // Traveller's Bag.
@@ -309,6 +310,7 @@ public class _10034Found_Underground extends QuestHandler
 					return true;
 				}
 				break;
+			}
 		}
 		return false;
 	}

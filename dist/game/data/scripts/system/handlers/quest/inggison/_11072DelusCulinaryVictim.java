@@ -123,11 +123,14 @@ public class _11072DelusCulinaryVictim extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -136,6 +139,7 @@ public class _11072DelusCulinaryVictim extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		else if (targetId == 798960)
@@ -143,11 +147,14 @@ public class _11072DelusCulinaryVictim extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1693);
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						removeQuestItem(env, 182206860, 1);
@@ -158,6 +165,7 @@ public class _11072DelusCulinaryVictim extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 			}
 		}
 		return false;

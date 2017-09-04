@@ -59,19 +59,23 @@ public class QuestConditions
 			switch (operate)
 			{
 				case AND:
+				{
 					if (!bCond)
 					{
 						return false;
 					}
 					inCondition = inCondition && bCond;
 					break;
+				}
 				case OR:
+				{
 					if (bCond)
 					{
 						return true;
 					}
 					inCondition = inCondition || bCond;
 					break;
+				}
 			}
 		}
 		return inCondition;

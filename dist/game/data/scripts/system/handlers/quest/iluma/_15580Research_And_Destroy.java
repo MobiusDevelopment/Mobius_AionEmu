@@ -116,6 +116,7 @@ public class _15580Research_And_Destroy extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 241244:
+				{
 					if (qs.getQuestVarById(1) < 20)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -126,6 +127,7 @@ public class _15580Research_And_Destroy extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

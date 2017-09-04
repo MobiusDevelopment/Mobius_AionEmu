@@ -103,17 +103,23 @@ public class Eigen3f
 		switch (i)
 		{
 			case 0:
+			{
 				maxRows[0].normalizeLocal();
 				computeVectors(scaledData, maxRows[0], 1, 2, 0);
 				break;
+			}
 			case 1:
+			{
 				maxRows[1].normalizeLocal();
 				computeVectors(scaledData, maxRows[1], 2, 0, 1);
 				break;
+			}
 			case 2:
+			{
 				maxRows[2].normalizeLocal();
 				computeVectors(scaledData, maxRows[2], 0, 1, 2);
 				break;
+			}
 		}
 		
 		// Rescale the values back to the original size.

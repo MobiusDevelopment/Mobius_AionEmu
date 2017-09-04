@@ -172,6 +172,7 @@ public class BrokerItem implements Comparable<BrokerItem>
 		switch (persistentState)
 		{
 			case DELETED:
+			{
 				if (state == PersistentState.NEW)
 				{
 					state = PersistentState.NOACTION;
@@ -181,14 +182,19 @@ public class BrokerItem implements Comparable<BrokerItem>
 					state = PersistentState.DELETED;
 				}
 				break;
+			}
 			case UPDATE_REQUIRED:
+			{
 				if (state == PersistentState.NEW)
 				{
 					break;
 				}
 				break;
+			}
 			default:
+			{
 				state = persistentState;
+			}
 		}
 	}
 	
@@ -406,23 +412,41 @@ public class BrokerItem implements Comparable<BrokerItem>
 		switch (sortType)
 		{
 			case 0:
+			{
 				return NAME_SORT_ASC;
+			}
 			case 1:
+			{
 				return NAME_SORT_DESC;
+			}
 			case 2:
+			{
 				return LEVEL_SORT_ASC;
+			}
 			case 3:
+			{
 				return LEVEL_SORT_DESC;
+			}
 			case 4:
+			{
 				return PRICE_SORT_ASC;
+			}
 			case 5:
+			{
 				return PRICE_SORT_DESC;
+			}
 			case 6:
+			{
 				return PIECE_PRICE_SORT_ASC;
+			}
 			case 7:
+			{
 				return PIECE_PRICE_SORT_DESC;
+			}
 			default:
+			{
 				throw new IllegalArgumentException("Illegal sort type for broker items");
+			}
 		}
 	}
 }

@@ -53,6 +53,7 @@ public class Boss_WindstreamAI2 extends AggressiveNpcAI2
 			 * WINDSTREAM INGGISON
 			 */
 			case 215584: // Titan Starturtle.
+			{
 				announceWindBox();
 				final SpawnTemplate CastShadowPLSM = SpawnEngine.addNewSingleTimeSpawn(210050000, 281817, 338.26440f, 573.72168f, 458.27939f, (byte) 0);
 				CastShadowPLSM.setEntityId(755);
@@ -66,7 +67,9 @@ public class Boss_WindstreamAI2 extends AggressiveNpcAI2
 					}
 				}, 300000); // 5 Minutes.
 				break;
+			}
 			case 216849: // Watcher Garma.
+			{
 				announceWindBox();
 				final SpawnTemplate EnvWeatherShow = SpawnEngine.addNewSingleTimeSpawn(210050000, 281817, 2602.6992f, 1526.0367f, 258.13651f, (byte) 0);
 				EnvWeatherShow.setEntityId(754);
@@ -80,7 +83,9 @@ public class Boss_WindstreamAI2 extends AggressiveNpcAI2
 					}
 				}, 300000); // 5 Minutes.
 				break;
+			}
 			case 216848: // Illanthe Hundredyears.
+			{
 				announceWindBox();
 				final SpawnTemplate SkipOnLowSpec = SpawnEngine.addNewSingleTimeSpawn(210050000, 281817, 1745.8660f, 1716.3790f, 226.37808f, (byte) 0);
 				SkipOnLowSpec.setEntityId(1039);
@@ -94,7 +99,9 @@ public class Boss_WindstreamAI2 extends AggressiveNpcAI2
 					}
 				}, 300000); // 5 Minutes.
 				break;
+			}
 			case 217071: // Esalki The Fourth.
+			{
 				announceWindBox();
 				final SpawnTemplate EnvWeatherHide = SpawnEngine.addNewSingleTimeSpawn(210050000, 281817, 2288.1091f, 1067.0475f, 285.73407f, (byte) 0);
 				EnvWeatherHide.setEntityId(2311);
@@ -108,7 +115,9 @@ public class Boss_WindstreamAI2 extends AggressiveNpcAI2
 					}
 				}, 300000); // 5 Minutes.
 				break;
+			}
 			case 217072: // Huge Waterfall Starturtle.
+			{
 				announceWindBox();
 				final SpawnTemplate DisplayFilled = SpawnEngine.addNewSingleTimeSpawn(210050000, 281817, 1660.0439f, 928.57129f, 404.99213f, (byte) 0);
 				DisplayFilled.setEntityId(2292);
@@ -122,10 +131,12 @@ public class Boss_WindstreamAI2 extends AggressiveNpcAI2
 					}
 				}, 300000); // 5 Minutes.
 				break;
+			}
 			/**
 			 * WINDSTREAM GELKMAROS
 			 */
 			case 216846: // Agrima.
+			{
 				announceWindBox();
 				final SpawnTemplate FileLadderCGF = SpawnEngine.addNewSingleTimeSpawn(220070000, 281817, 1719.2194f, 2301.7344f, 318.70938f, (byte) 0);
 				FileLadderCGF.setEntityId(1821);
@@ -139,6 +150,7 @@ public class Boss_WindstreamAI2 extends AggressiveNpcAI2
 					}
 				}, 300000); // 5 Minutes.
 				break;
+			}
 		}
 		super.handleDied();
 		AI2Actions.scheduleRespawn(this);

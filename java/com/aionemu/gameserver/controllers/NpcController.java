@@ -289,20 +289,28 @@ public class NpcController extends CreatureController<Npc>
 						case 301650000: // Ashunatal Dredgion.
 						case 301660000: // Fallen Poeta.
 						case 302100000: // Fissure Of Oblivion.
+						{
 							player.getCommonData().addExp(Rnd.get(480000, 550000), RewardType.HUNTING, getOwner().getObjectTemplate().getNameId());
 							break;
+						}
 						case 210100000: // Iluma.
 						case 220110000: // Norsvold.
+						{
 							AbyssPointsService.addAp(player, getOwner(), Rnd.get(60, 100));
 							player.getCommonData().addExp(Rnd.get(480000, 550000), RewardType.HUNTING, getOwner().getObjectTemplate().getNameId());
 							break;
+						}
 						case 600090000: // Kaldor.
 						case 600100000: // Levinshor.
+						{
 							player.getCommonData().addExp(Rnd.get(50000, 100000), RewardType.HUNTING, getOwner().getObjectTemplate().getNameId());
 							break;
+						}
 						default:
+						{
 							player.getCommonData().addExp(rewardXp, RewardType.HUNTING, getOwner().getObjectTemplate().getNameId());
 							break;
+						}
 					}
 					player.getCommonData().addDp(rewardDp);
 					if (getOwner().isRewardAP())
@@ -325,6 +333,7 @@ public class NpcController extends CreatureController<Npc>
 						{
 							case 210010000: // Poeta.
 							case 220010000: // Ishalgen.
+							{
 								if (player.getLevel() < (getOwner().getLevel() + 5))
 								{
 									kinahCount = Rnd.get(100, 1000) * player.getLevel();
@@ -334,8 +343,10 @@ public class NpcController extends CreatureController<Npc>
 									kinahCount = 1000;
 								}
 								break;
+							}
 							case 210030000: // Verteron.
 							case 220030000: // Altgard.
+							{
 								if (player.getLevel() < (getOwner().getLevel() + 5))
 								{
 									kinahCount = Rnd.get(100, 1000) * player.getLevel();
@@ -345,8 +356,10 @@ public class NpcController extends CreatureController<Npc>
 									kinahCount = 1000;
 								}
 								break;
+							}
 							case 210020000: // Eltnen.
 							case 220020000: // Morheim.
+							{
 								if (player.getLevel() < (getOwner().getLevel() + 5))
 								{
 									kinahCount = Rnd.get(100, 1000) * player.getLevel();
@@ -356,8 +369,10 @@ public class NpcController extends CreatureController<Npc>
 									kinahCount = 1000;
 								}
 								break;
+							}
 							case 210040000: // Heiron.
 							case 220040000: // Beluslan.
+							{
 								if (player.getLevel() < (getOwner().getLevel() + 5))
 								{
 									kinahCount = Rnd.get(100, 1000) * player.getLevel();
@@ -367,8 +382,10 @@ public class NpcController extends CreatureController<Npc>
 									kinahCount = 1000;
 								}
 								break;
+							}
 							case 210060000: // Theobomos.
 							case 220050000: // Brushtonin.
+							{
 								if (player.getLevel() < (getOwner().getLevel() + 5))
 								{
 									kinahCount = Rnd.get(100, 1000) * player.getLevel();
@@ -378,8 +395,10 @@ public class NpcController extends CreatureController<Npc>
 									kinahCount = 1000;
 								}
 								break;
+							}
 							case 210050000: // Inggison.
 							case 220070000: // Gelkmaros.
+							{
 								if (player.getLevel() < (getOwner().getLevel() + 5))
 								{
 									kinahCount = Rnd.get(100, 1000) * player.getLevel();
@@ -389,8 +408,10 @@ public class NpcController extends CreatureController<Npc>
 									kinahCount = 1000;
 								}
 								break;
+							}
 							case 210070000: // Cygnea.
 							case 220080000: // Enshar.
+							{
 								if (player.getLevel() < (getOwner().getLevel() + 5))
 								{
 									kinahCount = Rnd.get(100, 10000) * player.getLevel();
@@ -400,11 +421,13 @@ public class NpcController extends CreatureController<Npc>
 									kinahCount = 1000;
 								}
 								break;
+							}
 							case 400010000: // Reshanta.
 							case 400020000: // Belus.
 							case 400040000: // Aspida.
 							case 400050000: // Atanatos.
 							case 400060000: // Disillon.
+							{
 								if (player.getLevel() < (getOwner().getLevel() + 5))
 								{
 									kinahCount = Rnd.get(100, 80000) * player.getLevel();
@@ -414,8 +437,10 @@ public class NpcController extends CreatureController<Npc>
 									kinahCount = 1000;
 								}
 								break;
+							}
 							case 600090000: // Kaldor.
 							case 600100000: // Levinshor.
+							{
 								if (player.getLevel() < (getOwner().getLevel() + 5))
 								{
 									kinahCount = Rnd.get(100, 1000) * player.getLevel();
@@ -425,8 +450,10 @@ public class NpcController extends CreatureController<Npc>
 									kinahCount = 1000;
 								}
 								break;
+							}
 							case 210100000: // Iluma.
 							case 220110000: // Norsvold.
+							{
 								if (player.getLevel() < (getOwner().getLevel() + 5))
 								{
 									kinahCount = Rnd.get(100, 80000) * player.getLevel();
@@ -436,8 +463,10 @@ public class NpcController extends CreatureController<Npc>
 									kinahCount = 1000;
 								}
 								break;
+							}
 							case 210090000: // Idian Depths E.
 							case 220100000: // Idian Depths A.
+							{
 								if (player.getLevel() < (getOwner().getLevel() + 5))
 								{
 									kinahCount = Rnd.get(100, 100000) * player.getLevel();
@@ -447,9 +476,12 @@ public class NpcController extends CreatureController<Npc>
 									kinahCount = 1000;
 								}
 								break;
+							}
 							default:
+							{
 								kinahCount = 0;
 								break;
+							}
 						}
 						if (player.isInInstance() && (player.getLevel() < (getOwner().getLevel() + 5)))
 						{
@@ -467,9 +499,11 @@ public class NpcController extends CreatureController<Npc>
 						// Idian Depths.
 						case 210090000:
 						case 220100000:
+						{
 							InGameShopEn.getInstance().addToll(player, (long) (2 * player.getRates().getTollRewardRate()));
 							PacketSendUtility.sendSys1Message(player, "\uE083", "You have gained <2 Toll Point>");
 							break;
+						}
 					}
 					// Aura Of Growth + Berdin's Star.
 					if (getOwner().getLevel() >= 66)

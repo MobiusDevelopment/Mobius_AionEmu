@@ -71,12 +71,14 @@ public class Panesterra_ContributorsAI2 extends GeneralNpcAI2
 			{
 				case 730942: // Advance Corridor For Contributors
 				case 730943: // Advance Corridor For Contributors
+				{
 					final AutoGroupType agt = AutoGroupType.getAutoGroup(player.getLevel(), getNpcId());
 					if (agt != null)
 					{
 						PacketSendUtility.sendPacket(player, new SM_FIND_GROUP(0x1A, agt.getInstanceMapId()));
 					}
 					break;
+				}
 			}
 		}
 		else if (dialogId == 10)

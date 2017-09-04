@@ -153,6 +153,7 @@ public class _25506Protect_Featherfern_Jungle extends QuestHandler
 				case 243266:
 				case 243267:
 				case 243268:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -163,6 +164,7 @@ public class _25506Protect_Featherfern_Jungle extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

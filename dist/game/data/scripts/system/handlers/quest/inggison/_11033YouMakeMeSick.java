@@ -98,9 +98,11 @@ public class _11033YouMakeMeSick extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 798959:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
@@ -109,7 +111,9 @@ public class _11033YouMakeMeSick extends QuestHandler
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							if (var == 0)
 							{
 								if (QuestService.collectItemCheck(env, true))
@@ -124,7 +128,9 @@ public class _11033YouMakeMeSick extends QuestHandler
 									return sendQuestDialog(env, 10001);
 								}
 							}
+						}
 						case STEP_TO_2:
+						{
 							if (var == 1)
 							{
 								if (!giveQuestItem(env, 182206728, 1))
@@ -135,7 +141,9 @@ public class _11033YouMakeMeSick extends QuestHandler
 								updateQuestStatus(env);
 							}
 							return true;
+						}
 					}
+				}
 			}
 		}
 		return false;
@@ -154,17 +162,12 @@ public class _11033YouMakeMeSick extends QuestHandler
 			return HandlerResult.UNKNOWN;
 		}
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 1000, 0, 0), true);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			
-			@Override
-			public void run()
-			{
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
-				removeQuestItem(env, 182206728, 1);
-				qs.setStatus(QuestStatus.REWARD);
-				updateQuestStatus(env);
-			}
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
+			removeQuestItem(env, 182206728, 1);
+			qs.setStatus(QuestStatus.REWARD);
+			updateQuestStatus(env);
 		}, 1000);
 		return HandlerResult.SUCCESS;
 	}

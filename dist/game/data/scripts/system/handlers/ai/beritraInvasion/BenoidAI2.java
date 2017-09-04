@@ -45,14 +45,18 @@ public class BenoidAI2 extends AggressiveNpcAI2
 			case 234612:
 			case 234613:
 			case 234614:
+			{
 				addGpPlayer();
 				announceBenoidDie();
 				break;
+			}
 			case 236750:
+			{
 				addGpPlayer();
 				announceBenoidDie();
 				updateBenoidLanding();
 				break;
+			}
 		}
 		super.handleDied();
 	}

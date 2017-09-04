@@ -64,11 +64,15 @@ public class BeritraQAI2 extends AggressiveNpcAI2
 							switch (player.getRace())
 							{
 								case ELYOS:
+								{
 									PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(0, 918));
 									break;
+								}
 								case ASMODIANS:
+								{
 									PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(0, 921));
 									break;
+								}
 							}
 						}
 					}

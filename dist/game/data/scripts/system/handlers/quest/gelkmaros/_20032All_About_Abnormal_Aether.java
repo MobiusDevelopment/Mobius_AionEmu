@@ -236,11 +236,13 @@ public class _20032All_About_Abnormal_Aether extends QuestHandler
 		switch (targetId)
 		{
 			case 215488:
+			{
 				if (qs.getQuestVarById(0) == 6)
 				{
 					return defaultOnKillEvent(env, 215488, 6, 7);
 				}
 				break;
+			}
 		}
 		return false;
 	}

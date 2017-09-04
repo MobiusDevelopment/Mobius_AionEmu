@@ -119,6 +119,7 @@ public class _25424Defend_Sootguzzle_Outpost extends QuestHandler
 				case 883151:
 				case 883152:
 				case 883153:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _25424Defend_Sootguzzle_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

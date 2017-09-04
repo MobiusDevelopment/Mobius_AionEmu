@@ -47,9 +47,13 @@ public class TargetFlyingCondition extends Condition
 		switch (restriction)
 		{
 			case FLY:
+			{
 				return env.getFirstTarget().isFlying();
+			}
 			case GROUND:
+			{
 				return !env.getFirstTarget().isFlying();
+			}
 		}
 		
 		return true;
@@ -66,9 +70,13 @@ public class TargetFlyingCondition extends Condition
 		switch (restriction)
 		{
 			case FLY:
+			{
 				return effect.getEffected().isFlying();
+			}
 			case GROUND:
+			{
 				return !effect.getEffected().isFlying();
+			}
 		}
 		
 		return true;

@@ -762,16 +762,26 @@ public final class FastMath
 		switch ((int)half)
 		{
 			case 0x0000:
+			{
 				return 0f;
+			}
 			case 0x8000:
+			{
 				return -0f;
+			}
 			case 0x7c00:
+			{
 				return Float.POSITIVE_INFINITY;
+			}
 			case 0xfc00:
+			{
 				return Float.NEGATIVE_INFINITY;
+			}
 			// TODO: Support for NaN?
 			default:
+			{
 				return Float.intBitsToFloat(((half & 0x8000) << 16) | (((half & 0x7c00) + 0x1C000) << 13) | ((half & 0x03FF) << 13));
+			}
 		}
 	}
 	

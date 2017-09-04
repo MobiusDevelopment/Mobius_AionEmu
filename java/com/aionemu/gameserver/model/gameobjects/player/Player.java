@@ -1630,19 +1630,25 @@ public class Player extends Creature
 		switch (getTribe())
 		{
 			case PC:
+			{
 				if ((race == Race.ASMODIANS) || (tribe == null) || tribe.isDarkGuard())
 				{
 					return true;
 				}
 				return DataManager.TRIBE_RELATIONS_DATA.isAggressiveRelation(tribe, TribeClass.PC);
+			}
 			case PC_DARK:
+			{
 				if ((race == Race.ELYOS) || (tribe == null) || tribe.isLightGuard())
 				{
 					return true;
 				}
 				return DataManager.TRIBE_RELATIONS_DATA.isAggressiveRelation(tribe, TribeClass.PC_DARK);
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return false;
 	}
@@ -1668,6 +1674,7 @@ public class Player extends Creature
 		switch (getRace())
 		{
 			case ELYOS:
+			{
 				// Elyos Gate
 				if (race == Race.PC_LIGHT_CASTLE_DOOR)
 				{
@@ -1689,7 +1696,9 @@ public class Player extends Creature
 					return false;
 				}
 				break;
+			}
 			case ASMODIANS:
+			{
 				// Asmo Gate
 				if (race == Race.PC_DARK_CASTLE_DOOR)
 				{
@@ -1711,8 +1720,11 @@ public class Player extends Creature
 					return false;
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return getRace() != race;
 	}
@@ -2208,7 +2220,9 @@ public class Player extends Creature
 			case 400050000: // 4.7
 			case 400060000: // 4.7
 			case 600090000: // 4.7
+			{
 				return true;
+			}
 		}
 		return false;
 	}
@@ -3009,25 +3023,39 @@ public class Player extends Creature
 		switch (getClientConnection().getAccount().getAccessLevel())
 		{
 			case 1:
+			{
 				accessTag = AdminConfig.ADMIN_TAG_1;
 				break;
+			}
 			case 2:
+			{
 				accessTag = AdminConfig.ADMIN_TAG_2;
 				break;
+			}
 			case 3:
+			{
 				accessTag = AdminConfig.ADMIN_TAG_3;
 				break;
+			}
 			case 4:
+			{
 				accessTag = AdminConfig.ADMIN_TAG_4;
 				break;
+			}
 			case 5:
+			{
 				accessTag = AdminConfig.ADMIN_TAG_5;
 				break;
+			}
 			case 6:
+			{
 				accessTag = AdminConfig.ADMIN_TAG_6;
 				break;
+			}
 			default:
+			{
 				accessTag = "%s";
+			}
 		}
 		return accessTag;
 	}

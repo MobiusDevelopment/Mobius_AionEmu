@@ -101,14 +101,20 @@ public class PriestElyosPreceptorAI2 extends AggressiveNpcAI2
 						switch (Rnd.get(1, 3))
 						{
 							case 1:
+							{
 								applySoulSickness((Npc) spawn(282366, p.getX(), p.getY(), p.getZ(), p.getHeading())); // Boreas.
 								break;
+							}
 							case 2:
+							{
 								applySoulSickness((Npc) spawn(282367, p.getX(), p.getY(), p.getZ(), p.getHeading())); // Jumentis.
 								break;
+							}
 							case 3:
+							{
 								applySoulSickness((Npc) spawn(282368, p.getX(), p.getY(), p.getZ(), p.getHeading())); // Charna.
 								break;
+							}
 						}
 					}
 				}, 5000);

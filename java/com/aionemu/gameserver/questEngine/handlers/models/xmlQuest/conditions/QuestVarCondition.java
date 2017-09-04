@@ -52,19 +52,33 @@ public class QuestVarCondition extends QuestCondition
 		switch (getOp())
 		{
 			case EQUAL:
+			{
 				return var == value;
+			}
 			case GREATER:
+			{
 				return var > value;
+			}
 			case GREATER_EQUAL:
+			{
 				return var >= value;
+			}
 			case LESSER:
+			{
 				return var < value;
+			}
 			case LESSER_EQUAL:
+			{
 				return var <= value;
+			}
 			case NOT_EQUAL:
+			{
 				return var != value;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 }

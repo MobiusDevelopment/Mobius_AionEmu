@@ -40,7 +40,6 @@ import com.aionemu.gameserver.services.player.PlayerReviveService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****
  * Author Rinzler (Encom) Draupnir Cave 4.9 http://aion.power.plaync.com/wiki/%EB%93%9C%EB%9D%BC%EC%9B%81%EB%8B%88%EB%A5%B4+%EB%8F%99%EA%B5%B4+-+%EB%A7%88%EC%8A%A4%ED%84%B0+%EB%B3%B4%EC%8A%A4
@@ -62,14 +61,7 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 		super.onInstanceCreate(instance);
 		// You must kill Afrane, Saraswati, Lakshmi, and Nimbarka to make Commander Bakarma appear.
 		sendMsgByRace(1400757, Race.PC_ALL, 10000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(237276, 495.48535f, 392.0867f, 616.5717f, (byte) 89); // Akhal's Phantasm.
-			}
-		}, 10000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(237276, 495.48535f, 392.0867f, 616.5717f, (byte) 89), 10000);
 		if (spawnRace == null)
 		{
 			spawnRace = player.getRace();
@@ -92,12 +84,17 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 702658: // Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053579, 1)); // [Event] Abbey Bundle.
 				break;
+			}
 			case 702659: // Noble Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); // [Event] Noble Abbey Bundle.
 				break;
+			}
 			case 213780: // Commander Bakarma.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -109,15 +106,21 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053265, 1)); // Bakarma's Fabled Weapon Box.
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053271, 1)); // Bakarma's Weapon Box.
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case 237275: // Akhal.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -128,6 +131,7 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -138,30 +142,38 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 4))
 		{
 			case 1:
+			{
 				spawn(213587, 567.438f, 700.875f, 538.701f, (byte) 7); // Hungry Ooze.
 				break;
+			}
 			case 2:
+			{
 				spawn(213588, 166.8f, 536.285f, 505.802f, (byte) 9); // Lucky Golden Saam.
 				break;
+			}
 			case 3:
+			{
 				spawn(213771, 497.006f, 434.713f, 616.584f, (byte) 71); // Protector Rakkan.
 				break;
+			}
 			case 4:
+			{
 				spawn(213773, 380.694f, 611.956f, 598.523f, (byte) 98); // Dragonpriest Tairgus.
 				break;
+			}
 		}
 	}
 	
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 213776: // Instructor Afrane.
 			case 213778: // Beautiful Lakshmi.
 			case 213779: // Commander Nimbarka.
 			case 213802: // Kind Saraswati.
+			{
 				adjutantsKilled++;
 				if (adjutantsKilled == 1)
 				{
@@ -186,29 +198,33 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 					deleteNpc(214026); // Deputy Brigade General Yavant.
 				}
 				break;
+			}
 			case 213780: // Commander Bakarma.
+			{
 				sendMsg("[Congratulation]: you finish <Draupnir Cave SP 4.9>");
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						spawn(702658, 787.32513f, 431.49173f, 319.62155f, (byte) 33); // Abbey Box.
 						break;
+					}
 					case 2:
+					{
 						spawn(702659, 787.32513f, 431.49173f, 319.62155f, (byte) 33); // Noble Abbey Box.
 						break;
-				}
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawnAkhal();
-						// A powerful Balaur has appeared in Beritra's Oracle Chamber.
-						sendMsgByRace(1403068, Race.PC_ALL, 0);
 					}
+				}
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
+				{
+					spawnAkhal();
+					// A powerful Balaur has appeared in Beritra's Oracle Chamber.
+					sendMsgByRace(1403068, Race.PC_ALL, 0);
 				}, 60000);
 				break;
+			}
 			case 236900: // Bakarma Charger.
+			{
 				bakarmaCharger++;
 				if (bakarmaCharger == 18)
 				{
@@ -217,6 +233,7 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 					sendMsgByRace(1403065, Race.PC_ALL, 0);
 				}
 				break;
+			}
 		}
 	}
 	
@@ -229,31 +246,23 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 702857: // Balaur Abyss Gate Enhancer.
+			{
 				despawnNpc(npc);
 				// Balaur are swarming to defend the Abyss Gate Enhancer.
 				sendMsgByRace(1403063, Race.PC_ALL, 0);
 				// The Balaur have been alerted to the presence of intruders.
 				sendMsgByRace(1403064, Race.PC_ALL, 4000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> startAbyssGateRaid1(), 5000);
+				abyssGateTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startAbyssGateRaid1();
-					}
-				}, 5000);
-				abyssGateTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						// Balaur are swarming to defend the Abyss Gate Enhancer.
-						sendMsgByRace(1403063, Race.PC_ALL, 0);
-						startAbyssGateRaid2();
-					}
+					// Balaur are swarming to defend the Abyss Gate Enhancer.
+					sendMsgByRace(1403063, Race.PC_ALL, 0);
+					startAbyssGateRaid2();
 				}, 60000);
 				break;
+			}
 			case 702858: // Balaur Abyss Gate Booster.
+			{
 				despawnNpc(npc);
 				// Find and overload the Abyss Gate Enhancer in the Central Control Room.
 				sendMsgByRace(1403058, Race.PC_ALL, 0);
@@ -264,6 +273,7 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 				spawn(702857, 511.36166f, 591.0183f, 510.60300f, (byte) 60); // Balaur Abyss Gate Enhancer.
 				spawn(702857, 466.00000f, 617.0000f, 511.22543f, (byte) 96); // Balaur Abyss Gate Enhancer.
 				break;
+			}
 		}
 	}
 	
@@ -293,21 +303,17 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 	
 	private void abyssGateRaid(Npc npc)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						npc.setTarget(player);
-						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
-						npc.setState(1);
-						npc.getMoveController().moveToTargetObject();
-						PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
-					}
+					npc.setTarget(player);
+					((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
+					npc.setState(1);
+					npc.getMoveController().moveToTargetObject();
+					PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
 				}
 			}
 		}, 1000);
@@ -331,36 +337,18 @@ public class DraupnirCaveInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

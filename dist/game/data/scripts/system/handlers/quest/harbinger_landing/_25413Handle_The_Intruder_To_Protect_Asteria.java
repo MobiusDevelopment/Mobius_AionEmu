@@ -121,6 +121,7 @@ public class _25413Handle_The_Intruder_To_Protect_Asteria extends QuestHandler
 				case 884024:
 				case 884025:
 				case 884026:
+				{
 					if (qs.getQuestVarById(1) < 2)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -131,6 +132,7 @@ public class _25413Handle_The_Intruder_To_Protect_Asteria extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

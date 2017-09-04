@@ -114,6 +114,7 @@ public class _16900Take_The_Arid_Ground extends QuestHandler
 			{
 				case 231549:
 				case 231551:
+				{
 					if (qs.getQuestVarById(0) < 1)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -121,6 +122,7 @@ public class _16900Take_The_Arid_Ground extends QuestHandler
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

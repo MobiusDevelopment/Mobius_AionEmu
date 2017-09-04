@@ -66,12 +66,16 @@ public class _11046BoxPickedUpInTheForest extends QuestHandler
 			switch (env.getDialog())
 			{
 				case ACCEPT_QUEST:
+				{
 					QuestService.startQuest(env);
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
 					return true;
+				}
 				case REFUSE_QUEST:
+				{
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
 					return true;
+				}
 			}
 		}
 		else if (targetId == 798954)

@@ -114,6 +114,7 @@ public class _16902Cultist_Capture extends QuestHandler
 			{
 				case 231564:
 				case 231566:
+				{
 					if (qs.getQuestVarById(0) < 1)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -121,6 +122,7 @@ public class _16902Cultist_Capture extends QuestHandler
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

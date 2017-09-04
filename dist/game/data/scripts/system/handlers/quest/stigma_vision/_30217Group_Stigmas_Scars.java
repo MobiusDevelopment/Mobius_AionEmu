@@ -63,10 +63,7 @@ public class _30217Group_Stigmas_Scars extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -74,7 +71,7 @@ public class _30217Group_Stigmas_Scars extends QuestHandler
 			return false;
 		}
 		final int var = qs.getQuestVarById(0);
-		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		if (qs.getStatus() == QuestStatus.START)
 		{
 			switch (targetId)
 			{
@@ -83,22 +80,29 @@ public class _30217Group_Stigmas_Scars extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
-							if ((var == 0) && (qs != null))
+						{
+							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
+						}
 						case STEP_TO_1:
+						{
 							QuestService.addNewSpawn(player.getWorldId(), player.getInstanceId(), 799506, player.getX(), player.getY(), player.getZ(), player.getHeading());
 							qs.setQuestVarById(0, 1);
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
+					break;
 				}
 				case 798909:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							final long itemCount1 = player.getInventory().getItemCountByItemId(182209618);
 							final long itemCount2 = player.getInventory().getItemCountByItemId(182209619);
 							if (var == 2)
@@ -111,26 +115,32 @@ public class _30217Group_Stigmas_Scars extends QuestHandler
 									updateQuestStatus(env);
 									return sendQuestDialog(env, 1693);
 								}
-								else
-								{
-									return sendQuestDialog(env, 10001);
-								}
+								return sendQuestDialog(env, 10001);
 							}
+						}
 					}
+					break;
+				}
 				case 799506:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_2:
+						{
 							env.getVisibleObject().getController().delete();
 							qs.setQuestVarById(0, 2);
 							updateQuestStatus(env);
 							return true;
+						}
 					}
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
@@ -141,10 +151,7 @@ public class _30217Group_Stigmas_Scars extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

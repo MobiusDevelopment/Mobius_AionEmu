@@ -48,6 +48,7 @@ public class Roiling_Sorcererk_SoulAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 833493: // Roiling Sorcererk's Soul.
+				{
 					if (player.getCommonData().getRace() == Race.ELYOS)
 					{
 						effectController.removeEffect(21829);
@@ -55,7 +56,9 @@ public class Roiling_Sorcererk_SoulAI2 extends NpcAI2
 						SkillEngine.getInstance().applyEffectDirectly(21831, player, player, 1200000 * 1); // Roiling Sorcererk's Soul.
 					}
 					break;
+				}
 				case 833496: // Roiling Sorcererk's Soul.
+				{
 					if (player.getCommonData().getRace() == Race.ASMODIANS)
 					{
 						effectController.removeEffect(21832);
@@ -63,6 +66,7 @@ public class Roiling_Sorcererk_SoulAI2 extends NpcAI2
 						SkillEngine.getInstance().applyEffectDirectly(21834, player, player, 1200000 * 1); // Roiling Sorcererk's Soul.
 					}
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

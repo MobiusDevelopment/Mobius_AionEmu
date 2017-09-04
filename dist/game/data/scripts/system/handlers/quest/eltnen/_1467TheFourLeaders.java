@@ -96,7 +96,6 @@ public class _1467TheFourLeaders extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
-						
 					}
 					case STEP_TO_3:
 					{
@@ -119,7 +118,9 @@ public class _1467TheFourLeaders extends QuestHandler
 						}
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

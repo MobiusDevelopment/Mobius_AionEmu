@@ -85,6 +85,7 @@ public class _14045Rumors_On_Wings extends QuestHandler
 			switch (targetId)
 			{
 				case 278506:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -105,7 +106,9 @@ public class _14045Rumors_On_Wings extends QuestHandler
 						}
 					}
 					break;
+				}
 				case 279023:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -123,7 +126,9 @@ public class _14045Rumors_On_Wings extends QuestHandler
 						}
 					}
 					break;
+				}
 				case 279006:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -155,6 +160,7 @@ public class _14045Rumors_On_Wings extends QuestHandler
 						}
 					}
 					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

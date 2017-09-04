@@ -78,21 +78,29 @@ public class AcceptReadWriteDispatcherImpl extends Dispatcher
 				switch (key.readyOps())
 				{
 					case SelectionKey.OP_ACCEPT:
+					{
 						accept(key);
 						break;
+					}
 					case SelectionKey.OP_READ:
+					{
 						read(key);
 						break;
+					}
 					case SelectionKey.OP_WRITE:
+					{
 						write(key);
 						break;
+					}
 					case SelectionKey.OP_READ | SelectionKey.OP_WRITE:
+					{
 						read(key);
 						if (key.isValid())
 						{
 							write(key);
 						}
 						break;
+					}
 				}
 			}
 		}

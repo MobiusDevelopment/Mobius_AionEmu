@@ -107,11 +107,14 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 			case 702581: // Intelligence Supply Box.
 			case 702582: // Intelligence Supply Box.
 			case 702583: // Intelligence Supply Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000314, 1)); // Devastation Bomb.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000315, 1)); // Freeze Bomb.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000316, 1)); // PvP Defense Scroll.
 				break;
+			}
 			case 234190: // Destroyer Kunax.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -120,6 +123,7 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -205,11 +209,15 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 		switch (player.getRace())
 		{
 			case ELYOS:
+			{
 				sendMovie(player, 901);
 				break;
+			}
 			case ASMODIANS:
+			{
 				sendMovie(player, 902);
 				break;
+			}
 		}
 		sendEnterPacket(player);
 	}
@@ -542,17 +550,22 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 			case 234187: // Sheban Intelligence Unit Hunter.
 			case 234188: // Sheban Intelligence Unit Mongrel.
 			case 234189: // Sheban Intelligence Unit Stitch.
+			{
 				point = 120;
 				despawnNpc(npc);
 				break;
+			}
 			case 234751: // Sheban Elite Stalwart.
 			case 234752: // Sheban Elite Sniper.
 			case 234753: // Sheban Elite Marauder.
 			case 234754: // Sheban Elite Medic.
+			{
 				point = 200;
 				despawnNpc(npc);
 				break;
+			}
 			case 234190: // Destroyer Kunax.
+			{
 				point = 6000;
 				RaceKilledKunax = mostPlayerDamage.getRace();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -568,6 +581,7 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 					}
 				}, 30000);
 				break;
+			}
 		}
 		updateScore(mostPlayerDamage, npc, point, false);
 	}
@@ -578,6 +592,7 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 802192: // Flame Vent [Elyos].
+			{
 				// The Asmodian Flame Vent has been activated.\nThe Asmodians are trapped!
 				sendMsgByRace(1402368, Race.PC_ALL, 0);
 				sp(702404, 234.43842f, 194.1041f, 79.23065f, (byte) 105, 0);
@@ -586,7 +601,9 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 				sp(702405, 234.42247f, 194.1363f, 79.23065f, (byte) 16, 0);
 				sp(702405, 234.53394f, 194.27177f, 79.23065f, (byte) 75, 0);
 				break;
+			}
 			case 802193: // Flame Vent [Asmodians]
+			{
 				// The Elyos Flame Vent has been activated.\nThe Elyos are trapped!
 				sendMsgByRace(1402369, Race.PC_ALL, 0);
 				sp(702404, 294.57443f, 324.22205f, 79.23065f, (byte) 45, 0);
@@ -595,6 +612,7 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 				sp(702405, 294.4634f, 323.84235f, 79.23065f, (byte) 15, 0);
 				sp(702405, 294.70172f, 324.23065f, 79.23065f, (byte) 45, 0);
 				break;
+			}
 		}
 	}
 	

@@ -125,6 +125,7 @@ public class _25510Scout_The_Nephilim_Graveyard extends QuestHandler
 				case 242623:
 				case 242643:
 				case 242663:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -135,6 +136,7 @@ public class _25510Scout_The_Nephilim_Graveyard extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

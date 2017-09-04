@@ -42,22 +42,28 @@ public class StatWeaponMasteryFunction extends StatRateFunction
 		switch (this.stat)
 		{
 			case MAIN_HAND_POWER:
+			{
 				if (player.getEquipment().getMainHandWeaponType() == weaponType)
 				{
 					super.apply(stat);
 				}
 				break;
+			}
 			case OFF_HAND_POWER:
+			{
 				if (player.getEquipment().getOffHandWeaponType() == weaponType)
 				{
 					super.apply(stat);
 				}
 				break;
+			}
 			default:
+			{
 				if (player.getEquipment().getMainHandWeaponType() == weaponType)
 				{
 					super.apply(stat);
 				}
+			}
 		}
 		
 	}

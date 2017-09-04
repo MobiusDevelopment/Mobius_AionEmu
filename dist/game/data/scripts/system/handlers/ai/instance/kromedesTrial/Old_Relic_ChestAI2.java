@@ -46,6 +46,7 @@ public class Old_Relic_ChestAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 730340: // Old Relic Chest.
+				{
 					if (player.getInventory().getItemCountByItemId(164000140) < 1)
 					{ // Explosive Bead.
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1012));
@@ -57,6 +58,7 @@ public class Old_Relic_ChestAI2 extends NpcAI2
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 27));
 					}
 					break;
+				}
 			}
 		}
 		return true;

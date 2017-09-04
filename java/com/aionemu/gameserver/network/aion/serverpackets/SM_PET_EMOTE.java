@@ -71,12 +71,15 @@ public class SM_PET_EMOTE extends AionServerPacket
 		switch (emote)
 		{
 			case MOVE_STOP:
+			{
 				writeF(x);
 				writeF(y);
 				writeF(z);
 				writeC(heading);
 				break;
+			}
 			case MOVETO:
+			{
 				writeF(x);
 				writeF(y);
 				writeF(z);
@@ -85,10 +88,13 @@ public class SM_PET_EMOTE extends AionServerPacket
 				writeF(y2);
 				writeF(z2);
 				break;
+			}
 			default:
+			{
 				writeC(emotionId);
 				writeC(param1); // happinessAdded?
 				break;
+			}
 		}
 	}
 }

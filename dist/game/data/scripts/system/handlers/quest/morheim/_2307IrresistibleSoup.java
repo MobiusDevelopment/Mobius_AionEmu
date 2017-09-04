@@ -124,12 +124,14 @@ public class _2307IrresistibleSoup extends QuestHandler
 			switch (targetId)
 			{
 				case 700247: // Aromatic Soup
+				{
 					if ((qs.getQuestVarById(0) == 0) && (env.getDialog() == QuestDialog.USE_OBJECT))
 					{
 						qs.setQuestVar(1);
 						updateQuestStatus(env);
 					}
 					break;
+				}
 			}
 		}
 		return false;

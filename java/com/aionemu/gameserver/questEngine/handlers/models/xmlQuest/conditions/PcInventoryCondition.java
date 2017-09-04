@@ -66,19 +66,33 @@ public class PcInventoryCondition extends QuestCondition
 		switch (getOp())
 		{
 			case EQUAL:
+			{
 				return itemCount == count;
+			}
 			case GREATER:
+			{
 				return itemCount > count;
+			}
 			case GREATER_EQUAL:
+			{
 				return itemCount >= count;
+			}
 			case LESSER:
+			{
 				return itemCount < count;
+			}
 			case LESSER_EQUAL:
+			{
 				return itemCount <= count;
+			}
 			case NOT_EQUAL:
+			{
 				return itemCount != count;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 }

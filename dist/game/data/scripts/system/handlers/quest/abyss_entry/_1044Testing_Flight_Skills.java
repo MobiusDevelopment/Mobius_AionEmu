@@ -158,7 +158,9 @@ public class _1044Testing_Flight_Skills extends QuestHandler
 							return defaultCloseDialog(env, 9, 9);
 						}
 						default:
+						{
 							break;
+						}
 					}
 				}
 			}

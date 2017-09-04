@@ -50,6 +50,7 @@ public class Eternity_RiftAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 806053: // Eternity Rift.
+				{
 					if (player.getCommonData().getRace() == Race.ASMODIANS)
 					{
 						TeleportService2.teleportTo(player, 220120000, 448.4795f, 499.93314f, 299.85013f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
@@ -59,6 +60,7 @@ public class Eternity_RiftAI2 extends NpcAI2
 						TeleportService2.teleportTo(player, 210110000, 448.4795f, 499.93314f, 299.85013f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
 					}
 					break;
+				}
 			}
 		}
 		return true;

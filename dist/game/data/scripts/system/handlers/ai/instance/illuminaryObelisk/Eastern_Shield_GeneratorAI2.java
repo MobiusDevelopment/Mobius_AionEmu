@@ -34,7 +34,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -72,23 +71,21 @@ public class Eastern_Shield_GeneratorAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 702010: // Eastern Shield Generator.
+				{
 					announceIDF5U3Defence01();
 					break;
+				}
 			}
 		}
 	}
 	
 	private void announceIDF5U3Defence01()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+		getPosition().getWorldMapInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
-				{
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDF5_U3_DEFENCE_01_ATTACKED);
-				}
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDF5_U3_DEFENCE_01_ATTACKED);
 			}
 		});
 	}
@@ -100,9 +97,11 @@ public class Eastern_Shield_GeneratorAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 702010: // Eastern Shield Generator.
+			{
 				switch (player.getWorldId())
 				{
 					case 301230000: // Illuminary Obelisk 4.5
+					{
 						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(164000289, 3))
 						{
 							startWESG1();
@@ -112,10 +111,12 @@ public class Eastern_Shield_GeneratorAI2 extends NpcAI2
 							objects.put(702014, SpawnEngine.spawnObject(CastShadowPSSM, instanceId));
 						}
 						break;
+					}
 				}
 				switch (player.getWorldId())
 				{
 					case 301370000: // [Infernal] Illuminary Obelisk 4.7
+					{
 						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(164000289, 3))
 						{
 							startIWESG1();
@@ -125,8 +126,10 @@ public class Eastern_Shield_GeneratorAI2 extends NpcAI2
 							objects.put(702014, SpawnEngine.spawnObject(CastShadowPSSM, instanceId));
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));
 		return true;
@@ -134,29 +137,21 @@ public class Eastern_Shield_GeneratorAI2 extends NpcAI2
 	
 	private void startWESG1()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(233723, 252.68709f, 333.483f, 325.59268f, (byte) 90), 252.4865f, 296.63016f, 321.30084f, false);
-				attackGenerator((Npc) spawn(233724, 255.74022f, 333.2762f, 325.49332f, (byte) 90), 255.46408f, 297.3457f, 321.3599f, false);
-				attackGenerator((Npc) spawn(233725, 258.72256f, 333.27713f, 325.58722f, (byte) 90), 258.93884f, 295.81204f, 321.29742f, false);
-			}
+			attackGenerator((Npc) spawn(233723, 252.68709f, 333.483f, 325.59268f, (byte) 90), 252.4865f, 296.63016f, 321.30084f, false);
+			attackGenerator((Npc) spawn(233724, 255.74022f, 333.2762f, 325.49332f, (byte) 90), 255.46408f, 297.3457f, 321.3599f, false);
+			attackGenerator((Npc) spawn(233725, 258.72256f, 333.27713f, 325.58722f, (byte) 90), 258.93884f, 295.81204f, 321.29742f, false);
 		}, 1000);
 	}
 	
 	private void startIWESG1()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackGenerator((Npc) spawn(234723, 252.68709f, 333.483f, 325.59268f, (byte) 90), 252.4865f, 296.63016f, 321.30084f, false);
-				attackGenerator((Npc) spawn(234724, 255.74022f, 333.2762f, 325.49332f, (byte) 90), 255.46408f, 297.3457f, 321.3599f, false);
-				attackGenerator((Npc) spawn(234725, 258.72256f, 333.27713f, 325.58722f, (byte) 90), 258.93884f, 295.81204f, 321.29742f, false);
-			}
+			attackGenerator((Npc) spawn(234723, 252.68709f, 333.483f, 325.59268f, (byte) 90), 252.4865f, 296.63016f, 321.30084f, false);
+			attackGenerator((Npc) spawn(234724, 255.74022f, 333.2762f, 325.49332f, (byte) 90), 255.46408f, 297.3457f, 321.3599f, false);
+			attackGenerator((Npc) spawn(234725, 258.72256f, 333.27713f, 325.58722f, (byte) 90), 258.93884f, 295.81204f, 321.29742f, false);
 		}, 1000);
 	}
 	

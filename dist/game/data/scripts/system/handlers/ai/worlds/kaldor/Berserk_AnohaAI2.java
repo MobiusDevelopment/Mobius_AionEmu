@@ -110,6 +110,7 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 					case 70:
 					case 44:
 					case 23:
+					{
 						think = false;
 						EmoteManager.emoteStopAttacking(getOwner());
 						SkillEngine.getInstance().getSkill(getOwner(), 21765, 60, getOwner()).useNoAnimationSkill();
@@ -134,6 +135,7 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 							}
 						}, 3500);
 						break;
+					}
 					case 84:
 					case 79:
 					case 75:
@@ -151,8 +153,10 @@ public class Berserk_AnohaAI2 extends AggressiveNpcAI2
 					case 16:
 					case 11:
 					case 6:
+					{
 						startPhaseTask();
 						break;
+					}
 				}
 				percents.remove(percent);
 				break;

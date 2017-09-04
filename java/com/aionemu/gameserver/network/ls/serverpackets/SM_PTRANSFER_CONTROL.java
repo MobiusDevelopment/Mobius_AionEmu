@@ -105,16 +105,22 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket
 		switch (type)
 		{
 			case OK:
+			{
 				writeD(taskId);
 				break;
+			}
 			case ERROR:
+			{
 				writeD(taskId);
 				writeS(result);
 				break;
+			}
 			case TASK_STOP:
+			{
 				writeD(taskId);
 				writeS(result);
 				break;
+			}
 			case CHARACTER_INFORMATION:
 			{
 				writeD(taskId);

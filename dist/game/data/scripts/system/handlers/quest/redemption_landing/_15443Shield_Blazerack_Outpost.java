@@ -119,6 +119,7 @@ public class _15443Shield_Blazerack_Outpost extends QuestHandler
 				case 883037:
 				case 883038:
 				case 883039:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _15443Shield_Blazerack_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

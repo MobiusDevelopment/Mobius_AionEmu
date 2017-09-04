@@ -46,9 +46,13 @@ public class SelfFlyingCondition extends Condition
 		switch (restriction)
 		{
 			case FLY:
+			{
 				return env.getEffector().isFlying();
+			}
 			case GROUND:
+			{
 				return !env.getEffector().isFlying();
+			}
 		}
 		
 		return true;
@@ -65,9 +69,13 @@ public class SelfFlyingCondition extends Condition
 		switch (restriction)
 		{
 			case FLY:
+			{
 				return effect.getEffector().isFlying();
+			}
 			case GROUND:
+			{
 				return !effect.getEffector().isFlying();
+			}
 		}
 		
 		return true;

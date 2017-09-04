@@ -87,6 +87,7 @@ public class CM_PET extends AionClientPacket
 		switch (action)
 		{
 			case ADOPT:
+			{
 				eggObjId = readD();
 				petId = readD();
 				unk2 = readC();
@@ -96,12 +97,16 @@ public class CM_PET extends AionClientPacket
 				unk6 = readD();
 				petName = readS();
 				break;
+			}
 			case SURRENDER:
 			case SPAWN:
 			case DISMISS:
+			{
 				petId = readD();
 				break;
+			}
 			case FOOD:
+			{
 				actionType = readD();
 				if (actionType == 3)
 				{
@@ -149,16 +154,23 @@ public class CM_PET extends AionClientPacket
 					count = readD();
 				}
 				break;
+			}
 			case RENAME:
+			{
 				petId = readD();
 				petName = readS();
 				break;
+			}
 			case MOOD:
+			{
 				subType = readD();
 				emotionId = readD();
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 	
@@ -174,6 +186,7 @@ public class CM_PET extends AionClientPacket
 		switch (action)
 		{
 			case ADOPT:
+			{
 				if (NameRestrictionService.isForbiddenWord(petName))
 				{
 					PacketSendUtility.sendMessage(player, "You are trying to use a forbidden name. Choose another one!");
@@ -183,18 +196,26 @@ public class CM_PET extends AionClientPacket
 					PetAdoptionService.adoptPet(player, eggObjId, petId, petName, decorationId);
 				}
 				break;
+			}
 			case SURRENDER:
+			{
 				PetAdoptionService.surrenderPet(player, petId);
 				// Items stored in the surrendered pet's bag have been returned to your cube.
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_TOYPET_RETURN_MASTER_ITEM);
 				break;
+			}
 			case SPAWN:
+			{
 				PetSpawnService.summonPet(player, petId, true);
 				break;
+			}
 			case DISMISS:
+			{
 				PetSpawnService.dismissPet(player, true);
 				break;
+			}
 			case FOOD:
+			{
 				if (actionType == 2)
 				{
 					if (dopingAction == 2)
@@ -247,7 +268,9 @@ public class CM_PET extends AionClientPacket
 					PetService.getInstance().removeObject(objectId, count, actionId, player);
 				}
 				break;
+			}
 			case RENAME:
+			{
 				if (NameConfig.PET_NAME_CHANGE_ENABLE)
 				{
 					if (NameRestrictionService.isForbiddenWord(petName))
@@ -260,13 +283,18 @@ public class CM_PET extends AionClientPacket
 					}
 				}
 				break;
+			}
 			case MOOD:
+			{
 				if ((pet != null) && (((subType == 0) && (pet.getCommonData().getMoodRemainingTime() == 0)) || ((subType == 3) && (pet.getCommonData().getGiftRemainingTime() == 0)) || (emotionId != 0)))
 				{
 					PetMoodService.checkMood(pet, subType, emotionId);
 				}
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 }

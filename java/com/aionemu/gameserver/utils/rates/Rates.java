@@ -78,13 +78,21 @@ public abstract class Rates
 		{
 			case 0:
 			case 1:
+			{
 				return new RegularRates();
+			}
 			case 2:
+			{
 				return new PremiumRates();
+			}
 			case 3:
+			{
 				return new VipRates();
+			}
 			default:
+			{
 				return new VipRates();
+			}
 		}
 	}
 }

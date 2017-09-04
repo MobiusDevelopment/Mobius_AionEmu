@@ -63,7 +63,9 @@ public class _21255Enhancing_The_Bow extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

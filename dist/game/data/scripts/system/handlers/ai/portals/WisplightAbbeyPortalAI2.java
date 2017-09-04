@@ -56,8 +56,10 @@ public class WisplightAbbeyPortalAI2 extends NpcAI2
 			{
 				// Sanctum To Wisplight Abbey.
 				case 209676:
+				{
 					TeleportService2.teleportTo(player, 130090000, 247.05283f, 223.70496f, 129.38268f, (byte) 31, TeleportAnimation.BEAM_ANIMATION);
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

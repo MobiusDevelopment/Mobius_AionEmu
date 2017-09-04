@@ -59,8 +59,10 @@ public class Empowered_MastariusAI2 extends AggressiveNpcAI2
 			switch (getNpcId())
 			{
 				case 235065: // Empowered Mastarius.
+				{
 					announceAgentUnderAttack();
 					break;
+				}
 			}
 		}
 		checkPercentage(getLifeStats().getHpPercentage());

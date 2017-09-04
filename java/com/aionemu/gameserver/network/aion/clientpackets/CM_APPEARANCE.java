@@ -54,8 +54,10 @@ public class CM_APPEARANCE extends AionClientPacket
 		{
 			case 0:
 			case 1:
+			{
 				name = readS();
 				break;
+			}
 		}
 		
 	}
@@ -68,18 +70,23 @@ public class CM_APPEARANCE extends AionClientPacket
 		switch (type)
 		{
 			case 0: // Change Char Name,
+			{
 				if (RenameService.renamePlayer(player, player.getName(), name, itemObjId))
 				{
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400157, name));
 				}
 				break;
+			}
 			case 1: // Change Legion Name
+			{
 				if (RenameService.renameLegion(player, name, itemObjId))
 				{
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400158, name));
 				}
 				break;
+			}
 			case 2: // cosmetic items
+			{
 				final Item item = player.getInventory().getItemByObjId(itemObjId);
 				if (item != null)
 				{
@@ -97,6 +104,7 @@ public class CM_APPEARANCE extends AionClientPacket
 					}
 				}
 				break;
+			}
 		}
 	}
 }

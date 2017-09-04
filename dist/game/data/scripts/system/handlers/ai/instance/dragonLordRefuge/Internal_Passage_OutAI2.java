@@ -37,49 +37,73 @@ public class Internal_Passage_OutAI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 730633: // Internal Passage Out 1
+			{
 				switch (player.getWorldId())
 				{
 					case 300520000:
+					{
 						TeleportService2.teleportTo(player, 300520000, 530.0911f, 480.24875f, 417.40436f, (byte) 103, TeleportAnimation.BEAM_ANIMATION);
 						break;
+					}
 					case 300630000:
+					{
 						TeleportService2.teleportTo(player, 300630000, 530.0911f, 480.24875f, 417.40436f, (byte) 103, TeleportAnimation.BEAM_ANIMATION);
 						break;
+					}
 				}
 				break;
+			}
 			case 730634: // Internal Passage Out 2
+			{
 				switch (player.getWorldId())
 				{
 					case 300520000:
+					{
 						TeleportService2.teleportTo(player, 300520000, 477.32306f, 549.42285f, 417.40436f, (byte) 43, TeleportAnimation.BEAM_ANIMATION);
 						break;
+					}
 					case 300630000:
+					{
 						TeleportService2.teleportTo(player, 300630000, 477.32306f, 549.42285f, 417.40436f, (byte) 43, TeleportAnimation.BEAM_ANIMATION);
 						break;
+					}
 				}
 				break;
+			}
 			case 730635: // Internal Passage Out 3
+			{
 				switch (player.getWorldId())
 				{
 					case 300520000:
+					{
 						TeleportService2.teleportTo(player, 300520000, 530.8401f, 549.626f, 417.40436f, (byte) 17, TeleportAnimation.BEAM_ANIMATION);
 						break;
+					}
 					case 300630000:
+					{
 						TeleportService2.teleportTo(player, 300630000, 530.8401f, 549.626f, 417.40436f, (byte) 17, TeleportAnimation.BEAM_ANIMATION);
 						break;
+					}
 				}
 				break;
+			}
 			case 730636: // Internal Passage Out 4
+			{
 				switch (player.getWorldId())
 				{
 					case 300520000:
+					{
 						TeleportService2.teleportTo(player, 300520000, 504.3792f, 520.4297f, 417.40436f, (byte) 61, TeleportAnimation.BEAM_ANIMATION);
 						break;
+					}
 					case 300630000:
+					{
 						TeleportService2.teleportTo(player, 300630000, 504.3792f, 520.4297f, 417.40436f, (byte) 61, TeleportAnimation.BEAM_ANIMATION);
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 }

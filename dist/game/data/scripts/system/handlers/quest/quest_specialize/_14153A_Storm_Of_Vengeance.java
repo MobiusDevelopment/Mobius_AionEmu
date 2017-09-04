@@ -110,11 +110,14 @@ public class _14153A_Storm_Of_Vengeance extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 0)
 					{
 						return sendQuestDialog(env, 1011);
 					}
+				}
 				case STEP_TO_1:
+				{
 					if (var == 0)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -123,8 +126,11 @@ public class _14153A_Storm_Of_Vengeance extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		else if (targetId == 204533)
@@ -132,6 +138,7 @@ public class _14153A_Storm_Of_Vengeance extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1352);
@@ -140,7 +147,9 @@ public class _14153A_Storm_Of_Vengeance extends QuestHandler
 					{
 						return sendQuestDialog(env, 2034);
 					}
+				}
 				case STEP_TO_2:
+				{
 					if (var == 1)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -148,7 +157,9 @@ public class _14153A_Storm_Of_Vengeance extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
+				}
 				case STEP_TO_4:
+				{
 					if (var == 3)
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -157,8 +168,11 @@ public class _14153A_Storm_Of_Vengeance extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		else if (targetId == 204535)
@@ -166,11 +180,14 @@ public class _14153A_Storm_Of_Vengeance extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 4)
 					{
 						return sendQuestDialog(env, 2375);
 					}
+				}
 				case STEP_TO_5:
+				{
 					if (var == 4)
 					{
 						if (!giveQuestItem(env, 182215459, 1))
@@ -183,8 +200,11 @@ public class _14153A_Storm_Of_Vengeance extends QuestHandler
 						return true;
 					}
 					return false;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		else if ((targetId == 700282) && (var == 2))

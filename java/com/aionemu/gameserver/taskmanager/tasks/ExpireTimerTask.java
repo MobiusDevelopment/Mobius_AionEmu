@@ -97,8 +97,10 @@ public class ExpireTimerTask extends AbstractPeriodicTaskManager
 					case 600:
 					case 300:
 					case 60:
+					{
 						expirable.expireMessage(player, min / 60);
 						break;
+					}
 				}
 			}
 		}

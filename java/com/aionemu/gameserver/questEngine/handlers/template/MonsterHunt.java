@@ -158,7 +158,9 @@ public class MonsterHunt extends QuestHandler
 							return sendQuestDialog(env, 5);
 						}
 						default:
+						{
 							break;
+						}
 					}
 				}
 				else
@@ -176,7 +178,9 @@ public class MonsterHunt extends QuestHandler
 							return sendQuestDialog(env, 5);
 						}
 						default:
+						{
 							break;
+						}
 					}
 				}
 			}
@@ -191,11 +195,17 @@ public class MonsterHunt extends QuestHandler
 					{
 						case START_DIALOG:
 						case USE_OBJECT:
+						{
 							return sendQuestDialog(env, 10002);
+						}
 						case SELECT_REWARD:
+						{
 							return sendQuestDialog(env, 5);
+						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 				else

@@ -70,6 +70,7 @@ public class PlayerAllianceLeavedEvent extends PlayerLeavedEvent<PlayerAllianceM
 			case BAN:
 			case LEAVE:
 			case LEAVE_TIMEOUT:
+			{
 				if (team.onlineMembers() <= 1)
 				{
 					PlayerAllianceService.disband(team);
@@ -85,11 +86,13 @@ public class PlayerAllianceLeavedEvent extends PlayerLeavedEvent<PlayerAllianceM
 				{
 					PacketSendUtility.sendPacket(leavedPlayer, SM_SYSTEM_MESSAGE.STR_FORCE_BAN_ME(banPersonName));
 				}
-				
 				break;
+			}
 			case DISBAND:
+			{
 				PacketSendUtility.sendPacket(leavedPlayer, SM_SYSTEM_MESSAGE.STR_PARTY_ALLIANCE_DISPERSED);
 				break;
+			}
 		}
 		
 		if (leavedPlayer.isInInstance())
@@ -123,17 +126,25 @@ public class PlayerAllianceLeavedEvent extends PlayerLeavedEvent<PlayerAllianceM
 		switch (reason)
 		{
 			case LEAVE_TIMEOUT:
+			{
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_PARTY_ALLIANCE_HE_LEAVED_PARTY(leavedPlayer.getName()));
 				break;
+			}
 			case LEAVE:
+			{
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_PARTY_ALLIANCE_HE_LEAVED_PARTY(leavedPlayer.getName()));
 				break;
+			}
 			case DISBAND:
+			{
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_PARTY_ALLIANCE_DISPERSED);
 				break;
+			}
 			case BAN:
+			{
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FORCE_BAN_HIM(banPersonName, leavedPlayer.getName()));
 				break;
+			}
 		}
 		
 		return true;

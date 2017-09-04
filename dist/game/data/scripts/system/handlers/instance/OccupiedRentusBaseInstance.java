@@ -49,7 +49,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****/
 /**
@@ -73,12 +72,17 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 702658: // Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053579, 1)); // [Event] Abbey Bundle.
 				break;
+			}
 			case 702659: // Noble Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); // [Event] Noble Abbey Bundle.
 				break;
+			}
 			case 236300: // Brigade General Vasharti.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -93,22 +97,32 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 4))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053702, 1)); // Vasharti's Equipment Box.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053703, 1)); // Vasharti Legionnaire's Weapon Box.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053704, 1)); // Vasharti Brigade General's Weapon Box.
 								break;
+							}
 							case 4:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188053705, 1)); // Vasharti Brigade General's Armor Box.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 218572: // Ariana's Jewelry Box.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -116,46 +130,72 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 12))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 170195109, 1)); // Resistance Army's Guestbloom.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 125002896, 1)); // Rebel Sorcerer's Headband.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 125002897, 1)); // Rebel Spiritmaster's Headband.
 								break;
+							}
 							case 4:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 125002898, 1)); // Rebel Assassin's Hat.
 								break;
+							}
 							case 5:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 125002899, 1)); // Rebel Ranger's Hat.
 								break;
+							}
 							case 6:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 125002900, 1)); // Rebel Cleric's Chain Hood.
 								break;
+							}
 							case 7:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 125002901, 1)); // Rebel Chanter's Chain Hood.
 								break;
+							}
 							case 8:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 125002902, 1)); // Rebel Gladiator's Helm.
 								break;
+							}
 							case 9:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 125002903, 1)); // Rebel Templar's Helm.
 								break;
+							}
 							case 10:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 125003320, 1)); // Rebel Gunslinger's Hat.
 								break;
+							}
 							case 11:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 125003321, 1)); // Rebel Songweaver's Headband.
 								break;
+							}
 							case 12:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 125003902, 1)); // Rebel Aethertech's Magic Helm.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			case 833048: // Rentus Quality Supplies Storage Box.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -164,6 +204,7 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -197,14 +238,19 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 236300: // Brigade General Vasharti.
+			{
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						spawn(702658, 184.69116f, 414.00864f, 260.75488f, (byte) 59); // Abbey Box.
 						break;
+					}
 					case 2:
+					{
 						spawn(702659, 184.69116f, 414.00864f, 260.75488f, (byte) 59); // Noble Abbey Box.
 						break;
+					}
 				}
 				boostMorale();
 				sendMovie(player, 481);
@@ -212,8 +258,10 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 				sendMsg("[Congratulation]: you finish <Occupied Rentus Base 4.8>");
 				spawn(730520, 193.6f, 436.5f, 262f, (byte) 86); // Occupied Rentus Base Exit.
 				break;
+			}
 			case 236299: // Umatha The Crazed.
 			case 236301: // Ambusher Kiriana.
+			{
 				final Npc yunNmdPortalFi65Ae = instance.getNpc(236299);
 				final Npc yunNmdPortalClew65Ae = instance.getNpc(236301);
 				if (isDead(yunNmdPortalFi65Ae) && isDead(yunNmdPortalClew65Ae))
@@ -222,45 +270,43 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 					doors.get(145).setOpen(true);
 				}
 				break;
+			}
 			case 236302: // Archmagus Upadi.
+			{
 				doors.get(70).setOpen(true);
 				break;
+			}
 			case 282394: // Oil Cask.
+			{
 				despawnNpc(npc);
 				spawn(282395, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading()); // Spilled Oil.
 				break;
+			}
 			case 283000: // Kiss Of Fire.
 			case 283001: // Kiss Of Ice.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 236267: // Exhausted Vasharti Pagati Combatant.
+			{
 				final float x = npc.getX();
 				final float y = npc.getY();
 				final float z = npc.getZ();
 				final byte h = npc.getHeading();
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
+					if (!isInstanceDestroyed)
 					{
-						if (!isInstanceDestroyed)
+						if ((x > 0) && (y > 0) && (z > 0))
 						{
-							if ((x > 0) && (y > 0) && (z > 0))
-							{
-								spawn(236268, x, y, z, h); // Exhausted Vasharti Combatant.
-							}
+							spawn(236268, x, y, z, h); // Exhausted Vasharti Combatant.
 						}
 					}
 				}, 2000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						despawnNpc(npc);
-					}
-				}, 1000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> despawnNpc(npc), 1000);
 				break;
+			}
 		}
 	}
 	
@@ -312,33 +358,43 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 			case 702680: // Rentus Siege Weapon.
 			case 702681: // Rentus Siege Weapon.
 			case 702682: // Rentus Siege Weapon.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21806, 60, player).useNoAnimationSkill(); // Mount Anti-Aircraft Gun.
 				break;
+			}
 			case 702683: // Rentus Siege Weapon.
 			case 702684: // Rentus Siege Weapon.
 			case 702685: // Rentus Siege Weapon.
 			case 702686: // Rentus Siege Weapon.
 			case 702687: // Rentus Siege Weapon.
 			case 702688: // Rentus Siege Weapon.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21805, 60, player).useNoAnimationSkill(); // Mount Anti-Aircraft Gun.
 				break;
+			}
 			case 701151: // Reian Combat Ration.
 			case 701152: // Reian Emergency Rations.
+			{
 				despawnNpc(npc);
 				player.getLifeStats().increaseHp(SM_ATTACK_STATUS.TYPE.HP, 5000);
 				player.getLifeStats().increaseHp(SM_ATTACK_STATUS.TYPE.MP, 5000);
 				break;
+			}
 			case 701097: // Collapsed Stone Wall.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 701100: // Old Incense Burner.
+			{
 				if (instance.getNpc(799543) == null)
 				{
 					spawn(799543, 506.303f, 613.902f, 158.179f, (byte) 0); // Paudav.
 				}
 				break;
+			}
 		}
 	}
 	
@@ -381,36 +437,18 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void despawnNpc(Npc npc)

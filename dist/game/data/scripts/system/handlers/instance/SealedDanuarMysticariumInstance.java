@@ -45,7 +45,6 @@ import com.aionemu.gameserver.services.player.PlayerReviveService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -94,19 +93,27 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 		{
 			case 702700: // Ancient Box.
 			case 702702: // Ancient Box.
+			{
 				switch (Rnd.get(1, 3))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000224, 1)); // Solid Prison Key.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000225, 1)); // Shabby Prison Key.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000226, 1)); // Hidden Prison Key.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -142,15 +149,19 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 			case 219984: // Sheban Gunner.
 			case 219985: // MuMu Test Subject.
 			case 219986: // Sprigg Test Subject.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 219987: // Doomtread Kurores.
+			{
 				despawnNpc(npc);
 				deleteNpc(219979); // Ancient Danuar Relic.
 				raidTask.cancel(true);
 				sendMsg("[Congratulation]: you finish <Sealed Danuar Mysticarium 4.8 KR version>");
 				spawn(701572, 556.5924f, 416.37885f, 96.81002f, (byte) 43); // Sealed Danuar Mysticarium Exit.
 				break;
+			}
 		}
 	}
 	
@@ -162,41 +173,37 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 		sendMsgByRace(1402805, Race.PC_ALL, 300000);
 		// All monsters and key boxes in the library will disappear in 1 minute.
 		sendMessage(1402802, 4 * 60 * 1000);
-		keyBoxTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+		keyBoxTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				spawn(702715, 172.09422f, 206.95068f, 188.01584f, (byte) 118); // Experimental Prison Teleporter.
-				AncientBox1.get(0).getController().onDelete();
-				AncientBox1.get(1).getController().onDelete();
-				AncientBox1.get(2).getController().onDelete();
-				AncientBox1.get(3).getController().onDelete();
-				AncientBox1.get(4).getController().onDelete();
-				AncientBox1.get(5).getController().onDelete();
-				AncientBox1.get(6).getController().onDelete();
-				AncientBox1.get(7).getController().onDelete();
-				AncientBox1.get(8).getController().onDelete();
-				AncientBox1.get(9).getController().onDelete();
-				AncientBox1.get(10).getController().onDelete();
-				AncientBox1.get(11).getController().onDelete();
-				AncientBox1.get(12).getController().onDelete();
-				AncientBox1.get(13).getController().onDelete();
-				AncientBox1.get(14).getController().onDelete();
-				AncientBox1.get(15).getController().onDelete();
-				AncientBox1.get(16).getController().onDelete();
-				AncientBox1.get(17).getController().onDelete();
-				AncientBox1.get(18).getController().onDelete();
-				AncientBox1.get(19).getController().onDelete();
-				// Ancient Box 2
-				AncientBox2.get(0).getController().onDelete();
-				AncientBox2.get(1).getController().onDelete();
-				AncientBox2.get(2).getController().onDelete();
-				AncientBox2.get(3).getController().onDelete();
-				AncientBox2.get(4).getController().onDelete();
-				AncientBox2.get(5).getController().onDelete();
-				AncientBox2.get(6).getController().onDelete();
-			}
+			spawn(702715, 172.09422f, 206.95068f, 188.01584f, (byte) 118); // Experimental Prison Teleporter.
+			AncientBox1.get(0).getController().onDelete();
+			AncientBox1.get(1).getController().onDelete();
+			AncientBox1.get(2).getController().onDelete();
+			AncientBox1.get(3).getController().onDelete();
+			AncientBox1.get(4).getController().onDelete();
+			AncientBox1.get(5).getController().onDelete();
+			AncientBox1.get(6).getController().onDelete();
+			AncientBox1.get(7).getController().onDelete();
+			AncientBox1.get(8).getController().onDelete();
+			AncientBox1.get(9).getController().onDelete();
+			AncientBox1.get(10).getController().onDelete();
+			AncientBox1.get(11).getController().onDelete();
+			AncientBox1.get(12).getController().onDelete();
+			AncientBox1.get(13).getController().onDelete();
+			AncientBox1.get(14).getController().onDelete();
+			AncientBox1.get(15).getController().onDelete();
+			AncientBox1.get(16).getController().onDelete();
+			AncientBox1.get(17).getController().onDelete();
+			AncientBox1.get(18).getController().onDelete();
+			AncientBox1.get(19).getController().onDelete();
+			// Ancient Box 2
+			AncientBox2.get(0).getController().onDelete();
+			AncientBox2.get(1).getController().onDelete();
+			AncientBox2.get(2).getController().onDelete();
+			AncientBox2.get(3).getController().onDelete();
+			AncientBox2.get(4).getController().onDelete();
+			AncientBox2.get(5).getController().onDelete();
+			AncientBox2.get(6).getController().onDelete();
 		}, 300000); // 5 Minute.
 	}
 	
@@ -214,21 +221,17 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 		sendMessage(1402812, 3 * 60 * 1000);
 		// All monsters will disappear in 1 minute.
 		sendMessage(1402813, 4 * 60 * 1000);
-		prisonTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+		prisonTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				TestSubject48012C.get(0).getController().onDelete();
-				TestSubject48013C.get(0).getController().onDelete();
-				TestSubject48015C.get(0).getController().onDelete();
-				TestSubject48023B.get(0).getController().onDelete();
-				TestSubject48025B.get(0).getController().onDelete();
-				TestSubject48027B.get(0).getController().onDelete();
-				TestSubject48039A.get(0).getController().onDelete();
-				TestSubject48123A.get(0).getController().onDelete();
-				spawn(702717, 331.80203f, 495.63107f, 147.172f, (byte) 44); // Sealed Danuar Mysticarium Exit.
-			}
+			TestSubject48012C.get(0).getController().onDelete();
+			TestSubject48013C.get(0).getController().onDelete();
+			TestSubject48015C.get(0).getController().onDelete();
+			TestSubject48023B.get(0).getController().onDelete();
+			TestSubject48025B.get(0).getController().onDelete();
+			TestSubject48027B.get(0).getController().onDelete();
+			TestSubject48039A.get(0).getController().onDelete();
+			TestSubject48123A.get(0).getController().onDelete();
+			spawn(702717, 331.80203f, 495.63107f, 147.172f, (byte) 44); // Sealed Danuar Mysticarium Exit.
 		}, 300000); // 5 Minute.
 	}
 	
@@ -238,6 +241,7 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 219979: // Ancient Danuar Relic.
+			{
 				/**
 				 * Start Mini Game 3
 				 */
@@ -245,220 +249,97 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402821, Race.PC_ALL, 0);
 				// Monsters will attack in a moment.
 				sendMsgByRace(1402830, Race.PC_ALL, 3000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> doors.get(4).setOpen(true), 5000);
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> startMysticariumRaid1(), 10000);
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> startMysticariumRaid2(), 30000);
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> startMysticariumRaid3(), 50000);
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> startMysticariumRaid4(), 70000);
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						doors.get(4).setOpen(true);
-					}
-				}, 5000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid1();
-					}
-				}, 10000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid2();
-					}
-				}, 30000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid3();
-					}
-				}, 50000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid4();
-					}
-				}, 70000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid5();
-						// An attack by Beritra's troops is imminent.
-						sendMsgByRace(1402822, Race.PC_ALL, 0);
-						// Additional Beritra troops have joined the attack.
-						sendMsgByRace(1402824, Race.PC_ALL, 3000);
-					}
+					startMysticariumRaid5();
+					// An attack by Beritra's troops is imminent.
+					sendMsgByRace(1402822, Race.PC_ALL, 0);
+					// Additional Beritra troops have joined the attack.
+					sendMsgByRace(1402824, Race.PC_ALL, 3000);
 				}, 90000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> startMysticariumRaid6(), 110000);
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> startMysticariumRaid7(), 130000);
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid6();
-					}
-				}, 110000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid7();
-					}
-				}, 130000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid8();
-						// An attack by Beritra's troops is imminent.
-						sendMsgByRace(1402822, Race.PC_ALL, 0);
-						// Additional Beritra troops have joined the attack.
-						sendMsgByRace(1402824, Race.PC_ALL, 3000);
-					}
+					startMysticariumRaid8();
+					// An attack by Beritra's troops is imminent.
+					sendMsgByRace(1402822, Race.PC_ALL, 0);
+					// Additional Beritra troops have joined the attack.
+					sendMsgByRace(1402824, Race.PC_ALL, 3000);
 				}, 150000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> startMysticariumRaid9(), 170000);
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> startMysticariumRaid10(), 190000);
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid9();
-					}
-				}, 170000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid10();
-					}
-				}, 190000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid11();
-						// An attack by Beritra's troops is imminent.
-						sendMsgByRace(1402822, Race.PC_ALL, 0);
-						// Additional Beritra troops have joined the attack.
-						sendMsgByRace(1402824, Race.PC_ALL, 3000);
-					}
+					startMysticariumRaid11();
+					// An attack by Beritra's troops is imminent.
+					sendMsgByRace(1402822, Race.PC_ALL, 0);
+					// Additional Beritra troops have joined the attack.
+					sendMsgByRace(1402824, Race.PC_ALL, 3000);
 				}, 210000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid12();
-						// An attack by Beritra's troops is imminent.
-						sendMsgByRace(1402822, Race.PC_ALL, 0);
-						// Additional Beritra troops have joined the attack.
-						sendMsgByRace(1402824, Race.PC_ALL, 3000);
-					}
+					startMysticariumRaid12();
+					// An attack by Beritra's troops is imminent.
+					sendMsgByRace(1402822, Race.PC_ALL, 0);
+					// Additional Beritra troops have joined the attack.
+					sendMsgByRace(1402824, Race.PC_ALL, 3000);
 				}, 230000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> startMysticariumRaid13(), 250000);
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid13();
-					}
-				}, 250000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid14();
-						// An attack by Beritra's troops is imminent.
-						sendMsgByRace(1402822, Race.PC_ALL, 0);
-						// Additional Beritra troops have joined the attack.
-						sendMsgByRace(1402824, Race.PC_ALL, 3000);
-					}
+					startMysticariumRaid14();
+					// An attack by Beritra's troops is imminent.
+					sendMsgByRace(1402822, Race.PC_ALL, 0);
+					// Additional Beritra troops have joined the attack.
+					sendMsgByRace(1402824, Race.PC_ALL, 3000);
 				}, 270000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> startMysticariumRaid15(), 290000);
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid15();
-					}
-				}, 290000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid16();
-						// An attack by Beritra's troops is imminent.
-						sendMsgByRace(1402822, Race.PC_ALL, 0);
-						// Additional Beritra troops have joined the attack.
-						sendMsgByRace(1402824, Race.PC_ALL, 3000);
-					}
+					startMysticariumRaid16();
+					// An attack by Beritra's troops is imminent.
+					sendMsgByRace(1402822, Race.PC_ALL, 0);
+					// Additional Beritra troops have joined the attack.
+					sendMsgByRace(1402824, Race.PC_ALL, 3000);
 				}, 310000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid17();
-						// An attack by Beritra's troops is imminent.
-						sendMsgByRace(1402822, Race.PC_ALL, 0);
-						// Additional Beritra troops have joined the attack.
-						sendMsgByRace(1402824, Race.PC_ALL, 3000);
-					}
+					startMysticariumRaid17();
+					// An attack by Beritra's troops is imminent.
+					sendMsgByRace(1402822, Race.PC_ALL, 0);
+					// Additional Beritra troops have joined the attack.
+					sendMsgByRace(1402824, Race.PC_ALL, 3000);
 				}, 330000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> startMysticariumRaid18(), 350000);
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid18();
-					}
-				}, 350000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid19();
-						// An attack by Beritra's troops is imminent.
-						sendMsgByRace(1402822, Race.PC_ALL, 0);
-						// Additional Beritra troops have joined the attack.
-						sendMsgByRace(1402824, Race.PC_ALL, 3000);
-					}
+					startMysticariumRaid19();
+					// An attack by Beritra's troops is imminent.
+					sendMsgByRace(1402822, Race.PC_ALL, 0);
+					// Additional Beritra troops have joined the attack.
+					sendMsgByRace(1402824, Race.PC_ALL, 3000);
 				}, 370000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startMysticariumRaid20();
-						// Thanks to our reinforcements, all Beritra's troops have been annihilated.
-						// It appears their Commander is preparing for a final offensive.
-						sendMsgByRace(1402827, Race.PC_ALL, 0);
-					}
+					startMysticariumRaid20();
+					// Thanks to our reinforcements, all Beritra's troops have been annihilated.
+					// It appears their Commander is preparing for a final offensive.
+					sendMsgByRace(1402827, Race.PC_ALL, 0);
 				}, 390000);
-				raidTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+				raidTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startMysticariumBoss();
-						// The Commander of the Beritra troops has destroyed this place. Eliminate the enemy Commander!
-						sendMsgByRace(1402828, Race.PC_ALL, 0);
-					}
+					startMysticariumBoss();
+					// The Commander of the Beritra troops has destroyed this place. Eliminate the enemy Commander!
+					sendMsgByRace(1402828, Race.PC_ALL, 0);
 				}, 410000);
 				break;
+			}
 		}
 	}
 	
@@ -474,16 +355,12 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 			{
 				isStartTimer1 = true;
 				System.currentTimeMillis();
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 ->
 				{
-					@Override
-					public void visit(Player player)
+					if (player1.isOnline())
 					{
-						if (player.isOnline())
-						{
-							startAncientBoxTimer();
-							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-						}
+						startAncientBoxTimer();
+						PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 300));
 					}
 				});
 			}
@@ -526,16 +403,12 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 			{
 				isStartTimer2 = true;
 				System.currentTimeMillis();
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 ->
 				{
-					@Override
-					public void visit(Player player)
+					if (player1.isOnline())
 					{
-						if (player.isOnline())
-						{
-							startTestSubjectPrisonTimer();
-							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-						}
+						startTestSubjectPrisonTimer();
+						PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 300));
 					}
 				});
 			}
@@ -552,21 +425,17 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 	
 	private void raidMysticarium(Npc npc)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						npc.setTarget(player);
-						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
-						npc.setState(1);
-						npc.getMoveController().moveToTargetObject();
-						PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
-					}
+					npc.setTarget(player);
+					((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
+					npc.setState(1);
+					npc.getMoveController().moveToTargetObject();
+					PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
 				}
 			}
 		}, 1000);
@@ -698,36 +567,18 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void sendMessage(int msgId, long delay)
@@ -738,14 +589,7 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					sendMsg(msgId);
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> sendMsg(msgId), delay);
 		}
 	}
 	

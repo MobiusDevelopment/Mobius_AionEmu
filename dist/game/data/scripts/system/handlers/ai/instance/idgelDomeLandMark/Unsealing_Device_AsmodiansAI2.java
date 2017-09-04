@@ -55,20 +55,28 @@ public class Unsealing_Device_AsmodiansAI2 extends ActionItemNpcAI2
 			switch (getNpcId())
 			{
 				case 806375: // Unsealing Device.
+				{
 					spawn(806359, 264.12469f, 273.46167f, 85.796768f, (byte) 0, 154);
 					spawn(806280, 264.74783f, 259.22983f, 88.351212f, (byte) 0, 194);
 					break;
+				}
 				case 806376: // Unsealing Device.
+				{
 					spawn(806280, 264.74783f, 259.22983f, 89.924179f, (byte) 0, 195);
 					spawn(806360, 265.26395f, 245.08080f, 85.796768f, (byte) 0, 106);
 					break;
+				}
 				case 806377: // Unsealing Device.
+				{
 					spawn(806280, 264.74783f, 259.22983f, 91.488808f, (byte) 0, 196);
 					spawn(806361, 250.50882f, 258.67883f, 85.796768f, (byte) 0, 153);
 					break;
+				}
 				case 806378: // Unsealing Device.
+				{
 					spawn(806362, 278.85132f, 259.72498f, 85.796768f, (byte) 0, 104);
 					break;
+				}
 			}
 		}
 	}

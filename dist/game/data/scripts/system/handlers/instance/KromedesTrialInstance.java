@@ -48,7 +48,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -69,11 +68,15 @@ public class KromedesTrialInstance extends GeneralInstanceHandler
 		switch (player.getRace())
 		{
 			case ELYOS:
+			{
 				SkillEngine.getInstance().applyEffectDirectly(19220, player, player, 3600000 * 1);
 				break;
+			}
 			case ASMODIANS:
+			{
 				SkillEngine.getInstance().applyEffectDirectly(19270, player, player, 3600000 * 1);
 				break;
+			}
 		}
 		sendMovie(player, 453);
 		HTMLService.showHTML(player, HTMLCache.getInstance().getHTML("instances/kromedeTrial.xhtml"));
@@ -87,11 +90,15 @@ public class KromedesTrialInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawn(217005, 670.7984f, 774.2175f, 216.88036f, (byte) 59); // Shadow Judge Kaliga.
 				break;
+			}
 			case 2:
+			{
 				spawn(217006, 670.7984f, 774.2175f, 216.88036f, (byte) 59); // Kaliga The Unjust.
 				break;
+			}
 		}
 	}
 	
@@ -103,127 +110,201 @@ public class KromedesTrialInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 216968: // Divine Hisen.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000109, 1)); // Relic Key.
 				break;
+			}
 			case 216980: // Warden Baal.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000099, 1)); // Dungeon Grate Key.
 				break;
+			}
 			case 216981: // Manor Guard Captain.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000100, 1)); // Dungeon Door Key.
 				break;
+			}
 			case 216999: // Jesse.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000101, 1)); // Secret Safe Key.
 				break;
+			}
 			case 217005: // Shadow Judge Kaliga.
 			case 217006: // Kaliga The Unjust.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188052826, 1)); // Judge's Fabled Weapon Chest.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000102, 1)); // Kaliga's Key.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053787, 1)); // Stigma Support Bundle.
 				break;
+			}
 			case 211861: // Ancient Treasure Box.
+			{
 				switch (Rnd.get(1, 7))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 110601097, 1)); // Corrupt Judge's Breastplate.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 111601074, 1)); // Corrupt Judge's Gauntlets.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 113601058, 1)); // Corrupt Judge's Greaves.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 125002432, 1)); // Corrupt Judge's Helm.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 114601054, 1)); // Corrupt Judge's Sabatons.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 112601049, 1)); // Corrupt Judge's Shoulderplates.
 						break;
+					}
 					case 7:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 123001099, 1)); // Corrupt Judge's Belt.
 						break;
+					}
 				}
 				break;
+			}
 			case 212333: // Ancient Treasure Box.
+			{
 				switch (Rnd.get(1, 7))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 125002429, 1)); // Corrupt Judge's Bandana.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 111101099, 1)); // Corrupt Judge's Gloves.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 113101113, 1)); // Corrupt Judge's Leggings.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 112101059, 1)); // Corrupt Judge's Pauldrons.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 114101140, 1)); // Corrupt Judge's Shoes.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 110101209, 1)); // Corrupt Judge's Tunic.
 						break;
+					}
 					case 7:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 123001099, 1)); // Corrupt Judge's Belt.
 						break;
+					}
 				}
 				break;
+			}
 			case 212335: // Ancient Treasure Box.
+			{
 				switch (Rnd.get(1, 7))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 114501100, 1)); // Corrupt Judge's Brogans.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 125002431, 1)); // Corrupt Judge's Chain Hood.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 113501093, 1)); // Corrupt Judge's Chausses.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 111501084, 1)); // Corrupt Judge's Handguards.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 110501115, 1)); // Corrupt Judge's Hauberk.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 112501035, 1)); // Corrupt Judge's Spaulders.
 						break;
+					}
 					case 7:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 123001099, 1)); // Corrupt Judge's Belt.
 						break;
+					}
 				}
 				break;
+			}
 			case 212338: // Ancient Treasure Box.
+			{
 				switch (Rnd.get(1, 7))
 				{
 					case 1:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 114301150, 1)); // Corrupt Judge's Boots.
 						break;
+					}
 					case 2:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 113301116, 1)); // Corrupt Judge's Breeches.
 						break;
+					}
 					case 3:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 125002430, 1)); // Corrupt Judge's Hat.
 						break;
+					}
 					case 4:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 110301144, 1)); // Corrupt Judge's Jerkin.
 						break;
+					}
 					case 5:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 112301045, 1)); // Corrupt Judge's Shoulderguards.
 						break;
+					}
 					case 6:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 111301098, 1)); // Corrupt Judge's Vambrace.
 						break;
+					}
 					case 7:
+					{
 						dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 123001099, 1)); // Corrupt Judge's Belt.
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -233,11 +314,15 @@ public class KromedesTrialInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 282093: // Mana Relic.
+			{
 				SkillEngine.getInstance().getSkill(npc, 19248, 1, player).useNoAnimationSkill(); // Mana Relic Effect.
 				break;
+			}
 			case 282095: // Strength Relic.
+			{
 				SkillEngine.getInstance().getSkill(npc, 19247, 1, player).useNoAnimationSkill(); // Strength Relic Effect.
 				break;
+			}
 		}
 	}
 	
@@ -266,119 +351,165 @@ public class KromedesTrialInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 700835: // Sealed Stone Door.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 216981: // Manor Guard Captain.
+			{
 				switch (player.getPlayerClass())
 				{
 					case TEMPLAR:
 					case GLADIATOR:
+					{
 						spawn(211861, 740.83966f, 535.38837f, 199.12067f, (byte) 89); // Treasure Box Kromede Trial (Gladiator-Templar).
 						break;
+					}
 					case RANGER:
 					case ASSASSIN:
 					case GUNSLINGER:
+					{
 						spawn(212338, 740.83966f, 535.38837f, 199.12067f, (byte) 89); // Treasure Box Kromede Trial (Assassin-Ranger-Gunslinger).
 						break;
+					}
 					case SORCERER:
 					case SONGWEAVER:
 					case SPIRIT_MASTER:
+					{
 						spawn(212333, 740.83966f, 535.38837f, 199.12067f, (byte) 89); // Treasure Box Kromede Trial (Sorcerer-SpiritMaster-Songweaver).
 						break;
+					}
 					case CLERIC:
 					case CHANTER:
 					case AETHERTECH:
+					{
 						spawn(212335, 740.83966f, 535.38837f, 199.12067f, (byte) 89); // Treasure Box Kromede Trial (Cleric-Chanter-Aethertech).
 						break;
+					}
 				}
 				break;
+			}
 			case 216982: // Hamam The Torturer.
+			{
 				sendMsg("<Wounded Hamam> appear");
 				spawn(217004, 651.186f, 767.856f, 215.584f, (byte) 59); // Wounded Hamam.
 				switch (player.getPlayerClass())
 				{
 					case TEMPLAR:
 					case GLADIATOR:
+					{
 						spawn(211861, 757.48157f, 617.7071f, 197.17694f, (byte) 108); // Treasure Box Kromede Trial (Gladiator-Templar).
 						break;
+					}
 					case RANGER:
 					case ASSASSIN:
 					case GUNSLINGER:
+					{
 						spawn(212338, 757.48157f, 617.7071f, 197.17694f, (byte) 108); // Treasure Box Kromede Trial (Assassin-Ranger-Gunslinger).
 						break;
+					}
 					case SORCERER:
 					case SONGWEAVER:
 					case SPIRIT_MASTER:
+					{
 						spawn(212333, 757.48157f, 617.7071f, 197.17694f, (byte) 108); // Treasure Box Kromede Trial (Sorcerer-SpiritMaster-Songweaver).
 						break;
+					}
 					case CLERIC:
 					case CHANTER:
 					case AETHERTECH:
+					{
 						spawn(212335, 757.48157f, 617.7071f, 197.17694f, (byte) 108); // Treasure Box Kromede Trial (Cleric-Chanter-Aethertech).
 						break;
+					}
 				}
 				break;
+			}
 			case 216999: // Jesse.
+			{
 				removeSilverBladeRotan(player);
 				switch (player.getPlayerClass())
 				{
 					case TEMPLAR:
 					case GLADIATOR:
+					{
 						spawn(211861, 581.11005f, 775.1529f, 215.53482f, (byte) 112); // Treasure Box Kromede Trial (Gladiator-Templar).
 						break;
+					}
 					case RANGER:
 					case ASSASSIN:
 					case GUNSLINGER:
+					{
 						spawn(212338, 581.11005f, 775.1529f, 215.53482f, (byte) 112); // Treasure Box Kromede Trial (Assassin-Ranger-Gunslinger).
 						break;
+					}
 					case SORCERER:
 					case SONGWEAVER:
 					case SPIRIT_MASTER:
+					{
 						spawn(212333, 581.11005f, 775.1529f, 215.53482f, (byte) 112); // Treasure Box Kromede Trial (Sorcerer-SpiritMaster-Songweaver).
 						break;
+					}
 					case CLERIC:
 					case CHANTER:
 					case AETHERTECH:
+					{
 						spawn(212335, 581.11005f, 775.1529f, 215.53482f, (byte) 112); // Treasure Box Kromede Trial (Cleric-Chanter-Aethertech).
 						break;
+					}
 				}
 				break;
+			}
 			case 217000: // Lady Angerr.
+			{
 				sendMsg("<Distraught Lady Angerr> appear");
 				spawn(217001, 650.679f, 774.197f, 215.584f, (byte) 60); // Distraught Lady Angerr.
 				switch (player.getPlayerClass())
 				{
 					case TEMPLAR:
 					case GLADIATOR:
+					{
 						spawn(211861, 512.89886f, 570.039f, 216.89487f, (byte) 31); // Treasure Box Kromede Trial (Gladiator-Templar).
 						break;
+					}
 					case RANGER:
 					case ASSASSIN:
 					case GUNSLINGER:
+					{
 						spawn(212338, 512.89886f, 570.039f, 216.89487f, (byte) 31); // Treasure Box Kromede Trial (Assassin-Ranger-Gunslinger).
 						break;
+					}
 					case SORCERER:
 					case SONGWEAVER:
 					case SPIRIT_MASTER:
+					{
 						spawn(212333, 512.89886f, 570.039f, 216.89487f, (byte) 31); // Treasure Box Kromede Trial (Sorcerer-SpiritMaster-Songweaver).
 						break;
+					}
 					case CLERIC:
 					case CHANTER:
 					case AETHERTECH:
+					{
 						spawn(212335, 512.89886f, 570.039f, 216.89487f, (byte) 31); // Treasure Box Kromede Trial (Cleric-Chanter-Aethertech).
 						break;
+					}
 				}
 				break;
+			}
 			case 217002: // Justicetaker Wyr.
+			{
 				sendMsg("<Injured Justicetaker Wyr> appear");
 				spawn(217003, 651.341f, 780.757f, 215.584f, (byte) 59); // Injured Justicetaker Wyr.
 				break;
+			}
 			case 217005: // Shadow Judge Kaliga.
 			case 217006: // Kaliga The Unjust.
+			{
 				sendMovie(player, 455);
 				sendMsg("[Congratulation]: you finish <Kromede's Trial>");
 				ItemService.addItem(player, 188900010, 1); // Secret Remedy Of Growth IV.
 				break;
+			}
 		}
 	}
 	
@@ -411,36 +542,18 @@ public class KromedesTrialInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

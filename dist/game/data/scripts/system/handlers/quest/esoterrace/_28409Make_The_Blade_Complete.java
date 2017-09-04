@@ -138,6 +138,7 @@ public class _28409Make_The_Blade_Complete extends QuestHandler
 		switch (targetId)
 		{
 			case 215795:
+			{
 				if (qs.getQuestVarById(0) == 2)
 				{
 					ItemService.addQuestItems(player, Collections.singletonList(new QuestItems(182215008, 1)));
@@ -146,6 +147,7 @@ public class _28409Make_The_Blade_Complete extends QuestHandler
 					updateQuestStatus(env);
 				}
 				break;
+			}
 		}
 		return false;
 	}

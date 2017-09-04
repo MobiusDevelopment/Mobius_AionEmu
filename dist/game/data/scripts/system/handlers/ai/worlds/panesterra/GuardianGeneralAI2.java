@@ -48,6 +48,7 @@ public class GuardianGeneralAI2 extends AggressiveNpcAI2
 		{
 			case 277400: // Mirage Dance Guardian General.
 			case 277405: // Chaos Wind Guardian General.
+			{
 				killedTheGuardianGeneral();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -68,8 +69,10 @@ public class GuardianGeneralAI2 extends AggressiveNpcAI2
 					}
 				}, 480000);
 				break;
+			}
 			case 277415: // Mirage Dance Guardian General.
 			case 277420: // Chaos Wind Guardian General.
+			{
 				killedTheGuardianGeneral();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -90,8 +93,10 @@ public class GuardianGeneralAI2 extends AggressiveNpcAI2
 					}
 				}, 480000);
 				break;
+			}
 			case 277430: // Mirage Dance Guardian General.
 			case 277435: // Chaos Wind Guardian General.
+			{
 				killedTheGuardianGeneral();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -112,8 +117,10 @@ public class GuardianGeneralAI2 extends AggressiveNpcAI2
 					}
 				}, 480000);
 				break;
+			}
 			case 277445: // Mirage Dance Guardian General.
 			case 277450: // Chaos Wind Guardian General.
+			{
 				killedTheGuardianGeneral();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -134,6 +141,7 @@ public class GuardianGeneralAI2 extends AggressiveNpcAI2
 					}
 				}, 480000);
 				break;
+			}
 		}
 		super.handleDied();
 	}

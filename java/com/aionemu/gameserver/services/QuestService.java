@@ -238,7 +238,9 @@ public final class QuestService
 						break;
 					}
 					default:
+					{
 						break;
+					}
 				}
 				if (classRewardItem != null)
 				{
@@ -325,7 +327,9 @@ public final class QuestService
 						break;
 					}
 					default:
+					{
 						break;
+					}
 				}
 				if (classRewardItem != null)
 				{

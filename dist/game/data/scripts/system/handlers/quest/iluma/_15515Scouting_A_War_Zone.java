@@ -175,6 +175,7 @@ public class _15515Scouting_A_War_Zone extends QuestHandler
 				case 242795:
 				case 242799:
 				case 242803:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -185,6 +186,7 @@ public class _15515Scouting_A_War_Zone extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

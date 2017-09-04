@@ -160,6 +160,7 @@ public class SvsService
 		switch (id)
 		{
 			case 1:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -178,8 +179,11 @@ public class SvsService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -191,6 +195,7 @@ public class SvsService
 		switch (id)
 		{
 			case 1:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -209,8 +214,11 @@ public class SvsService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -222,6 +230,7 @@ public class SvsService
 		switch (id)
 		{
 			case 5:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -244,8 +253,11 @@ public class SvsService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -257,13 +269,17 @@ public class SvsService
 		switch (id)
 		{
 			case 5:
+			{
 				advanceCorridor.put(802219, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400020000, 802219, 1024.12f, 1078.747f, 1530.2688f, (byte) 90), 1));
 				advanceCorridor.put(802221, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400040000, 802221, 1024.12f, 1078.747f, 1530.2688f, (byte) 90), 1));
 				advanceCorridor.put(802223, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400050000, 802223, 1024.12f, 1078.747f, 1530.2688f, (byte) 90), 1));
 				advanceCorridor.put(802225, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400060000, 802225, 1024.12f, 1078.747f, 1530.2688f, (byte) 90), 1));
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	

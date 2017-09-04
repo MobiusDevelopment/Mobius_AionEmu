@@ -71,14 +71,19 @@ public class SM_CASTSPELL extends AionServerPacket
 			case 0:
 			case 3:
 			case 4:
+			{
 				writeD(targetObjectId);
 				break;
+			}
 			case 1:
+			{
 				writeF(x);
 				writeF(y);
 				writeF(z);
 				break;
+			}
 			case 2:
+			{
 				writeF(x);
 				writeF(y);
 				writeF(z);
@@ -90,6 +95,7 @@ public class SM_CASTSPELL extends AionServerPacket
 				writeD(0);// unk6
 				writeD(0);// unk7
 				writeD(0);// unk8
+			}
 		}
 		
 		writeH(duration);// unk

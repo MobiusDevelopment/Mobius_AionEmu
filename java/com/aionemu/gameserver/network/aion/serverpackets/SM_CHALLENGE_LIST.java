@@ -60,6 +60,7 @@ public class SM_CHALLENGE_LIST extends AionServerPacket
 		switch (action)
 		{
 			case 2:
+			{
 				writeD((int) (System.currentTimeMillis() / 1000));
 				writeH(tasks.size());
 				for (ChallengeTask task : tasks)
@@ -72,7 +73,9 @@ public class SM_CHALLENGE_LIST extends AionServerPacket
 					writeD((int) (task.getCompleteTime().getTime() / 1000));
 				}
 				break;
+			}
 			case 7:
+			{
 				writeD(32);
 				writeD(task.getTaskId());
 				writeH(task.getQuestsCount());
@@ -84,6 +87,7 @@ public class SM_CHALLENGE_LIST extends AionServerPacket
 					writeH(quest.getCompleteCount());
 				}
 				break;
+			}
 		}
 	}
 }

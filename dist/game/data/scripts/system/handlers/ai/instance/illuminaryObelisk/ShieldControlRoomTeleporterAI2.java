@@ -37,21 +37,27 @@ public class ShieldControlRoomTeleporterAI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 730886: // Shield Control Room Teleporter.
+			{
 				switch (player.getWorldId())
 				{
 					case 301230000: // Illuminary Obelisk 4.5
+					{
 						PacketSendUtility.sendMessage(player, "you enter <Illuminary Obelisk>");
 						TeleportService2.teleportTo(player, 301230000, 266.04742f, 244.20813f, 455.17575f, (byte) 45);
 						break;
+					}
 				}
 				switch (player.getWorldId())
 				{
 					case 301370000: // [Infernal] Illuminary Obelisk 4.7
+					{
 						PacketSendUtility.sendMessage(player, "you enter <[Infernal] Illuminary Obelisk>");
 						TeleportService2.teleportTo(player, 301370000, 266.04742f, 244.20813f, 455.17575f, (byte) 45);
 						break;
+					}
 				}
 				break;
+			}
 		}
 	}
 }

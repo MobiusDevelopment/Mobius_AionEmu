@@ -120,6 +120,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 			case 701915: // Bastion's Eternal Treasure B.
 			case 701916: // Bastion's Eternal Treasure C.
 			case 701917: // Bastion's Eternal Treasure D.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -127,21 +128,29 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 						switch (Rnd.get(1, 3))
 						{
 							case 1:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188052591, 1)); // Weapon Box Of The Iron Wall Fighter.
 								break;
+							}
 							case 2:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188052592, 1)); // Armor Box Of The Iron Wall Fighter.
 								break;
+							}
 							case 3:
+							{
 								dropItems.add(DropRegistrationService.getInstance().regDropItem(index++, player.getObjectId(), npcId, 188052593, 1)); // Firm Equipment Support Box Of Iron Wall.
 								break;
+							}
 						}
 					}
 				}
 				break;
+			}
 			// Bastion's Eternal Treasure Chest.
 			case 801268:
 			case 801269:
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -152,29 +161,40 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case 831328: // Cannon Supplies Box.
 			case 831329: // Ammo Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182006996, 10)); // Case Shot.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182006997, 10)); // Armor-Piercing Shot.
 				break;
+			}
 			case 831330: // Siege Mine.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000137, 1)); // Mobile Turret Key.
 				break;
+			}
 			case 802185: // The Eternal Bastion Opportunity Bundle.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000051, 30)); // Major Ancient Crown.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000052, 30)); // Greater Ancient Crown.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000236, 50)); // Blood Mark.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000237, 50)); // Ancient Coin.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 186000242, 50)); // Ceramium Medal.
 				break;
+			}
 		}
 	}
 	
@@ -187,21 +207,27 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 233313: // Pashid Siege Combatant.
+			{
 				points = 20;
 				despawnNpc(npc);
 				break;
+			}
 			case 231115: // Pashid Siege Soldier.
 			case 231116: // Pashid Siege Mage.
 			case 233309: // Pashid Siege Ambusher.
+			{
 				points = 33;
 				despawnNpc(npc);
 				break;
+			}
 			case 233312: // Pashid Siege Healer.
 			case 233314: // Pashid Elite Siege Defender.
 			case 233315: // Pashid Elite Siege Gunner.
+			{
 				points = 36;
 				despawnNpc(npc);
 				break;
+			}
 			case 231105: // Pashid Advance Protector.
 			case 231106: // Pashid Advance Ambusher.
 			case 231107: // Pashid Advance Magus.
@@ -226,15 +252,19 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 			case 231128: // Pashid Elite Siege Medic.
 			case 233310: // Pashid Siege Cavalry.
 			case 233311: // Pashid Siege Engineer.
+			{
 				points = 42;
 				despawnNpc(npc);
 				break;
+			}
 			case 230782: // Pashid Army Barricade.
 			case 231149: // Pashid Army Barricade.
 			case 231181: // Pashid Army Barricade.
+			{
 				points = 266;
 				despawnNpc(npc);
 				break;
+			}
 			case 230784: // Pashid Snare Turret.
 			case 230785: // Pashid Assault Flamethrower.
 			case 231137: // Pashid Danuar Turret.
@@ -257,9 +287,11 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 			case 231162: // Pashid Assault Pod.
 			case 231148: // Dredgion Signal Tower I.
 			case 231180: // Dredgion Signal Tower II.
+			{
 				points = 334;
 				despawnNpc(npc);
 				break;
+			}
 			case 230744: // Pashid Assault Tribuni Combatant.
 			case 230745: // Pashid Assault Tribuni Protector.
 			case 230746: // Pashid Assault Tribuni Sentry.
@@ -273,32 +305,41 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 			case 231133: // Pashid Siege Dragon.
 			case 231134: // Pashid Siege Dragon.
 			case 231135: // Pashid Siege Dragon.
+			{
 				points = 1002;
 				despawnNpc(npc);
 				break;
+			}
 			case 231174: // Pashid Artillery Commander Murat.
 			case 231175: // Pashid Artillery Commander Kaimdu.
 			case 231176: // Pashid Infantry Commander Nirta.
+			{
 				points = 1880;
 				despawnNpc(npc);
 				startPashidSiegeTower();
 				break;
+			}
 			case 231168: // Pashid Scout Commander Azute.
 			case 231169: // Pashid Scout Commander Zest.
 			case 231170: // Pashid Scout Commander Sartas.
 			case 231171: // Pashid Infantry Commander Matuk.
 			case 231172: // Pashid Assault Commander Badute.
 			case 231173: // Pashid Assault Commander Katsu.
+			{
 				points = 1880;
 				despawnNpc(npc);
 				break;
+			}
 			case 231177: // Deathbringer Tariksha.
 			case 231178: // Commander Hakunta.
 			case 231179: // Commander Rakunta.
+			{
 				points = 1880;
 				despawnNpc(npc);
 				break;
+			}
 			case 231130: // Grand Commander Pashid.
+			{
 				ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player1 -> stopInstance(player1)), 5000);
 				points = 24000;
 				despawnNpc(npc);
@@ -331,6 +372,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 				final int bastionExit2 = spawnRace == Race.ASMODIANS ? 730882 : 730871;
 				spawn(bastionExit2, 767.1659f, 264.31552f, 233.49748f, (byte) 43); // The Eternal Bastion Exit.
 				break;
+			}
 		}
 		if (instanceReward.getInstanceScoreType().isStartProgress())
 		{
@@ -344,31 +386,39 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 			case 209555: // Lysander's Disciple.
 			case 209556: // Granir's Disciple.
 			case 209557: // Granir's Disciple.
+			{
 				despawnNpc(npc);
 				instanceReward.addPoints(-50);
 				break;
+			}
 			case 831332: // Right Castle Gate.
 			case 831333: // Left Castle Gate.
 			case 831334: // Outer Water Gate.
+			{
 				// The Bastion has been breached. The Pashid Legion is flooding through the hole.
 				sendMsgByRace(1401826, Race.PC_ALL, 0);
 				despawnNpc(npc);
 				instanceReward.addPoints(-150);
 				break;
+			}
 			case 831335: // Inner Water Gate.
+			{
 				// The Pashid Legion has destroyed the gate at the underground wateray.
 				sendMsgByRace(1401824, Race.PC_ALL, 0);
 				despawnNpc(npc);
 				instanceReward.addPoints(-150);
 				break;
+			}
 			case 209516: // Commander Lysander.
 			case 209517: // Commander Granir.
+			{
 				despawnNpc(npc);
 				stopInstance(player);
 				instanceReward.addPoints(-90000);
 				final int bastionExit1 = spawnRace == Race.ASMODIANS ? 730882 : 730871;
 				spawn(bastionExit1, 767.1659f, 264.31552f, 233.49748f, (byte) 43); // The Eternal Bastion Exit.
 				break;
+			}
 		}
 	}
 	
@@ -386,13 +436,17 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		switch (npc.getNpcId())
 		{
 			case 701625: // Lysander's Siege Cannon.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21065, 60, player).useNoAnimationSkill();
 				break;
+			}
 			case 701922: // Granir's Siege Cannon.
+			{
 				despawnNpc(npc);
 				SkillEngine.getInstance().getSkill(npc, 21066, 60, player).useNoAnimationSkill();
 				break;
+			}
 		}
 	}
 	
@@ -583,14 +637,20 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 3))
 		{
 			case 1:
+			{
 				moveToForward((Npc) spawn(231168, 810.351f, 348.20648f, 230.98207f, (byte) 73), 744.66473f, 293.50308f, 233.7125f, false); // Pashid Scout Commander Azute.
 				break;
+			}
 			case 2:
+			{
 				moveToForward((Npc) spawn(231169, 810.351f, 348.20648f, 230.98207f, (byte) 73), 744.66473f, 293.50308f, 233.7125f, false); // Pashid Scout Commander Zest.
 				break;
+			}
 			case 3:
+			{
 				moveToForward((Npc) spawn(231170, 810.351f, 348.20648f, 230.98207f, (byte) 73), 744.66473f, 293.50308f, 233.7125f, false); // Pashid Scout Commander Sartas.
 				break;
+			}
 		}
 	}
 	
@@ -604,14 +664,20 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 3))
 		{
 			case 1:
+			{
 				moveToForward((Npc) spawn(231171, 701.2387f, 305.8705f, 249.30322f, (byte) 103), 713.0358f, 288.13544f, 249.28407f, false); // Pashid Infantry Commander Matuk.
 				break;
+			}
 			case 2:
+			{
 				moveToForward((Npc) spawn(231172, 701.2387f, 305.8705f, 249.30322f, (byte) 103), 713.0358f, 288.13544f, 249.28407f, false); // Pashid Assault Commander Badute.
 				break;
+			}
 			case 3:
+			{
 				moveToForward((Npc) spawn(231173, 701.2387f, 305.8705f, 249.30322f, (byte) 103), 713.0358f, 288.13544f, 249.28407f, false); // Pashid Assault Commander Katsu.
 				break;
+			}
 		}
 	}
 	
@@ -630,14 +696,20 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 3))
 		{
 			case 1:
+			{
 				moveToForward((Npc) spawn(231174, 626.0661f, 294.24414f, 238.0753f, (byte) 23), 673.7405f, 372.1047f, 241.59521f, false); // Pashid Artillery Commander Murat.
 				break;
+			}
 			case 2:
+			{
 				moveToForward((Npc) spawn(231175, 626.0661f, 294.24414f, 238.0753f, (byte) 23), 673.7405f, 372.1047f, 241.59521f, false); // Pashid Artillery Commander Kaimdu.
 				break;
+			}
 			case 3:
+			{
 				moveToForward((Npc) spawn(231176, 626.0661f, 294.24414f, 238.0753f, (byte) 23), 673.7405f, 372.1047f, 241.59521f, false); // Pashid Infantry Commander Nirta.
 				break;
+			}
 		}
 	}
 	
@@ -788,6 +860,7 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 			switch (bastionRank)
 			{
 				case 1: // Rank S
+				{
 					playerReward.setScoreAP(35000);
 					playerReward.setCeramium(4);
 					ItemService.addItem(player, 186000242, 4);
@@ -796,7 +869,9 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 					playerReward.setHighestGradeMaterialSupportBundle(1);
 					ItemService.addItem(player, 188052596, 1);
 					break;
+				}
 				case 2: // Rank A
+				{
 					playerReward.setScoreAP(25000);
 					playerReward.setCeramium(2);
 					ItemService.addItem(player, 186000242, 2);
@@ -805,7 +880,9 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 					playerReward.setHighGradeMaterialSupportBundle(1);
 					ItemService.addItem(player, 188052597, 1);
 					break;
+				}
 				case 3: // Rank B
+				{
 					playerReward.setScoreAP(15000);
 					playerReward.setCeramium(1);
 					ItemService.addItem(player, 186000242, 1);
@@ -814,16 +891,23 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 					playerReward.setLowGradeMaterialSupportBundle(1);
 					ItemService.addItem(player, 188052598, 1);
 					break;
+				}
 				case 4: // Rank C
+				{
 					playerReward.setScoreAP(11000);
 					playerReward.setLowGradeMaterialSupportBundle(1);
 					ItemService.addItem(player, 188052598, 1);
 					break;
+				}
 				case 5: // Rank D
+				{
 					playerReward.setScoreAP(7000);
 					break;
+				}
 				case 6: // Rank F
+				{
 					break;
+				}
 			}
 			AbyssPointsService.addAp(player, playerReward.getScoreAP());
 		}
@@ -936,13 +1020,17 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawn(230746, 552.5082f, 414.074f, 222.75688f, (byte) 17); // Pashid Assault Tribuni Sentry.
 				spawn(231177, 820.55133f, 606.02814f, 239.70607f, (byte) 20); // Deathbringer Tariksha.
 				break;
+			}
 			case 2:
+			{
 				spawn(231177, 552.5082f, 414.074f, 222.75688f, (byte) 17); // Deathbringer Tariksha.
 				spawn(230746, 820.55133f, 606.02814f, 239.70607f, (byte) 20); // Pashid Assault Tribuni Sentry.
 				break;
+			}
 		}
 	}
 	

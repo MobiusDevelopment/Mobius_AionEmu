@@ -161,6 +161,7 @@ public class _15513Thinning_Out_The_Herd extends QuestHandler
 				case 241995:
 				case 241999:
 				case 242003:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -171,6 +172,7 @@ public class _15513Thinning_Out_The_Herd extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

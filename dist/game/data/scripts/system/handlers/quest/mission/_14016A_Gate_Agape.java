@@ -110,25 +110,34 @@ public class _14016A_Gate_Agape extends QuestHandler
 			switch (targetId)
 			{
 				case 203098: // Spatalos.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
 							break;
+						}
 						case STEP_TO_1:
+						{
 							TeleportService2.teleportTo(player, 210030000, 2683.2085f, 1068.8977f, 199.375f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
 							changeQuestStep(env, 0, 1, false);
 							return closeDialogWindow(env);
+						}
 					}
 					break;
+				}
 				case 700141: // Abyss Gate.
+				{
 					playQuestMovie(env, 153);
 					removeQuestItem(env, 182215317, 1);
 					return useQuestObject(env, 2, 2, true, false);
+				}
 				case 700142: // Abyss Gate Guardian Stone.
+				{
 					if (dialog == QuestDialog.USE_OBJECT)
 					{
 						QuestService.addNewSpawn(310030000, player.getInstanceId(), 233873, (float) 251.91177, (float) 262.239, (float) 228.30093, (byte) 89);
@@ -136,6 +145,7 @@ public class _14016A_Gate_Agape extends QuestHandler
 					final Npc npc = (Npc) env.getVisibleObject();
 					npc.getController().onDelete();
 					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

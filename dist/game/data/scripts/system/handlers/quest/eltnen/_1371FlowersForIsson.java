@@ -79,12 +79,15 @@ public class _1371FlowersForIsson extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
 						break;
+					}
 					case CHECK_COLLECTED_ITEMS:
+					{
 						if (var == 0)
 						{
 							itemCount = player.getInventory().getItemCountByItemId(152000601);
@@ -97,6 +100,7 @@ public class _1371FlowersForIsson extends QuestHandler
 						{
 							return sendQuestDialog(env, 1438);
 						}
+					}
 					case STEP_TO_1:
 					{
 						removeQuestItem(env, 152000601, 5);

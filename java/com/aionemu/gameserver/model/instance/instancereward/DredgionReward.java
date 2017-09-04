@@ -134,9 +134,13 @@ public class DredgionReward extends InstanceReward<DredgionPlayerReward>
 		switch (race)
 		{
 			case ELYOS:
+			{
 				return elyosPoins;
+			}
 			case ASMODIANS:
+			{
 				return asmodiansPoints;
+			}
 		}
 		return null;
 	}

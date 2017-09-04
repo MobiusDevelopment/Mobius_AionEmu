@@ -71,6 +71,7 @@ public abstract class HouseObject<T extends PlaceableHouseObject>extends Visible
 		switch (persistentState)
 		{
 			case DELETED:
+			{
 				if (this.persistentState == PersistentState.NEW)
 				{
 					this.persistentState = PersistentState.NOACTION;
@@ -81,17 +82,22 @@ public abstract class HouseObject<T extends PlaceableHouseObject>extends Visible
 					ownerHouse.getRegistry().setPersistentState(PersistentState.UPDATE_REQUIRED);
 				}
 				break;
+			}
 			case UPDATE_REQUIRED:
+			{
 				if (this.persistentState == PersistentState.NEW)
 				{
 					break;
 				}
+			}
 			default:
+			{
 				if (this.persistentState != persistentState)
 				{
 					this.persistentState = persistentState;
 					ownerHouse.getRegistry().setPersistentState(PersistentState.UPDATE_REQUIRED);
 				}
+			}
 		}
 	}
 	

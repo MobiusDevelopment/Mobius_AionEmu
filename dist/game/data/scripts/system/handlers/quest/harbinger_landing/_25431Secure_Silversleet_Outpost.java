@@ -119,6 +119,7 @@ public class _25431Secure_Silversleet_Outpost extends QuestHandler
 				case 882989:
 				case 882990:
 				case 882991:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _25431Secure_Silversleet_Outpost extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -82,9 +82,11 @@ public class _3937Group_The_Decorations_Of_Sanctum extends QuestHandler
 			switch (targetId)
 			{
 				case 203708:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
@@ -93,9 +95,13 @@ public class _3937Group_The_Decorations_Of_Sanctum extends QuestHandler
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							final long itemCount1 = player.getInventory().getItemCountByItemId(182206095);
 							if (itemCount1 >= 1)
 							{
@@ -107,10 +113,14 @@ public class _3937Group_The_Decorations_Of_Sanctum extends QuestHandler
 							{
 								return sendQuestDialog(env, 10001);
 							}
+						}
 					}
 					break;
+				}
 				default:
+				{
 					return sendQuestStartDialog(env);
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

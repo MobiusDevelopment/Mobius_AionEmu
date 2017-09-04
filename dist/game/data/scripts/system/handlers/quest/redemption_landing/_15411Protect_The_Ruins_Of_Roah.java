@@ -121,6 +121,7 @@ public class _15411Protect_The_Ruins_Of_Roah extends QuestHandler
 				case 884012:
 				case 884013:
 				case 884014:
+				{
 					if (qs.getQuestVarById(1) < 2)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -131,6 +132,7 @@ public class _15411Protect_The_Ruins_Of_Roah extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

@@ -76,29 +76,37 @@ public class HyperionAI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 4))
 		{
 			case 1:
+			{
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(276519, 108.55013f, 138.96940f, 132.60164f, (byte) 0), 3000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231093, 126.54710f, 154.47961f, 131.47116f, (byte) 0), 9000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231094, 146.72450f, 139.12267f, 132.68515f, (byte) 0), 15000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231095, 129.41306f, 121.34766f, 131.47110f, (byte) 0), 21000);
 				break;
+			}
 			case 2:
+			{
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(276519, 129.41306f, 121.34766f, 131.47110f, (byte) 0), 3000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231093, 108.55013f, 138.96940f, 132.60164f, (byte) 0), 9000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231094, 126.54710f, 154.47961f, 131.47116f, (byte) 0), 15000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231095, 146.72450f, 139.12267f, 132.68515f, (byte) 0), 21000);
 				break;
+			}
 			case 3:
+			{
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(276519, 146.72450f, 139.12267f, 132.68515f, (byte) 0), 3000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231093, 129.41306f, 121.34766f, 131.47110f, (byte) 0), 9000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231094, 108.55013f, 138.96940f, 132.60164f, (byte) 0), 15000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231095, 126.54710f, 154.47961f, 131.47116f, (byte) 0), 21000);
 				break;
+			}
 			case 4:
+			{
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(276519, 126.54710f, 154.47961f, 131.47116f, (byte) 0), 3000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231093, 146.72450f, 139.12267f, 132.68515f, (byte) 0), 9000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231094, 129.41306f, 121.34766f, 131.47110f, (byte) 0), 15000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231095, 108.55013f, 138.96940f, 132.60164f, (byte) 0), 21000);
 				break;
+			}
 		}
 	}
 	
@@ -139,85 +147,125 @@ public class HyperionAI2 extends AggressiveNpcAI2
 				switch (percent)
 				{
 					case 99:
+					{
 						startCast();
 						spawnIdeResonator();
 						break;
+					}
 					case 85:
+					{
 						castc = 1;
 						startCast();
 						break;
+					}
 					case 80:
+					{
 						AI2Actions.useSkill(this, 21253);
 						firstWaveEvent();
 						break;
+					}
 					case 70:
+					{
 						castc = 1;
 						startCast2();
 						firstWaveEvent();
 						break;
+					}
 					case 60:
+					{
 						castc = 0;
 						startCast3();
 						secondWaveEvent();
 						break;
+					}
 					case 55:
+					{
 						castc = 0;
 						startCast4();
 						secondWaveEvent();
 						break;
+					}
 					case 54:
+					{
 						AI2Actions.useSkill(this, 21244);
 						break;
+					}
 					case 50:
+					{
 						castc = 0;
 						startCast4();
 						secondWaveEvent();
 						break;
+					}
 					case 46:
+					{
 						AI2Actions.useSkill(this, 21244);
 						break;
+					}
 					case 45:
+					{
 						castc = 1;
 						startCast5();
 						secondWaveEvent();
 						break;
+					}
 					case 40:
+					{
 						AI2Actions.useSkill(this, 21248);
 						break;
+					}
 					case 35:
+					{
 						castc = 1;
 						startCast2();
 						break;
+					}
 					case 25:
+					{
 						castc = 1;
 						startCast5();
 						thirdWaveEvent();
 						break;
+					}
 					case 23:
+					{
 						AI2Actions.useSkill(this, 21244);
 						break;
+					}
 					case 20:
+					{
 						castc = 0;
 						startCast4();
 						thirdWaveEvent();
 						break;
+					}
 					case 18:
+					{
 						AI2Actions.useSkill(this, 21244);
 						break;
+					}
 					case 10:
+					{
 						AI2Actions.useSkill(this, 21246);
 						break;
+					}
 					case 8:
+					{
 						AI2Actions.useSkill(this, 21249);
 						break;
+					}
 					case 5:
+					{
 						castc = 0;
 						startCast4();
 						thirdWaveEvent();
 						break;
+					}
 					case 3:
+					{
 						AI2Actions.useSkill(this, 21249);
 						break;
+					}
 				}
 				percents.remove(percent);
 				break;
@@ -261,11 +309,15 @@ public class HyperionAI2 extends AggressiveNpcAI2
 		switch (castc)
 		{
 			case 1:
+			{
 				AI2Actions.useSkill(this, 21250);
 				break;
+			}
 			case 2:
+			{
 				AI2Actions.useSkill(this, 21251);
 				break;
+			}
 		}
 	}
 	
@@ -287,17 +339,25 @@ public class HyperionAI2 extends AggressiveNpcAI2
 		switch (castc)
 		{
 			case 0:
+			{
 				AI2Actions.useSkill(this, 21250);
 				break;
+			}
 			case 1:
+			{
 				AI2Actions.useSkill(this, 21251);
 				break;
+			}
 			case 2:
+			{
 				AI2Actions.useSkill(this, 21245);
 				break;
+			}
 			case 3:
+			{
 				AI2Actions.useSkill(this, 21253);
 				break;
+			}
 		}
 	}
 	
@@ -319,14 +379,20 @@ public class HyperionAI2 extends AggressiveNpcAI2
 		switch (castc)
 		{
 			case 0:
+			{
 				AI2Actions.useSkill(this, 21250);
 				break;
+			}
 			case 1:
+			{
 				AI2Actions.useSkill(this, 21251);
 				break;
+			}
 			case 2:
+			{
 				AI2Actions.useSkill(this, 21253);
 				break;
+			}
 		}
 	}
 	
@@ -348,11 +414,15 @@ public class HyperionAI2 extends AggressiveNpcAI2
 		switch (castc)
 		{
 			case 1:
+			{
 				AI2Actions.useSkill(this, 21241);
 				break;
+			}
 			case 2:
+			{
 				AI2Actions.useSkill(this, 21245);
 				break;
+			}
 		}
 	}
 	

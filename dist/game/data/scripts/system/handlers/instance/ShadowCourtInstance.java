@@ -67,26 +67,40 @@ public class ShadowCourtInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 214347: // Unfest Guard Captain.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000014, 1)); // Arena Basement Level 3 Key 1.
 				break;
+			}
 			case 214349: // Dysceptic Karnif.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000011, 1)); // Arena Basement Level 2 Key 1.
 				break;
+			}
 			case 214351: // Dysceptic Taiga.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000012, 1)); // Arena Basement Level 2 Key 2.
 				break;
+			}
 			case 214353: // Bejeweled Mosbear.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000013, 1)); // Arena Basement Level 2 Key 3.
 				break;
+			}
 			case 214357: // Cleric Wraith.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000009, 1)); // Arena Basement Level 1 Key 2.
 				break;
+			}
 			case 214360: // Ranger Spirit.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000010, 1)); // Arena Basement Level 1 Key 3.
 				break;
+			}
 			case 214531: // Prison Guard.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000008, 1)); // Arena Basement Level 1 Key 1.
 				break;
+			}
 		}
 	}
 	

@@ -49,33 +49,33 @@ public class TargetRelationProperty
 		switch (value)
 		{
 			case ALL:
+			{
 				break;
+			}
 			case ENEMY:
+			{
 				for (Iterator<Creature> iter = effectedList.iterator(); iter.hasNext();)
 				{
 					final Creature nextEffected = iter.next();
-					
 					if (effector.isEnemy(nextEffected))
 					{
 						continue;
 					}
-					
 					iter.remove();
 				}
 				break;
+			}
 			case FRIEND:
+			{
 				for (Iterator<Creature> iter = effectedList.iterator(); iter.hasNext();)
 				{
 					final Creature nextEffected = iter.next();
-					
 					if (!effector.isEnemy(nextEffected) && isBuffAllowed(nextEffected))
 					{
 						continue;
 					}
-					
 					iter.remove();
 				}
-				
 				if (effectedList.isEmpty())
 				{
 					skill.setFirstTarget(skill.getEffector());
@@ -86,11 +86,12 @@ public class TargetRelationProperty
 					skill.setFirstTarget(effectedList.get(0));
 				}
 				break;
+			}
 			case MYPARTY:
+			{
 				for (Iterator<Creature> iter = effectedList.iterator(); iter.hasNext();)
 				{
 					final Creature nextEffected = iter.next();
-					
 					Player player = null;
 					if (nextEffected instanceof Player)
 					{
@@ -110,7 +111,6 @@ public class TargetRelationProperty
 						{
 							effector = ((Servant) effector).getMaster();
 						}
-						
 						final Player playerEffector = (Player) effector;
 						if (playerEffector.isInAlliance2() && player.isInAlliance2())
 						{
@@ -129,7 +129,6 @@ public class TargetRelationProperty
 					}
 					iter.remove();
 				}
-				
 				if (effectedList.isEmpty())
 				{
 					skill.setFirstTarget(effector);
@@ -140,8 +139,11 @@ public class TargetRelationProperty
 					skill.setFirstTarget(effectedList.get(0));
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		
 		return true;
@@ -161,9 +163,13 @@ public class TargetRelationProperty
 				case ARTIFACT_EFFECT_CORE:
 				case DOOR:
 				case DOOR_REPAIR:
+				{
 					return false;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		return true;

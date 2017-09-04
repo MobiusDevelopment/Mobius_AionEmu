@@ -63,16 +63,22 @@ public class SM_ABNORMAL_EFFECT extends AionServerPacket
 			switch (effectType)
 			{
 				case 2:
+				{
 					writeD(effect.getEffectorId());
+				}
 				case 1:
+				{
 					writeH(effect.getSkillId());
 					writeC(effect.getSkillLevel());
 					writeC(effect.getTargetSlot());
 					writeD(effect.getRemainingTime());
 					break;
+				}
 				default:
+				{
 					writeH(effect.getSkillId());
 					writeC(effect.getSkillLevel());
+				}
 			}
 		}
 	}

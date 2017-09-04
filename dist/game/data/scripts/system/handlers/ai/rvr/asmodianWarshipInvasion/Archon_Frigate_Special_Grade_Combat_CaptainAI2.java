@@ -44,14 +44,20 @@ public class Archon_Frigate_Special_Grade_Combat_CaptainAI2 extends AggressiveNp
 		switch (Rnd.get(1, 3))
 		{
 			case 1:
+			{
 				spawn(240669, 1409.9818f, 1369.7706f, 1336.7855f, (byte) 60); // Suminid.
 				break;
+			}
 			case 2:
+			{
 				spawn(240670, 1409.9818f, 1369.7706f, 1336.7855f, (byte) 60); // Taina.
 				break;
+			}
 			case 3:
+			{
 				spawn(240671, 1409.9818f, 1369.7706f, 1336.7855f, (byte) 60); // Vassad.
 				break;
+			}
 		}
 		super.handleDied();
 		despawnNpc(240668); // Archon Frigate Special Grade Assault Leader.

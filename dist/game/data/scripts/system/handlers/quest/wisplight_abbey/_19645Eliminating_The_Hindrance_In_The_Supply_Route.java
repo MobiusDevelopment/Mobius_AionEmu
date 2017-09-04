@@ -89,9 +89,13 @@ public class _19645Eliminating_The_Hindrance_In_The_Supply_Route extends QuestHa
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}
@@ -112,7 +116,9 @@ public class _19645Eliminating_The_Hindrance_In_The_Supply_Route extends QuestHa
 							return sendQuestEndDialog(env);
 						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 			}
@@ -128,7 +134,9 @@ public class _19645Eliminating_The_Hindrance_In_The_Supply_Route extends QuestHa
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}
@@ -149,6 +157,7 @@ public class _19645Eliminating_The_Hindrance_In_The_Supply_Route extends QuestHa
 		{
 			case 235798:
 			case 235805:
+			{
 				if (qs.getQuestVarById(1) < 10)
 				{
 					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -160,6 +169,7 @@ public class _19645Eliminating_The_Hindrance_In_The_Supply_Route extends QuestHa
 					updateQuestStatus(env);
 				}
 				break;
+			}
 		}
 		return false;
 	}

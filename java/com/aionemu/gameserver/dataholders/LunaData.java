@@ -57,16 +57,24 @@ public class LunaData
 			switch (lt.getRace())
 			{
 				case ASMODIANS:
+				{
 					asmos.add(lt);
 					break;
+				}
 				case ELYOS:
+				{
 					elyos.add(lt);
 					break;
+				}
 				case PC_ALL:
+				{
 					any.add(lt);
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		list = null;

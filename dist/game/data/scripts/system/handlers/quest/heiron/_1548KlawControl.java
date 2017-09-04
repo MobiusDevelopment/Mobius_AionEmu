@@ -96,6 +96,7 @@ public class _1548KlawControl extends QuestHandler
 		switch (targetId)
 		{
 			case 700169:
+			{
 				if ((var >= 0) && (var < 4))
 				{
 					qs.setQuestVarById(0, var + 1);
@@ -110,6 +111,7 @@ public class _1548KlawControl extends QuestHandler
 					updateQuestStatus(env);
 					return true;
 				}
+			}
 		}
 		return false;
 	}

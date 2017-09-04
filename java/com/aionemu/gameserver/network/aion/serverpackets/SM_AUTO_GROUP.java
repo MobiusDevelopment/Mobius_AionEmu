@@ -113,50 +113,68 @@ public class SM_AUTO_GROUP extends AionServerPacket
 			switch (windowId)
 			{
 				case 0: // Request Entry
+				{
 					writeD(messageId);
 					writeD(titleId);
 					writeD(0);
 					break;
+				}
 				case 1: // Waiting Window
+				{
 					writeD(0);
 					writeD(0);
 					writeD(waitTime);
 					break;
+				}
 				case 2: // Cancel Looking
+				{
 					writeD(0);
 					writeD(0);
 					writeD(0);
 					break;
+				}
 				case 3: // Pass Window
+				{
 					writeD(0);
 					writeD(0);
 					writeD(waitTime);
 					break;
+				}
 				case 4: // Enter Window
+				{
 					writeD(0);
 					writeD(0);
 					writeD(0);
 					break;
+				}
 				case 5: // After You Click Enter
+				{
 					writeD(0);
 					writeD(0);
 					writeD(0);
 					break;
+				}
 				case wnd_EntryIcon:
+				{
 					writeD(messageId);
 					writeD(titleId);
 					writeD(close ? 0 : 1);
 					break;
+				}
 				case 7: // Failed Window
+				{
 					writeD(messageId);
 					writeD(titleId);
 					writeD(0);
 					break;
+				}
 				case 8:
+				{
 					writeD(0);
 					writeD(0);
 					writeD(waitTime);
 					break;
+				}
 			}
 			writeC(0);
 			writeS(name);

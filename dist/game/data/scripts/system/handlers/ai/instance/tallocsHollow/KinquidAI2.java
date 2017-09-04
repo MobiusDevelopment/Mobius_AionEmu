@@ -150,47 +150,73 @@ public class KinquidAI2 extends AggressiveNpcAI2
 			switch (Rnd.get(1, 2))
 			{
 				case 1:
+				{
 					spawnId = 282008;
 					break;
+				}
 				case 2:
+				{
 					spawnId = 282009;
 					break;
+				}
 			}
 			switch (Rnd.get(1, 11))
 			{
 				case 1:
+				{
 					spawn(spawnId, 266.706848f, 680.673279f, 1174.000000f, (byte) 0);
 					break;
+				}
 				case 2:
+				{
 					spawn(spawnId, 292.024658f, 719.713196f, 1174.000000f, (byte) 0);
 					break;
+				}
 				case 3:
+				{
 					spawn(spawnId, 263.433411f, 716.730042f, 1174.000000f, (byte) 0);
 					break;
+				}
 				case 4:
+				{
 					spawn(spawnId, 292.02466f, 719.7132f, 1169.3982f, (byte) 0);
 					break;
+				}
 				case 5:
+				{
 					spawn(spawnId, 263.4334f, 716.73004f, 1170.3693f, (byte) 0);
 					break;
+				}
 				case 6:
+				{
 					spawn(spawnId, 267.04f, 680.795f, 1167.27f, (byte) 119);
 					break;
+				}
 				case 7:
+				{
 					spawn(spawnId, 263.738f, 716.57f, 1170.34f, (byte) 33);
 					break;
+				}
 				case 8:
+				{
 					spawn(spawnId, 292.688f, 719.164f, 1169.33f, (byte) 22);
 					break;
+				}
 				case 9:
+				{
 					spawn(spawnId, 235.886f, 708.13f, 1170.82f, (byte) 48);
 					break;
+				}
 				case 10:
+				{
 					spawn(spawnId, 262.973f, 716.379f, 1170.29f, (byte) 7);
 					break;
+				}
 				case 11:
+				{
 					spawn(spawnId, 267.04f, 680.795f, 1167.27f, (byte) 119);
 					break;
+				}
 			}
 		}
 		doSchedule();

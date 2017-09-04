@@ -129,17 +129,25 @@ public class PriestAI2 extends AggressiveNpcAI2
 						switch (Rnd.get(1, 4))
 						{
 							case 1:
+							{
 								spawn(280638, x, y, z, (byte) 0); // Sacred Dragon Relic I.
 								break;
+							}
 							case 2:
+							{
 								spawn(280639, x, y, z, (byte) 0); // Sacred Dragon Relic II.
 								break;
+							}
 							case 3:
+							{
 								spawn(280640, x, y, z, (byte) 0); // Sacred Dragon Relic III.
 								break;
+							}
 							case 4:
+							{
 								spawn(281301, x, y, z, (byte) 0); // Holy Servant I.
 								break;
+							}
 						}
 					}
 				}
@@ -197,14 +205,18 @@ public class PriestAI2 extends AggressiveNpcAI2
 			case 214893:
 			case 215238:
 			case 215270:
+			{
 				anuhartBravery();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
 			case 233915:
+			{
 				survivalInstinct();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -320,15 +332,19 @@ public class PriestAI2 extends AggressiveNpcAI2
 			case 883252:
 			case 883258:
 			case 883264:
+			{
 				conquerorPassion();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
 			case 230804:
 			case 230805:
+			{
 				midnightRobe();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -345,8 +361,10 @@ public class PriestAI2 extends AggressiveNpcAI2
 			case 883060:
 			case 883066:
 			case 883072:
+			{
 				ereshkigalRage();
 				break;
+			}
 		}
 		switch (getNpcId())
 		{
@@ -370,8 +388,10 @@ public class PriestAI2 extends AggressiveNpcAI2
 			case 883036:
 			case 883042:
 			case 883048:
+			{
 				brokenMorale();
 				break;
+			}
 		}
 	}
 	

@@ -108,7 +108,9 @@ public class _30211GroupTheRodandtheOrb extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

@@ -116,6 +116,7 @@ public class _16988Asmo_Squad_Wipeout extends QuestHandler
 				case 233129:
 				case 233130:
 				case 233131:
+				{
 					if (qs.getQuestVarById(1) < 5)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -126,6 +127,7 @@ public class _16988Asmo_Squad_Wipeout extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

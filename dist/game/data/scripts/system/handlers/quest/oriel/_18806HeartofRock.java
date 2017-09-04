@@ -86,7 +86,9 @@ public class _18806HeartofRock extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -122,8 +124,10 @@ public class _18806HeartofRock extends QuestHandler
 							return sendQuestDialog(env, 2375);
 						}
 						case SELECT_REWARD:
+						{
 							changeQuestStep(env, 1, 1, true);
 							return sendQuestDialog(env, 5);
+						}
 					}
 				}
 			}

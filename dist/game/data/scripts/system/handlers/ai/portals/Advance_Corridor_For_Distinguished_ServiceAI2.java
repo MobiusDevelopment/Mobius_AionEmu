@@ -64,12 +64,14 @@ public class Advance_Corridor_For_Distinguished_ServiceAI2 extends GeneralNpcAI2
 			{
 				case 730967: // Advance Corridor For Distinguished Service.
 				case 730968: // Advance Corridor For Distinguished Service.
+				{
 					final AutoGroupType agt = AutoGroupType.getAutoGroup(player.getLevel(), getNpcId());
 					if (agt != null)
 					{
 						PacketSendUtility.sendPacket(player, new SM_FIND_GROUP(0x1A, agt.getInstanceMapId()));
 					}
 					break;
+				}
 			}
 		}
 		else if (dialogId == 10)

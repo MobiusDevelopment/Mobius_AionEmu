@@ -40,7 +40,6 @@ import com.aionemu.gameserver.services.player.PlayerReviveService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****/
 /**
@@ -74,24 +73,35 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 702658: // Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053579, 1)); // [Event] Abbey Bundle.
 				break;
+			}
 			case 702659: // Noble Abbey Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053580, 1)); // [Event] Noble Abbey Bundle.
 				break;
+			}
 			case 215796: // Gradarim The Collector.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000087, 1)); // Jotun Vault Key.
 				break;
+			}
 			case 215786: // Garha The Punisher.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000086, 1)); // Shadowy Prison Key.
 				break;
+			}
 			case 215797: // Bergrisar.
 			case 216149: // Udas Temple Treasure Box.
 			case 216150: // Udas Temple Treasure Box.
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188052306, 1)); // Udas Temple Contribution Bundle.
 				break;
+			}
 			case 215783: // Nexus.
 			case 215795: // Debilkarim The Maker.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -102,39 +112,41 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 	}
 	
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 215795: // Debilkarim The Maker.
+			{
 				chestUdasTempleTask.cancel(true);
 				sendMsg("[Congratulation]: you finish <Lower Udas Temple>");
 				switch (Rnd.get(1, 2))
 				{
 					case 1:
+					{
 						spawn(702658, 575.1232f, 1295.7212f, 187.85898f, (byte) 113); // Abbey Box.
 						break;
+					}
 					case 2:
+					{
 						spawn(702659, 575.1232f, 1295.7212f, 187.85898f, (byte) 113); // Noble Abbey Box.
 						break;
+					}
 				}
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 ->
 				{
-					@Override
-					public void visit(Player player)
+					if (player1.isOnline())
 					{
-						if (player.isOnline())
-						{
-							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 0));
-						}
+						PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 0));
 					}
 				});
 				break;
+			}
 		}
 	}
 	
@@ -146,15 +158,11 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		{
 			isStartTimer1 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player1 ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player1.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 300));
 				}
 			});
 			udasTempleChest.add((Npc) spawn(216149, 445.99957f, 1178.3578f, 193.02937f, (byte) 21));
@@ -169,15 +177,11 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 			udasTempleChest.add((Npc) spawn(216150, 455.50082f, 1176.3575f, 192.6768f, (byte) 34));
 			udasTempleChest.add((Npc) spawn(216150, 436.63177f, 1192.1348f, 190.88254f, (byte) 119));
 			udasTempleChest.add((Npc) spawn(216150, 438.38586f, 1202.9849f, 192.8323f, (byte) 105));
-			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer2();
-					sendMsg(1400245);
-					udasTempleChest.get(0).getController().onDelete();
-				}
+				StartTimer2();
+				sendMsg(1400245);
+				udasTempleChest.get(0).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -188,26 +192,18 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		{
 			isStartTimer2 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer3();
-					sendMsg(1400245);
-					udasTempleChest.get(1).getController().onDelete();
-				}
+				StartTimer3();
+				sendMsg(1400245);
+				udasTempleChest.get(1).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -218,26 +214,18 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		{
 			isStartTimer3 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer4();
-					sendMsg(1400245);
-					udasTempleChest.get(2).getController().onDelete();
-				}
+				StartTimer4();
+				sendMsg(1400245);
+				udasTempleChest.get(2).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -248,26 +236,18 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		{
 			isStartTimer4 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer5();
-					sendMsg(1400245);
-					udasTempleChest.get(3).getController().onDelete();
-				}
+				StartTimer5();
+				sendMsg(1400245);
+				udasTempleChest.get(3).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -278,26 +258,18 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		{
 			isStartTimer5 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer6();
-					sendMsg(1400245);
-					udasTempleChest.get(4).getController().onDelete();
-				}
+				StartTimer6();
+				sendMsg(1400245);
+				udasTempleChest.get(4).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -308,26 +280,18 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		{
 			isStartTimer6 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer7();
-					sendMsg(1400245);
-					udasTempleChest.get(5).getController().onDelete();
-				}
+				StartTimer7();
+				sendMsg(1400245);
+				udasTempleChest.get(5).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -338,26 +302,18 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		{
 			isStartTimer7 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer8();
-					sendMsg(1400245);
-					udasTempleChest.get(6).getController().onDelete();
-				}
+				StartTimer8();
+				sendMsg(1400245);
+				udasTempleChest.get(6).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -368,26 +324,18 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		{
 			isStartTimer8 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer9();
-					sendMsg(1400245);
-					udasTempleChest.get(7).getController().onDelete();
-				}
+				StartTimer9();
+				sendMsg(1400245);
+				udasTempleChest.get(7).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -398,26 +346,18 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		{
 			isStartTimer9 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer10();
-					sendMsg(1400245);
-					udasTempleChest.get(8).getController().onDelete();
-				}
+				StartTimer10();
+				sendMsg(1400245);
+				udasTempleChest.get(8).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -428,26 +368,18 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		{
 			isStartTimer10 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer11();
-					sendMsg(1400245);
-					udasTempleChest.get(9).getController().onDelete();
-				}
+				StartTimer11();
+				sendMsg(1400245);
+				udasTempleChest.get(9).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -458,26 +390,18 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		{
 			isStartTimer11 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer12();
-					sendMsg(1400245);
-					udasTempleChest.get(10).getController().onDelete();
-				}
+				StartTimer12();
+				sendMsg(1400245);
+				udasTempleChest.get(10).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -488,26 +412,18 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 		{
 			isStartTimer12 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestUdasTempleTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					sendMsg(1400244);
-					sendMsg(1400245);
-					udasTempleChest.get(11).getController().onDelete();
-				}
+				sendMsg(1400244);
+				sendMsg(1400245);
+				udasTempleChest.get(11).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -533,14 +449,7 @@ public class LowerUdasTempleInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	@Override

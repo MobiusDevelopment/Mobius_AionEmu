@@ -133,6 +133,7 @@ public class _25472Taking_The_Outposts extends QuestHandler
 				case 882988:
 				case 883000:
 				case 883012:
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -143,6 +144,7 @@ public class _25472Taking_The_Outposts extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

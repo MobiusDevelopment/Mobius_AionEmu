@@ -23,9 +23,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.model.gameobjects.PersistentState;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.Stigma.StigmaSkill;
@@ -39,8 +36,7 @@ import javolution.util.FastList;
  */
 public final class PlayerSkillList implements SkillList<Player>
 {
-	
-	private static final Logger log = LoggerFactory.getLogger(PlayerSkillList.class);
+	// private static final Logger log = LoggerFactory.getLogger(PlayerSkillList.class);
 	private final Map<Integer, PlayerSkillEntry> basicSkills;
 	private final Map<Integer, PlayerSkillEntry> stigmaSkills;
 	private final Map<Integer, PlayerSkillEntry> linkedSkills;
@@ -78,6 +74,7 @@ public final class PlayerSkillList implements SkillList<Player>
 	
 	/**
 	 * Returns array with all skills
+	 * @return
 	 */
 	public PlayerSkillEntry[] getAllSkills()
 	{
@@ -238,9 +235,13 @@ public final class PlayerSkillList implements SkillList<Player>
 			case 40009:
 			case 40010:
 			case 40011:
+			{
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -248,6 +249,7 @@ public final class PlayerSkillList implements SkillList<Player>
 	 * @param player
 	 * @param skillId
 	 * @param xpReward
+	 * @param objSkillPoints
 	 * @return
 	 */
 	public boolean addSkillXp(Player player, int skillId, int xpReward, int objSkillPoints)
@@ -262,16 +264,20 @@ public final class PlayerSkillList implements SkillList<Player>
 		switch (skillEntry.getSkillId())
 		{
 			case 30001:
+			{
 				if (skillEntry.getSkillLevel() == 49)
 				{
 					return false;
 				}
+			}
 			case 30002:
 			case 30003:
+			{
 				if (skillEntry.getSkillLevel() == 449)
 				{
 					break;
 				}
+			}
 			case 40001:
 			case 40002:
 			case 40003:
@@ -279,6 +285,7 @@ public final class PlayerSkillList implements SkillList<Player>
 			case 40007:
 			case 40008:
 			case 40010:
+			{
 				switch (skillEntry.getSkillLevel())
 				{
 					case 99:
@@ -288,9 +295,12 @@ public final class PlayerSkillList implements SkillList<Player>
 					case 449:
 					case 499:
 					case 549:
+					{
 						return false;
+					}
 				}
 				player.getRecipeList().autoLearnRecipe(player, skillId, skillEntry.getSkillLevel());
+			}
 		}
 		final boolean updateSkill = skillEntry.addSkillXp(player, xpReward);
 		if (updateSkill)
@@ -349,6 +359,7 @@ public final class PlayerSkillList implements SkillList<Player>
 	/**
 	 * @param player
 	 * @param skillId
+	 * @param isNew
 	 */
 	private void sendMessage(Player player, int skillId, boolean isNew)
 	{
@@ -356,11 +367,15 @@ public final class PlayerSkillList implements SkillList<Player>
 		{
 			case 30001:
 			case 30002:
+			{
 				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1330005, false));
 				break;
+			}
 			case 30003:
+			{
 				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1330005, false));
 				break;
+			}
 			case 40001:
 			case 40002:
 			case 40003:
@@ -371,10 +386,14 @@ public final class PlayerSkillList implements SkillList<Player>
 			case 40008:
 			case 40009:
 			case 40010:
+			{
 				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1330061, false));
 				break;
+			}
 			default:
+			{
 				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1300050, isNew));
+			}
 		}
 	}
 	

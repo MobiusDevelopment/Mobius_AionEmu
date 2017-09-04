@@ -56,6 +56,7 @@ public class ProvokerEffect extends ShieldEffect
 		switch (hitType)
 		{
 			case NMLATK:
+			{
 				observer = new ActionObserver(ObserverType.ATTACK)
 				{
 					@Override
@@ -69,7 +70,9 @@ public class ProvokerEffect extends ShieldEffect
 					}
 				};
 				break;
+			}
 			case EVERYHIT:
+			{
 				observer = new ActionObserver(ObserverType.ATTACKED)
 				{
 					@Override
@@ -90,7 +93,9 @@ public class ProvokerEffect extends ShieldEffect
 					}
 				};
 				break;
+			}
 			case BACKATK:
+			{
 				observer = new ActionObserver(ObserverType.ATTACKED)
 				{
 					@Override
@@ -104,7 +109,9 @@ public class ProvokerEffect extends ShieldEffect
 					}
 				};
 				break;
+			}
 			case PHHIT:
+			{
 				observer = new ActionObserver(ObserverType.ATTACKED)
 				{
 					@Override
@@ -123,7 +130,9 @@ public class ProvokerEffect extends ShieldEffect
 					}
 				};
 				break;
+			}
 			case MAHIT:
+			{
 				observer = new ActionObserver(ObserverType.ATTACKED)
 				{
 					@Override
@@ -142,6 +151,7 @@ public class ProvokerEffect extends ShieldEffect
 					}
 				};
 				break;
+			}
 		}
 		if (observer == null)
 		{
@@ -161,9 +171,13 @@ public class ProvokerEffect extends ShieldEffect
 		switch (provokeTarget)
 		{
 			case ME:
+			{
 				return effector;
+			}
 			case OPPONENT:
+			{
 				return target;
+			}
 		}
 		throw new IllegalArgumentException("Provoker target is invalid " + provokeTarget);
 	}

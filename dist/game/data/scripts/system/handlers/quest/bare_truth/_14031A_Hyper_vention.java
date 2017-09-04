@@ -121,7 +121,9 @@ public class _14031A_Hyper_vention extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					return sendQuestDialog(env, 1011);
+				}
 				case STEP_TO_1:
 				{
 					return defaultCloseDialog(env, 0, 1);
@@ -133,10 +135,12 @@ public class _14031A_Hyper_vention extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 1)
 					{
 						return sendQuestDialog(env, 1352);
 					}
+				}
 				case STEP_TO_2:
 				{
 					return defaultCloseDialog(env, 1, 2);
@@ -148,10 +152,12 @@ public class _14031A_Hyper_vention extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 2)
 					{
 						return sendQuestDialog(env, 1693);
 					}
+				}
 				case STEP_TO_3:
 				{
 					giveQuestItem(env, 182215388, 1);
@@ -164,10 +170,12 @@ public class _14031A_Hyper_vention extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 4)
 					{
 						return sendQuestDialog(env, 2376);
 					}
+				}
 				case STEP_TO_5:
 				{
 					giveQuestItem(env, 182215389, 1);
@@ -180,6 +188,7 @@ public class _14031A_Hyper_vention extends QuestHandler
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
+				{
 					if (var == 6)
 					{
 						return sendQuestDialog(env, 3057);
@@ -188,6 +197,7 @@ public class _14031A_Hyper_vention extends QuestHandler
 					{
 						return sendQuestDialog(env, 3740);
 					}
+				}
 				case STEP_TO_7:
 				{
 					giveQuestItem(env, 182215390, 1);
@@ -208,6 +218,7 @@ public class _14031A_Hyper_vention extends QuestHandler
 			switch (env.getDialog())
 			{
 				case USE_OBJECT:
+				{
 					if (var == 10)
 					{
 						playQuestMovie(env, 898);
@@ -217,6 +228,7 @@ public class _14031A_Hyper_vention extends QuestHandler
 						changeQuestStep(env, 10, 11, false);
 						return closeDialogWindow(env);
 					}
+				}
 			}
 		}
 		else if (targetId == 730898)

@@ -67,11 +67,15 @@ public class ManadarAI2 extends AggressiveNpcAI2
 				switch (nrNpc)
 				{
 					case 1:
+					{
 						nrNpc = 281545;
 						break;
+					}
 					case 2:
+					{
 						nrNpc = 281756;
 						break;
+					}
 				}
 				rndSpawnInRange(nrNpc, distance);
 			}

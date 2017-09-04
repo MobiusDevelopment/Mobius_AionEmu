@@ -119,6 +119,7 @@ public class _25632Primordial_Creatures_At_The_Canyon_Of_Lost_Souls extends Ques
 				case 243295:
 				case 243296:
 				case 243297:
+				{
 					if (qs.getQuestVarById(1) < 3)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _25632Primordial_Creatures_At_The_Canyon_Of_Lost_Souls extends Ques
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

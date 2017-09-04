@@ -81,6 +81,7 @@ public class _2620SummoningPhagrasul extends QuestHandler
 		switch (targetId)
 		{
 			case 213109:
+			{
 				if ((qs.getQuestVarById(1) < 5) && (qs.getQuestVarById(0) == 1))
 				{
 					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -88,14 +89,16 @@ public class _2620SummoningPhagrasul extends QuestHandler
 					return true;
 				}
 				break;
-			
+			}
 			case 213111:
+			{
 				if ((qs.getQuestVarById(2) < 5) && (qs.getQuestVarById(0) == 1))
 				{
 					qs.setQuestVarById(2, qs.getQuestVarById(2) + 1);
 					updateQuestStatus(env);
 					return true;
 				}
+			}
 		}
 		
 		return false;
@@ -143,11 +146,14 @@ public class _2620SummoningPhagrasul extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1011);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -164,6 +170,7 @@ public class _2620SummoningPhagrasul extends QuestHandler
 							}, 40000);
 							return true;
 						}
+					}
 				}
 			}
 			if (targetId == 700323)
@@ -171,6 +178,7 @@ public class _2620SummoningPhagrasul extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						if (var == 0)
 						{
 							final int targetObjectId = env.getVisibleObject().getObjectId();
@@ -194,6 +202,7 @@ public class _2620SummoningPhagrasul extends QuestHandler
 								}
 							}, 3000);
 						}
+					}
 				}
 			}
 			if (targetId == 204787)
@@ -201,11 +210,15 @@ public class _2620SummoningPhagrasul extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 10002);
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestDialog(env, 5);
+					}
 				}
 			}
 		}

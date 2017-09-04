@@ -57,16 +57,24 @@ public class StigmaService
 		switch (item.getItemTemplate().getItemQuality())
 		{
 			case RARE:
+			{
 				price = 35312;
 				break;
+			}
 			case LEGEND:
+			{
 				price = 70625;
 				break;
+			}
 			case UNIQUE:
+			{
 				price = 141250;
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return price;
 	}

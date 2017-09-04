@@ -152,9 +152,13 @@ public class DancingFlameAI2 extends GeneralNpcAI2
 		switch (question)
 		{
 			case CAN_ATTACK_PLAYER:
+			{
 				return AIAnswers.POSITIVE;
+			}
 			default:
+			{
 				return AIAnswers.NEGATIVE;
+			}
 		}
 	}
 }

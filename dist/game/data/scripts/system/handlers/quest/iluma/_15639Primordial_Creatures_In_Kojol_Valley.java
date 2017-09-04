@@ -119,6 +119,7 @@ public class _15639Primordial_Creatures_In_Kojol_Valley extends QuestHandler
 				case 243377:
 				case 243378:
 				case 243379:
+				{
 					if (qs.getQuestVarById(1) < 3)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _15639Primordial_Creatures_In_Kojol_Valley extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

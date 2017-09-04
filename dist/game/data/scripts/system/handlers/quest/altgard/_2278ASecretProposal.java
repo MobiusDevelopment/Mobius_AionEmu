@@ -82,6 +82,7 @@ public class _2278ASecretProposal extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							return sendQuestDialog(env, 1352);
@@ -92,7 +93,9 @@ public class _2278ASecretProposal extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 2375);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -100,8 +103,11 @@ public class _2278ASecretProposal extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 			if (targetId == 204206)
@@ -109,11 +115,14 @@ public class _2278ASecretProposal extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							return sendQuestDialog(env, 1693);
 						}
+					}
 					case STEP_TO_2:
+					{
 						if (var == 1)
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -121,6 +130,7 @@ public class _2278ASecretProposal extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 				}
 			}
 			if (targetId == 204075)
@@ -128,11 +138,14 @@ public class _2278ASecretProposal extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 2)
 						{
 							return sendQuestDialog(env, 2034);
 						}
+					}
 					case STEP_TO_3:
+					{
 						if (var == 2)
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -140,6 +153,7 @@ public class _2278ASecretProposal extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
+					}
 				}
 			}
 		}

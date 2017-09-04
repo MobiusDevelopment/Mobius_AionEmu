@@ -64,10 +64,14 @@ public class _28301Power_On extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						playQuestMovie(env, 468);
 						return sendQuestDialog(env, 4762);
+					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}
@@ -83,8 +87,11 @@ public class _28301Power_On extends QuestHandler
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 1011);
+					}
 					case STEP_TO_1:
+					{
 						if (env.getVisibleObject() instanceof Npc)
 						{
 							targetId = ((Npc) env.getVisibleObject()).getNpcId();
@@ -95,8 +102,11 @@ public class _28301Power_On extends QuestHandler
 							updateQuestStatus(env);
 							return closeDialogWindow(env);
 						}
+					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 			else if ((targetId == 730374) && (var == 7))
@@ -104,14 +114,20 @@ public class _28301Power_On extends QuestHandler
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 1352);
+					}
 					case STEP_TO_2:
+					{
 						ItemService.addQuestItems(player, Collections.singletonList(new QuestItems(182212110, 1)));
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 						return closeDialogWindow(env);
+					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}
@@ -122,11 +138,17 @@ public class _28301Power_On extends QuestHandler
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 10002);
+					}
 					case SELECT_REWARD:
+					{
 						return sendQuestDialog(env, 5);
+					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}

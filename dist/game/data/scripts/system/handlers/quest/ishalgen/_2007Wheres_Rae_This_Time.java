@@ -118,15 +118,19 @@ public class _2007Wheres_Rae_This_Time extends QuestHandler
 			switch (targetId)
 			{
 				case 203516:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
 							break;
+						}
 						case STEP_TO_1:
+						{
 							if (var == 0)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -135,18 +139,24 @@ public class _2007Wheres_Rae_This_Time extends QuestHandler
 								return true;
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case 203519:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
 							}
 							break;
+						}
 						case STEP_TO_2:
+						{
 							if (var == 1)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -155,21 +165,29 @@ public class _2007Wheres_Rae_This_Time extends QuestHandler
 								return true;
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case 203539:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 2)
 							{
 								return sendQuestDialog(env, 1693);
 							}
 							break;
+						}
 						case SELECT_ACTION_1694:
+						{
 							playQuestMovie(env, 55);
 							break;
+						}
 						case STEP_TO_3:
+						{
 							if (var == 2)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -178,18 +196,24 @@ public class _2007Wheres_Rae_This_Time extends QuestHandler
 								return true;
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case 203552:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 3)
 							{
 								return sendQuestDialog(env, 2034);
 							}
 							break;
+						}
 						case STEP_TO_4:
+						{
 							if (var == 3)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -198,12 +222,16 @@ public class _2007Wheres_Rae_This_Time extends QuestHandler
 								return true;
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case 203554:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 4)
 							{
 								return sendQuestDialog(env, 2375);
@@ -213,7 +241,9 @@ public class _2007Wheres_Rae_This_Time extends QuestHandler
 								return sendQuestDialog(env, 2716);
 							}
 							break;
+						}
 						case STEP_TO_5:
+						{
 							if (var == 4)
 							{
 								qs.setQuestVar(5);
@@ -222,7 +252,9 @@ public class _2007Wheres_Rae_This_Time extends QuestHandler
 								return true;
 							}
 							break;
+						}
 						case STEP_TO_6:
+						{
 							if (var == 8)
 							{
 								qs.setQuestVar(9);
@@ -234,29 +266,37 @@ public class _2007Wheres_Rae_This_Time extends QuestHandler
 								return true;
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case 700085:
+				{
 					if (var == 5)
 					{
 						destroy(6, env);
 						return false;
 					}
 					break;
+				}
 				case 700086:
+				{
 					if (var == 6)
 					{
 						destroy(7, env);
 						return false;
 					}
 					break;
+				}
 				case 700087:
+				{
 					if (var == 7)
 					{
 						destroy(-1, env);
 						return false;
 					}
 					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
@@ -268,10 +308,7 @@ public class _2007Wheres_Rae_This_Time extends QuestHandler
 					playQuestMovie(env, 58);
 					return sendQuestDialog(env, 3057);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;
@@ -283,32 +320,32 @@ public class _2007Wheres_Rae_This_Time extends QuestHandler
 		final Player player = env.getPlayer();
 		PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), targetObjectId, 3000, 1));
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.NEUTRALMODE2, 0, targetObjectId), true);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (player.getTarget().getObjectId() != targetObjectId)
 			{
-				if (player.getTarget().getObjectId() != targetObjectId)
-				{
-					return;
-				}
-				PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), targetObjectId, 3000, 0));
-				PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.START_LOOT, 0, targetObjectId), true);
-				sendEmotion(env, player, EmotionId.STAND, true);
-				final QuestState qs = player.getQuestStateList().getQuestState(questId);
-				switch (var)
-				{
-					case 6:
-					case 7:
-						qs.setQuestVar(var);
-						break;
-					case -1:
-						playQuestMovie(env, 56);
-						qs.setQuestVar(8);
-						break;
-				}
-				updateQuestStatus(env);
+				return;
 			}
+			PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), targetObjectId, 3000, 0));
+			PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.START_LOOT, 0, targetObjectId), true);
+			sendEmotion(env, player, EmotionId.STAND, true);
+			final QuestState qs = player.getQuestStateList().getQuestState(questId);
+			switch (var)
+			{
+				case 6:
+				case 7:
+				{
+					qs.setQuestVar(var);
+					break;
+				}
+				case -1:
+				{
+					playQuestMovie(env, 56);
+					qs.setQuestVar(8);
+					break;
+				}
+			}
+			updateQuestStatus(env);
 		}, 3000);
 	}
 }

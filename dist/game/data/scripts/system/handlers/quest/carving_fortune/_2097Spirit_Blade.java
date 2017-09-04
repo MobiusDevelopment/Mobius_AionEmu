@@ -75,14 +75,18 @@ public class _2097Spirit_Blade extends QuestHandler
 			switch (targetId)
 			{
 				case 203550:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
+						}
 						case STEP_TO_1:
+						{
 							if (var == 0)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -90,18 +94,24 @@ public class _2097Spirit_Blade extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+						}
 					}
 					break;
+				}
 				case 203546:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
 							}
 							return true;
+						}
 						case STEP_TO_2:
+						{
 							if (var == 1)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -109,17 +119,23 @@ public class _2097Spirit_Blade extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+						}
 					}
 					break;
+				}
 				case 279034:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 2)
 							{
 								return sendQuestDialog(env, 1693);
 							}
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							if (var == 2)
 							{
 								if (QuestService.collectItemCheck(env, true))
@@ -133,27 +149,30 @@ public class _2097Spirit_Blade extends QuestHandler
 									PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 									return sendQuestDialog(env, 10000);
 								}
-								else
-								{
-									return sendQuestDialog(env, 10001);
-								}
+								return sendQuestDialog(env, 10001);
 							}
+						}
 					}
 					break;
+				}
 				case 700509:
+				{
 					if (dialog == QuestDialog.USE_OBJECT)
 					{
 						giveQuestItem(env, 182207086, 1);
 						return true;
 					}
 					break;
+				}
 				case 700510:
+				{
 					if (dialog == QuestDialog.USE_OBJECT)
 					{
 						giveQuestItem(env, 182207087, 1);
 						return true;
 					}
 					break;
+				}
 			}
 		}
 		else if ((qs.getStatus() == QuestStatus.REWARD) && (targetId == 203550))

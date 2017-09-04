@@ -358,12 +358,18 @@ public class SpawnEngine
 					{
 						case RIFT:
 						case VOLATILE_RIFT:
+						{
 							RiftManager.addRiftSpawnTemplate(spawn);
 							break;
+						}
 						case STATIC:
+						{
 							StaticObjectSpawnManager.spawnTemplate(spawn, instanceId);
+						}
 						default:
+						{
 							break;
+						}
 					}
 				}
 				else if (spawn.hasPool() && checkPool(spawn))

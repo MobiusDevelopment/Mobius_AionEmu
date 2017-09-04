@@ -155,6 +155,7 @@ public class _15534Scout_Nightbloom_Forest extends QuestHandler
 				case 242535:
 				case 242539:
 				case 242543:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -165,6 +166,7 @@ public class _15534Scout_Nightbloom_Forest extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

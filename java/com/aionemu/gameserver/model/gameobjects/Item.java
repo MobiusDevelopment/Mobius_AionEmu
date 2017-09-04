@@ -657,6 +657,7 @@ public class Item extends AionObject implements IExpirable, StatOwner
 		switch (persistentState)
 		{
 			case DELETED:
+			{
 				if (this.persistentState == PersistentState.NEW)
 				{
 					this.persistentState = PersistentState.NOACTION;
@@ -666,13 +667,18 @@ public class Item extends AionObject implements IExpirable, StatOwner
 					this.persistentState = PersistentState.DELETED;
 				}
 				break;
+			}
 			case UPDATE_REQUIRED:
+			{
 				if (this.persistentState == PersistentState.NEW)
 				{
 					break;
 				}
+			}
 			default:
+			{
 				this.persistentState = persistentState;
+			}
 		}
 		
 	}
@@ -967,12 +973,16 @@ public class Item extends AionObject implements IExpirable, StatOwner
 				switch (i)
 				{
 					case CUBE:
+					{
 						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400034, new DescriptionId(getNameId())));
 						break;
+					}
 					case ACCOUNT_WAREHOUSE:
 					case REGULAR_WAREHOUSE:
+					{
 						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400406, new DescriptionId(getNameId())));
 						break;
+					}
 				}
 			}
 		}

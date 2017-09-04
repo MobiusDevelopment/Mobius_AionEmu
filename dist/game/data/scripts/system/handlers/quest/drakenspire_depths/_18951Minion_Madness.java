@@ -210,6 +210,7 @@ public class _18951Minion_Madness extends QuestHandler
 				case 236218:
 				case 236219:
 				case 236220:
+				{
 					if (qs.getQuestVarById(1) < 25)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -220,6 +221,7 @@ public class _18951Minion_Madness extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

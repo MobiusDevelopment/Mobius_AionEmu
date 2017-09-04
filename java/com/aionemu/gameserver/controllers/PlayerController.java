@@ -286,6 +286,7 @@ public class PlayerController extends CreatureController<Player>
 				case 400040000: // Aspida.
 				case 400050000: // Atanatos.
 				case 400060000: // Disillon.
+				{
 					player.setFlyState(0);
 					player.getFlyController().endFly(true);
 					player.unsetState(CreatureState.FLYING);
@@ -293,6 +294,7 @@ public class PlayerController extends CreatureController<Player>
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FLYING_FORBIDDEN_ZONE);
 					PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.LAND, 0, 0), true);
 					break;
+				}
 			}
 		}
 		InstanceService.onEnterZone(player, zone);
@@ -314,18 +316,24 @@ public class PlayerController extends CreatureController<Player>
 			{
 				// Rentus Base
 				case ELYOS:
+				{
 					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 730399, 1147.6155f, 800.88049f, 563.40173f, (byte) 0);
 					template.setEntityId(885);
 					autoPortals.put(730399, SpawnEngine.spawnObject(template, 1));
 					break;
+				}
 				// Occupied Rentus Base
 				case ASMODIANS:
+				{
 					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 832992, 1147.6155f, 800.88049f, 563.40173f, (byte) 0);
 					template.setEntityId(885);
 					autoPortals.put(832992, SpawnEngine.spawnObject(template, 1));
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		else if (zone.getAreaTemplate().getZoneName() == ZoneName.get("RENTUS_RECOVERY_BASE_220080000"))
@@ -334,18 +342,24 @@ public class PlayerController extends CreatureController<Player>
 			{
 				// Occupied Rentus Base
 				case ELYOS:
+				{
 					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 832991, 1973.3156f, 2017.3612f, 329.13571f, (byte) 0);
 					template.setEntityId(900);
 					autoPortals.put(832991, SpawnEngine.spawnObject(template, 1));
 					break;
+				}
 				// Rentus Base
 				case ASMODIANS:
+				{
 					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 730399, 1973.3156f, 2017.3612f, 329.13571f, (byte) 0);
 					template.setEntityId(900);
 					autoPortals.put(730399, SpawnEngine.spawnObject(template, 1));
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		else if (zone.getAreaTemplate().getZoneName() == ZoneName.get("RUINHOLD_SCATTERINGS_210070000"))
@@ -353,6 +367,7 @@ public class PlayerController extends CreatureController<Player>
 			switch (player.getRace())
 			{
 				case ELYOS:
+				{
 					// Tiamat Stronghold
 					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 832995, 93.335602f, 1474.6055f, 491.90103f, (byte) 0);
 					template.setEntityId(306);
@@ -362,14 +377,19 @@ public class PlayerController extends CreatureController<Player>
 					template.setEntityId(865);
 					autoPortals.put(832998, SpawnEngine.spawnObject(template, 1));
 					break;
+				}
 				case ASMODIANS:
+				{
 					// [Anguished] Dragon Lord Refuge
 					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 832997, 103.8532f, 1461.7725f, 494.52884f, (byte) 0);
 					template.setEntityId(865);
 					autoPortals.put(832997, SpawnEngine.spawnObject(template, 1));
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		else if (zone.getAreaTemplate().getZoneName() == ZoneName.get("DRAGONFALLS_GLARE_220080000"))
@@ -377,12 +397,15 @@ public class PlayerController extends CreatureController<Player>
 			switch (player.getRace())
 			{
 				case ELYOS:
+				{
 					// [Anguished] Dragon Lord Refuge
 					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 832997, 2862.9939f, 1679.4772f, 308.87949f, (byte) 0);
 					template.setEntityId(422);
 					autoPortals.put(832997, SpawnEngine.spawnObject(template, 1));
 					break;
+				}
 				case ASMODIANS:
+				{
 					// Tiamat Stronghold
 					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 832996, 2845.8596f, 1659.2727f, 302.67017f, (byte) 0);
 					template.setEntityId(364);
@@ -392,8 +415,11 @@ public class PlayerController extends CreatureController<Player>
 					template.setEntityId(422);
 					autoPortals.put(832998, SpawnEngine.spawnObject(template, 1));
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		else if (zone.getAreaTemplate().getZoneName() == ZoneName.get("DANUAR_SANCTUARY_INSPECTOR_210070000"))
@@ -402,18 +428,24 @@ public class PlayerController extends CreatureController<Player>
 			{
 				// Danuar Sanctuary
 				case ELYOS:
+				{
 					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 731570, 2097.4739f, 2276.1729f, 294.90442f, (byte) 0);
 					template.setEntityId(888);
 					autoPortals.put(731570, SpawnEngine.spawnObject(template, 1));
 					break;
+				}
 				// [Seized] Danuar Sanctuary
 				case ASMODIANS:
+				{
 					template = SpawnEngine.addNewSingleTimeSpawn(210070000, 731549, 2097.4739f, 2276.1729f, 294.90442f, (byte) 0);
 					template.setEntityId(888);
 					autoPortals.put(731549, SpawnEngine.spawnObject(template, 1));
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		else if (zone.getAreaTemplate().getZoneName() == ZoneName.get("DANUAR_SANCTUARY_INVESTIGATION_AREA_220080000"))
@@ -422,18 +454,24 @@ public class PlayerController extends CreatureController<Player>
 			{
 				// [Seized] Danuar Sanctuary
 				case ELYOS:
+				{
 					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 731549, 1667.7465f, 562.70654f, 258.88382f, (byte) 0);
 					template.setEntityId(407);
 					autoPortals.put(731549, SpawnEngine.spawnObject(template, 1));
 					break;
+				}
 				// Danuar Sanctuary
 				case ASMODIANS:
+				{
 					template = SpawnEngine.addNewSingleTimeSpawn(220080000, 731570, 1667.7465f, 562.70654f, 258.88382f, (byte) 0);
 					template.setEntityId(407);
 					autoPortals.put(731570, SpawnEngine.spawnObject(template, 1));
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		/**
@@ -453,10 +491,14 @@ public class PlayerController extends CreatureController<Player>
 				switch (player.getRace())
 				{
 					case ELYOS:
+					{
 						TeleportService2.moveToBindLocation(player, true);
 						break;
+					}
 					default:
+					{
 						break;
+					}
 				}
 			}
 			else if (
@@ -471,10 +513,14 @@ public class PlayerController extends CreatureController<Player>
 				switch (player.getRace())
 				{
 					case ASMODIANS:
+					{
 						TeleportService2.moveToBindLocation(player, true);
 						break;
+					}
 					default:
+					{
 						break;
+					}
 				}
 			}
 		}
@@ -992,10 +1038,14 @@ public class PlayerController extends CreatureController<Player>
 		switch (healType)
 		{
 			case DP:
+			{
 				getOwner().getCommonData().addDp(value);
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 	
@@ -1027,8 +1077,10 @@ public class PlayerController extends CreatureController<Player>
 		switch (dialogId)
 		{
 			case 2:
+			{
 				PacketSendUtility.sendPacket(player, new SM_PRIVATE_STORE(getOwner().getStore(), player));
 				break;
+			}
 		}
 	}
 	
@@ -1263,7 +1315,9 @@ public class PlayerController extends CreatureController<Player>
 				case MANSION:
 				case ESTATE:
 				case PALACE:
+				{
 					return;
+				}
 			}
 		}
 		if (!player.havePermission(MembershipConfig.DISABLE_SOULSICKNESS))

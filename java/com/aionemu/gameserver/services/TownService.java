@@ -153,19 +153,25 @@ public class TownService
 		switch (player.getRace())
 		{
 			case ELYOS:
+			{
 				if (player.getWorldId() == 700010000)
 				{
 					PacketSendUtility.sendPacket(player, new SM_TOWNS_LIST(elyosTowns));
 				}
 				break;
+			}
 			case ASMODIANS:
+			{
 				if (player.getWorldId() == 710010000)
 				{
 					PacketSendUtility.sendPacket(player, new SM_TOWNS_LIST(asmosTowns));
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 	}
 }

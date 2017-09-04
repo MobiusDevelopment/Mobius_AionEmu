@@ -60,6 +60,7 @@ public class DraidogAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 804841: // Draidog.
+				{
 					announceDarkLegionPortal();
 					spawn(702721, 803.0243f, 1260.2048f, 252.79918f, (byte) 63);
 					ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -71,6 +72,7 @@ public class DraidogAI2 extends NpcAI2
 						}
 					}, 300000); // 5 Minutes.
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

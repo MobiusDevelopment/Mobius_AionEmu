@@ -177,6 +177,7 @@ public class DropRegistrationService
 			switch (lootGrouRules.getLootRule())
 			{
 				case ROUNDROBIN:
+				{
 					final int size = groupMembers.size();
 					if (size > lootGrouRules.getNrRoundRobin())
 					{
@@ -186,7 +187,6 @@ public class DropRegistrationService
 					{
 						lootGrouRules.setNrRoundRobin(1);
 					}
-					
 					int i = 0;
 					for (Player p : groupMembers)
 					{
@@ -201,16 +201,21 @@ public class DropRegistrationService
 						}
 					}
 					break;
+				}
 				case FREEFORALL:
+				{
 					winningPlayers = groupMembers;
 					break;
+				}
 				case LEADER:
+				{
 					final Player leader = player.isInGroup2() ? player.getPlayerGroup2().getLeaderObject() : player.getPlayerAlliance2().getLeaderObject();
 					winningPlayers.add(leader);
 					winnerObj = leader.getObjectId();
 					setItemsToWinner(droppedItems, winnerObj);
 					genesis = leader;
 					break;
+				}
 			}
 			
 			for (Player member : winningPlayers)

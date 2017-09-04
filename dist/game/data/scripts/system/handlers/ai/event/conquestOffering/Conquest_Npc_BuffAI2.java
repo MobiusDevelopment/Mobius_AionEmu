@@ -45,29 +45,37 @@ public class Conquest_Npc_BuffAI2 extends ActionItemNpcAI2
 		switch (getNpcId())
 		{
 			case 856175: // Pawrunerk.
+			{
 				effectController.removeEffect(21925);
 				effectController.removeEffect(21926);
 				effectController.removeEffect(21927);
 				SkillEngine.getInstance().getSkill(player, 21924, 1, player).useNoAnimationSkill(); // Boost Attack Power.
 				break;
+			}
 			case 856176: // Chitrunerk.
+			{
 				effectController.removeEffect(21924);
 				effectController.removeEffect(21926);
 				effectController.removeEffect(21927);
 				SkillEngine.getInstance().getSkill(player, 21925, 1, player).useNoAnimationSkill(); // Movement Speed Increase.
 				break;
+			}
 			case 856177: // Rapirunerk.
+			{
 				effectController.removeEffect(21924);
 				effectController.removeEffect(21925);
 				effectController.removeEffect(21927);
 				SkillEngine.getInstance().getSkill(player, 21926, 1, player).useNoAnimationSkill(); // Attack Speed/Casting Speed Increase.
 				break;
+			}
 			case 856178: // Dandrunerk.
+			{
 				effectController.removeEffect(21924);
 				effectController.removeEffect(21925);
 				effectController.removeEffect(21926);
 				SkillEngine.getInstance().getSkill(player, 21927, 1, player).useNoAnimationSkill(); // Boost Defense.
 				break;
+			}
 		}
 		AI2Actions.deleteOwner(this);
 	}

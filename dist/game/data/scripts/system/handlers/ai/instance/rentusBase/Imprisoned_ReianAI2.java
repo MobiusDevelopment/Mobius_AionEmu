@@ -87,11 +87,15 @@ public class Imprisoned_ReianAI2 extends GeneralNpcAI2
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								sendMsg(390563);
 								break;
+							}
 							case 2:
+							{
 								sendMsg(390567);
 								break;
+							}
 						}
 					}
 				}
@@ -106,11 +110,15 @@ public class Imprisoned_ReianAI2 extends GeneralNpcAI2
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								sendMsg(342410);
 								break;
+							}
 							case 2:
+							{
 								sendMsg(342411);
 								break;
+							}
 						}
 					}
 				}

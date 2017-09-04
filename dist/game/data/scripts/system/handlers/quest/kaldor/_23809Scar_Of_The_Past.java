@@ -111,10 +111,14 @@ public class _23809Scar_Of_The_Past extends QuestHandler
 					switch (dialog)
 					{
 						case START_DIALOG:
+						{
 							return sendQuestDialog(env, 2375);
+						}
 						case SELECT_REWARD:
+						{
 							changeQuestStep(env, 3, 4, true);
 							return sendQuestDialog(env, 5);
+						}
 					}
 				}
 			}

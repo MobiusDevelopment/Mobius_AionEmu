@@ -79,17 +79,29 @@ public class LootGroupRules
 		switch (quality)
 		{
 			case COMMON: // White
+			{
 				return common_item_above != 0;
+			}
 			case RARE: // Green
+			{
 				return superior_item_above != 0;
+			}
 			case LEGEND: // Blue
+			{
 				return heroic_item_above != 0;
+			}
 			case UNIQUE: // Yellow
+			{
 				return fabled_item_above != 0;
+			}
 			case MYTHIC: // Orange
+			{
 				return ethernal_item_above != 0;
+			}
 			case EPIC: // Purple
+			{
 				return true;
+			}
 		}
 		return false;
 	}
@@ -190,17 +202,21 @@ public class LootGroupRules
 						switch (inRoll.getRollType())
 						{
 							case 2:
+							{
 								if ((inRoll.getIndex() == index) && (inRoll.getNpcId() == npcId))
 								{
 									DropDistributionService.getInstance().handleRoll(player, 0, inRoll.getItemId(), inRoll.getNpcId(), inRoll.getIndex());
 								}
 								break;
+							}
 							case 3:
+							{
 								if ((inRoll.getIndex() == index) && (inRoll.getNpcId() == npcId))
 								{
 									DropDistributionService.getInstance().handleBid(player, 0, inRoll.getItemId(), inRoll.getNpcId(), inRoll.getIndex());
 								}
 								break;
+							}
 						}
 					}
 				}

@@ -120,6 +120,7 @@ public class _25060Take_Down_The_Barricade extends QuestHandler
 				switch (targetId)
 				{
 					case 220033:
+					{
 						if (var1 < 0)
 						{
 							return defaultOnKillEvent(env, 220033, 0, 0, 1);
@@ -139,7 +140,9 @@ public class _25060Take_Down_The_Barricade extends QuestHandler
 							}
 						}
 						break;
+					}
 					case 220034:
+					{
 						if (var2 < 0)
 						{
 							return defaultOnKillEvent(env, 220034, 0, 0, 2);
@@ -159,7 +162,9 @@ public class _25060Take_Down_The_Barricade extends QuestHandler
 							}
 						}
 						break;
+					}
 					case 220035:
+					{
 						if (var3 < 0)
 						{
 							return defaultOnKillEvent(env, 220035, 0, 0, 3);
@@ -179,6 +184,7 @@ public class _25060Take_Down_The_Barricade extends QuestHandler
 							}
 						}
 						break;
+					}
 				}
 			}
 		}

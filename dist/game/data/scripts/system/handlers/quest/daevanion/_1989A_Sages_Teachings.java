@@ -96,9 +96,11 @@ public class _1989A_Sages_Teachings extends QuestHandler
 			switch (targetId)
 			{
 				case 203704:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if ((playerClass == PlayerClass.GLADIATOR) || (playerClass == PlayerClass.TEMPLAR))
 							{
 								return sendQuestDialog(env, 1352);
@@ -107,16 +109,23 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestDialog(env, 1438);
 							}
+						}
 						case STEP_TO_1:
+						{
 							qs.setQuestVarById(0, var + 1);
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
+					break;
+				}
 				case 203705:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if ((playerClass == PlayerClass.ASSASSIN) || (playerClass == PlayerClass.RANGER))
 							{
 								return sendQuestDialog(env, 1693);
@@ -125,16 +134,23 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestDialog(env, 1779);
 							}
+						}
 						case STEP_TO_1:
+						{
 							qs.setQuestVarById(0, var + 1);
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
+					break;
+				}
 				case 203706:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if ((playerClass == PlayerClass.SORCERER) || (playerClass == PlayerClass.SPIRIT_MASTER))
 							{
 								return sendQuestDialog(env, 2034);
@@ -143,16 +159,23 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestDialog(env, 2120);
 							}
+						}
 						case STEP_TO_1:
+						{
 							qs.setQuestVarById(0, var + 1);
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
+					break;
+				}
 				case 203707:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if ((playerClass == PlayerClass.CLERIC) || (playerClass == PlayerClass.CHANTER) || (playerClass == PlayerClass.AETHERTECH))
 							{
 								return sendQuestDialog(env, 2375);
@@ -161,16 +184,23 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestDialog(env, 2461);
 							}
+						}
 						case STEP_TO_1:
+						{
 							qs.setQuestVarById(0, var + 1);
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
+					break;
+				}
 				case 801214:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (playerClass == PlayerClass.GUNSLINGER)
 							{
 								return sendQuestDialog(env, 2548);
@@ -179,16 +209,23 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestDialog(env, 2568);
 							}
+						}
 						case STEP_TO_1:
+						{
 							qs.setQuestVarById(0, var + 1);
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
+					break;
+				}
 				case 801215:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (playerClass == PlayerClass.SONGWEAVER)
 							{
 								return sendQuestDialog(env, 2633);
@@ -197,16 +234,23 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestDialog(env, 2653);
 							}
+						}
 						case STEP_TO_1:
+						{
 							qs.setQuestVarById(0, var + 1);
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
+					break;
+				}
 				case 203771:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 2716);
@@ -237,7 +281,9 @@ public class _1989A_Sages_Teachings extends QuestHandler
 									return sendQuestDialog(env, 3739);
 								}
 							}
+						}
 						case SELECT_REWARD:
+						{
 							if (var == 3)
 							{
 								playQuestMovie(env, 105);
@@ -258,21 +304,30 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestEndDialog(env);
 							}
+						}
 						case STEP_TO_2:
+						{
 							qs.setQuestVarById(0, var + 1);
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 3057);
+						}
 						case STEP_TO_4:
+						{
 							qs.setQuestVarById(0, 3);
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 						case STEP_TO_5:
+						{
 							qs.setQuestVarById(0, 4);
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
+					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

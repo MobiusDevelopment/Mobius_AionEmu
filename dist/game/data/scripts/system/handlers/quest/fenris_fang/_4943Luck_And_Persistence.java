@@ -94,14 +94,19 @@ public class _4943Luck_And_Persistence extends QuestHandler
 			switch (targetId)
 			{
 				case 204096:
+				{
 					if (var == 0)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 1011);
+							}
 							case STEP_TO_1:
+							{
 								return defaultCloseDialog(env, 0, 1);
+							}
 						}
 					}
 					if (var == 2)
@@ -109,8 +114,11 @@ public class _4943Luck_And_Persistence extends QuestHandler
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 1693);
+							}
 							case CHECK_COLLECTED_ITEMS:
+							{
 								if (QuestService.collectItemCheck(env, true))
 								{
 									removeQuestItem(env, 182207123, 1);
@@ -121,17 +129,23 @@ public class _4943Luck_And_Persistence extends QuestHandler
 								{
 									return sendQuestDialog(env, 10001);
 								}
+							}
 						}
 					}
 					break;
+				}
 				case 204097:
+				{
 					if (var == 1)
 					{
 						switch (dialog)
 						{
 							case START_DIALOG:
+							{
 								return sendQuestDialog(env, 1352);
+							}
 							case SELECT_ACTION_1354:
+							{
 								if (player.getInventory().tryDecreaseKinah(3400000))
 								{
 									if (player.getInventory().getItemCountByItemId(182207123) == 0)
@@ -148,16 +162,21 @@ public class _4943Luck_And_Persistence extends QuestHandler
 								{
 									return sendQuestDialog(env, 1438);
 								}
+							}
 						}
 					}
 					break;
+				}
 				case 700538:
+				{
 					if ((dialog == QuestDialog.USE_OBJECT) && (var == 2))
 					{
 						return useQuestObject(env, 2, 2, false, 0);
 					}
 					break;
+				}
 				case 204075:
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -185,8 +204,11 @@ public class _4943Luck_And_Persistence extends QuestHandler
 						}
 					}
 					break;
+				}
 				default:
+				{
 					return sendQuestStartDialog(env);
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

@@ -68,12 +68,16 @@ public class _1964ASouvenirForNoris extends QuestHandler
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case STEP_TO_1:
+					{
 						return defaultCloseDialog(env, 0, 1, true, false, 0, 0, 0, 182206033, 1);
+					}
 				}
 			}
 		}

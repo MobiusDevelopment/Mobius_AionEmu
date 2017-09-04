@@ -70,7 +70,9 @@ public class _3041SororunerkWhereabouts extends QuestHandler
 						return sendQuestDialog(env, 1011);
 					}
 					default:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

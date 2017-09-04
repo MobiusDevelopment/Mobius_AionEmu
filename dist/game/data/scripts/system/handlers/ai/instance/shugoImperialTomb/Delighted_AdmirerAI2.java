@@ -47,11 +47,15 @@ public class Delighted_AdmirerAI2 extends GeneralNpcAI2
 			switch (getNpcId())
 			{
 				case 831114: // Crown Prince's Delighted Admirer.
+				{
 					TeleportService2.teleportTo(player, 300560000, instanceId, 347.85843f, 424.8407f, 294.75983f, (byte) 57);
 					break;
+				}
 				case 831115: // Empress's Delighted Admirer.
+				{
 					TeleportService2.teleportTo(player, 300560000, instanceId, 461.9911f, 109.995865f, 214.7108f, (byte) 68);
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

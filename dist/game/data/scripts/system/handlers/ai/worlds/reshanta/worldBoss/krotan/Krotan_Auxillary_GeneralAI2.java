@@ -57,6 +57,7 @@ public class Krotan_Auxillary_GeneralAI2 extends AggressiveNpcAI2
 			case 279153:
 			case 279447:
 			case 279741:
+			{
 				treasureChest();
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
@@ -72,6 +73,7 @@ public class Krotan_Auxillary_GeneralAI2 extends AggressiveNpcAI2
 					}
 				}, 10000);
 				break;
+			}
 		}
 		super.handleDied();
 	}

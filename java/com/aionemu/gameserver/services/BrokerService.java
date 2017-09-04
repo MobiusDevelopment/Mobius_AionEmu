@@ -292,11 +292,17 @@ public class BrokerService
 		switch (race)
 		{
 			case ELYOS:
+			{
 				return elyosBrokerItems;
+			}
 			case ASMODIANS:
+			{
 				return asmodianBrokerItems;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 	
@@ -309,11 +315,17 @@ public class BrokerService
 		switch (race)
 		{
 			case ELYOS:
+			{
 				return elyosSettledItems;
+			}
 			case ASMODIANS:
+			{
 				return asmodianSettledItems;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 	
@@ -462,15 +474,21 @@ public class BrokerService
 		switch (race)
 		{
 			case ASMODIANS:
+			{
 				asmodianBrokerItems.put(brokerItem.getItemUniqueId(), brokerItem);
 				asmodianSettledItems.put(newBrokerItem.getItemUniqueId(), newBrokerItem);
 				break;
+			}
 			case ELYOS:
+			{
 				elyosBrokerItems.put(brokerItem.getItemUniqueId(), brokerItem);
 				elyosSettledItems.put(newBrokerItem.getItemUniqueId(), newBrokerItem);
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		final Player seller = World.getInstance().findPlayer(brokerItem.getSellerId());
 		if (seller != null)
@@ -552,13 +570,19 @@ public class BrokerService
 		switch (race)
 		{
 			case ASMODIANS:
+			{
 				asmodianSettledItems.put(brokerItem.getItemUniqueId(), brokerItem);
 				break;
+			}
 			case ELYOS:
+			{
 				elyosSettledItems.put(brokerItem.getItemUniqueId(), brokerItem);
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		
 		final Player seller = World.getInstance().findPlayer(brokerItem.getSellerId());
@@ -703,11 +727,15 @@ public class BrokerService
 		switch (brRace)
 		{
 			case ASMODIAN:
+			{
 				asmodianBrokerItems.put(newBrokerItem.getItemUniqueId(), newBrokerItem);
 				break;
+			}
 			case ELYOS:
+			{
 				elyosBrokerItems.put(newBrokerItem.getItemUniqueId(), newBrokerItem);
 				break;
+			}
 		}
 		
 		final BrokerOpSaveTask bost = new BrokerOpSaveTask(newBrokerItem, itemToRegister, player.getInventory().getKinahItem(), player.getObjectId());
@@ -963,13 +991,19 @@ public class BrokerService
 				switch (playerRace)
 				{
 					case ASMODIANS:
+					{
 						result = asmodianSettledItems.remove(item.getItemUniqueId()) != null;
 						break;
+					}
 					case ELYOS:
+					{
 						result = elyosSettledItems.remove(item.getItemUniqueId()) != null;
 						break;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				
 				if (result)
@@ -990,13 +1024,19 @@ public class BrokerService
 						switch (playerRace)
 						{
 							case ASMODIANS:
+							{
 								result = asmodianSettledItems.remove(item.getItemUniqueId()) != null;
 								break;
+							}
 							case ELYOS:
+							{
 								result = elyosSettledItems.remove(item.getItemUniqueId()) != null;
 								break;
+							}
 							default:
+							{
 								break;
+							}
 						}
 						if (result)
 						{

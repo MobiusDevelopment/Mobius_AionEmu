@@ -58,6 +58,7 @@ public abstract class DamageEffect extends EffectTemplate
 		switch (damageType)
 		{
 			case PHYSICAL:
+			{
 				boolean cannotMiss = false;
 				if (this instanceof SkillAttackInstantEffect)
 				{
@@ -66,7 +67,9 @@ public abstract class DamageEffect extends EffectTemplate
 				final int rndDmg = (this instanceof SkillAttackInstantEffect ? ((SkillAttackInstantEffect) this).getRnddmg() : 0);
 				AttackUtil.calculateSkillResult(effect, valueWithDelta, modifier, getMode(), rndDmg, accMod, critProbMod2, critAddDmg, cannotMiss, shared, false, false);
 				break;
+			}
 			case MAGICAL:
+			{
 				boolean useKnowledge = true;
 				if (this instanceof ProcAtkInstantEffect)
 				{
@@ -74,8 +77,11 @@ public abstract class DamageEffect extends EffectTemplate
 				}
 				AttackUtil.calculateMagicalSkillResult(effect, valueWithDelta, modifier, getElement(), true, useKnowledge, false, getMode(), critProbMod2, critAddDmg, shared, false);
 				break;
+			}
 			default:
+			{
 				AttackUtil.calculateSkillResult(effect, 0, null, getMode(), 0, accMod, 100, 0, false, shared, false, false);
+			}
 		}
 		return true;
 	}

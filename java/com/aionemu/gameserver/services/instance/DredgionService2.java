@@ -109,17 +109,23 @@ public class DredgionService2
 					switch (instanceMaskId)
 					{
 						case maskLvlGradeC:
+						{
 							// An infiltration route into the Dredgion is open.
 							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_OPEN_IDAB1_DREADGION);
 							break;
+						}
 						case maskLvlGradeB:
+						{
 							// An infiltration passage into the Chantra Dredgion has opened.
 							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_OPEN_IDDREADGION_02);
 							break;
+						}
 						case maskLvlGradeA:
+						{
 							// An infiltration passage into the Terath Dredgion has opened.
 							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_OPEN_IDDREADGION_03);
 							break;
+						}
 					}
 				}
 			}

@@ -119,6 +119,7 @@ public class _25634Primordial_Creatures_At_The_Plateau_Of_Aetheric_Gales extends
 				case 243307:
 				case 243308:
 				case 243309:
+				{
 					if (qs.getQuestVarById(1) < 3)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -129,6 +130,7 @@ public class _25634Primordial_Creatures_At_The_Plateau_Of_Aetheric_Gales extends
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

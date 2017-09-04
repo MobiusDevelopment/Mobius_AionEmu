@@ -112,6 +112,7 @@ public class _28974Protect_Bomire_Village extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 219746:
+				{
 					if (qs.getQuestVarById(1) < 6)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -122,6 +123,7 @@ public class _28974Protect_Bomire_Village extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

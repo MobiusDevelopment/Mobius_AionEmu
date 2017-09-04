@@ -71,7 +71,9 @@ public class _80321The_Reason_Why_The_Hero_Of_Archons_Shines extends QuestHandle
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

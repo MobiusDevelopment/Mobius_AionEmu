@@ -105,7 +105,9 @@ public class _30327GroupMiredSouls extends QuestHandler
 							}
 						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1);
+						}
 					}
 				}
 				case 799517:
@@ -136,7 +138,9 @@ public class _30327GroupMiredSouls extends QuestHandler
 						return sendQuestDialog(env, 5);
 					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}
@@ -188,6 +192,7 @@ public class _30327GroupMiredSouls extends QuestHandler
 		switch (targetId)
 		{
 			case 216586:
+			{
 				if (qs.getQuestVarById(0) == 1)
 				{
 					QuestService.questTimerEnd(env);
@@ -197,10 +202,12 @@ public class _30327GroupMiredSouls extends QuestHandler
 					return true;
 				}
 				break;
+			}
 			case 216735:
 			case 216734:
 			case 216737:
 			case 216245:
+			{
 				if (qs.getQuestVarById(0) == 2)
 				{
 					qs.setStatus(QuestStatus.REWARD);
@@ -208,6 +215,7 @@ public class _30327GroupMiredSouls extends QuestHandler
 					return true;
 				}
 				break;
+			}
 		}
 		return false;
 	}

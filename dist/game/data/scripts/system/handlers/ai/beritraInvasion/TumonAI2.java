@@ -216,32 +216,44 @@ public class TumonAI2 extends AggressiveNpcAI2
 			// Tumon & Prime Tumon & Elite Tumon.
 			case 236722:
 			case 236726:
+			{
 				announceTumonDie();
 				break;
+			}
 			// Radeon & Prime Radeon.
 			case 234589:
 			case 234594:
+			{
 				announceRadeonDie();
 				break;
+			}
 			case 234590:
+			{
 				addGpPlayer();
 				announceRadeonDie();
 				updateTumonLanding1();
 				break;
+			}
 			case 234609:
+			{
 				addGpPlayer();
 				announceRadeonDie();
 				break;
+			}
 			case 234591:
+			{
 				addGpPlayer();
 				announceTumonDie();
 				updateTumonLanding2();
 				break;
+			}
 			case 234592:
 			case 234615:
+			{
 				addGpPlayer();
 				announceTumonDie();
 				break;
+			}
 		}
 		super.handleDied();
 	}

@@ -58,10 +58,14 @@ public class Conquest_Gelkmaros_BossAI2 extends AggressiveNpcAI2
 		switch (Rnd.get(1, 2))
 		{
 			case 1:
+			{
 				spawnSecretPortal();
 				break;
+			}
 			case 2:
+			{
 				break;
+			}
 		}
 		super.handleDied();
 	}
@@ -127,17 +131,25 @@ public class Conquest_Gelkmaros_BossAI2 extends AggressiveNpcAI2
 					switch (Rnd.get(1, 4))
 					{
 						case 1:
+						{
 							spawn(856175, p.getX(), p.getY(), p.getZ(), (byte) 0); // Pawrunerk.
 							break;
+						}
 						case 2:
+						{
 							spawn(856176, p.getX(), p.getY(), p.getZ(), (byte) 0); // Chitrunerk.
 							break;
+						}
 						case 3:
+						{
 							spawn(856177, p.getX(), p.getY(), p.getZ(), (byte) 0); // Rapirunerk.
 							break;
+						}
 						case 4:
+						{
 							spawn(856178, p.getX(), p.getY(), p.getZ(), (byte) 0); // Dandrunerk.
 							break;
+						}
 					}
 				}
 			}, 15000);

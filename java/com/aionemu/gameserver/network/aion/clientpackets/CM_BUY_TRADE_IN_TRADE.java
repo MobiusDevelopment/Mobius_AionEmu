@@ -48,17 +48,23 @@ public class CM_BUY_TRADE_IN_TRADE extends AionClientPacket
 		switch (TradeinListCount)
 		{
 			case 1:
+			{
 				TradeinItemObjectId1 = readD();
 				break;
+			}
 			case 2:
+			{
 				TradeinItemObjectId1 = readD();
 				TradeinItemObjectId2 = readD();
 				break;
+			}
 			case 3:
+			{
 				TradeinItemObjectId1 = readD();
 				TradeinItemObjectId2 = readD();
 				TradeinItemObjectId3 = readD();
 				break;
+			}
 		}
 	}
 	

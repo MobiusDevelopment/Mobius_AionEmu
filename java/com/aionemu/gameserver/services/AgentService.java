@@ -157,6 +157,7 @@ public class AgentService
 		switch (id)
 		{
 			case 1:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -169,8 +170,11 @@ public class AgentService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -179,6 +183,7 @@ public class AgentService
 		switch (id)
 		{
 			case 1:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -189,8 +194,11 @@ public class AgentService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -199,6 +207,7 @@ public class AgentService
 		switch (id)
 		{
 			case 1:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -209,8 +218,11 @@ public class AgentService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	

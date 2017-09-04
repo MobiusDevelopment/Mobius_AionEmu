@@ -116,6 +116,7 @@ public class _25580Stop_The_Elyos_Researchers extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 241244:
+				{
 					if (qs.getQuestVarById(1) < 20)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -126,6 +127,7 @@ public class _25580Stop_The_Elyos_Researchers extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

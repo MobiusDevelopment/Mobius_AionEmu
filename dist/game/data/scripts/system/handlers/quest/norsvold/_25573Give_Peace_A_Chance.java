@@ -121,6 +121,7 @@ public class _25573Give_Peace_A_Chance extends QuestHandler
 				case 241205:
 				case 241206:
 				case 241207:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -131,6 +132,7 @@ public class _25573Give_Peace_A_Chance extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

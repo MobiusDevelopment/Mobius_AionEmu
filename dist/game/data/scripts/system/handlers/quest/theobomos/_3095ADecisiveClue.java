@@ -105,7 +105,6 @@ public class _3095ADecisiveClue extends QuestHandler
 					return sendQuestEndDialog(env);
 				}
 			}
-			
 			case 203898:
 			{
 				if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
@@ -128,7 +127,6 @@ public class _3095ADecisiveClue extends QuestHandler
 					}
 				}
 			}
-			
 			case 0:
 			{
 				if (env.getDialogId() == 1002)

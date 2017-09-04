@@ -154,20 +154,30 @@ public class Power_GeneratorAI2 extends AggressiveNpcAI2
 						switch (Rnd.get(1, 5))
 						{
 							case 1:
+							{
 								spawn(281088, x, y, z, (byte) 0); // Light Generator Core.
 								break;
+							}
 							case 2:
+							{
 								spawn(281089, x, y, z, (byte) 0); // Wave Generator Core.
 								break;
+							}
 							case 3:
+							{
 								spawn(281090, x, y, z, (byte) 0); // Torpidity Generator Core.
 								break;
+							}
 							case 4:
+							{
 								spawn(281091, x, y, z, (byte) 0); // Shockwave Generator Core.
 								break;
+							}
 							case 5:
+							{
 								spawn(281092, x, y, z, (byte) 0); // Confusion Generator Core.
 								break;
+							}
 						}
 					}
 				}

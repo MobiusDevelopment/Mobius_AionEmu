@@ -54,13 +54,17 @@ public class CM_ABYSS_RANKING_LEGIONS extends AionClientPacket
 		switch (raceId)
 		{
 			case 0:
+			{
 				queriedRace = Race.ELYOS;
 				updateType = AbyssRankUpdateType.LEGION_ELYOS;
 				break;
+			}
 			case 1:
+			{
 				queriedRace = Race.ASMODIANS;
 				updateType = AbyssRankUpdateType.LEGION_ASMODIANS;
 				break;
+			}
 		}
 	}
 	

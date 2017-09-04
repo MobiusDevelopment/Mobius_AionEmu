@@ -63,13 +63,16 @@ public class BeshmundirsWalkAI2 extends ActionItemNpcAI2
 		switch (dialogId)
 		{
 			case 105:
+			{
 				final AutoGroupType agt = AutoGroupType.getAutoGroup(player.getLevel(), getNpcId());
 				if (agt != null)
 				{
 					PacketSendUtility.sendPacket(player, new SM_FIND_GROUP(0x1A, agt.getInstanceMapId()));
 				}
 				break;
+			}
 			case 65:
+			{
 				if (!player.isInGroup2())
 				{
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1390256));
@@ -89,14 +92,19 @@ public class BeshmundirsWalkAI2 extends ActionItemNpcAI2
 					moveToInstance(player);
 				}
 				break;
+			}
 			case 4763:
+			{
 				AI2Actions.addRequest(this, player, SM_QUESTION_WINDOW.STR_INSTANCE_DUNGEON_WITH_DIFFICULTY_ENTER_CONFIRM, getObjectId(), request, new DescriptionId(1804103));
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 4762));
 				break;
+			}
 			case 4848:
+			{
 				AI2Actions.addRequest(this, player, SM_QUESTION_WINDOW.STR_INSTANCE_DUNGEON_WITH_DIFFICULTY_ENTER_CONFIRM, getObjectId(), request, new DescriptionId(1804105));
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 4762));
 				break;
+			}
 		}
 		return true;
 	}

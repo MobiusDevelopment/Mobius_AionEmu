@@ -79,11 +79,15 @@ public class CM_GROUP_LOOT extends AionClientPacket
 		switch (distributionId)
 		{
 			case 2:
+			{
 				DropDistributionService.getInstance().handleRoll(player, roll, itemId, npcId, index);
 				break;
+			}
 			case 3:
+			{
 				DropDistributionService.getInstance().handleBid(player, bid, itemId, npcId, index);
 				break;
+			}
 		}
 	}
 }

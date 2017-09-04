@@ -156,11 +156,15 @@ public class AkhalAI2 extends AggressiveNpcAI2
 						switch (Rnd.get(1, 2))
 						{
 							case 1:
+							{
 								spawn(237277, x, y, z, (byte) 0); // Dark Messenger's Assaulter.
 								break;
+							}
 							case 2:
+							{
 								spawn(237278, x, y, z, (byte) 0); // Dark Messenger's Assassin.
 								break;
+							}
 						}
 					}
 				}

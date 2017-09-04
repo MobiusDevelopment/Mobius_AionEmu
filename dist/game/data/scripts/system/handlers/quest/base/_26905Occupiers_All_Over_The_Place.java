@@ -114,6 +114,7 @@ public class _26905Occupiers_All_Over_The_Place extends QuestHandler
 			{
 				case 231555:
 				case 231556:
+				{
 					if (qs.getQuestVarById(0) < 1)
 					{
 						qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -121,6 +122,7 @@ public class _26905Occupiers_All_Over_The_Place extends QuestHandler
 						updateQuestStatus(env);
 						return true;
 					}
+				}
 			}
 		}
 		return false;

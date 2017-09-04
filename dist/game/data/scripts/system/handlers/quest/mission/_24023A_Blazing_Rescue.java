@@ -111,11 +111,14 @@ public class _24023A_Blazing_Rescue extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
+						}
 						case STEP_TO_1:
+						{
 							if (var == 0)
 							{
 								qs.setQuestVarById(0, 1);
@@ -123,6 +126,7 @@ public class _24023A_Blazing_Rescue extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+						}
 					}
 				}
 					break;
@@ -131,6 +135,7 @@ public class _24023A_Blazing_Rescue extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
@@ -139,7 +144,9 @@ public class _24023A_Blazing_Rescue extends QuestHandler
 							{
 								return sendQuestDialog(env, 2034);
 							}
+						}
 						case STEP_TO_2:
+						{
 							if (var == 1)
 							{
 								if (!giveQuestItem(env, 182215369, 1))
@@ -152,7 +159,9 @@ public class _24023A_Blazing_Rescue extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							if (var == 3)
 							{
 								if (QuestService.collectItemCheck(env, true))
@@ -167,7 +176,7 @@ public class _24023A_Blazing_Rescue extends QuestHandler
 									return sendQuestDialog(env, 10001);
 								}
 							}
-							
+						}
 					}
 				}
 					break;

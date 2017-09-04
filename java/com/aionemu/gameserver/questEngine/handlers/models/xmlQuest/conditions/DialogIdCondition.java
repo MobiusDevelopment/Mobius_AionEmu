@@ -53,11 +53,17 @@ public class DialogIdCondition extends QuestCondition
 		switch (getOp())
 		{
 			case EQUAL:
+			{
 				return data == value;
+			}
 			case NOT_EQUAL:
+			{
 				return data != value;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 }

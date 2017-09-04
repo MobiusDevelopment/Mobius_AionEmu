@@ -44,11 +44,17 @@ public enum LegionDominionRace
 		switch (race)
 		{
 			case ASMODIANS:
+			{
 				return LegionDominionRace.ASMODIANS;
+			}
 			case ELYOS:
+			{
 				return LegionDominionRace.ELYOS;
+			}
 			default:
+			{
 				return LegionDominionRace.BALAUR;
+			}
 		}
 	}
 	

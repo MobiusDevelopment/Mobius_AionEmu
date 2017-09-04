@@ -69,17 +69,25 @@ public class Senior_AgentAI2 extends GeneralNpcAI2
 			switch (getNpcId())
 			{
 				case 805692: // Rike [Cloister Of Kaisinel]
+				{
 					TeleportService2.teleportTo(player, 210070000, 2963.83f, 890.73566f, 573.6276f, (byte) 114);
 					break;
+				}
 				case 805327: // Rike [Cygnea]
+				{
 					TeleportService2.teleportTo(player, 110020000, 519.60547f, 499.9686f, 499.59976f, (byte) 61);
 					break;
+				}
 				case 805693: // Skuldun [Convent Of Marchutan]
+				{
 					TeleportService2.teleportTo(player, 220080000, 449.13324f, 2240.4626f, 220.04858f, (byte) 26);
 					break;
+				}
 				case 805339: // Skuldun [Enshar]
+				{
 					TeleportService2.teleportTo(player, 120020000, 499.4822f, 480.57376f, 499.59976f, (byte) 26);
 					break;
+				}
 			}
 		}
 		else if ((dialogId == 1011) && (questId != 0))

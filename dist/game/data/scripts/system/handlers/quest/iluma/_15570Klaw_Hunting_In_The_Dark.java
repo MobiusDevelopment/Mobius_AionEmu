@@ -117,6 +117,7 @@ public class _15570Klaw_Hunting_In_The_Dark extends QuestHandler
 			{
 				case 241248:
 				case 241249:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _15570Klaw_Hunting_In_The_Dark extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

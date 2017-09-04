@@ -130,11 +130,15 @@ public class StatFunctions
 			switch (difference)
 			{
 				case 3:
+				{
 					pointsLost = Math.round(pointsLost * 0.85f);
 					break;
+				}
 				case 4:
+				{
 					pointsLost = Math.round(pointsLost * 0.65f);
 					break;
+				}
 			}
 		}
 		return pointsLost;
@@ -161,11 +165,15 @@ public class StatFunctions
 			switch (difference)
 			{
 				case 3:
+				{
 					pointsLost = Math.round(pointsLost * 0.85f);
 					break;
+				}
 				case 4:
+				{
 					pointsLost = Math.round(pointsLost * 0.65f);
 					break;
+				}
 			}
 		}
 		return pointsLost;
@@ -193,17 +201,25 @@ public class StatFunctions
 			switch (difference)
 			{
 				case 3:
+				{
 					pointsGained = Math.round(pointsGained * 0.85f);
 					break;
+				}
 				case 4:
+				{
 					pointsGained = Math.round(pointsGained * 0.65f);
 					break;
+				}
 				case -2:
+				{
 					pointsGained = Math.round(pointsGained * 1.1f);
 					break;
+				}
 				case -3:
+				{
 					pointsGained = Math.round(pointsGained * 1.2f);
 					break;
+				}
 			}
 		}
 		final int winnerAbyssRank = maxRank;
@@ -242,17 +258,25 @@ public class StatFunctions
 			switch (difference)
 			{
 				case 3:
+				{
 					pointsGained = Math.round(pointsGained * 0.85f);
 					break;
+				}
 				case 4:
+				{
 					pointsGained = Math.round(pointsGained * 0.65f);
 					break;
+				}
 				case -2:
+				{
 					pointsGained = Math.round(pointsGained * 1.1f);
 					break;
+				}
 				case -3:
+				{
 					pointsGained = Math.round(pointsGained * 1.2f);
 					break;
+				}
 			}
 		}
 		
@@ -288,17 +312,25 @@ public class StatFunctions
 			switch (difference)
 			{
 				case 3:
+				{
 					pointsGained = Math.round(pointsGained * 0.85f);
 					break;
+				}
 				case 4:
+				{
 					pointsGained = Math.round(pointsGained * 0.65f);
 					break;
+				}
 				case -2:
+				{
 					pointsGained = Math.round(pointsGained * 1.1f);
 					break;
+				}
 				case -3:
+				{
 					pointsGained = Math.round(pointsGained * 1.2f);
 					break;
+				}
 			}
 		}
 		final int winnerAbyssRank = maxRank;
@@ -658,22 +690,34 @@ public class StatFunctions
 		switch (npcRating)
 		{
 			case JUNK:
+			{
 				multipler = 1;
 				break;
+			}
 			case NORMAL:
+			{
 				multipler = 2;
 				break;
+			}
 			case ELITE:
+			{
 				multipler = 3;
 				break;
+			}
 			case HERO:
+			{
 				multipler = 4;
 				break;
+			}
 			case LEGENDARY:
+			{
 				multipler = 5;
 				break;
+			}
 			default:
+			{
 				multipler = 1;
+			}
 		}
 		return multipler;
 	}
@@ -687,22 +731,34 @@ public class StatFunctions
 		switch (npcRating)
 		{
 			case JUNK:
+			{
 				multipler = 1;
 				break;
+			}
 			case NORMAL:
+			{
 				multipler = 2;
 				break;
+			}
 			case ELITE:
+			{
 				multipler = 3;
 				break;
+			}
 			case HERO:
+			{
 				multipler = 4;
 				break;
+			}
 			case LEGENDARY:
+			{
 				multipler = 5;
 				break;
+			}
 			default:
+			{
 				multipler = 1;
+			}
 		}
 		return multipler;
 	}
@@ -741,20 +797,26 @@ public class StatFunctions
 			switch (elements)
 			{
 				case NONE:
+				{
 					pvpAttackBonus += attacker.getGameStats().getStat(StatEnum.PVP_PHYSICAL_ATTACK, 0).getCurrent();
 					pvpDefenceBonus += target.getGameStats().getStat(StatEnum.PVP_PHYSICAL_DEFEND, 0).getCurrent();
 					break;
+				}
 				case FIRE:
 				case WATER:
 				case WIND:
 				case EARTH:
 				case LIGHT:
 				case DARK:
+				{
 					pvpAttackBonus += attacker.getGameStats().getStat(StatEnum.PVP_MAGICAL_ATTACK, 0).getCurrent();
 					pvpDefenceBonus += target.getGameStats().getStat(StatEnum.PVP_MAGICAL_DEFEND, 0).getCurrent();
 					break;
+				}
 				default:
+				{
 					break;
+				}
 			}
 			pvpAttackBonus = pvpAttackBonus * 0.001f;
 			pvpDefenceBonus = pvpDefenceBonus * 0.001f;
@@ -782,19 +844,29 @@ public class StatFunctions
 				switch (playerClass)
 				{
 					case AETHERTECH:
+					{
 						damages *= 0.8f;
 						break;
+					}
 					case GUNSLINGER:
+					{
 						damages *= 0.7f;
 						break;
+					}
 					case SONGWEAVER:
+					{
 						damages *= 0.7f;
 						break;
+					}
 					case SORCERER:
+					{
 						damages *= 0.7f;
 						break;
+					}
 					default:
+					{
 						damages *= 1f;
+					}
 				}
 			}
 		}
@@ -1040,6 +1112,7 @@ public class StatFunctions
 			case 7:
 			case 0:
 			case 1:
+			{
 				switch (stat)
 				{
 					case WATER_RESISTANCE:
@@ -1049,37 +1122,58 @@ public class StatFunctions
 					case ELEMENTAL_RESISTANCE_DARK:
 					case ELEMENTAL_RESISTANCE_LIGHT:
 					case PHYSICAL_DEFENSE:
+					{
 						return value * 0.8f;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				break;
+			}
 			case 6:
 			case 2:
+			{
 				switch (stat)
 				{
 					case EVASION:
+					{
 						return value + 300;
+					}
 					case SPEED:
+					{
 						return value * 0.8f;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				break;
+			}
 			case 5:
 			case 4:
 			case 3:
+			{
 				switch (stat)
 				{
 					case PARRY:
 					case BLOCK:
+					{
 						return value + 500;
+					}
 					case SPEED:
+					{
 						return value * 0.6f;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return value;
 	}
@@ -1101,17 +1195,23 @@ public class StatFunctions
 			case 7:
 			case 0:
 			case 1:
+			{
 				value = value * 1.1f;
 				break;
+			}
 			case 6:
 			case 2:
+			{
 				value -= value * 0.2f;
 				break;
+			}
 			case 5:
 			case 4:
 			case 3:
+			{
 				value -= value * 0.2f;
 				break;
+			}
 		}
 		return value;
 	}
@@ -1121,24 +1221,40 @@ public class StatFunctions
 		switch (levelDiff)
 		{
 			case 3:
+			{
 				return 0.1f;
+			}
 			case 4:
+			{
 				return 0.2f;
+			}
 			case 5:
+			{
 				return 0.3f;
+			}
 			case 6:
+			{
 				return 0.4f;
+			}
 			case 7:
+			{
 				return 0.5f;
+			}
 			case 8:
+			{
 				return 0.6f;
+			}
 			case 9:
+			{
 				return 0.7f;
+			}
 			default:
+			{
 				if (levelDiff > 9)
 				{
 					return 0.8f;
 				}
+			}
 		}
 		return base;
 	}

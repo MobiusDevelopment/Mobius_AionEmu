@@ -54,11 +54,15 @@ public class FeedingMantutuAI2 extends ShifterAI2
 			switch (getNpcId())
 			{
 				case 701387: // Water Supply.
+				{
 					npc = (Npc) spawn(281129, 712.042f, 490.5559f, 939.7027f, (byte) 0);
 					break;
+				}
 				case 701386: // Feed Supply.
+				{
 					npc = (Npc) spawn(281128, 714.62634f, 504.4552f, 939.60675f, (byte) 0);
 					break;
+				}
 			}
 			boss.getAi2().onCustomEvent(1, npc);
 			AI2Actions.deleteOwner(this);

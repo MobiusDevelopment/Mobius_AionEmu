@@ -109,25 +109,33 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 			case 233510:
 			case 233511:
 			case 233512:
+			{
 				// Elyos Reinforcements.
+			}
 			case 233530:
 			case 233531:
 			case 233532:
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000287, 5)); // Siege Turret Fuel.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000288, 5)); // Siege Cannonball.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000286, 5)); // Anti-Turret Grenade.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 164000285, 5)); // Stun Grenade.
 				break;
+			}
 			// Cannon Supplies Box & Ammo Box.
 			case 831328:
 			case 831329:
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182006996, 10)); // Case Shot.
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 182006997, 10)); // Armor-Piercing Shot.
 				break;
+			}
 			// Cannon Supplies Box.
 			case 831330:
+			{
 				dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000137, 1)); // Aetheric Power Crystal.
 				break;
+			}
 		}
 	}
 	
@@ -613,18 +621,25 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 			case 233543: // Pashid Scout.
 			case 233549: // Pashid Sentinel.
 			case 233561: // Pashid Rider.
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 233547: // Pashid Summoner Captain.
 			case 233548: // Pashid Defender Captain.
+			{
 				point = 100;
 				despawnNpc(npc);
 				break;
+			}
 			case 233537: // Pashid Beastmaster.
+			{
 				point = 250;
 				despawnNpc(npc);
 				break;
+			}
 			case 233741: // Pashid Aetheric Cannon.
+			{
 				point = 250;
 				despawnNpc(npc);
 				if (race.equals(Race.ELYOS))
@@ -638,7 +653,9 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					sp(801961, 726.56537f, 328.0778f, 254.21608f, (byte) 48, 0); // Asmodians Cannon Flag.
 				}
 				break;
+			}
 			case 233742: // Pashid Aetheric Cannon.
+			{
 				point = 250;
 				despawnNpc(npc);
 				if (race.equals(Race.ELYOS))
@@ -652,7 +669,9 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					sp(801961, 761.6324f, 381.78177f, 240.92268f, (byte) 84, 0); // Asmodians Cannon Flag.
 				}
 				break;
+			}
 			case 233743: // Pashid Aetheric Cannon.
+			{
 				point = 250;
 				despawnNpc(npc);
 				if (race.equals(Race.ELYOS))
@@ -666,7 +685,9 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					sp(801961, 710.0556f, 410.75735f, 241.01321f, (byte) 32, 0); // Asmodians Cannon Flag.
 				}
 				break;
+			}
 			case 233744: // Pashid Aetheric Cannon.
+			{
 				point = 250;
 				despawnNpc(npc);
 				if (race.equals(Race.ELYOS))
@@ -680,7 +701,9 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					sp(801961, 625.838f, 339.61523f, 235.74188f, (byte) 54, 0); // Asmodians Cannon Flag.
 				}
 				break;
+			}
 			case 233745: // Pashid Aetheric Cannon.
+			{
 				point = 250;
 				despawnNpc(npc);
 				if (race.equals(Race.ELYOS))
@@ -694,7 +717,9 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					sp(801961, 644.94305f, 302.79245f, 235.74263f, (byte) 114, 0); // Asmodians Cannon Flag.
 				}
 				break;
+			}
 			case 233746: // Pashid Field Gun.
+			{
 				point = 250;
 				despawnNpc(npc);
 				if (race.equals(Race.ELYOS))
@@ -708,7 +733,9 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					sp(801961, 618.3957f, 361.9848f, 224.94342f, (byte) 42, 0); // Asmodians Cannon Flag.
 				}
 				break;
+			}
 			case 233747: // Pashid Field Gun.
+			{
 				point = 250;
 				despawnNpc(npc);
 				if (race.equals(Race.ELYOS))
@@ -722,7 +749,9 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					sp(801961, 685.2113f, 427.90024f, 229.82187f, (byte) 33, 0); // Asmodians Cannon Flag.
 				}
 				break;
+			}
 			case 233748: // Pashid Field Gun.
+			{
 				point = 250;
 				despawnNpc(npc);
 				if (race.equals(Race.ELYOS))
@@ -736,7 +765,9 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					sp(801961, 670.0691f, 560.67737f, 229.34996f, (byte) 113, 0); // Asmodians Cannon Flag.
 				}
 				break;
+			}
 			case 233749: // Pashid Field Gun.
+			{
 				point = 250;
 				despawnNpc(npc);
 				if (race.equals(Race.ELYOS))
@@ -750,27 +781,33 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					sp(801961, 518.4247f, 230.84209f, 231.92047f, (byte) 0, 0); // Asmodians Cannon Flag.
 				}
 				break;
+			}
 			case 233510: // Asmodians Reinforcements.
 			case 233511: // Asmodians Reinforcements.
 			case 233512: // Asmodians Reinforcements.
 			case 233530: // Elyos Reinforcements.
 			case 233531: // Elyos Reinforcements.
 			case 233532: // Elyos Reinforcements.
+			{
 				point = 400;
 				despawnNpc(npc);
 				break;
+			}
 			case 233564: // Inner Wall.
 			case 233565: // Loose Wall.
 			case 233566: // Rear Portcullis.
 			case 233567: // Main Portcullis.
 			case 233568: // Right Gate.
 			case 233569: // Left Gate.
+			{
 				point = 2000;
 				despawnNpc(npc);
 				// The gate at the The Eternal Bastion has been destroyed.
 				sendMsgByRace(1402207, Race.PC_ALL, 0);
 				break;
+			}
 			case 233544: // Commander Pashid.
+			{
 				point = 200000;
 				deleteNpc(801956);
 				RaceKilledCommander = mostPlayerDamage.getRace();
@@ -787,12 +824,13 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}, 30000);
 				break;
-			
+			}
 			/**
 			 * ASMODIANS
 			 */
 			// Supply Base Beta.
 			case 233518: // Elyos Supply Base Beta Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 1)
@@ -815,8 +853,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Military Supply Base.
 			case 233519: // Elyos Military Supply Base Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 2)
@@ -839,8 +879,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Supply Base Alpha.
 			case 233520: // Elyos Supply Base Alpha Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 3)
@@ -864,8 +906,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Artillery Base.
 			case 233521: // Elyos Artillery Base Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 4)
@@ -886,8 +930,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Sentry Post Alpha.
 			case 233522: // Elyos Sentry Post Alpha Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 5)
@@ -908,8 +954,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Sentry Post Beta.
 			case 233523: // Elyos Sentry Post Beta Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 6)
@@ -935,8 +983,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Holy Grounds.
 			case 233524: // Elyos Holy Grounds Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 7)
@@ -962,8 +1012,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Command Center.
 			case 233525: // Elyos Command Center Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 8)
@@ -987,8 +1039,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Headquarters Alpha.
 			case 233526: // Elyos Headquarters Alpha Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 9)
@@ -1013,8 +1067,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Headquarters Beta.
 			case 233527: // Elyos Headquarters Beta Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 10)
@@ -1040,12 +1096,13 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
-			
+			}
 			/**
 			 * ELYOS
 			 */
 			// Supply Base Beta.
 			case 233498: // Asmodians Supply Base Beta Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 1)
@@ -1068,8 +1125,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Military Supply Base.
 			case 233499: // Asmodians Military Supply Base Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 2)
@@ -1092,8 +1151,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Supply Base Alpha.
 			case 233500: // Asmodians Supply Base Alpha Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 3)
@@ -1117,8 +1178,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Artillery Base.
 			case 233501: // Asmodians Artillery Base Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 4)
@@ -1139,8 +1202,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Sentry Post Alpha.
 			case 233502: // Asmodians Sentry Post Alpha Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 5)
@@ -1161,8 +1226,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Sentry Post Beta.
 			case 233503: // Asmodians Sentry Post Beta Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 6)
@@ -1188,8 +1255,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Holy Grounds.
 			case 233504: // Asmodians Holy Grounds Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 7)
@@ -1215,8 +1284,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Command Center.
 			case 233505: // Asmodians Command Center Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 8)
@@ -1240,8 +1311,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Headquarters Alpha.
 			case 233506: // Asmodians Headquarters Alpha Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 9)
@@ -1266,8 +1339,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Headquarters Beta.
 			case 233507: // Asmodians Headquarters Beta Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 10)
@@ -1293,12 +1368,13 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
-			
+			}
 			/**
 			 * BALAUR
 			 */
 			// Supply Base Beta.
 			case 233550: // Pashid Supply Base Beta Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 1)
@@ -1341,8 +1417,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Military Supply Base.
 			case 233551: // Pashid Military Supply Base Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 2)
@@ -1385,8 +1463,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Supply Base Alpha.
 			case 233552: // Pashid Supply Base Alpha Officer Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 3)
@@ -1431,8 +1511,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Artillery Base.
 			case 233553: // Pashid Artillery Base Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 4)
@@ -1471,8 +1553,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Sentry Post Alpha.
 			case 233554: // Pashid Sentry Post Alpha Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 5)
@@ -1511,8 +1595,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Sentry Post Beta.
 			case 233555: // Pashid Sentry Post Beta Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 6)
@@ -1561,8 +1647,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Holy Grounds.
 			case 233556: // Pashid Holy Grounds Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 7)
@@ -1611,8 +1699,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Command Center.
 			case 233557: // Pashid Command Center Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 8)
@@ -1657,8 +1747,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Headquarters Alpha.
 			case 233558: // Pashid Headquarters Alpha Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 9)
@@ -1705,8 +1797,10 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 			// Headquarters Beta.
 			case 233559: // Pashid Headquarters Beta Officer.
+			{
 				point = 400;
 				despawnNpc(npc);
 				if (ironWallBase == 10)
@@ -1757,6 +1851,7 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 					}
 				}
 				break;
+			}
 		}
 		updateScore(mostPlayerDamage, npc, point, false);
 	}
@@ -1770,6 +1865,7 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 			case 831910: // Siege Base Blanket Bomber A.
 			case 831914: // Siege Base Bomber E.
 			case 831915: // Siege Base Blanket Bomber E.
+			{
 				despawnNpc(npc);
 				// Bombardment has been activated on the siege base.\nBombing will begin soon.
 				sendMsgByRace(1402109, Race.PC_ALL, 0);
@@ -1780,12 +1876,14 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 				sp(855240, 394.76648f, 640.9771f, 214.52452f, (byte) 44, 7000);
 				sp(855240, 398.99435f, 611.30725f, 214.52452f, (byte) 83, 7500);
 				break;
+			}
 			case 831911: // Fortress Wall Bomber A.
 			case 831912: // Fortress Bomber A.
 			case 831913: // Fortress Blanket Bomber A.
 			case 831916: // Fortress Wall Bomber E.
 			case 831917: // Fortress Bomber E.
 			case 831918: // Fortress Blanket Bomber E.
+			{
 				despawnNpc(npc);
 				// Bombardment has been activated on the siege base.\nBombing will begin soon.
 				sendMsgByRace(1402110, Race.PC_ALL, 0);
@@ -1808,6 +1906,7 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 				sp(855240, 713.01105f, 416.59003f, 231.0f, (byte) 3, 13000);
 				sp(855240, 730.56836f, 415.3179f, 230.96448f, (byte) 118, 13500);
 				break;
+			}
 		}
 	}
 	

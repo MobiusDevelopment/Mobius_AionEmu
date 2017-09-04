@@ -200,7 +200,9 @@ public class _1099An_Important_Choice extends QuestHandler
 						}
 						case STEP_TO_2:
 						case STEP_TO_3:
+						{
 							return defaultCloseDialog(env, 54, 54, true, false);
+						}
 					}
 				}
 			}

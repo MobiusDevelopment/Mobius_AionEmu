@@ -71,7 +71,9 @@ public class _80315The_Reason_Why_The_Hero_Of_Guardians_Shines extends QuestHand
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 				}
 			}
 		}

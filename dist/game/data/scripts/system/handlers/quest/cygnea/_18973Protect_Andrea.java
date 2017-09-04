@@ -114,6 +114,7 @@ public class _18973Protect_Andrea extends QuestHandler
 			{
 				case 235867:
 				case 235868:
+				{
 					if (qs.getQuestVarById(1) < 6)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -124,6 +125,7 @@ public class _18973Protect_Andrea extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

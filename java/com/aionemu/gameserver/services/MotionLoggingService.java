@@ -217,6 +217,7 @@ public class MotionLoggingService
 					switch (st.getRace())
 					{
 						case ASMODIANS:
+						{
 							if (st.getGender() == Gender.MALE)
 							{
 								weaponTimeAm.add(weapon, recalculate("base", weapon, st.getAttackSpeed(), st.getClientTime()));
@@ -226,7 +227,9 @@ public class MotionLoggingService
 								weaponTimeAf.add(weapon, recalculate("base", weapon, st.getAttackSpeed(), st.getClientTime()));
 							}
 							break;
+						}
 						case ELYOS:
+						{
 							if (st.getGender() == Gender.MALE)
 							{
 								weaponTimeEm.add(weapon, recalculate("base", weapon, st.getAttackSpeed(), st.getClientTime()));
@@ -236,6 +239,7 @@ public class MotionLoggingService
 								weaponTimeEf.add(weapon, recalculate("base", weapon, st.getAttackSpeed(), st.getClientTime()));
 							}
 							break;
+						}
 					}
 				}
 				final List<WeaponTime> weaponTimes = new ArrayList<>(4);
@@ -298,6 +302,7 @@ public class MotionLoggingService
 				switch (wt.getRace())
 				{
 					case ASMODIANS:
+					{
 						if (wt.getGender() == Gender.MALE)
 						{
 							motion.setAm(times);
@@ -307,7 +312,9 @@ public class MotionLoggingService
 							motion.setAf(times);
 						}
 						break;
+					}
 					case ELYOS:
+					{
 						if (wt.getGender() == Gender.MALE)
 						{
 							motion.setEm(times);
@@ -317,6 +324,7 @@ public class MotionLoggingService
 							motion.setEf(times);
 						}
 						break;
+					}
 				}
 			}
 			

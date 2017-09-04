@@ -117,6 +117,7 @@ public class _15573Daylight_Raiders extends QuestHandler
 			{
 				case 241254:
 				case 241257:
+				{
 					if (qs.getQuestVarById(1) < 10)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -127,6 +128,7 @@ public class _15573Daylight_Raiders extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

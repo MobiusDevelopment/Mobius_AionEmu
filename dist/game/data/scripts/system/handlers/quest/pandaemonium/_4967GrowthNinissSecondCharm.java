@@ -83,25 +83,33 @@ public class _4967GrowthNinissSecondCharm extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1352);
 							}
+						}
 						case STEP_TO_1:
+						{
 							return defaultCloseDialog(env, 0, 1, 182207137, 1, 0, 0); // 1
+						}
 					}
 					break;
 				}
 				case 798385: // Ninis
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								removeQuestItem(env, 182207137, 1);
 								return sendQuestDialog(env, 2375);
 							}
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							final long itemAmount = player.getInventory().getItemCountByItemId(186000091);
 							if ((var == 1) && (itemAmount >= 1) && player.getInventory().tryDecreaseKinah(50000))
 							{
@@ -113,10 +121,14 @@ public class _4967GrowthNinissSecondCharm extends QuestHandler
 							{
 								return sendQuestDialog(env, 2716);
 							}
+						}
 						case FINISH_DIALOG:
+						{
 							return defaultCloseDialog(env, 1, 1);
+						}
 					}
 					break;
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

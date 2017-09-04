@@ -57,6 +57,7 @@ public class Anoha_SwordAI2 extends NpcAI2
 			{
 				case 804576: // Anoha Sword [Elyos]
 				case 804577: // Anoha Sword [Asmodians]
+				{
 					announceBerserkAnoha30Min();
 					spawn(702644, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading());
 					ThreadPoolManager.getInstance().schedule(new Runnable()
@@ -69,6 +70,7 @@ public class Anoha_SwordAI2 extends NpcAI2
 						}
 					}, 1800000); // 30 Minutes.
 					break;
+				}
 			}
 		}
 		// The Anoha Sealing Stone was used to release Anoha.

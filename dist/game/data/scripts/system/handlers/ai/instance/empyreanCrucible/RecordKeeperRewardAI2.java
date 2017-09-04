@@ -48,8 +48,10 @@ public class RecordKeeperRewardAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 205344: // Record Keeper Reward.
+				{
 					getPosition().getWorldMapInstance().getInstanceHandler().doReward(player);
 					break;
+				}
 			}
 		}
 		return true;
@@ -61,9 +63,11 @@ public class RecordKeeperRewardAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 205344:
+			{
 				// Wonderful, Daeva! You completed entire Crucible! Very impressive, nyerk!
 				sendMsg(1111469, getObjectId(), false, 2000);
 				break;
+			}
 		}
 		super.handleSpawned();
 	}

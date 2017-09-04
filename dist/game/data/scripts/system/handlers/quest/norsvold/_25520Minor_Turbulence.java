@@ -115,6 +115,7 @@ public class _25520Minor_Turbulence extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 703080:
+				{
 					if (qs.getQuestVarById(1) < 20)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -125,6 +126,7 @@ public class _25520Minor_Turbulence extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

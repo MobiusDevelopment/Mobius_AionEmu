@@ -108,12 +108,15 @@ public class _2002Wheres_Rae extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);
 							}
 							break;
+						}
 						case STEP_TO_1:
+						{
 							if (var == 0)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -122,6 +125,7 @@ public class _2002Wheres_Rae extends QuestHandler
 								return true;
 							}
 							break;
+						}
 					}
 				}
 					break;
@@ -130,15 +134,20 @@ public class _2002Wheres_Rae extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 1352);
 							}
 							break;
+						}
 						case SELECT_ACTION_1353:
+						{
 							playQuestMovie(env, 52);
 							break;
+						}
 						case STEP_TO_2:
+						{
 							if (var == 1)
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -147,6 +156,7 @@ public class _2002Wheres_Rae extends QuestHandler
 								return true;
 							}
 							break;
+						}
 					}
 				}
 					break;
@@ -155,6 +165,7 @@ public class _2002Wheres_Rae extends QuestHandler
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 2)
 							{
 								return sendQuestDialog(env, 1693);
@@ -176,9 +187,11 @@ public class _2002Wheres_Rae extends QuestHandler
 								return sendQuestDialog(env, 2716);
 							}
 							break;
+						}
 						case STEP_TO_3:
 						case STEP_TO_4:
 						case STEP_TO_6:
+						{
 							if ((var == 2) || (var == 10))
 							{
 								qs.setQuestVarById(0, var + 1);
@@ -194,7 +207,9 @@ public class _2002Wheres_Rae extends QuestHandler
 								return true;
 							}
 							break;
+						}
 						case STEP_TO_5:
+						{
 							if ((var == 12) || (var == 99))
 							{
 								qs.setQuestVar(99);
@@ -206,7 +221,9 @@ public class _2002Wheres_Rae extends QuestHandler
 								return true;
 							}
 							break;
+						}
 						case CHECK_COLLECTED_ITEMS:
+						{
 							if (var == 11)
 							{
 								if (QuestService.collectItemCheck(env, true))
@@ -221,17 +238,21 @@ public class _2002Wheres_Rae extends QuestHandler
 								}
 							}
 							break;
+						}
 					}
 				}
 					break;
 				case 700045:
+				{
 					if ((var == 11) && (env.getDialog() == QuestDialog.USE_OBJECT))
 					{
 						SkillEngine.getInstance().getSkill(player, 8343, 1, player).useSkill();
 						return true;
 					}
 					break;
+				}
 				case 203538:
+				{
 					if ((var == 14) && (env.getDialog() == QuestDialog.USE_OBJECT))
 					{
 						qs.setQuestVarById(0, var + 1);
@@ -243,16 +264,21 @@ public class _2002Wheres_Rae extends QuestHandler
 						return true;
 					}
 					break;
+				}
 				case 203553:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var == 15)
 							{
 								return sendQuestDialog(env, 3057);
 							}
 							break;
+						}
 						case STEP_TO_7:
+						{
 							if (var == 15)
 							{
 								env.getVisibleObject().getController().delete();
@@ -262,34 +288,38 @@ public class _2002Wheres_Rae extends QuestHandler
 								return true;
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case 205020:
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
+						{
 							if (var >= 12)
 							{
 								player.setState(CreatureState.FLIGHT_TELEPORT);
 								player.unsetState(CreatureState.ACTIVE);
 								player.setFlightTeleportId(3001);
 								PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 3001, 0));
-								ThreadPoolManager.getInstance().schedule(new Runnable()
+								ThreadPoolManager.getInstance().schedule(() ->
 								{
-									@Override
-									public void run()
-									{
-										TeleportService2.teleportTo(player, 220010000, 940.15f, 2295.64f, 265.7f, (byte) 43);
-										qs.setQuestVar(13);
-										updateQuestStatus(qEnv);
-									}
+									TeleportService2.teleportTo(player, 220010000, 940.15f, 2295.64f, 265.7f, (byte) 43);
+									qs.setQuestVar(13);
+									updateQuestStatus(qEnv);
 								}, 40000);
 								return true;
 							}
 							return false;
+						}
 						default:
+						{
 							return false;
+						}
 					}
+				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
@@ -336,6 +366,7 @@ public class _2002Wheres_Rae extends QuestHandler
 		{
 			case 210377:
 			case 210378:
+			{
 				if ((var >= 3) && (var < 10))
 				{
 					qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
@@ -343,6 +374,7 @@ public class _2002Wheres_Rae extends QuestHandler
 					return true;
 				}
 				break;
+			}
 		}
 		return false;
 	}

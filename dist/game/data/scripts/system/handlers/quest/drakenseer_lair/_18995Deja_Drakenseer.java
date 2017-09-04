@@ -118,6 +118,7 @@ public class _18995Deja_Drakenseer extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 220450: // Drakenseer Akhal.
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -128,6 +129,7 @@ public class _18995Deja_Drakenseer extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

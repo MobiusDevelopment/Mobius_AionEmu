@@ -81,17 +81,21 @@ public class _30054PetrificationandPride extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 1)
 						{
 							return sendQuestDialog(env, 2375);
 						}
+					}
 					case SELECT_REWARD:
+					{
 						if (var == 1)
 						{
 							qs.setStatus(QuestStatus.REWARD);
 							updateQuestStatus(env);
 							return sendQuestEndDialog(env);
 						}
+					}
 				}
 			}
 			if (targetId == 203901)
@@ -99,15 +103,19 @@ public class _30054PetrificationandPride extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							return defaultCloseDialog(env, 0, 1);
 						}
+					}
 				}
 			}
 		}

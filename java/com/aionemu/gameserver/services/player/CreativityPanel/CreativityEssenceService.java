@@ -328,29 +328,41 @@ public class CreativityEssenceService
 			switch (id)
 			{
 				case 1:
+				{
 					player.setCPSlot1(point);
 					Power.getInstance().onChange(player, point);
 					break;
+				}
 				case 2:
+				{
 					player.setCPSlot2(point);
 					Health.getInstance().onChange(player, point);
 					break;
+				}
 				case 3:
+				{
 					player.setCPSlot3(point);
 					Agility.getInstance().onChange(player, point);
 					break;
+				}
 				case 4:
+				{
 					player.setCPSlot4(point);
 					Precision.getInstance().onChange(player, point);
 					break;
+				}
 				case 5:
+				{
 					player.setCPSlot5(point);
 					Knowledge.getInstance().onChange(player, point);
 					break;
+				}
 				case 6:
+				{
 					player.setCPSlot6(point);
 					Will.getInstance().onChange(player, point);
 					break;
+				}
 			}
 			PacketSendUtility.sendPacket(player, new SM_PLAYER_ESSENCE_CONTROL(type, size, id, point));
 		}
@@ -430,11 +442,14 @@ public class CreativityEssenceService
 			switch (id)
 			{
 				case 8:
+				{
 					player.getSkillList().addSkill(player, 4696, 1); // Transformation: Vessel Of Wind.
 					player.getSkillList().addSkill(player, 4697, 1); // Mercurial Blast.
 					player.getCP().addPoint(player, 7, 1);
 					break;
+				}
 				case 10:
+				{
 					if (player.getRace() == Race.ELYOS)
 					{
 						player.getSkillList().addSkill(player, 4700, 1); // Transformation: Vessel Of Fire.
@@ -447,18 +462,24 @@ public class CreativityEssenceService
 					}
 					player.getCP().addPoint(player, 9, 1);
 					break;
+				}
 				case 12:
+				{
 					player.getSkillList().addSkill(player, 4702, 1); // Transformation: Vessel Of Water.
 					player.getSkillList().addSkill(player, 4703, 1); // Waterbind.
 					player.getCP().addPoint(player, 11, 1);
 					break;
+				}
 				case 14:
+				{
 					player.getSkillList().addSkill(player, 4698, 1); // Transformation: Vessel Of Earth.
 					player.getSkillList().addSkill(player, 4699, 1); // Terraform.
 					player.getCP().addPoint(player, 13, 1);
 					break;
+				}
 				// Ver: 5.1
 				case 402:
+				{
 					if (player.getRace() == Race.ELYOS)
 					{
 						player.getSkillList().addSkill(player, 4768, 1); // Transformation: Avatar Of Wind (Elyos)
@@ -469,7 +490,9 @@ public class CreativityEssenceService
 					}
 					player.getCP().addPoint(player, 401, 1);
 					break;
+				}
 				case 404:
+				{
 					if (player.getRace() == Race.ELYOS)
 					{
 						player.getSkillList().addSkill(player, 4752, 1); // Transformation: Avatar Of Fire (Elyos)
@@ -480,7 +503,9 @@ public class CreativityEssenceService
 					}
 					player.getCP().addPoint(player, 403, 1);
 					break;
+				}
 				case 406:
+				{
 					if (player.getRace() == Race.ELYOS)
 					{
 						player.getSkillList().addSkill(player, 4757, 1); // Transformation: Avatar Of Water (Elyos)
@@ -491,7 +516,9 @@ public class CreativityEssenceService
 					}
 					player.getCP().addPoint(player, 405, 1);
 					break;
+				}
 				case 408:
+				{
 					if (player.getRace() == Race.ELYOS)
 					{
 						player.getSkillList().addSkill(player, 4762, 1); // Transformation: Avatar Of Earth (Elyos)
@@ -502,6 +529,7 @@ public class CreativityEssenceService
 					}
 					player.getCP().addPoint(player, 407, 1);
 					break;
+				}
 			}
 			player.getCP().addPoint(player, id, point);
 		}
@@ -510,11 +538,14 @@ public class CreativityEssenceService
 			switch (id)
 			{
 				case 8:
+				{
 					SkillLearnService.removeSkill(player, 4696); // Transformation: Vessel Of Wind.
 					SkillLearnService.removeSkill(player, 4697); // Mercurial Blast.
 					player.getCP().removePoint(player, 7);
 					break;
+				}
 				case 10:
+				{
 					if (player.getRace() == Race.ELYOS)
 					{
 						SkillLearnService.removeSkill(player, 4700); // Transformation: Vessel Of Fire.
@@ -527,18 +558,24 @@ public class CreativityEssenceService
 					}
 					player.getCP().removePoint(player, 9);
 					break;
+				}
 				case 12:
+				{
 					SkillLearnService.removeSkill(player, 4702); // Transformation: Vessel Of Water.
 					SkillLearnService.removeSkill(player, 4703); // Waterbind.
 					player.getCP().removePoint(player, 11);
 					break;
+				}
 				case 14:
+				{
 					SkillLearnService.removeSkill(player, 4698); // Transformation: Vessel Of Earth.
 					SkillLearnService.removeSkill(player, 4699); // Terraform.
 					player.getCP().removePoint(player, 13);
 					break;
+				}
 				// Ver: 5.1
 				case 402:
+				{
 					if (player.getRace() == Race.ELYOS)
 					{
 						SkillLearnService.removeSkill(player, 4768); // Transformation: Avatar Of Wind (Elyos)
@@ -549,7 +586,9 @@ public class CreativityEssenceService
 					}
 					player.getCP().removePoint(player, 401);
 					break;
+				}
 				case 404:
+				{
 					if (player.getRace() == Race.ELYOS)
 					{
 						SkillLearnService.removeSkill(player, 4752); // Transformation: Avatar Of Fire (Elyos)
@@ -560,7 +599,9 @@ public class CreativityEssenceService
 					}
 					player.getCP().removePoint(player, 403);
 					break;
+				}
 				case 406:
+				{
 					if (player.getRace() == Race.ELYOS)
 					{
 						SkillLearnService.removeSkill(player, 4757); // Transformation: Avatar Of Water (Elyos)
@@ -571,7 +612,9 @@ public class CreativityEssenceService
 					}
 					player.getCP().removePoint(player, 405);
 					break;
+				}
 				case 408:
+				{
 					if (player.getRace() == Race.ELYOS)
 					{
 						SkillLearnService.removeSkill(player, 4762); // Transformation: Avatar Of Earth (Elyos)
@@ -582,6 +625,7 @@ public class CreativityEssenceService
 					}
 					player.getCP().removePoint(player, 407);
 					break;
+				}
 			}
 			player.getCP().removePoint(player, id);
 		}

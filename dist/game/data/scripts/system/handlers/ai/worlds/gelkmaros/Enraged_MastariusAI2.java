@@ -51,8 +51,10 @@ public class Enraged_MastariusAI2 extends AggressiveNpcAI2
 			switch (getNpcId())
 			{
 				case 258220: // Enraged Mastarius.
+				{
 					announceAgentUnderAttack();
 					break;
+				}
 			}
 		}
 		checkPercentage(getLifeStats().getHpPercentage());

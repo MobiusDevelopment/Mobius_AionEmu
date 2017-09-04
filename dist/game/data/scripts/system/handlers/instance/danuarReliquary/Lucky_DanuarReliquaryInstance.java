@@ -61,6 +61,7 @@ public class Lucky_DanuarReliquaryInstance extends GeneralInstanceHandler
 		switch (npcId)
 		{
 			case 701795: // Lucky Danuar Reliquary Box.
+			{
 				for (Player player : instance.getPlayersInside())
 				{
 					if (player.isOnline())
@@ -75,14 +76,19 @@ public class Lucky_DanuarReliquaryInstance extends GeneralInstanceHandler
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188053623, 1)); // Fire Dragon King's Weapon Bundle [Mythic].
 							break;
+						}
 						case 2:
+						{
 							dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 188054244, 1)); // Dreaming Nether Water Dragon King's Weapon Chest [Mythic].
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 	}
 	
@@ -122,11 +128,14 @@ public class Lucky_DanuarReliquaryInstance extends GeneralInstanceHandler
 			case 284662:
 			case 284663:
 			case 284664:
+			{
 				despawnNpc(npc);
 				break;
+			}
 			case 284377: // Danuar Reliquary Novun.
 			case 284378: // Idean Lapilima.
 			case 284379: // Idean Obscura.
+			{
 				ideanKilled++;
 				if (ideanKilled == 1)
 				{
@@ -148,7 +157,9 @@ public class Lucky_DanuarReliquaryInstance extends GeneralInstanceHandler
 				}
 				despawnNpc(npc);
 				break;
+			}
 			case 284383: // Clone's Modor.
+			{
 				cloneModorKilled++;
 				if (cloneModorKilled == 1)
 				{
@@ -168,7 +179,9 @@ public class Lucky_DanuarReliquaryInstance extends GeneralInstanceHandler
 				}
 				despawnNpc(npc);
 				break;
+			}
 			case 231305: // Enraged Queen's Modor.
+			{
 				luckyReliquaryTask.cancel(true);
 				sendMsg("[Congratulation]: you finish <[Lucky] Danuar Reliquary>");
 				spawn(730907, 256.45197f, 257.91986f, 241.78688f, (byte) 90); // Lucky Danuar Reliquary Exit.
@@ -181,6 +194,7 @@ public class Lucky_DanuarReliquaryInstance extends GeneralInstanceHandler
 					}
 				});
 				break;
+			}
 		}
 	}
 	

@@ -116,25 +116,33 @@ public class KuharaTheVolatileAI2 extends AggressiveNpcAI2
 				switch (Rnd.get(1, 4))
 				{
 					case 1:
+					{
 						spawn(282394, 163.79257f, 266.18692f, 210.0678f, (byte) 74);
 						spawn(282394, 166.12807f, 263.00272f, 210.11052f, (byte) 74);
 						spawn(282394, 162.76723f, 263.038f, 210.0678f, (byte) 74);
 						break;
+					}
 					case 2:
+					{
 						spawn(282394, 158.55418f, 236.08423f, 210.0678f, (byte) 42);
 						spawn(282394, 155.07852f, 234.39168f, 210.06781f, (byte) 40);
 						spawn(282394, 155.78406f, 237.70297f, 210.0678f, (byte) 39);
 						break;
+					}
 					case 3:
+					{
 						spawn(282394, 119.849335f, 243.8364f, 210.06781f, (byte) 12);
 						spawn(282394, 117.94701f, 246.95924f, 210.06781f, (byte) 12);
 						spawn(282394, 121.0155f, 246.60715f, 210.06781f, (byte) 11);
 						break;
+					}
 					case 4:
+					{
 						spawn(282394, 124.52082f, 273.96237f, 210.06781f, (byte) 105);
 						spawn(282394, 127.199356f, 276.00143f, 210.06781f, (byte) 104);
 						spawn(282394, 127.42693f, 273.05597f, 210.06781f, (byte) 103);
 						break;
+					}
 				}
 				startBombEvent();
 				announceWeakKuhara();

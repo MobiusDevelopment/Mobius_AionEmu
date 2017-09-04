@@ -72,9 +72,13 @@ public class _30610The_Good_News_And_Bad extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}
@@ -139,6 +143,7 @@ public class _30610The_Good_News_And_Bad extends QuestHandler
 			switch (env.getTargetId())
 			{
 				case 219264: // Captain Anusa.
+				{
 					if (qs.getQuestVarById(1) < 1)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -149,6 +154,7 @@ public class _30610The_Good_News_And_Bad extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

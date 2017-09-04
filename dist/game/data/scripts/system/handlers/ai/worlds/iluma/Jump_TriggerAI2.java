@@ -58,40 +58,50 @@ public class Jump_TriggerAI2 extends AggressiveNpcAI2
 					switch (Rnd.get(1, 5))
 					{
 						case 1:
+						{
 							effectController.removeEffect(22883);
 							effectController.removeEffect(22884);
 							effectController.removeEffect(22885);
 							effectController.removeEffect(22886);
 							SkillEngine.getInstance().getSkill(player, 22882, 1, player).useNoAnimationSkill(); // Boost Attack Power.
 							break;
+						}
 						case 2:
+						{
 							effectController.removeEffect(22884);
 							effectController.removeEffect(22885);
 							effectController.removeEffect(22886);
 							effectController.removeEffect(22882);
 							SkillEngine.getInstance().getSkill(player, 22883, 1, player).useNoAnimationSkill(); // Movement Speed Increase.
 							break;
+						}
 						case 3:
+						{
 							effectController.removeEffect(22885);
 							effectController.removeEffect(22886);
 							effectController.removeEffect(22882);
 							effectController.removeEffect(22883);
 							SkillEngine.getInstance().getSkill(player, 22884, 1, player).useNoAnimationSkill(); // Attack Speed Increased.
 							break;
+						}
 						case 4:
+						{
 							effectController.removeEffect(22886);
 							effectController.removeEffect(22882);
 							effectController.removeEffect(22883);
 							effectController.removeEffect(22884);
 							SkillEngine.getInstance().getSkill(player, 22885, 1, player).useNoAnimationSkill(); // Boost Defense.
 							break;
+						}
 						case 5:
+						{
 							effectController.removeEffect(22882);
 							effectController.removeEffect(22883);
 							effectController.removeEffect(22884);
 							effectController.removeEffect(22885);
 							SkillEngine.getInstance().getSkill(player, 22886, 1, player).useNoAnimationSkill(); // Casting Time Reduced.
 							break;
+						}
 					}
 					AI2Actions.deleteOwner(Jump_TriggerAI2.this);
 					AI2Actions.scheduleRespawn(this);

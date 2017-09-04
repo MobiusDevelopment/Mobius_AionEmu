@@ -106,11 +106,15 @@ public class MySQL5ChallengeTasksDAO extends ChallengeTasksDAO
 			switch (quest.getPersistentState())
 			{
 				case NEW:
+				{
 					insertQuestEntry(task, quest);
 					break;
+				}
 				case UPDATE_REQUIRED:
+				{
 					updateQuestEntry(task, quest);
 					break;
+				}
 			}
 		}
 	}

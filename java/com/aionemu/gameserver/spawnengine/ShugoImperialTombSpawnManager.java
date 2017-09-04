@@ -121,8 +121,10 @@ public class ShugoImperialTombSpawnManager
 		switch (npc_id)
 		{
 			case 831117:
+			{
 				PacketSendUtility.sendSys3Message(player, "\uE09B", "<Shugo Imperial Tomb> is now open !!!");
 				break;
+			}
 		}
 	}
 	

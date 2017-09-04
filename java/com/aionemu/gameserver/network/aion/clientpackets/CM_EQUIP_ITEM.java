@@ -66,12 +66,17 @@ public class CM_EQUIP_ITEM extends AionClientPacket
 		switch (action)
 		{
 			case 0:
+			{
 				resultItem = equipment.equipItem(itemUniqueId, slotRead);
 				break;
+			}
 			case 1:
+			{
 				resultItem = equipment.unEquipItem(itemUniqueId, slotRead);
 				break;
+			}
 			case 2:
+			{
 				if (activePlayer.getController().hasTask(TaskId.ITEM_USE) && !activePlayer.getController().getTask(TaskId.ITEM_USE).isDone())
 				{
 					PacketSendUtility.sendPacket(activePlayer, SM_SYSTEM_MESSAGE.STR_CANT_EQUIP_ITEM_IN_ACTION);
@@ -83,6 +88,7 @@ public class CM_EQUIP_ITEM extends AionClientPacket
 				}
 				equipment.switchHands();
 				break;
+			}
 		}
 		if ((resultItem != null) || (action == 2))
 		{

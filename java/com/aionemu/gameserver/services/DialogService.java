@@ -74,6 +74,7 @@ public class DialogService
 			case 358048:
 			case 358049:
 			case 463212:
+			{
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(npc.getObjectId(), 0));
 				final Legion legion = player.getLegion();
 				if (legion != null)
@@ -85,6 +86,7 @@ public class DialogService
 					}
 				}
 				break;
+			}
 			case 314362: // Stigma Master A.
 			case 314365: // Stigma Master B.
 			case 314366: // Stigma Master C.
@@ -103,8 +105,10 @@ public class DialogService
 			case 370503: // <Gogorunerk Solution,INC>
 			case 462878: // <Village Alliance>
 			case 466226: // Stigma Researcher.
+			{
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(npc.getObjectId(), 0));
 				break;
+			}
 		}
 	}
 	
@@ -151,41 +155,49 @@ public class DialogService
 					// <Iron Combat Administration Officer Elyos>
 					case 203179: // Anontrite.
 					case 203330: // Laksis.
+					{
 						if (player.getInventory().getItemCountByItemId(186000001) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Iron Combat Administration Officer Asmodians>
 					case 203659: // Lateni.
 					case 203689: // Lohaban.
+					{
 						if (player.getInventory().getItemCountByItemId(186000006) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Bronze Combat Administration Officer Elyos>
 					case 203931: // Ferenna.
 					case 798111: // Atro.
+					{
 						if (player.getInventory().getItemCountByItemId(186000002) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Bronze Combat Administration Officer Asmodians>
 					case 204360: // Nott.
 					case 204368: // Cliessa.
 					case 204425: // Bevna.
 					case 204426: // Skataon.
+					{
 						if (player.getInventory().getItemCountByItemId(186000007) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Silver Administration Officer Elyos>
 					case 203964: // Agrips.
 					case 204011: // Sandinas.
@@ -197,12 +209,14 @@ public class DialogService
 					case 798113: // Anobi.
 					case 801158: // Callias.
 					case 801161: // Donar.
+					{
 						if (player.getInventory().getItemCountByItemId(186000003) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Silver Administration Officer Asmodians>
 					case 204359: // Royaa.
 					case 204427: // Sigen.
@@ -210,12 +224,14 @@ public class DialogService
 					case 204789: // Lewin.
 					case 801170: // Lamachus.
 					case 801173: // Kellas.
+					{
 						if (player.getInventory().getItemCountByItemId(186000008) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Gold Administration Officer Elyos>
 					case 204548: // Euripia.
 					case 204638: // Tolemos.
@@ -223,12 +239,14 @@ public class DialogService
 					case 801167: // Dalla.
 					case 801182: // Dinon.
 					case 801185: // Gudrun.
+					{
 						if (player.getInventory().getItemCountByItemId(186000004) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Gold Administration Officer Asmodians>
 					case 204761: // Cinnia.
 					case 204762: // Coventina.
@@ -237,12 +255,14 @@ public class DialogService
 					case 801179: // Nibelr.
 					case 801196: // Hippias.
 					case 801199: // Thorkell.
+					{
 						if (player.getInventory().getItemCountByItemId(186000009) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Platinum Administration Officer Elyos>
 					case 798172: // Eunomia.
 					case 798173: // Euterpe.
@@ -254,12 +274,14 @@ public class DialogService
 					case 798198: // Calliope.
 					case 801188: // Cariton.
 					case 801192: // Lithrasir.
+					{
 						if (player.getInventory().getItemCountByItemId(186000005) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Platinum Administration Officer Asmodians>
 					case 205160: // Nagel.
 					case 205161: // Huvat.
@@ -271,93 +293,111 @@ public class DialogService
 					case 205186: // Forseti.
 					case 801202: // Bupalus.
 					case 801206: // Mofrig.
+					{
 						if (player.getInventory().getItemCountByItemId(186000010) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Mithril Administration Officer Elyos>
 					case 798914: // Eduardo.
 					case 798915: // Giuseppe.
 					case 798916: // Silva.
 					case 798917: // Amauri.
+					{
 						if (player.getInventory().getItemCountByItemId(186000018) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Mithril Administration Officer Asmodians>
 					case 799213: // Nordin.
 					case 799214: // Flores.
 					case 799215: // Godin.
 					case 799216: // Assulin.
+					{
 						if (player.getInventory().getItemCountByItemId(186000019) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Alabaster Order Steward Elyos>
 					case 805136: // Andun.
 					case 805137: // Barett.
 					case 805138: // Carsemion.
 					case 805139: // Seoron.
+					{
 						if (player.getInventory().getItemCountByItemId(186000100) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Field Warden Steward Asmodians>
 					case 805047: // Nielan.
 					case 805048: // Garpai.
 					case 805049: // Debuiss.
 					case 805050: // Lauris.
+					{
 						if (player.getInventory().getItemCountByItemId(186000103) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Fortuneers Order Steward Elyos>
 					case 805140: // Edell.
 					case 805141: // Pradon.
 					case 805142: // Gildox.
+					{
 						if (player.getInventory().getItemCountByItemId(186000102) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Charlirunerk's Daemons Steward Asmodians>
 					case 805051: // Atarinrinerk.
 					case 805052: // Moerunerk.
 					case 805053: // Momorinrinerk.
 					case 805054: // Yokurunerk.
+					{
 						if (player.getInventory().getItemCountByItemId(186000105) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Radiant Ops Steward Elyos>
 					case 805144: // Terpander.
+					{
 						if (player.getInventory().getItemCountByItemId(186000101) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Blood Crusade Steward Asmodians>
 					case 805055: // Ledmar.
+					{
 						if (player.getInventory().getItemCountByItemId(186000104) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					// <Master Numismatist>
 					case 833744: // Cufrunerk.
 					case 833745: // Irumonerk.
@@ -367,12 +407,14 @@ public class DialogService
 					case 833749: // Grurerk.
 					case 833750: // Kirarinerk.
 					case 833751: // Mirunerk.
+					{
 						if (player.getInventory().getItemCountByItemId(186000237) == 0)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 				}
 				// Abyss Stigma/Stuff Seller's
 				switch (npc.getNpcId())
@@ -381,12 +423,14 @@ public class DialogService
 					case 203710: // Dairos.
 					case 206331: // Rigdamis.
 					case 206332: // Gladria.
+					{
 						if (level < 25)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					case 798505: // Salvius.
 					case 798509: // Papinius.
 					case 798510: // Ecocia.
@@ -394,27 +438,33 @@ public class DialogService
 					case 802209: // Temista.
 					case 802210: // Fujak.
 					case 805130: // Fibhe.
+					{
 						if (level < 45)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					case 798507: // Gracus.
 					case 798508: // Tororite.
+					{
 						if (level < 50)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					case 798506: // Elmaia.
+					{
 						if (level < 55)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 				}
 				final int tradeModifier = tradeListTemplate.getSellPriceRate();
 				PacketSendUtility.sendPacket(player, new SM_TRADELIST(player, npc, tradeListTemplate, (PricesService.getVendorBuyModifier() * tradeModifier) / 100));
@@ -445,22 +495,26 @@ public class DialogService
 				{
 					case 206331: // Rigdamis.
 					case 206332: // Gladria.
+					{
 						if (level < 25)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 					case 798509: // Papinius.
 					case 798510: // Ecocia.
 					case 799224: // Camila.
 					case 802209: // Temista.
+					{
 						if (level < 45)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 				}
 				PacketSendUtility.sendPacket(player, new SM_SELL_ITEM(targetObjectId, PricesService.getVendorSellModifier(player.getRace())));
 				break;
@@ -483,6 +537,7 @@ public class DialogService
 					case 370111: // Abyss Master Stigma A.
 					case 370112: // Abyss Master Stigma B.
 					case 370503: // <Gogorunerk Solution,INC>
+					{
 						if (player.getRace() == Race.ELYOS)
 						{
 							final QuestState qs = player.getQuestStateList().getQuestState(1929); // Sliver Of Darkness.
@@ -510,6 +565,7 @@ public class DialogService
 							}
 						}
 						break;
+					}
 				}
 				break;
 			}
@@ -549,7 +605,9 @@ public class DialogService
 					case 358043:
 					case 358044:
 					case 358045:
+					{
 						// Warehouse Base Reshanta 4.9
+					}
 					case 358314:
 					case 358317:
 					case 358320:
@@ -582,36 +640,47 @@ public class DialogService
 					case 358401:
 					case 358404:
 					case 358407:
+					{
 						// End Warehouse Base Reshanta 4.9
+					}
 					case 358485:
 					case 358515:
 					case 370503:
 					case 462878:
+					{
 						// Panesterra 4.7
 						// [Belus]
+					}
 					case 357010: // Arcadian Fortress Warehouse Manager.
 					case 357326: // Belani Warehouse Manager.
 					case 357330: // Belfarth Warehouse Manager.
 					case 357334: // Beling Warehouse Manager.
 					case 357338: // Belsal Warehouse Manager.
+					{
 						// [Aspida]
+					}
 					case 357022: // Umbral Fortress Warehouse Manager.
 					case 357406: // Aspamon Warehouse Manager.
 					case 357410: // Aspatyr Warehouse Manager.
 					case 357414: // Aspar Warehouse Manager.
 					case 357418: // Aspal Warehouse Manager.
+					{
 						// [Atanatos]
+					}
 					case 357034: // Eternum Fortress Warehouse Manager.
 					case 357486: // Atasin Warehouse Manager.
 					case 357490: // Atair Warehouse Manager.
 					case 357494: // Atangal Warehouse Manager.
 					case 357498: // Ataj Warehouse Manager.
+					{
 						// [Disillon]
+					}
 					case 357046: // Skyclash Fortress Warehouse Manager.
 					case 357566: // Disilgot Warehouse Manager.
 					case 357570: // Disilveir Warehouse Manager.
 					case 357574: // Disiltroll Warehouse Manager.
 					case 357578: // Disilheim Warehouse Manager.
+					{
 						final int level = player.getLevel();
 						if (level < 10)
 						{
@@ -630,6 +699,7 @@ public class DialogService
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 26));
 						WarehouseService.sendWarehouseInfo(player, true);
 						break;
+					}
 				}
 				break;
 			}
@@ -680,8 +750,10 @@ public class DialogService
 					case 358487: // Redemption Landing 4.9.1
 					case 358517: // Harbinger's Landing 4.9.1
 					case 462878:
+					{
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 13));
 						break;
+					}
 				}
 				break;
 			}
@@ -715,7 +787,6 @@ public class DialogService
 							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_NOT_ENOUGH_KINA(price));
 						}
 					}
-					
 					@Override
 					public void denyRequest(Creature requester, Player responder)
 					{
@@ -742,12 +813,17 @@ public class DialogService
 				switch (npc.getNpcId())
 				{
 					case 204089: // Garm.
+					{
 						TeleportService2.teleportTo(player, 120010000, 984.000f, 1543.000f, 222.100f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
 						break;
+					}
 					case 203764: // Epeios.
+					{
 						TeleportService2.teleportTo(player, 110010000, 1462.500f, 1326.100f, 564.100f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
 						break;
+					}
 					case 203981: // Meneus.
+					{
 						if (player.getRace() == Race.ELYOS)
 						{
 							final QuestState qs = player.getQuestStateList().getQuestState(1346); // Killing For Castor.
@@ -762,7 +838,9 @@ public class DialogService
 							}
 						}
 						break;
+					}
 					case 730048: // Fire Temple Exit.
+					{
 						if (level < 27)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
@@ -776,7 +854,9 @@ public class DialogService
 							TeleportService2.teleportTo(player, 220020000, 1592.100f, 977.200f, 140.700f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
 						}
 						break;
+					}
 					case 730049: // Symbol Of Mau Hero.
+					{
 						if (level < 35)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
@@ -788,7 +868,9 @@ public class DialogService
 							TeleportService2.teleportTo(player, 220020000, 2434.500f, 553.600f, 334.600f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
 						}
 						break;
+					}
 					case 730052: // Statue Of Mau Hero [The Hand Behind The IceClaw]
+					{
 						if (level < 30)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
@@ -800,7 +882,9 @@ public class DialogService
 							TeleportService2.teleportTo(player, 220020000, 1252.900f, 266.000f, 534.200f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
 						}
 						break;
+					}
 					case 730053: // Statue Of Mau Hero [The Hand Behind The IceClaw]
+					{
 						if (level < 30)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
@@ -810,6 +894,7 @@ public class DialogService
 							TeleportService2.teleportTo(player, 220020000, 1243.500f, 263.900f, 531.300f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
 						}
 						break;
+					}
 				}
 			}
 			case 37:
@@ -818,14 +903,20 @@ public class DialogService
 				switch (npc.getNpcId())
 				{
 					case 204087: // Gunnar.
+					{
 						TeleportService2.teleportTo(player, 120010000, 1005.100f, 1528.900f, 222.100f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
 						break;
+					}
 					case 203875: // Nepis.
+					{
 						TeleportService2.teleportTo(player, 110010000, 1470.300f, 1343.500f, 563.700f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
 						break;
+					}
 					case 203982: // Ipetos.
+					{
 						TeleportService2.teleportTo(player, 210020000, 446.200f, 431.100f, 274.500f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
 						break;
+					}
 				}
 				break;
 			}
@@ -855,7 +946,6 @@ public class DialogService
 					{
 						TeleportService2.showMap(player, targetObjectId, npc.getNpcId());
 					}
-					
 				}
 				else
 				{
@@ -863,6 +953,7 @@ public class DialogService
 					switch (npc.getNpcId())
 					{
 						case 203194: // Daines [Poeta]
+						{
 							if (player.getRace() == Race.ELYOS)
 							{
 								final QuestState qs = player.getQuestStateList().getQuestState(1006); // Asension Quest.
@@ -877,7 +968,9 @@ public class DialogService
 								}
 							}
 							break;
+						}
 						case 203679: // Osmar [Ishalgen]
+						{
 							if (player.getRace() == Race.ASMODIANS)
 							{
 								final QuestState qs = player.getQuestStateList().getQuestState(2008); // Asension Quest.
@@ -892,7 +985,9 @@ public class DialogService
 								}
 							}
 							break;
+						}
 						case 203895: // Lamid [Sanctum]
+						{
 							if (player.getRace() == Race.ELYOS)
 							{
 								final QuestState qs = player.getQuestStateList().getQuestState(1926); // Secret Library Access.
@@ -907,7 +1002,9 @@ public class DialogService
 								}
 							}
 							break;
+						}
 						case 204268: // Gaminart [Pandaemonium]
+						{
 							if (player.getRace() == Race.ASMODIANS)
 							{
 								final QuestState qs = player.getQuestStateList().getQuestState(2938); // Secret Library Access.
@@ -922,7 +1019,9 @@ public class DialogService
 								}
 							}
 							break;
+						}
 						case 730040: // Secret Passage Of Indratu Legion [Heiron]
+						{
 							if (level < 45)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
@@ -934,9 +1033,11 @@ public class DialogService
 								TeleportService2.teleportTo(player, 210040000, 2599.130f, 2182.7583f, 154.74075f, (byte) 27, TeleportAnimation.JUMP_ANIMATION);
 							}
 							break;
+						}
 						case 800245: // Naerty [Inggison]
 						case 804561: // Topos [Levinshor]
 						case 804562: // Spake [Levinshor]
+						{
 							if (level < 55)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
@@ -947,8 +1048,10 @@ public class DialogService
 								TeleportService2.showMap(player, targetObjectId, npc.getNpcId());
 							}
 							break;
+						}
 						case 805748: // Ortiga [Norsvold]
 						case 805773: // Mantesia [Iluma]
+						{
 							if (level < 66)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
@@ -959,8 +1062,10 @@ public class DialogService
 								TeleportService2.showMap(player, targetObjectId, npc.getNpcId());
 							}
 							break;
+						}
 						case 805750: // Crouzer [Norsvold]
 						case 805775: // Tasos [Iluma]
+						{
 							if (level < 66)
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 1011));
@@ -971,6 +1076,7 @@ public class DialogService
 								TeleportService2.showMap(player, targetObjectId, npc.getNpcId());
 							}
 							break;
+						}
 						// Sky Island Rift [Asmodians]
 						case 805872:
 						case 805873:
@@ -982,8 +1088,10 @@ public class DialogService
 						case 805879:
 						case 805880:
 						case 805881:
+						{
 							TeleportService2.teleportTo(player, 220110000, 1760.1392f, 2007.7195f, 196.34007f, (byte) 110, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						// Sky Island Rift [Elyos]
 						case 805907:
 						case 805908:
@@ -995,8 +1103,10 @@ public class DialogService
 						case 805914:
 						case 805915:
 						case 805916:
+						{
 							TeleportService2.teleportTo(player, 210100000, 1451.8922f, 1297.8304f, 335.60767f, (byte) 65, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						default:
 						{
 							TeleportService2.showMap(player, targetObjectId, npc.getNpcId());
@@ -1058,8 +1168,10 @@ public class DialogService
 					case 358048:
 					case 358049:
 					case 463212:
+					{
 						LegionService.getInstance().openLegionWarehouse(player, npc);
 						break;
+					}
 				}
 				break;
 			}
@@ -1296,12 +1408,14 @@ public class DialogService
 				{
 					case 805976: // Winifred.
 					case 806012: // Italus.
+					{
 						if (level < 66)
 						{
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
 							return;
 						}
 						break;
+					}
 				}
 				PacketSendUtility.sendPacket(player, new SM_SELL_ITEM(targetObjectId, tradeListTemplate));
 				break;
@@ -1340,6 +1454,7 @@ public class DialogService
 					case 358523: // Harbinger's Landing 4.9.1
 					case 370111: // Abyss Master Stigma A.
 					case 370112: // Abyss Master Stigma B.
+					{
 						if (player.getRace() == Race.ELYOS)
 						{
 							final QuestState qs = player.getQuestStateList().getQuestState(1929); // Sliver Of Darkness.
@@ -1367,6 +1482,7 @@ public class DialogService
 							}
 						}
 						break;
+					}
 				}
 				break;
 			}
@@ -1378,6 +1494,7 @@ public class DialogService
 					{
 						// Walk Of Fame Entrance Manager
 						case 802437: // Tisiphone
+						{
 							if (player.getAbyssRank().getRank().getId() < AbyssRankEnum.GENERAL.getId())
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
@@ -1385,8 +1502,10 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 110070000, 503.80746f, 417.2141f, 126.789635f, (byte) 68, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						// Legion Area Entry Manager
 						case 805162: // Cerio
+						{
 							if (player.getLegion() == null)
 							{
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GUILD_LEAVE_I_AM_NOT_BELONG_TO_GUILD);
@@ -1394,7 +1513,9 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 210070000, 1326.1046f, 640.8399f, 584.82385f, (byte) 26, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						case 805164: // Storia
+						{
 							if (player.getLegion() == null)
 							{
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GUILD_LEAVE_I_AM_NOT_BELONG_TO_GUILD);
@@ -1402,7 +1523,9 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 210070000, 1378.3633f, 655.79205f, 584.82385f, (byte) 54, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						case 805166: // Bersus
+						{
 							if (player.getLegion() == null)
 							{
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GUILD_LEAVE_I_AM_NOT_BELONG_TO_GUILD);
@@ -1410,7 +1533,9 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 210070000, 1228.2413f, 1628.6283f, 470.35565f, (byte) 100, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						case 805168: // Sogia
+						{
 							if (player.getLegion() == null)
 							{
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GUILD_LEAVE_I_AM_NOT_BELONG_TO_GUILD);
@@ -1418,7 +1543,9 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 210070000, 1218.8335f, 1576.2424f, 470.35565f, (byte) 14, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						case 805170: // Rumon
+						{
 							if (player.getLegion() == null)
 							{
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GUILD_LEAVE_I_AM_NOT_BELONG_TO_GUILD);
@@ -1426,7 +1553,9 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 210070000, 2327.8035f, 1535.8595f, 440.83572f, (byte) 17, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						case 805172: // Sanoria
+						{
 							if (player.getLegion() == null)
 							{
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GUILD_LEAVE_I_AM_NOT_BELONG_TO_GUILD);
@@ -1434,6 +1563,7 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 210070000, 2381.8564f, 1549.5217f, 440.83572f, (byte) 51, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 					}
 				}
 				else
@@ -1442,6 +1572,7 @@ public class DialogService
 					{
 						// Walk Of Fame Entrance Manager
 						case 802439: // Bulundur.
+						{
 							if (player.getAbyssRank().getRank().getId() < AbyssRankEnum.GENERAL.getId())
 							{
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 27));
@@ -1449,8 +1580,10 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 120080000, 385.92166f, 251.25146f, 93.129425f, (byte) 24, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						// Legion Area Entry Manager
 						case 805174: // Sefwoire
+						{
 							if (player.getLegion() == null)
 							{
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GUILD_LEAVE_I_AM_NOT_BELONG_TO_GUILD);
@@ -1458,7 +1591,9 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 220080000, 1769.7422f, 2596.248f, 301.87747f, (byte) 12, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						case 805176: // Portintom
+						{
 							if (player.getLegion() == null)
 							{
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GUILD_LEAVE_I_AM_NOT_BELONG_TO_GUILD);
@@ -1466,7 +1601,9 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 220080000, 1810.1752f, 2559.1487f, 301.87747f, (byte) 25, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						case 805178: // Clarok
+						{
 							if (player.getLegion() == null)
 							{
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GUILD_LEAVE_I_AM_NOT_BELONG_TO_GUILD);
@@ -1474,7 +1611,9 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 220080000, 1435.401f, 1742.898f, 332.56546f, (byte) 38, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						case 805180: // Hamkarden
+						{
 							if (player.getLegion() == null)
 							{
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GUILD_LEAVE_I_AM_NOT_BELONG_TO_GUILD);
@@ -1482,7 +1621,9 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 220080000, 1466.7686f, 1787.5085f, 332.56546f, (byte) 55, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						case 805182: // Edelbourgh
+						{
 							if (player.getLegion() == null)
 							{
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GUILD_LEAVE_I_AM_NOT_BELONG_TO_GUILD);
@@ -1490,7 +1631,9 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 220080000, 768.7018f, 1316.1646f, 254.92737f, (byte) 1, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 						case 805184: // Orportin
+						{
 							if (player.getLegion() == null)
 							{
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_GUILD_LEAVE_I_AM_NOT_BELONG_TO_GUILD);
@@ -1498,6 +1641,7 @@ public class DialogService
 							}
 							TeleportService2.teleportTo(player, 220080000, 803.8293f, 1274.7317f, 254.92737f, (byte) 18, TeleportAnimation.JUMP_ANIMATION);
 							break;
+						}
 					}
 				}
 				break;
@@ -1507,7 +1651,9 @@ public class DialogService
 			case 10002:
 			case 10003:
 			case 10004:
+			{
 				//// 4.7////
+			}
 			case 20006:
 			case 20007:
 			case 20008:

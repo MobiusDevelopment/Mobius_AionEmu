@@ -72,22 +72,28 @@ public class MotlieAI2 extends GeneralNpcAI2
 			{
 				case 832963: // Motlie E.
 				case 832974: // Motlie A.
+				{
 					switch (Rnd.get(1, 2))
 					{
 						case 1:
+						{
 							skillId = 10976;
 							effectController.removeEffect(10977);
 							effectController.removeEffect(10978);
 							effectController.removeEffect(10979);
 							break;
+						}
 						case 2:
+						{
 							skillId = 10977;
 							effectController.removeEffect(10976);
 							effectController.removeEffect(10978);
 							effectController.removeEffect(10979);
 							break;
+						}
 					}
 					break;
+				}
 			}
 			SkillEngine.getInstance().getSkill(getOwner(), skillId, 1, player).useNoAnimationSkill();
 		}

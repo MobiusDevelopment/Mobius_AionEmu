@@ -39,6 +39,7 @@ public class Idle_Power_GeneratorAI2 extends NpcAI2
 		switch (getNpcId())
 		{
 			case 806391: // North Power Generator.
+			{
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
 					@Override
@@ -49,7 +50,9 @@ public class Idle_Power_GeneratorAI2 extends NpcAI2
 					}
 				}, 300000); // 5 Minutes.
 				break;
+			}
 			case 806392: // South Power Generator.
+			{
 				ThreadPoolManager.getInstance().schedule(new Runnable()
 				{
 					@Override
@@ -60,6 +63,7 @@ public class Idle_Power_GeneratorAI2 extends NpcAI2
 					}
 				}, 300000); // 5 Minutes.
 				break;
+			}
 		}
 		super.handleSpawned();
 	}

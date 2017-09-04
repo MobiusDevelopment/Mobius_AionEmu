@@ -122,14 +122,18 @@ public class _28648Kaliga_Collection_Cipher_Blade extends QuestHandler
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
+						{
 							if (var == 1)
 							{
 								return sendQuestDialog(env, 5);
 							}
+						}
 						case SELECT_NO_REWARD:
+						{
 							QuestService.finishQuest(env, qs.getQuestVars().getQuestVars() - 1);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
+						}
 					}
 				}
 			}

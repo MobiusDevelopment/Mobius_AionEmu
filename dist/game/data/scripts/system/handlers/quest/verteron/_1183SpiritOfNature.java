@@ -130,7 +130,9 @@ public class _1183SpiritOfNature extends QuestHandler
 							return true;
 						}
 						default:
+						{
 							return sendQuestEndDialog(env);
+						}
 					}
 				}
 				case 730012:

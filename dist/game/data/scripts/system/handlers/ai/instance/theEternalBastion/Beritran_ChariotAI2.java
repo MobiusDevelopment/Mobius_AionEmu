@@ -56,8 +56,10 @@ public class Beritran_ChariotAI2 extends NpcAI2
 			{
 				case 701624: // Beritran Chariot.
 				case 702689: // Beritran Chariot.
+				{
 					SkillEngine.getInstance().getSkill(player, 21141, 1, player).useNoAnimationSkill();
 					break;
+				}
 			}
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

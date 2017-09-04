@@ -86,12 +86,18 @@ public class _30056DirvisiasSorrow extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						return sendQuestDialog(env, 2375);
+					}
 					case SELECT_REWARD:
+					{
 						removeQuestItem(env, 182209224, 1);
 						return sendQuestDialog(env, 5);
+					}
 					default:
+					{
 						return sendQuestEndDialog(env);
+					}
 				}
 			}
 		}
@@ -103,11 +109,13 @@ public class _30056DirvisiasSorrow extends QuestHandler
 				switch (dialog)
 				{
 					case USE_OBJECT:
+					{
 						if (var == 0)
 						{
 							QuestService.addNewSpawn(600010000, 1, 799034, 555.8842f, 307.8092f, 310.24997f, (byte) 0);
 							return useQuestObject(env, 0, 0, false, 0, 0, 0, 182209223, 1);
 						}
+					}
 				}
 			}
 			if (targetId == 799034)
@@ -115,11 +123,14 @@ public class _30056DirvisiasSorrow extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						if (var == 0)
 						{
 							return sendQuestDialog(env, 1352);
 						}
+					}
 					case STEP_TO_1:
+					{
 						if (var == 0)
 						{
 							defaultCloseDialog(env, 0, 0, true, false);
@@ -134,6 +145,7 @@ public class _30056DirvisiasSorrow extends QuestHandler
 							}, 400);
 							return true;
 						}
+					}
 				}
 			}
 		}

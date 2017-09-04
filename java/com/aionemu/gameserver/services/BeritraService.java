@@ -169,6 +169,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 1:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -179,8 +180,11 @@ public class BeritraService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -189,6 +193,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 1:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -199,8 +204,11 @@ public class BeritraService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -209,6 +217,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 1:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -219,8 +228,11 @@ public class BeritraService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -232,6 +244,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 35:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -242,8 +255,11 @@ public class BeritraService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -252,6 +268,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 35:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -262,8 +279,11 @@ public class BeritraService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -272,6 +292,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 35:
+			{
 				World.getInstance().doOnAllPlayers(new Visitor<Player>()
 				{
 					@Override
@@ -282,8 +303,11 @@ public class BeritraService
 					}
 				});
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -295,6 +319,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 1:
+			{
 				adventControl.put(702529, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(210020000, 702529, 858.5479f, 1151.3783f, 278.46576f, (byte) 71), 1));
 				adventControl.put(702529, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(210020000, 702529, 1519.0f, 1911.0f, 289.5f, (byte) 10), 1));
 				adventControl.put(702529, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(210020000, 702529, 260.20285f, 2134.1099f, 207.375f, (byte) 9), 1));
@@ -343,8 +368,11 @@ public class BeritraService
 				adventControl.put(702529, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(600100000, 702529, 386.59848f, 1810.1382f, 226.42104f, (byte) 89), 1));
 				adventControl.put(702529, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(600100000, 702529, 1836.0f, 142.0f, 242.625f, (byte) 86), 1));
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -353,6 +381,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 1:
+			{
 				adventEffect.put(702549, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(210020000, 702549, 858.5479f, 1151.3783f, 278.46576f, (byte) 71), 1));
 				adventEffect.put(702549, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(210020000, 702549, 1519.0f, 1911.0f, 289.5f, (byte) 10), 1));
 				adventEffect.put(702549, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(210020000, 702549, 260.20285f, 2134.1099f, 207.375f, (byte) 9), 1));
@@ -401,8 +430,11 @@ public class BeritraService
 				adventEffect.put(702549, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(600100000, 702549, 386.59848f, 1810.1382f, 226.42104f, (byte) 89), 1));
 				adventEffect.put(702549, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(600100000, 702549, 1836.0f, 142.0f, 242.625f, (byte) 86), 1));
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -411,6 +443,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 1:
+			{
 				adventPortal.put(702550, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(210020000, 702550, 858.5479f, 1151.3783f, 278.46576f, (byte) 71), 1));
 				adventPortal.put(702550, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(210020000, 702550, 1519.0f, 1911.0f, 289.5f, (byte) 10), 1));
 				adventPortal.put(702550, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(210020000, 702550, 260.20285f, 2134.1099f, 207.375f, (byte) 9), 1));
@@ -459,8 +492,11 @@ public class BeritraService
 				adventPortal.put(702550, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(600100000, 702550, 386.59848f, 1810.1382f, 226.42104f, (byte) 89), 1));
 				adventPortal.put(702550, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(600100000, 702550, 1836.0f, 142.0f, 242.625f, (byte) 86), 1));
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -469,6 +505,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 1:
+			{
 				adventDirecting.put(855231, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(210020000, 855231, 858.5479f, 1151.3783f, 278.46576f, (byte) 71), 1));
 				adventDirecting.put(855231, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(210020000, 855231, 1519.0f, 1911.0f, 289.5f, (byte) 10), 1));
 				adventDirecting.put(855231, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(210020000, 855231, 260.20285f, 2134.1099f, 207.375f, (byte) 9), 1));
@@ -517,8 +554,11 @@ public class BeritraService
 				adventDirecting.put(855231, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(600100000, 855231, 386.59848f, 1810.1382f, 226.42104f, (byte) 89), 1));
 				adventDirecting.put(855231, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(600100000, 855231, 1836.0f, 142.0f, 242.625f, (byte) 86), 1));
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -530,6 +570,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 35:
+			{
 				adventEreshControl.put(702529, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702529, 2065.3005f, 2473.1807f, 2900.1775f, (byte) 115), 1));
 				adventEreshControl.put(702529, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702529, 1722.8392f, 1903.1249f, 2892.1248f, (byte) 107), 1));
 				adventEreshControl.put(702529, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702529, 670.0000f, 2700.0000f, 2897.547f, (byte) 107), 1));
@@ -537,8 +578,11 @@ public class BeritraService
 				adventEreshControl.put(702529, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702529, 2606.2485f, 1892.8187f, 2908.7598f, (byte) 47), 1));
 				adventEreshControl.put(702529, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702529, 2773.0369f, 1152.2582f, 2801.5713f, (byte) 37), 1));
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -547,6 +591,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 35:
+			{
 				adventEreshEffect.put(702549, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702549, 2065.3005f, 2473.1807f, 2900.1775f, (byte) 115), 1));
 				adventEreshEffect.put(702549, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702549, 1722.8392f, 1903.1249f, 2892.1248f, (byte) 107), 1));
 				adventEreshEffect.put(702549, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702549, 670.0000f, 2700.0000f, 2897.547f, (byte) 107), 1));
@@ -554,8 +599,11 @@ public class BeritraService
 				adventEreshEffect.put(702549, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702549, 2606.2485f, 1892.8187f, 2908.7598f, (byte) 47), 1));
 				adventEreshEffect.put(702549, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702549, 2773.0369f, 1152.2582f, 2801.5713f, (byte) 37), 1));
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -564,6 +612,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 35:
+			{
 				adventEreshPortal.put(702550, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702550, 2065.3005f, 2473.1807f, 2900.1775f, (byte) 115), 1));
 				adventEreshPortal.put(702550, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702550, 1722.8392f, 1903.1249f, 2892.1248f, (byte) 107), 1));
 				adventEreshPortal.put(702550, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702550, 670.0000f, 2700.0000f, 2897.547f, (byte) 107), 1));
@@ -571,8 +620,11 @@ public class BeritraService
 				adventEreshPortal.put(702550, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702550, 2606.2485f, 1892.8187f, 2908.7598f, (byte) 47), 1));
 				adventEreshPortal.put(702550, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 702550, 2773.0369f, 1152.2582f, 2801.5713f, (byte) 37), 1));
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -581,6 +633,7 @@ public class BeritraService
 		switch (id)
 		{
 			case 35:
+			{
 				adventEreshDirecting.put(855231, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 855231, 2065.3005f, 2473.1807f, 2900.1775f, (byte) 115), 1));
 				adventEreshDirecting.put(855231, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 855231, 1722.8392f, 1903.1249f, 2892.1248f, (byte) 107), 1));
 				adventEreshDirecting.put(855231, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 855231, 670.0000f, 2700.0000f, 2897.547f, (byte) 107), 1));
@@ -588,8 +641,11 @@ public class BeritraService
 				adventEreshDirecting.put(855231, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 855231, 2606.2485f, 1892.8187f, 2908.7598f, (byte) 47), 1));
 				adventEreshDirecting.put(855231, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 855231, 2773.0369f, 1152.2582f, 2801.5713f, (byte) 37), 1));
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	

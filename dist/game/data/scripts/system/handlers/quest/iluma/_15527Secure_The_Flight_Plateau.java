@@ -167,6 +167,7 @@ public class _15527Secure_The_Flight_Plateau extends QuestHandler
 				case 243055:
 				case 243059:
 				case 243063:
+				{
 					if (qs.getQuestVarById(1) < 60)
 					{
 						qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -177,6 +178,7 @@ public class _15527Secure_The_Flight_Plateau extends QuestHandler
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 					}
+				}
 			}
 		}
 		return false;

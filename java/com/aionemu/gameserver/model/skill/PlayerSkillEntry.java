@@ -74,10 +74,12 @@ public class PlayerSkillEntry extends SkillEntry
 		{
 			case 30002:
 			case 30003:
+			{
 				if ((skillLevel > 399) && (skillLevel < 500))
 				{
 					return 4;
 				}
+			}
 			case 40001:
 			case 40002:
 			case 40003:
@@ -85,6 +87,7 @@ public class PlayerSkillEntry extends SkillEntry
 			case 40007:
 			case 40008:
 			case 40010:
+			{
 				if ((skillLevel > 449) && (skillLevel < 500))
 				{
 					return 5;
@@ -97,6 +100,7 @@ public class PlayerSkillEntry extends SkillEntry
 				{
 					return skillLevel / 100;
 				}
+			}
 		}
 		return 0;
 	}
@@ -220,6 +224,7 @@ public class PlayerSkillEntry extends SkillEntry
 		switch (persistentState)
 		{
 			case DELETED:
+			{
 				if (this.persistentState == PersistentState.NEW)
 				{
 					this.persistentState = PersistentState.NOACTION;
@@ -229,16 +234,23 @@ public class PlayerSkillEntry extends SkillEntry
 					this.persistentState = PersistentState.DELETED;
 				}
 				break;
+			}
 			case UPDATE_REQUIRED:
+			{
 				if (this.persistentState != PersistentState.NEW)
 				{
 					this.persistentState = PersistentState.UPDATE_REQUIRED;
 				}
 				break;
+			}
 			case NOACTION:
+			{
 				break;
+			}
 			default:
+			{
 				this.persistentState = persistentState;
+			}
 		}
 	}
 	

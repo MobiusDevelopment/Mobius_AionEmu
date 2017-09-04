@@ -97,9 +97,13 @@ public class _29667Protect_The_Morninglight_Plains extends QuestHandler
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
+					{
 						return sendQuestStartDialog(env);
+					}
 					case REFUSE_QUEST_SIMPLE:
+					{
 						return closeDialogWindow(env);
+					}
 				}
 			}
 		}
@@ -164,6 +168,7 @@ public class _29667Protect_The_Morninglight_Plains extends QuestHandler
 			case 240376:
 			case 240377:
 			case 240378:
+			{
 				if (qs.getQuestVarById(1) < 12)
 				{
 					qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
@@ -175,6 +180,7 @@ public class _29667Protect_The_Morninglight_Plains extends QuestHandler
 					updateQuestStatus(env);
 				}
 				break;
+			}
 		}
 		return false;
 	}

@@ -65,11 +65,15 @@ public class _28837Sprout_Of_Joy extends QuestHandler
 				switch (dialog)
 				{
 					case START_DIALOG:
+					{
 						return sendQuestDialog(env, 2375);
+					}
 					case SELECT_REWARD:
+					{
 						changeQuestStep(env, 0, 0, true);
 						removeQuestItem(env, 182213211, 1);
 						return sendQuestDialog(env, 5);
+					}
 				}
 			}
 		}

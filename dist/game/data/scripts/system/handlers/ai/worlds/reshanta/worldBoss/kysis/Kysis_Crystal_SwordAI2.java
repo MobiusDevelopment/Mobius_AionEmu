@@ -58,6 +58,7 @@ public class Kysis_Crystal_SwordAI2 extends NpcAI2
 			switch (getNpcId())
 			{
 				case 702844: // Kysis's Crystal Sword [Elyos]
+				{
 					announceSpiritOfKysis30Min();
 					ThreadPoolManager.getInstance().schedule(new Runnable()
 					{
@@ -68,7 +69,9 @@ public class Kysis_Crystal_SwordAI2 extends NpcAI2
 						}
 					}, 1800000); // 30 Minutes.
 					break;
+				}
 				case 702845: // Kysis's Crystal Sword [Asmodians]
+				{
 					announceSpiritOfKysis30Min();
 					ThreadPoolManager.getInstance().schedule(new Runnable()
 					{
@@ -79,6 +82,7 @@ public class Kysis_Crystal_SwordAI2 extends NpcAI2
 						}
 					}, 1800000); // 30 Minutes.
 					break;
+				}
 			}
 		}
 		// Spirit Of Kysis' Pendant has broken the seal.

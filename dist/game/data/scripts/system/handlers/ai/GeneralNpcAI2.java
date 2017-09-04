@@ -162,9 +162,13 @@ public class GeneralNpcAI2 extends NpcAI2
 		switch (eventType)
 		{
 			case CREATURE_MOVED:
+			{
 				return canHandle || DataManager.NPC_SHOUT_DATA.hasAnyShout(getOwner().getWorldId(), getOwner().getNpcId(), ShoutEventType.SEE);
+			}
 			case CREATURE_NEEDS_SUPPORT:
+			{
 				return canHandle && isNonFightingState() && DataManager.TRIBE_RELATIONS_DATA.hasSupportRelations(getOwner().getTribe());
+			}
 		}
 		return canHandle;
 	}
