@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_help extends PlayerCommand
 {
-	
 	public cmd_help()
 	{
 		super("help");
@@ -43,11 +42,32 @@ public class cmd_help extends PlayerCommand
 		
 		if ((player.getRace() == Race.ASMODIANS) || (player.getRace() == Race.ELYOS))
 		{
-			PacketSendUtility.sendMessage(player, "" + "\n" + "==============================\n" + "Available .[dot] Commands for Players!" + "\n==============================\n" + " .skills : refresh or get new skills.\n" + " .ffa : to join or leave free for all\n" + " .vs : to join or leave 1v1 battles\n" + " .pk : to make pk xform\n" + " .clean <item id/link> : to delete an item\n" + " .luna <ap | kinah> <value> : kinah/ap to luna coins\n" + " .toll : shows current toll you have in you're account.\n" + " .uniquepack info : informs you with some important information about how to get gears!\n" + " .dye <color> : to dye yourself.\n" + " .unstuck : go to obelisk location\n" + " .skin : will remove your candy look,\n" + " .reskinvip : reskin two handed weapons with use of tiamat bloody tear [VIP]");
-			PacketSendUtility.sendMessage(player, ".faction : asmodian/elyos world chat\n" + " .world : open world chat\n" + " .enchant 16 : will enchant your equiptment to 16.\n" + " .gmlist : shows available gm's \n" + " .marry : marry another player \n" + " .divorce : divorces from a player\n" + " .pet add : adds You a scroll Buffer Pet.\n" + " .job : Makes all craft available\n" + " .queue : registers you in an on-going event hosted by a gm.\n" + " .remodel : cross remodel with use of tiamat bloody tear\n");
-			
+			PacketSendUtility.sendMessage(player, "===========================");
+			PacketSendUtility.sendMessage(player, " Available .[dot] commands");
+			PacketSendUtility.sendMessage(player, "===========================");
+			PacketSendUtility.sendMessage(player, ".skills : Refresh or get new skills.");
+			// PacketSendUtility.sendMessage(player, ".ffa : Join or leave free for all.");
+			// PacketSendUtility.sendMessage(player, ".vs : Join or leave 1v1 battles.");
+			// PacketSendUtility.sendMessage(player, ".pk : Make pk xform.");
+			PacketSendUtility.sendMessage(player, ".clean <item id/link> : Delete an item.");
+			PacketSendUtility.sendMessage(player, ".luna <ap | kinah> <value> : kinah/ap to luna coins.");
+			PacketSendUtility.sendMessage(player, ".toll : Shows current toll you have in you're account.");
+			// PacketSendUtility.sendMessage(player, ".uniquepack info : Informs you on how to obtain gear!");
+			PacketSendUtility.sendMessage(player, ".dye <color> : Dye yourself.");
+			PacketSendUtility.sendMessage(player, ".unstuck : Go to obelisk location.");
+			PacketSendUtility.sendMessage(player, ".skin : Will remove your candy look.");
+			PacketSendUtility.sendMessage(player, ".reskinvip : Reskin two handed weapons with use of tiamat bloody tear [VIP].");
+			// PacketSendUtility.sendMessage(player, ".faction : Asmodian/Elyos world chat.");
+			PacketSendUtility.sendMessage(player, ".world : open world chat.");
+			// PacketSendUtility.sendMessage(player, ".enchant 16 : will enchant your equipment to 16.");
+			PacketSendUtility.sendMessage(player, ".gmlist : shows available gms.");
+			PacketSendUtility.sendMessage(player, ".marry : marry another player.");
+			PacketSendUtility.sendMessage(player, ".divorce : divorces from a player.");
+			// PacketSendUtility.sendMessage(player, ".pet add : adds you a scroll Buffer Pet.");
+			// PacketSendUtility.sendMessage(player, ".job : Makes all craft available.");
+			PacketSendUtility.sendMessage(player, ".queue : Register in an on-going event hosted by a gm.");
+			PacketSendUtility.sendMessage(player, ".remodel : Cross remodel with use of tiamat bloody tear.");
 		}
-		
 	}
 	
 	@Override
