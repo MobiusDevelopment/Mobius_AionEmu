@@ -32,28 +32,24 @@ import javolution.util.FastMap;
 
 public class MoveTaskManager extends AbstractPeriodicTaskManager
 {
-	private final FastMap<Integer, Creature> movingCreatures = new FastMap<Integer, Creature>().shared();
+	final FastMap<Integer, Creature> movingCreatures = new FastMap<Integer, Creature>().shared();
 	
 	public static final int UPDATE_PERIOD = 100;
 	
-	private final Predicate<Creature> CREATURE_MOVE_PREDICATE = new Predicate<Creature>()
+	private final Predicate<Creature> CREATURE_MOVE_PREDICATE = creature ->
 	{
-		@Override
-		public boolean apply(Creature creature)
+		creature.getMoveController().moveToDestination();
+		if (creature.getAi2().poll(AIQuestion.DESTINATION_REACHED))
 		{
-			creature.getMoveController().moveToDestination();
-			if (creature.getAi2().poll(AIQuestion.DESTINATION_REACHED))
-			{
-				movingCreatures.remove(creature.getObjectId());
-				creature.getAi2().onGeneralEvent(AIEventType.MOVE_ARRIVED);
-				ZoneUpdateService.getInstance().add(creature);
-			}
-			else
-			{
-				creature.getAi2().onGeneralEvent(AIEventType.MOVE_VALIDATE);
-			}
-			return true;
+			movingCreatures.remove(creature.getObjectId());
+			creature.getAi2().onGeneralEvent(AIEventType.MOVE_ARRIVED);
+			ZoneUpdateService.getInstance().add(creature);
 		}
+		else
+		{
+			creature.getAi2().onGeneralEvent(AIEventType.MOVE_VALIDATE);
+		}
+		return true;
 	};
 	
 	private MoveTaskManager()

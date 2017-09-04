@@ -17,7 +17,6 @@
 package com.aionemu.commons.scripting.url;
 
 import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
@@ -52,16 +51,15 @@ public class VirtualClassURLConnection extends URLConnection
 	 * This method is ignored
 	 */
 	@Override
-	public void connect() throws IOException
+	public void connect()
 	{
-		
 	}
 	
 	/**
 	 * {@inheritDoc}
 	 */
 	@Override
-	public InputStream getInputStream() throws IOException
+	public InputStream getInputStream()
 	{
 		return is;
 	}

@@ -214,10 +214,7 @@ final class PlatformDependent0
 		{
 			return UNSAFE.getShort(address);
 		}
-		else
-		{
-			return (short) ((getByte(address) << 8) | (getByte(address + 1) & 0xff));
-		}
+		return (short) ((getByte(address) << 8) | (getByte(address + 1) & 0xff));
 	}
 	
 	static int getInt(long address)
@@ -226,10 +223,7 @@ final class PlatformDependent0
 		{
 			return UNSAFE.getInt(address);
 		}
-		else
-		{
-			return (getByte(address) << 24) | ((getByte(address + 1) & 0xff) << 16) | ((getByte(address + 2) & 0xff) << 8) | (getByte(address + 3) & 0xff);
-		}
+		return (getByte(address) << 24) | ((getByte(address + 1) & 0xff) << 16) | ((getByte(address + 2) & 0xff) << 8) | (getByte(address + 3) & 0xff);
 	}
 	
 	static long getLong(long address)
@@ -238,10 +232,7 @@ final class PlatformDependent0
 		{
 			return UNSAFE.getLong(address);
 		}
-		else
-		{
-			return ((long) getByte(address) << 56) | (((long) getByte(address + 1) & 0xff) << 48) | (((long) getByte(address + 2) & 0xff) << 40) | (((long) getByte(address + 3) & 0xff) << 32) | (((long) getByte(address + 4) & 0xff) << 24) | (((long) getByte(address + 5) & 0xff) << 16) | (((long) getByte(address + 6) & 0xff) << 8) | ((long) getByte(address + 7) & 0xff);
-		}
+		return ((long) getByte(address) << 56) | (((long) getByte(address + 1) & 0xff) << 48) | (((long) getByte(address + 2) & 0xff) << 40) | (((long) getByte(address + 3) & 0xff) << 32) | (((long) getByte(address + 4) & 0xff) << 24) | (((long) getByte(address + 5) & 0xff) << 16) | (((long) getByte(address + 6) & 0xff) << 8) | ((long) getByte(address + 7) & 0xff);
 	}
 	
 	static void putByte(long address, byte value)

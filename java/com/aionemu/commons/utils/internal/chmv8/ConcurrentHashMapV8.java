@@ -17,6 +17,7 @@
 package com.aionemu.commons.utils.internal.chmv8;
 
 import java.io.Serializable;
+import java.security.PrivilegedExceptionAction;
 import java.util.AbstractMap;
 import java.util.Arrays;
 import java.util.Collection;
@@ -33,6 +34,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.LongAdder;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
+
+import sun.misc.Unsafe;
 
 /**
  * A hash table supporting full concurrency of retrievals and high expected concurrency for updates. This class obeys the same functional specification as {@link java.util.Hashtable}, and includes versions of methods corresponding to each method of {@code Hashtable}. However, even though all
@@ -142,16 +145,12 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * Sample usage: Here is one (of the several) ways to compute the sum of the values held in a map using the ForkJoin framework. As illustrated here, Spliterators are well suited to designs in which a task repeatedly splits off half its work into forked subtasks until small enough to process
 	 * directly, and then joins these subtasks. Variants of this style can also be used in completion-based designs.
 	 * <p/>
-	 * < pre> null null null null {@code ConcurrentHashMapV8<String, Long> m = ...
-	 * // split as if have 8 * parallelism, for load balance
-	 * int n = m.size();
-	 * int p = aForkJoinPool.getParallelism() * 8;
-	 * int split = (n < p)? n : p;
-	 * long sum = aForkJoinPool.invoke(new SumValues(m.valueSpliterator(), split, null));
-	 * // ... static class SumValues extends RecursiveTask<Long> { final Spliterator<Long> s; final int split; // split while > 1 final SumValues nextJoin; // records forked subtasks to join SumValues(Spliterator<Long> s, int depth, SumValues nextJoin) { this.s = s; this.depth = depth; this.nextJoin
-	 * = nextJoin; } public Long compute() { long sum = 0; SumValues subtasks = null; // fork subtasks for (int s = split >>> 1; s > 0; s >>>= 1) (subtasks = new SumValues(s.split(), s, subtasks)).fork(); while (s.hasNext()) // directly process remaining elements sum += s.next(); for (SumValues t =
-	 * subtasks; t != null; t = t.nextJoin) sum += t.join(); // collect subtask results return sum; } } }
+	 * // split as if have 8 * parallelism, for load balance int n = m.size(); int p = aForkJoinPool.getParallelism() * 8; int split = (n < p)? n : p; long sum = aForkJoinPool.invoke(new SumValues(m.valueSpliterator(), split, null)); // ... static class SumValues extends RecursiveTask<Long> { final
+	 * Spliterator<Long> s; final int split; // split while > 1 final SumValues nextJoin; // records forked subtasks to join SumValues(Spliterator<Long> s, int depth, SumValues nextJoin) { this.s = s; this.depth = depth; this.nextJoin = nextJoin; } public Long compute() { long sum = 0; SumValues
+	 * subtasks = null; // fork subtasks for (int s = split >>> 1; s > 0; s >>>= 1) (subtasks = new SumValues(s.split(), s, subtasks)).fork(); while (s.hasNext()) // directly process remaining elements sum += s.next(); for (SumValues t = subtasks; t != null; t = t.nextJoin) sum += t.join(); //
+	 * collect subtask results return sum; } } }
 	 * </pre>
+	 * @param <T>
 	 */
 	public static interface Spliterator<T>extends Iterator<T>
 	{
@@ -350,6 +349,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	/**
 	 * Key-value entry. Note that this is never exported out as a user-visible Map.Entry (see MapEntry below). Nodes with a hash field of MOVED are special, and do not contain user keys or values. Otherwise, keys are never null, and null val fields indicate that a node is in the process of being
 	 * deleted or created. For purposes of read-only access, a key may be read before a val, but can only be used after checking val to be non-null.
+	 * @param <V>
 	 */
 	static class Node<V>
 	{
@@ -372,10 +372,10 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Nodes for use in TreeBins
+	 * @param <V>
 	 */
 	static final class TreeNode<V>extends Node<V>
 	{
-		
 		TreeNode<V> parent; // red-black tree links
 		TreeNode<V> left;
 		TreeNode<V> right;
@@ -401,6 +401,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * of read-write lock. For update operations and table validation, the exclusive form of lock behaves in the same way as bin-head locks. However, lookups use shared read-lock mechanics to allow multiple readers in the absence of writers. Additionally, these lookups do not ever block: While the
 	 * lock is not available, they proceed along the slow traversal path (via next-pointers) until the lock becomes available or the list is exhausted, whichever comes first. (These cases are not fast, but maximize aggregate expected throughput.) The AQS mechanics for doing this are straightforward.
 	 * The lock state is held as AQS getState(). Read counts are negative; the write count (1) is positive. There are no signalling preferences among readers and writers. Since we don't need to export full Lock API, we just override the minimal AQS methods and use them directly.
+	 * @param <V>
 	 */
 	static final class TreeBin<V>extends AbstractQueuedSynchronizer
 	{
@@ -465,6 +466,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * From CLR
+		 * @param p
 		 */
 		private void rotateLeft(TreeNode<V> p)
 		{
@@ -496,6 +498,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * From CLR
+		 * @param p
 		 */
 		private void rotateRight(TreeNode<V> p)
 		{
@@ -527,6 +530,10 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns the TreeNode (or null if not found) for the given key starting at given root.
+		 * @param h
+		 * @param k
+		 * @param p
+		 * @return
 		 */
 		@SuppressWarnings("unchecked")
 		final TreeNode<V> getTreeNode(int h, Object k, TreeNode<V> p)
@@ -546,7 +553,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 						return p;
 					}
 					pc = pk.getClass();
-					if ((c != pc) || !(k instanceof Comparable) || ((dir = ((Comparable) k).compareTo(pk)) == 0))
+					if ((c != pc) || !(k instanceof Comparable) || ((dir = ((Comparable<Object>) k).compareTo(pk)) == 0))
 					{
 						dir = (c == pc) ? 0 : c.getName().compareTo(pc.getName());
 						if (dir == 0)
@@ -578,6 +585,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Wrapper for getTreeNode used by CHM.get. Tries to obtain read-lock to call getTreeNode, but during failure to get lock, searches along next links.
+		 * @param h
+		 * @param k
+		 * @return
 		 */
 		final V getValue(int h, Object k)
 		{
@@ -612,6 +622,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Finds or adds a node.
+		 * @param h
+		 * @param k
+		 * @param v
 		 * @return null if added
 		 */
 		@SuppressWarnings("unchecked")
@@ -635,7 +648,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 						return p;
 					}
 					pc = pk.getClass();
-					if ((c != pc) || !(k instanceof Comparable) || ((dir = ((Comparable) k).compareTo(pk)) == 0))
+					if ((c != pc) || !(k instanceof Comparable) || ((dir = ((Comparable<Object>) k).compareTo(pk)) == 0))
 					{
 						TreeNode<V> s = null, r = null, pr;
 						dir = (c == pc) ? 0 : c.getName().compareTo(pc.getName());
@@ -646,10 +659,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 							{
 								return r;
 							}
-							else // continue left
-							{
-								dir = -1;
-							}
+							dir = -1;
 						}
 						else if (((pr = p.right) != null) && (h >= pr.hash))
 						{
@@ -762,6 +772,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		/**
 		 * Removes the given node, that must be present before this call. This is messier than typical red-black deletion code because we cannot swap the contents of an interior node with a leaf successor that is pinned by "next" pointers that are accessible independently of lock. So instead we swap
 		 * the tree linkages.
+		 * @param p
 		 */
 		final void deleteTreeNode(TreeNode<V> p)
 		{
@@ -1018,6 +1029,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * Spreads higher bits to lower, and also forces top bit to 0. Because the table uses power-of-two masking, sets of hashes that vary only in bits above the current mask will always collide. (Among known examples are sets of Float keys holding consecutive whole numbers in small tables.) To
 	 * counter this, we apply a transform that spreads the impact of higher bits downward. There is a tradeoff between speed, utility, and quality of bit-spreading. Because many common sets of hashes are already reasonably distributed across bits (so don't benefit from spreading), and because we use
 	 * trees to handle large sets of collisions in bins, we don't need excessively high quality.
+	 * @param h
+	 * @return
 	 */
 	private static int spread(int h)
 	{
@@ -1027,6 +1040,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Replaces a list bin with a tree bin if key is comparable. Call only when locked.
+	 * @param tab
+	 * @param index
+	 * @param key
 	 */
 	private final void replaceWithTreeBin(Node<V>[] tab, int index, Object key)
 	{
@@ -1045,6 +1061,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Implementation for get and containsKey
+	 * @param k
+	 * @return
 	 */
 	@SuppressWarnings("unchecked")
 	private final V internalGet(Object k)
@@ -1065,11 +1083,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 					{
 						return ((TreeBin<V>) ek).getValue(h, k);
 					}
-					else
-					{ // restart with new table
-						tab = (Node<V>[]) ek;
-						continue retry;
-					}
+					tab = (Node<V>[]) ek;
+					continue retry;
 				}
 				else if ((eh == h) && ((ev = e.val) != null) && (((ek = e.key) == k) || k.equals(ek)))
 				{
@@ -1083,9 +1098,13 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Implementation for the four public remove/replace methods: Replaces node value with v, conditional upon match of cv if non-null. If resulting value is null, delete.
+	 * @param k
+	 * @param v
+	 * @param cv
+	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	private final V internalReplace(Object k, V v, Object cv)
+	final V internalReplace(Object k, V v, Object cv)
 	{
 		final int h = spread(k.hashCode());
 		V oldVal = null;
@@ -1215,9 +1234,13 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Implementation for put and putIfAbsent
+	 * @param k
+	 * @param v
+	 * @param onlyIfAbsent
+	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	private final V internalPut(K k, V v, boolean onlyIfAbsent)
+	final V internalPut(K k, V v, boolean onlyIfAbsent)
 	{
 		if ((k == null) || (v == null))
 		{
@@ -1338,6 +1361,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Implementation for computeIfAbsent
+	 * @param k
+	 * @param mf
+	 * @return
 	 */
 	@SuppressWarnings("unchecked")
 	private final V internalComputeIfAbsent(K k, Fun<? super K, ? extends V> mf)
@@ -1495,6 +1521,10 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Implementation for compute
+	 * @param k
+	 * @param onlyIfPresent
+	 * @param mf
+	 * @return
 	 */
 	@SuppressWarnings("unchecked")
 	private final V internalCompute(K k, boolean onlyIfPresent, BiFun<? super K, ? super V, ? extends V> mf)
@@ -1510,6 +1540,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		for (Node<V>[] tab = table;;)
 		{
 			Node<V> f;
+			@SuppressWarnings("unused")
 			int i, fh;
 			Object fk;
 			if (tab == null)
@@ -1669,6 +1700,10 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Implementation for merge
+	 * @param k
+	 * @param v
+	 * @param mf
+	 * @return
 	 */
 	@SuppressWarnings("unchecked")
 	private final V internalMerge(K k, V v, BiFun<? super V, ? super V, ? extends V> mf)
@@ -1686,6 +1721,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 			int i;
 			Node<V> f;
 			Object fk;
+			@SuppressWarnings("unused")
 			final V fv;
 			if (tab == null)
 			{
@@ -1811,6 +1847,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Implementation for putAll
+	 * @param m
 	 */
 	@SuppressWarnings("unchecked")
 	private final void internalPutAll(Map<? extends K, ? extends V> m)
@@ -1834,6 +1871,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 				{
 					int i;
 					Node<V> f;
+					@SuppressWarnings("unused")
 					int fh;
 					Object fk;
 					if (tab == null)
@@ -1897,6 +1935,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 								for (Node<V> e = f;; ++len)
 								{
 									Object ek;
+									@SuppressWarnings("unused")
 									V ev;
 									if ((e.hash == h) && ((ev = e.val) != null) && (((ek = e.key) == k) || k.equals(ek)))
 									{
@@ -2024,6 +2063,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns a power of two table size for the given desired capacity. See Hackers Delight, sec 3.2
+	 * @param c
+	 * @return
 	 */
 	private static int tableSizeFor(int c)
 	{
@@ -2038,6 +2079,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Initializes table, using the size recorded in sizeCtl.
+	 * @return
 	 */
 	@SuppressWarnings("unchecked")
 	private final Node<V>[] initTable()
@@ -2177,6 +2219,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Moves and/or copies the nodes in each bin to new table. See above for explanation.
+	 * @param tab
+	 * @param nextTab
 	 */
 	@SuppressWarnings("unchecked")
 	private final void transfer(Node<V>[] tab, Node<V>[] nextTab)
@@ -2542,8 +2586,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * At each step, the iterator snapshots the key ("nextKey") and value ("nextVal") of a valid node (i.e., one that, at point of snapshot, has a non-null user value). Because val fields can change (including to null, indicating deletion), field nextVal might not be accurate at point of use, but
 	 * still maintains the weak consistency property of holding a value that was once valid. To support iterator.remove, the nextKey field is not updated (nulled out) when the iterator cannot advance.
 	 * <p/>
-	 * Internal traversals directly access these fields, as in: {@code while (it.advance() != null) { process(it.nextKey); }}
-	 * <p/>
 	 * Exported iterators must track whether the iterator has advanced (in hasNext vs next) (by setting/checking/nulling field nextVal), and then extract key, value, or key-value pairs as return values of next().
 	 * <p/>
 	 * The iterator visits once each still-valid node that was reachable upon iterator construction. It might miss some that were added to a bin after the bin was visited, which is OK wrt consistency guarantees. Maintaining this property in the face of possible ongoing resizes requires a fair amount
@@ -2554,11 +2596,13 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * <p/>
 	 * This class extends CountedCompleter to streamline parallel iteration in bulk operations. This adds only a few fields of space overhead, which is small enough in cases where it is not needed to not worry about it. Because CountedCompleter is Serializable, but iterators need not be, we need to
 	 * add warning suppressions.
+	 * @param <K>
+	 * @param <V>
+	 * @param <R>
 	 */
 	@SuppressWarnings("serial")
 	static class Traverser<K, V, R>extends CountedCompleter<R>
 	{
-		
 		final ConcurrentHashMapV8<K, V> map;
 		Node<V> next; // the next entry to use
 		Object nextKey; // cached key field of next
@@ -2572,6 +2616,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Creates iterator for all entries in the table.
+		 * @param map
 		 */
 		Traverser(ConcurrentHashMapV8<K, V> map)
 		{
@@ -2580,6 +2625,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Creates iterator for split() methods and task constructors
+		 * @param map
+		 * @param it
+		 * @param batch
 		 */
 		Traverser(ConcurrentHashMapV8<K, V> map, Traverser<K, V, ?> it, int batch)
 		{
@@ -2602,6 +2650,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Advances next; returns nextVal or null if terminated. See above for explanation.
+		 * @return
 		 */
 		@SuppressWarnings("unchecked")
 		final V advance()
@@ -2688,6 +2737,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		/**
 		 * Returns a batch value > 0 if this task should (and must) be split, if so, adding to pending count, and in any case updating batch value. The initial batch value is approx exp2 of the number of times (minus one) to split task by two before executing leaf action. This value is faster to
 		 * compute and more convenient to use as a guide to splitting than is the depth, since it is used while dividing by two anyway.
+		 * @return
 		 */
 		final int preSplit()
 		{
@@ -2791,6 +2841,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Creates a new {@link Set} backed by a ConcurrentHashMapV8 from the given type to {@code Boolean.TRUE}.
+	 * @param <K>
 	 * @return the new set
 	 */
 	public static <K> KeySetView<K, Boolean> newKeySet()
@@ -2800,6 +2851,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Creates a new {@link Set} backed by a ConcurrentHashMapV8 from the given type to {@code Boolean.TRUE}.
+	 * @param <K>
 	 * @param initialCapacity The implementation performs internal sizing to accommodate this many elements.
 	 * @return the new set
 	 * @throws IllegalArgumentException if the initial capacity of elements is negative
@@ -2967,8 +3019,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * except that the action is performed atomically. If the function returns {@code null} no mapping is recorded. If the function itself throws an (unchecked) exception, the exception is rethrown to its caller, and no mapping is recorded. Some attempted update operations on this map by other
 	 * threads may be blocked while computation is in progress, so the computation should be short and simple, and must not attempt to update any other mappings of this Map. The most appropriate usage is to construct a new object serving as an initial mapped value, or memoized result, as in:
 	 * <p/>
-	 * < pre> {@code map.computeIfAbsent(key, new Fun<K, V>() { public V map(K k) { return new Value(f(k)); }});}
-	 * </pre>
 	 * @param key key with which the specified value is to be associated
 	 * @param mappingFunction the function to compute a value
 	 * @return the current (existing or computed) value associated with the specified key, or null if the computed value is null
@@ -2985,14 +3035,15 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * If the given key is present, computes a new mapping value given a key and its current mapped value. This is equivalent to
 	 * 
 	 * <pre>
-	 *  {@code
-	 *   if (map.containsKey(key)) {
-	 *     value = remappingFunction.apply(key, map.get(key));
-	 *     if (value != null)
-	 *       map.put(key, value);
-	 *     else
-	 *       map.remove(key);
-	 *   }
+	 * {
+	 * 	if (map.containsKey(key))
+	 * 	{
+	 * 		value = remappingFunction.apply(key, map.get(key));
+	 * 		if (value != null)
+	 * 			map.put(key, value);
+	 * 		else
+	 * 			map.remove(key);
+	 * 	}
 	 * }
 	 * </pre>
 	 * <p/>
@@ -3026,10 +3077,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * except that the action is performed atomically. If the function returns {@code null}, the mapping is removed. If the function itself throws an (unchecked) exception, the exception is rethrown to its caller, and the current mapping is left unchanged. Some attempted update operations on this
 	 * map by other threads may be blocked while computation is in progress, so the computation should be short and simple, and must not attempt to update any other mappings of this Map. For example, to either create or append new messages to a value mapping:
 	 * <p/>
-	 * < pre> {@code
-	 * Map<Key, String> map = ...;
-	 * final String msg = ...; map.compute(key, new BiFun<Key, String, String>() { public String apply(Key k, String v) { return (v == null) ? msg : v + msg;});}}
-	 * </pre>
 	 * @param key key with which the specified value is to be associated
 	 * @param remappingFunction the function to compute a value
 	 * @return the new value associated with the specified key, or null if none
@@ -3046,21 +3093,26 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * If the specified key is not already associated with a value, associate it with the given value. Otherwise, replace the value with the results of the given remapping function. This is equivalent to:
 	 * 
 	 * <pre>
-	 *  {@code
-	 *   if (!map.containsKey(key))
-	 *     map.put(value);
-	 *   else {
-	 *     newValue = remappingFunction.apply(map.get(key), value);
-	 *     if (value != null)
-	 *       map.put(key, value);
-	 *     else
-	 *       map.remove(key);
-	 *   }
+	 * {
+	 * 	if (!map.containsKey(key))
+	 * 		map.put(value);
+	 * 	else
+	 * 	{
+	 * 		newValue = remappingFunction.apply(map.get(key), value);
+	 * 		if (value != null)
+	 * 			map.put(key, value);
+	 * 		else
+	 * 			map.remove(key);
+	 * 	}
 	 * }
 	 * </pre>
 	 * 
 	 * except that the action is performed atomically. If the function returns {@code null}, the mapping is removed. If the function itself throws an (unchecked) exception, the exception is rethrown to its caller, and the current mapping is left unchanged. Some attempted update operations on this
 	 * map by other threads may be blocked while computation is in progress, so the computation should be short and simple, and must not attempt to update any other mappings of this Map.
+	 * @param key
+	 * @param value
+	 * @param remappingFunction
+	 * @return
 	 */
 	public V merge(K key, V value, BiFun<? super V, ? super V, ? extends V> remappingFunction)
 	{
@@ -3243,8 +3295,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	}
 	
 	/**
-	 * Returns a string representation of this map. The string representation consists of a list of key-value mappings (in no particular order) enclosed in braces ("{@code {}}"). Adjacent mappings are separated by the characters {@code ", "} (comma and space). Each key-value mapping is rendered as
-	 * the key followed by an equals sign ("{@code =}") followed by the associated value.
+	 * Returns a string representation of this map. The string representation consists of a list of key-value mappings (in no particular order) enclosed in braces ("{}"). Adjacent mappings are separated by the characters {@code ", "} (comma and space). Each key-value mapping is rendered as the key
+	 * followed by an equals sign ("{@code =}") followed by the associated value.
 	 * @return a string representation of this map
 	 */
 	@Override
@@ -3439,6 +3491,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Exported Entry for iterators
+	 * @param <K>
+	 * @param <V>
 	 */
 	static final class MapEntry<K, V> implements Map.Entry<K, V>
 	{
@@ -3506,6 +3560,11 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns exportable snapshot entry for the given key and value when write-through can't or shouldn't be used.
+	 * @param k
+	 * @param v
+	 * @param <K>
+	 * @param <V>
+	 * @return
 	 */
 	static <K, V> AbstractMap.SimpleEntry<K, V> entryFor(K k, V v)
 	{
@@ -3516,6 +3575,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Stripped-down version of helper class used in previous version, declared for the sake of serialization compatibility
+	 * @param <K>
+	 * @param <V>
 	 */
 	static class Segment<K, V> implements Serializable
 	{
@@ -3532,6 +3593,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	/**
 	 * Saves the state of the {@code ConcurrentHashMapV8} instance to a stream (i.e., serializes it).
 	 * @param s the stream
+	 * @throws java.io.IOException
 	 * @serialData the key (Object) and value (Object) for each key-value mapping, followed by a null pair. The key-value mappings are emitted in no particular order.
 	 */
 	@SuppressWarnings("unchecked")
@@ -3561,6 +3623,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	/**
 	 * Reconstitutes the instance from a stream (that is, deserializes it).
 	 * @param s the stream
+	 * @throws java.io.IOException
+	 * @throws ClassNotFoundException
 	 */
 	@SuppressWarnings("unchecked")
 	private void readObject(java.io.ObjectInputStream s) throws java.io.IOException, ClassNotFoundException
@@ -3590,7 +3654,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		{
 			boolean init = false;
 			int n;
-			if (size >= MAXIMUM_CAPACITY >>> 1)
+			if (size >= (MAXIMUM_CAPACITY >>> 1))
 			{
 				n = MAXIMUM_CAPACITY;
 			}
@@ -3663,100 +3727,107 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Interface describing a void action of one argument
+	 * @param <A>
 	 */
 	public interface Action<A>
 	{
-		
 		void apply(A a);
 	}
 	
 	/**
 	 * Interface describing a void action of two arguments
+	 * @param <A>
+	 * @param <B>
 	 */
 	public interface BiAction<A, B>
 	{
-		
 		void apply(A a, B b);
 	}
 	
 	/**
 	 * Interface describing a function of one argument
+	 * @param <A>
+	 * @param <T>
 	 */
 	public interface Fun<A, T>
 	{
-		
 		T apply(A a);
 	}
 	
 	/**
 	 * Interface describing a function of two arguments
+	 * @param <A>
+	 * @param <B>
+	 * @param <T>
 	 */
 	public interface BiFun<A, B, T>
 	{
-		
 		T apply(A a, B b);
 	}
 	
 	/**
 	 * Interface describing a function of no arguments
+	 * @param <T>
 	 */
 	public interface Generator<T>
 	{
-		
 		T apply();
 	}
 	
 	/**
 	 * Interface describing a function mapping its argument to a double
+	 * @param <A>
 	 */
 	public interface ObjectToDouble<A>
 	{
-		
 		double apply(A a);
 	}
 	
 	/**
 	 * Interface describing a function mapping its argument to a long
+	 * @param <A>
 	 */
 	public interface ObjectToLong<A>
 	{
-		
 		long apply(A a);
 	}
 	
 	/**
 	 * Interface describing a function mapping its argument to an int
+	 * @param <A>
 	 */
 	public interface ObjectToInt<A>
 	{
-		
 		int apply(A a);
 	}
 	
 	/**
 	 * Interface describing a function mapping two arguments to a double
+	 * @param <A>
+	 * @param <B>
 	 */
 	public interface ObjectByObjectToDouble<A, B>
 	{
-		
 		double apply(A a, B b);
 	}
 	
 	/**
 	 * Interface describing a function mapping two arguments to a long
+	 * @param <A>
+	 * @param <B>
 	 */
 	public interface ObjectByObjectToLong<A, B>
 	{
-		
 		long apply(A a, B b);
 	}
 	
 	/**
 	 * Interface describing a function mapping two arguments to an int
+	 * @param <A>
+	 * @param <B>
 	 */
 	public interface ObjectByObjectToInt<A, B>
 	{
-		
 		int apply(A a, B b);
 	}
 	
@@ -3765,7 +3836,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 */
 	public interface DoubleToDouble
 	{
-		
 		double apply(double a);
 	}
 	
@@ -3774,7 +3844,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 */
 	public interface LongToLong
 	{
-		
 		long apply(long a);
 	}
 	
@@ -3783,7 +3852,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 */
 	public interface IntToInt
 	{
-		
 		int apply(int a);
 	}
 	
@@ -3792,7 +3860,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 */
 	public interface DoubleByDoubleToDouble
 	{
-		
 		double apply(double a, double b);
 	}
 	
@@ -3801,7 +3868,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 */
 	public interface LongByLongToLong
 	{
-		
 		long apply(long a, long b);
 	}
 	
@@ -3810,7 +3876,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 */
 	public interface IntByIntToInt
 	{
-		
 		int apply(int a, int b);
 	}
 	
@@ -3835,6 +3900,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Performs the given action for each non-null transformation of each (key, value).
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied)
 	 * @param action the action
 	 */
@@ -3860,6 +3926,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns a non-null result from applying the given search function on each (key, value), or null if none.
+	 * @param <U>
 	 * @param searchFunction a function returning a non-null result on success, else null
 	 * @return a non-null result from applying the given search function on each (key, value), or null if none
 	 */
@@ -3886,6 +3953,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, or null if none.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined)
 	 * @param reducer a commutative associative combining function
 	 * @return the result of accumulating the given transformation of all (key, value) pairs
@@ -4003,6 +4071,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Performs the given action for each non-null transformation of each key.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied)
 	 * @param action the action
 	 */
@@ -4028,6 +4097,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns a non-null result from applying the given search function on each key, or null if none.
+	 * @param <U>
 	 * @param searchFunction a function returning a non-null result on success, else null
 	 * @return a non-null result from applying the given search function on each key, or null if none
 	 */
@@ -4071,6 +4141,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, or null if none.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined)
 	 * @param reducer a commutative associative combining function
 	 * @return the result of accumulating the given transformation of all keys
@@ -4184,7 +4255,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Performs the given action for each non-null transformation of each value.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied)
+	 * @param action
 	 */
 	public <U> void forEachValueSequentially(Fun<? super V, ? extends U> transformer, Action<U> action)
 	{
@@ -4207,6 +4280,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns a non-null result from applying the given search function on each value, or null if none.
+	 * @param <U>
 	 * @param searchFunction a function returning a non-null result on success, else null
 	 * @return a non-null result from applying the given search function on each value, or null if none
 	 */
@@ -4253,6 +4327,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns the result of accumulating the given transformation of all values using the given reducer to combine values, or null if none.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined)
 	 * @param reducer a commutative associative combining function
 	 * @return the result of accumulating the given transformation of all values
@@ -4367,6 +4442,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Performs the given action for each non-null transformation of each entry.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied)
 	 * @param action the action
 	 */
@@ -4392,6 +4468,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns a non-null result from applying the given search function on each entry, or null if none.
+	 * @param <U>
 	 * @param searchFunction a function returning a non-null result on success, else null
 	 * @return a non-null result from applying the given search function on each entry, or null if none
 	 */
@@ -4441,6 +4518,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, or null if none.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined)
 	 * @param reducer a commutative associative combining function
 	 * @return the result of accumulating the given transformation of all entries
@@ -4545,6 +4623,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Performs the given action for each non-null transformation of each (key, value).
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied)
 	 * @param action the action
 	 */
@@ -4555,6 +4634,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns a non-null result from applying the given search function on each (key, value), or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored.
+	 * @param <U>
 	 * @param searchFunction a function returning a non-null result on success, else null
 	 * @return a non-null result from applying the given search function on each (key, value), or null if none
 	 */
@@ -4565,6 +4645,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, or null if none.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined)
 	 * @param reducer a commutative associative combining function
 	 * @return the result of accumulating the given transformation of all (key, value) pairs
@@ -4621,6 +4702,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Performs the given action for each non-null transformation of each key.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied)
 	 * @param action the action
 	 */
@@ -4631,6 +4713,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns a non-null result from applying the given search function on each key, or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored.
+	 * @param <U>
 	 * @param searchFunction a function returning a non-null result on success, else null
 	 * @return a non-null result from applying the given search function on each key, or null if none
 	 */
@@ -4651,6 +4734,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, or null if none.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined)
 	 * @param reducer a commutative associative combining function
 	 * @return the result of accumulating the given transformation of all keys
@@ -4707,7 +4791,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Performs the given action for each non-null transformation of each value.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied)
+	 * @param action
 	 */
 	public <U> void forEachValueInParallel(Fun<? super V, ? extends U> transformer, Action<U> action)
 	{
@@ -4716,6 +4802,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns a non-null result from applying the given search function on each value, or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored.
+	 * @param <U>
 	 * @param searchFunction a function returning a non-null result on success, else null
 	 * @return a non-null result from applying the given search function on each value, or null if none
 	 */
@@ -4736,6 +4823,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns the result of accumulating the given transformation of all values using the given reducer to combine values, or null if none.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined)
 	 * @param reducer a commutative associative combining function
 	 * @return the result of accumulating the given transformation of all values
@@ -4792,6 +4880,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Performs the given action for each non-null transformation of each entry.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied)
 	 * @param action the action
 	 */
@@ -4802,6 +4891,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns a non-null result from applying the given search function on each entry, or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored.
+	 * @param <U>
 	 * @param searchFunction a function returning a non-null result on success, else null
 	 * @return a non-null result from applying the given search function on each entry, or null if none
 	 */
@@ -4822,6 +4912,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, or null if none.
+	 * @param <U>
 	 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined)
 	 * @param reducer a commutative associative combining function
 	 * @return the result of accumulating the given transformation of all entries
@@ -4871,6 +4962,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * Base class for views.
+	 * @param <K>
+	 * @param <V>
 	 */
 	static abstract class CHMView<K, V>
 	{
@@ -5070,10 +5163,11 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	/**
 	 * A view of a ConcurrentHashMapV8 as a {@link Set} of keys, in which additions may optionally be enabled by mapping to a common value. This class cannot be directly instantiated. See null null null null null null {@link #keySet()}, {@link #keySet(Object)}, {@link #newKeySet()},
 	 * {@link #newKeySet(int)}.
+	 * @param <K>
+	 * @param <V>
 	 */
 	public static class KeySetView<K, V>extends CHMView<K, V> implements Set<K>, java.io.Serializable
 	{
-		
 		private static final long serialVersionUID = 7249069246763182397L;
 		private final V value;
 		
@@ -5159,6 +5253,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * <p/>
 	 * The view's {@code iterator} is a "weakly consistent" iterator that will never throw {@link ConcurrentModificationException}, and guarantees to traverse elements as they existed upon construction of the iterator, and may (but is not guaranteed to) reflect any modifications subsequent to
 	 * construction.
+	 * @param <K>
+	 * @param <V>
 	 */
 	public static final class ValuesView<K, V>extends CHMView<K, V> implements Collection<V>
 	{
@@ -5217,10 +5313,11 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	
 	/**
 	 * A view of a ConcurrentHashMapV8 as a {@link Set} of (key, value) entries. This class cannot be directly instantiated. See {@link #entrySet()}.
+	 * @param <K>
+	 * @param <V>
 	 */
 	public static final class EntrySetView<K, V>extends CHMView<K, V> implements Set<Map.Entry<K, V>>
 	{
-		
 		EntrySetView(ConcurrentHashMapV8<K, V> map)
 		{
 			super(map);
@@ -5293,6 +5390,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, performs the given action for each (key, value)
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param action the action
 		 * @return the task
@@ -5308,6 +5407,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, performs the given action for each non-null transformation of each (key, value)
+		 * @param <K>
+		 * @param <V>
+		 * @param <U>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied)
 		 * @param action the action
@@ -5324,6 +5426,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns a non-null result from applying the given search function on each (key, value), or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored.
+		 * @param <K>
+		 * @param <V>
+		 * @param <U>
 		 * @param map the map
 		 * @param searchFunction a function returning a non-null result on success, else null
 		 * @return the task
@@ -5339,6 +5444,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, or null if none.
+		 * @param <K>
+		 * @param <V>
+		 * @param <U>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined)
 		 * @param reducer a commutative associative combining function
@@ -5355,6 +5463,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, and the given basis as an identity value.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element
 		 * @param basis the identity (initial default value) for the reduction
@@ -5372,6 +5482,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, and the given basis as an identity value.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element
 		 * @param basis the identity (initial default value) for the reduction
@@ -5389,6 +5501,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, and the given basis as an identity value.
+		 * @param map
+		 * @param <K>
+		 * @param <V>
 		 * @param transformer a function returning the transformation for an element
 		 * @param basis the identity (initial default value) for the reduction
 		 * @param reducer a commutative associative combining function
@@ -5405,6 +5520,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, performs the given action for each key.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param action the action
 		 * @return the task
@@ -5420,6 +5537,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, performs the given action for each non-null transformation of each key.
+		 * @param <K>
+		 * @param <V>
+		 * @param <U>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied)
 		 * @param action the action
@@ -5436,6 +5556,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns a non-null result from applying the given search function on each key, or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored.
+		 * @param <K>
+		 * @param <V>
+		 * @param <U>
 		 * @param map the map
 		 * @param searchFunction a function returning a non-null result on success, else null
 		 * @return the task
@@ -5451,6 +5574,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating all keys using the given reducer to combine values, or null if none.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param reducer a commutative associative combining function
 		 * @return the task
@@ -5466,6 +5591,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all keys using the given reducer to combine values, or null if none.
+		 * @param <K>
+		 * @param <V>
+		 * @param <U>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined)
 		 * @param reducer a commutative associative combining function
@@ -5482,6 +5610,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all keys using the given reducer to combine values, and the given basis as an identity value.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element
 		 * @param basis the identity (initial default value) for the reduction
@@ -5499,6 +5629,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all keys using the given reducer to combine values, and the given basis as an identity value.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element
 		 * @param basis the identity (initial default value) for the reduction
@@ -5516,6 +5648,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all keys using the given reducer to combine values, and the given basis as an identity value.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element
 		 * @param basis the identity (initial default value) for the reduction
@@ -5533,8 +5667,11 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, performs the given action for each value.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param action the action
+		 * @return
 		 */
 		public static <K, V> ForkJoinTask<Void> forEachValue(ConcurrentHashMapV8<K, V> map, Action<V> action)
 		{
@@ -5547,9 +5684,13 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, performs the given action for each non-null transformation of each value.
+		 * @param <K>
+		 * @param <V>
+		 * @param <U>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied)
 		 * @param action the action
+		 * @return
 		 */
 		public static <K, V, U> ForkJoinTask<Void> forEachValue(ConcurrentHashMapV8<K, V> map, Fun<? super V, ? extends U> transformer, Action<U> action)
 		{
@@ -5562,6 +5703,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns a non-null result from applying the given search function on each value, or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored.
+		 * @param <K>
+		 * @param <V>
+		 * @param <U>
 		 * @param map the map
 		 * @param searchFunction a function returning a non-null result on success, else null
 		 * @return the task
@@ -5577,6 +5721,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating all values using the given reducer to combine values, or null if none.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param reducer a commutative associative combining function
 		 * @return the task
@@ -5592,6 +5738,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all values using the given reducer to combine values, or null if none.
+		 * @param <K>
+		 * @param <V>
+		 * @param <U>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined)
 		 * @param reducer a commutative associative combining function
@@ -5608,6 +5757,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all values using the given reducer to combine values, and the given basis as an identity value.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element
 		 * @param basis the identity (initial default value) for the reduction
@@ -5625,6 +5776,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all values using the given reducer to combine values, and the given basis as an identity value.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element
 		 * @param basis the identity (initial default value) for the reduction
@@ -5642,6 +5795,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all values using the given reducer to combine values, and the given basis as an identity value.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element
 		 * @param basis the identity (initial default value) for the reduction
@@ -5659,8 +5814,11 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, perform the given action for each entry.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param action the action
+		 * @return
 		 */
 		public static <K, V> ForkJoinTask<Void> forEachEntry(ConcurrentHashMapV8<K, V> map, Action<Map.Entry<K, V>> action)
 		{
@@ -5673,9 +5831,13 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, perform the given action for each non-null transformation of each entry.
+		 * @param <K>
+		 * @param <V>
+		 * @param <U>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied)
 		 * @param action the action
+		 * @return
 		 */
 		public static <K, V, U> ForkJoinTask<Void> forEachEntry(ConcurrentHashMapV8<K, V> map, Fun<Map.Entry<K, V>, ? extends U> transformer, Action<U> action)
 		{
@@ -5688,6 +5850,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns a non-null result from applying the given search function on each entry, or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored.
+		 * @param <K>
+		 * @param <V>
+		 * @param <U>
 		 * @param map the map
 		 * @param searchFunction a function returning a non-null result on success, else null
 		 * @return the task
@@ -5703,6 +5868,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating all entries using the given reducer to combine values, or null if none.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param reducer a commutative associative combining function
 		 * @return the task
@@ -5718,6 +5885,9 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all entries using the given reducer to combine values, or null if none.
+		 * @param <K>
+		 * @param <V>
+		 * @param <U>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined)
 		 * @param reducer a commutative associative combining function
@@ -5734,6 +5904,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all entries using the given reducer to combine values, and the given basis as an identity value.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element
 		 * @param basis the identity (initial default value) for the reduction
@@ -5751,6 +5923,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all entries using the given reducer to combine values, and the given basis as an identity value.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element
 		 * @param basis the identity (initial default value) for the reduction
@@ -5768,6 +5942,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		
 		/**
 		 * Returns a task that when invoked, returns the result of accumulating the given transformation of all entries using the given reducer to combine values, and the given basis as an identity value.
+		 * @param <K>
+		 * @param <V>
 		 * @param map the map
 		 * @param transformer a function returning the transformation for an element
 		 * @param basis the identity (initial default value) for the reduction
@@ -5835,7 +6011,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 		
 		@Override
-		@SuppressWarnings("unchecked")
 		public final void compute()
 		{
 			final Action<V> action = this.action;
@@ -5977,7 +6152,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 		
 		@Override
-		@SuppressWarnings("unchecked")
 		public final void compute()
 		{
 			final Fun<? super V, ? extends U> transformer;
@@ -6173,7 +6347,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 		
 		@Override
-		@SuppressWarnings("unchecked")
 		public final void compute()
 		{
 			final Fun<? super V, ? extends U> searchFunction;
@@ -7560,23 +7733,19 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 		try
 		{
-			return java.security.AccessController.doPrivileged(new java.security.PrivilegedExceptionAction<sun.misc.Unsafe>()
+			return java.security.AccessController.doPrivileged((PrivilegedExceptionAction<Unsafe>) () ->
 			{
-				@Override
-				public sun.misc.Unsafe run() throws Exception
+				final Class<sun.misc.Unsafe> k = sun.misc.Unsafe.class;
+				for (java.lang.reflect.Field f : k.getDeclaredFields())
 				{
-					final Class<sun.misc.Unsafe> k = sun.misc.Unsafe.class;
-					for (java.lang.reflect.Field f : k.getDeclaredFields())
+					f.setAccessible(true);
+					final Object x = f.get(null);
+					if (k.isInstance(x))
 					{
-						f.setAccessible(true);
-						final Object x = f.get(null);
-						if (k.isInstance(x))
-						{
-							return k.cast(x);
-						}
+						return k.cast(x);
 					}
-					throw new NoSuchFieldError("the Unsafe");
 				}
+				throw new NoSuchFieldError("the Unsafe");
 			});
 		}
 		catch (java.security.PrivilegedActionException e)

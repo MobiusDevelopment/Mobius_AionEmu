@@ -41,7 +41,6 @@ import com.aionemu.commons.utils.SystemPropertyUtil;
  */
 public final class PlatformDependent
 {
-	
 	private static final boolean IS_WINDOWS = isWindows0();
 	private static final boolean IS_ROOT = isRoot0();
 	private static final int JAVA_VERSION = javaVersion0();
@@ -60,6 +59,7 @@ public final class PlatformDependent
 	
 	/**
 	 * Return {@code true} if the JVM is running on Windows
+	 * @return
 	 */
 	public static boolean isWindows()
 	{
@@ -68,6 +68,7 @@ public final class PlatformDependent
 	
 	/**
 	 * Return {@code true} if the current user is root. Note that this method returns {@code false} if on Windows.
+	 * @return
 	 */
 	public static boolean isRoot()
 	{
@@ -76,6 +77,7 @@ public final class PlatformDependent
 	
 	/**
 	 * Return the version of Java under which this library is used.
+	 * @return
 	 */
 	public static int javaVersion()
 	{
@@ -84,6 +86,7 @@ public final class PlatformDependent
 	
 	/**
 	 * Return {@code true} if {@code sun.misc.Unsafe} was found on the classpath and can be used for acclerated direct memory access.
+	 * @return
 	 */
 	public static boolean hasUnsafe()
 	{
@@ -92,6 +95,7 @@ public final class PlatformDependent
 	
 	/**
 	 * Raises an exception bypassing compiler checks for checked exceptions.
+	 * @param t
 	 */
 	public static void throwException(Throwable t)
 	{
@@ -113,6 +117,9 @@ public final class PlatformDependent
 	
 	/**
 	 * Creates a new fastest {@link ConcurrentMap} implementation for the current platform.
+	 * @param <K>
+	 * @param <V>
+	 * @return
 	 */
 	public static <K, V> ConcurrentMap<K, V> newConcurrentHashMap()
 	{
@@ -120,14 +127,15 @@ public final class PlatformDependent
 		{
 			return new ConcurrentHashMapV8<>();
 		}
-		else
-		{
-			return new ConcurrentHashMap<>();
-		}
+		return new ConcurrentHashMap<>();
 	}
 	
 	/**
 	 * Creates a new fastest {@link ConcurrentMap} implementation for the current platform.
+	 * @param initialCapacity
+	 * @param <K>
+	 * @param <V>
+	 * @return
 	 */
 	public static <K, V> ConcurrentMap<K, V> newConcurrentHashMap(int initialCapacity)
 	{
@@ -135,14 +143,16 @@ public final class PlatformDependent
 		{
 			return new ConcurrentHashMapV8<>(initialCapacity);
 		}
-		else
-		{
-			return new ConcurrentHashMap<>(initialCapacity);
-		}
+		return new ConcurrentHashMap<>(initialCapacity);
 	}
 	
 	/**
 	 * Creates a new fastest {@link ConcurrentMap} implementation for the current platform.
+	 * @param initialCapacity
+	 * @param loadFactor
+	 * @param <K>
+	 * @param <V>
+	 * @return
 	 */
 	public static <K, V> ConcurrentMap<K, V> newConcurrentHashMap(int initialCapacity, float loadFactor)
 	{
@@ -150,14 +160,17 @@ public final class PlatformDependent
 		{
 			return new ConcurrentHashMapV8<>(initialCapacity, loadFactor);
 		}
-		else
-		{
-			return new ConcurrentHashMap<>(initialCapacity, loadFactor);
-		}
+		return new ConcurrentHashMap<>(initialCapacity, loadFactor);
 	}
 	
 	/**
 	 * Creates a new fastest {@link ConcurrentMap} implementation for the current platform.
+	 * @param initialCapacity
+	 * @param loadFactor
+	 * @param concurrencyLevel
+	 * @param <K>
+	 * @param <V>
+	 * @return
 	 */
 	public static <K, V> ConcurrentMap<K, V> newConcurrentHashMap(int initialCapacity, float loadFactor, int concurrencyLevel)
 	{
@@ -165,14 +178,15 @@ public final class PlatformDependent
 		{
 			return new ConcurrentHashMapV8<>(initialCapacity, loadFactor, concurrencyLevel);
 		}
-		else
-		{
-			return new ConcurrentHashMap<>(initialCapacity, loadFactor, concurrencyLevel);
-		}
+		return new ConcurrentHashMap<>(initialCapacity, loadFactor, concurrencyLevel);
 	}
 	
 	/**
 	 * Creates a new fastest {@link ConcurrentMap} implementation for the current platform.
+	 * @param map
+	 * @param <K>
+	 * @param <V>
+	 * @return
 	 */
 	public static <K, V> ConcurrentMap<K, V> newConcurrentHashMap(Map<? extends K, ? extends V> map)
 	{
@@ -180,14 +194,12 @@ public final class PlatformDependent
 		{
 			return new ConcurrentHashMapV8<>(map);
 		}
-		else
-		{
-			return new ConcurrentHashMap<>(map);
-		}
+		return new ConcurrentHashMap<>(map);
 	}
 	
 	/**
 	 * Try to deallocate the specified direct {@link ByteBuffer}. Please note this method does nothing if the current platform does not support this operation or the specified buffer is not a direct buffer.
+	 * @param buffer
 	 */
 	public static void freeDirectBuffer(ByteBuffer buffer)
 	{

@@ -146,6 +146,8 @@ public class DeadLockDetector extends Thread
 	 * Thread-0 is waiting to lock java.lang.Object@276af2 which is held by main. Locked synchronizers:0 monitors:1<br>
 	 * main is waiting to lock java.lang.Object@fa3ac1 which is held by Thread-0. Locked synchronizers:0 monitors:1<br>
 	 * </p>
+	 * @param threadInfo
+	 * @return
 	 */
 	private String createShortLockInfo(ThreadInfo threadInfo)
 	{
@@ -172,6 +174,8 @@ public class DeadLockDetector extends Thread
 	 * - locked java.lang.Object@fa3ac1<br>
 	 * at java.lang.Thread.run(Thread.java:662)
 	 * </p>
+	 * @param threadInfo
+	 * @return
 	 */
 	private String printDumpedThreadInfo(ThreadInfo threadInfo)
 	{

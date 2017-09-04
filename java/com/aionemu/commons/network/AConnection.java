@@ -81,9 +81,10 @@ public abstract class AConnection
 	 * Constructor
 	 * @param sc
 	 * @param d
-	 * @throws IOException
+	 * @param rbSize
+	 * @param wbSize
 	 */
-	public AConnection(SocketChannel sc, Dispatcher d, int rbSize, int wbSize) throws IOException
+	public AConnection(SocketChannel sc, Dispatcher d, int rbSize, int wbSize)
 	{
 		socketChannel = sc;
 		dispatcher = d;

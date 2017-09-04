@@ -88,10 +88,7 @@ public class ScriptManager
 		}
 		finally
 		{
-			if (fin != null)
-			{
-				fin.close();
-			}
+			fin.close();
 		}
 		
 		for (ScriptInfo si : list.getScriptInfos())

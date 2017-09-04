@@ -16,7 +16,6 @@
  */
 package com.aionemu.commons.scripting.url;
 
-import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLStreamHandler;
@@ -52,10 +51,9 @@ public class VirtualClassURLStreamHandler extends URLStreamHandler
 	 * Opens new URL connection for URL
 	 * @param u url
 	 * @return Opened connection
-	 * @throws IOException never thrown
 	 */
 	@Override
-	protected URLConnection openConnection(URL u) throws IOException
+	protected URLConnection openConnection(URL u)
 	{
 		return new VirtualClassURLConnection(u, cl);
 	}

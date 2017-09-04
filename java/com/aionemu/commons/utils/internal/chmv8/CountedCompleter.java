@@ -16,7 +16,10 @@
  */
 package com.aionemu.commons.utils.internal.chmv8;
 
+import java.security.PrivilegedExceptionAction;
 import java.util.concurrent.RecursiveAction;
+
+import sun.misc.Unsafe;
 
 /**
  * A {@link ForkJoinTask} with a completion action performed when triggered and there are no remaining pending actions. CountedCompleters are in general more robust in the presence of subtask stalls and blockage than are other forms of ForkJoinTasks, but are less intuitive to program. Uses of
@@ -55,8 +58,6 @@ import java.util.concurrent.RecursiveAction;
  * inter-thread communication and improve load balancing. In the recursive case, the second of each pair of subtasks to finish triggers completion of its parent (because no result combination is performed, the default no-op implementation of method {@code onCompletion} is not overridden). A static
  * utility method sets up the base task and invokes it (here, implicitly using the {@link ForkJoinPool#commonPool()}).
  * <p/>
- * < pre> {@code class MyOperation<E> { void apply(E e) { ... } }
- * <p/>
  * class ForEach<E> extends CountedCompleter<Void> {
  * <p/>
  * public static <E> void forEach(E[] array, MyOperation<E> op) { new ForEach<E>(null, array, op, 0, array.length).invoke(); }
@@ -70,16 +71,14 @@ import java.util.concurrent.RecursiveAction;
  * This design can be improved by noticing that in the recursive case, the task has nothing to do after forking its right task, so can directly invoke its left task before returning. (This is an analog of tail recursion removal.) Also, because the task returns upon executing its left task (rather
  * than falling through to invoke {@code tryComplete}) the pending count is set to one:
  * <p/>
- * < pre> {@code
- * class ForEach<E> ... public void compute() { // version 2 if (hi - lo >= 2) { int mid = (lo + hi) >>> 1; setPendingCount(1); // only one pending new ForEach(this, array, op, mid, hi).fork(); // right child new ForEach(this, array, op, lo, mid).compute(); // direct invoke } else { if (hi > lo)
- * op.apply(array[lo]); tryComplete(); } } }
+ * < pre> { class ForEach<E> ... public void compute() { // version 2 if (hi - lo >= 2) { int mid = (lo + hi) >>> 1; setPendingCount(1); // only one pending new ForEach(this, array, op, mid, hi).fork(); // right child new ForEach(this, array, op, lo, mid).compute(); // direct invoke } else { if (hi
+ * > lo) op.apply(array[lo]); tryComplete(); } } }
  * </pre>
  * <p/>
  * As a further improvement, notice that the left task need not even exist. Instead of creating a new one, we can iterate using the original task, and add a pending count for each fork. Additionally, because no task in this tree implements an {@link #onCompletion} method, {@code tryComplete()} can
  * be replaced with {@link #propagateCompletion}.
  * <p/>
- * < pre> {@code
- * class ForEach<E> ... public void compute() { // version 3 int l = lo, h = hi; while (h - l >= 2) { int mid = (l + h) >>> 1; addToPendingCount(1); new ForEach(this, array, op, mid, h).fork(); // right child h = mid; } if (h > l) op.apply(array[l]); propagateCompletion(); } }
+ * < pre> { class ForEach<E> ... public void compute() { // version 3 int l = lo, h = hi; while (h - l >= 2) { int mid = (l + h) >>> 1; addToPendingCount(1); new ForEach(this, array, op, mid, h).fork(); // right child h = mid; } if (h > l) op.apply(array[l]); propagateCompletion(); } }
  * </pre>
  * <p/>
  * Additional improvements of such classes might entail precomputing pending counts so that they can be established in constructors, specializing classes for leaf steps, subdividing by say, four, instead of two per iteration, and using an adaptive threshold instead of always subdividing down to
@@ -90,9 +89,9 @@ import java.util.concurrent.RecursiveAction;
  * (You could additionally {@linkplain #cancel cancel} other tasks, but it is usually simpler and more efficient to just let them notice that the result is set and if so skip further processing.) Illustrating again with an array using full partitioning (again, in practice, leaf tasks will almost
  * always process more than one element):
  * <p/>
- * < pre> {@code class Searcher<E> extends CountedCompleter<E> { final E[] array; final AtomicReference<E> result; final int lo, hi; Searcher(CountedCompleter<?> p, E[] array, AtomicReference<E> result, int lo, int hi) { super(p); this.array = array; this.result = result; this.lo = lo; this.hi = hi;
- * } public E getRawResult() { return result.get(); } public void compute() { // similar to ForEach version 3 int l = lo, h = hi; while (result.get() == null && h >= l) { if (h - l >= 2) { int mid = (l + h) >>> 1; addToPendingCount(1); new Searcher(this, array, result, mid, h).fork(); h = mid; }
- * else { E x = array[l]; if (matches(x) && result.compareAndSet(null, x)) quietlyCompleteRoot(); // root task is now joinable break; } } tryComplete(); // normally complete whether or not found } boolean matches(E e) { ... } // return true if found
+ * < pre> {class Searcher<E> extends CountedCompleter<E> { final E[] array; final AtomicReference<E> result; final int lo, hi; Searcher(CountedCompleter<?> p, E[] array, AtomicReference<E> result, int lo, int hi) { super(p); this.array = array; this.result = result; this.lo = lo; this.hi = hi; }
+ * public E getRawResult() { return result.get(); } public void compute() { // similar to ForEach version 3 int l = lo, h = hi; while (result.get() == null && h >= l) { if (h - l >= 2) { int mid = (l + h) >>> 1; addToPendingCount(1); new Searcher(this, array, result, mid, h).fork(); h = mid; } else
+ * { E x = array[l]; if (matches(x) && result.compareAndSet(null, x)) quietlyCompleteRoot(); // root task is now joinable break; } } tryComplete(); // normally complete whether or not found } boolean matches(E e) { ... } // return true if found
  * <p/>
  * public static <E> E search(E[] array) { return new Searcher<E>(null, array, new AtomicReference<E>(), 0, array.length).invoke(); } }}
  * </pre>
@@ -105,7 +104,7 @@ import java.util.concurrent.RecursiveAction;
  * {@code E}), one way to do this in divide and conquer designs is to have each subtask record its sibling, so that it can be accessed in method {@code onCompletion}. This technique applies to reductions in which the order of combining left and right results does not matter; ordered reductions
  * require explicit left/right designations. Variants of other streamlinings seen in the above examples may also apply.
  * <p/>
- * < pre> {@code class MyMapper<E> { E apply(E v) { ... } } class MyReducer<E> { E apply(E x, E y) { ... } } class MapReducer<E> extends CountedCompleter<E> { final E[] array; final MyMapper<E> mapper; final MyReducer<E> reducer; final int lo, hi; MapReducer<E> sibling; E result;
+ * < pre> {class MyMapper<E> { E apply(E v) { ... } } class MyReducer<E> { E apply(E x, E y) { ... } } class MapReducer<E> extends CountedCompleter<E> { final E[] array; final MyMapper<E> mapper; final MyReducer<E> reducer; final int lo, hi; MapReducer<E> sibling; E result;
  * MapReducer(CountedCompleter<?> p, E[] array, MyMapper<E> mapper, MyReducer<E> reducer, int lo, int hi) { super(p); this.array = array; this.mapper = mapper; this.reducer = reducer; this.lo = lo; this.hi = hi; } public void compute() { if (hi - lo >= 2) { int mid = (lo + hi) >>> 1; MapReducer<E>
  * left = new MapReducer(this, array, mapper, reducer, lo, mid); MapReducer<E> right = new MapReducer(this, array, mapper, reducer, mid, hi); left.sibling = right; right.sibling = left; setPendingCount(1); // only right is pending right.fork(); left.compute(); // directly execute left } else { if
  * (hi > lo) result = mapper.apply(array[lo]); tryComplete(); } } public void onCompletion(CountedCompleter<?> caller) { if (caller != this) { MapReducer<E> child = (MapReducer<E>)caller; MapReducer<E> sib = child.sibling; if (sib == null || sib.result == null) result = child.result; else result =
@@ -124,10 +123,10 @@ import java.util.concurrent.RecursiveAction;
  * <b>Completion Traversals</b>. If using {@code onCompletion} to process completions is inapplicable or inconvenient, you can use methods {@link #firstComplete} and {@link #nextComplete} to create custom traversals. For example, to define a MapReducer that only splits out right-hand tasks in the
  * form of the third ForEach example, the completions must cooperatively reduce along unexhausted subtask links, which can be done as follows:
  * <p/>
- * < pre> {@code class MapReducer<E> extends CountedCompleter<E> { // version 2 final E[] array; final MyMapper<E> mapper; final MyReducer<E> reducer; final int lo, hi; MapReducer<E> forks, next; // record subtask forks in list E result; MapReducer(CountedCompleter<?> p, E[] array, MyMapper<E>
- * mapper, MyReducer<E> reducer, int lo, int hi, MapReducer<E> next) { super(p); this.array = array; this.mapper = mapper; this.reducer = reducer; this.lo = lo; this.hi = hi; this.next = next; } public void compute() { int l = lo, h = hi; while (h - l >= 2) { int mid = (l + h) >>> 1;
- * addToPendingCount(1); (forks = new MapReducer(this, array, mapper, reducer, mid, h, forks)).fork; h = mid; } if (h > l) result = mapper.apply(array[l]); // process completions by reducing along and advancing subtask links for (CountedCompleter<?> c = firstComplete(); c != null; c =
- * c.nextComplete()) { for (MapReducer t = (MapReducer)c, s = t.forks; s != null; s = t.forks = s.next) t.result = reducer.apply(t.result, s.result); } } public E getRawResult() { return result; }
+ * < pre> {class MapReducer<E> extends CountedCompleter<E> { // version 2 final E[] array; final MyMapper<E> mapper; final MyReducer<E> reducer; final int lo, hi; MapReducer<E> forks, next; // record subtask forks in list E result; MapReducer(CountedCompleter<?> p, E[] array, MyMapper<E> mapper,
+ * MyReducer<E> reducer, int lo, int hi, MapReducer<E> next) { super(p); this.array = array; this.mapper = mapper; this.reducer = reducer; this.lo = lo; this.hi = hi; this.next = next; } public void compute() { int l = lo, h = hi; while (h - l >= 2) { int mid = (l + h) >>> 1; addToPendingCount(1);
+ * (forks = new MapReducer(this, array, mapper, reducer, mid, h, forks)).fork; h = mid; } if (h > l) result = mapper.apply(array[l]); // process completions by reducing along and advancing subtask links for (CountedCompleter<?> c = firstComplete(); c != null; c = c.nextComplete()) { for (MapReducer
+ * t = (MapReducer)c, s = t.forks; s != null; s = t.forks = s.next) t.result = reducer.apply(t.result, s.result); } } public E getRawResult() { return result; }
  * <p/>
  * public static <E> E mapReduce(E[] array, MyMapper<E> mapper, MyReducer<E> reducer) { return new MapReducer<E>(null, array, mapper, reducer, 0, array.length, null).invoke(); } }}
  * </pre>
@@ -135,10 +134,11 @@ import java.util.concurrent.RecursiveAction;
  * <p/>
  * <b>Triggers.</b> Some CountedCompleters are themselves never forked, but instead serve as bits of plumbing in other designs; including those in which the completion of one of more async tasks triggers another async task. For example:
  * <p/>
- * < pre> {@code class HeaderBuilder extends CountedCompleter<...> { ... } class BodyBuilder extends CountedCompleter<...> { ... } class PacketSender extends CountedCompleter<...> { PacketSender(...) { super(null, 1); ... } // trigger on second completion public void compute() { } // never called
- * public void onCompletion(CountedCompleter<?> caller) { sendPacket(); } } // sample use: PacketSender p = new PacketSender(); new HeaderBuilder(p, ...).fork(); new BodyBuilder(p, ...).fork(); }
+ * < pre> {class HeaderBuilder extends CountedCompleter<...> { ... } class BodyBuilder extends CountedCompleter<...> { ... } class PacketSender extends CountedCompleter<...> { PacketSender(...) { super(null, 1); ... } // trigger on second completion public void compute() { } // never called public
+ * void onCompletion(CountedCompleter<?> caller) { sendPacket(); } } // sample use: PacketSender p = new PacketSender(); new HeaderBuilder(p, ...).fork(); new BodyBuilder(p, ...).fork(); }
  * </pre>
  * @author Doug Lea
+ * @param <T>
  * @since 1.8
  */
 public abstract class CountedCompleter<T>extends ForkJoinTask<T>
@@ -389,9 +389,7 @@ public abstract class CountedCompleter<T>extends ForkJoinTask<T>
 	 * If this task does not have a completer, invokes {@link ForkJoinTask#quietlyComplete} and returns {@code null}. Or, if this task's pending count is non-zero, decrements its pending count and returns {@code null}. Otherwise, returns the completer. This method can be used as part of a completion
 	 * traversal loop for homogeneous task hierarchies:
 	 * <p/>
-	 * < pre> {@code
-	 * for (CountedCompleter<?> c = firstComplete();
-	 * c != null; c = c.nextComplete()) { // ... process c ... }}
+	 * < pre> { for (CountedCompleter<?> c = firstComplete(); c != null; c = c.nextComplete()) { // ... process c ... }}
 	 * </pre>
 	 * @return the completer, or {@code null} if none
 	 */
@@ -402,11 +400,8 @@ public abstract class CountedCompleter<T>extends ForkJoinTask<T>
 		{
 			return p.firstComplete();
 		}
-		else
-		{
-			quietlyComplete();
-			return null;
-		}
+		quietlyComplete();
+		return null;
 	}
 	
 	/**
@@ -499,23 +494,19 @@ public abstract class CountedCompleter<T>extends ForkJoinTask<T>
 		}
 		try
 		{
-			return java.security.AccessController.doPrivileged(new java.security.PrivilegedExceptionAction<sun.misc.Unsafe>()
+			return java.security.AccessController.doPrivileged((PrivilegedExceptionAction<Unsafe>) () ->
 			{
-				@Override
-				public sun.misc.Unsafe run() throws Exception
+				final Class<sun.misc.Unsafe> k = sun.misc.Unsafe.class;
+				for (java.lang.reflect.Field f : k.getDeclaredFields())
 				{
-					final Class<sun.misc.Unsafe> k = sun.misc.Unsafe.class;
-					for (java.lang.reflect.Field f : k.getDeclaredFields())
+					f.setAccessible(true);
+					final Object x = f.get(null);
+					if (k.isInstance(x))
 					{
-						f.setAccessible(true);
-						final Object x = f.get(null);
-						if (k.isInstance(x))
-						{
-							return k.cast(x);
-						}
+						return k.cast(x);
 					}
-					throw new NoSuchFieldError("the Unsafe");
 				}
+				throw new NoSuchFieldError("the Unsafe");
 			});
 		}
 		catch (java.security.PrivilegedActionException e)

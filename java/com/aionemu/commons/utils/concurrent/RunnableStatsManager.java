@@ -41,7 +41,7 @@ public final class RunnableStatsManager
 {
 	private static final Logger log = LoggerFactory.getLogger(RunnableStatsManager.class);
 	
-	private static final Map<Class<?>, ClassStat> classStats = new HashMap<>();
+	static final Map<Class<?>, ClassStat> classStats = new HashMap<>();
 	
 	private static final class ClassStat
 	{
@@ -50,9 +50,9 @@ public final class RunnableStatsManager
 		private final MethodStat runnableStat;
 		
 		private String[] methodNames = new String[0];
-		private MethodStat[] methodStats = new MethodStat[0];
+		MethodStat[] methodStats = new MethodStat[0];
 		
-		private ClassStat(Class<?> clazz)
+		ClassStat(Class<?> clazz)
 		{
 			className = clazz.getName().replace("com.aionemu.gameserver.", "");
 			runnableStat = new MethodStat(className, "run()");
@@ -69,12 +69,12 @@ public final class RunnableStatsManager
 			classStats.put(clazz, this);
 		}
 		
-		private MethodStat getRunnableStat()
+		MethodStat getRunnableStat()
 		{
 			return runnableStat;
 		}
 		
-		private MethodStat getMethodStat(String methodName, boolean synchronizedAlready)
+		MethodStat getMethodStat(String methodName, boolean synchronizedAlready)
 		{
 			// method names will be interned automatically because of compiling, so this gonna work
 			if ("run()".equals(methodName))
@@ -114,21 +114,21 @@ public final class RunnableStatsManager
 		
 		private final ReentrantLock lock = new ReentrantLock();
 		
-		private final String className;
-		private final String methodName;
+		final String className;
+		final String methodName;
 		
-		private long count;
-		private long total;
-		private long min = Long.MAX_VALUE;
-		private long max = Long.MIN_VALUE;
+		long count;
+		long total;
+		long min = Long.MAX_VALUE;
+		long max = Long.MIN_VALUE;
 		
-		private MethodStat(String className, String methodName)
+		MethodStat(String className, String methodName)
 		{
 			this.className = className;
 			this.methodName = methodName;
 		}
 		
-		private void handleStats(long runTime)
+		void handleStats(long runTime)
 		{
 			lock.lock();
 			try
@@ -186,14 +186,14 @@ public final class RunnableStatsManager
 		MIN("min"),
 		MAX("max"),;
 		
-		private final String xmlAttributeName;
+		final String xmlAttributeName;
 		
 		private SortBy(String xmlAttributeName)
 		{
 			this.xmlAttributeName = xmlAttributeName;
 		}
 		
-		private final Comparator<MethodStat> comparator = new Comparator<MethodStat>()
+		final Comparator<MethodStat> comparator = new Comparator<MethodStat>()
 		{
 			
 			@Override
@@ -226,10 +226,7 @@ public final class RunnableStatsManager
 						{
 							return ch2 - ch1;
 						}
-						else
-						{
-							return ch1 - ch2;
-						}
+						return ch1 - ch2;
 					}
 				}
 				
@@ -251,7 +248,7 @@ public final class RunnableStatsManager
 		};
 		
 		@SuppressWarnings("rawtypes")
-		private Comparable getComparableValueOf(MethodStat stat)
+		Comparable getComparableValueOf(MethodStat stat)
 		{
 			switch (this)
 			{
@@ -274,7 +271,7 @@ public final class RunnableStatsManager
 			}
 		}
 		
-		private static final SortBy[] VALUES = SortBy.values();
+		static final SortBy[] VALUES = SortBy.values();
 	}
 	
 	public static void dumpClassStats()

@@ -60,7 +60,6 @@ public abstract class BaseServerPacket extends BasePacket
 	
 	/**
 	 * Write int to buffer.
-	 * @param buf
 	 * @param value
 	 */
 	protected final void writeD(int value)
@@ -70,7 +69,6 @@ public abstract class BaseServerPacket extends BasePacket
 	
 	/**
 	 * Write short to buffer.
-	 * @param buf
 	 * @param value
 	 */
 	protected final void writeH(int value)
@@ -80,7 +78,6 @@ public abstract class BaseServerPacket extends BasePacket
 	
 	/**
 	 * Write byte to buffer.
-	 * @param buf
 	 * @param value
 	 */
 	protected final void writeC(int value)
@@ -90,7 +87,6 @@ public abstract class BaseServerPacket extends BasePacket
 	
 	/**
 	 * Write double to buffer.
-	 * @param buf
 	 * @param value
 	 */
 	protected final void writeDF(double value)
@@ -100,7 +96,6 @@ public abstract class BaseServerPacket extends BasePacket
 	
 	/**
 	 * Write float to buffer.
-	 * @param buf
 	 * @param value
 	 */
 	protected final void writeF(float value)
@@ -110,7 +105,6 @@ public abstract class BaseServerPacket extends BasePacket
 	
 	/**
 	 * Write long to buffer.
-	 * @param buf
 	 * @param value
 	 */
 	protected final void writeQ(long value)
@@ -120,7 +114,6 @@ public abstract class BaseServerPacket extends BasePacket
 	
 	/**
 	 * Write String to buffer
-	 * @param buf
 	 * @param text
 	 */
 	protected final void writeS(String text)
@@ -142,7 +135,6 @@ public abstract class BaseServerPacket extends BasePacket
 	
 	/**
 	 * Write byte array to buffer.
-	 * @param buf
 	 * @param data
 	 */
 	protected final void writeB(byte[] data)

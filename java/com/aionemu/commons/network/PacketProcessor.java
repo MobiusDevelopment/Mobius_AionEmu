@@ -41,22 +41,22 @@ public class PacketProcessor<T extends AConnection>
 	/**
 	 * Logger for PacketProcessor
 	 */
-	private static final Logger log = LoggerFactory.getLogger(PacketProcessor.class.getName());
+	static final Logger log = LoggerFactory.getLogger(PacketProcessor.class.getName());
 	
 	/**
 	 * When one working thread should be created.
 	 */
-	private final int threadSpawnThreshold;
+	final int threadSpawnThreshold;
 	
 	/**
 	 * When one working thread should be killed.
 	 */
-	private final int threadKillThreshold;
+	final int threadKillThreshold;
 	
 	/**
 	 * Lock for synchronization.
 	 */
-	private final Lock lock = new ReentrantLock();
+	final Lock lock = new ReentrantLock();
 	
 	/**
 	 * Not Empty condition.
@@ -66,7 +66,7 @@ public class PacketProcessor<T extends AConnection>
 	/**
 	 * Queue of packet that will be executed in correct order.
 	 */
-	private final List<BaseClientPacket<T>> packets = new LinkedList<>();
+	final List<BaseClientPacket<T>> packets = new LinkedList<>();
 	
 	/**
 	 * Working threads.
@@ -86,10 +86,13 @@ public class PacketProcessor<T extends AConnection>
 	/**
 	 * Executor that will be used to execute packets
 	 */
-	private final Executor executor;
+	final Executor executor;
 	
 	private static class DummyExecutor implements Executor
 	{
+		public DummyExecutor()
+		{
+		}
 		
 		@Override
 		public void execute(Runnable command)
@@ -154,7 +157,7 @@ public class PacketProcessor<T extends AConnection>
 	 * Create and start new PacketProcessor Thread, but only if there wont be more working Threads than "maxThreads"
 	 * @return true if new Thread was created.
 	 */
-	private boolean newThread()
+	boolean newThread()
 	{
 		if (threads.size() >= maxThreads)
 		{
@@ -174,7 +177,7 @@ public class PacketProcessor<T extends AConnection>
 	/**
 	 * Kill one PacketProcessor Thread, but only if there are more working Threads than "minThreads"
 	 */
-	private void killThread()
+	void killThread()
 	{
 		if (threads.size() < minThreads)
 		{
@@ -206,7 +209,7 @@ public class PacketProcessor<T extends AConnection>
 	 * Return first packet available for execution with respecting rules: - 1 packet / client at one time. - execute packets in received order.
 	 * @return first available BaseClientPacket
 	 */
-	private BaseClientPacket<T> getFirstAviable()
+	BaseClientPacket<T> getFirstAviable()
 	{
 		for (;;)
 		{
@@ -235,6 +238,9 @@ public class PacketProcessor<T extends AConnection>
 	 */
 	private final class PacketProcessorTask implements Runnable
 	{
+		public PacketProcessorTask()
+		{
+		}
 		
 		/**
 		 * {@inheritDoc}
@@ -276,7 +282,6 @@ public class PacketProcessor<T extends AConnection>
 	 */
 	private final class CheckerTask implements Runnable
 	{
-		
 		/**
 		 * How often CheckerTask should do check.
 		 */
@@ -285,6 +290,10 @@ public class PacketProcessor<T extends AConnection>
 		 * Number of packets waiting for execution on last check.
 		 */
 		private int lastSize = 0;
+		
+		public CheckerTask()
+		{
+		}
 		
 		/**
 		 * {@inheritDoc}

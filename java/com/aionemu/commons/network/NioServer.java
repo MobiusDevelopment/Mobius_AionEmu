@@ -76,7 +76,6 @@ public class NioServer
 	/**
 	 * Constructor.
 	 * @param readWriteThreads - number of threads that will be used for handling read and write.
-	 * @param dcPool - ThreadPool on witch Disconnection tasks will be executed.
 	 * @param cfgs - Server Configurations
 	 */
 	public NioServer(int readWriteThreads, ServerCfg... cfgs)
