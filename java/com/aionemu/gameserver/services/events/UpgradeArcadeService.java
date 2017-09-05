@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.services.player;
+package com.aionemu.gameserver.services.events;
 
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.commons.utils.Rnd;
@@ -30,9 +30,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 /**
- * @author Ranastic
+ * @author Ghostfur
  */
-
 public class UpgradeArcadeService
 {
 	PlayerUpgradeArcadeDAO playerDAO = DAOManager.getDAO(PlayerUpgradeArcadeDAO.class);
@@ -48,8 +47,8 @@ public class UpgradeArcadeService
 	
 	public void updateTypeOne(Player player)
 	{
-		final int getCurrentFrenzyMeterFromDB = playerDAO.getFrenzyMeterByObjId(player.getObjectId());
-		final Item token = player.getInventory().getFirstItemByItemId(186000389);
+		int getCurrentFrenzyMeterFromDB = playerDAO.getFrenzyMeterByObjId(player.getObjectId());
+		Item token = player.getInventory().getFirstItemByItemId(186000389);
 		int wtfPoint = 0;
 		if (token != null)
 		{
@@ -63,14 +62,14 @@ public class UpgradeArcadeService
 		PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(2));
 	}
 	
-	public void upgradeTypeThree(Player player)
+	public void upgradeTypeThree(final Player player)
 	{
-		final int getCurrentFrenzyMeterFromDB = playerDAO.getFrenzyMeterByObjId(player.getObjectId());
+		int getCurrentFrenzyMeterFromDB = playerDAO.getFrenzyMeterByObjId(player.getObjectId());
 		final int getCurrentUpgradeLvlFromDB = playerDAO.getUpgradeLvlByObjId(player.getObjectId());
-		final Item token = player.getInventory().getFirstItemByItemId(186000389);
+		Item token = player.getInventory().getFirstItemByItemId(186000389);
 		PacketSendUtility.sendPacket(player, new SM_QUESTION_WINDOW(SM_QUESTION_WINDOW.STR_POPUP_GACHA_FEVER_TIME_CHECK, 0, 0));
 		boolean result = false;
-		final float random = Rnd.get(1, 1000) / 10f;
+		float random = Rnd.get(1, 1000) / 10f;
 		if (random >= 10)
 		{
 			result = true;
@@ -79,40 +78,29 @@ public class UpgradeArcadeService
 		if (result)
 		{
 			player.getPlayerUpgradeArcade().setFrenzyMeter(lr.getFrenzyMeter() + 5);
-			player.getPlayerUpgradeArcade().setFrenzyMeterByObjId(player.getObjectId().intValue());
+			player.getPlayerUpgradeArcade().setFrenzyMeterByObjId(player.getObjectId());
 			player.getInventory().decreaseItemCount(token, 1);
-			PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(3, result ? 1 : 0, getCurrentFrenzyMeterFromDB));
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(3, 1, getCurrentFrenzyMeterFromDB));
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
+				if (lr.getFrenzyMeter() == 100)
 				{
-					if (lr.getFrenzyMeter() == 100)
-					{
-						player.getPlayerUpgradeArcade().setFrenzyMeter(0);
-						player.getPlayerUpgradeArcade().setFrenzyMeterByObjId(player.getObjectId());
-						player.getPlayerUpgradeArcade().setUpgradeLvl(lr.getUpgradeLvl() + 1);
-						player.getPlayerUpgradeArcade().setUpgradeLvlByObjId(player.getObjectId());
-					}
-					PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(4, player.getPlayerUpgradeArcade().getUpgradeLvl()));
+					player.getPlayerUpgradeArcade().setFrenzyMeter(0);
+					player.getPlayerUpgradeArcade().setFrenzyMeterByObjId(player.getObjectId());
+					player.getPlayerUpgradeArcade().setUpgradeLvl(lr.getUpgradeLvl() + 1);
+					player.getPlayerUpgradeArcade().setUpgradeLvlByObjId(player.getObjectId());
 				}
+				PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(4, player.getPlayerUpgradeArcade().getUpgradeLvl()));
 			}, 3000);
 			lr.setPersistentState(PersistentState.UPDATE_REQUIRED);
 		}
 		else
 		{
 			player.getPlayerUpgradeArcade().setFrenzyMeter(lr.getFrenzyMeter() - 5);
-			player.getPlayerUpgradeArcade().setFrenzyMeterByObjId(player.getObjectId().intValue());
+			player.getPlayerUpgradeArcade().setFrenzyMeterByObjId(player.getObjectId());
 			player.getInventory().decreaseItemCount(token, 1);
 			PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(3, 0, getCurrentFrenzyMeterFromDB));
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(5, player.getPlayerUpgradeArcade().getUpgradeLvl(), true, 3));
-				}
-			}, 3000);
+			ThreadPoolManager.getInstance().schedule(() -> PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(5, player.getPlayerUpgradeArcade().getUpgradeLvl(), true, 3)), 3000);
 			lr.setPersistentState(PersistentState.UPDATE_REQUIRED);
 		}
 		player.setPlayerUpgradeArcade(lr);
@@ -120,8 +108,8 @@ public class UpgradeArcadeService
 	
 	public void upgradeTypeSix(Player player)
 	{
-		final int getCurrentUpgradeLvlFromDB = playerDAO.getUpgradeLvlByObjId(player.getObjectId());
-		final int itemIdTier1 = getRewardTier1();
+		int getCurrentUpgradeLvlFromDB = playerDAO.getUpgradeLvlByObjId(player.getObjectId());
+		int itemIdTier1 = getRewardTier1();
 		int countTier1 = 0;
 		/** Reward Tier 1 **/
 		if (itemIdTier1 == 167010180)
@@ -158,7 +146,7 @@ public class UpgradeArcadeService
 		}
 		
 		/** Reward Tier 2 **/
-		final int itemIdTier2 = getRewardTier2();
+		int itemIdTier2 = getRewardTier2();
 		int countTier2 = 0;
 		if (itemIdTier2 == 110900830)
 		{ // Astronaut's Costume
@@ -194,7 +182,7 @@ public class UpgradeArcadeService
 		}
 		
 		/** Reward Tier 3 **/
-		final int itemIdTier3 = getRewardTier3();
+		int itemIdTier3 = getRewardTier3();
 		int countTier3 = 0;
 		if (itemIdTier3 == 125045493)
 		{ // Astronaut's Helmet
@@ -230,7 +218,7 @@ public class UpgradeArcadeService
 		}
 		
 		/** Reward Tier 4 **/
-		final int itemIdTier4 = getRewardTier4();
+		int itemIdTier4 = getRewardTier4();
 		int countTier4 = 0;
 		if (itemIdTier4 == 188053627)
 		{ // Sleek Hovercycle Chest
@@ -363,7 +351,7 @@ public class UpgradeArcadeService
 		protected static final UpgradeArcadeService instance = new UpgradeArcadeService();
 	}
 	
-	public static UpgradeArcadeService getInstance()
+	public static final UpgradeArcadeService getInstance()
 	{
 		return SingletonHolder.instance;
 	}

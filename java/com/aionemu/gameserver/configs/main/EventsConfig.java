@@ -62,9 +62,7 @@ public class EventsConfig
 	@Property(key = "gameserver.atreian.passport.enable", defaultValue = "false")
 	public static boolean ENABLE_ATREIAN_PASSPORT;
 	
-	/*
-	 * Aionunity events
-	 */
+	// Aionunity events
 	@Property(key = "gameserver.event.aionunity.enable", defaultValue = "false")
 	public static boolean ENABLE_AIONUNITY_EVENTS;
 	@Property(key = "gameserver.babi.mulai.elyos", defaultValue = "0 0 20 ? * SAT")
@@ -97,4 +95,14 @@ public class EventsConfig
 	public static int EVENT_ITEM_COUNT;
 	@Property(key = "gameserver.event.membership.rate", defaultValue = "false")
 	public static boolean EVENT_REWARD_MEMBERSHIP_RATE;
+	
+	// Arcade Upgrade
+	@Property(key = "gameserver.event.arcade.enable", defaultValue = "false")
+	public static boolean ENABLE_EVENT_ARCADE;
+	@Property(key = "gameserver.event.arcade.chance", defaultValue = "70")
+	public static int EVENT_ARCADE_CHANCE;
+	@Property(key = "gameserver.event.arcade.onlyFrenzyRewardChance", defaultValue = "50")
+	public static int EVENT_ARCADE_FRENZYITEM_CHANCE;
+	@Property(key = "gameserver.event.arcade.frenzy_time", defaultValue = "90")
+	public static int EVENT_ARCADE_FRENZY_TIME;
 }

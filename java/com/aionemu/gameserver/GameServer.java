@@ -120,6 +120,7 @@ import com.aionemu.gameserver.services.events.EventVipTicketsService;
 import com.aionemu.gameserver.services.events.EventsService;
 import com.aionemu.gameserver.services.events.FFAService;
 import com.aionemu.gameserver.services.events.LadderService;
+import com.aionemu.gameserver.services.events.UpgradeArcadeService;
 import com.aionemu.gameserver.services.events.unity.EventGebukMantan;
 import com.aionemu.gameserver.services.events.unity.ExpoEventAsmo;
 import com.aionemu.gameserver.services.events.unity.ExpoEventElyos;
@@ -471,6 +472,10 @@ public class GameServer
 		if (EventsConfig.ENABLE_ATREIAN_PASSPORT)
 		{
 			AtreianPassportService.getInstance().onStart();
+		}
+		if (EventsConfig.ENABLE_EVENT_ARCADE)
+		{
+			UpgradeArcadeService.getInstance();
 		}
 		if (CustomConfig.ENABLE_REWARD_SERVICE)
 		{

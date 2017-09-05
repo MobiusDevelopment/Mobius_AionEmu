@@ -16,26 +16,22 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UPGRADE_ARCADE;
-import com.aionemu.gameserver.services.player.UpgradeArcadeService;
+import com.aionemu.gameserver.services.events.UpgradeArcadeService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
  * @author Ranastic
  */
-
 public class CM_UPGRADE_ARCADE extends AionClientPacket
 {
+	// private static final Logger log = LoggerFactory.getLogger(CM_UPGRADE_ARCADE.class);
+	
 	private int type;
 	private int wtfPoint;
-	
-	private static final Logger log = LoggerFactory.getLogger(CM_UPGRADE_ARCADE.class);
 	
 	public CM_UPGRADE_ARCADE(int opcode, State state, State... restStates)
 	{
