@@ -42,7 +42,6 @@ import com.aionemu.gameserver.utils.audit.AuditLogger;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldMap;
 import com.aionemu.gameserver.world.WorldPosition;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 public class PlayerReviveService
 {
@@ -162,7 +161,14 @@ public class PlayerReviveService
 			}
 			if (!isInvadeActiveVortex)
 			{
-				TeleportService2.moveToBindLocation(player, true);
+				if (player.isGM() && player.isInvul()) // happens when you fall into the void
+				{
+					TeleportService2.moveToBindLocation(player, false); // fix admin characters not been able to resurrect
+				}
+				else
+				{
+					TeleportService2.moveToBindLocation(player, true);
+				}
 			}
 		}
 		player.unsetResPosState();
@@ -240,17 +246,13 @@ public class PlayerReviveService
 	
 	public static void revive(Player player, int hpPercent, int mpPercent, boolean setSoulsickness, int resurrectionSkill)
 	{
-		player.getKnownList().doOnAllPlayers(new Visitor<Player>()
+		player.getKnownList().doOnAllPlayers(visitor ->
 		{
-			@Override
-			public void visit(Player visitor)
+			final VisibleObject target = visitor.getTarget();
+			if ((target != null) && (target.getObjectId() == player.getObjectId()) && (visitor.getRace() != player.getRace()))
 			{
-				final VisibleObject target = visitor.getTarget();
-				if ((target != null) && (target.getObjectId() == player.getObjectId()) && (visitor.getRace() != player.getRace()))
-				{
-					visitor.setTarget(null);
-					PacketSendUtility.sendPacket(visitor, new SM_TARGET_SELECTED(null));
-				}
+				visitor.setTarget(null);
+				PacketSendUtility.sendPacket(visitor, new SM_TARGET_SELECTED(null));
 			}
 		});
 		final boolean isNoResurrectPenalty = player.getController().isNoResurrectPenaltyInEffect();
@@ -288,7 +290,7 @@ public class PlayerReviveService
 	public static void itemSelfRevive(Player player)
 	{
 		final Item item = player.getSelfRezStone();
-		if ((item == null) && (player.getAccessLevel() == 0))
+		if (item == null)
 		{
 			cancelRes(player);
 			return;
