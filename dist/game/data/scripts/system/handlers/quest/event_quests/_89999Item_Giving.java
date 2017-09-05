@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * Author Rinzler (Encom) /
  ****/
-
 public class _89999Item_Giving extends QuestHandler
 {
 	private static final int questId = 89999;
@@ -80,14 +79,11 @@ public class _89999Item_Giving extends QuestHandler
 					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetId, 1097, 0));
 					return true;
 				}
-				else
+				if (giveQuestItem(env, itemId, 1))
 				{
-					if (giveQuestItem(env, itemId, 1))
-					{
-						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetId, 1012, 0));
-					}
-					return true;
+					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetId, 1012, 0));
 				}
+				return true;
 			}
 		}
 		return false;

@@ -25,19 +25,17 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.gameserver.eventEngine.EventScheduler;
 import com.aionemu.gameserver.eventEngine.events.BattlegroundEvent;
-import com.aionemu.gameserver.services.EventService;
 
 /**
  * Created by wanke on 12/02/2017.
  */
-
 public class BGService
 {
-	Logger log = LoggerFactory.getLogger(EventService.class);
+	Logger log = LoggerFactory.getLogger(EventsService.class);
 	private static final int DELAY = 60 * 100;
 	private final List<ScheduledFuture<?>> futures = new ArrayList<>();
 	
-	private BGService()
+	BGService()
 	{
 		register(DELAY);
 		log.info("<Battleground> initialized!");

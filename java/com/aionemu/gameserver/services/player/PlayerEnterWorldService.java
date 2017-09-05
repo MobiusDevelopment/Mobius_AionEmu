@@ -33,7 +33,6 @@ import com.aionemu.gameserver.configs.administration.AdminConfig;
 import com.aionemu.gameserver.configs.main.AStationConfig;
 import com.aionemu.gameserver.configs.main.AutoGroupConfig;
 import com.aionemu.gameserver.configs.main.CustomConfig;
-import com.aionemu.gameserver.configs.main.EventsConfig;
 import com.aionemu.gameserver.configs.main.GSConfig;
 import com.aionemu.gameserver.configs.main.HTMLConfig;
 import com.aionemu.gameserver.configs.main.PeriodicSaveConfig;
@@ -111,7 +110,6 @@ import com.aionemu.gameserver.services.BrokerService;
 import com.aionemu.gameserver.services.ClassChangeService;
 import com.aionemu.gameserver.services.DisputeLandService;
 import com.aionemu.gameserver.services.EnchantService;
-import com.aionemu.gameserver.services.EventService;
 import com.aionemu.gameserver.services.F2pService;
 import com.aionemu.gameserver.services.HTMLService;
 import com.aionemu.gameserver.services.HousingService;
@@ -129,6 +127,7 @@ import com.aionemu.gameserver.services.VortexService;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 import com.aionemu.gameserver.services.abyss.AbyssSkillService;
 import com.aionemu.gameserver.services.craft.RelinquishCraftStatus;
+import com.aionemu.gameserver.services.events.EventsService;
 import com.aionemu.gameserver.services.events.RollDiceEventService;
 import com.aionemu.gameserver.services.gmservice.GmSpecialSkills;
 import com.aionemu.gameserver.services.instance.InstanceService;
@@ -744,10 +743,7 @@ public final class PlayerEnterWorldService
 			player.getController().addTask(TaskId.PLAYER_UPDATE, ThreadPoolManager.getInstance().scheduleAtFixedRate(new GeneralUpdateTask(player.getObjectId()), PeriodicSaveConfig.PLAYER_GENERAL * 1000, PeriodicSaveConfig.PLAYER_GENERAL * 1000));
 			player.getController().addTask(TaskId.INVENTORY_UPDATE, ThreadPoolManager.getInstance().scheduleAtFixedRate(new ItemUpdateTask(player.getObjectId()), PeriodicSaveConfig.PLAYER_ITEMS * 1000, PeriodicSaveConfig.PLAYER_ITEMS * 1000));
 			SurveyService.getInstance().showAvailable(player);
-			if (EventsConfig.ENABLE_EVENT_SERVICE)
-			{
-				EventService.getInstance().onPlayerLogin(player);
-			}
+			EventsService.getInstance().onPlayerLogin(player);
 			RelinquishCraftStatus.removeExcessCraftStatus(player, false);
 			PlayerTransferService.getInstance().onEnterWorld(player);
 			player.setPartnerId(DAOManager.getDAO(WeddingDAO.class).loadPartnerId(player));

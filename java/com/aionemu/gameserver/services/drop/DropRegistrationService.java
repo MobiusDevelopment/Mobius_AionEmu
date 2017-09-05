@@ -27,7 +27,6 @@ import java.util.Set;
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.ai2.event.AIEventType;
 import com.aionemu.gameserver.configs.main.DropConfig;
-import com.aionemu.gameserver.configs.main.EventsConfig;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.dataholders.NpcDropData;
 import com.aionemu.gameserver.model.drop.Drop;
@@ -46,8 +45,8 @@ import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.model.templates.pet.PetFunctionType;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LOOT_STATUS;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PET;
-import com.aionemu.gameserver.services.EventService;
 import com.aionemu.gameserver.services.QuestService;
+import com.aionemu.gameserver.services.events.EventsService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.stats.DropRewardEnum;
 
@@ -141,6 +140,10 @@ public class DropRegistrationService
 	
 	/**
 	 * After NPC dies, it can register arbitrary drop
+	 * @param npc
+	 * @param player
+	 * @param heighestLevel
+	 * @param groupMembers
 	 */
 	public void registerDrop(Npc npc, Player player, int heighestLevel, Collection<Player> groupMembers)
 	{
@@ -251,45 +254,44 @@ public class DropRegistrationService
 		}
 		currentDropMap.put(npcObjId, droppedItems);
 		index = QuestService.getQuestDrop(droppedItems, index, npc, groupMembers, genesis);
-		if (EventsConfig.ENABLE_EVENT_SERVICE)
+		
+		final List<EventTemplate> activeEvents = EventsService.getInstance().getActiveEvents();
+		for (EventTemplate eventTemplate : activeEvents)
 		{
-			final List<EventTemplate> activeEvents = EventService.getInstance().getActiveEvents();
-			for (EventTemplate eventTemplate : activeEvents)
+			if (eventTemplate.EventDrop() == null)
 			{
-				if (eventTemplate.EventDrop() == null)
+				continue;
+			}
+			final List<EventDrop> eventDrops = eventTemplate.EventDrop().getEventDrops();
+			for (EventDrop eventDrop : eventDrops)
+			{
+				final int diff = npc.getLevel() - eventDrop.getItemTemplate().getLevel();
+				final int minDiff = eventDrop.getMinDiff();
+				final int maxDiff = eventDrop.getMaxDiff();
+				if (minDiff != 0)
 				{
-					continue;
-				}
-				final List<EventDrop> eventDrops = eventTemplate.EventDrop().getEventDrops();
-				for (EventDrop eventDrop : eventDrops)
-				{
-					final int diff = npc.getLevel() - eventDrop.getItemTemplate().getLevel();
-					final int minDiff = eventDrop.getMinDiff();
-					final int maxDiff = eventDrop.getMaxDiff();
-					if (minDiff != 0)
-					{
-						if (diff < eventDrop.getMinDiff())
-						{
-							continue;
-						}
-					}
-					if (maxDiff != 0)
-					{
-						if (diff > eventDrop.getMaxDiff())
-						{
-							continue;
-						}
-					}
-					float percent = eventDrop.getChance();
-					percent *= dropRate;
-					if ((Rnd.get() * 100) > percent)
+					if (diff < eventDrop.getMinDiff())
 					{
 						continue;
 					}
-					droppedItems.add(regDropItem(index++, winnerObj, npcObjId, eventDrop.getItemId(), eventDrop.getCount()));
 				}
+				if (maxDiff != 0)
+				{
+					if (diff > eventDrop.getMaxDiff())
+					{
+						continue;
+					}
+				}
+				float percent = eventDrop.getChance();
+				percent *= dropRate;
+				if ((Rnd.get() * 100) > percent)
+				{
+					continue;
+				}
+				droppedItems.add(regDropItem(index++, winnerObj, npcObjId, eventDrop.getItemId(), eventDrop.getCount()));
 			}
 		}
+		
 		if (npc.getPosition().isInstanceMap())
 		{
 			npc.getPosition().getWorldMapInstance().getInstanceHandler().onDropRegistered(npc);

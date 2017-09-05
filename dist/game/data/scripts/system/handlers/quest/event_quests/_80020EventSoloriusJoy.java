@@ -30,12 +30,11 @@ import com.aionemu.gameserver.questEngine.model.QuestDialog;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
-import com.aionemu.gameserver.services.EventService;
 import com.aionemu.gameserver.services.QuestService;
+import com.aionemu.gameserver.services.events.EventsService;
 
 public class _80020EventSoloriusJoy extends QuestHandler
 {
-	
 	private static final int questId = 80020;
 	private static final int[] npcs =
 	{
@@ -82,10 +81,7 @@ public class _80020EventSoloriusJoy extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestNoneDialog(env, 799769, 182214012, 1);
-				}
+				return sendQuestNoneDialog(env, 799769, 182214012, 1);
 			}
 			return false;
 		}
@@ -162,7 +158,7 @@ public class _80020EventSoloriusJoy extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		
-		if (EventService.getInstance().checkQuestIsActive(questId))
+		if (EventsService.getInstance().checkQuestIsActive(questId))
 		{
 			return QuestService.checkLevelRequirement(questId, player.getCommonData().getLevel());
 		}
@@ -173,5 +169,4 @@ public class _80020EventSoloriusJoy extends QuestHandler
 		}
 		return false;
 	}
-	
 }

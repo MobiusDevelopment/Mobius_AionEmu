@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.services;
+package com.aionemu.gameserver.services.events;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -26,7 +26,6 @@ import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.aionemu.gameserver.configs.main.EventsConfig;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.EventType;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -37,6 +36,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_QUEST_ACTION;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
@@ -45,9 +45,9 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 /**
  * @author Rolandas
  */
-public class EventService
+public class EventsService
 {
-	Logger log = LoggerFactory.getLogger(EventService.class);
+	Logger log = LoggerFactory.getLogger(EventsService.class);
 	
 	private final int CHECK_TIME_PERIOD = 1000 * 60 * 5;
 	
@@ -64,15 +64,15 @@ public class EventService
 	private static class SingletonHolder
 	{
 		
-		protected static final EventService instance = new EventService();
+		protected static final EventsService instance = new EventsService();
 	}
 	
-	public static EventService getInstance()
+	public static EventsService getInstance()
 	{
 		return SingletonHolder.instance;
 	}
 	
-	EventService()
+	EventsService()
 	{
 		activeEvents = Collections.synchronizedList(DataManager.EVENT_DATA.getActiveEvents());
 		updateQuestMap();
@@ -315,18 +315,15 @@ public class EventService
 	
 	public EventType getEventType()
 	{
-		if (EventsConfig.ENABLE_EVENT_SERVICE)
+		for (EventTemplate et : activeEvents)
 		{
-			for (EventTemplate et : activeEvents)
+			final String theme = et.getTheme();
+			if (theme != null)
 			{
-				final String theme = et.getTheme();
-				if (theme != null)
+				final EventType type = EventType.getEventType(theme);
+				if (et.isActive() && !type.equals(EventType.NONE))
 				{
-					final EventType type = EventType.getEventType(theme);
-					if (et.isActive() && !type.equals(EventType.NONE))
-					{
-						return type;
-					}
+					return type;
 				}
 			}
 		}

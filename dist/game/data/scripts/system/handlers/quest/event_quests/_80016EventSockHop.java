@@ -27,8 +27,8 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
-import com.aionemu.gameserver.services.EventService;
 import com.aionemu.gameserver.services.QuestService;
+import com.aionemu.gameserver.services.events.EventsService;
 
 /**
  * @author Rolandas
@@ -120,7 +120,7 @@ public class _80016EventSockHop extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		
-		if (EventService.getInstance().checkQuestIsActive(questId))
+		if (EventsService.getInstance().checkQuestIsActive(questId))
 		{
 			if (!QuestService.checkLevelRequirement(questId, player.getCommonData().getLevel()))
 			{

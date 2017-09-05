@@ -30,8 +30,7 @@ import javolution.util.FastMap;
  */
 public class PlayerLimitService
 {
-	
-	private static FastMap<Integer, Long> sellLimit = new FastMap<Integer, Long>().shared();
+	static FastMap<Integer, Long> sellLimit = new FastMap<Integer, Long>().shared();
 	
 	public static boolean updateSellLimit(Player player, long reward)
 	{
@@ -53,26 +52,14 @@ public class PlayerLimitService
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_DAY_CANNOT_SELL_NPC(limit));
 			return false;
 		}
-		else
-		{
-			limit -= reward;
-			sellLimit.putEntry(accoutnId, limit);
-			return true;
-		}
+		limit -= reward;
+		sellLimit.putEntry(accoutnId, limit);
+		return true;
 	}
 	
 	public void scheduleUpdate()
 	{
-		CronService.getInstance().schedule(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				sellLimit.clear();
-			}
-			
-		}, CustomConfig.LIMITS_UPDATE, true);
+		CronService.getInstance().schedule(() -> sellLimit.clear(), CustomConfig.LIMITS_UPDATE, true);
 	}
 	
 	public static PlayerLimitService getInstance()
@@ -82,8 +69,6 @@ public class PlayerLimitService
 	
 	private static class SingletonHolder
 	{
-		
 		protected static final PlayerLimitService instance = new PlayerLimitService();
 	}
-	
 }

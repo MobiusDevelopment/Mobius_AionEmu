@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.services.thedevils;
+package com.aionemu.gameserver.services.events.unity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +37,6 @@ import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Romanz Hckd05
@@ -49,7 +48,7 @@ public class TreasureAbyss
 	private static final String ABYSS_EVENT_SCHEDULE = EventsConfig.ABYSS_EVENT_SCHEDULE;
 	private static int WORLD_ID = 400010000;
 	private static int NPC_ID = 801988;
-	private static int[] rewards =
+	static int[] rewards =
 	{
 		186000097,
 		186000235,
@@ -79,20 +78,11 @@ public class TreasureAbyss
 		166000110,
 		166000115
 	};
-	private static Npc mainN;
+	static Npc mainN;
 	
 	public static void ScheduleCron()
 	{
-		CronService.getInstance().schedule(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				startEvent();
-			}
-			
-		}, ABYSS_EVENT_SCHEDULE);
+		CronService.getInstance().schedule(() -> startEvent(), ABYSS_EVENT_SCHEDULE);
 		log.info("Treasure Abyss Event start to:" + EventsConfig.ABYSS_EVENT_SCHEDULE + " duration 30 min");
 	}
 	
@@ -100,31 +90,15 @@ public class TreasureAbyss
 	{
 		initCoordinates();
 		
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			
-			@Override
-			public void visit(Player object)
-			{
-				PacketSendUtility.sendYellowMessageOnCenter(object, "Event Balaur Treasure Chest di mulai location Core cepat ikuti untuk mengambil hadiah!");
-			}
-		});
+		World.getInstance().doOnAllPlayers(object -> PacketSendUtility.sendYellowMessageOnCenter(object, "Event Balaur Treasure Chest at start location Core quickly follow to take the prize!"));
 		
 		initPig();
 		
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				endEvent();
-			}
-		}, 30 * 60 * 1000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> endEvent(), 30 * 60 * 1000);
 		
 	}
 	
-	private static void initPig()
+	static void initPig()
 	{
 		final float[] coords = floatArray.get(Rnd.get(floatArray.size()));
 		final SpawnTemplate spawn = SpawnEngine.addNewSingleTimeSpawn(WORLD_ID, NPC_ID, coords[0], coords[1], coords[2], (byte) coords[3]);
@@ -144,15 +118,7 @@ public class TreasureAbyss
 					final Player player = (Player) creature;
 					final int id = rewards[Rnd.get(rewards.length)];
 					ItemService.addItem(player, id, 1);
-					World.getInstance().doOnAllPlayers(new Visitor<Player>()
-					{
-						
-						@Override
-						public void visit(Player object)
-						{
-							PacketSendUtility.sendYellowMessageOnCenter(object, player.getName() + "Saya menemuka Balaur Treasure Chest [item:%d]!");
-						}
-					});
+					World.getInstance().doOnAllPlayers(object -> PacketSendUtility.sendYellowMessageOnCenter(object, player.getName() + "Saya menemuka Balaur Treasure Chest [item:%d]!"));
 				}
 				mainN.getObserveController().removeObserver(this);
 				mainN.getController().onDelete();
@@ -167,15 +133,7 @@ public class TreasureAbyss
 	
 	public static void endEvent()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			
-			@Override
-			public void visit(Player object)
-			{
-				PacketSendUtility.sendYellowMessageOnCenter(object, "Event Balaur Treasure Chest telah selesai terimakasih atas partisipasinya!");
-			}
-		});
+		World.getInstance().doOnAllPlayers(object -> PacketSendUtility.sendYellowMessageOnCenter(object, "The Balaur Treasure Chest event has been completed. Thanks for the participation!"));
 		
 		mainN.getController().onDelete();
 	}

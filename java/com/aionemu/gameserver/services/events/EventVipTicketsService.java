@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.services.player;
+package com.aionemu.gameserver.services.events;
 
 import com.aionemu.gameserver.configs.main.EventsConfig;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -25,17 +25,10 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
-public class PlayerEventService
+public class EventVipTicketsService
 {
-	// private static final Logger log = LoggerFactory.getLogger(PlayerEventService.class);
-	
-	PlayerEventService()
+	EventVipTicketsService()
 	{
-		/**
-		 * Event Awake [Event JAP] http://event2.ncsoft.jp/1.0/aion/1503awake/
-		 */
-		final EventAwake awake = new EventAwake();
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> World.getInstance().doOnAllPlayers(awake), EventsConfig.SEED_TRANSFORMATION_PERIOD * 60000, EventsConfig.SEED_TRANSFORMATION_PERIOD * 60000);
 		/**
 		 * VIP Tickets.
 		 */
@@ -70,36 +63,13 @@ public class PlayerEventService
 		}
 	}
 	
-	private static final class EventAwake implements Visitor<Player>
-	{
-		public EventAwake()
-		{
-		}
-		
-		@Override
-		public void visit(Player player)
-		{
-			if (EventsConfig.ENABLE_AWAKE_EVENT)
-			{
-				if ((player.getLevel() >= 10) && (player.getLevel() <= 64))
-				{
-					HTMLService.sendGuideHtml(player, "Event_Awake_10");
-				}
-				if ((player.getLevel() >= 65) && (player.getLevel() <= 83))
-				{
-					HTMLService.sendGuideHtml(player, "Event_Awake_65");
-				}
-			}
-		}
-	}
-	
-	public static PlayerEventService getInstance()
+	public static EventVipTicketsService getInstance()
 	{
 		return SingletonHolder.instance;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final PlayerEventService instance = new PlayerEventService();
+		protected static final EventVipTicketsService instance = new EventVipTicketsService();
 	}
 }

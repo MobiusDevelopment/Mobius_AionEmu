@@ -20,18 +20,14 @@ import com.aionemu.commons.configuration.Property;
 
 public class EventsConfig
 {
-	@Property(key = "gameserver.event.enable", defaultValue = "false")
-	public static boolean EVENT_ENABLED;
 	@Property(key = "gameserver.enable.decor", defaultValue = "0")
 	public static int ENABLE_DECOR;
 	@Property(key = "gameserver.events.give.juice", defaultValue = "160009017")
 	public static int EVENT_GIVE_JUICE;
 	@Property(key = "gameserver.events.give.cake", defaultValue = "160010073")
 	public static int EVENT_GIVE_CAKE;
-	@Property(key = "gameserver.event.service.enable", defaultValue = "false")
-	public static boolean ENABLE_EVENT_SERVICE;
 	
-	// VIP Tickets.
+	// VIP Tickets
 	@Property(key = "gameserver.vip.tickets.enable", defaultValue = "false")
 	public static boolean ENABLE_VIP_TICKETS;
 	@Property(key = "gameserver.vip.tickets.time", defaultValue = "60")
@@ -43,7 +39,6 @@ public class EventsConfig
 	@Property(key = "gameserver.event.seed.transformation.time", defaultValue = "60")
 	public static int SEED_TRANSFORMATION_PERIOD;
 	
-	// EVENT
 	// Shugo Imperial Tomb 4.3
 	@Property(key = "gameserver.shugo.imperial.tomb.enable", defaultValue = "true")
 	public static boolean IMPERIAL_TOMB_ENABLE;
@@ -52,7 +47,7 @@ public class EventsConfig
 	@Property(key = "gameserver.shugo.imperial.tomb.time.to.start", defaultValue = "0 0 0,12,20,0 ? * *")
 	public static String IMPERIAL_TOMB_TIMES;
 	
-	// Crazy Daeva.
+	// Crazy Daeva
 	@Property(key = "gameserver.crazy.daeva.enable", defaultValue = "false")
 	public static boolean ENABLE_CRAZY;
 	@Property(key = "gameserver.crazy.daeva.tag", defaultValue = "<Crazy>")
@@ -68,61 +63,38 @@ public class EventsConfig
 	public static boolean ENABLE_ATREIAN_PASSPORT;
 	
 	/*
-	 * Event config babi lu
+	 * Aionunity events
 	 */
+	@Property(key = "gameserver.event.aionunity.enable", defaultValue = "false")
+	public static boolean ENABLE_AIONUNITY_EVENTS;
 	@Property(key = "gameserver.babi.mulai.elyos", defaultValue = "0 0 20 ? * SAT")
 	public static String BABI_EVENT_SCHEDULE_ELYOS;
-	
 	@Property(key = "gameserver.babi.mulai.asmo", defaultValue = "0 0 20 ? * SAT")
 	public static String BABI_EVENT_SCHEDULE_ASMO;
-	
 	@Property(key = "gameserver.babi.reward.count", defaultValue = "5")
 	public static int BABI_EVENT_COUNT_REWARD;
-	
 	@Property(key = "gameserver.mantan.mulai", defaultValue = "0 0 20 ? * SAT")
 	public static String MANTAN_EVENT_SCHEDULE;
-	
 	@Property(key = "gameserver.mantan.reward.count", defaultValue = "1")
 	public static int MANTAN_EVENT_COUNT_REWARD;
-	
 	@Property(key = "gameserver.abyss.event.time", defaultValue = "0 0 15 ? * SUN")
 	public static String ABYSS_EVENT_SCHEDULE;
 	
-	// LoginService
-	@Property(key = "gameserver.event.enable2", defaultValue = "false")
-	public static boolean EVENT_ENABLED2;
-	@Property(key = "gameserver.event.level2", defaultValue = "45")
-	public static int EVENT_REWARD_LEVEL3;
-	@Property(key = "gameserver.event.level3", defaultValue = "45")
-	public static int EVENT_REWARD_LEVEL4;
-	@Property(key = "gameserver.event.level4", defaultValue = "45")
-	public static int EVENT_REWARD_LEVEL2;
+	// Login reward service
+	@Property(key = "gameserver.event.rewarding.membership", defaultValue = "false")
+	public static boolean EVENT_MEMBER_LOGIN;
 	@Property(key = "gameserver.event.membership", defaultValue = "0")
 	public static int EVENT_REWARD_MEMBERSHIP;
-	@Property(key = "gameserver.event.period2", defaultValue = "60")
+	@Property(key = "gameserver.event.level", defaultValue = "45")
+	public static int EVENT_REWARD_LEVEL;
+	@Property(key = "gameserver.event.period", defaultValue = "60")
 	public static int EVENT_PERIOD2;
-	@Property(key = "gameserver.event.period3", defaultValue = "60")
-	public static int EVENT_PERIOD3;
-	@Property(key = "gameserver.event.period4", defaultValue = "60")
-	public static int EVENT_PERIOD4;
-	@Property(key = "gameserver.event.item.elyos2", defaultValue = "162002024")
-	public static int EVENT_ITEM_ELYOS2;
-	@Property(key = "gameserver.event.item.elyos3", defaultValue = "162002024")
-	public static int EVENT_ITEM_ELYOS3;
-	@Property(key = "gameserver.event.item.elyos4", defaultValue = "162002024")
-	public static int EVENT_ITEM_ELYOS4;
-	@Property(key = "gameserver.event.item.asmo2", defaultValue = "162002024")
-	public static int EVENT_ITEM_ASMO2;
-	@Property(key = "gameserver.event.item.asmo3", defaultValue = "162002024")
-	public static int EVENT_ITEM_ASMO3;
-	@Property(key = "gameserver.event.item.asmo4", defaultValue = "162002024")
-	public static int EVENT_ITEM_ASMO4;
-	@Property(key = "gameserver.event.count2", defaultValue = "1")
-	public static int EVENT_ITEM_COUNT2;
-	@Property(key = "gameserver.event.count3", defaultValue = "1")
-	public static int EVENT_ITEM_COUNT3;
-	@Property(key = "gameserver.event.count4", defaultValue = "1")
-	public static int EVENT_ITEM_COUNT4;
+	@Property(key = "gameserver.event.item.elyos", defaultValue = "162002024")
+	public static int EVENT_ITEM_ELYOS;
+	@Property(key = "gameserver.event.item.asmo", defaultValue = "162002024")
+	public static int EVENT_ITEM_ASMO;
+	@Property(key = "gameserver.event.count", defaultValue = "1")
+	public static int EVENT_ITEM_COUNT;
 	@Property(key = "gameserver.event.membership.rate", defaultValue = "false")
 	public static boolean EVENT_REWARD_MEMBERSHIP_RATE;
 }

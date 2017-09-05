@@ -67,10 +67,7 @@ public class _50008Solorius_Shugo_Slackers extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -84,10 +81,7 @@ public class _50008Solorius_Shugo_Slackers extends QuestHandler
 					updateQuestStatus(env);
 					return sendQuestDialog(env, 1352);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

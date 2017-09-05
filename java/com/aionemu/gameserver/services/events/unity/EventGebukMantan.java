@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.services.thedevils;
+package com.aionemu.gameserver.services.events.unity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +37,6 @@ import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Hckd05
@@ -49,7 +48,7 @@ public class EventGebukMantan
 	private static final String MANTAN_EVENT_SCHEDULE = EventsConfig.MANTAN_EVENT_SCHEDULE;
 	private static int WORLD_ID = 600010000;
 	private static int NPC_ID = 831573;
-	private static int[] rewards =
+	static int[] rewards =
 	{
 		166030005,
 		186000253,
@@ -59,20 +58,11 @@ public class EventGebukMantan
 		169620062,
 		188052637
 	};
-	private static Npc mainN;
+	static Npc mainN;
 	
 	public static void ScheduleCron()
 	{
-		CronService.getInstance().schedule(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				startEvent(); // To change body of generated methods, choose Tools | Templates.
-			}
-			
-		}, MANTAN_EVENT_SCHEDULE);
+		CronService.getInstance().schedule(() -> startEvent(), MANTAN_EVENT_SCHEDULE);
 		log.info("Gebuk Mantan Event start to:" + EventsConfig.MANTAN_EVENT_SCHEDULE + " duration 30 min");
 	}
 	
@@ -80,31 +70,15 @@ public class EventGebukMantan
 	{
 		initCoordinates();
 		
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			
-			@Override
-			public void visit(Player object)
-			{
-				PacketSendUtility.sendYellowMessageOnCenter(object, "Event, Gebuk mantan di mulai location silentera cayon cepat ikuti untuk mengambil hadiah!");
-			}
-		});
+		World.getInstance().doOnAllPlayers(object -> PacketSendUtility.sendYellowMessageOnCenter(object, "Event, Gebuk mantan is at start Silentera Cayon. Go quickly to take the prize!"));
 		
 		initPig();
 		
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				endEvent(); // To change body of generated methods, choose Tools | Templates.
-			}
-		}, 30 * 60 * 1000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> endEvent(), 30 * 60 * 1000);
 		
 	}
 	
-	private static void initPig()
+	static void initPig()
 	{
 		final float[] coords = floatArray.get(Rnd.get(floatArray.size()));
 		final SpawnTemplate spawn = SpawnEngine.addNewSingleTimeSpawn(WORLD_ID, NPC_ID, coords[0], coords[1], coords[2], (byte) coords[3]);
@@ -124,15 +98,7 @@ public class EventGebukMantan
 					final Player player = (Player) creature;
 					final int id = rewards[Rnd.get(rewards.length)];
 					ItemService.addItem(player, id, EventsConfig.MANTAN_EVENT_COUNT_REWARD);
-					World.getInstance().doOnAllPlayers(new Visitor<Player>()
-					{
-						
-						@Override
-						public void visit(Player object)
-						{
-							PacketSendUtility.sendYellowMessageOnCenter(object, player.getName() + "Mantan di gebuk dan mendapatkan [item:%d]");
-						}
-					});
+					World.getInstance().doOnAllPlayers(object -> PacketSendUtility.sendYellowMessageOnCenter(object, player.getName() + "Mantan di gebuk dan mendapatkan [item:%d]"));
 				}
 				mainN.getObserveController().removeObserver(this);
 				// mainN.setSpawn(null);
@@ -148,15 +114,7 @@ public class EventGebukMantan
 	
 	public static void endEvent()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			
-			@Override
-			public void visit(Player object)
-			{
-				PacketSendUtility.sendYellowMessageOnCenter(object, "Event Gebuk mantan telah selesai terimakasih atas partisipasinya!");
-			}
-		});
+		World.getInstance().doOnAllPlayers(object -> PacketSendUtility.sendYellowMessageOnCenter(object, "Event Gebuk mantan has been completed. Thanks for the participation!"));
 		
 		mainN.getController().onDelete();
 	}

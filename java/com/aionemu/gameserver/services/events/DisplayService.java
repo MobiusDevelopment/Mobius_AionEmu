@@ -111,20 +111,14 @@ public class DisplayService
 				{
 					return 110101255; // Elite Legion Uniform.
 				}
-				else
-				{
-					return 110101257; // Elite Legion Uniform.
-				}
+				return 110101257; // Elite Legion Uniform.
 			}
 			else
 			{
 				return item.getItemSkinTemplate().getTemplateId();
 			}
 		}
-		else
-		{
-			return item.getItemSkinTemplate().getTemplateId();
-		}
+		return item.getItemSkinTemplate().getTemplateId();
 	}
 	
 	public static String getDisplayName(Player player)

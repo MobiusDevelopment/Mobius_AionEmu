@@ -78,7 +78,7 @@ public class CustomConfig
 	public static boolean ENABLE_SHOW_DIALOG_ID;
 	@Property(key = "gameserver.reward.service.enable", defaultValue = "false")
 	public static boolean ENABLE_REWARD_SERVICE;
-	@Property(key = "gameserver.limits.enable", defaultValue = "true")
+	@Property(key = "gameserver.limits.enable", defaultValue = "false")
 	public static boolean LIMITS_ENABLED;
 	@Property(key = "gameserver.limits.update", defaultValue = "0 0 0 ? * *")
 	public static String LIMITS_UPDATE;

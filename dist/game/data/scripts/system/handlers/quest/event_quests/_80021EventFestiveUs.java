@@ -26,15 +26,14 @@ import com.aionemu.gameserver.questEngine.model.QuestDialog;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
-import com.aionemu.gameserver.services.EventService;
 import com.aionemu.gameserver.services.QuestService;
+import com.aionemu.gameserver.services.events.EventsService;
 
 /**
  * @author Rolandas
  */
 public class _80021EventFestiveUs extends QuestHandler
 {
-	
 	private static final int questId = 80021;
 	private static final int[] npcs =
 	{
@@ -81,10 +80,7 @@ public class _80021EventFestiveUs extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestNoneDialog(env, 799784, 182214014, 1);
-				}
+				return sendQuestNoneDialog(env, 799784, 182214014, 1);
 			}
 			return false;
 		}
@@ -161,7 +157,7 @@ public class _80021EventFestiveUs extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		
-		if (EventService.getInstance().checkQuestIsActive(questId))
+		if (EventsService.getInstance().checkQuestIsActive(questId))
 		{
 			return QuestService.checkLevelRequirement(questId, player.getCommonData().getLevel());
 		}
@@ -172,5 +168,4 @@ public class _80021EventFestiveUs extends QuestHandler
 		}
 		return false;
 	}
-	
 }

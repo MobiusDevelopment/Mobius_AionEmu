@@ -82,7 +82,6 @@ import com.aionemu.gameserver.services.DatabaseCleaningService;
 import com.aionemu.gameserver.services.DebugService;
 import com.aionemu.gameserver.services.DisputeLandService;
 import com.aionemu.gameserver.services.DynamicRiftService;
-import com.aionemu.gameserver.services.EventService;
 import com.aionemu.gameserver.services.ExchangeService;
 import com.aionemu.gameserver.services.FlyRingService;
 import com.aionemu.gameserver.services.GameTimeService;
@@ -115,8 +114,16 @@ import com.aionemu.gameserver.services.abysslandingservice.LandingUpdateService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.services.events.BGService;
 import com.aionemu.gameserver.services.events.CrazyDaevaService;
+import com.aionemu.gameserver.services.events.EventAwakeService;
+import com.aionemu.gameserver.services.events.EventLoginRewardService;
+import com.aionemu.gameserver.services.events.EventVipTicketsService;
+import com.aionemu.gameserver.services.events.EventsService;
 import com.aionemu.gameserver.services.events.FFAService;
 import com.aionemu.gameserver.services.events.LadderService;
+import com.aionemu.gameserver.services.events.unity.EventGebukMantan;
+import com.aionemu.gameserver.services.events.unity.ExpoEventAsmo;
+import com.aionemu.gameserver.services.events.unity.ExpoEventElyos;
+import com.aionemu.gameserver.services.events.unity.TreasureAbyss;
 import com.aionemu.gameserver.services.instance.AsyunatarService;
 import com.aionemu.gameserver.services.instance.DredgionService2;
 import com.aionemu.gameserver.services.instance.EngulfedOphidanBridgeService;
@@ -127,19 +134,11 @@ import com.aionemu.gameserver.services.instance.IronWallWarfrontService;
 import com.aionemu.gameserver.services.instance.KamarBattlefieldService;
 import com.aionemu.gameserver.services.instance.SuspiciousOphidanBridgeService;
 import com.aionemu.gameserver.services.player.LunaShopService;
-import com.aionemu.gameserver.services.player.PlayerEventService;
-import com.aionemu.gameserver.services.player.PlayerEventService2;
-import com.aionemu.gameserver.services.player.PlayerEventService3;
-import com.aionemu.gameserver.services.player.PlayerEventService4;
 import com.aionemu.gameserver.services.player.PlayerLimitService;
 import com.aionemu.gameserver.services.player.CreativityPanel.CreativityEssenceService;
 import com.aionemu.gameserver.services.reward.RewardService;
 import com.aionemu.gameserver.services.teleport.HotspotTeleportService;
 import com.aionemu.gameserver.services.territory.TerritoryService;
-import com.aionemu.gameserver.services.thedevils.EventGebukMantan;
-import com.aionemu.gameserver.services.thedevils.ExpoEventAsmo;
-import com.aionemu.gameserver.services.thedevils.ExpoEventElyos;
-import com.aionemu.gameserver.services.thedevils.TreasureAbyss;
 import com.aionemu.gameserver.services.transfers.PlayerTransferService;
 import com.aionemu.gameserver.spawnengine.ShugoImperialTombSpawnManager;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
@@ -442,48 +441,49 @@ public class GameServer
 			Util.printSection("Idgel Dome Landmark 5.1");
 			IdgelDomeLandmarkService.getInstance().initLandmark();
 		}
-		// Aionunity Event
-		Util.printSection("Elyos Babi Event");
-		ExpoEventElyos.ScheduleCron();
-		Util.printSection("Asmodians Babi Event");
-		ExpoEventAsmo.ScheduleCron();
-		Util.printSection("Treasure Abyss Event");
-		TreasureAbyss.ScheduleCron();
-		Util.printSection("Gebuk Mantan Event");
-		EventGebukMantan.ScheduleCron();
+		
+		// Aionunity Events
+		if (EventsConfig.ENABLE_AIONUNITY_EVENTS)
+		{
+			Util.printSection("Elyos Babi Event");
+			ExpoEventElyos.ScheduleCron();
+			Util.printSection("Asmodians Babi Event");
+			ExpoEventAsmo.ScheduleCron();
+			Util.printSection("Treasure Abyss Event");
+			TreasureAbyss.ScheduleCron();
+			Util.printSection("Gebuk Mantan Event");
+			EventGebukMantan.ScheduleCron();
+		}
+		
 		// Custom
-		if (CustomConfig.ENABLE_REWARD_SERVICE)
+		if (EventsConfig.ENABLE_VIP_TICKETS)
 		{
-			RewardService.getInstance();
+			EventVipTicketsService.getInstance();
 		}
-		if (EventsConfig.EVENT_ENABLED)
+		if (EventsConfig.ENABLE_AWAKE_EVENT)
 		{
-			PlayerEventService.getInstance();
+			EventAwakeService.getInstance();
 		}
-		if (EventsConfig.EVENT_ENABLED2)
+		if (EventsConfig.EVENT_MEMBER_LOGIN)
 		{
-			PlayerEventService2.getInstance();
-		}
-		if (EventsConfig.EVENT_ENABLED2)
-		{
-			PlayerEventService3.getInstance();
-		}
-		if (EventsConfig.EVENT_ENABLED2)
-		{
-			PlayerEventService4.getInstance();
-		}
-		if (EventsConfig.ENABLE_EVENT_SERVICE)
-		{
-			EventService.getInstance().start();
+			EventLoginRewardService.getInstance();
 		}
 		if (EventsConfig.ENABLE_ATREIAN_PASSPORT)
 		{
 			AtreianPassportService.getInstance().onStart();
 		}
+		if (CustomConfig.ENABLE_REWARD_SERVICE)
+		{
+			RewardService.getInstance();
+		}
 		if (WeddingsConfig.WEDDINGS_ENABLE)
 		{
 			WeddingService.getInstance();
 		}
+		
+		// Check static_data/events_config for these.
+		EventsService.getInstance().start();
+		
 		AdminService.getInstance();
 		CreativityEssenceService.getInstance();
 		PlayerTransferService.getInstance();

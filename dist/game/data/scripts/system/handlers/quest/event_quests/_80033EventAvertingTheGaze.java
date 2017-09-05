@@ -26,8 +26,8 @@ import com.aionemu.gameserver.questEngine.model.QuestDialog;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
-import com.aionemu.gameserver.services.EventService;
 import com.aionemu.gameserver.services.QuestService;
+import com.aionemu.gameserver.services.events.EventsService;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 /**
@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 public class _80033EventAvertingTheGaze extends QuestHandler
 {
-	
 	private static final int questId = 80033;
 	
 	public _80033EventAvertingTheGaze()
@@ -79,10 +78,7 @@ public class _80033EventAvertingTheGaze extends QuestHandler
 					{
 						return sendQuestDialog(env, 2375);
 					}
-					else
-					{
-						return sendQuestDialog(env, 2716);
-					}
+					return sendQuestDialog(env, 2716);
 				}
 				else if (env.getDialog() == QuestDialog.SELECT_REWARD)
 				{
@@ -109,7 +105,7 @@ public class _80033EventAvertingTheGaze extends QuestHandler
 	public HandlerResult onItemUseEvent(QuestEnv env, Item item)
 	{
 		// check if the parent quest is active (you get Charm Cards)
-		if (!EventService.getInstance().checkQuestIsActive(80032))
+		if (!EventsService.getInstance().checkQuestIsActive(80032))
 		{
 			return HandlerResult.FAILED;
 		}
@@ -120,36 +116,31 @@ public class _80033EventAvertingTheGaze extends QuestHandler
 		// to not start asmodians quests
 		if ((item.getItemId() == 188051133) && player.getCommonData().getRace().equals(Race.ASMODIANS))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
+				final Storage storage = player.getInventory();
+				QuestStatus status = QuestStatus.NONE;
 				
-				@Override
-				public void run()
+				if (storage.getItemCountByItemId(164002015) > 0)
 				{
-					final Storage storage = player.getInventory();
-					QuestStatus status = QuestStatus.NONE;
-					
-					if (storage.getItemCountByItemId(164002015) > 0)
-					{
-						status = getQuestUpdateStatus(player, questId);
-						// got a Beritra's Gaze, then start me
-						QuestService.startEventQuest(new QuestEnv(null, player, questId, 0), status);
-					}
-					if (storage.getItemCountByItemId(164002016) > 9) // Israphel's Glory
-					{
-						status = getQuestUpdateStatus(player, 80037);
-						QuestService.startEventQuest(new QuestEnv(null, player, 80037, 0), status);
-					}
-					if (storage.getItemCountByItemId(164002017) > 4) // Siel's Gift
-					{
-						status = getQuestUpdateStatus(player, 80038);
-						QuestService.startEventQuest(new QuestEnv(null, player, 80038, 0), status);
-					}
-					if (storage.getItemCountByItemId(164002018) > 0) // Aion's Grace
-					{
-						status = getQuestUpdateStatus(player, 80039);
-						QuestService.startEventQuest(new QuestEnv(null, player, 80039, 0), status);
-					}
+					status = getQuestUpdateStatus(player, questId);
+					// got a Beritra's Gaze, then start me
+					QuestService.startEventQuest(new QuestEnv(null, player, questId, 0), status);
+				}
+				if (storage.getItemCountByItemId(164002016) > 9) // Israphel's Glory
+				{
+					status = getQuestUpdateStatus(player, 80037);
+					QuestService.startEventQuest(new QuestEnv(null, player, 80037, 0), status);
+				}
+				if (storage.getItemCountByItemId(164002017) > 4) // Siel's Gift
+				{
+					status = getQuestUpdateStatus(player, 80038);
+					QuestService.startEventQuest(new QuestEnv(null, player, 80038, 0), status);
+				}
+				if (storage.getItemCountByItemId(164002018) > 0) // Aion's Grace
+				{
+					status = getQuestUpdateStatus(player, 80039);
+					QuestService.startEventQuest(new QuestEnv(null, player, 80039, 0), status);
 				}
 			}, 10000);
 			return HandlerResult.SUCCESS;

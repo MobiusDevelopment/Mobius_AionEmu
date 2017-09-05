@@ -51,7 +51,7 @@ import com.aionemu.gameserver.dataholders.loadingutils.XmlValidationHandler;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.ingameshop.InGameShopEn;
 import com.aionemu.gameserver.questEngine.QuestEngine;
-import com.aionemu.gameserver.services.EventService;
+import com.aionemu.gameserver.services.events.EventsService;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
@@ -211,7 +211,7 @@ public class Reload extends AdminCommand
 			}
 			if (data != null)
 			{
-				EventService.getInstance().stop();
+				EventsService.getInstance().stop();
 				String text = data.getActiveText();
 				if ((text == null) || (text.trim().length() == 0))
 				{
@@ -219,7 +219,7 @@ public class Reload extends AdminCommand
 				}
 				DataManager.EVENT_DATA.setAllEvents(data.getAllEvents(), data.getActiveText());
 				PacketSendUtility.sendMessage(admin, "Active events: " + text);
-				EventService.getInstance().start();
+				EventsService.getInstance().start();
 			}
 		}
 		else

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.services.thedevils;
+package com.aionemu.gameserver.services.events.unity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +37,6 @@ import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Hckd05
@@ -49,7 +48,7 @@ public class ExpoEventAsmo
 	private static final String BABI_EVENT_SCHEDULE_ASMO = EventsConfig.BABI_EVENT_SCHEDULE_ASMO;
 	private static int WORLD_ID = 120010000;
 	private static int NPC_ID = 219158;
-	private static int[] rewards =
+	static int[] rewards =
 	{
 		164002096,
 		164002097,
@@ -168,20 +167,11 @@ public class ExpoEventAsmo
 		188052438,
 		188100099
 	};
-	private static Npc mainN;
+	static Npc mainN;
 	
 	public static void ScheduleCron()
 	{
-		CronService.getInstance().schedule(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				startEvent(); // To change body of generated methods, choose Tools | Templates.
-			}
-			
-		}, BABI_EVENT_SCHEDULE_ASMO);
+		CronService.getInstance().schedule(() -> startEvent(), BABI_EVENT_SCHEDULE_ASMO);
 		log.info("Pig Event start to:" + EventsConfig.BABI_EVENT_SCHEDULE_ASMO + " duration 30 min");
 	}
 	
@@ -189,31 +179,15 @@ public class ExpoEventAsmo
 	{
 		initCoordinates();
 		
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			
-			@Override
-			public void visit(Player object)
-			{
-				PacketSendUtility.sendYellowMessageOnCenter(object, "Event, mencari babi hutan di mulai location pandaemonium cepat ikuti untuk mengambil hadiah!");
-			}
-		});
+		World.getInstance().doOnAllPlayers(object -> PacketSendUtility.sendYellowMessageOnCenter(object, "Event, look for wild boar in the start location Pandaemonium quickly follow to take the prize!"));
 		
 		initPig();
 		
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				endEvent(); // To change body of generated methods, choose Tools | Templates.
-			}
-		}, 30 * 60 * 1000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> endEvent(), 30 * 60 * 1000);
 		
 	}
 	
-	private static void initPig()
+	static void initPig()
 	{
 		final float[] coords = floatArray.get(Rnd.get(floatArray.size()));
 		final SpawnTemplate spawn = SpawnEngine.addNewSingleTimeSpawn(WORLD_ID, NPC_ID, coords[0], coords[1], coords[2], (byte) coords[3]);
@@ -233,15 +207,7 @@ public class ExpoEventAsmo
 					final Player player = (Player) creature;
 					final int id = rewards[Rnd.get(rewards.length)];
 					ItemService.addItem(player, id, EventsConfig.BABI_EVENT_COUNT_REWARD);
-					World.getInstance().doOnAllPlayers(new Visitor<Player>()
-					{
-						
-						@Override
-						public void visit(Player object)
-						{
-							PacketSendUtility.sendYellowMessageOnCenter(object, "Menemukan babi hutan dan mendapatkan [item:%d]");
-						}
-					});
+					World.getInstance().doOnAllPlayers(object -> PacketSendUtility.sendYellowMessageOnCenter(object, "Menemukan babi hutan dan mendapatkan [item:%d]"));
 				}
 				mainN.getObserveController().removeObserver(this);
 				// mainN.setSpawn(null);
@@ -257,15 +223,7 @@ public class ExpoEventAsmo
 	
 	public static void endEvent()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			
-			@Override
-			public void visit(Player object)
-			{
-				PacketSendUtility.sendYellowMessageOnCenter(object, "Event mencari babi hutan telah selesai terimakasih atas partisipasinya!");
-			}
-		});
+		World.getInstance().doOnAllPlayers(object -> PacketSendUtility.sendYellowMessageOnCenter(object, "The search for a wild boar has been completed. Thanks for the participation!"));
 		
 		mainN.getController().onDelete();
 	}

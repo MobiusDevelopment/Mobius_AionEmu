@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.services.player;
+package com.aionemu.gameserver.services.events;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,27 +30,21 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 /**
  * @author Source
  */
-public class PlayerEventService3
+public class EventLoginRewardService
 {
+	static final Logger log = LoggerFactory.getLogger(EventVipTicketsService.class);
 	
-	private static final Logger log = LoggerFactory.getLogger(PlayerEventService.class);
-	
-	private PlayerEventService3()
+	EventLoginRewardService()
 	{
-		
 		final EventCollector visitor = new EventCollector();
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				World.getInstance().doOnAllPlayers(visitor);
-			}
-		}, EventsConfig.EVENT_PERIOD3 * 60000, EventsConfig.EVENT_PERIOD3 * 60000);
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> World.getInstance().doOnAllPlayers(visitor), EventsConfig.EVENT_PERIOD2 * 60000, EventsConfig.EVENT_PERIOD2 * 60000);
 	}
 	
 	private static final class EventCollector implements Visitor<Player>
 	{
+		public EventCollector()
+		{
+		}
 		
 		@Override
 		public void visit(Player player)
@@ -58,7 +52,7 @@ public class PlayerEventService3
 			final int membership = player.getClientConnection().getAccount().getMembership();
 			final int rate = EventsConfig.EVENT_REWARD_MEMBERSHIP_RATE ? membership + 1 : 1;
 			final int level = player.getLevel();
-			if ((membership >= EventsConfig.EVENT_REWARD_MEMBERSHIP) && (level <= EventsConfig.EVENT_REWARD_LEVEL3))
+			if ((membership >= EventsConfig.EVENT_REWARD_MEMBERSHIP) && (level <= EventsConfig.EVENT_REWARD_LEVEL))
 			{
 				try
 				{
@@ -68,7 +62,7 @@ public class PlayerEventService3
 					}
 					else
 					{
-						ItemService.addItem(player, (player.getRace() == Race.ELYOS ? EventsConfig.EVENT_ITEM_ELYOS3 : EventsConfig.EVENT_ITEM_ASMO3), EventsConfig.EVENT_ITEM_COUNT3 * rate);
+						ItemService.addItem(player, (player.getRace() == Race.ELYOS ? EventsConfig.EVENT_ITEM_ELYOS : EventsConfig.EVENT_ITEM_ASMO), EventsConfig.EVENT_ITEM_COUNT * rate);
 					}
 				}
 				catch (Exception ex)
@@ -79,7 +73,7 @@ public class PlayerEventService3
 		}
 	}
 	
-	public static PlayerEventService3 getInstance()
+	public static EventLoginRewardService getInstance()
 	{
 		return SingletonHolder.instance;
 	}
@@ -87,6 +81,6 @@ public class PlayerEventService3
 	private static class SingletonHolder
 	{
 		
-		protected static final PlayerEventService3 instance = new PlayerEventService3();
+		protected static final EventLoginRewardService instance = new EventLoginRewardService();
 	}
 }

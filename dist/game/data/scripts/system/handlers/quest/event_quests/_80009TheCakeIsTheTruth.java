@@ -21,8 +21,8 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
-import com.aionemu.gameserver.services.EventService;
 import com.aionemu.gameserver.services.QuestService;
+import com.aionemu.gameserver.services.events.EventsService;
 
 public class _80009TheCakeIsTheTruth extends QuestHandler
 {
@@ -88,7 +88,7 @@ public class _80009TheCakeIsTheTruth extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (!EventService.getInstance().checkQuestIsActive(questId) && (qs != null))
+		if (!EventsService.getInstance().checkQuestIsActive(questId) && (qs != null))
 		{
 			QuestService.abandonQuest(player, questId);
 		}
