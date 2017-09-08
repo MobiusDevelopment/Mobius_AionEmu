@@ -24,6 +24,29 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.templates.rewards.BonusType;
 
+/**
+ * @author Rolandas
+ *
+ */
+
+/**
+ * <p/>
+ * Java class for ItemGroup complex type.
+ * <p/>
+ * The following schema fragment specifies the expected content contained within this class.
+ * <p/>
+ * 
+ * <pre>
+ * &lt;complexType name="BonusItemGroup">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;attribute name="bonusType" use="required" type="{}BonusType" />
+ *       &lt;attribute name="chance" type="{http://www.w3.org/2001/XMLSchema}float" default="0" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BonusItemGroup")
 @XmlSeeAlso(

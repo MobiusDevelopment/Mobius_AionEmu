@@ -34,6 +34,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.geo.GeoService;
 
+/**
+ * @author ATracer
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BackDashEffect")
 public class BackDashEffect extends DamageEffect

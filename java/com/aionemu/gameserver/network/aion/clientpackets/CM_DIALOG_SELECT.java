@@ -32,6 +32,9 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.ClassChangeService;
 import com.aionemu.gameserver.services.QuestService;
 
+/**
+ * @author KKnD , orz, avol
+ */
 public class CM_DIALOG_SELECT extends AionClientPacket
 {
 	private int targetObjectId;

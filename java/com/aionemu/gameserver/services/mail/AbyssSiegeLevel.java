@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.services.mail;
 
+/**
+ * @author Rolandas
+ */
 public enum AbyssSiegeLevel
 {
 	NONE(0),

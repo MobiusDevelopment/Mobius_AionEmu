@@ -24,6 +24,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 import javolution.util.FastList;
 
+/**
+ * @author xTz
+ */
 public class LookingForParty extends AbstractLockManager
 {
 	private final List<SearchInstance> searchInstances = new ArrayList<>();

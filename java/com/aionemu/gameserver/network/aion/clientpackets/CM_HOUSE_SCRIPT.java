@@ -25,6 +25,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_HOUSE_SCRIPTS;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Rolandas
+ */
 public class CM_HOUSE_SCRIPT extends AionClientPacket
 {
 	int address;

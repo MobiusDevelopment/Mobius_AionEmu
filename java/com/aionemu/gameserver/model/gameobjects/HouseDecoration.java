@@ -19,6 +19,9 @@ package com.aionemu.gameserver.model.gameobjects;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.templates.housing.HousePart;
 
+/**
+ * @author Rolandas
+ */
 public class HouseDecoration extends AionObject
 {
 	private final int templateId;

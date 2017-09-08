@@ -33,11 +33,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Luzien
+ */
 @AIName("mage_preceptor")
 public class MagePreceptorAI2 extends AggressiveNpcAI2
 {

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_STATUPDATE_HP extends AionServerPacket
 {
-	
 	private final int currentHp;
 	private final int maxHp;
 	
@@ -48,5 +47,4 @@ public class SM_STATUPDATE_HP extends AionServerPacket
 		writeD(currentHp);
 		writeD(maxHp);
 	}
-	
 }

@@ -25,11 +25,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("toxic_caverns_teleport_device")
 public class Toxic_Caverns_Teleport_DeviceAI2 extends ActionItemNpcAI2
 {

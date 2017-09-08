@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.team.legion;
  */
 public enum LegionPermissionsMask
 {
-	
 	EDIT(0x200),
 	INVITE(0x8),
 	KICK(0x10),

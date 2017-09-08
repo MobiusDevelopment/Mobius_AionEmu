@@ -27,7 +27,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Balthazar
  */
-
 public class _1423ExpertAdvice extends QuestHandler
 {
 	

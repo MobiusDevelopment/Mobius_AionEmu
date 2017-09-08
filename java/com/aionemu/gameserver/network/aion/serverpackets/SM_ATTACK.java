@@ -24,6 +24,10 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author -Nemesiss-, Sweetkr
+ * @author GiGatR00n v4.7.5.x
+ */
 public class SM_ATTACK extends AionServerPacket
 {
 	private final int attackno;

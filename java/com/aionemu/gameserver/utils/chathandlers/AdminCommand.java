@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public abstract class AdminCommand extends ChatCommand
 {
-	
 	static final Logger log = LoggerFactory.getLogger("ADMINAUDIT_LOG");
 	
 	public AdminCommand(String alias)

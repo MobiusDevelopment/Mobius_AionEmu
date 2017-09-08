@@ -47,6 +47,11 @@ import com.aionemu.gameserver.spawnengine.ShugoImperialTombSpawnManager;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldMapType;
 
+/**
+ * Client is saying that level[map] is ready.
+ * @author -Nemesiss-
+ * @author Kwazar
+ */
 public class CM_LEVEL_READY extends AionClientPacket
 {
 	public CM_LEVEL_READY(int opcode, State state, State... restStates)

@@ -36,6 +36,10 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.Util;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * Packet that reads Whisper chat messages.<br>
+ * @author SoulKeeper
+ */
 public class CM_CHAT_MESSAGE_WHISPER extends AionClientPacket
 {
 	private static final Logger log = LoggerFactory.getLogger("CHAT_LOG");

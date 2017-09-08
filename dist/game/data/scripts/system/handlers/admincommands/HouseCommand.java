@@ -32,6 +32,9 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 
+/**
+ * @author Rolandas
+ */
 public class HouseCommand extends AdminCommand
 {
 	public HouseCommand()

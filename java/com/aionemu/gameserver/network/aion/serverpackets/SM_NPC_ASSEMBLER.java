@@ -21,6 +21,9 @@ import com.aionemu.gameserver.model.assemblednpc.AssembledNpcPart;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author xTz
+ */
 public class SM_NPC_ASSEMBLER extends AionServerPacket
 {
 	private final AssembledNpc assembledNpc;

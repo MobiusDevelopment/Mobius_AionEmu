@@ -24,6 +24,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_STATUPDATE_EXP;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author kecimis, source
+ */
 public class ProcVPHealInstantEffect extends EffectTemplate
 {
 	@XmlAttribute(required = true)

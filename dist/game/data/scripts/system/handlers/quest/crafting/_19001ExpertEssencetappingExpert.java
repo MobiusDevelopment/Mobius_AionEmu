@@ -24,6 +24,9 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
+/**
+ * @author Gigi
+ */
 public class _19001ExpertEssencetappingExpert extends QuestHandler
 {
 	private static final int questId = 19001;

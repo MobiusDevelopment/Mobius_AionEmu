@@ -20,6 +20,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author Rolandas
+ */
 public class SM_PACKAGE_INFO_NOTIFY extends AionServerPacket
 {
 	private final int count;

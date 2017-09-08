@@ -19,6 +19,10 @@ package com.aionemu.gameserver.model.items;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This enum is defining inventory slots, to which items can be equipped.
+ * @author Luno, xTz
+ */
 public enum ItemSlot
 {
 	MAIN_HAND(1L),

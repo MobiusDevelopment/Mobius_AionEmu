@@ -30,6 +30,10 @@ import com.aionemu.gameserver.network.NetworkController;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author -Nemesiss- CC fix
+ * @modified by Novo, cura
+ */
 public class SM_VERSION_CHECK extends AionServerPacket
 {
 	private static final Logger log = LoggerFactory.getLogger(SM_VERSION_CHECK.class);

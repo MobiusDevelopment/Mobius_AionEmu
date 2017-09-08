@@ -32,11 +32,9 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("recordkeeper")
 public class RecordkeeperAI2 extends NpcAI2
 {

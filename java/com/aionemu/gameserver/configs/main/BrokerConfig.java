@@ -18,6 +18,9 @@ package com.aionemu.gameserver.configs.main;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author GiGatR00n v4.7.5.x
+ */
 public class BrokerConfig
 {
 	@Property(key = "gameserver.broker.save.manager.interval", defaultValue = "6")

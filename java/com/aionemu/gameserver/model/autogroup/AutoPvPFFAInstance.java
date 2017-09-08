@@ -22,6 +22,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_AUTO_GROUP;
 import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author xTz
+ */
 public class AutoPvPFFAInstance extends AutoInstance
 {
 	@Override

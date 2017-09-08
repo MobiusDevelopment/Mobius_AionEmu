@@ -22,6 +22,9 @@ import java.util.Map.Entry;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author MrPoke, Rolandas
+ */
 public class SM_NEARBY_QUESTS extends AionServerPacket
 {
 	private final HashMap<Integer, Integer> nearbyQuestList;

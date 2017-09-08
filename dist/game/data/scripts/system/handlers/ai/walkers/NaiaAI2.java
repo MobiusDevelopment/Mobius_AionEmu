@@ -29,11 +29,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rolandas
+ */
 @AIName("naia")
 public class NaiaAI2 extends GeneralNpcAI2
 {

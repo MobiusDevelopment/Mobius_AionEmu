@@ -43,6 +43,9 @@ import com.aionemu.gameserver.model.gameobjects.player.AbyssRank;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 
+/**
+ * @author ATracer, Divinity, nrg
+ */
 public class MySQL5AbyssRankDAO extends AbyssRankDAO
 {
 	private static final Logger log = LoggerFactory.getLogger(MySQL5AbyssRankDAO.class);

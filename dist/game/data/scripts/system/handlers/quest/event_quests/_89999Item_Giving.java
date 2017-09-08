@@ -24,10 +24,9 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
+ * @author Rinzler (Encom)
+ */
 public class _89999Item_Giving extends QuestHandler
 {
 	private static final int questId = 89999;

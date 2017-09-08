@@ -40,6 +40,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_USE_OBJECT;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Rolandas
+ */
 public class UseableItemObject extends HouseObject<HousingUseableItem>
 {
 	private volatile boolean mustGiveLastReward = false;

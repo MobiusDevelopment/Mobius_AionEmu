@@ -106,6 +106,11 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 
+/**
+ * This class is designed to do all the work related with loading/storing players.<br>
+ * Same with storing, {@link #storePlayer(com.aionemu.gameserver.model.gameobjects.player.Player)} stores all player data like appearance, items, etc...
+ * @author SoulKeeper, Saelya, Cura
+ */
 public class PlayerService
 {
 	private static final CacheMap<Integer, Player> playerCache = CacheMapFactory.createSoftCacheMap("Player", "player");

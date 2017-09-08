@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_toll extends PlayerCommand
 {
-	
 	public cmd_toll()
 	{
 		super("toll");

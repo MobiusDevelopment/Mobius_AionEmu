@@ -34,11 +34,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("omega")
 public class OmegaAI2 extends AggressiveNpcAI2
 {

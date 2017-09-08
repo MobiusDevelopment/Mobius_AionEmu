@@ -42,6 +42,11 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author ATracer
+ * @rework Blackfire
+ * @rework Kill3r
+ */
 public class ItemSocketService
 {
 	private static final Logger log = LoggerFactory.getLogger(ItemSocketService.class);

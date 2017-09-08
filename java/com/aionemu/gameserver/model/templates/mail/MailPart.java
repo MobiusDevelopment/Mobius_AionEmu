@@ -24,6 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import org.apache.commons.lang.StringUtils;
 
+/**
+ * @author Rolandas
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MailPart")
 @XmlSeeAlso(

@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlType;
 import com.aionemu.gameserver.skillengine.model.Effect;
 
 /**
- * @author Rinzler (Encom)
+ * @author antness
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "XPBoostEffect")

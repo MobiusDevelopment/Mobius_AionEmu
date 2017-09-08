@@ -21,11 +21,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("frosty_petrahulk")
 public class Frosty_PetrahulkAI2 extends AggressiveNpcAI2
 {

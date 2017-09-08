@@ -21,11 +21,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("masked_manduri_monkey_king")
 public class Masked_Manduri_Monkey_KingAI2 extends AggressiveNpcAI2
 {

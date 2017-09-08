@@ -19,6 +19,9 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author Rhys2002
+ */
 public class SM_GROUP_LOOT extends AionServerPacket
 {
 	private final int groupId;

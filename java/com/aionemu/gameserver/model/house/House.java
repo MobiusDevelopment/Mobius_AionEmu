@@ -68,6 +68,9 @@ import com.aionemu.gameserver.world.knownlist.PlayerAwareKnownList;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneService;
 
+/**
+ * @author Rolandas
+ */
 public class House extends VisibleObject
 {
 	private static final Logger log = LoggerFactory.getLogger(House.class);

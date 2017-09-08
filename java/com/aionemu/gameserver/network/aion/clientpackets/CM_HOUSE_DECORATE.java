@@ -27,6 +27,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_HOUSE_EDIT;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 
+/**
+ * @author Rolandas
+ */
 public class CM_HOUSE_DECORATE extends AionClientPacket
 {
 	int objectId;

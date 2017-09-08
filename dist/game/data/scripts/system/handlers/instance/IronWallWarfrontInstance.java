@@ -68,11 +68,9 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 
 import javolution.util.FastList;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(301220000)
 public class IronWallWarfrontInstance extends GeneralInstanceHandler
 {

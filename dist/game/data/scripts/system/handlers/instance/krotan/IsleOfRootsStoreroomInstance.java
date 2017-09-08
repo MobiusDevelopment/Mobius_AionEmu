@@ -48,11 +48,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(300140000)
 public class IsleOfRootsStoreroomInstance extends GeneralInstanceHandler
 {

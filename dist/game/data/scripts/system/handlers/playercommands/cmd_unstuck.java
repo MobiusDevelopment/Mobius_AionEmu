@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_unstuck extends PlayerCommand
 {
-	
 	public cmd_unstuck()
 	{
 		super("unstuck");

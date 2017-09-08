@@ -24,6 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.questEngine.QuestEngine;
 
+/**
+ * @author MrPoke, Hilgert
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "QuestScriptData")
 @XmlSeeAlso(

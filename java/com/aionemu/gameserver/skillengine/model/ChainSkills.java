@@ -24,6 +24,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 import javolution.util.FastMap;
 
+/**
+ * @author kecimis
+ */
 public class ChainSkills
 {
 	private final Map<String, ChainSkill> multiSkills = new FastMap<>();

@@ -26,11 +26,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("shulack_thermo_bomb")
 public class ShulackThermoBombAI2 extends AggressiveNpcAI2
 {

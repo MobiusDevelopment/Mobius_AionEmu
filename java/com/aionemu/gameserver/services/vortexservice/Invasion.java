@@ -33,6 +33,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Source
+ */
 public class Invasion extends DimensionalVortex<VortexLocation>
 {
 	PlayerAlliance invAlliance, defAlliance;

@@ -21,11 +21,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("valley_torr_crumbler")
 public class Valley_Torr_CrumblerAI2 extends AggressiveNpcAI2
 {

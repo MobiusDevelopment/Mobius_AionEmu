@@ -24,11 +24,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author wasacacax
+ */
 @AIName("crater")
 public class CraterAI2 extends AggressiveNpcAI2
 {

@@ -22,6 +22,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author kecimis
+ */
 public class DelayedFpAtkInstantEffect extends EffectTemplate
 {
 	

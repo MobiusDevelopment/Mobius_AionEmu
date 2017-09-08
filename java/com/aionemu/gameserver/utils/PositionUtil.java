@@ -18,6 +18,9 @@ package com.aionemu.gameserver.utils;
 
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 
+/**
+ * @author ATracer
+ */
 public class PositionUtil
 {
 	private static final float MAX_ANGLE_DIFF = 90f;

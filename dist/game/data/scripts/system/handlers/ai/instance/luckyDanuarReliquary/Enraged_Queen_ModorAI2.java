@@ -37,11 +37,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("enraged_queen_modor")
 public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 {

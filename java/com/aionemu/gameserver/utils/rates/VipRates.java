@@ -19,6 +19,9 @@ package com.aionemu.gameserver.utils.rates;
 import com.aionemu.gameserver.configs.main.CraftConfig;
 import com.aionemu.gameserver.configs.main.RateConfig;
 
+/**
+ * @author ATracer
+ */
 public class VipRates extends Rates
 {
 	

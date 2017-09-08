@@ -33,6 +33,10 @@ import com.aionemu.gameserver.model.templates.stats.PlayerStatsTemplate;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * Created on: 31.07.2009 14:20:03
+ * @author Aquanox
+ */
 @XmlRootElement(name = "player_stats_templates")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PlayerStatsData

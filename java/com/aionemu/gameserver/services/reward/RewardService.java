@@ -29,6 +29,9 @@ import com.aionemu.gameserver.services.mail.SystemMailService;
 
 import javolution.util.FastList;
 
+/**
+ * @author KID
+ */
 public class RewardService
 {
 	private final RewardServiceDAO dao;

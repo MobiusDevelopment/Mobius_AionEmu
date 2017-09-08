@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.templates.spawns;
 
+/**
+ * @author Rolandas
+ */
 public final class SpawnSearchResult
 {
 	private final SpawnSpotTemplate spot;

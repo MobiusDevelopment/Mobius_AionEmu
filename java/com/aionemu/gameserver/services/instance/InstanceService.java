@@ -52,6 +52,10 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
 
 import javolution.util.FastList;
 
+/**
+ * @author ATracer
+ * @modified Kill3r (ffa)
+ */
 public class InstanceService
 {
 	private static final Logger log = LoggerFactory.getLogger(InstanceService.class);

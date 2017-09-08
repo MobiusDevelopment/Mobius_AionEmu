@@ -21,6 +21,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * @author ATracer
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ComboProduct")
 public class ComboProduct

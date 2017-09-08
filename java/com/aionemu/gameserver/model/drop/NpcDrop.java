@@ -31,6 +31,9 @@ import javax.xml.bind.annotation.XmlType;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
+/**
+ * @author MrPoke
+ */
 @XmlRootElement(name = "npc_drop")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "npcDrop", propOrder =

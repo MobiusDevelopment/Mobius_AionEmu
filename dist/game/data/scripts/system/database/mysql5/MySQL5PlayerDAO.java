@@ -58,6 +58,10 @@ import com.google.common.collect.Maps;
 
 import javolution.util.FastMap;
 
+/**
+ * @author SoulKeeper, Saelya
+ * @author cura
+ */
 public class MySQL5PlayerDAO extends PlayerDAO
 {
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerDAO.class);

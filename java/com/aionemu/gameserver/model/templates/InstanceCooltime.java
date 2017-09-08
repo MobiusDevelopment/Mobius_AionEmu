@@ -26,6 +26,9 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.instance.InstanceCoolTimeType;
 import com.aionemu.gameserver.model.instance.InstanceType;
 
+/**
+ * @author VladimirZ
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "InstanceCooltime")
 public class InstanceCooltime

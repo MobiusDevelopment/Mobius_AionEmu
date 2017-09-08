@@ -56,10 +56,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import javolution.util.FastMap;
 
-/****
- * Author Rinzler (Encom) Dark Poeta 4.9 http://aion.power.plaync.com/wiki/%EC%95%94%ED%9D%91%EC%9D%98+%ED%8F%AC%EC%97%90%ED%83%80+-+%EB%A7%88%EC%8A%A4%ED%84%B0+%EB%B3%B4%EC%8A%A4
- ****/
-
+/**
+ * @author Rinzler (Encom) Dark Poeta 4.9 http://aion.power.plaync.com/wiki/%EC%95%94%ED%9D%91%EC%9D%98+%ED%8F%AC%EC%97%90%ED%83%80+-+%EB%A7%88%EC%8A%A4%ED%84%B0+%EB%B3%B4%EC%8A%A4
+ */
 @InstanceID(300040000)
 public class DarkPoetaInstance extends GeneralInstanceHandler
 {

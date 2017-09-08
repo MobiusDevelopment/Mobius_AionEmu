@@ -28,11 +28,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("assult_pod_1")
 public class AssultPod1AI2 extends AggressiveNpcAI2
 {

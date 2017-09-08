@@ -25,6 +25,10 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob;
 import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
 import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
 
+/**
+ * @author ATracer
+ * @author -Nemesiss-
+ */
 public class SM_INVENTORY_UPDATE_ITEM extends AionServerPacket
 {
 	private final Player player;

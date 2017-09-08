@@ -30,6 +30,10 @@ import com.google.common.base.Predicate;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
+/**
+ * @author ATracer
+ * @reworked Rolandas, parallelized by using Fork/Join framework
+ */
 public class MoveTaskManager extends AbstractPeriodicTaskManager
 {
 	final FastMap<Integer, Creature> movingCreatures = new FastMap<Integer, Creature>().shared();

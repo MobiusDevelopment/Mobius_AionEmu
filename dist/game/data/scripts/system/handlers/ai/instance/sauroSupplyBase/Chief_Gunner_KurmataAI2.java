@@ -23,11 +23,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("chief_gunner_kurmata")
 public class Chief_Gunner_KurmataAI2 extends AggressiveNpcAI2
 {

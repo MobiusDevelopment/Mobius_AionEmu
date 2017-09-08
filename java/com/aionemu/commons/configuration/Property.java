@@ -65,7 +65,8 @@ public @interface Property
 	 * If your value is one of this types - just leave this field empty
 	 * @return returns class that will be used to transform value
 	 */
-	@SuppressWarnings("rawtypes") Class<? extends PropertyTransformer> propertyTransformer() default PropertyTransformer.class;
+	@SuppressWarnings("rawtypes")
+	Class<? extends PropertyTransformer> propertyTransformer() default PropertyTransformer.class;
 	
 	/**
 	 * Represents default value that will be parsed if key not found. If this key equals(default) {@link #DEFAULT_VALUE} init value of the object won't be overriden

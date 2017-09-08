@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1483HarumonerksRequest extends QuestHandler
 {
-	
 	private static final int questId = 1483;
 	
 	public _1483HarumonerksRequest()

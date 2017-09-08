@@ -23,11 +23,9 @@ import com.aionemu.gameserver.model.instance.instancereward.InstanceReward;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("Unsealing_Device_Elyos")
 public class Unsealing_Device_ElyosAI2 extends ActionItemNpcAI2
 {

@@ -26,6 +26,9 @@ import javax.xml.bind.annotation.XmlType;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.handlers.template.RelicRewards;
 
+/**
+ * @author Bobobear
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RelicRewardsData")
 

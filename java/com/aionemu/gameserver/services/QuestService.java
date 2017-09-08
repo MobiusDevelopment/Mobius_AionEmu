@@ -96,6 +96,10 @@ import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
+/**
+ * @author Mr. Poke
+ * @modified vlog, bobobear, xTz, Rolandas
+ */
 public final class QuestService
 {
 	static QuestsData questsData = DataManager.QUEST_DATA;

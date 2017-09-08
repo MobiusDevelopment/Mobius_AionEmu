@@ -34,11 +34,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("wrathclaw2")
 public class IDTiamatT1RageKeyNamed65AlAI2 extends AggressiveNpcAI2
 {

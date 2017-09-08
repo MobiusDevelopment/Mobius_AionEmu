@@ -40,6 +40,9 @@ import com.aionemu.gameserver.world.zone.handler.ZoneHandler;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Source
+ */
 public class VortexLocation implements ZoneHandler
 {
 	protected boolean isActive;

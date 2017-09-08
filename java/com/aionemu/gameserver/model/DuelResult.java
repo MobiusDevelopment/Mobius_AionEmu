@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model;
 
+/**
+ * @author xavier
+ */
 public enum DuelResult
 {
 	DUEL_YOU_WIN(1300098, (byte) 2),

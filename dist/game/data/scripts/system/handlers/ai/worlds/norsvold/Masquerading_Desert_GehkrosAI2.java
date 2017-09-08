@@ -21,11 +21,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("masquerading_desert_gehkros")
 public class Masquerading_Desert_GehkrosAI2 extends AggressiveNpcAI2
 {

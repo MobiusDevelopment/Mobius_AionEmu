@@ -25,6 +25,9 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.skillengine.model.SpellStatus;
 
+/**
+ * @author ATracer
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SpinEffect")
 public class SpinEffect extends EffectTemplate

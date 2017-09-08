@@ -23,11 +23,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("SWFlameTank_Dark")
 public class SWFlameTank_DarkAI2 extends ActionItemNpcAI2
 {

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30222AGuardsCurse extends QuestHandler
 {
-	
 	private static final int questId = 30222;
 	
 	public _30222AGuardsCurse()

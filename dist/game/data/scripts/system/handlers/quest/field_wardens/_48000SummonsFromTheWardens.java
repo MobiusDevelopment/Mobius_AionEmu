@@ -29,7 +29,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _48000SummonsFromTheWardens extends QuestHandler
 {
-	
 	public static final int questId = 48000;
 	
 	public _48000SummonsFromTheWardens()

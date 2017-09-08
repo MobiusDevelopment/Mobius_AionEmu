@@ -33,6 +33,9 @@ import com.aionemu.gameserver.services.SiegeService;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Sarynth
+ */
 public class SM_SIEGE_LOCATION_INFO extends AionServerPacket
 {
 	private final int infoType;

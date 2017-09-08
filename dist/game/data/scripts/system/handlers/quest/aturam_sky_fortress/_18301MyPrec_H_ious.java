@@ -28,11 +28,9 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.services.item.ItemService;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Cheatkiller
+ */
 public class _18301MyPrec_H_ious extends QuestHandler
 {
 	private static final int questId = 18301;

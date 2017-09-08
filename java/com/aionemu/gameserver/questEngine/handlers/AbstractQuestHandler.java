@@ -28,6 +28,10 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
+/**
+ * The methods will be overridden in concrete quest handlers
+ * @author vlog
+ */
 public abstract class AbstractQuestHandler
 {
 	public abstract void register();

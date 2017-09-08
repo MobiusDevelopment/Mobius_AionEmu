@@ -23,11 +23,9 @@ import com.aionemu.gameserver.model.instance.instancereward.InstanceReward;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("reian_prisoner")
 public class Reian_PrisonerAI2 extends ActionItemNpcAI2
 {

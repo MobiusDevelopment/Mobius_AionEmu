@@ -21,6 +21,9 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.ProtectorConquerorService;
 
+/**
+ * @author Lyahim
+ */
 public class CM_SHOW_MAP extends AionClientPacket
 {
 	public CM_SHOW_MAP(int opcode, State state, State... restStates)

@@ -26,11 +26,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("thunderbolt_whirlpool")
 public class Thunderbolt_WhirlpoolAI2 extends AggressiveNpcAI2
 {

@@ -26,11 +26,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("exploding_pearl")
 public class Exploding_PearlAI2 extends AggressiveNpcAI2
 {

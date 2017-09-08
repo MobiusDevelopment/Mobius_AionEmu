@@ -18,6 +18,9 @@ package com.aionemu.gameserver.configs.administration;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author ATracer
+ */
 public class AdminConfig
 {
 	@Property(key = "gameserver.administration.gmlevel", defaultValue = "3")

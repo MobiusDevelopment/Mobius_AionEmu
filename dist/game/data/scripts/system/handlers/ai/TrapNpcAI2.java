@@ -32,11 +32,11 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_STATE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author ATracer
+ * @modified Kashim
+ * @Reworked Kill3r
+ */
 @AIName("trap")
 public class TrapNpcAI2 extends NpcAI2
 {

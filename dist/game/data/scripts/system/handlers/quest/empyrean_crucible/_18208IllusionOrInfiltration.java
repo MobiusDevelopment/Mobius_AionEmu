@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _18208IllusionOrInfiltration extends QuestHandler
 {
-	
 	private static final int questId = 18208;
 	
 	public _18208IllusionOrInfiltration()

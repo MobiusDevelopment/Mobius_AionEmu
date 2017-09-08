@@ -56,11 +56,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(301590000)
 public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 {

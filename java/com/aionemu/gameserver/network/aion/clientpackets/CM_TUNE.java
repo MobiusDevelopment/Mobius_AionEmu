@@ -35,9 +35,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 /**
- * @author Ranastic
+ * @author xTz
  */
-
 public class CM_TUNE extends AionClientPacket
 {
 	private int tuningScrollId;

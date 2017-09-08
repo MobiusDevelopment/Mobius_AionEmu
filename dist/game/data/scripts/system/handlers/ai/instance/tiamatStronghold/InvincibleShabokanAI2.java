@@ -35,11 +35,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler, Ranastic (Encom) /
- ****/
-
+ * @author Rinzler, Ranastic (Encom)
+ */
 @AIName("invincibleshabokan")
 public class InvincibleShabokanAI2 extends AggressiveNpcAI2
 {

@@ -22,11 +22,9 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("omega_clone")
 public class Clone_Of_BarrierAI2 extends AggressiveNpcAI2
 {

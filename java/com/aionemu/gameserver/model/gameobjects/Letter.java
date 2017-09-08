@@ -18,6 +18,9 @@ package com.aionemu.gameserver.model.gameobjects;
 
 import java.sql.Timestamp;
 
+/**
+ * @author kosyachok
+ */
 public class Letter extends AionObject
 {
 	private final int recipientId;

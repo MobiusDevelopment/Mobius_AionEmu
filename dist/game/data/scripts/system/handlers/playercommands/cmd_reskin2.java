@@ -38,7 +38,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_reskin2 extends PlayerCommand
 {
-	
 	public cmd_reskin2()
 	{
 		super("reskinvip");

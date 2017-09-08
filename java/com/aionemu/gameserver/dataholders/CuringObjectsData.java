@@ -29,6 +29,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.templates.curingzones.CuringTemplate;
 
+/**
+ * @author xTz
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =
 {

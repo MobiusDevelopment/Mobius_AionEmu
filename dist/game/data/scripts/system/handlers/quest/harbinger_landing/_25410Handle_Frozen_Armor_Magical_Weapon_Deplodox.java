@@ -23,11 +23,9 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class _25410Handle_Frozen_Armor_Magical_Weapon_Deplodox extends QuestHandler
 {
 	private static final int questId = 25410;

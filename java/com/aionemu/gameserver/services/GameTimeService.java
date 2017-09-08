@@ -28,6 +28,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.gametime.GameTimeManager;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author ATracer
+ */
 public class GameTimeService
 {
 	private static Logger log = LoggerFactory.getLogger(GameTimeService.class);

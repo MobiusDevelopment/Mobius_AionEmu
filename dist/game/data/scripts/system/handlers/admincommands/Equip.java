@@ -39,6 +39,9 @@ import com.aionemu.gameserver.utils.Util;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author Tago modified by Wakizashi
+ */
 public class Equip extends AdminCommand
 {
 	public Equip()

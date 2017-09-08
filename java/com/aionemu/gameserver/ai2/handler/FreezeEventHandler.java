@@ -23,6 +23,9 @@ import com.aionemu.gameserver.ai2.NpcAI2;
 import com.aionemu.gameserver.ai2.manager.WalkManager;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 
+/**
+ * @author Rolandas
+ */
 public class FreezeEventHandler
 {
 	

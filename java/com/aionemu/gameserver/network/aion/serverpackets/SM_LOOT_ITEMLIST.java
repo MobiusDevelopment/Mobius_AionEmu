@@ -30,6 +30,9 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 import javolution.util.FastList;
 
+/**
+ * @author alexa026, Avol, Corrected by Metos modified by ATracer, KID
+ */
 public class SM_LOOT_ITEMLIST extends AionServerPacket
 {
 	private int targetObjectId;

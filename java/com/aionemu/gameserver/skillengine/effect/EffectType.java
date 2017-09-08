@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.skillengine.effect;
 
+/**
+ * @author kecimis
+ */
 public enum EffectType
 {
 	ABSOLUTEEXPPOINTHEALINSTANT,

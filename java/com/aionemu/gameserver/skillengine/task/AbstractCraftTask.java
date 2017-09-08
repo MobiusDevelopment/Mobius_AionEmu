@@ -21,6 +21,12 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.ItemQuality;
 
+/**
+ * @author ATracer
+ * @author synchro2
+ * @author Antraxx
+ * @author Kamikaze
+ */
 public abstract class AbstractCraftTask extends AbstractInteractionTask
 {
 	protected int maxSuccessValue = 40;

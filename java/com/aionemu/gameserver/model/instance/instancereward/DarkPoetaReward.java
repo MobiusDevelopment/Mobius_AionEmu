@@ -16,11 +16,9 @@
  */
 package com.aionemu.gameserver.model.instance.instancereward;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @SuppressWarnings("rawtypes")
 public class DarkPoetaReward extends InstanceReward
 {

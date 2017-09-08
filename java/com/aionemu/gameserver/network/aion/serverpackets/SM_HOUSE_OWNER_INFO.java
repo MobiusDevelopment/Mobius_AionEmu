@@ -30,6 +30,9 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.services.TownService;
 
+/**
+ * @author Rolandas
+ */
 public class SM_HOUSE_OWNER_INFO extends AionServerPacket
 {
 	private final Player player;

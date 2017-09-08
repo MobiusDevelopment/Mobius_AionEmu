@@ -25,6 +25,9 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.skillengine.model.SkillMoveType;
 import com.aionemu.gameserver.skillengine.model.SpellStatus;
 
+/**
+ * @author kecimis
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EvadeEffect")
 public class EvadeEffect extends DispelEffect

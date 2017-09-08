@@ -23,6 +23,9 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author Rolandas
+ */
 public class CM_USE_HOUSE_OBJECT extends AionClientPacket
 {
 	

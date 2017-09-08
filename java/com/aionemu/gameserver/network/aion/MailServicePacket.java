@@ -27,6 +27,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob;
 
+/**
+ * @author kosyachok, Source
+ */
 public abstract class MailServicePacket extends AionServerPacket
 {
 	private static final Logger log = LoggerFactory.getLogger(MailServicePacket.class);

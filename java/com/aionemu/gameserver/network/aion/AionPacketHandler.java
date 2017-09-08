@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.Util;
  */
 public class AionPacketHandler
 {
-	
 	/**
 	 * logger for this class
 	 */

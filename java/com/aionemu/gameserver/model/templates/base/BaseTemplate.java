@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * @author Rinzler
+ * @author Source
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Base")

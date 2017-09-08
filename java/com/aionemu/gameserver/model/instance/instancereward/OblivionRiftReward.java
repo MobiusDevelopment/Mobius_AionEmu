@@ -18,11 +18,9 @@ package com.aionemu.gameserver.model.instance.instancereward;
 
 import com.aionemu.gameserver.model.instance.playerreward.OblivionRiftPlayerReward;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class OblivionRiftReward extends InstanceReward<OblivionRiftPlayerReward>
 {
 	private int points;

@@ -22,11 +22,9 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("crazy_scar")
 public class Crazy_ScarAI2 extends AggressiveNpcAI2
 {

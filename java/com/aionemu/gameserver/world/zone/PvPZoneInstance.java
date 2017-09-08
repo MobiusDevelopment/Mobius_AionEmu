@@ -20,6 +20,9 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.templates.zone.ZoneInfo;
 import com.aionemu.gameserver.model.templates.zone.ZoneType;
 
+/**
+ * @author MrPoke
+ */
 public class PvPZoneInstance extends SiegeZoneInstance
 {
 	public PvPZoneInstance(int mapId, ZoneInfo template)

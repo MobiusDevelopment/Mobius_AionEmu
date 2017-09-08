@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * @author Rolandas
  */
-
 public class _80033EventAvertingTheGaze extends QuestHandler
 {
 	private static final int questId = 80033;

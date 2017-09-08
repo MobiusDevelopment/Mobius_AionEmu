@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.model.items;
 
+//added by Blackhive original credits to xTr 2.0.0.5 mod by Tomate
 public class ItemMask
 {
 	public static final int LIMIT_ONE = 1;

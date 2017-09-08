@@ -25,6 +25,10 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.skillengine.model.Skill;
 
+/**
+ * This packet show cast spell result (including hit time).
+ * @author alexa026, Sweetkr
+ */
 public class SM_CASTSPELL_RESULT extends AionServerPacket
 {
 	private final Creature effector;

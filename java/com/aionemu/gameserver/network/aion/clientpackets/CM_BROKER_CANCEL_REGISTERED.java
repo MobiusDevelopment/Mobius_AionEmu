@@ -21,6 +21,9 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.BrokerService;
 
+/**
+ * @author GiGatR00n v4.7.5.x
+ */
 public class CM_BROKER_CANCEL_REGISTERED extends AionClientPacket
 {
 	@SuppressWarnings("unused")

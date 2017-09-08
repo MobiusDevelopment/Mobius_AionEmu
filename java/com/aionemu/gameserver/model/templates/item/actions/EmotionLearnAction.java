@@ -29,6 +29,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Mr. Poke
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EmotionLearnAction")
 public class EmotionLearnAction extends AbstractItemAction

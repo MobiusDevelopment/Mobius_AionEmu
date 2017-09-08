@@ -18,6 +18,9 @@ package com.aionemu.gameserver.configs.main;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author Rolandas
+ */
 public class EventsConfig
 {
 	@Property(key = "gameserver.enable.decor", defaultValue = "0")

@@ -28,6 +28,9 @@ import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldMapType;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
+/**
+ * @author Luno, reworked Bobobear
+ */
 public class ReloadSpawn extends AdminCommand
 {
 	public ReloadSpawn()

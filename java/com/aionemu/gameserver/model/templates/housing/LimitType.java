@@ -19,6 +19,10 @@ package com.aionemu.gameserver.model.templates.housing;
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * @author Rolandas
+ * @see client_housing_object_place_tag.xml</tt>
+ */
 @XmlType(name = "LimitType")
 @XmlEnum
 public enum LimitType

@@ -22,11 +22,9 @@ import com.aionemu.gameserver.model.instance.playerreward.InstancePlayerReward;
 import com.aionemu.gameserver.model.instance.playerreward.PvPArenaPlayerReward;
 import com.aionemu.gameserver.world.WorldMapInstance;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @InstanceID(300550000)
 public class ArenaOfGloryInstance extends PvPArenaInstance
 {

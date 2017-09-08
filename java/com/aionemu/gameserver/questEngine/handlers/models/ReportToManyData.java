@@ -29,6 +29,10 @@ import com.aionemu.gameserver.questEngine.handlers.template.ReportToMany;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Hilgert
+ * @modified Rolandas
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ReportToManyData")
 public class ReportToManyData extends XMLQuest

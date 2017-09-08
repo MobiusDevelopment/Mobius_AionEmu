@@ -19,6 +19,9 @@ package com.aionemu.gameserver.model.instance.playerreward;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.instance.InstanceBuff;
 
+/**
+ * @author xTz
+ */
 public class PvPArenaPlayerReward extends InstancePlayerReward
 {
 	private int position;

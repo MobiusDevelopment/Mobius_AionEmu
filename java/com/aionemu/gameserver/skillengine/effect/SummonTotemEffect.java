@@ -33,6 +33,9 @@ import com.aionemu.gameserver.spawnengine.VisibleObjectSpawner;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author kecimis
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SummonTotemEffect")
 public class SummonTotemEffect extends SummonServantEffect

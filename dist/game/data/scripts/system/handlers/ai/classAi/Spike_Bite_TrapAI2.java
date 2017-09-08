@@ -22,11 +22,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("spike_bite_trap")
 public class Spike_Bite_TrapAI2 extends AggressiveNpcAI2
 {

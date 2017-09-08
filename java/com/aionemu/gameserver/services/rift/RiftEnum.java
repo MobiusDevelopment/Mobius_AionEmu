@@ -18,6 +18,9 @@ package com.aionemu.gameserver.services.rift;
 
 import com.aionemu.gameserver.model.Race;
 
+/**
+ * @author Source
+ */
 public enum RiftEnum
 {
 	/**

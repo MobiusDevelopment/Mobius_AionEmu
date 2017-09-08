@@ -23,11 +23,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("shield_control_room")
 public class ShieldControlRoomTeleporterAI2 extends ActionItemNpcAI2
 {

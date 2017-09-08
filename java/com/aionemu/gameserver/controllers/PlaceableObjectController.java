@@ -31,6 +31,9 @@ import com.aionemu.gameserver.world.World;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Rolandas
+ */
 public class PlaceableObjectController<T extends PlaceableHouseObject>extends VisibleObjectController<HouseObject<T>>
 {
 	FastMap<Integer, ActionObserver> observed = new FastMap<Integer, ActionObserver>().shared();

@@ -45,11 +45,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(301500000)
 public class StonespearReachInstance extends GeneralInstanceHandler
 {

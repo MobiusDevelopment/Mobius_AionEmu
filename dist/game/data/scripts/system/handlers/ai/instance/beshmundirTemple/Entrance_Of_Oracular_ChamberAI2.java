@@ -27,11 +27,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("entranceoforacularchamber")
 public class Entrance_Of_Oracular_ChamberAI2 extends ActionItemNpcAI2
 {

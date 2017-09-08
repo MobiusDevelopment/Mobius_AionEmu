@@ -28,6 +28,9 @@ import com.aionemu.gameserver.questEngine.handlers.template.KillSpawned;
 
 import javolution.util.FastMap;
 
+/**
+ * @author vlog, reworked Bobobear
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "KillSpawnedData")
 public class KillSpawnedData extends MonsterHuntData

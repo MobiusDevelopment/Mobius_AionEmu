@@ -27,6 +27,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_PET;
 import com.aionemu.gameserver.taskmanager.tasks.ExpireTimerTask;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer
+ */
 public class PetAdoptionService
 {
 	private static final Logger log = LoggerFactory.getLogger(PetAdoptionService.class);

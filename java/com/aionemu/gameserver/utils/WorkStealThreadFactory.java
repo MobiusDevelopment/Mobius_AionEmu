@@ -24,6 +24,9 @@ import com.aionemu.commons.utils.internal.chmv8.ForkJoinPool;
 import com.aionemu.commons.utils.internal.chmv8.ForkJoinPool.ForkJoinWorkerThreadFactory;
 import com.aionemu.commons.utils.internal.chmv8.ForkJoinWorkerThread;
 
+/**
+ * @author Rolandas
+ */
 public class WorkStealThreadFactory extends PriorityThreadFactory implements ForkJoinWorkerThreadFactory
 {
 	public WorkStealThreadFactory(String namePrefix)

@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.house;
 
+/**
+ * @author Rolandas
+ */
 public enum HousePermissions
 {
 	NOT_SET(0),

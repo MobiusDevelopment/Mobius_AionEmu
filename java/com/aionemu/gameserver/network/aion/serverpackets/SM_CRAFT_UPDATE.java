@@ -20,6 +20,10 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author Mr. Poke
+ * @author Antraxx
+ */
 public class SM_CRAFT_UPDATE extends AionServerPacket
 {
 	private final int skillId;

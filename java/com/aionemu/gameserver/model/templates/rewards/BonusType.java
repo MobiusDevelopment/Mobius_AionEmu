@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.templates.rewards;
 
+/**
+ * @author Rolandas
+ */
 public enum BonusType
 {
 	BOSS,

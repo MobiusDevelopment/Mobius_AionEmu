@@ -29,6 +29,9 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.MathUtil;
 
+/**
+ * @author xavier, Source
+ */
 public class FlyRingObserver extends ActionObserver
 {
 	private final Player player;

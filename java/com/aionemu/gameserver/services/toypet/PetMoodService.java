@@ -26,6 +26,9 @@ import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.audit.AuditLogger;
 
+/**
+ * @author ATracer
+ */
 public class PetMoodService
 {
 	private static final Logger log = LoggerFactory.getLogger(PetMoodService.class);

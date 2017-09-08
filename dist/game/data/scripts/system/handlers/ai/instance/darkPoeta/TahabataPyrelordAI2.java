@@ -35,11 +35,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Ritsu
+ */
 @AIName("tahabatapyrelord")
 public class TahabataPyrelordAI2 extends AggressiveNpcAI2
 {

@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.skillengine.model;
 
+/**
+ * @author kecimis
+ */
 public class ChainSkill
 {
 	

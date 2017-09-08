@@ -22,6 +22,10 @@ import com.aionemu.gameserver.model.skill.PlayerSkillEntry;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * In this packet Server is sending Skill Info?
+ * @author modified by ATracer,MrPoke
+ */
 public class SM_SKILL_LIST extends AionServerPacket
 {
 	private final PlayerSkillEntry[] skillList;

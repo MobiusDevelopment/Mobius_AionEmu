@@ -23,11 +23,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("LF6_Event_G1_SWHowitzer")
 public class Elyos_TurretAI2 extends ActionItemNpcAI2
 {

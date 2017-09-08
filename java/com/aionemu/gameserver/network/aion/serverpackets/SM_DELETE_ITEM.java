@@ -20,8 +20,9 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.services.item.ItemPacketService.ItemDeleteType;
 
-//Author Avol
-
+/**
+ * @author Avol
+ */
 public class SM_DELETE_ITEM extends AionServerPacket
 {
 	

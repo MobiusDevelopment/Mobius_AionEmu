@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1472GanimerksEspionage extends QuestHandler
 {
-	
 	private static final int questId = 1472;
 	
 	public _1472GanimerksEspionage()

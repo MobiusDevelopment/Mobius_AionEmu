@@ -28,6 +28,9 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.world.WorldPosition;
 
+/**
+ * @author Sarynth (Thx Rhys2002 for Packets)
+ */
 public class SM_ALLIANCE_MEMBER_INFO extends AionServerPacket
 {
 	private final Player player;

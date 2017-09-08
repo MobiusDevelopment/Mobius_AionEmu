@@ -26,9 +26,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * @author Rinzler
+ * @author ATracer
  */
-
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement(name = "Stigma")
 public class Stigma

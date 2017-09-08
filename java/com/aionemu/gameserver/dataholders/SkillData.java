@@ -30,6 +30,9 @@ import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * @author ATracer
+ */
 @XmlRootElement(name = "skill_data")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SkillData

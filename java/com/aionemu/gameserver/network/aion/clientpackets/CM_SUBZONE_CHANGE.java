@@ -25,6 +25,9 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 
+/**
+ * @author KKnD , orz, avol
+ */
 public class CM_SUBZONE_CHANGE extends AionClientPacket
 {
 	private int unk;

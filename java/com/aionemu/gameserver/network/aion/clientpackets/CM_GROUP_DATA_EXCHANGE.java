@@ -24,6 +24,9 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_GROUP_DATA_EXCHANGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author xTz
+ */
 public class CM_GROUP_DATA_EXCHANGE extends AionClientPacket
 {
 	

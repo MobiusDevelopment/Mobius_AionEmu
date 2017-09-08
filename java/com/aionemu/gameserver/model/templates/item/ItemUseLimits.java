@@ -25,6 +25,9 @@ import com.aionemu.gameserver.model.Gender;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
+/**
+ * @author Rolandas
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UseLimits")
 public class ItemUseLimits

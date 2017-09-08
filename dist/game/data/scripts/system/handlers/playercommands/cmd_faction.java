@@ -33,7 +33,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class cmd_faction extends PlayerCommand
 {
-	
 	public cmd_faction()
 	{
 		super("faction");

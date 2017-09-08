@@ -27,11 +27,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("rune_elite")
 public class Wealhtheow_Keep_Rune_EliteAI2 extends AggressiveNpcAI2
 {

@@ -32,11 +32,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Luzien
+ */
 @AIName("warrior_preceptor")
 public class WarriorPreceptorAI2 extends AggressiveNpcAI2
 {

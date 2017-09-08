@@ -25,11 +25,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("altar_of_avarice_mercenary_asmodians")
 public class Altar_Of_Avarice_Mercenary_AsmodiansAI2 extends GeneralNpcAI2
 {

@@ -18,6 +18,9 @@ package com.aionemu.gameserver.services.siegeservice;
 
 import com.aionemu.gameserver.services.SiegeService;
 
+/**
+ * @author Source
+ */
 public class SiegeStartRunnable implements Runnable
 {
 	

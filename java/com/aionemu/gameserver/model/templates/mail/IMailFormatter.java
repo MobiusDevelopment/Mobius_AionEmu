@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.templates.mail;
 
+/**
+ * @author Rolandas
+ */
 public abstract interface IMailFormatter
 {
 	

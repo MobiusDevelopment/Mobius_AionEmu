@@ -16,11 +16,9 @@
  */
 package com.aionemu.gameserver.skillengine.effect;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class DeathPenaltyReduceEffect extends BuffEffect
 {
 	

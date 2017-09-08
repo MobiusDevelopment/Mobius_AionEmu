@@ -25,6 +25,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_UPDATE_ITEM;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer
+ */
 public class ChargeInfo extends ActionObserver
 {
 	public static final int LEVEL2 = 1000000;

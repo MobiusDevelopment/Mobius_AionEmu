@@ -68,6 +68,10 @@ import com.aionemu.gameserver.model.vortex.VortexStateType;
 import com.aionemu.gameserver.model.zorshivdredgion.ZorshivDredgionStateType;
 import com.aionemu.gameserver.spawnengine.SpawnHandlerType;
 
+/**
+ * @author xTz
+ * @modified Rolandas
+ */
 public class SpawnGroup2 extends AbstractLockManager
 {
 	private static final Logger log = LoggerFactory.getLogger(SpawnGroup2.class);

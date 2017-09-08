@@ -34,11 +34,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("escapee_asachin")
 public class Escapee_AsachinAI2 extends GeneralNpcAI2
 {

@@ -28,6 +28,9 @@ import com.aionemu.gameserver.services.PrivateStoreService;
 import com.aionemu.gameserver.skillengine.effect.AbnormalState;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Simple
+ */
 public class CM_PRIVATE_STORE extends AionClientPacket
 {
 	private Player activePlayer;

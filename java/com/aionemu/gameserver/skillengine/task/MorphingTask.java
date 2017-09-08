@@ -27,6 +27,10 @@ import com.aionemu.gameserver.services.craft.CraftService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author Antraxx
+ * @author Kamikaze
+ */
 public class MorphingTask extends CraftingTask
 {
 	public MorphingTask(Player requestor, StaticObject responder, RecipeTemplate recipeTemplates)

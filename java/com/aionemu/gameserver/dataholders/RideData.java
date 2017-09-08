@@ -30,6 +30,9 @@ import com.aionemu.gameserver.model.templates.ride.RideInfo;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * @author Rolandas
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =
 {

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30303GroupTheFallofIsbariya extends QuestHandler
 {
-	
 	private static final int questId = 30303;
 	private static final int[] npc_ids =
 	{

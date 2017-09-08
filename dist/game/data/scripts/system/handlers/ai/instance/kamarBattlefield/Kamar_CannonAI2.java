@@ -28,11 +28,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("kamar_cannon")
 public class Kamar_CannonAI2 extends ActionItemNpcAI2
 {

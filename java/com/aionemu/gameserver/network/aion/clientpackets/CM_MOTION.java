@@ -20,6 +20,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 
+/**
+ * @author MrPoke
+ */
 public class CM_MOTION extends AionClientPacket
 {
 	private int motionId;

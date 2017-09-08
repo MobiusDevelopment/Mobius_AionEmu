@@ -20,6 +20,9 @@ import com.aionemu.gameserver.ai2.AbstractAI;
 import com.aionemu.gameserver.ai2.eventcallback.OnDieEventCallback;
 import com.aionemu.gameserver.services.VortexService;
 
+/**
+ * @author Source
+ */
 @SuppressWarnings("rawtypes")
 public class GeneratorDestroyListener extends OnDieEventCallback
 {

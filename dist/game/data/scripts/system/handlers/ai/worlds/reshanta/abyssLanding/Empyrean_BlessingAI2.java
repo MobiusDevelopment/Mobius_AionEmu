@@ -24,11 +24,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("empyrean_blessing")
 public class Empyrean_BlessingAI2 extends ActionItemNpcAI2
 {

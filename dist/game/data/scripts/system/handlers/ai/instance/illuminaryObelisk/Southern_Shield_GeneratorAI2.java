@@ -37,11 +37,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("southern_shield_generator")
 public class Southern_Shield_GeneratorAI2 extends NpcAI2
 {

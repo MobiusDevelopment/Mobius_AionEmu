@@ -27,11 +27,9 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.services.NpcShoutsService;
 import com.aionemu.gameserver.world.WorldPosition;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("archon_shadow_scout")
 public class Archon_Shadow_ScoutAI2 extends NpcAI2
 {

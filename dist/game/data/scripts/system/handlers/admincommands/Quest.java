@@ -44,7 +44,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Quest extends AdminCommand
 {
-	
 	public Quest()
 	{
 		super("quest");

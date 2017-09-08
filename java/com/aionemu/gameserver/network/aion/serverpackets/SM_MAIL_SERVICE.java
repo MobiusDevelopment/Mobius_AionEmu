@@ -27,6 +27,9 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.MailServicePacket;
 import com.aionemu.gameserver.utils.collections.ListSplitter;
 
+/**
+ * @author kosyachok, Source
+ */
 public class SM_MAIL_SERVICE extends MailServicePacket
 {
 	private final int serviceId;

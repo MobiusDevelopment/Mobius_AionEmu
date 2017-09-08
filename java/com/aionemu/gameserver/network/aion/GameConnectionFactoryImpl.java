@@ -35,7 +35,6 @@ import com.aionemu.gameserver.network.sequrity.FloodManager.Result;
  */
 public class GameConnectionFactoryImpl implements ConnectionFactory
 {
-	
 	private final Logger log = LoggerFactory.getLogger(GameConnectionFactoryImpl.class);
 	private FloodManager floodAcceptor;
 	

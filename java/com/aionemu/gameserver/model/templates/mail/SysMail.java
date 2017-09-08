@@ -31,6 +31,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.Race;
 
+/**
+ * @author Rolandas
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SysMail", propOrder =
 {

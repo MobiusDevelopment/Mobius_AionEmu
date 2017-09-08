@@ -27,6 +27,9 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Gigi
+ */
 public class _19002ExpertAethertappersTest extends QuestHandler
 {
 	private static final int questId = 19002;

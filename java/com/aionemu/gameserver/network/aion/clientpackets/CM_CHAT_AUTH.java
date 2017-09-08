@@ -21,6 +21,10 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_CHAT_INIT;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * Client sends this only once.
+ * @author Luno
+ */
 public class CM_CHAT_AUTH extends AionClientPacket
 {
 	public CM_CHAT_AUTH(int opcode, State state, State... restStates)

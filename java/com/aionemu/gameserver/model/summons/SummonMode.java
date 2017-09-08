@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.summons;
 
+/**
+ * @author xTz
+ */
 public enum SummonMode
 {
 	ATTACK(0),

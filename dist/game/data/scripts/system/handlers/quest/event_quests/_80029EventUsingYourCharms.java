@@ -26,10 +26,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Rolandas
  */
-
 public class _80029EventUsingYourCharms extends QuestHandler
 {
-	
 	private static final int questId = 80029;
 	
 	public _80029EventUsingYourCharms()

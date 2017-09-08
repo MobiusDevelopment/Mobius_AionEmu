@@ -24,6 +24,11 @@ import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.items.ManaStone;
 import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
 
+/**
+ * This blob is sending info about the item that were fused with current item.
+ * @author -Nemesiss-
+ * @modified Rolandas
+ */
 public class CompositeItemBlobEntry extends ItemBlobEntry
 {
 	CompositeItemBlobEntry()

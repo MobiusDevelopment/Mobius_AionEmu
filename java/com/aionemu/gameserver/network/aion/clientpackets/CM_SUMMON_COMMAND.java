@@ -24,6 +24,9 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.summons.SummonsService;
 
+/**
+ * @author ATracer
+ */
 public class CM_SUMMON_COMMAND extends AionClientPacket
 {
 	private int mode;

@@ -26,11 +26,9 @@ import com.aionemu.gameserver.ai2.poll.AIAnswer;
 import com.aionemu.gameserver.ai2.poll.AIAnswers;
 import com.aionemu.gameserver.ai2.poll.AIQuestion;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Luzien
+ */
 @AIName("electrocute")
 public class ElectrocuteAI2 extends NpcAI2
 {

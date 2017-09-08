@@ -35,9 +35,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.geo.GeoService;
 
 /**
- * @Author Wartraxx
+ * @author Wartraxx
  **/
-
 public class CM_HOUSE_OPEN_DOOR extends AionClientPacket
 {
 	int address;

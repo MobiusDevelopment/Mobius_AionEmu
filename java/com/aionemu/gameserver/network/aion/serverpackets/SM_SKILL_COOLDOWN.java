@@ -23,6 +23,9 @@ import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author ATracer, nrg, Eloann
+ */
 public class SM_SKILL_COOLDOWN extends AionServerPacket
 {
 	private final Map<Integer, Long> cooldowns;

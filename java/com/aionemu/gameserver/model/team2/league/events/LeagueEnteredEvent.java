@@ -25,6 +25,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_ALLIANCE_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SHOW_BRAND;
 import com.google.common.base.Predicate;
 
+/**
+ * @author ATracer
+ */
 public class LeagueEnteredEvent implements Predicate<LeagueMember>, TeamEvent
 {
 	private final League league;

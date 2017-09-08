@@ -24,6 +24,9 @@ import com.aionemu.gameserver.model.team2.group.PlayerGroup;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author Lyahim, ATracer, xTz
+ */
 public class SM_GROUP_INFO extends AionServerPacket
 {
 	

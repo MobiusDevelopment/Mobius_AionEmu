@@ -19,6 +19,10 @@ package com.aionemu.gameserver.model.templates.quest;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.templates.QuestTemplate;
 
+/**
+ * @author vlog
+ * @modified Rolandas
+ */
 public class HandlerSideDrop extends QuestDrop
 {
 	private final int neededAmount;

@@ -33,7 +33,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
- * @author Ranastic
+ * @author xTz
  */
 public class IdianStone extends ItemStone
 {

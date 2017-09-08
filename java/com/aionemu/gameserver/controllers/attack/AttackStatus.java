@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.controllers.attack;
 
+/**
+ * @author ATracer
+ */
 public enum AttackStatus
 {
 	DODGE(0, true, false),

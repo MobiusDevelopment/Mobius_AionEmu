@@ -24,6 +24,9 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.services.HousingService;
 
+/**
+ * @author Simple
+ */
 public class SM_LEGION_MEMBERLIST extends AionServerPacket
 {
 	

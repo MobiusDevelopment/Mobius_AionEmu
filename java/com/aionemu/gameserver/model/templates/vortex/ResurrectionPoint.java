@@ -23,6 +23,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.world.WorldPosition;
 
+/**
+ * @author Source
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ResurrectionPoint")
 public class ResurrectionPoint

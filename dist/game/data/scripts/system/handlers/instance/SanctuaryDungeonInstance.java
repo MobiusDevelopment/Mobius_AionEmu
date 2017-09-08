@@ -31,11 +31,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /** Source KOR: https://www.youtube.com/watch?v=8Qt-ZODwhoA /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(301580000)
 public class SanctuaryDungeonInstance extends GeneralInstanceHandler
 {

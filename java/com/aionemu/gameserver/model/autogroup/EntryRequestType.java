@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.autogroup;
 
+/**
+ * @author xTz
+ */
 public enum EntryRequestType
 {
 	NEW_GROUP_ENTRY((byte) 0),

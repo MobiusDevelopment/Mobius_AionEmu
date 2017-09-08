@@ -36,6 +36,9 @@ import com.aionemu.gameserver.services.player.PlayerService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author SoulKeeper
+ */
 public class ArtifactSiege extends Siege<ArtifactLocation>
 {
 	private static final Logger log = LoggerFactory.getLogger(ArtifactSiege.class.getName());

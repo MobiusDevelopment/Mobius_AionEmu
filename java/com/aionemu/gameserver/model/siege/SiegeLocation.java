@@ -32,6 +32,9 @@ import com.aionemu.gameserver.world.zone.handler.ZoneHandler;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Sarynth, Source, Wakizashi
+ */
 public class SiegeLocation implements ZoneHandler
 {
 	private static final Logger log = LoggerFactory.getLogger(SiegeLocation.class);

@@ -31,6 +31,10 @@ import com.aionemu.gameserver.services.EnchantService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author ATracer
+ * @author Antraxx
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ExtractAction")
 public class ExtractAction extends AbstractItemAction

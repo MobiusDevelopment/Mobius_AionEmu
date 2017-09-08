@@ -44,6 +44,11 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_ATTACK_STATUS;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.google.common.base.Preconditions;
 
+/**
+ * @author ATracer
+ * @author alexa026
+ * @rework Blackfire
+ */
 public class StatFunctions
 {
 	private static SkillElement elements = null;

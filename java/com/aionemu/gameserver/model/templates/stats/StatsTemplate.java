@@ -21,6 +21,10 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * This class is only a container for Stats. Created on: 04.08.2009 14:59:10
+ * @author Aquanox, Dr2co
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "stats_template")
 public abstract class StatsTemplate

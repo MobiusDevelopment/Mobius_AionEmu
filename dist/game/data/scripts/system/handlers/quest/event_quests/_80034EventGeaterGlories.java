@@ -33,10 +33,8 @@ import com.aionemu.gameserver.services.QuestService;
 /**
  * @author Rolandas
  */
-
 public class _80034EventGeaterGlories extends QuestHandler
 {
-	
 	private static final int questId = 80034;
 	
 	public _80034EventGeaterGlories()

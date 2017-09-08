@@ -26,11 +26,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("Fallen_Orkia_Fortress_Teleport_Stone")
 public class Fallen_Orkia_Fortress_Teleport_StoneAI2 extends NpcAI2
 {

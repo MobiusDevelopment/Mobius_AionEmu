@@ -25,11 +25,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("galecyclone")
 public class GaleCycloneAI2 extends NpcAI2
 {

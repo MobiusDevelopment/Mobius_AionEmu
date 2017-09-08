@@ -60,6 +60,9 @@ import com.aionemu.gameserver.utils.TimeUtil;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Predicate;
 
+/**
+ * @author ATracer
+ */
 public class PlayerAllianceService
 {
 	private static final Logger log = LoggerFactory.getLogger(PlayerAllianceService.class);

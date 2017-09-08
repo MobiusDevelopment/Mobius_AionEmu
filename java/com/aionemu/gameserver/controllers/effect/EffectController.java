@@ -44,6 +44,9 @@ import com.google.common.collect.Collections2;
 
 import javolution.util.FastMap;
 
+/**
+ * @author ATracer modified by Wakizashi, Sippolo, Cheatkiller
+ */
 public class EffectController
 {
 	private final Creature owner;

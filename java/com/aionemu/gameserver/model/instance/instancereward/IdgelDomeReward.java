@@ -36,11 +36,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author GiGatR00n v4.7.5.x
+ */
 public class IdgelDomeReward extends InstanceReward<IdgelDomePlayerReward>
 {
 	private final int capPoints;

@@ -18,6 +18,9 @@ package com.aionemu.gameserver.services;
 
 import com.aionemu.gameserver.configs.main.NameConfig;
 
+/**
+ * @author nrg
+ */
 public class NameRestrictionService
 {
 	

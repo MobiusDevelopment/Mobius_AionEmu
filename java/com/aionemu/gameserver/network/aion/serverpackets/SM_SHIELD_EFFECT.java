@@ -24,6 +24,9 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.services.SiegeService;
 
+/**
+ * @author xTz, Source
+ */
 public class SM_SHIELD_EFFECT extends AionServerPacket
 {
 	private final Collection<SiegeLocation> locations;

@@ -28,11 +28,9 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Cheatkiller
+ */
 @AIName("brigadegeneralchantra")
 public class BrigadeGeneralChantraAI2 extends AggressiveNpcAI2
 {

@@ -18,6 +18,9 @@ package com.aionemu.gameserver.model.templates.item;
 
 import javax.xml.bind.annotation.XmlEnum;
 
+/**
+ * @author vlog
+ */
 @XmlEnum
 public enum RandomType
 {

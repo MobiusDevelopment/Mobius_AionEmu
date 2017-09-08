@@ -21,6 +21,9 @@ import com.aionemu.gameserver.model.instance.playerreward.InstancePlayerReward;
 
 import javolution.util.FastList;
 
+/**
+ * @author xTz
+ */
 public class InstanceReward<T extends InstancePlayerReward>
 {
 	protected FastList<T> instanceRewards = new FastList<>();

@@ -28,10 +28,8 @@ import com.aionemu.gameserver.services.events.EventsService;
 /**
  * @author Rolandas
  */
-
 public class _80000JoyfulDaevasDay extends QuestHandler
 {
-	
 	private static final int questId = 80000;
 	
 	public _80000JoyfulDaevasDay()

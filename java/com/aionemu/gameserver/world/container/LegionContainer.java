@@ -25,6 +25,10 @@ import com.aionemu.gameserver.world.exceptions.DuplicateAionObjectException;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
+/**
+ * Container for storing Legions by legionId and name.
+ * @author Simple
+ */
 public class LegionContainer implements Iterable<Legion>
 {
 	private final Map<Integer, Legion> legionsById = new FastMap<Integer, Legion>().shared();

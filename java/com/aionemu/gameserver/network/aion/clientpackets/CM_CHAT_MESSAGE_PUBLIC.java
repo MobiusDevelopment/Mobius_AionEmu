@@ -32,6 +32,10 @@ import com.aionemu.gameserver.utils.audit.AuditLogger;
 import com.aionemu.gameserver.utils.chathandlers.ChatProcessor;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 
+/**
+ * Packet that reads normal chat messages.<br>
+ * @author SoulKeeper
+ */
 public class CM_CHAT_MESSAGE_PUBLIC extends AionClientPacket
 {
 	private ChatType type;

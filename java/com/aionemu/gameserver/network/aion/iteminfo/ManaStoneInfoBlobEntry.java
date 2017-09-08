@@ -26,6 +26,12 @@ import com.aionemu.gameserver.model.items.ItemStone;
 import com.aionemu.gameserver.model.items.ManaStone;
 import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
 
+/**
+ * This blob sends info about mana stones.
+ * @author -Nemesiss-
+ * @author Rolandas
+ * @author GiGatR00n v4.7.5.x
+ */
 public class ManaStoneInfoBlobEntry extends ItemBlobEntry
 {
 	ManaStoneInfoBlobEntry()

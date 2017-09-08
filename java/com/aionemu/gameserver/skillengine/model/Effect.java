@@ -60,6 +60,13 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import javolution.util.FastMap;
 
+/**
+ * @author ATracer
+ * @modified by Wakizashi
+ * @modified by Sippolo
+ * @modified by kecimis
+ * @Reworked Kill3r
+ */
 public class Effect implements StatOwner
 {
 	private Skill skill;

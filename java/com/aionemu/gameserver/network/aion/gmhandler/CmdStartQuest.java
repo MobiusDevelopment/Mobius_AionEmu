@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Alcapwnd
  */
-
 public class CmdStartQuest extends AbstractGMHandler
 {
 	public CmdStartQuest(Player admin, String params)

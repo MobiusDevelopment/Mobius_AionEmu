@@ -132,13 +132,15 @@ public interface ScriptContext
 	 * @param obj object to compare with
 	 * @return result of comparation
 	 */
-	@Override boolean equals(Object obj);
+	@Override
+	boolean equals(Object obj);
 	
 	/**
 	 * Returns hashCoded of this ScriptContext. Hashcode is calculated using root file and parent context(if available)
 	 * @return hashCode
 	 */
-	@Override int hashCode();
+	@Override
+	int hashCode();
 	
 	/**
 	 * This method overrides finalization to ensure that active script context will not be collected by GC. If such situation happens - {@link #shutdown()} is called to ensure that resources were released.

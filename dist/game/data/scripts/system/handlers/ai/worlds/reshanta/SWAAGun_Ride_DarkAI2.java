@@ -23,11 +23,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("SWAAGun_Ride_Dark")
 public class SWAAGun_Ride_DarkAI2 extends ActionItemNpcAI2
 {

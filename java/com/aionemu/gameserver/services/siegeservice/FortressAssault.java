@@ -38,6 +38,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
+/**
+ * @author Luzien
+ */
 public class FortressAssault extends Assault<FortressSiege>
 {
 	private final boolean isBalaurea;

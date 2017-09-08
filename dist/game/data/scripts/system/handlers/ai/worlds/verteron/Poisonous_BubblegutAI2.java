@@ -26,11 +26,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("poisonous_bubblegut")
 public class Poisonous_BubblegutAI2 extends AggressiveNpcAI2
 {

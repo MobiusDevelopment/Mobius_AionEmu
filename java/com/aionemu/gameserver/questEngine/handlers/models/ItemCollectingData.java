@@ -26,6 +26,10 @@ import javax.xml.bind.annotation.XmlType;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.handlers.template.ItemCollecting;
 
+/**
+ * @author MrPoke
+ * @modified Rolandas
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ItemCollectingData")
 public class ItemCollectingData extends XMLQuest

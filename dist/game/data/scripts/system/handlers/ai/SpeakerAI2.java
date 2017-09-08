@@ -22,11 +22,9 @@ import com.aionemu.gameserver.model.siege.SiegeRace;
 import com.aionemu.gameserver.model.templates.npcshout.ShoutEventType;
 import com.aionemu.gameserver.services.SiegeService;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rolandas
+ */
 @AIName("speaker")
 public class SpeakerAI2 extends GeneralNpcAI2
 {

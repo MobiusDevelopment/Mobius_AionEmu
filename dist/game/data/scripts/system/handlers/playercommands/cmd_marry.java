@@ -32,7 +32,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class cmd_marry extends PlayerCommand
 {
-	
 	public cmd_marry()
 	{
 		super("marry");

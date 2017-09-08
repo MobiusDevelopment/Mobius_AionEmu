@@ -35,11 +35,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("shadow_judge")
 public class Shadow_Judge_KaligaAI2 extends AggressiveNpcAI2
 {

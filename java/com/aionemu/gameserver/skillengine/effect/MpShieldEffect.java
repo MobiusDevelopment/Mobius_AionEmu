@@ -26,6 +26,9 @@ import com.aionemu.gameserver.controllers.observer.AttackShieldObserver;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.skillengine.model.Effect;
 
+/**
+ * @author Ever'
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MpShieldEffect")
 public class MpShieldEffect extends EffectTemplate

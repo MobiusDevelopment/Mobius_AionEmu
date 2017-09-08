@@ -28,11 +28,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /** Midified Ranastic (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("kahrun2")
 public class KahrunAI2 extends NpcAI2
 {

@@ -19,6 +19,9 @@ package com.aionemu.gameserver.model.templates.stats;
 import com.aionemu.gameserver.model.PlayerClass;
 import com.aionemu.gameserver.utils.stats.ClassStats;
 
+/**
+ * @author ATracer
+ */
 public class CalculatedPlayerStatsTemplate extends PlayerStatsTemplate
 {
 	private final PlayerClass playerClass;

@@ -29,11 +29,9 @@ import com.aionemu.gameserver.model.gameobjects.NpcObjectType;
 import com.aionemu.gameserver.model.skill.NpcSkillEntry;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author ATracer
+ */
 @AIName("servant")
 public class ServantNpcAI2 extends GeneralNpcAI2
 {

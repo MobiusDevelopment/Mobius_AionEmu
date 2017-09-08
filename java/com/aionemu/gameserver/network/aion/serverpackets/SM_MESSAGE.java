@@ -29,7 +29,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_MESSAGE extends AionServerPacket
 {
-	
 	/**
 	 * Player.
 	 */

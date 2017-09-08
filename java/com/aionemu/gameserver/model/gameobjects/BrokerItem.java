@@ -25,6 +25,10 @@ import org.apache.commons.lang.StringUtils;
 import com.aionemu.gameserver.configs.main.BrokerConfig;
 import com.aionemu.gameserver.model.broker.BrokerRace;
 
+/**
+ * @author kosyachok
+ * @author GiGatR00n
+ */
 public class BrokerItem implements Comparable<BrokerItem>
 {
 	private final Item item;

@@ -27,11 +27,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("IDF5TDWar_chief_l")
 public class IDF5TDWar_Chief_LAI2 extends AggressiveNpcAI2
 {

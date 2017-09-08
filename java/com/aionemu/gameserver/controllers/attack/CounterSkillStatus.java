@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.controllers.attack;
 
+/**
+ * @author Ever'
+ */
 public enum CounterSkillStatus
 {
 	BLOCK(32),

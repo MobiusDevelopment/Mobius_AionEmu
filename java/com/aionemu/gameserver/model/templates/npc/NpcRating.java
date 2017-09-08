@@ -21,6 +21,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.gameobjects.state.CreatureSeeState;
 
+/**
+ * @author ATracer
+ */
 @XmlType(name = "rating")
 @XmlEnum
 public enum NpcRating

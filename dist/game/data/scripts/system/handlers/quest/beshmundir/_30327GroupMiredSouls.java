@@ -28,10 +28,8 @@ import com.aionemu.gameserver.services.QuestService;
 /**
  * @author Gigi
  */
-
 public class _30327GroupMiredSouls extends QuestHandler
 {
-	
 	private static final int questId = 30327;
 	
 	public _30327GroupMiredSouls()

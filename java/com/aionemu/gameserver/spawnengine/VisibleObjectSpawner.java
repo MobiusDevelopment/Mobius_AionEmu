@@ -128,6 +128,9 @@ import com.aionemu.gameserver.world.knownlist.CreatureAwareKnownList;
 import com.aionemu.gameserver.world.knownlist.NpcKnownList;
 import com.aionemu.gameserver.world.knownlist.PlayerAwareKnownList;
 
+/**
+ * @author ATracer
+ */
 public class VisibleObjectSpawner
 {
 	private static final Logger log = LoggerFactory.getLogger(VisibleObjectSpawner.class);

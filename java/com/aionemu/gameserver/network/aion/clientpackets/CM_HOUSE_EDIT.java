@@ -41,6 +41,10 @@ import com.aionemu.gameserver.services.item.ItemPacketService.ItemDeleteType;
 import com.aionemu.gameserver.utils.audit.AuditLogger;
 import com.aionemu.gameserver.utils.idfactory.IDFactory;
 
+/**
+ * @author Rolandas
+ * @author_update Ever'
+ */
 public class CM_HOUSE_EDIT extends AionClientPacket
 {
 	private static final Logger log = LoggerFactory.getLogger(CM_HOUSE_EDIT.class);

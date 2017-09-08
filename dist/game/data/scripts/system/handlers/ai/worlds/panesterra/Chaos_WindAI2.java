@@ -27,11 +27,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("chaos_wind")
 public class Chaos_WindAI2 extends GeneralNpcAI2
 {

@@ -23,6 +23,9 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.restrictions.RestrictionsManager;
 
+/**
+ * Created with IntelliJ IDEA. User: pixfid Date: 7/14/13 Time: 5:30 PM
+ */
 public class CM_COMPOSITE_STONES extends AionClientPacket
 {
 	private int compinationToolItemObjectId;

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob;
  */
 public class SM_PRIVATE_STORE extends AionServerPacket
 {
-	
 	private final Player player;
 	/** Private store Information **/
 	private final PrivateStore store;

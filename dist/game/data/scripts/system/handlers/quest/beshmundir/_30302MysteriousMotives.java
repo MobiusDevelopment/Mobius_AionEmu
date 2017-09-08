@@ -29,10 +29,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Gigi
  */
-
 public class _30302MysteriousMotives extends QuestHandler
 {
-	
 	private static final int questId = 30302;
 	
 	public _30302MysteriousMotives()

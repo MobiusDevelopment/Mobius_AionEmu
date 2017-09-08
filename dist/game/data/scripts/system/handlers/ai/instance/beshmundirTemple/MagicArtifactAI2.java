@@ -24,7 +24,7 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 import system.handlers.ai.AggressiveNpcAI2;
 
 /**
- * @author Rinzler (Encom)
+ * @author Luzien
  */
 @AIName("magicartifact")
 public class MagicArtifactAI2 extends AggressiveNpcAI2

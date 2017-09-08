@@ -24,11 +24,9 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("LF6_Event_G1_S1_Kn_75_Ah")
 public class Guardian_Frigate_Veteran_Protectors_CaptainAI2 extends AggressiveNpcAI2
 {

@@ -24,6 +24,9 @@ import com.aionemu.gameserver.model.templates.item.actions.CraftLearnAction;
 import com.aionemu.gameserver.model.templates.item.actions.ItemActions;
 import com.aionemu.gameserver.model.templates.recipe.RecipeTemplate;
 
+/**
+ * @author xTz
+ */
 public class BrokerRecipeFilter extends BrokerFilter
 {
 	

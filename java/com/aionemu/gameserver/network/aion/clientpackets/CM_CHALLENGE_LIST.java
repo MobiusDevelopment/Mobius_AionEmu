@@ -24,6 +24,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.ChallengeTaskService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Rolandas
+ */
 public class CM_CHALLENGE_LIST extends AionClientPacket
 {
 	public CM_CHALLENGE_LIST(int opcode, State state, State... restStates)

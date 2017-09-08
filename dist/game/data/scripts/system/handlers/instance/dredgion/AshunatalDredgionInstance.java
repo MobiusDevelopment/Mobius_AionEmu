@@ -65,11 +65,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import javolution.util.FastList;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(301650000)
 public class AshunatalDredgionInstance extends GeneralInstanceHandler
 {

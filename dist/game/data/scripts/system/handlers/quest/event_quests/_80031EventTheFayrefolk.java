@@ -28,10 +28,8 @@ import com.aionemu.gameserver.services.events.EventsService;
 /**
  * @author Rolandas
  */
-
 public class _80031EventTheFayrefolk extends QuestHandler
 {
-	
 	private static final int questId = 80031;
 	
 	public _80031EventTheFayrefolk()

@@ -32,11 +32,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Cheatkiller
+ */
 @AIName("suramathetraitor")
 public class SuramaTheTraitorAI2 extends GeneralNpcAI2
 {

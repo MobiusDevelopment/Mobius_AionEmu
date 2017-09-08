@@ -24,6 +24,9 @@ import com.aionemu.gameserver.controllers.observer.AttackCalcObserver;
 import com.aionemu.gameserver.controllers.observer.AttackShieldObserver;
 import com.aionemu.gameserver.skillengine.model.Effect;
 
+/**
+ * @author ginho1 modified by Wakizashi, kecimis
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ReflectorEffect")
 public class ReflectorEffect extends ShieldEffect

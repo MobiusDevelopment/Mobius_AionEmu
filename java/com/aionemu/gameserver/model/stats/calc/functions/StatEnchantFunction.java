@@ -23,6 +23,9 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
 import com.aionemu.gameserver.model.templates.item.ArmorType;
 import com.aionemu.gameserver.model.templates.item.ItemCategory;
 
+/**
+ * @author ATracer (based on Mr.Poke EnchantModifier)
+ */
 public class StatEnchantFunction extends StatAddFunction
 {
 	private final Item item;

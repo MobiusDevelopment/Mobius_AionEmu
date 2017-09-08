@@ -23,6 +23,9 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 import javolution.util.FastList;
 
+/**
+ * @author Rolandas
+ */
 public class SM_HOUSE_OBJECTS extends AionServerPacket
 {
 	Player player;

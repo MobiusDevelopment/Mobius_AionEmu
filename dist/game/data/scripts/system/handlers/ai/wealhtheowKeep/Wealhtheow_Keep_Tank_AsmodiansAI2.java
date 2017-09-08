@@ -23,11 +23,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("wealhtheow_keep_siege_asmodians")
 public class Wealhtheow_Keep_Tank_AsmodiansAI2 extends ActionItemNpcAI2
 {

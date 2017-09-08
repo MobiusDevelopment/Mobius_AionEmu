@@ -69,6 +69,9 @@ import com.aionemu.gameserver.configs.main.WorldConfig;
 import com.aionemu.gameserver.configs.network.IPConfig;
 import com.aionemu.gameserver.configs.network.NetworkConfig;
 
+/**
+ * @author Nemesiss, SoulKeeper
+ */
 public class Config
 {
 	protected static final Logger log = LoggerFactory.getLogger(Config.class);

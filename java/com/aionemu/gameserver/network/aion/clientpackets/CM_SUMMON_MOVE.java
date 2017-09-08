@@ -27,6 +27,9 @@ import com.aionemu.gameserver.skillengine.effect.AbnormalState;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author ATracer
+ */
 public class CM_SUMMON_MOVE extends AionClientPacket
 {
 	private byte type;

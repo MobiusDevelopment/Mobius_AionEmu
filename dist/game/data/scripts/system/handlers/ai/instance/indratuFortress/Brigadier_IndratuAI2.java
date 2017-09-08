@@ -24,11 +24,9 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("brigadier_indratu")
 public class Brigadier_IndratuAI2 extends AggressiveNpcAI2
 {

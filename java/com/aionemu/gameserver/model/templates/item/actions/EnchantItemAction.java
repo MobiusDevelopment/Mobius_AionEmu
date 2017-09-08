@@ -42,6 +42,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author Nemiroff, Wakizashi, vlog
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EnchantItemAction")
 public class EnchantItemAction extends AbstractItemAction

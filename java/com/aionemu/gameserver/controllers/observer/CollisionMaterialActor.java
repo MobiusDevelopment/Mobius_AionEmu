@@ -41,6 +41,9 @@ import com.aionemu.gameserver.utils.gametime.GameTime;
 import com.aionemu.gameserver.utils.gametime.GameTimeManager;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 
+/**
+ * @author Rolandas
+ */
 public class CollisionMaterialActor extends AbstractCollisionObserver implements IActor
 {
 	private final MaterialTemplate actionTemplate;

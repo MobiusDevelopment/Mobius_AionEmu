@@ -28,6 +28,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
 
+/**
+ * @author MrPoke
+ */
 public class MotionList
 {
 	private final Player owner;

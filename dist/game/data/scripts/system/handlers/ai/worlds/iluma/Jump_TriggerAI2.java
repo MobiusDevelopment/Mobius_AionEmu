@@ -29,11 +29,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("jump_trigger")
 public class Jump_TriggerAI2 extends AggressiveNpcAI2
 {

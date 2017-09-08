@@ -32,6 +32,10 @@ import com.aionemu.gameserver.services.player.PlayerEnterWorldService;
 import com.aionemu.gameserver.services.player.PlayerService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * In this packets aion client is requesting edit of character.
+ * @author IlBuono
+ */
 public class CM_CHARACTER_EDIT extends AionClientPacket
 {
 	private int objectId;

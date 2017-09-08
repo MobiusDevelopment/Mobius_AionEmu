@@ -23,6 +23,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * @author vlog, modified Bobobear
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "QuestSkillData")
 public class QuestSkillData

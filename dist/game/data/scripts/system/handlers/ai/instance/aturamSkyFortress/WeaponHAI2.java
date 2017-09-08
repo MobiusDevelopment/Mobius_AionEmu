@@ -24,11 +24,9 @@ import com.aionemu.gameserver.services.NpcShoutsService;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("weaponh")
 public class WeaponHAI2 extends AggressiveNpcAI2
 {

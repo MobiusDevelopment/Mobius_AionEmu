@@ -29,11 +29,9 @@ import com.aionemu.gameserver.model.templates.npcskill.NpcSkillTemplate;
 import com.aionemu.gameserver.model.templates.npcskill.NpcSkillTemplates;
 import com.aionemu.gameserver.services.summons.SummonsService;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("siege_weapon")
 public class SiegeWeaponAI2 extends AISummon
 {

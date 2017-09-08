@@ -29,6 +29,10 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
 
+/**
+ * @author MrPoke
+ * @reworked vlog, Rolandas
+ */
 public class ItemCollecting extends QuestHandler
 {
 	private final Set<Integer> startNpcs = new HashSet<>();

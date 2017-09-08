@@ -25,6 +25,11 @@ import com.aionemu.gameserver.model.broker.filter.BrokerPlayerClassExtraFilter;
 import com.aionemu.gameserver.model.broker.filter.BrokerRecipeFilter;
 import com.aionemu.gameserver.model.gameobjects.Item;
 
+/**
+ * @author kosyachok
+ * @author Simple
+ * @author ATracer
+ */
 public enum BrokerItemMask
 {
 	/**

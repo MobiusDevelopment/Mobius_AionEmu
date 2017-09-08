@@ -20,6 +20,9 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * @author Rolandas
+ */
 public final class FeedGroups
 {
 	@XmlAccessorType(XmlAccessType.FIELD)

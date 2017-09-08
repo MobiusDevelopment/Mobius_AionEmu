@@ -30,6 +30,11 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer
+ * @author Antraxx
+ * @author Kamikaze
+ */
 public class GatheringTask extends AbstractCraftTask
 {
 	private final GatherableTemplate template;

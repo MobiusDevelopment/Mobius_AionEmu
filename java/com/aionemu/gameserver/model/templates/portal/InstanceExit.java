@@ -23,6 +23,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.Race;
 
+/**
+ * @author xTz
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "InstanceExit")
 public class InstanceExit

@@ -23,11 +23,9 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("oil_cask")
 public class OilCaskAI2 extends AggressiveNpcAI2
 {

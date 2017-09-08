@@ -23,9 +23,8 @@ import com.aionemu.gameserver.model.items.ItemSlot;
 import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
 
 /**
- * @author Ranastic (Encom)
+ * @rework Ever'
  */
-
 public class PlumeInfoBlobEntry extends ItemBlobEntry
 {
 	PlumeInfoBlobEntry()

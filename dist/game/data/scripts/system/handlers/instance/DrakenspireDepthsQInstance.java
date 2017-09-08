@@ -57,11 +57,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * @author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(301520000)
 public class DrakenspireDepthsQInstance extends GeneralInstanceHandler
 {

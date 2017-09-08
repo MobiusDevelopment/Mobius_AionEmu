@@ -24,6 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 import com.aionemu.gameserver.model.PlayerClass;
 import com.aionemu.gameserver.model.Race;
 
+/**
+ * @author ATracer
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "skill")
 public class SkillLearnTemplate

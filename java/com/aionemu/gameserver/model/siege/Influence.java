@@ -25,6 +25,11 @@ import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * Calculates fortresses as 10 points and artifacts as 1 point each. Need to find retail calculation. (Upper forts worth more...)
+ * @author Sarynth
+ * @updated Eloann
+ */
 public class Influence
 {
 	private static final Influence instance = new Influence();

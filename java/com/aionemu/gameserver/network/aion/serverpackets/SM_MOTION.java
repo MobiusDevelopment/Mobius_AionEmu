@@ -23,6 +23,9 @@ import com.aionemu.gameserver.model.gameobjects.player.motion.Motion;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author MrPoke
+ */
 public class SM_MOTION extends AionServerPacket
 {
 	byte action;

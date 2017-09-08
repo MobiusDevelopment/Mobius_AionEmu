@@ -43,6 +43,10 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.idfactory.IDFactory;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author xTz
+ * @author Antraxx
+ */
 public class SystemMailService
 {
 	

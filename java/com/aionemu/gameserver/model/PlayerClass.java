@@ -18,6 +18,10 @@ package com.aionemu.gameserver.model;
 
 import javax.xml.bind.annotation.XmlEnum;
 
+/**
+ * This enum represent class that a player may belong to.
+ * @author Luno
+ */
 @XmlEnum
 public enum PlayerClass
 {

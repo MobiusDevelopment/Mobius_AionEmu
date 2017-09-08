@@ -32,11 +32,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Ritsu
+ */
 @AIName("calindiflamelord")
 public class CalindiFlamelordAI2 extends AggressiveNpcAI2
 {

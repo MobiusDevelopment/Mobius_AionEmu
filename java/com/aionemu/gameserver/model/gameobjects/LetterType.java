@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.gameobjects;
 
+/**
+ * @author ginho1
+ */
 public enum LetterType
 {
 	NORMAL(0),

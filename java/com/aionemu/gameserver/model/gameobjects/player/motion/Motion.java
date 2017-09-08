@@ -22,6 +22,9 @@ import java.util.Map;
 import com.aionemu.gameserver.model.IExpirable;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
+/**
+ * @author MrPoke
+ */
 public class Motion implements IExpirable
 {
 	static final Map<Integer, Integer> motionType = new HashMap<>();

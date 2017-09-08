@@ -25,11 +25,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("dried_out_vine")
 public class Dried_Out_VineAI2 extends ActionItemNpcAI2
 {

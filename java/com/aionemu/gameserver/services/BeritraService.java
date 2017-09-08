@@ -49,7 +49,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler (Encom)
  */
-
 public class BeritraService
 {
 	private BeritraSchedule beritraSchedule;

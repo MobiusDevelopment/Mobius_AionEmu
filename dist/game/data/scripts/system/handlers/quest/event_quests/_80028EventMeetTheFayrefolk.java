@@ -19,7 +19,6 @@ package system.handlers.quest.event_quests;
 /**
  * @author Rolandas
  */
-
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestDialog;
@@ -31,7 +30,6 @@ import com.aionemu.gameserver.services.events.EventsService;
 
 public class _80028EventMeetTheFayrefolk extends QuestHandler
 {
-	
 	private static final int questId = 80028;
 	
 	public _80028EventMeetTheFayrefolk()

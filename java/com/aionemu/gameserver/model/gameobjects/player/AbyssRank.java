@@ -24,6 +24,9 @@ import org.slf4j.LoggerFactory;
 import com.aionemu.gameserver.model.gameobjects.PersistentState;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 
+/**
+ * @author ATracer, Divinity
+ */
 public class AbyssRank
 {
 	Logger log = LoggerFactory.getLogger(AbyssRank.class);

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_questrestart extends PlayerCommand
 {
-	
 	public cmd_questrestart()
 	{
 		super("questrestart");

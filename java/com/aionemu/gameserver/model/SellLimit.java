@@ -18,6 +18,9 @@ package com.aionemu.gameserver.model;
 
 import java.util.NoSuchElementException;
 
+/**
+ * @author synchro2
+ */
 public enum SellLimit
 {
 	LIMIT_1_65(1, 65, 292000047L),

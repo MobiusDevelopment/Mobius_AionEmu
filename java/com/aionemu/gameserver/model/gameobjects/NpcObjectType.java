@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.gameobjects;
 
+/**
+ * @author ATracer
+ */
 public enum NpcObjectType
 {
 	NORMAL(1),

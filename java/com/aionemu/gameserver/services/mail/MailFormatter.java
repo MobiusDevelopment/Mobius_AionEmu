@@ -25,6 +25,9 @@ import com.aionemu.gameserver.model.siege.SiegeLocation;
 import com.aionemu.gameserver.model.templates.mail.MailPart;
 import com.aionemu.gameserver.model.templates.mail.MailTemplate;
 
+/**
+ * @author Rolandas
+ */
 public final class MailFormatter
 {
 	public static void sendBlackCloudMail(String recipientName, int itemObjectId, int itemCount)

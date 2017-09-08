@@ -58,6 +58,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import javolution.util.FastList;
 
+/**
+ * @author Rolandas
+ */
 public class HousingService
 {
 	

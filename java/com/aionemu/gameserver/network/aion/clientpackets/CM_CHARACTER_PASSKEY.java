@@ -32,9 +32,8 @@ import com.aionemu.gameserver.services.player.PlayerEnterWorldService;
 import com.aionemu.gameserver.services.player.PlayerService;
 
 /**
- * @author Rinzler
+ * @author ginho1
  */
-
 public class CM_CHARACTER_PASSKEY extends AionClientPacket
 {
 	private int type;

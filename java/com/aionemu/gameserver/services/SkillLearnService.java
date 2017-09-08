@@ -32,6 +32,9 @@ import com.aionemu.gameserver.skillengine.model.SkillLearnTemplate;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer, xTz
+ */
 public class SkillLearnService
 {
 	private static final Logger log = LoggerFactory.getLogger(SkillLearnService.class);

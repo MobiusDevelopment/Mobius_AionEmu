@@ -41,6 +41,9 @@ import com.aionemu.gameserver.utils.stats.StatFunctions;
 import com.aionemu.gameserver.world.WorldMapType;
 import com.google.common.base.Predicate;
 
+/**
+ * @author ATracer, nrg
+ */
 public class PlayerTeamDistributionService
 {
 	public static void doReward(TemporaryPlayerTeam<?> team, float damagePercent, Npc owner, AionObject winner)

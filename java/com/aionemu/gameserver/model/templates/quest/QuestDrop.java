@@ -22,6 +22,9 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * @author MrPoke
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "QuestDrop")
 public class QuestDrop

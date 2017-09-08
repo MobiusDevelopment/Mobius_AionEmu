@@ -19,6 +19,9 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author ATracer
+ */
 public class SM_UI_SETTINGS extends AionServerPacket
 {
 	private final byte[] data;

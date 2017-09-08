@@ -26,11 +26,9 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author MrPoke
+ */
 public class _2132ANewSkill extends QuestHandler
 {
 	private static final int questId = 2132;

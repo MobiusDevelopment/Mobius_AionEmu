@@ -68,6 +68,10 @@ import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 
 import javolution.util.FastList;
 
+/**
+ * @author Avol, ATracer, kosyachok
+ * @modified cura
+ */
 public class Equipment
 {
 	private Player owner;

@@ -26,6 +26,9 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.services.HousingBidService;
 
+/**
+ * @author Rolandas
+ */
 public class SM_HOUSE_BIDS extends AionServerPacket
 {
 	private final boolean isFirst;

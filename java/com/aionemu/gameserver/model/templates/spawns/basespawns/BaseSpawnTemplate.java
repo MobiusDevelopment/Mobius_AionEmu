@@ -22,9 +22,8 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnSpotTemplate;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 
 /**
- * @author Rinzler
+ * @author Source
  */
-
 public class BaseSpawnTemplate extends SpawnTemplate
 {
 	private int id;

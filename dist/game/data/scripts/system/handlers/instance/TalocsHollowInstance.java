@@ -55,11 +55,9 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @InstanceID(300190000)
 public class TalocsHollowInstance extends GeneralInstanceHandler
 {

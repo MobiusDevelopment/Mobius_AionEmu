@@ -36,6 +36,10 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.geo.GeoService;
 
+/**
+ * @author Bio
+ * @reworked Kill3r
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RandomMoveLocEffect")
 public class RandomMoveLocEffect extends EffectTemplate

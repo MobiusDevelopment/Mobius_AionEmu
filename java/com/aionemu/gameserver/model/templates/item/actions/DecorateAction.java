@@ -21,6 +21,9 @@ import javax.xml.bind.annotation.XmlAttribute;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
+/**
+ * @author Rolandas
+ */
 public class DecorateAction extends AbstractItemAction
 {
 	

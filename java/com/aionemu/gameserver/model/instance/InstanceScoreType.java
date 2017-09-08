@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.instance;
 
+/**
+ * @author xTz
+ */
 public enum InstanceScoreType
 {
 	PREPARING(1 * 1024 * 1024),

@@ -67,11 +67,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
-/****/
 /**
- * Author Rinzler (Encom) //http://aion.power.plaync.com/wiki/%EB%A3%A8%EB%82%98%ED%86%A0%EB%A6%AC%EC%9B%80 /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(301310000)
 public class IdgelDomeInstance extends GeneralInstanceHandler
 {

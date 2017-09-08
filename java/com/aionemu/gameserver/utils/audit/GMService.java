@@ -34,6 +34,9 @@ import com.aionemu.gameserver.world.World;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Waii
+ */
 public class GMService
 {
 	public static GMService getInstance()

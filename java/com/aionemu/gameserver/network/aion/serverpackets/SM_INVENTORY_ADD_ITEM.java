@@ -27,6 +27,9 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob;
 import com.aionemu.gameserver.services.item.ItemPacketService.ItemAddType;
 
+/**
+ * @author ATracer
+ */
 public class SM_INVENTORY_ADD_ITEM extends AionServerPacket
 {
 	private final List<Item> items;

@@ -30,6 +30,9 @@ import com.aionemu.gameserver.questEngine.handlers.models.xmlQuest.events.OnKill
 import com.aionemu.gameserver.questEngine.handlers.models.xmlQuest.events.OnTalkEvent;
 import com.aionemu.gameserver.questEngine.handlers.template.XmlQuest;
 
+/**
+ * @author Mr. Poke
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "XmlQuest", propOrder =
 {

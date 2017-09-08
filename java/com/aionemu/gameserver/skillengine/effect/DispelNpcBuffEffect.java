@@ -24,6 +24,9 @@ import com.aionemu.gameserver.skillengine.model.DispelCategoryType;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.skillengine.model.SkillTargetSlot;
 
+/**
+ * @author kecimis
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DispelNpcBuffEffect")
 public class DispelNpcBuffEffect extends AbstractDispelEffect

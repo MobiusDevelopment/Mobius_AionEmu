@@ -31,6 +31,9 @@ import com.aionemu.gameserver.skillengine.model.SkillType;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author ATracer
+ */
 public class SkillAttackManager
 {
 	public static void performAttack(NpcAI2 npcAI, int delay)

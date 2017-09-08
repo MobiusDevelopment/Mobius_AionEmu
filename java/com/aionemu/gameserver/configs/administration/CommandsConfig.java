@@ -18,6 +18,9 @@ package com.aionemu.gameserver.configs.administration;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author vlog TEMPORARY fix
+ */
 public class CommandsConfig
 {
 	@Property(key = "add", defaultValue = "3")

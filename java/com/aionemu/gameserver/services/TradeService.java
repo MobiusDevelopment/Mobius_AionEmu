@@ -55,6 +55,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.SafeMath;
 import com.aionemu.gameserver.utils.audit.AuditLogger;
 
+/**
+ * @author ATracer, Rama, Wakizashi, xTz
+ */
 public class TradeService
 {
 	

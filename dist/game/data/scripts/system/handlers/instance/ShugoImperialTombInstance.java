@@ -41,11 +41,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
 
-/****/
 /**
- * Author Rinzler (Encom) /** Source: https://www.youtube.com/watch?v=UYCLUuaLVGI + http://aionpowerbook.com/powerbook/Shugo_Imperial_Tomb /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(300560000)
 public class ShugoImperialTombInstance extends GeneralInstanceHandler
 {

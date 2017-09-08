@@ -28,6 +28,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Sarynth, nrg
+ */
 public class KiskService
 {
 	private static final KiskService instance = new KiskService();

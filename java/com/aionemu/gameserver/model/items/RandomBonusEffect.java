@@ -23,7 +23,7 @@ import com.aionemu.gameserver.model.templates.item.bonuses.StatBonusType;
 import com.aionemu.gameserver.model.templates.stats.ModifiersTemplate;
 
 /**
- * @author Ranastic
+ * @author xTz
  */
 public class RandomBonusEffect implements StatOwner
 {

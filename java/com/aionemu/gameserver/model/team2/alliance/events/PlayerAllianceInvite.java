@@ -33,6 +33,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.google.common.base.Preconditions;
 
+/**
+ * @author ATracer
+ */
 public class PlayerAllianceInvite extends RequestResponseHandler
 {
 	private final Player inviter;

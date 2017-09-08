@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.utils.rates;
 
+/**
+ * @author ATracer
+ */
 public abstract class Rates
 {
 	public abstract float getGroupXpRate();

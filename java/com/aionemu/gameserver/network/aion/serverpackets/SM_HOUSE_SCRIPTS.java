@@ -23,6 +23,9 @@ import com.aionemu.gameserver.model.house.PlayerScript;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author Rolandas
+ */
 public class SM_HOUSE_SCRIPTS extends AionServerPacket
 {
 	

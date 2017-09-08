@@ -28,6 +28,9 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.TownService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer
+ */
 public class TalkEventHandler
 {
 	public static void onTalk(NpcAI2 npcAI, Creature creature)

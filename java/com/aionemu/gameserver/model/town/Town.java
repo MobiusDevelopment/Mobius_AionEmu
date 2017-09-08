@@ -37,6 +37,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
+/**
+ * @author ViAl
+ */
 public class Town
 {
 	private final int id;

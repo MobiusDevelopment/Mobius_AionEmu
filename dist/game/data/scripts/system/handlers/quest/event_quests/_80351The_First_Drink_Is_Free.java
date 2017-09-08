@@ -25,11 +25,9 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.services.events.EventsService;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class _80351The_First_Drink_Is_Free extends QuestHandler
 {
 	private static final int questId = 80351;

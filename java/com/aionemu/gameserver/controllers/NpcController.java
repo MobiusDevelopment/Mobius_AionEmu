@@ -73,6 +73,10 @@ import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 
+/**
+ * This class is for controlling Npc's
+ * @author -Nemesiss-, ATracer (2009-09-29), Sarynth modified by Wakizashi
+ */
 public class NpcController extends CreatureController<Npc>
 {
 	private static final Logger log = LoggerFactory.getLogger(NpcController.class);

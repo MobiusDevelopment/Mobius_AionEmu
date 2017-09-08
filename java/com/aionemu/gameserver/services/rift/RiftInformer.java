@@ -31,6 +31,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Source
+ */
 public class RiftInformer
 {
 	public static List<Npc> getSpawned(int worldId)

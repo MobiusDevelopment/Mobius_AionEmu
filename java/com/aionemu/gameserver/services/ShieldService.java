@@ -37,6 +37,10 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
 
 import javolution.util.FastMap;
 
+/**
+ * @author xavier
+ * @modified Rolandas
+ */
 public class ShieldService
 {
 	Logger log = LoggerFactory.getLogger(ShieldService.class);

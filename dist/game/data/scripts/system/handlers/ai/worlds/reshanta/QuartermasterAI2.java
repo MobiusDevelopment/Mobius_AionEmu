@@ -26,11 +26,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("quartermaster")
 public class QuartermasterAI2 extends GeneralNpcAI2
 {

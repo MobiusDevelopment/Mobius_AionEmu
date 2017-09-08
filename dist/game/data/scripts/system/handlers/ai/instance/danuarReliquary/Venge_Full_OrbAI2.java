@@ -24,11 +24,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("venge_full_orb")
 public class Venge_Full_OrbAI2 extends AggressiveNpcAI2
 {

@@ -29,6 +29,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author Sarynth modified by Wakizashi, Sippolo
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PulledEffect")
 public class PulledEffect extends EffectTemplate

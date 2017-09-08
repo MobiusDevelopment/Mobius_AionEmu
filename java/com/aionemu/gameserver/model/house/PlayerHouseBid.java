@@ -18,6 +18,9 @@ package com.aionemu.gameserver.model.house;
 
 import java.sql.Timestamp;
 
+/**
+ * @author Rolandas
+ */
 public class PlayerHouseBid implements Comparable<PlayerHouseBid>
 {
 	private final int playerId;

@@ -26,6 +26,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 
+/**
+ * @author ATracer
+ */
 public class CM_SUMMON_ATTACK extends AionClientPacket
 {
 	private static final Logger log = LoggerFactory.getLogger(CM_SUMMON_ATTACK.class);

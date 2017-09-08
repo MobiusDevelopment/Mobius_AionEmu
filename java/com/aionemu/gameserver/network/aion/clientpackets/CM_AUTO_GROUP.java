@@ -34,6 +34,10 @@ import com.aionemu.gameserver.services.instance.KamarBattlefieldService;
 import com.aionemu.gameserver.services.instance.SuspiciousOphidanBridgeService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Shepper, Guapo, nrg
+ * @author GiGatR00n v4.7.5.x
+ */
 public class CM_AUTO_GROUP extends AionClientPacket
 {
 	private byte instanceMaskId;

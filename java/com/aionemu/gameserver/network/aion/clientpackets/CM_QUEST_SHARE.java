@@ -31,6 +31,9 @@ import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ginho1
+ */
 public class CM_QUEST_SHARE extends AionClientPacket
 {
 	public int questId;

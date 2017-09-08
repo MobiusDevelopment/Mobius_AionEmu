@@ -51,6 +51,9 @@ import com.aionemu.gameserver.skillengine.task.MorphingTask;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author MrPoke, sphinx, synchro2
+ */
 public class CraftService
 {
 	public static void finishCrafting(Player player, RecipeTemplate recipetemplate, int critCount, int bonus)

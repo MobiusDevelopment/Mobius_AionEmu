@@ -23,11 +23,9 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.utils.MathUtil;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("Fissure_Of_Oblivion_Bind_Point")
 public class Fissure_Of_Oblivion_Bind_PointAI2 extends NpcAI2
 {

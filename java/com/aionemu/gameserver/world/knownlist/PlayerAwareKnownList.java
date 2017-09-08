@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class PlayerAwareKnownList extends KnownList
 {
-	
 	public PlayerAwareKnownList(VisibleObject owner)
 	{
 		super(owner);
@@ -35,5 +34,4 @@ public class PlayerAwareKnownList extends KnownList
 	{
 		return newObject instanceof Player;
 	}
-	
 }

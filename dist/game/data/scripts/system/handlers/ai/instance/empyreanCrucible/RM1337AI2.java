@@ -32,11 +32,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Luzien
+ */
 @AIName("rm_1337")
 public class RM1337AI2 extends AggressiveNpcAI2
 {

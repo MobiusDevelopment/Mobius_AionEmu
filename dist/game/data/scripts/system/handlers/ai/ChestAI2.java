@@ -36,6 +36,9 @@ import com.aionemu.gameserver.services.drop.DropService;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer, xTz
+ */
 @AIName("chest")
 public class ChestAI2 extends ActionItemNpcAI2
 {

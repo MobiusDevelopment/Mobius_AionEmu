@@ -19,6 +19,10 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author orz
+ * @author Sarynth thx Rhys2002 for packets. :)
+ */
 public class SM_DIE extends AionServerPacket
 {
 	private final boolean hasRebirth;

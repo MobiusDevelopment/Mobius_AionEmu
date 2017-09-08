@@ -29,6 +29,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.instance.instancereward.InstanceReward;
 import com.aionemu.gameserver.world.WorldMapInstance;
 
+/**
+ * @author xTz
+ */
 public abstract class AutoInstance extends AbstractLockManager implements AutoInstanceHandler
 {
 	protected int instanceMaskId;

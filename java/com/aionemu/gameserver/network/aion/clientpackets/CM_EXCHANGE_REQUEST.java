@@ -32,6 +32,9 @@ import com.aionemu.gameserver.services.ExchangeService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author -Avol-
+ */
 public class CM_EXCHANGE_REQUEST extends AionClientPacket
 {
 	public Integer targetObjectId;

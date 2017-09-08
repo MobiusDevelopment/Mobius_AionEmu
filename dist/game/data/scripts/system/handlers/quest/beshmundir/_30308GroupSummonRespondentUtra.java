@@ -33,10 +33,8 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * @author Gigi
  */
-
 public class _30308GroupSummonRespondentUtra extends QuestHandler
 {
-	
 	private static final int questId = 30308;
 	
 	public _30308GroupSummonRespondentUtra()

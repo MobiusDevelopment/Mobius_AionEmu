@@ -37,11 +37,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.skill.NpcSkillEntry;
 import com.aionemu.gameserver.model.templates.npcshout.ShoutEventType;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author ATracer
+ */
 @AIName("general")
 public class GeneralNpcAI2 extends NpcAI2
 {

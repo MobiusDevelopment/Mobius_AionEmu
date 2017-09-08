@@ -19,6 +19,9 @@ package com.aionemu.gameserver.model.templates.quest;
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * @author antness
+ */
 @XmlType(name = "QuestCategory")
 @XmlEnum
 public enum QuestCategory

@@ -22,6 +22,9 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.reward.RewardService;
 
+/**
+ * @author ginho1
+ */
 public class CM_PLAYER_LISTENER extends AionClientPacket
 {
 	

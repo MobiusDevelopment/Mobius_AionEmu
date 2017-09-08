@@ -22,9 +22,8 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 
 /**
- * @author Ranastic (Encom)
+ * @author -Enomine-
  */
-
 public class CM_BONUS_TITLE extends AionClientPacket
 {
 	private int bonusTitleId;

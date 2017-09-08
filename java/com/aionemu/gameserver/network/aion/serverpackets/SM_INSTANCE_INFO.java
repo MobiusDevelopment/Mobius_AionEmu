@@ -26,6 +26,9 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 import javolution.util.FastMap;
 
+/**
+ * @author nrg
+ */
 public class SM_INSTANCE_INFO extends AionServerPacket
 {
 	private final Player player;

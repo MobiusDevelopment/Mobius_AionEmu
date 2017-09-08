@@ -25,6 +25,10 @@ import com.aionemu.commons.utils.internal.chmv8.CountedCompleter;
 import com.aionemu.commons.utils.internal.chmv8.ForkJoinTask;
 import com.google.common.base.Predicate;
 
+/**
+ * @author Rolandas <br>
+ *         To use forEach method, statically import the method</tt>
+ */
 public final class ForEach<E>extends CountedCompleter<E>
 {
 	private static final Logger log = LoggerFactory.getLogger(ForEach.class);

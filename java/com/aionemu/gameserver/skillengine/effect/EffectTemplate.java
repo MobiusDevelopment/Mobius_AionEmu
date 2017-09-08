@@ -53,6 +53,9 @@ import com.aionemu.gameserver.utils.stats.StatFunctions;
 
 import javolution.util.FastList;
 
+/**
+ * @author ATracer
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Effect")
 public abstract class EffectTemplate

@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.skillengine.model;
 
+/**
+ * @author MrPoke
+ */
 public enum SkillMoveType
 {
 	RESIST(0),

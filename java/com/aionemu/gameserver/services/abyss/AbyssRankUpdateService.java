@@ -41,9 +41,9 @@ import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
- * @author Rinzler (Encom)
+ * @author ATracer
+ * @author ThunderBolt - GloryPoints
  */
-
 public class AbyssRankUpdateService
 {
 	private static final Logger log = LoggerFactory.getLogger(AbyssRankUpdateService.class);

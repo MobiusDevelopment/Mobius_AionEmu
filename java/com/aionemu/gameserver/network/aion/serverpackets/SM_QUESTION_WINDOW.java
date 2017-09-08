@@ -21,6 +21,10 @@ import com.aionemu.gameserver.model.siege.ArtifactLocation;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * Opens a yes/no question window on the client. Question based on the code given, defined in client_strings.xml
+ * @author Ben, avol, Lyahim
+ */
 public class SM_QUESTION_WINDOW extends AionServerPacket
 {
 	public static final int STR_DUEL_DO_YOU_ACCEPT_REQUEST = 50028;

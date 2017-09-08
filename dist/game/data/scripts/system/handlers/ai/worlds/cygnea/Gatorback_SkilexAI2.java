@@ -21,11 +21,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("gatorback_skilex")
 public class Gatorback_SkilexAI2 extends AggressiveNpcAI2
 {

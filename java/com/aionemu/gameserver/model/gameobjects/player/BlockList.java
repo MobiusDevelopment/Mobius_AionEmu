@@ -21,6 +21,11 @@ import java.util.Map;
 
 import com.aionemu.commons.utils.internal.chmv8.PlatformDependent;
 
+/**
+ * Represents a players list of blocked users<br />
+ * Blocks via a player's CommonData
+ * @author Ben
+ */
 public class BlockList implements Iterable<BlockedPlayer>
 {
 	public static final int MAX_BLOCKS = 10;

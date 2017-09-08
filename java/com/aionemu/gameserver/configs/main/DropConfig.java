@@ -18,6 +18,10 @@ package com.aionemu.gameserver.configs.main;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author Tiger0319
+ * @rework Blackfire
+ */
 public class DropConfig
 {
 	@Property(key = "gameserver.drop.reduction.disable", defaultValue = "false")

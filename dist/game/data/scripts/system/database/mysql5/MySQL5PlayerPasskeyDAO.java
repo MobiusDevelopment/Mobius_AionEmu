@@ -28,6 +28,9 @@ import com.aionemu.commons.database.DatabaseFactory;
 import com.aionemu.gameserver.dao.MySQL5DAOUtils;
 import com.aionemu.gameserver.dao.PlayerPasskeyDAO;
 
+/**
+ * @author cura
+ */
 public class MySQL5PlayerPasskeyDAO extends PlayerPasskeyDAO
 {
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerPasskeyDAO.class);

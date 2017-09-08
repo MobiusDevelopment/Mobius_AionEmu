@@ -27,6 +27,9 @@ import com.aionemu.gameserver.services.HousingBidService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.collections.ListSplitter;
 
+/**
+ * @author Rolandas
+ */
 public class CM_GET_HOUSE_BIDS extends AionClientPacket
 {
 	public CM_GET_HOUSE_BIDS(int opcode, State state, State... restStates)

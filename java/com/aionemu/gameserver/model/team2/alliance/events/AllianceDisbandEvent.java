@@ -22,6 +22,9 @@ import com.aionemu.gameserver.model.team2.common.events.AlwaysTrueTeamEvent;
 import com.aionemu.gameserver.model.team2.common.events.PlayerLeavedEvent.LeaveReson;
 import com.google.common.base.Predicate;
 
+/**
+ * @author ATracer
+ */
 public class AllianceDisbandEvent extends AlwaysTrueTeamEvent implements Predicate<Player>
 {
 	private final PlayerAlliance alliance;

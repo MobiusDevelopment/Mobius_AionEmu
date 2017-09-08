@@ -44,6 +44,10 @@ import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.services.craft.CraftSkillUpdateService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author MrPoke
+ * @modified synchro2
+ */
 public class NpcFactions
 {
 	private final Player owner;

@@ -28,6 +28,11 @@ import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.SiegeZoneInstance;
 
+/**
+ * This class contains static methods, which are utility methods, all of them are interacting only with objects passed as parameters.<br>
+ * These methods could be placed directly into Player class, but we want to keep Player class as a pure data holder.<br>
+ * @author Luno
+ */
 public class PacketSendUtility
 {
 	public static void sendMessage(Player player, String msg)

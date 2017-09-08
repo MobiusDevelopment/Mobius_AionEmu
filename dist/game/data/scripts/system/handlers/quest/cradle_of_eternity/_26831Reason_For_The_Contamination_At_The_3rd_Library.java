@@ -24,11 +24,9 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class _26831Reason_For_The_Contamination_At_The_3rd_Library extends QuestHandler
 {
 	private static final int questId = 26831;

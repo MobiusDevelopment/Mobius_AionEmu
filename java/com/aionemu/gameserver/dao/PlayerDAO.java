@@ -27,6 +27,11 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
 import com.aionemu.gameserver.model.team.legion.LegionJoinRequestState;
 
+/**
+ * Class that is responsible for storing/loading player data
+ * @author SoulKeeper, Saelya
+ * @author cura
+ */
 public abstract class PlayerDAO implements IDFactoryAwareDAO
 {
 	public abstract boolean isNameUsed(String name);

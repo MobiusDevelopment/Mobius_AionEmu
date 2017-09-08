@@ -42,6 +42,13 @@ import com.aionemu.gameserver.services.events.bg.SoloSurvivorBg;
 
 import javolution.util.FastList;
 
+/**
+ * This packet is displaying visible players.
+ * @author -Nemesiss-, Avol, srx47 modified cura
+ * @author GiGatR00n v4.7.5.x
+ * @modified -Enomine- -Artur-
+ * @Reworked Kill3r
+ */
 public class SM_PLAYER_INFO extends AionServerPacket
 {
 	private final Player player;

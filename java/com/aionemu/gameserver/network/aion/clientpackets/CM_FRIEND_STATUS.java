@@ -26,6 +26,10 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_FRIEND_STATUS;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * Packet received when a user changes his buddylist status
+ * @author Ben
+ */
 public class CM_FRIEND_STATUS extends AionClientPacket
 {
 	private final Logger log = LoggerFactory.getLogger(CM_FRIEND_STATUS.class);

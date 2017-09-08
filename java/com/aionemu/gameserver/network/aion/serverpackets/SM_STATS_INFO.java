@@ -29,6 +29,12 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.utils.gametime.GameTimeManager;
 
+/**
+ * In this packet Server is sending User Info?
+ * @author -Nemesiss-
+ * @author Luno
+ * @author ginho1
+ */
 public class SM_STATS_INFO extends AionServerPacket
 {
 	Logger log = LoggerFactory.getLogger(SM_STATS_INFO.class);

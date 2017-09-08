@@ -29,11 +29,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Luzien
+ */
 @AIName("alukina_emp")
 public class QueenAlukinaAI2 extends AggressiveNpcAI2
 {

@@ -26,6 +26,9 @@ import javax.xml.bind.annotation.XmlType;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.handlers.template.FountainRewards;
 
+/**
+ * @author Bobobear
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FountainRewardsData")
 public class FountainRewardsData extends XMLQuest

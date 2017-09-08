@@ -44,6 +44,9 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.item.actions.SummonHouseObjectAction;
 import com.aionemu.gameserver.utils.idfactory.IDFactory;
 
+/**
+ * @author Rolandas
+ */
 public final class HouseObjectFactory
 {
 	

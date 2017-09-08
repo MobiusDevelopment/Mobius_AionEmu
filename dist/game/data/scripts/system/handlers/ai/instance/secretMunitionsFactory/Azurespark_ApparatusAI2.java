@@ -27,11 +27,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("azurespark_apparatus")
 public class Azurespark_ApparatusAI2 extends ActionItemNpcAI2
 {

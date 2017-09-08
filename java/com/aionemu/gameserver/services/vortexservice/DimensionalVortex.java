@@ -27,6 +27,9 @@ import com.aionemu.gameserver.services.VortexService;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Source
+ */
 public abstract class DimensionalVortex<VL extends VortexLocation>
 {
 	private final VL vortexLocation;

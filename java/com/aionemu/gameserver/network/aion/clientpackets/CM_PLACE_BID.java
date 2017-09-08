@@ -22,6 +22,9 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.HousingBidService;
 
+/**
+ * @author Rolandas
+ */
 public class CM_PLACE_BID extends AionClientPacket
 {
 	int listIndex = 0;

@@ -18,11 +18,9 @@ package com.aionemu.gameserver.model.instance.instancereward;
 
 import com.aionemu.gameserver.model.instance.playerreward.StonespearReachPlayerReward;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class StonespearReachReward extends InstanceReward<StonespearReachPlayerReward>
 {
 	private int points;

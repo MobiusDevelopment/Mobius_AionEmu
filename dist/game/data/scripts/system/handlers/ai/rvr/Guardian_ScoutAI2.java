@@ -21,11 +21,9 @@ import com.aionemu.gameserver.services.NpcShoutsService;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("guardian_scout")
 public class Guardian_ScoutAI2 extends AggressiveNpcAI2
 {

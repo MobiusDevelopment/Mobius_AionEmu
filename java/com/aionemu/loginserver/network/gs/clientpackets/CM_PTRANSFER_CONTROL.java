@@ -24,7 +24,6 @@ import com.aionemu.loginserver.service.PlayerTransferService;
  */
 public class CM_PTRANSFER_CONTROL extends GsClientPacket
 {
-	
 	private byte actionId;
 	
 	@Override

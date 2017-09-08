@@ -29,6 +29,9 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.MathUtil;
 
+/**
+ * @author ATracer, orz, KID
+ */
 public class CM_TELEPORT_SELECT extends AionClientPacket
 {
 	public int targetObjectId;

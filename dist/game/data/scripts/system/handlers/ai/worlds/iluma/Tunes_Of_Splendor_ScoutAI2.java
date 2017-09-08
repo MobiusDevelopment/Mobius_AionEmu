@@ -27,11 +27,9 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.services.NpcShoutsService;
 import com.aionemu.gameserver.world.WorldPosition;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("tunes_of_splendor_scout")
 public class Tunes_Of_Splendor_ScoutAI2 extends NpcAI2
 {

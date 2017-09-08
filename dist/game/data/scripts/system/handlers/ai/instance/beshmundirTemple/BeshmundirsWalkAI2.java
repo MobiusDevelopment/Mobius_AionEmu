@@ -35,11 +35,10 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Gigi
+ * @author vlog
+ */
 @AIName("beshmundirswalk")
 public class BeshmundirsWalkAI2 extends ActionItemNpcAI2
 {

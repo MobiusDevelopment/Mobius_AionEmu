@@ -18,6 +18,9 @@ package com.aionemu.gameserver.controllers.observer;
 
 import com.aionemu.gameserver.controllers.attack.AttackStatus;
 
+/**
+ * @author kecimis
+ */
 public class AttackerCriticalStatusObserver extends AttackCalcObserver
 {
 	

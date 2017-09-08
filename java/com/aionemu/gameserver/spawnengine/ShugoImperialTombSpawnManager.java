@@ -31,11 +31,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class ShugoImperialTombSpawnManager
 {
 	private static final Logger log = LoggerFactory.getLogger(ShugoImperialTombSpawnManager.class);

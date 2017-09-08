@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.flypath;
 
+/**
+ * @author xTz
+ */
 public enum FlyPathType
 {
 	GEYSER(0),

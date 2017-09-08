@@ -24,6 +24,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author xTz
+ */
 public class SiegeWeaponMoveController extends SummonMoveController
 {
 	

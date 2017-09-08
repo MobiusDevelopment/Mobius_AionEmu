@@ -26,10 +26,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Gigi
  */
-
 public class _30311GroupAQuartzIsaQuartz extends QuestHandler
 {
-	
 	private static final int questId = 30311;
 	
 	public _30311GroupAQuartzIsaQuartz()

@@ -27,9 +27,11 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_ATTACK_STATUS.TYPE;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.skillengine.model.HealType;
 
+/**
+ * @author kecimis
+ */
 public class CaseHealEffect extends AbstractHealEffect
 {
-	
 	@XmlAttribute(name = "cond_value")
 	protected int condValue;
 	

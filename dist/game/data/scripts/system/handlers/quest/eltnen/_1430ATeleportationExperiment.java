@@ -30,7 +30,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
  */
 public class _1430ATeleportationExperiment extends QuestHandler
 {
-	
 	private static final int questId = 1430;
 	
 	public _1430ATeleportationExperiment()

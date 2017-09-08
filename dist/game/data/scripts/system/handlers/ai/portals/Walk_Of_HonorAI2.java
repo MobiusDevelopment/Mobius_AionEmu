@@ -26,11 +26,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /** Helper themoose (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("walk_of_honor")
 public class Walk_Of_HonorAI2 extends GeneralNpcAI2
 {

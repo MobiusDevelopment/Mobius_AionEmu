@@ -26,10 +26,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Gigi
  */
-
 public class _30213GroupMagicalEssence extends QuestHandler
 {
-	
 	private static final int questId = 30213;
 	
 	public _30213GroupMagicalEssence()

@@ -30,6 +30,9 @@ import org.apache.commons.io.FileUtils;
 import com.aionemu.commons.utils.xml.JAXBUtil;
 import com.aionemu.gameserver.model.templates.ingameshop.IGCategory;
 
+/**
+ * @author xTz
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "in_game_shop")
 public class InGameShopProperty

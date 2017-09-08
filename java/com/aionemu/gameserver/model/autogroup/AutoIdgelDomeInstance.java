@@ -32,9 +32,8 @@ import com.aionemu.gameserver.model.team2.group.PlayerGroupService;
 import com.aionemu.gameserver.services.instance.IdgelDomeService;
 
 /**
- * @author Rinzler (Encom)
+ * @author GiGatR00n v4.7.5.x
  */
-
 public class AutoIdgelDomeInstance extends AutoInstance
 {
 	@Override

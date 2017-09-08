@@ -32,6 +32,9 @@ import com.aionemu.gameserver.questEngine.handlers.template.MonsterHunt;
 
 import javolution.util.FastMap;
 
+/**
+ * @author MrPoke, modified Bobobear
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MonsterHuntData", propOrder =
 {

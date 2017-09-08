@@ -20,11 +20,9 @@ import com.aionemu.gameserver.model.IExpirable;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-/****/
 /**
- * Author Ranastic (Encom) /
- ****/
-
+ * @author Ranastic (Encom)
+ */
 public class F2pAccount implements IExpirable
 {
 	private int deleteTime = 0;

@@ -24,7 +24,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlRootElement(name = "game_experience_item")
 @XmlAccessorType(XmlAccessType.NONE)
 public class GameExperience

@@ -21,6 +21,10 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_TRANSFORM;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 
+/**
+ * @author ATracer
+ * @modified By aionchs- Wylovech
+ */
 public class Morph extends AdminCommand
 {
 	public Morph()

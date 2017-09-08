@@ -27,6 +27,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.templates.item.WeaponType;
 
+/**
+ * @author kecims
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Times")
 public class Times

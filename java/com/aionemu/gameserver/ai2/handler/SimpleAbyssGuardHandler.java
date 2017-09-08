@@ -25,6 +25,9 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.world.geo.GeoService;
 
+/**
+ * @author Rolandas
+ */
 public class SimpleAbyssGuardHandler
 {
 	public static void onCreatureMoved(NpcAI2 npcAI, Creature creature)

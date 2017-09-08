@@ -19,6 +19,9 @@ package com.aionemu.gameserver.services.siegeservice;
 import com.aionemu.gameserver.controllers.attack.AggroList.AddDamageValueCallback;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 
+/**
+ * @author SoulKeeper
+ */
 public class SiegeBossDoAddDamageListener extends AddDamageValueCallback
 {
 	private final Siege<?> siege;

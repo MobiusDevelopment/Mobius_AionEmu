@@ -23,6 +23,9 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
+/**
+ * @author keqi
+ */
 public class _21054MissionofDestiny extends QuestHandler
 {
 	private static final int questId = 21054;

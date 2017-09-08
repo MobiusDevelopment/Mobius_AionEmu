@@ -37,6 +37,11 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
 
+/**
+ * Talk with Munin (790001). Find Fissure of Destiny (700551) that connects to Ataxiar (320140000) and talk with Hagen (205020) (spawn). Proceed to Ataxiar aand annihilate the Guardian Legionarys (50): Legionary (798342, 798343, 798344, 798345), Vanquish Brigade General Hellion (1), Talk with Lephar
+ * (205118) (spawn). Report the result to Vidar (204052).
+ * @author Bobobear
+ */
 public class _2099ToFaceTheFuture extends QuestHandler
 {
 	private static final int questId = 2099;

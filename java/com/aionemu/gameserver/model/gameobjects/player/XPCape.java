@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.gameobjects.player;
 
+/**
+ * @author MrPoke
+ */
 public enum XPCape
 {
 	_0(0),

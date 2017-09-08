@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Rinzler (30.03.2014)
  */
-
 public class SM_TRADE_IN_LIST extends AionServerPacket
 {
 	private final Npc npc;

@@ -26,11 +26,9 @@ import com.aionemu.gameserver.model.templates.windstreams.WindstreamPath;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 public class PlayerActions extends CreatureActions
 {
 	public static boolean isInPlayerMode(Player player, PlayerMode mode)

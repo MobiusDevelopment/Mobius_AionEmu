@@ -150,6 +150,9 @@ import com.aionemu.gameserver.world.World;
 
 import javolution.util.FastList;
 
+/**
+ * @author ATracer
+ */
 public final class PlayerEnterWorldService
 {
 	private static final Logger log = LoggerFactory.getLogger("GAMECONNECTION_LOG");

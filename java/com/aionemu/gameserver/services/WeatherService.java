@@ -38,6 +38,11 @@ import com.aionemu.gameserver.utils.gametime.GameTime;
 import com.aionemu.gameserver.utils.gametime.GameTimeManager;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author ATracer
+ * @author Kwazar
+ * @reworked Rolandas
+ */
 public class WeatherService
 {
 	final Map<WeatherKey, WeatherEntry[]> worldZoneWeathers;

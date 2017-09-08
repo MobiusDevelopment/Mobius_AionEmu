@@ -34,7 +34,6 @@ import javolution.util.FastList;
 /**
  * @author Rinzler (Encom)
  */
-
 public class DisputeLandService
 {
 	private boolean active;

@@ -23,6 +23,9 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author Simple
+ */
 public class LegionConfig
 {
 	protected static final Logger log = LoggerFactory.getLogger(LegionConfig.class);

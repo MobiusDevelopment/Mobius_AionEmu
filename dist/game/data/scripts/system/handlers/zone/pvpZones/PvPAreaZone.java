@@ -22,6 +22,9 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.world.zone.ZoneName;
 import com.aionemu.gameserver.world.zone.handler.ZoneNameAnnotation;
 
+/**
+ * @author MrPoke
+ */
 @ZoneNameAnnotation(value = "LC1_PVP_SUB_C DC1_PVP_ZONE")
 public class PvPAreaZone extends PvPZone
 {

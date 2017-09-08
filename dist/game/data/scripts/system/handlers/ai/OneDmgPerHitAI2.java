@@ -18,11 +18,9 @@ package system.handlers.ai;
 
 import com.aionemu.gameserver.ai2.AIName;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("onedmgperhit")
 public class OneDmgPerHitAI2 extends NoActionAI2
 {

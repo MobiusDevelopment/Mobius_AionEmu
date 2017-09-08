@@ -22,11 +22,9 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("fountless_heatvent_protector")
 public class Fountless_Heatvent_ProtectorAI2 extends AggressiveNpcAI2
 {

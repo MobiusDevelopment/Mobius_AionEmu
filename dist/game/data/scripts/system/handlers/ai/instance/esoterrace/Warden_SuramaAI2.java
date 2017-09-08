@@ -31,11 +31,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("wardensurama")
 public class Warden_SuramaAI2 extends AggressiveNpcAI2
 {

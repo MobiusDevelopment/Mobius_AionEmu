@@ -31,6 +31,9 @@ import com.aionemu.gameserver.model.team2.group.PlayerGroup;
 import com.aionemu.gameserver.model.team2.group.PlayerGroupService;
 import com.aionemu.gameserver.services.instance.DredgionService2;
 
+/**
+ * @author xTz
+ */
 public class AutoDredgionInstance extends AutoInstance
 {
 	@Override

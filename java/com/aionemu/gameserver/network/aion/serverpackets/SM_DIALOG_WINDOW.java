@@ -29,6 +29,9 @@ import com.aionemu.gameserver.world.MapRegion;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 
+/**
+ * @author alexa026
+ */
 public class SM_DIALOG_WINDOW extends AionServerPacket
 {
 	private final int targetObjectId;

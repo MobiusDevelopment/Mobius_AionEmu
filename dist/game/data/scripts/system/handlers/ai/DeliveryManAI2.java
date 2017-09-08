@@ -26,11 +26,9 @@ import com.aionemu.gameserver.services.NpcShoutsService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author -Nemesiss-
+ */
 @AIName("deliveryman")
 public class DeliveryManAI2 extends FollowingNpcAI2
 {

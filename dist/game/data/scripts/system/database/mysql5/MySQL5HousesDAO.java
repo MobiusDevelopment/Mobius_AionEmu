@@ -43,6 +43,9 @@ import com.aionemu.gameserver.model.templates.housing.BuildingType;
 import com.aionemu.gameserver.model.templates.housing.HouseAddress;
 import com.aionemu.gameserver.model.templates.housing.HousingLand;
 
+/**
+ * @author Rolandas
+ */
 public class MySQL5HousesDAO extends HousesDAO
 {
 	private static final Logger log = LoggerFactory.getLogger(MySQL5HousesDAO.class);

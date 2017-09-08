@@ -45,6 +45,10 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
+/**
+ * @author synchro2
+ * @reworked Luzien TODO: Send Peace Dredgion without assault TODO: Artifact Siege
+ */
 public class BalaurAssaultService
 {
 	private static final BalaurAssaultService instance = new BalaurAssaultService();

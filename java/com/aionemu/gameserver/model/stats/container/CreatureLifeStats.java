@@ -34,6 +34,9 @@ import com.aionemu.gameserver.services.LifeStatsRestoreService;
 import com.aionemu.gameserver.skillengine.effect.AbnormalState;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer
+ */
 public abstract class CreatureLifeStats<T extends Creature>
 {
 	private static final Logger log = LoggerFactory.getLogger(CreatureLifeStats.class);

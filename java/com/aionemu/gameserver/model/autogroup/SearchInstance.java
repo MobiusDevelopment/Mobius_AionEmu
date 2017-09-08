@@ -24,6 +24,10 @@ import java.util.List;
 
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
+/**
+ * @author xTz
+ * @author GiGatR00n v4.7.5.x
+ */
 public class SearchInstance
 {
 	private final long registrationTime = System.currentTimeMillis();

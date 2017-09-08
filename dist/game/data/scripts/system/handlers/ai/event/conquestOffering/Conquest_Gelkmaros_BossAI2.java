@@ -32,11 +32,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("conquest_gelkmaros")
 public class Conquest_Gelkmaros_BossAI2 extends AggressiveNpcAI2
 {

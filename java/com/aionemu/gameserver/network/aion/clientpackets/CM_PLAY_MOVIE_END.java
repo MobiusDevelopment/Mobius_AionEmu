@@ -22,6 +22,9 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 
+/**
+ * @author MrPoke
+ */
 public class CM_PLAY_MOVIE_END extends AionClientPacket
 {
 	@SuppressWarnings("unused")

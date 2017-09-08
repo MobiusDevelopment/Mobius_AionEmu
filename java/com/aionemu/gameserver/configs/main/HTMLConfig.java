@@ -18,6 +18,9 @@ package com.aionemu.gameserver.configs.main;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author lord_rex
+ */
 public class HTMLConfig
 {
 	@Property(key = "gameserver.html.welcome.enable", defaultValue = "false")

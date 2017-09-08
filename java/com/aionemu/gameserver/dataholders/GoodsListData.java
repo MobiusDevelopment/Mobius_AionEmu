@@ -28,6 +28,9 @@ import com.aionemu.gameserver.model.templates.goods.GoodsList;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * @author ATracer
+ */
 @XmlRootElement(name = "goodslists")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GoodsListData

@@ -28,6 +28,9 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import javolution.util.FastList;
 
+/**
+ * @author xTz, KID
+ */
 public class SM_IN_GAME_SHOP_LIST extends AionServerPacket
 {
 	private final Player player;

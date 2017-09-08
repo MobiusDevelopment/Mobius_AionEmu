@@ -23,6 +23,11 @@ import com.aionemu.gameserver.model.stats.calc.Stat2;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * Emotion packet
+ * @author SoulKeeper
+ * @modified -Enomine- 4.0
+ */
 public class SM_EMOTION extends AionServerPacket
 {
 	private final int senderObjectId;

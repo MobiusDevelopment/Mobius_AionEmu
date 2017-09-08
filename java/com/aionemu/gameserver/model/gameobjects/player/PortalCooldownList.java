@@ -23,6 +23,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
 
+/**
+ * @author ATracer
+ */
 public class PortalCooldownList
 {
 	private final Player owner;

@@ -28,11 +28,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("Shadow_Of_Oblivion_70")
 public class Shadow_Of_Oblivion_70AI2 extends AggressiveNpcAI2
 {

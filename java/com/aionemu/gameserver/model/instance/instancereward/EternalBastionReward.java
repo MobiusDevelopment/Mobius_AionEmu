@@ -18,11 +18,9 @@ package com.aionemu.gameserver.model.instance.instancereward;
 
 import com.aionemu.gameserver.model.instance.playerreward.EternalBastionPlayerReward;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Romanz
+ */
 public class EternalBastionReward extends InstanceReward<EternalBastionPlayerReward>
 {
 	private int points;

@@ -24,11 +24,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("tiamat_woman_form")
 public class Tiamat_Woman_FormAI2 extends AggressiveNpcAI2
 {

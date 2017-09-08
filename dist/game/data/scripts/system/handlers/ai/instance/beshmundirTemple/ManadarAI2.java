@@ -23,11 +23,9 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("manadar")
 public class ManadarAI2 extends AggressiveNpcAI2
 {

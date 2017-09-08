@@ -19,6 +19,9 @@ package com.aionemu.gameserver.model.autogroup;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.world.WorldMapInstance;
 
+/**
+ * @author xTz
+ */
 public interface AutoInstanceHandler
 {
 	void initsialize(int instanceMaskId);

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_STATUPDATE_MP extends AionServerPacket
 {
-	
 	private final int currentMp;
 	private final int maxMp;
 	
@@ -48,5 +47,4 @@ public class SM_STATUPDATE_MP extends AionServerPacket
 		writeD(currentMp);
 		writeD(maxMp);
 	}
-	
 }

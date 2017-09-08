@@ -27,10 +27,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Hilgert
  */
-
 public class _2842BalaurintheUndergroundFortress extends QuestHandler
 {
-	
 	private static final int questId = 2842;
 	
 	public _2842BalaurintheUndergroundFortress()

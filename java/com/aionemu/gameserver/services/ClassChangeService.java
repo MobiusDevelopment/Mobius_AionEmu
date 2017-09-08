@@ -31,6 +31,9 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer, sweetkr
+ */
 public class ClassChangeService
 {
 	public static void showClassChangeDialog(Player player)

@@ -27,10 +27,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Gigi
  */
-
 public class _30301TrackingSupplies extends QuestHandler
 {
-	
 	private static final int questId = 30301;
 	
 	public _30301TrackingSupplies()

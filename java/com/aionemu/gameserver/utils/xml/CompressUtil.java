@@ -20,9 +20,11 @@ import java.io.ByteArrayOutputStream;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
 
+/**
+ * @author Rolandas
+ */
 public final class CompressUtil
 {
-	
 	public static String Decompress(byte[] bytes) throws Exception
 	{
 		final Inflater decompressor = new Inflater();

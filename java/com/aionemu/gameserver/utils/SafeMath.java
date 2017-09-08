@@ -21,7 +21,6 @@ package com.aionemu.gameserver.utils;
  */
 public class SafeMath
 {
-	
 	public static int addSafe(int source, int value) throws OverfowException
 	{
 		final long s = (long) source + (long) value;

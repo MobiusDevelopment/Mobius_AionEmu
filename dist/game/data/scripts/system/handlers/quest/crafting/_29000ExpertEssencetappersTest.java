@@ -24,6 +24,9 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
 
+/**
+ * @author Gigi
+ */
 public class _29000ExpertEssencetappersTest extends QuestHandler
 {
 	private static final int questId = 29000;

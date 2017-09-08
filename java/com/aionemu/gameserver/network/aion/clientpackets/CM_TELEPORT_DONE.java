@@ -23,6 +23,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_SPAWN;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapType;
 
+/**
+ * @author Rolandas
+ */
 public class CM_TELEPORT_DONE extends AionClientPacket
 {
 	

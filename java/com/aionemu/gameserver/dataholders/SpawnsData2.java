@@ -85,6 +85,10 @@ import com.aionemu.gameserver.world.WorldMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import javolution.util.FastMap;
 
+/**
+ * @author xTz
+ * @modified Rolandas
+ */
 @XmlRootElement(name = "spawns")
 @XmlType(namespace = "", name = "SpawnsData2")
 @XmlAccessorType(XmlAccessType.NONE)

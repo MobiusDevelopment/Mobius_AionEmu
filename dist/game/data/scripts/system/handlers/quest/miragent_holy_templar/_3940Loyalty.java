@@ -23,11 +23,12 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * Quest starter: Lavirintos (203701). Collect the amulets (600) from Calydon Chasers and Calydon Shamans and take them Lavirintos. Defeat Great Protectors in the Eye of Reshanta (300): Aether's Defender (251002), Fire's Defender (251021), Ancient Defender (251018), Nature's Defender (251039),
+ * Light's Defender (251033), Shadow's Defender (251036). Talk with Lavirintos. Go to the Dredgion and kill a Dredgion Captains (1): Captain Adhati (214823), Captain Mituna (216850). Talk with Lavirintos. Fill yourself with Divine Power and take Divine Hoat Stone (186000082) to High Priest Jucleas
+ * (203752) for the final blessing ritual. Talk with Lavirintos.
+ * @author vlog, bobobear
+ */
 public class _3940Loyalty extends QuestHandler
 {
 	private static final int questId = 3940;

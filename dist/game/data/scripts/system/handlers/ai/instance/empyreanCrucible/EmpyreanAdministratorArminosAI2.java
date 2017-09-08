@@ -20,11 +20,9 @@ import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.ai2.NpcAI2;
 import com.aionemu.gameserver.services.NpcShoutsService;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("empadministratorarminos")
 public class EmpyreanAdministratorArminosAI2 extends NpcAI2
 {

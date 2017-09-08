@@ -26,6 +26,9 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.SocialService;
 
+/**
+ * @author Ben
+ */
 public class CM_FRIEND_DEL extends AionClientPacket
 {
 	private String targetName;

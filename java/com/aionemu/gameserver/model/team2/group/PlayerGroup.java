@@ -25,6 +25,9 @@ import com.aionemu.gameserver.utils.idfactory.IDFactory;
 
 import javolution.util.FastMap;
 
+/**
+ * @author ATracer
+ */
 public class PlayerGroup extends TemporaryPlayerTeam<PlayerGroupMember>
 {
 	private final TeamType type;

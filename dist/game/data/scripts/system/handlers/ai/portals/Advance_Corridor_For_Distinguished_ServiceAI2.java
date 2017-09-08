@@ -25,11 +25,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("advance_corridor_distinguished")
 public class Advance_Corridor_For_Distinguished_ServiceAI2 extends GeneralNpcAI2
 {

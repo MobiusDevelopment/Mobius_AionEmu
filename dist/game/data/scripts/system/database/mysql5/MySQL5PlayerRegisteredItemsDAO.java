@@ -54,6 +54,9 @@ import com.google.common.collect.Collections2;
 
 import javolution.util.FastList;
 
+/**
+ * @author Rolandas
+ */
 public class MySQL5PlayerRegisteredItemsDAO extends PlayerRegisteredItemsDAO
 {
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerRegisteredItemsDAO.class);

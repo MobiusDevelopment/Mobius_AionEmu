@@ -39,6 +39,9 @@ import com.aionemu.gameserver.model.gameobjects.BrokerItem;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.PersistentState;
 
+/**
+ * @author GiGatR00n v4.7.5.x
+ */
 public class MySQL5BrokerDAO extends BrokerDAO
 {
 	

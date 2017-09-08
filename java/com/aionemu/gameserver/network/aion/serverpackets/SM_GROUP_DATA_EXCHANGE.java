@@ -19,6 +19,9 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author xTz
+ */
 public class SM_GROUP_DATA_EXCHANGE extends AionServerPacket
 {
 	private final byte[] byteData;

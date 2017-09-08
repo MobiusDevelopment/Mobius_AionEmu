@@ -24,11 +24,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * Author Ranastic
+ */
 @AIName("shiningmagicward")
 public class ShiningMagicWardAI2 extends ActionItemNpcAI2
 {

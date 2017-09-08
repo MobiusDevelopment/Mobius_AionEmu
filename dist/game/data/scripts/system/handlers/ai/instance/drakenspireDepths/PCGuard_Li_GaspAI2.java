@@ -24,11 +24,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("pc_guard_li_gasp")
 public class PCGuard_Li_GaspAI2 extends AggressiveNpcAI2
 {

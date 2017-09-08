@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1470HannetsVengeance extends QuestHandler
 {
-	
 	private static final int questId = 1470;
 	
 	public _1470HannetsVengeance()

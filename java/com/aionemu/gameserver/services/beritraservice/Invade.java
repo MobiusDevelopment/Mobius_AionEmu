@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.beritra.BeritraStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class Invade extends BeritraInvasion<BeritraLocation>
 {
 	public Invade(BeritraLocation beritra)

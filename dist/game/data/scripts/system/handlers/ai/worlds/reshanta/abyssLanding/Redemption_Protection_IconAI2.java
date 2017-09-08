@@ -22,11 +22,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("redemption_protection_icon")
 public class Redemption_Protection_IconAI2 extends AggressiveNpcAI2
 {

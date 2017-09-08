@@ -35,7 +35,7 @@ import com.aionemu.gameserver.model.templates.stats.ModifiersTemplate;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
- * @author Rinzler (Encom)
+ * @author Rolandas
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =

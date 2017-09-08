@@ -29,7 +29,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _48002CharlirunerksDaemonsWantYou extends QuestHandler
 {
-	
 	public static final int questId = 48002;
 	
 	public _48002CharlirunerksDaemonsWantYou()

@@ -31,6 +31,12 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_CRAFT_UPDATE;
 import com.aionemu.gameserver.services.craft.CraftService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Mr. Poke
+ * @author synchro2
+ * @author Antraxx
+ * @author Kamikaze
+ */
 public class CraftingTask extends AbstractCraftTask
 {
 	protected RecipeTemplate recipeTemplate;

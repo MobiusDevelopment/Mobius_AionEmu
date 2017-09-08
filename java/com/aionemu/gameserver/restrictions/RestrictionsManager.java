@@ -27,6 +27,12 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.skillengine.model.Skill;
 
+/**
+ * This class is a Manager for restrictions. This is a very useful system, you can use that for: game restrictions, events restrictions, quests restrictions, instances restrictions, customs restrictions.
+ * @Example: Open a new class like this: public class AppleRestrictions extends AbstractRestrictions {
+ * @Override public boolean canEatApple(Player player) { if(player.getController().isInEvent()) { // only example, don't forget! return true; // player can eat apple in event. } return false; // player cannot eat apple in normal game. } }
+ * @author lord_rex
+ */
 public final class RestrictionsManager
 {
 	private RestrictionsManager()

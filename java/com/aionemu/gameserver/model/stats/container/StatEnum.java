@@ -21,6 +21,10 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.items.ItemSlot;
 
+/**
+ * @author xavier
+ * @author ATracer
+ */
 @XmlType(name = "StatEnum")
 @XmlEnum
 public enum StatEnum

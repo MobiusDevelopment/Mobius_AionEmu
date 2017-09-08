@@ -29,11 +29,9 @@ import com.aionemu.gameserver.model.templates.teleport.MultiReturnLocationList;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author GiGatR00n
+ */
 @XmlRootElement(name = "multi_returns")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MultiReturnItemData

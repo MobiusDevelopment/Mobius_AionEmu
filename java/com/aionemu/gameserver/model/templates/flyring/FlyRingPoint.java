@@ -23,6 +23,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.utils3d.Point3D;
 
+/**
+ * @author M@xx
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FlyRingPoint")
 public class FlyRingPoint

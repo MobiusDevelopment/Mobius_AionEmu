@@ -30,6 +30,9 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 import com.aionemu.gameserver.world.zone.handler.AdvencedZoneHandler;
 
+/**
+ * @author MrPoke
+ */
 public abstract class PvPZone implements AdvencedZoneHandler
 {
 	@Override

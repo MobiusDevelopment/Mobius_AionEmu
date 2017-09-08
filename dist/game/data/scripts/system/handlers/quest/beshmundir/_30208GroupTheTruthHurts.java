@@ -33,10 +33,8 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * @author Gigi
  */
-
 public class _30208GroupTheTruthHurts extends QuestHandler
 {
-	
 	private static final int questId = 30208;
 	
 	public _30208GroupTheTruthHurts()

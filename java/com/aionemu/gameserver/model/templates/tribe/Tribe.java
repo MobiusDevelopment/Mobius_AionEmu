@@ -27,6 +27,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.TribeClass;
 
+/**
+ * @author ATracer
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Tribe")
 public class Tribe

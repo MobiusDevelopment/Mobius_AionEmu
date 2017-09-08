@@ -24,11 +24,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("infernal_captain_xasta_ride")
 public class InfernalCaptainXastaRideAI2 extends AggressiveNpcAI2
 {

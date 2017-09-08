@@ -30,6 +30,9 @@ import javax.xml.bind.annotation.XmlType;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.templates.portal.InstanceExit;
 
+/**
+ * @author xTz
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =
 {

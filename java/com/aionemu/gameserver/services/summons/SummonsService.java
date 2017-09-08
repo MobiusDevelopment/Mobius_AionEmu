@@ -35,6 +35,9 @@ import com.aionemu.gameserver.spawnengine.VisibleObjectSpawner;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author xTz
+ */
 public class SummonsService
 {
 	public static void createSummon(Player master, int npcId, int skillId, int skillLevel, int time)

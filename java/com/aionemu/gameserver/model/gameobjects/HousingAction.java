@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.gameobjects;
 
+/**
+ * @author Ever'
+ */
 public enum HousingAction
 {
 	UNK(-1),

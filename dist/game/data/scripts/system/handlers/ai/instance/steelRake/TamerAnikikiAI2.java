@@ -34,11 +34,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("tamer_anikiki")
 public class TamerAnikikiAI2 extends AggressiveNpcAI2
 {

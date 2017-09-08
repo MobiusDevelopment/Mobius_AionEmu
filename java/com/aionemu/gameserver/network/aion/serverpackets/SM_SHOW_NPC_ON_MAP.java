@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_SHOW_NPC_ON_MAP extends AionServerPacket
 {
-	
 	private final int npcid, worldid;
 	private final float x, y, z;
 	

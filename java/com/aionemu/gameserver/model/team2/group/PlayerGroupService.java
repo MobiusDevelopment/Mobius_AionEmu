@@ -58,6 +58,9 @@ import com.google.common.base.Predicate;
 
 import javolution.util.FastMap;
 
+/**
+ * @author ATracer
+ */
 public class PlayerGroupService
 {
 	private static final Logger log = LoggerFactory.getLogger(PlayerGroupService.class);

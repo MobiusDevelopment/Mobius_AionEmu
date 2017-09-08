@@ -24,6 +24,9 @@ import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Wakizashi, Source
+ */
 public class ShieldObserver extends ActionObserver
 {
 	private final Creature creature;

@@ -23,6 +23,10 @@ import javax.xml.bind.annotation.XmlType;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.skillengine.model.Effect;
 
+/**
+ * @author ATracer
+ * @modified Cheatkiller
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PolymorphEffect")
 public class PolymorphEffect extends TransformEffect

@@ -24,11 +24,12 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 
 import system.handlers.ai.OneDmgPerHitAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * recieve only 1 dmg with each attack(handled by super)
+ * <p/>
+ * Aggro the whole room on attack
+ * @author Luzien
+ */
 @AIName("surkana")
 public class SurkanaAI2 extends OneDmgPerHitAI2
 {

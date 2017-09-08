@@ -29,11 +29,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("centralcannon")
 public class CentralDeckMobileCannonAI2 extends ActionItemNpcAI2
 {

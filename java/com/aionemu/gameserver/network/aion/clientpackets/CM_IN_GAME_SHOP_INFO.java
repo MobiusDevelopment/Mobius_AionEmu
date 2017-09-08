@@ -27,6 +27,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_IN_GAME_SHOP_LIST;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_TOLL_INFO;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author xTz, KID
+ */
 public class CM_IN_GAME_SHOP_INFO extends AionClientPacket
 {
 	private int actionId;

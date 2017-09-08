@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.utils.stats.enums;
 
+/**
+ * @author ATracer
+ */
 public enum ATTACK_SPEED
 {
 	WARRIOR(1400),

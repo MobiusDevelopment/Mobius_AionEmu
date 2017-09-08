@@ -24,6 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.handlers.template.ItemOrders;
 
+/**
+ * @author Bobobear
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ItemOrdersData")
 public class ItemOrdersData extends XMLQuest

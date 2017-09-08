@@ -43,6 +43,9 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author ATracer
+ */
 public class GodStone extends ItemStone
 {
 	private static final Logger log = LoggerFactory.getLogger(GodStone.class);

@@ -20,6 +20,9 @@ import com.aionemu.gameserver.model.gameobjects.Kisk;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author Sarynth 0xB0 for 1.5.1.10 and 1.5.1.15
+ */
 public class SM_KISK_UPDATE extends AionServerPacket
 {
 	private final int objId;

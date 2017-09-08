@@ -37,6 +37,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
+/**
+ * @author VladimirZ
+ */
 public class AbyssRankingCache
 {
 	private static final Logger log = LoggerFactory.getLogger(AbyssRankingCache.class);

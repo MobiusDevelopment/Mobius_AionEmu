@@ -52,6 +52,9 @@ import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author M@xx, IlBuono, xTz, Rolandas
+ */
 public class PetService
 {
 	Logger log = LoggerFactory.getLogger(PetService.class);

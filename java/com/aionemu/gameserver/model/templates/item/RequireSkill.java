@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Rinzler
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RequireSkill")
 public class RequireSkill

@@ -22,6 +22,9 @@ import java.util.List;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.stats.container.StatEnum;
 
+/**
+ * @author ATracer
+ */
 public class PlayerStatFunctions
 {
 	private static final List<IStatFunction> FUNCTIONS = new ArrayList<>();

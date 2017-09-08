@@ -16,6 +16,10 @@
  */
 package com.aionemu.gameserver.skillengine.effect;
 
+/**
+ * @author ATracer
+ * @Reworked Kill3r
+ */
 public enum AbnormalState
 {
 	BUFF(0),

@@ -54,11 +54,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import javolution.util.FastList;
 
-/****/
 /**
- * Author Rinzler (Encom) /** Source: https://www.youtube.com/watch?v=pkRzAfyLJ2g /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(301630000)
 public class ContaminatedUnderpathInstance extends GeneralInstanceHandler
 {

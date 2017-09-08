@@ -27,11 +27,9 @@ import com.aionemu.gameserver.services.NpcShoutsService;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("beritra_dragon_formQ")
 public class Beritra_Dragon_FormQAI2 extends AggressiveNpcAI2
 {

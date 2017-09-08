@@ -27,11 +27,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("stolen_harbinger_call")
 public class Stolen_Harbinger_CallAI2 extends NpcAI2
 {

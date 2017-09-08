@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model;
 
+/**
+ * @author lyahim
+ */
 public enum EmotionType
 {
 	UNK(-1),

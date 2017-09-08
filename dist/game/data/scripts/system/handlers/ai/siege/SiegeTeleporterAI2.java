@@ -27,11 +27,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Source
+ */
 @AIName("siege_teleporter")
 public class SiegeTeleporterAI2 extends GeneralNpcAI2
 {

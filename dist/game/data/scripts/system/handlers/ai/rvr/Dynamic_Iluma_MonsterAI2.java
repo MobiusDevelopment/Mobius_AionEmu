@@ -25,11 +25,9 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("dynamic_iluma_monster")
 public class Dynamic_Iluma_MonsterAI2 extends AggressiveNpcAI2
 {

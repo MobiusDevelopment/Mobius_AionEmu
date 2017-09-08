@@ -28,6 +28,11 @@ import com.aionemu.gameserver.model.templates.tradelist.TradeListTemplate;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * This is a container holding and serving all {@link NpcTemplate} instances.<br>
+ * Briefly: Every {@link Npc} instance represents some class of NPCs among which each have the same id, name, items, statistics. Data for such NPC class is defined in {@link NpcTemplate} and is uniquely identified by npc id.
+ * @author Luno
+ */
 @XmlRootElement(name = "npc_trade_list")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TradeListData

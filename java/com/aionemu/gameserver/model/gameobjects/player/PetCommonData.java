@@ -34,6 +34,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.idfactory.IDFactory;
 
+/**
+ * @author ATracer
+ */
 public class PetCommonData extends VisibleObjectTemplate implements IExpirable
 {
 	private int decoration;

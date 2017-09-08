@@ -28,6 +28,9 @@ import com.aionemu.gameserver.model.summons.UnsummonType;
 import com.aionemu.gameserver.services.summons.SummonsService;
 import com.aionemu.gameserver.utils.MathUtil;
 
+/**
+ * @author xTz
+ */
 public class FollowSummonTaskAI implements Runnable
 {
 	

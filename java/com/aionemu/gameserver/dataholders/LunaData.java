@@ -29,11 +29,9 @@ import com.aionemu.gameserver.model.templates.recipe.LunaTemplate;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import javolution.util.FastList;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @XmlRootElement(name = "luna_templates")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LunaData

@@ -23,7 +23,6 @@ import java.util.NoSuchElementException;
  */
 public enum APRewardEnum
 {
-	
 	GRADE9_SOLDIER(1, 100f),
 	GRADE8_SOLDIER(2, 100f),
 	GRADE7_SOLDIER(3, 100f),
@@ -83,5 +82,4 @@ public enum APRewardEnum
 		
 		throw new NoSuchElementException("AP reward for such rank was not found");
 	}
-	
 }

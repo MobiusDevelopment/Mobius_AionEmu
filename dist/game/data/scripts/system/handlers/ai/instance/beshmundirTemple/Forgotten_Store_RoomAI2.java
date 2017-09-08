@@ -27,11 +27,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("forgottenstoreroom")
 public class Forgotten_Store_RoomAI2 extends ActionItemNpcAI2
 {

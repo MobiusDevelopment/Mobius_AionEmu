@@ -16,11 +16,9 @@
  */
 package com.aionemu.gameserver.model.instance.playerreward;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class SmolderingPlayerReward extends InstancePlayerReward
 {
 	private int scoreAP;

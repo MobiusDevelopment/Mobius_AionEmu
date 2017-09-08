@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_MAY_LOGIN_INTO_GAME extends AionServerPacket
 {
-	
 	/**
 	 * {@inheritDoc}
 	 */

@@ -36,6 +36,9 @@ import com.aionemu.gameserver.utils.idfactory.IDFactory;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.NpcKnownList;
 
+/**
+ * @author Source
+ */
 public class RiftManager
 {
 	private static List<Npc> rifts = new ArrayList<>();

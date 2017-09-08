@@ -42,11 +42,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldType;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author ATracer
+ */
 @AIName("resurrect")
 public class ResurrectAI2 extends NpcAI2
 {

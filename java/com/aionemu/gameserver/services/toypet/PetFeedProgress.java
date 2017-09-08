@@ -21,7 +21,6 @@ package com.aionemu.gameserver.services.toypet;
  */
 public final class PetFeedProgress
 {
-	
 	private int totalPoints = 0;
 	private short regularConsumed = 0;
 	private short lovedConsumed = 0;

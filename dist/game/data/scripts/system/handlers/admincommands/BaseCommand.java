@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 /**
  * @author Rinzler
  */
-
 @SuppressWarnings("rawtypes")
 public class BaseCommand extends AdminCommand
 {

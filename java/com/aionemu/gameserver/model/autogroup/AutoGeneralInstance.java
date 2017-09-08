@@ -33,6 +33,9 @@ import com.aionemu.gameserver.model.templates.portal.PortalLoc;
 import com.aionemu.gameserver.model.templates.portal.PortalPath;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 
+/**
+ * @author xTz
+ */
 public class AutoGeneralInstance extends AutoInstance
 {
 	@Override

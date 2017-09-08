@@ -27,11 +27,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("unsealed_kysis")
 public class Kysis_OverlordAI2 extends AggressiveNpcAI2
 {

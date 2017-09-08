@@ -27,11 +27,9 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.utils.MathUtil;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Cheatkiller
+ */
 @AIName("chantrarings")
 public class ChantraRingsAI2 extends NpcAI2
 {

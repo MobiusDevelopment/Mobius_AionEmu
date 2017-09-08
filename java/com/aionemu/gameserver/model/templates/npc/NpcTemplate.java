@@ -35,6 +35,10 @@ import com.aionemu.gameserver.model.templates.VisibleObjectTemplate;
 import com.aionemu.gameserver.model.templates.stats.KiskStatsTemplate;
 import com.aionemu.gameserver.model.templates.stats.NpcStatsTemplate;
 
+/**
+ * @author Luno
+ * @author GiGatR00n v4.7.5.x
+ */
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement(name = "npc_template")
 public class NpcTemplate extends VisibleObjectTemplate

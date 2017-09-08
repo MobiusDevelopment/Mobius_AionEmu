@@ -49,6 +49,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldMapInstance;
 
+/**
+ * @author ATracer, xTz
+ */
 public class PortalService
 {
 	private static Logger log = LoggerFactory.getLogger(PortalService.class);

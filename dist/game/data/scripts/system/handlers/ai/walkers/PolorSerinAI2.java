@@ -25,11 +25,9 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 import com.aionemu.gameserver.utils.MathUtil;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rolandas
+ */
 @AIName("polorserin")
 public class PolorSerinAI2 extends WalkGeneralRunnerAI2
 {

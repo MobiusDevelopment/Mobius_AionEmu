@@ -22,11 +22,11 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Luzien
+ *         <p/>
+ *         TODO: Random aggro switch
+ */
 @AIName("isbariyaServants")
 public class IsbariyaServantsAI2 extends AggressiveNpcAI2
 {

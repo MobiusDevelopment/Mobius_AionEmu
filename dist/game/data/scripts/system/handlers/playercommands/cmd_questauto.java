@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_questauto extends PlayerCommand
 {
-	
 	/**
 	 * put quests for automation here (new int[]{1245,1345,7895})
 	 */

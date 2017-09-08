@@ -24,6 +24,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * @author xTz
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AssemblyItem")
 public class AssemblyItem

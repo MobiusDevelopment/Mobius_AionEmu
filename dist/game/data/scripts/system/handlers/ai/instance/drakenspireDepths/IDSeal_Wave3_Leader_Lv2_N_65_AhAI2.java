@@ -24,11 +24,9 @@ import com.aionemu.gameserver.services.NpcShoutsService;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("wave3_leader")
 public class IDSeal_Wave3_Leader_Lv2_N_65_AhAI2 extends AggressiveNpcAI2
 {

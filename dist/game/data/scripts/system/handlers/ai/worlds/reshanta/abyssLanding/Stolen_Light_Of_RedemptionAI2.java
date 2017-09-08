@@ -27,11 +27,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("stolen_light_of_redemption")
 public class Stolen_Light_Of_RedemptionAI2 extends NpcAI2
 {

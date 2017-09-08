@@ -26,10 +26,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Gigi
  */
-
 public class _30310RankandBile extends QuestHandler
 {
-	
 	private static final int questId = 30310;
 	
 	public _30310RankandBile()

@@ -24,11 +24,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author wasacacax
+ */
 @AIName("lava_floor")
 public class LavaFloorAI2 extends AggressiveNpcAI2
 {

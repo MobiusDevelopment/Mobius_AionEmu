@@ -49,11 +49,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(301160000)
 public class NightmareCircusInstance extends GeneralInstanceHandler
 {

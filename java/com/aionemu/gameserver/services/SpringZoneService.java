@@ -30,11 +30,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class SpringZoneService
 {
 	Logger log = LoggerFactory.getLogger(SpringZoneService.class);

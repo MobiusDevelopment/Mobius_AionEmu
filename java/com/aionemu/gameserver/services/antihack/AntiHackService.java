@@ -30,6 +30,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.audit.AuditLogger;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author Source
+ */
 public class AntiHackService
 {
 	public static boolean canMove(Player player, float x, float y, float z, float speed, byte type)

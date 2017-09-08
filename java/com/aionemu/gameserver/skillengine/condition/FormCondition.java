@@ -27,6 +27,9 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 import com.aionemu.gameserver.skillengine.model.TransformType;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author kecimis
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FormCondition")
 public class FormCondition extends Condition

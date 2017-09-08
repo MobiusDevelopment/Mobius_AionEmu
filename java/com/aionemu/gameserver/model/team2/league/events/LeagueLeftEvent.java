@@ -26,6 +26,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_ALLIANCE_INFO;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.google.common.base.Predicate;
 
+/**
+ * @author ATracer
+ */
 public class LeagueLeftEvent extends AlwaysTrueTeamEvent implements Predicate<LeagueMember>
 {
 	private final League league;

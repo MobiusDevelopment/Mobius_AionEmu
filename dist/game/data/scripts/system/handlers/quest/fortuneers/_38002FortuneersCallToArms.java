@@ -29,7 +29,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _38002FortuneersCallToArms extends QuestHandler
 {
-	
 	public static final int questId = 38002;
 	
 	public _38002FortuneersCallToArms()

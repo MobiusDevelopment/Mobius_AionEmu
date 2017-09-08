@@ -18,6 +18,9 @@ package com.aionemu.gameserver.configs.main;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author Sarynth
+ */
 public class RankingConfig
 {
 	@Property(key = "gameserver.top.ranking.update.setting", defaultValue = "true")

@@ -24,6 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 import com.aionemu.gameserver.utils.gametime.GameTime;
 import com.aionemu.gameserver.utils.gametime.GameTimeManager;
 
+/**
+ * @author xTz
+ */
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TemporarySpawn")
 public class TemporarySpawn

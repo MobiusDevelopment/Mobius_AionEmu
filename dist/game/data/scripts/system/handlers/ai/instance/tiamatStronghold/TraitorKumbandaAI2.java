@@ -36,11 +36,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Ranastic (Encom) /
- ****/
-
+ * @author Ranastic (Encom)
+ */
 @AIName("traitor_kumbanda")
 public class TraitorKumbandaAI2 extends AggressiveNpcAI2
 {

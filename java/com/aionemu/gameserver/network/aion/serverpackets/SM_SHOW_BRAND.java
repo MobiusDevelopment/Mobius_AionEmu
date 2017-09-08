@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_SHOW_BRAND extends AionServerPacket
 {
-	
 	private final int brandId;
 	private final int targetObjectId;
 	
@@ -37,11 +36,9 @@ public class SM_SHOW_BRAND extends AionServerPacket
 	@Override
 	protected void writeImpl(AionConnection con)
 	{
-		
 		writeH(0x01);
 		writeD(0x01); // unk
 		writeD(brandId);
 		writeD(targetObjectId);
-		
 	}
 }

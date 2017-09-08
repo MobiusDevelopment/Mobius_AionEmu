@@ -31,6 +31,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_UPDATE_PLAYER_APPEAR
 import com.aionemu.gameserver.services.item.ItemPacketService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author IceReaper
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DyeAction")
 public class DyeAction extends AbstractItemAction implements HouseDyeAction

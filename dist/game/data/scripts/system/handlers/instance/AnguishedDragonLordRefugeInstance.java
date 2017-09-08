@@ -54,11 +54,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(300630000)
 public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 {

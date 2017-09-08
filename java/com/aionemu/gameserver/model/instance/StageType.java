@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.instance;
 
+/**
+ * @author xTz
+ */
 public enum StageType
 {
 	DEFAULT(0, 0),

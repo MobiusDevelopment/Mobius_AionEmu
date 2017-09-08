@@ -38,6 +38,9 @@ import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.google.common.base.Preconditions;
 
+/**
+ * @author ATracer
+ */
 public class LeagueService
 {
 	private static final Logger log = LoggerFactory.getLogger(LeagueService.class);

@@ -19,11 +19,10 @@ package system.handlers.ai;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Ritsu
+ * @Reworked Majka Ajural
+ */
 @AIName("aggressive_first_skill")
 public class AggressiveFirstSkillAI2 extends AggressiveNpcAI2
 {

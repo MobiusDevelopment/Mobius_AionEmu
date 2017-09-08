@@ -60,6 +60,9 @@ import com.aionemu.gameserver.taskmanager.tasks.ExpireTimerTask;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.audit.GMService;
 
+/**
+ * @author ATracer
+ */
 public class PlayerLeaveWorldService
 {
 	private static final Logger log = LoggerFactory.getLogger(PlayerLeaveWorldService.class);

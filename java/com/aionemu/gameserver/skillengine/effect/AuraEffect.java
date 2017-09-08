@@ -35,6 +35,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.audit.AuditLogger;
 
+/**
+ * @author ATracer, kecimis, xTz
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AuraEffect")
 public class AuraEffect extends EffectTemplate

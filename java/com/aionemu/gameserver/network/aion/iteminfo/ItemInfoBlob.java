@@ -30,6 +30,11 @@ import com.aionemu.gameserver.model.templates.item.ItemCategory;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.network.PacketWriteHelper;
 
+/**
+ * Entry item info packet data (contains blob entries with detailed info).
+ * @author -Nemesiss-
+ * @modified Rolandas - complete rewrite, no trees (blob size must be known in advance!), just sequences
+ */
 public class ItemInfoBlob extends PacketWriteHelper
 {
 	protected final Player player;

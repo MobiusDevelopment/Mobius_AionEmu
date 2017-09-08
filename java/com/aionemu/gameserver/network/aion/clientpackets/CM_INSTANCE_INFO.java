@@ -25,6 +25,9 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_INFO;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author nrg
+ */
 public class CM_INSTANCE_INFO extends AionClientPacket
 {
 	private static Logger log = LoggerFactory.getLogger(CM_INSTANCE_INFO.class);

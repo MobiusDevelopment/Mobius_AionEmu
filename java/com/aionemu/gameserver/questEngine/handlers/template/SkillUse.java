@@ -29,6 +29,9 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 import javolution.util.FastMap;
 
+/**
+ * @author vlog, modified Bobobear
+ */
 public class SkillUse extends QuestHandler
 {
 	private final int questId;

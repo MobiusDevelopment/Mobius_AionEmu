@@ -63,6 +63,10 @@ import com.aionemu.gameserver.world.WorldMapInstanceFactory;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
+/**
+ * @author xTz
+ * @Reworked Eloann v4.5
+ */
 public class AutoGroupService
 {
 	private final FastMap<Integer, LookingForParty> searchers = new FastMap<Integer, LookingForParty>().shared();

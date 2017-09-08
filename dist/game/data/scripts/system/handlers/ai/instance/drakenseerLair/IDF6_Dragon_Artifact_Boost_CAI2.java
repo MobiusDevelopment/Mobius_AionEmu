@@ -30,11 +30,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.NpcShoutsService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("IDF6_Dragon_Artifact_Boost_C")
 public class IDF6_Dragon_Artifact_Boost_CAI2 extends NpcAI2
 {

@@ -26,6 +26,11 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * Sent to fill the search panel of a players social window<br />
+ * I.E.: In response to a <tt>CM_PLAYER_SEARCH</tt>
+ * @author Ben
+ */
 public class SM_PLAYER_SEARCH extends AionServerPacket
 {
 	private static final Logger log = LoggerFactory.getLogger(SM_PLAYER_SEARCH.class);

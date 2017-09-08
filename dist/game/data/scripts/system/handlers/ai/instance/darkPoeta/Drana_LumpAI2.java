@@ -28,11 +28,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("drana_lump")
 public class Drana_LumpAI2 extends AggressiveNpcAI2
 {

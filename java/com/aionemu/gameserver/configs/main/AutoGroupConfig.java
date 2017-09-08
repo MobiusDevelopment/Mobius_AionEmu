@@ -18,6 +18,9 @@ package com.aionemu.gameserver.configs.main;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author xTz
+ */
 public class AutoGroupConfig
 {
 	@Property(key = "gameserver.autogroup.enable", defaultValue = "true")

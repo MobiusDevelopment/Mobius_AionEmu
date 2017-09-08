@@ -26,6 +26,9 @@ import com.aionemu.gameserver.skillengine.model.SkillTargetSlot;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 
+/**
+ * @author Mrakobes, Loxo
+ */
 public class Heal extends AdminCommand
 {
 	public Heal()

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_RESURRECT extends AionServerPacket
 {
-	
 	private final String name;
 	private final int skillId;
 	

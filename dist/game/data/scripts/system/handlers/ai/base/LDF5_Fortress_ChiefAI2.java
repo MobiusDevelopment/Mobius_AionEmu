@@ -25,11 +25,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("ldf5_fortress_chief")
 public class LDF5_Fortress_ChiefAI2 extends AggressiveNpcAI2
 {

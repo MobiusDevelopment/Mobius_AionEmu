@@ -22,6 +22,9 @@ import com.aionemu.gameserver.controllers.observer.AttackShieldObserver;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.skillengine.model.HealType;
 
+/**
+ * @author kecimis
+ */
 public class ConvertHealEffect extends ShieldEffect
 {
 	@XmlAttribute

@@ -24,6 +24,10 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_QUIT_RESPONSE;
 import com.aionemu.gameserver.network.ls.LoginServer;
 import com.aionemu.gameserver.services.player.PlayerLeaveWorldService;
 
+/**
+ * In this packets aion client is asking if may quit.
+ * @author -Nemesiss-
+ */
 public class CM_QUIT extends AionClientPacket
 {
 	private boolean logout;

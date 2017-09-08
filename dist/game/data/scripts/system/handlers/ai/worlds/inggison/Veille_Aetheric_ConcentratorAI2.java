@@ -28,11 +28,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("veille_aetheric_concentrator")
 public class Veille_Aetheric_ConcentratorAI2 extends ActionItemNpcAI2
 {

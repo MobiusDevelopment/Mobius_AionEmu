@@ -34,6 +34,10 @@ import com.google.common.collect.Maps;
 
 import javolution.util.FastMap;
 
+/**
+ * A class that contains all the counters for the siege. One SiegeCounter per race should be used.
+ * @author SoulKeeper
+ */
 public class SiegeRaceCounter implements Comparable<SiegeRaceCounter>
 {
 	private final AtomicLong totalDamage = new AtomicLong();

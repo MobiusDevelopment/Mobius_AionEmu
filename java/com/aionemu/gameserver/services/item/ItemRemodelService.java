@@ -31,6 +31,9 @@ import com.aionemu.gameserver.services.trade.PricesService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author Sarynth modified by Wakizashi
+ */
 public class ItemRemodelService
 {
 	public static void remodelItem(Player player, int keepItemObjId, int extractItemObjId)

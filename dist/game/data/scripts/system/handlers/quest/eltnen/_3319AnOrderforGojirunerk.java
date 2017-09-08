@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class _3319AnOrderforGojirunerk extends QuestHandler
 {
-	
 	private static final int questId = 3319;
 	
 	public _3319AnOrderforGojirunerk()

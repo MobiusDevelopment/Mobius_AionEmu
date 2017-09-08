@@ -25,7 +25,6 @@ import com.aionemu.gameserver.services.trade.PricesService;
  */
 public class SM_PRICES extends AionServerPacket
 {
-	
 	@Override
 	protected void writeImpl(AionConnection con)
 	{

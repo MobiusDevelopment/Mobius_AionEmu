@@ -28,6 +28,11 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_USE_OBJECT;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author xTz
+ * @modified vlog
+ * @Modified Majka Ajural
+ */
 @AIName("useitem")
 public class ActionItemNpcAI2 extends NpcAI2
 {

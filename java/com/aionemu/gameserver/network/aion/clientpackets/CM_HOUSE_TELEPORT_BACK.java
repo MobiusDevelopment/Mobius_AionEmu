@@ -22,6 +22,9 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 
+/**
+ * @author Rolandas
+ */
 public class CM_HOUSE_TELEPORT_BACK extends AionClientPacket
 {
 	public CM_HOUSE_TELEPORT_BACK(int opcode, State state, State... restStates)

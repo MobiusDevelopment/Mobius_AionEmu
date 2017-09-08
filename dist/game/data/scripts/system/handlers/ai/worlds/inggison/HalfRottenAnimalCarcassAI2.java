@@ -23,11 +23,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("halfrottenanimalcarcass")
 public class HalfRottenAnimalCarcassAI2 extends ActionItemNpcAI2
 {

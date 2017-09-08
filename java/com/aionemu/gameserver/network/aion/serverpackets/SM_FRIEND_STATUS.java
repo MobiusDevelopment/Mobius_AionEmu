@@ -19,6 +19,9 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author Rolandas
+ */
 public class SM_FRIEND_STATUS extends AionServerPacket
 {
 	

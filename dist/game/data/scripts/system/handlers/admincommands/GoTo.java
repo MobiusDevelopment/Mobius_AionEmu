@@ -26,6 +26,11 @@ import com.aionemu.gameserver.world.WorldMap;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.WorldMapType;
 
+/**
+ * Goto command
+ * @author Dwarfpicker
+ * @Reworked Imaginary
+ */
 public class GoTo extends AdminCommand
 {
 	public GoTo()

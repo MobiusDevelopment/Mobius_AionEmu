@@ -23,6 +23,9 @@ import com.aionemu.gameserver.skillengine.model.Skill;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapType;
 
+/**
+ * @author lord_rex
+ */
 public class PrisonRestrictions extends AbstractRestrictions
 {
 	@Override

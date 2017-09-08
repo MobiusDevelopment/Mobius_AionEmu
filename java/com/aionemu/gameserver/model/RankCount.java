@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model;
 
+/**
+ * @author zdead
+ */
 public class RankCount
 {
 	private final int playerId;

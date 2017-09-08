@@ -23,6 +23,10 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.services.HousingService;
 
+/**
+ * Sends a friend list to the client
+ * @author Ben
+ */
 public class SM_FRIEND_LIST extends AionServerPacket
 {
 	@Override

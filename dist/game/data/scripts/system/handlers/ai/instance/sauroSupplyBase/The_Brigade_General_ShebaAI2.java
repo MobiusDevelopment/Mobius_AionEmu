@@ -28,11 +28,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("the_brigade_general_sheba")
 public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 {

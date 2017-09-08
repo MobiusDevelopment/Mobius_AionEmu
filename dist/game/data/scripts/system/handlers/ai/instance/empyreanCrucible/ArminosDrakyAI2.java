@@ -25,11 +25,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("arminos_draky")
 public class ArminosDrakyAI2 extends GeneralNpcAI2
 {

@@ -50,11 +50,9 @@ import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
 
-/****/
 /**
- * Remake by Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @InstanceID(300280000)
 public class RentusBaseInstance extends GeneralInstanceHandler
 {

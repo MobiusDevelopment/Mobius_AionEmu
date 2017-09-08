@@ -20,6 +20,9 @@ import com.aionemu.gameserver.model.TribeClass;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.skillengine.model.TransformType;
 
+/**
+ * @author Rolandas
+ */
 public class TransformModel
 {
 	private int modelId;

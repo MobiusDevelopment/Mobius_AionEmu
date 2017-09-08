@@ -18,6 +18,9 @@ package com.aionemu.gameserver.model;
 
 import javax.xml.bind.annotation.XmlEnum;
 
+/**
+ * @rework Blackfire
+ */
 @XmlEnum
 public enum TribeClass
 {

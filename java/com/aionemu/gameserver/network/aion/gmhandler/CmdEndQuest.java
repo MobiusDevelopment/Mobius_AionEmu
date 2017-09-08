@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Alcapwnd
  */
-
 public class CmdEndQuest extends AbstractGMHandler
 {
 	

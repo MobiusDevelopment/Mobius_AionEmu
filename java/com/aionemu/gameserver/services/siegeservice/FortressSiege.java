@@ -51,6 +51,11 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.google.common.collect.Lists;
 
+/**
+ * Object that controls siege of certain fortress. Siege object is not reusable. New siege = new instance.
+ * <p/>
+ * @author SoulKeeper
+ */
 public class FortressSiege extends Siege<FortressLocation>
 {
 	// private static final Logger log = LoggerFactory.getLogger("SIEGE_LOG");

@@ -18,11 +18,9 @@ package com.aionemu.gameserver.model.instance.instancereward;
 
 import com.aionemu.gameserver.model.instance.playerreward.SealedArgentManorPlayerReward;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class SealedArgentManorReward extends InstanceReward<SealedArgentManorPlayerReward>
 {
 	private int points;

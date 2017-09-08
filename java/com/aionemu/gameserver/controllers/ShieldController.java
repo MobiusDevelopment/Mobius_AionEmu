@@ -28,6 +28,9 @@ import com.aionemu.gameserver.world.World;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Source
+ */
 public class ShieldController extends VisibleObjectController<Shield>
 {
 	FastMap<Integer, ActionObserver> observed = new FastMap<Integer, ActionObserver>().shared();

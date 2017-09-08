@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
  */
 public class CreatureAwareKnownList extends KnownList
 {
-	
 	public CreatureAwareKnownList(VisibleObject owner)
 	{
 		super(owner);

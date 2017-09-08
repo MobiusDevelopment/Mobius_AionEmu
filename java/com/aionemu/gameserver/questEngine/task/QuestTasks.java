@@ -25,6 +25,9 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
+/**
+ * @author ATracer
+ */
 public class QuestTasks
 {
 	public static Future<?> newFollowingToTargetCheckTask(QuestEnv env, Npc npc, Npc target)

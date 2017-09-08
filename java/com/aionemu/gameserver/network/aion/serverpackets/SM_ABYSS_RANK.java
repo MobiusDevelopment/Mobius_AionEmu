@@ -21,6 +21,10 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 
+/**
+ * @author Nemiroff Date: 25.01.2010
+ * @author GiGatR00n v4.7.5.x
+ */
 public class SM_ABYSS_RANK extends AionServerPacket
 {
 	private final AbyssRank rank;

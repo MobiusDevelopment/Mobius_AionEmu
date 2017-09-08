@@ -25,11 +25,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("accountant_cabin_exit")
 public class AccountantCabinExitAI2 extends ActionItemNpcAI2
 {

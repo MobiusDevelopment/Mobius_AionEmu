@@ -22,6 +22,9 @@ import java.util.GregorianCalendar;
 
 import com.aionemu.gameserver.configs.main.RateConfig;
 
+/**
+ * @author Dr2co
+ */
 public class HolidayRates
 {
 	private static Calendar calendar = GregorianCalendar.getInstance();

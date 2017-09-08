@@ -18,6 +18,9 @@ package com.aionemu.gameserver.configs.main;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author Rolandas
+ */
 public class HousingConfig
 {
 	@Property(key = "gameserver.housing.visibility.distance", defaultValue = "200")

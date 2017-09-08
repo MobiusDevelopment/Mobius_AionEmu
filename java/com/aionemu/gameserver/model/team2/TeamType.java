@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.team2;
 
+/**
+ * @author Source
+ */
 public enum TeamType
 {
 	GROUP(0x3F, 0),

@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.utils.stats.enums;
 
+/**
+ * @author ATracer
+ */
 public enum WILL
 {
 	WARRIOR(90),

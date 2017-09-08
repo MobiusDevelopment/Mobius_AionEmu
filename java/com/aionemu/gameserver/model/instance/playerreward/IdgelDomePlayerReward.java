@@ -20,11 +20,9 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.instance.InstanceBuff;
 
-/****/
 /**
- * Author Ranastic (Encom) /
- ****/
-
+ * @author GiGatR00n v4.7.5.x
+ */
 public class IdgelDomePlayerReward extends InstancePlayerReward
 {
 	private int timeBonus;

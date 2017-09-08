@@ -57,11 +57,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(302000000)
 public class SmolderingFireTempleInstance extends GeneralInstanceHandler
 {

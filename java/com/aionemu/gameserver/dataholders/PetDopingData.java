@@ -29,6 +29,9 @@ import com.aionemu.gameserver.model.templates.pet.PetDopingEntry;
 
 import gnu.trove.map.hash.TShortObjectHashMap;
 
+/**
+ * @author Rolandas
+ */
 @XmlRootElement(name = "dopings")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PetDopingData

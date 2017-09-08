@@ -45,11 +45,10 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ * @modified Luzien
+ */
 @InstanceID(300300000)
 public class EmpyreanCrucibleInstance extends CrucibleInstance
 {

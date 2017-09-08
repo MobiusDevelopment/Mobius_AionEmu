@@ -30,6 +30,9 @@ import com.aionemu.gameserver.dao.HouseScriptsDAO;
 import com.aionemu.gameserver.model.house.PlayerScript;
 import com.aionemu.gameserver.utils.xml.CompressUtil;
 
+/**
+ * @author Rolandas
+ */
 public class PlayerScripts
 {
 	private static final Logger logger = LoggerFactory.getLogger(PlayerScripts.class);

@@ -43,6 +43,10 @@ import com.aionemu.gameserver.model.templates.quest.QuestWorkItems;
 import com.aionemu.gameserver.model.templates.quest.Rewards;
 import com.aionemu.gameserver.model.templates.quest.XMLStartCondition;
 
+/**
+ * @author MrPoke
+ * @modified vlog
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Quest")
 

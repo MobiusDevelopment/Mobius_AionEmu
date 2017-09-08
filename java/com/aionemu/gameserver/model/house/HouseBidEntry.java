@@ -19,6 +19,9 @@ package com.aionemu.gameserver.model.house;
 import com.aionemu.gameserver.configs.main.HousingConfig;
 import com.aionemu.gameserver.model.templates.housing.HouseType;
 
+/**
+ * @author Rolandas
+ */
 public class HouseBidEntry implements Cloneable
 {
 	private int entryIndex;

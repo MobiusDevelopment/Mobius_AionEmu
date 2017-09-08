@@ -24,6 +24,9 @@ import com.aionemu.gameserver.model.templates.housing.UseItemAction;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author Rolandas
+ */
 public class SM_OBJECT_USE_UPDATE extends AionServerPacket
 {
 	private final int usingPlayerId;

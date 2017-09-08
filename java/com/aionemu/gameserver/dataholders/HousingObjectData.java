@@ -31,6 +31,9 @@ import com.aionemu.gameserver.model.templates.housing.PlaceableHouseObject;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * @author Rolandas
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =
 {

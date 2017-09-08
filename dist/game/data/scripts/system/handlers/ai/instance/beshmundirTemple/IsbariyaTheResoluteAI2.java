@@ -37,11 +37,10 @@ import com.aionemu.gameserver.utils.MathUtil;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Luzien
+ * @author Antraxx
+ */
 @AIName("isbariya")
 public class IsbariyaTheResoluteAI2 extends AggressiveNpcAI2
 {

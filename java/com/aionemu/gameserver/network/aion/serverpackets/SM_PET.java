@@ -28,6 +28,9 @@ import com.aionemu.gameserver.model.templates.pet.PetTemplate;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author M@xx, xTz, Rolandas
+ */
 public class SM_PET extends AionServerPacket
 {
 	private final int actionId;

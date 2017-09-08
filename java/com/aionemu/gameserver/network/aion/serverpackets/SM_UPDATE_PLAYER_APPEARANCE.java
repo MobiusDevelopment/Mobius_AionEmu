@@ -25,6 +25,10 @@ import com.aionemu.gameserver.services.EnchantService;
 
 import javolution.util.FastList;
 
+/**
+ * @author Avol modified by ATracer
+ * @reworked Kill3r
+ */
 public class SM_UPDATE_PLAYER_APPEARANCE extends AionServerPacket
 {
 	public int playerId;

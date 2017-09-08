@@ -22,11 +22,9 @@ import java.util.List;
 
 import com.aionemu.commons.utils.Rnd;
 
-/****/
 /**
- * Author Ranastic (Encom) /
- ****/
-
+ * Created with IntelliJ IDEA. User: pixfid Date: 7/19/13 Time: 7:44 AM
+ */
 public class RndSelector<E>
 {
 	private class RndNode<T> implements Comparable<RndNode<T>>

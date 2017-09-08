@@ -19,6 +19,9 @@ package com.aionemu.loginserver.dao;
 import com.aionemu.commons.database.dao.DAO;
 import com.aionemu.loginserver.model.AccountTime;
 
+/**
+ * @author Antraxx
+ */
 public abstract class AccountPlayTimeDAO implements DAO
 {
 	

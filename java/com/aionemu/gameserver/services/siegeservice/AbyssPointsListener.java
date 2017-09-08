@@ -20,6 +20,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.siege.SiegeLocation;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 
+/**
+ * @author SoulKeeper, Source
+ */
 public class AbyssPointsListener extends AbyssPointsService.AddAPGlobalCallback
 {
 	

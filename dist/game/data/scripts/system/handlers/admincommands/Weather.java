@@ -28,6 +28,10 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 import com.aionemu.gameserver.world.WorldMapType;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 
+/**
+ * Admin command allowing to change weathers of the world.
+ * @author Kwazar
+ */
 public class Weather extends AdminCommand
 {
 	public Weather()

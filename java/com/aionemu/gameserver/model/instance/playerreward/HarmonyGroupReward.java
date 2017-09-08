@@ -21,6 +21,9 @@ import java.util.List;
 import com.aionemu.gameserver.model.autogroup.AGPlayer;
 import com.aionemu.gameserver.utils.idfactory.IDFactory;
 
+/**
+ * @author xTz
+ */
 public class HarmonyGroupReward extends PvPArenaPlayerReward
 {
 	private final int id;

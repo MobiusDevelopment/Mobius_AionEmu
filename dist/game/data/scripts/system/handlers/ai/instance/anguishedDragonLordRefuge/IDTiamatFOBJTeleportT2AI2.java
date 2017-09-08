@@ -24,11 +24,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("blood_red_jewel")
 public class IDTiamatFOBJTeleportT2AI2 extends ActionItemNpcAI2
 {

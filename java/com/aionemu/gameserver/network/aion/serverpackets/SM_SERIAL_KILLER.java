@@ -22,6 +22,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author Source & xTz
+ */
 public class SM_SERIAL_KILLER extends AionServerPacket
 {
 	private final int type;

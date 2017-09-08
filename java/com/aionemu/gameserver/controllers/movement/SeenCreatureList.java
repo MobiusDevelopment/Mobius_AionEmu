@@ -20,6 +20,9 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Rolandas
+ */
 public class SeenCreatureList
 {
 	

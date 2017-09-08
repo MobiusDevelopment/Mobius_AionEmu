@@ -38,11 +38,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Cheatkiller
+ */
 @AIName("brigadegeneralterath")
 public class BrigadeGeneralTerathAI2 extends AggressiveNpcAI2
 {

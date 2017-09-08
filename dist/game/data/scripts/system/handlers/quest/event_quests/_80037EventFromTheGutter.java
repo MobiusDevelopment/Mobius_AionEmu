@@ -33,10 +33,8 @@ import com.aionemu.gameserver.services.QuestService;
 /**
  * @author Rolandas
  */
-
 public class _80037EventFromTheGutter extends QuestHandler
 {
-	
 	private static final int questId = 80037;
 	
 	public _80037EventFromTheGutter()

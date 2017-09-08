@@ -25,11 +25,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import system.handlers.ai.ShifterAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("feeding_mantutu")
 public class FeedingMantutuAI2 extends ShifterAI2
 {

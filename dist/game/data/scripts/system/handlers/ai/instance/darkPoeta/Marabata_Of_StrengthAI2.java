@@ -32,11 +32,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("marabata_of_strength")
 public class Marabata_Of_StrengthAI2 extends AggressiveNpcAI2
 {

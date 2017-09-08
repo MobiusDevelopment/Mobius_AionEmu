@@ -23,7 +23,7 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
 import system.handlers.ai.AggressiveNpcAI2;
 
 /**
- * @author Rinzler (Encom)
+ * @author Luzien
  */
 @AIName("takun_gojira")
 public class TakunGojiraAI2 extends AggressiveNpcAI2

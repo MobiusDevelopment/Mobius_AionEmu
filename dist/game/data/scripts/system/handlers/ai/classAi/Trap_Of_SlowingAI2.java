@@ -22,11 +22,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("trap_of_slowing")
 public class Trap_Of_SlowingAI2 extends AggressiveNpcAI2
 {

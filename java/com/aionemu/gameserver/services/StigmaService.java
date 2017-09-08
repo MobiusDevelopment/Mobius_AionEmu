@@ -46,7 +46,6 @@ import com.aionemu.gameserver.utils.audit.AuditLogger;
 /**
  * @author KorLightning (Encom)
  */
-
 public class StigmaService
 {
 	private static final Logger log = LoggerFactory.getLogger(StigmaService.class);

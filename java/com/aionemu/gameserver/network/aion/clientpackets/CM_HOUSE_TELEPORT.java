@@ -40,6 +40,10 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldMapInstance;
 
+/**
+ * Packet for telporting by using relationship crystal
+ * @author Rolandas
+ */
 public class CM_HOUSE_TELEPORT extends AionClientPacket
 {
 	int actionId;

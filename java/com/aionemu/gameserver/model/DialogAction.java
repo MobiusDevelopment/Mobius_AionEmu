@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model;
 
+/**
+ * @author Rolandas
+ */
 public enum DialogAction
 {
 	ERROR(-1),

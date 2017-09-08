@@ -37,11 +37,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("kuhara_the_volatile")
 public class KuharaTheVolatileAI2 extends AggressiveNpcAI2
 {

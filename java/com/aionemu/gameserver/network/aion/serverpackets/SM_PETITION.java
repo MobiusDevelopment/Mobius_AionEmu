@@ -21,6 +21,9 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.services.PetitionService;
 
+/**
+ * @author zdead
+ */
 public class SM_PETITION extends AionServerPacket
 {
 	private final Petition petition;

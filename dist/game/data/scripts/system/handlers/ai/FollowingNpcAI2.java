@@ -23,11 +23,9 @@ import com.aionemu.gameserver.ai2.event.AIEventType;
 import com.aionemu.gameserver.ai2.handler.FollowEventHandler;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author ATracer
+ */
 @AIName("following")
 public class FollowingNpcAI2 extends GeneralNpcAI2
 {

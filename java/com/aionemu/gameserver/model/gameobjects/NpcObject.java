@@ -22,6 +22,9 @@ import com.aionemu.gameserver.model.templates.housing.HousingNpc;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 
+/**
+ * @author Rolandas
+ */
 public class NpcObject extends HouseObject<HousingNpc>
 {
 	

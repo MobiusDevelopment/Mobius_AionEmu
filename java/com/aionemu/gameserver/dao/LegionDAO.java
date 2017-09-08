@@ -28,6 +28,10 @@ import com.aionemu.gameserver.model.team.legion.LegionWarehouse;
 
 import javolution.util.FastList;
 
+/**
+ * Class that is responsible for storing/loading legion data
+ * @author Simple
+ */
 public abstract class LegionDAO implements IDFactoryAwareDAO
 {
 	public abstract boolean isNameUsed(String name);

@@ -32,6 +32,10 @@ import com.aionemu.gameserver.services.item.ItemSocketService;
 import com.aionemu.gameserver.services.trade.PricesService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * This class is responsible of Armsfusion-related tasks (fusion,breaking)
+ * @author Wakizashi modified by Source & xTz
+ */
 public class ArmsfusionService
 {
 	private static final Logger log = LoggerFactory.getLogger(ArmsfusionService.class);

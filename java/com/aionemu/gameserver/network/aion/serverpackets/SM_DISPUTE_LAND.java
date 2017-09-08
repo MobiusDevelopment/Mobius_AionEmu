@@ -22,9 +22,8 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 import javolution.util.FastList;
 
 /**
- * @author Rinzler
+ * @author Source
  */
-
 public class SM_DISPUTE_LAND extends AionServerPacket
 {
 	boolean active;

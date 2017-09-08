@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_mcheck extends PlayerCommand
 {
-	
 	public cmd_mcheck()
 	{
 		super("mcheck");

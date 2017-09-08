@@ -28,6 +28,9 @@ import com.aionemu.gameserver.model.templates.panels.SkillPanel;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * @author xTz
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "polymorph_panels")
 public class PanelSkillsData

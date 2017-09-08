@@ -23,6 +23,10 @@ import java.util.Set;
 
 import com.aionemu.gameserver.network.aion.serverpackets.*;
 
+/**
+ * This class is holding opcodes for all server packets. It's used only to have all opcodes in one place
+ * @author Luno, alexa026, ATracer, avol, orz, cura
+ */
 public class ServerPacketsOpcodes
 {
 	private static Map<Class<? extends AionServerPacket>, Integer> opcodes = new HashMap<>();

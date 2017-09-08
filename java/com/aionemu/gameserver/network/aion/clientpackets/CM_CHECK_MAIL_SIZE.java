@@ -20,11 +20,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @uthor Rinzler (Encom)
+ */
 public class CM_CHECK_MAIL_SIZE extends AionClientPacket
 {
 	public int mailSize;

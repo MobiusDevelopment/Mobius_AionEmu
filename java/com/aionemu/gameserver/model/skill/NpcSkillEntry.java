@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.skill;
 
+/**
+ * @author ATracer
+ */
 public abstract class NpcSkillEntry extends SkillEntry
 {
 	protected long lastTimeUsed = 0;

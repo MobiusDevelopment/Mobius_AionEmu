@@ -23,6 +23,13 @@ import com.aionemu.gameserver.dataholders.loadingutils.XmlDataLoader;
 import com.aionemu.gameserver.model.templates.mail.Mails;
 import com.aionemu.gameserver.utils.Util;
 
+/**
+ * This class is holding whole static data, that is loaded from /data/static_data directory.<br>
+ * The data is loaded by XMLDataLoader using JAXB.<br>
+ * <br>
+ * This class temporarily also contains data loaded from txt files by DataLoaders. It'll be changed later.
+ * @author Luno , orz modified by Wakizashi
+ */
 public final class DataManager
 {
 	static Logger log = LoggerFactory.getLogger(DataManager.class);

@@ -33,11 +33,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("fierce_sandmane_tigric")
 public class Fierce_Sandmane_TigricAI2 extends AggressiveNpcAI2
 {

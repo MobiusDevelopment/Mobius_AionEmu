@@ -30,11 +30,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("shulack_guided_bomb")
 public class ShulackGuidedBombAI2 extends AggressiveNpcAI2
 {

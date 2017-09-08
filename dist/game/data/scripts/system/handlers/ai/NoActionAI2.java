@@ -19,11 +19,9 @@ package system.handlers.ai;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.ai2.NpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author ATracer
+ */
 @AIName("noaction")
 public class NoActionAI2 extends NpcAI2
 {

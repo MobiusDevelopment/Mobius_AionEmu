@@ -26,11 +26,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Ranastic
+ */
 @AIName("emptyaethericcannon")
 public class EmptyAethericCannonAI2 extends ActionItemNpcAI2
 {

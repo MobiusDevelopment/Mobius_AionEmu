@@ -23,11 +23,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Source
+ */
 @AIName("siege_mine")
 public class MineAI2 extends AggressiveNpcAI2
 {

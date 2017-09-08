@@ -35,11 +35,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("kaliga_the_unjust")
 public class Kaliga_The_UnjustAI2 extends AggressiveNpcAI2
 {

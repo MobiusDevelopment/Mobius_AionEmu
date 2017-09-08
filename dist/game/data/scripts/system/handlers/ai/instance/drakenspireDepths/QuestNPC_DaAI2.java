@@ -25,11 +25,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("quest_npc_da")
 public class QuestNPC_DaAI2 extends AggressiveNpcAI2
 {

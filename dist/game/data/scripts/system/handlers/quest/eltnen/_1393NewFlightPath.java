@@ -27,10 +27,8 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 /**
  * @author Balthazar
  */
-
 public class _1393NewFlightPath extends QuestHandler
 {
-	
 	private static final int questId = 1393;
 	
 	public _1393NewFlightPath()

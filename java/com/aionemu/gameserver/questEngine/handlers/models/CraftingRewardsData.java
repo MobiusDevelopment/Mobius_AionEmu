@@ -24,6 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.handlers.template.CraftingRewards;
 
+/**
+ * @author Bobobear
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CraftingRewardsData")
 public class CraftingRewardsData extends XMLQuest

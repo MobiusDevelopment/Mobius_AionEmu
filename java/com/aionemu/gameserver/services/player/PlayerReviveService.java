@@ -43,6 +43,9 @@ import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldMap;
 import com.aionemu.gameserver.world.WorldPosition;
 
+/**
+ * @author Jego, xTz
+ */
 public class PlayerReviveService
 {
 	public static void duelRevive(Player player)

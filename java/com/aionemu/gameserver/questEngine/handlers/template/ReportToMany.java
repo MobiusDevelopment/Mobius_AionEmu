@@ -34,6 +34,10 @@ import com.aionemu.gameserver.services.QuestService;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Hilgert
+ * @modified vlog
+ */
 public class ReportToMany extends QuestHandler
 {
 	private final int startItem;

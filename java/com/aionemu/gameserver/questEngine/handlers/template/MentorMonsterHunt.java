@@ -32,6 +32,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 
 import javolution.util.FastMap;
 
+/**
+ * @author MrPoke reworked Bobobear
+ */
 public class MentorMonsterHunt extends MonsterHunt
 {
 	private final int menteMinLevel;

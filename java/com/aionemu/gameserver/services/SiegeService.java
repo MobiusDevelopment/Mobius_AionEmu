@@ -83,6 +83,10 @@ import com.google.common.collect.Maps;
 
 import javolution.util.FastMap;
 
+/**
+ * 3.0 siege update (https://docs.google.com/document/d/1HVOw8-w9AlRp4ci0ei4iAzNaSKzAHj_xORu-qIQJFmc/edit#)
+ * @author SoulKeeper, Source
+ */
 public class SiegeService
 {
 	/**

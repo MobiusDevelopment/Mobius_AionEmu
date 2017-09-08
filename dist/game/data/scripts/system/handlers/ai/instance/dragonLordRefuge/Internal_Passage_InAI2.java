@@ -23,11 +23,9 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Ranastic (Encom) /
- ****/
-
+ * @author Ranastic (Encom)
+ */
 @AIName("internal_passage_in")
 public class Internal_Passage_InAI2 extends ActionItemNpcAI2
 {

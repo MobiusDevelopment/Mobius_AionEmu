@@ -31,7 +31,7 @@ import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
- * Author Rinzler (Encom)
+ * Created with IntelliJ IDEA. User: pixfid Date: 7/14/13 Time: 5:18 PM
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CompositionAction")

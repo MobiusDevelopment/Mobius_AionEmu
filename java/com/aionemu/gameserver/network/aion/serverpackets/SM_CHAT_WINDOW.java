@@ -24,6 +24,10 @@ import com.aionemu.gameserver.model.team2.group.PlayerGroup;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author ginho1
+ * @edit Cheatkiller
+ */
 public class SM_CHAT_WINDOW extends AionServerPacket
 {
 	private final Player target;

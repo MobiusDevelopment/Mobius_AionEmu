@@ -35,6 +35,10 @@ import com.aionemu.gameserver.services.VortexService;
 
 import javolution.util.FastMap;
 
+/**
+ * @author MrPoke
+ * @reworked vlog, Bobobear
+ */
 public class MonsterHunt extends QuestHandler
 {
 	private final int questId;

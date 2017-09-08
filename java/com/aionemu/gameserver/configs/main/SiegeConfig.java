@@ -18,6 +18,9 @@ package com.aionemu.gameserver.configs.main;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author Sarynth, xTz
+ */
 public class SiegeConfig
 {
 	@Property(key = "gameserver.siege.enable", defaultValue = "true")

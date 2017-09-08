@@ -21,6 +21,10 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.TradeService;
 
+/**
+ * @author MrPoke
+ * @author GiGatR00n, Raziel
+ */
 public class CM_BUY_TRADE_IN_TRADE extends AionClientPacket
 {
 	private int sellerObjId;

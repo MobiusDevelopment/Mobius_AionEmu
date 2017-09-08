@@ -26,6 +26,9 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.craft.CraftService;
 import com.aionemu.gameserver.utils.MathUtil;
 
+/**
+ * @author Mr. Poke
+ */
 public class CM_CRAFT extends AionClientPacket
 {
 	private static final Logger log = LoggerFactory.getLogger(CM_CRAFT.class);

@@ -25,6 +25,9 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author Rolandas
+ */
 public class CM_RELEASE_OBJECT extends AionClientPacket
 {
 	int targetObjectId;

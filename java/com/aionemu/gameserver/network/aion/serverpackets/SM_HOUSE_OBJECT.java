@@ -24,6 +24,9 @@ import com.aionemu.gameserver.model.house.House;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author Rolandas
+ */
 public class SM_HOUSE_OBJECT extends AionServerPacket
 {
 	HouseObject<?> houseObject;

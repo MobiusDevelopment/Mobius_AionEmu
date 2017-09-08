@@ -23,6 +23,9 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
 import com.aionemu.gameserver.model.stats.calc.functions.StatFunction;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 
+/**
+ * @author ATracer
+ */
 public class ManaStone extends ItemStone
 {
 	private List<StatFunction> modifiers;

@@ -33,10 +33,8 @@ import com.aionemu.gameserver.services.QuestService;
 /**
  * @author Rolandas
  */
-
 public class _80039EventTheChosenFew extends QuestHandler
 {
-	
 	private static final int questId = 80039;
 	
 	public _80039EventTheChosenFew()

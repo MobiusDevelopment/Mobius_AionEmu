@@ -24,7 +24,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author kecimis
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Motion")
 public class Motion

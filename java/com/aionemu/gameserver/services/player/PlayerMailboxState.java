@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.services.player;
 
+/**
+ * @author Source
+ */
 public class PlayerMailboxState
 {
 	public static final byte CLOSED = 0;

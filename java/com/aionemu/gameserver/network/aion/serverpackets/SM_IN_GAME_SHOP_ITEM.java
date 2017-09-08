@@ -22,6 +22,9 @@ import com.aionemu.gameserver.model.ingameshop.InGameShopEn;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author xTz, KID
+ */
 public class SM_IN_GAME_SHOP_ITEM extends AionServerPacket
 {
 	private final IGItem item;

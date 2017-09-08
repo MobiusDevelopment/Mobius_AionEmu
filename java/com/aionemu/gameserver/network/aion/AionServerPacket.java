@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public abstract class AionServerPacket extends BaseServerPacket
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(AionServerPacket.class);
 	
 	/**

@@ -81,6 +81,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.WorldMapType;
 import com.aionemu.gameserver.world.WorldPosition;
 
+/**
+ * @author xTz
+ */
 public class TeleportService2
 {
 	private static final Logger log = LoggerFactory.getLogger(TeleportService2.class);

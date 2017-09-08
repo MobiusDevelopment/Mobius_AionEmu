@@ -29,11 +29,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("explosion_shadows")
 public class ExplosionShadowsAI2 extends AggressiveNpcAI2
 {

@@ -18,6 +18,9 @@ package com.aionemu.gameserver.skillengine.effect;
 
 import com.aionemu.gameserver.skillengine.model.Effect;
 
+/**
+ * @author kecimis
+ */
 public class SanctuaryEffect extends EffectTemplate
 {
 	

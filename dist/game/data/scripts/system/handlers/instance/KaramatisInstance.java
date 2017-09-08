@@ -30,11 +30,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Eloann
+ */
 @InstanceID(310010000)
 public class KaramatisInstance extends GeneralInstanceHandler
 {

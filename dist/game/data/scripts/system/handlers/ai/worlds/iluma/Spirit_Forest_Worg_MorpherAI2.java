@@ -21,11 +21,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("spirit_forest_worg_morpher")
 public class Spirit_Forest_Worg_MorpherAI2 extends AggressiveNpcAI2
 {

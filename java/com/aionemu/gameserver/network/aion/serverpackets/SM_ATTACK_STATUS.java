@@ -20,6 +20,11 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author alexa026
+ * @author ATracer
+ * @author kecimis
+ */
 public class SM_ATTACK_STATUS extends AionServerPacket
 {
 	private final Creature creature;

@@ -32,6 +32,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
 
+/**
+ * @author xavier, cura, xTz
+ */
 public class TitleList
 {
 	

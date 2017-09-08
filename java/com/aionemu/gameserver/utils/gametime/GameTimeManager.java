@@ -23,6 +23,10 @@ import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.ServerVariablesDAO;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * Manages ingame time
+ * @author Ben
+ */
 public class GameTimeManager
 {
 	private static final Logger log = LoggerFactory.getLogger(GameTimeManager.class);

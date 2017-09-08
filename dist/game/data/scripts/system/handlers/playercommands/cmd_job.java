@@ -22,7 +22,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
 
 public class cmd_job extends PlayerCommand
 {
-	
 	public cmd_job()
 	{
 		super("job");

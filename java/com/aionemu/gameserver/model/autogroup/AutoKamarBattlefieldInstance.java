@@ -34,7 +34,6 @@ import com.aionemu.gameserver.services.instance.KamarBattlefieldService;
 /**
  * @author Rinzler (Encom)
  */
-
 public class AutoKamarBattlefieldInstance extends AutoInstance
 {
 	@Override

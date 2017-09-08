@@ -28,6 +28,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Source
+ */
 public class PlayerChatService
 {
 	private static final Logger log = LoggerFactory.getLogger("CHAT_LOG");

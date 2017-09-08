@@ -32,6 +32,10 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Wakizashi, vlog, Bobobear
+ * @reworked Luzien
+ */
 public class FountainRewards extends QuestHandler
 {
 	private final int questId;

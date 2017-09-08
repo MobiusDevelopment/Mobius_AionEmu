@@ -24,7 +24,6 @@ import com.aionemu.gameserver.world.MapRegion;
  */
 public class NpcKnownList extends CreatureAwareKnownList
 {
-	
 	public NpcKnownList(VisibleObject owner)
 	{
 		super(owner);

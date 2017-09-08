@@ -22,11 +22,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("shape_change_zombie")
 public class Shape_Change_ZombieAI2 extends AggressiveNpcAI2
 {

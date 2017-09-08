@@ -32,6 +32,9 @@ import com.aionemu.gameserver.world.zone.handler.ZoneNameAnnotation;
 
 import javolution.util.FastMap;
 
+/**
+ * @author MrPoke
+ */
 @ZoneNameAnnotation("CORE_400010000")
 public class AbyssCore implements ZoneHandler
 {

@@ -25,6 +25,9 @@ import com.aionemu.gameserver.model.templates.challenge.ChallengeType;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author ViAl
+ */
 public class SM_CHALLENGE_LIST extends AionServerPacket
 {
 	int action;

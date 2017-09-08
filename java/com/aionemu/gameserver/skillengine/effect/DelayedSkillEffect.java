@@ -29,6 +29,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
+/**
+ * @author kecimis
+ */
 public class DelayedSkillEffect extends EffectTemplate
 {
 	@XmlAttribute(name = "skill_id")

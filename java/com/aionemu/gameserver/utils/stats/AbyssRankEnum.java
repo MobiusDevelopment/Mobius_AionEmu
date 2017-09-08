@@ -25,6 +25,12 @@ import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
+/**
+ * @author ATracer
+ * @author Sarynth
+ * @author Imaginary
+ * @rework Ever' for 4.5
+ */
 @XmlEnum
 public enum AbyssRankEnum
 {

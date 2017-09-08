@@ -16,11 +16,9 @@
  */
 package com.aionemu.gameserver.model.instance.playerreward;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 public class CruciblePlayerReward extends InstancePlayerReward
 {
 	private int insignia;

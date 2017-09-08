@@ -24,11 +24,9 @@ import com.aionemu.gameserver.services.item.ItemService;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("dyeplant")
 public class DyePlantAI2 extends ActionItemNpcAI2
 {

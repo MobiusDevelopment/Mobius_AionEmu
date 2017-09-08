@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1484ChiyorinrinerksRequest extends QuestHandler
 {
-	
 	private static final int questId = 1484;
 	
 	public _1484ChiyorinrinerksRequest()

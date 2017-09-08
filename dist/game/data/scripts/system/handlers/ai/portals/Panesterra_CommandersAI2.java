@@ -26,11 +26,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /** Helper themoose (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("panesterra_commanders")
 public class Panesterra_CommandersAI2 extends GeneralNpcAI2
 {

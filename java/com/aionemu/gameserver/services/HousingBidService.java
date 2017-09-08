@@ -66,6 +66,9 @@ import com.aionemu.gameserver.world.WorldMapType;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Rolandas
+ */
 public class HousingBidService extends AbstractCronTask
 {
 	private static final Logger log = LoggerFactory.getLogger("HOUSE_AUCTION_LOG");

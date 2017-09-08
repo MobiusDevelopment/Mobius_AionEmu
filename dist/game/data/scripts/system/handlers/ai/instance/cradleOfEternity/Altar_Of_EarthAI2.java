@@ -28,11 +28,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("Altar_Of_Earth")
 public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 {

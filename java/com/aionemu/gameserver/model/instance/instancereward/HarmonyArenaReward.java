@@ -34,6 +34,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
+/**
+ * @author xTz
+ */
 public class HarmonyArenaReward extends PvPArenaReward
 {
 	private final FastList<HarmonyGroupReward> groups = new FastList<>();

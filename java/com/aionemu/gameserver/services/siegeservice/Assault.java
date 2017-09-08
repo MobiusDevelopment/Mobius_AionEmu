@@ -22,6 +22,9 @@ import com.aionemu.gameserver.model.gameobjects.siege.SiegeNpc;
 import com.aionemu.gameserver.model.siege.SiegeLocation;
 import com.aionemu.gameserver.model.siege.SiegeRace;
 
+/**
+ * @author Luzien
+ */
 public abstract class Assault<siege extends Siege<?>>
 {
 	

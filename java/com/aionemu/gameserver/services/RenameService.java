@@ -31,6 +31,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.audit.AuditLogger;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author ATracer modified cura
+ */
 public class RenameService
 {
 	public static boolean renamePlayer(Player player, String oldName, String newName, int item)

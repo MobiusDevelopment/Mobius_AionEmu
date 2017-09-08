@@ -54,6 +54,7 @@ public class OneTimeBoostSkillAttackEffect extends BuffEffect
 				observer = new AttackCalcObserver()
 				{
 					private int count = 0;
+					
 					@Override
 					public float getBaseMagicalDamageMultiplier()
 					{
@@ -72,6 +73,7 @@ public class OneTimeBoostSkillAttackEffect extends BuffEffect
 				observer = new AttackCalcObserver()
 				{
 					private int count = 0;
+					
 					@Override
 					public float getBasePhysicalDamageMultiplier(boolean isSkill)
 					{

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _28208ARiftAdrift extends QuestHandler
 {
-	
 	private static final int questId = 28208;
 	
 	public _28208ARiftAdrift()

@@ -29,11 +29,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("captain_murugan")
 public class Captain_MuruganAI2 extends AggressiveNpcAI2
 {

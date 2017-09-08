@@ -24,6 +24,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.Race;
 
+/**
+ * @author Source
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Vortex")
 public class VortexTemplate

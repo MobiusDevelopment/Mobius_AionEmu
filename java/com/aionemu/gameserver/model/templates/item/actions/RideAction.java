@@ -46,6 +46,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 
+/**
+ * @author Rolandas, ginho1
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RideAction")
 public class RideAction extends AbstractItemAction

@@ -37,6 +37,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Source
+ */
 public class RiftService
 {
 	private RiftSchedule riftSchedule;

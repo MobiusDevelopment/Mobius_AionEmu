@@ -43,6 +43,9 @@ import com.aionemu.gameserver.utils.stats.enums.WATER_RESIST;
 import com.aionemu.gameserver.utils.stats.enums.WILL;
 import com.aionemu.gameserver.utils.stats.enums.WIND_RESIST;
 
+/**
+ * @author ATracer
+ */
 public class ClassStats
 {
 	public static int getMaxHpFor(PlayerClass playerClass, int level)

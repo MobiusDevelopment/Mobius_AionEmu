@@ -33,6 +33,10 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.geo.GeoService;
 
+/**
+ * @author VladimirZ,
+ * @modified Cheatkiller
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SimpleRootEffect")
 public class SimpleRootEffect extends EffectTemplate

@@ -26,6 +26,10 @@ import com.aionemu.gameserver.taskmanager.tasks.TeamMoveUpdater;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * Packet about player movement.
+ * @author -Nemesiss-
+ */
 public class CM_MOVE extends AionClientPacket
 {
 	private byte type;

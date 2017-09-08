@@ -27,7 +27,6 @@ import com.aionemu.gameserver.spawnengine.TemporarySpawnEngine;
  */
 public class GameTime implements Cloneable
 {
-	
 	private static final int MINUTES_IN_HOUR = 60;
 	private static final int MINUTES_IN_DAY = MINUTES_IN_HOUR * 24;
 	private static final int MINUTES_IN_YEAR = ((31 * 7) + (30 * 4) + (28 * 1)) * MINUTES_IN_DAY;

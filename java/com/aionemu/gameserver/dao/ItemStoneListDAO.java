@@ -26,6 +26,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.IdianStone;
 import com.aionemu.gameserver.model.items.ManaStone;
 
+/**
+ * @author ATracer modified by Wakizashi
+ */
 public abstract class ItemStoneListDAO implements DAO
 {
 	public abstract void load(Collection<Item> items);

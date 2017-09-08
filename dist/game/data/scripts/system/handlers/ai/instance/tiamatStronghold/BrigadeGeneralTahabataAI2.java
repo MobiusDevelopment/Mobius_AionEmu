@@ -29,11 +29,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Ranastic (Encom) /
- ****/
-
+ * @author Ranastic (Encom)
+ */
 @AIName("brigade_general_tahabata")
 public class BrigadeGeneralTahabataAI2 extends AggressiveNpcAI2
 {

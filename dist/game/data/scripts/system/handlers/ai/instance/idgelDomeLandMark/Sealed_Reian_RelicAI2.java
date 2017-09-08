@@ -29,11 +29,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("Sealed_Reian_Relic")
 public class Sealed_Reian_RelicAI2 extends ActionItemNpcAI2
 {

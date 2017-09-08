@@ -29,6 +29,9 @@ import com.aionemu.gameserver.questEngine.handlers.template.SkillUse;
 
 import javolution.util.FastMap;
 
+/**
+ * @author vlog, modified Bobobear
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SkillUseData")
 public class SkillUseData extends XMLQuest

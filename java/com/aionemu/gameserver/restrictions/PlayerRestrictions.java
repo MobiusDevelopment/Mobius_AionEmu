@@ -37,6 +37,10 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
+/**
+ * @Author lord_rex modified by Sippolo
+ * @Reworked Kill3r
+ */
 public class PlayerRestrictions extends AbstractRestrictions
 {
 	@Override

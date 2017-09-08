@@ -25,11 +25,9 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("DF6_Event_G1_S2_Fi_75_Al")
 public class Archon_Frigate_Special_Grade_Combat_CaptainAI2 extends AggressiveNpcAI2
 {

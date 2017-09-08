@@ -38,6 +38,10 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.restrictions.RestrictionsManager;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Avol
+ * @author GiGatR00n v4.7.5.x
+ */
 public class CM_USE_ITEM extends AionClientPacket
 {
 	public int uniqueItemId;

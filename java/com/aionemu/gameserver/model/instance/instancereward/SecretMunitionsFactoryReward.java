@@ -18,11 +18,9 @@ package com.aionemu.gameserver.model.instance.instancereward;
 
 import com.aionemu.gameserver.model.instance.playerreward.SecretMunitionsFactoryPlayerReward;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class SecretMunitionsFactoryReward extends InstanceReward<SecretMunitionsFactoryPlayerReward>
 {
 	private int points;

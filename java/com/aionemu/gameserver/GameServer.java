@@ -162,6 +162,13 @@ import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.joran.JoranConfigurator;
 import ch.qos.logback.core.joran.spi.JoranException;
 
+/**
+ * <tt>GameServer </tt> is the main class of the application and represents the whole game server.<br>
+ * This class is also an entry point with main() method.
+ * @author -Nemesiss-
+ * @author SoulKeeper
+ * @author cura
+ */
 public class GameServer
 {
 	private static final Logger log = LoggerFactory.getLogger(GameServer.class);

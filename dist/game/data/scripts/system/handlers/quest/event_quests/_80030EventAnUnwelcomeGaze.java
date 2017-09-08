@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * @author Rolandas
  */
-
 public class _80030EventAnUnwelcomeGaze extends QuestHandler
 {
 	private static final int questId = 80030;

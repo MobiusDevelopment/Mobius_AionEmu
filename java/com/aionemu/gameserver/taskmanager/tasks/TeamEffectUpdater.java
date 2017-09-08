@@ -23,6 +23,9 @@ import com.aionemu.gameserver.model.team2.common.legacy.PlayerAllianceEvent;
 import com.aionemu.gameserver.model.team2.group.PlayerGroupService;
 import com.aionemu.gameserver.taskmanager.AbstractIterativePeriodicTaskManager;
 
+/**
+ * @author Sarynth Supports PlayerGroup and PlayerAlliance movement updating.
+ */
 public final class TeamEffectUpdater extends AbstractIterativePeriodicTaskManager<Player>
 {
 	private static final class SingletonHolder

@@ -19,6 +19,9 @@ package com.aionemu.gameserver.model.gameobjects.player;
 import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.model.stats.container.StatEnum;
 
+/**
+ * @author antness
+ */
 public enum RewardType
 {
 	AP_PLAYER

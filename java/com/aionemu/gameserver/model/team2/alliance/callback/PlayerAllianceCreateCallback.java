@@ -20,6 +20,9 @@ import com.aionemu.commons.callbacks.Callback;
 import com.aionemu.commons.callbacks.CallbackResult;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
+/**
+ * @author ATracer
+ */
 @SuppressWarnings("rawtypes")
 public abstract class PlayerAllianceCreateCallback implements Callback
 {

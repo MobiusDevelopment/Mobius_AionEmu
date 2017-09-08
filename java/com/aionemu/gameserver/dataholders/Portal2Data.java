@@ -36,6 +36,9 @@ import com.aionemu.gameserver.model.templates.portal.PortalUse;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * @author xTz
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =
 {

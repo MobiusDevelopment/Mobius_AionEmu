@@ -28,6 +28,9 @@ import com.aionemu.gameserver.spawnengine.VisibleObjectSpawner;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author antness thx to Guapo for sniffing
+ */
 public class CM_READ_EXPRESS_MAIL extends AionClientPacket
 {
 	private int action;

@@ -25,11 +25,9 @@ import com.aionemu.gameserver.ai2.poll.AIQuestion;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Ranastic (Encom) /
- ****/
-
+ * @author Cheatkiller
+ */
 @AIName("timeaccelerator")
 public class TimeAcceleratorAI2 extends AggressiveNpcAI2
 {

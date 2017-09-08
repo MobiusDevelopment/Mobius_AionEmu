@@ -61,9 +61,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.audit.AuditLogger;
 
 /**
- * @author Ranastic (Encom)
+ * @author ATracer
+ * @modified Wakizashi, Source, vlog
  */
-
 public class EnchantService
 {
 	private static final Logger log = LoggerFactory.getLogger(EnchantService.class);

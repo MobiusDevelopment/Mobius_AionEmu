@@ -24,11 +24,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("corrupted_danuar")
 public class Corrupted_DanuarAI2 extends AggressiveNpcAI2
 {

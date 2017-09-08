@@ -29,7 +29,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _38000CallOfTheAlabasterOrder extends QuestHandler
 {
-	
 	public static final int questId = 38000;
 	
 	public _38000CallOfTheAlabasterOrder()

@@ -41,7 +41,6 @@ import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 
 public class DropLists
 {
-	
 	private static List<Element> listgroups = new ArrayList<>();
 	private static List<Element> drops = new ArrayList<>();
 	private static List<Element> allnpcs = new ArrayList<>();

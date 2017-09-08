@@ -33,6 +33,10 @@ import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.services.RiftService;
 import com.aionemu.gameserver.services.VortexService;
 
+/**
+ * Standard xml-based handling for the DAILY quests with onKillInZone events
+ * @author vlog, reworked bobobear
+ */
 public class KillInWorld extends QuestHandler
 {
 	private final int questId;

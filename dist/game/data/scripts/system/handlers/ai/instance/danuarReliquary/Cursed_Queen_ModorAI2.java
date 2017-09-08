@@ -41,11 +41,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("cursed_queen_modor")
 public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 {

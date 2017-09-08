@@ -23,6 +23,9 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.gameserver.model.stats.container.StatEnum;
 
+/**
+ * @author ATracer
+ */
 public class StatCapUtil
 {
 	protected static final Logger log = LoggerFactory.getLogger(StatCapUtil.class);

@@ -50,6 +50,10 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 
 import javolution.util.FastMap;
 
+/**
+ * This class is representing movable objects, its base class for all in game objects that may move
+ * @author -Nemesiss-
+ */
 public abstract class Creature extends VisibleObject
 {
 	private static final Logger log = LoggerFactory.getLogger(Creature.class);

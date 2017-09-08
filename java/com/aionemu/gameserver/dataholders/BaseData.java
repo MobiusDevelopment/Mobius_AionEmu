@@ -31,7 +31,7 @@ import com.aionemu.gameserver.model.templates.base.BaseTemplate;
 import javolution.util.FastMap;
 
 /**
- * @author Rinzler
+ * @author Source
  */
 
 @XmlAccessorType(XmlAccessType.FIELD)

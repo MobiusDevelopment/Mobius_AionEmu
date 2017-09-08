@@ -20,6 +20,9 @@ import com.aionemu.gameserver.configs.main.FallDamageConfig;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.utils.stats.StatFunctions;
 
+/**
+ * @author ATracer
+ */
 public class PlayerMoveController extends PlayableMoveController<Player>
 {
 	private float fallDistance;

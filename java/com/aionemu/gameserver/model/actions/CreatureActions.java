@@ -18,11 +18,9 @@ package com.aionemu.gameserver.model.actions;
 
 import com.aionemu.gameserver.model.gameobjects.Creature;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 public class CreatureActions
 {
 	public static String getName(Creature creature)

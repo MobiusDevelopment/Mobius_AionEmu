@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_answer extends PlayerCommand
 {
-	
 	public cmd_answer()
 	{
 		super("answer");

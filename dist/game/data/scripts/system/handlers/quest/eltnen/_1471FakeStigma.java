@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1471FakeStigma extends QuestHandler
 {
-	
 	private static final int questId = 1471;
 	
 	public _1471FakeStigma()

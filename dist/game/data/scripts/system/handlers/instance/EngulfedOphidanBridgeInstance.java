@@ -70,11 +70,9 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 
 import javolution.util.FastList;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-// http://aion.power.plaync.com/wiki/%EC%9A%94%EB%A5%B4%EB%AC%B8%EA%B0%84%EB%93%9C+%EC%A7%84%EA%B2%A9%EB%A1%9C+-+%EC%A7%84%ED%96%89+%EC%A0%95%EB%B3%B4
+ * @author Rinzler (Encom)
+ */
 
 @InstanceID(301210000)
 public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler

@@ -19,6 +19,9 @@ package com.aionemu.gameserver.world;
 import com.aionemu.gameserver.instance.InstanceEngine;
 import com.aionemu.gameserver.instance.handlers.InstanceHandler;
 
+/**
+ * @author ATracer
+ */
 public class WorldMapInstanceFactory
 {
 	public static WorldMapInstance createWorldMapInstance(WorldMap parent, int instanceId)

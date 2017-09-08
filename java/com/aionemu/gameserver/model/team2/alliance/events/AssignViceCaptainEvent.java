@@ -23,6 +23,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_ALLIANCE_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer
+ */
 public class AssignViceCaptainEvent extends AbstractTeamPlayerEvent<PlayerAlliance>
 {
 	public static enum AssignType

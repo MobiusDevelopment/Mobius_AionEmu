@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.items;
 
+/**
+ * @author ATracer
+ */
 public enum ItemId
 {
 	KINAH(182400001),

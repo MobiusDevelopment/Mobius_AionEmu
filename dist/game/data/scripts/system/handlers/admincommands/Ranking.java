@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Ranking extends AdminCommand
 {
-	
 	public Ranking()
 	{
 		super("ranking");

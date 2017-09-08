@@ -19,6 +19,9 @@ package com.aionemu.gameserver.model.siege;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
+/**
+ * @author Ever
+ */
 public class PlayerGP implements Comparable<PlayerGP>
 {
 	private final Player player;

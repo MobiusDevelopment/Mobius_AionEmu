@@ -29,6 +29,9 @@ import com.aionemu.gameserver.model.templates.tribe.Tribe;
 
 import gnu.trove.map.hash.THashMap;
 
+/**
+ * @author ATracer
+ */
 @XmlRootElement(name = "tribe_relations")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TribeRelationsData

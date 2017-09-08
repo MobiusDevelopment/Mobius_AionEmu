@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.templates.bonus;
 
+/**
+ * @author Wakizashi
+ */
 public enum InventoryBonusType
 {
 	BOSS,

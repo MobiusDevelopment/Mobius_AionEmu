@@ -24,6 +24,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import com.aionemu.gameserver.model.templates.mail.Mails;
 
+/**
+ * An instance of this class is the result of data loading.
+ * @author Luno, orz Modified by Wakizashi
+ */
 @XmlRootElement(name = "ae_static_data")
 @XmlAccessorType(XmlAccessType.NONE)
 public class StaticData

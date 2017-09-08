@@ -29,6 +29,9 @@ import com.aionemu.gameserver.model.templates.towns.TownSpawnMap;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * @author ViAl
+ */
 @XmlRootElement(name = "town_spawns_data")
 public class TownSpawnsData
 {

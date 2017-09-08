@@ -32,11 +32,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("aurelian_dadar")
 public class Aurelian_DadarAI2 extends AggressiveNpcAI2
 {

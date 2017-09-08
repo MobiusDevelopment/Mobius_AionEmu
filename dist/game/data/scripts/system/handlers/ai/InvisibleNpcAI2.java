@@ -25,9 +25,8 @@ import com.aionemu.gameserver.skillengine.effect.AbnormalState;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
- * @author Rinzler
+ * @author xTz
  */
-
 @AIName("invisible_npc")
 public class InvisibleNpcAI2 extends AggressiveNpcAI2
 {

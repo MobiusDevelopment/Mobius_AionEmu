@@ -36,6 +36,9 @@ import com.aionemu.gameserver.services.toypet.PetService;
 import com.aionemu.gameserver.services.toypet.PetSpawnService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author M@xx, xTz
+ */
 public class CM_PET extends AionClientPacket
 {
 	@SuppressWarnings("unused")

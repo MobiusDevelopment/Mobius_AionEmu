@@ -29,6 +29,9 @@ import com.aionemu.gameserver.model.templates.quest.QuestItems;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.handlers.template.WorkOrders;
 
+/**
+ * @author Mr. Poke, reworked Bobobear
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "WorkOrdersData", propOrder =
 {

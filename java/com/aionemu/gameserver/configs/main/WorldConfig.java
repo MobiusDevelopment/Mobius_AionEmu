@@ -18,6 +18,9 @@ package com.aionemu.gameserver.configs.main;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author ATracer
+ */
 public class WorldConfig
 {
 	@Property(key = "gameserver.world.region.size", defaultValue = "128")

@@ -41,11 +41,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(300460000)
 public class SteelRakeCabineInstance extends GeneralInstanceHandler
 {

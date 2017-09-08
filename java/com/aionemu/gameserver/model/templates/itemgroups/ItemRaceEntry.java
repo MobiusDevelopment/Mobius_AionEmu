@@ -27,6 +27,28 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.rewards.IdLevelReward;
 
+/**
+ * @author Rolandas
+ */
+
+/**
+ * <p/>
+ * Java class for ItemRaceEntry complex type.
+ * <p/>
+ * The following schema fragment specifies the expected content contained within this class.
+ * <p/>
+ * 
+ * <pre>
+ * &lt;complexType name="ItemRaceEntry">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}int" />
+ *       &lt;attribute name="race" type="{}Race" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ItemRaceEntry")
 @XmlSeeAlso(

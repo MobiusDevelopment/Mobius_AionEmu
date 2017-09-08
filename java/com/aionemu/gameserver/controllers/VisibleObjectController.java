@@ -19,6 +19,10 @@ package com.aionemu.gameserver.controllers;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * This class is for controlling VisibleObjects [players, npc's etc]. Its controlling movement, visibility etc.
+ * @author -Nemesiss-
+ */
 public abstract class VisibleObjectController<T extends VisibleObject>
 {
 	private T owner;

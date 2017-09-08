@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.ingameshop;
 
+/**
+ * @author xTz
+ */
 public class InGameShop
 {
 	

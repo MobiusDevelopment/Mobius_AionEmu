@@ -31,6 +31,11 @@ import com.aionemu.gameserver.model.templates.tradelist.TradeListTemplate.TradeT
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
+/**
+ * @author xTz
+ *         <p/>
+ *         TYPE_A: BuyLimit == 0 && SellLimit != 0 TYPE_B: BuyLimit != 0 && SellLimit == 0 TYPE_C: BuyLimit != 0 && SellLimit != 0
+ */
 public class LimitedItemTradeService
 {
 	private static final Logger log = LoggerFactory.getLogger(LimitedItemTradeService.class);

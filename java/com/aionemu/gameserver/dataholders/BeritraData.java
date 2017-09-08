@@ -30,10 +30,6 @@ import com.aionemu.gameserver.model.templates.beritra.BeritraTemplate;
 
 import javolution.util.FastMap;
 
-/**
- * @author Rinzler (Encom)
- */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "beritra_invasion")
 public class BeritraData

@@ -19,7 +19,6 @@ package com.aionemu.gameserver.model.beritra;
 /**
  * @author Rinzler (Encom)
  */
-
 public enum BeritraStateType
 {
 	INVASION,

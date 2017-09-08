@@ -21,6 +21,9 @@ import com.aionemu.gameserver.model.house.House;
 import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 
+/**
+ * @author Rolandas
+ */
 public class SummonedHouseNpc extends SummonedObject<House>
 {
 	

@@ -35,6 +35,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 import javolution.util.FastList;
 import javolution.util.FastSet;
 
+/**
+ * @author Sarynth, nrg
+ */
 public class Kisk extends SummonedObject<Player>
 {
 	private final Legion ownerLegion;

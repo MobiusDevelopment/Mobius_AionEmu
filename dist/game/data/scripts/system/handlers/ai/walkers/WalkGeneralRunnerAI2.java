@@ -21,11 +21,9 @@ import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rolandas
+ */
 @AIName("general_runner")
 public class WalkGeneralRunnerAI2 extends GeneralNpcAI2
 {

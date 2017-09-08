@@ -31,11 +31,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import system.handlers.ai.AggressiveFirstSkillAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Ritsu
+ */
 @AIName("bollvig")
 public class BollvigAI2 extends AggressiveFirstSkillAI2
 {

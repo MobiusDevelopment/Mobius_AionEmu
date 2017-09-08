@@ -29,11 +29,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("lizardman_1")
 public class Stygian_Mist_WarriorAI2 extends AggressiveNpcAI2
 {

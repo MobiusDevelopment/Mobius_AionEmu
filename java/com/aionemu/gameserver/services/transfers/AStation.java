@@ -19,7 +19,6 @@ package com.aionemu.gameserver.services.transfers;
 /**
  * @author Ranastic
  */
-
 public class AStation
 {
 	private final int serverId;

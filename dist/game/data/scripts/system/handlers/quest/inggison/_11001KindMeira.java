@@ -29,10 +29,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author dta3000
  */
-
 public class _11001KindMeira extends QuestHandler
 {
-	
 	private static final int questId = 11001;
 	
 	public _11001KindMeira()

@@ -37,6 +37,9 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SIEGE_LOCATION_STATE
 import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author SoulKeeper, Source
+ */
 public abstract class Siege<SL extends SiegeLocation>
 {
 	

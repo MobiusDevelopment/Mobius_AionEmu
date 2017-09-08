@@ -25,6 +25,9 @@ import com.aionemu.gameserver.services.item.ItemPacketService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 
+/**
+ * @author loleron pieced together from DyeAction.java, Set.java
+ */
 public class Dye extends AdminCommand
 {
 	public Dye()

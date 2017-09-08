@@ -26,10 +26,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Hilgert
  */
-
 public class _2843OperationAnnihilate extends QuestHandler
 {
-	
 	private static final int questId = 2843;
 	
 	public _2843OperationAnnihilate()

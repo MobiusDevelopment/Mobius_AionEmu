@@ -22,11 +22,9 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Eloann
+ */
 @AIName("theplaguebearer")
 public class ThePlaguebearerAI2 extends AggressiveNpcAI2
 {

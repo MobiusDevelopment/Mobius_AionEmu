@@ -28,11 +28,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Luzien
+ */
 @AIName("spectral_warrior")
 public class SpectralWarriorAI2 extends AggressiveNpcAI2
 {

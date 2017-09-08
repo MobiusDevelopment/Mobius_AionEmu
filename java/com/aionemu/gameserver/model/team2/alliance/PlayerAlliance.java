@@ -29,6 +29,9 @@ import com.aionemu.gameserver.model.team2.league.League;
 import com.aionemu.gameserver.utils.idfactory.IDFactory;
 import com.google.common.base.Preconditions;
 
+/**
+ * @author ATracer
+ */
 public class PlayerAlliance extends TemporaryPlayerTeam<PlayerAllianceMember>
 {
 	private final Map<Integer, PlayerAllianceGroup> groups = new HashMap<>();

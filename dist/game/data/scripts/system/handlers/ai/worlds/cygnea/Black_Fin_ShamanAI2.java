@@ -33,11 +33,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("black_fin_shaman")
 public class Black_Fin_ShamanAI2 extends AggressiveNpcAI2
 {

@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.gm;
 
+/**
+ * @author xTz
+ */
 public enum GmCommands
 {
 	GM_DIALOG_TELEPORTTO,

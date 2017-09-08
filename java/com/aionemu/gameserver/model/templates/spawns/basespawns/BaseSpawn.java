@@ -28,9 +28,8 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.templates.spawns.Spawn;
 
 /**
- * @author Rinzler
+ * @author Source
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BaseSpawn")
 public class BaseSpawn

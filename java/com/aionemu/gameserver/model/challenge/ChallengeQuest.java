@@ -19,6 +19,9 @@ package com.aionemu.gameserver.model.challenge;
 import com.aionemu.gameserver.model.gameobjects.PersistentState;
 import com.aionemu.gameserver.model.templates.challenge.ChallengeQuestTemplate;
 
+/**
+ * @author ViAl
+ */
 public class ChallengeQuest
 {
 	private final ChallengeQuestTemplate template;

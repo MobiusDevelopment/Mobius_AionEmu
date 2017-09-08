@@ -21,6 +21,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * @author ATracer
+ */
 @XmlRootElement(name = "telelocation")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TeleportLocation

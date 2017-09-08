@@ -29,6 +29,11 @@ import com.aionemu.gameserver.model.items.GodStone;
 import com.aionemu.gameserver.model.items.ItemSlot;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 
+/**
+ * @author AEJTester
+ * @author Nemesiss
+ * @author Niato
+ */
 public abstract class PlayerInfo extends AionServerPacket
 {
 	

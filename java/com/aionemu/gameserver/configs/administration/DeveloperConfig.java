@@ -18,6 +18,9 @@ package com.aionemu.gameserver.configs.administration;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author ATracer
+ */
 public class DeveloperConfig
 {
 	@Property(key = "gameserver.developer.spawn.enable", defaultValue = "true")

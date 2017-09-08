@@ -21,6 +21,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * @author Hilgert
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "NpcInfos")
 public class NpcInfos

@@ -36,11 +36,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("remodeled_dynatoum")
 public class Remodeled_DynatoumAI2 extends AggressiveNpcAI2
 {

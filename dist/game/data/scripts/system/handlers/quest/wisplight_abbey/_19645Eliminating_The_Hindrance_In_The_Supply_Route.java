@@ -27,11 +27,9 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class _19645Eliminating_The_Hindrance_In_The_Supply_Route extends QuestHandler
 {
 	private static final int questId = 19645;

@@ -29,11 +29,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("shulack_drudge")
 public class Shulack_DrudgeAI2 extends GeneralNpcAI2
 {

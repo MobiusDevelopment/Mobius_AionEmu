@@ -759,7 +759,7 @@ public final class FastMath
 	@SuppressWarnings("cast")
 	public static float convertHalfToFloat(short half)
 	{
-		switch ((int)half)
+		switch ((int) half)
 		{
 			case 0x0000:
 			{

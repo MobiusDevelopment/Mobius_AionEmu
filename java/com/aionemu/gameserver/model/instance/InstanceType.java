@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.instance;
 
+/**
+ * @author Ever'
+ */
 public enum InstanceType
 {
 	LF1,

@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.controllers.movement;
 
+/**
+ * @author Mr. Poke
+ */
 public class MovementMask
 {
 	public static final byte IMMEDIATE = (byte) 0x00;

@@ -26,11 +26,9 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class _29070Dispatch_To_Altgard_Gunslinger_Aethertech extends QuestHandler
 {
 	private static final int questId = 29070;

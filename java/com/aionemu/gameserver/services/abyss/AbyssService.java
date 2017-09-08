@@ -24,6 +24,9 @@ import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
+/**
+ * @author ATracer
+ */
 public class AbyssService
 {
 	private static final int[] abyssMapList =

@@ -23,11 +23,9 @@ import com.aionemu.gameserver.model.instance.instancereward.InstanceReward;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("blessed_relics")
 public class BlessedRelicsAI2 extends ActionItemNpcAI2
 {

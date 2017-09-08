@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.templates.windstreams;
 
+/**
+ * @author xTz
+ */
 public class WindstreamPath
 {
 	public int teleportId;

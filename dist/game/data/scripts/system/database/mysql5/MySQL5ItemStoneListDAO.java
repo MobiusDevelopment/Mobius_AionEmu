@@ -45,6 +45,9 @@ import com.aionemu.gameserver.model.items.ManaStone;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Sets;
 
+/**
+ * @author ATracer
+ */
 public class MySQL5ItemStoneListDAO extends ItemStoneListDAO
 {
 	private static final Logger log = LoggerFactory.getLogger(MySQL5ItemStoneListDAO.class);

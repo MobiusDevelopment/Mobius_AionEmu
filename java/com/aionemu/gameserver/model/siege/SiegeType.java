@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.siege;
 
+/**
+ * @author Sarynth
+ */
 public enum SiegeType
 {
 	FORTRESS(0),

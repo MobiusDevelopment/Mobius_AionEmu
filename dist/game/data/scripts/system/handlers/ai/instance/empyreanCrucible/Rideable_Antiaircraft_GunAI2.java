@@ -28,11 +28,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("rideable_antiaircraft_gun")
 public class Rideable_Antiaircraft_GunAI2 extends ActionItemNpcAI2
 {

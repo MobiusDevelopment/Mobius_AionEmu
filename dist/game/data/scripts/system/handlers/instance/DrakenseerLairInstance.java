@@ -46,11 +46,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import javolution.util.FastList;
 
-/****/
 /**
- * Author Rinzler (Encom) /** Source: https://www.youtube.com/watch?v=hO-QSwBfeXI /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(301620000)
 public class DrakenseerLairInstance extends GeneralInstanceHandler
 {

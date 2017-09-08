@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model;
 
+/**
+ * @author xTz
+ */
 public enum EventType
 {
 	NONE(0, ""),

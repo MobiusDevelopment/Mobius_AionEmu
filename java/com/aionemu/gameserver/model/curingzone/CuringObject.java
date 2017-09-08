@@ -23,6 +23,9 @@ import com.aionemu.gameserver.utils.idfactory.IDFactory;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.NpcKnownList;
 
+/**
+ * @author xTz
+ */
 public class CuringObject extends VisibleObject
 {
 	

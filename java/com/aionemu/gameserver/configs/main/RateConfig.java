@@ -18,6 +18,9 @@ package com.aionemu.gameserver.configs.main;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author ATracer
+ */
 public class RateConfig
 {
 	@Property(key = "gameserver.rate.regular.xp", defaultValue = "1")

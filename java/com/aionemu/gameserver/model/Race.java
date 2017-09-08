@@ -20,6 +20,11 @@ import javax.xml.bind.annotation.XmlEnum;
 
 import org.apache.commons.lang.NotImplementedException;
 
+/**
+ * Basic enum with races.<br>
+ * I believe that NPCs will have their own races, so it's quite comfortable to have it in the same place
+ * @author SoulKeeper
+ */
 @XmlEnum
 public enum Race
 {

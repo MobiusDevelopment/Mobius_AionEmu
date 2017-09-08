@@ -28,6 +28,10 @@ import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.services.player.PlayerService;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * Offers the functionality to delete all data about inactive players
+ * @author nrg
+ */
 public class DatabaseCleaningService
 {
 	

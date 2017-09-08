@@ -26,6 +26,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.configs.main.GSConfig;
 
+/**
+ * @author xTz
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PortalReq")
 public class PortalReq

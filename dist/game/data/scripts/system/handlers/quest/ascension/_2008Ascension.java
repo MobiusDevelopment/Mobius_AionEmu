@@ -44,6 +44,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
 
+/**
+ * @author MrPoke
+ */
 public class _2008Ascension extends QuestHandler
 {
 	private static final int questId = 2008;

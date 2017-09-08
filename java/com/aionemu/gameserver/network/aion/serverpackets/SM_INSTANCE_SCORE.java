@@ -62,6 +62,9 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 import javolution.util.FastList;
 
+/**
+ * @author Dns, ginho1, nrg, xTz
+ */
 @SuppressWarnings("rawtypes")
 public class SM_INSTANCE_SCORE extends AionServerPacket
 {

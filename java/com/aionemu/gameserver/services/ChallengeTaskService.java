@@ -49,6 +49,9 @@ import com.aionemu.gameserver.world.World;
 
 import javolution.util.FastMap;
 
+/**
+ * @author ViAl
+ */
 public class ChallengeTaskService
 {
 	private static final Logger log = LoggerFactory.getLogger(ChallengeTaskService.class);

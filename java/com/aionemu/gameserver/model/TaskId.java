@@ -16,6 +16,10 @@
  */
 package com.aionemu.gameserver.model;
 
+/**
+ * @author ATracer
+ * @author GiGatR00n v4.7.5.x
+ */
 public enum TaskId
 {
 	DECAY,

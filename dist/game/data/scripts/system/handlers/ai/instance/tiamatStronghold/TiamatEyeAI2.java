@@ -25,11 +25,9 @@ import com.aionemu.gameserver.ai2.poll.AIAnswers;
 import com.aionemu.gameserver.ai2.poll.AIQuestion;
 import com.aionemu.gameserver.services.NpcShoutsService;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Cheatkiller
+ */
 @AIName("tiamateye")
 public class TiamatEyeAI2 extends NpcAI2
 {

@@ -34,11 +34,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("graviwing2")
 public class IDTiamatT1GravityKeyNamed65AlAI2 extends AggressiveNpcAI2
 {

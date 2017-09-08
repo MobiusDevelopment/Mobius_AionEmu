@@ -33,6 +33,9 @@ import org.apache.commons.lang.StringUtils;
 
 import com.aionemu.gameserver.model.Race;
 
+/**
+ * @author Rolandas
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MailTemplate")
 public class MailTemplate

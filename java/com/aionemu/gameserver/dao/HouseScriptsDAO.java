@@ -19,6 +19,9 @@ package com.aionemu.gameserver.dao;
 import com.aionemu.commons.database.dao.DAO;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerScripts;
 
+/**
+ * @author Rolandas
+ */
 public abstract class HouseScriptsDAO implements DAO
 {
 	

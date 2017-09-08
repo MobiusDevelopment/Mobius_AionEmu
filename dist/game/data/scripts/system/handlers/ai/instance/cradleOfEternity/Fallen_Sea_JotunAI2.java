@@ -36,11 +36,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("Fallen_Sea_Jotun")
 public class Fallen_Sea_JotunAI2 extends AggressiveNpcAI2
 {

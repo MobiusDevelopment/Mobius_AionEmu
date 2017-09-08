@@ -18,6 +18,10 @@ package com.aionemu.gameserver.configs.main;
 
 import com.aionemu.commons.configuration.Property;
 
+/**
+ * @author lord_rex
+ * @modified Rolandas, changed formula which had no sense.
+ */
 public class ThreadConfig
 {
 	@Property(key = "gameserver.thread.basepoolsize", defaultValue = "1")

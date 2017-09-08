@@ -23,11 +23,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * Author Ranastic
+ */
 @AIName("groggetssafedoor")
 public class GroggetsSafeDoorAI2 extends ActionItemNpcAI2
 {

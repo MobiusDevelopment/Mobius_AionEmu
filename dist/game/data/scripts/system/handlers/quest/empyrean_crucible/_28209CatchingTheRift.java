@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _28209CatchingTheRift extends QuestHandler
 {
-	
 	private static final int questId = 28209;
 	
 	public _28209CatchingTheRift()

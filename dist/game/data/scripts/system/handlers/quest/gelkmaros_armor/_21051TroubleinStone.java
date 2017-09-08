@@ -23,6 +23,10 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
+/**
+ * @author zhkchi
+ * @reworked vlog
+ */
 public class _21051TroubleinStone extends QuestHandler
 {
 	private static final int questId = 21051;

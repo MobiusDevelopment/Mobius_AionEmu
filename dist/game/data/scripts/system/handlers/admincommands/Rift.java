@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 /**
  * @author Ranastic
  */
-
 public class Rift extends AdminCommand
 {
 	private static final String COMMAND_OPEN = "open";

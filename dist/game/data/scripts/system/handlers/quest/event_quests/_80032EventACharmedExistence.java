@@ -28,10 +28,8 @@ import com.aionemu.gameserver.services.events.EventsService;
 /**
  * @author Rolandas
  */
-
 public class _80032EventACharmedExistence extends QuestHandler
 {
-	
 	private static final int questId = 80032;
 	
 	public _80032EventACharmedExistence()

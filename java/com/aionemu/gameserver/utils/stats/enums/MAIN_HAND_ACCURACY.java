@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.utils.stats.enums;
 
+/**
+ * @author ATracer
+ */
 public enum MAIN_HAND_ACCURACY
 {
 	WARRIOR(0),

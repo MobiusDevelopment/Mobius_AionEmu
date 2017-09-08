@@ -45,6 +45,10 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
+/**
+ * World object for storing and spawning, despawning etc players and other in-game objects. It also manage WorldMaps and instances.
+ * @author -Nemesiss-, Source, Wakizashi
+ */
 public class World
 {
 	private static final Logger log = LoggerFactory.getLogger(World.class);

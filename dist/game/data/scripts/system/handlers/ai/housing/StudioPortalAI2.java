@@ -30,11 +30,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("studioportal")
 public class StudioPortalAI2 extends ActionItemNpcAI2
 {

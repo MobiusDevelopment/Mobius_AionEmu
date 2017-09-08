@@ -28,6 +28,9 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.world.WorldPosition;
 
+/**
+ * @author Lyahim, ATracer
+ */
 public class SM_GROUP_MEMBER_INFO extends AionServerPacket
 {
 	private final int groupId;

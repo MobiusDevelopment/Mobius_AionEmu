@@ -31,6 +31,9 @@ import com.aionemu.gameserver.dao.MySQL5DAOUtils;
 import com.aionemu.gameserver.dao.PlayerAppearanceDAO;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerAppearance;
 
+/**
+ * @author SoulKeeper, AEJTester, srx47
+ */
 public class MySQL5PlayerAppearanceDAO extends PlayerAppearanceDAO
 {
 	private static final Logger log = LoggerFactory.getLogger(PlayerAppearanceDAO.class);

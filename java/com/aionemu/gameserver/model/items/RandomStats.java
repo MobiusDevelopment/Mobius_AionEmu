@@ -20,7 +20,7 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.bonuses.StatBonusType;
 
 /**
- * @author Ranastic
+ * @author xTz
  */
 
 public class RandomStats

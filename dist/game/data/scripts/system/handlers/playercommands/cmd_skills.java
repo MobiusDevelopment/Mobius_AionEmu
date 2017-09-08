@@ -21,6 +21,9 @@ import com.aionemu.gameserver.services.SkillLearnService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
 
+/**
+ * @author ATracer
+ */
 public class cmd_skills extends PlayerCommand
 {
 	public cmd_skills()

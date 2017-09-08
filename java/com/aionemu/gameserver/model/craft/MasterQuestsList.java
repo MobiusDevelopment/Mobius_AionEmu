@@ -18,6 +18,9 @@ package com.aionemu.gameserver.model.craft;
 
 import com.aionemu.gameserver.model.Race;
 
+/**
+ * @author synchro2
+ */
 public enum MasterQuestsList
 {
 	COOKING_ELYOS(new int[]

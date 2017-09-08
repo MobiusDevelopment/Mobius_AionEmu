@@ -24,6 +24,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * @author MrPoke
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AutoGroup")
 public class AutoGroup

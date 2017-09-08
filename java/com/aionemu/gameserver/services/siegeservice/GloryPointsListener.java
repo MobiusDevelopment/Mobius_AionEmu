@@ -20,6 +20,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.siege.SiegeLocation;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
 
+/**
+ * @author Ever
+ */
 public class GloryPointsListener extends AbyssPointsService.AddGPGlobalCallback
 {
 	private final Siege<?> siege;

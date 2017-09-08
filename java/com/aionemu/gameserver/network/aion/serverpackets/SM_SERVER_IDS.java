@@ -21,9 +21,8 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.services.transfers.AStation;
 
 /**
- * @author Ranastic
+ * @author Eloann - Enomine
  */
-
 public class SM_SERVER_IDS extends AionServerPacket
 {
 	

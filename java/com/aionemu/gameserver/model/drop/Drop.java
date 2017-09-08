@@ -32,6 +32,9 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 
+/**
+ * @author MrPoke
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "drop")
 public class Drop implements DropCalculator

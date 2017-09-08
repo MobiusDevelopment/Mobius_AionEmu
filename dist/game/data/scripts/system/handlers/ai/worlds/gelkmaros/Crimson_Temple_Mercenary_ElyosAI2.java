@@ -25,11 +25,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("crimson_temple_mercenary_elyos")
 public class Crimson_Temple_Mercenary_ElyosAI2 extends GeneralNpcAI2
 {

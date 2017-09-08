@@ -25,6 +25,9 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
 import com.aionemu.gameserver.model.templates.challenge.ChallengeQuestTemplate;
 import com.aionemu.gameserver.model.templates.challenge.ChallengeTaskTemplate;
 
+/**
+ * @author ViAl
+ */
 public class ChallengeTask
 {
 	private final int taskId;

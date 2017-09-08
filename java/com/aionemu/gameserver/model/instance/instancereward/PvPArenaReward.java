@@ -44,6 +44,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
+/**
+ * @author xTz
+ */
 public class PvPArenaReward extends InstanceReward<PvPArenaPlayerReward>
 {
 	private final Map<Integer, Boolean> positions = new HashMap<>();

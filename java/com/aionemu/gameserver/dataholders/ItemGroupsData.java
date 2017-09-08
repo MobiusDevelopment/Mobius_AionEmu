@@ -58,6 +58,9 @@ import com.aionemu.gameserver.model.templates.rewards.IdLevelReward;
 import javolution.util.FastMap;
 import javolution.util.FastSet;
 
+/**
+ * @author Rolandas
+ */
 @XmlRootElement(name = "item_groups")
 @XmlType(name = "", propOrder =
 {

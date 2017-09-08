@@ -25,6 +25,9 @@ import com.aionemu.gameserver.utils.idfactory.IDFactory;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.SphereKnownList;
 
+/**
+ * @author xavier
+ */
 public class FlyRing extends VisibleObject
 {
 	private FlyRingTemplate template = null;

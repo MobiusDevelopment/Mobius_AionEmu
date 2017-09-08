@@ -25,6 +25,9 @@ import com.aionemu.gameserver.taskmanager.AbstractPeriodicTaskManager;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Mr. Poke
+ */
 public class ExpireTimerTask extends AbstractPeriodicTaskManager
 {
 	private final FastMap<IExpirable, Player> expirables = new FastMap<>();

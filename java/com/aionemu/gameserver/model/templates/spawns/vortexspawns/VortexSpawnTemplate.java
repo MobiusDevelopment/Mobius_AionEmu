@@ -21,6 +21,9 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnSpotTemplate;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.vortex.VortexStateType;
 
+/**
+ * @author Source
+ */
 public class VortexSpawnTemplate extends SpawnTemplate
 {
 	private int id;

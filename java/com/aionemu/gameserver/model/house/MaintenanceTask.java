@@ -41,6 +41,9 @@ import com.aionemu.gameserver.world.World;
 
 import javolution.util.FastList;
 
+/**
+ * @author Rolandas
+ */
 public class MaintenanceTask extends AbstractCronTask
 {
 	private static final Logger log = LoggerFactory.getLogger(MaintenanceTask.class);

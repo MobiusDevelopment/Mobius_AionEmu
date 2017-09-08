@@ -35,6 +35,9 @@ import com.aionemu.gameserver.model.templates.world.WorldMapTemplate;
 import com.aionemu.gameserver.taskmanager.AbstractFIFOPeriodicTaskManager;
 import com.aionemu.gameserver.world.knownlist.VisitorWithOwner;
 
+/**
+ * @author ATracer
+ */
 public class MovementNotifyTask extends AbstractFIFOPeriodicTaskManager<Creature>
 {
 	private static Map<Integer, int[]> moveBroadcastCounts = new HashMap<>();

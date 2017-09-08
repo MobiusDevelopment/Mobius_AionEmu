@@ -24,6 +24,9 @@ import com.aionemu.gameserver.model.team2.league.LeagueService;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer
+ */
 public class LeagueInvite extends RequestResponseHandler
 {
 	private final Player inviter;

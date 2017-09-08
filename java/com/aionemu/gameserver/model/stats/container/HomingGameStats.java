@@ -20,6 +20,9 @@ import com.aionemu.gameserver.model.gameobjects.Homing;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.stats.calc.Stat2;
 
+/**
+ * @author Cheatkiller
+ */
 public class HomingGameStats extends SummonedObjectGameStats
 {
 	public HomingGameStats(Npc owner)

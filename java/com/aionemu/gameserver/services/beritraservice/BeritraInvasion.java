@@ -25,7 +25,6 @@ import com.aionemu.gameserver.services.BeritraService;
 /**
  * @author Rinzler (Encom)
  */
-
 public abstract class BeritraInvasion<BL extends BeritraLocation>
 {
 	private boolean started;

@@ -26,11 +26,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("Sleeping_Sylfae_Queen")
 public class Sleeping_Sylfae_QueenAI2 extends GeneralNpcAI2
 {

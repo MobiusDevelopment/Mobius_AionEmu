@@ -37,6 +37,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 import javolution.util.FastMap;
 
+/**
+ * @author ATracer, Source
+ */
 public class RVController extends NpcController
 {
 	private boolean isMaster = false;

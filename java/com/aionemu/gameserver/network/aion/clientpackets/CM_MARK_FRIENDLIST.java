@@ -22,6 +22,9 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_FRIEND_LIST;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MARK_FRIENDLIST;
 
+/**
+ * @author xTz, Rolandas
+ */
 public class CM_MARK_FRIENDLIST extends AionClientPacket
 {
 	public CM_MARK_FRIENDLIST(int opcode, State state, State... restStates)

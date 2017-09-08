@@ -21,11 +21,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("nightbloom_gargonops_shifter")
 public class Nightbloom_Gargonops_ShifterAI2 extends AggressiveNpcAI2
 {

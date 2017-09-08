@@ -22,11 +22,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("geniesincenseburner")
 public class GeniesIncenseBurnerAI2 extends ActionItemNpcAI2
 {

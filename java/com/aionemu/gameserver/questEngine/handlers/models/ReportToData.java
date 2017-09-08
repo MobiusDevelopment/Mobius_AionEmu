@@ -26,6 +26,9 @@ import javax.xml.bind.annotation.XmlType;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.handlers.template.ReportTo;
 
+/**
+ * @author MrPoke
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ReportToData")
 public class ReportToData extends XMLQuest

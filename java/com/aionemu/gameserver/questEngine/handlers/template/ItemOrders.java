@@ -31,6 +31,9 @@ import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author Altaress, Bobobear
+ */
 public class ItemOrders extends QuestHandler
 {
 	private final int questId;

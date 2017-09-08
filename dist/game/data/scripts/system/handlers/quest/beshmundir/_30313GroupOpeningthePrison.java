@@ -26,10 +26,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Gigi
  */
-
 public class _30313GroupOpeningthePrison extends QuestHandler
 {
-	
 	private static final int questId = 30313;
 	
 	public _30313GroupOpeningthePrison()

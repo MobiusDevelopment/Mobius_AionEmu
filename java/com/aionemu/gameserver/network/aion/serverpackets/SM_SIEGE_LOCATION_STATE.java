@@ -20,6 +20,9 @@ import com.aionemu.gameserver.model.siege.SiegeLocation;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author Source
+ */
 public class SM_SIEGE_LOCATION_STATE extends AionServerPacket
 {
 	

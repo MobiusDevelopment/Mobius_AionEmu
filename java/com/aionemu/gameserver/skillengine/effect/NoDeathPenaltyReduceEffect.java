@@ -18,11 +18,9 @@ package com.aionemu.gameserver.skillengine.effect;
 
 import com.aionemu.gameserver.skillengine.model.Effect;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class NoDeathPenaltyReduceEffect extends BuffEffect
 {
 	@Override

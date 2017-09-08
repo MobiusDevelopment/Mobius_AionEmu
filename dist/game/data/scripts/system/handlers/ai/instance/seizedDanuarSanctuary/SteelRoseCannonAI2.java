@@ -31,11 +31,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("steelrosecannon2")
 public class SteelRoseCannonAI2 extends ActionItemNpcAI2
 {

@@ -29,6 +29,9 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
+/**
+ * @author Mr. Poke, modified Bobobear
+ */
 public class XmlQuest extends QuestHandler
 {
 	private final XmlQuestData xmlQuestData;

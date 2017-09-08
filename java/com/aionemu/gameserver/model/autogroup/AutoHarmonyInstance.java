@@ -30,6 +30,9 @@ import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
 
+/**
+ * @author xTz
+ */
 public class AutoHarmonyInstance extends AutoInstance
 {
 	private final List<AGPlayer> group1 = new ArrayList<>();

@@ -21,7 +21,7 @@ import java.util.concurrent.locks.ReentrantLock;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 /**
- * @author NB4L1 Going to remove this - Nemesiss
+ * @author NB4L1
  */
 public abstract class FIFOExecutableQueue implements Runnable
 {

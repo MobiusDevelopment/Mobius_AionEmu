@@ -30,6 +30,9 @@ import com.aionemu.gameserver.model.templates.serial_killer.RankRestriction;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * @author Dtem
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =
 {

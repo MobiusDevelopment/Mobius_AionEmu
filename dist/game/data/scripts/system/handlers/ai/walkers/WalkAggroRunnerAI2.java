@@ -21,11 +21,9 @@ import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rolandas
+ */
 @AIName("aggro_runner")
 public class WalkAggroRunnerAI2 extends AggressiveNpcAI2
 {

@@ -21,11 +21,9 @@ import javax.xml.bind.annotation.XmlAttribute;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
-/****/
 /**
- * Author themoose (Encom) /
- ****/
-
+ * @author Rolandas
+ */
 public class AdoptPetAction extends AbstractItemAction
 {
 	@XmlAttribute(name = "petId")

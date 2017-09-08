@@ -34,6 +34,10 @@ import com.aionemu.gameserver.services.RepurchaseService;
 import com.aionemu.gameserver.services.TradeService;
 import com.aionemu.gameserver.utils.audit.AuditLogger;
 
+/**
+ * @author orz, ATracer, Simple, xTz
+ * @modify pralinka
+ */
 public class CM_BUY_ITEM extends AionClientPacket
 {
 	private static final Logger log = LoggerFactory.getLogger(CM_BUY_ITEM.class);

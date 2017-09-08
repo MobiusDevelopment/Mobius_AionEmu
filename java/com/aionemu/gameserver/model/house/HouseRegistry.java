@@ -29,6 +29,9 @@ import com.aionemu.gameserver.model.templates.housing.PartType;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
+/**
+ * @author Rolandas
+ */
 public class HouseRegistry
 {
 	private static final Logger log = LoggerFactory.getLogger(HouseRegistry.class);

@@ -31,6 +31,10 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.Util;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * Received when a player searches using the social search panel
+ * @author Ben
+ */
 public class CM_PLAYER_SEARCH extends AionClientPacket
 {
 	public static final int MAX_RESULTS = 104;

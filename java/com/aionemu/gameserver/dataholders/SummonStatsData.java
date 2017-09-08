@@ -30,6 +30,9 @@ import com.aionemu.gameserver.model.templates.stats.SummonStatsTemplate;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * @author ATracer
+ */
 @XmlRootElement(name = "summon_stats_templates")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SummonStatsData

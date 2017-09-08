@@ -46,11 +46,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /** Source: https://www.youtube.com/watch?v=rAgRxmXbr1k /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(301660000)
 public class FallenPoetaInstance extends GeneralInstanceHandler
 {

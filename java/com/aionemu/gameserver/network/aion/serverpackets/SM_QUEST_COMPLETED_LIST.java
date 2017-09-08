@@ -22,6 +22,9 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 
 import javolution.util.FastList;
 
+/**
+ * @author MrPoke
+ */
 public class SM_QUEST_COMPLETED_LIST extends AionServerPacket
 {
 	private FastList<QuestState> questState;

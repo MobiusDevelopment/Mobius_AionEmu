@@ -21,10 +21,8 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 /**
  * @author synchro2
  */
-
 public class Wedding
 {
-	
 	private final Player player;
 	private final Player partner;
 	private final Player priest;

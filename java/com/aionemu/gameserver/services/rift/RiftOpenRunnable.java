@@ -21,6 +21,9 @@ import java.util.Map;
 import com.aionemu.gameserver.model.rift.RiftLocation;
 import com.aionemu.gameserver.services.RiftService;
 
+/**
+ * @author Source
+ */
 public class RiftOpenRunnable implements Runnable
 {
 	private final int worldId;

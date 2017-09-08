@@ -16,6 +16,10 @@
  */
 package com.aionemu.gameserver.skillengine.model;
 
+/**
+ * @author weiwei
+ * @modified VladimirZ
+ */
 public enum DashStatus
 {
 	NONE(0),

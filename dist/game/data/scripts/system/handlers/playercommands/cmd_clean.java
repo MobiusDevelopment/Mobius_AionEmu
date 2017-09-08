@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_clean extends PlayerCommand
 {
-	
 	public cmd_clean()
 	{
 		super("clean");

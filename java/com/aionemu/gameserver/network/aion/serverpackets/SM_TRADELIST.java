@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Dr.Nism
  */
-
 public class SM_TRADELIST extends AionServerPacket
 {
 	private final Integer playerObj;

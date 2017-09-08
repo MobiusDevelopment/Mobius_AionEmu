@@ -23,6 +23,15 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.network.aion.SystemMessageId;
 
+/**
+ * System message packet.
+ * @author -Nemesiss-
+ * @author EvilSpirit
+ * @author Luno :D
+ * @author Avol!
+ * @author Simple :)
+ * @author Sarynth
+ */
 public class SM_SYSTEM_MESSAGE extends AionServerPacket
 {
 	/**

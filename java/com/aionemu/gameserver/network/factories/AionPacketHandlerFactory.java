@@ -21,6 +21,12 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.AionPacketHandler;
 import com.aionemu.gameserver.network.aion.clientpackets.*;
 
+/**
+ * This factory is responsible for creating {@link AionPacketHandler} object. It also initializes created handler with a set of packet prototypes.<br>
+ * Object of this classes uses <tt>Injector</tt> for injecting dependencies into prototype objects.<br>
+ * <br>
+ * @author Luno, Ever
+ */
 public class AionPacketHandlerFactory
 {
 	private final AionPacketHandler handler;

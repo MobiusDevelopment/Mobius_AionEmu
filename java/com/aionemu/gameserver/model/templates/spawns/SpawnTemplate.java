@@ -22,6 +22,10 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.templates.event.EventTemplate;
 import com.aionemu.gameserver.spawnengine.SpawnHandlerType;
 
+/**
+ * @author xTz
+ * @modified Rolandas
+ */
 public class SpawnTemplate
 {
 	private float x;

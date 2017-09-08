@@ -29,6 +29,9 @@ import com.aionemu.gameserver.services.CubeExpandService;
 import com.aionemu.gameserver.services.WarehouseService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ExpandInventoryAction")
 public class ExpandInventoryAction extends AbstractItemAction

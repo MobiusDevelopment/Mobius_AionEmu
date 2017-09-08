@@ -19,11 +19,9 @@ package system.handlers.ai;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Ritsu
+ */
 @AIName("general_first_skill")
 public class GeneralFirstSkillAI2 extends GeneralNpcAI2
 {

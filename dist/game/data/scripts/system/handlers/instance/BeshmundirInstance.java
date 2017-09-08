@@ -45,11 +45,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /** (Version 3.9/4.5) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(300170000)
 public class BeshmundirInstance extends GeneralInstanceHandler
 {

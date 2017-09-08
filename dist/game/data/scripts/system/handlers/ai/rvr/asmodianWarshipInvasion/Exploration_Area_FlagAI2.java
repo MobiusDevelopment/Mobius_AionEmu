@@ -26,11 +26,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("battlefield_trigger_asmodians")
 public class Exploration_Area_FlagAI2 extends ActionItemNpcAI2
 {

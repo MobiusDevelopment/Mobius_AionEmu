@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _18209ARiftInTheSpaceTwineContinuum extends QuestHandler
 {
-	
 	private static final int questId = 18209;
 	
 	public _18209ARiftInTheSpaceTwineContinuum()

@@ -27,6 +27,10 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author alexa026
+ * @author rhys2002
+ */
 public class CM_CASTSPELL extends AionClientPacket
 {
 	private final Logger log = LoggerFactory.getLogger(CM_CASTSPELL.class);

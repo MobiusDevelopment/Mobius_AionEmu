@@ -35,11 +35,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
-/****/
 /**
- * Author Rinzler (Encom) /** Source KOR: https://www.youtube.com/watch?v=8Qt-ZODwhoA /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class _10521Memories_Of_Eternity extends QuestHandler
 {
 	public static final int questId = 10521;

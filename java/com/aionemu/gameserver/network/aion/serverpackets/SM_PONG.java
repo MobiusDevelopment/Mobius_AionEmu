@@ -21,7 +21,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 public class SM_PONG extends AionServerPacket
 {
-	
 	@Override
 	protected void writeImpl(AionConnection con)
 	{

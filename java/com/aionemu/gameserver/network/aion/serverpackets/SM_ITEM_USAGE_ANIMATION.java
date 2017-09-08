@@ -22,6 +22,9 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author ATracer
+ */
 public class SM_ITEM_USAGE_ANIMATION extends AionServerPacket
 {
 	private final int playerObjId;

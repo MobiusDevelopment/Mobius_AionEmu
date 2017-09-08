@@ -21,7 +21,6 @@ package com.aionemu.gameserver.network.aion;
  */
 public enum InventoryPacketType
 {
-	
 	WAREHOUSE(false, false, false),
 	INVENTORY(true, false, false),
 	MAIL_REPURCHASE(false, true, false),

@@ -29,6 +29,9 @@ import com.aionemu.gameserver.questEngine.handlers.template.MentorMonsterHunt;
 
 import javolution.util.FastMap;
 
+/**
+ * @author MrPoke reworked Bobobear
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MentorMonsterHuntData")
 public class MentorMonsterHuntData extends MonsterHuntData

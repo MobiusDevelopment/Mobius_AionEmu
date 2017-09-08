@@ -25,11 +25,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("vorgaltem_citadel_mercenary_asmodians")
 public class Vorgaltem_Citadel_Mercenary_AsmodiansAI2 extends GeneralNpcAI2
 {

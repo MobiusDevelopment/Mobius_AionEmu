@@ -25,11 +25,9 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("betrayer_icaronix")
 public class Betrayer_IcaronixAI2 extends AggressiveNpcAI2
 {

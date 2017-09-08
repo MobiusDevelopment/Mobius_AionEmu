@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30307SoulSummoning extends QuestHandler
 {
-	
 	private static final int questId = 30307;
 	
 	public _30307SoulSummoning()

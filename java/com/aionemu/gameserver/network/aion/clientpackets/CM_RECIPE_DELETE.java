@@ -20,6 +20,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 
+/**
+ * @author Rolandas
+ */
 public class CM_RECIPE_DELETE extends AionClientPacket
 {
 	

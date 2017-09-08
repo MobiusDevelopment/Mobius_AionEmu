@@ -27,10 +27,6 @@ import javax.annotation.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author nrg
- */
-
 import com.aionemu.commons.database.DB;
 import com.aionemu.commons.database.DatabaseFactory;
 import com.aionemu.commons.database.IUStH;
@@ -41,6 +37,9 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Maps;
 
+/**
+ * @author nrg
+ */
 public class MySQL5PlayerCooldownsDAO extends PlayerCooldownsDAO
 {
 	

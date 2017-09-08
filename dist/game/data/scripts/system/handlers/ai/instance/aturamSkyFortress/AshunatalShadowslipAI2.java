@@ -33,11 +33,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("ashunatal_shadowslip")
 public class AshunatalShadowslipAI2 extends AggressiveNpcAI2
 {

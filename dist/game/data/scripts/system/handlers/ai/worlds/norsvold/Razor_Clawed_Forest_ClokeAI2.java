@@ -21,11 +21,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("razor_clawed_forest_cloke")
 public class Razor_Clawed_Forest_ClokeAI2 extends AggressiveNpcAI2
 {

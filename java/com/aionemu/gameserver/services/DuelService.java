@@ -43,6 +43,10 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Simple, Sphinx, xTz
+ * @reworked Kill3r
+ */
 public class DuelService
 {
 	private static Logger log = LoggerFactory.getLogger(DuelService.class);

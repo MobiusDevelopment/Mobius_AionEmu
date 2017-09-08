@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_PRIVATE_STORE_NAME extends AionServerPacket
 {
-	
 	/** Private store Information **/
 	private final int playerObjId;
 	private final String name;

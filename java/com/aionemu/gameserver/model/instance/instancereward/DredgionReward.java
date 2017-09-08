@@ -27,11 +27,9 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 
 import javolution.util.FastList;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 public class DredgionReward extends InstanceReward<DredgionPlayerReward>
 {
 	private final int winnerPoints;

@@ -27,11 +27,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("taina_comander")
 public class Taina_ComanderAI2 extends AggressiveNpcAI2
 {

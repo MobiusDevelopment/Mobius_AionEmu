@@ -41,6 +41,9 @@ import com.aionemu.gameserver.model.stats.calc.functions.StatFunctionProxy;
 import javolution.util.FastMap;
 import javolution.util.FastMap.Entry;
 
+/**
+ * @author xavier
+ */
 public abstract class CreatureGameStats<T extends Creature>
 {
 	protected static final Logger log = LoggerFactory.getLogger(CreatureGameStats.class);

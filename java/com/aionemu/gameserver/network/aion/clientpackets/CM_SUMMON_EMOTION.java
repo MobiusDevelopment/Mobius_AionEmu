@@ -28,6 +28,9 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer
+ */
 public class CM_SUMMON_EMOTION extends AionClientPacket
 {
 	private static final Logger log = LoggerFactory.getLogger(CM_SUMMON_EMOTION.class);

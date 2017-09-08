@@ -32,6 +32,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author SoulKeeper
+ */
 public class OutpostSiege extends Siege<OutpostLocation>
 {
 	private final AbyssPointsListener addAPListener = new AbyssPointsListener(this);

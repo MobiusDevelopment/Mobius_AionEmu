@@ -33,10 +33,8 @@ import com.aionemu.gameserver.services.QuestService;
 /**
  * @author Rolandas
  */
-
 public class _80035EventOnlyTheBest extends QuestHandler
 {
-	
 	private static final int questId = 80035;
 	
 	public _80035EventOnlyTheBest()

@@ -34,6 +34,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.geo.GeoService;
 
+/**
+ * @author Sarynth, modified Bobobear
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MoveBehindEffect")
 public class MoveBehindEffect extends DamageEffect

@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model;
 
+/**
+ * @author xTz
+ */
 public enum TeleportAnimation
 {
 	NO_ANIMATION(0, 0),

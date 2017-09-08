@@ -16,6 +16,10 @@
  */
 package com.aionemu.gameserver.model.gameobjects;
 
+/**
+ * @author ATracer
+ * @author GiGatR00n
+ */
 public enum PersistentState
 {
 	NEW,

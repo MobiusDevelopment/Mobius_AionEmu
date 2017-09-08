@@ -40,6 +40,10 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author ATracer
+ * @author Antraxx
+ */
 @AIName("aggressive")
 public class AggressiveNpcAI2 extends GeneralNpcAI2
 {

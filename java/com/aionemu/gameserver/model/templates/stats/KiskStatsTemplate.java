@@ -21,6 +21,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * @author Sarynth
+ */
 @XmlRootElement(name = "kisk_stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class KiskStatsTemplate

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class cmd_world_channel extends PlayerCommand
 {
-	
 	public cmd_world_channel()
 	{
 		super("world");

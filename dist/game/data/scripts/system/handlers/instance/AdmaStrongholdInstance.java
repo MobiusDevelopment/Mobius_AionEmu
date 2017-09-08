@@ -47,11 +47,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(320130000)
 public class AdmaStrongholdInstance extends GeneralInstanceHandler
 {

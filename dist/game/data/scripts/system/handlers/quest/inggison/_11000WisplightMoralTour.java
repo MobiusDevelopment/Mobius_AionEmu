@@ -29,10 +29,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author dta3000
  */
-
 public class _11000WisplightMoralTour extends QuestHandler
 {
-	
 	private static final int questId = 11000;
 	
 	public _11000WisplightMoralTour()

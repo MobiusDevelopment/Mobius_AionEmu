@@ -34,11 +34,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("captain_xasta")
 public class CaptainXastaAI2 extends AggressiveNpcAI2
 {

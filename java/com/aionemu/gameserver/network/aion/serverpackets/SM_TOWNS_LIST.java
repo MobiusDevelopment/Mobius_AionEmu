@@ -22,6 +22,9 @@ import com.aionemu.gameserver.model.town.Town;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author ViAl
+ */
 public class SM_TOWNS_LIST extends AionServerPacket
 {
 	private final Map<Integer, Town> towns;

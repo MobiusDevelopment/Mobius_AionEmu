@@ -19,6 +19,10 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * This packet is used to teleport player and port animation
+ * @author Luno, orz, xTz
+ */
 public class SM_TELEPORT_LOC extends AionServerPacket
 {
 	private final int portAnimation;

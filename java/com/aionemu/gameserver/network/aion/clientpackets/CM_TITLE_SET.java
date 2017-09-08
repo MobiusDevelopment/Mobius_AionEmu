@@ -22,9 +22,9 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 
 /**
- * @author Ranastic (Encom)
+ * @author Nemiroff Date: 01.12.2009
+ * @modified cura
  */
-
 public class CM_TITLE_SET extends AionClientPacket
 {
 	private int titleId;

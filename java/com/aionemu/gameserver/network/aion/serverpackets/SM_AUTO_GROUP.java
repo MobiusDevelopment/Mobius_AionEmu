@@ -22,6 +22,9 @@ import com.aionemu.gameserver.model.autogroup.AutoGroupType;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author SheppeR, Guapo, nrg
+ */
 public class SM_AUTO_GROUP extends AionServerPacket
 {
 	private byte windowId;

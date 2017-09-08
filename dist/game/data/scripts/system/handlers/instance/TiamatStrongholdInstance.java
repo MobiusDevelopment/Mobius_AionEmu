@@ -50,11 +50,9 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * @author Rinzler, Ranastic (Encom) /
- ****/
-
+ * @author Rinzler, Ranastic (Encom)
+ */
 @InstanceID(300510000)
 public class TiamatStrongholdInstance extends GeneralInstanceHandler
 {

@@ -28,11 +28,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("cruciblerift")
 public class CrucibleRiftAI2 extends ActionItemNpcAI2
 {

@@ -47,7 +47,6 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
  */
 public class NpcShoutsService
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(NpcShoutsService.class);
 	
 	NpcShoutData shoutsCache = DataManager.NPC_SHOUT_DATA;

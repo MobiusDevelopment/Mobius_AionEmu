@@ -26,6 +26,9 @@ import com.aionemu.commons.services.CronService;
 import com.aionemu.gameserver.dao.ServerVariablesDAO;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
+/**
+ * @author Rolandas
+ */
 public abstract class AbstractCronTask implements Runnable
 {
 	private final String cronExpressionString;

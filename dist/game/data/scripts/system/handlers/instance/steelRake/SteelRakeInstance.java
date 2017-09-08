@@ -43,11 +43,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(300100000)
 public class SteelRakeInstance extends GeneralInstanceHandler
 {

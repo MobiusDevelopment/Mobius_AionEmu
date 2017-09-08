@@ -26,6 +26,10 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob;
 import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
 
+/**
+ * @author IlBuono, kosyachok
+ * @author GiGatR00n
+ */
 public class SM_BROKER_SERVICE extends AionServerPacket
 {
 	private enum BrokerPacketType

@@ -33,10 +33,8 @@ import com.aionemu.gameserver.services.QuestService;
 /**
  * @author Rolandas
  */
-
 public class _80036EventGamblingWithGrace extends QuestHandler
 {
-	
 	private static final int questId = 80036;
 	
 	public _80036EventGamblingWithGrace()

@@ -18,11 +18,9 @@ package system.handlers.ai.walkers;
 
 import com.aionemu.gameserver.ai2.AIName;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rolandas
+ */
 @AIName("ulgornspriggs1")
 public class UlgornSpriggs1AI2 extends WalkGeneralRunnerAI2
 {

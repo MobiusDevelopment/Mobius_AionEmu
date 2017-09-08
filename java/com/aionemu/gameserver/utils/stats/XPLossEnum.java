@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.utils.stats;
 
+/**
+ * @author ATracer, Jangan
+ */
 public enum XPLossEnum
 {
 	LEVEL_6(6, 1.0),

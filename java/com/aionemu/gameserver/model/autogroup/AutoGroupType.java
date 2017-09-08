@@ -21,9 +21,8 @@ import java.util.List;
 import com.aionemu.gameserver.dataholders.DataManager;
 
 /**
- * @author Rinzler (Encom)
+ * @author xTz
  */
-
 public enum AutoGroupType
 {
 	// DREDGION.

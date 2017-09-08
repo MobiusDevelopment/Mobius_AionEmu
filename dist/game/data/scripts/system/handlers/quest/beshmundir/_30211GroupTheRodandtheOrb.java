@@ -26,10 +26,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Gigi
  */
-
 public class _30211GroupTheRodandtheOrb extends QuestHandler
 {
-	
 	private static final int questId = 30211;
 	
 	public _30211GroupTheRodandtheOrb()

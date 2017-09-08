@@ -35,6 +35,9 @@ import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.google.common.collect.Collections2;
 
+/**
+ * @author ATracer
+ */
 public class ItemChargeService
 {
 	public static Collection<Item> filterItemsToCondition(Player player, Item selectedItem, int chargeWay)

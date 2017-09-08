@@ -20,6 +20,9 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
+/**
+ * @author VladimirZ
+ */
 public class SM_QUEST_ACTION extends AionServerPacket
 {
 	protected int questId;

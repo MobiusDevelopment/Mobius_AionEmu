@@ -60,6 +60,9 @@ import com.aionemu.gameserver.skillengine.model.SkillTargetSlot;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 
+/**
+ * @author VladimirZ
+ */
 public class DialogService
 {
 	private static final Logger log = LoggerFactory.getLogger(DialogService.class);
@@ -787,6 +790,7 @@ public class DialogService
 							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_NOT_ENOUGH_KINA(price));
 						}
 					}
+					
 					@Override
 					public void denyRequest(Creature requester, Player responder)
 					{

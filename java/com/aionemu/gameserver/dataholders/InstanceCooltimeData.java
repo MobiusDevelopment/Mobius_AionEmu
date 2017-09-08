@@ -33,6 +33,9 @@ import com.aionemu.gameserver.services.instance.InstanceService;
 
 import javolution.util.FastMap;
 
+/**
+ * @author VladimirZ
+ */
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement(name = "instance_cooltimes")
 public class InstanceCooltimeData

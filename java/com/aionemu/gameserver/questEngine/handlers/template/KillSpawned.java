@@ -36,6 +36,9 @@ import com.aionemu.gameserver.services.QuestService;
 import gnu.trove.list.array.TIntArrayList;
 import javolution.util.FastMap;
 
+/**
+ * @author vlog
+ */
 public class KillSpawned extends QuestHandler
 {
 	private final int questId;

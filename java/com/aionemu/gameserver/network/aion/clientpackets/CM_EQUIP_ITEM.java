@@ -28,6 +28,9 @@ import com.aionemu.gameserver.restrictions.RestrictionsManager;
 import com.aionemu.gameserver.skillengine.effect.AbnormalState;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Avol modified by ATracer
+ */
 public class CM_EQUIP_ITEM extends AionClientPacket
 {
 	public long slotRead;

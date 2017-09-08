@@ -29,6 +29,9 @@ import com.aionemu.gameserver.services.item.ItemRemodelService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
 
+/**
+ * @author Kashim
+ */
 public class cmd_remodel extends PlayerCommand
 {
 	public cmd_remodel()

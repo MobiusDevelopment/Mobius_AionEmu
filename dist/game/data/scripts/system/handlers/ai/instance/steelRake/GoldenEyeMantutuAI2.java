@@ -36,7 +36,7 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 import system.handlers.ai.AggressiveNpcAI2;
 
 /**
- * @author Rinzler (Encom)
+ * @author xTz
  */
 @AIName("goldeneyemantutu")
 public class GoldenEyeMantutuAI2 extends AggressiveNpcAI2

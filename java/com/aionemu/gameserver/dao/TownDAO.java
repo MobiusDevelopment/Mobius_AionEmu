@@ -22,6 +22,9 @@ import com.aionemu.commons.database.dao.DAO;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.town.Town;
 
+/**
+ * @author ViAl
+ */
 public abstract class TownDAO implements DAO
 {
 	public abstract Map<Integer, Town> load(Race race);

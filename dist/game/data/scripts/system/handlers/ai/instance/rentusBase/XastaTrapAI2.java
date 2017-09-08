@@ -23,11 +23,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Ranastic
+ */
 @AIName("xastatrap")
 public class XastaTrapAI2 extends AggressiveNpcAI2
 {

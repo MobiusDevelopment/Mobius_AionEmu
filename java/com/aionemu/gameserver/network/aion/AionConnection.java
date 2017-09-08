@@ -53,7 +53,6 @@ import javolution.util.FastList;
  */
 public class AionConnection extends AConnection
 {
-	
 	/**
 	 * Logger for this class.
 	 */

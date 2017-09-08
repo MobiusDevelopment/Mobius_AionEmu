@@ -28,10 +28,8 @@ import com.aionemu.gameserver.services.QuestService;
 /**
  * @author Gigi
  */
-
 public class _30227GroupToLiberateSouls extends QuestHandler
 {
-	
 	private static final int questId = 30227;
 	
 	public _30227GroupToLiberateSouls()

@@ -36,6 +36,9 @@ import com.aionemu.commons.utils.concurrent.RunnableWrapper;
 import com.aionemu.commons.utils.internal.chmv8.ForkJoinPool;
 import com.aionemu.gameserver.configs.main.ThreadConfig;
 
+/**
+ * @author -Nemesiss-, NB4L1, MrPoke, lord_rex
+ */
 public final class ThreadPoolManager
 {
 	private static final Logger log = LoggerFactory.getLogger(ThreadPoolManager.class);

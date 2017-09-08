@@ -34,11 +34,9 @@ import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.services.drop.DropService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("quest_use_item")
 public class QuestItemNpcAI2 extends ActionItemNpcAI2
 {

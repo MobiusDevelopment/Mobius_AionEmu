@@ -16,11 +16,9 @@
  */
 package com.aionemu.gameserver.model.items.storage;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author kosyachok, IlBuono
+ */
 public enum StorageType
 {
 	// Cube & Warehouse.

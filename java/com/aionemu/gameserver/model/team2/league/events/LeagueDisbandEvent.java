@@ -22,6 +22,9 @@ import com.aionemu.gameserver.model.team2.league.League;
 import com.aionemu.gameserver.model.team2.league.events.LeagueLeftEvent.LeaveReson;
 import com.google.common.base.Predicate;
 
+/**
+ * @author ATracer
+ */
 public class LeagueDisbandEvent extends AlwaysTrueTeamEvent implements Predicate<PlayerAlliance>
 {
 	private final League league;

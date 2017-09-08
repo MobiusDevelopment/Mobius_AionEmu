@@ -31,6 +31,10 @@ import com.aionemu.gameserver.services.player.LunaShopService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 
+/**
+ * @author Nemiroff, ATracer, IceReaper Date: 11.12.2009
+ * @author Sarynth - Added AP
+ */
 public class Set extends AdminCommand
 {
 	public Set()

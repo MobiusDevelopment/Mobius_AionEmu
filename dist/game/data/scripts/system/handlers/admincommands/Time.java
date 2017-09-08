@@ -24,6 +24,9 @@ import com.aionemu.gameserver.utils.gametime.GameTimeManager;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 
+/**
+ * @author Pan
+ */
 public class Time extends AdminCommand
 {
 	public Time()

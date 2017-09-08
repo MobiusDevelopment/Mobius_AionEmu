@@ -130,6 +130,14 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
+/**
+ * This class is representing Player object, it contains all needed data.
+ * @author -Nemesiss-
+ * @author SoulKeeper
+ * @author alexa026
+ * @author cura
+ * @author GiGatR00n v4.7.5.x
+ */
 public class Player extends Creature
 {
 	public RideInfo ride;

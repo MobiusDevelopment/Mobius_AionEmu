@@ -32,6 +32,9 @@ import com.aionemu.gameserver.model.templates.spawns.HouseSpawns;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
+/**
+ * @author Rolandas
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =
 {

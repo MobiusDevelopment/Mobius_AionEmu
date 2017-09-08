@@ -33,10 +33,8 @@ import com.aionemu.gameserver.services.QuestService;
 /**
  * @author Rolandas
  */
-
 public class _80038EventMightyAspirations extends QuestHandler
 {
-	
 	private static final int questId = 80038;
 	
 	public _80038EventMightyAspirations()

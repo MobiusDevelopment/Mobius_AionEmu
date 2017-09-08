@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_noexp extends PlayerCommand
 {
-	
 	public cmd_noexp()
 	{
 		super("noexp");

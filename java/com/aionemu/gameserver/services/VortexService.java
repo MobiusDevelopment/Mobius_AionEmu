@@ -49,6 +49,9 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
+/**
+ * @author Source
+ */
 public class VortexService
 {
 	private VortexSchedule vortexSchedule;

@@ -31,11 +31,9 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Antraxx
+ */
 @AIName("flarestorm")
 public class FlarestormAI2 extends AggressiveNpcAI2
 {

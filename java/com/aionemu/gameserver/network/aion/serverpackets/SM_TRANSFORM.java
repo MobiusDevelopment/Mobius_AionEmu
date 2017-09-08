@@ -23,6 +23,9 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.skillengine.model.TransformType;
 
+/**
+ * @author Sweetkr, xTz
+ */
 public class SM_TRANSFORM extends AionServerPacket
 {
 	private final Creature creature;

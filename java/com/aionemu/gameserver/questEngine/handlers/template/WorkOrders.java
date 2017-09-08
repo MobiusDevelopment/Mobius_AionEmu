@@ -37,6 +37,9 @@ import com.aionemu.gameserver.services.RecipeService;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
+/**
+ * @author Mr. Poke reworked Bobobear
+ */
 public class WorkOrders extends QuestHandler
 {
 	private final WorkOrdersData workOrdersData;

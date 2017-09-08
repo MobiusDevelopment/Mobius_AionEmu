@@ -25,6 +25,9 @@ import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 
+/**
+ * @author zhkchi
+ */
 public class _2106VanarsFlattery extends QuestHandler
 {
 	private static final int questId = 2106;

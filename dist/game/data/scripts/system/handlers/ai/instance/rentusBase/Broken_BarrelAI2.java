@@ -27,11 +27,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("broken_barrel")
 public class Broken_BarrelAI2 extends AggressiveNpcAI2
 {

@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.network.aion;
 
+/**
+ * @author KKnD
+ */
 public enum SystemMessageId
 {
 	THE_WEAPON_HAS_BEEN_CHANGED(0x13D620),

@@ -22,6 +22,9 @@ import com.aionemu.gameserver.model.templates.tradelist.TradeNpcType;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
+/**
+ * @author orz, Sarynth, modified by Artur
+ */
 public class SM_SELL_ITEM extends AionServerPacket
 {
 	private final int targetObjectId;

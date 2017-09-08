@@ -28,6 +28,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.siege.SiegeType;
 
+/**
+ * @author Sarynth modified by antness & Source & Wakizashi
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "siegelocation")
 public class SiegeLocationTemplate

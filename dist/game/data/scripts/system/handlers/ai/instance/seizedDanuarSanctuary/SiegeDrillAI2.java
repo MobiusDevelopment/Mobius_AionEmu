@@ -29,11 +29,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("siegedrill")
 public class SiegeDrillAI2 extends ActionItemNpcAI2
 {

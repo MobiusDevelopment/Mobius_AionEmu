@@ -22,6 +22,9 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.utils.audit.AuditLogger;
 
+/**
+ * @author Rolandas
+ */
 public class CM_HOUSE_KICK extends AionClientPacket
 {
 	int option;

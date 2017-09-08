@@ -24,11 +24,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("Balaur_Explosives_Stockpile")
 public class Balaur_Explosives_StockpileAI2 extends AggressiveNpcAI2
 {

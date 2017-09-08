@@ -30,11 +30,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.GeneralNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("dancing_flame")
 public class DancingFlameAI2 extends GeneralNpcAI2
 {

@@ -65,11 +65,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import javolution.util.FastList;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(300210000)
 public class ChantraDredgionInstance extends GeneralInstanceHandler
 {

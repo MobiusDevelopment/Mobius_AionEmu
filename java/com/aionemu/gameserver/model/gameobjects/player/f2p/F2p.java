@@ -21,11 +21,9 @@ import com.aionemu.gameserver.dao.F2pDAO;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.taskmanager.tasks.ExpireTimerTask;
 
-/****/
 /**
- * Author Ranastic (Encom) /
- ****/
-
+ * @author Ranastic (Encom)
+ */
 public class F2p
 {
 	private final Player owner;

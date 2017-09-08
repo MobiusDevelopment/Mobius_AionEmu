@@ -26,6 +26,9 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.model.templates.rewards.MedalItem;
 
+/**
+ * @author Luzien
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MedalGroup")
 public class MedalGroup extends BonusItemGroup

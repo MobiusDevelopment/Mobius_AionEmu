@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model;
 
+/**
+ * @author Rolandas Some emotions are for NPCs (like ANGRY, THANK, THINK, SURPRISE)
+ */
 public enum EmotionId
 {
 	NONE(0),

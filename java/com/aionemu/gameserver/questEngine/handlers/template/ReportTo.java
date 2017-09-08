@@ -28,6 +28,10 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
+/**
+ * @author MrPoke Like: Sleeping on the Job quest.
+ * @modified Rolandas
+ */
 public class ReportTo extends QuestHandler
 {
 	private final Set<Integer> startNpcs = new HashSet<>();

@@ -31,11 +31,9 @@ import com.aionemu.gameserver.utils.MathUtil;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("inspector_chardu")
 public class Inspector_CharduAI2 extends AggressiveNpcAI2
 {

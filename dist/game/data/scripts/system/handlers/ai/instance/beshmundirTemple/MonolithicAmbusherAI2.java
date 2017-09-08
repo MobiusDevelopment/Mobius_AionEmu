@@ -24,11 +24,9 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("monolithicambusher")
 public class MonolithicAmbusherAI2 extends AggressiveNpcAI2
 {

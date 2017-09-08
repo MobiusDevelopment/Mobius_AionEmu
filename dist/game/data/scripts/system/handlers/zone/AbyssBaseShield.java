@@ -24,6 +24,9 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 import com.aionemu.gameserver.world.zone.handler.ZoneHandler;
 import com.aionemu.gameserver.world.zone.handler.ZoneNameAnnotation;
 
+/**
+ * @author MrPoke
+ */
 @ZoneNameAnnotation("PRIMUM_FORTRESS TERMINON_LANDING")
 public class AbyssBaseShield implements ZoneHandler
 {

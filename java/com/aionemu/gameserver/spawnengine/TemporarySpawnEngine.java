@@ -28,6 +28,9 @@ import com.aionemu.gameserver.model.templates.spawns.TemporarySpawn;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
+/**
+ * @author xTz
+ */
 public class TemporarySpawnEngine
 {
 	

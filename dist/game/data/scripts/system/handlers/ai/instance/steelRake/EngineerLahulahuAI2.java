@@ -26,11 +26,9 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author xTz
+ */
 @AIName("engineerlahulahu")
 public class EngineerLahulahuAI2 extends AggressiveNpcAI2
 {

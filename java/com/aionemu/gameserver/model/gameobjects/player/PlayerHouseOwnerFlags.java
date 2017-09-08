@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.model.gameobjects.player;
 
+/**
+ * @author Rolandas
+ */
 public enum PlayerHouseOwnerFlags
 {
 	IS_OWNER(1 << 0),

@@ -30,6 +30,9 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.skillengine.model.ProvokeTarget;
 import com.aionemu.gameserver.utils.MathUtil;
 
+/**
+ * @author ATracer modified by kecimis
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ProvokerEffect")
 public class ProvokerEffect extends ShieldEffect

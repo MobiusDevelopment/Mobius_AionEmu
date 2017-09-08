@@ -18,11 +18,9 @@ package com.aionemu.gameserver.model.instance.instancereward;
 
 import com.aionemu.gameserver.model.instance.playerreward.ContaminatedUnderpathPlayerReward;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 public class ContaminatedUnderpathReward extends InstanceReward<ContaminatedUnderpathPlayerReward>
 {
 	private int points;

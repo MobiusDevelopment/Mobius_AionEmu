@@ -21,11 +21,9 @@ import com.aionemu.gameserver.ai2.AIName;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("forest_of_life_brohum_changeling")
 public class Forest_Of_Life_Brohum_ChangelingAI2 extends AggressiveNpcAI2
 {

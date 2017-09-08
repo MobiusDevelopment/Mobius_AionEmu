@@ -46,6 +46,9 @@ import com.aionemu.gameserver.model.templates.spawns.svsspawns.SvsSpawn;
 import com.aionemu.gameserver.model.templates.spawns.vortexspawns.VortexSpawn;
 import com.aionemu.gameserver.model.templates.spawns.zorshivdredgionspawns.ZorshivDredgionSpawn;
 
+/**
+ * @author xTz
+ */
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SpawnMap")
 public class SpawnMap

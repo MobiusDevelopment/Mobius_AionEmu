@@ -45,6 +45,9 @@ import com.aionemu.gameserver.utils.RndSelector;
 import com.aionemu.gameserver.utils.captcha.CAPTCHAUtil;
 import com.aionemu.gameserver.world.World;
 
+/**
+ * @author ATracer, sphinx, Cura
+ */
 public class GatherableController extends VisibleObjectController<Gatherable>
 {
 	private int gatherCount;

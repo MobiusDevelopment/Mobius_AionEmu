@@ -23,9 +23,8 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.player.PlayerReviveService;
 
 /**
- * @author Ranastic (Encom)
+ * @author ATracer, orz, avol, Simple
  */
-
 public class CM_REVIVE extends AionClientPacket
 {
 	private int reviveId;

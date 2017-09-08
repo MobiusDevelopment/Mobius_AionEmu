@@ -30,6 +30,10 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 
+/**
+ * @author ATracer
+ * @author ThunderBolt - GloryPoints
+ */
 public class AbyssPointsService
 {
 	@GlobalCallback(AddAPGlobalCallback.class)

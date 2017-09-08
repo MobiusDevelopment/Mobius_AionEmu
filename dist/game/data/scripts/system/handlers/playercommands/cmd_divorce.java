@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class cmd_divorce extends PlayerCommand
 {
-	
 	public cmd_divorce()
 	{
 		super("divorce");

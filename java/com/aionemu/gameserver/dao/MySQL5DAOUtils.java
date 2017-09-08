@@ -16,6 +16,9 @@
  */
 package com.aionemu.gameserver.dao;
 
+/**
+ * @author SoulKeeper
+ */
 public class MySQL5DAOUtils
 {
 	

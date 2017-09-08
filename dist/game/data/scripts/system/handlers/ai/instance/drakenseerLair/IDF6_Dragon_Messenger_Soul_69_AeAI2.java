@@ -22,11 +22,9 @@ import com.aionemu.gameserver.ai2.NpcAI2;
 import com.aionemu.gameserver.services.NpcShoutsService;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @AIName("IDF6_Dragon_Messenger_Soul_69_Ae")
 public class IDF6_Dragon_Messenger_Soul_69_AeAI2 extends NpcAI2
 {

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_PLAY_MOVIE extends AionServerPacket
 {
-	
 	private int type = 1; // if 1: CutSceneMovies else CutScenes
 	private int movieId = 0;
 	private int id = 0; // id scene ?

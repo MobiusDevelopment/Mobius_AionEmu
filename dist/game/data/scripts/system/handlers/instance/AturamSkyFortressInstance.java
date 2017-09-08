@@ -59,11 +59,9 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 
 import javolution.util.FastMap;
 
-/****/
 /**
- * Author Rinzler (Encom) /
- ****/
-
+ * @author Rinzler (Encom)
+ */
 @InstanceID(300240000)
 public class AturamSkyFortressInstance extends GeneralInstanceHandler
 {
