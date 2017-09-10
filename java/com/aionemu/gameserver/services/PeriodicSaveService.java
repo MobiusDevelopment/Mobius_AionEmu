@@ -37,8 +37,7 @@ import javolution.util.FastList;
  */
 public class PeriodicSaveService
 {
-	
-	private static final Logger log = LoggerFactory.getLogger(PeriodicSaveService.class);
+	static final Logger log = LoggerFactory.getLogger(PeriodicSaveService.class);
 	
 	private final Future<?> legionWhUpdateTask;
 	
@@ -49,14 +48,15 @@ public class PeriodicSaveService
 	
 	private PeriodicSaveService()
 	{
-		
 		final int DELAY_LEGION_ITEM = PeriodicSaveConfig.LEGION_ITEMS * 1000;
-		
 		legionWhUpdateTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new LegionWhUpdateTask(), DELAY_LEGION_ITEM, DELAY_LEGION_ITEM);
 	}
 	
 	private class LegionWhUpdateTask implements Runnable
 	{
+		public LegionWhUpdateTask()
+		{
+		}
 		
 		@Override
 		public void run()

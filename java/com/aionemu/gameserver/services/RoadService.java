@@ -28,12 +28,10 @@ import com.aionemu.gameserver.model.templates.road.RoadTemplate;
  */
 public class RoadService
 {
-	
 	Logger log = LoggerFactory.getLogger(RoadService.class);
 	
 	private static class SingletonHolder
 	{
-		
 		protected static final RoadService instance = new RoadService();
 	}
 	
@@ -42,7 +40,7 @@ public class RoadService
 		return SingletonHolder.instance;
 	}
 	
-	private RoadService()
+	RoadService()
 	{
 		for (RoadTemplate rt : DataManager.ROAD_DATA.getRoadTemplates())
 		{

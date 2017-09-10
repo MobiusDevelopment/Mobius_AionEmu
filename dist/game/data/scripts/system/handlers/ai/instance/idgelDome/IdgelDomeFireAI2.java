@@ -55,7 +55,7 @@ public class IdgelDomeFireAI2 extends AggressiveNpcAI2
 		super.handleDespawned();
 	}
 	
-	private void cancelEventTask()
+	void cancelEventTask()
 	{
 		if ((eventTask != null) && !eventTask.isDone())
 		{
@@ -65,31 +65,20 @@ public class IdgelDomeFireAI2 extends AggressiveNpcAI2
 	
 	private void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(IdgelDomeFireAI2.this);
-			}
-		}, 30000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> AI2Actions.deleteOwner(IdgelDomeFireAI2.this), 30000);
 	}
 	
 	private void startEventTask()
 	{
-		eventTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		eventTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelEventTask();
-				}
-				else
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 20070, 1, getOwner()).useNoAnimationSkill();
-				}
+				cancelEventTask();
+			}
+			else
+			{
+				SkillEngine.getInstance().getSkill(getOwner(), 20070, 1, getOwner()).useNoAnimationSkill();
 			}
 		}, 1000, 1000);
 	}

@@ -34,11 +34,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
-/****/
 /**
- * Author Rinzler, Ranastic (Encom) /
- ****/
-
+ * Author Rinzler, Ranastic (Encom)
+ */
 @AIName("IDF6_Dragon_Messenger_69_Ah")
 public class Akhal_The_OracleAI2 extends AggressiveNpcAI2
 {
@@ -98,40 +96,36 @@ public class Akhal_The_OracleAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				SkillEngine.getInstance().getSkill(getOwner(), 22772, 60, getOwner()).useNoAnimationSkill(); // Stone Skin.
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 22772, 60, getOwner()).useNoAnimationSkill(); // Stone Skin.
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnDarkMessengerAssaulter(p);
-							}
+							spawnDarkMessengerAssaulter(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(6, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(6, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnDarkMessengerAssaulter(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnDarkMessengerAssaulter(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -139,32 +133,28 @@ public class Akhal_The_OracleAI2 extends AggressiveNpcAI2
 		}, 20000, 40000);
 	}
 	
-	private void spawnDarkMessengerAssaulter(Player player)
+	void spawnDarkMessengerAssaulter(Player player)
 	{
 		final float x = player.getX();
 		final float y = player.getY();
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
+					switch (Rnd.get(1, 2))
 					{
-						switch (Rnd.get(1, 2))
+						case 1:
 						{
-							case 1:
-							{
-								spawn(220452, x, y, z, (byte) 0); // IDF6_Dragon_Messenger_Summon1_69_An.
-								break;
-							}
-							case 2:
-							{
-								spawn(220453, x, y, z, (byte) 0); // IDF6_Dragon_Messenger_Summon2_69_An.
-								break;
-							}
+							spawn(220452, x, y, z, (byte) 0); // IDF6_Dragon_Messenger_Summon1_69_An.
+							break;
+						}
+						case 2:
+						{
+							spawn(220453, x, y, z, (byte) 0); // IDF6_Dragon_Messenger_Summon2_69_An.
+							break;
 						}
 					}
 				}
@@ -178,7 +168,7 @@ public class Akhal_The_OracleAI2 extends AggressiveNpcAI2
 		return canThink;
 	}
 	
-	private List<Player> getLifedPlayers()
+	List<Player> getLifedPlayers()
 	{
 		final List<Player> players = new ArrayList<>();
 		for (Player player : getKnownList().getKnownPlayers().values())
@@ -191,7 +181,7 @@ public class Akhal_The_OracleAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((phaseTask != null) && !phaseTask.isDone())
 		{

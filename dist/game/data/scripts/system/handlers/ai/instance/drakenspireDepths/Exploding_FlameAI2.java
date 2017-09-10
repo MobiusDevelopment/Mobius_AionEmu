@@ -53,7 +53,7 @@ public class Exploding_FlameAI2 extends AggressiveNpcAI2
 		super.handleDespawned();
 	}
 	
-	private void cancelEventTask()
+	void cancelEventTask()
 	{
 		if ((eventTask != null) && !eventTask.isDone())
 		{
@@ -63,19 +63,15 @@ public class Exploding_FlameAI2 extends AggressiveNpcAI2
 	
 	private void startEventTask()
 	{
-		eventTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		eventTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelEventTask();
-				}
-				else
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 21516, 46, getOwner()).useNoAnimationSkill();
-				}
+				cancelEventTask();
+			}
+			else
+			{
+				SkillEngine.getInstance().getSkill(getOwner(), 21516, 46, getOwner()).useNoAnimationSkill();
 			}
 		}, 3000, 8000);
 	}

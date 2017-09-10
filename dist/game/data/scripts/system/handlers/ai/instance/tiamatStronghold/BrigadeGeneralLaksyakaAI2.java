@@ -31,7 +31,6 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.skillengine.SkillEngine;
-import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.WorldPosition;
 
 import system.handlers.ai.AggressiveNpcAI2;
@@ -107,39 +106,35 @@ public class BrigadeGeneralLaksyakaAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnLaksyakaOffering(p);
-							}
+							spawnLaksyakaOffering(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(6, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(6, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnLaksyakaOffering(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnLaksyakaOffering(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -147,22 +142,18 @@ public class BrigadeGeneralLaksyakaAI2 extends AggressiveNpcAI2
 		}, 20000, 40000);
 	}
 	
-	private void spawnLaksyakaOffering(Player player)
+	void spawnLaksyakaOffering(Player player)
 	{
 		final float x = player.getX();
 		final float y = player.getY();
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(283115, x, y, z, (byte) 0); // Laksyaka Offering.
-					}
+					spawn(283115, x, y, z, (byte) 0); // Laksyaka Offering.
 				}
 			}, 3000);
 		}
@@ -170,24 +161,20 @@ public class BrigadeGeneralLaksyakaAI2 extends AggressiveNpcAI2
 	
 	private void startSkillTask()
 	{
-		skeletonTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		skeletonTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelTask();
-				}
-				else
-				{
-					startSkeletonEvent();
-				}
+				cancelTask();
+			}
+			else
+			{
+				startSkeletonEvent();
 			}
 		}, 5000, 40000);
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((phaseTask != null) && !phaseTask.isDone())
 		{
@@ -195,7 +182,7 @@ public class BrigadeGeneralLaksyakaAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void cancelTask()
+	void cancelTask()
 	{
 		if ((skeletonTask != null) && !skeletonTask.isCancelled())
 		{
@@ -203,7 +190,7 @@ public class BrigadeGeneralLaksyakaAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void startSkeletonEvent()
+	void startSkeletonEvent()
 	{
 		final Npc tiamatEye = getPosition().getWorldMapInstance().getNpc(283178); // Tiamat's Eye.
 		final List<Player> players = new ArrayList<>();
@@ -218,7 +205,7 @@ public class BrigadeGeneralLaksyakaAI2 extends AggressiveNpcAI2
 		SkillEngine.getInstance().applyEffectDirectly(20865, tiamatEye, player, 30000); // Body Snatch.
 	}
 	
-	private List<Player> getLifedPlayers()
+	List<Player> getLifedPlayers()
 	{
 		final List<Player> players = new ArrayList<>();
 		for (Player player : getKnownList().getKnownPlayers().values())
@@ -229,15 +216,6 @@ public class BrigadeGeneralLaksyakaAI2 extends AggressiveNpcAI2
 			}
 		}
 		return players;
-	}
-	
-	private void deleteHelpers()
-	{
-		final WorldMapInstance instance = getPosition().getWorldMapInstance();
-		if (instance != null)
-		{
-			deleteNpcs(instance.getNpcs(283115)); // Laksyaka Offering.
-		}
 	}
 	
 	@Override

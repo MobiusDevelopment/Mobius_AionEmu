@@ -36,6 +36,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @AIName("Empress_Admirer")
 public class Empress_AdmirerAI2 extends NpcAI2
 {
+	@SuppressWarnings("unused")
 	private boolean isInstanceDestroyed;
 	
 	@Override
@@ -68,7 +69,7 @@ public class Empress_AdmirerAI2 extends NpcAI2
 		return true;
 	}
 	
-	private void attackEvent(Npc npc, float x, float y, float z, boolean despawn)
+	void attackEvent(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -78,265 +79,185 @@ public class Empress_AdmirerAI2 extends NpcAI2
 	
 	private void startTombWaveB1()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 10000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 20000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219515, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219515, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219515, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219515, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219515, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219515, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 40000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219515, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219515, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219515, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219515, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219515, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219515, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 50000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219516, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219516, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219516, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219516, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219516, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219516, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 70000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219516, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219516, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219516, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219516, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219516, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219516, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 80000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 100000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 110000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219515, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219515, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219515, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219515, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219515, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219515, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 130000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219515, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219515, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219515, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219515, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219515, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219515, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 140000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219516, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219516, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219516, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219516, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219516, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219516, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 160000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219516, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219516, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219516, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219516, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219516, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219516, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 170000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 190000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 200000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219515, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219515, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219515, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219515, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219515, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219515, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 220000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219515, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219515, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219515, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219515, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219515, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219515, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 230000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219516, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219516, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219516, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219516, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219516, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219516, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 250000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219516, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219516, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219516, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219516, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219516, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219516, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 260000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 280000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
-				attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-				attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
-				attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
-			}
+			attackEvent((Npc) spawn(219514, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 313.3913f, 443.98557f, 296.40808f, (byte) 13), 333.79936f, 453.9313f, 296.40808f, false);
+			attackEvent((Npc) spawn(219514, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
+			attackEvent((Npc) spawn(219514, 307.97067f, 422.196f, 296.40808f, (byte) 78), 322.31113f, 405.27344f, 296.40808f, false);
+			attackEvent((Npc) spawn(219519, 316.16348f, 431.76547f, 294.58875f, (byte) 78), 335.83118f, 427.14017f, 294.7588f, false);
 		}, 290000);
 	}
 	

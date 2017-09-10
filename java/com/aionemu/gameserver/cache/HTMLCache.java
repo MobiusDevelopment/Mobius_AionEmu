@@ -42,25 +42,15 @@ import javolution.util.FastMap;
  */
 public final class HTMLCache
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(HTMLCache.class);
 	
-	private static final FileFilter HTML_FILTER = new FileFilter()
-	{
-		
-		@Override
-		public boolean accept(File file)
-		{
-			return file.isDirectory() || file.getName().endsWith(".xhtml");
-		}
-	};
+	private static final FileFilter HTML_FILTER = file -> file.isDirectory() || file.getName().endsWith(".xhtml");
 	
 	private static final File HTML_ROOT = new File(HTMLConfig.HTML_ROOT);
 	
 	private static final class SingletonHolder
 	{
-		
-		private static final HTMLCache INSTANCE = new HTMLCache();
+		static final HTMLCache INSTANCE = new HTMLCache();
 	}
 	
 	public static HTMLCache getInstance()
@@ -73,7 +63,7 @@ public final class HTMLCache
 	private int loadedFiles;
 	private int size;
 	
-	private HTMLCache()
+	HTMLCache()
 	{
 		reload(false);
 	}

@@ -34,10 +34,11 @@ import com.google.common.collect.Collections2;
 
 /**
  * @author ATracer
+ * @param <M>
+ * @param <TM>
  */
 public abstract class GeneralTeam<M extends AionObject, TM extends TeamMember<M>>extends AionObject implements Team<M, TM>
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(GeneralTeam.class);
 	protected final Map<Integer, TM> members = new ConcurrentHashMap<>();
 	protected final Lock teamLock = new ReentrantLock();
@@ -107,6 +108,7 @@ public abstract class GeneralTeam<M extends AionObject, TM extends TeamMember<M>
 	/**
 	 * Apply some predicate on all group members<br>
 	 * Should be used only to change state of the group or its members
+	 * @param predicate
 	 */
 	public void apply(Predicate<TM> predicate)
 	{
@@ -130,6 +132,7 @@ public abstract class GeneralTeam<M extends AionObject, TM extends TeamMember<M>
 	/**
 	 * Apply some predicate on all group member's objects<br>
 	 * Should be used only to change state of the group or its members
+	 * @param predicate
 	 */
 	public void applyOnMembers(Predicate<M> predicate)
 	{
@@ -227,6 +230,9 @@ public abstract class GeneralTeam<M extends AionObject, TM extends TeamMember<M>
 	
 	private static final class MemberTransformFunction<TM extends TeamMember<M>, M> implements Function<TM, M>
 	{
+		public MemberTransformFunction()
+		{
+		}
 		
 		@Override
 		public M apply(TM member)

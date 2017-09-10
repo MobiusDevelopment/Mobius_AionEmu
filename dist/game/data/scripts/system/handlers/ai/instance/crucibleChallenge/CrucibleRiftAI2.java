@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
@@ -61,30 +60,9 @@ public class CrucibleRiftAI2 extends ActionItemNpcAI2
 		{
 			case 730459: // Crucible Rift.
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						announceCrucibleRift1();
-					}
-				}, 2000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						announceCrucibleRift2();
-					}
-				}, 6000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						announceCrucibleRift3();
-					}
-				}, 10000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> announceCrucibleRift1(), 2000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> announceCrucibleRift2(), 6000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> announceCrucibleRift3(), 10000);
 				break;
 			}
 		}
@@ -116,50 +94,38 @@ public class CrucibleRiftAI2 extends ActionItemNpcAI2
 		return true;
 	}
 	
-	private void announceCrucibleRift1()
+	void announceCrucibleRift1()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+		getPosition().getWorldMapInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
-				{
-					// A Crucible Rift has appeared at the spot where Vanktrist vanished. I'd better go investigate!
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(false, 1111482, player.getObjectId(), 2));
-				}
+				// A Crucible Rift has appeared at the spot where Vanktrist vanished. I'd better go investigate!
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(false, 1111482, player.getObjectId(), 2));
 			}
 		});
 	}
 	
-	private void announceCrucibleRift2()
+	void announceCrucibleRift2()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+		getPosition().getWorldMapInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
-				{
-					// Hmm, just as I suspected... Tiamat's Balaur have infiltrated the Crucible.
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(false, 1111483, player.getObjectId(), 2));
-				}
+				// Hmm, just as I suspected... Tiamat's Balaur have infiltrated the Crucible.
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(false, 1111483, player.getObjectId(), 2));
 			}
 		});
 	}
 	
-	private void announceCrucibleRift3()
+	void announceCrucibleRift3()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+		getPosition().getWorldMapInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
-				{
-					// Weird. It looks like a Crucible... just not OUR Crucible. I wonder who it belongs to?
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(false, 1111484, player.getObjectId(), 2));
-				}
+				// Weird. It looks like a Crucible... just not OUR Crucible. I wonder who it belongs to?
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(false, 1111484, player.getObjectId(), 2));
 			}
 		});
 	}

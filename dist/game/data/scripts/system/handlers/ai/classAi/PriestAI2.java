@@ -70,39 +70,35 @@ public class PriestAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 1)
 					{
-						final int size = players.size();
-						if (players.size() < 1)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnServant(p);
-							}
+							spawnServant(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(1, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(1, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnServant(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnServant(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -117,35 +113,31 @@ public class PriestAI2 extends AggressiveNpcAI2
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
+					switch (Rnd.get(1, 4))
 					{
-						switch (Rnd.get(1, 4))
+						case 1:
 						{
-							case 1:
-							{
-								spawn(280638, x, y, z, (byte) 0); // Sacred Dragon Relic I.
-								break;
-							}
-							case 2:
-							{
-								spawn(280639, x, y, z, (byte) 0); // Sacred Dragon Relic II.
-								break;
-							}
-							case 3:
-							{
-								spawn(280640, x, y, z, (byte) 0); // Sacred Dragon Relic III.
-								break;
-							}
-							case 4:
-							{
-								spawn(281301, x, y, z, (byte) 0); // Holy Servant I.
-								break;
-							}
+							spawn(280638, x, y, z, (byte) 0); // Sacred Dragon Relic I.
+							break;
+						}
+						case 2:
+						{
+							spawn(280639, x, y, z, (byte) 0); // Sacred Dragon Relic II.
+							break;
+						}
+						case 3:
+						{
+							spawn(280640, x, y, z, (byte) 0); // Sacred Dragon Relic III.
+							break;
+						}
+						case 4:
+						{
+							spawn(281301, x, y, z, (byte) 0); // Holy Servant I.
+							break;
 						}
 					}
 				}
@@ -177,7 +169,7 @@ public class PriestAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((phaseTask != null) && !phaseTask.isDone())
 		{

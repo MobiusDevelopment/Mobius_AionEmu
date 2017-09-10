@@ -75,7 +75,7 @@ public class KinquidAI2 extends AggressiveNpcAI2
 		cancelSkillTask();
 	}
 	
-	private void cancelSkillTask()
+	void cancelSkillTask()
 	{
 		if ((skillTask != null) && !skillTask.isDone())
 		{
@@ -85,44 +85,29 @@ public class KinquidAI2 extends AggressiveNpcAI2
 	
 	private void startSkillTask()
 	{
-		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelSkillTask();
+			}
+			else
+			{
+				SkillEngine.getInstance().getSkill(getOwner(), 19233, 60, getOwner()).useNoAnimationSkill();
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					cancelSkillTask();
-				}
-				else
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 19233, 60, getOwner()).useNoAnimationSkill();
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					if (!isAlreadyDead() && getPosition().isSpawned())
 					{
-						@Override
-						public void run()
-						{
-							if (!isAlreadyDead() && getPosition().isSpawned())
-							{
-								SkillEngine.getInstance().getSkill(getOwner(), 19234, 60, getOwner()).useNoAnimationSkill();
-							}
-						}
-					}, 3500);
-				}
+						SkillEngine.getInstance().getSkill(getOwner(), 19234, 60, getOwner()).useNoAnimationSkill();
+					}
+				}, 3500);
 			}
 		}, 35000, 35000);
 	}
 	
 	private void doSchedule()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				check();
-			}
-		}, 2500);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> check(), 2500);
 	}
 	
 	private void despawnDestroyer()

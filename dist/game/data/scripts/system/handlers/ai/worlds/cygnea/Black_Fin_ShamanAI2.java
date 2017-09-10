@@ -74,39 +74,35 @@ public class Black_Fin_ShamanAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 1)
 					{
-						final int size = players.size();
-						if (players.size() < 1)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnSharkSpecies(p);
-							}
+							spawnSharkSpecies(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(1, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(1, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnSharkSpecies(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnSharkSpecies(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -114,22 +110,18 @@ public class Black_Fin_ShamanAI2 extends AggressiveNpcAI2
 		}, 3000, 15000);
 	}
 	
-	private void spawnSharkSpecies(Player player)
+	void spawnSharkSpecies(Player player)
 	{
 		final float x = player.getX();
 		final float y = player.getY();
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(235838, x, y, z, (byte) 0); // LF5_P1_SharkSpecies_Wi_58_sum_Ah.
-					}
+					spawn(235838, x, y, z, (byte) 0); // LF5_P1_SharkSpecies_Wi_58_sum_Ah.
 				}
 			}, 1000);
 		}
@@ -140,7 +132,7 @@ public class Black_Fin_ShamanAI2 extends AggressiveNpcAI2
 		NpcShoutsService.getInstance().sendMsg(getOwner(), msg, getObjectId(), false, 0, 0);
 	}
 	
-	private List<Player> getLifedPlayers()
+	List<Player> getLifedPlayers()
 	{
 		final List<Player> players = new ArrayList<>();
 		for (Player player : getKnownList().getKnownPlayers().values())
@@ -153,7 +145,7 @@ public class Black_Fin_ShamanAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((phaseTask != null) && !phaseTask.isDone())
 		{

@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.services;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.commons.services.CronService;
 import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -26,7 +23,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_DISPUTE_LAND;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneAttributes;
 
 import javolution.util.FastList;
@@ -36,12 +32,12 @@ import javolution.util.FastList;
  */
 public class DisputeLandService
 {
+	// private static final Logger log = LoggerFactory.getLogger(DisputeLandService.class);
 	private boolean active;
 	private final FastList<Integer> worlds = new FastList<>();
-	private static final int duration = CustomConfig.DISPUTE_LAND_DURATION;
-	private static final Logger log = LoggerFactory.getLogger(DisputeLandService.class);
+	static final int duration = CustomConfig.DISPUTE_LAND_DURATION;
 	
-	private DisputeLandService()
+	DisputeLandService()
 	{
 	}
 	
@@ -54,22 +50,11 @@ public class DisputeLandService
 	{
 		if (CustomConfig.DISPUTE_LAND_ENABLED)
 		{
-			CronService.getInstance().schedule(new Runnable()
+			CronService.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
+				if (isActive())
 				{
-					if (isActive())
-					{
-						ThreadPoolManager.getInstance().schedule(new Runnable()
-						{
-							@Override
-							public void run()
-							{
-								setActive(false);
-							}
-						}, duration * 3600 * 1000);
-					}
+					ThreadPoolManager.getInstance().schedule(() -> setActive(false), duration * 3600 * 1000);
 				}
 			}, CustomConfig.DISPUTE_LAND_SCHEDULE);
 		}
@@ -136,21 +121,14 @@ public class DisputeLandService
 		}
 	}
 	
-	private void broadcast(Player player)
+	void broadcast(Player player)
 	{
 		PacketSendUtility.sendPacket(player, new SM_DISPUTE_LAND(worlds, active));
 	}
 	
 	private void broadcast()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				broadcast(player);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> broadcast(player));
 	}
 	
 	public void onLogin(Player player)
@@ -160,6 +138,6 @@ public class DisputeLandService
 	
 	private static class DisputeLandServiceHolder
 	{
-		private static final DisputeLandService INSTANCE = new DisputeLandService();
+		static final DisputeLandService INSTANCE = new DisputeLandService();
 	}
 }

@@ -80,9 +80,9 @@ public class _14013A_Frill_Of_A_Fuss extends QuestHandler
 		if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
-			final int var1 = qs.getQuestVarById(1);
-			final int var2 = qs.getQuestVarById(2);
-			final int var3 = qs.getQuestVarById(3);
+			// final int var1 = qs.getQuestVarById(1);
+			// final int var2 = qs.getQuestVarById(2);
+			// final int var3 = qs.getQuestVarById(3);
 			switch (targetId)
 			{
 				case (203129):

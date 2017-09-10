@@ -72,24 +72,20 @@ public class IDTiamatKalrindyNamed65AlAI2 extends AggressiveNpcAI2
 	
 	private void startSkillTask()
 	{
-		trapTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		trapTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelTask();
-				}
-				else
-				{
-					startHallucinatoryVictoryEvent();
-				}
+				cancelTask();
+			}
+			else
+			{
+				startHallucinatoryVictoryEvent();
 			}
 		}, 5000, 80000);
 	}
 	
-	private void cancelTask()
+	void cancelTask()
 	{
 		if ((trapTask != null) && !trapTask.isCancelled())
 		{

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.NpcShoutsService;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
@@ -70,18 +69,14 @@ public class Esoterrace_AlarmAI2 extends AggressiveNpcAI2
 					WalkManager.startWalking(this);
 					getOwner().setState(1);
 					PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getObjectId()));
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
+						if (!isAlreadyDead())
 						{
-							if (!isAlreadyDead())
-							{
-								despawn();
-								announceBridgeRaised();
-								getPosition().getWorldMapInstance().getDoors().get(69).setOpen(true);
-								getPosition().getWorldMapInstance().getDoors().get(367).setOpen(true);
-							}
+							despawn();
+							announceBridgeRaised();
+							getPosition().getWorldMapInstance().getDoors().get(69).setOpen(true);
+							getPosition().getWorldMapInstance().getDoors().get(367).setOpen(true);
 						}
 					}, 12000);
 				}
@@ -89,23 +84,19 @@ public class Esoterrace_AlarmAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void announceBridgeRaised()
+	void announceBridgeRaised()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+		getPosition().getWorldMapInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
-				{
-					// The Bridge to the Drana Production Lab has been raised.
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDF4Re_Drana_01);
-				}
+				// The Bridge to the Drana Production Lab has been raised.
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDF4Re_Drana_01);
 			}
 		});
 	}
 	
-	private void despawn()
+	void despawn()
 	{
 		AI2Actions.deleteOwner(this);
 	}

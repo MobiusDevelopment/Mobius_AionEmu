@@ -297,7 +297,7 @@ public class InstanceService
 		private final WorldMapInstance worldMapInstance;
 		private long soloInstanceDestroyTime;
 		
-		private EmptyInstanceCheckerTask(WorldMapInstance worldMapInstance)
+		EmptyInstanceCheckerTask(WorldMapInstance worldMapInstance)
 		{
 			this.worldMapInstance = worldMapInstance;
 			soloInstanceDestroyTime = System.currentTimeMillis() + SOLO_INSTANCES_DESTROY_DELAY;
@@ -335,10 +335,7 @@ public class InstanceService
 						destroyInstance(worldMapInstance);
 						return;
 					}
-					else
-					{
-						return;
-					}
+					return;
 				}
 				final Iterator<Player> playerIterator = worldMapInstance.playerIterator();
 				final int mapId = worldMapInstance.getMapId();

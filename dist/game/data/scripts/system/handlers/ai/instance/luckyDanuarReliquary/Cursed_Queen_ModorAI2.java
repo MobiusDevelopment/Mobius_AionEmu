@@ -123,24 +123,20 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 	
 	private void startSkillTask()
 	{
-		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelTask();
-				}
-				else
-				{
-					chooseRandomEvent();
-				}
+				cancelTask();
+			}
+			else
+			{
+				chooseRandomEvent();
 			}
 		}, 5000, 30000);
 	}
 	
-	private void cancelTask()
+	void cancelTask()
 	{
 		if ((skillTask != null) && !skillTask.isCancelled())
 		{
@@ -174,19 +170,15 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 		{
 			SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 			sendMsg(1500750);
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(284380, 244.12497f, 276.17401f, 242.625f, (byte) 0); // Modor's Bodyguard.
-						spawn(284381, 263.12497f, 276.17401f, 242.625f, (byte) 0); // Vengeful Reaper.
-						spawn(284382, 253.12497f, 277.17401f, 242.625f, (byte) 0); // Hoarfrost Acheron Drake.
-						World.getInstance().updatePosition(getOwner(), 284.34036f, 262.9162f, 248.851f, (byte) 63);
-						PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-					}
+					spawn(284380, 244.12497f, 276.17401f, 242.625f, (byte) 0); // Modor's Bodyguard.
+					spawn(284381, 263.12497f, 276.17401f, 242.625f, (byte) 0); // Vengeful Reaper.
+					spawn(284382, 253.12497f, 277.17401f, 242.625f, (byte) 0); // Hoarfrost Acheron Drake.
+					World.getInstance().updatePosition(getOwner(), 284.34036f, 262.9162f, 248.851f, (byte) 63);
+					PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 				}
 			}, 2000);
 		}
@@ -197,36 +189,32 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 		AI2Actions.targetSelf(Cursed_Queen_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		sendMsg(1500741);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			final float pos1[][] =
 			{
-				final float pos1[][] =
 				{
-					{
-						232.426f,
-						263.818f,
-						248.6419f,
-						115
-					},
-					{
-						271.426f,
-						230.243f,
-						250.9022f,
-						38
-					},
-					{
-						240.130f,
-						235.219f,
-						251.1553f,
-						17
-					}
-				};
-				final float pos[] = pos1[Rnd.get(0, 2)];
-				World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+					232.426f,
+					263.818f,
+					248.6419f,
+					115
+				},
+				{
+					271.426f,
+					230.243f,
+					250.9022f,
+					38
+				},
+				{
+					240.130f,
+					235.219f,
+					251.1553f,
+					17
+				}
+			};
+			final float pos[] = pos1[Rnd.get(0, 2)];
+			World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -234,48 +222,44 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 	{
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		sendMsg(1500741);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			final float pos1[][] =
 			{
-				final float pos1[][] =
 				{
-					{
-						245.426f,
-						261.818f,
-						242.1f,
-						114
-					},
-					{
-						251.426f,
-						247.243f,
-						242.1f,
-						20
-					},
-					{
-						261.130f,
-						247.219f,
-						242.1f,
-						40
-					},
-					{
-						267.426f,
-						260.243f,
-						242.1f,
-						65
-					},
-					{
-						256.426f,
-						269.243f,
-						242.1f,
-						90
-					}
-				};
-				final float pos[] = pos1[Rnd.get(0, 4)];
-				World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+					245.426f,
+					261.818f,
+					242.1f,
+					114
+				},
+				{
+					251.426f,
+					247.243f,
+					242.1f,
+					20
+				},
+				{
+					261.130f,
+					247.219f,
+					242.1f,
+					40
+				},
+				{
+					267.426f,
+					260.243f,
+					242.1f,
+					65
+				},
+				{
+					256.426f,
+					269.243f,
+					242.1f,
+					90
+				}
+			};
+			final float pos[] = pos1[Rnd.get(0, 4)];
+			World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -284,14 +268,10 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 		AI2Actions.targetSelf(Cursed_Queen_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		sendMsg(1500741);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				World.getInstance().updatePosition(getOwner(), 256.4457f, 257.6867f, 242.30f, (byte) 115);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+			World.getInstance().updatePosition(getOwner(), 256.4457f, 257.6867f, 242.30f, (byte) 115);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -301,18 +281,14 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		EmoteManager.emoteStopAttacking(getOwner());
 		sendMsg(1500744);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				despawnNpcs(231304); // Cursed Queen Modor.
-				spawn(284383, 255.12497f, 293.17401f, 257.625f, (byte) 22);
-				spawn(284383, 284.12497f, 262.17401f, 249.625f, (byte) 0);
-				spawn(284383, 271.12497f, 230.17401f, 251.625f, (byte) 0);
-				spawn(284383, 240.12497f, 235.17401f, 252.625f, (byte) 0);
-				spawn(284383, 232.12497f, 263.17401f, 249.625f, (byte) 0);
-			}
+			despawnNpcs(231304); // Cursed Queen Modor.
+			spawn(284383, 255.12497f, 293.17401f, 257.625f, (byte) 22);
+			spawn(284383, 284.12497f, 262.17401f, 249.625f, (byte) 0);
+			spawn(284383, 271.12497f, 230.17401f, 251.625f, (byte) 0);
+			spawn(284383, 240.12497f, 235.17401f, 252.625f, (byte) 0);
+			spawn(284383, 232.12497f, 263.17401f, 249.625f, (byte) 0);
 		}, 2000);
 	}
 	

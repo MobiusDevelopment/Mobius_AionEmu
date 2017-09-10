@@ -96,40 +96,36 @@ public class Dalia_CharlandsAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				SkillEngine.getInstance().getSkill(getOwner(), 19323, 10, getOwner()).useNoAnimationSkill(); // Saccage De Souffrance.
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 19323, 10, getOwner()).useNoAnimationSkill(); // Saccage De Souffrance.
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnDaliaWatcher(p);
-							}
+							spawnDaliaWatcher(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(1, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(1, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnDaliaWatcher(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnDaliaWatcher(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -144,15 +140,11 @@ public class Dalia_CharlandsAI2 extends AggressiveNpcAI2
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(217650, x, y, z, (byte) 0); // Dalia Watcher.
-					}
+					spawn(217650, x, y, z, (byte) 0); // Dalia Watcher.
 				}
 			}, 3000);
 		}
@@ -177,7 +169,7 @@ public class Dalia_CharlandsAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((phaseTask != null) && !phaseTask.isDone())
 		{

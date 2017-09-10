@@ -32,7 +32,7 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @AIName("deliveryman")
 public class DeliveryManAI2 extends FollowingNpcAI2
 {
-	private Player owner;
+	Player owner;
 	public static int EVENT_SET_CREATOR = 1;
 	private static int SERVICE_TIME = 10 * 60 * 1000;
 	private static int SPAWN_ACTION_DELAY = 1000;
@@ -82,6 +82,10 @@ public class DeliveryManAI2 extends FollowingNpcAI2
 	
 	private final class DeleteDeliveryMan implements Runnable
 	{
+		public DeleteDeliveryMan()
+		{
+		}
+		
 		@Override
 		public void run()
 		{
@@ -91,6 +95,10 @@ public class DeliveryManAI2 extends FollowingNpcAI2
 	
 	private final class DeliveryManSpawnAction implements Runnable
 	{
+		public DeliveryManSpawnAction()
+		{
+		}
+		
 		@Override
 		public void run()
 		{
@@ -101,7 +109,7 @@ public class DeliveryManAI2 extends FollowingNpcAI2
 		}
 	}
 	
-	private void sendMsg(int msg, int Obj, boolean isShout, int time)
+	void sendMsg(int msg, int Obj, boolean isShout, int time)
 	{
 		NpcShoutsService.getInstance().sendMsg(getPosition().getWorldMapInstance(), msg, Obj, isShout, 0, time);
 	}

@@ -68,7 +68,7 @@ public class ChallengeTaskService
 		return SingletonHolder.instance;
 	}
 	
-	private ChallengeTaskService()
+	ChallengeTaskService()
 	{
 		cityTasks = new FastMap<Integer, Map<Integer, ChallengeTask>>().shared();
 		legionTasks = new FastMap<Integer, Map<Integer, ChallengeTask>>().shared();
@@ -119,6 +119,10 @@ public class ChallengeTaskService
 		}
 		final int playerTownId = TownService.getInstance().getTownResidence(player);
 		final List<ChallengeTask> availableTasks = new ArrayList<>();
+		if (taskMap == null)
+		{
+			return availableTasks;
+		}
 		if (!taskMap.containsKey(ownerId))
 		{
 			final Map<Integer, ChallengeTask> tasks = DAOManager.getDAO(ChallengeTasksDAO.class).load(ownerId, challengeType);
@@ -155,19 +159,16 @@ public class ChallengeTaskService
 							availableTasks.add(task);
 							continue;
 						}
-						else
+						final int prevTaskId = template.getPrevTask();
+						if (taskMap.get(ownerId).containsKey(prevTaskId))
 						{
-							final int prevTaskId = template.getPrevTask();
-							if (taskMap.get(ownerId).containsKey(prevTaskId))
+							final ChallengeTask prevTask = taskMap.get(ownerId).get(prevTaskId);
+							if (prevTask.isCompleted())
 							{
-								final ChallengeTask prevTask = taskMap.get(ownerId).get(prevTaskId);
-								if (prevTask.isCompleted())
-								{
-									final ChallengeTask task = new ChallengeTask(ownerId, template);
-									taskMap.get(ownerId).put(task.getTaskId(), task);
-									DAOManager.getDAO(ChallengeTasksDAO.class).storeTask(task);
-									availableTasks.add(task);
-								}
+								final ChallengeTask task = new ChallengeTask(ownerId, template);
+								taskMap.get(ownerId).put(task.getTaskId(), task);
+								DAOManager.getDAO(ChallengeTasksDAO.class).storeTask(task);
+								availableTasks.add(task);
 							}
 						}
 					}
@@ -298,22 +299,19 @@ public class ChallengeTaskService
 						member.getLegionMember().setChallengeScore(0);
 						continue;
 					}
-					else
+					final LegionMember legionMember = DAOManager.getDAO(LegionMemberDAO.class).loadLegionMember(memberObjId);
+					final int score = legionMember.getChallengeScore();
+					if (score <= 0)
 					{
-						final LegionMember legionMember = DAOManager.getDAO(LegionMemberDAO.class).loadLegionMember(memberObjId);
-						final int score = legionMember.getChallengeScore();
-						if (score <= 0)
-						{
-							continue;
-						}
-						if (winnersByPoints.get(score) == null)
-						{
-							winnersByPoints.put(score, new ArrayList<Integer>());
-						}
-						winnersByPoints.get(score).add(legionMember.getObjectId());
-						legionMember.setChallengeScore(0);
-						DAOManager.getDAO(LegionMemberDAO.class).storeLegionMember(memberObjId, legionMember);
+						continue;
 					}
+					if (winnersByPoints.get(score) == null)
+					{
+						winnersByPoints.put(score, new ArrayList<Integer>());
+					}
+					winnersByPoints.get(score).add(legionMember.getObjectId());
+					legionMember.setChallengeScore(0);
+					DAOManager.getDAO(LegionMemberDAO.class).storeLegionMember(memberObjId, legionMember);
 				}
 				int rewardsAdded = 0, itemId, itemCount;
 				for (Entry<Integer, List<Integer>> e : winnersByPoints.descendingMap().entrySet())

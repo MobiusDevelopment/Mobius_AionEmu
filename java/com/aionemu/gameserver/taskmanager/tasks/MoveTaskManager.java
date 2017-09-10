@@ -56,7 +56,7 @@ public class MoveTaskManager extends AbstractPeriodicTaskManager
 		return true;
 	};
 	
-	private MoveTaskManager()
+	MoveTaskManager()
 	{
 		super(UPDATE_PERIOD);
 	}
@@ -93,6 +93,6 @@ public class MoveTaskManager extends AbstractPeriodicTaskManager
 	
 	private static final class SingletonHolder
 	{
-		private static final MoveTaskManager INSTANCE = new MoveTaskManager();
+		static final MoveTaskManager INSTANCE = new MoveTaskManager();
 	}
 }

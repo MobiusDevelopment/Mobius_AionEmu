@@ -88,40 +88,36 @@ public class Vile_TyphonAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				SkillEngine.getInstance().getSkill(getOwner(), 23024, 60, getOwner()).useNoAnimationSkill(); // Inferno Fiend.
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 23024, 60, getOwner()).useNoAnimationSkill(); // Inferno Fiend.
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnSnakeRSummon(p);
-							}
+							spawnSnakeRSummon(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(6, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(6, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnSnakeRSummon(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnSnakeRSummon(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -137,15 +133,11 @@ public class Vile_TyphonAI2 extends AggressiveNpcAI2
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
 			spawn(220554, x, y, z, (byte) 0); // IDEternity_02_Snake_Area.
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(220542, x, y, z, (byte) 0); // IDEternity_02_SnakeR_Boss_Summon.
-					}
+					spawn(220542, x, y, z, (byte) 0); // IDEternity_02_SnakeR_Boss_Summon.
 				}
 			}, 3000);
 		}
@@ -170,7 +162,7 @@ public class Vile_TyphonAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((phaseTask != null) && !phaseTask.isDone())
 		{

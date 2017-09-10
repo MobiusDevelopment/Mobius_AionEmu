@@ -89,21 +89,17 @@ public class Cruel_LamiaAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		lamiaTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		lamiaTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					getOwner().getController().cancelCurrentSkill();
-					NpcShoutsService.getInstance().sendMsg(getOwner(), 1500230, getObjectId(), 0, 0);
-					SkillEngine.getInstance().getSkill(getOwner(), 19551, 60, getOwner()).useNoAnimationSkill();
-				}
+				cancelPhaseTask();
+			}
+			else
+			{
+				getOwner().getController().cancelCurrentSkill();
+				NpcShoutsService.getInstance().sendMsg(getOwner(), 1500230, getObjectId(), 0, 0);
+				SkillEngine.getInstance().getSkill(getOwner(), 19551, 60, getOwner()).useNoAnimationSkill();
 			}
 		}, 3000, 15000);
 	}
@@ -137,7 +133,7 @@ public class Cruel_LamiaAI2 extends AggressiveNpcAI2
 		super.handleBackHome();
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((lamiaTask != null) && !lamiaTask.isDone())
 		{

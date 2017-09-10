@@ -113,24 +113,20 @@ public class IsbariyaTheResoluteAI2 extends AggressiveNpcAI2
 	
 	private void startBasicSkillTask()
 	{
-		basicSkillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		basicSkillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelSkillTask();
-				}
-				else
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 18912 + Rnd.get(2), 55, getOwner()).useNoAnimationSkill();
-				}
+				cancelSkillTask();
+			}
+			else
+			{
+				SkillEngine.getInstance().getSkill(getOwner(), 18912 + Rnd.get(2), 55, getOwner()).useNoAnimationSkill();
 			}
 		}, 0, 24000);
 	}
 	
-	private void cancelSkillTask()
+	void cancelSkillTask()
 	{
 		if ((basicSkillTask != null) && !basicSkillTask.isCancelled())
 		{
@@ -209,14 +205,7 @@ public class IsbariyaTheResoluteAI2 extends AggressiveNpcAI2
 	
 	private void scheduleSpecial(int delay)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				launchSpecial();
-			}
-		}, delay);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> launchSpecial(), delay);
 	}
 	
 	private SpawnTemplate rndSpawnInRange(int npcId)

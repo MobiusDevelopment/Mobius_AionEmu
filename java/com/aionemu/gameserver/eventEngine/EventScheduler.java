@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 public class EventScheduler implements Runnable
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(EventScheduler.class);
 	private static final int TIMEOUT = 15; // in minutes
 	private static final int WORKING_DELAY = 1000; // in msec
@@ -38,7 +37,7 @@ public class EventScheduler implements Runnable
 	private long startTime = 0;
 	private final AtomicBoolean paused = new AtomicBoolean(false);
 	
-	private EventScheduler()
+	EventScheduler()
 	{
 		ThreadPoolManager.getInstance().schedule(this, 1);
 		log.info("EventScheduler initialized");
@@ -86,7 +85,7 @@ public class EventScheduler implements Runnable
 		return;
 	}
 	
-	private void waitForExecution(Event event)
+	void waitForExecution(Event event)
 	{
 		if (event.isFinished())
 		{
@@ -107,7 +106,6 @@ public class EventScheduler implements Runnable
 	
 	private class WaitForExecutionRunnable implements Runnable
 	{
-		
 		private final Event event;
 		
 		public WaitForExecutionRunnable(Event event)

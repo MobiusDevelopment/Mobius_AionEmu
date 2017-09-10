@@ -40,28 +40,24 @@ public class DancingFlameAI2 extends GeneralNpcAI2
 	
 	private void startTask()
 	{
-		task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		task = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelTask();
+			}
+			else
+			{
+				if (isPlayerInRange())
 				{
-					cancelTask();
-				}
-				else
-				{
-					if (isPlayerInRange())
+					final WorldPosition p = getPosition();
+					if (getNpcId() == 282996)
 					{
-						final WorldPosition p = getPosition();
-						if (getNpcId() == 282996)
-						{
-							spawn(282998, p.getX(), p.getY(), p.getZ(), p.getHeading());
-						}
-						else
-						{
-							spawn(282999, p.getX(), p.getY(), p.getZ(), p.getHeading());
-						}
+						spawn(282998, p.getX(), p.getY(), p.getZ(), p.getHeading());
+					}
+					else
+					{
+						spawn(282999, p.getX(), p.getY(), p.getZ(), p.getHeading());
 					}
 				}
 			}
@@ -80,7 +76,7 @@ public class DancingFlameAI2 extends GeneralNpcAI2
 		return false;
 	}
 	
-	private void cancelTask()
+	void cancelTask()
 	{
 		if ((task != null) && !task.isDone())
 		{
@@ -98,28 +94,14 @@ public class DancingFlameAI2 extends GeneralNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), getNpcId() == 282998 ? 20536 : 20535, 60, getOwner()).useNoAnimationSkill();
-				}
-			}, 500);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> SkillEngine.getInstance().getSkill(getOwner(), getNpcId() == 282998 ? 20536 : 20535, 60, getOwner()).useNoAnimationSkill(), 500);
 			starLifeTask();
 		}
 	}
 	
 	private void starLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				despawn();
-			}
-		}, 4000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> despawn(), 4000);
 	}
 	
 	private void despawn()

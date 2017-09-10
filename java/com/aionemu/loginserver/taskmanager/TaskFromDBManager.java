@@ -30,11 +30,10 @@ import com.aionemu.loginserver.taskmanager.trigger.TaskFromDBTrigger;
  */
 public class TaskFromDBManager
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(TaskFromDBManager.class);
 	private final ArrayList<TaskFromDBTrigger> tasksList;
 	
-	private TaskFromDBManager()
+	TaskFromDBManager()
 	{
 		tasksList = getDAO().getAllTasks();
 		log.info("Loaded " + tasksList.size() + " task" + (tasksList.size() > 1 ? "s" : "") + " from the database");
@@ -84,7 +83,6 @@ public class TaskFromDBManager
 	 */
 	private static class SingletonHolder
 	{
-		
 		protected static final TaskFromDBManager instance = new TaskFromDBManager();
 	}
 }

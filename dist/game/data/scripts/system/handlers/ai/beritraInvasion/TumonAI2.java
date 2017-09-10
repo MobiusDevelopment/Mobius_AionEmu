@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.WorldPosition;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
@@ -103,39 +102,35 @@ public class TumonAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnCannonBall(p);
-							}
+							spawnCannonBall(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(6, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(6, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnCannonBall(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnCannonBall(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -150,15 +145,11 @@ public class TumonAI2 extends AggressiveNpcAI2
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(287261, x, y, z, (byte) 0); // Cannon Ball.
-					}
+					spawn(287261, x, y, z, (byte) 0); // Cannon Ball.
 				}
 			}, 3000);
 		}
@@ -183,7 +174,7 @@ public class TumonAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((phaseTask != null) && !phaseTask.isDone())
 		{
@@ -258,36 +249,28 @@ public class TumonAI2 extends AggressiveNpcAI2
 	
 	private void addGpPlayer()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (MathUtil.isIn3dRange(player, getOwner(), 15))
 			{
-				if (MathUtil.isIn3dRange(player, getOwner(), 15))
-				{
-					AbyssPointsService.addGp(player, 500);
-				}
+				AbyssPointsService.addGp(player, 500);
 			}
 		});
 	}
 	
 	private void updateTumonLanding1()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (MathUtil.isIn3dRange(getOwner().getAggroList().getMostHated(), getOwner(), 20))
 			{
-				if (MathUtil.isIn3dRange(getOwner().getAggroList().getMostHated(), getOwner(), 20))
+				if (getOwner().getAggroList().getPlayerWinnerRace() == Race.ASMODIANS)
 				{
-					if (getOwner().getAggroList().getPlayerWinnerRace() == Race.ASMODIANS)
-					{
-						AbyssLandingService.getInstance().onRewardMonuments(Race.ASMODIANS, 21, 10000);
-					}
-					else if (getOwner().getAggroList().getPlayerWinnerRace() == Race.ELYOS)
-					{
-						AbyssLandingService.getInstance().onRewardMonuments(Race.ELYOS, 9, 10000);
-					}
+					AbyssLandingService.getInstance().onRewardMonuments(Race.ASMODIANS, 21, 10000);
+				}
+				else if (getOwner().getAggroList().getPlayerWinnerRace() == Race.ELYOS)
+				{
+					AbyssLandingService.getInstance().onRewardMonuments(Race.ELYOS, 9, 10000);
 				}
 			}
 		});
@@ -295,21 +278,17 @@ public class TumonAI2 extends AggressiveNpcAI2
 	
 	private void updateTumonLanding2()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (MathUtil.isIn3dRange(getOwner().getAggroList().getMostHated(), getOwner(), 20))
 			{
-				if (MathUtil.isIn3dRange(getOwner().getAggroList().getMostHated(), getOwner(), 20))
+				if (getOwner().getAggroList().getPlayerWinnerRace() == Race.ASMODIANS)
 				{
-					if (getOwner().getAggroList().getPlayerWinnerRace() == Race.ASMODIANS)
-					{
-						AbyssLandingService.getInstance().onRewardMonuments(Race.ASMODIANS, 22, 10000);
-					}
-					else if (getOwner().getAggroList().getPlayerWinnerRace() == Race.ELYOS)
-					{
-						AbyssLandingService.getInstance().onRewardMonuments(Race.ELYOS, 10, 10000);
-					}
+					AbyssLandingService.getInstance().onRewardMonuments(Race.ASMODIANS, 22, 10000);
+				}
+				else if (getOwner().getAggroList().getPlayerWinnerRace() == Race.ELYOS)
+				{
+					AbyssLandingService.getInstance().onRewardMonuments(Race.ELYOS, 10, 10000);
 				}
 			}
 		});
@@ -346,27 +325,11 @@ public class TumonAI2 extends AggressiveNpcAI2
 	
 	private void announceTumonDie()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// The Devil Unit's Tumon has been destroyed.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_MESSAGE_DIE_04);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_MESSAGE_DIE_04));
 	}
 	
 	private void announceRadeonDie()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// The Devil Unit's Raedon Beta has been destroyed.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_MESSAGE_DIE_05);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_MESSAGE_DIE_05));
 	}
 }

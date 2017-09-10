@@ -113,42 +113,38 @@ public class Enraged_Inferno_DemonAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				// A massive blast of elemental power will soon explode with destructive force.
+				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_Teo_T_Boss_Skill_03, 0);
+				SkillEngine.getInstance().getSkill(getOwner(), 19567, 46, getOwner()).useNoAnimationSkill(); // Gravitational Shift.
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					// A massive blast of elemental power will soon explode with destructive force.
-					PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_Teo_T_Boss_Skill_03, 0);
-					SkillEngine.getInstance().getSkill(getOwner(), 19567, 46, getOwner()).useNoAnimationSkill(); // Gravitational Shift.
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnDimensionalIntruder(p);
-							}
+							spawnDimensionalIntruder(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(6, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(6, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnDimensionalIntruder(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnDimensionalIntruder(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -163,27 +159,23 @@ public class Enraged_Inferno_DemonAI2 extends AggressiveNpcAI2
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
+					switch (Rnd.get(1, 2))
 					{
-						switch (Rnd.get(1, 2))
+						case 1:
 						{
-							case 1:
-							{
-								spawn(237374, x, y, z, (byte) 0); // Mutated Dimensional Intruder.
-								spawn(856597, x, y, z, (byte) 0);
-								break;
-							}
-							case 2:
-							{
-								spawn(237381, x, y, z, (byte) 0); // Wary Dimensional Intruder.
-								spawn(856597, x, y, z, (byte) 0);
-								break;
-							}
+							spawn(237374, x, y, z, (byte) 0); // Mutated Dimensional Intruder.
+							spawn(856597, x, y, z, (byte) 0);
+							break;
+						}
+						case 2:
+						{
+							spawn(237381, x, y, z, (byte) 0); // Wary Dimensional Intruder.
+							spawn(856597, x, y, z, (byte) 0);
+							break;
 						}
 					}
 				}
@@ -210,7 +202,7 @@ public class Enraged_Inferno_DemonAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((phaseTask != null) && !phaseTask.isDone())
 		{

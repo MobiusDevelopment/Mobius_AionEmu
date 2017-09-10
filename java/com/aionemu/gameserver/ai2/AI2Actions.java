@@ -38,9 +38,9 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class AI2Actions
 {
-	
 	/**
 	 * Despawn and delete owner
+	 * @param ai2
 	 */
 	public static void deleteOwner(AbstractAI ai2)
 	{
@@ -49,6 +49,8 @@ public class AI2Actions
 	
 	/**
 	 * Target will die with all notifications using ai's owner as the last attacker
+	 * @param ai2
+	 * @param target
 	 */
 	public static void killSilently(AbstractAI ai2, Creature target)
 	{
@@ -57,6 +59,8 @@ public class AI2Actions
 	
 	/**
 	 * AI's owner will die from specified attacker
+	 * @param ai2
+	 * @param attacker
 	 */
 	public static void dieSilently(AbstractAI ai2, Creature attacker)
 	{
@@ -65,6 +69,8 @@ public class AI2Actions
 	
 	/**
 	 * Use skill or add intention to use (will be implemented later)
+	 * @param ai2
+	 * @param skillId
 	 */
 	public static void useSkill(AbstractAI ai2, int skillId)
 	{
@@ -73,6 +79,9 @@ public class AI2Actions
 	
 	/**
 	 * Effect will be created and applied to target with 100% success
+	 * @param ai2
+	 * @param template
+	 * @param target
 	 */
 	public static void applyEffect(AbstractAI ai2, SkillTemplate template, Creature target)
 	{
@@ -137,7 +146,7 @@ public class AI2Actions
 		private final boolean success;
 		private final QuestEnv env;
 		
-		private SelectDialogResult(boolean success, QuestEnv env)
+		SelectDialogResult(boolean success, QuestEnv env)
 		{
 			this.success = success;
 			this.env = env;
@@ -157,6 +166,11 @@ public class AI2Actions
 	
 	/**
 	 * Add RequestResponseHandler to player with senderId equal to objectId of AI owner
+	 * @param ai2
+	 * @param player
+	 * @param requestId
+	 * @param request
+	 * @param requestParams
 	 */
 	public static void addRequest(AbstractAI ai2, Player player, int requestId, AI2Request request, Object... requestParams)
 	{
@@ -165,6 +179,13 @@ public class AI2Actions
 	
 	/**
 	 * Add RequestResponseHandler to player, which cancels request on movement
+	 * @param ai2
+	 * @param player
+	 * @param requestId
+	 * @param senderId
+	 * @param range
+	 * @param request
+	 * @param requestParams
 	 */
 	public static void addRequest(AbstractAI ai2, Player player, int requestId, int senderId, int range, AI2Request request, Object... requestParams)
 	{
@@ -205,6 +226,12 @@ public class AI2Actions
 	
 	/**
 	 * Add RequestResponseHandler to player
+	 * @param ai2
+	 * @param player
+	 * @param requestId
+	 * @param senderId
+	 * @param request
+	 * @param requestParams
 	 */
 	public static void addRequest(AbstractAI ai2, Player player, int requestId, int senderId, AI2Request request, Object... requestParams)
 	{

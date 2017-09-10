@@ -97,42 +97,38 @@ public class InvincibleShabokanAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				sendMsg(1500702);
+				spawn(283081, 1216.7513f, 1069.1871f, 491.32993f, (byte) 59); // Shabokhan EarthQuake.
+				SkillEngine.getInstance().getSkill(getOwner(), 20717, 10, getOwner()).useNoAnimationSkill(); // Tremor.
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					sendMsg(1500702);
-					spawn(283081, 1216.7513f, 1069.1871f, 491.32993f, (byte) 59); // Shabokhan EarthQuake.
-					SkillEngine.getInstance().getSkill(getOwner(), 20717, 10, getOwner()).useNoAnimationSkill(); // Tremor.
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnShabokhanSink(p);
-							}
+							spawnShabokhanSink(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(6, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(6, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnShabokhanSink(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnShabokhanSink(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -147,15 +143,11 @@ public class InvincibleShabokanAI2 extends AggressiveNpcAI2
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(283083, x, y, z, (byte) 0); // Shabokhan Sink.
-					}
+					spawn(283083, x, y, z, (byte) 0); // Shabokhan Sink.
 				}
 			}, 3000);
 		}
@@ -180,7 +172,7 @@ public class InvincibleShabokanAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((phaseTask != null) && !phaseTask.isDone())
 		{

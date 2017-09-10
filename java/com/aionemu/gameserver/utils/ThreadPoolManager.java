@@ -49,7 +49,7 @@ public final class ThreadPoolManager
 	private final ThreadPoolExecutor longRunningPool;
 	private final ForkJoinPool workStealingPool;
 	
-	private ThreadPoolManager()
+	ThreadPoolManager()
 	{
 		final int instantPoolSize = Math.max(1, ThreadConfig.THREAD_POOL_SIZE) * Runtime.getRuntime().availableProcessors();
 		instantPool = new ThreadPoolExecutor(instantPoolSize, instantPoolSize, 0, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(100000), new PriorityThreadFactory("InstantPool", ThreadConfig.USE_PRIORITIES ? 7 : Thread.NORM_PRIORITY));
@@ -64,14 +64,7 @@ public final class ThreadPoolManager
 		final WorkStealThreadFactory forkJoinThreadFactory = new WorkStealThreadFactory("ForkJoinPool");
 		workStealingPool = new ForkJoinPool(Runtime.getRuntime().availableProcessors(), forkJoinThreadFactory, new ThreadUncaughtExceptionHandler(), true);
 		forkJoinThreadFactory.setDefaultPool(workStealingPool);
-		final Thread maintainThread = new Thread(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				purge();
-			}
-		}, "ThreadPool Purge Task");
+		final Thread maintainThread = new Thread((Runnable) () -> purge(), "ThreadPool Purge Task");
 		maintainThread.setDaemon(true);
 		scheduleAtFixedRate(maintainThread, 500000, 500000);
 	}
@@ -83,7 +76,7 @@ public final class ThreadPoolManager
 	
 	private static final class ThreadPoolRunnableWrapper extends RunnableWrapper
 	{
-		private ThreadPoolRunnableWrapper(Runnable runnable)
+		ThreadPoolRunnableWrapper(Runnable runnable)
 		{
 			super(runnable, ThreadConfig.MAXIMUM_RUNTIME_IN_MILLISEC_WITHOUT_WARNING);
 		}
@@ -257,7 +250,7 @@ public final class ThreadPoolManager
 	
 	private static final class SingletonHolder
 	{
-		private static final ThreadPoolManager INSTANCE = new ThreadPoolManager();
+		static final ThreadPoolManager INSTANCE = new ThreadPoolManager();
 	}
 	
 	public static ThreadPoolManager getInstance()

@@ -21,12 +21,10 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.dataholders.DataManager;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.springzone.SpringObject;
 import com.aionemu.gameserver.model.templates.springzones.SpringTemplate;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.MathUtil;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -36,9 +34,9 @@ import javolution.util.FastList;
 public class SpringZoneService
 {
 	Logger log = LoggerFactory.getLogger(SpringZoneService.class);
-	private final FastList<SpringObject> springObjects = new FastList<>();
+	final FastList<SpringObject> springObjects = new FastList<>();
 	
-	private SpringZoneService()
+	SpringZoneService()
 	{
 		for (SpringTemplate t : DataManager.SPRING_OBJECTS_DATA.getSpringObject())
 		{
@@ -51,25 +49,17 @@ public class SpringZoneService
 	
 	private void startSpring()
 	{
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			for (SpringObject obj : springObjects)
 			{
-				for (SpringObject obj : springObjects)
+				obj.getKnownList().doOnAllPlayers(player ->
 				{
-					obj.getKnownList().doOnAllPlayers(new Visitor<Player>()
-					{
-						@Override
-						public void visit(Player player)
-						{
-							if ((MathUtil.isIn3dRange(obj, player, obj.getRange())) && (!player.getEffectController().hasAbnormalEffect(17560)))
-							{ // Bless Of Guardian Spring.
-								SkillEngine.getInstance().getSkill(player, 17560, 1, player).useNoAnimationSkill();
-							}
-						}
-					});
-				}
+					if ((MathUtil.isIn3dRange(obj, player, obj.getRange())) && (!player.getEffectController().hasAbnormalEffect(17560)))
+					{ // Bless Of Guardian Spring.
+						SkillEngine.getInstance().getSkill(player, 17560, 1, player).useNoAnimationSkill();
+					}
+				});
 			}
 		}, 1000, 1000);
 	}

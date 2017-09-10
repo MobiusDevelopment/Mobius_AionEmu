@@ -57,7 +57,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class MailService
 {
-	
 	private static final Logger log = LoggerFactory.getLogger("MAIL_LOG");
 	protected Queue<Player> newPlayers;
 	
@@ -80,11 +79,10 @@ public class MailService
 	 * @param attachedItemObjId
 	 * @param attachedItemCount
 	 * @param attachedKinahCount
-	 * @param express
+	 * @param letterType
 	 */
 	public void sendMail(Player sender, String recipientName, String title, String message, int attachedItemObjId, int attachedItemCount, int attachedKinahCount, LetterType letterType)
 	{
-		
 		if ((letterType == LetterType.BLACKCLOUD) || (recipientName.length() > 16))
 		{
 			return;
@@ -398,7 +396,7 @@ public class MailService
 	
 	/**
 	 * @param player
-	 * @param letterId
+	 * @param mailObjId
 	 */
 	public void deleteMail(Player player, int[] mailObjId)
 	{
@@ -496,10 +494,9 @@ public class MailService
 	 */
 	private class MailLoadTask implements Runnable
 	{
-		
 		private final Player player;
 		
-		private MailLoadTask(Player player)
+		MailLoadTask(Player player)
 		{
 			this.player = player;
 		}
@@ -511,14 +508,11 @@ public class MailService
 			PacketSendUtility.sendPacket(player, new SM_MAIL_SERVICE(player.getMailbox()));
 			HousingBidService.getInstance().onPlayerLogin(player);
 		}
-		
 	}
 	
 	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final MailService instance = new MailService();
 	}
-	
 }

@@ -57,8 +57,7 @@ import javolution.util.FastMap;
  */
 public class MotionLoggingService
 {
-	
-	private static Logger log = LoggerFactory.getLogger(MotionLoggingService.class);
+	static Logger log = LoggerFactory.getLogger(MotionLoggingService.class);
 	
 	private final FastMap<String, MotionLog> motionsMap = new FastMap<String, MotionLog>().shared();
 	
@@ -619,10 +618,7 @@ public class MotionLoggingService
 			motionsMap.put(motionName, motionLog);
 			return result;
 		}
-		else
-		{
-			return motionsMap.get(motionName).addSkillTime(weapon, new SkillTime(skillId, currentAttackSpeed, race, gender, clientTime));
-		}
+		return motionsMap.get(motionName).addSkillTime(weapon, new SkillTime(skillId, currentAttackSpeed, race, gender, clientTime));
 	}
 	
 	public void setAdvancedLog(boolean bol)
@@ -649,6 +645,10 @@ public class MotionLoggingService
 	private class MotionLog
 	{
 		private final FastMap<WeaponTypeWrapper, List<SkillTime>> motionsForWeapons = new FastMap<>();
+		
+		public MotionLog()
+		{
+		}
 		
 		public FastMap<WeaponTypeWrapper, List<SkillTime>> getMotionLog()
 		{
@@ -862,6 +862,7 @@ public class MotionLoggingService
 		/**
 		 * @param race the race to set
 		 */
+		@SuppressWarnings("unused")
 		public void setRace(Race race)
 		{
 			this.race = race;
@@ -878,6 +879,7 @@ public class MotionLoggingService
 		/**
 		 * @param gender the gender to set
 		 */
+		@SuppressWarnings("unused")
 		public void setGender(Gender gender)
 		{
 			this.gender = gender;
@@ -937,7 +939,7 @@ public class MotionLoggingService
 		}
 	}
 	
-	private int calculateFrequency(List<Integer> list, int value)
+	int calculateFrequency(List<Integer> list, int value)
 	{
 		int frequency = 0;
 		

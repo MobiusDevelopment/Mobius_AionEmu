@@ -38,7 +38,6 @@ import com.aionemu.commons.utils.concurrent.ScheduledFutureWrapper;
  */
 public final class ThreadPoolManager
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(ThreadPoolManager.class);
 	public static final long MAXIMUM_RUNTIME_IN_MILLISEC_WITHOUT_WARNING = 5000;
 	private static final long MAX_DELAY = TimeUnit.NANOSECONDS.toMillis(Long.MAX_VALUE - System.nanoTime()) / 2;
@@ -46,9 +45,8 @@ public final class ThreadPoolManager
 	private final ThreadPoolExecutor instantPool;
 	private final ThreadPoolExecutor longRunningPool;
 	
-	private ThreadPoolManager()
+	ThreadPoolManager()
 	{
-		
 		final int threadpoolsize = 2 + (Runtime.getRuntime().availableProcessors() * 4);
 		final int instantPoolSize = Math.max(1, threadpoolsize / 3);
 		
@@ -64,14 +62,7 @@ public final class ThreadPoolManager
 		longRunningPool.setRejectedExecutionHandler(new AionRejectedExecutionHandler());
 		longRunningPool.prestartAllCoreThreads();
 		
-		scheduleAtFixedRate(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				purge();
-			}
-		}, 150000, 150000);
+		scheduleAtFixedRate(() -> purge(), 150000, 150000);
 		
 		log.info("ThreadPoolManager: Initialized with " + scheduledPool.getPoolSize() + " scheduler, " + instantPool.getPoolSize() + " instant, " + longRunningPool.getPoolSize() + " long running thread(s).");
 	}
@@ -83,8 +74,7 @@ public final class ThreadPoolManager
 	
 	private static final class ThreadPoolRunnableWrapper extends RunnableWrapper
 	{
-		
-		private ThreadPoolRunnableWrapper(Runnable runnable)
+		ThreadPoolRunnableWrapper(Runnable runnable)
 		{
 			super(runnable, MAXIMUM_RUNTIME_IN_MILLISEC_WITHOUT_WARNING);
 		}
@@ -295,8 +285,7 @@ public final class ThreadPoolManager
 	
 	private static final class SingletonHolder
 	{
-		
-		private static final ThreadPoolManager INSTANCE = new ThreadPoolManager();
+		static final ThreadPoolManager INSTANCE = new ThreadPoolManager();
 	}
 	
 	public static ThreadPoolManager getInstance()

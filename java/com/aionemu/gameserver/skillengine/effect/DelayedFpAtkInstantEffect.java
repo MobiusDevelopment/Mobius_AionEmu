@@ -46,21 +46,16 @@ public class DelayedFpAtkInstantEffect extends EffectTemplate
 	@Override
 	public void applyEffect(Effect effect)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			
-			@Override
-			public void run()
+			if (effect.getEffector().isEnemy(effect.getEffected()))
 			{
-				if (effect.getEffector().isEnemy(effect.getEffected()))
-				{
-					DelayedFpAtkInstantEffect.this.calculateAndApplyDamage(effect);
-				}
+				calculateAndApplyDamage(effect);
 			}
 		}, delay);
 	}
 	
-	private void calculateAndApplyDamage(Effect effect)
+	void calculateAndApplyDamage(Effect effect)
 	{
 		if (!(effect.getEffected() instanceof Player))
 		{

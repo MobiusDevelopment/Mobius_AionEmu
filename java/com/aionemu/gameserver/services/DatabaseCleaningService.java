@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class DatabaseCleaningService
 {
-	
 	private final Logger log = LoggerFactory.getLogger(DatabaseCleaningService.class);
 	private final PlayerDAO dao = DAOManager.getDAO(PlayerDAO.class);
 	
@@ -141,12 +140,11 @@ public class DatabaseCleaningService
 	
 	private class Worker implements Runnable
 	{
+		final List<Integer> ids = new ArrayList<>();
+		int deletedChars = 0;
+		boolean _READY = false;
 		
-		private final List<Integer> ids = new ArrayList<>();
-		private int deletedChars = 0;
-		private boolean _READY = false;
-		
-		private Worker()
+		Worker()
 		{
 		}
 		

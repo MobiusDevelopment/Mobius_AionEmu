@@ -16,7 +16,6 @@
  */
 package com.aionemu.gameserver.services;
 
-import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -55,7 +54,7 @@ public class TownService
 		return SingletonHolder.instance;
 	}
 	
-	private TownService()
+	TownService()
 	{
 		elyosTowns = DAOManager.getDAO(TownDAO.class).load(Race.ELYOS);
 		asmosTowns = DAOManager.getDAO(TownDAO.class).load(Race.ASMODIANS);
@@ -69,22 +68,19 @@ public class TownService
 					{
 						continue;
 					}
-					else
+					final Race townRace = DataManager.NPC_DATA.getNpcTemplate(land.getManagerNpcId()).getTribe() == TribeClass.GENERAL ? Race.ELYOS : Race.ASMODIANS;
+					if (((townRace == Race.ELYOS) && !elyosTowns.containsKey(address.getTownId())) || ((townRace == Race.ASMODIANS) && !asmosTowns.containsKey(address.getTownId())))
 					{
-						final Race townRace = DataManager.NPC_DATA.getNpcTemplate(land.getManagerNpcId()).getTribe() == TribeClass.GENERAL ? Race.ELYOS : Race.ASMODIANS;
-						if (((townRace == Race.ELYOS) && !elyosTowns.containsKey(address.getTownId())) || ((townRace == Race.ASMODIANS) && !asmosTowns.containsKey(address.getTownId())))
+						final Town town = new Town(address.getTownId(), townRace);
+						if (townRace == Race.ELYOS)
 						{
-							final Town town = new Town(address.getTownId(), townRace);
-							if (townRace == Race.ELYOS)
-							{
-								elyosTowns.put(town.getId(), town);
-							}
-							else if (townRace == Race.ASMODIANS)
-							{
-								asmosTowns.put(town.getId(), town);
-							}
-							DAOManager.getDAO(TownDAO.class).store(town);
+							elyosTowns.put(town.getId(), town);
 						}
+						else if (townRace == Race.ASMODIANS)
+						{
+							asmosTowns.put(town.getId(), town);
+						}
+						DAOManager.getDAO(TownDAO.class).store(town);
 					}
 				}
 			}
@@ -99,10 +95,7 @@ public class TownService
 		{
 			return elyosTowns.get(townId);
 		}
-		else
-		{
-			return asmosTowns.get(townId);
-		}
+		return asmosTowns.get(townId);
 	}
 	
 	public int getTownResidence(Player player)
@@ -112,10 +105,7 @@ public class TownService
 		{
 			return 0;
 		}
-		else
-		{
-			return house.getAddress().getTownId();
-		}
+		return house.getAddress().getTownId();
 	}
 	
 	public int getTownIdByPosition(Creature creature)
@@ -133,16 +123,12 @@ public class TownService
 		{
 			return 0;
 		}
-		else
+		for (ZoneInstance zone : region.getZones(creature))
 		{
-			final List<ZoneInstance> zones = region.getZones(creature);
-			for (ZoneInstance zone : zones)
+			townId = zone.getTownId();
+			if (townId > 0)
 			{
-				townId = zone.getTownId();
-				if (townId > 0)
-				{
-					break;
-				}
+				break;
 			}
 		}
 		return townId;

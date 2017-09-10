@@ -81,40 +81,36 @@ public class OmegaAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				SkillEngine.getInstance().getSkill(getOwner(), 18671, 60, getOwner()).useNoAnimationSkill(); // Magic Ward.
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 18671, 60, getOwner()).useNoAnimationSkill(); // Magic Ward.
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnOmegaClone(p);
-							}
+							spawnOmegaClone(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(6, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(6, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnOmegaClone(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnOmegaClone(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -129,50 +125,46 @@ public class OmegaAI2 extends AggressiveNpcAI2
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
+					switch (Rnd.get(1, 5))
 					{
-						switch (Rnd.get(1, 5))
+						case 1:
 						{
-							case 1:
-							{
-								// Omega summons a creature.
-								NpcShoutsService.getInstance().sendMsg(getOwner(), 1400606, 0);
-								spawn(281945, x, y, z, (byte) 0); // Clone Of Power.
-								break;
-							}
-							case 2:
-							{
-								// Omega summons a powerful creature.
-								NpcShoutsService.getInstance().sendMsg(getOwner(), 1400607, 0);
-								spawn(281946, x, y, z, (byte) 0); // Clone Of Explosion.
-								break;
-							}
-							case 3:
-							{
-								// Omega summons a healing creature.
-								NpcShoutsService.getInstance().sendMsg(getOwner(), 1400608, 0);
-								spawn(281947, x, y, z, (byte) 0); // Clone Of Healing.
-								break;
-							}
-							case 4:
-							{
-								// Omega summons a creature that creates barriers.
-								NpcShoutsService.getInstance().sendMsg(getOwner(), 1400609, 0);
-								spawn(281948, x, y, z, (byte) 0); // Clone Of Physical Barrier.
-								break;
-							}
-							case 5:
-							{
-								// Omega summons a creature that creates barriers.
-								NpcShoutsService.getInstance().sendMsg(getOwner(), 1400609, 0);
-								spawn(281949, x, y, z, (byte) 0); // Clone Of Magical Barrier.
-								break;
-							}
+							// Omega summons a creature.
+							NpcShoutsService.getInstance().sendMsg(getOwner(), 1400606, 0);
+							spawn(281945, x, y, z, (byte) 0); // Clone Of Power.
+							break;
+						}
+						case 2:
+						{
+							// Omega summons a powerful creature.
+							NpcShoutsService.getInstance().sendMsg(getOwner(), 1400607, 0);
+							spawn(281946, x, y, z, (byte) 0); // Clone Of Explosion.
+							break;
+						}
+						case 3:
+						{
+							// Omega summons a healing creature.
+							NpcShoutsService.getInstance().sendMsg(getOwner(), 1400608, 0);
+							spawn(281947, x, y, z, (byte) 0); // Clone Of Healing.
+							break;
+						}
+						case 4:
+						{
+							// Omega summons a creature that creates barriers.
+							NpcShoutsService.getInstance().sendMsg(getOwner(), 1400609, 0);
+							spawn(281948, x, y, z, (byte) 0); // Clone Of Physical Barrier.
+							break;
+						}
+						case 5:
+						{
+							// Omega summons a creature that creates barriers.
+							NpcShoutsService.getInstance().sendMsg(getOwner(), 1400609, 0);
+							spawn(281949, x, y, z, (byte) 0); // Clone Of Magical Barrier.
+							break;
 						}
 					}
 				}
@@ -193,7 +185,7 @@ public class OmegaAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((phaseTask != null) && !phaseTask.isDone())
 		{

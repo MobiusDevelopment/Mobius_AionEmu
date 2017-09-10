@@ -16,7 +16,6 @@
  */
 package com.aionemu.gameserver.network.aion;
 
-import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.util.concurrent.ScheduledFuture;
@@ -209,9 +208,8 @@ public class AionConnection extends AConnection
 	 * Constructor
 	 * @param sc
 	 * @param d
-	 * @throws IOException
 	 */
-	public AionConnection(SocketChannel sc, Dispatcher d) throws IOException
+	public AionConnection(SocketChannel sc, Dispatcher d)
 	{
 		super(sc, d, 8192 * 4, 8192 * 4);
 		final AionPacketHandlerFactory aionPacketHandlerFactory = AionPacketHandlerFactory.getInstance();
@@ -602,14 +600,18 @@ public class AionConnection extends AConnection
 		private ScheduledFuture<?> task;
 		private boolean started;
 		
-		private void start()
+		public PingChecker()
+		{
+		}
+		
+		void start()
 		{
 			Preconditions.checkState(!started, "PingChecker can be started only one time!");
 			started = true;
 			task = ThreadPoolManager.getInstance().scheduleAtFixedRate(this, checkTime, checkTime);
 		}
 		
-		private void stop()
+		void stop()
 		{
 			task.cancel(false);
 		}

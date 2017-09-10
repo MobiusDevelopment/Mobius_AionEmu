@@ -65,43 +65,39 @@ public class AnimationAddAction extends AbstractItemAction
 	{
 		player.getController().cancelUseItem();
 		PacketSendUtility.sendPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 1000, 0, 0));
-		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable()
+		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (player.getInventory().decreaseItemCount(parentItem, 1) != 0)
 			{
-				if (player.getInventory().decreaseItemCount(parentItem, 1) != 0)
-				{
-					return;
-				}
-				if (idle != null)
-				{
-					addMotion(player, idle);
-				}
-				if (run != null)
-				{
-					addMotion(player, run);
-				}
-				if (jump != null)
-				{
-					addMotion(player, jump);
-				}
-				if (rest != null)
-				{
-					addMotion(player, rest);
-				}
-				if (shop != null)
-				{
-					addMotion(player, shop);
-				}
-				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 0, 1, 0));
-				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300423, new DescriptionId(parentItem.getItemTemplate().getNameId())));
-				PacketSendUtility.broadcastPacket(player, new SM_MOTION(player.getObjectId(), player.getMotions().getActiveMotions()), false);
+				return;
 			}
+			if (idle != null)
+			{
+				addMotion(player, idle);
+			}
+			if (run != null)
+			{
+				addMotion(player, run);
+			}
+			if (jump != null)
+			{
+				addMotion(player, jump);
+			}
+			if (rest != null)
+			{
+				addMotion(player, rest);
+			}
+			if (shop != null)
+			{
+				addMotion(player, shop);
+			}
+			PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 0, 1, 0));
+			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300423, new DescriptionId(parentItem.getItemTemplate().getNameId())));
+			PacketSendUtility.broadcastPacket(player, new SM_MOTION(player.getObjectId(), player.getMotions().getActiveMotions()), false);
 		}, 1000));
 	}
 	
-	private void addMotion(Player player, int motionId)
+	void addMotion(Player player, int motionId)
 	{
 		final Motion motion = new Motion(motionId, minutes == null ? 0 : (int) (System.currentTimeMillis() / 1000) + (minutes * 60), true);
 		player.getMotions().add(motion, true);

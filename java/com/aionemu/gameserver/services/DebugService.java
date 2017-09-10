@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class DebugService
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(DebugService.class);
 	
 	private static final int ANALYZE_PLAYERS_INTERVAL = 30 * 60 * 1000;
@@ -43,20 +42,11 @@ public class DebugService
 	
 	private DebugService()
 	{
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				analyzeWorldPlayers();
-			}
-			
-		}, ANALYZE_PLAYERS_INTERVAL, ANALYZE_PLAYERS_INTERVAL);
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> analyzeWorldPlayers(), ANALYZE_PLAYERS_INTERVAL, ANALYZE_PLAYERS_INTERVAL);
 		log.info("DebugService started. Analyze iterval: " + ANALYZE_PLAYERS_INTERVAL);
 	}
 	
-	private void analyzeWorldPlayers()
+	void analyzeWorldPlayers()
 	{
 		log.info("Starting analysis of world players at " + System.currentTimeMillis());
 		
@@ -90,7 +80,6 @@ public class DebugService
 	@SuppressWarnings("synthetic-access")
 	private static class SingletonHolder
 	{
-		
 		protected static final DebugService instance = new DebugService();
 	}
 }

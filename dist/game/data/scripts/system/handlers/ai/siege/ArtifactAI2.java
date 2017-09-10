@@ -49,7 +49,6 @@ import com.aionemu.gameserver.skillengine.properties.TargetSpeciesAttribute;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler (Encom)
@@ -57,7 +56,7 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 @AIName("artifact")
 public class ArtifactAI2 extends NpcAI2
 {
-	private final Map<Integer, ItemUseObserver> observers = new HashMap<>();
+	final Map<Integer, ItemUseObserver> observers = new HashMap<>();
 	
 	@Override
 	protected SiegeSpawnTemplate getSpawnTemplate()
@@ -137,14 +136,10 @@ public class ArtifactAI2 extends NpcAI2
 		final SM_SYSTEM_MESSAGE startMessage = SM_SYSTEM_MESSAGE.STR_ARTIFACT_CASTING(player.getRace().getRaceDescriptionId(), player.getName(), new DescriptionId(skillTemplate.getNameId()));
 		loc.setStatus(ArtifactStatus.ACTIVATION);
 		final SM_ABYSS_ARTIFACT_INFO3 artifactInfo = new SM_ABYSS_ARTIFACT_INFO3(loc.getLocationId());
-		player.getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+		player.getPosition().getWorldMapInstance().doOnAllPlayers(player1 ->
 		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, startMessage);
-				PacketSendUtility.sendPacket(player, artifactInfo);
-			}
+			PacketSendUtility.sendPacket(player1, startMessage);
+			PacketSendUtility.sendPacket(player1, artifactInfo);
 		});
 		PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), getObjectId(), 10000, 1));
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.START_QUESTLOOT, 0, getObjectId()), true);
@@ -159,79 +154,63 @@ public class ArtifactAI2 extends NpcAI2
 				final SM_SYSTEM_MESSAGE message = SM_SYSTEM_MESSAGE.STR_ARTIFACT_CANCELED(loc.getRace().getDescriptionId(), new DescriptionId(skillTemplate.getNameId()));
 				loc.setStatus(ArtifactStatus.IDLE);
 				final SM_ABYSS_ARTIFACT_INFO3 artifactInfo = new SM_ABYSS_ARTIFACT_INFO3(loc.getLocationId());
-				getOwner().getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+				getOwner().getPosition().getWorldMapInstance().doOnAllPlayers(player1 ->
 				{
-					@Override
-					public void visit(Player player)
-					{
-						PacketSendUtility.sendPacket(player, message);
-						PacketSendUtility.sendPacket(player, artifactInfo);
-					}
+					PacketSendUtility.sendPacket(player1, message);
+					PacketSendUtility.sendPacket(player1, artifactInfo);
 				});
 			}
 		};
 		observers.put(player.getObjectId(), observer);
 		player.getObserveController().attach(observer);
-		player.getController().addTask(TaskId.ACTION_ITEM_NPC, ThreadPoolManager.getInstance().schedule(new Runnable()
+		player.getController().addTask(TaskId.ACTION_ITEM_NPC, ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			final ItemUseObserver observer1 = observers.remove(player.getObjectId());
+			if (observer1 != null)
 			{
-				final ItemUseObserver observer = observers.remove(player.getObjectId());
-				if (observer != null)
+				player.getObserveController().removeObserver(observer1);
+			}
+			PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), getObjectId(), 10000, 0));
+			PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.END_QUESTLOOT, 0, getObjectId()), true);
+			if (!player.getInventory().decreaseByItemId(itemId, count))
+			{
+				return;
+			}
+			final SM_SYSTEM_MESSAGE message = SM_SYSTEM_MESSAGE.STR_ARTIFACT_CORE_CASTING(loc.getRace().getDescriptionId(), new DescriptionId(skillTemplate.getNameId()));
+			loc.setStatus(ArtifactStatus.CASTING);
+			final SM_ABYSS_ARTIFACT_INFO3 artifactInfo1 = new SM_ABYSS_ARTIFACT_INFO3(loc.getLocationId());
+			player.getPosition().getWorldMapInstance().doOnAllPlayers(player1 ->
+			{
+				PacketSendUtility.sendPacket(player1, message);
+				PacketSendUtility.sendPacket(player1, artifactInfo1);
+			});
+			loc.setLastActivation(System.currentTimeMillis());
+			if (loc.getTemplate().getRepeatCount() == 1)
+			{
+				ThreadPoolManager.getInstance().schedule(new ArtifactUseSkill(loc, player, skillTemplate), 13000);
+			}
+			else
+			{
+				final ScheduledFuture<?> s = ThreadPoolManager.getInstance().scheduleAtFixedRate(new ArtifactUseSkill(loc, player, skillTemplate), 13000, loc.getTemplate().getRepeatInterval() * 1000);
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					player.getObserveController().removeObserver(observer);
-				}
-				PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), getObjectId(), 10000, 0));
-				PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.END_QUESTLOOT, 0, getObjectId()), true);
-				if (!player.getInventory().decreaseByItemId(itemId, count))
-				{
-					return;
-				}
-				final SM_SYSTEM_MESSAGE message = SM_SYSTEM_MESSAGE.STR_ARTIFACT_CORE_CASTING(loc.getRace().getDescriptionId(), new DescriptionId(skillTemplate.getNameId()));
-				loc.setStatus(ArtifactStatus.CASTING);
-				final SM_ABYSS_ARTIFACT_INFO3 artifactInfo = new SM_ABYSS_ARTIFACT_INFO3(loc.getLocationId());
-				player.getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						PacketSendUtility.sendPacket(player, message);
-						PacketSendUtility.sendPacket(player, artifactInfo);
-					}
-				});
-				loc.setLastActivation(System.currentTimeMillis());
-				if (loc.getTemplate().getRepeatCount() == 1)
-				{
-					ThreadPoolManager.getInstance().schedule(new ArtifactUseSkill(loc, player, skillTemplate), 13000);
-				}
-				else
-				{
-					final ScheduledFuture<?> s = ThreadPoolManager.getInstance().scheduleAtFixedRate(new ArtifactUseSkill(loc, player, skillTemplate), 13000, loc.getTemplate().getRepeatInterval() * 1000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							s.cancel(true);
-							loc.setStatus(ArtifactStatus.IDLE);
-						}
-					}, 13000 + (loc.getTemplate().getRepeatInterval() * loc.getTemplate().getRepeatCount() * 1000));
-				}
+					s.cancel(true);
+					loc.setStatus(ArtifactStatus.IDLE);
+				}, 13000 + (loc.getTemplate().getRepeatInterval() * loc.getTemplate().getRepeatCount() * 1000));
 			}
 		}, 10000));
 	}
 	
 	class ArtifactUseSkill implements Runnable
 	{
-		private final ArtifactLocation artifact;
+		final ArtifactLocation artifact;
 		private final Player player;
 		private final SkillTemplate skill;
 		private int runCount = 1;
-		private final SM_ABYSS_ARTIFACT_INFO3 pkt;
-		private final SM_SYSTEM_MESSAGE message;
+		final SM_ABYSS_ARTIFACT_INFO3 pkt;
+		final SM_SYSTEM_MESSAGE message;
 		
-		private ArtifactUseSkill(ArtifactLocation artifact, Player activator, SkillTemplate skill)
+		ArtifactUseSkill(ArtifactLocation artifact, Player activator, SkillTemplate skill)
 		{
 			this.artifact = artifact;
 			player = activator;
@@ -250,22 +229,18 @@ public class ArtifactAI2 extends NpcAI2
 			final boolean start = (runCount == 1);
 			final boolean end = (runCount == artifact.getTemplate().getRepeatCount());
 			runCount++;
-			player.getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+			player.getPosition().getWorldMapInstance().doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (start)
 				{
-					if (start)
-					{
-						PacketSendUtility.sendPacket(player, message);
-						artifact.setStatus(ArtifactStatus.ACTIVATED);
-						PacketSendUtility.sendPacket(player, pkt);
-					}
-					if (end)
-					{
-						artifact.setStatus(ArtifactStatus.IDLE);
-						PacketSendUtility.sendPacket(player, pkt);
-					}
+					PacketSendUtility.sendPacket(player, message);
+					artifact.setStatus(ArtifactStatus.ACTIVATED);
+					PacketSendUtility.sendPacket(player, pkt);
+				}
+				if (end)
+				{
+					artifact.setStatus(ArtifactStatus.IDLE);
+					PacketSendUtility.sendPacket(player, pkt);
 				}
 			});
 			final boolean pc = skill.getProperties().getTargetSpecies() == TargetSpeciesAttribute.PC;

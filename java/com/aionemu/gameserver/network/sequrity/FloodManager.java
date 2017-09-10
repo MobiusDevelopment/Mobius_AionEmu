@@ -75,6 +75,10 @@ public final class FloodManager
 		
 		private int _lastTick = getCurrentTick();
 		
+		public LogEntry()
+		{
+		}
+		
 		public int getCurrentTick()
 		{
 			return (int) ((System.currentTimeMillis() - ZERO) / _tickLength);
@@ -167,16 +171,16 @@ public final class FloodManager
 	
 	public final Logger log = LoggerFactory.getLogger(FloodManager.class);
 	
-	private static final long ZERO = System.currentTimeMillis() - TimeUnit.DAYS.toMillis(1);
+	static final long ZERO = System.currentTimeMillis() - TimeUnit.DAYS.toMillis(1);
 	
 	private final Map<String, LogEntry> _entries = new HashMap<>();
 	private final ReentrantLock _lock = new ReentrantLock();
 	
-	private final int _tickLength;
+	final int _tickLength;
 	
-	private final int _tickAmount;
+	final int _tickAmount;
 	
-	private final FloodFilter[] _filters;
+	final FloodFilter[] _filters;
 	
 	public FloodManager(int msecPerTick, FloodFilter... filters)
 	{
@@ -192,17 +196,10 @@ public final class FloodManager
 		
 		_tickAmount = max;
 		
-		NetFlusher.add(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				flush();
-			}
-		}, 60000);
+		NetFlusher.add(() -> flush(), 60000);
 	}
 	
-	private void flush()
+	void flush()
 	{
 		_lock.lock();
 		try

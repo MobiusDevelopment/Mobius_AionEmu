@@ -96,21 +96,17 @@ public class QueenAlukinaAI2 extends AggressiveNpcAI2
 			}
 			case 25:
 			{
-				task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+				task = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 				{
-					@Override
-					public void run()
+					if (isAlreadyDead())
 					{
-						if (isAlreadyDead())
-						{
-							cancelTask();
-						}
-						else
-						{
-							SkillEngine.getInstance().getSkill(getOwner(), 17901, 41, getTarget()).useNoAnimationSkill();
-							scheduleSkill(17902, 5500);
-							scheduleSkill(17902, 7500);
-						}
+						cancelTask();
+					}
+					else
+					{
+						SkillEngine.getInstance().getSkill(getOwner(), 17901, 41, getTarget()).useNoAnimationSkill();
+						scheduleSkill(17902, 5500);
+						scheduleSkill(17902, 7500);
 					}
 				}, 4500, 20000);
 				break;
@@ -118,7 +114,7 @@ public class QueenAlukinaAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void cancelTask()
+	void cancelTask()
 	{
 		if ((task != null) && !task.isCancelled())
 		{
@@ -128,15 +124,11 @@ public class QueenAlukinaAI2 extends AggressiveNpcAI2
 	
 	private void scheduleSkill(int skillId, int delay)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead())
 			{
-				if (!isAlreadyDead())
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), skillId, 41, getTarget()).useNoAnimationSkill();
-				}
+				SkillEngine.getInstance().getSkill(getOwner(), skillId, 41, getTarget()).useNoAnimationSkill();
 			}
 		}, delay);
 	}

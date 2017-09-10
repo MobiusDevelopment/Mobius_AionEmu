@@ -51,7 +51,6 @@ import com.google.common.base.Preconditions;
  */
 public abstract class AbstractAI implements AI2
 {
-	
 	private Creature owner;
 	private AIState currentState;
 	private AISubState currentSubState;
@@ -703,7 +702,7 @@ public abstract class AbstractAI implements AI2
 	 * @param heading
 	 * @return
 	 */
-	protected VisibleObject spawn(int npcId, float x, float y, float z, byte heading)
+	public VisibleObject spawn(int npcId, float x, float y, float z, byte heading)
 	{
 		return spawn(owner.getWorldId(), npcId, x, y, z, heading, 0, getPosition().getInstanceId());
 	}
@@ -718,7 +717,7 @@ public abstract class AbstractAI implements AI2
 	 * @param entityId
 	 * @return
 	 */
-	protected VisibleObject spawn(int npcId, float x, float y, float z, byte heading, int entityId)
+	public VisibleObject spawn(int npcId, float x, float y, float z, byte heading, int entityId)
 	{
 		return spawn(owner.getWorldId(), npcId, x, y, z, heading, entityId, getPosition().getInstanceId());
 	}

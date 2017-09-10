@@ -35,7 +35,7 @@ import system.handlers.ai.AggressiveNpcAI2;
 public class ChieftainMuhamurruAI2 extends AggressiveNpcAI2
 {
 	private Future<?> hideTask;
-	private final AtomicBoolean isHome = new AtomicBoolean(true);
+	final AtomicBoolean isHome = new AtomicBoolean(true);
 	
 	@Override
 	public void handleAttack(Creature creature)
@@ -48,7 +48,7 @@ public class ChieftainMuhamurruAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((hideTask != null) && !hideTask.isDone())
 		{
@@ -58,57 +58,49 @@ public class ChieftainMuhamurruAI2 extends AggressiveNpcAI2
 	
 	private void startHideTask()
 	{
-		hideTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		hideTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 19660, 60, getOwner()).useNoAnimationSkill();
-					sendMsg(1500398);
-					startEvent(2000, 1500399, 19661);
-					startEvent(6000, 1500399, 19661);
-					startEvent(8000, 1500400, 19662);
-				}
+				cancelPhaseTask();
+			}
+			else
+			{
+				SkillEngine.getInstance().getSkill(getOwner(), 19660, 60, getOwner()).useNoAnimationSkill();
+				sendMsg(1500398);
+				startEvent(2000, 1500399, 19661);
+				startEvent(6000, 1500399, 19661);
+				startEvent(8000, 1500400, 19662);
 			}
 		}, 14000, 14000);
 	}
 	
-	private void startEvent(int time, int msg, int skill)
+	void startEvent(int time, int msg, int skill)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead() && !isHome.get())
 			{
-				if (!isAlreadyDead() && !isHome.get())
+				Creature target = getOwner();
+				if (skill == 19661)
 				{
-					Creature target = getOwner();
-					if (skill == 19661)
+					final VisibleObject npcTarget = target.getTarget();
+					if ((npcTarget != null) && (npcTarget instanceof Creature))
 					{
-						final VisibleObject npcTarget = target.getTarget();
-						if ((npcTarget != null) && (npcTarget instanceof Creature))
-						{
-							target = (Creature) npcTarget;
-						}
+						target = (Creature) npcTarget;
 					}
-					if ((target != null) && isInRange(target, 5))
-					{
-						SkillEngine.getInstance().getSkill(getOwner(), skill, 60, target).useNoAnimationSkill();
-					}
-					getEffectController().removeEffect(19660);
-					sendMsg(msg);
 				}
+				if ((target != null) && isInRange(target, 5))
+				{
+					SkillEngine.getInstance().getSkill(getOwner(), skill, 60, target).useNoAnimationSkill();
+				}
+				getEffectController().removeEffect(19660);
+				sendMsg(msg);
 			}
 		}, time);
 	}
 	
-	private void sendMsg(int msg)
+	void sendMsg(int msg)
 	{
 		NpcShoutsService.getInstance().sendMsg(getOwner(), msg, getObjectId(), 0, 0);
 	}

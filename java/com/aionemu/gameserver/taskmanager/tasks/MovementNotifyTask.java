@@ -53,7 +53,7 @@ public class MovementNotifyTask extends AbstractFIFOPeriodicTaskManager<Creature
 	
 	private static final class SingletonHolder
 	{
-		private static final MovementNotifyTask INSTANCE = new MovementNotifyTask();
+		static final MovementNotifyTask INSTANCE = new MovementNotifyTask();
 	}
 	
 	public static MovementNotifyTask getInstance()
@@ -116,6 +116,10 @@ public class MovementNotifyTask extends AbstractFIFOPeriodicTaskManager<Creature
 	
 	private class MoveNotifier implements VisitorWithOwner<Npc, VisibleObject>
 	{
+		public MoveNotifier()
+		{
+		}
+		
 		@Override
 		public void visit(Npc object, VisibleObject owner)
 		{

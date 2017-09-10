@@ -55,19 +55,15 @@ public class AdjutantAnuhartAI2 extends AggressiveNpcAI2
 	
 	private void startBladeStormTask()
 	{
-		bladeStormTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		bladeStormTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelTask();
-				}
-				else
-				{
-					startBladeStormEvent();
-				}
+				cancelTask();
+			}
+			else
+			{
+				startBladeStormEvent();
 			}
 		}, 5000, 40000);
 	}
@@ -79,7 +75,7 @@ public class AdjutantAnuhartAI2 extends AggressiveNpcAI2
 		spawn(283099, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0); // Blade Storm.
 	}
 	
-	private void cancelTask()
+	void cancelTask()
 	{
 		if ((bladeStormTask != null) && !bladeStormTask.isCancelled())
 		{

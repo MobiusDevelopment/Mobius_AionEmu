@@ -83,40 +83,36 @@ public class OrissanAI2 extends AggressiveNpcAI2
 	
 	private void spawnFrigidCrystal()
 	{
-		crystalTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		crystalTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				SkillEngine.getInstance().getSkill(getOwner(), 21635, 46, getOwner()).useNoAnimationSkill(); // Summon Crystal.
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 21635, 46, getOwner()).useNoAnimationSkill(); // Summon Crystal.
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnFrigidCrystal(p);
-							}
+							spawnFrigidCrystal(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(6, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(6, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnFrigidCrystal(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnFrigidCrystal(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -131,15 +127,11 @@ public class OrissanAI2 extends AggressiveNpcAI2
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(855699, x, y, z, (byte) 0); // Frigid Crystal.
-					}
+					spawn(855699, x, y, z, (byte) 0); // Frigid Crystal.
 				}
 			}, 3000);
 		}
@@ -158,7 +150,7 @@ public class OrissanAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((crystalTask != null) && !crystalTask.isDone())
 		{

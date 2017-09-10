@@ -37,7 +37,6 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
@@ -161,24 +160,20 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 	
 	private void startSkillTask()
 	{
-		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelTask();
-				}
-				else
-				{
-					chooseRandomEvent();
-				}
+				cancelTask();
+			}
+			else
+			{
+				chooseRandomEvent();
 			}
 		}, 5000, 30000);
 	}
 	
-	private void cancelTask()
+	void cancelTask()
 	{
 		if ((skillTask != null) && !skillTask.isCancelled())
 		{
@@ -212,19 +207,15 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 			// Rise, my children, rise!
 			sendMsg(1500749, getObjectId(), false, 2000);
 			SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(284380, 244.12497f, 276.17401f, 242.625f, (byte) 0); // Modor's Bodyguard.
-						spawn(284381, 263.12497f, 276.17401f, 242.625f, (byte) 0); // Vengeful Reaper.
-						spawn(284382, 253.12497f, 277.17401f, 242.625f, (byte) 0); // Hoarfrost Acheron Drake.
-						World.getInstance().updatePosition(getOwner(), 284.34036f, 262.9162f, 248.851f, (byte) 63);
-						PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-					}
+					spawn(284380, 244.12497f, 276.17401f, 242.625f, (byte) 0); // Modor's Bodyguard.
+					spawn(284381, 263.12497f, 276.17401f, 242.625f, (byte) 0); // Vengeful Reaper.
+					spawn(284382, 253.12497f, 277.17401f, 242.625f, (byte) 0); // Hoarfrost Acheron Drake.
+					World.getInstance().updatePosition(getOwner(), 284.34036f, 262.9162f, 248.851f, (byte) 63);
+					PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 				}
 			}, 2000);
 		}
@@ -234,98 +225,86 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 	{
 		AI2Actions.targetSelf(Cursed_Queen_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			final float pos1[][] =
 			{
-				final float pos1[][] =
 				{
-					{
-						232.426f,
-						263.818f,
-						248.6419f,
-						115
-					},
-					{
-						271.426f,
-						230.243f,
-						250.9022f,
-						38
-					},
-					{
-						240.130f,
-						235.219f,
-						251.1553f,
-						17
-					}
-				};
-				final float pos[] = pos1[Rnd.get(0, 2)];
-				World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+					232.426f,
+					263.818f,
+					248.6419f,
+					115
+				},
+				{
+					271.426f,
+					230.243f,
+					250.9022f,
+					38
+				},
+				{
+					240.130f,
+					235.219f,
+					251.1553f,
+					17
+				}
+			};
+			final float pos[] = pos1[Rnd.get(0, 2)];
+			World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
 	private void Teleport3()
 	{
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			final float pos1[][] =
 			{
-				final float pos1[][] =
 				{
-					{
-						245.426f,
-						261.818f,
-						242.1f,
-						114
-					},
-					{
-						251.426f,
-						247.243f,
-						242.1f,
-						20
-					},
-					{
-						261.130f,
-						247.219f,
-						242.1f,
-						40
-					},
-					{
-						267.426f,
-						260.243f,
-						242.1f,
-						65
-					},
-					{
-						256.426f,
-						269.243f,
-						242.1f,
-						90
-					}
-				};
-				final float pos[] = pos1[Rnd.get(0, 4)];
-				World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+					245.426f,
+					261.818f,
+					242.1f,
+					114
+				},
+				{
+					251.426f,
+					247.243f,
+					242.1f,
+					20
+				},
+				{
+					261.130f,
+					247.219f,
+					242.1f,
+					40
+				},
+				{
+					267.426f,
+					260.243f,
+					242.1f,
+					65
+				},
+				{
+					256.426f,
+					269.243f,
+					242.1f,
+					90
+				}
+			};
+			final float pos[] = pos1[Rnd.get(0, 4)];
+			World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
 	private void Teleport4()
 	{
 		AI2Actions.targetSelf(Cursed_Queen_ModorAI2.this);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				World.getInstance().updatePosition(getOwner(), 256.4457f, 257.6867f, 242.30f, (byte) 115);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+			World.getInstance().updatePosition(getOwner(), 256.4457f, 257.6867f, 242.30f, (byte) 115);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -338,18 +317,14 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 		sendMsg(1500744, getObjectId(), false, 2000);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		EmoteManager.emoteStopAttacking(getOwner());
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				despawnNpcs(231304); // Cursed Queen Modor.
-				spawn(284383, 255.53348f, 293.31943f, 253.80542f, (byte) 89);
-				spawn(284383, 232.61987f, 263.7199f, 248.63794f, (byte) 114);
-				spawn(284383, 240.3703f, 235.24257f, 251.1346f, (byte) 18);
-				spawn(284383, 271.17352f, 230.53893f, 250.95367f, (byte) 42);
-				spawn(284383, 284.42993f, 262.8276f, 248.76474f, (byte) 63);
-			}
+			despawnNpcs(231304); // Cursed Queen Modor.
+			spawn(284383, 255.53348f, 293.31943f, 253.80542f, (byte) 89);
+			spawn(284383, 232.61987f, 263.7199f, 248.63794f, (byte) 114);
+			spawn(284383, 240.3703f, 235.24257f, 251.1346f, (byte) 18);
+			spawn(284383, 271.17352f, 230.53893f, 250.95367f, (byte) 42);
+			spawn(284383, 284.42993f, 262.8276f, 248.76474f, (byte) 63);
 		}, 2000);
 	}
 	
@@ -389,32 +364,24 @@ public class Cursed_Queen_ModorAI2 extends AggressiveNpcAI2
 	
 	private void announceAnotherDimension()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+		getPosition().getWorldMapInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
-				{
-					// Modor has disappeared into another dimension.
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDLDF5_Under_Rune_User_Kill);
-				}
+				// Modor has disappeared into another dimension.
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDLDF5_Under_Rune_User_Kill);
 			}
 		});
 	}
 	
 	private void announceBossReset()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+		getPosition().getWorldMapInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
-				{
-					// Modor has finished the battle.
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDLDF5_Under_Rune_Boss_Reset_Nor);
-				}
+				// Modor has finished the battle.
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDLDF5_Under_Rune_Boss_Reset_Nor);
 			}
 		});
 	}

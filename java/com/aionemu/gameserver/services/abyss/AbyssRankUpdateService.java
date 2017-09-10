@@ -38,7 +38,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author ATracer
@@ -48,7 +47,7 @@ public class AbyssRankUpdateService
 {
 	private static final Logger log = LoggerFactory.getLogger(AbyssRankUpdateService.class);
 	
-	private AbyssRankUpdateService()
+	AbyssRankUpdateService()
 	{
 	}
 	
@@ -66,14 +65,7 @@ public class AbyssRankUpdateService
 			performUpdate();
 		}
 		log.info("Start <Abyss Ranking> update");
-		CronService.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				performUpdate();
-			}
-		}, RankingConfig.TOP_RANKING_UPDATE_RULE, true);
+		CronService.getInstance().schedule(() -> performUpdate(), RankingConfig.TOP_RANKING_UPDATE_RULE, true);
 	}
 	
 	public void scheduleUpdateMinute()
@@ -102,15 +94,11 @@ public class AbyssRankUpdateService
 	{
 		log.info("Abyss Rank: executing rank update");
 		final long startTime = System.currentTimeMillis();
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
-			{
-				AbyssPointsService.AbyssRankCheck(player);
-				player.getAbyssRank().doUpdate();
-				DAOManager.getDAO(AbyssRankDAO.class).storeAbyssRank(player);
-			}
+			AbyssPointsService.AbyssRankCheck(player);
+			player.getAbyssRank().doUpdate();
+			DAOManager.getDAO(AbyssRankDAO.class).storeAbyssRank(player);
 		});
 		updateLimitedGpRanks();
 		AbyssRankingCacheUpdate();
@@ -236,6 +224,10 @@ public class AbyssRankUpdateService
 	
 	private static class PlayerGpComparator<K, V extends Comparable<V>> implements Comparator<Entry<K, V>>
 	{
+		public PlayerGpComparator()
+		{
+		}
+		
 		@Override
 		public int compare(Entry<K, V> o1, Entry<K, V> o2)
 		{

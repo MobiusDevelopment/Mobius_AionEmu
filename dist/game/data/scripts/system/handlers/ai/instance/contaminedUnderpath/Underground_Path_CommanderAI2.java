@@ -36,6 +36,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @AIName("underground_path_commander")
 public class Underground_Path_CommanderAI2 extends NpcAI2
 {
+	@SuppressWarnings("unused")
 	private boolean isInstanceDestroyed;
 	
 	@Override
@@ -69,43 +70,35 @@ public class Underground_Path_CommanderAI2 extends NpcAI2
 	
 	private void startInfectedDaevas1()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackUnderground((Npc) spawn(245547, 222.75296f, 282.81735f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 224.62003f, 282.99942f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 226.25397f, 283.0834f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 227.87476f, 283.16495f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 229.36754f, 283.24008f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 231.03639f, 283.3239f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 232.78214f, 283.41165f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 234.50366f, 283.59793f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
-			}
+			attackUnderground((Npc) spawn(245547, 222.75296f, 282.81735f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 224.62003f, 282.99942f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 226.25397f, 283.0834f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 227.87476f, 283.16495f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 229.36754f, 283.24008f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 231.03639f, 283.3239f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 232.78214f, 283.41165f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 234.50366f, 283.59793f, 160.3114f, (byte) 90), 229.63113f, 225.24828f, 160.28148f, false);
 		}, 1000);
 	}
 	
 	private void startInfectedDaevas2()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				attackUnderground((Npc) spawn(245547, 222.73087f, 285.1328f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 224.51028f, 285.3419f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 226.20146f, 285.4962f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 227.90823f, 285.6521f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 229.46863f, 285.79477f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 231.11894f, 285.9454f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 232.91904f, 286.11008f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
-				attackUnderground((Npc) spawn(245547, 234.55264f, 286.2593f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
-			}
+			attackUnderground((Npc) spawn(245547, 222.73087f, 285.1328f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 224.51028f, 285.3419f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 226.20146f, 285.4962f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 227.90823f, 285.6521f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 229.46863f, 285.79477f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 231.11894f, 285.9454f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 232.91904f, 286.11008f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
+			attackUnderground((Npc) spawn(245547, 234.55264f, 286.2593f, 160.3114f, (byte) 91), 229.63113f, 225.24828f, 160.28148f, false);
 		}, 15000);
 	}
 	
-	private void attackUnderground(Npc npc, float x, float y, float z, boolean despawn)
+	void attackUnderground(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);

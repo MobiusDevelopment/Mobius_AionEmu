@@ -53,13 +53,12 @@ import javolution.util.FastMap.Entry;
  */
 public class MapRegion
 {
-	
-	private static final Logger log = LoggerFactory.getLogger(MapRegion.class);
+	static final Logger log = LoggerFactory.getLogger(MapRegion.class);
 	
 	/**
 	 * Region id of this map region [NOT WORLD ID!]
 	 */
-	private final int regionId;
+	final int regionId;
 	/**
 	 * WorldMapInstance witch is parent of this map region.
 	 */
@@ -88,6 +87,7 @@ public class MapRegion
 	 * Constructor.
 	 * @param id
 	 * @param parent
+	 * @param zones
 	 */
 	MapRegion(int id, WorldMapInstance parent, ZoneInstance[] zones)
 	{
@@ -109,6 +109,7 @@ public class MapRegion
 	
 	/**
 	 * Return an instance of {@link World}, which keeps map, to which belongs this region
+	 * @return
 	 */
 	public World getWorld()
 	{
@@ -237,37 +238,27 @@ public class MapRegion
 	
 	final void startActivation()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			
-			@Override
-			public void run()
+			log.debug("Activating in map {} region {}", getMapId(), regionId);
+			MapRegion.this.activateObjects();
+			for (MapRegion neighbor : getNeighbours())
 			{
-				log.debug("Activating in map {} region {}", getMapId(), regionId);
-				MapRegion.this.activateObjects();
-				for (MapRegion neighbor : getNeighbours())
-				{
-					neighbor.activate();
-				}
+				neighbor.activate();
 			}
 		}, 1000);
 	}
 	
 	final void startDeactivation()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			
-			@Override
-			public void run()
+			log.debug("Deactivating in map {} region {}", getMapId(), regionId);
+			for (MapRegion neighbor : getNeighbours())
 			{
-				log.debug("Deactivating in map {} region {}", getMapId(), regionId);
-				for (MapRegion neighbor : getNeighbours())
+				if (!neighbor.isNeighboursActive())
 				{
-					if (!neighbor.isNeighboursActive())
-					{
-						neighbor.deactivate();
-					}
+					neighbor.deactivate();
 				}
 			}
 		}, 60000);
@@ -284,7 +275,7 @@ public class MapRegion
 	/**
 	 * Send ACTIVATE event to all objects with AI2
 	 */
-	private final void activateObjects()
+	final void activateObjects()
 	{
 		for (VisibleObject visObject : objects.values())
 		{

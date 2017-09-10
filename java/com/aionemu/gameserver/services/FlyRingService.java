@@ -28,12 +28,10 @@ import com.aionemu.gameserver.model.templates.flyring.FlyRingTemplate;
  */
 public class FlyRingService
 {
-	
 	Logger log = LoggerFactory.getLogger(FlyRingService.class);
 	
 	private static class SingletonHolder
 	{
-		
 		protected static final FlyRingService instance = new FlyRingService();
 	}
 	
@@ -42,7 +40,7 @@ public class FlyRingService
 		return SingletonHolder.instance;
 	}
 	
-	private FlyRingService()
+	FlyRingService()
 	{
 		for (FlyRingTemplate t : DataManager.FLY_RING_DATA.getFlyRingTemplates())
 		{

@@ -109,42 +109,38 @@ public class Artifact_Overlord_KrobanAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				// A massive blast of elemental power will soon explode with destructive force.
+				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_Teo_T_Boss_Skill_03, 0);
+				SkillEngine.getInstance().getSkill(getOwner(), 19567, 46, getOwner()).useNoAnimationSkill(); // Gravitational Shift.
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					// A massive blast of elemental power will soon explode with destructive force.
-					PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_Teo_T_Boss_Skill_03, 0);
-					SkillEngine.getInstance().getSkill(getOwner(), 19567, 46, getOwner()).useNoAnimationSkill(); // Gravitational Shift.
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnIDF6LF1VanqSummonAe73(p);
-							}
+							spawnIDF6LF1VanqSummonAe73(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(6, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(6, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnIDF6LF1VanqSummonAe73(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnIDF6LF1VanqSummonAe73(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -152,23 +148,19 @@ public class Artifact_Overlord_KrobanAI2 extends AggressiveNpcAI2
 		}, 20000, 40000);
 	}
 	
-	private void spawnIDF6LF1VanqSummonAe73(Player player)
+	void spawnIDF6LF1VanqSummonAe73(Player player)
 	{
 		final float x = player.getX();
 		final float y = player.getY();
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(244038, x, y, z, (byte) 0); // IDF6_LF1_Vanq_Summon_Ae_73_01.
-						spawn(856597, x, y, z, (byte) 0);
-					}
+					spawn(244038, x, y, z, (byte) 0); // IDF6_LF1_Vanq_Summon_Ae_73_01.
+					spawn(856597, x, y, z, (byte) 0);
 				}
 			}, 1000);
 		}
@@ -180,7 +172,7 @@ public class Artifact_Overlord_KrobanAI2 extends AggressiveNpcAI2
 		return canThink;
 	}
 	
-	private List<Player> getLifedPlayers()
+	List<Player> getLifedPlayers()
 	{
 		final List<Player> players = new ArrayList<>();
 		for (Player player : getKnownList().getKnownPlayers().values())
@@ -193,7 +185,7 @@ public class Artifact_Overlord_KrobanAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((phaseTask != null) && !phaseTask.isDone())
 		{

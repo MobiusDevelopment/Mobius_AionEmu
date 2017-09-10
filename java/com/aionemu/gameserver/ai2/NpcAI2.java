@@ -46,7 +46,6 @@ import com.aionemu.gameserver.world.knownlist.KnownList;
 @AIName("npc")
 public class NpcAI2 extends AITemplate
 {
-	
 	@Override
 	public Npc getOwner()
 	{
@@ -63,7 +62,7 @@ public class NpcAI2 extends AITemplate
 		return getOwner().getSpawn();
 	}
 	
-	protected NpcLifeStats getLifeStats()
+	public NpcLifeStats getLifeStats()
 	{
 		return getOwner().getLifeStats();
 	}
@@ -78,7 +77,7 @@ public class NpcAI2 extends AITemplate
 		return getOwner().getTribe();
 	}
 	
-	protected EffectController getEffectController()
+	public EffectController getEffectController()
 	{
 		return getOwner().getEffectController();
 	}
@@ -122,7 +121,7 @@ public class NpcAI2 extends AITemplate
 		return getOwner().getCreatorId();
 	}
 	
-	protected boolean isInRange(VisibleObject object, int range)
+	public boolean isInRange(VisibleObject object, int range)
 	{
 		return MathUtil.isIn3dRange(getOwner(), object, range);
 	}
@@ -231,5 +230,4 @@ public class NpcAI2 extends AITemplate
 	{
 		return (getOwner().getGameStats().getMovementSpeedFloat() > 0) && !isInSubState(AISubState.FREEZE);
 	}
-	
 }

@@ -25,11 +25,9 @@ import com.aionemu.gameserver.taskmanager.AbstractFIFOPeriodicTaskManager;
  */
 public final class PacketBroadcaster extends AbstractFIFOPeriodicTaskManager<Creature>
 {
-	
 	private static final class SingletonHolder
 	{
-		
-		private static final PacketBroadcaster INSTANCE = new PacketBroadcaster();
+		static final PacketBroadcaster INSTANCE = new PacketBroadcaster();
 	}
 	
 	public static PacketBroadcaster getInstance()
@@ -37,7 +35,7 @@ public final class PacketBroadcaster extends AbstractFIFOPeriodicTaskManager<Cre
 		return SingletonHolder.INSTANCE;
 	}
 	
-	private PacketBroadcaster()
+	PacketBroadcaster()
 	{
 		super(200);
 	}

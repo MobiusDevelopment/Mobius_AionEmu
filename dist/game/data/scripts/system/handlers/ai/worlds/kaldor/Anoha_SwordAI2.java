@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler (Encom)
@@ -58,14 +57,10 @@ public class Anoha_SwordAI2 extends NpcAI2
 				{
 					announceBerserkAnoha30Min();
 					spawn(702644, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading());
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule(() ->
 					{
-						@Override
-						public void run()
-						{
-							announceReleaseAnoha();
-							spawn(855263, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Berserk Anoha.
-						}
+						announceReleaseAnoha();
+						spawn(855263, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading()); // Berserk Anoha.
 					}, 1800000); // 30 Minutes.
 					break;
 				}
@@ -81,27 +76,11 @@ public class Anoha_SwordAI2 extends NpcAI2
 	
 	private void announceBerserkAnoha30Min()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// Berserk Anoha will return to Kaldor in 30 minutes.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Fortress_Named_Spawn_System);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Fortress_Named_Spawn_System));
 	}
 	
-	private void announceReleaseAnoha()
+	void announceReleaseAnoha()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// Release Anoha.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Fortress_Named_Spawn);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Fortress_Named_Spawn));
 	}
 }

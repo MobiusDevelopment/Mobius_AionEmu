@@ -38,16 +38,17 @@ import com.aionemu.gameserver.skillengine.model.HitType;
 import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.stats.StatFunctions;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author ATracer
  */
-
 public class AttackUtil
 {
 	/**
 	 * Calculate physical attack status and damage
+	 * @param attacker
+	 * @param attacked
+	 * @return
 	 */
 	public static List<AttackResult> calculatePhysicalAttackResult(Creature attacker, Creature attacked)
 	{
@@ -65,6 +66,10 @@ public class AttackUtil
 	
 	/**
 	 * Calculate Magical attack status and damage
+	 * @param attacker
+	 * @param attacked
+	 * @param elem
+	 * @return
 	 */
 	public static List<AttackResult> calculateMagicalAttackResult(Creature attacker, Creature attacked, SkillElement elem)
 	{
@@ -128,6 +133,12 @@ public class AttackUtil
 	
 	/**
 	 * Calculate physical attack status and damage of the MAIN hand
+	 * @param attacker
+	 * @param attacked
+	 * @param attackerStatus
+	 * @param damage
+	 * @param attackList
+	 * @return
 	 */
 	private static AttackStatus calculateMainHandResult(Creature attacker, Creature attacked, AttackStatus attackerStatus, int damage, List<AttackResult> attackList)
 	{
@@ -155,6 +166,10 @@ public class AttackUtil
 	
 	/**
 	 * Calculate physical attack status and damage of the OFF hand
+	 * @param attacker
+	 * @param attacked
+	 * @param mainHandStatus
+	 * @param attackList
 	 */
 	private static void calculateOffHandResult(Creature attacker, Creature attacked, AttackStatus mainHandStatus, List<AttackResult> attackList)
 	{
@@ -167,6 +182,13 @@ public class AttackUtil
 	
 	/**
 	 * Generate attack results based on weapon hit count
+	 * @param attacker
+	 * @param attacked
+	 * @param hitCount
+	 * @param damage
+	 * @param status
+	 * @param attackList
+	 * @return
 	 */
 	private static List<AttackResult> splitPhysicalDamage(Creature attacker, Creature attacked, int hitCount, int damage, AttackStatus status, List<AttackResult> attackList)
 	{
@@ -239,8 +261,10 @@ public class AttackUtil
 	}
 	
 	/**
+	 * @param attacked
 	 * @param damages
 	 * @param weaponType
+	 * @param stat
 	 * @return
 	 */
 	private static float calculateWeaponCritical(Creature attacked, float damages, WeaponType weaponType, StatEnum stat)
@@ -335,10 +359,16 @@ public class AttackUtil
 	/**
 	 * @param effect
 	 * @param skillDamage
-	 * @param bonus (damage from modifiers)
+	 * @param modifier
 	 * @param func (add/percent)
 	 * @param randomDamage
 	 * @param accMod
+	 * @param criticalProb
+	 * @param critAddDmg
+	 * @param cannotMiss
+	 * @param shared
+	 * @param ignoreShield
+	 * @param isMainHand
 	 */
 	public static void calculateSkillResult(Effect effect, int skillDamage, ActionModifier modifier, Func func, int randomDamage, int accMod, int criticalProb, int critAddDmg, boolean cannotMiss, boolean shared, boolean ignoreShield, boolean isMainHand)
 	{
@@ -538,6 +568,7 @@ public class AttackUtil
 	 * @param damage
 	 * @param status
 	 * @param hitType
+	 * @param ignoreShield
 	 */
 	private static void calculateEffectResult(Effect effect, Creature effected, int damage, AttackStatus status, HitType hitType, boolean ignoreShield)
 	{
@@ -655,8 +686,8 @@ public class AttackUtil
 	/**
 	 * @param effect
 	 * @param skillDamage
+	 * @param modifier
 	 * @param element
-	 * @param isNoReduceSpell
 	 */
 	public static void calculateMagicalSkillResult(Effect effect, int skillDamage, ActionModifier modifier, SkillElement element)
 	{
@@ -740,6 +771,9 @@ public class AttackUtil
 	
 	/**
 	 * Manage attack status rate
+	 * @param attacker
+	 * @param attacked
+	 * @param isMainHand
 	 * @source http://www.aionsource.com/forum/mechanic-analysis/42597-character-stats-xp-dp-origin-gerbator-team-july-2009 -a.html
 	 * @return AttackStatus
 	 */
@@ -842,6 +876,11 @@ public class AttackUtil
 	/**
 	 * Every + 100 delta of (MR - MA) = + 10% to resist<br>
 	 * if the difference is 1000 = 100% resist
+	 * @param attacker
+	 * @param attacked
+	 * @param criticalProb
+	 * @param isSkill
+	 * @return
 	 */
 	public static AttackStatus calculateMagicalStatus(Creature attacker, Creature attacked, int criticalProb, boolean isSkill)
 	{
@@ -891,37 +930,24 @@ public class AttackUtil
 	
 	public static void cancelCastOn(Creature target)
 	{
-		target.getKnownList().doOnAllPlayers(new Visitor<Player>()
+		target.getKnownList().doOnAllPlayers(observer ->
 		{
-			
-			@Override
-			public void visit(Player observer)
+			if (observer.getTarget() == target)
 			{
-				if (observer.getTarget() == target)
-				{
-					cancelCast(observer, target);
-				}
+				cancelCast(observer, target);
 			}
-			
 		});
 		
-		target.getKnownList().doOnAllNpcs(new Visitor<Npc>()
+		target.getKnownList().doOnAllNpcs(observer ->
 		{
-			
-			@Override
-			public void visit(Npc observer)
+			if (observer.getTarget() == target)
 			{
-				if (observer.getTarget() == target)
-				{
-					cancelCast(observer, target);
-				}
+				cancelCast(observer, target);
 			}
-			
 		});
-		
 	}
 	
-	private static void cancelCast(Creature creature, Creature target)
+	static void cancelCast(Creature creature, Creature target)
 	{
 		if ((target != null) && (creature.getCastingSkill() != null))
 		{
@@ -943,34 +969,30 @@ public class AttackUtil
 	
 	public static void removeTargetFrom(Creature object, boolean validateSee)
 	{
-		object.getKnownList().doOnAllPlayers(new Visitor<Player>()
+		object.getKnownList().doOnAllPlayers(observer ->
 		{
-			
-			@Override
-			public void visit(Player observer)
+			if (validateSee && (observer.getTarget() == object))
 			{
-				if (validateSee && (observer.getTarget() == object))
-				{
-					if (!observer.canSee(object))
-					{
-						observer.setTarget(null);
-						// retail packet (//fsc 0x44 dhdd 0 0 0 0) right after SM_PLAYER_STATE
-						PacketSendUtility.sendPacket(observer, new SM_TARGET_SELECTED(observer));
-					}
-				}
-				else if (observer.getTarget() == object)
+				if (!observer.canSee(object))
 				{
 					observer.setTarget(null);
 					// retail packet (//fsc 0x44 dhdd 0 0 0 0) right after SM_PLAYER_STATE
 					PacketSendUtility.sendPacket(observer, new SM_TARGET_SELECTED(observer));
 				}
 			}
-			
+			else if (observer.getTarget() == object)
+			{
+				observer.setTarget(null);
+				// retail packet (//fsc 0x44 dhdd 0 0 0 0) right after SM_PLAYER_STATE
+				PacketSendUtility.sendPacket(observer, new SM_TARGET_SELECTED(observer));
+			}
 		});
 	}
 	
 	/**
 	 * Author "KorLightNing" ### Some specific skills will not be affected ###
+	 * @param skillId
+	 * @return
 	 */
 	public static boolean isSkillEffect(int skillId)
 	{

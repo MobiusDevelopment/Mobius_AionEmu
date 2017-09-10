@@ -59,15 +59,11 @@ public class Lava_ProtectorAI2 extends AggressiveNpcAI2
 			{
 				case 236227: // Lava Protector.
 				{
-					lavaProtectorTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+					lavaProtectorTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
-						{
-							AI2Actions.deleteOwner(Lava_ProtectorAI2.this);
-							// Thanks to the sacrifice of the Detachment's Rush Squad, the Protectors' Fount has been destroyed.
-							PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_IDSeal_Twin_06, 0);
-						}
+						AI2Actions.deleteOwner(Lava_ProtectorAI2.this);
+						// Thanks to the sacrifice of the Detachment's Rush Squad, the Protectors' Fount has been destroyed.
+						PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_IDSeal_Twin_06, 0);
 					}, 300000);
 					break;
 				}
@@ -116,41 +112,37 @@ public class Lava_ProtectorAI2 extends AggressiveNpcAI2
 	
 	private void startMagmaGluttenTask()
 	{
-		magmaGluttenTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		magmaGluttenTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelMagmaGluttenTask();
+				cancelLavaProtectorTask();
+			}
+			else
+			{
+				SkillEngine.getInstance().getSkill(getOwner(), 21645, 60, getOwner()).useNoAnimationSkill(); // Raging Hellfire.
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelMagmaGluttenTask();
-					cancelLavaProtectorTask();
-				}
-				else
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 21645, 60, getOwner()).useNoAnimationSkill(); // Raging Hellfire.
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnMagmaGlutten(p);
-							}
+							spawnMagmaGlutten(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(6, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(6, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnMagmaGlutten(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnMagmaGlutten(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -158,22 +150,18 @@ public class Lava_ProtectorAI2 extends AggressiveNpcAI2
 		}, 20000, 40000);
 	}
 	
-	private void spawnMagmaGlutten(Player player)
+	void spawnMagmaGlutten(Player player)
 	{
 		final float x = player.getX();
 		final float y = player.getY();
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(855621, x, y, z, (byte) 0); // Magma Glutten.
-					}
+					spawn(855621, x, y, z, (byte) 0); // Magma Glutten.
 				}
 			}, 3000);
 		}
@@ -185,7 +173,7 @@ public class Lava_ProtectorAI2 extends AggressiveNpcAI2
 		return canThink;
 	}
 	
-	private List<Player> getLifedPlayers()
+	List<Player> getLifedPlayers()
 	{
 		final List<Player> players = new ArrayList<>();
 		for (Player player : getKnownList().getKnownPlayers().values())
@@ -198,7 +186,7 @@ public class Lava_ProtectorAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelMagmaGluttenTask()
+	void cancelMagmaGluttenTask()
 	{
 		if ((magmaGluttenTask != null) && !magmaGluttenTask.isDone())
 		{
@@ -206,7 +194,7 @@ public class Lava_ProtectorAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void cancelLavaProtectorTask()
+	void cancelLavaProtectorTask()
 	{
 		if ((lavaProtectorTask != null) && !lavaProtectorTask.isDone())
 		{

@@ -46,14 +46,7 @@ public class PriestElyosPreceptorAI2 extends AggressiveNpcAI2
 	public void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				SkillEngine.getInstance().getSkill(getOwner(), 19612, 46, getOwner()).useNoAnimationSkill();
-			}
-		}, 1000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> SkillEngine.getInstance().getSkill(getOwner(), 19612, 46, getOwner()).useNoAnimationSkill(), 1000);
 	}
 	
 	@Override
@@ -84,39 +77,31 @@ public class PriestElyosPreceptorAI2 extends AggressiveNpcAI2
 	private void startEvent()
 	{
 		SkillEngine.getInstance().getSkill(getOwner(), 19610, 46, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			SkillEngine.getInstance().getSkill(getOwner(), 19614, 46, getOwner()).useNoAnimationSkill();
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				SkillEngine.getInstance().getSkill(getOwner(), 19614, 46, getOwner()).useNoAnimationSkill();
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				final WorldPosition p = getPosition();
+				switch (Rnd.get(1, 3))
 				{
-					@Override
-					public void run()
+					case 1:
 					{
-						final WorldPosition p = getPosition();
-						switch (Rnd.get(1, 3))
-						{
-							case 1:
-							{
-								applySoulSickness((Npc) spawn(282366, p.getX(), p.getY(), p.getZ(), p.getHeading())); // Boreas.
-								break;
-							}
-							case 2:
-							{
-								applySoulSickness((Npc) spawn(282367, p.getX(), p.getY(), p.getZ(), p.getHeading())); // Jumentis.
-								break;
-							}
-							case 3:
-							{
-								applySoulSickness((Npc) spawn(282368, p.getX(), p.getY(), p.getZ(), p.getHeading())); // Charna.
-								break;
-							}
-						}
+						applySoulSickness((Npc) spawn(282366, p.getX(), p.getY(), p.getZ(), p.getHeading())); // Boreas.
+						break;
 					}
-				}, 5000);
-			}
+					case 2:
+					{
+						applySoulSickness((Npc) spawn(282367, p.getX(), p.getY(), p.getZ(), p.getHeading())); // Jumentis.
+						break;
+					}
+					case 3:
+					{
+						applySoulSickness((Npc) spawn(282368, p.getX(), p.getY(), p.getZ(), p.getHeading())); // Charna.
+						break;
+					}
+				}
+			}, 5000);
 		}, 2000);
 	}
 	
@@ -133,16 +118,12 @@ public class PriestElyosPreceptorAI2 extends AggressiveNpcAI2
 		return players.get(Rnd.get(players.size()));
 	}
 	
-	private void applySoulSickness(Npc npc)
+	void applySoulSickness(Npc npc)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				npc.getLifeStats().setCurrentHpPercent(50);
-				SkillEngine.getInstance().getSkill(npc, 19594, 4, npc).useNoAnimationSkill();
-			}
+			npc.getLifeStats().setCurrentHpPercent(50);
+			SkillEngine.getInstance().getSkill(npc, 19594, 4, npc).useNoAnimationSkill();
 		}, 1000);
 	}
 	

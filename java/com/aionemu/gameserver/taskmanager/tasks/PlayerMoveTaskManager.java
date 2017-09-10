@@ -26,10 +26,9 @@ import javolution.util.FastMap;
  */
 public class PlayerMoveTaskManager extends AbstractPeriodicTaskManager
 {
-	
 	private final FastMap<Integer, Creature> movingPlayers = new FastMap<Integer, Creature>().shared();
 	
-	private PlayerMoveTaskManager()
+	PlayerMoveTaskManager()
 	{
 		super(200);
 	}
@@ -62,6 +61,6 @@ public class PlayerMoveTaskManager extends AbstractPeriodicTaskManager
 	private static final class SingletonHolder
 	{
 		
-		private static final PlayerMoveTaskManager INSTANCE = new PlayerMoveTaskManager();
+		static final PlayerMoveTaskManager INSTANCE = new PlayerMoveTaskManager();
 	}
 }

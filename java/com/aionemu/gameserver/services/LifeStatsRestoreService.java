@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class LifeStatsRestoreService
 {
-	
 	private static final int DEFAULT_DELAY = 6000;
 	private static final int DEFAULT_FPREDUCE_DELAY = 2000;
 	private static final int DEFAULT_FPRESTORE_DELAY = 2000;
@@ -40,7 +39,7 @@ public class LifeStatsRestoreService
 	
 	/**
 	 * HP and MP restoring task
-	 * @param creature
+	 * @param lifeStats
 	 * @return Future<?>
 	 */
 	public Future<?> scheduleRestoreTask(CreatureLifeStats<? extends Creature> lifeStats)
@@ -60,6 +59,7 @@ public class LifeStatsRestoreService
 	
 	/**
 	 * @param lifeStats
+	 * @param costFp
 	 * @return
 	 */
 	public Future<?> scheduleFpReduceTask(PlayerLifeStats lifeStats, Integer costFp)
@@ -83,10 +83,9 @@ public class LifeStatsRestoreService
 	
 	private static class HpRestoreTask implements Runnable
 	{
-		
 		private CreatureLifeStats<?> lifeStats;
 		
-		private HpRestoreTask(CreatureLifeStats<?> lifeStats)
+		HpRestoreTask(CreatureLifeStats<?> lifeStats)
 		{
 			this.lifeStats = lifeStats;
 		}
@@ -109,10 +108,9 @@ public class LifeStatsRestoreService
 	
 	private static class HpMpRestoreTask implements Runnable
 	{
-		
 		private CreatureLifeStats<?> lifeStats;
 		
-		private HpMpRestoreTask(CreatureLifeStats<?> lifeStats)
+		HpMpRestoreTask(CreatureLifeStats<?> lifeStats)
 		{
 			this.lifeStats = lifeStats;
 		}
@@ -136,11 +134,10 @@ public class LifeStatsRestoreService
 	
 	private static class FpReduceTask implements Runnable
 	{
-		
 		private PlayerLifeStats lifeStats;
 		private final Integer costFp;
 		
-		private FpReduceTask(PlayerLifeStats lifeStats, Integer costFp)
+		FpReduceTask(PlayerLifeStats lifeStats, Integer costFp)
 		{
 			this.lifeStats = lifeStats;
 			this.costFp = costFp;
@@ -184,10 +181,9 @@ public class LifeStatsRestoreService
 	
 	private static class FpRestoreTask implements Runnable
 	{
-		
 		private PlayerLifeStats lifeStats;
 		
-		private FpRestoreTask(PlayerLifeStats lifeStats)
+		FpRestoreTask(PlayerLifeStats lifeStats)
 		{
 			this.lifeStats = lifeStats;
 		}

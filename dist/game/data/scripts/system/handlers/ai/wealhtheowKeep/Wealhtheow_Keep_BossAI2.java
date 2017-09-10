@@ -32,7 +32,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldPosition;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
@@ -111,39 +110,35 @@ public class Wealhtheow_Keep_BossAI2 extends AggressiveNpcAI2
 	
 	private void startPhaseTask()
 	{
-		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		phaseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelPhaseTask();
+			}
+			else
+			{
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelPhaseTask();
-				}
-				else
-				{
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnExplosiveSacrifice(p);
-							}
+							spawnExplosiveSacrifice(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(6, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(6, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnExplosiveSacrifice(players.get(Rnd.get(players.size())));
+								break;
 							}
+							spawnExplosiveSacrifice(players.get(Rnd.get(players.size())));
 						}
 					}
 				}
@@ -158,15 +153,11 @@ public class Wealhtheow_Keep_BossAI2 extends AggressiveNpcAI2
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(855262, x, y, z, (byte) 0); // Explosive Sacrifice.
-					}
+					spawn(855262, x, y, z, (byte) 0); // Explosive Sacrifice.
 				}
 			}, 3000);
 		}
@@ -185,7 +176,7 @@ public class Wealhtheow_Keep_BossAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelPhaseTask()
+	void cancelPhaseTask()
 	{
 		if ((phaseTask != null) && !phaseTask.isDone())
 		{
@@ -210,15 +201,11 @@ public class Wealhtheow_Keep_BossAI2 extends AggressiveNpcAI2
 		{
 			deleteNpcs(p.getWorldMapInstance().getNpcs(855262)); // Explosive Sacrifice.
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				spawn(701481, 780.46515f, 288.62924f, 143.18782f, (byte) 45);
-				spawn(701481, 787.1314f, 288.72644f, 143.20233f, (byte) 30);
-				spawn(701481, 793.9525f, 289.05054f, 143.18248f, (byte) 15);
-			}
+			spawn(701481, 780.46515f, 288.62924f, 143.18782f, (byte) 45);
+			spawn(701481, 787.1314f, 288.72644f, 143.20233f, (byte) 30);
+			spawn(701481, 793.9525f, 289.05054f, 143.18248f, (byte) 15);
 		}, 10000);
 		treasureChest();
 		cancelPhaseTask();
@@ -238,26 +225,11 @@ public class Wealhtheow_Keep_BossAI2 extends AggressiveNpcAI2
 	
 	private void treasureChest()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// A treasure chest has appeared.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDAbRe_Core_NmdC_BoxSpawn);
-			}
-		});
+		getPosition().getWorldMapInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDAbRe_Core_NmdC_BoxSpawn));
 	}
 	
 	private void announceWealhtheowKeepBoss()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Fortress_RuneElite);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Fortress_RuneElite));
 	}
 }

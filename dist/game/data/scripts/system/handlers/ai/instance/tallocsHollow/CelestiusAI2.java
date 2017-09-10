@@ -55,7 +55,7 @@ public class CelestiusAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void cancelHelpersTask()
+	void cancelHelpersTask()
 	{
 		if ((helpersTask != null) && !helpersTask.isDone())
 		{
@@ -65,22 +65,18 @@ public class CelestiusAI2 extends AggressiveNpcAI2
 	
 	private void startHelpersCall()
 	{
-		helpersTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		helpersTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead() && (getLifeStats().getHpPercentage() < 90))
 			{
-				if (isAlreadyDead() && (getLifeStats().getHpPercentage() < 90))
-				{
-					deleteHelpers();
-					cancelHelpersTask();
-				}
-				else
-				{
-					deleteHelpers();
-					SkillEngine.getInstance().getSkill(getOwner(), 18981, 44, getOwner()).useNoAnimationSkill();
-					startCelestiusRushEvent();
-				}
+				deleteHelpers();
+				cancelHelpersTask();
+			}
+			else
+			{
+				deleteHelpers();
+				SkillEngine.getInstance().getSkill(getOwner(), 18981, 44, getOwner()).useNoAnimationSkill();
+				startCelestiusRushEvent();
 			}
 		}, 1000, 25000);
 	}
@@ -93,14 +89,14 @@ public class CelestiusAI2 extends AggressiveNpcAI2
 		PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
 	}
 	
-	private void startCelestiusRushEvent()
+	void startCelestiusRushEvent()
 	{
 		rushTalocHollow((Npc) spawn(281514, 518f, 813f, 1378f, (byte) 0), 539.357f, 826.74567f, 1376.8346f, false);
 		rushTalocHollow((Npc) spawn(281514, 551f, 795f, 1376f, (byte) 0), 546.886848f, 819.90924f, 1376.3254f, false);
 		rushTalocHollow((Npc) spawn(281514, 574f, 854f, 1375f, (byte) 0), 549.684f, 835.2079f, 1377.119f, false);
 	}
 	
-	private void deleteHelpers()
+	void deleteHelpers()
 	{
 		final WorldPosition p = getPosition();
 		if (p != null)
@@ -112,7 +108,7 @@ public class CelestiusAI2 extends AggressiveNpcAI2
 				for (Npc npc : npcs)
 				{
 					final SpawnTemplate template = npc.getSpawn();
-					if ((npc != null) && ((template.getX() == 518) || (template.getX() == 551) || (template.getX() == 574)))
+					if ((template.getX() == 518) || (template.getX() == 551) || (template.getX() == 574))
 					{
 						npc.getController().onDelete();
 					}

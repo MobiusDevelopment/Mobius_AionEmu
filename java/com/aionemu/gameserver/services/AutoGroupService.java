@@ -71,10 +71,10 @@ public class AutoGroupService
 {
 	private final FastMap<Integer, LookingForParty> searchers = new FastMap<Integer, LookingForParty>().shared();
 	private final FastMap<Integer, AutoInstance> autoInstances = new FastMap<Integer, AutoInstance>().shared();
-	private final Collection<Integer> penaltys = new FastList<Integer>().shared();
+	final Collection<Integer> penaltys = new FastList<Integer>().shared();
 	private final Lock lock = new ReentrantLock();
 	
-	private AutoGroupService()
+	AutoGroupService()
 	{
 	}
 	
@@ -865,15 +865,11 @@ public class AutoGroupService
 			penaltys.remove(obj);
 		}
 		penaltys.add(obj);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (penaltys.contains(obj))
 			{
-				if (penaltys.contains(obj))
-				{
-					penaltys.remove(obj);
-				}
+				penaltys.remove(obj);
 			}
 		}, 10000);
 	}
@@ -1010,6 +1006,6 @@ public class AutoGroupService
 	
 	private static class NewSingletonHolder
 	{
-		private static final AutoGroupService INSTANCE = new AutoGroupService();
+		static final AutoGroupService INSTANCE = new AutoGroupService();
 	}
 }
