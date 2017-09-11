@@ -238,7 +238,6 @@ public class ObserveController
 	
 	/**
 	 * @param creature
-	 * @param notify that creature died
 	 */
 	public void notifyDeathObservers(Creature creature)
 	{
@@ -256,7 +255,6 @@ public class ObserveController
 	/**
 	 * notify that creature attacking
 	 * @param creature
-	 * @param damage
 	 */
 	public void notifyAttackObservers(Creature creature)
 	{

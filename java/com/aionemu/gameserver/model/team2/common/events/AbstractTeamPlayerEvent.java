@@ -23,6 +23,7 @@ import com.google.common.base.Predicate;
 
 /**
  * @author ATracer
+ * @param <T>
  */
 public abstract class AbstractTeamPlayerEvent<T extends TemporaryPlayerTeam<?>> implements Predicate<Player>, TeamEvent
 {

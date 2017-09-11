@@ -93,38 +93,33 @@ public class AnnouncementService
 		
 		for (Announcement announce : announcements)
 		{
-			delays.add(ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+			delays.add(ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
 			{
-				
-				@Override
-				public void run()
+				final Iterator<Player> iter = World.getInstance().getPlayersIterator();
+				while (iter.hasNext())
 				{
-					final Iterator<Player> iter = World.getInstance().getPlayersIterator();
-					while (iter.hasNext())
+					final Player player = iter.next();
+					
+					if (announce.getFaction().equalsIgnoreCase("ALL"))
 					{
-						final Player player = iter.next();
-						
-						if (announce.getFaction().equalsIgnoreCase("ALL"))
+						if ((announce.getChatType() == ChatType.SHOUT) || (announce.getChatType() == ChatType.GROUP_LEADER))
 						{
-							if ((announce.getChatType() == ChatType.SHOUT) || (announce.getChatType() == ChatType.GROUP_LEADER))
-							{
-								PacketSendUtility.sendPacket(player, new SM_MESSAGE(1, "Announcement", announce.getAnnounce(), announce.getChatType()));
-							}
-							else
-							{
-								PacketSendUtility.sendPacket(player, new SM_MESSAGE(1, "Announcement", "Announcement: " + announce.getAnnounce(), announce.getChatType()));
-							}
+							PacketSendUtility.sendPacket(player, new SM_MESSAGE(1, "Announcement", announce.getAnnounce(), announce.getChatType()));
 						}
-						else if (announce.getFactionEnum() == player.getRace())
+						else
 						{
-							if ((announce.getChatType() == ChatType.SHOUT) || (announce.getChatType() == ChatType.GROUP_LEADER))
-							{
-								PacketSendUtility.sendPacket(player, new SM_MESSAGE(1, (announce.getFaction().equalsIgnoreCase("ELYOS") ? "Elyos" : "Asmodian") + " Announcement", announce.getAnnounce(), announce.getChatType()));
-							}
-							else
-							{
-								PacketSendUtility.sendPacket(player, new SM_MESSAGE(1, (announce.getFaction().equalsIgnoreCase("ELYOS") ? "Elyos" : "Asmodian") + " Announcement", (announce.getFaction().equalsIgnoreCase("ELYOS") ? "Elyos" : "Asmodian") + " Announcement: " + announce.getAnnounce(), announce.getChatType()));
-							}
+							PacketSendUtility.sendPacket(player, new SM_MESSAGE(1, "Announcement", "Announcement: " + announce.getAnnounce(), announce.getChatType()));
+						}
+					}
+					else if (announce.getFactionEnum() == player.getRace())
+					{
+						if ((announce.getChatType() == ChatType.SHOUT) || (announce.getChatType() == ChatType.GROUP_LEADER))
+						{
+							PacketSendUtility.sendPacket(player, new SM_MESSAGE(1, (announce.getFaction().equalsIgnoreCase("ELYOS") ? "Elyos" : "Asmodian") + " Announcement", announce.getAnnounce(), announce.getChatType()));
+						}
+						else
+						{
+							PacketSendUtility.sendPacket(player, new SM_MESSAGE(1, (announce.getFaction().equalsIgnoreCase("ELYOS") ? "Elyos" : "Asmodian") + " Announcement", (announce.getFaction().equalsIgnoreCase("ELYOS") ? "Elyos" : "Asmodian") + " Announcement: " + announce.getAnnounce(), announce.getChatType()));
 						}
 					}
 				}
@@ -149,10 +144,6 @@ public class AnnouncementService
 		return getDAO().getAnnouncements();
 	}
 	
-	/**
-	 * Retuns {@link com.aionemu.loginserver.dao.AnnouncementDAO} , just a shortcut
-	 * @return {@link com.aionemu.loginserver.dao.AnnouncementDAO}
-	 */
 	private AnnouncementsDAO getDAO()
 	{
 		return DAOManager.getDAO(AnnouncementsDAO.class);

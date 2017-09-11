@@ -55,6 +55,7 @@ public abstract class BoundingVolume implements Collidable
 	
 	/**
 	 * Grabs the checkplane we should check first.
+	 * @return
 	 */
 	public int getCheckPlane()
 	{
@@ -72,6 +73,7 @@ public abstract class BoundingVolume implements Collidable
 	
 	/**
 	 * getType returns the type of bounding volume this is.
+	 * @return
 	 */
 	public abstract Type getType();
 	

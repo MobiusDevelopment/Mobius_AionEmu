@@ -48,7 +48,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
  */
 public class NpcMoveController extends CreatureMoveController<Npc>
 {
-	
 	public static final float MOVE_CHECK_OFFSET = 0.1f;
 	private static final float MOVE_OFFSET = 0.05f;
 	
@@ -128,9 +127,6 @@ public class NpcMoveController extends CreatureMoveController<Npc>
 		}
 	}
 	
-	/**
-	 * @return if destination reached
-	 */
 	@Override
 	public void moveToDestination()
 	{
@@ -229,7 +225,6 @@ public class NpcMoveController extends CreatureMoveController<Npc>
 	 * @param targetY
 	 * @param targetZ
 	 * @param offset
-	 * @return
 	 */
 	protected void moveToLocation(float targetX, float targetY, float targetZ, float offset)
 	{

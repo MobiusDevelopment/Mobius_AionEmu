@@ -147,7 +147,7 @@ public class DropItem
 	}
 	
 	/**
-	 * @param WinningPlayer to set
+	 * @param winningPlayer
 	 */
 	public void setWinningPlayer(Player winningPlayer)
 	{

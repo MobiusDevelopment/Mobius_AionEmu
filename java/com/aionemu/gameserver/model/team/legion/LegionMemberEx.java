@@ -120,7 +120,6 @@ public class LegionMemberEx extends LegionMember
 	/**
 	 * sets the exp value
 	 * @param exp
-	 * @param admin : enable decrease level
 	 */
 	public void setExp(long exp)
 	{

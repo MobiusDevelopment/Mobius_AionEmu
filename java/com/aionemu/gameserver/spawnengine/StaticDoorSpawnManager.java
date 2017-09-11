@@ -42,7 +42,7 @@ public class StaticDoorSpawnManager
 	private static Logger log = LoggerFactory.getLogger(StaticDoorSpawnManager.class);
 	
 	/**
-	 * @param spawnGroup
+	 * @param worldId
 	 * @param instanceIndex
 	 */
 	public static void spawnTemplate(int worldId, int instanceIndex)

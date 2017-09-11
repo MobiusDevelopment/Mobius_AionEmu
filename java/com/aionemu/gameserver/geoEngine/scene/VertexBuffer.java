@@ -168,6 +168,7 @@ public class VertexBuffer extends GLObject implements Cloneable
 	
 	/**
 	 * Creates an empty, uninitialized buffer. Must call setupData() to initialize.
+	 * @param type
 	 */
 	public VertexBuffer(Type type)
 	{

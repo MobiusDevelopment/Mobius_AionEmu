@@ -24,6 +24,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
  * @author ATracer
+ * @param <T>
  */
 public class TeamKinahDistributionEvent<T extends TemporaryPlayerTeam<? extends TeamMember<Player>>>extends AbstractTeamPlayerEvent<T>
 {

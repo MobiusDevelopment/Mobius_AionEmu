@@ -434,7 +434,6 @@ public abstract class Creature extends VisibleObject
 	
 	/**
 	 * @param model
-	 * @param transformModel the transformedModel to set
 	 */
 	public final void setTransformModel(TransformModel model)
 	{
@@ -489,6 +488,7 @@ public abstract class Creature extends VisibleObject
 	
 	/**
 	 * Broadcast getter.
+	 * @return
 	 */
 	public final byte getPacketBroadcastMask()
 	{
@@ -515,6 +515,7 @@ public abstract class Creature extends VisibleObject
 	
 	/**
 	 * @param creature
+	 * @return
 	 */
 	public boolean isEnemyFrom(Creature creature)
 	{
@@ -583,6 +584,7 @@ public abstract class Creature extends VisibleObject
 	
 	/**
 	 * @param npc
+	 * @return
 	 */
 	public boolean isSupportFrom(Npc npc)
 	{
@@ -591,6 +593,7 @@ public abstract class Creature extends VisibleObject
 	
 	/**
 	 * @param npc
+	 * @return
 	 */
 	public boolean isFriendFrom(Npc npc)
 	{
@@ -598,7 +601,6 @@ public abstract class Creature extends VisibleObject
 	}
 	
 	/**
-	 * @param visibleObject
 	 * @return
 	 */
 	
@@ -655,7 +657,7 @@ public abstract class Creature extends VisibleObject
 	}
 	
 	/**
-	 * @param delayId
+	 * @param template
 	 * @return
 	 */
 	public boolean isSkillDisabled(SkillTemplate template)
@@ -822,6 +824,7 @@ public abstract class Creature extends VisibleObject
 	
 	/**
 	 * Creature is flying (FLY or GLIDE states)
+	 * @return
 	 */
 	public boolean isFlying()
 	{

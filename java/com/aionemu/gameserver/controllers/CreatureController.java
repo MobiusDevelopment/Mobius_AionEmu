@@ -62,6 +62,7 @@ import javolution.util.FastMap;
 /**
  * This class is for controlling Creatures [npc's, players etc]
  * @author -Nemesiss-, ATracer(2009-09-29), Sarynth
+ * @param <T>
  * @modified by Wakizashi
  */
 public abstract class CreatureController<T extends Creature>extends VisibleObjectController<Creature>
@@ -133,7 +134,6 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 	
 	/**
 	 * Zone update mask management
-	 * @param mode
 	 */
 	public final void updateZone()
 	{
@@ -469,6 +469,7 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 	
 	/**
 	 * @param taskId
+	 * @return
 	 */
 	public Future<?> cancelTask(TaskId taskId)
 	{

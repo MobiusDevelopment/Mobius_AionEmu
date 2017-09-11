@@ -43,6 +43,8 @@ public abstract class AbstractArea implements Area
 	
 	/**
 	 * Creates new AbstractArea with min and max z
+	 * @param zoneName
+	 * @param worldId
 	 * @param minZ min z
 	 * @param maxZ max z
 	 */

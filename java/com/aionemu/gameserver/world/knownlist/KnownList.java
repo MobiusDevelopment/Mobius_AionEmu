@@ -130,6 +130,7 @@ public class KnownList
 	/**
 	 * Add VisibleObject to this KnownList.
 	 * @param object
+	 * @return
 	 */
 	protected boolean add(VisibleObject object)
 	{

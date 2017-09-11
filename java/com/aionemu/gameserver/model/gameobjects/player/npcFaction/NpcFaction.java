@@ -37,8 +37,6 @@ public class NpcFaction
 	 * @param id
 	 * @param time
 	 * @param active
-	 * @param persistentState
-	 * @param mentor
 	 * @param state
 	 * @param questId
 	 */

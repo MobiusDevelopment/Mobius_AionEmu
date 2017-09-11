@@ -47,6 +47,7 @@ public class LimitedItem
 	
 	/**
 	 * return itemId.
+	 * @return
 	 */
 	public int getItemId()
 	{
@@ -56,8 +57,6 @@ public class LimitedItem
 	/**
 	 * @param playerObjectId
 	 * @param count
-	 * @param set playerObjectId.
-	 * @param set count.
 	 */
 	public void setBuyCount(int playerObjectId, int count)
 	{
@@ -66,6 +65,7 @@ public class LimitedItem
 	
 	/**
 	 * return playerListByObject.
+	 * @return
 	 */
 	public TIntObjectHashMap<Integer> getBuyCount()
 	{
@@ -74,7 +74,6 @@ public class LimitedItem
 	
 	/**
 	 * @param itemId
-	 * @param set itemId.
 	 */
 	public void setItem(int itemId)
 	{
@@ -83,6 +82,7 @@ public class LimitedItem
 	
 	/**
 	 * return sellLimit.
+	 * @return
 	 */
 	public int getSellLimit()
 	{
@@ -91,6 +91,7 @@ public class LimitedItem
 	
 	/**
 	 * return buyLimit.
+	 * @return
 	 */
 	public int getBuyLimit()
 	{
@@ -105,7 +106,6 @@ public class LimitedItem
 	
 	/**
 	 * @param sellLimit
-	 * @param set sellLimit.
 	 */
 	public void setSellLimit(int sellLimit)
 	{
@@ -114,6 +114,7 @@ public class LimitedItem
 	
 	/**
 	 * return defaultSellLimit.
+	 * @return
 	 */
 	public int getDefaultSellLimit()
 	{

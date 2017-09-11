@@ -44,6 +44,7 @@ public class WalkManager
 	
 	/**
 	 * @param npcAI
+	 * @return
 	 */
 	public static boolean startWalking(NpcAI2 npcAI)
 	{
@@ -65,6 +66,7 @@ public class WalkManager
 	/**
 	 * @param npcAI
 	 * @param owner
+	 * @return
 	 */
 	private static boolean startRandomWalking(NpcAI2 npcAI, Npc owner)
 	{
@@ -327,7 +329,6 @@ public class WalkManager
 	
 	/**
 	 * @param npcAI
-	 * @param owner
 	 * @return
 	 */
 	public static boolean isArrivedAtPoint(NpcAI2 npcAI)

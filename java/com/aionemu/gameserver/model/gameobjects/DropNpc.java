@@ -178,7 +178,6 @@ public class DropNpc
 	
 	/**
 	 * @param player
-	 * @param addPlayerStatus
 	 */
 	public void addPlayerStatus(Player player)
 	{
@@ -187,7 +186,6 @@ public class DropNpc
 	
 	/**
 	 * @param player
-	 * @param delPlayerStatus
 	 */
 	public void delPlayerStatus(Player player)
 	{

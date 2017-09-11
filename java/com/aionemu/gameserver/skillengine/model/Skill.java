@@ -142,7 +142,6 @@ public class Skill
 	 * @param skillTemplate
 	 * @param effector
 	 * @param firstTarget
-	 * @param world
 	 */
 	public Skill(SkillTemplate skillTemplate, Player effector, Creature firstTarget)
 	{
@@ -1658,6 +1657,7 @@ public class Skill
 	
 	/**
 	 * Check all conditions before starting cast
+	 * @return
 	 */
 	private boolean preCastCheck()
 	{
@@ -1667,6 +1667,7 @@ public class Skill
 	
 	/**
 	 * Check all conditions before using skill
+	 * @return
 	 */
 	private boolean preUsageCheck()
 	{
@@ -1780,7 +1781,6 @@ public class Skill
 	
 	/**
 	 * @param firstTargetAttribute
-	 * @param FirstTargetAttribute the firstTargetAttribute to set
 	 */
 	public void setFirstTargetAttribute(FirstTargetAttribute firstTargetAttribute)
 	{
@@ -1938,6 +1938,7 @@ public class Skill
 	
 	/**
 	 * 4.8 Version
+	 * @return
 	 */
 	private boolean isCastTimeFixed()
 	{

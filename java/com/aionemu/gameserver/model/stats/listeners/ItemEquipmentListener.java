@@ -54,7 +54,6 @@ public class ItemEquipmentListener
 	/**
 	 * @param item
 	 * @param owner
-	 * @param cgs
 	 */
 	public static void onItemEquipment(Item item, Player owner)
 	{
@@ -168,8 +167,6 @@ public class ItemEquipmentListener
 	
 	/**
 	 * @param item
-	 * @param itemTemplate
-	 * @param slot
 	 * @param cgs
 	 * @param player
 	 */

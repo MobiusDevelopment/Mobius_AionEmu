@@ -109,6 +109,7 @@ public class CAPTCHAUtil
 	}
 	
 	/**
+	 * @param wordLength
 	 * @return CAPTCHA word
 	 */
 	private static String randomWord(int wordLength)

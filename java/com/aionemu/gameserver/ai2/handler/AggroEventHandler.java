@@ -43,7 +43,6 @@ public class AggroEventHandler
 	/**
 	 * @param npcAI
 	 * @param myTarget
-	 * @param creature
 	 */
 	public static void onAggro(NpcAI2 npcAI, Creature myTarget)
 	{

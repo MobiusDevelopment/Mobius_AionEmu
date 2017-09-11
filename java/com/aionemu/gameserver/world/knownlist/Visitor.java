@@ -18,6 +18,7 @@ package com.aionemu.gameserver.world.knownlist;
 
 /**
  * @author ATracer
+ * @param <T>
  */
 public interface Visitor<T>
 {

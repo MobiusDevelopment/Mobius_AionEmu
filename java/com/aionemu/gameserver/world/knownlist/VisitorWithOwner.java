@@ -18,6 +18,8 @@ package com.aionemu.gameserver.world.knownlist;
 
 /**
  * @author ATracer
+ * @param <T>
+ * @param <V>
  */
 public interface VisitorWithOwner<T, V>
 {

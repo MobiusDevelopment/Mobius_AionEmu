@@ -140,6 +140,7 @@ public class FlyController
 	
 	/**
 	 * Switching to glide mode (called by CM_MOVE with VALIDATE_GLIDE movement type) 1) from standing state 2) from flying state If from stand to glide - start fp reduce + emotions/stats if from fly to glide - only emotions/stats
+	 * @return
 	 */
 	public boolean switchToGliding()
 	{

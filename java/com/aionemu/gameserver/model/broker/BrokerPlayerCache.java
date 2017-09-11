@@ -90,7 +90,7 @@ public class BrokerPlayerCache
 	}
 	
 	/**
-	 * @param the getSearchItemList
+	 * @return
 	 */
 	public List<Integer> getSearchItemList()
 	{
@@ -107,7 +107,6 @@ public class BrokerPlayerCache
 	
 	/**
 	 * @param itemList
-	 * @param setSearchItemsList the searched item list to set
 	 */
 	public void setSearchItemsList(List<Integer> itemList)
 	{

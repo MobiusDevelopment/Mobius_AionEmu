@@ -34,7 +34,7 @@ public class StaticObjectSpawnManager
 {
 	
 	/**
-	 * @param spawnGroup
+	 * @param spawn
 	 * @param instanceIndex
 	 */
 	public static void spawnTemplate(SpawnGroup2 spawn, int instanceIndex)

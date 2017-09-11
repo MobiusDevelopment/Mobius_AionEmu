@@ -124,6 +124,7 @@ public class PlayerSkillEntry extends SkillEntry
 	/**
 	 * @param player
 	 * @param xp
+	 * @return
 	 */
 	public boolean addSkillXp(Player player, int xp)
 	{

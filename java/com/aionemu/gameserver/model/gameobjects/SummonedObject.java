@@ -28,6 +28,7 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 
 /**
  * @author ATracer
+ * @param <T>
  */
 public class SummonedObject<T extends VisibleObject>extends Npc
 {

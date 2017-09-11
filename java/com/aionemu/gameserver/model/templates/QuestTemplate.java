@@ -173,6 +173,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link Rewards }
+	 * @return
 	 */
 	public List<Rewards> getRewards()
 	{
@@ -213,6 +214,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestDrop }
+	 * @return
 	 */
 	public List<QuestDrop> getQuestDrop()
 	{
@@ -253,6 +255,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link PlayerClass }
+	 * @return
 	 */
 	public List<PlayerClass> getClassPermitted()
 	{
@@ -293,6 +296,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestItems }
+	 * @return
 	 */
 	public List<QuestItems> getFighterSelectableReward()
 	{
@@ -315,6 +319,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestItems }
+	 * @return
 	 */
 	public List<QuestItems> getKnightSelectableReward()
 	{
@@ -337,6 +342,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestItems }
+	 * @return
 	 */
 	public List<QuestItems> getRangerSelectableReward()
 	{
@@ -359,6 +365,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestItems }
+	 * @return
 	 */
 	public List<QuestItems> getAssassinSelectableReward()
 	{
@@ -381,6 +388,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestItems }
+	 * @return
 	 */
 	public List<QuestItems> getWizardSelectableReward()
 	{
@@ -403,6 +411,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestItems }
+	 * @return
 	 */
 	public List<QuestItems> getElementalistSelectableReward()
 	{
@@ -425,6 +434,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestItems }
+	 * @return
 	 */
 	public List<QuestItems> getPriestSelectableReward()
 	{
@@ -447,6 +457,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestItems }
+	 * @return
 	 */
 	public List<QuestItems> getChanterSelectableReward()
 	{
@@ -469,6 +480,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestItems }
+	 * @return
 	 */
 	public List<QuestItems> getGunslingerSelectableReward()
 	{
@@ -491,6 +503,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestItems }
+	 * @return
 	 */
 	public List<QuestItems> getSongweaverSelectableReward()
 	{
@@ -513,6 +526,7 @@ public class QuestTemplate
 	 * </pre>
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list {@link QuestItems }
+	 * @return
 	 */
 	public List<QuestItems> getAethertechSelectableReward()
 	{
@@ -525,6 +539,7 @@ public class QuestTemplate
 	
 	/**
 	 * Gets the value of the id property.
+	 * @return
 	 */
 	public int getId()
 	{

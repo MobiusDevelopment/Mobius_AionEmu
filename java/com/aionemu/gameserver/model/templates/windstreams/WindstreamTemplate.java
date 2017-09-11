@@ -36,6 +36,7 @@ public class WindstreamTemplate
 	
 	/**
 	 * Gets the value of the locations property.
+	 * @return
 	 */
 	public StreamLocations getLocations()
 	{
@@ -44,6 +45,7 @@ public class WindstreamTemplate
 	
 	/**
 	 * Gets the value of the mapid property.
+	 * @return
 	 */
 	public int getMapid()
 	{

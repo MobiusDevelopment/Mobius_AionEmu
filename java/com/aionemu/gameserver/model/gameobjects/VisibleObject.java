@@ -89,6 +89,7 @@ public abstract class VisibleObject extends AionObject
 	
 	/**
 	 * Returns current WorldRegion AionObject is in.
+	 * @return
 	 */
 	public MapRegion getActiveRegion()
 	{
@@ -102,6 +103,7 @@ public abstract class VisibleObject extends AionObject
 	
 	/**
 	 * Return World map id.
+	 * @return
 	 */
 	public int getWorldId()
 	{
@@ -110,6 +112,7 @@ public abstract class VisibleObject extends AionObject
 	
 	/**
 	 * Return the WorldType of the current location
+	 * @return
 	 */
 	public WorldType getWorldType()
 	{
@@ -118,6 +121,7 @@ public abstract class VisibleObject extends AionObject
 	
 	/**
 	 * Return World position x
+	 * @return
 	 */
 	public float getX()
 	{
@@ -126,6 +130,7 @@ public abstract class VisibleObject extends AionObject
 	
 	/**
 	 * Return World position y
+	 * @return
 	 */
 	public float getY()
 	{
@@ -134,6 +139,7 @@ public abstract class VisibleObject extends AionObject
 	
 	/**
 	 * Return World position z
+	 * @return
 	 */
 	public float getZ()
 	{
@@ -147,6 +153,7 @@ public abstract class VisibleObject extends AionObject
 	
 	/**
 	 * Heading of the object. Values from <0,120)
+	 * @return
 	 */
 	public byte getHeading()
 	{

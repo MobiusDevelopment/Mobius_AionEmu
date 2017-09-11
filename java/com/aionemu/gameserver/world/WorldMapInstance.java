@@ -163,6 +163,7 @@ public abstract class WorldMapInstance
 	 * Returns MapRegion that contains given x,y coordinates. If the region doesn't exist, it's created.
 	 * @param x
 	 * @param y
+	 * @param z
 	 * @return a MapRegion
 	 */
 	public abstract MapRegion getRegion(float x, float y, float z);
@@ -551,7 +552,6 @@ public abstract class WorldMapInstance
 	
 	/**
 	 * @param object
-	 * @param player
 	 * @param zoneName
 	 * @return
 	 */
@@ -567,7 +567,7 @@ public abstract class WorldMapInstance
 	
 	/**
 	 * @param pos
-	 * @param zone
+	 * @param zoneName
 	 * @return
 	 */
 	public boolean isInsideZone(WorldPosition pos, ZoneName zoneName)

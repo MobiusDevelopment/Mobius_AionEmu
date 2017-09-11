@@ -44,6 +44,8 @@ public class CylinderArea extends AbstractArea
 	
 	/**
 	 * Creates new cylinder with given radius
+	 * @param zoneName
+	 * @param worldId
 	 * @param center center of the circle
 	 * @param radius radius of the circle
 	 * @param minZ min z
@@ -56,6 +58,8 @@ public class CylinderArea extends AbstractArea
 	
 	/**
 	 * Creates new cylider with given radius
+	 * @param zoneName
+	 * @param worldId
 	 * @param x center coord
 	 * @param y center coord
 	 * @param radius radius of the circle

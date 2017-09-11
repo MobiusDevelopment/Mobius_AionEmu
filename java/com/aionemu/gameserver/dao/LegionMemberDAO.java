@@ -32,7 +32,6 @@ public abstract class LegionMemberDAO implements IDFactoryAwareDAO
 	/**
 	 * Returns true if name is used, false in other case
 	 * @param playerObjId
-	 * @param name name to check
 	 * @return true if name is used, false in other case
 	 */
 	public abstract boolean isIdUsed(int playerObjId);
@@ -40,6 +39,7 @@ public abstract class LegionMemberDAO implements IDFactoryAwareDAO
 	/**
 	 * Creates legion member in DB
 	 * @param legionMember
+	 * @return
 	 */
 	public abstract boolean saveNewLegionMember(LegionMember legionMember);
 	
@@ -47,14 +47,12 @@ public abstract class LegionMemberDAO implements IDFactoryAwareDAO
 	 * Stores legion member to DB
 	 * @param playerObjId
 	 * @param legionMember
-	 * @param player
 	 */
 	public abstract void storeLegionMember(int playerObjId, LegionMember legionMember);
 	
 	/**
 	 * Loads a legion member
 	 * @param playerObjId
-	 * @param legionService
 	 * @return LegionMember
 	 */
 	public abstract LegionMember loadLegionMember(int playerObjId);
@@ -62,7 +60,6 @@ public abstract class LegionMemberDAO implements IDFactoryAwareDAO
 	/**
 	 * Loads an off line legion member by id
 	 * @param playerObjId
-	 * @param legionService
 	 * @return LegionMemberEx
 	 */
 	public abstract LegionMemberEx loadLegionMemberEx(int playerObjId);
@@ -70,7 +67,6 @@ public abstract class LegionMemberDAO implements IDFactoryAwareDAO
 	/**
 	 * Loads an off line legion member by name
 	 * @param playerName
-	 * @param legionService
 	 * @return LegionMemberEx
 	 */
 	public abstract LegionMemberEx loadLegionMemberEx(String playerName);
@@ -85,7 +81,6 @@ public abstract class LegionMemberDAO implements IDFactoryAwareDAO
 	/**
 	 * Removes legion member and all related data (Done by CASCADE DELETION)
 	 * @param playerObjId
-	 * @param playerId legion member to delete
 	 */
 	public abstract void deleteLegionMember(int playerObjId);
 	

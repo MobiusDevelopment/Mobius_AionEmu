@@ -120,8 +120,6 @@ public class PlayerEffectController extends EffectController
 	 * @param skillLvl
 	 * @param remainingTime
 	 * @param endTime
-	 * @param currentTime
-	 * @param reuseDelay
 	 */
 	public void addSavedEffect(int skillId, int skillLvl, int remainingTime, long endTime)
 	{

@@ -21,6 +21,7 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 /**
  * @author NB4L1
+ * @param <T>
  */
 public abstract class FIFORunnableQueue<T extends Runnable>extends FIFOSimpleExecutableQueue<T>
 {

@@ -43,10 +43,7 @@ public class PrivateStoreService
 	
 	/**
 	 * @param activePlayer
-	 * @param itemObjId
-	 * @param itemId
-	 * @param itemAmount
-	 * @param itemPrice
+	 * @param tradePSItems
 	 */
 	public static void addItems(Player activePlayer, TradePSItem[] tradePSItems)
 	{
@@ -225,6 +222,7 @@ public class PrivateStoreService
 	 * Decrease item count and update inventory
 	 * @param seller
 	 * @param item
+	 * @param tradeItem
 	 */
 	private static void decreaseItemFromPlayer(Player seller, Item item, TradeItem tradeItem)
 	{
@@ -269,8 +267,6 @@ public class PrivateStoreService
 	/**
 	 * @param itemOwner
 	 * @param newOwner
-	 * @param player1
-	 * @param player2
 	 * @return
 	 */
 	private static boolean validateParticipants(Player itemOwner, Player newOwner)
@@ -322,8 +318,6 @@ public class PrivateStoreService
 	 * This method will return the item in a inventory by object id
 	 * @param seller
 	 * @param itemObjId
-	 * @param player
-	 * @param tradePSItems
 	 * @return
 	 */
 	private static Item getItemByObjId(Player seller, int itemObjId)

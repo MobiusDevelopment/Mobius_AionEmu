@@ -41,8 +41,8 @@ import com.aionemu.gameserver.dao.PlayerRegisteredItemsDAO;
  */
 public class IDFactory
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(IDFactory.class);
+	
 	/**
 	 * Bitset that is used for all id's.<br>
 	 * We are allowing BitSet to grow over time, so in the end it can be as big as {@link Integer#MAX_VALUE}
@@ -61,10 +61,8 @@ public class IDFactory
 	
 	/**
 	 * Returns next free id.
-	 * @return next free id
 	 * @throws IDFactoryError if there is no free id's
 	 */
-	
 	private IDFactory()
 	{
 		idList = new BitSet();

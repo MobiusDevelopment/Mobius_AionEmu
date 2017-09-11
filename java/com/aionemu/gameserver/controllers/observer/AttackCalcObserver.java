@@ -28,7 +28,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
  */
 public class AttackCalcObserver
 {
-	
 	/**
 	 * @param status
 	 * @return false
@@ -42,7 +41,6 @@ public class AttackCalcObserver
 	 * @param attackList
 	 * @param effect
 	 * @param attacker
-	 * @return value
 	 */
 	public void checkShield(List<AttackResult> attackList, Effect effect, Creature attacker)
 	{

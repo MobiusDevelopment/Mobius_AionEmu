@@ -66,7 +66,6 @@ public class SM_INVENTORY_INFO extends AionServerPacket
 	}
 	
 	/**
-	 * @param isEmpty
 	 */
 	public SM_INVENTORY_INFO()
 	{

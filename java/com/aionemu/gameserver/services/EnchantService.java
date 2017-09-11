@@ -204,32 +204,28 @@ public class EnchantService
 			}
 		};
 		player.getObserveController().attach(observer);
-		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable()
+		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (isStigmaSuccess)
 			{
-				if (isStigmaSuccess)
-				{
-					player.getObserveController().removeObserver(observer);
-					PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parntObjectId, parentItemId, 0, 1, 1), true);
-					player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1);
-					targetItem.setEnchantLevel(targetItem.getEnchantLevel() + 1);
-					targetItem.setPersistentState(PersistentState.UPDATE_REQUIRED);
-					PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, targetItem));
-					// You have successfully enchanted %0 and the Stigma's enchantment level has increased by 1 level.
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_ENCHANT_SUCCESS(new DescriptionId(parentNameId)));
-				}
-				else
-				{
-					player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1);
-					targetItem.setEnchantLevel(0);
-					PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, targetItem));
-					// You have failed to enchant %0 and the Stigma has been destroyed.
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_ENCHANT_FAIL(new DescriptionId(parentNameId)));
-				}
-				PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, isStigmaSuccess ? 1 : 2, 0));
+				player.getObserveController().removeObserver(observer);
+				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parntObjectId, parentItemId, 0, 1, 1), true);
+				player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1);
+				targetItem.setEnchantLevel(targetItem.getEnchantLevel() + 1);
+				targetItem.setPersistentState(PersistentState.UPDATE_REQUIRED);
+				PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, targetItem));
+				// You have successfully enchanted %0 and the Stigma's enchantment level has increased by 1 level.
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_ENCHANT_SUCCESS(new DescriptionId(parentNameId)));
 			}
+			else
+			{
+				player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1);
+				targetItem.setEnchantLevel(0);
+				PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, targetItem));
+				// You have failed to enchant %0 and the Stigma has been destroyed.
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_STIGMA_ENCHANT_FAIL(new DescriptionId(parentNameId)));
+			}
+			PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, isStigmaSuccess ? 1 : 2, 0));
 		}, 5000));
 	}
 	
@@ -1709,6 +1705,8 @@ public class EnchantService
 	
 	/**
 	 * Archdaeva's Remodeled Danuar Destroy Enchant: NEVER!!!
+	 * @param targetItem
+	 * @return
 	 */
 	public static boolean isArchdaevaRemodeledDanuar(Item targetItem)
 	{

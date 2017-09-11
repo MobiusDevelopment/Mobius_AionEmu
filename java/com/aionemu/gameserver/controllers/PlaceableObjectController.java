@@ -33,6 +33,7 @@ import javolution.util.FastMap;
 
 /**
  * @author Rolandas
+ * @param <T>
  */
 public class PlaceableObjectController<T extends PlaceableHouseObject>extends VisibleObjectController<HouseObject<T>>
 {

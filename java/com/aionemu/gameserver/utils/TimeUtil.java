@@ -26,6 +26,8 @@ public class TimeUtil
 	
 	/**
 	 * Check whether supplied time in ms is expired
+	 * @param time
+	 * @return
 	 */
 	public static boolean isExpired(long time)
 	{

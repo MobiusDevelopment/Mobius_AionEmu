@@ -139,7 +139,9 @@ public class Triangle extends AbstractTriangle implements Reusable
 	/**
 	 * <code>set</code> sets one of the triangles points to that specified as a parameter.
 	 * @param i the index to place the point.
-	 * @param point the point to set.
+	 * @param x
+	 * @param y
+	 * @param z
 	 */
 	public void set(int i, float x, float y, float z)
 	{

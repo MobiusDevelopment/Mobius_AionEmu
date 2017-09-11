@@ -114,6 +114,7 @@ public final class RestrictionsManager
 	 * This function created for enable/disable attack.
 	 * @param player
 	 * @param target
+	 * @return
 	 */
 	public static boolean canAttack(Player player, VisibleObject target)
 	{
@@ -167,6 +168,7 @@ public final class RestrictionsManager
 	/**
 	 * This function is created for enable/disable chat.
 	 * @param player
+	 * @return
 	 */
 	public static boolean canChat(Player player)
 	{
@@ -184,6 +186,7 @@ public final class RestrictionsManager
 	 * This function is created for enable/disable invite to group.
 	 * @param player
 	 * @param target
+	 * @return
 	 */
 	public static boolean canInviteToGroup(Player player, Player target)
 	{
@@ -201,6 +204,7 @@ public final class RestrictionsManager
 	 * This function is created for enable/disable invite to alliance.
 	 * @param player
 	 * @param target
+	 * @return
 	 */
 	public static boolean canInviteToAlliance(Player player, Player target)
 	{
@@ -218,6 +222,7 @@ public final class RestrictionsManager
 	 * This function is created for enable/disable invite to league.
 	 * @param player
 	 * @param target
+	 * @return
 	 */
 	public static boolean canInviteToLeague(Player player, Player target)
 	{
@@ -234,6 +239,7 @@ public final class RestrictionsManager
 	/**
 	 * This function is created for enable/disable equip change.
 	 * @param player
+	 * @return
 	 */
 	public static boolean canChangeEquip(Player player)
 	{

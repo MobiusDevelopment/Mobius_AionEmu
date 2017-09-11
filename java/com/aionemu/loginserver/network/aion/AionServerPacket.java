@@ -39,7 +39,6 @@ public abstract class AionServerPacket extends BaseServerPacket
 	/**
 	 * Write and encrypt this packet data for given connection, to given buffer.
 	 * @param con
-	 * @param buf
 	 */
 	public final void write(LoginConnection con)
 	{
@@ -58,7 +57,6 @@ public abstract class AionServerPacket extends BaseServerPacket
 	/**
 	 * Write data that this packet represents to given byte buffer.
 	 * @param con
-	 * @param buf
 	 */
 	protected abstract void writeImpl(LoginConnection con);
 }

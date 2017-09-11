@@ -67,8 +67,6 @@ public class AttackShieldObserver extends AttackCalcObserver
 	 * @param type
 	 * @param shieldType
 	 * @param probability
-	 * @param value
-	 * @param status
 	 */
 	public AttackShieldObserver(int hit, int totalHit, boolean percent, Effect effect, HitType type, int shieldType, int probability)
 	{

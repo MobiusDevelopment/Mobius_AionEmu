@@ -155,6 +155,7 @@ public class WalkerGroup
 	 * @param origin - initial spawn location
 	 * @param destination - point of next move
 	 * @param shift - distance from origin located in lines perpendicular to destination; for SagittalShift if negative then located to the left from origin, otherwise, to the right for CoronalShift if negative then located to back, otherwise to the front
+	 * @return
 	 * @category TODO: move to MathUtil when all kinds of WalkerGroupType are implemented.
 	 */
 	public static Point2D getLinePoint(Point2D origin, Point2D destination, WalkerGroupShift shift)

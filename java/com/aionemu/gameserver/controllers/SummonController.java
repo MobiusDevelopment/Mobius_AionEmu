@@ -67,6 +67,7 @@ public class SummonController extends CreatureController<Summon>
 	
 	/**
 	 * Release summon
+	 * @param unsummonType
 	 */
 	public void release(UnsummonType unsummonType)
 	{
@@ -102,6 +103,7 @@ public class SummonController extends CreatureController<Summon>
 	
 	/**
 	 * Change to attackMode
+	 * @param targetObjId
 	 */
 	public void attackMode(int targetObjId)
 	{
@@ -199,7 +201,6 @@ public class SummonController extends CreatureController<Summon>
 	/**
 	 * Handle automatic release if Ultra Skill demands it
 	 * @param skillId
-	 * @param is the skill commanded by summoner, after which pet is automatically dismissed
 	 */
 	public void setReleaseAfterSkill(int skillId)
 	{

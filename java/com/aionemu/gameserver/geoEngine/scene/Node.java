@@ -401,11 +401,11 @@ public class Node extends Spatial implements Cloneable
 	 * <p/>
 	 * "Descendants" does not include self, per the definition of the word. To test for descendants AND self, you must do a <code>node.matches(aClass, aRegex)</code> + <code>node.descendantMatches(aClass, aRegex)</code>.
 	 * <p/>
+	 * @param <T>
 	 * @param spatialSubclass Subclass which matching Spatials must implement. Null causes all Spatials to qualify.
 	 * @param nameRegex Regular expression to match Spatial name against. Null causes all Names to qualify.
 	 * @return Non-null, but possibly 0-element, list of matching Spatials (also Instances extending Spatials).
 	 * @see java.util.regex.Pattern
-	 * @see Spatial#matches(Class<? extends Spatial>, String)
 	 */
 	@SuppressWarnings("unchecked")
 	public <T extends Spatial> List<T> descendantMatches(Class<T> spatialSubclass, String nameRegex)
@@ -432,7 +432,9 @@ public class Node extends Spatial implements Cloneable
 	
 	/**
 	 * Convenience wrapper.
-	 * @see #descendantMatches(Class<? extends Spatial>, String)
+	 * @param spatialSubclass
+	 * @param <T>
+	 * @return
 	 */
 	public <T extends Spatial> List<T> descendantMatches(Class<T> spatialSubclass)
 	{
@@ -444,7 +446,6 @@ public class Node extends Spatial implements Cloneable
 	 * @param nameRegex
 	 * @param <T>
 	 * @return
-	 * @see #descendantMatches(Class<? extends Spatial>, String)
 	 */
 	public <T extends Spatial> List<T> descendantMatches(String nameRegex)
 	{

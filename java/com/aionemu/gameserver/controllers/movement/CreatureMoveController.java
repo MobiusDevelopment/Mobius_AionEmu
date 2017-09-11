@@ -25,6 +25,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
  * @author ATracer
+ * @param <T>
  */
 public abstract class CreatureMoveController<T extends VisibleObject> implements MoveController
 {

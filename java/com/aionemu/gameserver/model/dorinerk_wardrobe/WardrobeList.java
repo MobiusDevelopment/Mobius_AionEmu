@@ -20,6 +20,7 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 
 /**
  * @author Ranastic
+ * @param <T>
  */
 public interface WardrobeList<T extends Creature>
 {

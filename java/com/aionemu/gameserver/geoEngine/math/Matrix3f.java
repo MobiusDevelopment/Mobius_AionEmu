@@ -597,7 +597,6 @@ public final class Matrix3f implements Cloneable, Reusable
 	 * <code>set</code> sets the values of the matrix to those supplied by the 3x3 two dimenion array.
 	 * @param matrix the new values of the matrix.
 	 * @return this
-	 * @throws JmeException if the array is not of size 9.
 	 */
 	public Matrix3f set(float[][] matrix)
 	{
@@ -918,6 +917,7 @@ public final class Matrix3f implements Cloneable, Reusable
 	
 	/**
 	 * Inverts this matrix and stores it in the given store.
+	 * @param store
 	 * @return The store
 	 */
 	public Matrix3f invert(Matrix3f store)
@@ -1208,7 +1208,6 @@ public final class Matrix3f implements Cloneable, Reusable
 	 * A function for creating a rotation matrix that rotates a vector called "start" into another vector called "end".
 	 * @param start normalized non-zero starting vector
 	 * @param end normalized non-zero ending vector
-	 * @see "Tomas M???ller, John Hughes \"Efficiently Building a Matrix to Rotate \ One Vector to Another\" Journal of Graphics Tools, 4(4):1-4, 1999"
 	 */
 	public void fromStartEndVectors(Vector3f start, Vector3f end)
 	{

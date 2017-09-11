@@ -126,7 +126,6 @@ public interface Area
 	
 	/**
 	 * Returns closest point of area to given point.<br>
-	 * Works exactly like {@link #getClosestPoint(int, int)} if {@link #isInsideZ(int)} returns true.<br>
 	 * In other case closest z edge is set as z coord.
 	 * @param point point to check
 	 * @return closest point of area to point
@@ -135,7 +134,6 @@ public interface Area
 	
 	/**
 	 * Returns closest point of area to given coords.<br>
-	 * Works exactly like {@link #getClosestPoint(int, int)} if {@link #isInsideZ(int)} returns true.<br>
 	 * In other case closest z edge is set as z coord.
 	 * @param x x coord
 	 * @param y y coord

@@ -26,6 +26,7 @@ import com.google.common.base.Predicate;
 
 /**
  * @author ATracer
+ * @param <T>
  */
 public abstract class PlayerStopMentoringEvent<T extends TemporaryPlayerTeam<? extends TeamMember<Player>>>extends AlwaysTrueTeamEvent implements Predicate<Player>
 {

@@ -65,7 +65,7 @@ public class TaskManagerFromDB
 	
 	/**
 	 * Allow to register one task and check if already exists
-	 * @param shutdownTask
+	 * @param task
 	 */
 	private void registerNewTask(TaskFromDBHandler task)
 	{
@@ -135,7 +135,6 @@ public class TaskManagerFromDB
 	 * Run a fixed in the time (HH:MM:SS) task
 	 * @param handler
 	 * @param dbTask
-	 * @param task
 	 */
 	private void runFixedInTimeTask(TaskFromDBHandler handler, TaskFromDB dbTask)
 	{

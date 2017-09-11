@@ -91,7 +91,6 @@ public class EffectController
 	
 	/**
 	 * @param nextEffect
-	 * @param effect
 	 */
 	public void addEffect(Effect nextEffect)
 	{
@@ -304,7 +303,6 @@ public class EffectController
 	/**
 	 * @param mapToUpdate
 	 * @param newEffect
-	 * @param effect
 	 * @return
 	 */
 	private final Effect findConflictedEffect(Map<String, Effect> mapToUpdate, Effect newEffect)
@@ -478,8 +476,6 @@ public class EffectController
 	
 	/**
 	 * Method used to calculate number of effects of given dispelcategory, targetslot and dispelLevel used only in DispelBuffCounterAtk, therefore rest of cases are skipped
-	 * @param dispelCat
-	 * @param targetSlot
 	 * @param dispelLevel
 	 * @return
 	 */
@@ -795,7 +791,6 @@ public class EffectController
 	}
 	
 	/**
-	 * @see TargetSlot
 	 * @param targetSlot
 	 */
 	public void removeAbnormalEffectsByTargetSlot(SkillTargetSlot targetSlot)
@@ -902,6 +897,7 @@ public class EffectController
 	
 	/**
 	 * return true if creature is under Fear effect
+	 * @return
 	 */
 	public boolean isUnderFear()
 	{

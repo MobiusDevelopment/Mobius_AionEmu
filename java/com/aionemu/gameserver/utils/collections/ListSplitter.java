@@ -23,6 +23,7 @@ import java.util.List;
 
 /**
  * @author xTz
+ * @param <T>
  */
 public class ListSplitter<T>
 {

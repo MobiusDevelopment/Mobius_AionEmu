@@ -85,7 +85,9 @@ public class Plane implements Cloneable
 	
 	/**
 	 * <code>setNormal</code> sets the normal of the plane.
-	 * @param normal the new normal of the plane.
+	 * @param x
+	 * @param y
+	 * @param z
 	 */
 	public void setNormal(float x, float y, float z)
 	{

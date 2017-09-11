@@ -37,7 +37,6 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket
 	/**
 	 * Rift announce packet
 	 * @param rifts
-	 * @param player
 	 */
 	public SM_RIFT_ANNOUNCE(FastMap<Integer, Integer> rifts)
 	{
@@ -56,7 +55,6 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket
 	 * Rift announce packet
 	 * @param rift
 	 * @param isMaster
-	 * @param player
 	 */
 	public SM_RIFT_ANNOUNCE(RVController rift, boolean isMaster)
 	{

@@ -21,6 +21,7 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 /**
  * @author DrNism
+ * @param <T>
  */
 public interface StigmaList<T extends Creature>
 {

@@ -120,6 +120,8 @@ public class PetTemplate
 	
 	/**
 	 * Used to write to SM_PET packet, so checks only needed ones
+	 * @param type
+	 * @return
 	 */
 	public boolean ContainsFunction(PetFunctionType type)
 	{
@@ -140,6 +142,8 @@ public class PetTemplate
 	
 	/**
 	 * Returns function if found, otherwise null
+	 * @param type
+	 * @return
 	 */
 	public PetFunction getPetFunction(PetFunctionType type)
 	{

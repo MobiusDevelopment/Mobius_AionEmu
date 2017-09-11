@@ -24,6 +24,7 @@ import com.aionemu.gameserver.services.ZorshivDredgionService;
 
 /**
  * @author Rinzler (Encom)
+ * @param <ZL>
  */
 
 public abstract class ZorshivDredgion<ZL extends ZorshivDredgionLocation>

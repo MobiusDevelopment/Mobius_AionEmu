@@ -22,6 +22,7 @@ import javolution.util.FastList;
 
 /**
  * @author NB4L1
+ * @param <T>
  */
 public abstract class FIFOSimpleExecutableQueue<T>extends FIFOExecutableQueue
 {

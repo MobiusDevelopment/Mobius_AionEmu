@@ -202,6 +202,7 @@ public final class Vector3f implements Cloneable, Reusable
 	 * <code>scaleAdd</code> multiplies this vector by a scalar then adds the given Vector3f.
 	 * @param scalar the value to multiply this vector by.
 	 * @param add the value to add
+	 * @return
 	 */
 	public Vector3f scaleAdd(float scalar, Vector3f add)
 	{
@@ -216,6 +217,7 @@ public final class Vector3f implements Cloneable, Reusable
 	 * @param scalar the value to multiply this vector by.
 	 * @param mult the value to multiply the scalar by
 	 * @param add the value to add
+	 * @return
 	 */
 	public Vector3f scaleAdd(float scalar, Vector3f mult, Vector3f add)
 	{
@@ -674,6 +676,7 @@ public final class Vector3f implements Cloneable, Reusable
 	
 	/**
 	 * <code>zero</code> resets this vector's data to zero internally.
+	 * @return
 	 */
 	public Vector3f zero()
 	{
@@ -697,6 +700,7 @@ public final class Vector3f implements Cloneable, Reusable
 	 * Sets this vector to the interpolation by changeAmnt from this to the finalVec this=(1-changeAmnt)*this + changeAmnt * finalVec
 	 * @param finalVec The final vector to interpolate towards
 	 * @param changeAmnt An amount between 0.0 - 1.0 representing a precentage change from this towards finalVec
+	 * @return
 	 */
 	public Vector3f interpolate(Vector3f finalVec, float changeAmnt)
 	{
@@ -711,6 +715,7 @@ public final class Vector3f implements Cloneable, Reusable
 	 * @param beginVec the beging vector (changeAmnt=0)
 	 * @param finalVec The final vector to interpolate towards
 	 * @param changeAmnt An amount between 0.0 - 1.0 representing a precentage change from beginVec towards finalVec
+	 * @return
 	 */
 	public Vector3f interpolate(Vector3f beginVec, Vector3f finalVec, float changeAmnt)
 	{

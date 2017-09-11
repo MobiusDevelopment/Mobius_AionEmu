@@ -59,6 +59,7 @@ public class AbyssRank
 	 * @param weeklyGP
 	 * @param gp
 	 * @param rank
+	 * @param topRanking
 	 * @param dailyKill
 	 * @param weeklyKill
 	 * @param allKill

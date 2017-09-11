@@ -24,6 +24,7 @@ import javolution.util.FastSet;
 
 /**
  * @author NB4L1
+ * @param <T>
  */
 public abstract class AbstractIterativePeriodicTaskManager<T>extends AbstractPeriodicTaskManager
 {

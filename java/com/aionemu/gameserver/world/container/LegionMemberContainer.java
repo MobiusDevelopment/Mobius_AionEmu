@@ -49,6 +49,7 @@ public class LegionMemberContainer
 	/**
 	 * This method will return a member from cache
 	 * @param memberObjId
+	 * @return
 	 */
 	public LegionMember getMember(int memberObjId)
 	{
@@ -72,6 +73,7 @@ public class LegionMemberContainer
 	/**
 	 * This method will return a memberEx from cache
 	 * @param memberObjId
+	 * @return
 	 */
 	public LegionMemberEx getMemberEx(int memberObjId)
 	{
@@ -81,6 +83,7 @@ public class LegionMemberContainer
 	/**
 	 * This method will return a memberEx from cache
 	 * @param memberName
+	 * @return
 	 */
 	public LegionMemberEx getMemberEx(String memberName)
 	{

@@ -301,6 +301,9 @@ class Polyline2D implements Shape, Cloneable, Serializable
 	
 	/**
 	 * Determines whether the specified coordinates are inside this <code>Polyline2D</code>. This method is required to implement the Shape interface, but in the case of Line2D objects it always returns false since a line contains no area.
+	 * @param x
+	 * @param y
+	 * @return
 	 */
 	public boolean contains(int x, int y)
 	{

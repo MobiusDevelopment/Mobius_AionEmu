@@ -5677,6 +5677,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer bound
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bind_END_A_TO_SELF(String skilltarget)
 	{
@@ -5685,6 +5687,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer bleeding.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bleed_END_A_TO_SELF(String skilltarget)
 	{
@@ -5693,6 +5697,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is released from the cursed state.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Curse_END_A_TO_SELF(String skilltarget)
 	{
@@ -5701,6 +5707,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is able to fly again.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoFly_END_A_TO_SELF(String skilltarget)
 	{
@@ -5709,6 +5717,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is released from the Aerial Snare.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OpenAerial_END_A_TO_SELF(String skilltarget)
 	{
@@ -5717,6 +5727,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer petrified.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Petrification_END_A_TO_SELF(String skilltarget)
 	{
@@ -5725,6 +5737,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer poisoned.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Poison_END_A_TO_SELF(String skilltarget)
 	{
@@ -5733,6 +5747,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] restored its attack speed.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Slow_END_A_TO_SELF(String skilltarget)
 	{
@@ -5741,6 +5757,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] restored its movement speed.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Snare_END_A_TO_SELF(String skilltarget)
 	{
@@ -7111,6 +7129,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer blind.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Blind_END_A_TO_B(String skilltarget)
 	{
@@ -7119,6 +7139,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer confused.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Confuse_END_A_TO_B(String skilltarget)
 	{
@@ -7127,6 +7149,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer diseased.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Disease_END_A_TO_B(String skilltarget)
 	{
@@ -7135,6 +7159,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer afraid.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fear_END_A_TO_B(String skilltarget)
 	{
@@ -7143,6 +7169,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer paralyzed.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Paralyze_END_A_TO_B(String skilltarget)
 	{
@@ -7151,6 +7179,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer immobilized.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Root_END_A_TO_B(String skilltarget)
 	{
@@ -7159,6 +7189,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer silenced.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Silence_END_A_TO_B(String skilltarget)
 	{
@@ -7167,6 +7199,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] woke up.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sleep_END_A_TO_B(String skilltarget)
 	{
@@ -7175,6 +7209,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer spinning.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Spin_END_A_TO_B(String skilltarget)
 	{
@@ -7183,6 +7219,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer staggering.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stagger_END_A_TO_B(String skilltarget)
 	{
@@ -7191,6 +7229,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer shocked.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stumble_END_A_TO_B(String skilltarget)
 	{
@@ -7199,6 +7239,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer stunned.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stun_END_A_TO_B(String skilltarget)
 	{
@@ -7384,6 +7426,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer bound
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bind_END_A_TO_B(String skilltarget)
 	{
@@ -7392,6 +7436,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer bleeding.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bleed_END_A_TO_B(String skilltarget)
 	{
@@ -7400,6 +7446,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered from the cursed state.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Curse_END_A_TO_B(String skilltarget)
 	{
@@ -7408,6 +7456,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is able to fly again.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoFly_END_A_TO_B(String skilltarget)
 	{
@@ -7416,6 +7466,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is released from the aerial snare.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OpenAerial_END_A_TO_B(String skilltarget)
 	{
@@ -7424,6 +7476,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer petrified.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Petrification_END_A_TO_B(String skilltarget)
 	{
@@ -7432,6 +7486,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer poisoned.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Poison_END_A_TO_B(String skilltarget)
 	{
@@ -7440,6 +7496,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s attack speed is restored to normal.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Slow_END_A_TO_B(String skilltarget)
 	{
@@ -7448,6 +7506,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s movement speed is restored to normal.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Snare_END_A_TO_B(String skilltarget)
 	{
@@ -7911,6 +7971,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] will receive the decrease flight time effect in a moment because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -7945,6 +8009,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the flight time recovery state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -7979,6 +8047,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the continuous healing state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8063,6 +8135,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the spinning state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Hide_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8071,6 +8147,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the spinning state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HostileUp_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8079,6 +8159,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] was put in the magical counterattack state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MagicCounterATK_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8126,6 +8210,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the Mana Treatment state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8160,6 +8248,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the boost recovery skill state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostHealEffect_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8168,6 +8260,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the boost skill state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostSkillAttack_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8302,6 +8398,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] blocked %num0 damage because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Protect_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -8310,6 +8411,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] was affected because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Provoker_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8318,6 +8423,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received %num0 damage and was put in the pull state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Pulled_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -8326,6 +8436,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the teleport state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_RandomMoveLoc_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8334,6 +8448,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] entered the reserved resurrection state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Rebirth_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8342,6 +8460,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the reflection state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8350,6 +8472,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] reflected %num0 damage because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -8358,6 +8485,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the resurrection state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Resurrect_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8366,6 +8497,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the resurrection summoning state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ResurrectPositional_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8374,6 +8509,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the see-through state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Search_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8382,6 +8521,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] has transformed into %0 because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ShapeChange_A_TO_B(String skilltarget, String value0, String skillcaster, String skillname)
 	{
@@ -8390,6 +8534,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the defense shield state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8398,6 +8546,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] blocked %num0 damage because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -8406,6 +8559,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SignetBurst_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -8414,6 +8572,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATK_Instant_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -8422,6 +8585,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATKDrain_Instant_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -8430,6 +8598,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] used [%SkillName] to inflict the continuous damage effect on [%SkillTarget].
+	 * @param skillcaster
+	 * @param skillname
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATK_A_TO_B(String skillcaster, String skillname, String skilltarget)
 	{
@@ -8438,6 +8610,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATK_Instant_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -8446,6 +8623,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] absorbs [%SkillTarget]'s HP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -8454,6 +8635,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_Instant_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -8462,6 +8648,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s movement speed increased because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sprint_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8470,6 +8660,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the weaken %0 state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_StatDown_A_TO_B(String skilltarget, String value0, String skillcaster, String skillname)
 	{
@@ -8478,6 +8673,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the boost %0 state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_StatUp_A_TO_B(String skilltarget, String value0, String skillcaster, String skillname)
 	{
@@ -8486,6 +8686,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s %0 resistance effects were weakened because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SubTypeBoostResist_A_TO_B(String skilltarget, String value0, String skillcaster, String skillname)
 	{
@@ -8494,6 +8699,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s %0 skill durations changed because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SubTypeExtendDuration_A_TO_B(String skilltarget, String value0, String skillcaster, String skillname)
 	{
@@ -8502,6 +8712,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] summoned %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Summon_A_TO_B(String skillcaster, String value0, String skillname)
 	{
@@ -8510,6 +8724,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] summoned %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonBindingGroupGate_A_TO_B(String skillcaster, String value0, String skillname)
 	{
@@ -8518,6 +8736,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has summoned %0 to [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonGroupGate_A_TO_B(String skillcaster, String value0, String skilltarget, String skillname)
 	{
@@ -8526,6 +8749,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has summoned %0 to attack [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonHoming_A_TO_B(String skillcaster, String value0, String skilltarget, String skillname)
 	{
@@ -8534,6 +8762,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has summoned %0 to attack [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonServant_A_TO_B(String skillcaster, String value0, String skilltarget, String skillname)
 	{
@@ -8542,6 +8775,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has summoned %0 to [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonTotem_A_TO_B(String skillcaster, String value0, String skilltarget, String skillname)
 	{
@@ -8550,6 +8788,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has summoned %0 to [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonTrap_A_TO_B(String skillcaster, String value0, String skilltarget, String skillname)
 	{
@@ -8558,6 +8801,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] exchanged [%SkillTarget]'s HP and MP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SwitchHPMP_Instant_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -8566,6 +8813,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] changed [%SkillTarget]'s %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_WeaponStatUp_A_TO_B(String skillcaster, String skilltarget, String value0, String skillname)
 	{
@@ -8574,6 +8826,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received %num0 bleeding damage after you used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bleed_INTERVAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -8582,6 +8838,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num0 bleeding damage due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bleed_INTERVAL_TO_ME(int num0, String skillname)
 	{
@@ -8590,6 +8849,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s HP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CaseHeal_INTERVAL_HEAL_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -8598,6 +8861,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CaseHeal_INTERVAL_HEAL_TO_ME(int num0, String skillname)
 	{
@@ -8606,6 +8872,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s HP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_INTERVAL_HEAL_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -8614,6 +8884,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_INTERVAL_HEAL_TO_ME(int num0, String skillname)
 	{
@@ -8622,6 +8895,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 MP due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_INTERVAL_HEAL_MP_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -8630,6 +8907,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 MP due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_INTERVAL_HEAL_MP_TO_ME(int num0, String skillname)
 	{
@@ -8638,6 +8918,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time decreased by %num0 due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedFPATK_Instant_INTERVAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -8646,6 +8930,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your flight time decreased by %num0 due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedFPATK_Instant_INTERVAL_TO_ME(int num0, String skillname)
 	{
@@ -8654,6 +8941,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received %num0 damage due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSpellATK_Instant_INTERVAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -8662,6 +8953,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num0 damage due to [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSpellATK_Instant_INTERVAL_TO_ME(int num0, String skillname)
 	{
@@ -8670,6 +8964,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time decreased by %num0 due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_INTERVAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -8678,6 +8976,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your flight time decreased by %num0 due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_INTERVAL_TO_ME(int num0, String skillname)
 	{
@@ -8686,6 +8987,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time increased by %num0 due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_INTERVAL_HEAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -8694,6 +8999,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your flight time increased by %num0 due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_INTERVAL_HEAL_TO_ME(int num0, String skillname)
 	{
@@ -8702,6 +9010,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s HP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_INTERVAL_HEAL_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -8710,6 +9022,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_INTERVAL_HEAL_TO_ME(int num0, String skillname)
 	{
@@ -8718,6 +9033,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s HP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnAttacked_INTERVAL_HEAL_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -8726,6 +9045,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnAttacked_INTERVAL_HEAL_TO_ME(int num0, String skillname)
 	{
@@ -8734,6 +9056,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s HP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnTargetDead_INTERVAL_HEAL_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -8742,6 +9068,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnTargetDead_INTERVAL_HEAL_TO_ME(int num0, String skillname)
 	{
@@ -8750,6 +9079,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received %num0 damage due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MagicCounterATK_INTERVAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -8758,6 +9091,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You receive %num0 damage due to [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MagicCounterATK_INTERVAL_TO_ME(int num0, String skillname)
 	{
@@ -8766,6 +9102,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 MP due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_INTERVAL_HEAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -8774,6 +9114,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 MP due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_INTERVAL_HEAL_TO_ME(int num0, String skillname)
 	{
@@ -8782,6 +9125,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received %num0 poisoning damage after you used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Poison_INTERVAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -8790,6 +9137,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num0 poisoning damage due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Poison_INTERVAL_TO_ME(int num0, String skillname)
 	{
@@ -8798,6 +9148,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] blocked %num0 damage through the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Protect_INTERVAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -8806,6 +9160,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You blocked %num0 damage through the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Protect_INTERVAL_TO_ME(int num0, String skillname)
 	{
@@ -8814,6 +9171,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] reflected %num0 damage.
+	 * @param skilltarget
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_INTERVAL_TO_B(String skilltarget, int num0)
 	{
@@ -8822,6 +9182,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You reflected %num0 damage.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_INTERVAL_TO_ME(int num0)
 	{
@@ -8830,6 +9192,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] blocked %num0 damage.
+	 * @param skilltarget
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_INTERVAL_TO_B(String skilltarget, int num0)
 	{
@@ -8838,6 +9203,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You blocked %num0 damage.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_INTERVAL_TO_ME(int num0)
 	{
@@ -8846,6 +9213,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s HP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATKDrain_Instant_INTERVAL_HEAL_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -8854,6 +9225,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATKDrain_Instant_INTERVAL_HEAL_TO_ME(int num0, String skillname)
 	{
@@ -8862,6 +9236,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] absorbed [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSORBED_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -8870,6 +9247,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillName] conflicted with [%SkillTarget]'s existing skill.
+	 * @param skillname
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_CONFLICT_ME_TO_B(String skillname, String skilltarget)
 	{
@@ -8878,6 +9258,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 evaded the attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_DODGED_ME_TO_B(String value0)
 	{
@@ -8886,6 +9268,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] resisted [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_RESISTED_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -8894,6 +9279,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is immune to your [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_IMMUNED_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -8902,6 +9290,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillName] was cancelled as [%SkillTarget] is under too many effects.
+	 * @param skillname
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_NO_AVAILABLE_SLOT_ME_TO_B(String skillname, String skilltarget)
 	{
@@ -8910,6 +9301,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 blocked the attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_BLOCK_ME_TO_B(String value0)
 	{
@@ -8918,6 +9311,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 parried the attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARRY_ME_TO_B(String value0)
 	{
@@ -8926,6 +9321,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You absorbed [%SkillCaster]'s [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSORBED_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -8934,6 +9332,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s [%SkillName] conflicted with your existing skill.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_CONFLICT_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -8942,6 +9343,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You evaded %0's attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_DODGED_A_TO_ME(String value0)
 	{
@@ -8950,6 +9353,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You resisted [%SkillCaster]'s [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_RESISTED_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -8958,6 +9364,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are immune to [%SkillCaster]'s [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_IMMUNED_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -8966,6 +9375,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s [%SkillName] was cancelled as you are under too many effects.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_NO_AVAILABLE_SLOT_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -8974,6 +9386,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You blocked %0's attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_BLOCK_A_TO_ME(String value0)
 	{
@@ -8982,6 +9396,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You parried %0's attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARRY_A_TO_ME(String value0)
 	{
@@ -8990,6 +9406,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] was affected by [%SkillCaster]'s [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSORBED_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -8998,6 +9418,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s [%SkillName] conflicted with [%SkillTarget]'s existing skill.
+	 * @param skillcaster
+	 * @param skillname
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_CONFLICT_A_TO_B(String skillcaster, String skillname, String skilltarget)
 	{
@@ -9006,6 +9430,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 evaded %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_DODGED_A_TO_B(String value0, String value1)
 	{
@@ -9014,6 +9441,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] resisted [%SkillCaster]'s [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_RESISTED_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -9022,6 +9453,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is immune to [%SkillCaster]'s [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_IMMUNED_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -9030,6 +9465,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s [%SkillName] was cancelled as [%SkillTarget] is under too many effects.
+	 * @param skillcaster
+	 * @param skillname
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_NO_AVAILABLE_SLOT_A_TO_B(String skillcaster, String skillname, String skilltarget)
 	{
@@ -9038,6 +9477,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 blocked %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_BLOCK_A_TO_B(String value0, String value1)
 	{
@@ -9046,6 +9488,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 parried %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARRY_A_TO_B(String value0, String value1)
 	{
@@ -9054,6 +9499,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] evaded [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_DODGED_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -9062,6 +9510,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You evaded [%SkillCaster]'s [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_DODGED_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -9070,6 +9521,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] evaded [%SkillCaster]'s [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_DODGED_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -9183,6 +9638,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer blinded.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Blind_END_A(String value0)
 	{
@@ -9191,6 +9648,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer confused.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Confuse_END_A(String value0)
 	{
@@ -9199,6 +9658,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer diseased.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Disease_END_A(String value0)
 	{
@@ -9207,6 +9668,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer afraid.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fear_END_A(String value0)
 	{
@@ -9215,6 +9678,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer paralyzed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Paralyze_END_A(String value0)
 	{
@@ -9223,6 +9688,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer immobilized.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Root_END_A(String value0)
 	{
@@ -9231,6 +9698,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer silenced.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Silence_END_A(String value0)
 	{
@@ -9239,6 +9708,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 woke up.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sleep_END_A(String value0)
 	{
@@ -9247,6 +9718,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer spinning.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Spin_END_A(String value0)
 	{
@@ -9255,6 +9728,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer staggering.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stagger_END_A(String value0)
 	{
@@ -9263,6 +9738,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer shocked.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stumble_END_A(String value0)
 	{
@@ -9271,6 +9748,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer stunned.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stun_END_A(String value0)
 	{
@@ -9279,6 +9758,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer bound.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bind_END_A(String value0)
 	{
@@ -9287,6 +9768,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer bleeding.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bleed_END_A(String value0)
 	{
@@ -9295,6 +9778,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 recovered from the cursed state.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Curse_END_A(String value0)
 	{
@@ -9303,6 +9788,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is able to fly again.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoFly_END_A(String value0)
 	{
@@ -9311,6 +9798,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is released from the Aerial Snare.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OpenAerial_END_A(String value0)
 	{
@@ -9319,6 +9808,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 recovered from the petrified state.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Petrification_END_A(String value0)
 	{
@@ -9327,6 +9818,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer poisoned.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Poison_END_A(String value0)
 	{
@@ -9335,6 +9828,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's attack speed is restored to normal.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Slow_END_A(String value0)
 	{
@@ -9343,6 +9838,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's movement speed is restored to normal.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Snare_END_A(String value0)
 	{
@@ -9351,6 +9848,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You use [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonSkillArea_ME_TO_SELF(String skillname)
 	{
@@ -9359,6 +9858,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] uses [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonSkillArea_ME_TO_B(String skillcaster, String skillname)
 	{
@@ -9367,6 +9869,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] uses [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonSkillArea_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -9375,6 +9880,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] uses [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonSkillArea_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -9383,6 +9891,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] uses [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonSkillArea_A_TO_B(String skillcaster, String skillname)
 	{
@@ -9391,6 +9902,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received %num0 damage due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATK_INTERVAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -9399,6 +9914,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You receive %num0 damage due to [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATK_INTERVAL_TO_ME(int num0, String skillname)
 	{
@@ -9407,6 +9925,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s HP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_Instant_INTERVAL_HEAL_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -9415,6 +9937,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_Instant_INTERVAL_HEAL_TO_ME(int num0, String skillname)
 	{
@@ -9423,6 +9948,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 MP due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_Instant_INTERVAL_HEAL_MP_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -9431,6 +9960,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 MP due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_Instant_INTERVAL_HEAL_MP_TO_ME(int num0, String skillname)
 	{
@@ -9439,6 +9971,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received %num0 damage due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_INTERVAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -9447,6 +9983,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You receive %num0 damage due to [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_INTERVAL_TO_ME(int num0, String skillname)
 	{
@@ -9455,6 +9994,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s HP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_INTERVAL_HEAL_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -9463,6 +10006,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_INTERVAL_HEAL_TO_ME(int num0, String skillname)
 	{
@@ -9471,6 +10017,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 MP due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_INTERVAL_HEAL_MP_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -9479,6 +10029,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 MP due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_INTERVAL_HEAL_MP_TO_ME(int num0, String skillname)
 	{
@@ -9487,6 +10040,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num0 damage as the [%SkillName] you used on [%SkillTarget] was reflected back at you.
+	 * @param num0
+	 * @param skillname
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_PROTECT_SKILL_ME_to_B(int num0, String skillname, String skilltarget)
 	{
@@ -9495,6 +10052,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by reflecting [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_PROTECT_SKILL_A_to_ME(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -9503,6 +10065,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] inflicted %num0 damage on [%SkillCaster] by reflecting [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_PROTECT_SKILL_A_to_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -9511,6 +10078,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your attack on [%SkillTarget] was reflected and inflicted %num0 damage on you.
+	 * @param skilltarget
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_PROTECT_ME_to_B(String skilltarget, int num0)
 	{
@@ -9519,6 +10089,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] inflicted %num0 damage on [%SkillCaster] by reflecting the attack.
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_PROTECT_A_to_ME(String skilltarget, int num0, String skillcaster)
 	{
@@ -9527,6 +10101,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] inflicted %num0 damage on [%SkillCaster] by reflecting the attack.
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_PROTECT_A_to_B(String skilltarget, int num0, String skillcaster)
 	{
@@ -9535,6 +10113,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillName] was blocked by the protective shield effect cast on [%SkillTarget].
+	 * @param skillname
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_PROTECT_SKILL_ME_to_B(String skillname, String skilltarget)
 	{
@@ -9543,6 +10124,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You blocked the [%SkillName] used by [%SkillCaster] with the protective shield effect.
+	 * @param skillname
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_PROTECT_SKILL_A_to_ME(String skillname, String skillcaster)
 	{
@@ -9551,6 +10135,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] blocked the [%SkillName] used by [%SkillCaster] with the protective shield effect.
+	 * @param skilltarget
+	 * @param skillname
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_PROTECT_SKILL_A_to_B(String skilltarget, String skillname, String skillcaster)
 	{
@@ -9559,6 +10147,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The attack was blocked by the protective shield effect cast on [%SkillTarget].
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_PROTECT_ME_to_B(String skilltarget)
 	{
@@ -9567,6 +10157,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You blocked [%SkillCaster]'s attack with the protective shield effect.
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_PROTECT_A_to_ME(String skillcaster)
 	{
@@ -9575,6 +10167,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] blocked [%SkillCaster]'s attack with the protective shield effect.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_PROTECT_A_to_B(String skilltarget, String skillcaster)
 	{
@@ -9583,6 +10178,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received the %num0 damage inflicted on [%SkillTarget] by [%SkillCaster]'s [%SkillName], because of the protection effect you cast on it.
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_protect_PROTECT_SKILL_A_to_B(int num0, String skilltarget, String skillcaster, String skillname)
 	{
@@ -9591,6 +10191,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received the %num0 damage inflicted on [%SkillTarget] by [%SkillCaster], because of the protection effect you cast on it.
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_protect_PROTECT_A_to_B(int num0, String skilltarget, String skillcaster)
 	{
@@ -9599,6 +10203,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%Protector] received the %num0 damage inflicted on [%SkillTarget] by a [%SkillName], because of the protection effect cast on it.
+	 * @param protector
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_protect_PROTECT_SKILL_HEAL_ME_to_B(String protector, int num0, String skilltarget, String skillname)
 	{
@@ -9607,6 +10216,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%Protector] received the %num0 damage inflicted by [%SkillCaster] 's [%SkillName], because of the protection effect.
+	 * @param protector
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_protect_PROTECT_SKILL_HEAL_A_to_ME(String protector, int num0, String skillcaster, String skillname)
 	{
@@ -9615,6 +10229,12 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%Protector] received the %num0 damage inflicted on [%SkillTarget] by [%SkillCaster]'s [%SkillName], because of the protection effect cast on it.
+	 * @param protector
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_protect_PROTECT_SKILL_HEAL_A_to_B(String protector, int num0, String skilltarget, String skillcaster, String skillname)
 	{
@@ -9623,6 +10243,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%Protector] received %num0 damage inflicted on [%SkillTarget], because of the protection effect cast on it.
+	 * @param protector
+	 * @param num0
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_protect_PROTECT_HEAL_ME_to_B(String protector, int num0, String skilltarget)
 	{
@@ -9631,6 +10255,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%Protector] received %num0 damage inflicted on you by [%SkillCaster], because of the protection effect.
+	 * @param protector
+	 * @param num0
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_protect_PROTECT_HEAL_A_to_ME(String protector, int num0, String skillcaster)
 	{
@@ -9639,6 +10267,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%Protector] received %num0 damage inflicted on [%SkillTarget] by [%SkillCaster], because of the protection effect cast on it.
+	 * @param protector
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_protect_PROTECT_HEAL_A_to_B(String protector, int num0, String skilltarget, String skillcaster)
 	{
@@ -9647,6 +10280,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 MP.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_MPHeal_TO_ME(int num0)
 	{
@@ -9655,6 +10290,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored your flight time by %num0.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_FPHeal_TO_ME(int num0)
 	{
@@ -9663,6 +10300,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_Heal_TO_ME(int num0)
 	{
@@ -9671,6 +10310,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 restored %num1 MP.
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_MPHeal_TO_OTHER(String value0, int num1)
 	{
@@ -9679,6 +10321,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 restored his flight time by %num1.
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_FPHeal_TO_OTHER(String value0, int num1)
 	{
@@ -9687,6 +10332,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received %num0 damage due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcATK_Instant_INTERVAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -9695,6 +10344,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You receive %num0 damage due to [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcATK_Instant_INTERVAL_TO_ME(int num0, String skillname)
 	{
@@ -9703,6 +10355,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 restored %num1 HP.
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_Heal_TO_OTHER(String value0, int num1)
 	{
@@ -9711,6 +10366,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You released [%SkillTarget]'s spirit by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PetOrderUnSummon_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -9719,6 +10377,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your spirit was unsummoned by the effect of [%SkillName] used by [%SkillCaster].
+	 * @param skillname
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PetOrderUnSummon_A_TO_ME(String skillname, String skillcaster)
 	{
@@ -9727,6 +10388,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] released [%SkillTarget]'s spirit by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PetOrderUnSummon_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -9735,6 +10400,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted continuous damage on [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPAttack_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -9743,6 +10411,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has reduced your MP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPAttack_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -9751,6 +10422,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] gave [%SkillTarget] the continuous MP reduction effect by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPAttack_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -9759,6 +10434,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s MP decreased by %num0 due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPAttack_INTERVAL_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -9767,6 +10446,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your MP decreased by %num0 due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPAttack_INTERVAL_TO_ME(int num0, String skillname)
 	{
@@ -9775,6 +10457,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You gave yourself an XP bonus by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_XPBoost_ME_TO_SELF(String skillname)
 	{
@@ -9783,6 +10467,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You gave [%SkillTarget] an XP bonus by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_XPBoost_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -9791,6 +10478,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] gave you an XP bonus by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_XPBoost_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -9799,6 +10489,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] gave themselves an XP bonus by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_XPBoost_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -9807,6 +10500,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] gave [%SkillTarget] an XP bonus by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_XPBoost_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -9815,6 +10512,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You made yourself more resistant to crashing and prohibitions on flying by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_InvulnerableWing_ME_TO_SELF(String skillname)
 	{
@@ -9823,6 +10522,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You gave [%SkillTarget] the crash and flying prohibition resistance effects by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_InvulnerableWing_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -9831,6 +10533,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] made you more resistant to crashing and prohibitions on flying by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_InvulnerableWing_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -9839,6 +10544,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] made themselves more resistant to crashing and prohibitions on flying by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_InvulnerableWing_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -9847,6 +10555,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] made [%SkillTarget] more resistant to crashing and prohibitions on flying by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_InvulnerableWing_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -9855,6 +10567,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 DP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPHeal_Instant_HEAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -9863,6 +10578,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 DP because you used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPHeal_Instant_HEAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -9871,6 +10590,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 DP because [%SkillCaster] used [%SkillName] on you.
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPHeal_Instant_HEAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -9879,6 +10602,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 DP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPHeal_Instant_HEAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -9887,6 +10614,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 DP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPHeal_Instant_HEAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -9895,6 +10627,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered some DP by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPHeal_HEAL_ME_TO_SELF(String skillname)
 	{
@@ -9903,6 +10637,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored some of [%SkillTarget]'s DP by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPHeal_HEAL_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -9911,6 +10648,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted [%SkillTarget]'s DP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPHeal_HEAL_A_TO_ME(String skillcaster, String skilltarget, String skillname)
 	{
@@ -9919,6 +10660,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] restored some DP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPHeal_HEAL_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -9927,6 +10671,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] restored some of [%SkillTarget]'s DP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPHeal_HEAL_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -9935,6 +10683,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s DP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPHeal_INTERVAL_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -9943,6 +10695,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 MP due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPHeal_INTERVAL_TO_ME(int num0, String skillname)
 	{
@@ -9951,6 +10706,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 DP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcDPHeal_Instant_HEAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -9959,6 +10717,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 DP because you used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcDPHeal_Instant_HEAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -9967,6 +10729,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 DP because [%SkillCaster] used [%SkillName] on you.
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcDPHeal_Instant_HEAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -9975,6 +10741,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 DP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcDPHeal_Instant_HEAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -9983,6 +10753,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 DP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcDPHeal_Instant_HEAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -9991,6 +10766,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You caused [%SkillTarget] to forcibly resurrect at the bind point by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ResurrectBase_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -9999,6 +10777,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are forced to resurrect at the bind point because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ResurrectBase_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -10007,6 +10788,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is forced to resurrect at the bind point because [%SkillCaster] used [%SkillName] on it.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ResurrectBase_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -10015,6 +10800,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You requested [%SkillTarget] to be summoned by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Recall_Instant_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -10023,6 +10811,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] requested you to be summoned by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Recall_Instant_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -10031,6 +10822,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] requested [%SkillTarget] to be summoned by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Recall_Instant_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -10039,6 +10834,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You dispelled magical buffs by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCBuff_ME_TO_SELF(String skillname)
 	{
@@ -10047,6 +10844,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You dispelled magical debuffs by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuff_ME_TO_SELF(String skillname)
 	{
@@ -10055,6 +10854,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You removed abnormal mental conditions by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuffMental_ME_TO_SELF(String skillname)
 	{
@@ -10063,6 +10864,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You removed abnormal physical conditions by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuffPhysical_ME_TO_SELF(String skillname)
 	{
@@ -10071,6 +10874,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You dispelled magical buffs from [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCBuff_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -10079,6 +10885,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You dispelled magical debuffs from [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuff_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -10087,6 +10896,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You removed abnormal mental conditions from [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuffMental_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -10095,6 +10907,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You removed abnormal physical conditions from [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuffPhysical_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -10103,6 +10918,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your magical buffs were dispelled because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCBuff_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -10111,6 +10929,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your magical debuffs were dispelled because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuff_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -10119,6 +10940,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your abnormal mental conditions were removed because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuffMental_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -10127,6 +10951,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your abnormal physical conditions were removed because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuffPhysical_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -10135,6 +10962,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] dispelled its magical buffs by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCBuff_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -10143,6 +10973,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] dispelled its magical debuffs by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuff_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -10151,6 +10984,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] removed its abnormal mental conditions by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuffMental_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -10159,6 +10995,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] removed its abnormal physical conditions by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuffPhysical_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -10167,6 +11006,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] dispelled the magical buffs from [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCBuff_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -10175,6 +11018,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] dispelled the magical debuffs from [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuff_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -10183,6 +11030,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] removed abnormal mental conditions from [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuffMental_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -10191,6 +11042,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] removed abnormal physical conditions from [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelNPCDeBuffPhysical_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -10199,6 +11054,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received a delayed chain effect by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSkill_ME_TO_SELF(String skillname)
 	{
@@ -10207,6 +11064,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received a delayed chain effect from [%SkillName] used by you.
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSkill_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -10215,6 +11075,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received a delayed chain effect from [%SkillName] used by [%SkillCaster].
+	 * @param skillname
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSkill_A_TO_ME(String skillname, String skillcaster)
 	{
@@ -10223,6 +11086,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] used [%SkillName] and received a delayed chain effect.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSkill_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -10231,6 +11097,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] used [%SkillName] to give [%SkillTarget] a delayed chain effect.
+	 * @param skillcaster
+	 * @param skillname
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSkill_A_TO_B(String skillcaster, String skillname, String skilltarget)
 	{
@@ -10239,6 +11109,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received a periodic chain effect by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_InteralSkill_ME_TO_SELF(String skillname)
 	{
@@ -10247,6 +11119,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received a periodic chain effect from [%SkillName] used by you.
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_InteralSkill_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -10255,6 +11130,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received a periodic chain effect from [%SkillName] used by [%SkillCaster].
+	 * @param skillname
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_InteralSkill_A_TO_ME(String skillname, String skillcaster)
 	{
@@ -10263,6 +11141,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] used [%SkillName] and received a periodic chain effect.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_InteralSkill_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -10271,6 +11152,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] used [%SkillName] to give [%SkillTarget] a periodic chain effect.
+	 * @param skillcaster
+	 * @param skillname
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_InteralSkill_A_TO_B(String skillcaster, String skillname, String skilltarget)
 	{
@@ -10279,6 +11164,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You suffer %num0 damage from [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoReduceSpellATK_Instant_ME_TO_SELF(int num0, String skillname)
 	{
@@ -10287,6 +11175,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoReduceSpellATK_Instant_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -10295,6 +11187,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You receive %num0 damage from [%SkillCaster]'s [%SkillName] effect.
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoReduceSpellATK_Instant_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -10303,6 +11199,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] suffers %num0 damage from [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoReduceSpellATK_Instant_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -10311,6 +11211,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoReduceSpellATK_Instant_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -10319,6 +11224,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 MP due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATKDrain_Instant_INTERVAL_HEAL_MP_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -10327,6 +11236,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 MP due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATKDrain_Instant_INTERVAL_HEAL_MP_TO_ME(int num0, String skillname)
 	{
@@ -10335,6 +11247,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You blocked %0's attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_BLOCK(String value0)
 	{
@@ -10343,6 +11257,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You parried %0's attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_PARRY(String value0)
 	{
@@ -10351,6 +11267,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You evaded %0's attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_DODGE(String value0)
 	{
@@ -10359,6 +11277,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You resisted [%SkillCaster]'s magic.
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_RESISTED_MAGIC_MY(String skillcaster)
 	{
@@ -10367,6 +11287,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are immune to [%SkillCaster]'s magic.
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_IMMUNED_MAGIC_MY(String skillcaster)
 	{
@@ -10375,6 +11297,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You absorbed [%SkillCaster]'s magic.
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSORBED_MY(String skillcaster)
 	{
@@ -10383,6 +11307,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num1 damage from %0.
+	 * @param num1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_ENEMY_ATTACK(int num1, String value0)
 	{
@@ -10391,6 +11318,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Critical Hit! You received %num1 damage from %0.
+	 * @param num1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_ENEMY_CRITICAL(int num1, String value0)
 	{
@@ -10399,6 +11329,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 blocked your attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_ENEMY_BLOCK(String value0)
 	{
@@ -10407,6 +11339,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 parried your attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_ENEMY_PARRY(String value0)
 	{
@@ -10415,6 +11349,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 evaded your attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_ENEMY_DODGE(String value0)
 	{
@@ -10423,6 +11359,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] resisted your magic.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_RESISTED_MAGIC_TARGET(String skilltarget)
 	{
@@ -10431,6 +11369,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is immune to your magic.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_IMMUNED_MAGIC_TARGET(String skilltarget)
 	{
@@ -10439,6 +11379,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] absorbed your magic.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSORBED_TARGET(String skilltarget)
 	{
@@ -10447,6 +11389,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 inflicted %num2 damage on %1.
+	 * @param value0
+	 * @param num2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARTY_ATTACK(String value0, int num2, String value1)
 	{
@@ -10455,6 +11401,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Critical Hit! %0 inflicted %num2 critical damage on %1.
+	 * @param value0
+	 * @param num2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARTY_CRITICAL(String value0, int num2, String value1)
 	{
@@ -10463,6 +11413,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 blocked %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARTY_BLOCK(String value0, String value1)
 	{
@@ -10471,6 +11424,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 parried %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARTY_PARRY(String value0, String value1)
 	{
@@ -10479,6 +11435,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 evaded %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARTY_DODGE(String value0, String value1)
 	{
@@ -10487,6 +11446,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] resisted [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_RESISTED_TO_MAGIC_PARTY(String skilltarget, String skillcaster)
 	{
@@ -10495,6 +11457,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is immune to [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_IMMUNED_MAGIC_PARTY(String skilltarget, String skillcaster)
 	{
@@ -10503,6 +11468,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] absorbed [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSORBED_PARTY(String skilltarget, String skillcaster)
 	{
@@ -10511,6 +11479,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 received %num2 damage from %0.
+	 * @param value1
+	 * @param num2
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARTY_ENEMY_ATTACK(String value1, int num2, String value0)
 	{
@@ -10519,6 +11491,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Critical Hit! %1 received %num2 critical damage from %0.
+	 * @param value1
+	 * @param num2
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARTY_ENEMY_CRITICAL(String value1, int num2, String value0)
 	{
@@ -10527,6 +11503,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 blocked %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARTY_ENEMY_BLOCK(String value0, String value1)
 	{
@@ -10535,6 +11514,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 parried %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARTY_ENEMY_PARRY(String value0, String value1)
 	{
@@ -10543,6 +11525,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 evaded %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_PARTY_ENEMY_DODGE(String value0, String value1)
 	{
@@ -10551,6 +11536,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] resisted [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_RESISTED_MAGIC_PARTY_ENEMY(String skilltarget, String skillcaster)
 	{
@@ -10559,6 +11547,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is immune to [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_IMMUNED_MAGIC_PARTY_ENEMY(String skilltarget, String skillcaster)
 	{
@@ -10567,6 +11558,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] absorbed [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSORBED_PARTY_ENEMY(String skilltarget, String skillcaster)
 	{
@@ -10575,6 +11569,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 inflicted %num2 damage on %1.
+	 * @param value0
+	 * @param num2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_FRIENDLY_ATTACK(String value0, int num2, String value1)
 	{
@@ -10583,6 +11581,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Critical Hit! %0 inflicted %num2 critical damage on %1.
+	 * @param value0
+	 * @param num2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_FRIENDLY_CRITICAL(String value0, int num2, String value1)
 	{
@@ -10591,6 +11593,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 blocked %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_FRIENDLY_BLOCK(String value0, String value1)
 	{
@@ -10599,6 +11604,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 parried %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_FRIENDLY_PARRY(String value0, String value1)
 	{
@@ -10607,6 +11615,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 evaded %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_FRIENDLY_DODGE(String value0, String value1)
 	{
@@ -10615,6 +11626,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] resisted [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_RESISTED_MAGIC_OTHER_FRIENDLY(String skilltarget, String skillcaster)
 	{
@@ -10623,6 +11637,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is immune to [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_IMMUNED_MAGIC_OTHER_FRIENDLY(String skilltarget, String skillcaster)
 	{
@@ -10631,6 +11648,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] absorbed [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSORBED_OTHER_FRIENDLY(String skilltarget, String skillcaster)
 	{
@@ -10639,6 +11659,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 inflicted %num2 damage on %1.
+	 * @param value0
+	 * @param num2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_HOSTILE_ATTACK(String value0, int num2, String value1)
 	{
@@ -10647,6 +11671,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Critical Hit! %0 inflicted %num2 critical damage on %1.
+	 * @param value0
+	 * @param num2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_HOSTILE_CRITICAL(String value0, int num2, String value1)
 	{
@@ -10655,6 +11683,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 blocked %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_HOSTILE_BLOCK(String value0, String value1)
 	{
@@ -10663,6 +11694,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 parried %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_HOSTILE_PARRY(String value0, String value1)
 	{
@@ -10671,6 +11705,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 evaded %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_HOSTILE_DODGE(String value0, String value1)
 	{
@@ -10679,6 +11716,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] resisted [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_RESISTED_MAGIC_OTHER_HOSTILE(String skilltarget, String skillcaster)
 	{
@@ -10687,6 +11727,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is immune to [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_IMMUNED_MAGIC_OTHER_HOSTILE(String skilltarget, String skillcaster)
 	{
@@ -10695,6 +11738,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] absorbed [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSORBED_OTHER_HOSTILE(String skilltarget, String skillcaster)
 	{
@@ -10703,6 +11749,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 inflicted %num2 damage on %1.
+	 * @param value0
+	 * @param num2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_NPC_ATTACK(String value0, int num2, String value1)
 	{
@@ -10711,6 +11761,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Critical Hit! %0 inflicted %num2 critical damage on %1.
+	 * @param value0
+	 * @param num2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_NPC_CRITICAL(String value0, int num2, String value1)
 	{
@@ -10719,6 +11773,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 blocked %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_NPC_BLOCK(String value0, String value1)
 	{
@@ -10727,6 +11784,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 parried %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_NPC_PARRY(String value0, String value1)
 	{
@@ -10735,6 +11795,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 evaded %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_OTHER_NPC_DODGE(String value0, String value1)
 	{
@@ -10743,6 +11806,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] resisted [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_RESISTED_MAGIC_OTHER_NPC(String skilltarget, String skillcaster)
 	{
@@ -10751,6 +11817,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is immune to [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_IMMUNED_MAGIC_OTHER_NPC(String skilltarget, String skillcaster)
 	{
@@ -10759,6 +11828,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] absorbed [%SkillCaster]'s magic.
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSORBED_OTHER_NPC(String skilltarget, String skillcaster)
 	{
@@ -10857,6 +11929,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You do not have enough %0 necessary to use the skill.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_NOT_ENOUGH_ITEM(String value0)
 	{
@@ -10870,6 +11944,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have not learned the %0 skill.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_NOT_LEARNED(String value0)
 	{
@@ -10903,6 +11979,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot do that while you are %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_CANT_CAST(String value0)
 	{
@@ -10951,6 +12029,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You acquired the %0 title as a quest reward.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_GET_REWARD_TITLE(int value0)
 	{
@@ -10969,6 +12049,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is running away.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UI_COMBAT_NPC_FLEE(String value0)
 	{
@@ -10977,6 +12059,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 gives up the pursuit.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UI_COMBAT_NPC_RETURN(int nameId)
 	{
@@ -10985,6 +12069,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have discovered [%subzone].
+	 * @param subzone
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UI_DISCOVERY_NEWZONE(String subzone)
 	{
@@ -11018,6 +12104,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot leave the group in %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANNOT_LEAVE_PARTY_DURING_PATH_FLYING(String value0)
 	{
@@ -11026,6 +12114,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use an item while %0.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANNOT_USE_ITEM_DURING_PATH_FLYING(DescriptionId descriptionId)
 	{
@@ -11034,6 +12124,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 gives up the attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UI_COMBAT_NPC_RETURN_NOMOVE(String value0)
 	{
@@ -11042,6 +12134,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You learned %0 (Level %1).
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_LEARNED_NEW_SKILL(String value0, String value1)
 	{
@@ -11050,6 +12145,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You stopped using %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_TOGGLE_SKILL_TURNED_OFF(String value0)
 	{
@@ -11063,6 +12160,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You stopped using %0 skill.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_MAINTAIN_SKILL_TURNED_OFF(String value0)
 	{
@@ -11076,6 +12175,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 skill effect has been removed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSTATUS_SKILL_TURNED_OFF(String value0)
 	{
@@ -11084,6 +12185,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 skill effect cannot be removed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSTATUS_SKILL_CAN_NOT_BE_TURNED_OFF_BY_TARGET(String value0)
 	{
@@ -11092,6 +12195,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 skill effect cannot be removed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABSTATUS_SKILL_CAN_NOT_BE_TURNED_OFF_BY_CASTOR(String value0)
 	{
@@ -11100,6 +12205,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cured the altered state caused by %0 skill.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_TURN_OFF_ABNORMAL_STATUS(String value0)
 	{
@@ -11108,6 +12215,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 skill was cancelled as %1 is already under a more powerful skill.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_CONFLICT_WITH_OTHER_SKILL(String value0, String value1)
 	{
@@ -11166,6 +12276,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 skill failed as there are already too many skills in effect.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SLOT_FULL(String value0)
 	{
@@ -11174,6 +12286,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use the %0 skill in your current stance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_CANT_CAST_THIS_SKILL_IN_CURRENT_STANCE(String value0)
 	{
@@ -11252,6 +12366,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has reached level %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ENSLAVE_PET_LEVEL_CHANGE(String value0, String value1)
 	{
@@ -11280,6 +12397,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot duel with %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_PARTNER_INVALID(String value0)
 	{
@@ -11288,6 +12407,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is already fighting a duel with another opponent.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_PARTNER_IN_DUEL_ALREADY(String value0)
 	{
@@ -11301,6 +12422,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You challenged %0 to a duel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_REQUEST_TO_PARTNER(String value0)
 	{
@@ -11309,6 +12432,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is answering another request and cannot respond.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_CANT_REQUEST_WHEN_HE_IS_ASKED_QUESTION(String value0)
 	{
@@ -11322,6 +12447,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 declined your challenge.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_HE_REJECT_DUEL(String value0)
 	{
@@ -11330,6 +12457,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You won the duel against %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_YOU_WIN(String value0)
 	{
@@ -11338,6 +12467,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You lost the duel against %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_YOU_LOSE(String value0)
 	{
@@ -11346,6 +12477,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The duel with %0 ended due to the time limit.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_TIMEOUT(String value0)
 	{
@@ -11354,6 +12487,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are too far from %0 to start a duel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_PARTNER_TOO_FAR_FOR_START(String value0)
 	{
@@ -11372,6 +12507,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The duel with %0 ended due to the time limit.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_TIMEOUT_WITHOUT_PARTNER(String value0)
 	{
@@ -11515,6 +12652,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is running away.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UI_COMBAT_NPC_FLEE_ORG(String value0)
 	{
@@ -11523,6 +12662,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 gives up the pursuit.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UI_COMBAT_NPC_RETURN_ORG(String value0)
 	{
@@ -11531,6 +12672,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has withdrawn the challenge for a duel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_REQUESTER_WITHDRAW_REQUEST(String value0)
 	{
@@ -11539,6 +12682,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have withdrawn the challenge to %0 for a duel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_WITHDRAW_REQUEST(String value0)
 	{
@@ -11547,6 +12692,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * A duel between %0 and %1 has started.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_START_BROADCAST(String value0, String value1)
 	{
@@ -11555,6 +12703,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 defeated %1 in a duel.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_STOP_BROADCAST(String value0, String value1)
 	{
@@ -11563,6 +12714,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The duel between %0 and %1 was a draw.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_TIMEOUT_BROADCAST(String value0, String value1)
 	{
@@ -11571,6 +12725,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The duel ends in %0 seconds.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_TIMEOUT_NOTIFY(String value0)
 	{
@@ -11579,6 +12735,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot request a duel to %0 as the player is currently busy.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_START_OTHER_IS_BUSY(String value0)
 	{
@@ -11622,6 +12780,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has logged out.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ASK_OTHER_HAS_LOGOUT(String value0)
 	{
@@ -11655,6 +12815,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has become the new group leader.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_HE_IS_NEW_LEADER(String value0)
 	{
@@ -11693,6 +12855,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has declined your invitation.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_HE_REJECT_INVITATION(String value0)
 	{
@@ -11731,6 +12895,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has left your group.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_HE_LEAVE_PARTY(String value0)
 	{
@@ -11739,6 +12905,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is already a member of another group.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_HE_IS_ALREADY_MEMBER_OF_OTHER_PARTY(String value0)
 	{
@@ -11747,6 +12915,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is already a member of your group.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_HE_IS_ALREADY_MEMBER_OF_OUR_PARTY(String value0)
 	{
@@ -11765,6 +12935,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have invited %0 to join your group.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_INVITED_HIM(String value0)
 	{
@@ -11773,6 +12945,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Currently, %0 cannot accept your group invitation.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_CANT_INVITE_WHEN_HE_IS_ASKED_QUESTION(String value0)
 	{
@@ -11781,6 +12955,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been disconnected.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_HE_BECOME_OFFLINE(String value0)
 	{
@@ -11789,6 +12965,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been offline for too long and is automatically excluded from the group.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_HE_BECOME_OFFLINE_TIMEOUT(String value0)
 	{
@@ -11797,6 +12975,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been kicked out of your group.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_HE_IS_BANISHED(String value0)
 	{
@@ -11825,6 +13005,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 rolled the dice and got a %num1.
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ITEM_DICE(String value0, int num1)
 	{
@@ -11853,6 +13036,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 rolled the dice and got a %num1 (max. %num2).
+	 * @param value0
+	 * @param num1
+	 * @param num2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ITEM_DICE_CUSTOM(String value0, int num1, int num2)
 	{
@@ -11866,6 +13053,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have invited %0's group to the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_INVITED_HIS_PARTY(String value0)
 	{
@@ -11874,6 +13063,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has declined your invitation to join the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_HE_REJECT_INVITATION(String value0)
 	{
@@ -11882,6 +13073,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Currently, %0 cannot accept your invitation to join the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_CANT_INVITE_WHEN_HE_IS_ASKED_QUESTION(String value0)
 	{
@@ -11890,6 +13083,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is already a member of another alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_HE_IS_ALREADY_MEMBER_OF_OTHER_ALLIANCE(String value0)
 	{
@@ -11898,6 +13093,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is already a member of your alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_HE_IS_ALREADY_MEMBER_OF_OUR_ALLIANCE(String value0)
 	{
@@ -11906,6 +13103,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot invite %0 to the alliance as he or she is not a group leader.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_CAN_NOT_INVITE_HIM_HE_IS_NOT_PARTY_LEADER(String value0)
 	{
@@ -11914,6 +13113,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot invite %0 to the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_CAN_NOT_INVITE_HIM(String value0)
 	{
@@ -11937,6 +13138,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's group has left the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_HIS_PARTY_LEAVE_ALLIANCE(String value0)
 	{
@@ -11955,6 +13158,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has left the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_HE_LEAVED_PARTY(String value0)
 	{
@@ -11963,6 +13168,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been offline for too long and has been automatically kicked out of the group and the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_HE_LEAVED_PARTY_OFFLINE_TIMEOUT(String value0)
 	{
@@ -11971,6 +13178,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been kicked out of the group and thus the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_HE_IS_BANISHED(String value0)
 	{
@@ -11979,6 +13188,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has become the new group leader.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_HE_BECOME_PARTY_LEADER(String value0)
 	{
@@ -11997,6 +13208,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has already requested the item distribution method to be changed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_CHANGE_LOOT_PROCESSING_HIS_REQUEST(String value0)
 	{
@@ -12010,6 +13223,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 denied %1's request to change the item distribution method.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_CHANGE_LOOT_HE_DENIED_HIS_ASK(String value0, String value1)
 	{
@@ -12018,6 +13234,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's request to change the item distribution method has been denied.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_CHANGE_LOOT_HE_DENIED_MY_ASK(String value0)
 	{
@@ -12031,6 +13249,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's request to change the item distribution method timed out.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_CHANGE_LOOT_TIMEOUT(String value0)
 	{
@@ -12039,6 +13259,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You asked the alliance Captain for permission to pick up %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_PICKUP_ITEM_ASK_SUBMITTED(String value0)
 	{
@@ -12047,6 +13269,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your request for permission to pick up %0 is being processed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_PICKUP_ITEM_PROCESSING_YOUR_REQUEST(String value0)
 	{
@@ -12055,6 +13279,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's request for permission to pick up %1 was approved.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_PICKUP_ITEM_ALL_ACCEPT_HIM(String value0, String value1)
 	{
@@ -12063,6 +13290,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 denied %1's request for permission to pick up %2.
+	 * @param value0
+	 * @param value1
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_PICKUP_ITEM_HE_DENIED(String value0, String value1, String value2)
 	{
@@ -12071,6 +13302,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 denied your request for permission to pick up %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_PICKUP_ITEM_HE_DENIED_MY_ASK(String value0, String value1)
 	{
@@ -12079,6 +13313,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's request for permission to pick up %1 timed out.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_PICKUP_ITEM_TIMEOUT(String value0, String value1)
 	{
@@ -12097,6 +13334,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been disconnected.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_HE_BECOME_OFFLINE(String value0)
 	{
@@ -12165,6 +13404,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 Legion has been created.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CREATED(String value0)
 	{
@@ -12193,6 +13434,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has left the Legion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_LEAVE_HE_LEFT(String value0)
 	{
@@ -12201,6 +13444,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have left the %0 Legion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_LEAVE_DONE(String value0)
 	{
@@ -12229,6 +13474,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have been kicked out of the %0 Legion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_BANISHIED_FROM_GUILD_BY_HIM(String value0)
 	{
@@ -12237,6 +13484,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 kicked %1 out of the Legion.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_BANSIH_HE_BANISHED_HIM(String value0, String value1)
 	{
@@ -12245,6 +13495,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not a member of your Legion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_BANISH_HE_IS_NOT_MY_GUILD_MEMBER(String value0)
 	{
@@ -12283,6 +13535,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is already a member of your Legion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_INVITE_HE_IS_MY_GUILD_MEMBER(String value0)
 	{
@@ -12291,6 +13545,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is a member of another Legion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_INVITE_HE_IS_OTHER_GUILD_MEMBER(String value0)
 	{
@@ -12304,6 +13560,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have sent a Legion invitation to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_INVITE_SENT_INVITE_MSG_TO_HIM(String value0)
 	{
@@ -12312,6 +13570,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has declined your Legion invitation.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_INVITE_HE_REJECTED_INVITATION(String value0)
 	{
@@ -12320,6 +13580,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has joined your Legion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_INVITE_HE_JOINED(String value0)
 	{
@@ -12348,6 +13610,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not a member of your Legion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CHANGE_MEMBER_RANK_HE_IS_NOT_MY_GUILD_MEMBER(String value0)
 	{
@@ -12356,6 +13620,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has become the Legion Brigade General.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CHANGE_MEMBER_RANK_DONE_1_GUILD_MASTER(String value0)
 	{
@@ -12364,6 +13630,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has become a Legion Centurion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CHANGE_MEMBER_RANK_DONE_2_GUILD_OFFICER(String value0)
 	{
@@ -12372,6 +13640,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has become a Legionary.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CHANGE_MEMBER_RANK_DONE_3_GUILD_MEMBER(String value0)
 	{
@@ -12395,6 +13665,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not a member of your Legion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CHANGE_MASTER_NOT_MY_GUILD_MEMBER(String value0)
 	{
@@ -12403,6 +13675,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has become the Legion Brigade General.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CHANGE_MASTER_DONE(String value0)
 	{
@@ -12466,6 +13740,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Legion Information: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_INTRO(String value0)
 	{
@@ -12554,6 +13830,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 Legion has been disbanded.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_DISPERSE_DONE(String value0)
 	{
@@ -12562,6 +13840,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The Brigade General has requested to disband the Legion. The expected time of disbanding is %DATETIME0.
+	 * @param datetime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_DISPERSE_REQUESTED(String datetime0)
 	{
@@ -12590,6 +13870,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Time remaining until disbanding: %DURATIONDAY0
+	 * @param durationday0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_DISPERSE_TIME(String durationday0)
 	{
@@ -12623,6 +13905,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not a member of your Legion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CHANGE_MEMBER_NICKNAME_HE_IS_NOT_MY_GUILD_MEMBER(String value0)
 	{
@@ -12656,6 +13940,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your Legion is now at level %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CHANGE_LEVEL_DONE(String value0)
 	{
@@ -12709,6 +13995,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You nominated %0 as the next Legion Brigade General.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CHANGE_MASTER_SENT_OFFER_MSG_TO_HIM(String value0)
 	{
@@ -12722,6 +14010,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has declined to become the Legion Brigade General.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CHANGE_MASTER_HE_DECLINE_YOUR_OFFER(String value0)
 	{
@@ -12745,6 +14035,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 does not sell items.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BUY_SELL_HE_DOES_NOT_SELL_ITEM(String value0)
 	{
@@ -12753,6 +14045,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 does not buy items.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BUY_SELL_HE_DOES_NOT_BUY_ITEM(String value0)
 	{
@@ -12791,6 +14085,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not an item that can be sold.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BUY_SELL_ITEM_CAN_NOT_BE_SELLED_TO_NPC(String value0)
 	{
@@ -12839,6 +14135,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You sent a trade message to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXCHANGE_ASKED_EXCHANGE_TO_HIM(String value0)
 	{
@@ -12847,6 +14145,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 declined your trade offer.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXCHANGE_HE_REJECTED_EXCHANGE(String value0)
 	{
@@ -12860,6 +14160,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot trade at the moment.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXCHANGE_CANT_ASK_WHEN_HE_IS_ASKED_QUESTION(String value0)
 	{
@@ -12873,6 +14175,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not a tradable item.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXCHANGE_ITEM_CANNOT_BE_EXCHANGED(String value0)
 	{
@@ -12886,6 +14190,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot trade as the target already has the limited possession item %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXCHANGE_CANT_EXCHANGE_PARTNER_HAS_LORE_ITEM(String value0)
 	{
@@ -12939,6 +14245,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use the selected item until you reach the %0 rank.
+	 * @param i
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANNOT_USE_ITEM_INVALID_RANK(int i)
 	{
@@ -12952,6 +14260,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use %1 until you reach level %0.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANNOT_USE_ITEM_TOO_LOW_LEVEL_MUST_BE_THIS_LEVEL(int value1, int value0)
 	{
@@ -13000,6 +14311,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot discard %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNBREAKABLE_ITEM(DescriptionId value0)
 	{
@@ -13008,6 +14321,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is currently refusing to accept items.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_IS_NOT_WILLING_TO_RECEIVE(String value0)
 	{
@@ -13026,6 +14341,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You ate %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EAT(String value0)
 	{
@@ -13034,6 +14351,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot equip %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANT_EQUIP(String value0)
 	{
@@ -13042,6 +14361,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You do not buy %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SELL_TO_NPC_NO_INTEREST_IN(String value0)
 	{
@@ -13055,6 +14376,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot be discarded.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ITEM_CANNOT_BE_DROPPED(String value0)
 	{
@@ -13063,6 +14386,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot be given to others.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ITEM_CANNOT_BE_GIVEN(String value0)
 	{
@@ -13071,6 +14396,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 gave you %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_TO_YOU(String value0, String value1)
 	{
@@ -13084,6 +14412,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANT_USE_ITEM(DescriptionId value0)
 	{
@@ -13092,6 +14422,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use %0 as you have already used it to its maximum usage count.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANT_USE_ITEM_OUT_OF_USABLE_COUNT(String value0)
 	{
@@ -13100,6 +14432,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use %0 to the maximum usage count as the item is currently equipped.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANT_USE_WORN_ITEM_OUT_OF_USABLE_COUNT(String value0)
 	{
@@ -13108,6 +14442,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have acquired %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_ITEM(String value0)
 	{
@@ -13131,6 +14467,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have equipped the Stigma Stone and acquired the %0 skill (Level %1).
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_STIGMA_YOU_CAN_USE_THIS_SKILL_BY_STIGMA_STONE(String value0, String value1)
 	{
@@ -13139,6 +14478,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have removed the Stigma Stone, but you can still use the %0 skill (Level %1) as you are equipped with another stone.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_STIGMA_AFTER_UNEQUIP_STONE_YOU_CAN_USE_THIS_SKILL_LEVEL_BY_OTHER_STONE(String value0, String value1)
 	{
@@ -13147,6 +14489,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have removed the Stigma Stone and can no longer use the %0 skill.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_STIGMA_YOU_CANNOT_USE_THIS_SKILL_AFTER_UNEQUIP_STIGMA_STONE(String value0)
 	{
@@ -13165,6 +14509,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You need %0 Stigma Shard(s) to equip this Stone.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_STIGMA_CANNT_EQUIP_STONE_OUT_OF_AVAILABLE_STIGMA_POINT(String value0)
 	{
@@ -13173,6 +14519,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot equip that Stigma Stone because you have not learned the %0 skill.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_STIGMA_CANNT_EQUIP_STONE_YOU_DO_NOT_HAVE_THIS_SKILL(String value0)
 	{
@@ -13186,6 +14534,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot be equipped as its rank exceeds the maximum rank of the Stigma slot.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_STIGMA_TOO_HIGH_STONE_RANK_FOR_SLOT(String value0)
 	{
@@ -13194,6 +14544,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot remove the Stigma Stone because %1 is a prerequisite for the %0th Stigma Stone.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_STIGMA_CANNT_UNEQUIP_STONE_OTHER_STONE_NEED_ITS_SKILL(String value1, String value0)
 	{
@@ -13202,6 +14555,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have spent %num0sp.
+	 * @param num0sp
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_STIGMA_EXHAUST(int num0sp)
 	{
@@ -13210,6 +14565,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %num0sp has been returned to you.
+	 * @param num0sp
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_STIGMA_RETURN(int num0sp)
 	{
@@ -13223,6 +14580,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can no longer use the %0 skill acquired through the Stigma Stone.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_STIGMA_NOT_USABLE_SKILL(String value0)
 	{
@@ -13266,6 +14625,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot have this item as you already have the limited possession item %0%.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CAN_NOT_GET_LORE_ITEM(DescriptionId descriptionId)
 	{
@@ -13274,6 +14635,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have used %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_USE_ITEM(DescriptionId value0)
 	{
@@ -13282,6 +14645,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been destroyed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BREAK_ITEM(String value0)
 	{
@@ -13300,6 +14665,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have cancelled using the item.
+	 * @param id
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ITEM_CANCELED(DescriptionId id)
 	{
@@ -13323,6 +14690,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 spaces have been added to your cube.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXTEND_INVENTORY_SIZE_EXTENDED(String value0)
 	{
@@ -13336,6 +14705,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 spaces have been added to your personal warehouse.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXTEND_CHAR_WAREHOUSE_SIZE_EXTENDED(String value0)
 	{
@@ -13349,6 +14720,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 spaces have been added to your account warehouse.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXTEND_ACCOUNT_WAREHOUSE_SIZE_EXTENDED(String value0)
 	{
@@ -13357,6 +14730,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 can only upgrade cubes of level %1 or higher.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXTEND_INVENTORY_CANT_EXTEND_DUE_TO_MINIMUM_EXTEND_LEVEL_BY_THIS_NPC(String value0, String value1)
 	{
@@ -13365,6 +14741,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 can only upgrade cubes to level %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXTEND_INVENTORY_CANT_EXTEND_MORE_DUE_TO_MAXIMUM_EXTEND_LEVEL_BY_THIS_NPC(String value0, String value1)
 	{
@@ -13373,6 +14752,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 can only upgrade private warehouses of level %1 or higher.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXTEND_CHAR_WAREHOUSE_CANT_EXTEND_DUE_TO_MINIMUM_EXTEND_LEVEL_BY_THIS_NPC(String value0, String value1)
 	{
@@ -13381,6 +14763,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 can only upgrade warehouses to level %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXTEND_CHAR_WAREHOUSE_CANT_EXTEND_MORE_DUE_TO_MAXIMUM_EXTEND_LEVEL_BY_THIS_NPC(String value0, String value1)
 	{
@@ -13389,6 +14774,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 can only upgrade warehouses of level %1 or higher.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXTEND_ACCOUNT_WAREHOUSE_CANT_EXTEND_DUE_TO_MINIMUM_EXTEND_LEVEL_BY_THIS_NPC(String value0, String value1)
 	{
@@ -13397,6 +14785,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 can only upgrade warehouses to level %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXTEND_ACCOUNT_WAREHOUSE_CANT_EXTEND_MORE_DUE_TO_MAXIMUM_EXTEND_LEVEL_BY_THIS_NPC(String value0, String value1)
 	{
@@ -13425,6 +14816,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not an extractable item.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DECOMPOSE_ITEM_IT_CAN_NOT_BE_DECOMPOSED(String value0)
 	{
@@ -13438,6 +14831,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to extract from %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DECOMPOSE_ITEM_FAILED(int value0)
 	{
@@ -13446,6 +14841,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have successfully extracted from %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DECOMPOSE_ITEM_SUCCEED(int value0)
 	{
@@ -13454,6 +14851,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have cancelled the extraction from %0.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DECOMPOSE_ITEM_CANCELED(int nameId)
 	{
@@ -13462,6 +14861,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot extract item in %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DECOMPOSE_ITEM_INVALID_STANCE(int value0)
 	{
@@ -13475,6 +14876,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot be enchanted.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ENCHANT_ITEM_IT_CAN_NOT_BE_ENCHANTED(String value0)
 	{
@@ -13483,6 +14886,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot be enchanted any more.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ENCHANT_ITEM_IT_CAN_NOT_BE_ENCHANTED_MORE_TIME(int nameId)
 	{
@@ -13491,6 +14896,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have successfully enchanted %0.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ENCHANT_ITEM_SUCCEED(int nameId)
 	{
@@ -13499,6 +14906,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to enchant %0.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ENCHANT_ITEM_FAILED(DescriptionId descriptionId)
 	{
@@ -13507,6 +14916,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have cancelled the enchanting of %0.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ENCHANT_ITEM_CANCELED(int nameId)
 	{
@@ -13515,6 +14926,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot enchant items in %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ENCHANT_ITEM_INVALID_STANCE(String value0)
 	{
@@ -13528,6 +14941,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot be socketed with manastones.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_OPTION_IT_CAN_NOT_BE_GIVEN_OPTION(String value0)
 	{
@@ -13536,6 +14951,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot be socketed with Manastone.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_OPTION_IT_CAN_NOT_BE_GIVEN_OPTION_MORE_TIME(String value0)
 	{
@@ -13544,6 +14961,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have succeeded in the manastone socketing of %0.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_OPTION_SUCCEED(DescriptionId descriptionId)
 	{
@@ -13552,6 +14971,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed in the manastone socketing of %0.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_OPTION_FAILED(DescriptionId descriptionId)
 	{
@@ -13560,6 +14981,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have cancelled the manastone socketing of %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_OPTION_CANCELED(String value0)
 	{
@@ -13568,6 +14991,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * All manastones that were socketed in %0 have disappeared.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_OPTION_ALL_OPTION_REMOVED(String value0)
 	{
@@ -13576,6 +15001,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot socket manastones while %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_OPTION_INVALID_STANCE(String value0)
 	{
@@ -13594,6 +15021,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Manastone socketing / removal is not possible for the item %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_REMOVE_ITEM_OPTION_IT_CAN_NOT_BE_GIVEN_OPTION(String value0)
 	{
@@ -13602,6 +15031,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not socketed with a manastone.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_REMOVE_ITEM_OPTION_NO_OPTION_TO_REMOVE(String value0)
 	{
@@ -13610,6 +15041,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The target slot on %0 is not socketed with a manastone.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_REMOVE_ITEM_OPTION_INVALID_OPTION_SLOT_NUMBER(String value0)
 	{
@@ -13618,6 +15051,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You do not have enough Kinah to remove the manastone from %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_REMOVE_ITEM_OPTION_NOT_ENOUGH_GOLD(String value0)
 	{
@@ -13626,6 +15061,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have removed the manastone from %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_REMOVE_ITEM_OPTION_SUCCEED(String value0)
 	{
@@ -13634,6 +15071,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot remove manastones from items in %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_REMOVE_ITEM_OPTION_INVALID_STANCE(String value0)
 	{
@@ -13657,6 +15096,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The appearance of %0 cannot be modified.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHANGE_ITEM_SKIN_NOT_SKIN_CHANGABLE_ITEM(String value0)
 	{
@@ -13665,6 +15106,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The appearance of %0 cannot be modified into %1 and vice versa as they are different types of item.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHANGE_ITEM_SKIN_NOT_SAME_EQUIP_SLOT(String value0, String value1)
 	{
@@ -13673,6 +15117,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The appearance of %0 cannot be modified into %1 and vice versa as they are different type of items.
+	 * @param descriptionId
+	 * @param descriptionId2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHANGE_ITEM_SKIN_NOT_COMPATIBLE(DescriptionId descriptionId, DescriptionId descriptionId2)
 	{
@@ -13681,6 +15128,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You do not have enough Kinah to modify the appearance of %0.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHANGE_ITEM_SKIN_NOT_ENOUGH_GOLD(DescriptionId descriptionId)
 	{
@@ -13689,6 +15138,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to modify the appearance of the item as you could not remove the skin item %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHANGE_ITEM_SKIN_CAN_NOT_REMOVE_SKIN_ITEM(String value0)
 	{
@@ -13697,6 +15148,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have modified the appearance of %0.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHANGE_ITEM_SKIN_SUCCEED(DescriptionId descriptionId)
 	{
@@ -13705,6 +15158,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot modify the appearance of items in %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHANGE_ITEM_SKIN_INVALID_STANCE(String value0)
 	{
@@ -13713,6 +15168,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have successfully soul-bound %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SOUL_BOUND_ITEM_SUCCEED(int value0)
 	{
@@ -13721,6 +15178,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to soul-bind %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SOUL_BOUND_ITEM_FAILED(String value0)
 	{
@@ -13729,6 +15188,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cancelled the soul-binding of %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SOUL_BOUND_ITEM_CANCELED(int value0)
 	{
@@ -13742,6 +15203,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot soul-bind an item while %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SOUL_BOUND_INVALID_STANCE(int value0)
 	{
@@ -13820,6 +15283,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not an item you can add ability to.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_PROC_NOT_PROC_GIVABLE_ITEM(String value0)
 	{
@@ -13833,6 +15298,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not an item you can add ability to.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_PROC_NOT_PROC_GIVE_ITEM(String value0)
 	{
@@ -13841,6 +15308,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You do not have enough Kinah to add ability to %0.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_PROC_NOT_ENOUGH_MONEY(DescriptionId descriptionId)
 	{
@@ -13849,6 +15318,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have successfully added ability to %0.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_PROC_ENCHANTED_TARGET_ITEM(DescriptionId descriptionId)
 	{
@@ -13857,6 +15328,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot socket godstones while %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_PROC_INVALID_STANCE(String value0)
 	{
@@ -13865,6 +15338,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have removed the dye from %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ITEM_COLOR_REMOVE_SUCCEED(String value0)
 	{
@@ -13873,6 +15348,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have dyed %0 %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ITEM_COLOR_CHANGE_SUCCEED(String value0, String value1)
 	{
@@ -13881,6 +15359,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot be dyed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ITEM_COLOR_CHANGE_ERROR_CANNOTDYE(String value0)
 	{
@@ -13909,6 +15389,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's Reputation has increased by %1 point(s).
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FACTION_POINTUP(String value0, String value1)
 	{
@@ -13917,6 +15400,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's Reputation has fallen by %1 point(s).
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FACTION_POINTDOWN(String value0, String value1)
 	{
@@ -13925,6 +15411,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's Reputation has become Hostile.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FACTION_HOSTIL(String value0)
 	{
@@ -13933,6 +15421,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's Reputation has become Confrontational.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FACTION_OPPOSITE(String value0)
 	{
@@ -13941,6 +15431,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's Reputation has become Neutral.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FACTION_NEUTRAL(String value0)
 	{
@@ -13949,6 +15441,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's Reputation has become Friendly.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FACTION_FREINDSHIP(String value0)
 	{
@@ -13957,6 +15451,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's Reputation has become Alliance mode.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FACTION_ALLY(String value0)
 	{
@@ -13965,6 +15461,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Congratulations! You have joined %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FACTION_JOIN(String value0)
 	{
@@ -13978,6 +15476,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have left %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FACTION_LEAVE(String value0)
 	{
@@ -14011,6 +15511,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The Support Petition has been received. The receipt number is %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SUBMIT_PETITION_OK(String value0)
 	{
@@ -14019,6 +15521,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * This is your %num0th petition. You may make %num1 more Support Petitions today.
+	 * @param num0th
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SUBMIT_PETITION_QUOTA_LEFT(int num0th, int num1)
 	{
@@ -14027,6 +15532,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * There are %num0 users waiting in the queue to lodge Support Petitions.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SUBMIT_PETITION_WAITING_COUNT(int num0)
 	{
@@ -14035,6 +15542,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has received a request from the GM for consultation.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SUBMIT_GM_PETITION_OK_TO_USER(String value0)
 	{
@@ -14043,6 +15552,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has received a proxy petition generated by the GM. The petition number is %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SUBMIT_GM_PETITION_OK_TO_GM(String value0, String value1)
 	{
@@ -14051,6 +15563,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * A proxy petition by the GM has been received, but the user is offline. The petition number is %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SUBMIT_GM_PETITION_OK_TO_GM_USER_OFFLINE(String value0)
 	{
@@ -14059,6 +15573,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The Support service cannot be used in the hours between %0 and %1 o' clock. Please use the Return skill if you are locked in an impassable area.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SUBMIT_PETITION_FAILED_NOT_SERVICE_TIME(String value0, String value1)
 	{
@@ -14072,6 +15589,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have used up your daily quota of %num0 Support Petitions. You cannot make any more inquiries with this account today.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SUBMIT_PETITION_FAILED_OUT_OF_QUOTA(int num0)
 	{
@@ -14085,6 +15604,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your proxy petition request has failed. %0 has already received the Support Petition.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SUBMIT_GM_PETITION_FAILED_ALREADY_SUBMITTED(String value0)
 	{
@@ -14093,6 +15614,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your proxy petition request for %0 has failed. The error code is %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SUBMIT_GM_PETITION_FAILED(String value0, String value1)
 	{
@@ -14101,6 +15625,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The request for a proxy petition has failed. (The user is currently offline.) The error code is %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SUBMIT_GM_PETITION_FAILED_OFFLINE_USER(String value0)
 	{
@@ -14109,6 +15635,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Petition No. %0 has been cancelled.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANCEL_PETITION_OK1(String value0)
 	{
@@ -14117,6 +15645,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The petition has been cancelled. You have %num1 Support Petitions left for today.
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANCEL_PETITION_OK2(int num1)
 	{
@@ -14125,6 +15655,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cancelled the proxy petition request for %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANCEL_PETITION_OK_TO_GM(String value0)
 	{
@@ -14148,6 +15680,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Failed to cancel the request for a proxy petition to %0. The error code is %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANCEL_PETITION_FAIL_TO_GM(String value0, String value1)
 	{
@@ -14156,6 +15691,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The User (%0) is not in the game server.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PETITION_USER_NOT_FOUND(String value0)
 	{
@@ -14164,6 +15701,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your consultation with the GM (%0) has started.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PETITION_CHAT_STARTED_TO_USER(String value0)
 	{
@@ -14172,6 +15711,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The GM (%0)'s response is complete. Please evaluate the Support Petition service in a moment.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PETITION_CHAT_ENDED_TO_USER(String value0)
 	{
@@ -14190,6 +15731,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 : %1
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PETITION_GM_CHAT_MSG(String value0, String value1)
 	{
@@ -14198,6 +15742,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * This is a message from the GM: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PETITION_GM_LEAVE_MSG(String value0)
 	{
@@ -14211,6 +15757,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when your group has %0 or more members.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_PARTY_SIZE(String value0)
 	{
@@ -14224,6 +15772,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when the level of your Legion is %0 or above.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_GUILD_LEVEL(String value0)
 	{
@@ -14232,6 +15782,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when the Legion Point of your Legion is %num0 or above.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_GUILD_EXP(int num0)
 	{
@@ -14240,6 +15792,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when your level is %0 or above.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_MIN_LEVEL(String value0)
 	{
@@ -14248,6 +15802,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when your level is %0 or below.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_MAX_LEVEL(String value0)
 	{
@@ -14256,6 +15812,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when your rank is %0 or above.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_MIN_RANK(int value0)
 	{
@@ -14264,6 +15822,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when your production job rank is %0 or above.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_TS_RANK(String value0)
 	{
@@ -14302,6 +15862,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You must have the %0 voice to receive this quest.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_VOICE(String value0)
 	{
@@ -14310,6 +15872,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when you need %num0 or less XP to reach the next level.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_EXP_TO_NEXT_LEVEL(int num0)
 	{
@@ -14318,6 +15882,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when your Stigma Point is %num0 or above.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_STIGMA_PT(int num0)
 	{
@@ -14326,6 +15892,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when your PVP point is %num0 or more.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_PVP_PT(int num0)
 	{
@@ -14334,6 +15902,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when %0's favor toward you is %num1 or above.
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_FAVOR(String value0, int num1)
 	{
@@ -14342,6 +15913,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when your Faction with %0 is %num1 or higher.
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_FACTION(String value0, int num1)
 	{
@@ -14350,6 +15924,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when your National Contribute Point is %num0 or more.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_NATION_PT(int num0)
 	{
@@ -14358,6 +15934,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when you have the %0 title.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_TITLE(String value0)
 	{
@@ -14366,6 +15944,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when you have the %0 skill.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_SKILL(String value0)
 	{
@@ -14374,6 +15954,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only accept this quest when you have level %1 %0 skill.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_SKILL_LEVEL(String value1, String value0)
 	{
@@ -14387,6 +15970,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You must have played for a total of at least %num0 hours to receive this quest.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_PLAY_TIME(int num0)
 	{
@@ -14395,6 +15980,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when you are equipped with %0.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_EQUIP_ITEM(DescriptionId descriptionId)
 	{
@@ -14403,6 +15990,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when you have %0 in your inventory.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_INVENTORY_ITEM(DescriptionId descriptionId)
 	{
@@ -14411,6 +16000,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You must be a member of the %0 NPC Legion to receive this quest.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_NPC_GUILD(String value0)
 	{
@@ -14419,6 +16010,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only receive this quest when you have completed the %0 quest.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_FINISHED_QUEST(String value0)
 	{
@@ -14437,6 +16030,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can do the %0 quest only once.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_NONE_REPEATABLE(String value0)
 	{
@@ -14445,6 +16040,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can do the %0 quest only %1 times.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_ACQUIRE_ERROR_MAX_REPEAT_COUNT(String value0, String value1)
 	{
@@ -14458,6 +16056,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot get the quest reward as you don't have %0 %0s.
+	 * @param value0
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_GET_REWARD_ERROR_NO_QUEST_ITEM_SINGLE(String value0, String value0s)
 	{
@@ -14466,6 +16067,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot receive the quest reward as you do not have %1 %0.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_GET_REWARD_ERROR_NO_QUEST_ITEM_MULTIPLE(String value1, String value0)
 	{
@@ -14474,6 +16078,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot destroy %0 because it is used in the "%1" quest which cannot be abandoned once started.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_GIVEUP_WHEN_DELETE_QUEST_ITEM_IMPOSSIBLE(String value0)
 	{
@@ -14502,6 +16108,7 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1[acquire]%2 %0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_QIMSG_ACQUIRE()
 	{
@@ -14510,6 +16117,7 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1[fail]%2 %0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_QIMSG_GIVEUP()
 	{
@@ -14518,6 +16126,7 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1[update]%2 %0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_QIMSG_UPDATE()
 	{
@@ -14526,6 +16135,7 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1[complete]%2 %0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_QIMSG_COMPLETE()
 	{
@@ -14534,6 +16144,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Quest acquired: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_SYSTEMMSG_ACQUIRE_QUEST(String value0)
 	{
@@ -14542,6 +16154,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Quest failed: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_SYSTEMMSG_GIVEUP_QUEST(String value0)
 	{
@@ -14550,6 +16164,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Quest updated: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_SYSTEMMSG_UPDATE_QUEST(String value0)
 	{
@@ -14558,6 +16174,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Quest complete: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_SYSTEMMSG_COMPLETE_QUEST(String value0)
 	{
@@ -14566,6 +16184,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Quest acquired: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_SYSTEMMSG_ACQUIRE(String value0)
 	{
@@ -14574,6 +16194,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Quest failed: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_SYSTEMMSG_GIVEUP(String value0)
 	{
@@ -14582,6 +16204,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Quest updated: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_SYSTEMMSG_UPDATE(String value0)
 	{
@@ -14590,6 +16214,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Quest complete: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_QUEST_SYSTEMMSG_COMPLETE(String value0)
 	{
@@ -14608,6 +16234,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been banned.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_USER_BANNED(String value0)
 	{
@@ -14616,6 +16244,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been disconnected from the server.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_USER_KICKED(String value0)
 	{
@@ -14624,6 +16254,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * There is no user named %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_NO_USER_NAMED(String value0)
 	{
@@ -14637,6 +16269,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not playing the game.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_NO_SUCH_USER(String value0)
 	{
@@ -14645,6 +16279,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has blocked you.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_YOU_EXCLUDED(String value0)
 	{
@@ -14653,6 +16289,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is currently not accepting any Whispers.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_WHISPER_REFUSE(String value0)
 	{
@@ -14671,6 +16309,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have unblocked %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ONE_INCLUDED(String value0)
 	{
@@ -14679,6 +16319,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have blocked %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ONE_EXCLUDED(String value0)
 	{
@@ -14687,6 +16329,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Blocked users: %num0 users
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CURRENT_EXCLUDES(int num0)
 	{
@@ -14700,6 +16344,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have excluded %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ONE_NO_LONGER_INCLUDED(String value0)
 	{
@@ -14708,6 +16354,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have listed %0 as a friend.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ONE_IS_INCLUDED(String value0)
 	{
@@ -14721,6 +16369,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Users listed as friends: %num0 users
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CURRENT_INCLUDES(int num0)
 	{
@@ -14734,6 +16384,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Current users: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_LIST_USER(String value0)
 	{
@@ -14742,6 +16394,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The server is due to shut down in %0 seconds. Please quit the game.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SERVER_SHUTDOWN(String value0)
 	{
@@ -14750,6 +16404,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Please do not flood chat. Blocked for %0m.
+	 * @param value0m
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_DISABLED_FOR(String value0m)
 	{
@@ -14773,6 +16429,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has already been sold.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_VENDOR_SOLD_OUT(int nameId)
 	{
@@ -14866,6 +16524,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has already been sold.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PERSONAL_SHOP_SOLD_OUT(String value0)
 	{
@@ -14894,6 +16554,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are now bound at [%subzone].
+	 * @param subzone
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DEATH_REGISTER_RESURRECT_POINT(String subzone)
 	{
@@ -14947,6 +16609,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are assisting the target %0 has selected.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ASSISTKEY_ASSIST_FOR_SOMEONE(String value0)
 	{
@@ -15040,6 +16704,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Leaving Atreia.\n\n Please wait %0 seconds.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_WAIT_TO_QUIT(String value0)
 	{
@@ -15148,6 +16814,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The remaining playing time is %*0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_REMAIN_PLAYTIME(String value0)
 	{
@@ -15156,6 +16824,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Pre-paid credit is being applied. The remaining playing time is %*0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHANGE_REMAIN_PLAYTIME(String value0)
 	{
@@ -15169,6 +16839,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You need %0 to open the door.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANNOT_OPEN_DOOR_NEED_NAMED_KEY_ITEM(String value0)
 	{
@@ -15202,6 +16874,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You do not have enough items needed for repair. The fee is %0 (per %1).
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANNOT_USE_DOOR_REPAIR_NOT_ENOUGH_FEE(String value0, String value1)
 	{
@@ -15210,6 +16885,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has used level %1 %2.
+	 * @param value0
+	 * @param value1
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_MONSTER_SKILL(String value0, String value1, String value2)
 	{
@@ -15263,6 +16942,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has defeated %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_KILLMSG(String value0, String value1)
 	{
@@ -15271,6 +16953,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Resurrection wait time: %0 sec
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_WATINGTIME(String value0)
 	{
@@ -15294,6 +16978,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * It will be cancelled if you do not press it in %0 minutes.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_RESURRECTOTHER_DIALOG__5MIN(String value0)
 	{
@@ -15302,6 +16988,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * It will be cancelled if you do not press it in %0 minutes.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_RESURRECT_DIALOG__5MIN(String value0)
 	{
@@ -15310,6 +16998,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You will be resurrected at the registered bind point if you do not press it in %0 minutes.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_RESURRECT_DIALOG__30MIN(String value0)
 	{
@@ -15323,6 +17013,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is at the position indicated on the map.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIND_POS_SUBZONE_FOUND(String value0)
 	{
@@ -15331,6 +17023,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is where it is indicated on the map, but the path leading to it cannot be found.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIND_POS_TOO_FAR_FROM_SUBZONE(String value0)
 	{
@@ -15339,6 +17033,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is at the position indicated on the map.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIND_POS_NPC_FOUND(String value0)
 	{
@@ -15347,6 +17043,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is where it is indicated on the map, but the path leading to it cannot be found.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIND_POS_TOO_FAR_FROM_NPC(String value0)
 	{
@@ -15355,6 +17053,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is at a hard-to-find location.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIND_POS_NO_NPC_IN_THIS_WORLD(String value0)
 	{
@@ -15368,6 +17068,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is in the %1 region.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIND_POS_NPC_FOUND_IN_OTHER_WORLD(String value0, String value1)
 	{
@@ -15386,6 +17089,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You spent %num0 Kinah.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_USEMONEY(int num0)
 	{
@@ -15404,6 +17109,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can list up to %num0 items.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_EXCEED_MAX_ITEM_COUNT(int num0)
 	{
@@ -15482,6 +17189,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 skill (Level %1)
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_TITLE_BONUS_SKILL(String value0, String value1)
 	{
@@ -15495,6 +17205,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Starting the duel with %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DUEL_START(String value0)
 	{
@@ -15508,6 +17220,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The current screenshot was saved in %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PRINT_SCREEN(String value0)
 	{
@@ -15521,6 +17235,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 rolled the dice and got a %num1.
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DICE_ROLLED(String value0, int num1)
 	{
@@ -15529,6 +17246,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 gave up rolling the dice.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DICE_PASSED(String value0)
 	{
@@ -15537,6 +17256,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 does not have the right to roll the dice.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DICE_UNAUTHORIZED(String value0)
 	{
@@ -15545,6 +17266,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have purchased %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_BUY_ITEM(String value0)
 	{
@@ -15553,6 +17276,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have purchased %1 %0s.
+	 * @param value1
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_BUY_ITEM_MULTI(String value1, String value0s)
 	{
@@ -15561,6 +17287,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have sold %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SELL_ITEM(String value0)
 	{
@@ -15569,6 +17297,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have sold %1 %0s.
+	 * @param value1
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SELL_ITEM_MULTI(String value1, String value0s)
 	{
@@ -15577,6 +17308,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have crafted %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBINE_ITEM(String value0)
 	{
@@ -15585,6 +17318,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have crafted %1 %0s.
+	 * @param value1
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBINE_ITEM_MULTI(String value1, String value0s)
 	{
@@ -15593,6 +17329,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been sold.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SOLDOUT_ITEM(String value0)
 	{
@@ -15601,6 +17339,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 %0s have been sold.
+	 * @param value1
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SOLDOUT_ITEM_MULTI(String value1, String value0s)
 	{
@@ -15609,6 +17350,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have discarded %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DISCARD_ITEM(String value0)
 	{
@@ -15617,6 +17360,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have discarded %1 %0s.
+	 * @param value1
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DISCARD_ITEM_MULTI(String value1, String value0s)
 	{
@@ -15630,6 +17376,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Currently, %0 cannot receive any friend requests.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BUDDY_CANT_ADD_WHEN_HE_IS_ASKED_QUESTION(String value0)
 	{
@@ -15703,6 +17451,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are not allowed to move for %0 minutes for the following reason(s).
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_INGAME_BLOCK_ENABLE_NO_MOVE(String value0)
 	{
@@ -15711,6 +17461,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are not allowed to chat for %0 minutes for the following reason(s).
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_INGAME_BLOCK_ENABLE_NO_CHAT(String value0)
 	{
@@ -15719,6 +17471,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are not allowed to open the private store for %0 minutes for the following reason(s).
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_INGAME_BLOCK_ENABLE_NO_SHOP(String value0)
 	{
@@ -15742,6 +17496,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are currently unable to move. There are %0 minute(s) left in your ban.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_INGAME_BLOCK_IN_NO_MOVE(String value0)
 	{
@@ -15750,6 +17506,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are currently unable to chat. There are %0 minute(s) left in your ban.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_INGAME_BLOCK_IN_NO_CHAT(String value0)
 	{
@@ -15758,6 +17516,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are currently unable to open a private store. There are %0 minute(s) left on your ban.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_INGAME_BLOCK_IN_NO_SHOP(String value0)
 	{
@@ -15854,6 +17614,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot be socketed with Manastone.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GIVE_ITEM_PROC_NOT_ADD_PROC(DescriptionId descriptionId)
 	{
@@ -15902,6 +17664,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have joined the %0 Channel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_CHANNEL_JOIN(String value0)
 	{
@@ -15910,6 +17674,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have left the %0 Channel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_CHANNEL_LEAVE(String value0)
 	{
@@ -15918,6 +17684,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have created the %0 Channel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_CHANNEL_CREATE(String value0)
 	{
@@ -15926,6 +17694,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your private channel "%1"% is open as Channel No. %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_CREATE_SUCCESS(String value0)
 	{
@@ -15954,6 +17724,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have joined the private channel %1 at Channel %0. Confirm if you selected the channel in the chatting tab option.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CAHT_ROOM_JOIN_SUCCESS(String value1, String value0)
 	{
@@ -15977,6 +17750,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You need to enter a password to join the private channel %0. Please enter it accurately, in the format of '/JoinChannel [ChannelName] [password]'.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_JOIN_FAIL_WRONG_PASSWORD(String value0)
 	{
@@ -15985,6 +17760,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot enter the private channel (%0) as it is full.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_JOIN_FAIL_ROOM_FULL(String value0)
 	{
@@ -15993,6 +17770,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has entered the private channel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_JOIN_NOTIFY(String value0)
 	{
@@ -16001,6 +17780,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have joined the private channel %1 at Channel %0. Confirm if you selected the channel in the chatting tab option.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_JOIN_NOTIFY_SELF(String value1, String value0)
 	{
@@ -16009,6 +17791,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are not in the private channel %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_LEAVE_FAIL_NOT_A_MEMBER(String value0)
 	{
@@ -16017,6 +17801,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has left the private channel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_LEAVE_NOTIFY(String value0)
 	{
@@ -16025,6 +17811,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have left the private channel %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_LEAVE_SUCCESS(String value0)
 	{
@@ -16033,6 +17821,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is the new channel leader.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_NEW_ADMIN(String value0)
 	{
@@ -16051,6 +17841,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been kicked out of the private channel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_BAN_MEMBER_BANNED(String value0)
 	{
@@ -16059,6 +17851,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have been kicked out of the private channel %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_BAN_SELF_BANNED(String value0)
 	{
@@ -16067,6 +17861,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The password of the private channel has been changed to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_PASSWORD_CHANGED(String value0)
 	{
@@ -16075,6 +17871,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The maximum password length is %0 characters.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_PASSWORD_TOO_LONG(String value0)
 	{
@@ -16093,6 +17891,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been deleted from the Ban List.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_UNBAN_SUCCESS(String value0)
 	{
@@ -16111,6 +17911,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Maximum number of users allowed is now set to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_PROPERTYCHANGE_MAXMEMBER(String value0)
 	{
@@ -16177,6 +17979,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have added %0 to your Friends List.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BUDDYLIST_ADD_BUDDY_ACCEPTED(String value0)
 	{
@@ -16185,6 +17989,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 declined your friend request.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BUDDYLIST_ADD_BUDDY_REJECTED(String value0)
 	{
@@ -16198,6 +18004,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have removed %0 from your Friends List.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BUDDYLIST_REMOVE_CHARACTER(String value0)
 	{
@@ -16211,6 +18019,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your friend %0 has logged in.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BUDDYLIST_BUDDY_LOGON(String value0)
 	{
@@ -16224,6 +18034,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have blocked %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BLOCKLIST_ADD_BLOCKED(String value0)
 	{
@@ -16247,6 +18059,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have unblocked %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BLOCKLIST_REMOVE_FROM_LIST(String value0)
 	{
@@ -16270,6 +18084,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Channel information: %0, Name: %1, Password: %2, Users: %num3.
+	 * @param value0
+	 * @param value1
+	 * @param value2
+	 * @param num3
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_INFO_FORMAT(String value0, String value1, String value2, int num3)
 	{
@@ -16278,6 +18097,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Channel information: %0, Name: %1, Users: %num2.
+	 * @param value0
+	 * @param value1
+	 * @param num2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_INFO_FORMAT_NOPASSWORD(String value0, String value1, int num2)
 	{
@@ -16326,6 +18149,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Requires the %0 Equip Skill.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_TOOLTIP_NEED_MASTERY_SKILL(String value0)
 	{
@@ -16334,6 +18159,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has sent you a friend request.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BUDDY_REQUEST_TO_ADD(String value0)
 	{
@@ -16357,6 +18184,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has logged in.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_NOTIFY_LOGIN_BUDDY(String value0)
 	{
@@ -16365,6 +18194,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has logged out.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_NOTIFY_LOGOFF_BUDDY(String value0)
 	{
@@ -16373,6 +18204,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has deleted you from their Friends List.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_NOTIFY_DELETE_BUDDY(String value0)
 	{
@@ -16386,6 +18219,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Builder Command %0 requires %1 parameters.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_BC_NOT_ENOUGH_PARAMETER(String value0, String value1)
 	{
@@ -16399,6 +18235,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0: Level %1 (%2)
+	 * @param value0
+	 * @param value1
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MACRO_MSG_PROCESS(String value0, String value1, String value2)
 	{
@@ -16412,6 +18252,7 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your petition has been received.\nThe receipt number is %0.\nThere are %1 users on the waiting list, and the approximate waiting time is %2.\nYou have submitted %3 petitions today, and there are %4 more petitions left. Thank you!
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PETITION_SUBMIT_MESSAGE()
 	{
@@ -16450,6 +18291,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Campaign quest acquired: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MISSION_SYSTEMMSG_ACQUIRE(String value0)
 	{
@@ -16483,6 +18326,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Please do not flood chat. Blocked for %0m.
+	 * @param value0m
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_CHANNEL_FLOODING_BLOCKED_1(String value0m)
 	{
@@ -16491,6 +18336,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can use the Channel: %0 only once every %1 seconds. Time Remaining: %2 seconds
+	 * @param value0
+	 * @param value1
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_CHANNEL_FLOODING_BLOCKED_2(String value0, String value1, String value2)
 	{
@@ -16499,6 +18348,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Both local and trade channels were moved to the %0 area.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_CHANNEL_LEVEL_CHANGED(String value0)
 	{
@@ -16537,6 +18388,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %0 item as reward for the survey.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_POLL_REWARD_ITEM(String value0)
 	{
@@ -16545,6 +18398,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num1 %0 items as reward for the survey.
+	 * @param num1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_POLL_REWARD_ITEM_MULTI(int num1, String value0)
 	{
@@ -16553,6 +18409,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num0 Kinah as reward for the survey.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_POLL_REWARD_MONEY(int num0)
 	{
@@ -16586,6 +18444,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 starts the voice chatting.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_VOICE_START_NOTIFY(String value0)
 	{
@@ -16594,6 +18454,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 ends the voice chatting.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_ROOM_VOICE_FINISH_NOTIFY(String value0)
 	{
@@ -16652,6 +18514,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You used %num0 Abyss Points.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_USE_ABYSSPOINT(int num0)
 	{
@@ -16660,6 +18524,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have invited %0 to join the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_INVITE_HIM(String value0)
 	{
@@ -16668,6 +18534,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have received an alliance invitation from %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_INVITE_ME(String value0)
 	{
@@ -16676,6 +18544,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have invited %0's group to the alliance. %0's group has a total of %1 members.
+	 * @param value0
+	 * @param value2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_INVITE_PARTY(String value0, String value2, String value1)
 	{
@@ -16684,6 +18556,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The leader of %0's group is %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_INVITE_PARTY_HIM(String value0, String value1)
 	{
@@ -16692,6 +18567,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your group has received an alliance invitation from %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_INVITE_PARTY_ME(String value0)
 	{
@@ -16700,6 +18577,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have declined %0's invitation to join the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_REJECT_ME(String value0)
 	{
@@ -16708,6 +18587,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has declined your invitation to join the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_REJECT_HIM(String value0)
 	{
@@ -16716,6 +18597,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's group has declined your invitation to join the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_REJECT_PARTY(String value0)
 	{
@@ -16724,6 +18607,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is already a member of another alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_ALREADY_OTHER_FORCE(String value0)
 	{
@@ -16747,6 +18632,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has left the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_LEAVE_HIM(String value0)
 	{
@@ -16755,6 +18642,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has kicked you out of the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_BAN_ME(String value0)
 	{
@@ -16763,6 +18652,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has kicked out %1 of the alliance.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_BAN_HIM(String value0, String value1)
 	{
@@ -16771,6 +18663,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has left the alliance due to a prolonged absence.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_LEAVE_TIMEOUT(String value0)
 	{
@@ -16779,6 +18673,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is now Captain of the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_CHANGE_LEADER_TIMEOUT(String value0)
 	{
@@ -16792,6 +18688,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is now vice Captain of the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_PROMOTE_MANAGER(String value0)
 	{
@@ -16800,6 +18698,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been demoted to member from vice Captain.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_DEMOTE_MANAGER(String value0)
 	{
@@ -16808,6 +18708,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has promoted %1. From now on, %1 is the alliance captain.
+	 * @param value0
+	 * @param value1
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_CHANGE_LEADER(String value0, String value1, String value2)
 	{
@@ -16831,6 +18735,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has requested to check the combat readiness.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_CHECK_REQUEST(String value0)
 	{
@@ -16874,6 +18780,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is now the alliance captain.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_HE_IS_NEW_LEADER(String value0)
 	{
@@ -16912,6 +18820,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has declined your invitation to join the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_HE_REJECT_INVITATION(String value0)
 	{
@@ -16950,6 +18860,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has left the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_HE_LEAVE_FORCE(String value0)
 	{
@@ -16958,6 +18870,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is a member of another alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_HE_IS_ALREADY_MEMBER_OF_OTHER_FORCE(String value0)
 	{
@@ -16966,6 +18880,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is already a member of your alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_HE_IS_ALREADY_MEMBER_OF_OUR_FORCE(String value0)
 	{
@@ -16984,6 +18900,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have invited %0 to join the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_INVITED_HIM(String value0)
 	{
@@ -16992,6 +18910,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Currently, %0 cannot accept your invitation to join the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_CANT_INVITE_WHEN_HE_IS_ASKED_QUESTION(String value0)
 	{
@@ -17000,6 +18920,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been disconnected.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_HE_BECOME_OFFLINE(String value0)
 	{
@@ -17008,6 +18930,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been offline for too long and had been automatically kicked out of the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_HE_BECOME_OFFLINE_TIMEOUT(String value0)
 	{
@@ -17016,6 +18940,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been kicked out of the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_HE_IS_BANISHED(String value0)
 	{
@@ -17044,6 +18970,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 rolled the dice and got a %num1.
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_ITEM_DICE(String value0, int num1)
 	{
@@ -17072,6 +19001,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been kicked out of the arena.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PvPZONE_OUT_MESSAGE(String value0)
 	{
@@ -17085,6 +19016,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 %1 is activating the %2 Artifact.
+	 * @param race
+	 * @param value1
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ARTIFACT_CASTING(DescriptionId race, String value1, DescriptionId descriptionId)
 	{
@@ -17093,6 +19028,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %1 Artifact core in %0 possession has been deactivated.
+	 * @param race
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ARTIFACT_CORE_CASTING(DescriptionId race, DescriptionId descriptionId)
 	{
@@ -17101,6 +19039,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The activation of the %1 Artifact in %0 possession has been cancelled.
+	 * @param race
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ARTIFACT_CANCELED(DescriptionId race, DescriptionId descriptionId)
 	{
@@ -17109,6 +19050,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 %1 has succeeded in activating the %2 Artifact.
+	 * @param race
+	 * @param value1
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ARTIFACT_FIRE(DescriptionId race, String value1, DescriptionId descriptionId)
 	{
@@ -17117,6 +19062,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 Legion lost %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_GUILD_CASTLE_TAKEN(String value0, String value1)
 	{
@@ -17125,6 +19073,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has conquered %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_GUILD_WIN_CASTLE(String value0, String value1)
 	{
@@ -17133,6 +19084,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 succeeded in conquering %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_WIN_CASTLE(String value0, String value1)
 	{
@@ -17141,6 +19095,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is now vulnerable.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_PVP_ON(DescriptionId descriptionId)
 	{
@@ -17149,6 +19105,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer vulnerable.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_PVP_OFF(DescriptionId descriptionId)
 	{
@@ -17177,6 +19135,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 failed to defend %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_CASTLE_TAKEN(String value0, String value1)
 	{
@@ -17185,6 +19146,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 item has been sold by the broker.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_VENDOR_REGISTER_SOLD_OUT(int nameId)
 	{
@@ -17193,6 +19156,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of the %0 killed the Aetheric Field Generator.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_SHIELD_BROKEN(String value1, String value0)
 	{
@@ -17201,6 +19167,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of the %0 destroyed the Castle Gate.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_DOOR_BROKEN(String value1, String value0)
 	{
@@ -17229,6 +19198,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of the %0 destroyed the Gate Guardian Stone.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_REPAIR_BROKEN(String value1, String value0)
 	{
@@ -17262,6 +19234,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You do not have enough mana to continue using %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_INSUFFICIENT_COST_FOR_TOGGLE_SKILLL(String value0)
 	{
@@ -17275,6 +19249,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been activated.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_PROC_EFFECT_OCCURRED(int value0)
 	{
@@ -17288,6 +19264,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You declined %0's challenge for a duel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_REJECT_DUEL(String value0)
 	{
@@ -17296,6 +19274,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has challenged you to a duel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DUEL_REQUESTED(String value0)
 	{
@@ -17314,6 +19294,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 cannot chat.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANT_CHAT_LEVEL(String value0)
 	{
@@ -17327,6 +19309,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 cannot send whispers.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANT_WHISPER_LEVEL(String value0)
 	{
@@ -17355,6 +19339,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You disabled chatting for %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DISABLED_OTHER_CHAT(String value0)
 	{
@@ -17378,6 +19364,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot quit during a battle. Canceling in %0 seconds.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANNOT_QUIT_DURING_BATTLE(String value0)
 	{
@@ -17626,6 +19614,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num0 Abyss Points.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_ABYSS_POINT_GAIN(int num0)
 	{
@@ -17644,6 +19634,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of %0 has captured the %2 Artifact.
+	 * @param value1
+	 * @param value0
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_EVENT_WIN_ARTIFACT(String value1, String value0, String value2)
 	{
@@ -17652,6 +19646,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has conquered %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_EVENT_WIN_FORT(String value0, String value1)
 	{
@@ -17660,6 +19657,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 Artifact has been lost to %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_EVENT_LOSE_ARTIFACT(String value0, String value1)
 	{
@@ -17668,6 +19668,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 Legion lost %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_EVENT_LOSE_FORT(String value0, String value1)
 	{
@@ -17681,6 +19684,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your %0 skill level is not high enough.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_OUT_OF_SKILL_POINT(String value0)
 	{
@@ -17699,6 +19704,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have learned the %0 skill.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_LEARNED_NEW_GATHER_SKILL(String value0)
 	{
@@ -17707,6 +19714,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your %0 skill has been upgraded to %1 points.
+	 * @param skillName
+	 * @param newLevel
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_SKILL_POINT_UP(String skillName, int newLevel)
 	{
@@ -17740,6 +19750,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are gathering %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_START_1_BASIC(String value0)
 	{
@@ -17748,6 +19760,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are harvesting %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_START_2_GATHER(String value0)
 	{
@@ -17756,6 +19770,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are mining %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_START_3_MINING(String value0)
 	{
@@ -17764,6 +19780,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are fishing %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_START_4_FISHING(String value0)
 	{
@@ -17772,6 +19790,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are felling %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_START_5_FORESTRY(String value0)
 	{
@@ -17780,6 +19800,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gathered %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_SUCCESS_1_BASIC(String value0)
 	{
@@ -17788,6 +19810,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have harvested %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_SUCCESS_2_GATHER(String value0)
 	{
@@ -17796,6 +19820,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have mined %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_SUCCESS_3_MINING(String value0)
 	{
@@ -17804,6 +19830,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have caught %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_SUCCESS_4_FISHING(String value0)
 	{
@@ -17812,6 +19840,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have acquired %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_SUCCESS_5_FORESTRY(String value0)
 	{
@@ -17820,6 +19850,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to gather %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_FAIL_1_BASIC(String value0)
 	{
@@ -17828,6 +19860,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to harvest %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_FAIL_2_GATHER(String value0)
 	{
@@ -17836,6 +19870,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to mine %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_FAIL_3_MINING(String value0)
 	{
@@ -17844,6 +19880,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to catch %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_FAIL_4_FISHING(String value0)
 	{
@@ -17852,6 +19890,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to acquire %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_FAIL_5_FORESTRY(String value0)
 	{
@@ -17930,6 +19970,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are too far from %0 to craft.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMBINE_TOO_FAR_FROM_TOOL(String value0)
 	{
@@ -17938,6 +19980,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot craft as you do not have %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMBINE_DO_NOT_HAVE_TOOL(String value0)
 	{
@@ -17946,6 +19990,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot start crafting as you have not learned the %0 skill.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMBINE_CANT_USE(String value0)
 	{
@@ -17959,6 +20005,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your %0 skill is not good enough yet.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMBINE_OUT_OF_SKILL_POINT(String value0)
 	{
@@ -17972,6 +20020,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot craft as you do not have %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMBINE_NO_COMPONENT_ITEM_SINGLE(String value0)
 	{
@@ -17980,6 +20030,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot craft as you do not have %num1 %0.
+	 * @param num1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMBINE_NO_COMPONENT_ITEM_MULTIPLE(int num1, String value0)
 	{
@@ -17988,6 +20041,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are crafting %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMBINE_START(String value0)
 	{
@@ -17996,6 +20051,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have crafted %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMBINE_SUCCESS(String value0)
 	{
@@ -18004,6 +20061,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to craft %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMBINE_FAIL(String value0)
 	{
@@ -18017,6 +20076,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You must have learned the %0 skill to use this tool.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMBINE_CANT_USE_TOOL(String value0)
 	{
@@ -18025,6 +20086,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your %0 skill has been upgraded to %1 points.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMBINE_SKILL_POINT_UP(String value0, String value1)
 	{
@@ -18033,6 +20097,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You must learn the %0 skill to start gathering.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHER_LEARN_SKILL(String value0)
 	{
@@ -18071,6 +20137,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have learned %0.
+	 * @param value0
+	 * @param name
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CRAFT_RECIPE_LEARN(int value0, String name)
 	{
@@ -18079,6 +20148,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot learn the design because you have not learned the %0 skill.
+	 * @param i
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CRAFT_RECIPE_CANT_LEARN_SKILL(int i)
 	{
@@ -18092,6 +20163,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Maximum skill level of %0 has been upgraded to Level %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CRAFT_INFO_UPGRADE(String value0, String value1)
 	{
@@ -18110,6 +20184,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Maximum skill level of %0 has been upgraded to Level %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GATHERING_INFO_UPGRADE(String value0, String value1)
 	{
@@ -18118,6 +20195,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Maximum skill level of %0 has been upgraded to Level %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_AERIALGATHERING_INFO_UPGRADE(String value0, String value1)
 	{
@@ -18166,6 +20246,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have started gathering %0.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXTRACT_GATHER_START_1_BASIC(DescriptionId nameId)
 	{
@@ -18174,6 +20256,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gathered %0.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXTRACT_GATHER_SUCCESS_1_BASIC(DescriptionId nameId)
 	{
@@ -18182,6 +20266,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to gather %0.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EXTRACT_GATHER_FAIL_1_BASIC(DescriptionId nameId)
 	{
@@ -18215,6 +20301,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You were killed by %0's attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PvPZONE_MY_DEATH_TO_B(String value0)
 	{
@@ -18223,6 +20311,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You were killed by %0's attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_DEATH_TO_B(String value0)
 	{
@@ -18231,6 +20321,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has died.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_FRIENDLY_DEATH(String value0)
 	{
@@ -18239,6 +20331,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 was killed by %1's attack.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_FRIENDLY_DEATH_TO_B(String value0, String value1)
 	{
@@ -18247,6 +20342,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has died.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_HOSTILE_DEATH(String value0)
 	{
@@ -18255,6 +20352,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have defeated %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PvPZONE_HOSTILE_DEATH_TO_ME(String value0)
 	{
@@ -18263,6 +20362,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has defeated %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PvPZONE_HOSTILE_DEATH_TO_B(String value0, String value1)
 	{
@@ -18271,6 +20373,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have defeated %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_HOSTILE_DEATH_TO_ME(String value0)
 	{
@@ -18279,6 +20383,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has defeated %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_HOSTILE_DEATH_TO_B(String value0, String value1)
 	{
@@ -18287,6 +20394,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num1 XP from %0.
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP(String value0, long num1)
 	{
@@ -18300,6 +20410,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have earned %0 XP.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_EXP_GAIN(String value0)
 	{
@@ -18308,6 +20420,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num0 XP.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP2(long num0)
 	{
@@ -18316,6 +20430,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has received %num1 XP.
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ENSLAVE_GIVE_EXP_TO_PET_GET_EXP(String value0, int num1)
 	{
@@ -18324,6 +20441,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has lost %num1 XP.
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ENSLAVE_PET_LOSS_EXP(String value0, int num1)
 	{
@@ -18332,6 +20452,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You distributed %1 Kinah each to %0 members.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_DISTRIBUTE_GOLD(String value1, String value0)
 	{
@@ -18340,6 +20463,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have earned %num0 Kinah.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GETMONEY(int num0)
 	{
@@ -18348,6 +20473,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received a refund of %num0 Kinah.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REFUND_MONEY_SYSTEM(int num0)
 	{
@@ -18356,6 +20483,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have acquired %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_ITEM1(String value0)
 	{
@@ -18364,6 +20493,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has acquired %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ITEM_WIN(String value0, String value1)
 	{
@@ -18372,6 +20504,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has acquired %1.
+	 * @param value0
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_ITEM_PARTYNOTICE(String value0, DescriptionId descriptionId)
 	{
@@ -18380,6 +20515,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has acquired %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_ITEM_WIN(String value0, String value1)
 	{
@@ -18388,6 +20526,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have acquired %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_ITEM(String value0)
 	{
@@ -18396,6 +20536,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have acquired %num1 %0(s).
+	 * @param num1
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_ITEM_MULTI(int num1, String value0s)
 	{
@@ -18444,6 +20587,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot send a mail to %0 because his/her mailbox is full.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MAIL_MSG_RECIPIENT_MAILBOX_FULL(String value0)
 	{
@@ -18452,6 +20597,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is currently refusing the View Detail access.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REJECTED_WATCH(String value0)
 	{
@@ -18460,6 +20607,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is currently rejecting trade requests.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REJECTED_TRADE(String value0)
 	{
@@ -18468,6 +20617,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is currently rejecting group invitations.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REJECTED_INVITE_PARTY(String value0)
 	{
@@ -18476,6 +20627,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is currently rejecting alliance invitations.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REJECTED_INVITE_FORCE(String value0)
 	{
@@ -18484,6 +20637,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is currently rejecting Legion invitations.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REJECTED_INVITE_GUILD(String value0)
 	{
@@ -18492,6 +20647,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not currently accepting friend requests.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REJECTED_FRIEND(String value0)
 	{
@@ -18500,6 +20657,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not currently accepting duel requests.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REJECTED_DUEL(String value0)
 	{
@@ -18508,6 +20667,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You started using the %0 skill.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_TOGGLE_SKILL_TURNED_ON(String value0)
 	{
@@ -18516,6 +20677,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have entered zone channel %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TELEPORT_ZONECHANNEL(String value0)
 	{
@@ -18529,6 +20692,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your Note: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_READ_TODAY_WORDS(String value0)
 	{
@@ -18567,6 +20732,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 resisted your attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_RESISTED_ME_TO_B(String value0)
 	{
@@ -18575,6 +20742,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You resisted %0's attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_RESISTED_A_TO_ME(String value0)
 	{
@@ -18583,6 +20752,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 resisted %0's attack.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_RESISTED_A_TO_B(String value1, String value0)
 	{
@@ -18591,6 +20763,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You changed the connection status to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CONNECTION_STATUS(String value0)
 	{
@@ -18599,6 +20773,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You changed the group to the %0 state.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_MY_PARTY_STATE(String value0)
 	{
@@ -18632,6 +20808,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your accumulated play time is %0 hour(s) %1 minute(s). Your accumulated rest time is %2 hour(s) %3 minute(s).
+	 * @param value0
+	 * @param value1
+	 * @param value2
+	 * @param value3
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_NORMAL_REMAIN_PLAYTIME(String value0, String value1, String value2, String value3)
 	{
@@ -18640,6 +20821,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your accumulated rest time is %0 hour(s) %1 minute(s).
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_HEALTH_REMAIN_PLAYTIME(String value0, String value1)
 	{
@@ -18658,6 +20842,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Real Time: %0 %1
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LOCAL_TIME(String value0, String value1)
 	{
@@ -18666,6 +20853,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Game Time: %0 %1
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GAME_TIME(String value0, String value1)
 	{
@@ -18704,6 +20894,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The name must be entered in the form of [%0 character name].
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CHAT_CMD_NEED_NAME_FIELD(String value0)
 	{
@@ -18717,6 +20909,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of %0 uses %3 in %2.
+	 * @param player
+	 * @param skill
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_ABYSS_SKILL_IS_FIRED(Player player, DescriptionId skill)
 	{
@@ -18755,6 +20950,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You rolled the dice and got %0 (max. %num1).
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DICE_RESULT_ME(int value0, int num1)
 	{
@@ -18763,6 +20961,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 rolled the dice and got %1 (max. %num2).
+	 * @param value0
+	 * @param value1
+	 * @param num2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DICE_RESULT_OTHER(String value0, int value1, int num2)
 	{
@@ -18776,6 +20978,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 gave up rolling the dice.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DICE_GIVEUP_OTHER(String value0)
 	{
@@ -18854,6 +21058,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are now the owner of %0.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LOOT_GET_ITEM_ME(DescriptionId descriptionId)
 	{
@@ -18862,6 +21068,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is now the owner of %1.
+	 * @param value0
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LOOT_GET_ITEM_OTHER(String value0, DescriptionId descriptionId)
 	{
@@ -18880,6 +21089,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 settled the account instantly.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PAY_RESULT_OTHER(String value0)
 	{
@@ -18888,6 +21099,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your bid was successful and %num0 Kinah has been deducted.
+	 * @param highestValue
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PAY_ACCOUNT_ME(long highestValue)
 	{
@@ -18896,6 +21109,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * It was won by %0 for %num1 Kinah.
+	 * @param value0
+	 * @param highestValue
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PAY_ACCOUNT_OTHER(String value0, long highestValue)
 	{
@@ -18904,6 +21120,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %num0 Kinah is distributed %num2 Kinah each to %1 members.
+	 * @param highestValue
+	 * @param num2
+	 * @param distributeKinah
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PAY_DISTRIBUTE(long highestValue, int num2, long distributeKinah)
 	{
@@ -18912,6 +21132,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You pause %0 temporarily.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LOOT_PAUSE_START_ME(String value0)
 	{
@@ -18920,6 +21142,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 pauses %1 temporarily.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LOOT_PAUSE_START_OTHER(String value0, String value1)
 	{
@@ -18928,6 +21153,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 ended the pause state of %0.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LOOT_PAUSE_END_ME(String value0, String value1)
 	{
@@ -18936,6 +21164,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 unpauses %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LOOT_PAUSE_END_OTHER(String value0, String value1)
 	{
@@ -18949,6 +21180,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You rolled the dice and got a %0 (1~%1).
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DICE_RESULT_EX_ME(String value0)
 	{
@@ -18957,6 +21190,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's rolled the dice and got a %1 (1~%2).
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DICE_RESULT_EX_OTHER(String value0, String value1)
 	{
@@ -18965,6 +21201,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of the %0 killed the Guardian General.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_BOSS_KILLED(String value1, String value0)
 	{
@@ -18973,6 +21212,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of the %0 has destroyed the Balaur Battleship Dredgion.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_CARRIER_KILLED(String value1, String value0)
 	{
@@ -18981,6 +21223,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 seconds remain until you can cast it again.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ARTIFACT_INITIAL_TIME(String value0)
 	{
@@ -19014,6 +21258,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 captured the %1 Artifact.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EVENT_WIN_ARTIFACT(String value0, String value1)
 	{
@@ -19022,6 +21269,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 lost the %1 Artifact.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_EVENT_LOSE_ARTIFACT(String value0, String value1)
 	{
@@ -19035,6 +21285,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of the %0 has destroyed the Balaur Battleship Dredgion.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_GUILD_CARRIER_KILLED(String value1, String value0)
 	{
@@ -19043,6 +21296,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have captured the %0 Artifact.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ARTIFACT_WIN_FORT_TO_ME(String value0)
 	{
@@ -19051,6 +21306,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of %0 has captured the %2 Artifact.
+	 * @param value1
+	 * @param value0
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ARTIFACT_WIN_FORT(String value1, String value0, String value2)
 	{
@@ -19059,6 +21318,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 Artifact has been lost to %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ARTIFACT_LOSE_FORT(String value0, String value1)
 	{
@@ -19082,6 +21344,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Playing Time: %0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PLAYING_TIME(String value0)
 	{
@@ -19090,6 +21354,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have played for %0 hour(s). Please take a break.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_NOTIFY_PLAYING_TIME(String value0)
 	{
@@ -19098,6 +21364,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have joined the %0 Legion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_INVITE_I_JOINED(String value0)
 	{
@@ -19106,6 +21374,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE _STR_MSG_Heal_TO_ME(int num0)
 	{
@@ -19114,6 +21384,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only buy one %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CAN_BUY_ONLY_ONE(String value0)
 	{
@@ -19122,6 +21394,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Registering %0 on the quality item distribution list.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LOOT_LISTING_ITEM(String value0)
 	{
@@ -19130,6 +21404,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is one of the quality items waiting to be distributed.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LOOT_ALREADY_DISTRIBUTING_ITEM(DescriptionId descriptionId)
 	{
@@ -19143,6 +21419,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The skill level for the %0 skill does not increase as the difficulty is too low.
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DONT_GET_PRODUCTION_EXP(DescriptionId descriptionId)
 	{
@@ -19161,6 +21439,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have sent a friend request to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BUDDY_REQUEST_ADD(String value0)
 	{
@@ -19189,6 +21469,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 gave up the Bidding.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PAY_GIVEUP_OTHER(String value0)
 	{
@@ -19197,6 +21479,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use this function in %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DISABLE(String value0)
 	{
@@ -19205,6 +21489,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The registered Kisk can resurrect %num0 times more.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BINDSTONE_CAPACITY_LIMITTED_ALARM(int num0)
 	{
@@ -19213,6 +21499,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your Abyss Rank has changed to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_CHANGE_RANK(String value0)
 	{
@@ -19231,6 +21519,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your Abyss Rank has been changed to %0. Check the changed ranking on the Abyss Ranking Window.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_CHANGE_RANK_THIS_WEEK(String value0)
 	{
@@ -19239,6 +21529,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have learned the skill, %0 (Level - %1).
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_LEARNED_ABYSS_SKILL(String value0, String value1)
 	{
@@ -19272,6 +21565,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have acquired the %0 title.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_CASH_TITLE(int value0)
 	{
@@ -19280,6 +21575,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have acquired the %0 emote.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_CASH_SOCIALACTION(String value0)
 	{
@@ -19288,6 +21585,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The usage time of %0 title has expired.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DELETE_CASH_TITLE_BY_TIMEOUT(String value0)
 	{
@@ -19296,6 +21595,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Usage time for the %0 emote has expired.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DELETE_CASH_SOCIALACTION_BY_TIMEOUT(String value0)
 	{
@@ -19309,6 +21610,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You distributed %num0 Kinah to %num1 people, giving each %num2 Kinah.
+	 * @param num0
+	 * @param num1
+	 * @param num2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SPLIT_ME_TO_B(int num0, int num1, int num2)
 	{
@@ -19317,6 +21622,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 distributed %num1 Kinah among %num2 people, giving %num3 Kinah each.
+	 * @param value0
+	 * @param num1
+	 * @param num2
+	 * @param num3
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SPLIT_B_TO_ME(String value0, int num1, int num2, int num3)
 	{
@@ -19325,6 +21635,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The search found %num0 characters (max. 110).
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_WHO_DIALOG_RESULT(int num0)
 	{
@@ -19333,6 +21645,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Group loot policy is now %0. %1 items will be distributed by %2.
+	 * @param value0
+	 * @param value1
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PARTY_LOOTING_CHANGED_RULE(String value0, String value1, String value2)
 	{
@@ -19341,6 +21657,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Alliance loot policy is now %0. %1 items will be distributed by %2.
+	 * @param value0
+	 * @param value1
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_FORCE_LOOTING_CHANGED_RULE(String value0, String value1, String value2)
 	{
@@ -19379,6 +21699,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * A report for the character %0 has been received. You have %1 auto hunting reports remaining.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ACCUSE_SUBMIT(String value0, String value1)
 	{
@@ -19387,6 +21710,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Only % minutes have passes since the last report.
+	 * @param value
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ACCUSE_CANNOT_SUBMIT(String value)
 	{
@@ -19395,6 +21720,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * There is a charged item issued to the account. Do you want %0 to have the charged item?
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_LOGIN_WARNING_GET_ITEM1(String value0)
 	{
@@ -19403,6 +21730,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Once the item is given, it cannot be used by other characters. Are you sure you want to keep it in %0?
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_LOGIN_WARNING_GET_ITEM2(String value0)
 	{
@@ -19431,6 +21760,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 rolled the highest (%0 rolled %1, while you rolled %2).
+	 * @param value0
+	 * @param value3
+	 * @param value1
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_ITEM_PARTYNOTICE_DICE(String value0, String value3, String value1, String value2)
 	{
@@ -19439,6 +21773,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 rolled the highest (%0 rolled %1, while you passed).
+	 * @param value0
+	 * @param value2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_ITEM_PARTYNOTICE_DICE_GIVEUP_ROLL(String value0, String value2, String value1)
 	{
@@ -19457,6 +21795,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * A now-disconnected player rolled the highest (they winner rolled %1, while you rolled %1).
+	 * @param value1
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_ITEM_PARTYNOTICE_DICE_OFFLINE_WINNER(String value1, String value2)
 	{
@@ -19465,6 +21806,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * A now-disconnected player rolled the highest (they winner rolled %1, while you passed).
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_ITEM_PARTYNOTICE_DICE_GIVEUP_ROLL_OFFLINE_WINNER(String value1)
 	{
@@ -19478,6 +21821,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 Shouts:
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CMD_SHOUT_OUTPUT(String value0)
 	{
@@ -19486,6 +21831,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is asking for help from %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CMD_SHOUT_OUTPUT1(String value0, String value1)
 	{
@@ -19494,6 +21842,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 Shouts:
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CMD_SHOUT_OUTPUT_NPC(String value0)
 	{
@@ -19502,6 +21852,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is asking for help from %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CMD_SHOUT_OUTPUT1_NPC(String value0, String value1)
 	{
@@ -19520,6 +21873,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 Whispers:
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CMD_WHISHPER_OUTPUT(String value0)
 	{
@@ -19528,6 +21883,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 Whispers:
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CMD_WHISHPER_OUTPUT_NPC(String value0)
 	{
@@ -19536,6 +21893,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You Whisper to %1: %0
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CMD_WHISHPER_INPUT(String value1, String value0)
 	{
@@ -19544,6 +21904,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has joined your group.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_HE_ENTERED_PARTY(String value0)
 	{
@@ -19552,6 +21914,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your group has joined %0's alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_ENTER_WITH_PARTY(String value0)
 	{
@@ -19560,6 +21924,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has joined the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_ENTER_HIM(String value0)
 	{
@@ -19568,6 +21934,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's group has joined the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_ENTER_WITH_HIS_PARTY(String value0)
 	{
@@ -19576,6 +21944,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has joined the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_HE_ENTERED_FORCE(String value0)
 	{
@@ -19584,6 +21954,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's group has joined the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_HIS_PARTY_ENTERED_ALLIANCE(String value0)
 	{
@@ -19602,6 +21974,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has joined the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_HE_ENTERED_ALLIANCE(String value0)
 	{
@@ -19610,6 +21984,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have joined %0's allliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FORCE_ENTER_MEMBER(String value0)
 	{
@@ -19618,6 +21994,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Legion Message: %0 %DATETIME1
+	 * @param value0
+	 * @param i
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_NOTICE(String value0, long i)
 	{
@@ -19631,6 +22010,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 killed the Guardian General.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_NPC_BOSS_KILLED(String value0)
 	{
@@ -19644,6 +22025,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 %1 %2 has died in %3.
+	 * @param victim
+	 * @param rankDescId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_ORDER_RANKER_DIE(Player victim, DescriptionId rankDescId)
 	{
@@ -19652,6 +22036,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot continue the battle as you have insufficient Abyss Points. You will be resurrected at %1 if nothing is entered within %0 minutes.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANNOT_RESURRECT_HERE_BY_ABYSS_POINT_ZERO(String value1, String value0)
 	{
@@ -19660,6 +22047,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has used the Gate Guardian Stone to repair the castle gate by %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REPAIR_ABYSS_DOOR(String value0, String value1)
 	{
@@ -19668,6 +22058,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have obtained %0 from the Internet Cafe Event.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_PCBANG_ITEM(String value0)
 	{
@@ -19676,6 +22068,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %WORLDNAME0% region restricts access. You cannot reenter the region for %1 hour(s) if all your group members left the region or if you left the current group.
+	 * @param worldname0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_COOL_TIME_HOUR(String worldname0, String value1)
 	{
@@ -19684,6 +22079,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %WORLDNAME0% region restricts access. You cannot reenter the region for %1 minute(s) if all your group members left the region or if you left the current group.
+	 * @param worldname0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_COOL_TIME_MIN(String worldname0, String value1)
 	{
@@ -19692,6 +22090,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You may enter %WORLDNAME0 again after %1 hour(s).
+	 * @param worldname0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANNOT_ENTER_INSTANCE_COOL_TIME_HOUR(String worldname0, String value1)
 	{
@@ -19700,6 +22101,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You may enter %WORLDNAME0 again after %1 minute(s).
+	 * @param worldname0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANNOT_ENTER_INSTANCE_COOL_TIME_MIN(String worldname0, String value1)
 	{
@@ -19708,6 +22112,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can enter %0 area now.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CAN_ENTER_INSTANCE(String value0)
 	{
@@ -19716,6 +22122,7 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0: %1(%2)
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CHECK_INSTANCE_COOL_TIME()
 	{
@@ -19729,6 +22136,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Usage time for %0 has expired.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DELETE_CASH_ITEM_BY_TIMEOUT(String value0)
 	{
@@ -19742,6 +22151,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your trial has ended. %1, We hope you've enjoyed playing Aion! To continue to play, purchase Aion. Go to AionOnline.com to buy now!
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LEVEL_LIMIT_FREE_TIME(String value1)
 	{
@@ -19750,6 +22161,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You may enter %0 again after %1 hour(s).
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANNOT_ENTER_INSTANCE_COOL_TIME_HOUR_CLIENT(String value0, String value1)
 	{
@@ -19758,6 +22172,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You may enter %0 again after %1 minute(s).
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANNOT_ENTER_INSTANCE_COOL_TIME_MIN_CLIENT(String value0, String value1)
 	{
@@ -19791,6 +22208,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have exited the Instanced Zone. This zone will be reset in %0 minutes.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LEAVE_INSTANCE(String value0)
 	{
@@ -19799,6 +22218,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have exited the Instanced Zone. This zone will be reset in %0 minutes.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LEAVE_INSTANCE_PARTY(String value0)
 	{
@@ -19807,6 +22228,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have exited the Instanced Zone. This zone will be reset in %0 minutes.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LEAVE_INSTANCE_FORCE(String value0)
 	{
@@ -19820,6 +22243,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The playing time remaining is %*0, and there are %1 items of pre-paid credits left.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REMAIN_PLAYTIME_WITH_RESERVATION(String value0, String value1)
 	{
@@ -19828,6 +22254,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The playing time will expire in %*0. If you wish to continue using the service, please make additional payments on the Billing Page of the Plaync website.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ALARM_REMAIN_PLAYTIME(String value0)
 	{
@@ -19836,6 +22264,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have %*0 playing time remaining. Pre-paid credit will be applied afterward.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ALARM_REMAIN_PLAYTIME_WITH_RESERVATION(String value0)
 	{
@@ -19844,6 +22274,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The playing time has expired, and the game will end automatically in %*0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COUNT_REMAIN_PLAYTIME(String value0)
 	{
@@ -19852,6 +22284,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The playing time will expire in %*0. Pre-paid credit will be applied after it expires.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COUNT_REMAIN_PLAYTIME_WITH_RESERVATION(String value0)
 	{
@@ -19935,6 +22369,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You must wait %DURATIONTIME0 to use the channel change function. Time Remaining: %DURATIONTIME1
+	 * @param durationtime0
+	 * @param durationtime1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REMAIN_CHANGE_CHANNEL_COOLTIME(String durationtime0, String durationtime1)
 	{
@@ -19943,6 +22380,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You entered into the Phase %num0 Restriction state because the auto hunting reports have accumulated. You can check the Restriction Phase and the Release Time by typing the '/Restriction' command.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ACCUSE_UPGRADE_LEVEL(int num0)
 	{
@@ -19951,6 +22390,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your restriction phase has been lowered to %num0 as you played fair for a certain period of time. Please continue to play the game in a proper manner.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ACCUSE_DEGRADE_LEVEL(int num0)
 	{
@@ -19959,6 +22400,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are currently at Phase 1 Restriction State, and will be released in %0 minutes. While not affecting your game play in anyway, a continued accumulation of reports will however raise the Restriction Phase and will limit your gaining of XP and items.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ACCUSE_INFO_1_LEVEL(String value0)
 	{
@@ -19967,6 +22410,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are currently in Phase 2 Restriction State, and will be downgraded to Phase 1 in %0 minutes. You now receive less XP, Kinah and Abyss Points, and the chance of successful gathering and extraction has been decreased. You will face greater restrictions if reports continue to accumulate.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ACCUSE_INFO_2_LEVEL(String value0)
 	{
@@ -19976,6 +22421,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	/**
 	 * You are currently in Phase 3 Restriction State and will be downgraded to Phase 2 in %0 minutes. You cannot acquire any loot, and you now receive less XP, Kinah and Abyss Points, and the chance of successful gathering and extraction has been significantly decreased. You are banned from joining
 	 * a Group or Alliance. You will face greater restrictions if reports continue to accumulate.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ACCUSE_INFO_3_LEVEL(String value0)
 	{
@@ -19984,6 +22431,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are currently at Phase 4 Restriction State and will be downgraded to Phase 3 in %0 minutes. You cannot acquire any loot, XP, Kinah, or Abyss Points, and are unable to gather or extract any items. You are also banned from joining a Group or Alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ACCUSE_INFO_4_LEVEL(String value0)
 	{
@@ -20037,6 +22486,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not an appearance-modified item.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_NOT_SKIN_CHANGED_ITEM(String value0)
 	{
@@ -20055,6 +22506,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot issue commands in %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SUMMON_CANT_ORDER_BY_INVALID_STANCE(String value0)
 	{
@@ -20078,6 +22531,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You currently have %0 auto hunting reports left.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ACCUSE_COUNT_INFO(String value0)
 	{
@@ -20111,6 +22566,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot be summoned right now.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_Recall_CANNOT_ACCEPT_EFFECT(String value0)
 	{
@@ -20119,6 +22576,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Summoning of %0 is cancelled as the confirmation stand-by time has been exceeded.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_Recall_DONOT_ACCEPT_EFFECT(String value0)
 	{
@@ -20127,6 +22586,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You declined %0's summoning.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_Recall_Reject_EFFECT(String value0)
 	{
@@ -20135,6 +22596,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 declined your summoning.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_Recall_Rejected_EFFECT(String value0)
 	{
@@ -20143,6 +22606,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Summoning of %0 is cancelled.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_Recall_CANCEL_EFFECT(String value0)
 	{
@@ -20151,6 +22616,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot summon %0 as you are already under the same effect.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_Recall_DUPLICATE_EFFECT(String value0)
 	{
@@ -20159,6 +22626,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is currently unable to join a group or a force.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ACCUSE_OTHER_IS_BANISHED(String value0)
 	{
@@ -20222,6 +22691,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot register as you are not %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_BINDSTONE_CANNOT_FOR_INVALID_RIGHT(String value0)
 	{
@@ -20235,6 +22706,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot send the letter to %0 because you have been blocked by the player.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_MAIL_CANT_FOR_YOU_EXCLUDED(String value0)
 	{
@@ -20243,6 +22716,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Network Status: %0 ms
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PING_RESULT(String value0)
 	{
@@ -20281,6 +22756,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You rolled the dice and got a %num0 (max. %num1).
+	 * @param num0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ITEM_DICE_CUSTOM_ME(int num0, int num1)
 	{
@@ -20289,6 +22767,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You rolled the dice and got a %num0 (max. %num1).
+	 * @param num0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DICE_CUSTOM_ME(int num0, int num1)
 	{
@@ -20297,6 +22778,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 rolled the dice and got a %num1 (max. %num2).
+	 * @param value0
+	 * @param num1
+	 * @param num2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DICE_CUSTOM_OTHER(String value0, int num1, int num2)
 	{
@@ -20330,6 +22815,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has logged in.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_NOTIFY_LOGIN_GUILD(String value0)
 	{
@@ -20338,6 +22825,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have sold %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PERSONAL_SHOP_SELL_ITEM(String value0)
 	{
@@ -20346,6 +22835,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have sold %num1 %0s.
+	 * @param num1
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PERSONAL_SHOP_SELL_ITEM_MULTI(int num1, String value0s)
 	{
@@ -20359,6 +22851,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are now under level %0 curse of the Empyrean Lords for killing too many lower level targets in the opposition territory.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SLAYER_UPGRADE_LEVEL(String value0)
 	{
@@ -20367,6 +22861,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The curse of the Empyrean Lords has been reduced to %0 level because you haven't slaughtered the lower level targets for a certain time.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SLAYER_DEGRADE_LEVEL(String value0)
 	{
@@ -20380,6 +22876,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Brave %0 has defeated notorious %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SLAYER_DEATH_TO_B(String value0, String value1)
 	{
@@ -20388,6 +22887,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Hero of Asmodian %0 killed the Divinely Punished Intruder %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SLAYER_LIGHT_DEATH_TO_B(String value0, String value1)
 	{
@@ -20396,6 +22898,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Hero of Elyos %0 killed the Divinely Punished Intruder %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SLAYER_DARK_DEATH_TO_B(String value0, String value1)
 	{
@@ -20404,6 +22909,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are now in %0 state because you've killed too many lower level targets in the opposition territory.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SLAYER_UP_LEVEL(String value0)
 	{
@@ -20412,6 +22919,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been lowered to %1 because you haven't killed the lower level targets for a certain time.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SLAYER_DOWN_LEVEL(String value0, String value1)
 	{
@@ -20420,6 +22930,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is removed because you haven't killed the lower level targets for a certain time.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SLAYER_DOWN_TO_NOMAL_LEVEL(String value0)
 	{
@@ -20428,6 +22940,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is crafting %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_OTHER_combine_START(String value0, String value1)
 	{
@@ -20436,6 +22951,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 successfully crafted %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_OTHER_combine_SUCCESS(String value0, String value1)
 	{
@@ -20444,6 +22962,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 failed to craft %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_OTHER_combine_FAIL(String value0, String value1)
 	{
@@ -20452,6 +22973,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use a Rift until the %0 is removed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANNOT_USE_DIRECT_PORTAL_BY_SLAYER_GRADE(String value0)
 	{
@@ -20495,6 +23018,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The character name has been changed to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_EDIT_CHAR_NAME_SUCCESS(String value0)
 	{
@@ -20503,6 +23028,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The Legion name has been changed to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_EDIT_GUILD_NAME_SUCCESS(String value0)
 	{
@@ -20511,6 +23038,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Failed to change the name. Error code is %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_EDIT_NAME_ERROR_DEFAULT(String value0)
 	{
@@ -20564,6 +23093,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The remaining active time of the registered Kisk is %DURATIONTIME0.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BINDSTONE_WARNING_REMAIN_TIME(String durationtime0)
 	{
@@ -20607,6 +23138,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can no longer use %0 as the number of allowed usage has been reached.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANT_USE_DUPLICATED_ITEM(String value0)
 	{
@@ -20615,6 +23148,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You may reenter %WORLDNAME1 after %DURATIONTIME0 has passed.
+	 * @param worldname1
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANT_INSTANCE_COOL_TIME_REMAIN(String worldname1, String durationtime0)
 	{
@@ -20628,6 +23164,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %num0 player limit of %WORLDNAME1 has been exceeded.
+	 * @param num0
+	 * @param worldname1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANT_INSTANCE_TOO_MANY_MEMBERS(int num0, String worldname1)
 	{
@@ -20636,6 +23175,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have already applied to enter %WORLDNAME0.
+	 * @param worldname0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANT_INSTANCE_ALREADY_REGISTERED(String worldname0)
 	{
@@ -20649,6 +23190,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You aborted entering %0. You can apply again after 10 seconds.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_REGISTER_CANCELED(String value0)
 	{
@@ -20657,6 +23200,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You aborted entering %0. You can try again after 10 seconds.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_ENTER_GIVEUP(String value0)
 	{
@@ -20675,6 +23220,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not able to enter the Instanced Zone right now.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANT_INSTANCE_ENTER_MEMBER(String value0)
 	{
@@ -20683,6 +23230,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The number of your private channel may have been changed with the deletion of the %0 Channel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CHANGE_CHANNEL5(String value0)
 	{
@@ -20691,6 +23240,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have applied to join %0's group.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PARTY_MATCH_JUST_SENT_APPLY(String value0)
 	{
@@ -20699,6 +23250,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have invited %0 to join your group.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PARTY_MATCH_JUST_INVITE(String value0)
 	{
@@ -20707,6 +23260,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have applied to join %0's alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_FORCE_MATCH_JUST_SENT_APPLY(String value0)
 	{
@@ -20715,6 +23270,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have invited %0 to join the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_FORCE_MATCH_JUST_INVITE(String value0)
 	{
@@ -20733,6 +23290,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The attack time remaining is %DURATIONTIME0.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_REMAIN_TIME(String durationtime0)
 	{
@@ -20746,6 +23305,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is under attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_BOSS_ATTACKED(String value0)
 	{
@@ -20754,6 +23315,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has destroyed %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_ROOM_DESTROYED(String value0, String value1)
 	{
@@ -20767,6 +23331,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %num0 player limit of %WORLDNAME1 has been exceeded.
+	 * @param num0
+	 * @param worldname1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANNOT_ENTER_INSTANCE_MAX_COUNT(int num0, String worldname1)
 	{
@@ -20775,6 +23342,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The attack time remaining is %DURATIONTIME0.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_REMAIN_TIME_60(String durationtime0)
 	{
@@ -20783,6 +23352,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The attack time remaining is %DURATIONTIME0.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_REMAIN_TIME_30(String durationtime0)
 	{
@@ -20791,6 +23362,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The attack time remaining is %DURATIONTIME0.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_REMAIN_TIME_10(String durationtime0)
 	{
@@ -20799,6 +23372,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The attack time remaining is %DURATIONTIME0.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_REMAIN_TIME_5(String durationtime0)
 	{
@@ -20812,6 +23387,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 can't apply to join the selected group as he or she is already a member of an alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_FORCE_MATCH_CANT_USE_PARTY_MATCH(String value0)
 	{
@@ -20845,6 +23422,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You must first learn the prerequisite skill to equip %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_STIGMA_TO_EQUIP_STONE_LEARN_PRESKILL(String value0)
 	{
@@ -20853,6 +23432,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot deactivate %0 as it is a prerequisite skill of %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_STIGMA_CANT_UNEQUIP_STONE_FOR_AFTERSKILL(String value0, String value1)
 	{
@@ -20861,6 +23443,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You already applied to join %0's group. You may apply for Recruit Group once every 15 seconds.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PARTY_MATCH_ALREADY_SENT_APPLY(String value0)
 	{
@@ -20869,6 +23453,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You already applied to join %0's force. You may apply for Recruit Alliance once every 15 seconds.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_FORCE_MATCH_ALREADY_SENT_APPLY(String value0)
 	{
@@ -20892,6 +23478,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %DURATIONTIME0 remaining.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REMAIN_TIME(String durationtime0)
 	{
@@ -20900,6 +23488,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %DURATIONTIME0 remaining.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REMAIN_TIME_60(String durationtime0)
 	{
@@ -20908,6 +23498,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %DURATIONTIME0 remaining.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REMAIN_TIME_30(String durationtime0)
 	{
@@ -20916,6 +23508,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %DURATIONTIME0 remaining.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REMAIN_TIME_10(String durationtime0)
 	{
@@ -20924,6 +23518,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %DURATIONTIME0 remaining.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REMAIN_TIME_5(String durationtime0)
 	{
@@ -20932,6 +23528,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 cannot use Channel Chat.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANT_CHANNELCHAT_LEVEL(String value0)
 	{
@@ -20970,6 +23568,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %num1 %0(s) remaining.
+	 * @param num1
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_LEFT(int num1, String value0s)
 	{
@@ -20988,6 +23589,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot enter %WORLDNAME0 as the entry time has expired.
+	 * @param worldname0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_CANT_ENTER_FOR_TIMEOVER(String worldname0)
 	{
@@ -20996,6 +23599,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Exceeded %num0 points!
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_SCORE_ALARM(int num0)
 	{
@@ -21004,6 +23609,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num1 points from %0.
+	 * @param score
+	 * @param objectNameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_SCORE(int score, int objectNameId)
 	{
@@ -21017,6 +23625,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have joined the %0 region channel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_CHANNEL_JOIN_ZONE(String value0)
 	{
@@ -21025,6 +23635,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have joined the %0 trade channel.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHAT_CHANNEL_JOIN_TRADE(String value0)
 	{
@@ -21033,6 +23645,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have already sent an Unavailable message to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PARTY_MATCH_ALREADY_SENT_DECLINE(String value0)
 	{
@@ -21041,6 +23655,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have already sent a Reject Alliance message to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_FORCE_MATCH_ALREADY_SENT_DECLINE(String value0)
 	{
@@ -21064,6 +23680,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is open and you can now access %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_IDSHULACKSHIP_OPEN_DOOR(String value0, String value1)
 	{
@@ -21107,6 +23726,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You may only battle %0 within the given time limit.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_BATTLE_TIME(String value0)
 	{
@@ -21115,6 +23736,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has left the battle.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_BATTLE_END(String value0)
 	{
@@ -21148,6 +23771,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Connection will time out in %DURATIONTIME0. Please take a break.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_USER_KICKED_BY_TIMEOUT(String durationtime0)
 	{
@@ -21166,6 +23791,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The opposition has withdrawn from the Dredgion infiltration mission. The mission will stop in %DURATIONTIME0% and you will leave the Dredgion.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ALARM_COLD_GAME_IDAB1_DREADGION(String durationtime0)
 	{
@@ -21179,6 +23806,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 cannot send Alliance invitations.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PARTY_ALLIANCE_TOO_LOW_LEVEL_TO_INVITE(String value0)
 	{
@@ -21187,6 +23816,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Only those at or under level %0 can use %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANNOT_USE_ITEM_TOO_HIGH_LEVEL(String value0, String value1)
 	{
@@ -21195,6 +23827,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You were poisoned during extraction and cannot extract for %DURATIONTIME0.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CAPTCHA_RESTRICTED(String durationtime0)
 	{
@@ -21213,6 +23847,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your incantation was incorrect; you failed to purify the poison. You have %0 attempts left.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CAPTCHA_UNRESTRICT_FAILED_RETRY(String value0)
 	{
@@ -21226,6 +23862,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are currently poisoned and unable to extract. (Time remaining: %DURATIONTIME0)
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CAPTCHA_REMAIN_RESTRICT_TIME(String durationtime0)
 	{
@@ -21249,6 +23887,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You gained %num0 points.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_SCORE_FOR_ENEMY(int num0)
 	{
@@ -21267,6 +23907,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The remaining playing time is %*0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_REMAIN_PLAYTIME_CENTER_DISPLAY(String value0)
 	{
@@ -21280,6 +23922,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * This modification cannot be completed as the gender or race requirements for %0 and %1 are different.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANT_CHANGE_OPPOSITE_ITEM_SKIN(String value0, String value1)
 	{
@@ -21288,6 +23933,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot be used for modification.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CHANGE_ITEM_SKIN_NOT_SKIN_EXTRACTABLE_ITEM(String value0)
 	{
@@ -21311,6 +23958,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Crafting %0 has used up the recipe.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMBINE_USAGE_OVER(String value0)
 	{
@@ -21324,6 +23973,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot be combined.
+	 * @param i
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMPOUND_ERROR_NOT_AVAILABLE(int i)
 	{
@@ -21332,6 +23983,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * This modification cannot be completed as the equipment requirements for %0 and %1 are different.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANT_CHANGE_SKIN_OPPOSITE_REQUIREMENT(String value0, String value1)
 	{
@@ -21340,6 +23994,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The appearance maintain time for %0 has expired and the appearance modification effect has been removed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SKIN_CHANGE_TIME_EXPIRED(String value0)
 	{
@@ -21353,6 +24009,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer vulnerable.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_PVP_OFF(String value0)
 	{
@@ -21366,6 +24024,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of the %0 killed the Guardian General.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_BOSS_KILLED(String value1, String value0)
 	{
@@ -21379,6 +24040,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has conquered %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_GUILD_WIN_CASTLE(String value0, String value1)
 	{
@@ -21387,6 +24051,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 succeeded in conquering %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_WIN_CASTLE(String value0, String value1)
 	{
@@ -21395,6 +24062,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 Legion lost %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_GUILD_CASTLE_TAKEN(String value0, String value1)
 	{
@@ -21403,6 +24073,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 failed to defend %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_CASTLE_TAKEN(String value0, String value1)
 	{
@@ -21411,6 +24084,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of %0 obtained the Artifact %2.
+	 * @param value1
+	 * @param value0
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_EVENT_WIN_FIELDARTIFACT(String value1, String value0, String value2)
 	{
@@ -21419,6 +24096,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 lost the Artifact %0.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_EVENT_LOSE_FIELDARTIFACT(String value1, String value0)
 	{
@@ -21437,6 +24117,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of the %0 destroyed the Castle Gate.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_DOOR_BROKEN(String value1, String value0)
 	{
@@ -21455,6 +24138,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of the %0 destroyed the Gate Guardian Stone.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_REPAIR_BROKEN(String value1, String value0)
 	{
@@ -21483,6 +24169,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of %0 is activating the Artifact %2.
+	 * @param value1
+	 * @param value0
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDARTIFACT_CASTING(String value1, String value0, String value2)
 	{
@@ -21491,6 +24181,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The Artifact %1 core of %0 has been ejected.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDARTIFACT_CORE_CASTING(String value1, String value0)
 	{
@@ -21499,6 +24192,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The activation of the Artifact %1 of %0 was canceled.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDARTIFACT_CANCELED(String value1, String value0)
 	{
@@ -21507,6 +24203,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of %0 has activated the Artifact %2.
+	 * @param value1
+	 * @param value0
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDARTIFACT_FIRE(String value1, String value0, String value2)
 	{
@@ -21545,6 +24245,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of %0 has killed Marchutan's Agent Mastarius.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_DARKBOSS_KILLED(String value1, String value0)
 	{
@@ -21553,6 +24256,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of %0 has killed Kaisinel's Agent Veille.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_LIGHTBOSS_KILLED(String value1, String value0)
 	{
@@ -21561,6 +24267,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is under attack.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_BARRIER_ATTACKED(String value0)
 	{
@@ -21569,6 +24277,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0% is in danger!
+	 * @param value0value
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_BARRIER_ATSTAKE(String value0value)
 	{
@@ -21577,6 +24287,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of %0 has destroyed %SUBZONE2.
+	 * @param value1
+	 * @param value0
+	 * @param subzone2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_BARRIER_BROKEN(String value1, String value0, String subzone2)
 	{
@@ -21610,6 +24324,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You used %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_USE_CASH_TYPE_ITEM1(String value0)
 	{
@@ -21618,6 +24334,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You used %1 %0s.
+	 * @param value1
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_USE_CASH_TYPE_ITEM2(String value1, String value0s)
 	{
@@ -21626,6 +24345,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The ability combined with %0 has been removed.
+	 * @param i
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMPOUNDED_ITEM_DECOMPOUND_SUCCESS(int i)
 	{
@@ -21634,6 +24355,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 has been combined with %0.
+	 * @param i
+	 * @param j
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMPOUND_SUCCESS(int i, int j)
 	{
@@ -21642,6 +24366,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You do not have enough Kinah to combine %0 and %1.
+	 * @param i
+	 * @param j
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_COMPOUND_ERROR_NOT_ENOUGH_MONEY(int i, int j)
 	{
@@ -21650,6 +24377,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The target is immune to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_WRONG_TARGET_CLASS(String value0)
 	{
@@ -21658,6 +24387,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The target is immune to %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_WRONG_TARGET_RACE(String value0)
 	{
@@ -21666,6 +24397,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 cannot send letters.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANT_MAIL_LEVEL(String value0)
 	{
@@ -21674,6 +24407,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 cannot use the search function.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANT_WHO_LEVEL(String value0)
 	{
@@ -21682,6 +24417,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num1 XP from %0 (Energy of Repose %num2).
+	 * @param value0
+	 * @param num1
+	 * @param num2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP_VITAL_BONUS(String value0, long num1, long num2)
 	{
@@ -21695,6 +24434,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num1 XP from %0 (Energy of Salvation %num2).
+	 * @param value0
+	 * @param num1
+	 * @param num2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP_MAKEUP_BONUS(String value0, long num1, long num2)
 	{
@@ -21708,6 +24451,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num1 XP from %0 (Energy of Repose %num2, Energy of Salvation %num3).
+	 * @param value0
+	 * @param num1
+	 * @param num2
+	 * @param num3
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP_VITAL_MAKEUP_BONUS(String value0, long num1, long num2, long num3)
 	{
@@ -21721,6 +24469,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %0 (Energy of Repose %num1).
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_EXP_GAIN_VITAL_BONUS(String value0, int num1)
 	{
@@ -21729,6 +24480,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %0 (Energy of Salvation %num1).
+	 * @param value0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_EXP_GAIN_MAKEUP_BONUS(String value0, int num1)
 	{
@@ -21737,6 +24491,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %0 (Energy of Repose %num1, Energy of Salvation %num2).
+	 * @param value0
+	 * @param num1
+	 * @param num2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_EXP_GAIN_VITAL_MAKEUP_BONUS(String value0, int num1, int num2)
 	{
@@ -21745,6 +24503,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num0 XP (Energy of Repose %num1).
+	 * @param num0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP2_VITAL_BONUS(long num0, long num1)
 	{
@@ -21753,6 +24514,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num0 XP (Energy of Salvation %num1).
+	 * @param num0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP2_MAKEUP_BONUS(long num0, long num1)
 	{
@@ -21761,6 +24525,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num0 XP (Energy of Repose %num1, Energy of Salvation %num2).
+	 * @param num0
+	 * @param num1
+	 * @param num2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP2_VITAL_MAKEUP_BONUS(long num0, long num1, long num2)
 	{
@@ -21769,6 +24537,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num1 XP from %0 (Energy of Repose %num2 and Golden Vinna Scent %num3).
+	 * @param value0
+	 * @param num1
+	 * @param num2
+	 * @param num3
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP_VITAL_ABSOLUTEEXP_BONUS_DESC(DescriptionId value0, long num1, long num2, long num3)
 	{
@@ -21777,6 +24550,12 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num1 XP from %0 (Energy of Repose %num2, Energy of Relief %num3, and Golden Vinna Scent %num4).
+	 * @param value0
+	 * @param num1
+	 * @param num2
+	 * @param num3
+	 * @param num4
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP_VITAL_MAKEUP_ABSOLUTEEXP_BONUS(DescriptionId value0, long num1, long num2, long num3, long num4)
 	{
@@ -21785,6 +24564,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num1 XP from %0 (Golden Vinna Scent %num2).
+	 * @param value0
+	 * @param num1
+	 * @param num2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP_ABSOLUTEEXP_BONUS_DESC(DescriptionId value0, long num1, long num2)
 	{
@@ -21798,6 +24581,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num1 XP from %0 (Golden Vinna Scent %num2).
+	 * @param value0
+	 * @param num1
+	 * @param num2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP_ABSOLUTEEXP_BONUS(String value0, long num1, long num2)
 	{
@@ -21811,6 +24598,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have gained %num0 XP (Golden Vinna Scent %num1).
+	 * @param num0
+	 * @param num1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP2_ABSOLUTEEXP_BONUS(long num0, long num1)
 	{
@@ -21849,6 +24639,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %WORLDNAME1 (difficulty: %2) with a %num0 player limit has opened.
+	 * @param worldname1
+	 * @param value2
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_DUNGEON_WITH_DIFFICULTY_OPENED(String worldname1, String value2, int num0)
 	{
@@ -21857,6 +24651,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %WORLDNAME1 with a %num0 player limit has opened.
+	 * @param worldname1
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_DUNGEON_OPENED(String worldname1, int num0)
 	{
@@ -21865,6 +24662,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %WORLDNAME1 (difficulty: %2) with a %num0 player limit is currently open.
+	 * @param worldname1
+	 * @param value2
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_DUNGEON_WITH_DIFFICULTY_OPENED_INFO(String worldname1, String value2, int num0)
 	{
@@ -21873,6 +24674,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %WORLDNAME1 with a %num0 player limit is currently open.
+	 * @param worldname1
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_DUNGEON_OPENED_INFO(String worldname1, int num0)
 	{
@@ -21916,6 +24720,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has blocked all Whispers from characters under level %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REJECT_WHISPER_FROM_LOW_LEVEL(String value0, String value1)
 	{
@@ -21924,6 +24731,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has blocked all mail from characters under level %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REJECT_MAIL_FROM_LOW_LEVEL(String value0, String value1)
 	{
@@ -21932,6 +24742,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The appearance maintain time for %0 in the warehouse has expired and the appearance modification effect has been removed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SKIN_CHANGE_TIME_EXPIRED_IN_WAREHOUSE(String value0)
 	{
@@ -21940,6 +24752,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * This modification cannot be completed as %0 and %1 have the same appearance.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANT_CHANGE_SAME_ITEM_SKIN(String value0, String value1)
 	{
@@ -21948,6 +24763,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The appearance modification effect of %0 has been removed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNCHANGE_ITEM_SKIN_SUCCEED(String value0)
 	{
@@ -21956,6 +24773,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not a combined item.
+	 * @param i
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DECOMPOUND_ERROR_NOT_AVAILABLE(int i)
 	{
@@ -21964,6 +24783,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is now selling rare items.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LIMIT_SALE_TEST_DESC01(String value0)
 	{
@@ -21977,6 +24798,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You do not have enough %0 to gather.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANT_GATHERING_B_ITEM_CHECK(String value0)
 	{
@@ -21985,6 +24808,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 cannot shout.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANT_SHOUT_LEVEL(String value0)
 	{
@@ -22048,6 +24873,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is now selling rare items.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LIMIT_SALE_TEST_DESC02(String value0)
 	{
@@ -22061,6 +24888,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * This message is for testing %0's limited sale.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LIMIT_SALE_TEST_DESC04(String value0)
 	{
@@ -22099,6 +24928,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 who are using a free trial cannot use the Broker.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FREE_EXPERIENCE_CHARACTER_CANT_USE_VENDOR(String value0)
 	{
@@ -22107,6 +24938,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 who are using a free trial cannot open a private store.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FREE_EXPERIENCE_CHARACTER_CANT_OPEN_PERSONAL_SHOP(String value0)
 	{
@@ -22115,6 +24948,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 who are playing a free trial cannot trade.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FREE_EXPERIENCE_CHARACTER_CANT_TRADE(String value0)
 	{
@@ -22123,6 +24958,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 who are using a free trial cannot send mail containing items or money.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FREE_EXPERIENCE_CHARACTER_CANT_SEND_ITEM(String value0)
 	{
@@ -22131,6 +24968,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 who are using a free trial cannot use the private warehouse.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FREE_EXPERIENCE_CHARACTER_CANT_USE_WAREHOUSE(String value0)
 	{
@@ -22139,6 +24978,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 who are using a free trial cannot use the Legion warehouse.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FREE_EXPERIENCE_CHARACTER_CANT_USE_GUILD_WAREHOUSE(String value0)
 	{
@@ -22147,6 +24988,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Characters under level %0 who are using a free trial cannot use the Account warehouse.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FREE_EXPERIENCE_CHARACTER_CANT_USE_ACCOUNT_WAREHOUSE(String value0)
 	{
@@ -22160,6 +25003,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Usage time for %0 in the warehouse has expired.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DELETE_CASH_ITEM_BY_TIMEOUT_IN_WAREHOUSE(String value0)
 	{
@@ -22298,6 +25143,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has succeeded in enchanting %1 to Level 15.
+	 * @param playerName
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ENCHANT_ITEM_SUCCEEDED_15(String playerName, int nameId)
 	{
@@ -22306,6 +25154,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has succeeded in enchanting %1 to Level 20.
+	 * @param playerName
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ENCHANT_ITEM_SUCCEEDED_20(String playerName, int nameId)
 	{
@@ -22314,6 +25165,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is selling items to extract vitality and Aether.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LIMIT_SALE_GATHERING_DESC01(String value0)
 	{
@@ -22327,6 +25180,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can only join when your level is %0 or above.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FACTION_JOIN_ERROR_MIN_LEVEL(String value0)
 	{
@@ -22335,6 +25190,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is selling materials to create the items of Crafting Masters.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LIMIT_SALE_M_EPIC_SHOP_DESC01(String value0)
 	{
@@ -22343,6 +25200,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is selling materials to create the items of Crafting Masters.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LIMIT_SALE_M_EPIC_SHOP_DESC02(String value0)
 	{
@@ -22351,6 +25210,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is selling special materials for Master Crafting.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_LIMIT_SALE_EPIC_SHOP_MATERIAL_DESC01(String value0)
 	{
@@ -22389,6 +25250,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You used %1 %0s.
+	 * @param value1
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_USE_ITEM_MULTI(String value1, String value0s)
 	{
@@ -22412,6 +25276,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have opened the %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNCOMPRESS_COMPRESSED_ITEM_SUCCEEDED(String value0)
 	{
@@ -22420,6 +25286,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have stopped opening the %0 bundle.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNCOMPRESS_COMPRESSED_ITEM_CANCELED(String value0)
 	{
@@ -22448,6 +25316,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has given up following because the distance between you is too great.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MERCENARY_FOLLOWING_CANCELED_BY_TOO_DISTANCE(String value0)
 	{
@@ -22481,6 +25351,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * A Level %0 Fatigue Penalty has been applied because you have played too long. Monitor your fatigue level with the '/Fatigue' command.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_FATIGUE_UPGRADE_LEVEL(String value0)
 	{
@@ -22529,6 +25401,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 of %0 destroyed the castle gate.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIELDABYSS_SHIELD_BROKEN(String value1, String value0)
 	{
@@ -22572,6 +25447,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 remains before the usage time for %0 expires.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CASH_ITEM_TIME_LEFT(String value1, String value0)
 	{
@@ -22580,6 +25458,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 remains on the appearance change time of %0.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SKIN_CHANGE_TIME_LEFT(String value1, String value0)
 	{
@@ -22593,6 +25474,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are too far from %0 to issue an order.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MERCENARY_CANT_ORDER_BY_TOO_DISTANCE(String value0)
 	{
@@ -22891,6 +25774,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's buddy list is full.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_BUDDYLIST_BUDDYS_LIST_FULL(String value0)
 	{
@@ -22914,6 +25799,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is located at %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIND_POS_SUBZONE_FOUND_DEV(String value0, String value1)
 	{
@@ -22922,6 +25810,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Cannot find the path to %0. %0 is located at %1.
+	 * @param value0
+	 * @param value2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIND_POS_TOO_FAR_FROM_SUBZONE_DEV(String value0, String value2, String value1)
 	{
@@ -22930,6 +25822,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is located at %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIND_POS_NPC_FOUND_DEV(String value0, String value1)
 	{
@@ -22938,6 +25833,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Cannot find the path to %0. %0 is located at %1.
+	 * @param value0
+	 * @param value2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIND_POS_TOO_FAR_FROM_NPC_DEV(String value0, String value2, String value1)
 	{
@@ -22946,6 +25845,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is located at %2 in %1.
+	 * @param value0
+	 * @param value2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FIND_POS_NPC_FOUND_IN_OTHER_WORLD_DEV(String value0, String value2, String value1)
 	{
@@ -22959,6 +25862,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * There is 1 minute left to trade with %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ALARM_REMAIN_ONE_MINUTE(String value0)
 	{
@@ -22967,6 +25872,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's temporary trade time has expired. %0 can no longer be traded.
+	 * @param nameId
+	 * @param timeMin
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_END_OF_EXCHANGE_TIME(int nameId, int timeMin)
 	{
@@ -22975,6 +25883,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not a target you can trade %1 with.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_WRONG_EXCHANGE_TARGET(String value0, String value1)
 	{
@@ -22983,6 +25894,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's temporary trade time has expired and can no longer be traded.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_EXCHANGE_TIME_OVER(int value0)
 	{
@@ -22991,6 +25904,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has acquired %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMPLETE_EXCHANGE(String value0, String value1)
 	{
@@ -22999,6 +25915,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You do not have enough %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_NOT_ENOUGH_TRADE_MONEY(String value0)
 	{
@@ -23007,6 +25925,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have invited %0's alliance to the Alliance League. %0's alliance has a total of %1 members.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_INVITE_HIM(String value0, String value1)
 	{
@@ -23015,6 +25936,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The alliance captain of the alliance %0 belongs to is %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_INVITE_HIS_LEADER(String value0, String value1)
 	{
@@ -23023,6 +25947,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your alliance has joined %0's Alliance League.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_ENTER_ME(String value0)
 	{
@@ -23031,6 +25957,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's alliance has joined the Alliance League.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_ENTER_HIM(String value0)
 	{
@@ -23039,6 +25967,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have declined %0's invitation to join the Alliance League.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_REJECT_ME(String value0)
 	{
@@ -23047,6 +25977,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's alliance has declined your invitation to join the Alliance League.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_REJECT_HIM(String value0)
 	{
@@ -23055,6 +25987,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is already a member of another Alliance League.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_ALREADY_OTHER_UNION(String value0)
 	{
@@ -23073,6 +26007,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Currently, %0 cannot accept your invitation to join the alliance.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_CANT_INVITE_WHEN_HE_IS_ASKED_QUESTION(String value0)
 	{
@@ -23101,6 +26037,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0's alliance has left the Alliance League.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_LEAVE_HIM(String value0)
 	{
@@ -23114,6 +26052,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have expelled %0's alliance from the Alliance League.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_BAN_HIM(String value0)
 	{
@@ -23122,6 +26062,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has expelled %1's alliance from the Alliance League.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_BAN_HIS_LEADER(String value0, String value1)
 	{
@@ -23130,6 +26073,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has expelled your alliance from the Alliance League.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_BAN_ME(String value0)
 	{
@@ -23153,6 +26098,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You transferred the league leadership to %0. From now on, %0 is the league leader.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_CHANGE_LEADER(String value0, String value1)
 	{
@@ -23161,6 +26109,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 entrusted %1 with the league leadership authority. From now on, %1 is the league leader.
+	 * @param value0
+	 * @param value1
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_HE_IS_NEW_LEADER(String value0, String value1, String value2)
 	{
@@ -23199,6 +26151,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 was automatically entrusted with the league leader authority.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_CHANGE_LEADER_TIMEOUT(String value0)
 	{
@@ -23207,6 +26161,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The alliance number has been changed to %num0.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_CHANGE_FORCE_NUMBER_ME(int num0)
 	{
@@ -23215,6 +26171,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The alliance number of %0 has been changed to %num0.
+	 * @param value0
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_CHANGE_FORCE_NUMBER_HIM(String value0, int num0)
 	{
@@ -23238,6 +26197,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your must be at least level %0 to be promoted.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DONT_LEVELLOW_RANK_UP(String value0)
 	{
@@ -23256,6 +26217,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can use Screen Capture once every %0 seconds. Time Remaining: %1 seconds
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REMAIN_PRINT_SCREEN_COOLTIME(String value0, String value1)
 	{
@@ -23274,6 +26238,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The selected target is already a member of another force league.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNION_ALREADY_MY_UNION(String value0)
 	{
@@ -23337,6 +26303,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 Pats its tummy and indicates that its full.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_FEED_PET_FULL(String value0)
 	{
@@ -23345,6 +26313,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 eats %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_FEED_START_EATING(String value0, String value1)
 	{
@@ -23353,6 +26324,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Stop feeding %1 to %0.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_FEED_STOP_EATING(String value1, String value0)
 	{
@@ -23361,6 +26335,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 spits out %1 and makes a face.
+	 * @param petName
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_FEED_FOOD_NOT_LOVEFLAVOR(String petName, int nameId)
 	{
@@ -23369,6 +26346,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is grateful and gives you a %1 as a present (Times remaining: %2/%3).
+	 * @param value0
+	 * @param value1
+	 * @param value2
+	 * @param value3
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_FEED_CASH_REWARD(String value0, String value1, String value2, String value3)
 	{
@@ -23377,6 +26359,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has enjoyed eating %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_FEED_ATE_FOOD_1(String value0, String value1)
 	{
@@ -23385,6 +26370,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has enjoyed eating %1 and looks pleased.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_FEED_ATE_FOOD_2(String value0, String value1)
 	{
@@ -23393,6 +26381,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has enjoyed eating %1 and looks happy.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_FEED_ATE_FOOD_3(String value0, String value1)
 	{
@@ -23401,6 +26392,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has finished eating %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_FEED_ATE_ALL_FOOD(String value0, String value1)
 	{
@@ -23409,6 +26403,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is thankful and gives you %2.
+	 * @param value0
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_FEED_COMMON_REWARD(String value0, String value2)
 	{
@@ -23422,6 +26419,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The Alliance League's looting method has changed to %0, %1 %2.
+	 * @param value0
+	 * @param value1
+	 * @param value2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_UNION_LOOTING_CHANGED_RULE(String value0, String value1, String value2)
 	{
@@ -23437,6 +26438,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The opposition has abandoned the Chantra Dredgion infiltration mission. You will leave the Chantra Dredgion when the mission ends in %DURATIONTIME0.
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ALARM_COLD_GAME_IDDREADGION_02(String durationtime0)
 	{
@@ -23495,6 +26498,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have entered %WORLDNAME0. Your allies are barred from joining you.
+	 * @param worldname0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_DUNGEON_OPENED_FOR_SELF(String worldname0)
 	{
@@ -23523,6 +26528,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You abandoned %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PET_ABANDON_PET_COMPLETE(String value0)
 	{
@@ -23531,6 +26538,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PET_SUMMONED(String value0)
 	{
@@ -23539,6 +26548,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been dismissed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PET_UNSUMMONED(String value0)
 	{
@@ -23617,6 +26628,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You must leave your group or alliance to enter %WORLDNAME0.
+	 * @param worldname0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_DUNGEON_NEED_SOLO(String worldname0)
 	{
@@ -23780,6 +26793,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You may change a pet's name once every %DURATIONTIME1 (Time remaining: %DURATIONTIME0).
+	 * @param durationtime1
+	 * @param durationtime0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_NAME_CHANGE_DELAY(String durationtime1, String durationtime0)
 	{
@@ -23803,6 +26819,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 indicates that it is not hungry.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_LIMIT_LOVE_COUNT(String value0)
 	{
@@ -23811,6 +26829,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %0: %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_PET_TAME_COMPLETE(String value0, String value1)
 	{
@@ -23819,6 +26840,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot feed your pet %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSGBOX_TOYPET_FEED_CANT_FEED(String value0)
 	{
@@ -23842,6 +26865,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot eat any food.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_PET_CANT_EAT(String value0)
 	{
@@ -23890,6 +26915,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your pet's time is up. %0 has gone.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PET_ABANDON_EXPIRE_TIME_COMPLETE(String value0)
 	{
@@ -23913,6 +26940,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to reclaim %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_CANT_RETURN_ITEM(String value0)
 	{
@@ -23921,6 +26950,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have failed to reclaim %num1 %0s.
+	 * @param num1
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_CANT_RETURN_ITEM_MULTI(int num1, String value0s)
 	{
@@ -23929,6 +26961,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is grateful and gives you a %1 as a present.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_FEED_CASH_REWARD_CASH_UNLIMITED(String value0, String value1)
 	{
@@ -24017,6 +27052,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot summon a pet in %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_CANT_SUMMON_STATE(String value0)
 	{
@@ -24030,6 +27067,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot dismiss a pet in %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOYPET_CANT_UNSUMMON_STATE(String value0)
 	{
@@ -24043,6 +27082,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You must be at least level %0 to perform extraction.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANT_GATHERING_B_LEVEL_CHECK(String value0)
 	{
@@ -24166,6 +27207,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 sealed by the heat of high summer has been accumulated.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_HCOIN_01(String value0)
 	{
@@ -24179,6 +27222,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is now a Mentor.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_MENTOR_START_PARTYMSG(String value0)
 	{
@@ -24192,6 +27237,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is no longer a Mentor.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_MENTOR_END_PARTYMSG(String value0)
 	{
@@ -24200,6 +27247,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot enter %WORLDNAME0 with a Mentor in your group.
+	 * @param worldname0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_MENTOR_CANT_ENTER(String worldname0)
 	{
@@ -24208,6 +27257,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You were forced to leave %WORLDNAME0 because you stopped Mentoring.
+	 * @param worldname0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_MENTOR_END_BANISH(String worldname0)
 	{
@@ -24216,6 +27267,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 was forced to leave %WORLDNAME1 because he or she stopped Mentoring.
+	 * @param value0
+	 * @param worldname1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_MENTOR_END_BANISH_PARTYMSG(String value0, String worldname1)
 	{
@@ -24224,6 +27278,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot become a Mentor in %WORLDNAME0.
+	 * @param worldname0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANT_BE_MENTOR(String worldname0)
 	{
@@ -24232,6 +27288,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have left %0 because of the level limit.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FACTION_LEAVE_BY_LEVEL_LIMIT(int value0)
 	{
@@ -24240,6 +27298,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * None of your group members meet the level requirement for %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DONT_KILL_COUNT_BY_WRONG_LEVEL(String value0)
 	{
@@ -24248,6 +27308,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * None of your group members meet the level requirement for %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DONT_DROP_ITEM_BY_WRONG_LEVEL(String value0)
 	{
@@ -24256,6 +27318,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use %1 while Mentoring.
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DONT_USE_ITEM_BY_NOT_MENTOR(String value1)
 	{
@@ -24264,6 +27328,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use %1 while Mentoring.
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DONT_USE_ITEM_BY_NOT_MENTEE(String value1)
 	{
@@ -24382,6 +27448,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been sealed.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_START_DONE(int nameId)
 	{
@@ -24390,6 +27458,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Canceled sealing %0.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_START_CANCEL(int nameId)
 	{
@@ -24423,6 +27493,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * It takes %0 days to remove the seal completely.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_STATUS_DURATION(String value0)
 	{
@@ -24431,6 +27503,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can have only %0 items pending unsealing at a time.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_STATUS_UNSEALMAX(String value0)
 	{
@@ -24439,6 +27513,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is now pending unsealing. This will take 7 days.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_STATUS_UNSEALWAIT_START(int nameId)
 	{
@@ -24447,6 +27523,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is now pending unsealing. This will take %DURATIONDAY1 days.
+	 * @param value0
+	 * @param durationday1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_STATUS_UNSEALPROGRESS(String value0, String durationday1)
 	{
@@ -24455,6 +27534,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is unsealed.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_STATUS_UNSEALDONE(int nameId)
 	{
@@ -24463,6 +27544,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot trade, enhance, destroy, sell, extract, or soulbind sealed items, and it takes %0 days to unseal them completely.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_WARNING_START(String value0)
 	{
@@ -24561,6 +27644,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use %0 while you are waiting for more than 3 items to be unsealed.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_WARNING_MAXWAIT(int nameId)
 	{
@@ -24569,6 +27654,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Canceled unsealing %0.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_WARNING_UNSEALCANCEL(int nameId)
 	{
@@ -24577,6 +27664,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use %0 on an item that is pending unsealing.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_WARNING_ALREADYUNSEAL(int nameId)
 	{
@@ -24585,6 +27674,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is not a sealed item.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_WARNING_NOTSEALED(int nameId)
 	{
@@ -24598,6 +27689,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 Premium Seal Breaking Scrolls have arrived. They will vanish in 60 minutes or if you log out.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_WARNING_SCROLLGET(String value0)
 	{
@@ -24616,6 +27709,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Promotion Item Test: You have acquired %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_ALL_ITEM(String value0)
 	{
@@ -24659,6 +27754,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot seal %0.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_START_FAIL1(int nameId)
 	{
@@ -24667,6 +27764,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot seal %0 while it is equipped.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_START_FAIL2(int nameId)
 	{
@@ -24680,6 +27779,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot break the combination.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_WARNING_DICOMPOSITION(int nameId)
 	{
@@ -24723,6 +27824,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can receive the daily quest again at %0 in the morning.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_QUEST_LIMIT_START_DAILY(String value0)
 	{
@@ -24736,6 +27839,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You can receive the weekly quest again at %1 in the morning on %0.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_QUEST_LIMIT_START_WEEK(String value1, String value0)
 	{
@@ -24749,6 +27855,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot break the combination.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_DECOMPOUND_ERROR_NOT_DECOMPOUNDABLE_ITEM(String value0)
 	{
@@ -24757,6 +27865,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot continue the quest with %0 equipped.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_QUEST_ERROR_UNEQUIP_QUEST_ITEM(String value0)
 	{
@@ -24785,6 +27895,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You check how %0 feels.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PET_CONDITION_CARE_01(String value0)
 	{
@@ -24793,6 +27905,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 feels a little better.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PET_CONDITION_UP_01(String value0)
 	{
@@ -24801,6 +27915,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 feels much better.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PET_CONDITION_UP_02(String value0)
 	{
@@ -24809,6 +27925,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 feels a lot better.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PET_CONDITION_UP_02_01(String value0)
 	{
@@ -24817,6 +27935,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You ask %0 to search the area.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PET_CONDITION_SEARCH_01(String value0)
 	{
@@ -24830,6 +27950,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 unearthed a buried %1 for you.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_PET_CONDITION_REWARD_GET(String value0, String value1)
 	{
@@ -24913,6 +28036,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been conditioned to level %1.
+	 * @param descriptionId
+	 * @param level
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_CHARGE_SUCCESS(DescriptionId descriptionId, int level)
 	{
@@ -24926,6 +28052,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot condition %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_CHARGE_FAIL_NOT_CHARGEABLE(String value0)
 	{
@@ -24934,6 +28062,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been conditioned as much as it can be. You cannot condition it to Level %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_CHARGE_FAIL_ALREADY_CHARGED(String value0, String value1)
 	{
@@ -24957,6 +28088,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been conditioned to level %1, and the item's stats have changed.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_CHARGE_LEVEL_DOWN(String value0, String value1)
 	{
@@ -24965,6 +28099,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * All equipped items have been conditioned to their maximum level, and cannot be conditioned to level %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_CHARGE_ALL_FAIL_EQUIPED_ALREADY_CHARGED(String value0)
 	{
@@ -25003,6 +28139,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been sealed by a GM. You cannot remove this seal.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_SEAL_STATUS_GMSEAL_UNSEAL_IMPOSSIBLE(int nameId)
 	{
@@ -25011,6 +28149,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has become the Legion Deputy.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CHANGE_MEMBER_RANK_DONE_GUILD_SUBMASTER(String value0)
 	{
@@ -25019,6 +28159,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has become a Legion Member.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GUILD_CHANGE_MEMBER_RANK_DONE_GUILD_NEWBIE(String value0)
 	{
@@ -25032,6 +28174,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use %1 in %0.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_SKILL_ITEM_RESTRICTED_AREA(String value1, String value0)
 	{
@@ -25040,6 +28185,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot use %1 until you reach level %0.
+	 * @param value1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANNOT_USE_ITEM_TOO_LOW_GUILD_LEVEL(String value1, String value0)
 	{
@@ -25053,6 +28201,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been conditioned. You cannot condition it further.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_CHARGE_FAIL_ALREADY_FULLY_CHARGED(String value0)
 	{
@@ -25101,6 +28251,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 motion has expired and can no longer be used.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DELETE_CASH_CUSTOMANIMATION_BY_TIMEOUT(String value0)
 	{
@@ -25159,6 +28311,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Round %0 begins!
+	 * @param round
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_START_ROUND_IDARENA(int round)
 	{
@@ -25167,6 +28321,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have eliminated all enemies in Round %0.
+	 * @param round
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_COMPLETE_ROUND_IDARENA(int round)
 	{
@@ -25175,6 +28331,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have passed Stage %0!
+	 * @param stage
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_COMPLETE_STAGE_IDARENA(int stage)
 	{
@@ -25183,6 +28341,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You join Stage %0 Round %1!
+	 * @param stage
+	 * @param round
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_JOIN_ROUND_IDARENA(int stage, int round)
 	{
@@ -25196,6 +28357,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 failed the training and has been sent to the Ready Room.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_MOVE_BIRTHAREA_FRIENDLY_IDARENA(String value0)
 	{
@@ -25204,6 +28367,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have acquired %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_GET_COIN_IDARENA(String value0)
 	{
@@ -25222,6 +28387,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have acquired %num1 %0s.
+	 * @param num1
+	 * @param value0s
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_GET_COIN_MULTI_IDARENA(int num1, String value0s)
 	{
@@ -25230,6 +28398,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have %0 kinah left in your daily sell limit, and this transaction would exceed that.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DAY_CANNOT_SELL_NPC(long value0)
 	{
@@ -25238,6 +28408,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The %0 has crystallized in your cube.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_HCOIN_02(String value0)
 	{
@@ -25256,6 +28428,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have reached the daily Private Store trading limit of %0 Kinah, so the trade cannot be completed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DAY_CANNOT_OWN_SHOP(String value0)
 	{
@@ -25269,6 +28443,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have reached the daily Trading limit of %0 Kinah, so the trade cannot be completed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DAY_CANNOT_OWN_TRADE(String value0)
 	{
@@ -25277,6 +28453,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have reached the daily Broker limit of %0 Kinah, so the item cannot be listed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DAY_CANNOT_SELL_AUCTION(String value0)
 	{
@@ -25285,6 +28463,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have reached the daily Mail attachment limit of %0 Kinah, so the kinah cannot be sent.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DAY_CANNOT_SEND_MAIL(String value0)
 	{
@@ -25293,6 +28473,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have reached the daily Mail attachment limit of %0 Kinah, so you cannot receive this kinah.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DAY_CANNOT_RECEIVE_MAIL(String value0)
 	{
@@ -25301,6 +28483,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has declined your invitation to the Mini Fortress Battle.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOWER_DEFENCE_REJECT_INVITATION(String value0)
 	{
@@ -25309,6 +28493,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has joined the Mini Fortress Battle.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOWER_DEFENCE_ENTERED_PARTY(String value0)
 	{
@@ -25327,6 +28513,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have invited %0 to join the Mini Game.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOWER_DEFENCE_INVITED_HIM(String value0)
 	{
@@ -25335,6 +28523,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 cannot accept your Mini Game invitation right now.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOWER_DEFENCE_CANT_INVITE_WHEN_HE_IS_ASKED_QUESTION(String value0)
 	{
@@ -25343,6 +28533,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is participating in another Mini Fortress Battle.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOWER_DEFENCE_ALREADY_MEMBER_OF_OTHER_GAME(String value0)
 	{
@@ -25351,6 +28543,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The power binding the soul of %0 has weakened, and %1 has vanished.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_DELETE_ITEM_CHANGE_TO_PUBLIC(String value0, String value1)
 	{
@@ -25359,6 +28554,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The power binding the soul of %0 with %1 has weakened.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_WILL_DELETE_ITEM_CHANGE_TO_PUBLIC(String value0, String value1)
 	{
@@ -25392,6 +28590,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 dropped out of training and left the Empyrean Crucible.
+	 * @param player
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_FRIENDLY_LEAVE_IDARENA(String player)
 	{
@@ -25405,6 +28605,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has reentered the Illusion Stadium.
+	 * @param player
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_FRIENDLY_MOVE_COMBATAREA_IDARENA(String player)
 	{
@@ -25418,6 +28620,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * All fatigue is gone. You have %0 Fatigue Recovery remaining.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_FATIGUE_STATE_RECOVERED(String value0)
 	{
@@ -25441,6 +28645,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cannot extract items while %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_CHARGE_INVALID_STANCE(String value0)
 	{
@@ -25449,6 +28655,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 quit the Mini Fortress Battle, and %1 became the leader.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_TOWER_DEFENCE_HOST_MOVED(String value0, String value1)
 	{
@@ -25467,6 +28676,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 succeeded in crafting %1.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBINE_BROADCAST_COMBINE_SUCCESS(String value0, String value1)
 	{
@@ -25525,6 +28737,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You must be under level %0 to join.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_FACTION_JOIN_ERROR_MAX_LEVEL(String value0)
 	{
@@ -25738,6 +28952,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have acquired the %0 motion.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GET_CASH_CUSTOMIZE_MOTION(String value0)
 	{
@@ -25791,6 +29007,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have already requested entry into %WORLDNAME0 (Difficulty: %1).
+	 * @param worldname0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CANT_INSTANCE_ALREADY_REGISTERED_WITH_DIFFICULTY(String worldname0, String value1)
 	{
@@ -25804,6 +29023,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have aborted entering %0 (Difficulty: %1). You may apply again in 10 seconds.
+	 * @param value0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_INSTANCE_REGISTER_CANCELED_WTH_DIFFICULTY(String value0, String value1)
 	{
@@ -25950,6 +29172,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You do not have enough %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_INGAMESHOP_NOT_ENOUGH_CASH(String value0)
 	{
@@ -25973,6 +29197,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Coordinates of current location: %WORLDNAME0 Region, X=%1 Y=%2 Z=%3
+	 * @param worldId
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CMD_LOCATION_DESC(int worldId, float x, float y, float z)
 	{
@@ -25986,6 +29215,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You don't have enough Kinah. It costs %num0 Kinah.
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_NOT_ENOUGH_KINA(long num0)
 	{
@@ -26262,6 +29493,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Glory Points 4.5
+	 * @param num0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_GLORY_POINT_GAIN(int num0)
 	{
@@ -26285,6 +29518,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Idian Enchant 4.3
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_POLISH_SUCCEED(int nameId)
 	{
@@ -26306,6 +29541,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Tempering
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ITEM_AUTHORIZE_CANCEL(int nameId)
 	{
@@ -26369,6 +29606,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You successfully enchanted %0 by + %num1.
+	 * @param descriptionId
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_ENCHANT_ITEM_SUCCEED_NEW(DescriptionId descriptionId, int value0)
 	{
@@ -26377,6 +29617,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 cannot be wrapped with %0.
+	 * @param parentNameId
+	 * @param targetNameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_PACK_ITEM_WRONG_TARGET_ITEM_CATEGORY(int parentNameId, int targetNameId)
 	{
@@ -26566,6 +29809,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * PC Bang Xp
+	 * @param value0
+	 * @param num1
+	 * @param num2
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_GET_EXP_PCBANG_VITAL_BONUS(String value0, long num1, long num2)
 	{
@@ -26639,6 +29886,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * F2P
+	 * @param durationtime0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_F2P_MSG_NOTICE_PACK_EXPIRE_TIME(String durationtime0, String value1)
 	{
@@ -26654,6 +29904,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have opened the %0.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNCOMPRESS_COMPRESSED_ITEM_SUCCEEDED(int nameId)
 	{
@@ -26662,6 +29914,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have stopped opening the %0 bundle.
+	 * @param nameId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_UNCOMPRESS_COMPRESSED_ITEM_CANCELED(int nameId)
 	{
@@ -26701,6 +29955,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Illusion Godstone 4.7
+	 * @param durationtime0
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_BREAK_PROC_REMAIN_START(String durationtime0, String value1)
 	{
@@ -26719,6 +29976,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Amplification Item 4.7.5.2
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_EXCEED_CANNOT_01(DescriptionId descriptionId)
 	{
@@ -26806,6 +30065,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [Stigma Enchant] 4.8
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_STIGMA_ENCHANT_SUCCESS(DescriptionId descriptionId)
 	{
@@ -26824,6 +30085,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [Quest Cooltime]
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_QUEST_COOLTIME_START_LIMITED_DURATION(String value0)
 	{
@@ -27187,6 +30450,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [ArchDeva] 5.0
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_CANNOT_USE_ITEM_INVALID_HIGHDEVA(String value0)
 	{
@@ -27337,6 +30602,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [Unbinding Item] 5.0
+	 * @param descriptionId
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_REMOVE_SOULBIND_SUCCEED(DescriptionId descriptionId)
 	{
@@ -27345,6 +30612,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [Golden Star] 5.0
+	 * @param percent
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_CHARGE_ABSOLUTEEXPPOINT_50(int percent)
 	{
@@ -27370,6 +30639,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [Siege Occupy Count] 4.9.1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_ABYSS_OCCUPY_COUNT_MAX(int value0)
 	{

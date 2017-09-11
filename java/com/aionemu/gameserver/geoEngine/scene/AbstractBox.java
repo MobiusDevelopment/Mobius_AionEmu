@@ -82,6 +82,7 @@ public abstract class AbstractBox extends Mesh
 	
 	/**
 	 * Get the center point of this box.
+	 * @return
 	 */
 	public final Vector3f getCenter()
 	{
@@ -90,6 +91,7 @@ public abstract class AbstractBox extends Mesh
 	
 	/**
 	 * Get the x-axis size (extent) of this box.
+	 * @return
 	 */
 	public final float getXExtent()
 	{
@@ -98,6 +100,7 @@ public abstract class AbstractBox extends Mesh
 	
 	/**
 	 * Get the y-axis size (extent) of this box.
+	 * @return
 	 */
 	public final float getYExtent()
 	{
@@ -106,6 +109,7 @@ public abstract class AbstractBox extends Mesh
 	
 	/**
 	 * Get the z-axis size (extent) of this box.
+	 * @return
 	 */
 	public final float getZExtent()
 	{

@@ -185,6 +185,7 @@ public class World
 	
 	/**
 	 * Returns Players iterator.
+	 * @return
 	 */
 	public Iterator<Player> getPlayersIterator()
 	{
@@ -282,6 +283,7 @@ public class World
 	 * @param newY
 	 * @param newZ
 	 * @param newHeading
+	 * @param updateKnownList
 	 */
 	public void updatePosition(VisibleObject object, float newX, float newY, float newZ, byte newHeading, boolean updateKnownList)
 	{

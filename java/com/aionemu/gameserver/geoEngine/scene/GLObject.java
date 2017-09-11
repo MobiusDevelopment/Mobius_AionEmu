@@ -157,6 +157,7 @@ public abstract class GLObject implements Cloneable
 	
 	/**
 	 * Creates a shallow clone of this GL Object. The deleteObject method should be functional for this object.
+	 * @return
 	 */
 	public abstract GLObject createDestructableClone();
 }

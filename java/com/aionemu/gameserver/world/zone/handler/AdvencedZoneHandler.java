@@ -29,6 +29,7 @@ public interface AdvencedZoneHandler extends ZoneHandler
 	 * This call if creature die in zone.
 	 * @param attacker
 	 * @param target
+	 * @param zone
 	 * @return TRUE if hadle die event.
 	 */
 	boolean onDie(Creature attacker, Creature target, ZoneInstance zone);

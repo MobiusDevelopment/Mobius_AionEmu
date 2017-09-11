@@ -54,6 +54,7 @@ public class RandomBonus
 	
 	/**
 	 * Gets the value of the id property.
+	 * @return
 	 */
 	public int getId()
 	{

@@ -24,14 +24,12 @@ import com.aionemu.gameserver.dao.TaskFromDBDAO;
  */
 public abstract class TaskFromDBHandler implements Runnable
 {
-	
 	protected int id;
 	protected String params[];
 	
 	/**
 	 * Task's id
 	 * @param id
-	 * @param int
 	 */
 	public void setId(int id)
 	{
@@ -49,6 +47,7 @@ public abstract class TaskFromDBHandler implements Runnable
 	
 	/**
 	 * The task's name This allow to check with the table column "task"
+	 * @return
 	 */
 	public abstract String getTaskName();
 	
@@ -60,7 +59,6 @@ public abstract class TaskFromDBHandler implements Runnable
 	
 	/**
 	 * Retuns {@link com.aionemu.gameserver.dao.TaskFromDBDAO} , just a shortcut
-	 * @return {@link com.aionemu.gameserver.dao.TaskFromDBDAO}
 	 */
 	protected void setLastActivation()
 	{

@@ -428,10 +428,6 @@ public class NpcGameStats extends CreatureGameStats<Npc>
 		return nextAttack;
 	}
 	
-	/**
-	 * @return next possible skill time depending on time
-	 */
-	
 	public void renewLastSkillTime()
 	{
 		lastSkillTime = System.currentTimeMillis();

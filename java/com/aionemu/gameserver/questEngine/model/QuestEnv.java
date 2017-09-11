@@ -37,7 +37,6 @@ public class QuestEnv
 	
 	/**
 	 * @param visibleObject
-	 * @param creature
 	 * @param player
 	 * @param questId
 	 * @param dialogId

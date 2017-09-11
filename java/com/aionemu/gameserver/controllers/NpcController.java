@@ -70,7 +70,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.stats.StatFunctions;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 
 /**
@@ -168,15 +167,7 @@ public class NpcController extends CreatureController<Npc>
 		final NpcRank npcRank = owner.getObjectTemplate().getRank();
 		if (npcRank == NpcRank.EXPERT)
 		{
-			World.getInstance().doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player players)
-				{
-					// "Player Name" has killed "Named Monster"
-					PacketSendUtility.sendPacket(players, new SM_SYSTEM_MESSAGE(1400021, player.getName(), new DescriptionId((npcNameId * 2) + 1)));
-				}
-			});
+			World.getInstance().doOnAllPlayers(players -> PacketSendUtility.sendPacket(players, new SM_SYSTEM_MESSAGE(1400021, player.getName(), new DescriptionId((npcNameId * 2) + 1))));
 		}
 	}
 	
@@ -688,6 +679,7 @@ public class NpcController extends CreatureController<Npc>
 	
 	/**
 	 * Schedule respawn of npc In instances - no npc respawn
+	 * @return
 	 */
 	public Future<?> scheduleRespawn()
 	{

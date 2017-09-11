@@ -25,6 +25,7 @@ import com.aionemu.gameserver.model.team2.group.events.ChangeGroupLeaderEvent;
 
 /**
  * @author ATracer
+ * @param <T>
  */
 public abstract class ChangeLeaderEvent<T extends TemporaryPlayerTeam<?>>extends AbstractTeamPlayerEvent<T>
 {

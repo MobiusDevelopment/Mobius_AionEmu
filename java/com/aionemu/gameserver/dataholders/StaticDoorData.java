@@ -79,7 +79,7 @@ public class StaticDoorData
 	}
 	
 	/**
-	 *
+	 * @param staticDorWorlds
 	 */
 	public void setStaticDorWorlds(List<StaticDoorWorld> staticDorWorlds)
 	{

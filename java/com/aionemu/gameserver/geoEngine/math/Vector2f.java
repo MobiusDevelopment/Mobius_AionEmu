@@ -196,6 +196,7 @@ public final class Vector2f implements Cloneable
 	 * Sets this vector to the interpolation by changeAmnt from this to the finalVec this=(1-changeAmnt)*this + changeAmnt * finalVec
 	 * @param finalVec The final vector to interpolate towards
 	 * @param changeAmnt An amount between 0.0 - 1.0 representing a percentage change from this towards finalVec
+	 * @return
 	 */
 	public Vector2f interpolate(Vector2f finalVec, float changeAmnt)
 	{
@@ -209,6 +210,7 @@ public final class Vector2f implements Cloneable
 	 * @param beginVec The begining vector (delta=0)
 	 * @param finalVec The final vector to interpolate towards (delta=1)
 	 * @param changeAmnt An amount between 0.0 - 1.0 representing a precentage change from beginVec towards finalVec
+	 * @return
 	 */
 	public Vector2f interpolate(Vector2f beginVec, Vector2f finalVec, float changeAmnt)
 	{
@@ -273,7 +275,6 @@ public final class Vector2f implements Cloneable
 	 * <code>distanceSquared</code> calculates the distance squared between this vector and vector v.
 	 * @param otherX
 	 * @param otherY
-	 * @param v the second vector to determine the distance squared.
 	 * @return the distance squared between the two vectors.
 	 */
 	public float distanceSquared(float otherX, float otherY)
@@ -546,6 +547,7 @@ public final class Vector2f implements Cloneable
 	
 	/**
 	 * <code>zero</code> resets this vector's data to zero internally.
+	 * @return
 	 */
 	public Vector2f zero()
 	{

@@ -45,7 +45,6 @@ public abstract class AionServerPacket extends BaseServerPacket
 	
 	/**
 	 * Write packet opcodec and two additional bytes
-	 * @param buf
 	 * @param value
 	 */
 	private final void writeOP(int value)
@@ -69,7 +68,6 @@ public abstract class AionServerPacket extends BaseServerPacket
 	 * Write and encrypt this packet data for given connection, to given buffer.
 	 * @param con
 	 * @param buffer
-	 * @param buf
 	 */
 	public final void write(AionConnection con, ByteBuffer buffer)
 	{
@@ -94,7 +92,6 @@ public abstract class AionServerPacket extends BaseServerPacket
 	/**
 	 * Write data that this packet represents to given byte buffer.
 	 * @param con
-	 * @param buf
 	 */
 	protected void writeImpl(AionConnection con)
 	{

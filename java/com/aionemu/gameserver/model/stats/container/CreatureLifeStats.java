@@ -36,6 +36,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
  * @author ATracer
+ * @param <T>
  */
 public abstract class CreatureLifeStats<T extends Creature>
 {

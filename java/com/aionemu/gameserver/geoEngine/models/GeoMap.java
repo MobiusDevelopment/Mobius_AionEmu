@@ -48,6 +48,7 @@ public class GeoMap extends Node
 	
 	/**
 	 * @param name
+	 * @param worldSize
 	 */
 	public GeoMap(String name, int worldSize)
 	{

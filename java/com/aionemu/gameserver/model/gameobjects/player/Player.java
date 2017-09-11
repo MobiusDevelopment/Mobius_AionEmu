@@ -418,7 +418,6 @@ public class Player extends Creature
 	/**
 	 * Only use for the Size admin command
 	 * @param savedPlayerAppearance
-	 * @param playerAppearance PlayerAppearance : The saved player's appearance, to rollback his appearance
 	 */
 	public void setSavedPlayerAppearance(PlayerAppearance savedPlayerAppearance)
 	{
@@ -748,7 +747,8 @@ public class Player extends Creature
 	}
 	
 	/**
-	 * @param inventory the inventory to set Inventory should be set right after player object is created
+	 * @param storage
+	 * @param storageType
 	 */
 	public void setStorage(Storage storage, StorageType storageType)
 	{
@@ -1017,6 +1017,7 @@ public class Player extends Creature
 	
 	/**
 	 * Returns true if has valid LegionMember
+	 * @return
 	 */
 	public boolean isLegionMember()
 	{
@@ -1160,6 +1161,7 @@ public class Player extends Creature
 	
 	/**
 	 * 0: regular, 1: fly, 2: glide
+	 * @return
 	 */
 	public int getFlyState()
 	{
@@ -1601,7 +1603,6 @@ public class Player extends Creature
 	/**
 	 * Used in SM_NPC_INFO to check aggro irrespective to level
 	 * @param npc
-	 * @param npcTribe
 	 * @return
 	 */
 	public boolean isAggroIconTo(Npc npc)
@@ -1781,7 +1782,6 @@ public class Player extends Creature
 	
 	/**
 	 * @param limits
-	 * @param delayId
 	 * @return
 	 */
 	public boolean isItemUseDisabled(ItemUseLimits limits)
@@ -1995,7 +1995,6 @@ public class Player extends Creature
 	}
 	
 	/**
-	 * @param worldId
 	 * @return
 	 */
 	public PortalCooldownList getPortalCooldownList()
@@ -2097,6 +2096,7 @@ public class Player extends Creature
 	
 	/**
 	 * chain skills
+	 * @return
 	 */
 	public ChainSkills getChainSkills()
 	{
@@ -2167,7 +2167,7 @@ public class Player extends Creature
 	}
 	
 	/**
-	 * @param the Resurrection Positional State to set
+	 * @param value
 	 */
 	public void setResPosState(boolean value)
 	{
@@ -2175,7 +2175,7 @@ public class Player extends Creature
 	}
 	
 	/**
-	 * @param the Resurrection Positional X value to set
+	 * @param value
 	 */
 	public void setResPosX(float value)
 	{
@@ -2191,7 +2191,7 @@ public class Player extends Creature
 	}
 	
 	/**
-	 * @param the Resurrection Positional Y value to set
+	 * @param value
 	 */
 	public void setResPosY(float value)
 	{
@@ -2207,7 +2207,7 @@ public class Player extends Creature
 	}
 	
 	/**
-	 * @param the Resurrection Positional Z value to set
+	 * @param value
 	 */
 	public void setResPosZ(float value)
 	{
@@ -2250,7 +2250,7 @@ public class Player extends Creature
 	}
 	
 	/**
-	 * @param the status of NoFpConsum Effect
+	 * @param value
 	 */
 	public void setUnderNoFPConsum(boolean value)
 	{
@@ -2482,7 +2482,7 @@ public class Player extends Creature
 	}
 	
 	/**
-	 * @param the flying mode flag to set
+	 * @param value
 	 */
 	public void setFlyingMode(boolean value)
 	{
@@ -2499,7 +2499,6 @@ public class Player extends Creature
 	
 	/**
 	 * Stone Use Order determined by highest inventory slot. :( If player has two types, wrong one might be used.
-	 * @param player
 	 * @return selfRezItem
 	 */
 	public Item getSelfRezStone()
@@ -2524,7 +2523,7 @@ public class Player extends Creature
 	}
 	
 	/**
-	 * @param stoneItemId
+	 * @param stoneId
 	 * @return stoneItem or null
 	 */
 	private Item getReviveStone(int stoneId)
@@ -3548,7 +3547,8 @@ public class Player extends Creature
 	}
 	
 	/**************
-	 * PVP System *
+	 * PVP System
+	 * @return *
 	 **************/
 	
 	public int getKillStreak()

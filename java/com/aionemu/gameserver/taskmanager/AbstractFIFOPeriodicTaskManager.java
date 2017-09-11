@@ -24,6 +24,7 @@ import com.aionemu.commons.utils.concurrent.RunnableStatsManager;
 
 /**
  * @author lord_rex and MrPoke based on l2j-free engines.
+ * @param <T>
  */
 public abstract class AbstractFIFOPeriodicTaskManager<T>extends AbstractPeriodicTaskManager
 {

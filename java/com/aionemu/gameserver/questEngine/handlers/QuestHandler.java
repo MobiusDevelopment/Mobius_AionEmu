@@ -265,6 +265,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 	 * Send completion dialog of the quest and finish it
 	 * @param env
 	 * @param reward The index of the List<Reward>.
+	 * @return
 	 */
 	public boolean sendQuestEndDialog(QuestEnv env, int reward)
 	{

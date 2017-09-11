@@ -84,6 +84,8 @@ public class RectangleArea extends AbstractArea
 	
 	/**
 	 * Creates new area from given points. Point order doesn't matter
+	 * @param zoneName
+	 * @param worldId
 	 * @param p1 point
 	 * @param p2 point
 	 * @param p3 point
@@ -109,6 +111,8 @@ public class RectangleArea extends AbstractArea
 	
 	/**
 	 * Creates new are from given coords
+	 * @param zoneName
+	 * @param worldId
 	 * @param minX mimal x point
 	 * @param minY minimal y point
 	 * @param maxX maximal x point

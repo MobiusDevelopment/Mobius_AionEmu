@@ -519,7 +519,6 @@ public class BoundingBox extends BoundingVolume
 	
 	/**
 	 * determines if this bounding box intersects a given bounding sphere.
-	 * @see com.jme.bounding.BoundingVolume#intersectsSphere(com.jme.bounding.BoundingSphere)
 	 */
 	@Override
 	public boolean intersectsSphere(BoundingSphere bs)
@@ -529,7 +528,6 @@ public class BoundingBox extends BoundingVolume
 	
 	/**
 	 * intersects determines if this Bounding Box intersects with another given bounding volume. If so, true is returned, otherwise, false is returned.
-	 * @see com.aionemu.gameserver.geoEngine.bounding.jme.bounding.BoundingVolume#intersects(com.aionemu.gameserver.geoEngine.bounding.jme.bounding.BoundingVolume)
 	 */
 	@Override
 	public boolean intersects(BoundingVolume bv)
@@ -539,7 +537,6 @@ public class BoundingBox extends BoundingVolume
 	
 	/**
 	 * determines if this bounding box intersects a given bounding box. If the two boxes intersect in any way, true is returned. Otherwise, false is returned.
-	 * @see com.aionemu.gameserver.geoEngine.bounding.jme.bounding.BoundingVolume#intersectsBoundingBox(com.aionemu.gameserver.geoEngine.bounding.jme.bounding.BoundingBox)
 	 */
 	@Override
 	public boolean intersectsBoundingBox(BoundingBox bb)
@@ -574,7 +571,6 @@ public class BoundingBox extends BoundingVolume
 	
 	/**
 	 * determines if this bounding box intersects with a given ray object. If an intersection has occurred, true is returned, otherwise false is returned.
-	 * @see com.aionemu.gameserver.geoEngine.bounding.jme.bounding.BoundingVolume#intersects(com.jme.math.Ray)
 	 */
 	@Override
 	public boolean intersects(Ray ray)
@@ -698,7 +694,6 @@ public class BoundingBox extends BoundingVolume
 	 * @param ray
 	 * @param results
 	 * @return
-	 * @see com.aionemu.gameserver.geoEngine.bounding.jme.bounding.BoundingVolume#intersectsWhere(com.jme.math.Ray)
 	 */
 	private int collideWithRay(Ray ray, CollisionResults results)
 	{

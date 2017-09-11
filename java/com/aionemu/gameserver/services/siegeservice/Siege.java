@@ -39,6 +39,7 @@ import com.aionemu.gameserver.world.World;
 
 /**
  * @author SoulKeeper, Source
+ * @param <SL>
  */
 public abstract class Siege<SL extends SiegeLocation>
 {

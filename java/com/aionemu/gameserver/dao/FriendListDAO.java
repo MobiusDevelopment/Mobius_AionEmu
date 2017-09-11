@@ -57,8 +57,6 @@ public abstract class FriendListDAO implements DAO
 	 * Deletes the friends from eachothers lists
 	 * @param playerOid
 	 * @param friendOid
-	 * @param player Player whos is deleting
-	 * @param friendName Name of friend to delete
 	 * @return Success
 	 */
 	public abstract boolean delFriends(int playerOid, int friendOid);

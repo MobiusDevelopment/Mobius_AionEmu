@@ -26,6 +26,8 @@ import com.google.common.base.Predicate;
 
 /**
  * @author ATracer
+ * @param <TM>
+ * @param <T>
  */
 public abstract class PlayerLeavedEvent<TM extends TeamMember<Player>, T extends TemporaryPlayerTeam<TM>> implements Predicate<TM>, TeamEvent
 {

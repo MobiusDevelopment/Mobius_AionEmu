@@ -37,7 +37,7 @@ public class QuestTimer
 	
 	private boolean isTicking = false;
 	
-	private final Player player;
+	final Player player;
 	
 	/**
 	 * @param questId
@@ -51,11 +51,6 @@ public class QuestTimer
 		this.player = player;
 	}
 	
-	/**
-	 * @param seconds
-	 * @param player
-	 * @return
-	 */
 	public void Start()
 	{
 		PacketSendUtility.sendMessage(player, "Timer started");
@@ -89,8 +84,7 @@ public class QuestTimer
 	}
 	
 	/**
-	 * @return true - if Timer started, and ticking.
-	 * @return false - if Timer not started or stoped.
+	 * @return true - if Timer started, and ticking. false - if Timer not started or stoped.
 	 */
 	public boolean isTicking()
 	{

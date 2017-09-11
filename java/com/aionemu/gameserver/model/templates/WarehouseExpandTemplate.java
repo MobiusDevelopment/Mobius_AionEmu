@@ -57,6 +57,7 @@ public class WarehouseExpandTemplate
 	
 	/**
 	 * Gets the value of the material property.
+	 * @return
 	 */
 	public List<Expand> getWarehouseExpand()
 	{

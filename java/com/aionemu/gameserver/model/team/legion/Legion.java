@@ -157,7 +157,6 @@ public class Legion
 	/**
 	 * Add a legionMember to the legionMembers list
 	 * @param playerObjId
-	 * @param legionMember
 	 * @return
 	 */
 	public boolean addLegionMember(int playerObjId)
@@ -185,9 +184,6 @@ public class Legion
 	 * @param centurionPermission
 	 * @param legionaryPermission
 	 * @param volunteerPermission
-	 * @param legionarPermission2
-	 * @param centurionPermission1
-	 * @param centurionPermission2
 	 * @return true or false
 	 */
 	public boolean setLegionPermissions(short deputyPermission, short centurionPermission, short legionaryPermission, short volunteerPermission)
@@ -273,7 +269,6 @@ public class Legion
 	
 	/**
 	 * @param contributionPoints
-	 * @param newPoints
 	 */
 	public void setContributionPoints(long contributionPoints)
 	{

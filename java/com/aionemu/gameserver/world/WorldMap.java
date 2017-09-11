@@ -244,6 +244,7 @@ public class WorldMap
 	
 	/**
 	 * Returns the World containing this WorldMap.
+	 * @return
 	 */
 	public World getWorld()
 	{
@@ -282,6 +283,7 @@ public class WorldMap
 	
 	/**
 	 * All instance ids of this map
+	 * @return
 	 */
 	public Collection<Integer> getAvailableInstanceIds()
 	{

@@ -54,8 +54,8 @@ public class Summon extends Creature
 	 * @param controller
 	 * @param spawnTemplate
 	 * @param objectTemplate
-	 * @param position
 	 * @param level
+	 * @param time
 	 */
 	public Summon(int objId, CreatureController<? extends Creature> controller, SpawnTemplate spawnTemplate, NpcTemplate objectTemplate, byte level, int time)
 	{

@@ -35,6 +35,7 @@ import com.aionemu.gameserver.world.knownlist.PlayerAwareKnownList;
 
 /**
  * @author Rolandas
+ * @param <T>
  */
 public abstract class HouseObject<T extends PlaceableHouseObject>extends VisibleObject implements IExpirable
 {
@@ -330,6 +331,7 @@ public abstract class HouseObject<T extends PlaceableHouseObject>extends Visible
 	
 	/**
 	 * Means the player has it spawned, not the game server
+	 * @return
 	 */
 	public boolean isSpawnedByPlayer()
 	{

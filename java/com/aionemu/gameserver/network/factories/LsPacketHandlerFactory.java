@@ -45,7 +45,6 @@ public class LsPacketHandlerFactory
 	}
 	
 	/**
-	 * @param loginServer
 	 */
 	private LsPacketHandlerFactory()
 	{

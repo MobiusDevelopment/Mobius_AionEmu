@@ -68,7 +68,7 @@ public class QuestVars
 	
 	/**
 	 * Fill the array with values, based on
-	 * @param int value, represented like above
+	 * @param var int value, represented like above
 	 */
 	public void setVar(int var)
 	{

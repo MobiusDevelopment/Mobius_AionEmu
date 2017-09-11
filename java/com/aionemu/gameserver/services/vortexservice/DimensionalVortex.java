@@ -29,6 +29,7 @@ import javolution.util.FastMap;
 
 /**
  * @author Source
+ * @param <VL>
  */
 public abstract class DimensionalVortex<VL extends VortexLocation>
 {

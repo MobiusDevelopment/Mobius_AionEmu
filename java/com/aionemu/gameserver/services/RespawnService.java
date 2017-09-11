@@ -71,6 +71,7 @@ public class RespawnService
 	
 	/**
 	 * @param visibleObject
+	 * @return
 	 */
 	public static Future<?> scheduleRespawnTask(VisibleObject visibleObject)
 	{
@@ -83,6 +84,7 @@ public class RespawnService
 	/**
 	 * @param spawnTemplate
 	 * @param instanceId
+	 * @return
 	 */
 	static VisibleObject respawn(SpawnTemplate spawnTemplate, int instanceId)
 	{

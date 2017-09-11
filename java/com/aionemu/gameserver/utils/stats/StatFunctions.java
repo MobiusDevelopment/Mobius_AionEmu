@@ -76,7 +76,6 @@ public class StatFunctions
 	
 	/**
 	 * @param maxLevelInRange
-	 * @param player
 	 * @param target
 	 * @return "XP Group" reward from target
 	 */
@@ -189,7 +188,6 @@ public class StatFunctions
 	 * @param defeated
 	 * @param maxRank
 	 * @param maxLevel
-	 * @param winner
 	 * @return Points Gained in PvP Kill
 	 */
 	public static int calculatePvpApGained(Player defeated, int maxRank, int maxLevel)
@@ -245,7 +243,6 @@ public class StatFunctions
 	 * @param defeated
 	 * @param maxRank
 	 * @param maxLevel
-	 * @param winner
 	 * @return Glory Gained in PvP Kill
 	 */
 	public static int calculatePvpGpGained(Player defeated, int maxRank, int maxLevel)
@@ -412,7 +409,6 @@ public class StatFunctions
 	
 	/**
 	 * @param attacker
-	 * @param player
 	 * @param target
 	 * @param isMainHand
 	 * @param element
@@ -444,11 +440,8 @@ public class StatFunctions
 	
 	/**
 	 * @param attacker
-	 * @param player
 	 * @param target
 	 * @param isMainHand
-	 * @param effectTemplate
-	 * @param skillDamages
 	 * @return Damage made to target (-hp value)
 	 */
 	public static int calculatePhysicalAttackDamage(Creature attacker, Creature target, boolean isMainHand)
@@ -661,7 +654,6 @@ public class StatFunctions
 	 * @param attacker
 	 * @param attacked
 	 * @param criticalProb
-	 * @param attacke
 	 * @return boolean
 	 */
 	public static boolean calculateMagicalCriticalRate(Creature attacker, Creature attacked, int criticalProb)
@@ -790,7 +782,6 @@ public class StatFunctions
 	 * @param damages
 	 * @param pvpDamage
 	 * @param useMovement
-	 * @param baseDamages
 	 * @return
 	 **/
 	public static float adjustDamages(Creature attacker, Creature target, float damages, int pvpDamage, boolean useMovement)
@@ -1101,6 +1092,7 @@ public class StatFunctions
 	 * Calculates the fall damage
 	 * @param player
 	 * @param distance
+	 * @param stoped
 	 * @return True if the player is forced to his bind location.
 	 */
 	public static boolean calculateFallDamage(Player player, float distance, boolean stoped)

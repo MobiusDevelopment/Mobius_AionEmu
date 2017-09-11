@@ -149,7 +149,6 @@ import javolution.util.FastMap;
  */
 public class PlayerController extends CreatureController<Player>
 {
-	
 	private final Logger log = LoggerFactory.getLogger(PlayerController.class);
 	private boolean isInShutdownProgress;
 	private long lastAttackMilis = 0;
@@ -539,9 +538,6 @@ public class PlayerController extends CreatureController<Player>
 		QuestEngine.getInstance().onLeaveZone(new QuestEnv(null, player, 0, 0), zoneName);
 	}
 	
-	/**
-	 * {@inheritDoc} Should only be triggered from one place (life stats)
-	 */
 	// TODO [AT] move
 	public void onEnterWorld()
 	{
@@ -769,10 +765,7 @@ public class PlayerController extends CreatureController<Player>
 		{
 			return player.getWorldId() == 210060000; // Theobomos.
 		}
-		else
-		{
-			return player.getWorldId() == 220050000; // Brusthonin.
-		}
+		return player.getWorldId() == 220050000; // Brusthonin.
 	}
 	
 	@Override
@@ -876,6 +869,7 @@ public class PlayerController extends CreatureController<Player>
 	 * @param x
 	 * @param y
 	 * @param z
+	 * @param time
 	 */
 	public void useSkill(int skillId, int targetType, float x, float y, float z, int time)
 	{

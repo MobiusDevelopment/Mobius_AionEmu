@@ -23,6 +23,7 @@ import javolution.util.FastList;
 
 /**
  * @author xTz
+ * @param <T>
  */
 public class InstanceReward<T extends InstancePlayerReward>
 {

@@ -109,7 +109,6 @@ public class InstanceBuff implements StatOwner
 	/**
 	 * Victory's Pledge
 	 * @param player
-	 * @param buffId
 	 */
 	public void endPledge(Player player)
 	{
@@ -122,6 +121,7 @@ public class InstanceBuff implements StatOwner
 	 * Victory's Pledge
 	 * @param player
 	 * @param buffId
+	 * @param time
 	 */
 	public void applyPledgeDuration(Player player, int buffId, int time)
 	{
@@ -152,7 +152,6 @@ public class InstanceBuff implements StatOwner
 	/**
 	 * Victory's Pledge
 	 * @param player
-	 * @param buffId
 	 */
 	public void endPledgeDuration(Player player)
 	{

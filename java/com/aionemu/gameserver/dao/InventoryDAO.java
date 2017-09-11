@@ -83,6 +83,7 @@ public abstract class InventoryDAO implements IDFactoryAwareDAO
 	
 	/**
 	 * @param playerId
+	 * @return
 	 */
 	public abstract boolean deletePlayerItems(int playerId);
 	

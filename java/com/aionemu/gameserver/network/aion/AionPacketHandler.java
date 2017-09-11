@@ -87,7 +87,6 @@ public class AionPacketHandler
 	 * @param state
 	 * @param id
 	 * @param data
-	 * @throws Exception
 	 */
 	private void unknownPacket(State state, int id, ByteBuffer data)
 	{

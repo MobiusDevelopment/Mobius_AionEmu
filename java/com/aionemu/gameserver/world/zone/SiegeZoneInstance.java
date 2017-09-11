@@ -39,7 +39,6 @@ public class SiegeZoneInstance extends ZoneInstance
 	/**
 	 * @param mapId
 	 * @param template
-	 * @param handler
 	 */
 	public SiegeZoneInstance(int mapId, ZoneInfo template)
 	{

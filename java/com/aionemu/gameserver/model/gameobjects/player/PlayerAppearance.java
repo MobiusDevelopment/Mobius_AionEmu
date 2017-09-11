@@ -400,6 +400,7 @@ public class PlayerAppearance implements Cloneable
 	
 	/**
 	 * Sets eye colour
+	 * @return
 	 */
 	public int getEyeRGB()
 	{

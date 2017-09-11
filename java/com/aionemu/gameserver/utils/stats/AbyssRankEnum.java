@@ -72,7 +72,6 @@ public enum AbyssRankEnum
 	 * @param pointsLost
 	 * @param apRequired
 	 * @param gpRequired
-	 * @param required
 	 * @param quota
 	 * @param descriptionId
 	 */

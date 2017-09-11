@@ -271,7 +271,7 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	}
 	
 	/**
-	 * @param return itemCreator
+	 * @return itemCreator
 	 */
 	public String getItemCreator()
 	{
@@ -463,7 +463,7 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	/**
 	 * This method should be called ONLY from Storage class In all other ways it is not guaranteed to be udpated in a regular update service It is allowed to use this method for newly created items which are not yet in any storage
 	 * @param count
-	 * @param left count
+	 * @return
 	 */
 	public long increaseItemCount(long count)
 	{
@@ -484,7 +484,7 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	/**
 	 * This method should be called ONLY from Storage class In all other ways it is not guaranteed to be udpated in a regular update service It is allowed to use this method for newly created items which are not yet in any storage
 	 * @param count
-	 * @param left count
+	 * @return
 	 */
 	public long decreaseItemCount(long count)
 	{
@@ -742,10 +742,7 @@ public class Item extends AionObject implements IExpirable, StatOwner
 		{
 			return false;
 		}
-		else
-		{
-			return isSoulBound;
-		}
+		return isSoulBound;
 	}
 	
 	public void setSoulBound(boolean isSoulBound)
@@ -874,7 +871,6 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	
 	/**
 	 * Compares two items on their object and item ids
-	 * @param Item object
 	 * @return true, if this item is equal to the object item
 	 * @author vlog
 	 * @param i
@@ -1064,6 +1060,7 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	
 	/**
 	 * Calculate charge level based on main item and fusioned item
+	 * @return
 	 */
 	public int getChargeLevel()
 	{

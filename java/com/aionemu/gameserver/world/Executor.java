@@ -26,6 +26,7 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 /**
  * @author xavier
+ * @param <T>
  */
 public abstract class Executor<T extends AionObject>
 {

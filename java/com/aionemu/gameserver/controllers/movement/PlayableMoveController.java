@@ -27,6 +27,7 @@ import com.aionemu.gameserver.world.World;
 
 /**
  * @author ATracer base class for summon & player move controller
+ * @param <T>
  */
 public abstract class PlayableMoveController<T extends Creature>extends CreatureMoveController<T>
 {

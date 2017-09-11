@@ -37,6 +37,8 @@ public class PolyArea extends AbstractArea
 	
 	/**
 	 * Creates new area from given points
+	 * @param zoneName
+	 * @param worldId
 	 * @param points list of points
 	 * @param zMin minimal z
 	 * @param zMax maximal z
@@ -48,6 +50,8 @@ public class PolyArea extends AbstractArea
 	
 	/**
 	 * Creates new area from given points
+	 * @param zoneName
+	 * @param worldId
 	 * @param points list of points
 	 * @param zMin minimal z
 	 * @param zMax maximal z

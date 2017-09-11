@@ -552,7 +552,6 @@ public final class Matrix4f implements Cloneable
 	/**
 	 * <code>set</code> sets the values of this matrix from an array of values.
 	 * @param matrix the matrix to set the value to.
-	 * @throws JmeException if the array is not of size 16.
 	 */
 	public void set(float[][] matrix)
 	{
@@ -582,6 +581,7 @@ public final class Matrix4f implements Cloneable
 	/**
 	 * <code>set</code> sets the values of this matrix from another matrix.
 	 * @param matrix the matrix to read the value from.
+	 * @return
 	 */
 	public Matrix4f set(Matrix4f matrix)
 	{
@@ -1249,6 +1249,7 @@ public final class Matrix4f implements Cloneable
 	
 	/**
 	 * Inverts this matrix and stores it in the given store.
+	 * @param store
 	 * @return The store
 	 */
 	public Matrix4f invert(Matrix4f store)
@@ -1562,7 +1563,6 @@ public final class Matrix4f implements Cloneable
 	/**
 	 * <code>setTranslation</code> will set the matrix's translation values.
 	 * @param translation the new values for the translation.
-	 * @throws JmeException if translation is not size 3.
 	 */
 	public void setTranslation(float[] translation)
 	{
@@ -1602,7 +1602,6 @@ public final class Matrix4f implements Cloneable
 	/**
 	 * <code>setInverseTranslation</code> will set the matrix's inverse translation values.
 	 * @param translation the new values for the inverse translation.
-	 * @throws JmeException if translation is not size 3.
 	 */
 	public void setInverseTranslation(float[] translation)
 	{
@@ -1652,7 +1651,6 @@ public final class Matrix4f implements Cloneable
 	/**
 	 * <code>setInverseRotationRadians</code> builds an inverted rotation from Euler angles that are in radians.
 	 * @param angles the Euler angles in radians.
-	 * @throws JmeException if angles is not size 3.
 	 */
 	public void setInverseRotationRadians(float[] angles)
 	{
@@ -1686,7 +1684,6 @@ public final class Matrix4f implements Cloneable
 	/**
 	 * <code>setInverseRotationDegrees</code> builds an inverted rotation from Euler angles that are in degrees.
 	 * @param angles the Euler angles in degrees.
-	 * @throws JmeException if angles is not size 3.
 	 */
 	public void setInverseRotationDegrees(float[] angles)
 	{
@@ -1704,7 +1701,6 @@ public final class Matrix4f implements Cloneable
 	/**
 	 * <code>inverseTranslateVect</code> translates a given Vector3f by the translation part of this matrix.
 	 * @param vec the Vector3f data to be translated.
-	 * @throws JmeException if the size of the Vector3f is not 3.
 	 */
 	public void inverseTranslateVect(float[] vec)
 	{
@@ -1721,7 +1717,6 @@ public final class Matrix4f implements Cloneable
 	/**
 	 * <code>inverseTranslateVect</code> translates a given Vector3f by the translation part of this matrix.
 	 * @param data the Vector3f to be translated.
-	 * @throws JmeException if the size of the Vector3f is not 3.
 	 */
 	public void inverseTranslateVect(Vector3f data)
 	{
@@ -1733,7 +1728,6 @@ public final class Matrix4f implements Cloneable
 	/**
 	 * <code>inverseTranslateVect</code> translates a given Vector3f by the translation part of this matrix.
 	 * @param data the Vector3f to be translated.
-	 * @throws JmeException if the size of the Vector3f is not 3.
 	 */
 	public void translateVect(Vector3f data)
 	{

@@ -73,8 +73,6 @@ public class ExchangeService
 	/**
 	 * @param player1
 	 * @param player2
-	 * @param objectId
-	 * @param objectId2
 	 */
 	public void registerExchange(Player player1, Player player2)
 	{
@@ -96,6 +94,7 @@ public class ExchangeService
 	/**
 	 * @param player1
 	 * @param player2
+	 * @return
 	 */
 	private boolean validateParticipants(Player player1, Player player2)
 	{
@@ -129,6 +128,7 @@ public class ExchangeService
 	
 	/**
 	 * @param player
+	 * @return
 	 */
 	public boolean isPlayerInExchange(Player player)
 	{
@@ -382,6 +382,7 @@ public class ExchangeService
 	/**
 	 * @param player
 	 * @param exchange
+	 * @return
 	 */
 	private boolean removeItemsFromInventory(Player player, Exchange exchange)
 	{

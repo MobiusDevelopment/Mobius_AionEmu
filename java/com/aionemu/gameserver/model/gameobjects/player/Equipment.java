@@ -231,6 +231,7 @@ public class Equipment
 	/**
 	 * @param itemSlotToEquip - must be slot combination for dual weapons
 	 * @param item
+	 * @return
 	 */
 	Item equip(long itemSlotToEquip, Item item)
 	{
@@ -439,8 +440,7 @@ public class Equipment
 	/**
 	 * Used during equip process and analyzes equipped slots
 	 * @param item
-	 * @param itemInMainHand
-	 * @param itemInSubHand
+	 * @param validateOnly
 	 * @return
 	 */
 	private boolean validateEquippedWeapon(Item item, boolean validateOnly)
@@ -631,7 +631,7 @@ public class Equipment
 	/**
 	 * Used during equip process and analyzes equipped slots
 	 * @param item
-	 * @param itemInMainHand
+	 * @param validateOnly
 	 * @return
 	 */
 	private boolean validateEquippedArmor(Item item, boolean validateOnly)
@@ -1039,6 +1039,7 @@ public class Equipment
 	}
 	
 	/**
+	 * @param type
 	 * @return true if player is equipping the requested ArmorType
 	 */
 	public boolean isArmorTypeEquipped(ArmorType type)
@@ -1304,6 +1305,7 @@ public class Equipment
 	
 	/**
 	 * @param weaponType
+	 * @return
 	 */
 	public boolean isWeaponEquipped(WeaponType weaponType)
 	{
@@ -1347,6 +1349,7 @@ public class Equipment
 	
 	/**
 	 * @param armorType
+	 * @return
 	 */
 	public boolean isArmorEquipped(ArmorType armorType)
 	{
@@ -1416,6 +1419,7 @@ public class Equipment
 	/**
 	 * @param player
 	 * @param item
+	 * @param slot
 	 * @return
 	 */
 	private boolean soulBindItem(Player player, Item item, long slot)

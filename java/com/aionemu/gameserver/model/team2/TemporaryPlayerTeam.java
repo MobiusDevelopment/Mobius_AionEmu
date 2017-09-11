@@ -32,6 +32,7 @@ import com.google.common.base.Predicates;
 
 /**
  * @author ATracer
+ * @param <TM>
  */
 public abstract class TemporaryPlayerTeam<TM extends TeamMember<Player>>extends GeneralTeam<Player, TM>
 {
@@ -45,11 +46,13 @@ public abstract class TemporaryPlayerTeam<TM extends TeamMember<Player>>extends 
 	
 	/**
 	 * Level of the player with lowest exp
+	 * @return
 	 */
 	public abstract int getMinExpPlayerLevel();
 	
 	/**
 	 * Level of the player with highest exp
+	 * @return
 	 */
 	public abstract int getMaxExpPlayerLevel();
 	

@@ -40,10 +40,6 @@ public class GameConnectionFactoryImpl implements ConnectionFactory
 	
 	/**
 	 * Create a new {@link com.aionemu.commons.network.AConnection AConnection} instance.<br>
-	 * @param socket that new {@link com.aionemu.commons.network.AConnection AConnection} instance will represent.<br>
-	 * @param dispatcher to witch new connection will be registered.<br>
-	 * @return a new instance of {@link com.aionemu.commons.network.AConnection AConnection}<br>
-	 * @throws IOException
 	 * @see com.aionemu.commons.network.AConnection
 	 * @see com.aionemu.commons.network.Dispatcher
 	 */

@@ -20,6 +20,7 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 
 /**
  * @author ATracer
+ * @param <T>
  */
 public interface SkillList<T extends Creature>
 {
@@ -53,6 +54,7 @@ public interface SkillList<T extends Creature>
 	
 	/**
 	 * Size of skill list
+	 * @return
 	 */
 	int size();
 	

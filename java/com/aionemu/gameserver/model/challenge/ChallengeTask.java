@@ -40,7 +40,6 @@ public class ChallengeTask
 	 * Used for loading tasks from DAO.
 	 * @param taskId
 	 * @param ownerId
-	 * @param header
 	 * @param quests
 	 * @param completeTime
 	 */

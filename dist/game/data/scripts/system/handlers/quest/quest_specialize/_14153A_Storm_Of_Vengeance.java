@@ -74,7 +74,7 @@ public class _14153A_Storm_Of_Vengeance extends QuestHandler
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
-		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
+		if (qs.getStatus() == QuestStatus.NONE)
 		{
 			if (targetId == 204504)
 			{ // Sofne
@@ -82,15 +82,8 @@ public class _14153A_Storm_Of_Vengeance extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
-		}
-		if (qs == null)
-		{
-			return false;
 		}
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
@@ -254,18 +247,14 @@ public class _14153A_Storm_Of_Vengeance extends QuestHandler
 			return HandlerResult.UNKNOWN;
 		}
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 3000, 0, 0), true);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
-				playQuestMovie(env, 192);
-				removeQuestItem(env, 182215459, 1);
-				qs.setQuestVarById(0, 5);
-				qs.setStatus(QuestStatus.REWARD);
-				updateQuestStatus(env);
-			}
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
+			playQuestMovie(env, 192);
+			removeQuestItem(env, 182215459, 1);
+			qs.setQuestVarById(0, 5);
+			qs.setStatus(QuestStatus.REWARD);
+			updateQuestStatus(env);
 		}, 3000);
 		return HandlerResult.SUCCESS;
 	}

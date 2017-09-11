@@ -26,6 +26,7 @@ public class NpcAIPolls
 	
 	/**
 	 * @param npcAI
+	 * @return
 	 */
 	public static AIAnswer shouldDecay(NpcAI2 npcAI)
 	{

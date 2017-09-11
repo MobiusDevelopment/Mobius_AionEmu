@@ -21,7 +21,6 @@ package com.aionemu.loginserver.taskmanager.handler;
  */
 public abstract class TaskFromDBHandler
 {
-	
 	protected int taskId;
 	protected String[] params =
 	{
@@ -39,7 +38,7 @@ public abstract class TaskFromDBHandler
 	
 	/**
 	 * Task's id
-	 * @param int
+	 * @param taskId
 	 */
 	public void setTaskId(int taskId)
 	{
