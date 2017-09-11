@@ -78,7 +78,7 @@ public class Research_TeselikAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void stage1()
+	void stage1()
 	{
 		final int delay = 50000;
 		if (isAlreadyDead() || !isStart)
@@ -97,16 +97,12 @@ public class Research_TeselikAI2 extends AggressiveNpcAI2
 	{
 		if (!isAlreadyDead())
 		{
-			enrageTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			enrageTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(284455, 482.25043f, 337.24167f, 181.71579f, (byte) 30); // Sheban Mystical Tyrhund.
-						spawn(284455, 476.00104f, 337.45627f, 181.71579f, (byte) 30); // Sheban Mystical Tyrhund.
-					}
+					spawn(284455, 482.25043f, 337.24167f, 181.71579f, (byte) 30); // Sheban Mystical Tyrhund.
+					spawn(284455, 476.00104f, 337.45627f, 181.71579f, (byte) 30); // Sheban Mystical Tyrhund.
 				}
 			}, 3000);
 		}
@@ -120,14 +116,7 @@ public class Research_TeselikAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stage1();
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
 		}
 	}
 	

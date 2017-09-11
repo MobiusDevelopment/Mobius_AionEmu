@@ -34,6 +34,8 @@ public class FirstTargetRangeProperty
 	/**
 	 * @param skill
 	 * @param properties
+	 * @param castState
+	 * @return
 	 */
 	public static boolean set(Skill skill, Properties properties, CastState castState)
 	{

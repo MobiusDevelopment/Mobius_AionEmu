@@ -32,6 +32,8 @@ public class CM_CLIENT_COMMAND_LOC extends AionClientPacket
 	/**
 	 * Constructs new client packet instance.
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_CLIENT_COMMAND_LOC(int opcode, State state, State... restStates)
 	{

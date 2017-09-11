@@ -53,14 +53,7 @@ public class Warship_Invasion_VortexAI2 extends NpcAI2
 	
 	private void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(Warship_Invasion_VortexAI2.this);
-			}
-		}, 300000); // 5 Minutes.
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> AI2Actions.deleteOwner(Warship_Invasion_VortexAI2.this), 300000); // 5 Minutes.
 	}
 	
 	@Override
@@ -117,16 +110,18 @@ public class Warship_Invasion_VortexAI2 extends NpcAI2
 	
 	/**
 	 * Elyos.
+	 * @param responder
 	 */
-	private void transferInvasion1(Player responder)
+	void transferInvasion1(Player responder)
 	{
 		TeleportService2.teleportTo(responder, 220110000, 1549.2898f, 2402.2078f, 195.69263f, (byte) 110);
 	}
 	
 	/**
 	 * Asmodians.
+	 * @param responder
 	 */
-	private void transferInvasion2(Player responder)
+	void transferInvasion2(Player responder)
 	{
 		TeleportService2.teleportTo(responder, 210100000, 1352.1334f, 1761.8057f, 325.0038f, (byte) 1);
 	}

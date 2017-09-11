@@ -28,7 +28,6 @@ import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.svs.SvsLocation;
 import com.aionemu.gameserver.model.svs.SvsStateType;
 import com.aionemu.gameserver.model.templates.spawns.SpawnGroup2;
@@ -42,7 +41,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -104,14 +102,7 @@ public class SvsService
 		}
 		gate.start();
 		advanceCorridorCountdownMsg(id);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				stopSvs(id);
-			}
-		}, duration * 3600 * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> stopSvs(id), duration * 3600 * 1000);
 	}
 	
 	public void stopSvs(int id)
@@ -154,6 +145,8 @@ public class SvsService
 	
 	/**
 	 * The Advance Corridor Countdown.
+	 * @param id
+	 * @return
 	 */
 	public boolean advanceCorridorCountdownMsg(int id)
 	{
@@ -161,22 +154,18 @@ public class SvsService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
+				World.getInstance().doOnAllPlayers(player ->
 				{
-					@Override
-					public void visit(Player player)
-					{
-						// An Advance Corridor to a Rift Portal battle has appeared.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_SVS_INVADE_DIRECT_PORTAL_OPEN, 0);
-						// The Advance Corridor leading to the Panesterra Fortress Battle will be closed in 10 minutes.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End01, 3000000);
-						// The Advance Corridor leading to the Panesterra Fortress Battle will be closed in 5 minutes.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End02, 3300000);
-						// The Advance Corridor leading to the Panesterra Fortress Battle will be closed in 1 minute.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End03, 3540000);
-						// The Advance Corridor leading to the Panesterra Fortress Battle has closed.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End05, 3600000);
-					}
+					// An Advance Corridor to a Rift Portal battle has appeared.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_SVS_INVADE_DIRECT_PORTAL_OPEN, 0);
+					// The Advance Corridor leading to the Panesterra Fortress Battle will be closed in 10 minutes.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End01, 3000000);
+					// The Advance Corridor leading to the Panesterra Fortress Battle will be closed in 5 minutes.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End02, 3300000);
+					// The Advance Corridor leading to the Panesterra Fortress Battle will be closed in 1 minute.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End03, 3540000);
+					// The Advance Corridor leading to the Panesterra Fortress Battle has closed.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End05, 3600000);
 				});
 				return true;
 			}
@@ -189,6 +178,8 @@ public class SvsService
 	
 	/**
 	 * The Advance Corridor For Distinguished Service.
+	 * @param id
+	 * @return
 	 */
 	public boolean distinguishedServiceMsg(int id)
 	{
@@ -196,22 +187,18 @@ public class SvsService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
+				World.getInstance().doOnAllPlayers(player ->
 				{
-					@Override
-					public void visit(Player player)
-					{
-						// The Distinguished Service Siege Portal leading to Panesterra opened.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End11, 0);
-						// The Distinguished Service Siege Portal to the Panesterra Siege will close in 5 minutes.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End06, 10000);
-						// The Distinguished Service Siege Portal to the Panesterra Siege will close in 3 minutes.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End07, 120000);
-						// The Distinguished Service Siege Portal to the Panesterra Siege will close in 1 minute.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End08, 240000);
-						// The Distinguished Service Siege Portal to the Panesterra Siege has closed.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End10, 300000);
-					}
+					// The Distinguished Service Siege Portal leading to Panesterra opened.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End11, 0);
+					// The Distinguished Service Siege Portal to the Panesterra Siege will close in 5 minutes.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End06, 10000);
+					// The Distinguished Service Siege Portal to the Panesterra Siege will close in 3 minutes.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End07, 120000);
+					// The Distinguished Service Siege Portal to the Panesterra Siege will close in 1 minute.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End08, 240000);
+					// The Distinguished Service Siege Portal to the Panesterra Siege has closed.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Gab1_End10, 300000);
 				});
 				return true;
 			}
@@ -224,6 +211,8 @@ public class SvsService
 	
 	/**
 	 * Advance Corridor [Transidium Annex]
+	 * @param id
+	 * @return
 	 */
 	public boolean transidiumAnnexMsg(int id)
 	{
@@ -231,26 +220,22 @@ public class SvsService
 		{
 			case 5:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
+				World.getInstance().doOnAllPlayers(player ->
 				{
-					@Override
-					public void visit(Player player)
-					{
-						// Loading the Advance Corridor Shield... Please wait.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_01, 0);
-						// The entrance to the Transidium Annex will open in 8 minutes.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_02, 10000);
-						// The entrance to the Transidium Annex will open in 6 minutes.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_03, 120000);
-						// The entrance to the Transidium Annex will open in 4 minutes.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_04, 240000);
-						// The entrance to the Transidium Annex will open in 2 minutes.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_05, 360000);
-						// The entrance to the Transidium Annex will open in 1 minute.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_06, 420000);
-						// The entrance to the Transidium Annex has opened.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_08, 480000);
-					}
+					// Loading the Advance Corridor Shield... Please wait.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_01, 0);
+					// The entrance to the Transidium Annex will open in 8 minutes.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_02, 10000);
+					// The entrance to the Transidium Annex will open in 6 minutes.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_03, 120000);
+					// The entrance to the Transidium Annex will open in 4 minutes.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_04, 240000);
+					// The entrance to the Transidium Annex will open in 2 minutes.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_05, 360000);
+					// The entrance to the Transidium Annex will open in 1 minute.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_06, 420000);
+					// The entrance to the Transidium Annex has opened.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GAB1_SUB_ALARM_08, 480000);
 				});
 				return true;
 			}
@@ -263,6 +248,8 @@ public class SvsService
 	
 	/**
 	 * Advance Corridor [Transidium Annex]
+	 * @param id
+	 * @return
 	 */
 	public boolean advanceCorridorSP(int id)
 	{

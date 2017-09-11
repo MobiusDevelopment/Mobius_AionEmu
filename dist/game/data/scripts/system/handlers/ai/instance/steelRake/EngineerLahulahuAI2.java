@@ -99,17 +99,10 @@ public class EngineerLahulahuAI2 extends AggressiveNpcAI2
 	
 	private void doSchedule()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				useSkills();
-			}
-		}, 10000);
+		ThreadPoolManager.getInstance().schedule(() -> useSkills(), 10000);
 	}
 	
-	private void useSkills()
+	void useSkills()
 	{
 		if (getPosition().isSpawned() && !isAlreadyDead() && isStart)
 		{

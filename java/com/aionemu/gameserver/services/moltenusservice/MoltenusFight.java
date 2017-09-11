@@ -24,6 +24,7 @@ import com.aionemu.gameserver.services.MoltenusService;
 
 /**
  * @author Rinzler (Encom)
+ * @param <ML>
  */
 
 public abstract class MoltenusFight<ML extends MoltenusLocation>

@@ -64,7 +64,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -135,142 +134,118 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 	{
 		instanceTime = System.currentTimeMillis();
 		engulfedOphidanBridgeReward.setInstanceStartTime();
-		ophidanTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ophidanTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!engulfedOphidanBridgeReward.isRewarded())
 			{
-				if (!engulfedOphidanBridgeReward.isRewarded())
-				{
-					openFirstDoors();
-					// The member recruitment window has passed. You cannot recruit any more members.
-					sendMsgByRace(1401181, Race.PC_ALL, 5000);
-					engulfedOphidanBridgeReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-					startInstancePacket();
-					engulfedOphidanBridgeReward.sendPacket(4, null);
-				}
+				openFirstDoors();
+				// The member recruitment window has passed. You cannot recruit any more members.
+				sendMsgByRace(1401181, Race.PC_ALL, 5000);
+				engulfedOphidanBridgeReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+				startInstancePacket();
+				engulfedOphidanBridgeReward.sendPacket(4, null);
 			}
 		}, 90000));
-		ophidanTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ophidanTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// Reinforcements for the weaker camp have arrived at the sentry post.
-				sendMsgByRace(1401949, Race.ELYOS, 0);
-				// Reinforcements for the weaker camp have arrived at the sentry post.
-				sendMsgByRace(1401950, Race.ASMODIANS, 0);
-				sp(802023, 755.64215f, 545.90179f, 577.8269f, (byte) 0, 155);
-				sp(802023, 337.73990f, 491.16772f, 597.2395f, (byte) 0, 156);
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// Reinforcements for the weaker camp have arrived at the sentry post.
+			sendMsgByRace(1401949, Race.ELYOS, 0);
+			// Reinforcements for the weaker camp have arrived at the sentry post.
+			sendMsgByRace(1401950, Race.ASMODIANS, 0);
+			sp(802023, 755.64215f, 545.90179f, 577.8269f, (byte) 0, 155);
+			sp(802023, 337.73990f, 491.16772f, 597.2395f, (byte) 0, 156);
 		}, 220000));
-		ophidanTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ophidanTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// A hero has been spotted at the starting point.
-				sendMsgByRace(1401967, Race.PC_ALL, 0);
-				// A hero and their reinforcements have been spotted at the starting point.
-				sendMsgByRace(1401968, Race.PC_ALL, 10000);
-				sp(701988, 313.6124f, 489.13992f, 597.13184f, (byte) 2, 0); // Rearguard Telekesis.
-				sp(801957, 313.6124f, 489.13992f, 597.13184f, (byte) 2, 0); // Elyos Reinforcements Flag.
-				sp(701989, 759.2739f, 569.3167f, 577.37885f, (byte) 87, 0); // Rearguard Freidr.
-				sp(801958, 759.2739f, 569.3167f, 577.37885f, (byte) 87, 0); // Asmodians Reinforcements Flag.
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// A hero has been spotted at the starting point.
+			sendMsgByRace(1401967, Race.PC_ALL, 0);
+			// A hero and their reinforcements have been spotted at the starting point.
+			sendMsgByRace(1401968, Race.PC_ALL, 10000);
+			sp(701988, 313.6124f, 489.13992f, 597.13184f, (byte) 2, 0); // Rearguard Telekesis.
+			sp(801957, 313.6124f, 489.13992f, 597.13184f, (byte) 2, 0); // Elyos Reinforcements Flag.
+			sp(701989, 759.2739f, 569.3167f, 577.37885f, (byte) 87, 0); // Rearguard Freidr.
+			sp(801958, 759.2739f, 569.3167f, 577.37885f, (byte) 87, 0); // Asmodians Reinforcements Flag.
 		}, 400000));
-		ophidanTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ophidanTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// Supplies have been delivered to some of the sentry posts.
-				sendMsgByRace(1401965, Race.PC_ALL, 0);
-				// Supplies have been dropped in a confidential area.
-				sendMsgByRace(1402086, Race.PC_ALL, 10000);
-				sp(701974, 322.18567f, 490.11285f, 596.1117f, (byte) 1, 0); // Supply Box.
-				sp(701974, 758.0247f, 560.9797f, 576.9838f, (byte) 87, 0); // Supply Box.
-				sp(701975, 574.02966f, 477.84848f, 620.6126f, (byte) 93, 10000); // Emergency Supply Box.
-				sp(701975, 619.36755f, 515.6929f, 592.13336f, (byte) 55, 10000); // Emergency Supply Box.
-				sp(701976, 582.56866f, 396.15695f, 603.4048f, (byte) 2, 10000); // Hidden Supply Box.
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// Supplies have been delivered to some of the sentry posts.
+			sendMsgByRace(1401965, Race.PC_ALL, 0);
+			// Supplies have been dropped in a confidential area.
+			sendMsgByRace(1402086, Race.PC_ALL, 10000);
+			sp(701974, 322.18567f, 490.11285f, 596.1117f, (byte) 1, 0); // Supply Box.
+			sp(701974, 758.0247f, 560.9797f, 576.9838f, (byte) 87, 0); // Supply Box.
+			sp(701975, 574.02966f, 477.84848f, 620.6126f, (byte) 93, 10000); // Emergency Supply Box.
+			sp(701975, 619.36755f, 515.6929f, 592.13336f, (byte) 55, 10000); // Emergency Supply Box.
+			sp(701976, 582.56866f, 396.15695f, 603.4048f, (byte) 2, 10000); // Hidden Supply Box.
 		}, 600000));
-		ophidanTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ophidanTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			switch (Rnd.get(1, 4))
 			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				switch (Rnd.get(1, 4))
+				case 1:
 				{
-					case 1:
-					{
-						// The Balaur raiders have appeared at some of the sentry posts.
-						sendMsgByRace(1401966, Race.PC_ALL, 0);
-						// The Balaur have arrived at the Northern Approach Post.
-						sendMsgByRace(1402071, Race.PC_ALL, 5000);
-						// The Balaur are attacking the Northern Approach Post.
-						sendMsgByRace(1402073, Race.PC_ALL, 10000);
-						sp(233491, 532.19055f, 445.263f, 620.25f, (byte) 105, 0); // Captain Avran.
-						sp(801956, 532.19055f, 445.263f, 620.25f, (byte) 105, 0); // Assault Team Commander Flag.
-						break;
-					}
-					case 2:
-					{
-						// The Balaur raiders have appeared at some of the sentry posts.
-						sendMsgByRace(1401966, Race.PC_ALL, 0);
-						// The Balaur have arrived at the Southern Approach Post.
-						sendMsgByRace(1402066, Race.PC_ALL, 5000);
-						// The Southern Approach Post is under attack by the Balaur.
-						sendMsgByRace(1402068, Race.PC_ALL, 10000);
-						sp(233491, 620.5344f, 562.1826f, 590.91034f, (byte) 81, 0); // Captain Avran.
-						sp(801956, 620.5344f, 562.1826f, 590.91034f, (byte) 81, 0); // Assault Team Commander Flag.
-						break;
-					}
-					case 3:
-					{
-						// The Balaur raiders have appeared at some of the sentry posts.
-						sendMsgByRace(1401966, Race.PC_ALL, 0);
-						// The Balaur have arrived at the Defense Post.
-						sendMsgByRace(1402056, Race.PC_ALL, 5000);
-						// The Defense Post is under attack by the Balaur.
-						sendMsgByRace(1402058, Race.PC_ALL, 10000);
-						sp(233491, 688.96906f, 484.00226f, 599.91016f, (byte) 94, 0); // Captain Avran.
-						sp(801956, 688.96906f, 484.00226f, 599.91016f, (byte) 94, 0); // Assault Team Commander Flag.
-						break;
-					}
-					case 4:
-					{
-						// The Balaur raiders have appeared at some of the sentry posts.
-						sendMsgByRace(1401966, Race.PC_ALL, 0);
-						// The Balaur have arrived at the Guard Post.
-						sendMsgByRace(1402061, Race.PC_ALL, 5000);
-						// The Guard Post is under attack by the Balaur.
-						sendMsgByRace(1402063, Race.PC_ALL, 10000);
-						sp(233491, 499.92856f, 520.9595f, 597.6485f, (byte) 20, 0); // Captain Avran.
-						sp(801956, 499.92856f, 520.9595f, 597.6485f, (byte) 20, 0); // Assault Team Commander Flag.
-						break;
-					}
+					// The Balaur raiders have appeared at some of the sentry posts.
+					sendMsgByRace(1401966, Race.PC_ALL, 0);
+					// The Balaur have arrived at the Northern Approach Post.
+					sendMsgByRace(1402071, Race.PC_ALL, 5000);
+					// The Balaur are attacking the Northern Approach Post.
+					sendMsgByRace(1402073, Race.PC_ALL, 10000);
+					sp(233491, 532.19055f, 445.263f, 620.25f, (byte) 105, 0); // Captain Avran.
+					sp(801956, 532.19055f, 445.263f, 620.25f, (byte) 105, 0); // Assault Team Commander Flag.
+					break;
+				}
+				case 2:
+				{
+					// The Balaur raiders have appeared at some of the sentry posts.
+					sendMsgByRace(1401966, Race.PC_ALL, 0);
+					// The Balaur have arrived at the Southern Approach Post.
+					sendMsgByRace(1402066, Race.PC_ALL, 5000);
+					// The Southern Approach Post is under attack by the Balaur.
+					sendMsgByRace(1402068, Race.PC_ALL, 10000);
+					sp(233491, 620.5344f, 562.1826f, 590.91034f, (byte) 81, 0); // Captain Avran.
+					sp(801956, 620.5344f, 562.1826f, 590.91034f, (byte) 81, 0); // Assault Team Commander Flag.
+					break;
+				}
+				case 3:
+				{
+					// The Balaur raiders have appeared at some of the sentry posts.
+					sendMsgByRace(1401966, Race.PC_ALL, 0);
+					// The Balaur have arrived at the Defense Post.
+					sendMsgByRace(1402056, Race.PC_ALL, 5000);
+					// The Defense Post is under attack by the Balaur.
+					sendMsgByRace(1402058, Race.PC_ALL, 10000);
+					sp(233491, 688.96906f, 484.00226f, 599.91016f, (byte) 94, 0); // Captain Avran.
+					sp(801956, 688.96906f, 484.00226f, 599.91016f, (byte) 94, 0); // Assault Team Commander Flag.
+					break;
+				}
+				case 4:
+				{
+					// The Balaur raiders have appeared at some of the sentry posts.
+					sendMsgByRace(1401966, Race.PC_ALL, 0);
+					// The Balaur have arrived at the Guard Post.
+					sendMsgByRace(1402061, Race.PC_ALL, 5000);
+					// The Guard Post is under attack by the Balaur.
+					sendMsgByRace(1402063, Race.PC_ALL, 10000);
+					sp(233491, 499.92856f, 520.9595f, 597.6485f, (byte) 20, 0); // Captain Avran.
+					sp(801956, 499.92856f, 520.9595f, 597.6485f, (byte) 20, 0); // Assault Team Commander Flag.
+					break;
 				}
 			}
 		}, 900000));
-		ophidanTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ophidanTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!engulfedOphidanBridgeReward.isRewarded())
 			{
-				if (!engulfedOphidanBridgeReward.isRewarded())
-				{
-					final Race winnerRace = engulfedOphidanBridgeReward.getWinnerRaceByScore();
-					stopInstance(winnerRace);
-				}
+				final Race winnerRace = engulfedOphidanBridgeReward.getWinnerRaceByScore();
+				stopInstance(winnerRace);
 			}
 		}, 1800000));
 	}
@@ -296,24 +271,20 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 	
 	private void sendEnterPacket(Player player)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(opponent ->
 		{
-			@Override
-			public void visit(Player opponent)
+			if (player.getRace() != opponent.getRace())
 			{
-				if (player.getRace() != opponent.getRace())
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
+				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId()));
+			}
+			else
+			{
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
+				if (player.getObjectId() != opponent.getObjectId())
 				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId()));
-				}
-				else
-				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
-					if (player.getObjectId() != opponent.getObjectId())
-					{
-						PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId(), 20, 0));
-					}
+					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId(), 20, 0));
 				}
 			}
 		});
@@ -324,16 +295,12 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 	
 	private void startInstancePacket()
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(3, getTime(), engulfedOphidanBridgeReward, player.getObjectId(), 0, 0));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
-			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(3, getTime(), engulfedOphidanBridgeReward, player.getObjectId(), 0, 0));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
 		});
 	}
 	
@@ -341,25 +308,11 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 	{
 		if (isObjects)
 		{
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true));
-				}
-			});
+			instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true)));
 		}
 		else
 		{
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true));
-				}
-			});
+			instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true)));
 		}
 	}
 	
@@ -426,24 +379,20 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 		{
 			npc.getController().onDelete();
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						onExitInstance(player);
-					}
-					AutoGroupService.getInstance().unRegisterInstance(instanceId);
+					onExitInstance(player);
 				}
+				AutoGroupService.getInstance().unRegisterInstance(instanceId);
 			}
 		}, 60000);
 	}
 	
-	private int getTime()
+	int getTime()
 	{
 		final long result = System.currentTimeMillis() - instanceTime;
 		if (result < 90000)
@@ -1211,18 +1160,14 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
-		ophidanTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ophidanTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				spawn(npcId, x, y, z, h, entityId);
+				if (msg > 0)
 				{
-					spawn(npcId, x, y, z, h, entityId);
-					if (msg > 0)
-					{
-						sendMsgByRace(msg, race, 0);
-					}
+					sendMsgByRace(msg, race, 0);
 				}
 			}
 		}, time));
@@ -1230,53 +1175,31 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
-		ophidanTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ophidanTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
-				{
-					final Npc npc = (Npc) spawn(npcId, x, y, z, h);
-					npc.getSpawn().setWalkerId(walkerId);
-					WalkManager.startWalking((NpcAI2) npc.getAi2());
-				}
+				final Npc npc = (Npc) spawn(npcId, x, y, z, h);
+				npc.getSpawn().setWalkerId(walkerId);
+				WalkManager.startWalking((NpcAI2) npc.getAi2());
 			}
 		}, time));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ophidanTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ophidanTask.add(ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time));
+		}), time));
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void stopInstanceTask()

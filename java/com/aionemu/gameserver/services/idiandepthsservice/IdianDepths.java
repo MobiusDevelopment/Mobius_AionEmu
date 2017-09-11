@@ -24,6 +24,7 @@ import com.aionemu.gameserver.services.IdianDepthsService;
 
 /**
  * @author Rinzler (Encom)
+ * @param <IL>
  */
 
 public abstract class IdianDepths<IL extends IdianDepthsLocation>

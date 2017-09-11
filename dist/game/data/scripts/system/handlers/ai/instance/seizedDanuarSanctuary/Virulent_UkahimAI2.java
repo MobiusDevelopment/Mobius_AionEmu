@@ -110,14 +110,7 @@ public class Virulent_UkahimAI2 extends AggressiveNpcAI2
 	private void skill()
 	{
 		SkillEngine.getInstance().getSkill(getOwner(), 18158, 100, getOwner()).useNoAnimationSkill(); // Wrathful Venom Burst.
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				SkillEngine.getInstance().getSkill(getOwner(), 18160, 100, getOwner()).useNoAnimationSkill(); // Virulence.
-			}
-		}, 4000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> SkillEngine.getInstance().getSkill(getOwner(), 18160, 100, getOwner()).useNoAnimationSkill(), 4000);
 	}
 	
 	private void scheduleDelayStage2(int delay)
@@ -128,14 +121,7 @@ public class Virulent_UkahimAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stage2();
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage2(), delay);
 		}
 	}
 	
@@ -160,19 +146,15 @@ public class Virulent_UkahimAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
-				{
-					getRandomTarget();
-					stage3();
-				}
+				getRandomTarget();
+				stage3();
 			}, delay);
 		}
 	}
 	
-	private void getRandomTarget()
+	void getRandomTarget()
 	{
 		final List<Player> players = new ArrayList<>();
 		for (Player player : getKnownList().getKnownPlayers().values())

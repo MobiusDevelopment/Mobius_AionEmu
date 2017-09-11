@@ -32,6 +32,8 @@ public class CM_LEGION_UPLOAD_EMBLEM extends AionClientPacket
 	
 	/**
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_LEGION_UPLOAD_EMBLEM(int opcode, State state, State... restStates)
 	{

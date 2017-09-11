@@ -60,7 +60,13 @@ public class AttackShieldObserver extends AttackCalcObserver
 	private boolean totalHitPercentSet = false;
 	
 	/**
+	 * @param hit
+	 * @param totalHit
 	 * @param percent
+	 * @param effect
+	 * @param type
+	 * @param shieldType
+	 * @param probability
 	 * @param value
 	 * @param status
 	 */

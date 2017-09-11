@@ -26,8 +26,10 @@ public class TradePSItem extends TradeItem
 	private long price;
 	
 	/**
+	 * @param itemObjId
 	 * @param itemId
 	 * @param count
+	 * @param price
 	 */
 	public TradePSItem(int itemObjId, int itemId, long count, long price)
 	{

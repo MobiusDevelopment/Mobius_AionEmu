@@ -71,14 +71,7 @@ public class Brigade_General_TahabataAI2 extends AggressiveNpcAI2
 	
 	private void fireTornado()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(243961, 679.88f, 1068.88f, 497.88f, (byte) 0); // IDF6_LF1_Thor_SumStatue_PhyAtk.
-			}
-		}, 5000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(243961, 679.88f, 1068.88f, 497.88f, (byte) 0), 5000);
 	}
 	
 	private void startPhase()
@@ -86,7 +79,7 @@ public class Brigade_General_TahabataAI2 extends AggressiveNpcAI2
 		AI2Actions.useSkill(this, 20060); // Lava Eruption.
 	}
 	
-	private void startParalyze()
+	void startParalyze()
 	{
 		AI2Actions.useSkill(this, 20761); // Flame Terror.
 	}
@@ -97,14 +90,7 @@ public class Brigade_General_TahabataAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				startParalyze();
-			}
-		}, 10000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> startParalyze(), 10000);
 	}
 	
 	@Override

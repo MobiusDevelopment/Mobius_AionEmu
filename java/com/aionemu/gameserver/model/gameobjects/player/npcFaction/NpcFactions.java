@@ -143,7 +143,7 @@ public class NpcFactions
 		leaveNpcFaction(npcFaction);
 	}
 	
-	private void leaveNpcFaction(NpcFaction npcFaction)
+	void leaveNpcFaction(NpcFaction npcFaction)
 	{
 		final NpcFactionTemplate npcFactionTemplate = DataManager.NPC_FACTIONS_DATA.getNpcFactionById(npcFaction.getId());
 		PacketSendUtility.sendPacket(owner, new SM_SYSTEM_MESSAGE(1300526, new DescriptionId(npcFactionTemplate.getNameId())));

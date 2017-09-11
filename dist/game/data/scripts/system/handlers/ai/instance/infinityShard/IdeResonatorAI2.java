@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
@@ -56,38 +55,30 @@ public class IdeResonatorAI2 extends AggressiveNpcAI2
 	private void startIdeInvulnerable()
 	{
 		final Npc IdeResonator = getPosition().getWorldMapInstance().getNpc(276519); // Ide Resonator.
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			IdeResonator.setTarget(getOwner());
+			IdeResonator.setNpcType(NpcType.INVULNERABLE);
+			final WorldMapInstance instance = getPosition().getWorldMapInstance();
+			for (Player player : instance.getPlayersInside())
 			{
-				IdeResonator.setTarget(getOwner());
-				IdeResonator.setNpcType(NpcType.INVULNERABLE);
-				final WorldMapInstance instance = getPosition().getWorldMapInstance();
-				for (Player player : instance.getPlayersInside())
+				if (MathUtil.isIn3dRange(player, IdeResonator, 10))
 				{
-					if (MathUtil.isIn3dRange(player, IdeResonator, 10))
-					{
-						infinityShardFail();
-						player.clearKnownlist();
-						player.updateKnownlist();
-					}
+					infinityShardFail();
+					player.clearKnownlist();
+					player.updateKnownlist();
 				}
 			}
 		}, 60000);
 	}
 	
-	private void infinityShardFail()
+	void infinityShardFail()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+		getPosition().getWorldMapInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
-				{
-					PacketSendUtility.sendSys3Message(player, "\uE005", "You fail <Hyperion> !!!");
-				}
+				PacketSendUtility.sendSys3Message(player, "\uE005", "You fail <Hyperion> !!!");
 			}
 		});
 		despawnNpc(231073); // Hyperion.
@@ -96,14 +87,10 @@ public class IdeResonatorAI2 extends AggressiveNpcAI2
 	
 	private void attackBoost()
 	{
-		attackBoostTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		attackBoostTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				AI2Actions.targetCreature(IdeResonatorAI2.this, getPosition().getWorldMapInstance().getNpc(231073)); // Hyperion.
-				AI2Actions.useSkill(IdeResonatorAI2.this, 21257);
-			}
+			AI2Actions.targetCreature(IdeResonatorAI2.this, getPosition().getWorldMapInstance().getNpc(231073)); // Hyperion.
+			AI2Actions.useSkill(IdeResonatorAI2.this, 21257);
 		}, 3000, 8000);
 	}
 	
@@ -114,50 +101,22 @@ public class IdeResonatorAI2 extends AggressiveNpcAI2
 		{
 			case 276519: // Ide Resonator.
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(276519, 108.55013f, 138.96940f, 132.60164f, (byte) 0);
-					}
-				}, 300000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(276519, 108.55013f, 138.96940f, 132.60164f, (byte) 0), 300000);
 				break;
 			}
 			case 231093: // Ide Resonator.
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231093, 126.54710f, 154.47961f, 131.47116f, (byte) 0);
-					}
-				}, 300000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231093, 126.54710f, 154.47961f, 131.47116f, (byte) 0), 300000);
 				break;
 			}
 			case 231094: // Ide Resonator.
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231094, 146.72450f, 139.12267f, 132.68515f, (byte) 0);
-					}
-				}, 300000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231094, 146.72450f, 139.12267f, 132.68515f, (byte) 0), 300000);
 				break;
 			}
 			case 231095: // Ide Resonator.
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(231095, 129.41306f, 121.34766f, 131.47110f, (byte) 0);
-					}
-				}, 300000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(231095, 129.41306f, 121.34766f, 131.47110f, (byte) 0), 300000);
 				break;
 			}
 		}

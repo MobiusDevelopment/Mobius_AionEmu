@@ -99,6 +99,11 @@ public class PlayerTransferService
 	
 	/**
 	 * first method - sent to source server
+	 * @param accountId
+	 * @param targetAccountId
+	 * @param playerId
+	 * @param targetServerId
+	 * @param taskId
 	 */
 	public void startTransfer(int accountId, int targetAccountId, int playerId, byte targetServerId, int taskId)
 	{
@@ -171,6 +176,11 @@ public class PlayerTransferService
 	
 	/**
 	 * sent from login to target server with character information from source server
+	 * @param taskId
+	 * @param targetAccountId
+	 * @param name
+	 * @param account
+	 * @param db
 	 */
 	public void cloneCharacter(int taskId, int targetAccountId, String name, String account, byte[] db)
 	{
@@ -229,6 +239,8 @@ public class PlayerTransferService
 	
 	/**
 	 * from login server to source, after response from target server
+	 * @param taskId
+	 * @param reason
 	 */
 	public void onError(int taskId, String reason)
 	{

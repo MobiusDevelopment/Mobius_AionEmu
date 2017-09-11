@@ -22,12 +22,12 @@ package com.aionemu.gameserver.geoEngine.collision;
  */
 public interface Collidable
 {
-	
 	/**
 	 * Check collision with another collidable
 	 * @param other
 	 * @param results
 	 * @return how many collisions were found
+	 * @throws UnsupportedCollisionException
 	 */
 	int collideWith(Collidable other, CollisionResults results) throws UnsupportedCollisionException;
 }

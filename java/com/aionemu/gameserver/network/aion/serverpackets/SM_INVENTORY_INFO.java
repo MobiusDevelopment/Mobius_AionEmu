@@ -48,7 +48,11 @@ public class SM_INVENTORY_INFO extends AionServerPacket
 	private boolean isFirstPacket;
 	
 	/**
+	 * @param isFirstPacket
 	 * @param items
+	 * @param npcExpandsSize
+	 * @param questExpandsSize
+	 * @param player
 	 */
 	public SM_INVENTORY_INFO(boolean isFirstPacket, List<Item> items, int npcExpandsSize, int questExpandsSize, Player player)
 	{

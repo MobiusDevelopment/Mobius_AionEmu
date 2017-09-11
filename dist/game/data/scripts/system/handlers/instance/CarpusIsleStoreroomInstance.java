@@ -43,7 +43,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****/
 /**
@@ -132,18 +131,14 @@ public class CarpusIsleStoreroomInstance extends GeneralInstanceHandler
 			{
 				isStartTimer = true;
 				System.currentTimeMillis();
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 ->
 				{
-					@Override
-					public void visit(Player player)
+					if (player1.isOnline())
 					{
-						if (player.isOnline())
-						{
-							startCarpusIsleStoreroomChamberTimer();
-							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 900));
-							// The Balaur protective magic ward has been activated.
-							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_START_IDABRE);
-						}
+						startCarpusIsleStoreroomChamberTimer();
+						PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 900));
+						// The Balaur protective magic ward has been activated.
+						PacketSendUtility.sendPacket(player1, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_START_IDABRE);
 					}
 				});
 			}
@@ -160,32 +155,21 @@ public class CarpusIsleStoreroomInstance extends GeneralInstanceHandler
 		CarpusIsleStoreroomTreasureBoxSuscess.add((Npc) spawn(700477, 671.581f, 565.1735f, 206.14534f, (byte) 60));
 	}
 	
-	private void startCarpusIsleStoreroomChamberTimer()
+	void startCarpusIsleStoreroomChamberTimer()
 	{
-		carpusIsleStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+		carpusIsleStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// All Balaur treasure chests have disappeared.
-				sendMsg(1400244);
-				CarpusIsleStoreroomTreasureBoxSuscess.get(0).getController().onDelete();
-				CarpusIsleStoreroomTreasureBoxSuscess.get(1).getController().onDelete();
-				CarpusIsleStoreroomTreasureBoxSuscess.get(2).getController().onDelete();
-			}
+			// All Balaur treasure chests have disappeared.
+			sendMsg(1400244);
+			CarpusIsleStoreroomTreasureBoxSuscess.get(0).getController().onDelete();
+			CarpusIsleStoreroomTreasureBoxSuscess.get(1).getController().onDelete();
+			CarpusIsleStoreroomTreasureBoxSuscess.get(2).getController().onDelete();
 		}, 900000); // 15 Minutes.
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	@Override

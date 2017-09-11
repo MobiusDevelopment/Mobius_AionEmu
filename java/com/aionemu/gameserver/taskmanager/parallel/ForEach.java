@@ -28,6 +28,7 @@ import com.google.common.base.Predicate;
 /**
  * @author Rolandas <br>
  *         To use forEach method, statically import the method</tt>
+ * @param <E>
  */
 public final class ForEach<E>extends CountedCompleter<E>
 {

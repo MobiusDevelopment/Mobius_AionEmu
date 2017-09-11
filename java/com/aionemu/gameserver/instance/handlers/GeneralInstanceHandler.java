@@ -104,7 +104,7 @@ public class GeneralInstanceHandler implements InstanceHandler
 		return false;
 	}
 	
-	protected VisibleObject spawn(int npcId, float x, float y, float z, byte heading)
+	public VisibleObject spawn(int npcId, float x, float y, float z, byte heading)
 	{
 		final SpawnTemplate template = SpawnEngine.addNewSingleTimeSpawn(mapId, npcId, x, y, z, heading);
 		return SpawnEngine.spawnObject(template, instanceId);

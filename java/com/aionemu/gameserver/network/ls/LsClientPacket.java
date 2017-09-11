@@ -61,7 +61,7 @@ public abstract class LsClientPacket extends BaseClientPacket<LoginServerConnect
 	 * Send new LsServerPacket to connection that is owner of this packet. This method is equivalent to: getConnection().sendPacket(msg);
 	 * @param msg
 	 */
-	protected void sendPacket(LsServerPacket msg)
+	public void sendPacket(LsServerPacket msg)
 	{
 		getConnection().sendPacket(msg);
 	}

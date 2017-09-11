@@ -94,14 +94,10 @@ public class MuruganAI2 extends GeneralNpcAI2
 		getOwner().setState(1);
 		getMoveController().moveToPoint(838, 1317, 396);
 		PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getOwner().getObjectId()));
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				forQuest(player);
-				AI2Actions.deleteOwner(MuruganAI2.this);
-			}
+			forQuest(player);
+			AI2Actions.deleteOwner(MuruganAI2.this);
 		}, 10000);
 	}
 	
@@ -115,7 +111,7 @@ public class MuruganAI2 extends GeneralNpcAI2
 		}
 	}
 	
-	private void forQuest(Player player)
+	void forQuest(Player player)
 	{
 		final int quest = player.getRace().equals(Race.ELYOS) ? 30708 : 30758;
 		final QuestState qs = player.getQuestStateList().getQuestState(quest);

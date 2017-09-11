@@ -17,7 +17,6 @@
 package com.aionemu.gameserver.model.gameobjects;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -103,6 +102,8 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	
 	/**
 	 * Create simple item with minimum information
+	 * @param objId
+	 * @param itemTemplate
 	 */
 	public Item(int objId, ItemTemplate itemTemplate)
 	{
@@ -128,6 +129,11 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	
 	/**
 	 * This constructor should be called from ItemService for newly created items and loadedFromDb
+	 * @param objId
+	 * @param itemTemplate
+	 * @param itemCount
+	 * @param isEquipped
+	 * @param equipmentSlot
 	 */
 	public Item(int objId, ItemTemplate itemTemplate, long itemCount, boolean isEquipped, long equipmentSlot)
 	{
@@ -139,6 +145,36 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	
 	/**
 	 * This constructor should be called only from DAO while loading from DB
+	 * @param objId
+	 * @param itemId
+	 * @param itemCount
+	 * @param itemColor
+	 * @param colorExpires
+	 * @param itemCreator
+	 * @param expireTime
+	 * @param activationCount
+	 * @param isEquipped
+	 * @param isSoulBound
+	 * @param equipmentSlot
+	 * @param itemLocation
+	 * @param enchant
+	 * @param enchantBonus
+	 * @param itemSkin
+	 * @param fusionedItem
+	 * @param optionalSocket
+	 * @param optionalFusionSocket
+	 * @param charge
+	 * @param randomBonus
+	 * @param rndCount
+	 * @param wrappableCount
+	 * @param isPacked
+	 * @param authorize
+	 * @param amplification
+	 * @param amplificationSkill
+	 * @param SkinSkill
+	 * @param lunaReskin
+	 * @param reuctionLevel
+	 * @param unSeal
 	 */
 	public Item(int objId, int itemId, long itemCount, int itemColor, int colorExpires, String itemCreator, int expireTime, int activationCount, boolean isEquipped, boolean isSoulBound, long equipmentSlot, int itemLocation, int enchant, int enchantBonus, int itemSkin, int fusionedItem, int optionalSocket, int optionalFusionSocket, int charge, int randomBonus, int rndCount, int wrappableCount, boolean isPacked, int authorize, boolean amplification, int amplificationSkill, int SkinSkill, boolean lunaReskin, int reuctionLevel, int unSeal)
 	{
@@ -554,17 +590,13 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	
 	private Set<ManaStone> itemStonesCollection()
 	{
-		return new TreeSet<>(new Comparator<ManaStone>()
+		return new TreeSet<>((o1, o2) ->
 		{
-			@Override
-			public int compare(ManaStone o1, ManaStone o2)
+			if (o1.getSlot() == o2.getSlot())
 			{
-				if (o1.getSlot() == o2.getSlot())
-				{
-					return 0;
-				}
-				return o1.getSlot() > o2.getSlot() ? 1 : -1;
+				return 0;
 			}
+			return o1.getSlot() > o2.getSlot() ? 1 : -1;
 		});
 	}
 	
@@ -799,6 +831,7 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	}
 	
 	/**
+	 * @param player
 	 * @return the mask
 	 */
 	public int getItemMask(Player player)
@@ -809,6 +842,7 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	
 	/**
 	 * @param player
+	 * @param mask
 	 * @return
 	 */
 	private int checkConfig(Player player, int mask)
@@ -843,6 +877,7 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	 * @param Item object
 	 * @return true, if this item is equal to the object item
 	 * @author vlog
+	 * @param i
 	 */
 	public boolean isSameItem(Item i)
 	{

@@ -38,6 +38,8 @@ public class CM_BLOCK_DEL extends AionClientPacket
 	
 	/**
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_BLOCK_DEL(int opcode, State state, State... restStates)
 	{

@@ -36,6 +36,8 @@ public class CM_TIME_CHECK extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_VERSION_CHECK </tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_TIME_CHECK(int opcode, State state, State... restStates)
 	{

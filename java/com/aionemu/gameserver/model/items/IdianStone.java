@@ -87,7 +87,7 @@ public class IdianStone extends ItemStone
 		}
 	}
 	
-	private synchronized void decreasePolishCharge(Player player, boolean isAttacked)
+	synchronized void decreasePolishCharge(Player player, boolean isAttacked)
 	{
 		decreasePolishCharge(player, isAttacked, 0);
 	}

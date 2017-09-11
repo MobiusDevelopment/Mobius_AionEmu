@@ -68,7 +68,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 
 import gnu.trove.list.array.TIntArrayList;
 import gnu.trove.map.hash.TIntObjectHashMap;
-import gnu.trove.procedure.TIntProcedure;
 import javolution.util.FastMap;
 
 /**
@@ -672,22 +671,18 @@ public class QuestEngine implements GameEngine
 		if (questCanAct.containsKey(templateId))
 		{
 			final TIntArrayList questIds = questCanAct.get(templateId);
-			return !questIds.forEach(new TIntProcedure()
+			return !questIds.forEach(value ->
 			{
-				@Override
-				public boolean execute(int value)
+				final QuestHandler questHandler = getQuestHandlerByQuestId(value);
+				if (questHandler != null)
 				{
-					final QuestHandler questHandler = getQuestHandlerByQuestId(value);
-					if (questHandler != null)
+					env.setQuestId(value);
+					if (questHandler.onCanAct(env, questActionType, objects))
 					{
-						env.setQuestId(value);
-						if (questHandler.onCanAct(env, questActionType, objects))
-						{
-							return false;
-						}
+						return false;
 					}
-					return true;
 				}
+				return true;
 			});
 		}
 		return false;
@@ -1300,7 +1295,7 @@ public class QuestEngine implements GameEngine
 		return new TIntArrayList();
 	}
 	
-	private QuestHandler getQuestHandlerByQuestId(int questId)
+	QuestHandler getQuestHandlerByQuestId(int questId)
 	{
 		return questHandlers.get(questId);
 	}
@@ -1321,7 +1316,14 @@ public class QuestEngine implements GameEngine
 		questHandlers.put(questId, questHandler);
 	}
 	
-	/** Add handler side drop (if not already in xml) */
+	/**
+	 * Add handler side drop (if not already in xml)
+	 * @param questId
+	 * @param npcId
+	 * @param itemId
+	 * @param amount
+	 * @param chance
+	 */
 	public void addHandlerSideQuestDrop(int questId, int npcId, int itemId, int amount, int chance)
 	{
 		final HandlerSideDrop hsd = new HandlerSideDrop(questId, npcId, itemId, amount, chance);
@@ -1396,35 +1398,30 @@ public class QuestEngine implements GameEngine
 		{
 			sendingDate.add(Calendar.HOUR, 24);
 		}
-		ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
 		{
-			
-			@Override
-			public void run()
+			final SM_SYSTEM_MESSAGE dailyMessage = new SM_SYSTEM_MESSAGE(1400854);
+			final SM_SYSTEM_MESSAGE weeklyMessage = new SM_SYSTEM_MESSAGE(1400856);
+			for (Player player : World.getInstance().getAllPlayers())
 			{
-				final SM_SYSTEM_MESSAGE dailyMessage = new SM_SYSTEM_MESSAGE(1400854);
-				final SM_SYSTEM_MESSAGE weeklyMessage = new SM_SYSTEM_MESSAGE(1400856);
-				for (Player player : World.getInstance().getAllPlayers())
+				for (QuestState qs : player.getQuestStateList().getAllQuestState())
 				{
-					for (QuestState qs : player.getQuestStateList().getAllQuestState())
+					if ((qs != null) && qs.canRepeat())
 					{
-						if ((qs != null) && qs.canRepeat())
+						final QuestTemplate template = DataManager.QUEST_DATA.getQuestById(qs.getQuestId());
+						if (template.isDaily())
 						{
-							final QuestTemplate template = DataManager.QUEST_DATA.getQuestById(qs.getQuestId());
-							if (template.isDaily())
-							{
-								player.getController().updateNearbyQuests();
-								PacketSendUtility.sendPacket(player, dailyMessage);
-							}
-							else if (template.isWeekly())
-							{
-								player.getController().updateNearbyQuests();
-								PacketSendUtility.sendPacket(player, weeklyMessage);
-							}
+							player.getController().updateNearbyQuests();
+							PacketSendUtility.sendPacket(player, dailyMessage);
+						}
+						else if (template.isWeekly())
+						{
+							player.getController().updateNearbyQuests();
+							PacketSendUtility.sendPacket(player, weeklyMessage);
 						}
 					}
-					player.getNpcFactions().sendDailyQuest();
 				}
+				player.getNpcFactions().sendDailyQuest();
 			}
 		}, sendingDate.getTimeInMillis() - System.currentTimeMillis(), 1000 * 60 * 60 * 24);
 	}

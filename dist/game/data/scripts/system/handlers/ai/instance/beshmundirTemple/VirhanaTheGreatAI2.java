@@ -57,17 +57,10 @@ public class VirhanaTheGreatAI2 extends AggressiveNpcAI2
 			return;
 		}
 		AI2Actions.useSkill(this, 19121); // Seal Of Reflection.
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				startRage();
-			}
-		}, 70000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> startRage(), 70000);
 	}
 	
-	private void startRage()
+	void startRage()
 	{
 		if (isAlreadyDead() || !isStart)
 		{
@@ -77,14 +70,7 @@ public class VirhanaTheGreatAI2 extends AggressiveNpcAI2
 		{
 			AI2Actions.useSkill(this, 18897); // Earthly Retribution.
 			count++;
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					startRage();
-				}
-			}, 10000);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> startRage(), 10000);
 		}
 		else
 		{

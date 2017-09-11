@@ -50,7 +50,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTemplate;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -70,14 +69,7 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 	{
 		super.onInstanceCreate(instance);
 		spawn(800429, 496.42648f, 516.493f, 240.26653f, (byte) 0); // Kahrun (Reian Leader).
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawnTiamatWomanForm();
-			}
-		}, 180000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawnTiamatWomanForm(), 180000);
 	}
 	
 	@Override
@@ -164,24 +156,16 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 							sendMsgByRace(1401538, Race.ELYOS, 15000);
 							// Eliminate the Balaur Spiritualist to grant a beneficial effect to the Empyrean Lord.
 							sendMsgByRace(1401550, Race.ELYOS, 25000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startGodKaisinelEvent();
-									spawn(283175, 551.78796f, 514.75494f, 417.40436f, (byte) 60); // Kaisinel Teleport.
-								}
+								startGodKaisinelEvent();
+								spawn(283175, 551.78796f, 514.75494f, 417.40436f, (byte) 60); // Kaisinel Teleport.
 							}, 15000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRushWalkEvent1();
-									spawnInternalPassageEnter1();
-									spawn(283166, 463f, 461f, 417.405f, (byte) 17); // Balaur Spiritualist.
-								}
+								startRushWalkEvent1();
+								spawnInternalPassageEnter1();
+								spawn(283166, 463f, 461f, 417.405f, (byte) 17); // Balaur Spiritualist.
 							}, 25000);
 							break;
 						case ASMODIANS:
@@ -195,53 +179,27 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 							sendMsgByRace(1401538, Race.ASMODIANS, 15000);
 							// Eliminate the Balaur Spiritualist to grant a beneficial effect to the Empyrean Lord.
 							sendMsgByRace(1401550, Race.ASMODIANS, 25000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startGodMarchutanEvent();
-									spawn(283176, 551.78796f, 514.75494f, 417.40436f, (byte) 60); // Marchutan Teleport.
-								}
+								startGodMarchutanEvent();
+								spawn(283176, 551.78796f, 514.75494f, 417.40436f, (byte) 60); // Marchutan Teleport.
 							}, 15000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRushWalkEvent1();
-									spawnInternalPassageEnter1();
-									spawn(283166, 463f, 461f, 417.405f, (byte) 17); // Balaur Spiritualist.
-								}
+								startRushWalkEvent1();
+								spawnInternalPassageEnter1();
+								spawn(283166, 463f, 461f, 417.405f, (byte) 17); // Balaur Spiritualist.
 							}, 25000);
 							break;
 					}
 				}
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 ->
 				{
-					@Override
-					public void visit(Player player)
-					{
-						// Dragon Lord Tiamat used its Death Roar to defeat the Empyrean Lord.
-						sendMsgByRace(1401542, Race.PC_ALL, 0);
-						SkillEngine.getInstance().applyEffectDirectly(20920, player, player, 30000); // Dragon Lord's Roar.
-					}
+					// Dragon Lord Tiamat used its Death Roar to defeat the Empyrean Lord.
+					sendMsgByRace(1401542, Race.PC_ALL, 0);
+					SkillEngine.getInstance().applyEffectDirectly(20920, player1, player1, 30000); // Dragon Lord's Roar.
 				});
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								player.getEffectController().removeEffect(20920); // Dragon Lord's Roar.
-							}
-						});
-					}
-				}, 10000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player1 -> player1.getEffectController().removeEffect(20920)), 10000);
 				break;
 			case 219365: // Fissurefang.
 				despawnNpc(npc);
@@ -258,15 +216,11 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 				// Fissure Incarnate has collapsed.
 				sendMsgByRace(1401533, Race.PC_ALL, 0);
 				despawnNpc(getNpc(730673)); // Internal Passage In 1.
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startRushWalkEvent2();
-						spawnInternalPassageEnter2();
-						spawn(283165, 545f, 461f, 417.405f, (byte) 46); // Balaur Spiritualist.
-					}
+					startRushWalkEvent2();
+					spawnInternalPassageEnter2();
+					spawn(283165, 545f, 461f, 417.405f, (byte) 46); // Balaur Spiritualist.
 				}, 15000);
 				break;
 			case 219366: // Graviwing.
@@ -284,15 +238,11 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 				// Gravity Incarnate has collapsed.
 				sendMsgByRace(1401535, Race.PC_ALL, 0);
 				despawnNpc(getNpc(730674)); // Internal Passage In 2.
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startRushWalkEvent3();
-						spawnInternalPassageEnter3();
-						spawn(283164, 463f, 568f, 417.405f, (byte) 105); // Balaur Spiritualist.
-					}
+					startRushWalkEvent3();
+					spawnInternalPassageEnter3();
+					spawn(283164, 463f, 568f, 417.405f, (byte) 105); // Balaur Spiritualist.
 				}, 15000);
 				break;
 			case 219367: // Wrathclaw.
@@ -310,15 +260,11 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 				// Wrath Incarnate has collapsed.
 				sendMsgByRace(1401534, Race.PC_ALL, 0);
 				despawnNpc(getNpc(730675)); // Internal Passage In 3.
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						startRushWalkEvent4();
-						spawnInternalPassageEnter4();
-						spawn(283163, 545f, 568f, 417.405f, (byte) 78); // Balaur Spiritualist.
-					}
+					startRushWalkEvent4();
+					spawnInternalPassageEnter4();
+					spawn(283163, 545f, 568f, 417.405f, (byte) 78); // Balaur Spiritualist.
 				}, 15000);
 				break;
 			case 219368: // Petriscale.
@@ -347,33 +293,25 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 							kaisinelLight();
 							// All of Tiamat's Incarnations have collapsed.
 							sendMsgByRace(1401537, Race.ELYOS, 2000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawnTiamatDying();
-									spawnGodKaisinelGroggy();
-									// Empyrean Lord Kaisinel is exhausted. You must take over the fight against Tiamat!
-									sendMsgByRace(1401540, Race.ELYOS, 5000);
-									
-								}
+								spawnTiamatDying();
+								spawnGodKaisinelGroggy();
+								// Empyrean Lord Kaisinel is exhausted. You must take over the fight against Tiamat!
+								sendMsgByRace(1401540, Race.ELYOS, 5000);
+								
 							}, 5000);
 							break;
 						case ASMODIANS:
 							marchutanGrace();
 							// All of Tiamat's Incarnations have collapsed.
 							sendMsgByRace(1401537, Race.ASMODIANS, 2000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawnTiamatDying();
-									spawnGodMarchutanGroggy();
-									// Empyrean Lord Marchutan is exhausted. You must take over the fight against Tiamat!
-									sendMsgByRace(1401541, Race.ASMODIANS, 5000);
-								}
+								spawnTiamatDying();
+								spawnGodMarchutanGroggy();
+								// Empyrean Lord Marchutan is exhausted. You must take over the fight against Tiamat!
+								sendMsgByRace(1401541, Race.ASMODIANS, 5000);
 							}, 5000);
 							break;
 					}
@@ -434,29 +372,11 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 				{
 					despawnNpc(getNpc(219368));
 				}
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 -> PacketSendUtility.sendPacket(player1, SM_SYSTEM_MESSAGE.IDTIAMAT_TIAMAT_COUNTDOWN_OVER));
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void visit(Player player)
-					{
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.IDTIAMAT_TIAMAT_COUNTDOWN_OVER);
-					}
-				});
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								onExitInstance(player);
-							}
-						});
-						onInstanceDestroy();
-					}
+					instance.doOnAllPlayers(player1 -> onExitInstance(player1));
+					onInstanceDestroy();
 				}, 10000);
 				break;
 			case 219491: // God Marchutan.
@@ -480,29 +400,11 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 				{
 					despawnNpc(getNpc(219368));
 				}
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 -> PacketSendUtility.sendPacket(player1, SM_SYSTEM_MESSAGE.IDTIAMAT_TIAMAT_COUNTDOWN_OVER));
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void visit(Player player)
-					{
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.IDTIAMAT_TIAMAT_COUNTDOWN_OVER);
-					}
-				});
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								onExitInstance(player);
-							}
-						});
-						onInstanceDestroy();
-					}
+					instance.doOnAllPlayers(player1 -> onExitInstance(player1));
+					onInstanceDestroy();
 				}, 10000);
 				break;
 		}
@@ -585,7 +487,7 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void eventGodAttack(Npc npc, float x, float y, float z, boolean despawn)
+	void eventGodAttack(Npc npc, float x, float y, float z, boolean despawn)
 	{
 		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
 		npc.setState(1);
@@ -596,14 +498,7 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 	// PHASE GOD KASINEL.
 	private void startGodKaisinelEvent()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				eventGodAttack((Npc) spawn(219488, 551.78796f, 514.75494f, 417.40436f, (byte) 60), 480.363f, 514.3989f, 417.40436f, false); // God Kaisinel.
-			}
-		}, 1000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> eventGodAttack((Npc) spawn(219488, 551.78796f, 514.75494f, 417.40436f, (byte) 60), 480.363f, 514.3989f, 417.40436f, false), 1000);
 	}
 	
 	private void spawnGodKaisinelGroggy()
@@ -614,14 +509,7 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 	// PHASE GOD MARCHUTAN.
 	private void startGodMarchutanEvent()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				eventGodAttack((Npc) spawn(219491, 551.78796f, 514.75494f, 417.40436f, (byte) 60), 480.363f, 514.3989f, 417.40436f, false); // God Marchutan.
-			}
-		}, 1000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> eventGodAttack((Npc) spawn(219491, 551.78796f, 514.75494f, 417.40436f, (byte) 60), 480.363f, 514.3989f, 417.40436f, false), 1000);
 	}
 	
 	private void spawnGodMarchutanGroggy()
@@ -681,21 +569,17 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 	// PHASE RUSH.
 	private void rushWalk(Npc npc)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						npc.setTarget(player);
-						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
-						npc.setState(1);
-						npc.getMoveController().moveToTargetObject();
-						PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
-					}
+					npc.setTarget(player);
+					((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
+					npc.setState(1);
+					npc.getMoveController().moveToTargetObject();
+					PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
 				}
 			}
 		}, 1000);
@@ -774,36 +658,18 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void sendMovie(Player player, int movie)

@@ -41,6 +41,8 @@ public class QuestTimer
 	
 	/**
 	 * @param questId
+	 * @param seconds
+	 * @param player
 	 */
 	public QuestTimer(int questId, int seconds, Player player)
 	{

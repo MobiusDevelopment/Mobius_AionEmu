@@ -62,7 +62,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -141,86 +140,66 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 	{
 		instanceTime = System.currentTimeMillis();
 		ironWallWarfrontReward.setInstanceStartTime();
-		ironWallTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ironWallTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!ironWallWarfrontReward.isRewarded())
 			{
-				if (!ironWallWarfrontReward.isRewarded())
-				{
-					openFirstDoors();
-					// The member recruitment window has passed. You cannot recruit any more members.
-					sendMsgByRace(1401181, Race.PC_ALL, 5000);
-					ironWallWarfrontReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-					startInstancePacket();
-					ironWallWarfrontReward.sendPacket(4, null);
-				}
+				openFirstDoors();
+				// The member recruitment window has passed. You cannot recruit any more members.
+				sendMsgByRace(1401181, Race.PC_ALL, 5000);
+				ironWallWarfrontReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+				startInstancePacket();
+				ironWallWarfrontReward.sendPacket(4, null);
 			}
 		}, 90000)); // 1:30-Mins
-		ironWallTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ironWallTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				ironWallWarfrontReward.sendPacket(4, null);
-				// A siege weapon has arrived at the siege base.
-				sendMsgByRace(1402210, Race.PC_ALL, 0);
-				// A flame vehicle has been spotted in the siege base.
-				sendMsgByRace(1402228, Race.PC_ALL, 10000);
-				// A battering ram has been spotted in the siege base.
-				sendMsgByRace(1402229, Race.PC_ALL, 20000);
-				sp(701624, 422.98706f, 641.44116f, 214.52452f, (byte) 92, 0);
-				sp(702589, 426.4476f, 617.95264f, 214.52452f, (byte) 32, 0);
-			}
+			sendPacket(false);
+			ironWallWarfrontReward.sendPacket(4, null);
+			// A siege weapon has arrived at the siege base.
+			sendMsgByRace(1402210, Race.PC_ALL, 0);
+			// A flame vehicle has been spotted in the siege base.
+			sendMsgByRace(1402228, Race.PC_ALL, 10000);
+			// A battering ram has been spotted in the siege base.
+			sendMsgByRace(1402229, Race.PC_ALL, 20000);
+			sp(701624, 422.98706f, 641.44116f, 214.52452f, (byte) 92, 0);
+			sp(702589, 426.4476f, 617.95264f, 214.52452f, (byte) 32, 0);
 		}, 600000)); // 10-Mins
-		ironWallTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ironWallTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				ironWallWarfrontReward.sendPacket(4, null);
-				// Supplies have arrived at their respective bind points.
-				sendMsgByRace(1402206, Race.PC_ALL, 0);
-				sp(233510, 298.95648f, 399.21204f, 227.56165f, (byte) 17, 0); // Asmodians Supplies.
-				sp(233511, 304.02267f, 396.9381f, 227.68314f, (byte) 26, 0); // Asmodians Supplies.
-				sp(233512, 309.49344f, 395.97568f, 227.2273f, (byte) 28, 0); // Asmodians Supplies.
-				sp(831979, 298.95648f, 399.21204f, 227.56165f, (byte) 17, 0); // Asmodians Supplies Flag.
-				sp(831979, 304.02267f, 396.9381f, 227.68314f, (byte) 26, 0); // Asmodians Supplies Flag.
-				sp(831979, 309.49344f, 395.97568f, 227.2273f, (byte) 28, 0); // Asmodians Supplies Flag.
-				// **//
-				sp(233530, 707.57275f, 648.9977f, 203.91081f, (byte) 10, 0); // Elyos Supplies.
-				sp(233531, 706.97595f, 644.1978f, 203.07692f, (byte) 113, 0); // Elyos Supplies.
-				sp(233532, 701.6543f, 643.7906f, 202.58696f, (byte) 84, 0); // Elyos Supplies.
-				sp(831978, 707.57275f, 648.9977f, 203.91081f, (byte) 10, 0); // Elyos Supplies Flag.
-				sp(831978, 706.97595f, 644.1978f, 203.07692f, (byte) 113, 0); // Elyos Supplies Flag.
-				sp(831978, 701.6543f, 643.7906f, 202.58696f, (byte) 84, 0); // Elyos Supplies Flag.
-			}
+			sendPacket(false);
+			ironWallWarfrontReward.sendPacket(4, null);
+			// Supplies have arrived at their respective bind points.
+			sendMsgByRace(1402206, Race.PC_ALL, 0);
+			sp(233510, 298.95648f, 399.21204f, 227.56165f, (byte) 17, 0); // Asmodians Supplies.
+			sp(233511, 304.02267f, 396.9381f, 227.68314f, (byte) 26, 0); // Asmodians Supplies.
+			sp(233512, 309.49344f, 395.97568f, 227.2273f, (byte) 28, 0); // Asmodians Supplies.
+			sp(831979, 298.95648f, 399.21204f, 227.56165f, (byte) 17, 0); // Asmodians Supplies Flag.
+			sp(831979, 304.02267f, 396.9381f, 227.68314f, (byte) 26, 0); // Asmodians Supplies Flag.
+			sp(831979, 309.49344f, 395.97568f, 227.2273f, (byte) 28, 0); // Asmodians Supplies Flag.
+			// **//
+			sp(233530, 707.57275f, 648.9977f, 203.91081f, (byte) 10, 0); // Elyos Supplies.
+			sp(233531, 706.97595f, 644.1978f, 203.07692f, (byte) 113, 0); // Elyos Supplies.
+			sp(233532, 701.6543f, 643.7906f, 202.58696f, (byte) 84, 0); // Elyos Supplies.
+			sp(831978, 707.57275f, 648.9977f, 203.91081f, (byte) 10, 0); // Elyos Supplies Flag.
+			sp(831978, 706.97595f, 644.1978f, 203.07692f, (byte) 113, 0); // Elyos Supplies Flag.
+			sp(831978, 701.6543f, 643.7906f, 202.58696f, (byte) 84, 0); // Elyos Supplies Flag.
 		}, 900000)); // 15-Mins
-		ironWallTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ironWallTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				ironWallWarfrontReward.sendPacket(4, null);
-				// Grand Commander Pashid has arrived with the Guard to assault the fortress.
-				sendMsgByRace(1401819, Race.PC_ALL, 0);
-				spawn(233544, 744.06085f, 293.31564f, 233.70102f, (byte) 104); // Commander Pashid.
-				spawn(801956, 744.06085f, 293.31564f, 233.70102f, (byte) 104); // Assault Team Commander Flag.
-			}
+			sendPacket(false);
+			ironWallWarfrontReward.sendPacket(4, null);
+			// Grand Commander Pashid has arrived with the Guard to assault the fortress.
+			sendMsgByRace(1401819, Race.PC_ALL, 0);
+			spawn(233544, 744.06085f, 293.31564f, 233.70102f, (byte) 104); // Commander Pashid.
+			spawn(801956, 744.06085f, 293.31564f, 233.70102f, (byte) 104); // Assault Team Commander Flag.
 		}, 1800000)); // 30-Mins
-		ironWallTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ironWallTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!ironWallWarfrontReward.isRewarded())
 			{
-				if (!ironWallWarfrontReward.isRewarded())
-				{
-					final Race winnerRace = ironWallWarfrontReward.getWinnerRaceByScore();
-					stopInstance(winnerRace);
-				}
+				final Race winnerRace = ironWallWarfrontReward.getWinnerRaceByScore();
+				stopInstance(winnerRace);
 			}
 		}, 2400000)); // 40-Mins
 	}
@@ -246,24 +225,20 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 	
 	private void sendEnterPacket(Player player)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(opponent ->
 		{
-			@Override
-			public void visit(Player opponent)
+			if (player.getRace() != opponent.getRace())
 			{
-				if (player.getRace() != opponent.getRace())
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
+				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId()));
+			}
+			else
+			{
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
+				if (player.getObjectId() != opponent.getObjectId())
 				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId()));
-				}
-				else
-				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
-					if (player.getObjectId() != opponent.getObjectId())
-					{
-						PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId(), 20, 0));
-					}
+					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId(), 20, 0));
 				}
 			}
 		});
@@ -274,16 +249,12 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 	
 	private void startInstancePacket()
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), ironWallWarfrontReward, instance.getPlayersInside(), true));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(3, getTime(), ironWallWarfrontReward, player.getObjectId(), 0, 0));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), ironWallWarfrontReward, instance.getPlayersInside(), true));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
-			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), ironWallWarfrontReward, instance.getPlayersInside(), true));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(3, getTime(), ironWallWarfrontReward, player.getObjectId(), 0, 0));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), ironWallWarfrontReward, instance.getPlayersInside(), true));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
 		});
 	}
 	
@@ -291,25 +262,11 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 	{
 		if (isObjects)
 		{
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime(), ironWallWarfrontReward, instance.getPlayersInside(), true));
-				}
-			});
+			instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime(), ironWallWarfrontReward, instance.getPlayersInside(), true)));
 		}
 		else
 		{
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), ironWallWarfrontReward, instance.getPlayersInside(), true));
-				}
-			});
+			instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), ironWallWarfrontReward, instance.getPlayersInside(), true)));
 		}
 	}
 	
@@ -379,24 +336,20 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 		{
 			npc.getController().onDelete();
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						onExitInstance(player);
-					}
-					AutoGroupService.getInstance().unRegisterInstance(instanceId);
+					onExitInstance(player);
 				}
+				AutoGroupService.getInstance().unRegisterInstance(instanceId);
 			}
 		}, 60000);
 	}
 	
-	private int getTime()
+	int getTime()
 	{
 		final long result = System.currentTimeMillis() - instanceTime;
 		if (result < 90000)
@@ -809,16 +762,12 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 				point = 200000;
 				deleteNpc(801956);
 				RaceKilledCommander = mostPlayerDamage.getRace();
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
+					if (!ironWallWarfrontReward.isRewarded())
 					{
-						if (!ironWallWarfrontReward.isRewarded())
-						{
-							final Race winningRace = ironWallWarfrontReward.getWinnerRaceByScore();
-							stopInstance(winningRace);
-						}
+						final Race winningRace = ironWallWarfrontReward.getWinnerRaceByScore();
+						stopInstance(winningRace);
 					}
 				}, 30000);
 				break;
@@ -1970,18 +1919,14 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
-		ironWallTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ironWallTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				spawn(npcId, x, y, z, h, entityId);
+				if (msg > 0)
 				{
-					spawn(npcId, x, y, z, h, entityId);
-					if (msg > 0)
-					{
-						sendMsgByRace(msg, race, 0);
-					}
+					sendMsgByRace(msg, race, 0);
 				}
 			}
 		}, time));
@@ -1989,41 +1934,26 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
-		ironWallTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ironWallTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
-				{
-					final Npc npc = (Npc) spawn(npcId, x, y, z, h);
-					npc.getSpawn().setWalkerId(walkerId);
-					WalkManager.startWalking((NpcAI2) npc.getAi2());
-				}
+				final Npc npc = (Npc) spawn(npcId, x, y, z, h);
+				npc.getSpawn().setWalkerId(walkerId);
+				WalkManager.startWalking((NpcAI2) npc.getAi2());
 			}
 		}, time));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ironWallTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		ironWallTask.add(ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time));
+		}), time));
 	}
 	
 	private void stopInstanceTask()

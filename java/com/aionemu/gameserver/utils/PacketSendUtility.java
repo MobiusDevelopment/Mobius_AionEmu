@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.team.legion.Legion;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_MESSAGE;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.SiegeZoneInstance;
 
 /**
@@ -100,45 +99,36 @@ public class PacketSendUtility
 	
 	/**
 	 * Player Send Packet
+	 * @param player
+	 * @param packet
+	 * @param time
 	 */
 	public static void playerSendPacketTime(Player player, AionServerPacket packet, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (player.getClientConnection() != null)
 			{
-				if (player.getClientConnection() != null)
-				{
-					player.getClientConnection().sendPacket(packet);
-				}
+				player.getClientConnection().sendPacket(packet);
 			}
 		}, time);
 	}
 	
 	/**
 	 * Npc Send Packet
+	 * @param npc
+	 * @param packet
+	 * @param time
 	 */
 	public static void npcSendPacketTime(Npc npc, AionServerPacket packet, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> npc.getKnownList().doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.isOnline())
 			{
-				npc.getKnownList().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.isOnline())
-						{
-							sendPacket(player, packet);
-						}
-					}
-				});
+				sendPacket(player, packet);
 			}
-		}, time);
+		}), time);
 	}
 	
 	public static void broadcastPacket(Player player, AionServerPacket packet, boolean toSelf)
@@ -161,15 +151,11 @@ public class PacketSendUtility
 	
 	public static void broadcastPacket(VisibleObject visibleObject, AionServerPacket packet)
 	{
-		visibleObject.getKnownList().doOnAllPlayers(new Visitor<Player>()
+		visibleObject.getKnownList().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
-				{
-					sendPacket(player, packet);
-				}
+				sendPacket(player, packet);
 			}
 		});
 	}
@@ -180,46 +166,33 @@ public class PacketSendUtility
 		{
 			sendPacket(player, packet);
 		}
-		player.getKnownList().doOnAllPlayers(new Visitor<Player>()
+		player.getKnownList().doOnAllPlayers(object ->
 		{
-			@Override
-			public void visit(Player object)
+			if (filter.acceptObject(object))
 			{
-				if (filter.acceptObject(object))
-				{
-					sendPacket(object, packet);
-				}
+				sendPacket(object, packet);
 			}
 		});
 	}
 	
 	public static void broadcastPacket(VisibleObject visibleObject, AionServerPacket packet, int distance)
 	{
-		visibleObject.getKnownList().doOnAllPlayers(new Visitor<Player>()
+		visibleObject.getKnownList().doOnAllPlayers(p ->
 		{
-			@Override
-			public void visit(Player p)
+			if (MathUtil.isIn3dRange(visibleObject, p, distance))
 			{
-				if (MathUtil.isIn3dRange(visibleObject, p, distance))
-				{
-					sendPacket(p, packet);
-				}
+				sendPacket(p, packet);
 			}
 		});
 	}
 	
 	public static void broadcastFilteredPacket(AionServerPacket packet, ObjectFilter<Player> filter)
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(object ->
 		{
-			
-			@Override
-			public void visit(Player object)
+			if (filter.acceptObject(object))
 			{
-				if (filter.acceptObject(object))
-				{
-					sendPacket(object, packet);
-				}
+				sendPacket(object, packet);
 			}
 		});
 	}
@@ -245,13 +218,6 @@ public class PacketSendUtility
 	
 	public static void broadcastPacketToZone(SiegeZoneInstance zone, AionServerPacket packet)
 	{
-		zone.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				sendPacket(player, packet);
-			}
-		});
+		zone.doOnAllPlayers(player -> sendPacket(player, packet));
 	}
 }

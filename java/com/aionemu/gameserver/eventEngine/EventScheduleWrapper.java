@@ -48,19 +48,12 @@ class EventScheduleWrapper implements Runnable
 		}
 		if (!check())
 		{
-			final Runnable runnable = new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					check();
-				}
-			};
+			final Runnable runnable = () -> check();
 			last_future = ThreadPoolManager.getInstance().schedule(runnable, RECHECK_DELAY * 60 * 1000);
 		}
 	}
 	
-	private boolean check()
+	boolean check()
 	{
 		if (event.isFinished() || first)
 		{

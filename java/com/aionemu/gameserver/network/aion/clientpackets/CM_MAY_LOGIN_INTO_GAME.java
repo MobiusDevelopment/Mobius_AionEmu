@@ -31,6 +31,8 @@ public class CM_MAY_LOGIN_INTO_GAME extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_MAY_LOGIN_INTO_GAME </tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_MAY_LOGIN_INTO_GAME(int opcode, State state, State... restStates)
 	{

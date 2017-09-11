@@ -28,7 +28,6 @@ import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_FORCED_MOVE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.NpcShoutsService;
@@ -36,7 +35,6 @@ import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldPosition;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
@@ -221,24 +219,20 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 	
 	private void startSkillTask()
 	{
-		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelTask1();
-				}
-				else
-				{
-					chooseRandomEvent();
-				}
+				cancelTask1();
+			}
+			else
+			{
+				chooseRandomEvent();
 			}
 		}, 4000, 30000);
 	}
 	
-	private void cancelTask1()
+	void cancelTask1()
 	{
 		if ((skillTask != null) && !skillTask.isCancelled())
 		{
@@ -269,14 +263,7 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 	{
 		AI2Actions.targetSelf(Crazed_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21177, 1, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawnSorcererQueenModor();
-			}
-		}, 11000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawnSorcererQueenModor(), 11000);
 	}
 	
 	private void spawnSorcererQueenModor()
@@ -292,15 +279,11 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 		// Rise, my children, rise!
 		sendMsg(1500749, getObjectId(), false, 2000);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				modorNpc();
-				World.getInstance().updatePosition(getOwner(), 284, 262, 249, (byte) 63);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+			modorNpc();
+			World.getInstance().updatePosition(getOwner(), 284, 262, 249, (byte) 63);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -308,36 +291,32 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 	{
 		AI2Actions.targetSelf(Crazed_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			final float pos1[][] =
 			{
-				final float pos1[][] =
 				{
-					{
-						232.426f,
-						263.818f,
-						248.6419f,
-						115
-					},
-					{
-						271.426f,
-						230.243f,
-						250.9022f,
-						38
-					},
-					{
-						240.130f,
-						235.219f,
-						251.1553f,
-						17
-					}
-				};
-				final float pos[] = pos1[Rnd.get(0, 2)];
-				World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+					232.426f,
+					263.818f,
+					248.6419f,
+					115
+				},
+				{
+					271.426f,
+					230.243f,
+					250.9022f,
+					38
+				},
+				{
+					240.130f,
+					235.219f,
+					251.1553f,
+					17
+				}
+			};
+			final float pos[] = pos1[Rnd.get(0, 2)];
+			World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -345,15 +324,11 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 	{
 		AI2Actions.targetSelf(Crazed_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				modorNpc();
-				World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+			modorNpc();
+			World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -361,23 +336,15 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 	{
 		AI2Actions.targetSelf(Crazed_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21268, 60, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			AI2Actions.targetSelf(Crazed_ModorAI2.this);
+			SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				AI2Actions.targetSelf(Crazed_ModorAI2.this);
-				SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						World.getInstance().updatePosition(getOwner(), 232, 263, 249, (byte) 115);
-						PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-					}
-				}, 2000);
-			}
+				World.getInstance().updatePosition(getOwner(), 232, 263, 249, (byte) 115);
+				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
+			}, 2000);
 		}, 3000);
 	}
 	
@@ -386,15 +353,11 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 		// Rise, my children, rise!
 		sendMsg(1500749, getObjectId(), false, 2000);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				modorNpc();
-				World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+			modorNpc();
+			World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -402,36 +365,32 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 	{
 		AI2Actions.targetSelf(Crazed_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			final float pos1[][] =
 			{
-				final float pos1[][] =
 				{
-					{
-						232.426f,
-						263.818f,
-						248.6419f,
-						115
-					},
-					{
-						271.426f,
-						230.243f,
-						250.9022f,
-						38
-					},
-					{
-						240.130f,
-						235.219f,
-						251.1553f,
-						17
-					}
-				};
-				final float pos[] = pos1[Rnd.get(0, 2)];
-				World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+					232.426f,
+					263.818f,
+					248.6419f,
+					115
+				},
+				{
+					271.426f,
+					230.243f,
+					250.9022f,
+					38
+				},
+				{
+					240.130f,
+					235.219f,
+					251.1553f,
+					17
+				}
+			};
+			final float pos[] = pos1[Rnd.get(0, 2)];
+			World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -440,15 +399,11 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 		// Rise, my children, rise!
 		sendMsg(1500749, getObjectId(), false, 2000);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				modorNpc2();
-				World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+			modorNpc2();
+			World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -456,36 +411,32 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 	{
 		AI2Actions.targetSelf(Crazed_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			final float pos1[][] =
 			{
-				final float pos1[][] =
 				{
-					{
-						232.426f,
-						263.818f,
-						248.6419f,
-						115
-					},
-					{
-						271.426f,
-						230.243f,
-						250.9022f,
-						38
-					},
-					{
-						240.130f,
-						235.219f,
-						251.1553f,
-						17
-					}
-				};
-				final float pos[] = pos1[Rnd.get(0, 2)];
-				World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+					232.426f,
+					263.818f,
+					248.6419f,
+					115
+				},
+				{
+					271.426f,
+					230.243f,
+					250.9022f,
+					38
+				},
+				{
+					240.130f,
+					235.219f,
+					251.1553f,
+					17
+				}
+			};
+			final float pos[] = pos1[Rnd.get(0, 2)];
+			World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -494,45 +445,33 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 		// Rise, my children, rise!
 		sendMsg(1500749, getObjectId(), false, 2000);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				modorNpc2();
-				World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+			modorNpc2();
+			World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
 	private void modorNpc()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				spawn(284659, 271.12497f, 247.17401f, 242.625f, (byte) 90);
-				spawn(284660, 244.12497f, 245.17401f, 242.625f, (byte) 90);
-				spawn(284664, 243.12497f, 270.17401f, 242.625f, (byte) 90);
-				spawn(284660, 268.12497f, 271.17401f, 242.625f, (byte) 90);
-			}
+			spawn(284659, 271.12497f, 247.17401f, 242.625f, (byte) 90);
+			spawn(284660, 244.12497f, 245.17401f, 242.625f, (byte) 90);
+			spawn(284664, 243.12497f, 270.17401f, 242.625f, (byte) 90);
+			spawn(284660, 268.12497f, 271.17401f, 242.625f, (byte) 90);
 		}, 4000);
 	}
 	
 	private void modorNpc2()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				spawn(284663, 271.12497f, 247.17401f, 242.625f, (byte) 90);
-				spawn(284662, 244.12497f, 245.17401f, 242.625f, (byte) 90);
-				spawn(284664, 243.12497f, 270.17401f, 242.625f, (byte) 90);
-				spawn(284663, 268.12497f, 271.17401f, 242.625f, (byte) 90);
-			}
+			spawn(284663, 271.12497f, 247.17401f, 242.625f, (byte) 90);
+			spawn(284662, 244.12497f, 245.17401f, 242.625f, (byte) 90);
+			spawn(284664, 243.12497f, 270.17401f, 242.625f, (byte) 90);
+			spawn(284663, 268.12497f, 271.17401f, 242.625f, (byte) 90);
 		}, 4000);
 	}
 	
@@ -601,16 +540,12 @@ public class Crazed_ModorAI2 extends AggressiveNpcAI2
 	
 	private void announceAnotherDimension()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+		getPosition().getWorldMapInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.isOnline())
 			{
-				if (player.isOnline())
-				{
-					// Modor has disappeared into another dimension.
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDLDF5_Under_Rune_User_Kill);
-				}
+				// Modor has disappeared into another dimension.
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDLDF5_Under_Rune_User_Kill);
 			}
 		});
 	}

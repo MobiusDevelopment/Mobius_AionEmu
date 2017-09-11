@@ -115,7 +115,11 @@ public final class BIHNode
 	
 	/**
 	 * @param col
+	 * @param box
+	 * @param worldMatrix
+	 * @param tree
 	 * @param results
+	 * @return
 	 */
 	public final int intersectWhere(Collidable col, BoundingBox box, Matrix4f worldMatrix, BIHTree tree, CollisionResults results)
 	{
@@ -197,8 +201,13 @@ public final class BIHNode
 	}
 	
 	/**
+	 * @param r
+	 * @param worldMatrix
+	 * @param tree
 	 * @param sceneMin
 	 * @param sceneMax
+	 * @param results
+	 * @return
 	 */
 	public final int intersectBrute(Ray r, Matrix4f worldMatrix, BIHTree tree, float sceneMin, float sceneMax, CollisionResults results)
 	{

@@ -37,6 +37,8 @@ public class SM_DELETE extends AionServerPacket
 	/**
 	 * Constructor.
 	 * @param object
+	 * @param time
+	 * @param id
 	 */
 	
 	public SM_DELETE(AionObject object, int time, int id)

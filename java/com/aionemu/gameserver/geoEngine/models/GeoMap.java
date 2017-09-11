@@ -326,8 +326,14 @@ public class GeoMap extends Node
 	}
 	
 	/**
+	 * @param x
+	 * @param y
 	 * @param z
+	 * @param targetX
+	 * @param targetY
 	 * @param targetZ
+	 * @param ray
+	 * @return
 	 */
 	private Vector3f calculateTerrainCollision(float x, float y, float z, float targetX, float targetY, float targetZ, Ray ray)
 	{

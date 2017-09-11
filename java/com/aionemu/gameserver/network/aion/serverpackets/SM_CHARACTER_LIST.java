@@ -48,6 +48,8 @@ public class SM_CHARACTER_LIST extends PlayerInfo
 	
 	/**
 	 * Constructs new <tt>SM_CHARACTER_LIST </tt> packet
+	 * @param unkValue
+	 * @param playOk2
 	 */
 	public SM_CHARACTER_LIST(int unkValue, int playOk2)
 	{

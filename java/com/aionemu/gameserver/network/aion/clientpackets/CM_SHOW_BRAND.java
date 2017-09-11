@@ -36,6 +36,8 @@ public class CM_SHOW_BRAND extends AionClientPacket
 	
 	/**
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_SHOW_BRAND(int opcode, State state, State... restStates)
 	{

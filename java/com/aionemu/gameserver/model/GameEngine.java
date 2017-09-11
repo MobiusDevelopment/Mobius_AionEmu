@@ -26,6 +26,7 @@ public interface GameEngine
 	
 	/**
 	 * Load resources for engine
+	 * @param progressLatch
 	 */
 	void load(CountDownLatch progressLatch);
 	

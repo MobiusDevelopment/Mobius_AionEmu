@@ -41,27 +41,16 @@ public class GravityTornadoAI2 extends AggressiveNpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				SkillEngine.getInstance().getSkill(getOwner(), 20966, 60, getOwner()).useNoAnimationSkill();
-				startLifeTask();
-			}
+			SkillEngine.getInstance().getSkill(getOwner(), 20966, 60, getOwner()).useNoAnimationSkill();
+			startLifeTask();
 		}, 1000);
 	}
 	
-	private void startLifeTask()
+	void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(GravityTornadoAI2.this);
-			}
-		}, 10000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> AI2Actions.deleteOwner(GravityTornadoAI2.this), 10000);
 	}
 	
 	@Override

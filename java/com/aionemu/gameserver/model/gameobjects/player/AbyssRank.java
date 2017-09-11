@@ -114,6 +114,7 @@ public class AbyssRank
 	/**
 	 * Add AP to a player (current player AP + added AP)
 	 * @param additionalAp
+	 * @param player
 	 */
 	public void addAp(int additionalAp, Player player)
 	{

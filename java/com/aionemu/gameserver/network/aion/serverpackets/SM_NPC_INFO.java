@@ -59,6 +59,7 @@ public class SM_NPC_INFO extends AionServerPacket
 	
 	/**
 	 * Constructs new <tt>SM_NPC_INFO </tt> packet
+	 * @param npc
 	 * @param player
 	 * @param kisk - the visible npc.
 	 */

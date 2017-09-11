@@ -28,7 +28,6 @@ import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.spawns.SpawnGroup2;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.zorshivdredgionspawns.ZorshivDredgionSpawnTemplate;
@@ -42,7 +41,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -101,14 +99,7 @@ public class ZorshivDredgionService
 			activeZorshivDredgion.put(id, zorshiv);
 		}
 		zorshiv.start();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				stopZorshivDredgion(id);
-			}
-		}, duration * 3600 * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> stopZorshivDredgion(id), duration * 3600 * 1000);
 	}
 	
 	public void stopZorshivDredgion(int id)
@@ -150,6 +141,8 @@ public class ZorshivDredgionService
 	
 	/**
 	 * Dredgion Invasion Msg.
+	 * @param id
+	 * @return
 	 */
 	public boolean levinshorMsg(int id)
 	{
@@ -158,19 +151,15 @@ public class ZorshivDredgionService
 			case 1:
 			case 2:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
+				World.getInstance().doOnAllPlayers(player ->
 				{
-					@Override
-					public void visit(Player player)
-					{
-						PacketSendUtility.sendSys3Message(player, "\uE050", "The <Zorshiv Dredgion> to lands at levinshor !!!");
-						// The Balaur Dredgion has appeared.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_CARRIER_SPAWN, 120000);
-						// The Dredgion has dropped Balaur Troopers.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_CARRIER_DROP_DRAGON, 300000);
-						// The Balaur Dredgion has disappeared.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_CARRIER_DESPAWN, 3600000);
-					}
+					PacketSendUtility.sendSys3Message(player, "\uE050", "The <Zorshiv Dredgion> to lands at levinshor !!!");
+					// The Balaur Dredgion has appeared.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_CARRIER_SPAWN, 120000);
+					// The Dredgion has dropped Balaur Troopers.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_CARRIER_DROP_DRAGON, 300000);
+					// The Balaur Dredgion has disappeared.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_CARRIER_DESPAWN, 3600000);
 				});
 				return true;
 			}
@@ -187,19 +176,15 @@ public class ZorshivDredgionService
 		{
 			case 3:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
+				World.getInstance().doOnAllPlayers(player ->
 				{
-					@Override
-					public void visit(Player player)
-					{
-						PacketSendUtility.sendSys3Message(player, "\uE050", "The <Zorshiv Dredgion> to lands at inggison !!!");
-						// The Balaur Dredgion has appeared.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_CARRIER_SPAWN, 120000);
-						// The Dredgion has dropped Balaur Troopers.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_CARRIER_DROP_DRAGON, 300000);
-						// The Balaur Dredgion has disappeared.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_CARRIER_DESPAWN, 3600000);
-					}
+					PacketSendUtility.sendSys3Message(player, "\uE050", "The <Zorshiv Dredgion> to lands at inggison !!!");
+					// The Balaur Dredgion has appeared.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_CARRIER_SPAWN, 120000);
+					// The Dredgion has dropped Balaur Troopers.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_CARRIER_DROP_DRAGON, 300000);
+					// The Balaur Dredgion has disappeared.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_CARRIER_DESPAWN, 3600000);
 				});
 				return true;
 			}

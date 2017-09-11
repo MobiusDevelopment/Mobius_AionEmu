@@ -93,6 +93,8 @@ public class TradeList
 	}
 	
 	/**
+	 * @param player
+	 * @param modifier
 	 * @return price TradeList sum price
 	 */
 	public boolean calculateBuyListPrice(Player player, int modifier)
@@ -109,6 +111,7 @@ public class TradeList
 	}
 	
 	/**
+	 * @param player
 	 * @return true or false
 	 */
 	public boolean calculateAbyssBuyListPrice(Player player)
@@ -169,6 +172,7 @@ public class TradeList
 	}
 	
 	/**
+	 * @param player
 	 * @return true or false
 	 */
 	public boolean calculateRewardBuyListPrice(Player player)

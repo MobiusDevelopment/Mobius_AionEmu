@@ -22,13 +22,11 @@ import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.model.gameobjects.Npc;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.services.HTMLService;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldPosition;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
@@ -73,22 +71,8 @@ public class Conquest_Inggison_BossAI2 extends AggressiveNpcAI2
 		final WorldPosition p = getPosition();
 		if (p != null)
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					spawn(833018, p.getX(), p.getY(), p.getZ(), (byte) 0); // Secret Portal.
-				}
-			}, 15000);
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					despawnNpc(833018); // Secret Portal.
-				}
-			}, 300000); // 5 Minutes.
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(833018, p.getX(), p.getY(), p.getZ(), (byte) 0), 15000);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> despawnNpc(833018), 300000); // 5 Minutes.
 		}
 	}
 	
@@ -97,22 +81,8 @@ public class Conquest_Inggison_BossAI2 extends AggressiveNpcAI2
 		final WorldPosition p = getPosition();
 		if (p != null)
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					spawn(833019, p.getX(), p.getY(), p.getZ(), (byte) 0); // Questionable Portal.
-				}
-			}, 15000);
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					despawnNpc(833019); // Secret Portal.
-				}
-			}, 300000); // 5 Minutes.
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(833019, p.getX(), p.getY(), p.getZ(), (byte) 0), 15000);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> despawnNpc(833019), 300000); // 5 Minutes.
 		}
 	}
 	
@@ -121,33 +91,29 @@ public class Conquest_Inggison_BossAI2 extends AggressiveNpcAI2
 		final WorldPosition p = getPosition();
 		if (p != null)
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				switch (Rnd.get(1, 4))
 				{
-					switch (Rnd.get(1, 4))
+					case 1:
 					{
-						case 1:
-						{
-							spawn(856175, p.getX(), p.getY(), p.getZ(), (byte) 0); // Pawrunerk.
-							break;
-						}
-						case 2:
-						{
-							spawn(856176, p.getX(), p.getY(), p.getZ(), (byte) 0); // Chitrunerk.
-							break;
-						}
-						case 3:
-						{
-							spawn(856177, p.getX(), p.getY(), p.getZ(), (byte) 0); // Rapirunerk.
-							break;
-						}
-						case 4:
-						{
-							spawn(856178, p.getX(), p.getY(), p.getZ(), (byte) 0); // Dandrunerk.
-							break;
-						}
+						spawn(856175, p.getX(), p.getY(), p.getZ(), (byte) 0); // Pawrunerk.
+						break;
+					}
+					case 2:
+					{
+						spawn(856176, p.getX(), p.getY(), p.getZ(), (byte) 0); // Chitrunerk.
+						break;
+					}
+					case 3:
+					{
+						spawn(856177, p.getX(), p.getY(), p.getZ(), (byte) 0); // Rapirunerk.
+						break;
+					}
+					case 4:
+					{
+						spawn(856178, p.getX(), p.getY(), p.getZ(), (byte) 0); // Dandrunerk.
+						break;
 					}
 				}
 			}, 15000);
@@ -161,20 +127,16 @@ public class Conquest_Inggison_BossAI2 extends AggressiveNpcAI2
 	
 	private void sendGuide()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (MathUtil.isIn3dRange(player, getOwner(), 15))
 			{
-				if (MathUtil.isIn3dRange(player, getOwner(), 15))
-				{
-					HTMLService.sendGuideHtml(player, "Conquest_Offering");
-				}
+				HTMLService.sendGuideHtml(player, "Conquest_Offering");
 			}
 		});
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

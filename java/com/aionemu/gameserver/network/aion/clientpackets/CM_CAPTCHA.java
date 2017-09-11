@@ -46,6 +46,8 @@ public class CM_CAPTCHA extends AionClientPacket
 	
 	/**
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_CAPTCHA(int opcode, State state, State... restStates)
 	{

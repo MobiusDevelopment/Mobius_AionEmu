@@ -41,7 +41,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -134,15 +133,11 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 		if (instanceTimer == null)
 		{
 			startTime = System.currentTimeMillis();
-			instanceTimer = ThreadPoolManager.getInstance().schedule(new Runnable()
+			instanceTimer = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					deleteNpc(834123);
-					// The enemies are coming. Kill them all.
-					sendMsgByRace(1403547, Race.PC_ALL, 0);
-				}
+				deleteNpc(834123);
+				// The enemies are coming. Kill them all.
+				sendMsgByRace(1403547, Race.PC_ALL, 0);
 			}, 60000);
 		}
 		if (spawnRace == null)
@@ -259,17 +254,13 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 			case 703025: // Heavy Door Lever.
 			{
 				despawnNpc(npc);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
-					{
-						deleteNpc(703026);
-						// You’ve removed the pollutants from the library.
-						sendMsgByRace(1403526, Race.PC_ALL, 0);
-						// The library’s pollutants have disappeared.
-						sendMsgByRace(1403527, Race.PC_ALL, 10000);
-					}
+					deleteNpc(703026);
+					// You’ve removed the pollutants from the library.
+					sendMsgByRace(1403526, Race.PC_ALL, 0);
+					// The library’s pollutants have disappeared.
+					sendMsgByRace(1403527, Race.PC_ALL, 10000);
 				}, 10000);
 				break;
 			}
@@ -277,21 +268,17 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 			{
 				if (player.getInventory().decreaseByItemId(185000267, 1))
 				{ // Sun Quartz.
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule(() ->
 					{
-						@Override
-						public void run()
-						{
-							deleteNpc(834007);
-							deleteNpc(834018);
-							// The Mysterious Waterfall has stopped flowing.
-							// You’ve discovered a hidden entrance.
-							sendMsgByRace(1403522, Race.PC_ALL, 0);
-							// The Rose Quarz of Sun emits a light and starts to float.
-							sendMsgByRace(1403590, Race.PC_ALL, 5000);
-							spawn(834007, 745.79639f, 728.73376f, 547.07489f, (byte) 0, 42);
-							spawn(834091, 794.84790f, 737.12927f, 542.71869f, (byte) 0, 633);
-						}
+						deleteNpc(834007);
+						deleteNpc(834018);
+						// The Mysterious Waterfall has stopped flowing.
+						// You’ve discovered a hidden entrance.
+						sendMsgByRace(1403522, Race.PC_ALL, 0);
+						// The Rose Quarz of Sun emits a light and starts to float.
+						sendMsgByRace(1403590, Race.PC_ALL, 5000);
+						spawn(834007, 745.79639f, 728.73376f, 547.07489f, (byte) 0, 42);
+						spawn(834091, 794.84790f, 737.12927f, 542.71869f, (byte) 0, 633);
 					}, 5000);
 				}
 				else
@@ -466,36 +453,18 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override
@@ -526,7 +495,7 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 		doors.clear();
 	}
 	
-	private void deleteNpc(int npcId)
+	void deleteNpc(int npcId)
 	{
 		if (getNpc(npcId) != null)
 		{

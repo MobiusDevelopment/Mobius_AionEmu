@@ -58,6 +58,8 @@ public class CM_CREATE_CHARACTER extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_CREATE_CHARACTER </tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_CREATE_CHARACTER(int opcode, State state, State... restStates)
 	{

@@ -45,7 +45,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -106,15 +105,11 @@ public class VortexService
 		theobomosVortexMsg(id);
 		brusthoninVortexMsg(id);
 		dimensionalVortexCountdownMsg(id);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!invasion.isGeneratorDestroyed())
 			{
-				if (!invasion.isGeneratorDestroyed())
-				{
-					stopInvasion(id);
-				}
+				stopInvasion(id);
 			}
 		}, duration * 3600 * 1000);
 	}
@@ -160,6 +155,8 @@ public class VortexService
 	
 	/**
 	 * Dimensional Vortex Msg.
+	 * @param id
+	 * @return
 	 */
 	public boolean theobomosVortexMsg(int id)
 	{
@@ -167,16 +164,12 @@ public class VortexService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
+				World.getInstance().doOnAllPlayers(player ->
 				{
-					@Override
-					public void visit(Player player)
+					if (player.getCommonData().getRace() == Race.ASMODIANS)
 					{
-						if (player.getCommonData().getRace() == Race.ASMODIANS)
-						{
-							// A Dimensional Vortex leading to Theobomos has appeared.
-							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LIGHT_SIDE_INVADE_DIRECT_PORTAL_OPEN);
-						}
+						// A Dimensional Vortex leading to Theobomos has appeared.
+						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LIGHT_SIDE_INVADE_DIRECT_PORTAL_OPEN);
 					}
 				});
 				return true;
@@ -194,16 +187,12 @@ public class VortexService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
+				World.getInstance().doOnAllPlayers(player ->
 				{
-					@Override
-					public void visit(Player player)
+					if (player.getCommonData().getRace() == Race.ELYOS)
 					{
-						if (player.getCommonData().getRace() == Race.ELYOS)
-						{
-							// A Dimensional Vortex leading to Brusthonin has appeared.
-							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_DARK_SIDE_INVADE_DIRECT_PORTAL_OPEN);
-						}
+						// A Dimensional Vortex leading to Brusthonin has appeared.
+						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_DARK_SIDE_INVADE_DIRECT_PORTAL_OPEN);
 					}
 				});
 				return true;
@@ -217,6 +206,8 @@ public class VortexService
 	
 	/**
 	 * Dimensional Vortex Countdown.
+	 * @param id
+	 * @return
 	 */
 	public boolean dimensionalVortexCountdownMsg(int id)
 	{
@@ -224,32 +215,28 @@ public class VortexService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
+				World.getInstance().doOnAllPlayers(player ->
 				{
-					@Override
-					public void visit(Player player)
-					{
-						// The Dimensional Vortex will close in 90 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_90M, 1800000);
-						// The Dimensional Vortex will close in 60 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_60M, 3600000);
-						// The Dimensional Vortex will close in 30 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_30M, 5400000);
-						// The Dimensional Vortex will close in 15 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_15M, 6300000);
-						// The Dimensional Vortex will close in 10 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_10M, 6600000);
-						// The Dimensional Vortex will close in 5 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_5M, 6900000);
-						// The Dimensional Vortex will close in 3 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_3M, 7020000);
-						// The Dimensional Vortex will close in 2 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_2M, 7080000);
-						// The Dimensional Vortex will close in 1 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_1M, 7140000);
-						// The Dimensional Vortex has closed, and you will be returned to where you entered.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_COMPULSION_TELEPORT, 7200000);
-					}
+					// The Dimensional Vortex will close in 90 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_90M, 1800000);
+					// The Dimensional Vortex will close in 60 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_60M, 3600000);
+					// The Dimensional Vortex will close in 30 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_30M, 5400000);
+					// The Dimensional Vortex will close in 15 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_15M, 6300000);
+					// The Dimensional Vortex will close in 10 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_10M, 6600000);
+					// The Dimensional Vortex will close in 5 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_5M, 6900000);
+					// The Dimensional Vortex will close in 3 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_3M, 7020000);
+					// The Dimensional Vortex will close in 2 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_2M, 7080000);
+					// The Dimensional Vortex will close in 1 minutes. When it closes, the alliance will be disbanded and all infiltrators will be returned home.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_TIMER_1M, 7140000);
+					// The Dimensional Vortex has closed, and you will be returned to where you entered.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_INVADE_DIRECT_PORTAL_CLOSE_COMPULSION_TELEPORT, 7200000);
 				});
 				return true;
 			}

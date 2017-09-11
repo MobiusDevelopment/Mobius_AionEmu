@@ -164,12 +164,12 @@ public class ProvokerEffect extends ShieldEffect
 		effect.getEffected().getObserveController().addObserver(observer);
 	}
 	
-	private void createProvokedEffect(Creature effector, Creature target)
+	void createProvokedEffect(Creature effector, Creature target)
 	{
 		SkillEngine.getInstance().applyEffectDirectly(skillId, effector, target, 0);
 	}
 	
-	private Creature getProvokeTarget(ProvokeTarget provokeTarget, Creature effector, Creature target)
+	Creature getProvokeTarget(ProvokeTarget provokeTarget, Creature effector, Creature target)
 	{
 		switch (provokeTarget)
 		{

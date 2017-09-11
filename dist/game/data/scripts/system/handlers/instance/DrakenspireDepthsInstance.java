@@ -48,7 +48,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -134,14 +133,7 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 		if (sealSceneRace == null)
 		{
 			sealSceneRace = player.getRace();
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					spawnIDSealScene01();
-				}
-			}, 20000);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> spawnIDSealScene01(), 20000);
 		}
 	}
 	
@@ -188,27 +180,19 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 					switch (player.getRace())
 					{
 						case ELYOS:
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209684, 498.12088f, 206.94075f, 1688.1917f, (byte) 0);
-									spawn(209684, 498.19083f, 215.10863f, 1688.1915f, (byte) 0);
-									spawn(209685, 504.2284f, 211.17325f, 1688.1797f, (byte) 1);
-								}
+								spawn(209684, 498.12088f, 206.94075f, 1688.1917f, (byte) 0);
+								spawn(209684, 498.19083f, 215.10863f, 1688.1915f, (byte) 0);
+								spawn(209685, 504.2284f, 211.17325f, 1688.1797f, (byte) 1);
 							}, 5000);
 							break;
 						case ASMODIANS:
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209749, 498.12088f, 206.94075f, 1688.1917f, (byte) 0);
-									spawn(209749, 498.19083f, 215.10863f, 1688.1915f, (byte) 0);
-									spawn(209750, 504.2284f, 211.17325f, 1688.1797f, (byte) 1);
-								}
+								spawn(209749, 498.12088f, 206.94075f, 1688.1917f, (byte) 0);
+								spawn(209749, 498.19083f, 215.10863f, 1688.1915f, (byte) 0);
+								spawn(209750, 504.2284f, 211.17325f, 1688.1797f, (byte) 1);
 							}, 5000);
 							break;
 					}
@@ -220,27 +204,19 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 					switch (player.getRace())
 					{
 						case ELYOS:
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209684, 497.9484f, 147.90346f, 1688.2479f, (byte) 1);
-									spawn(209684, 498.11224f, 155.47922f, 1688.2467f, (byte) 0);
-									spawn(209685, 504.3097f, 152.23334f, 1688.1984f, (byte) 0);
-								}
+								spawn(209684, 497.9484f, 147.90346f, 1688.2479f, (byte) 1);
+								spawn(209684, 498.11224f, 155.47922f, 1688.2467f, (byte) 0);
+								spawn(209685, 504.3097f, 152.23334f, 1688.1984f, (byte) 0);
 							}, 5000);
 							break;
 						case ASMODIANS:
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209749, 497.9484f, 147.90346f, 1688.2479f, (byte) 1);
-									spawn(209749, 498.11224f, 155.47922f, 1688.2467f, (byte) 0);
-									spawn(209750, 504.3097f, 152.23334f, 1688.1984f, (byte) 0);
-								}
+								spawn(209749, 497.9484f, 147.90346f, 1688.2479f, (byte) 1);
+								spawn(209749, 498.11224f, 155.47922f, 1688.2467f, (byte) 0);
+								spawn(209750, 504.3097f, 152.23334f, 1688.1984f, (byte) 0);
 							}, 5000);
 							break;
 					}
@@ -280,83 +256,59 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 						switch (player.getRace())
 						{
 							case ELYOS:
-								ThreadPoolManager.getInstance().schedule(new Runnable()
+								ThreadPoolManager.getInstance().schedule((Runnable) () ->
 								{
-									@Override
-									public void run()
-									{
-										spawn(209690, 552.93365f, 155.68227f, 1683.7301f, (byte) 0);
-										spawn(209690, 552.90247f, 215.51768f, 1683.7301f, (byte) 0);
-										spawn(209693, 552.98486f, 148.64922f, 1683.7301f, (byte) 1);
-										spawn(209693, 553.1255f, 208.44653f, 1683.7301f, (byte) 1);
-									}
+									spawn(209690, 552.93365f, 155.68227f, 1683.7301f, (byte) 0);
+									spawn(209690, 552.90247f, 215.51768f, 1683.7301f, (byte) 0);
+									spawn(209693, 552.98486f, 148.64922f, 1683.7301f, (byte) 1);
+									spawn(209693, 553.1255f, 208.44653f, 1683.7301f, (byte) 1);
 								}, 2000);
-								ThreadPoolManager.getInstance().schedule(new Runnable()
+								ThreadPoolManager.getInstance().schedule((Runnable) () ->
 								{
-									@Override
-									public void run()
-									{
-										spawn(209694, 583.8417f, 177.45332f, 1683.7301f, (byte) 8);
-										spawn(209695, 582.48083f, 183.74684f, 1683.7301f, (byte) 116);
-										final Npc PCGuard_Li_Talk_A = getNpc(209695);
-										NpcShoutsService.getInstance().sendMsg(PCGuard_Li_Talk_A, 1402727, PCGuard_Li_Talk_A.getObjectId(), 0, 1500);
-										NpcShoutsService.getInstance().sendMsg(PCGuard_Li_Talk_A, 1402728, PCGuard_Li_Talk_A.getObjectId(), 0, 3500);
-										NpcShoutsService.getInstance().sendMsg(PCGuard_Li_Talk_A, 1402729, PCGuard_Li_Talk_A.getObjectId(), 0, 5500);
-										NpcShoutsService.getInstance().sendMsg(PCGuard_Li_Talk_A, 1402730, PCGuard_Li_Talk_A.getObjectId(), 0, 7500);
-									}
+									spawn(209694, 583.8417f, 177.45332f, 1683.7301f, (byte) 8);
+									spawn(209695, 582.48083f, 183.74684f, 1683.7301f, (byte) 116);
+									final Npc PCGuard_Li_Talk_A = getNpc(209695);
+									NpcShoutsService.getInstance().sendMsg(PCGuard_Li_Talk_A, 1402727, PCGuard_Li_Talk_A.getObjectId(), 0, 1500);
+									NpcShoutsService.getInstance().sendMsg(PCGuard_Li_Talk_A, 1402728, PCGuard_Li_Talk_A.getObjectId(), 0, 3500);
+									NpcShoutsService.getInstance().sendMsg(PCGuard_Li_Talk_A, 1402729, PCGuard_Li_Talk_A.getObjectId(), 0, 5500);
+									NpcShoutsService.getInstance().sendMsg(PCGuard_Li_Talk_A, 1402730, PCGuard_Li_Talk_A.getObjectId(), 0, 7500);
 								}, 30000);
-								ThreadPoolManager.getInstance().schedule(new Runnable()
+								ThreadPoolManager.getInstance().schedule((Runnable) () ->
 								{
-									@Override
-									public void run()
-									{
-										deleteNpc(209694);
-										deleteNpc(209695);
-										// Detachment Demolisher has opened the path to the next area.
-										sendMsgByRace(1402689, Race.PC_ALL, 0);
-										spawn(209698, 583.8417f, 177.45332f, 1683.7301f, (byte) 8);
-										spawn(209700, 582.48083f, 183.74684f, 1683.7301f, (byte) 116);
-									}
+									deleteNpc(209694);
+									deleteNpc(209695);
+									// Detachment Demolisher has opened the path to the next area.
+									sendMsgByRace(1402689, Race.PC_ALL, 0);
+									spawn(209698, 583.8417f, 177.45332f, 1683.7301f, (byte) 8);
+									spawn(209700, 582.48083f, 183.74684f, 1683.7301f, (byte) 116);
 								}, 40000);
 								break;
 							case ASMODIANS:
-								ThreadPoolManager.getInstance().schedule(new Runnable()
+								ThreadPoolManager.getInstance().schedule((Runnable) () ->
 								{
-									@Override
-									public void run()
-									{
-										spawn(209755, 552.93365f, 155.68227f, 1683.7301f, (byte) 0);
-										spawn(209755, 552.90247f, 215.51768f, 1683.7301f, (byte) 0);
-										spawn(209758, 552.98486f, 148.64922f, 1683.7301f, (byte) 1);
-										spawn(209758, 553.1255f, 208.44653f, 1683.7301f, (byte) 1);
-									}
+									spawn(209755, 552.93365f, 155.68227f, 1683.7301f, (byte) 0);
+									spawn(209755, 552.90247f, 215.51768f, 1683.7301f, (byte) 0);
+									spawn(209758, 552.98486f, 148.64922f, 1683.7301f, (byte) 1);
+									spawn(209758, 553.1255f, 208.44653f, 1683.7301f, (byte) 1);
 								}, 2000);
-								ThreadPoolManager.getInstance().schedule(new Runnable()
+								ThreadPoolManager.getInstance().schedule((Runnable) () ->
 								{
-									@Override
-									public void run()
-									{
-										spawn(209759, 583.8417f, 177.45332f, 1683.7301f, (byte) 8);
-										spawn(209760, 582.48083f, 183.74684f, 1683.7301f, (byte) 116);
-										final Npc PCGuard_Da_Talk_A = getNpc(209760);
-										NpcShoutsService.getInstance().sendMsg(PCGuard_Da_Talk_A, 1402727, PCGuard_Da_Talk_A.getObjectId(), 0, 1500);
-										NpcShoutsService.getInstance().sendMsg(PCGuard_Da_Talk_A, 1402728, PCGuard_Da_Talk_A.getObjectId(), 0, 3500);
-										NpcShoutsService.getInstance().sendMsg(PCGuard_Da_Talk_A, 1402729, PCGuard_Da_Talk_A.getObjectId(), 0, 5500);
-										NpcShoutsService.getInstance().sendMsg(PCGuard_Da_Talk_A, 1402730, PCGuard_Da_Talk_A.getObjectId(), 0, 7500);
-									}
+									spawn(209759, 583.8417f, 177.45332f, 1683.7301f, (byte) 8);
+									spawn(209760, 582.48083f, 183.74684f, 1683.7301f, (byte) 116);
+									final Npc PCGuard_Da_Talk_A = getNpc(209760);
+									NpcShoutsService.getInstance().sendMsg(PCGuard_Da_Talk_A, 1402727, PCGuard_Da_Talk_A.getObjectId(), 0, 1500);
+									NpcShoutsService.getInstance().sendMsg(PCGuard_Da_Talk_A, 1402728, PCGuard_Da_Talk_A.getObjectId(), 0, 3500);
+									NpcShoutsService.getInstance().sendMsg(PCGuard_Da_Talk_A, 1402729, PCGuard_Da_Talk_A.getObjectId(), 0, 5500);
+									NpcShoutsService.getInstance().sendMsg(PCGuard_Da_Talk_A, 1402730, PCGuard_Da_Talk_A.getObjectId(), 0, 7500);
 								}, 30000);
-								ThreadPoolManager.getInstance().schedule(new Runnable()
+								ThreadPoolManager.getInstance().schedule((Runnable) () ->
 								{
-									@Override
-									public void run()
-									{
-										deleteNpc(209759);
-										deleteNpc(209760);
-										// Detachment Demolisher has opened the path to the next area.
-										sendMsgByRace(1402689, Race.PC_ALL, 0);
-										spawn(209763, 583.8417f, 177.45332f, 1683.7301f, (byte) 8);
-										spawn(209765, 582.48083f, 183.74684f, 1683.7301f, (byte) 116);
-									}
+									deleteNpc(209759);
+									deleteNpc(209760);
+									// Detachment Demolisher has opened the path to the next area.
+									sendMsgByRace(1402689, Race.PC_ALL, 0);
+									spawn(209763, 583.8417f, 177.45332f, 1683.7301f, (byte) 8);
+									spawn(209765, 582.48083f, 183.74684f, 1683.7301f, (byte) 116);
 								}, 40000);
 								break;
 						}
@@ -376,37 +328,29 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 						switch (player.getRace())
 						{
 							case ELYOS:
-								ThreadPoolManager.getInstance().schedule(new Runnable()
+								ThreadPoolManager.getInstance().schedule((Runnable) () ->
 								{
-									@Override
-									public void run()
-									{
-										// Orissan begins to Ascend through Ascension Dominance.
-										sendMsgByRace(1402693, Race.PC_ALL, 0);
-										// Orissan has Ascended through Ascension Dominance.
-										sendMsgByRace(1402694, Race.PC_ALL, 8000);
-										// Slay Orissan before the next Ascension Dominance begins.
-										sendMsgByRace(1402698, Race.PC_ALL, 16000);
-										spawn(209704, 821.6019f, 523.7112f, 1706.6428f, (byte) 33);
-										spawn(209705, 815.1346f, 522.75665f, 1706.7778f, (byte) 32);
-									}
+									// Orissan begins to Ascend through Ascension Dominance.
+									sendMsgByRace(1402693, Race.PC_ALL, 0);
+									// Orissan has Ascended through Ascension Dominance.
+									sendMsgByRace(1402694, Race.PC_ALL, 8000);
+									// Slay Orissan before the next Ascension Dominance begins.
+									sendMsgByRace(1402698, Race.PC_ALL, 16000);
+									spawn(209704, 821.6019f, 523.7112f, 1706.6428f, (byte) 33);
+									spawn(209705, 815.1346f, 522.75665f, 1706.7778f, (byte) 32);
 								}, 2000);
 								break;
 							case ASMODIANS:
-								ThreadPoolManager.getInstance().schedule(new Runnable()
+								ThreadPoolManager.getInstance().schedule((Runnable) () ->
 								{
-									@Override
-									public void run()
-									{
-										// Orissan begins to Ascend through Ascension Dominance.
-										sendMsgByRace(1402693, Race.PC_ALL, 0);
-										// Orissan has Ascended through Ascension Dominance.
-										sendMsgByRace(1402694, Race.PC_ALL, 8000);
-										// Slay Orissan before the next Ascension Dominance begins.
-										sendMsgByRace(1402698, Race.PC_ALL, 16000);
-										spawn(209769, 821.6019f, 523.7112f, 1706.6428f, (byte) 33);
-										spawn(209770, 815.1346f, 522.75665f, 1706.7778f, (byte) 32);
-									}
+									// Orissan begins to Ascend through Ascension Dominance.
+									sendMsgByRace(1402693, Race.PC_ALL, 0);
+									// Orissan has Ascended through Ascension Dominance.
+									sendMsgByRace(1402694, Race.PC_ALL, 8000);
+									// Slay Orissan before the next Ascension Dominance begins.
+									sendMsgByRace(1402698, Race.PC_ALL, 16000);
+									spawn(209769, 821.6019f, 523.7112f, 1706.6428f, (byte) 33);
+									spawn(209770, 815.1346f, 522.75665f, 1706.7778f, (byte) 32);
 								}, 2000);
 								break;
 						}
@@ -421,96 +365,64 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 					{
 						case ELYOS:
 							sendMovie(player, 914);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209706, 810.4212f, 550.19934f, 1701.044f, (byte) 31);
-									spawn(209707, 818.40704f, 552.7704f, 1701.044f, (byte) 36);
-								}
+								spawn(209706, 810.4212f, 550.19934f, 1701.044f, (byte) 31);
+								spawn(209707, 818.40704f, 552.7704f, 1701.044f, (byte) 36);
 							}, 10000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209710, 807.78894f, 578.7186f, 1701.0446f, (byte) 34);
-									spawn(209710, 815.84827f, 579.7431f, 1701.0446f, (byte) 30);
-									spawn(209711, 814.1693f, 588.4347f, 1701.0449f, (byte) 34);
-									spawn(209711, 806.99536f, 587.9815f, 1701.0448f, (byte) 30);
-								}
+								spawn(209710, 807.78894f, 578.7186f, 1701.0446f, (byte) 34);
+								spawn(209710, 815.84827f, 579.7431f, 1701.0446f, (byte) 30);
+								spawn(209711, 814.1693f, 588.4347f, 1701.0449f, (byte) 34);
+								spawn(209711, 806.99536f, 587.9815f, 1701.0448f, (byte) 30);
 							}, 15000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209712, 811.5f, 583.0642f, 1701.0447f, (byte) 32);
-									spawn(209713, 810.85767f, 588.2299f, 1701.0449f, (byte) 32);
-									final Npc PCGuard_Li = getNpc(209713);
-									NpcShoutsService.getInstance().sendMsg(PCGuard_Li, 1402727, PCGuard_Li.getObjectId(), 0, 1500);
-									NpcShoutsService.getInstance().sendMsg(PCGuard_Li, 1402728, PCGuard_Li.getObjectId(), 0, 3500);
-									NpcShoutsService.getInstance().sendMsg(PCGuard_Li, 1402729, PCGuard_Li.getObjectId(), 0, 5500);
-									NpcShoutsService.getInstance().sendMsg(PCGuard_Li, 1402730, PCGuard_Li.getObjectId(), 0, 7500);
-								}
+								spawn(209712, 811.5f, 583.0642f, 1701.0447f, (byte) 32);
+								spawn(209713, 810.85767f, 588.2299f, 1701.0449f, (byte) 32);
+								final Npc PCGuard_Li = getNpc(209713);
+								NpcShoutsService.getInstance().sendMsg(PCGuard_Li, 1402727, PCGuard_Li.getObjectId(), 0, 1500);
+								NpcShoutsService.getInstance().sendMsg(PCGuard_Li, 1402728, PCGuard_Li.getObjectId(), 0, 3500);
+								NpcShoutsService.getInstance().sendMsg(PCGuard_Li, 1402729, PCGuard_Li.getObjectId(), 0, 5500);
+								NpcShoutsService.getInstance().sendMsg(PCGuard_Li, 1402730, PCGuard_Li.getObjectId(), 0, 7500);
 							}, 20000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									deleteNpc(700546);
-									// Glide at the Soulfade Labyrinth to use the wind road.
-									sendMsgByRace(1402941, Race.PC_ALL, 0);
-								}
+								deleteNpc(700546);
+								// Glide at the Soulfade Labyrinth to use the wind road.
+								sendMsgByRace(1402941, Race.PC_ALL, 0);
 							}, 30000);
 							break;
 						case ASMODIANS:
 							sendMovie(player, 914);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209771, 810.4212f, 550.19934f, 1701.044f, (byte) 31);
-									spawn(209772, 818.40704f, 552.7704f, 1701.044f, (byte) 36);
-								}
+								spawn(209771, 810.4212f, 550.19934f, 1701.044f, (byte) 31);
+								spawn(209772, 818.40704f, 552.7704f, 1701.044f, (byte) 36);
 							}, 10000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209775, 807.78894f, 578.7186f, 1701.0446f, (byte) 34);
-									spawn(209775, 815.84827f, 579.7431f, 1701.0446f, (byte) 30);
-									spawn(209776, 814.1693f, 588.4347f, 1701.0449f, (byte) 34);
-									spawn(209776, 806.99536f, 587.9815f, 1701.0448f, (byte) 30);
-								}
+								spawn(209775, 807.78894f, 578.7186f, 1701.0446f, (byte) 34);
+								spawn(209775, 815.84827f, 579.7431f, 1701.0446f, (byte) 30);
+								spawn(209776, 814.1693f, 588.4347f, 1701.0449f, (byte) 34);
+								spawn(209776, 806.99536f, 587.9815f, 1701.0448f, (byte) 30);
 							}, 15000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209777, 811.5f, 583.0642f, 1701.0447f, (byte) 32);
-									spawn(209778, 810.85767f, 588.2299f, 1701.0449f, (byte) 32);
-									final Npc PCGuard_Da = getNpc(209778);
-									NpcShoutsService.getInstance().sendMsg(PCGuard_Da, 1402727, PCGuard_Da.getObjectId(), 0, 1500);
-									NpcShoutsService.getInstance().sendMsg(PCGuard_Da, 1402728, PCGuard_Da.getObjectId(), 0, 3500);
-									NpcShoutsService.getInstance().sendMsg(PCGuard_Da, 1402729, PCGuard_Da.getObjectId(), 0, 5500);
-									NpcShoutsService.getInstance().sendMsg(PCGuard_Da, 1402730, PCGuard_Da.getObjectId(), 0, 7500);
-								}
+								spawn(209777, 811.5f, 583.0642f, 1701.0447f, (byte) 32);
+								spawn(209778, 810.85767f, 588.2299f, 1701.0449f, (byte) 32);
+								final Npc PCGuard_Da = getNpc(209778);
+								NpcShoutsService.getInstance().sendMsg(PCGuard_Da, 1402727, PCGuard_Da.getObjectId(), 0, 1500);
+								NpcShoutsService.getInstance().sendMsg(PCGuard_Da, 1402728, PCGuard_Da.getObjectId(), 0, 3500);
+								NpcShoutsService.getInstance().sendMsg(PCGuard_Da, 1402729, PCGuard_Da.getObjectId(), 0, 5500);
+								NpcShoutsService.getInstance().sendMsg(PCGuard_Da, 1402730, PCGuard_Da.getObjectId(), 0, 7500);
 							}, 20000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									deleteNpc(700546);
-									// Glide at the Soulfade Labyrinth to use the wind road.
-									sendMsgByRace(1402941, Race.PC_ALL, 0);
-								}
+								deleteNpc(700546);
+								// Glide at the Soulfade Labyrinth to use the wind road.
+								sendMsgByRace(1402941, Race.PC_ALL, 0);
 							}, 30000);
 							break;
 					}
@@ -522,191 +434,107 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 					switch (player.getRace())
 					{
 						case ELYOS:
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209722, 631.6413f, 847.15717f, 1599.8486f, (byte) 90);
-									spawn(209722, 639.45526f, 847.40265f, 1599.9614f, (byte) 90);
-								}
+								spawn(209722, 631.6413f, 847.15717f, 1599.8486f, (byte) 90);
+								spawn(209722, 639.45526f, 847.40265f, 1599.9614f, (byte) 90);
 							}, 5000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209720, 635.39325f, 886.9716f, 1600.7146f, (byte) 90);
-									spawn(209721, 635.0717f, 901.48553f, 1600.49f, (byte) 89);
-									spawn(209731, 640.8788f, 891.53687f, 1600.5566f, (byte) 94);
-									spawn(209731, 629.2198f, 891.1963f, 1600.5817f, (byte) 92);
-								}
+								spawn(209720, 635.39325f, 886.9716f, 1600.7146f, (byte) 90);
+								spawn(209721, 635.0717f, 901.48553f, 1600.49f, (byte) 89);
+								spawn(209731, 640.8788f, 891.53687f, 1600.5566f, (byte) 94);
+								spawn(209731, 629.2198f, 891.1963f, 1600.5817f, (byte) 92);
 							}, 10000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () -> spawnIDSeal4ThStageElyos(), 12000);
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawnIDSeal4ThStageElyos();
-								}
-							}, 12000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
-							{
-								@Override
-								public void run()
-								{
-									spawnEmpyreanLordsSiegeWeapon();
-									// The Empyrean Lord's Stormcannon is being charged for the Empyrean Firestorm.
-									sendMsgByRace(1402703, Race.PC_ALL, 0);
-									// Defend the Detachment and its siege weapons from the Guhena Legion.
-									sendMsgByRace(1402705, Race.PC_ALL, 5000);
-									// If the Detachment loses too many soldiers, they will not be able to assist during the battle against Beritra.
-									sendMsgByRace(1402706, Race.PC_ALL, 10000);
-								}
+								spawnEmpyreanLordsSiegeWeapon();
+								// The Empyrean Lord's Stormcannon is being charged for the Empyrean Firestorm.
+								sendMsgByRace(1402703, Race.PC_ALL, 0);
+								// Defend the Detachment and its siege weapons from the Guhena Legion.
+								sendMsgByRace(1402705, Race.PC_ALL, 5000);
+								// If the Detachment loses too many soldiers, they will not be able to assist during the battle against Beritra.
+								sendMsgByRace(1402706, Race.PC_ALL, 10000);
 							}, 15000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawnWaveDoor();
-									// The Guhena Legion has detected intruders and will begin attacking.
-									sendMsgByRace(1402704, Race.PC_ALL, 0);
-								}
+								spawnWaveDoor();
+								// The Guhena Legion has detected intruders and will begin attacking.
+								sendMsgByRace(1402704, Race.PC_ALL, 0);
 							}, 25000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRaidSeal1();
-									doors.get(271).setOpen(true);
-									// The Guhena Legion's Commander Virtsha has appeared. You must defeat every captain and commander.
-									sendMsgByRace(1402710, Race.PC_ALL, 0);
-								}
+								startRaidSeal1();
+								doors.get(271).setOpen(true);
+								// The Guhena Legion's Commander Virtsha has appeared. You must defeat every captain and commander.
+								sendMsgByRace(1402710, Race.PC_ALL, 0);
 							}, 30000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRaidSeal2();
-									// The Guhena Legion's second wave of attack has started. There will be three more attack waves.
-									sendMsgByRace(1402707, Race.PC_ALL, 0);
-								}
+								startRaidSeal2();
+								// The Guhena Legion's second wave of attack has started. There will be three more attack waves.
+								sendMsgByRace(1402707, Race.PC_ALL, 0);
 							}, 65000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaidSeal2_1(), 67000);
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRaidSeal2_1();
-								}
-							}, 67000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
-							{
-								@Override
-								public void run()
-								{
-									startRaidSeal3();
-									doors.get(267).setOpen(true);
-									// The Guhena Legion's third wave of attack has started. There will be two more attack waves.
-									sendMsgByRace(1402708, Race.PC_ALL, 0);
-								}
+								startRaidSeal3();
+								doors.get(267).setOpen(true);
+								// The Guhena Legion's third wave of attack has started. There will be two more attack waves.
+								sendMsgByRace(1402708, Race.PC_ALL, 0);
 							}, 87000);
 							break;
 						case ASMODIANS:
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209787, 631.6413f, 847.15717f, 1599.8486f, (byte) 90);
-									spawn(209787, 639.45526f, 847.40265f, 1599.9614f, (byte) 90);
-								}
+								spawn(209787, 631.6413f, 847.15717f, 1599.8486f, (byte) 90);
+								spawn(209787, 639.45526f, 847.40265f, 1599.9614f, (byte) 90);
 							}, 5000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawn(209785, 635.39325f, 886.9716f, 1600.7146f, (byte) 90);
-									spawn(209786, 635.0717f, 901.48553f, 1600.49f, (byte) 89);
-									spawn(209796, 640.8788f, 891.53687f, 1600.5566f, (byte) 94);
-									spawn(209796, 629.2198f, 891.1963f, 1600.5817f, (byte) 92);
-								}
+								spawn(209785, 635.39325f, 886.9716f, 1600.7146f, (byte) 90);
+								spawn(209786, 635.0717f, 901.48553f, 1600.49f, (byte) 89);
+								spawn(209796, 640.8788f, 891.53687f, 1600.5566f, (byte) 94);
+								spawn(209796, 629.2198f, 891.1963f, 1600.5817f, (byte) 92);
 							}, 10000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () -> spawnIDSeal4ThStageAsmodians(), 12000);
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawnIDSeal4ThStageAsmodians();
-								}
-							}, 12000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
-							{
-								@Override
-								public void run()
-								{
-									spawnEmpyreanLordsSiegeWeapon();
-									// The Empyrean Lord's Stormcannon is being charged for the Empyrean Firestorm.
-									sendMsgByRace(1402703, Race.PC_ALL, 0);
-									// Defend the Detachment and its siege weapons from the Guhena Legion.
-									sendMsgByRace(1402705, Race.PC_ALL, 5000);
-									// If the Detachment loses too many soldiers, they will not be able to assist during the battle against Beritra.
-									sendMsgByRace(1402706, Race.PC_ALL, 10000);
-								}
+								spawnEmpyreanLordsSiegeWeapon();
+								// The Empyrean Lord's Stormcannon is being charged for the Empyrean Firestorm.
+								sendMsgByRace(1402703, Race.PC_ALL, 0);
+								// Defend the Detachment and its siege weapons from the Guhena Legion.
+								sendMsgByRace(1402705, Race.PC_ALL, 5000);
+								// If the Detachment loses too many soldiers, they will not be able to assist during the battle against Beritra.
+								sendMsgByRace(1402706, Race.PC_ALL, 10000);
 							}, 15000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									spawnWaveDoor();
-									// The Guhena Legion has detected intruders and will begin attacking.
-									sendMsgByRace(1402704, Race.PC_ALL, 0);
-								}
+								spawnWaveDoor();
+								// The Guhena Legion has detected intruders and will begin attacking.
+								sendMsgByRace(1402704, Race.PC_ALL, 0);
 							}, 25000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRaidSeal1();
-									doors.get(271).setOpen(true);
-									// The Guhena Legion's Commander Virtsha has appeared. You must defeat every captain and commander.
-									sendMsgByRace(1402710, Race.PC_ALL, 0);
-								}
+								startRaidSeal1();
+								doors.get(271).setOpen(true);
+								// The Guhena Legion's Commander Virtsha has appeared. You must defeat every captain and commander.
+								sendMsgByRace(1402710, Race.PC_ALL, 0);
 							}, 30000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRaidSeal2();
-									// The Guhena Legion's second wave of attack has started. There will be three more attack waves.
-									sendMsgByRace(1402707, Race.PC_ALL, 0);
-								}
+								startRaidSeal2();
+								// The Guhena Legion's second wave of attack has started. There will be three more attack waves.
+								sendMsgByRace(1402707, Race.PC_ALL, 0);
 							}, 65000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () -> startRaidSeal2_1(), 67000);
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRaidSeal2_1();
-								}
-							}, 67000);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
-							{
-								@Override
-								public void run()
-								{
-									startRaidSeal3();
-									doors.get(267).setOpen(true);
-									// The Guhena Legion's third wave of attack has started. There will be two more attack waves.
-									sendMsgByRace(1402708, Race.PC_ALL, 0);
-								}
+								startRaidSeal3();
+								doors.get(267).setOpen(true);
+								// The Guhena Legion's third wave of attack has started. There will be two more attack waves.
+								sendMsgByRace(1402708, Race.PC_ALL, 0);
 							}, 87000);
 							break;
 					}
@@ -719,33 +547,25 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 					switch (player.getRace())
 					{
 						case ELYOS:
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRaidSeal4();
-									startRaidSeal5();
-									doors.get(7).setOpen(true);
-									doors.get(310).setOpen(true);
-									// The Guhena Legion's fourth wave of attack has started. There will be one more attack wave.
-									sendMsgByRace(1402709, Race.PC_ALL, 0);
-								}
+								startRaidSeal4();
+								startRaidSeal5();
+								doors.get(7).setOpen(true);
+								doors.get(310).setOpen(true);
+								// The Guhena Legion's fourth wave of attack has started. There will be one more attack wave.
+								sendMsgByRace(1402709, Race.PC_ALL, 0);
 							}, 15000);
 							break;
 						case ASMODIANS:
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRaidSeal4();
-									startRaidSeal5();
-									doors.get(7).setOpen(true);
-									doors.get(310).setOpen(true);
-									// The Guhena Legion's fourth wave of attack has started. There will be one more attack wave.
-									sendMsgByRace(1402709, Race.PC_ALL, 0);
-								}
+								startRaidSeal4();
+								startRaidSeal5();
+								doors.get(7).setOpen(true);
+								doors.get(310).setOpen(true);
+								// The Guhena Legion's fourth wave of attack has started. There will be one more attack wave.
+								sendMsgByRace(1402709, Race.PC_ALL, 0);
 							}, 15000);
 							break;
 					}
@@ -758,31 +578,23 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 					switch (player.getRace())
 					{
 						case ELYOS:
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRaidSeal6();
-									doors.get(210).setOpen(true);
-									doors.get(312).setOpen(true);
-									// The Detachment has suffered severe losses and will not be able to assist any further.
-									sendMsgByRace(1402712, Race.PC_ALL, 0);
-								}
+								startRaidSeal6();
+								doors.get(210).setOpen(true);
+								doors.get(312).setOpen(true);
+								// The Detachment has suffered severe losses and will not be able to assist any further.
+								sendMsgByRace(1402712, Race.PC_ALL, 0);
 							}, 15000);
 							break;
 						case ASMODIANS:
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRaidSeal6();
-									doors.get(210).setOpen(true);
-									doors.get(312).setOpen(true);
-									// The Detachment has suffered severe losses and will not be able to assist any further.
-									sendMsgByRace(1402712, Race.PC_ALL, 0);
-								}
+								startRaidSeal6();
+								doors.get(210).setOpen(true);
+								doors.get(312).setOpen(true);
+								// The Detachment has suffered severe losses and will not be able to assist any further.
+								sendMsgByRace(1402712, Race.PC_ALL, 0);
 							}, 15000);
 							break;
 					}
@@ -795,29 +607,21 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 					switch (player.getRace())
 					{
 						case ELYOS:
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRaidSeal3();
-									startRaidSeal4();
-									// The Detachment has suffered heavy losses and can only assist in limited capacity.
-									sendMsgByRace(1402713, Race.PC_ALL, 0);
-								}
+								startRaidSeal3();
+								startRaidSeal4();
+								// The Detachment has suffered heavy losses and can only assist in limited capacity.
+								sendMsgByRace(1402713, Race.PC_ALL, 0);
 							}, 15000);
 							break;
 						case ASMODIANS:
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
 							{
-								@Override
-								public void run()
-								{
-									startRaidSeal3();
-									startRaidSeal4();
-									// The Detachment has suffered heavy losses and can only assist in limited capacity.
-									sendMsgByRace(1402713, Race.PC_ALL, 0);
-								}
+								startRaidSeal3();
+								startRaidSeal4();
+								// The Detachment has suffered heavy losses and can only assist in limited capacity.
+								sendMsgByRace(1402713, Race.PC_ALL, 0);
 							}, 15000);
 							break;
 					}
@@ -829,16 +633,12 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402714, Race.PC_ALL, 0);
 				// You have successfully protected the Detachment. They will assist you during the battle against Beritra.
 				sendMsgByRace(1402715, Race.PC_ALL, 10000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						deleteNpc(700545);
-						spawnEternalAltarOfTormentEntrance();
-						// The Empyrean Lord's Stormcannon has blown open the Seal of Darkness.
-						sendMsgByRace(1402711, Race.PC_ALL, 0);
-					}
+					deleteNpc(700545);
+					spawnEternalAltarOfTormentEntrance();
+					// The Empyrean Lord's Stormcannon has blown open the Seal of Darkness.
+					sendMsgByRace(1402711, Race.PC_ALL, 0);
 				}, 20000);
 				break;
 			case 236204: // Flamesquelch Destoyer.
@@ -860,14 +660,7 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 				spawn(833015, 161.93251f, 518.47626f, 1749.4482f, (byte) 59); // Sacred Beast Of Balaur Lord Beritra.
 				sendMsg("[Congratulation]: you finish <Drakenspire Depths>");
 				sendMovie(player, 916);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawnIDSealSceneEnding();
-					}
-				}, 20000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawnIDSealSceneEnding(), 20000);
 				break;
 		}
 	}
@@ -944,21 +737,17 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 	
 	private void raidSeal(Npc npc)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						npc.setTarget(player);
-						((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
-						npc.setState(1);
-						npc.getMoveController().moveToTargetObject();
-						PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
-					}
+					npc.setTarget(player);
+					((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
+					npc.setState(1);
+					npc.getMoveController().moveToTargetObject();
+					PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
 				}
 			}
 		}, 1000);
@@ -1022,39 +811,21 @@ public class DrakenspireDepthsInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
-	private void deleteNpc(int npcId)
+	void deleteNpc(int npcId)
 	{
 		if (getNpc(npcId) != null)
 		{

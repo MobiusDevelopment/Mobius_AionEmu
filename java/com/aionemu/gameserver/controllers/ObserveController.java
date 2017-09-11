@@ -115,6 +115,8 @@ public class ObserveController
 	
 	/**
 	 * notify all observers
+	 * @param type
+	 * @param object
 	 */
 	public void notifyObservers(ObserverType type, Object... object)
 	{
@@ -235,6 +237,7 @@ public class ObserveController
 	}
 	
 	/**
+	 * @param creature
 	 * @param notify that creature died
 	 */
 	public void notifyDeathObservers(Creature creature)
@@ -252,6 +255,7 @@ public class ObserveController
 	
 	/**
 	 * notify that creature attacking
+	 * @param creature
 	 * @param damage
 	 */
 	public void notifyAttackObservers(Creature creature)
@@ -261,6 +265,7 @@ public class ObserveController
 	
 	/**
 	 * notify that creature attacked
+	 * @param creature
 	 */
 	public void notifyAttackedObservers(Creature creature)
 	{
@@ -269,6 +274,8 @@ public class ObserveController
 	
 	/**
 	 * notify that creature attacked by dot's hit
+	 * @param creature
+	 * @param effect
 	 */
 	public void notifyDotAttackedObservers(Creature creature, Effect effect)
 	{
@@ -277,6 +284,7 @@ public class ObserveController
 	
 	/**
 	 * notify that creature used a skill
+	 * @param skill
 	 */
 	public void notifySkilluseObservers(Skill skill)
 	{
@@ -303,6 +311,7 @@ public class ObserveController
 	
 	/**
 	 * notify that player used an item
+	 * @param item
 	 */
 	public void notifyItemuseObservers(Item item)
 	{
@@ -311,6 +320,7 @@ public class ObserveController
 	
 	/**
 	 * notify that player requested dialog with npc
+	 * @param npc
 	 */
 	public void notifyRequestDialogObservers(Npc npc)
 	{
@@ -383,6 +393,8 @@ public class ObserveController
 	
 	/**
 	 * @param attackList
+	 * @param effect
+	 * @param attacker
 	 */
 	public void checkShieldStatus(List<AttackResult> attackList, Effect effect, Creature attacker)
 	{

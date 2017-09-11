@@ -60,6 +60,7 @@ public class FollowEventHandler
 	}
 	
 	/**
+	 * @param npcAI
 	 * @param creature
 	 */
 	public static void checkFollowTarget(NpcAI2 npcAI, Creature creature)

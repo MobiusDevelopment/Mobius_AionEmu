@@ -37,6 +37,8 @@ public class CM_START_LOOT extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_CM_REQUEST_DIALOG </tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_START_LOOT(int opcode, State state, State... restStates)
 	{

@@ -116,17 +116,10 @@ public class MarabataControllerAI2 extends NpcAI2
 	{
 		super.handleSpawned();
 		apllyEffect(false);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				useSkill();
-			}
-		}, 2000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> useSkill(), 2000);
 	}
 	
-	private void useSkill()
+	void useSkill()
 	{
 		if (isAlreadyDead())
 		{

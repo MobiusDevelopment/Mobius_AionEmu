@@ -79,6 +79,9 @@ public class ItemService
 	
 	/**
 	 * Add new item based on all sourceItem values
+	 * @param player
+	 * @param sourceItem
+	 * @return
 	 */
 	public static long addItem(Player player, Item sourceItem)
 	{
@@ -102,6 +105,13 @@ public class ItemService
 	
 	/**
 	 * Add new item based on sourceItem values
+	 * @param player
+	 * @param itemId
+	 * @param count
+	 * @param sourceItem
+	 * @param predicate
+	 * @param enchantLevel
+	 * @return
 	 */
 	public static long addItem(Player player, int itemId, long count, Item sourceItem, ItemUpdatePredicate predicate, int enchantLevel)
 	{
@@ -139,6 +149,13 @@ public class ItemService
 	
 	/**
 	 * Add non-stackable item to inventory
+	 * @param player
+	 * @param itemTemplate
+	 * @param count
+	 * @param sourceItem
+	 * @param predicate
+	 * @param enchantlevel
+	 * @return
 	 */
 	private static long addNonStackableItem(Player player, ItemTemplate itemTemplate, long count, Item sourceItem, ItemUpdatePredicate predicate, int enchantlevel)
 	{
@@ -176,6 +193,8 @@ public class ItemService
 	
 	/**
 	 * Copy some item values like item stones and enchange level
+	 * @param sourceItem
+	 * @param newItem
 	 */
 	private static void copyItemInfo(Item sourceItem, Item newItem)
 	{
@@ -214,6 +233,11 @@ public class ItemService
 	
 	/**
 	 * Add stackable item to inventory
+	 * @param player
+	 * @param itemTemplate
+	 * @param count
+	 * @param predicate
+	 * @return
 	 */
 	private static long addStackableItem(Player player, ItemTemplate itemTemplate, long count, ItemUpdatePredicate predicate)
 	{

@@ -39,6 +39,7 @@ public abstract class LsServerPacket extends BaseServerPacket
 	/**
 	 * Write this packet data for given connection, to given buffer.
 	 * @param con
+	 * @param buffer
 	 * @param buf
 	 */
 	public final void write(LoginServerConnection con, ByteBuffer buffer)

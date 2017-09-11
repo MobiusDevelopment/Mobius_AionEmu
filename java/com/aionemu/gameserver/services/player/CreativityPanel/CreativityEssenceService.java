@@ -81,6 +81,7 @@ public class CreativityEssenceService
 	
 	/**
 	 * http://aionpowerbook.com/powerbook/Creativity
+	 * @param player
 	 */
 	public void pointPerExp(Player player)
 	{
@@ -191,6 +192,7 @@ public class CreativityEssenceService
 	/**
 	 * KR - Update December 30th 2015 http://aionpowerbook.com/powerbook/KR_-_Update_December_30th_2015 - The amount of Creativity a "ArchDaeva" can acquire with each level has been increased. - If you have already leveled up the difference will be paid the next time you reach the Creativity point.
 	 * - For a certain amount of time reseting Creativity will only require 1 Kinah, the price will not increase with each reset.
+	 * @param player
 	 */
 	public void pointPerLevel(Player player)
 	{

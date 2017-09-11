@@ -41,6 +41,8 @@ public class WalkerFormator
 	/**
 	 * If it's the instance first spawn, WalkerFormator verifies and creates groups; {@link #organizeAndSpawn()} must be called after to speed up spawning. If it's a respawn, nothing to verify, then the method places NPC to the first step and resets data to the saved, no organizing is needed.
 	 * @param npc
+	 * @param worldId
+	 * @param instanceId
 	 * @param instance
 	 * @return <tt>true</tt> if npc was brought into world by the method call.
 	 */
@@ -76,6 +78,8 @@ public class WalkerFormator
 	
 	/**
 	 * Organizes spawns in all processed walker groups. Must be called only when spawning all npcs for the instance of world.
+	 * @param worldId
+	 * @param instanceId
 	 */
 	public static void organizeAndSpawn(int worldId, int instanceId)
 	{

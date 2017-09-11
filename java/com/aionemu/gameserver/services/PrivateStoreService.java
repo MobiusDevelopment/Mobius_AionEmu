@@ -130,6 +130,9 @@ public class PrivateStoreService
 	
 	/**
 	 * This method will move the item to the new player and move kinah to item owner
+	 * @param seller
+	 * @param buyer
+	 * @param tradeList
 	 */
 	public static void sellStoreItem(Player seller, Player buyer, TradeList tradeList)
 	{
@@ -264,8 +267,11 @@ public class PrivateStoreService
 	}
 	
 	/**
+	 * @param itemOwner
+	 * @param newOwner
 	 * @param player1
 	 * @param player2
+	 * @return
 	 */
 	private static boolean validateParticipants(Player itemOwner, Player newOwner)
 	{
@@ -273,7 +279,9 @@ public class PrivateStoreService
 	}
 	
 	/**
+	 * @param seller
 	 * @param tradeList
+	 * @return
 	 */
 	private static boolean validateBuyItems(Player seller, TradeList tradeList)
 	{
@@ -312,6 +320,8 @@ public class PrivateStoreService
 	
 	/**
 	 * This method will return the item in a inventory by object id
+	 * @param seller
+	 * @param itemObjId
 	 * @param player
 	 * @param tradePSItems
 	 * @return
@@ -344,6 +354,7 @@ public class PrivateStoreService
 	
 	/**
 	 * @param activePlayer
+	 * @param name
 	 */
 	public static void openPrivateStore(Player activePlayer, String name)
 	{

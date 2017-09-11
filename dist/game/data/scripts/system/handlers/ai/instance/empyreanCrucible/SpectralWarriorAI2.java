@@ -48,18 +48,11 @@ public class SpectralWarriorAI2 extends AggressiveNpcAI2
 		if ((hpPercentage <= 50) && isDone.compareAndSet(false, true))
 		{
 			getPosition().getWorldMapInstance().getInstanceHandler().onChangeStage(StageType.START_STAGE_6_ROUND_5);
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					resurrectAllies();
-				}
-			}, 2000);
+			ThreadPoolManager.getInstance().schedule(() -> resurrectAllies(), 2000);
 		}
 	}
 	
-	private void resurrectAllies()
+	void resurrectAllies()
 	{
 		for (VisibleObject obj : getKnownList().getKnownObjects().values())
 		{

@@ -30,6 +30,8 @@ public class CM_PING_REQUEST extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_PING_REQUEST </tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_PING_REQUEST(int opcode, State state, State... restStates)
 	{

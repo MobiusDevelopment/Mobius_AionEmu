@@ -38,6 +38,7 @@ public abstract class BlockListDAO implements DAO
 	 * Adds the given object id to the list of blocked players for the given player
 	 * @param playerObjId ID of player to edit the blocklist of
 	 * @param objIdToBlock ID of player to add to the blocklist
+	 * @param reason
 	 * @return Success
 	 */
 	public abstract boolean addBlockedUser(int playerObjId, int objIdToBlock, String reason);

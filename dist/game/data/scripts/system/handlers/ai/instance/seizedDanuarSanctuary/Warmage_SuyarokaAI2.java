@@ -66,7 +66,7 @@ public class Warmage_SuyarokaAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void stage1()
+	void stage1()
 	{
 		final int delay = 50000;
 		if (isAlreadyDead() || !isStart)
@@ -85,16 +85,12 @@ public class Warmage_SuyarokaAI2 extends AggressiveNpcAI2
 	{
 		if (!isAlreadyDead())
 		{
-			enrageTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			enrageTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(284455, 1051.3069f, 694.83075f, 282.0391f, (byte) 14); // Sheban Mystical Tyrhund.
-						spawn(284455, 1062.1957f, 694.9131f, 282.0391f, (byte) 51); // Sheban Mystical Tyrhund.
-					}
+					spawn(284455, 1051.3069f, 694.83075f, 282.0391f, (byte) 14); // Sheban Mystical Tyrhund.
+					spawn(284455, 1062.1957f, 694.9131f, 282.0391f, (byte) 51); // Sheban Mystical Tyrhund.
 				}
 			}, 3000);
 		}
@@ -108,14 +104,7 @@ public class Warmage_SuyarokaAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stage1();
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
 		}
 	}
 	

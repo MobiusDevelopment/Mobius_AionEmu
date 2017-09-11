@@ -49,7 +49,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -236,14 +235,7 @@ public class TalocsHollowInstance extends GeneralInstanceHandler
 			}
 			case 700739: // Cracked Huge Insect Egg.
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawnGeyser();
-					}
-				}, 5000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> spawnGeyser(), 5000);
 				despawnNpc(npc);
 				// Cracks appear on the surface of Queen Mosqua's egg.
 				sendMsgByRace(1400476, Race.PC_ALL, 0);
@@ -281,7 +273,7 @@ public class TalocsHollowInstance extends GeneralInstanceHandler
 		objects.put(700741, SpawnEngine.spawnObject(AIONPieceCle, instanceId));
 	}
 	
-	private void spawnGeyser()
+	void spawnGeyser()
 	{
 		final SpawnTemplate IDElimWindBox = SpawnEngine.addNewSingleTimeSpawn(300190000, 281817, 653.77478f, 838.88306f, 1303.8502f, (byte) 0);
 		IDElimWindBox.setEntityId(1308);
@@ -349,36 +341,18 @@ public class TalocsHollowInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

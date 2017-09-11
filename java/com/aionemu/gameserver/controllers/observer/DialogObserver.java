@@ -49,6 +49,8 @@ public abstract class DialogObserver extends ActionObserver
 	
 	/**
 	 * Is called when player is too far away from dialog serving object
+	 * @param requester
+	 * @param responder
 	 */
 	public abstract void tooFar(Creature requester, Player responder);
 }

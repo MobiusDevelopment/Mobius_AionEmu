@@ -156,7 +156,7 @@ public class RVController extends NpcController
 		}
 	}
 	
-	private boolean onAccept(Player player)
+	boolean onAccept(Player player)
 	{
 		if (!isAccepting)
 		{
@@ -179,7 +179,7 @@ public class RVController extends NpcController
 		return true;
 	}
 	
-	private boolean onDeny(Player player)
+	boolean onDeny(Player player)
 	{
 		return true;
 	}

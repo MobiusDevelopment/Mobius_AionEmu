@@ -171,15 +171,7 @@ public class SummonController extends CreatureController<Summon>
 		
 		if (!master.equals(lastAttacker) && !owner.equals(lastAttacker) && !master.getLifeStats().isAlreadyDead() && !lastAttacker.getLifeStats().isAlreadyDead())
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				
-				@Override
-				public void run()
-				{
-					lastAttacker.getAggroList().addHate(master, 1);
-				}
-			}, 1000);
+			ThreadPoolManager.getInstance().schedule(() -> lastAttacker.getAggroList().addHate(master, 1), 1000);
 		}
 	}
 	
@@ -198,15 +190,7 @@ public class SummonController extends CreatureController<Summon>
 			// If skill succeeds, handle automatic release if expected
 			if (skill.useSkill() && (skillId == releaseAfterSkill))
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					
-					@Override
-					public void run()
-					{
-						SummonsService.release(getOwner(), UnsummonType.UNSPECIFIED, isAttacked);
-					}
-				}, 1000);
+				ThreadPoolManager.getInstance().schedule(() -> SummonsService.release(getOwner(), UnsummonType.UNSPECIFIED, isAttacked), 1000);
 			}
 			setReleaseAfterSkill(-1);
 		}
@@ -214,6 +198,7 @@ public class SummonController extends CreatureController<Summon>
 	
 	/**
 	 * Handle automatic release if Ultra Skill demands it
+	 * @param skillId
 	 * @param is the skill commanded by summoner, after which pet is automatically dismissed
 	 */
 	public void setReleaseAfterSkill(int skillId)

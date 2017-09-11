@@ -37,6 +37,7 @@ public abstract class RequestResponseHandler
 	 * Called when a response is received
 	 * @param requested Player whom requested this response
 	 * @param responder Player whom responded to this request
+	 * @param response
 	 * @param responseCode The response the player gave, usually 0 = no 1 = yes
 	 */
 	public void handle(Player responder, int response)

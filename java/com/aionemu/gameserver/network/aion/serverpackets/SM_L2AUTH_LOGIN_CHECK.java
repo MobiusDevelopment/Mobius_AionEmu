@@ -41,6 +41,7 @@ public class SM_L2AUTH_LOGIN_CHECK extends AionServerPacket
 	/**
 	 * Constructs new <tt>SM_L2AUTH_LOGIN_CHECK </tt> packet
 	 * @param ok
+	 * @param accountName
 	 */
 	public SM_L2AUTH_LOGIN_CHECK(boolean ok, String accountName)
 	{

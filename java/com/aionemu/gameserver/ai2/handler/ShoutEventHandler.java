@@ -114,6 +114,8 @@ public final class ShoutEventHandler
 	
 	/**
 	 * Called on Aggro when NPC is ready to attack
+	 * @param npcAI
+	 * @param creature
 	 */
 	public static void onAttackBegin(NpcAI2 npcAI, Creature creature)
 	{
@@ -129,6 +131,8 @@ public final class ShoutEventHandler
 	
 	/**
 	 * Handle NPC attacked event (when damage was received or not)
+	 * @param npcAI
+	 * @param creature
 	 */
 	public static void onHelp(NpcAI2 npcAI, Creature creature)
 	{
@@ -155,6 +159,8 @@ public final class ShoutEventHandler
 	/**
 	 * Handles attacks from NPC to NPC. <br>
 	 * <b><font color='red'>IMPORTANT!!! </font>All such shouts must be of type SAY.</b>
+	 * @param npcAI
+	 * @param target
 	 */
 	public static void onEnemyAttack(NpcAI2 npcAI, Creature target)
 	{
@@ -189,22 +195,17 @@ public final class ShoutEventHandler
 		{
 			return;
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			
-			@Override
-			public void run()
+			final Iterator<Player> iter = npc.getKnownList().getKnownPlayers().values().iterator();
+			while (iter.hasNext())
 			{
-				final Iterator<Player> iter = npc.getKnownList().getKnownPlayers().values().iterator();
-				while (iter.hasNext())
+				final Player kObj = iter.next();
+				if (kObj.getLifeStats().isAlreadyDead())
 				{
-					final Player kObj = iter.next();
-					if (kObj.getLifeStats().isAlreadyDead())
-					{
-						return;
-					}
-					NpcShoutsService.getInstance().shout(npc, kObj, shout, shout.getPollDelay() / 1000);
+					return;
 				}
+				NpcShoutsService.getInstance().shout(npc, kObj, shout, shout.getPollDelay() / 1000);
 			}
 		}, 0);
 	}
@@ -216,6 +217,8 @@ public final class ShoutEventHandler
 	
 	/**
 	 * Handle target attacked events
+	 * @param npcAI
+	 * @param creature
 	 */
 	public static void onAttack(NpcAI2 npcAI, Creature creature)
 	{

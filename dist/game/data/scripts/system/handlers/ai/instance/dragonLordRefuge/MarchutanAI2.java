@@ -34,32 +34,28 @@ public class MarchutanAI2 extends NpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// Finally, Tiamat is dead.
-				sendMsg(1500698, getObjectId(), false, 3000);
-				// I saw its despair, before the end.
-				sendMsg(1500699, getObjectId(), false, 6000);
-				// You can thank me by giving me those relics, for safekeeping.
-				sendMsg(1500633, getObjectId(), false, 9000);
-				// That time is over, Kahrun.
-				sendMsg(1500634, getObjectId(), false, 12000);
-				// You didn't have the power to fight Tiamat, so what makes you think you can stop me ?
-				sendMsg(1500635, getObjectId(), false, 15000);
-				// How far do you think you'll get with those ?
-				sendMsg(1500638, getObjectId(), false, 18000);
-				// We must unite to stop him--but don't think that this argument is over!
-				sendMsg(1500639, getObjectId(), false, 21000);
-				// Well well. What's this ? Bickering ? And so soon after your glorious victory.
-				sendMsg(1500640, getObjectId(), false, 24000);
-			}
+			// Finally, Tiamat is dead.
+			sendMsg(1500698, getObjectId(), false, 3000);
+			// I saw its despair, before the end.
+			sendMsg(1500699, getObjectId(), false, 6000);
+			// You can thank me by giving me those relics, for safekeeping.
+			sendMsg(1500633, getObjectId(), false, 9000);
+			// That time is over, Kahrun.
+			sendMsg(1500634, getObjectId(), false, 12000);
+			// You didn't have the power to fight Tiamat, so what makes you think you can stop me ?
+			sendMsg(1500635, getObjectId(), false, 15000);
+			// How far do you think you'll get with those ?
+			sendMsg(1500638, getObjectId(), false, 18000);
+			// We must unite to stop him--but don't think that this argument is over!
+			sendMsg(1500639, getObjectId(), false, 21000);
+			// Well well. What's this ? Bickering ? And so soon after your glorious victory.
+			sendMsg(1500640, getObjectId(), false, 24000);
 		}, 1000);
 	}
 	
-	private void sendMsg(int msg, int Obj, boolean isShout, int time)
+	void sendMsg(int msg, int Obj, boolean isShout, int time)
 	{
 		NpcShoutsService.getInstance().sendMsg(getPosition().getWorldMapInstance(), msg, Obj, isShout, 0, time);
 	}

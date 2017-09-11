@@ -123,7 +123,7 @@ public class BeshmundirsWalkAI2 extends ActionItemNpcAI2
 		return false;
 	}
 	
-	private void moveToInstance(Player player)
+	void moveToInstance(Player player)
 	{
 		final PortalUse portalUse = DataManager.PORTAL2_DATA.getPortalUse(getNpcId());
 		if (portalUse != null)

@@ -37,7 +37,6 @@ import com.aionemu.gameserver.services.item.ItemPacketService.ItemDeleteType;
  */
 public class ItemMoveService
 {
-	
 	public static void moveItem(Player player, int itemObjId, byte sourceStorageType, byte destinationStorageType, short slot)
 	{
 		if (ExchangeService.getInstance().isPlayerInExchange(player))

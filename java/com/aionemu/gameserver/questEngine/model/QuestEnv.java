@@ -36,9 +36,11 @@ public class QuestEnv
 	private int extendedRewardIndex;
 	
 	/**
+	 * @param visibleObject
 	 * @param creature
 	 * @param player
 	 * @param questId
+	 * @param dialogId
 	 */
 	public QuestEnv(VisibleObject visibleObject, Player player, Integer questId, Integer dialogId)
 	{

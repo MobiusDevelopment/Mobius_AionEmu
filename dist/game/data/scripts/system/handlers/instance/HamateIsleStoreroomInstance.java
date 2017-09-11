@@ -44,7 +44,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /****/
 /**
@@ -175,18 +174,14 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 			{
 				isStartTimer = true;
 				System.currentTimeMillis();
-				instance.doOnAllPlayers(new Visitor<Player>()
+				instance.doOnAllPlayers(player1 ->
 				{
-					@Override
-					public void visit(Player player)
+					if (player1.isOnline())
 					{
-						if (player.isOnline())
-						{
-							startHamateIsleStoreroomTimer();
-							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 900));
-							// The Balaur protective magic ward has been activated.
-							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_START_IDABRE);
-						}
+						startHamateIsleStoreroomTimer();
+						PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 900));
+						// The Balaur protective magic ward has been activated.
+						PacketSendUtility.sendPacket(player1, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_START_IDABRE);
 					}
 				});
 			}
@@ -203,32 +198,21 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 		HamateIsleStoreroomTreasureBoxSuscess.add((Npc) spawn(700474, 503.7779f, 630.8419f, 104.54881f, (byte) 90));
 	}
 	
-	private void startHamateIsleStoreroomTimer()
+	void startHamateIsleStoreroomTimer()
 	{
-		hamateIsleStoreroomTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+		hamateIsleStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// All Balaur treasure chests have disappeared.
-				sendMsg(1400244);
-				HamateIsleStoreroomTreasureBoxSuscess.get(0).getController().onDelete();
-				HamateIsleStoreroomTreasureBoxSuscess.get(1).getController().onDelete();
-				HamateIsleStoreroomTreasureBoxSuscess.get(2).getController().onDelete();
-			}
+			// All Balaur treasure chests have disappeared.
+			sendMsg(1400244);
+			HamateIsleStoreroomTreasureBoxSuscess.get(0).getController().onDelete();
+			HamateIsleStoreroomTreasureBoxSuscess.get(1).getController().onDelete();
+			HamateIsleStoreroomTreasureBoxSuscess.get(2).getController().onDelete();
 		}, 900000); // 15 Minutes.
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	@Override

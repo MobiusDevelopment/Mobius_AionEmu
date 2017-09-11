@@ -48,6 +48,8 @@ public class CM_L2AUTH_LOGIN_CHECK extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_L2AUTH_LOGIN_CHECK </tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_L2AUTH_LOGIN_CHECK(int opcode, State state, State... restStates)
 	{

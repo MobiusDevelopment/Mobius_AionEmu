@@ -308,6 +308,7 @@ public class GatherableController extends VisibleObjectController<Gatherable>
 	
 	/**
 	 * This is prevent "Pvp Uncivilized" when a player want gather in peace. The player become "Invisible" for other player.
+	 * @param player
 	 */
 	public void startGatherProtection(Player player)
 	{

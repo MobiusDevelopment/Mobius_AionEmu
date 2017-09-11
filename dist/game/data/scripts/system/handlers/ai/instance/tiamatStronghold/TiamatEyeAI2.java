@@ -40,38 +40,30 @@ public class TiamatEyeAI2 extends NpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startLifeTask();
-				// Insolent Daevas! Destroying my lieutenants!
-				sendMsg(1500679, getObjectId(), false, 3000);
-				// Laksyaka was useful to me. You'll see what happens to those who take away my tools.
-				sendMsg(1500680, getObjectId(), false, 9000);
-				// Whatever agony my lieutenants felt as they died, you will feel tenfold!
-				sendMsg(1500681, getObjectId(), false, 15000);
-				// Dear Dragon Lord, please rest in peace. Let me avenge you!
-				sendMsg(1500682, getObjectId(), false, 21000);
-			}
+			startLifeTask();
+			// Insolent Daevas! Destroying my lieutenants!
+			sendMsg(1500679, getObjectId(), false, 3000);
+			// Laksyaka was useful to me. You'll see what happens to those who take away my tools.
+			sendMsg(1500680, getObjectId(), false, 9000);
+			// Whatever agony my lieutenants felt as they died, you will feel tenfold!
+			sendMsg(1500681, getObjectId(), false, 15000);
+			// Dear Dragon Lord, please rest in peace. Let me avenge you!
+			sendMsg(1500682, getObjectId(), false, 21000);
 		}, 1000);
 	}
 	
 	private void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				spawn(730622, 1029.7988f, 267.03915f, 408.98651f, (byte) 0, 83); // Central Passage Teleport.
-				AI2Actions.deleteOwner(TiamatEyeAI2.this);
-			}
+			spawn(730622, 1029.7988f, 267.03915f, 408.98651f, (byte) 0, 83); // Central Passage Teleport.
+			AI2Actions.deleteOwner(TiamatEyeAI2.this);
 		}, 30000);
 	}
 	
-	private void sendMsg(int msg, int Obj, boolean isShout, int time)
+	void sendMsg(int msg, int Obj, boolean isShout, int time)
 	{
 		NpcShoutsService.getInstance().sendMsg(getPosition().getWorldMapInstance(), msg, Obj, isShout, 0, time);
 	}

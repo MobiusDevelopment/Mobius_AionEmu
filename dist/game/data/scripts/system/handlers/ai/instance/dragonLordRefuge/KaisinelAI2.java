@@ -34,32 +34,28 @@ public class KaisinelAI2 extends NpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// It is finally over.
-				sendMsg(1500695, getObjectId(), false, 3000);
-				// Even a Dragon Lord can be driven to madness.
-				sendMsg(1500696, getObjectId(), false, 6000);
-				// No need to thank me. Now, give me the relics, and I will be gone.
-				sendMsg(1500625, getObjectId(), false, 9000);
-				// Yes ? And such a fine job you've done.
-				sendMsg(1500626, getObjectId(), false, 12000);
-				// How dare you raise your voice in this place ? Be silent.
-				sendMsg(1500627, getObjectId(), false, 15000);
-				// What do you think you're going to do with those ?
-				sendMsg(1500630, getObjectId(), false, 18000);
-				// The traitor was right about one thing. We must put our argument aside and go after him.
-				sendMsg(1500631, getObjectId(), false, 21000);
-				// Ah, Kahrun. Getting a little ambitious, don't you think ?
-				sendMsg(1500632, getObjectId(), false, 24000);
-			}
+			// It is finally over.
+			sendMsg(1500695, getObjectId(), false, 3000);
+			// Even a Dragon Lord can be driven to madness.
+			sendMsg(1500696, getObjectId(), false, 6000);
+			// No need to thank me. Now, give me the relics, and I will be gone.
+			sendMsg(1500625, getObjectId(), false, 9000);
+			// Yes ? And such a fine job you've done.
+			sendMsg(1500626, getObjectId(), false, 12000);
+			// How dare you raise your voice in this place ? Be silent.
+			sendMsg(1500627, getObjectId(), false, 15000);
+			// What do you think you're going to do with those ?
+			sendMsg(1500630, getObjectId(), false, 18000);
+			// The traitor was right about one thing. We must put our argument aside and go after him.
+			sendMsg(1500631, getObjectId(), false, 21000);
+			// Ah, Kahrun. Getting a little ambitious, don't you think ?
+			sendMsg(1500632, getObjectId(), false, 24000);
 		}, 1000);
 	}
 	
-	private void sendMsg(int msg, int Obj, boolean isShout, int time)
+	void sendMsg(int msg, int Obj, boolean isShout, int time)
 	{
 		NpcShoutsService.getInstance().sendMsg(getPosition().getWorldMapInstance(), msg, Obj, isShout, 0, time);
 	}

@@ -48,38 +48,17 @@ public class Archon_Shadow_ScoutAI2 extends NpcAI2
 	
 	private void startRiftEscapeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawnRiftEscape(701131);
-			}
-		}, 2500);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawnRiftEscape(701131), 2500);
 	}
 	
 	private void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(Archon_Shadow_ScoutAI2.this);
-			}
-		}, 10000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> AI2Actions.deleteOwner(Archon_Shadow_ScoutAI2.this), 10000);
 	}
 	
 	private void startRiftEscapeClosed()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				despawnNpc(701131);
-			}
-		}, 12500);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> despawnNpc(701131), 12500);
 	}
 	
 	private void spawnRiftEscape(int npcId)
@@ -96,7 +75,7 @@ public class Archon_Shadow_ScoutAI2 extends NpcAI2
 		return (Npc) spawn(npcId, p.getX() + x1, p.getY() + y1, p.getZ(), (byte) 0);
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

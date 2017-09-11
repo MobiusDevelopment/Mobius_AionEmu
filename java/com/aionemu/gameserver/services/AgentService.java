@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.agent.AgentLocation;
 import com.aionemu.gameserver.model.agent.AgentStateType;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.spawns.SpawnGroup2;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.agentspawns.AgentSpawnTemplate;
@@ -42,7 +41,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -102,14 +100,7 @@ public class AgentService
 		}
 		fight.start();
 		empyreanLordCountdownMsg(id);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				stopAgentFight(id);
-			}
-		}, duration * 3600 * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> stopAgentFight(id), duration * 3600 * 1000);
 	}
 	
 	public void stopAgentFight(int id)
@@ -151,6 +142,8 @@ public class AgentService
 	
 	/**
 	 * The Empyrean Lord's Agent Countdown.
+	 * @param id
+	 * @return
 	 */
 	public boolean empyreanLordCountdownMsg(int id)
 	{
@@ -158,16 +151,12 @@ public class AgentService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
+				World.getInstance().doOnAllPlayers(player ->
 				{
-					@Override
-					public void visit(Player player)
-					{
-						// The Empyrean Lord's Agent will end the battle in 30 minutes.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GODELITE_TimeAttack_Start, 5400000);
-						// The Empyrean Lord's Agent has disappeared.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GODELITE_TimeAttack_Fail, 7200000);
-					}
+					// The Empyrean Lord's Agent will end the battle in 30 minutes.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GODELITE_TimeAttack_Start, 5400000);
+					// The Empyrean Lord's Agent has disappeared.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_GODELITE_TimeAttack_Fail, 7200000);
 				});
 				return true;
 			}
@@ -184,15 +173,7 @@ public class AgentService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						// The Agent battle will start in 10 minutes.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF4_Advance_GodElite_time_01, 0);
-					}
-				});
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF4_Advance_GodElite_time_01, 0));
 				return true;
 			}
 			default:
@@ -208,15 +189,7 @@ public class AgentService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						// The Agent battle will start in 5 minutes.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF4_Advance_GodElite_time_02, 0);
-					}
-				});
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF4_Advance_GodElite_time_02, 0));
 				return true;
 			}
 			default:

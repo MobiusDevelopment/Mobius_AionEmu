@@ -97,14 +97,15 @@ public class Legion_Advance_CorridorAI2 extends NpcAI2
 	
 	/**
 	 * Elyos.
+	 * @param responder
 	 */
-	private void transferRvrElyos1(Player responder)
+	void transferRvrElyos1(Player responder)
 	{
 		TeleportService2.teleportTo(responder, 220040000, 720.6933f, 2137.6619f, 305.9253f, (byte) 90, TeleportAnimation.BEAM_ANIMATION);
 		PacketSendUtility.playerSendPacketTime(responder, SM_SYSTEM_MESSAGE.STR_MSG_RVR_DIRECT_PORTAL_OPEN_NOTICE, 15000);
 	}
 	
-	private void transferRvrElyos2(Player responder)
+	void transferRvrElyos2(Player responder)
 	{
 		TeleportService2.teleportTo(responder, 210040000, 1370.1682f, 671.9592f, 180.76796f, (byte) 12, TeleportAnimation.BEAM_ANIMATION);
 		PacketSendUtility.playerSendPacketTime(responder, SM_SYSTEM_MESSAGE.STR_MSG_RVR_DIRECT_PORTAL_OPEN_NOTICE, 15000);
@@ -112,14 +113,15 @@ public class Legion_Advance_CorridorAI2 extends NpcAI2
 	
 	/**
 	 * Asmodians.
+	 * @param responder
 	 */
-	private void transferRvrAsmodians1(Player responder)
+	void transferRvrAsmodians1(Player responder)
 	{
 		TeleportService2.teleportTo(responder, 210040000, 862.318f, 318.10703f, 139.89037f, (byte) 6, TeleportAnimation.BEAM_ANIMATION);
 		PacketSendUtility.playerSendPacketTime(responder, SM_SYSTEM_MESSAGE.STR_MSG_RVR_DIRECT_PORTAL_OPEN_NOTICE, 15000);
 	}
 	
-	private void transferRvrAsmodians2(Player responder)
+	void transferRvrAsmodians2(Player responder)
 	{
 		TeleportService2.teleportTo(responder, 220040000, 790.0702f, 1434.9897f, 312.33909f, (byte) 66, TeleportAnimation.BEAM_ANIMATION);
 		PacketSendUtility.playerSendPacketTime(responder, SM_SYSTEM_MESSAGE.STR_MSG_RVR_DIRECT_PORTAL_OPEN_NOTICE, 15000);

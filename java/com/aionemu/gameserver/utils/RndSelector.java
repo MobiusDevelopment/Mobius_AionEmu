@@ -24,6 +24,7 @@ import com.aionemu.commons.utils.Rnd;
 
 /**
  * Created with IntelliJ IDEA. User: pixfid Date: 7/19/13 Time: 7:44 AM
+ * @param <E>
  */
 public class RndSelector<E>
 {

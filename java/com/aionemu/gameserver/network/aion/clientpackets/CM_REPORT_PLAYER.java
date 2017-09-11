@@ -33,6 +33,8 @@ public class CM_REPORT_PLAYER extends AionClientPacket
 	/**
 	 * A player gets reported.
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_REPORT_PLAYER(int opcode, State state, State... restStates)
 	{

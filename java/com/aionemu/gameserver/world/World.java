@@ -82,6 +82,7 @@ public class World
 	
 	/**
 	 * Store object in the world.
+	 * @param object
 	 */
 	public void storeObject(VisibleObject object)
 	{
@@ -149,6 +150,7 @@ public class World
 	/**
 	 * Remove Object from the world.<br>
 	 * If the given object is Npc then it also releases it's objId from IDFactory.
+	 * @param object
 	 */
 	public void removeObject(VisibleObject object)
 	{
@@ -208,6 +210,8 @@ public class World
 	
 	/**
 	 * Finds player by player name.
+	 * @param name
+	 * @return
 	 */
 	public Player findPlayer(String name)
 	{
@@ -216,6 +220,8 @@ public class World
 	
 	/**
 	 * Finds player by player objectId.
+	 * @param objectId
+	 * @return
 	 */
 	public Player findPlayer(int objectId)
 	{
@@ -224,6 +230,8 @@ public class World
 	
 	/**
 	 * Finds VisibleObject by objectId.
+	 * @param objectId
+	 * @return
 	 */
 	public VisibleObject findVisibleObject(int objectId)
 	{
@@ -232,6 +240,8 @@ public class World
 	
 	/**
 	 * Check whether object is in world
+	 * @param object
+	 * @return
 	 */
 	public boolean isInWorld(VisibleObject object)
 	{
@@ -240,6 +250,8 @@ public class World
 	
 	/**
 	 * Return World Map by id
+	 * @param id
+	 * @return
 	 */
 	public WorldMap getWorldMap(int id)
 	{
@@ -411,6 +423,7 @@ public class World
 	
 	/**
 	 * Spawn VisibleObject at current position [use setPosition ]. Object will be visible by others and will see other objects.
+	 * @param object
 	 */
 	public void spawn(VisibleObject object)
 	{
@@ -428,6 +441,7 @@ public class World
 	
 	/**
 	 * Despawn VisibleObject, object will become invisible and object position will become invalid. All others objects
+	 * @param object
 	 */
 	public void despawn(VisibleObject object)
 	{

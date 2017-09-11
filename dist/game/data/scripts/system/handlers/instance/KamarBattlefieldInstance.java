@@ -64,7 +64,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -101,153 +100,125 @@ public class KamarBattlefieldInstance extends GeneralInstanceHandler
 	{
 		instanceTime = System.currentTimeMillis();
 		kamarBattlefieldReward.setInstanceStartTime();
-		kamarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		kamarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!kamarBattlefieldReward.isRewarded())
 			{
-				if (!kamarBattlefieldReward.isRewarded())
-				{
-					openFirstDoors();
-					// The member recruitment window has passed. You cannot recruit any more members.
-					sendMsgByRace(1401181, Race.PC_ALL, 5000);
-					kamarBattlefieldReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-					startInstancePacket();
-					kamarBattlefieldReward.sendPacket(4, null);
-				}
+				openFirstDoors();
+				// The member recruitment window has passed. You cannot recruit any more members.
+				sendMsgByRace(1401181, Race.PC_ALL, 5000);
+				kamarBattlefieldReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+				startInstancePacket();
+				kamarBattlefieldReward.sendPacket(4, null);
 			}
 		}, 90000));
-		kamarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		kamarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				kamarBattlefieldReward.sendPacket(4, null);
-				// A Cannon has arrived in Peace Square.
-				sendMsgByRace(1401841, Race.PC_ALL, 0);
-				// Kamar Cannon.
-				sp(701806, 1364.5979f, 1467.5867f, 599.7256f, (byte) 104, 0);
-				sp(701902, 1262.3992f, 1609.1414f, 585.90643f, (byte) 53, 0);
-				// Kamar Cannon Flag.
-				sp(801960, 1364.5979f, 1467.5867f, 599.7256f, (byte) 104, 0);
-				sp(801961, 1262.3992f, 1609.1414f, 585.90643f, (byte) 53, 0);
-			}
+			sendPacket(false);
+			kamarBattlefieldReward.sendPacket(4, null);
+			// A Cannon has arrived in Peace Square.
+			sendMsgByRace(1401841, Race.PC_ALL, 0);
+			// Kamar Cannon.
+			sp(701806, 1364.5979f, 1467.5867f, 599.7256f, (byte) 104, 0);
+			sp(701902, 1262.3992f, 1609.1414f, 585.90643f, (byte) 53, 0);
+			// Kamar Cannon Flag.
+			sp(801960, 1364.5979f, 1467.5867f, 599.7256f, (byte) 104, 0);
+			sp(801961, 1262.3992f, 1609.1414f, 585.90643f, (byte) 53, 0);
 		}, 110000));
-		kamarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		kamarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				kamarBattlefieldReward.sendPacket(4, null);
-				// Reian Tribe supplies have been deposited in Peace Square.
-				sendMsgByRace(1401840, Race.PC_ALL, 0);
-				sp(701906, 1371.4758f, 1549.8353f, 595.35071f, (byte) 0, 65); // Reian Supply Items.
-				sp(701907, 1356.1837f, 1479.2998f, 593.80170f, (byte) 0, 66); // Reian Supply Items.
-				sp(701908, 1353.0874f, 1413.4635f, 598.66101f, (byte) 0, 68); // Reian Supply Items.
-			}
+			sendPacket(false);
+			kamarBattlefieldReward.sendPacket(4, null);
+			// Reian Tribe supplies have been deposited in Peace Square.
+			sendMsgByRace(1401840, Race.PC_ALL, 0);
+			sp(701906, 1371.4758f, 1549.8353f, 595.35071f, (byte) 0, 65); // Reian Supply Items.
+			sp(701907, 1356.1837f, 1479.2998f, 593.80170f, (byte) 0, 66); // Reian Supply Items.
+			sp(701908, 1353.0874f, 1413.4635f, 598.66101f, (byte) 0, 68); // Reian Supply Items.
 		}, 220000));
-		kamarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		kamarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				kamarBattlefieldReward.sendPacket(4, null);
-				// Teleport Statues have appeared at the entrance to Kamar and the boarding site.
-				sendMsgByRace(1401913, Race.PC_ALL, 0);
-				// Kamena Development Zone Teleport Statue.
-				sp(801774, 1559.2257f, 1409.8746f, 596.60065f, (byte) 0, 215);
-				// Kahrun Guard Headquarters Teleport Statue.
-				sp(801775, 1172.0404f, 1640.7632f, 599.26404f, (byte) 0, 216);
-				// Siel's Spear Headquarters Teleport Statue.
-				sp(801776, 1308.8353f, 1704.7883f, 599.26404f, (byte) 0, 213);
-				// Kamar Entrance Teleport Statue.
-				sp(802016, 1440.3145f, 1227.4073f, 585.78650f, (byte) 0, 223);
-				sp(802017, 1109.5887f, 1532.7554f, 585.05902f, (byte) 0, 221);
-				// Griffoen Boarding Site Teleport Statue.
-				sp(802018, 1213.4902f, 1363.4617f, 612.36188f, (byte) 0, 225);
-				// Habrok Boarding Site Teleport Statue.
-				sp(802019, 1527.2150f, 1561.5153f, 611.90063f, (byte) 0, 224);
-			}
+			sendPacket(false);
+			kamarBattlefieldReward.sendPacket(4, null);
+			// Teleport Statues have appeared at the entrance to Kamar and the boarding site.
+			sendMsgByRace(1401913, Race.PC_ALL, 0);
+			// Kamena Development Zone Teleport Statue.
+			sp(801774, 1559.2257f, 1409.8746f, 596.60065f, (byte) 0, 215);
+			// Kahrun Guard Headquarters Teleport Statue.
+			sp(801775, 1172.0404f, 1640.7632f, 599.26404f, (byte) 0, 216);
+			// Siel's Spear Headquarters Teleport Statue.
+			sp(801776, 1308.8353f, 1704.7883f, 599.26404f, (byte) 0, 213);
+			// Kamar Entrance Teleport Statue.
+			sp(802016, 1440.3145f, 1227.4073f, 585.78650f, (byte) 0, 223);
+			sp(802017, 1109.5887f, 1532.7554f, 585.05902f, (byte) 0, 221);
+			// Griffoen Boarding Site Teleport Statue.
+			sp(802018, 1213.4902f, 1363.4617f, 612.36188f, (byte) 0, 225);
+			// Habrok Boarding Site Teleport Statue.
+			sp(802019, 1527.2150f, 1561.5153f, 611.90063f, (byte) 0, 224);
 		}, 300000));
-		kamarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		kamarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			sendPacket(false);
+			kamarBattlefieldReward.sendPacket(4, null);
+			// Reinforcements for the Elyos and Asmodians have arrived.
+			sendMsgByRace(1401847, Race.PC_ALL, 0);
+			switch (Rnd.get(1, 2))
 			{
-				sendPacket(false);
-				kamarBattlefieldReward.sendPacket(4, null);
-				// Reinforcements for the Elyos and Asmodians have arrived.
-				sendMsgByRace(1401847, Race.PC_ALL, 0);
-				switch (Rnd.get(1, 2))
-				{
-					case 1:
-						sp(233327, 1237.7656f, 1660.9849f, 585.3441f, (byte) 42, 0); // Acting Commander Crispin.
-						sp(801957, 1237.7656f, 1660.9849f, 585.3441f, (byte) 42, 0); // Acting Commander Crispin Flag.
-						break;
-					case 2:
-						sp(233329, 1364.8312f, 1425.156f, 598.875f, (byte) 10, 0); // Acting Commander Crispin.
-						sp(801957, 1364.8312f, 1425.156f, 598.875f, (byte) 10, 0); // Acting Commander Crispin Flag.
-						break;
-				}
-				switch (Rnd.get(1, 2))
-				{
-					case 1:
-						sp(233328, 1382.1552f, 1443.0217f, 599.3814f, (byte) 2, 0); // Acting Commander Tepes.
-						sp(801958, 1382.1552f, 1443.0217f, 599.3814f, (byte) 2, 0); // Acting Commander Tepes Flag.
-						break;
-					case 2:
-						sp(233330, 1235.9894f, 1662.9991f, 585.3441f, (byte) 107, 0); // Acting Commander Tepes.
-						sp(801958, 1235.9894f, 1662.9991f, 585.3441f, (byte) 107, 0); // Acting Commander Tepes Flag.
-						break;
-				}
+				case 1:
+					sp(233327, 1237.7656f, 1660.9849f, 585.3441f, (byte) 42, 0); // Acting Commander Crispin.
+					sp(801957, 1237.7656f, 1660.9849f, 585.3441f, (byte) 42, 0); // Acting Commander Crispin Flag.
+					break;
+				case 2:
+					sp(233329, 1364.8312f, 1425.156f, 598.875f, (byte) 10, 0); // Acting Commander Crispin.
+					sp(801957, 1364.8312f, 1425.156f, 598.875f, (byte) 10, 0); // Acting Commander Crispin Flag.
+					break;
+			}
+			switch (Rnd.get(1, 2))
+			{
+				case 1:
+					sp(233328, 1382.1552f, 1443.0217f, 599.3814f, (byte) 2, 0); // Acting Commander Tepes.
+					sp(801958, 1382.1552f, 1443.0217f, 599.3814f, (byte) 2, 0); // Acting Commander Tepes Flag.
+					break;
+				case 2:
+					sp(233330, 1235.9894f, 1662.9991f, 585.3441f, (byte) 107, 0); // Acting Commander Tepes.
+					sp(801958, 1235.9894f, 1662.9991f, 585.3441f, (byte) 107, 0); // Acting Commander Tepes Flag.
+					break;
 			}
 		}, 600000));
-		kamarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		kamarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			sendPacket(false);
+			kamarBattlefieldReward.sendPacket(4, null);
+			// The Dredgion has appeared.
+			sendMsgByRace(1401842, Race.PC_ALL, 0);
+			// The Dredgion is disgorging a massive number of troops.
+			sendMsgByRace(1401843, Race.PC_ALL, 5000);
+			// Commander Varga and his Deputy have arrived at the battle.
+			sendMsgByRace(1401844, Race.PC_ALL, 10000);
+			switch (Rnd.get(1, 3))
 			{
-				sendPacket(false);
-				kamarBattlefieldReward.sendPacket(4, null);
-				// The Dredgion has appeared.
-				sendMsgByRace(1401842, Race.PC_ALL, 0);
-				// The Dredgion is disgorging a massive number of troops.
-				sendMsgByRace(1401843, Race.PC_ALL, 5000);
-				// Commander Varga and his Deputy have arrived at the battle.
-				sendMsgByRace(1401844, Race.PC_ALL, 10000);
-				switch (Rnd.get(1, 3))
-				{
-					case 1:
-						sp(233321, 1453.465f, 1347.8022f, 606.12854f, (byte) 42, 0); // General Varga.
-						sp(801956, 1453.465f, 1347.8022f, 606.12854f, (byte) 42, 0); // General Varga Flag.
-						sp(233324, 1437.8099f, 1368.8099f, 600.8967f, (byte) 41, 0); // Varga Assault Commander.
-						break;
-					case 2:
-						sp(233322, 1432.4172f, 1620.6938f, 599.9493f, (byte) 73, 0); // General Varga.
-						sp(801956, 1432.4172f, 1620.6938f, 599.9493f, (byte) 73, 0); // General Varga Flag.
-						sp(233325, 1418.108f, 1610.5255f, 599.9493f, (byte) 71, 0); // Varga Assault Commander.
-						break;
-					case 3:
-						sp(233323, 1181.3792f, 1428.9828f, 586.5563f, (byte) 40, 0); // General Varga.
-						sp(801956, 1181.3792f, 1428.9828f, 586.5563f, (byte) 40, 0); // General Varga Flag.
-						sp(233326, 1169.3397f, 1459.3201f, 586.5563f, (byte) 42, 0); // Varga Assault Commander.
-						break;
-				}
+				case 1:
+					sp(233321, 1453.465f, 1347.8022f, 606.12854f, (byte) 42, 0); // General Varga.
+					sp(801956, 1453.465f, 1347.8022f, 606.12854f, (byte) 42, 0); // General Varga Flag.
+					sp(233324, 1437.8099f, 1368.8099f, 600.8967f, (byte) 41, 0); // Varga Assault Commander.
+					break;
+				case 2:
+					sp(233322, 1432.4172f, 1620.6938f, 599.9493f, (byte) 73, 0); // General Varga.
+					sp(801956, 1432.4172f, 1620.6938f, 599.9493f, (byte) 73, 0); // General Varga Flag.
+					sp(233325, 1418.108f, 1610.5255f, 599.9493f, (byte) 71, 0); // Varga Assault Commander.
+					break;
+				case 3:
+					sp(233323, 1181.3792f, 1428.9828f, 586.5563f, (byte) 40, 0); // General Varga.
+					sp(801956, 1181.3792f, 1428.9828f, 586.5563f, (byte) 40, 0); // General Varga Flag.
+					sp(233326, 1169.3397f, 1459.3201f, 586.5563f, (byte) 42, 0); // Varga Assault Commander.
+					break;
 			}
 		}, 900000));
-		kamarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		kamarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!kamarBattlefieldReward.isRewarded())
 			{
-				if (!kamarBattlefieldReward.isRewarded())
-				{
-					final Race winnerRace = kamarBattlefieldReward.getWinnerRaceByScore();
-					stopInstance(winnerRace);
-				}
+				final Race winnerRace = kamarBattlefieldReward.getWinnerRaceByScore();
+				stopInstance(winnerRace);
 			}
 		}, 1800000));
 	}
@@ -273,24 +244,20 @@ public class KamarBattlefieldInstance extends GeneralInstanceHandler
 	
 	private void sendEnterPacket(Player player)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(opponent ->
 		{
-			@Override
-			public void visit(Player opponent)
+			if (player.getRace() != opponent.getRace())
 			{
-				if (player.getRace() != opponent.getRace())
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
+				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId()));
+			}
+			else
+			{
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
+				if (player.getObjectId() != opponent.getObjectId())
 				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId()));
-				}
-				else
-				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
-					if (player.getObjectId() != opponent.getObjectId())
-					{
-						PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId(), 20, 0));
-					}
+					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId(), 20, 0));
 				}
 			}
 		});
@@ -301,16 +268,12 @@ public class KamarBattlefieldInstance extends GeneralInstanceHandler
 	
 	private void startInstancePacket()
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), kamarBattlefieldReward, instance.getPlayersInside(), true));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(3, getTime(), kamarBattlefieldReward, player.getObjectId(), 0, 0));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), kamarBattlefieldReward, instance.getPlayersInside(), true));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
-			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), kamarBattlefieldReward, instance.getPlayersInside(), true));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(3, getTime(), kamarBattlefieldReward, player.getObjectId(), 0, 0));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), kamarBattlefieldReward, instance.getPlayersInside(), true));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
 		});
 	}
 	
@@ -318,25 +281,11 @@ public class KamarBattlefieldInstance extends GeneralInstanceHandler
 	{
 		if (isObjects)
 		{
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime(), kamarBattlefieldReward, instance.getPlayersInside(), true));
-				}
-			});
+			instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime(), kamarBattlefieldReward, instance.getPlayersInside(), true)));
 		}
 		else
 		{
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), kamarBattlefieldReward, instance.getPlayersInside(), true));
-				}
-			});
+			instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), kamarBattlefieldReward, instance.getPlayersInside(), true)));
 		}
 	}
 	
@@ -434,24 +383,20 @@ public class KamarBattlefieldInstance extends GeneralInstanceHandler
 		{
 			npc.getController().onDelete();
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						onExitInstance(player);
-					}
-					AutoGroupService.getInstance().unRegisterInstance(instanceId);
+					onExitInstance(player);
 				}
+				AutoGroupService.getInstance().unRegisterInstance(instanceId);
 			}
 		}, 60000);
 	}
 	
-	private int getTime()
+	int getTime()
 	{
 		final long result = System.currentTimeMillis() - instanceTime;
 		if (result < 90000)
@@ -680,16 +625,12 @@ public class KamarBattlefieldInstance extends GeneralInstanceHandler
 				// Commander Varga has died.
 				sendMsgByRace(1401846, Race.PC_ALL, 0);
 				RaceKilledVarga = mostPlayerDamage.getRace();
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
+					if (!kamarBattlefieldReward.isRewarded())
 					{
-						if (!kamarBattlefieldReward.isRewarded())
-						{
-							final Race winnerRace = kamarBattlefieldReward.getWinnerRaceByScore();
-							stopInstance(winnerRace);
-						}
+						final Race winnerRace = kamarBattlefieldReward.getWinnerRaceByScore();
+						stopInstance(winnerRace);
 					}
 				}, 30000);
 				break;
@@ -894,18 +835,14 @@ public class KamarBattlefieldInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
-		kamarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		kamarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				spawn(npcId, x, y, z, h, entityId);
+				if (msg > 0)
 				{
-					spawn(npcId, x, y, z, h, entityId);
-					if (msg > 0)
-					{
-						sendMsgByRace(msg, race, 0);
-					}
+					sendMsgByRace(msg, race, 0);
 				}
 			}
 		}, time));
@@ -913,41 +850,26 @@ public class KamarBattlefieldInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
-		kamarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		kamarTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
-				{
-					final Npc npc = (Npc) spawn(npcId, x, y, z, h);
-					npc.getSpawn().setWalkerId(walkerId);
-					WalkManager.startWalking((NpcAI2) npc.getAi2());
-				}
+				final Npc npc = (Npc) spawn(npcId, x, y, z, h);
+				npc.getSpawn().setWalkerId(walkerId);
+				WalkManager.startWalking((NpcAI2) npc.getAi2());
 			}
 		}, time));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		kamarTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		kamarTask.add(ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time));
+		}), time));
 	}
 	
 	private void stopInstanceTask()

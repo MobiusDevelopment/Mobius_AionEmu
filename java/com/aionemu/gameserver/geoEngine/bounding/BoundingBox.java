@@ -56,6 +56,10 @@ public class BoundingBox extends BoundingVolume
 	
 	/**
 	 * Contstructor instantiates a new <code>BoundingBox</code> object with given specs.
+	 * @param c
+	 * @param x
+	 * @param y
+	 * @param z
 	 */
 	public BoundingBox(Vector3f c, float x, float y, float z)
 	{
@@ -691,6 +695,9 @@ public class BoundingBox extends BoundingVolume
 	}
 	
 	/**
+	 * @param ray
+	 * @param results
+	 * @return
 	 * @see com.aionemu.gameserver.geoEngine.bounding.jme.bounding.BoundingVolume#intersectsWhere(com.jme.math.Ray)
 	 */
 	private int collideWithRay(Ray ray, CollisionResults results)

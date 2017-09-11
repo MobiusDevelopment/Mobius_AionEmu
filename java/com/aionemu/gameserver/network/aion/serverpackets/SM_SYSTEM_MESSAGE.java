@@ -36,6 +36,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 {
 	/**
 	 * You inflicted %num1 damage on %0.
+	 * @param num1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_ATTACK(int num1, String value0)
 	{
@@ -44,6 +47,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Critical Hit! You inflicted %num1 critical damage on %0.
+	 * @param num1
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_CRITICAL(int num1, String value0)
 	{
@@ -52,6 +58,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 inflicted %num2 damage on %1.
+	 * @param value0
+	 * @param num2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_SUMMONED_ATTACK(String value0, int num2, String value1)
 	{
@@ -60,6 +70,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Critical Hit! %0 inflicted %num2 critical damage on %1.
+	 * @param value0
+	 * @param num2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_SUMMONED_CRITICAL(String value0, int num2, String value1)
 	{
@@ -68,6 +82,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %1 received %num2 damage from %0.
+	 * @param value1
+	 * @param num2
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_SUMMONED_ENEMY_ATTACK(String value1, int num2, String value0)
 	{
@@ -76,6 +94,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Critical Hit! %0 inflicted %num2 critical damage on %1.
+	 * @param value0
+	 * @param num2
+	 * @param value1
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_MSG_COMBAT_MY_SUMMONED_ENEMY_CRITICAL(String value0, int num2, String value1)
 	{
@@ -84,6 +106,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 has been dismissed.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUMMON_UNSUMMONED(int value0)
 	{
@@ -92,6 +116,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is in Stand-by mode.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUMMON_STAY_MODE(String value0)
 	{
@@ -100,6 +126,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 starts to attack the enemy.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUMMON_ATTACK_MODE(int value0)
 	{
@@ -108,6 +136,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is in Guard mode.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUMMON_GUARD_MODE(int value0)
 	{
@@ -116,6 +146,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 is in Resting mode.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUMMON_REST_MODE(int value0)
 	{
@@ -124,6 +156,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You unsummon %0.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUMMON_UNSUMMON_FOLLOWER(int value0)
 	{
@@ -132,6 +166,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summon %0 Spirit. Cooldown time begins when it is unsummoned, and takes longer when the spirit is killed by an enemy.
+	 * @param value0
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUMMON_COOLDOWN(String value0)
 	{
@@ -390,6 +426,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You became blinded after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Blind_ME_TO_SELF(String skillname)
 	{
@@ -398,6 +436,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You became confused after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Confuse_ME_TO_SELF(String skillname)
 	{
@@ -406,6 +446,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You became diseased after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Disease_ME_TO_SELF(String skillname)
 	{
@@ -414,6 +456,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are struck with fear after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fear_ME_TO_SELF(String skillname)
 	{
@@ -422,6 +466,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You became paralyzed after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Paralyze_ME_TO_SELF(String skillname)
 	{
@@ -430,6 +476,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You became immobilized after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Root_ME_TO_SELF(String skillname)
 	{
@@ -438,6 +486,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You became silenced after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Silence_ME_TO_SELF(String skillname)
 	{
@@ -446,6 +496,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You fell asleep after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sleep_ME_TO_SELF(String skillname)
 	{
@@ -454,6 +506,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are spinning after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Spin_ME_TO_SELF(String skillname)
 	{
@@ -462,6 +516,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You were knocked back from a shock after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stagger_ME_TO_SELF(String skillname)
 	{
@@ -470,6 +526,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You fell down from shock after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stumble_ME_TO_SELF(String skillname)
 	{
@@ -478,6 +536,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You became stunned after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stun_ME_TO_SELF(String skillname)
 	{
@@ -546,6 +606,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your loot rate has increased because you used [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostDropRate_ME_TO_SELF(String skillname)
 	{
@@ -554,6 +616,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your visual range has reduced because you used [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OutofSight_ME_TO_SELF(String skillname)
 	{
@@ -562,6 +626,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You exchanged your enmity with the spirit's by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SwitchHostile_ME_TO_SELF(String skillname)
 	{
@@ -570,6 +636,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You used [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ReturnHome_ME_TO_SELF(String skillname)
 	{
@@ -578,6 +646,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You began using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Aura_ME_TO_SELF(String skillname)
 	{
@@ -586,6 +656,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You stopped using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Aura_END_ME_TO_SELF(String skillname)
 	{
@@ -594,6 +666,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You used [%SkillName] and became bound.
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bind_ME_TO_SELF(String skillname)
 	{
@@ -602,6 +676,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are bleeding after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bleed_ME_TO_SELF(String skillname)
 	{
@@ -610,6 +686,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are cursed after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Curse_ME_TO_SELF(String skillname)
 	{
@@ -618,6 +696,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are unable to fly because you used [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoFly_ME_TO_SELF(String skillname)
 	{
@@ -626,6 +706,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are snared in mid-air after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OpenAerial_ME_TO_SELF(String skillname)
 	{
@@ -634,6 +716,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You became petrified after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Petrification_ME_TO_SELF(String skillname)
 	{
@@ -642,6 +726,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You became poisoned after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Poison_ME_TO_SELF(String skillname)
 	{
@@ -650,6 +736,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your attack speed has decreased after you used [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Slow_ME_TO_SELF(String skillname)
 	{
@@ -658,6 +746,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your movement speed has decreased after you used [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Snare_ME_TO_SELF(String skillname)
 	{
@@ -711,6 +801,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You boosted your block by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysBlock_ME_TO_SELF(String skillname)
 	{
@@ -719,6 +811,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You boosted your evasion by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysDodge_ME_TO_SELF(String skillname)
 	{
@@ -727,6 +821,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You boosted your accuracy by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysHit_ME_TO_SELF(String skillname)
 	{
@@ -735,6 +831,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You removed your elemental defense by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysNoResist_ME_TO_SELF(String skillname)
 	{
@@ -743,6 +841,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You boosted your parry by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysParry_ME_TO_SELF(String skillname)
 	{
@@ -751,6 +851,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You boosted your elemental defense by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysResist_ME_TO_SELF(String skillname)
 	{
@@ -759,6 +861,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You boosted your recovery by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostHealEffect_ME_TO_SELF(String skillname)
 	{
@@ -767,6 +871,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You changed your casting speed by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillCastingTime_ME_TO_SELF(String skillname)
 	{
@@ -775,6 +881,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You changed your MP consumption by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillCost_ME_TO_SELF(String skillname)
 	{
@@ -783,6 +891,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You reduced your MP consumption for mantra skills by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillToggleCost_ME_TO_SELF(String skillname)
 	{
@@ -791,6 +901,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You boosted your spell skill by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSpellAttackEffect_ME_TO_SELF(String skillname)
 	{
@@ -799,6 +911,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on yourself by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BackDashATK_ME_TO_SELF(int num0, String skillname)
 	{
@@ -807,6 +922,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You %0d your enmity by using [%SkillName].
+	 * @param value0d
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostHate_ME_TO_SELF(String value0d, String skillname)
 	{
@@ -815,6 +933,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage and the rune carve effect on yourself by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CarveSignet_ME_TO_SELF(int num0, String skillname)
 	{
@@ -823,6 +944,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received the HP recovery effect by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CaseHeal_ME_TO_SELF(String skillname)
 	{
@@ -831,6 +954,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CaseHeal_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -839,6 +965,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You %0d your enmity by using [%SkillName].
+	 * @param value0d
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ChangeHateOnAttacked_ME_TO_SELF(String value0d, String skillname)
 	{
@@ -847,6 +976,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are released from the Aerial Snare by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CloseAerial_ME_TO_SELF(String skillname)
 	{
@@ -855,6 +986,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered from the transformation by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_ME_TO_SELF(String skillname)
 	{
@@ -863,6 +996,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered HP by %num0 by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -871,6 +1007,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on yourself by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DashATK_ME_TO_SELF(int num0, String skillname)
 	{
@@ -879,6 +1018,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on yourself by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DeathBlow_ME_TO_SELF(int num0, String skillname)
 	{
@@ -887,6 +1029,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your recovery amount changed after using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DeboostHealAmount_ME_TO_SELF(String skillname)
 	{
@@ -895,6 +1039,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You transformed yourself into a(n) %0 by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Deform_ME_TO_SELF(String value0, String skillname)
 	{
@@ -903,6 +1050,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You decreased your own flight time by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedFPATK_Instant_ME_TO_SELF(String skillname)
 	{
@@ -911,6 +1060,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You reduced your flight time by %num0 by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedFPATK_Instant_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -919,6 +1071,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You will inflict damage on yourself in a moment because you used [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSpellATK_Instant_ME_TO_SELF(String skillname)
 	{
@@ -927,6 +1081,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You reduced your flight time by %num0 by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSpellATK_Instant_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -935,6 +1092,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You dispelled the magic effect by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Dispel_ME_TO_SELF(String skillname)
 	{
@@ -943,6 +1102,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You dispelled magical buffs by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelBuff_ME_TO_SELF(String skillname)
 	{
@@ -951,6 +1112,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You suffered %num0 damage and dispelled some of the magical buffs by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelBuffCounterATK_ME_TO_SELF(int num0, String skillname)
 	{
@@ -959,6 +1123,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You dispelled magical debuffs by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuff_ME_TO_SELF(String skillname)
 	{
@@ -967,6 +1133,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You removed abnormal mental conditions by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuffMental_ME_TO_SELF(String skillname)
 	{
@@ -975,6 +1143,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You removed abnormal physical conditions by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuffPhysical_ME_TO_SELF(String skillname)
 	{
@@ -983,6 +1153,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You transferred %num0 DP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPTransfer_ME_TO_SELF(int num0, String skillname)
 	{
@@ -991,6 +1164,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You expanded the range of mantra by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ExtendAuraRange_ME_TO_SELF(String skillname)
 	{
@@ -999,6 +1174,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You were forced to crash by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fall_ME_TO_SELF(String skillname)
 	{
@@ -1007,6 +1184,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You decreased your own flight time by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_ME_TO_SELF(String skillname)
 	{
@@ -1015,6 +1194,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You reduced your flight time by %num0 by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1023,6 +1205,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your flight time has increased by %num0 because you used [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_Instant_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1031,6 +1216,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your flight time has been restored by [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_ME_TO_SELF(String skillname)
 	{
@@ -1039,6 +1226,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You increased your flight time by %num0 by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1047,6 +1237,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You increased the flight time by %num0 by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_Instant_HEAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1055,6 +1248,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are continuously recovering HP because of [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_ME_TO_SELF(String skillname)
 	{
@@ -1063,6 +1258,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1071,6 +1269,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_Instant_HEAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1079,6 +1280,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You converted damage to healing by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnAttacked_ME_TO_SELF(String skillname)
 	{
@@ -1087,6 +1290,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnAttacked_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1095,6 +1301,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You converted death to healing by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnTargetDead_ME_TO_SELF(String skillname)
 	{
@@ -1103,6 +1311,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnTargetDead_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1111,6 +1322,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You hid yourself by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Hide_ME_TO_SELF(String skillname)
 	{
@@ -1119,6 +1332,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You %0d your enmity by using [%SkillName].
+	 * @param value0d
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HostileUp_ME_TO_SELF(String value0d, String skillname)
 	{
@@ -1127,6 +1343,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You made a magical counterattack by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MagicCounterATK_ME_TO_SELF(String skillname)
 	{
@@ -1135,6 +1353,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on yourself by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MagicCounterATK_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1143,6 +1364,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num0 damage due to [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MoveBehindATK_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1151,6 +1375,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 MP after using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPAttack_Instant_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1159,6 +1386,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered MP by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_ME_TO_SELF(String skillname)
 	{
@@ -1167,6 +1396,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 MP due to the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1175,6 +1407,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 MP after using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_Instant_HEAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1183,6 +1418,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You boosted your recovery by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostHealEffect_ME_TO_SELF(String skillname)
 	{
@@ -1191,6 +1428,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You boosted your skill by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostSkillAttack_ME_TO_SELF(String skillname)
 	{
@@ -1199,6 +1438,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You boosted your critical hit skill by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostSkillCritical_ME_TO_SELF(String skillname)
 	{
@@ -1207,6 +1448,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You boosted your skill by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeTypeBoostSkillLevel_ME_TO_SELF(String skillname)
 	{
@@ -1215,6 +1458,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You made the spirit use its skills by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PetOrderUseUltraSkill_ME_TO_SELF(String skillname)
 	{
@@ -1223,6 +1468,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have transformed into %0 by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Polymorph_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1231,6 +1479,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num0 damage due to [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcATK_Instant_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1239,6 +1490,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num0 damage due to [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcATK_Instant_Ratio_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1247,6 +1501,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You increased the flight time by %num0 by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCFPHeal_Instant_HEAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1255,6 +1512,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCHeal_Instant_HEAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1263,6 +1523,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 MP after using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCMPHeal_Instant_HEAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1271,6 +1534,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You protected yourself by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Protect_ME_TO_SELF(String skillname)
 	{
@@ -1279,6 +1544,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You protected yourself from %num0 damage by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Protect_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1287,6 +1555,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received the effect by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Provoker_ME_TO_SELF(String skillname)
 	{
@@ -1295,6 +1565,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage and the pull effect on yourself by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Pulled_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1303,6 +1576,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You teleported yourself by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_RandomMoveLoc_ME_TO_SELF(String skillname)
 	{
@@ -1311,6 +1586,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You ensured resurrection by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Rebirth_ME_TO_SELF(String skillname)
 	{
@@ -1319,6 +1596,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You gave yourself the reflection effect by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_ME_TO_SELF(String skillname)
 	{
@@ -1327,6 +1606,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You reflected %num0 damage by the effect of [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1335,6 +1617,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You resurrected yourself by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Resurrect_ME_TO_SELF(String skillname)
 	{
@@ -1343,6 +1627,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You resurrected and telerported yourself by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ResurrectPositional_ME_TO_SELF(String skillname)
 	{
@@ -1351,6 +1637,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received the see-through effect by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Search_ME_TO_SELF(String skillname)
 	{
@@ -1359,6 +1647,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You have transformed into %0 by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ShapeChange_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1367,6 +1658,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You gave yourself a defense shield by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_ME_TO_SELF(String skillname)
 	{
@@ -1375,6 +1668,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You protected yourself from %num0 damage by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_INTERVAL_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1383,6 +1679,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num0 damage due to [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SignetBurst_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1391,6 +1690,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num0 damage due to [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATK_Instant_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1399,6 +1701,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You absorb %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATKDrain_Instant_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1407,6 +1712,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received continuous damage due to [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATK_ME_TO_SELF(String skillname)
 	{
@@ -1415,6 +1722,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num0 damage due to [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATK_Instant_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1423,6 +1733,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You absorb %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1431,6 +1744,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You absorb %num0 HP by using [%SkillName].
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_Instant_ME_TO_SELF(int num0, String skillname)
 	{
@@ -1439,6 +1755,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your movement speed has been increased by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sprint_ME_TO_SELF(String skillname)
 	{
@@ -1447,6 +1765,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your %0 has been weakened by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_StatDown_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1455,6 +1776,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your %0 has been boosted by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_StatUp_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1463,6 +1787,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your %0 resistance effects are weakened after using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SubTypeBoostResist_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1471,6 +1798,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You changed the duration of %0 skills by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SubTypeExtendDuration_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1479,6 +1809,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Summon_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1487,6 +1820,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonBindingGroupGate_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1495,6 +1831,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonGroupGate_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1503,6 +1842,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonHoming_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1511,6 +1853,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonServant_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1519,6 +1864,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonTotem_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1527,6 +1875,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 by using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonTrap_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1535,6 +1886,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You exchanged your MP with your HP by using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SwitchHPMP_Instant_ME_TO_SELF(String skillname)
 	{
@@ -1543,6 +1896,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * %0 was changed using [%SkillName].
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_WeaponStatUp_ME_TO_SELF(String value0, String skillname)
 	{
@@ -1551,6 +1907,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You blinded [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Blind_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1559,6 +1918,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You confused [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Confuse_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1567,6 +1929,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You diseased [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Disease_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1575,6 +1940,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You made [%SkillTarget] afraid by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fear_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1583,6 +1951,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You paralyzed [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Paralyze_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1591,6 +1962,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You immobilized [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Root_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1599,6 +1973,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You silenced [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Silence_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1607,6 +1984,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You put [%SkillTarget] to sleep by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sleep_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1615,6 +1995,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You span [%SkillTarget] around by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Spin_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1623,6 +2006,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You knocked [%SkillTarget] back by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stagger_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1631,6 +2017,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You knocked [%SkillTarget] over by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stumble_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1639,6 +2028,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You stunned [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stun_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1647,6 +2039,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer blind.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Blind_END_ME_TO_B(String skilltarget)
 	{
@@ -1655,6 +2049,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer confused.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Confuse_END_ME_TO_B(String skilltarget)
 	{
@@ -1663,6 +2059,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer diseased.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Disease_END_ME_TO_B(String skilltarget)
 	{
@@ -1671,6 +2069,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer afraid.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fear_END_ME_TO_B(String skilltarget)
 	{
@@ -1679,6 +2079,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer paralyzed.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Paralyze_END_ME_TO_B(String skilltarget)
 	{
@@ -1687,6 +2089,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer immobilized.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Root_END_ME_TO_B(String skilltarget)
 	{
@@ -1695,6 +2099,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer silenced.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Silence_END_ME_TO_B(String skilltarget)
 	{
@@ -1703,6 +2109,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] woke up.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sleep_END_ME_TO_B(String skilltarget)
 	{
@@ -1711,6 +2119,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer spinning.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Spin_END_ME_TO_B(String skilltarget)
 	{
@@ -1719,6 +2129,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer staggering.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stagger_END_ME_TO_B(String skilltarget)
 	{
@@ -1727,6 +2139,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer shocked.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stumble_END_ME_TO_B(String skilltarget)
 	{
@@ -1735,6 +2149,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer stunned.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stun_END_ME_TO_B(String skilltarget)
 	{
@@ -1743,6 +2159,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] was resurrected as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostDropRate_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1751,6 +2170,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s visual range has decreased because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OutofSight_ME_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -1759,6 +2182,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You exchanged [%SkillTarget]'s enmity with the spirit's by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SwitchHostile_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1767,6 +2193,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You used [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ReturnHome_ME_TO_B(String skillname)
 	{
@@ -1775,6 +2203,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You start using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Aura_ME_TO_B(String skillname)
 	{
@@ -1783,6 +2213,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You stop using [%SkillName].
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Aura_END_ME_TO_B(String skillname)
 	{
@@ -1791,6 +2223,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You used [%SkillName] and [%SkillTarget] became bound.
+	 * @param skillname
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bind_ME_TO_B(String skillname, String skilltarget)
 	{
@@ -1799,6 +2234,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You caused [%SkillTarget] to bleed by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bleed_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1807,6 +2245,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You cursed [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Curse_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1815,6 +2256,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is unable to fly because you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoFly_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1823,6 +2267,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] became snared in mid-air because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OpenAerial_ME_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -1831,6 +2279,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You petrified [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Petrification_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1839,6 +2290,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You poisoned [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Poison_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1847,6 +2301,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s attack speed has decreased because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Slow_ME_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -1855,6 +2313,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s movement speed decreased as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Snare_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1863,6 +2324,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer bound
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bind_END_ME_TO_B(String skilltarget)
 	{
@@ -1871,6 +2334,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer bleeding.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bleed_END_ME_TO_B(String skilltarget)
 	{
@@ -1879,6 +2344,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered from the cursed state.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Curse_END_ME_TO_B(String skilltarget)
 	{
@@ -1887,6 +2354,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is able to fly again.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoFly_END_ME_TO_B(String skilltarget)
 	{
@@ -1895,6 +2364,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is released from the Aerial Snare.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OpenAerial_END_ME_TO_B(String skilltarget)
 	{
@@ -1903,6 +2374,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer petrified.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Petrification_END_ME_TO_B(String skilltarget)
 	{
@@ -1911,6 +2384,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer poisoned.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Poison_END_ME_TO_B(String skilltarget)
 	{
@@ -1919,6 +2394,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s attack speed is restored to normal.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Slow_END_ME_TO_B(String skilltarget)
 	{
@@ -1927,6 +2404,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s movement speed is restored to normal.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Snare_END_ME_TO_B(String skilltarget)
 	{
@@ -1935,6 +2414,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted [%SkillTarget]'s block by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysBlock_ME_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -1943,6 +2426,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted [%SkillTarget]'s evasion by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysDodge_ME_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -1951,6 +2438,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted [%SkillTarget]'s parry by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysHit_ME_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -1959,6 +2450,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%Skillcaster] removed [%SkillTarget]'s elemental defense by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysNoResist_ME_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -1967,6 +2462,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted [%SkillTarget]'s parry by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysParry_ME_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -1975,6 +2474,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the elemental maximum defense state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysResist_ME_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -1983,6 +2486,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted [%SkillTarget]'s recovery skill by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostHealEffect_ME_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -1991,6 +2498,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s casting time increased as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillCastingTime_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -1999,6 +2509,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s movement speed decreased as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillCost_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2007,6 +2520,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s movement speed decreased as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillToggleCost_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2015,6 +2531,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted [%SkillTarget]'s spell skill by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSpellAttackEffect_ME_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -2023,6 +2543,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BackDashATK_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2031,6 +2555,12 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] %0d [%SkillTarget]'s enmity %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0d
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostHate_ME_TO_B(String skillcaster, String value0d, String skilltarget, String value0, String skillname)
 	{
@@ -2039,6 +2569,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage and the rune carve effect on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CarveSignet_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2047,6 +2581,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is recovering HP as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CaseHeal_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2055,6 +2592,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s HP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CaseHeal_INTERVAL_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2063,6 +2604,12 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] %0d [%SkillTarget]'s enmity %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0d
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ChangeHateOnAttacked_ME_TO_B(String skillcaster, String value0d, String skilltarget, String value0, String skillname)
 	{
@@ -2071,6 +2618,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You released [%SkillTarget] from the Aerial Snare by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CloseAerial_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2079,6 +2629,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received the transformation recovery effect as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2087,6 +2640,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s HP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_INTERVAL_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2095,6 +2652,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DashATK_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2103,6 +2664,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DeathBlow_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2111,6 +2676,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You changed [%SkillTarget]'s recovery amount by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DeboostHealAmount_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2119,6 +2687,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You transformed [%SkillTarget] into %0 by using [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Deform_ME_TO_B(String skilltarget, String value0, String skillname)
 	{
@@ -2127,6 +2699,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * In a moment, [%SkillTarget]'s flight time will decrease because you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedFPATK_Instant_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2135,6 +2710,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time decreased by %num0 due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedFPATK_Instant_INTERVAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2143,6 +2722,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received the Delayed Blast effect as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSpellATK_Instant_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2151,6 +2733,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time decreased by %num0 due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSpellATK_Instant_INTERVAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2159,6 +2745,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You dispelled the magic effect from [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Dispel_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2167,6 +2756,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You dispelled magical buffs from [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelBuff_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2175,6 +2767,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] and dispelled some of its magical buffs by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelBuffCounterATK_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2183,6 +2779,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You dispelled magical debuffs from [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuff_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2191,6 +2790,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You removed abnormal mental conditions from [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuffMental_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2199,6 +2801,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You removed abnormal physical conditions from [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuffPhysical_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2207,6 +2812,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the DP recovery state because you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPTransfer_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2215,6 +2823,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You expanded [%SkillTarget]'s mantra range by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ExtendAuraRange_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2223,6 +2834,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received the forced crash effect as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fall_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2231,6 +2845,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * In a moment, [%SkillTarget]'s flight time will decrease because you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2239,6 +2856,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time decreased by %num0 due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_INTERVAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2247,6 +2868,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time has decreased by %num0 because you used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_Instant_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2255,6 +2880,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored [%SkillTarget]'s flight time by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2263,6 +2891,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time increased by %num0 due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_INTERVAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2271,6 +2903,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time has increased by %num0 because you used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_Instant_HEAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2279,6 +2915,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has caused [%SkillTarget] to recover HP over time by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_ME_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -2287,6 +2927,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered its HP by %num0 due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_INTERVAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2295,6 +2939,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s HP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_Instant_HEAL_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2303,6 +2951,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] converted [%SkillTarget]'s damage to healing by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnAttacked_ME_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -2311,6 +2963,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] has recovered %num0 HP due to [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnAttacked_INTERVAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2319,6 +2975,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] converted death to healing by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnTargetDead_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2327,6 +2986,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] has recovered %num0 HP due to [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnTargetDead_INTERVAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2335,6 +2998,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You hid [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Hide_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2343,6 +3009,12 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] %0d [%SkillTarget]'s enmity %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0d
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HostileUp_ME_TO_B(String skillcaster, String value0d, String skilltarget, String value0, String skillname)
 	{
@@ -2351,6 +3023,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You granted [%SkillTarget] a magical counterattack by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MagicCounterATK_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2359,6 +3034,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MagicCounterATK_INTERVAL_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2367,6 +3046,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MoveBehindATK_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2375,6 +3058,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You reduced [%SkillTarget]'s MP by %num0 by using [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPAttack_Instant_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2383,6 +3070,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted [%SkillTarget]'s MP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_ME_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -2391,6 +3082,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 MP due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_INTERVAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2399,6 +3094,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 MP because you used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_Instant_HEAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2407,6 +3106,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted [%SkillTarget]'s recovery skill by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostHealEffect_ME_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -2415,6 +3118,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received the boost skill effect as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostSkillAttack_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2423,6 +3129,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received the critical hit effect as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostSkillCritical_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2431,6 +3140,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received the boost skill effect as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeTypeBoostSkillLevel_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2439,6 +3151,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your spirit uses its skills on [%SkillTarget] as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PetOrderUseUltraSkill_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2447,6 +3162,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You transformed [%SkillTarget] into %0 by using [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Polymorph_ME_TO_B(String skilltarget, String value0, String skillname)
 	{
@@ -2455,6 +3174,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcATK_Instant_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2463,6 +3186,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcATK_Instant_Ratio_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2471,6 +3198,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time has increased by %num0 because you used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCFPHeal_Instant_HEAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2479,6 +3210,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You restored %num0 of [%SkillTarget]'s HP by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCHeal_Instant_HEAL_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2487,6 +3222,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered MP by %num0 due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCMPHeal_Instant_HEAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2495,6 +3234,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You protected [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Protect_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2503,6 +3245,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] blocked %num0 damage due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Protect_INTERVAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2511,6 +3257,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You affected [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Provoker_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2519,6 +3268,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received %num0 damage and the pull effect as you used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Pulled_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2527,6 +3280,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] teleported as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_RandomMoveLoc_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2535,6 +3291,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You placed [%SkillTarget] in the reserved resurrection state as by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Rebirth_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2543,6 +3302,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You gave [%SkillTarget] the reflection effect by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2551,6 +3313,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] reflected %num0 damage due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_INTERVAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2559,6 +3325,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] has resurrected as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Resurrect_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2567,6 +3336,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the resurrection state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ResurrectPositional_ME_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -2575,6 +3348,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the see-through state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Search_ME_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -2583,6 +3360,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You transformed [%SkillTarget] into %0 by using [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ShapeChange_ME_TO_B(String skilltarget, String value0, String skillname)
 	{
@@ -2591,6 +3372,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received the defense shield effect as you used [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2599,6 +3383,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] blocked %num0 damage due to the effect of [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_INTERVAL_ME_TO_B(String skilltarget, int num0, String skillname)
 	{
@@ -2607,6 +3395,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SignetBurst_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2615,6 +3407,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATK_Instant_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2623,6 +3419,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATKDrain_Instant_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2631,6 +3431,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted continuous damage on [%SkillTarget] by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATK_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2639,6 +3442,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATK_Instant_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2647,6 +3454,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You start to absorb [%SkillTarget]'s HP by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2655,6 +3465,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_Instant_ME_TO_B(int num0, String skilltarget, String skillname)
 	{
@@ -2663,6 +3477,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the movement speed increase state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sprint_ME_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -2671,6 +3489,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has weakened [%SkillTarget]'s %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_StatDown_ME_TO_B(String skillcaster, String skilltarget, String value0, String skillname)
 	{
@@ -2679,6 +3502,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted [%SkillTarget]'s Physical Def by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_StatUp_ME_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -2687,6 +3514,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s %0 resistance effects were weakened as you used [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SubTypeBoostResist_ME_TO_B(String skilltarget, String value0, String skillname)
 	{
@@ -2695,6 +3526,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You changed [%SkillTarget]'s %0 skill duration by using [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SubTypeExtendDuration_ME_TO_B(String skilltarget, String value0, String skillname)
 	{
@@ -2703,6 +3538,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 to [%SkillTarget] by using [%SkillName].
+	 * @param value0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Summon_ME_TO_B(String value0, String skilltarget, String skillname)
 	{
@@ -2711,6 +3550,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 to [%SkillTarget] by using [%SkillName].
+	 * @param value0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonBindingGroupGate_ME_TO_B(String value0, String skilltarget, String skillname)
 	{
@@ -2719,6 +3562,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 to [%SkillTarget] by using [%SkillName].
+	 * @param value0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonGroupGate_ME_TO_B(String value0, String skilltarget, String skillname)
 	{
@@ -2727,6 +3574,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 by using [%SkillName] to let it attack [%SkillTarget].
+	 * @param value0
+	 * @param skillname
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonHoming_ME_TO_B(String value0, String skillname, String skilltarget)
 	{
@@ -2735,6 +3586,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 by using [%SkillName] to let it attack [%SkillTarget].
+	 * @param value0
+	 * @param skillname
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonServant_ME_TO_B(String value0, String skillname, String skilltarget)
 	{
@@ -2743,6 +3598,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 to [%SkillTarget] by using [%SkillName].
+	 * @param value0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonTotem_ME_TO_B(String value0, String skilltarget, String skillname)
 	{
@@ -2751,6 +3610,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You summoned %0 to [%SkillTarget] by using [%SkillName].
+	 * @param value0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonTrap_ME_TO_B(String value0, String skilltarget, String skillname)
 	{
@@ -2759,6 +3622,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You caused [%SkillTarget] to exchange MP with HP by using [%SkillName].
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SwitchHPMP_Instant_ME_TO_B(String skilltarget, String skillname)
 	{
@@ -2767,6 +3633,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You changed [%SkillTarget]'s %0 by using [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_WeaponStatUp_ME_TO_B(String skilltarget, String value0, String skillname)
 	{
@@ -2775,6 +3645,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has blinded you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Blind_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2783,6 +3656,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has confused you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Confuse_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2791,6 +3667,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has diseased you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Disease_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2799,6 +3678,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has made you afraid by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fear_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2807,6 +3689,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has diseased you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Paralyze_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2815,6 +3700,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has immobilized you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Root_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2823,6 +3711,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has silenced you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Silence_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2831,6 +3722,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has put you to sleep by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sleep_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2839,6 +3733,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has spun you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Spin_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2847,14 +3744,20 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has knocked you back by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
-	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stagger_A_TO_ME(String skillcaster, String skillname)
+	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stagger_A_TO_ME(String skillcaster, final String skillname)
 	{
 		return new SM_SYSTEM_MESSAGE(1200592, skillcaster, skillname);
 	}
 	
 	/**
 	 * [%SkillCaster] has knocked you down by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stumble_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2863,6 +3766,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has stunned you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stun_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2931,6 +3837,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your loot rate has increased because [%SkillCaster] used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostDropRate_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2939,6 +3848,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your visual range has decreased because [%SkillCaster] used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OutofSight_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2947,6 +3859,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] caused you to exchange your enmity with the spirit's by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SwitchHostile_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2955,6 +3870,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ReturnHome_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2963,6 +3881,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] started using [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Aura_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2971,6 +3892,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] stops using [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Aura_END_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2979,6 +3903,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You became bound because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bind_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2987,6 +3914,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] caused you to bleed by using [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bleed_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -2995,6 +3925,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has cursed you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Curse_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3003,6 +3936,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You are unable to fly because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoFly_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3011,6 +3947,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has snared you in mid-air by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OpenAerial_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3019,6 +3958,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has petrified you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Petrification_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3027,6 +3969,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has poisoned you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Poison_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3035,6 +3980,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your attack speed has decreased because [%SkillCaster] used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Slow_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3043,6 +3991,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your movement speed has decreased because [%SkillCaster] used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Snare_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3096,6 +4047,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted your block by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysBlock_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3104,6 +4058,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted your evasion by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysDodge_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3112,6 +4069,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received the boost accuracy effect because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysHit_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3120,6 +4080,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has removed your elemental defense by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysNoResist_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3128,6 +4091,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted your parry by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysParry_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3136,6 +4102,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has maximized your elemental defense by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysResist_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3144,6 +4113,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted your recovery skill by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostHealEffect_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3152,6 +4124,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has changed your casting speed by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillCastingTime_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3160,6 +4135,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has changed your MP consumption by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillCost_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3168,6 +4146,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your mantra skill MP consumption has changed because [%SkillCaster] used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillToggleCost_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3176,6 +4157,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted your spell skill by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSpellAttackEffect_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3184,6 +4168,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BackDashATK_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3192,6 +4180,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted enmity %0 on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostHate_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3200,6 +4192,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage and the rune carve effect on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CarveSignet_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3208,6 +4204,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted [%SkillTarget]'s HP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CaseHeal_A_TO_ME(String skillcaster, String skilltarget, String skillname)
 	{
@@ -3216,6 +4216,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 HP because he used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CaseHeal_INTERVAL_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3224,6 +4228,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted enmity %0 on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ChangeHateOnAttacked_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3232,6 +4240,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] released you from the aerial snare by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CloseAerial_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3240,6 +4251,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] restored you from the transformation by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3248,6 +4262,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 HP because he used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_INTERVAL_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3256,6 +4274,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DashATK_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3264,6 +4286,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DeathBlow_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3272,6 +4298,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your recovery amount has changed because [%SkillCaster] used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DeboostHealAmount_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3280,6 +4309,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] transformed you into a(n) %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Deform_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3288,6 +4321,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * In a moment, [%SkillCaster] will decrease your flight time because they used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedFPATK_Instant_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3296,6 +4332,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your flight time has increased by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedFPATK_Instant_INTERVAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3304,6 +4344,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted a Delayed Blast on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSpellATK_Instant_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3312,6 +4355,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s flight time has decreased by %num0 because he used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSpellATK_Instant_INTERVAL_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3320,6 +4367,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your magic effect was dispelled because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Dispel_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3328,6 +4378,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your magical buffs were dispelled because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelBuff_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3336,6 +4389,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You suffered %num0 damage and lost some of your magical buffs because [%SkillCaster] used [%SkillName] on you.
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelBuffCounterATK_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3344,6 +4401,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your magical debuffs were dispelled because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuff_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3352,6 +4412,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your abnormal mental conditions were removed because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuffMental_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3360,6 +4423,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your abnormal physical conditions were removed because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuffPhysical_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3368,6 +4434,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received %num0 DP because [%SkillCaster] used [%SkillName].
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPTransfer_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3376,6 +4446,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your aura range has expanded because [%SkillCaster] used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ExtendAuraRange_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3384,6 +4457,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] forced you to crash by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fall_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3392,6 +4468,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * In a moment, [%SkillCaster] will decrease your flight time because they used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3400,6 +4479,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your flight time decreased by %num0 due to the effect of [%SkillName] used by [%SkillCaster].
+	 * @param num0
+	 * @param skillname
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_INTERVAL_A_TO_ME(int num0, String skillname, String skillcaster)
 	{
@@ -3408,6 +4491,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your flight time decreased by %num0 due to the effect of [%SkillName] used by [%SkillCaster].
+	 * @param num0
+	 * @param skillname
+	 * @param skillcaster
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_Instant_A_TO_ME(int num0, String skillname, String skillcaster)
 	{
@@ -3416,6 +4503,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] restored your flight time by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3424,6 +4514,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your flight time has increased by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_INTERVAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3432,6 +4526,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your flight time has increased by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_Instant_HEAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3440,6 +4538,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is continuously restoring your HP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3448,6 +4549,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP because [%SkillCaster] used [%SkillName] on you.
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_INTERVAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3456,6 +4561,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP because [%SkillCaster] used [%SkillName] on you.
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_Instant_HEAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3464,6 +4573,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has converted damage dealt to you to healing by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnAttacked_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3472,6 +4584,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP because [%SkillCaster] used [%SkillName] on you.
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnAttacked_INTERVAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3480,6 +4596,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has converted death dealt to you to healing by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnTargetDead_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3488,6 +4607,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP because [%SkillCaster] used [%SkillName] on you.
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnTargetDead_INTERVAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3496,6 +4619,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has hidden you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Hide_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3504,6 +4630,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted enmity %0 on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HostileUp_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3512,6 +4642,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has given you a magical counterattack by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MagicCounterATK_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3520,6 +4653,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MagicCounterATK_INTERVAL_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3528,6 +4665,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MoveBehindATK_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3536,6 +4677,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your MP has decreased by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPAttack_Instant_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3544,6 +4689,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has restored your MP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3552,6 +4700,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 MP because [%SkillCaster] used [%SkillName] on you.
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_INTERVAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3560,6 +4712,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP because [%SkillCaster] used [%SkillName] on you.
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_Instant_HEAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3568,6 +4724,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted your recovery skill by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostHealEffect_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3576,6 +4735,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received the boost skill effect because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostSkillAttack_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3584,6 +4746,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted your parry by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostSkillCritical_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3592,6 +4757,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received the boost skill effect because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeTypeBoostSkillLevel_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3600,6 +4768,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The spirit uses its skills because [%SkillCaster] used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PetOrderUseUltraSkill_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3608,6 +4779,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has transformed you into a(n) %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Polymorph_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3616,6 +4791,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcATK_Instant_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3624,6 +4803,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcATK_Instant_Ratio_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3632,6 +4815,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your flight time has increased by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCFPHeal_Instant_HEAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3640,6 +4827,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You recovered %num0 HP because [%SkillCaster] used [%SkillName] on you.
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCHeal_Instant_HEAL_A_TO_ME(int num0, String skillcaster, String skillname)
 	{
@@ -3648,6 +4839,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 MP due to the effect of [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCMPHeal_Instant_HEAL_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3656,6 +4851,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has protected you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Protect_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3664,6 +4862,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] blocked %num0 damage through the effect of [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Protect_INTERVAL_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3672,6 +4874,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s [%SkillName] affected you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Provoker_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3680,6 +4885,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage and pulled you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Pulled_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3688,6 +4897,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You teleported because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_RandomMoveLoc_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3696,6 +4908,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You entered the reserved resurrection state because [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Rebirth_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3704,6 +4919,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has cast a reflector on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3712,6 +4930,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] reflected %num0 damage through to the effect of [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_INTERVAL_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3720,6 +4942,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You resurrected as [%SkillCaster] used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Resurrect_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3728,6 +4953,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has decreased your movement speed by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ResurrectPositional_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3736,6 +4964,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has put a see-through effect on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Search_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3744,6 +4975,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has transformed you into a(n) %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ShapeChange_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3752,6 +4987,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has put a defense shield on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3760,6 +4998,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] blocked %num0 damage through the effect of [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_INTERVAL_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3768,6 +5010,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SignetBurst_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3776,6 +5022,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATK_Instant_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3784,6 +5034,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATKDrain_Instant_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3792,6 +5046,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You received continuous damage because [%SkillCaster] used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATK_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3800,6 +5057,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATK_Instant_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3808,6 +5069,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has begun draining your HP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3816,6 +5080,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has inflicted %num0 damage on you by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_Instant_A_TO_ME(String skillcaster, int num0, String skillname)
 	{
@@ -3824,6 +5092,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has increased your movement speed by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sprint_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3832,6 +5103,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has weakened [%SkillTarget]'s %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_StatDown_A_TO_ME(String skillcaster, String skilltarget, String value0, String skillname)
 	{
@@ -3840,6 +5116,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has boosted your %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_StatUp_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3848,6 +5128,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your %0 resistance effect was weakened because [%SkillCaster] used [%SkillName].
+	 * @param value0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SubTypeBoostResist_A_TO_ME(String value0, String skillcaster, String skillname)
 	{
@@ -3856,6 +5140,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your %0 skill duration has changed because [%SkillCaster] used [%SkillName].
+	 * @param value0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SubTypeExtendDuration_A_TO_ME(String value0, String skillcaster, String skillname)
 	{
@@ -3864,6 +5152,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has caused you to summon %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Summon_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3872,6 +5164,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has caused you to summon %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonBindingGroupGate_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3880,6 +5176,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has caused you to summon %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonGroupGate_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3888,6 +5188,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has caused you to summon %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonHoming_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3896,6 +5200,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has caused you to summon %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonServant_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3904,6 +5212,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has caused you to summon %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonTotem_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3912,6 +5224,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has caused you to summon %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonTrap_A_TO_ME(String skillcaster, String value0, String skillname)
 	{
@@ -3920,6 +5236,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * You exchanged HP with MP because [%SkillCaster] used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SwitchHPMP_Instant_A_TO_ME(String skillcaster, String skillname)
 	{
@@ -3928,6 +5247,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * Your %0 has changed because [%SkillCaster] used [%SkillName].
+	 * @param value0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_WeaponStatUp_A_TO_ME(String value0, String skillcaster, String skillname)
 	{
@@ -3936,6 +5259,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] became blinded because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Blind_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -3944,6 +5270,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] became confused because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Confuse_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -3952,6 +5281,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] became diseased because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Disease_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -3960,6 +5292,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] was put in the fear state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fear_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -3968,6 +5303,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] became paralyzed because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Paralyze_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -3976,6 +5314,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] became immobilized because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Root_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -3984,6 +5325,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] became silenced because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Silence_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -3992,6 +5336,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] fell asleep because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sleep_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4000,6 +5347,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is spinning because it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Spin_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4008,6 +5358,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] was knocked back from shock because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stagger_A_TO_SELF(String skilltarget, String skillcaster, String skillname)
 	{
@@ -4016,6 +5370,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] fell down from shock because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stumble_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4024,6 +5381,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] became stunned because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stun_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4032,6 +5392,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer blind.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Blind_END_A_TO_SELF(String skilltarget)
 	{
@@ -4040,6 +5402,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer confused.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Confuse_END_A_TO_SELF(String skilltarget)
 	{
@@ -4048,6 +5412,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer diseased.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Disease_END_A_TO_SELF(String skilltarget)
 	{
@@ -4056,6 +5422,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer afraid.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fear_END_A_TO_SELF(String skilltarget)
 	{
@@ -4064,6 +5432,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer paralyzed.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Paralyze_END_A_TO_SELF(String skilltarget)
 	{
@@ -4072,6 +5442,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer immobilized.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Root_END_A_TO_SELF(String skilltarget)
 	{
@@ -4080,6 +5452,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer silenced.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Silence_END_A_TO_SELF(String skilltarget)
 	{
@@ -4088,6 +5462,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] woke up.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sleep_END_A_TO_SELF(String skilltarget)
 	{
@@ -4096,6 +5472,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer spinning.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Spin_END_A_TO_SELF(String skilltarget)
 	{
@@ -4104,6 +5482,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer staggering.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stagger_END_A_TO_SELF(String skilltarget)
 	{
@@ -4112,6 +5492,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer shocked.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stumble_END_A_TO_SELF(String skilltarget)
 	{
@@ -4120,6 +5502,8 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is no longer stunned.
+	 * @param skilltarget
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stun_END_A_TO_SELF(String skilltarget)
 	{
@@ -4128,6 +5512,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s loot rate has increased because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostDropRate_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4136,6 +5523,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s visual range has reduced because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OutofSight_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4144,6 +5534,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] exchanged its enmity with the spirit's by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SwitchHostile_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4152,6 +5545,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] used [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ReturnHome_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4160,6 +5556,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] started using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Aura_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4168,6 +5567,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] stops using [%SkillName] on you.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Aura_END_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4176,6 +5578,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] used [%SkillName] and became bound.
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bind_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4184,6 +5589,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is bleeding because it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bleed_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4192,6 +5600,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is cursed because it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Curse_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4200,6 +5611,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is unable to fly because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoFly_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4208,6 +5622,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] became snared in mid-air because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OpenAerial_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4216,6 +5633,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] became petrified because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Petrification_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4224,6 +5644,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] became poisoned because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Poison_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4232,6 +5655,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s attack speed has decreased because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Slow_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4240,6 +5666,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s movement speed has decreased because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Snare_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4320,6 +5749,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the boost block state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysBlock_A_TO_SELF(String skilltarget, String skillcaster, String skillname)
 	{
@@ -4328,6 +5761,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the boost evasion state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysDodge_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4336,6 +5772,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the boost accuracy state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysHit_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4344,6 +5783,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the no elemental defense state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysNoResist_A_TO_SELF(String skilltarget, String skillcaster, String skillname)
 	{
@@ -4352,6 +5795,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the boost parry state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysParry_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4360,6 +5806,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the elemental maximum defense state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysResist_A_TO_SELF(String skilltarget, String skillcaster, String skillname)
 	{
@@ -4368,6 +5818,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the boost recovery skill state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostHealEffect_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4376,6 +5829,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s casting speed has changed because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillCastingTime_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4384,6 +5840,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s MP consumption has changed because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillCost_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4392,6 +5851,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s mantra skill MP consumption has decreased because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillToggleCost_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4400,6 +5862,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the boost recovery skill state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSpellAttackEffect_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4408,6 +5873,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received %num0 damage as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BackDashATK_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4416,6 +5885,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the enmity %0 state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostHate_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -4424,6 +5897,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage and the rune carve effect on themselves by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CarveSignet_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4432,6 +5909,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered HP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CaseHeal_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4440,6 +5920,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 HP because he used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CaseHeal_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4448,6 +5932,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the enmity %0 state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ChangeHateOnAttacked_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -4456,6 +5944,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] was released from the aerial snare by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CloseAerial_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4464,6 +5955,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered from the transformation by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4472,6 +5966,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 HP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4480,6 +5978,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received %num0 damage as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DashATK_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4488,6 +5990,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received %num0 damage as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DeathBlow_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4496,6 +6002,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] changed his own recovery amount by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DeboostHealAmount_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4504,6 +6013,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has transformed into %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Deform_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -4512,6 +6025,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] will receive the decrease flight time effect in a moment because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedFPATK_Instant_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4520,6 +6036,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s flight time decreased by %num0 as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedFPATK_Instant_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4528,6 +6048,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] will receive damage in a moment because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSpellATK_Instant_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4536,6 +6059,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s flight time decreased by %num0 as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSpellATK_Instant_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4544,6 +6071,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] dispelled its magic effect by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Dispel_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4552,6 +6082,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] dispelled its magical buffs by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelBuff_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4560,6 +6093,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] suffered %num0 damage and dispelled some of its magical buffs by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelBuffCounterATK_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4568,6 +6105,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] dispelled its magical debuffs by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuff_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4576,6 +6116,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] removed its abnormal mental conditions by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuffMental_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4584,6 +6127,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] removed its abnormal physical conditions by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuffPhysical_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4592,6 +6138,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] transferred %num0 DP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPTransfer_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4600,6 +6150,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] boosted his mantra range by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ExtendAuraRange_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4608,6 +6161,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the forced crash state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fall_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4616,6 +6172,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] will receive the decrease flight time effect in a moment because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4624,6 +6183,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s flight time decreased by %num0 as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4632,6 +6195,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s flight time decreased by %num0 as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_Instant_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4640,6 +6207,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the flight time recovery state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4648,6 +6218,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s flight time increased by %num0 as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4656,6 +6230,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s flight time increased by %num0 as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_Instant_HEAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4664,6 +6242,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the continuous healing state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4672,6 +6253,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 HP because he used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4680,6 +6265,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 HP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_Instant_HEAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4688,6 +6277,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the convert damage healing state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnAttacked_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4696,6 +6288,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 HP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnAttacked_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4704,6 +6300,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the convert death healing state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnTargetDead_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4712,6 +6311,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 HP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnTargetDead_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4720,6 +6323,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the hide state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Hide_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4728,6 +6334,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the enmity %0 state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HostileUp_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -4736,6 +6346,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the magical counterattack state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MagicCounterATK_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4744,6 +6357,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received %num0 damage as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MagicCounterATK_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4752,6 +6369,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received %num0 damage as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MoveBehindATK_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4760,6 +6381,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s MP was reduced by %num0 as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPAttack_Instant_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4768,6 +6393,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the Mana Treatment state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4776,6 +6404,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 MP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4784,6 +6416,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 MP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_Instant_HEAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4792,6 +6428,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the boost recovery skill state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostHealEffect_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4800,6 +6439,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the boost skill state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostSkillAttack_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4808,6 +6450,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the critical hit state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostSkillCritical_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4816,6 +6461,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the boost skill state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeTypeBoostSkillLevel_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4824,6 +6472,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] caused the spirit to use its skill by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PetOrderUseUltraSkill_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4832,6 +6483,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has transformed into %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Polymorph_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -4840,6 +6495,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received %num0 damage as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcATK_Instant_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4848,6 +6507,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received %num0 damage as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcATK_Instant_Ratio_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4856,6 +6519,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s flight time increased by %num0 as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCFPHeal_Instant_HEAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4864,6 +6531,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 HP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCHeal_Instant_HEAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4872,6 +6543,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] recovered %num0 MP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCMPHeal_Instant_HEAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4880,6 +6555,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the protection state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Protect_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4888,6 +6566,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] blocked %num0 damage by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Protect_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4896,6 +6578,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] was affected by its own [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Provoker_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4904,6 +6589,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received %num0 damage and was put in the pull state because he used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Pulled_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4912,6 +6601,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the teleport state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_RandomMoveLoc_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4920,6 +6612,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the reserved resurrection state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Rebirth_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4928,6 +6623,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the reflection state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4936,6 +6634,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] reflected %num0 damage by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Reflector_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4944,6 +6646,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the resurrection state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Resurrect_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4952,6 +6657,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the summon-resurrection state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ResurrectPositional_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4960,6 +6668,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the see-through state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Search_A_TO_SELF(String skilltarget, String skillcaster, String skillname)
 	{
@@ -4968,6 +6680,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] has transformed into %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ShapeChange_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -4976,6 +6692,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] is in the defense shield state as it used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -4984,6 +6703,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] blocked %num0 damage by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Shield_INTERVAL_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -4992,6 +6715,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received %num0 damage as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SignetBurst_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -5000,6 +6727,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received %num0 damage as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATK_Instant_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -5008,6 +6739,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received %num0 damage as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SkillATKDrain_Instant_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -5016,6 +6751,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received the continuous damage effect because he used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATK_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -5024,6 +6762,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] received %num0 damage as it used [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATK_Instant_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -5032,6 +6774,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] absorbed %num0 HP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -5040,6 +6786,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] absorbed %num0 HP by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SpellATKDrain_Instant_A_TO_SELF(String skillcaster, int num0, String skillname)
 	{
@@ -5048,6 +6798,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the movement speed increase state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sprint_A_TO_SELF(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5056,6 +6810,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the weaken %0 state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_StatDown_A_TO_SELF(String skilltarget, String value0, String skillcaster, String skillname)
 	{
@@ -5064,6 +6823,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the boost %0 state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_StatUp_A_TO_SELF(String skilltarget, String value0, String skillcaster, String skillname)
 	{
@@ -5072,6 +6836,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster]'s %0 resistance effects are weakened as it used [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SubTypeBoostResist_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -5080,6 +6848,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] changed his %0 skill duration by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SubTypeExtendDuration_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -5088,6 +6860,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] summoned %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Summon_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -5096,6 +6872,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] summoned %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonBindingGroupGate_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -5104,6 +6884,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] summoned %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonGroupGate_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -5112,6 +6896,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] summoned %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonHoming_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -5120,6 +6908,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] summoned %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonServant_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -5128,6 +6920,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] summoned %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonTotem_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -5136,6 +6932,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] summoned %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SummonTrap_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -5144,6 +6944,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] exchanged his HP and MP by using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SwitchHPMP_Instant_A_TO_SELF(String skillcaster, String skillname)
 	{
@@ -5152,6 +6955,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] changed his %0 by using [%SkillName].
+	 * @param skillcaster
+	 * @param value0
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_WeaponStatUp_A_TO_SELF(String skillcaster, String value0, String skillname)
 	{
@@ -5160,6 +6967,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] became blinded because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Blind_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5168,6 +6979,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] became confused because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Confuse_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5176,6 +6991,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] became diseased because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Disease_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5184,6 +7003,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the fear state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fear_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5192,6 +7015,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] became paralyzed because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Paralyze_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5200,6 +7027,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is unable to fly because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Root_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5208,6 +7039,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] became silenced because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Silence_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5216,6 +7051,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] fell asleep because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Sleep_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5224,6 +7063,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is spinning because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Spin_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5232,6 +7075,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] was knocked back from shock because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stagger_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5240,6 +7087,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] fell down from shock because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stumble_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5248,6 +7099,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] became stunned because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Stun_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5352,6 +7207,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s loot rate has increased because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostDropRate_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5360,6 +7219,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s visual range has decreased because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OutofSight_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5368,6 +7231,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] exchanged his enmity toward [%SkillTarget] with his spirit's by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_SwitchHostile_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -5376,6 +7243,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] used [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ReturnHome_A_TO_B(String skillcaster, String skillname)
 	{
@@ -5384,6 +7254,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] started using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Aura_A_TO_B(String skillcaster, String skillname)
 	{
@@ -5392,6 +7265,9 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] stopped using [%SkillName].
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Aura_END_A_TO_B(String skillcaster, String skillname)
 	{
@@ -5400,6 +7276,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] became bound because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bind_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5408,6 +7288,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is bleeding because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Bleed_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5416,6 +7300,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is cursed because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Curse_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5424,6 +7312,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is unable to fly because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_NoFly_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5432,6 +7324,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] became snared in mid-air because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OpenAerial_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5440,6 +7336,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] became petrified because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Petrification_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5448,6 +7348,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] became poisoned because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Poison_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5456,6 +7360,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s attack speed has decreased because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Slow_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5464,6 +7372,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s attack speed has decreased because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Snare_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5544,6 +7456,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the boost block state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysBlock_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5552,6 +7468,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the boost evasion state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysDodge_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5560,6 +7480,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the boost accuracy state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysHit_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5568,6 +7492,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the no elemental defense state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysNoResist_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5576,6 +7504,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the boost parry state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysParry_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5584,6 +7516,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the elemental maximum defense state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_AlwaysResist_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5592,6 +7528,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the boost recovery skill state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostHealEffect_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5600,6 +7540,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] changed [%SkillTarget]'s casting speed by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillCastingTime_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -5608,6 +7552,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] changed [%SkillTarget]'s MP consumption by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillCost_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -5616,6 +7564,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s mantra skill MP consumption has decreased because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSkillToggleCost_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5624,6 +7576,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the boost spell skill state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostSpellAttackEffect_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5632,6 +7588,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BackDashATK_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -5640,6 +7601,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the spinning state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_BoostHate_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5648,6 +7613,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] and caused the Rune Carve effect by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CarveSignet_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -5656,6 +7626,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is recovering HP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CaseHeal_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5664,6 +7638,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 HP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CaseHeal_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5672,6 +7651,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the spinning state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ChangeHateOnAttacked_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5680,6 +7663,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] was released from the aerial snare because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_CloseAerial_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5688,6 +7675,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the transformation recovery state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5696,6 +7687,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 HP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ConvertHeal_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5704,6 +7700,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DashATK_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -5712,6 +7713,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DeathBlow_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -5720,6 +7726,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] changed [%SkillTarget]'s recovery amount by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DeboostHealAmount_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -5728,6 +7738,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] has transformed into %0 because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Deform_A_TO_B(String skilltarget, String value0, String skillcaster, String skillname)
 	{
@@ -5736,6 +7751,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] will receive the decrease flight time effect in a moment because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedFPATK_Instant_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5744,6 +7763,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time has decreased by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedFPATK_Instant_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5752,6 +7776,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] received the Delayed Blast effect because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSpellATK_Instant_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5760,6 +7788,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time has decreased by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DelayedSpellATK_Instant_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5768,6 +7801,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] dispelled the magic effect from [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Dispel_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -5776,6 +7813,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] dispelled the magical buffs from [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelBuff_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -5784,6 +7825,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] and dispelled some of its magical buffs by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelBuffCounterATK_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -5792,6 +7838,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] dispelled the magical debuffs from [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuff_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -5800,6 +7850,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] removed abnormal mental conditions from [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuffMental_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -5808,6 +7862,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] removed abnormal physical conditions from [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DispelDeBuffPhysical_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -5816,6 +7874,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] transferred %num0 DP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_DPTransfer_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5824,6 +7887,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] boosted [%SkillTarget]'s mantra range by using [%SkillName].
+	 * @param skillcaster
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ExtendAuraRange_A_TO_B(String skillcaster, String skilltarget, String skillname)
 	{
@@ -5832,6 +7899,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] was put in the forced crash state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Fall_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5848,6 +7919,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time has decreased by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5856,6 +7932,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time has decreased by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPATK_Instant_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5872,6 +7953,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time increased by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5880,6 +7966,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time increased by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_FPHeal_Instant_HEAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5896,6 +7987,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 HP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5904,6 +8000,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 HP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Heal_Instant_HEAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5912,6 +8013,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the convert damage healing state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnAttacked_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5920,6 +8025,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 HP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnAttacked_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5928,6 +8038,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the convert death healing state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnTargetDead_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -5936,6 +8050,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 HP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_HealCastorOnTargetDead_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -5968,6 +8087,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MagicCounterATK_INTERVAL_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -5976,6 +8100,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MoveBehindATK_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -5984,6 +8113,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s MP was reduced by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPAttack_Instant_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -6000,6 +8134,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 MP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_INTERVAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -6008,6 +8147,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 MP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_MPHeal_Instant_HEAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -6032,6 +8176,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the critical hit state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeBoostSkillCritical_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -6040,6 +8188,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the boost skill state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_OneTimeTypeBoostSkillLevel_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -6048,6 +8200,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * The spirit used a skill on [%SkillTarget] because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PetOrderUseUltraSkill_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{
@@ -6056,6 +8212,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] has transformed into %0 because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param value0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Polymorph_A_TO_B(String skilltarget, String value0, String skillcaster, String skillname)
 	{
@@ -6064,6 +8225,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcATK_Instant_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -6072,6 +8238,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillCaster] inflicted %num0 damage on [%SkillTarget] by using [%SkillName].
+	 * @param skillcaster
+	 * @param num0
+	 * @param skilltarget
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_ProcATK_Instant_Ratio_A_TO_B(String skillcaster, int num0, String skilltarget, String skillname)
 	{
@@ -6080,6 +8251,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget]'s flight time increased by %num0 because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCFPHeal_Instant_HEAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -6088,6 +8264,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 HP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCHeal_Instant_HEAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -6096,6 +8277,11 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] recovered %num0 MP because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param num0
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_PROCMPHeal_Instant_HEAL_A_TO_B(String skilltarget, int num0, String skillcaster, String skillname)
 	{
@@ -6104,6 +8290,10 @@ public class SM_SYSTEM_MESSAGE extends AionServerPacket
 	
 	/**
 	 * [%SkillTarget] is in the protection state because [%SkillCaster] used [%SkillName].
+	 * @param skilltarget
+	 * @param skillcaster
+	 * @param skillname
+	 * @return
 	 */
 	public static SM_SYSTEM_MESSAGE STR_SKILL_SUCC_Protect_A_TO_B(String skilltarget, String skillcaster, String skillname)
 	{

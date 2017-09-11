@@ -40,6 +40,7 @@ public class NpcFaction
 	 * @param persistentState
 	 * @param mentor
 	 * @param state
+	 * @param questId
 	 */
 	public NpcFaction(int id, int time, boolean active, ENpcFactionQuestState state, int questId)
 	{

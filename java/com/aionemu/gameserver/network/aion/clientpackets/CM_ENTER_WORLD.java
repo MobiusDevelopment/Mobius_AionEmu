@@ -36,6 +36,8 @@ public class CM_ENTER_WORLD extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_ENTER_WORLD </tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_ENTER_WORLD(int opcode, State state, State... restStates)
 	{

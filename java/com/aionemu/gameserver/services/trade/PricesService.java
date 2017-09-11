@@ -29,6 +29,7 @@ public class PricesService
 	
 	/**
 	 * Used in SM_PRICES
+	 * @param playerRace
 	 * @return buyingPrice
 	 */
 	public static int getGlobalPrices(Race playerRace)
@@ -86,6 +87,7 @@ public class PricesService
 	
 	/**
 	 * Used in SM_PRICES
+	 * @param playerRace
 	 * @return taxes
 	 */
 	public static int getTaxes(Race playerRace)
@@ -135,6 +137,7 @@ public class PricesService
 	
 	/**
 	 * Used in SM_SELL_ITEM - Can be unique per NPC!
+	 * @param playerRace
 	 * @return sellingModifier
 	 */
 	public static int getVendorSellModifier(Race playerRace)
@@ -144,6 +147,7 @@ public class PricesService
 	
 	/**
 	 * @param basePrice
+	 * @param playerRace
 	 * @return modifiedPrice
 	 */
 	public static long getPriceForService(long basePrice, Race playerRace)
@@ -155,6 +159,7 @@ public class PricesService
 	
 	/**
 	 * @param requiredKinah
+	 * @param playerRace
 	 * @return modified requiredKinah
 	 */
 	public static long getKinahForBuy(long requiredKinah, Race playerRace)
@@ -165,6 +170,7 @@ public class PricesService
 	
 	/**
 	 * @param kinahReward
+	 * @param playerRace
 	 * @return
 	 */
 	public static long getKinahForSell(long kinahReward, Race playerRace)

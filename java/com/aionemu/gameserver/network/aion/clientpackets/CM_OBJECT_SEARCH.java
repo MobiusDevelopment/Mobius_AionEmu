@@ -33,6 +33,8 @@ public class CM_OBJECT_SEARCH extends AionClientPacket
 	/**
 	 * Constructs new client packet instance.
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_OBJECT_SEARCH(int opcode, State state, State... restStates)
 	{

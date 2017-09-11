@@ -24,8 +24,8 @@ import com.aionemu.gameserver.services.NightmareCircusService;
 
 /**
  * @author Rinzler (Encom)
+ * @param <CL>
  */
-
 public abstract class CircusInstance<CL extends NightmareCircusLocation>
 {
 	private boolean started;

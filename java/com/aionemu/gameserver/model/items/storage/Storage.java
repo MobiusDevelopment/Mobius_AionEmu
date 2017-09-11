@@ -100,6 +100,8 @@ public abstract class Storage implements IStorage
 	
 	/**
 	 * Decrease kinah by {@code amount} but check first that its enough in storage
+	 * @param amount
+	 * @param actor
 	 * @return true if decrease was successful
 	 */
 	boolean tryDecreaseKinah(long amount, Player actor)
@@ -114,6 +116,8 @@ public abstract class Storage implements IStorage
 	
 	/**
 	 * just decrease kinah without any checks
+	 * @param amount
+	 * @param actor
 	 */
 	void decreaseKinah(long amount, Player actor)
 	{
@@ -135,6 +139,11 @@ public abstract class Storage implements IStorage
 	
 	/**
 	 * increase item count and return left count
+	 * @param item
+	 * @param count
+	 * @param updateType
+	 * @param actor
+	 * @return
 	 */
 	long increaseItemCount(Item item, long count, ItemUpdateType updateType, Player actor)
 	{
@@ -151,6 +160,11 @@ public abstract class Storage implements IStorage
 	
 	/**
 	 * decrease item count and return left count
+	 * @param item
+	 * @param count
+	 * @param updateType
+	 * @param actor
+	 * @return
 	 */
 	long decreaseItemCount(Item item, long count, ItemUpdateType updateType, Player actor)
 	{
@@ -234,6 +248,9 @@ public abstract class Storage implements IStorage
 	
 	/**
 	 * Delete item from storage and mark for DB update. QUEST_REWARD delete type
+	 * @param item
+	 * @param actor
+	 * @return
 	 */
 	Item delete(Item item, Player actor)
 	{
@@ -242,6 +259,10 @@ public abstract class Storage implements IStorage
 	
 	/**
 	 * Delete item from storage and mark for DB update
+	 * @param item
+	 * @param deleteType
+	 * @param actor
+	 * @return
 	 */
 	Item delete(Item item, ItemDeleteType deleteType, Player actor)
 	{

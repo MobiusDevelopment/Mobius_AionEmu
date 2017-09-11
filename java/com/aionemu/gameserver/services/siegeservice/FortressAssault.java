@@ -23,7 +23,6 @@ import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.siege.SiegeModType;
 import com.aionemu.gameserver.model.siege.SiegeRace;
 import com.aionemu.gameserver.model.templates.npc.AbyssNpcType;
@@ -36,7 +35,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Luzien
@@ -56,22 +54,11 @@ public class FortressAssault extends Assault<FortressSiege>
 	@Override
 	protected void scheduleAssault(int delay)
 	{
-		dredgionTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+		dredgionTask = ThreadPoolManager.getInstance().schedule(() -> spawnTask = ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				spawnTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawnAttackers();
-						BalaurAssaultService.getInstance().spawnDredgion(getSpawnIdByFortressId());
-					}
-				}, Rnd.get(240, 300) * 1000);
-			}
-		}, delay * 1000);
+			spawnAttackers();
+			BalaurAssaultService.getInstance().spawnDredgion(getSpawnIdByFortressId());
+		}, Rnd.get(240, 300) * 1000), delay * 1000);
 	}
 	
 	@Override
@@ -88,15 +75,7 @@ public class FortressAssault extends Assault<FortressSiege>
 		}
 		else
 		{
-			World.getInstance().doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					// The Balaur have killed the Guardian General.
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_DRAGON_BOSS_KILLED);
-				}
-			});
+			World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FIELDABYSS_DRAGON_BOSS_KILLED));
 		}
 	}
 	
@@ -157,16 +136,12 @@ public class FortressAssault extends Assault<FortressSiege>
 				SpawnEngine.spawnObject(spawn, 1);
 			}
 		}
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
-			{
-				// The Dredgion has disgorged a horde of Balaur troopers.
-				PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_ABYSS_CARRIER_DROP_DRAGON, 0);
-				// The Balaur Teleport Raiders appeared.
-				PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_ABYSS_WARP_DRAGON, 120000);
-			}
+			// The Dredgion has disgorged a horde of Balaur troopers.
+			PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_ABYSS_CARRIER_DROP_DRAGON, 0);
+			// The Balaur Teleport Raiders appeared.
+			PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_ABYSS_WARP_DRAGON, 120000);
 		});
 		idList.clear();
 	}
@@ -203,7 +178,7 @@ public class FortressAssault extends Assault<FortressSiege>
 		}
 	}
 	
-	private int getSpawnIdByFortressId()
+	int getSpawnIdByFortressId()
 	{
 		switch (locationId)
 		{

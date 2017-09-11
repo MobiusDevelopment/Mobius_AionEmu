@@ -39,28 +39,14 @@ public class BombAi2 extends AggressiveNpcAI2
 	private void bombSkill()
 	{
 		template = DataManager.AI_DATA.getAiTemplate().get(getNpcId()).getBombs().getBombTemplate();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				useSkill(template.getSkillId());
-			}
-		}, template.getCd());
+		ThreadPoolManager.getInstance().schedule(() -> useSkill(template.getSkillId()), template.getCd());
 	}
 	
-	private void useSkill(int skill)
+	void useSkill(int skill)
 	{
 		AI2Actions.targetSelf(this);
 		AI2Actions.useSkill(this, skill);
 		final int duration = DataManager.SKILL_DATA.getSkillTemplate(skill).getDuration();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(BombAi2.this);
-			}
-		}, duration != 0 ? duration + 1000 : 0);
+		ThreadPoolManager.getInstance().schedule(() -> AI2Actions.deleteOwner(BombAi2.this), duration != 0 ? duration + 1000 : 0);
 	}
 }

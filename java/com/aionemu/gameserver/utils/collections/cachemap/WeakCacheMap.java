@@ -28,6 +28,8 @@ import org.slf4j.LoggerFactory;
  * <br>
  * Values from the map will be removed after the first garbage collector run if there isn't any strong reference to the value object.
  * @author Luno
+ * @param <K>
+ * @param <V>
  */
 class WeakCacheMap<K, V>extends AbstractCacheMap<K, V> implements CacheMap<K, V>
 {

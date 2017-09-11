@@ -56,21 +56,14 @@ public class Poisonous_BubblegutAI2 extends AggressiveNpcAI2
 				{
 					spawn(203195, p.getX(), p.getY(), p.getZ(), (byte) 0); // Kato.
 				}
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						despawnNpc(203195); // Kato.
-					}
-				}, 60000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> despawnNpc(203195), 60000);
 				break;
 			}
 		}
 		super.handleDied();
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

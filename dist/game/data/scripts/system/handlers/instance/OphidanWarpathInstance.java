@@ -63,7 +63,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -117,276 +116,196 @@ public class OphidanWarpathInstance extends GeneralInstanceHandler
 	{
 		instanceTime = System.currentTimeMillis();
 		engulfedOphidanBridgeReward.setInstanceStartTime();
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!engulfedOphidanBridgeReward.isRewarded())
 			{
-				if (!engulfedOphidanBridgeReward.isRewarded())
-				{
-					openFirstDoors();
-					// The member recruitment window has passed. You cannot recruit any more members.
-					sendMsgByRace(1401181, Race.PC_ALL, 5000);
-					// The Beritra Power Generator is almost completely charged.
-					sendMsgByRace(1403624, Race.PC_ALL, 20000);
-					engulfedOphidanBridgeReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-					startInstancePacket();
-					engulfedOphidanBridgeReward.sendPacket(4, null);
-					sp(806391, 589.974180f, 407.85278f, 610.20313f, (byte) 0, 3); // North Idle Power Generator.
-					sp(806392, 605.049130f, 553.60150f, 591.49310f, (byte) 0, 42); // South Idle Power Generator.
-					sp(833935, 589.974180f, 407.85278f, 610.20313f, (byte) 0, 3); // Beritra Army Power Generator.
-					sp(833936, 605.049130f, 553.60150f, 591.49310f, (byte) 0, 42); // Beritra Army Power Generator.
-					sp(806272, 758.85846f, 566.28235f, 577.43921f, (byte) 0, 2); // Southern Cave Teleporter.
-					sp(806273, 314.84390f, 489.72495f, 597.13184f, (byte) 0, 32); // Northern Cave Teleporter.
-					sp(806274, 586.42255f, 477.52847f, 620.75189f, (byte) 0, 155); // Cave Teleport Statue.
-					sp(806275, 617.93579f, 508.27386f, 592.09863f, (byte) 0, 156); // Cave Teleport Statue.
-				}
+				openFirstDoors();
+				// The member recruitment window has passed. You cannot recruit any more members.
+				sendMsgByRace(1401181, Race.PC_ALL, 5000);
+				// The Beritra Power Generator is almost completely charged.
+				sendMsgByRace(1403624, Race.PC_ALL, 20000);
+				engulfedOphidanBridgeReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+				startInstancePacket();
+				engulfedOphidanBridgeReward.sendPacket(4, null);
+				sp(806391, 589.974180f, 407.85278f, 610.20313f, (byte) 0, 3); // North Idle Power Generator.
+				sp(806392, 605.049130f, 553.60150f, 591.49310f, (byte) 0, 42); // South Idle Power Generator.
+				sp(833935, 589.974180f, 407.85278f, 610.20313f, (byte) 0, 3); // Beritra Army Power Generator.
+				sp(833936, 605.049130f, 553.60150f, 591.49310f, (byte) 0, 42); // Beritra Army Power Generator.
+				sp(806272, 758.85846f, 566.28235f, 577.43921f, (byte) 0, 2); // Southern Cave Teleporter.
+				sp(806273, 314.84390f, 489.72495f, 597.13184f, (byte) 0, 32); // Northern Cave Teleporter.
+				sp(806274, 586.42255f, 477.52847f, 620.75189f, (byte) 0, 155); // Cave Teleport Statue.
+				sp(806275, 617.93579f, 508.27386f, 592.09863f, (byte) 0, 156); // Cave Teleport Statue.
 			}
 		}, 90000)); // ...1 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Elyos now own the Sealed Reian Relic.
-				sendMsgByRace(1403561, Race.PC_ALL, 0);
-				spawnChestPartElyos();
-				spawnMechanicalElyos();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Elyos now own the Sealed Reian Relic.
+			sendMsgByRace(1403561, Race.PC_ALL, 0);
+			spawnChestPartElyos();
+			spawnMechanicalElyos();
 		}, 150000)); // ...2 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Asmodians now control the Sealed Reian Relic.
-				sendMsgByRace(1403560, Race.PC_ALL, 0);
-				spawnChestPartAsmodians();
-				spawnMechanicalAsmodians();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Asmodians now control the Sealed Reian Relic.
+			sendMsgByRace(1403560, Race.PC_ALL, 0);
+			spawnChestPartAsmodians();
+			spawnMechanicalAsmodians();
 		}, 210000)); // ...3 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Elyos now own the Sealed Reian Relic.
-				sendMsgByRace(1403561, Race.PC_ALL, 0);
-				spawnChestPartElyos();
-				spawnMechanicalElyos();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Elyos now own the Sealed Reian Relic.
+			sendMsgByRace(1403561, Race.PC_ALL, 0);
+			spawnChestPartElyos();
+			spawnMechanicalElyos();
 		}, 270000)); // ...4 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Asmodians now control the Sealed Reian Relic.
-				sendMsgByRace(1403560, Race.PC_ALL, 0);
-				spawnChestPartAsmodians();
-				spawnMechanicalAsmodians();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Asmodians now control the Sealed Reian Relic.
+			sendMsgByRace(1403560, Race.PC_ALL, 0);
+			spawnChestPartAsmodians();
+			spawnMechanicalAsmodians();
 		}, 330000)); // ...5 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Elyos now own the Sealed Reian Relic.
-				sendMsgByRace(1403561, Race.PC_ALL, 0);
-				spawnChestPartElyos();
-				spawnMechanicalElyos();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Elyos now own the Sealed Reian Relic.
+			sendMsgByRace(1403561, Race.PC_ALL, 0);
+			spawnChestPartElyos();
+			spawnMechanicalElyos();
 		}, 390000)); // ...6 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Asmodians now control the Sealed Reian Relic.
-				sendMsgByRace(1403560, Race.PC_ALL, 0);
-				spawnChestPartAsmodians();
-				spawnMechanicalAsmodians();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Asmodians now control the Sealed Reian Relic.
+			sendMsgByRace(1403560, Race.PC_ALL, 0);
+			spawnChestPartAsmodians();
+			spawnMechanicalAsmodians();
 		}, 450000)); // ...7 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Elyos now own the Sealed Reian Relic.
-				sendMsgByRace(1403561, Race.PC_ALL, 0);
-				spawnChestPartElyos();
-				spawnMechanicalElyos();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Elyos now own the Sealed Reian Relic.
+			sendMsgByRace(1403561, Race.PC_ALL, 0);
+			spawnChestPartElyos();
+			spawnMechanicalElyos();
 		}, 510000)); // ...8 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Asmodians now control the Sealed Reian Relic.
-				sendMsgByRace(1403560, Race.PC_ALL, 0);
-				spawnChestPartAsmodians();
-				spawnMechanicalAsmodians();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Asmodians now control the Sealed Reian Relic.
+			sendMsgByRace(1403560, Race.PC_ALL, 0);
+			spawnChestPartAsmodians();
+			spawnMechanicalAsmodians();
 		}, 570000)); // ...9 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Elyos now own the Sealed Reian Relic.
-				sendMsgByRace(1403561, Race.PC_ALL, 0);
-				spawnChestPartElyos();
-				spawnMechanicalElyos();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Elyos now own the Sealed Reian Relic.
+			sendMsgByRace(1403561, Race.PC_ALL, 0);
+			spawnChestPartElyos();
+			spawnMechanicalElyos();
 		}, 630000)); // ...10 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Asmodians now control the Sealed Reian Relic.
-				sendMsgByRace(1403560, Race.PC_ALL, 0);
-				spawnChestPartAsmodians();
-				spawnMechanicalAsmodians();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Asmodians now control the Sealed Reian Relic.
+			sendMsgByRace(1403560, Race.PC_ALL, 0);
+			spawnChestPartAsmodians();
+			spawnMechanicalAsmodians();
 		}, 690000)); // ...11 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Elyos now own the Sealed Reian Relic.
-				sendMsgByRace(1403561, Race.PC_ALL, 0);
-				spawnChestPartElyos();
-				spawnMechanicalElyos();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Elyos now own the Sealed Reian Relic.
+			sendMsgByRace(1403561, Race.PC_ALL, 0);
+			spawnChestPartElyos();
+			spawnMechanicalElyos();
 		}, 750000)); // ...12 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Asmodians now control the Sealed Reian Relic.
-				sendMsgByRace(1403560, Race.PC_ALL, 0);
-				spawnChestPartAsmodians();
-				spawnMechanicalAsmodians();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Asmodians now control the Sealed Reian Relic.
+			sendMsgByRace(1403560, Race.PC_ALL, 0);
+			spawnChestPartAsmodians();
+			spawnMechanicalAsmodians();
 		}, 810000)); // ...13 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Elyos now own the Sealed Reian Relic.
-				sendMsgByRace(1403561, Race.PC_ALL, 0);
-				spawnChestPartElyos();
-				spawnMechanicalElyos();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Elyos now own the Sealed Reian Relic.
+			sendMsgByRace(1403561, Race.PC_ALL, 0);
+			spawnChestPartElyos();
+			spawnMechanicalElyos();
 		}, 870000)); // ...14 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Asmodians now control the Sealed Reian Relic.
-				sendMsgByRace(1403560, Race.PC_ALL, 0);
-				spawnChestPartAsmodians();
-				spawnMechanicalAsmodians();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Asmodians now control the Sealed Reian Relic.
+			sendMsgByRace(1403560, Race.PC_ALL, 0);
+			spawnChestPartAsmodians();
+			spawnMechanicalAsmodians();
 		}, 930000)); // ...15 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Elyos now own the Sealed Reian Relic.
-				sendMsgByRace(1403561, Race.PC_ALL, 0);
-				spawnChestPartElyos();
-				spawnMechanicalElyos();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Elyos now own the Sealed Reian Relic.
+			sendMsgByRace(1403561, Race.PC_ALL, 0);
+			spawnChestPartElyos();
+			spawnMechanicalElyos();
 		}, 990000)); // ...16 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Asmodians now control the Sealed Reian Relic.
-				sendMsgByRace(1403560, Race.PC_ALL, 0);
-				spawnChestPartAsmodians();
-				spawnMechanicalAsmodians();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Asmodians now control the Sealed Reian Relic.
+			sendMsgByRace(1403560, Race.PC_ALL, 0);
+			spawnChestPartAsmodians();
+			spawnMechanicalAsmodians();
 		}, 1050000)); // ...17 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Elyos now own the Sealed Reian Relic.
-				sendMsgByRace(1403561, Race.PC_ALL, 0);
-				spawnChestPartElyos();
-				spawnMechanicalElyos();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Elyos now own the Sealed Reian Relic.
+			sendMsgByRace(1403561, Race.PC_ALL, 0);
+			spawnChestPartElyos();
+			spawnMechanicalElyos();
 		}, 1110000)); // ...18 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				engulfedOphidanBridgeReward.sendPacket(4, null);
-				// The Asmodians now control the Sealed Reian Relic.
-				sendMsgByRace(1403560, Race.PC_ALL, 0);
-				spawnChestPartAsmodians();
-				spawnMechanicalAsmodians();
-			}
+			sendPacket(false);
+			engulfedOphidanBridgeReward.sendPacket(4, null);
+			// The Asmodians now control the Sealed Reian Relic.
+			sendMsgByRace(1403560, Race.PC_ALL, 0);
+			spawnChestPartAsmodians();
+			spawnMechanicalAsmodians();
 		}, 1170000)); // ...19 Minutes 30s
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!engulfedOphidanBridgeReward.isRewarded())
 			{
-				if (!engulfedOphidanBridgeReward.isRewarded())
-				{
-					final Race winnerRace = engulfedOphidanBridgeReward.getWinnerRaceByScore();
-					stopInstance(winnerRace);
-				}
+				final Race winnerRace = engulfedOphidanBridgeReward.getWinnerRaceByScore();
+				stopInstance(winnerRace);
 			}
 		}, 1200000));
 	}
@@ -576,24 +495,20 @@ public class OphidanWarpathInstance extends GeneralInstanceHandler
 	
 	private void sendEnterPacket(Player player)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(opponent ->
 		{
-			@Override
-			public void visit(Player opponent)
+			if (player.getRace() != opponent.getRace())
 			{
-				if (player.getRace() != opponent.getRace())
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime2(), getInstanceReward(), player.getObjectId()));
+				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime2(), getInstanceReward(), opponent.getObjectId()));
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime2(), getInstanceReward(), player.getObjectId()));
+			}
+			else
+			{
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime2(), getInstanceReward(), opponent.getObjectId()));
+				if (player.getObjectId() != opponent.getObjectId())
 				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime2(), getInstanceReward(), player.getObjectId()));
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime2(), getInstanceReward(), opponent.getObjectId()));
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime2(), getInstanceReward(), player.getObjectId()));
-				}
-				else
-				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime2(), getInstanceReward(), opponent.getObjectId()));
-					if (player.getObjectId() != opponent.getObjectId())
-					{
-						PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime2(), getInstanceReward(), player.getObjectId(), 20, 0));
-					}
+					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime2(), getInstanceReward(), player.getObjectId(), 20, 0));
 				}
 			}
 		});
@@ -604,16 +519,12 @@ public class OphidanWarpathInstance extends GeneralInstanceHandler
 	
 	private void startInstancePacket()
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime2(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(3, getTime2(), engulfedOphidanBridgeReward, player.getObjectId(), 0, 0));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime2(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime2(), getInstanceReward(), player.getObjectId()));
-			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime2(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(3, getTime2(), engulfedOphidanBridgeReward, player.getObjectId(), 0, 0));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime2(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime2(), getInstanceReward(), player.getObjectId()));
 		});
 	}
 	
@@ -621,25 +532,11 @@ public class OphidanWarpathInstance extends GeneralInstanceHandler
 	{
 		if (isObjects)
 		{
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime2(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true));
-				}
-			});
+			instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime2(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true)));
 		}
 		else
 		{
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime2(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true));
-				}
-			});
+			instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime2(), engulfedOphidanBridgeReward, instance.getPlayersInside(), true)));
 		}
 	}
 	
@@ -706,24 +603,20 @@ public class OphidanWarpathInstance extends GeneralInstanceHandler
 		{
 			npc.getController().onDelete();
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						onExitInstance(player);
-					}
-					AutoGroupService.getInstance().unRegisterInstance(instanceId);
+					onExitInstance(player);
 				}
+				AutoGroupService.getInstance().unRegisterInstance(instanceId);
 			}
 		}, 60000);
 	}
 	
-	private int getTime2()
+	int getTime2()
 	{
 		final long result = System.currentTimeMillis() - instanceTime;
 		if (result < 90000)
@@ -1048,18 +941,14 @@ public class OphidanWarpathInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				spawn(npcId, x, y, z, h, entityId);
+				if (msg > 0)
 				{
-					spawn(npcId, x, y, z, h, entityId);
-					if (msg > 0)
-					{
-						sendMsgByRace(msg, race, 0);
-					}
+					sendMsgByRace(msg, race, 0);
 				}
 			}
 		}, time));
@@ -1067,53 +956,31 @@ public class OphidanWarpathInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
-				{
-					final Npc npc = (Npc) spawn(npcId, x, y, z, h);
-					npc.getSpawn().setWalkerId(walkerId);
-					WalkManager.startWalking((NpcAI2) npc.getAi2());
-				}
+				final Npc npc = (Npc) spawn(npcId, x, y, z, h);
+				npc.getSpawn().setWalkerId(walkerId);
+				WalkManager.startWalking((NpcAI2) npc.getAi2());
 			}
 		}, time));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		warpathTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		warpathTask.add(ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time));
+		}), time));
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void stopInstanceTask()

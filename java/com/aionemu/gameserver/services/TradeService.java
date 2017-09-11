@@ -66,6 +66,7 @@ public class TradeService
 	private static final GoodsListData goodsListData = DataManager.GOODSLIST_DATA;
 	
 	/**
+	 * @param npc
 	 * @param player
 	 * @param tradeList
 	 * @return true or false
@@ -187,6 +188,7 @@ public class TradeService
 	
 	/**
 	 * Probably later merge with regular buy
+	 * @param npc
 	 * @param player
 	 * @param tradeList
 	 * @return true or false
@@ -264,6 +266,7 @@ public class TradeService
 	
 	/**
 	 * Probably later merge with regular buy
+	 * @param npc
 	 * @param player
 	 * @param tradeList
 	 * @return true or false
@@ -320,7 +323,10 @@ public class TradeService
 	}
 	
 	/**
+	 * @param npc
 	 * @param tradeList
+	 * @param player
+	 * @return
 	 */
 	private static boolean validateBuyItems(Npc npc, TradeList tradeList, Player player)
 	{
@@ -493,6 +499,10 @@ public class TradeService
 	
 	/**
 	 * Purchase List AP 4.3
+	 * @param player
+	 * @param tradeList
+	 * @param purchaseTemplate
+	 * @return
 	 **/
 	public static boolean performSellForAPToShop(Player player, TradeList tradeList, TradeListTemplate purchaseTemplate)
 	{
@@ -535,6 +545,10 @@ public class TradeService
 	
 	/**
 	 * Purchase List KINAH 4.3
+	 * @param player
+	 * @param tradeList
+	 * @param purchaseTemplate
+	 * @return
 	 **/
 	public static boolean performSellForKinahToShop(Player player, TradeList tradeList, TradeListTemplate purchaseTemplate)
 	{

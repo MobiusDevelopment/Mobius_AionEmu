@@ -55,6 +55,8 @@ public class FriendList implements Iterable<Friend>
 	
 	/**
 	 * Constructs a friend list for the given player, with the given friends
+	 * @param owner
+	 * @param newFriends
 	 * @param player Player who has this friend list
 	 * @param friends Friends on the list
 	 */
@@ -125,6 +127,7 @@ public class FriendList implements Iterable<Friend>
 	 * <li>Note: Sends the packet to update the client automatically</li>
 	 * <li>Note: You should use requestDel to delete from both lists</li>
 	 * </ul>
+	 * @param friendOid
 	 * @param friend
 	 */
 	public void delFriend(int friendOid)
@@ -160,6 +163,7 @@ public class FriendList implements Iterable<Friend>
 	 * <li>Note: Does not update friends</li>
 	 * </ul>
 	 * @param status
+	 * @param pcd
 	 */
 	public void setStatus(Status status, PlayerCommonData pcd)
 	{

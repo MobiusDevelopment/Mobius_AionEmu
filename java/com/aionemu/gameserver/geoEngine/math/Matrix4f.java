@@ -49,6 +49,22 @@ public final class Matrix4f implements Cloneable
 	
 	/**
 	 * constructs a matrix with the given values.
+	 * @param m00
+	 * @param m01
+	 * @param m02
+	 * @param m03
+	 * @param m10
+	 * @param m11
+	 * @param m12
+	 * @param m13
+	 * @param m20
+	 * @param m21
+	 * @param m22
+	 * @param m23
+	 * @param m30
+	 * @param m31
+	 * @param m32
+	 * @param m33
 	 */
 	public Matrix4f(float m00, float m01, float m02, float m03, float m10, float m11, float m12, float m13, float m20, float m21, float m22, float m23, float m30, float m31, float m32, float m33)
 	{

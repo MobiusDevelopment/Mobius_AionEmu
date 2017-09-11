@@ -161,6 +161,7 @@ public class LegionEmblem
 	}
 	
 	/**
+	 * @param data
 	 * @param uploadData the uploadData to set
 	 */
 	public void addUploadData(byte[] data)

@@ -33,6 +33,8 @@ public class CM_SHOW_DIALOG extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_SHOW_DIALOG </tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_SHOW_DIALOG(int opcode, State state, State... restStates)
 	{

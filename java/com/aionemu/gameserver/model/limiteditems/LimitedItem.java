@@ -54,6 +54,8 @@ public class LimitedItem
 	}
 	
 	/**
+	 * @param playerObjectId
+	 * @param count
 	 * @param set playerObjectId.
 	 * @param set count.
 	 */
@@ -71,6 +73,7 @@ public class LimitedItem
 	}
 	
 	/**
+	 * @param itemId
 	 * @param set itemId.
 	 */
 	public void setItem(int itemId)
@@ -101,6 +104,7 @@ public class LimitedItem
 	}
 	
 	/**
+	 * @param sellLimit
 	 * @param set sellLimit.
 	 */
 	public void setSellLimit(int sellLimit)

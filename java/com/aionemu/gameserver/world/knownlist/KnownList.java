@@ -184,6 +184,7 @@ public class KnownList
 	/**
 	 * Delete VisibleObject from this KnownList.
 	 * @param object
+	 * @param isOutOfRange
 	 */
 	private void del(VisibleObject object, boolean isOutOfRange)
 	{

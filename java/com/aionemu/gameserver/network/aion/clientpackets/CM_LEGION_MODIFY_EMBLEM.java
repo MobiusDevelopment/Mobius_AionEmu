@@ -38,6 +38,8 @@ public class CM_LEGION_MODIFY_EMBLEM extends AionClientPacket
 	
 	/**
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_LEGION_MODIFY_EMBLEM(int opcode, State state, State... restStates)
 	{

@@ -118,6 +118,8 @@ public class TemporarySpawnEngine
 	}
 	
 	/**
+	 * @param spawn
+	 * @param instanceId
 	 * @param spawnTemplate
 	 */
 	public static void addSpawnGroup(SpawnGroup2 spawn, int instanceId)

@@ -63,7 +63,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -137,54 +136,42 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 	{
 		instanceTime = System.currentTimeMillis();
 		idgelDomeReward.setInstanceStartTime();
-		idgelTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		idgelTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!idgelDomeReward.isRewarded())
 			{
-				if (!idgelDomeReward.isRewarded())
-				{
-					openFirstDoors();
-					// The member recruitment window has passed. You cannot recruit any more members.
-					sendMsgByRace(1401181, Race.PC_ALL, 5000);
-					idgelDomeReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-					startInstancePacket();
-					idgelDomeReward.sendPacket(4, null);
-				}
+				openFirstDoors();
+				// The member recruitment window has passed. You cannot recruit any more members.
+				sendMsgByRace(1401181, Race.PC_ALL, 5000);
+				idgelDomeReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+				startInstancePacket();
+				idgelDomeReward.sendPacket(4, null);
 			}
 		}, 90000));
-		idgelTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		idgelTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				idgelDomeReward.sendPacket(4, null);
-				// Supplies have been dropped in a confidential area.
-				sendMsgByRace(1402086, Race.PC_ALL, 0);
-				sp(702581, 312.9132f, 311.31152f, 79.86219f, (byte) 104, 0); // Intelligence Supply Box.
-				sp(702582, 216.0075f, 209.24077f, 79.86219f, (byte) 44, 0); // Intelligence Supply Box.
-				sp(702583, 252.9754f, 246.21234f, 92.94253f, (byte) 15, 0); // Intelligence Supply Box.
-				sp(702583, 276.4865f, 271.9778f, 92.94253f, (byte) 75, 0); // Intelligence Supply Box.
-			}
+			sendPacket(false);
+			idgelDomeReward.sendPacket(4, null);
+			// Supplies have been dropped in a confidential area.
+			sendMsgByRace(1402086, Race.PC_ALL, 0);
+			sp(702581, 312.9132f, 311.31152f, 79.86219f, (byte) 104, 0); // Intelligence Supply Box.
+			sp(702582, 216.0075f, 209.24077f, 79.86219f, (byte) 44, 0); // Intelligence Supply Box.
+			sp(702583, 252.9754f, 246.21234f, 92.94253f, (byte) 15, 0); // Intelligence Supply Box.
+			sp(702583, 276.4865f, 271.9778f, 92.94253f, (byte) 75, 0); // Intelligence Supply Box.
 		}, 300000));
-		idgelTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		idgelTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				idgelDomeReward.sendPacket(4, null);
-				// Destroyer Kunax has spawned.
-				sendMsgByRace(1402598, Race.PC_ALL, 0);
-				// Destroyer Kunax has appeared in the Slaying Arena.
-				sendMsgByRace(1402367, Race.PC_ALL, 10000);
-				sp(234190, 266.579f, 257.436f, 85.81963f, (byte) 46, 0); // Destroyer Kunax.
-				sp(234751, 250.67055f, 257.33798f, 85.81963f, (byte) 62, 0); // Sheban Elite Stalwart.
-				sp(234752, 265.60724f, 272.637f, 85.81963f, (byte) 36, 0); // Sheban Elite Sniper.
-				sp(234753, 263.66858f, 245.04124f, 85.81963f, (byte) 101, 0); // Sheban Elite Marauder.
-				sp(234754, 278.0694f, 262.5485f, 85.81963f, (byte) 2, 0); // Sheban Elite Medic.
-			}
+			sendPacket(false);
+			idgelDomeReward.sendPacket(4, null);
+			// Destroyer Kunax has spawned.
+			sendMsgByRace(1402598, Race.PC_ALL, 0);
+			// Destroyer Kunax has appeared in the Slaying Arena.
+			sendMsgByRace(1402367, Race.PC_ALL, 10000);
+			sp(234190, 266.579f, 257.436f, 85.81963f, (byte) 46, 0); // Destroyer Kunax.
+			sp(234751, 250.67055f, 257.33798f, 85.81963f, (byte) 62, 0); // Sheban Elite Stalwart.
+			sp(234752, 265.60724f, 272.637f, 85.81963f, (byte) 36, 0); // Sheban Elite Sniper.
+			sp(234753, 263.66858f, 245.04124f, 85.81963f, (byte) 101, 0); // Sheban Elite Marauder.
+			sp(234754, 278.0694f, 262.5485f, 85.81963f, (byte) 2, 0); // Sheban Elite Medic.
 		}, 600000));
 	}
 	
@@ -222,24 +209,20 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 	
 	private void sendEnterPacket(Player player)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(opponent ->
 		{
-			@Override
-			public void visit(Player opponent)
+			if (player.getRace() != opponent.getRace())
 			{
-				if (player.getRace() != opponent.getRace())
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
+				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId()));
+			}
+			else
+			{
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
+				if (player.getObjectId() != opponent.getObjectId())
 				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId()));
-				}
-				else
-				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
-					if (player.getObjectId() != opponent.getObjectId())
-					{
-						PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId(), 20, 0));
-					}
+					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId(), 20, 0));
 				}
 			}
 		});
@@ -250,16 +233,12 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 	
 	private void startInstancePacket()
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), idgelDomeReward, instance.getPlayersInside(), true));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(3, getTime(), idgelDomeReward, player.getObjectId(), 0, 0));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), idgelDomeReward, instance.getPlayersInside(), true));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
-			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), idgelDomeReward, instance.getPlayersInside(), true));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(3, getTime(), idgelDomeReward, player.getObjectId(), 0, 0));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), idgelDomeReward, instance.getPlayersInside(), true));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
 		});
 	}
 	
@@ -267,25 +246,11 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 	{
 		if (isObjects)
 		{
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime(), idgelDomeReward, instance.getPlayersInside(), true));
-				}
-			});
+			instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime(), idgelDomeReward, instance.getPlayersInside(), true)));
 		}
 		else
 		{
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), idgelDomeReward, instance.getPlayersInside(), true));
-				}
-			});
+			instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), idgelDomeReward, instance.getPlayersInside(), true)));
 		}
 	}
 	
@@ -357,24 +322,20 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 		{
 			npc.getController().onDelete();
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						onExitInstance(player);
-					}
-					AutoGroupService.getInstance().unRegisterInstance(instanceId);
+					onExitInstance(player);
 				}
+				AutoGroupService.getInstance().unRegisterInstance(instanceId);
 			}
 		}, 60000);
 	}
 	
-	private int getTime()
+	int getTime()
 	{
 		final long result = System.currentTimeMillis() - instanceTime;
 		if (result < 90000)
@@ -566,16 +527,12 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 			{
 				point = 6000;
 				RaceKilledKunax = mostPlayerDamage.getRace();
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
+					if (!idgelDomeReward.isRewarded())
 					{
-						if (!idgelDomeReward.isRewarded())
-						{
-							final Race winnerRace = idgelDomeReward.getWinnerRaceByScore();
-							stopInstance(winnerRace);
-						}
+						final Race winnerRace = idgelDomeReward.getWinnerRaceByScore();
+						stopInstance(winnerRace);
 					}
 				}, 30000);
 				break;
@@ -658,18 +615,14 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
-		idgelTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		idgelTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				spawn(npcId, x, y, z, h, entityId);
+				if (msg > 0)
 				{
-					spawn(npcId, x, y, z, h, entityId);
-					if (msg > 0)
-					{
-						sendMsgByRace(msg, race, 0);
-					}
+					sendMsgByRace(msg, race, 0);
 				}
 			}
 		}, time));
@@ -677,53 +630,31 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
-		idgelTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		idgelTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
-				{
-					final Npc npc = (Npc) spawn(npcId, x, y, z, h);
-					npc.getSpawn().setWalkerId(walkerId);
-					WalkManager.startWalking((NpcAI2) npc.getAi2());
-				}
+				final Npc npc = (Npc) spawn(npcId, x, y, z, h);
+				npc.getSpawn().setWalkerId(walkerId);
+				WalkManager.startWalking((NpcAI2) npc.getAi2());
 			}
 		}, time));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		idgelTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		idgelTask.add(ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time));
+		}), time));
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void stopInstanceTask()

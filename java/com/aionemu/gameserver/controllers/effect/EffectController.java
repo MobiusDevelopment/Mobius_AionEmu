@@ -39,7 +39,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTargetSlot;
 import com.aionemu.gameserver.skillengine.model.TransformType;
 import com.aionemu.gameserver.taskmanager.tasks.PacketBroadcaster.BroadcastMode;
 import com.aionemu.gameserver.utils.PacketSendUtility;
-import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 
 import javolution.util.FastMap;
@@ -91,6 +90,7 @@ public class EffectController
 	}
 	
 	/**
+	 * @param nextEffect
 	 * @param effect
 	 */
 	public void addEffect(Effect nextEffect)
@@ -303,6 +303,7 @@ public class EffectController
 	
 	/**
 	 * @param mapToUpdate
+	 * @param newEffect
 	 * @param effect
 	 * @return
 	 */
@@ -860,6 +861,8 @@ public class EffectController
 	
 	/**
 	 * Return true if skillId is present among creature's abnormals
+	 * @param skillId
+	 * @return
 	 */
 	public boolean isAbnormalPresentBySkillId(int skillId)
 	{
@@ -936,54 +939,27 @@ public class EffectController
 	 */
 	public Collection<Effect> getAbnormalEffectsToShow()
 	{
-		return Collections2.filter(abnormalEffectMap.values(), new Predicate<Effect>()
-		{
-			@Override
-			public boolean apply(Effect effect)
-			{
-				return effect.getSkillTemplate().getTargetSlot() != SkillTargetSlot.NOSHOW;
-			}
-		});
+		return Collections2.filter(abnormalEffectMap.values(), effect -> effect.getSkillTemplate().getTargetSlot() != SkillTargetSlot.NOSHOW);
 	}
 	
 	public Collection<Effect> getChantEffects()
 	{
-		return Collections2.filter(abnormalEffectMap.values(), new Predicate<Effect>()
-		{
-			@Override
-			public boolean apply(Effect effect)
-			{
-				return effect.isChant();
-			}
-		});
+		return Collections2.filter(abnormalEffectMap.values(), effect -> effect.isChant());
 	}
 	
 	public Collection<Effect> getRangerEffects()
 	{
-		return Collections2.filter(abnormalEffectMap.values(), new Predicate<Effect>()
-		{
-			@Override
-			public boolean apply(Effect effect)
-			{
-				return effect.isRangerBuff();
-			}
-		});
+		return Collections2.filter(abnormalEffectMap.values(), effect -> effect.isRangerBuff());
 	}
 	
 	public Collection<Effect> getBuffEffects()
 	{
-		return Collections2.filter(abnormalEffectMap.values(), new Predicate<Effect>()
-		{
-			@Override
-			public boolean apply(Effect effect)
-			{
-				return effect.isBuff();
-			}
-		});
+		return Collections2.filter(abnormalEffectMap.values(), effect -> effect.isBuff());
 	}
 	
 	/**
 	 * ABNORMAL EFFECTS
+	 * @param mask
 	 */
 	
 	public void setAbnormal(int mask)

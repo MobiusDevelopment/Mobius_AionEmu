@@ -48,7 +48,10 @@ public abstract class VisibleObject extends AionObject
 	/**
 	 * Constructor.
 	 * @param objId
+	 * @param controller
+	 * @param spawnTemplate
 	 * @param objectTemplate
+	 * @param position
 	 */
 	public VisibleObject(int objId, VisibleObjectController<? extends VisibleObject> controller, SpawnTemplate spawnTemplate, VisibleObjectTemplate objectTemplate, WorldPosition position)
 	{

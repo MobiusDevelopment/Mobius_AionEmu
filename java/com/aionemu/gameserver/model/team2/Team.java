@@ -24,6 +24,8 @@ import com.google.common.base.Predicate;
 
 /**
  * @author ATracer
+ * @param <M>
+ * @param <TM>
  */
 public interface Team<M, TM extends TeamMember<M>>
 {

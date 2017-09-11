@@ -187,24 +187,20 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 	
 	private void startSkillTask()
 	{
-		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelTask1();
-				}
-				else
-				{
-					chooseRandomEvent();
-				}
+				cancelTask1();
+			}
+			else
+			{
+				chooseRandomEvent();
 			}
 		}, 4000, 30000);
 	}
 	
-	private void cancelTask1()
+	void cancelTask1()
 	{
 		if ((skillTask != null) && !skillTask.isCancelled())
 		{
@@ -236,14 +232,7 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 	{
 		AI2Actions.targetSelf(Enraged_Queen_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21177, 1, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawnSorcererQueenModor();
-			}
-		}, 11000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawnSorcererQueenModor(), 11000);
 	}
 	
 	private void spawnSorcererQueenModor()
@@ -258,15 +247,11 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 	{
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		sendMsg(1500750);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				modorNpc();
-				World.getInstance().updatePosition(getOwner(), 284, 262, 249, (byte) 63);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+			modorNpc();
+			World.getInstance().updatePosition(getOwner(), 284, 262, 249, (byte) 63);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -275,36 +260,32 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 		AI2Actions.targetSelf(Enraged_Queen_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		sendMsg(1500741);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			final float pos1[][] =
 			{
-				final float pos1[][] =
 				{
-					{
-						232.426f,
-						263.818f,
-						248.6419f,
-						115
-					},
-					{
-						271.426f,
-						230.243f,
-						250.9022f,
-						38
-					},
-					{
-						240.130f,
-						235.219f,
-						251.1553f,
-						17
-					}
-				};
-				final float pos[] = pos1[Rnd.get(0, 2)];
-				World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+					232.426f,
+					263.818f,
+					248.6419f,
+					115
+				},
+				{
+					271.426f,
+					230.243f,
+					250.9022f,
+					38
+				},
+				{
+					240.130f,
+					235.219f,
+					251.1553f,
+					17
+				}
+			};
+			final float pos[] = pos1[Rnd.get(0, 2)];
+			World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -313,15 +294,11 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 		AI2Actions.targetSelf(Enraged_Queen_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		sendMsg(1500741);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				modorNpc();
-				World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+			modorNpc();
+			World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -329,23 +306,15 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 	{
 		AI2Actions.targetSelf(Enraged_Queen_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21268, 60, getOwner()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			AI2Actions.targetSelf(Enraged_Queen_ModorAI2.this);
+			SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				AI2Actions.targetSelf(Enraged_Queen_ModorAI2.this);
-				SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						World.getInstance().updatePosition(getOwner(), 232, 263, 249, (byte) 115);
-						PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-					}
-				}, 2000);
-			}
+				World.getInstance().updatePosition(getOwner(), 232, 263, 249, (byte) 115);
+				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
+			}, 2000);
 		}, 3000);
 	}
 	
@@ -353,15 +322,11 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 	{
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		sendMsg(1500741);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				modorNpc();
-				World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+			modorNpc();
+			World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -370,36 +335,32 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 		AI2Actions.targetSelf(Enraged_Queen_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		sendMsg(1500750);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			final float pos1[][] =
 			{
-				final float pos1[][] =
 				{
-					{
-						232.426f,
-						263.818f,
-						248.6419f,
-						115
-					},
-					{
-						271.426f,
-						230.243f,
-						250.9022f,
-						38
-					},
-					{
-						240.130f,
-						235.219f,
-						251.1553f,
-						17
-					}
-				};
-				final float pos[] = pos1[Rnd.get(0, 2)];
-				World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+					232.426f,
+					263.818f,
+					248.6419f,
+					115
+				},
+				{
+					271.426f,
+					230.243f,
+					250.9022f,
+					38
+				},
+				{
+					240.130f,
+					235.219f,
+					251.1553f,
+					17
+				}
+			};
+			final float pos[] = pos1[Rnd.get(0, 2)];
+			World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -407,15 +368,11 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 	{
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		sendMsg(1500741);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				modorNpc2();
-				World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+			modorNpc2();
+			World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -424,36 +381,32 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 		AI2Actions.targetSelf(Enraged_Queen_ModorAI2.this);
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		sendMsg(1500750);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			final float pos1[][] =
 			{
-				final float pos1[][] =
 				{
-					{
-						232.426f,
-						263.818f,
-						248.6419f,
-						115
-					},
-					{
-						271.426f,
-						230.243f,
-						250.9022f,
-						38
-					},
-					{
-						240.130f,
-						235.219f,
-						251.1553f,
-						17
-					}
-				};
-				final float pos[] = pos1[Rnd.get(0, 2)];
-				World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+					232.426f,
+					263.818f,
+					248.6419f,
+					115
+				},
+				{
+					271.426f,
+					230.243f,
+					250.9022f,
+					38
+				},
+				{
+					240.130f,
+					235.219f,
+					251.1553f,
+					17
+				}
+			};
+			final float pos[] = pos1[Rnd.get(0, 2)];
+			World.getInstance().updatePosition(getOwner(), pos[0], pos[1], pos[2], (byte) pos[3]);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
@@ -461,45 +414,33 @@ public class Enraged_Queen_ModorAI2 extends AggressiveNpcAI2
 	{
 		SkillEngine.getInstance().getSkill(getOwner(), 21165, 60, getOwner()).useNoAnimationSkill();
 		sendMsg(1500741);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				modorNpc2();
-				World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
-				PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
-			}
+			modorNpc2();
+			World.getInstance().updatePosition(getOwner(), 256, 258, 242, (byte) 10);
+			PacketSendUtility.broadcastPacketAndReceive(getOwner(), new SM_FORCED_MOVE(getOwner(), getOwner()));
 		}, 2000);
 	}
 	
 	private void modorNpc()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				spawn(284659, 271.12497f, 247.17401f, 242.625f, (byte) 90);
-				spawn(284660, 244.12497f, 245.17401f, 242.625f, (byte) 90);
-				spawn(284664, 243.12497f, 270.17401f, 242.625f, (byte) 90);
-				spawn(284660, 268.12497f, 271.17401f, 242.625f, (byte) 90);
-			}
+			spawn(284659, 271.12497f, 247.17401f, 242.625f, (byte) 90);
+			spawn(284660, 244.12497f, 245.17401f, 242.625f, (byte) 90);
+			spawn(284664, 243.12497f, 270.17401f, 242.625f, (byte) 90);
+			spawn(284660, 268.12497f, 271.17401f, 242.625f, (byte) 90);
 		}, 4000);
 	}
 	
 	private void modorNpc2()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				spawn(284663, 271.12497f, 247.17401f, 242.625f, (byte) 90);
-				spawn(284662, 244.12497f, 245.17401f, 242.625f, (byte) 90);
-				spawn(284664, 243.12497f, 270.17401f, 242.625f, (byte) 90);
-				spawn(284663, 268.12497f, 271.17401f, 242.625f, (byte) 90);
-			}
+			spawn(284663, 271.12497f, 247.17401f, 242.625f, (byte) 90);
+			spawn(284662, 244.12497f, 245.17401f, 242.625f, (byte) 90);
+			spawn(284664, 243.12497f, 270.17401f, 242.625f, (byte) 90);
+			spawn(284663, 268.12497f, 271.17401f, 242.625f, (byte) 90);
 		}, 4000);
 	}
 	

@@ -60,14 +60,7 @@ public class PlayerTransferService
 	
 	public PlayerTransferService()
 	{
-		veryfyTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				verifyNewTasks();
-			}
-		}, 10000, 7 * 60000);
+		veryfyTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> verifyNewTasks(), 10000, 7 * 60000);
 		dao = DAOManager.getDAO(PlayerTransferDAO.class);
 		log.info("PlayerTransferService will be initialized in 10 sec.");
 	}
@@ -122,6 +115,9 @@ public class PlayerTransferService
 	
 	/**
 	 * sended from source server to login with character information
+	 * @param taskId
+	 * @param name
+	 * @param db
 	 */
 	public void requestTransfer(int taskId, String name, byte[] db)
 	{
@@ -181,6 +177,8 @@ public class PlayerTransferService
 	
 	/**
 	 * When source server refuse to do transfer with reason
+	 * @param taskId
+	 * @param reason
 	 */
 	public void onTaskStop(int taskId, String reason)
 	{
@@ -192,6 +190,8 @@ public class PlayerTransferService
 	
 	/**
 	 * response from target server after cloning character
+	 * @param taskId
+	 * @param reason
 	 */
 	public void onError(int taskId, String reason)
 	{
@@ -217,6 +217,8 @@ public class PlayerTransferService
 	
 	/**
 	 * response from target server after cloning character
+	 * @param taskId
+	 * @param playerId
 	 */
 	public void onOk(int taskId, int playerId)
 	{

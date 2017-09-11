@@ -24,7 +24,6 @@ import static org.hamcrest.Matchers.equalTo;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.SortedSet;
@@ -61,7 +60,7 @@ public class Legion
 	private TreeMap<Timestamp, String> announcementList = new TreeMap<>();
 	private LegionEmblem legionEmblem = new LegionEmblem();
 	private LegionWarehouse legionWarehouse;
-	private SortedSet<LegionHistory> legionHistory;
+	private final SortedSet<LegionHistory> legionHistory;
 	private final AtomicBoolean hasBonus = new AtomicBoolean(false);
 	private final FastMap<Integer, LegionJoinRequest> joinRequestMap = new FastMap<>();
 	private String description = "";
@@ -87,16 +86,7 @@ public class Legion
 	public Legion()
 	{
 		legionWarehouse = new LegionWarehouse(this);
-		legionHistory = new TreeSet<>(new Comparator<LegionHistory>()
-		{
-			
-			@Override
-			public int compare(LegionHistory o1, LegionHistory o2)
-			{
-				return o1.getTime().getTime() < o2.getTime().getTime() ? 1 : -1;
-			}
-			
-		});
+		legionHistory = new TreeSet<>((o1, o2) -> o1.getTime().getTime() < o2.getTime().getTime() ? 1 : -1);
 	}
 	
 	/**
@@ -166,7 +156,9 @@ public class Legion
 	
 	/**
 	 * Add a legionMember to the legionMembers list
+	 * @param playerObjId
 	 * @param legionMember
+	 * @return
 	 */
 	public boolean addLegionMember(int playerObjId)
 	{
@@ -189,6 +181,10 @@ public class Legion
 	
 	/**
 	 * This method will set the permissions
+	 * @param deputyPermission
+	 * @param centurionPermission
+	 * @param legionaryPermission
+	 * @param volunteerPermission
 	 * @param legionarPermission2
 	 * @param centurionPermission1
 	 * @param centurionPermission2
@@ -276,6 +272,7 @@ public class Legion
 	}
 	
 	/**
+	 * @param contributionPoints
 	 * @param newPoints
 	 */
 	public void setContributionPoints(long contributionPoints)
@@ -467,6 +464,8 @@ public class Legion
 	
 	/**
 	 * This method will add a new announcement to the list
+	 * @param unixTime
+	 * @param announcement
 	 */
 	public void addAnnouncementToList(Timestamp unixTime, String announcement)
 	{

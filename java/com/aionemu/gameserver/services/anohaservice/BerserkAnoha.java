@@ -24,8 +24,8 @@ import com.aionemu.gameserver.services.AnohaService;
 
 /**
  * @author Rinzler (Encom)
+ * @param <AL>
  */
-
 public abstract class BerserkAnoha<AL extends AnohaLocation>
 {
 	private boolean started;

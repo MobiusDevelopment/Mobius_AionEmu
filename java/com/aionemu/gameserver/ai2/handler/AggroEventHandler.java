@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.geo.GeoService;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author ATracer
@@ -43,6 +42,7 @@ public class AggroEventHandler
 	
 	/**
 	 * @param npcAI
+	 * @param myTarget
 	 * @param creature
 	 */
 	public static void onAggro(NpcAI2 npcAI, Creature myTarget)
@@ -118,15 +118,7 @@ public class AggroEventHandler
 			aggressive.getAggroList().addHate(target, 1);
 			if (broadcast)
 			{
-				aggressive.getKnownList().doOnAllNpcs(new Visitor<Npc>()
-				{
-					
-					@Override
-					public void visit(Npc object)
-					{
-						object.getAi2().onCreatureEvent(AIEventType.CREATURE_NEEDS_SUPPORT, aggressive);
-					}
-				});
+				aggressive.getKnownList().doOnAllNpcs(object -> object.getAi2().onCreatureEvent(AIEventType.CREATURE_NEEDS_SUPPORT, aggressive));
 			}
 			aggressive = null;
 			target = null;

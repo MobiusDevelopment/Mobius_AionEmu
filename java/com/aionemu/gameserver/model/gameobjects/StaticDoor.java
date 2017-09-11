@@ -41,6 +41,7 @@ public class StaticDoor extends StaticObject
 	 * @param controller
 	 * @param spawnTemplate
 	 * @param objectTemplate
+	 * @param instanceId
 	 */
 	public StaticDoor(int objectId, StaticObjectController controller, SpawnTemplate spawnTemplate, StaticDoorTemplate objectTemplate, int instanceId)
 	{

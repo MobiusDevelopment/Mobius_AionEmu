@@ -45,6 +45,7 @@ public final class RestrictionsManager
 	{
 		for (Method method : restriction.getClass().getMethods())
 		{
+			@SuppressWarnings("synthetic-access")
 			final RestrictionMode mode = RestrictionMode.parse(method);
 			if (mode == null)
 			{
@@ -89,6 +90,9 @@ public final class RestrictionsManager
 	
 	/**
 	 * This function can be used for activate one restriction. Example: public static boolean startAppleEatingEvent(Player player) { if(RestrictionsManager.isRestricted(player, AppleEatingEventRestriction.class)) return false; return true; }
+	 * @param player
+	 * @param callingRestriction
+	 * @return
 	 */
 	public static boolean isRestricted(Player player, Class<? extends Restrictions> callingRestriction)
 	{
@@ -127,6 +131,8 @@ public final class RestrictionsManager
 	 * This function is created for enable/disable on specific target.
 	 * @param player
 	 * @param target
+	 * @param skill
+	 * @return
 	 */
 	public static boolean canAffectBySkill(Player player, VisibleObject target, Skill skill)
 	{
@@ -282,6 +288,7 @@ public final class RestrictionsManager
 	/**
 	 * Check whether player can use an item
 	 * @param player
+	 * @param item
 	 * @return
 	 */
 	public static boolean canUseItem(Player player, Item item)

@@ -46,9 +46,11 @@ public abstract class PlayerSkillListDAO implements DAO
 	
 	/**
 	 * Updates skill with new information
+	 * @param player
 	 * @param playerId
 	 * @param skillId
 	 * @param skillLevel
+	 * @return
 	 */
 	public abstract boolean storeSkills(Player player);
 	

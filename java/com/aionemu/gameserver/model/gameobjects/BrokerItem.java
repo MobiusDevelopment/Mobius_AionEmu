@@ -269,135 +269,103 @@ public class BrokerItem implements Comparable<BrokerItem>
 		return itemUniqueId > o.getItemUniqueId() ? 1 : -1;
 	}
 	
-	static Comparator<BrokerItem> NAME_SORT_ASC = new Comparator<BrokerItem>()
+	static Comparator<BrokerItem> NAME_SORT_ASC = (o1, o2) ->
 	{
-		@Override
-		public int compare(BrokerItem o1, BrokerItem o2)
+		if ((o1 == null) || (o2 == null))
 		{
-			if ((o1 == null) || (o2 == null))
-			{
-				return comparePossiblyNull(o1, o2);
-			}
-			return o1.getItemName().compareTo(o2.getItemName());
+			return comparePossiblyNull(o1, o2);
 		}
+		return o1.getItemName().compareTo(o2.getItemName());
 	};
 	
-	static Comparator<BrokerItem> NAME_SORT_DESC = new Comparator<BrokerItem>()
+	static Comparator<BrokerItem> NAME_SORT_DESC = (o1, o2) ->
 	{
-		@Override
-		public int compare(BrokerItem o1, BrokerItem o2)
+		if ((o1 == null) || (o2 == null))
 		{
-			if ((o1 == null) || (o2 == null))
-			{
-				return comparePossiblyNull(o1, o2);
-			}
-			return o1.getItemName().compareTo(o2.getItemName());
+			return comparePossiblyNull(o1, o2);
 		}
+		return o1.getItemName().compareTo(o2.getItemName());
 	};
 	
-	static Comparator<BrokerItem> PRICE_SORT_ASC = new Comparator<BrokerItem>()
+	static Comparator<BrokerItem> PRICE_SORT_ASC = (o1, o2) ->
 	{
-		@Override
-		public int compare(BrokerItem o1, BrokerItem o2)
+		if ((o1 == null) || (o2 == null))
 		{
-			if ((o1 == null) || (o2 == null))
-			{
-				return comparePossiblyNull(o1, o2);
-			}
-			if (o1.getPrice() == o2.getPrice())
-			{
-				return 0;
-			}
-			return o1.getPrice() > o2.getPrice() ? 1 : -1;
+			return comparePossiblyNull(o1, o2);
 		}
+		if (o1.getPrice() == o2.getPrice())
+		{
+			return 0;
+		}
+		return o1.getPrice() > o2.getPrice() ? 1 : -1;
 	};
 	
-	static Comparator<BrokerItem> PRICE_SORT_DESC = new Comparator<BrokerItem>()
+	static Comparator<BrokerItem> PRICE_SORT_DESC = (o1, o2) ->
 	{
-		@Override
-		public int compare(BrokerItem o1, BrokerItem o2)
+		if ((o1 == null) || (o2 == null))
 		{
-			if ((o1 == null) || (o2 == null))
-			{
-				return comparePossiblyNull(o1, o2);
-			}
-			if (o1.getPrice() == o2.getPrice())
-			{
-				return 0;
-			}
-			return o1.getPrice() > o2.getPrice() ? -1 : 1;
+			return comparePossiblyNull(o1, o2);
 		}
+		if (o1.getPrice() == o2.getPrice())
+		{
+			return 0;
+		}
+		return o1.getPrice() > o2.getPrice() ? -1 : 1;
 	};
 	
-	static Comparator<BrokerItem> PIECE_PRICE_SORT_ASC = new Comparator<BrokerItem>()
+	static Comparator<BrokerItem> PIECE_PRICE_SORT_ASC = (o1, o2) ->
 	{
-		@Override
-		public int compare(BrokerItem o1, BrokerItem o2)
+		if ((o1 == null) || (o2 == null))
 		{
-			if ((o1 == null) || (o2 == null))
-			{
-				return comparePossiblyNull(o1, o2);
-			}
-			if (o1.getPiecePrice() == o2.getPiecePrice())
-			{
-				return 0;
-			}
-			return o1.getPiecePrice() > o2.getPiecePrice() ? 1 : -1;
+			return comparePossiblyNull(o1, o2);
 		}
+		if (o1.getPiecePrice() == o2.getPiecePrice())
+		{
+			return 0;
+		}
+		return o1.getPiecePrice() > o2.getPiecePrice() ? 1 : -1;
 	};
 	
-	static Comparator<BrokerItem> PIECE_PRICE_SORT_DESC = new Comparator<BrokerItem>()
+	static Comparator<BrokerItem> PIECE_PRICE_SORT_DESC = (o1, o2) ->
 	{
-		@Override
-		public int compare(BrokerItem o1, BrokerItem o2)
+		if ((o1 == null) || (o2 == null))
 		{
-			if ((o1 == null) || (o2 == null))
-			{
-				return comparePossiblyNull(o1, o2);
-			}
-			if (o1.getPiecePrice() == o2.getPiecePrice())
-			{
-				return 0;
-			}
-			return o1.getPiecePrice() > o2.getPiecePrice() ? -1 : 1;
+			return comparePossiblyNull(o1, o2);
 		}
+		if (o1.getPiecePrice() == o2.getPiecePrice())
+		{
+			return 0;
+		}
+		return o1.getPiecePrice() > o2.getPiecePrice() ? -1 : 1;
 	};
 	
-	static Comparator<BrokerItem> LEVEL_SORT_ASC = new Comparator<BrokerItem>()
+	static Comparator<BrokerItem> LEVEL_SORT_ASC = (o1, o2) ->
 	{
-		@Override
-		public int compare(BrokerItem o1, BrokerItem o2)
+		if ((o1 == null) || (o2 == null))
 		{
-			if ((o1 == null) || (o2 == null))
-			{
-				return comparePossiblyNull(o1, o2);
-			}
-			if (o1.getItemLevel() == o2.getItemLevel())
-			{
-				return 0;
-			}
-			return o1.getItemLevel() > o2.getItemLevel() ? 1 : -1;
+			return comparePossiblyNull(o1, o2);
 		}
+		if (o1.getItemLevel() == o2.getItemLevel())
+		{
+			return 0;
+		}
+		return o1.getItemLevel() > o2.getItemLevel() ? 1 : -1;
 	};
 	
-	static Comparator<BrokerItem> LEVEL_SORT_DESC = new Comparator<BrokerItem>()
+	static Comparator<BrokerItem> LEVEL_SORT_DESC = (o1, o2) ->
 	{
-		@Override
-		public int compare(BrokerItem o1, BrokerItem o2)
+		if ((o1 == null) || (o2 == null))
 		{
-			if ((o1 == null) || (o2 == null))
-			{
-				return comparePossiblyNull(o1, o2);
-			}
-			if (o1.getItemLevel() == o2.getItemLevel())
-			{
-				return 0;
-			}
-			return o1.getItemLevel() > o2.getItemLevel() ? -1 : 1;
+			return comparePossiblyNull(o1, o2);
 		}
+		if (o1.getItemLevel() == o2.getItemLevel())
+		{
+			return 0;
+		}
+		return o1.getItemLevel() > o2.getItemLevel() ? -1 : 1;
 	};
 	
-	private static <T extends Comparable<T>> int comparePossiblyNull(T aThis, T aThat)
+	static <T extends Comparable<T>> int comparePossiblyNull(T aThis, T aThat)
 	{
 		int result = 0;
 		if ((aThis == null) && (aThat != null))

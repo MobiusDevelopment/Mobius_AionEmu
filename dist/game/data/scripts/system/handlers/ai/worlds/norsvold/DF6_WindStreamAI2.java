@@ -22,7 +22,6 @@ import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.ai2.NpcAI2;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.Npc;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.windstreams.Location2D;
 import com.aionemu.gameserver.model.templates.windstreams.WindstreamTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
@@ -30,7 +29,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_WINDSTREAM_ANNOUNCE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler (Encom)
@@ -50,39 +48,27 @@ public class DF6_WindStreamAI2 extends NpcAI2
 	
 	private void startWindStream(Npc npc)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			final Npc npc2 = (Npc) spawn(220110000, 857865, 1661.18f, 1956.75f, 197.8f, (byte) 0, 0, 1);
+			windStreamAnnounce(npc2, 1);
+			despawnNpc(857864);
+			spawn(857865, 1661.0259f, 1956.8621f, 200.32886f, (byte) 0, 2449);
+			PacketSendUtility.broadcastPacket(npc2, new SM_WINDSTREAM_ANNOUNCE(1, 220110000, 301, 1));
+			if (npc2 != null)
 			{
-				final Npc npc2 = (Npc) spawn(220110000, 857865, 1661.18f, 1956.75f, 197.8f, (byte) 0, 0, 1);
-				windStreamAnnounce(npc2, 1);
-				despawnNpc(857864);
-				spawn(857865, 1661.0259f, 1956.8621f, 200.32886f, (byte) 0, 2449);
-				PacketSendUtility.broadcastPacket(npc2, new SM_WINDSTREAM_ANNOUNCE(1, 220110000, 301, 1));
-				if (npc2 != null)
-				{
-					npc2.getController().onDelete();
-				}
-				if (npc != null)
-				{
-					npc.getController().onDelete();
-				}
+				npc2.getController().onDelete();
+			}
+			if (npc != null)
+			{
+				npc.getController().onDelete();
 			}
 		}, 5000);
 	}
 	
 	private void announceWindPathInvasion()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// The wind road to the defense frigate will vanish in 30 seconds.
-				PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_DF6_G1_Windpath_Off_01, 30000);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_DF6_G1_Windpath_Off_01, 30000));
 	}
 	
 	private void windStreamAnnounce(Npc npc, int state)
@@ -96,17 +82,10 @@ public class DF6_WindStreamAI2 extends NpcAI2
 				break;
 			}
 		}
-		npc.getPosition().getWorld().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_WINDSTREAM_ANNOUNCE(1, 220110000, 301, state));
-			}
-		});
+		npc.getPosition().getWorld().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_WINDSTREAM_ANNOUNCE(1, 220110000, 301, state)));
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

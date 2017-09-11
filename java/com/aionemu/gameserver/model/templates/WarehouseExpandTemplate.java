@@ -74,6 +74,7 @@ public class WarehouseExpandTemplate
 	
 	/**
 	 * Returns true if list contains level
+	 * @param level
 	 * @return true or false
 	 */
 	public boolean contains(int level)
@@ -90,6 +91,7 @@ public class WarehouseExpandTemplate
 	
 	/**
 	 * Returns true if list contains level
+	 * @param level
 	 * @return expand
 	 */
 	public Expand get(int level)

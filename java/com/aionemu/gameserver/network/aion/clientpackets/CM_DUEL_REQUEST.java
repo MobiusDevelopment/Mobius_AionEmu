@@ -39,6 +39,8 @@ public class CM_DUEL_REQUEST extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_DUEL_REQUEST</tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_DUEL_REQUEST(int opcode, State state, State... restStates)
 	{

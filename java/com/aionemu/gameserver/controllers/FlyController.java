@@ -60,7 +60,7 @@ public class FlyController
 	}
 	
 	/**
-	 * 
+	 * @param removeWings
 	 */
 	public void onStopGliding(boolean removeWings)
 	{
@@ -89,6 +89,7 @@ public class FlyController
 	
 	/**
 	 * Ends flying 1) by CM_EMOTION (pageDown or fly button press) 2) from server side during teleportation (abyss gates should not break flying) 3) when FP is decreased to 0
+	 * @param forceEndFly
 	 */
 	public void endFly(boolean forceEndFly)
 	{

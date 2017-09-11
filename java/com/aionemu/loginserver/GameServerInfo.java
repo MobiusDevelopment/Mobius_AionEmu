@@ -174,6 +174,7 @@ public class GameServerInfo
 	
 	/**
 	 * Set active GsConnection.
+	 * @param gscHandler
 	 * @param gsConnection
 	 */
 	public final void setConnection(GsConnection gscHandler)

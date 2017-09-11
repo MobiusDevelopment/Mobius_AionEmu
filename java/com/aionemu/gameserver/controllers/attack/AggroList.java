@@ -78,6 +78,8 @@ public class AggroList
 	
 	/**
 	 * Extra hate that is received from using non-damage skill effects
+	 * @param creature
+	 * @param hate
 	 */
 	public void addHate(Creature creature, int hate)
 	{
@@ -90,6 +92,7 @@ public class AggroList
 	
 	/**
 	 * start hating creature by adding 1 hate value
+	 * @param creature
 	 */
 	public void startHate(Creature creature)
 	{
@@ -180,6 +183,8 @@ public class AggroList
 	}
 	
 	/**
+	 * @param team
+	 * @param highestLevel
 	 * @return player with most damage
 	 */
 	public Player getMostPlayerDamageOfMembers(Collection<Player> team, int highestLevel)
@@ -370,6 +375,7 @@ public class AggroList
 	
 	/**
 	 * Used to get a list of AggroInfo with npc and player/group/alliance damages combined.
+	 * @param mergeGroupDamage
 	 * @return finalDamageList
 	 */
 	public Collection<AggroInfo> getFinalDamageList(boolean mergeGroupDamage)

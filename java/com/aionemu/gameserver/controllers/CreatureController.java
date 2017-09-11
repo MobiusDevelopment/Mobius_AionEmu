@@ -54,7 +54,6 @@ import com.aionemu.gameserver.taskmanager.tasks.MovementNotifyTask;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneUpdateService;
 
@@ -181,6 +180,12 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 	
 	/**
 	 * Perform tasks when Creature was attacked //TODO may be pass only Skill object - but need to add properties in it
+	 * @param attacker
+	 * @param skillId
+	 * @param type
+	 * @param damage
+	 * @param notifyAttack
+	 * @param log
 	 */
 	public void onAttack(Creature attacker, int skillId, TYPE type, int damage, boolean notifyAttack, LOG log)
 	{
@@ -262,19 +267,15 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 		getOwner().incrementAttackedCount();
 		
 		// notify all NPC's around that creature is attacking me
-		getOwner().getKnownList().doOnAllNpcs(new Visitor<Npc>()
-		{
-			@Override
-			public void visit(Npc object)
-			{
-				object.getAi2().onCreatureEvent(AIEventType.CREATURE_NEEDS_SUPPORT, getOwner());
-			}
-			
-		});
+		getOwner().getKnownList().doOnAllNpcs(object -> object.getAi2().onCreatureEvent(AIEventType.CREATURE_NEEDS_SUPPORT, getOwner()));
 	}
 	
 	/**
 	 * Perform tasks when Creature was attacked
+	 * @param creature
+	 * @param skillId
+	 * @param damage
+	 * @param notifyAttack
 	 */
 	public final void onAttack(Creature creature, int skillId, int damage, boolean notifyAttack)
 	{
@@ -431,6 +432,7 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 	 * @param dialogId
 	 * @param player
 	 * @param questId
+	 * @param extendedRewardIndex
 	 */
 	public void onDialogSelect(int dialogId, Player player, int questId, int extendedRewardIndex)
 	{
@@ -522,6 +524,8 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 	
 	/**
 	 * Use skill with default level 1
+	 * @param skillId
+	 * @return
 	 */
 	public final boolean useSkill(int skillId)
 	{

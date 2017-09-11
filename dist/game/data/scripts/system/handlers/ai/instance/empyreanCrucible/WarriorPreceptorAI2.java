@@ -75,24 +75,20 @@ public class WarriorPreceptorAI2 extends AggressiveNpcAI2
 	
 	private void startSkillTask()
 	{
-		task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		task = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
-				{
-					cancelTask();
-				}
-				else
-				{
-					startSkillEvent();
-				}
+				cancelTask();
+			}
+			else
+			{
+				startSkillEvent();
 			}
 		}, 30000, 30000);
 	}
 	
-	private void cancelTask()
+	void cancelTask()
 	{
 		if ((task != null) && !task.isCancelled())
 		{
@@ -103,15 +99,11 @@ public class WarriorPreceptorAI2 extends AggressiveNpcAI2
 	private void startSkillEvent()
 	{
 		SkillEngine.getInstance().getSkill(getOwner(), 19595, 46, getTargetPlayer()).useNoAnimationSkill();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead())
 			{
-				if (!isAlreadyDead())
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 19596, 46, getOwner()).useNoAnimationSkill();
-				}
+				SkillEngine.getInstance().getSkill(getOwner(), 19596, 46, getOwner()).useNoAnimationSkill();
 			}
 		}, 6000);
 	}

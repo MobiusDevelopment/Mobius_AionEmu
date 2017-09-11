@@ -243,6 +243,10 @@ public class ItemPacketService
 	
 	/**
 	 * Item will be deleted from UI slot
+	 * @param player
+	 * @param storageType
+	 * @param item
+	 * @param deleteType
 	 */
 	public static void sendItemDeletePacket(Player player, StorageType storageType, Item item, ItemDeleteType deleteType)
 	{
@@ -263,6 +267,10 @@ public class ItemPacketService
 	
 	/**
 	 * Item will be updated in UI slot (stacked items)
+	 * @param player
+	 * @param storageType
+	 * @param item
+	 * @param updateType
 	 */
 	public static void sendItemUpdatePacket(Player player, StorageType storageType, Item item, ItemUpdateType updateType)
 	{
@@ -295,6 +303,10 @@ public class ItemPacketService
 	
 	/**
 	 * New item will be displayed in storage
+	 * @param player
+	 * @param storageType
+	 * @param item
+	 * @param addType
 	 */
 	public static void sendStorageUpdatePacket(Player player, StorageType storageType, Item item, ItemAddType addType)
 	{

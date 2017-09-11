@@ -75,17 +75,10 @@ public class Dynamic_Iluma_MonsterAI2 extends AggressiveNpcAI2
 				break;
 			}
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				despawnNpc(241053); // Portal.
-			}
-		}, 60000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> despawnNpc(241053), 60000);
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

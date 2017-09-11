@@ -45,6 +45,7 @@ abstract class AbstractCacheMap<K, V> implements CacheMap<K, V>
 	/**
 	 * @param cacheName
 	 * @param valueName
+	 * @param log
 	 */
 	AbstractCacheMap(String cacheName, String valueName, Logger log)
 	{

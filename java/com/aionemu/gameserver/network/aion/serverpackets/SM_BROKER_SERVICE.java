@@ -49,7 +49,7 @@ public class SM_BROKER_SERVICE extends AionServerPacket
 			this.id = id;
 		}
 		
-		private int getId()
+		int getId()
 		{
 			return id;
 		}

@@ -1689,6 +1689,7 @@ public class ForkJoinPool extends AbstractExecutorService
 	 * @param task the task to join
 	 * @return 0 if no progress can be made, negative if task known complete, else positive
 	 */
+	@SuppressWarnings("rawtypes")
 	private int tryHelpStealer(WorkQueue joiner, ForkJoinTask<?> task)
 	{
 		int stat = 0, steps = 0; // bound to avoid cycles

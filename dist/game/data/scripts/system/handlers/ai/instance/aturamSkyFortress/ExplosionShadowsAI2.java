@@ -23,9 +23,7 @@ import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.skillengine.SkillEngine;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.AggressiveNpcAI2;
 
@@ -61,58 +59,42 @@ public class ExplosionShadowsAI2 extends AggressiveNpcAI2
 	{
 		if (!isAlreadyDead())
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
+					SkillEngine.getInstance().getSkill(getOwner(), 19425, 49, getOwner()).useNoAnimationSkill();
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						SkillEngine.getInstance().getSkill(getOwner(), 19425, 49, getOwner()).useNoAnimationSkill();
-						ThreadPoolManager.getInstance().schedule(new Runnable()
+						if (!isAlreadyDead())
 						{
-							@Override
-							public void run()
-							{
-								if (!isAlreadyDead())
-								{
-									check();
-								}
-							}
-						}, 1500);
-					}
+							check();
+						}
+					}, 1500);
 				}
 			}, 3000);
 		}
 	}
 	
-	private void check()
+	void check()
 	{
 		getPosition().getWorldMapInstance().getDoors().get(17).setOpen(false);
 		getPosition().getWorldMapInstance().getDoors().get(2).setOpen(false);
-		getKnownList().doOnAllPlayers(new Visitor<Player>()
+		getKnownList().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.getEffectController().hasAbnormalEffect(19502) || player.getEffectController().hasAbnormalEffect(21807) || player.getEffectController().hasAbnormalEffect(21808))
 			{
-				if (player.getEffectController().hasAbnormalEffect(19502) || player.getEffectController().hasAbnormalEffect(21807) || player.getEffectController().hasAbnormalEffect(21808))
+				final Npc npc = (Npc) spawn(799657, player.getX(), player.getY(), player.getZ(), player.getHeading());
+				player.getEffectController().removeEffect(19502);
+				player.getEffectController().removeEffect(21807);
+				player.getEffectController().removeEffect(21808);
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					final Npc npc = (Npc) spawn(799657, player.getX(), player.getY(), player.getZ(), player.getHeading());
-					player.getEffectController().removeEffect(19502);
-					player.getEffectController().removeEffect(21807);
-					player.getEffectController().removeEffect(21808);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					if ((npc != null) && !npc.getLifeStats().isAlreadyDead())
 					{
-						@Override
-						public void run()
-						{
-							if ((npc != null) && !npc.getLifeStats().isAlreadyDead())
-							{
-								npc.getController().onDelete();
-							}
-						}
-					}, 4000);
-				}
+						npc.getController().onDelete();
+					}
+				}, 4000);
 			}
 		});
 		AI2Actions.deleteOwner(this);

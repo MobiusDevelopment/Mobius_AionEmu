@@ -67,6 +67,10 @@ public abstract class InventoryDAO implements IDFactoryAwareDAO
 	
 	/**
 	 * @param item
+	 * @param playerId
+	 * @param accountId
+	 * @param legionId
+	 * @return
 	 */
 	public boolean store(Item item, Integer playerId, Integer accountId, Integer legionId)
 	{

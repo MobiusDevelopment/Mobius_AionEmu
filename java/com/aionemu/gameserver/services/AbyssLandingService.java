@@ -45,7 +45,6 @@ import com.aionemu.gameserver.services.abysslandingservice.Landing;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -425,33 +424,29 @@ public class AbyssLandingService
 	
 	public void AnnounceToPoints(Player pl, DescriptionId race, DescriptionId name, int points, LandingPointsEnum type)
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			switch (type)
 			{
-				switch (type)
+				case SIEGE:
 				{
-					case SIEGE:
-					{
-						// %0 has occupied %0 and the Landing is now enhanced.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_OCCUPY(race, name));
-						break;
-					}
-					case BASE:
-					{
-						// %0 has occupied %1 Base and the Landing is now enhanced.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_OCCUPY_BASECAMP(race, name.toString()));
-						break;
-					}
-					case QUEST:
-					{
-						// Completed quest has contributed %0 points to the Landing.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUILDUP_POINT_QUEST_GAIN(points));
-						// %0's completed quest has enhanced the Landing.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_QUEST(pl.getName()));
-						break;
-					}
+					// %0 has occupied %0 and the Landing is now enhanced.
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_OCCUPY(race, name));
+					break;
+				}
+				case BASE:
+				{
+					// %0 has occupied %1 Base and the Landing is now enhanced.
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_OCCUPY_BASECAMP(race, name.toString()));
+					break;
+				}
+				case QUEST:
+				{
+					// Completed quest has contributed %0 points to the Landing.
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUILDUP_POINT_QUEST_GAIN(points));
+					// %0's completed quest has enhanced the Landing.
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_QUEST(pl.getName()));
+					break;
 				}
 			}
 		});
@@ -552,15 +547,7 @@ public class AbyssLandingService
 		redemptionLanding().setLevel(level);
 		stopLanding(redemptionLanding().getId());
 		startLanding(redemptionLanding().getId());
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// Landing Level Up.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_UP_LIGHT);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_UP_LIGHT));
 	}
 	
 	public void levelUpHarbingerLanding(int level)
@@ -568,15 +555,7 @@ public class AbyssLandingService
 		harbingerLanding().setLevel(level);
 		stopLanding(harbingerLanding().getId());
 		startLanding(harbingerLanding().getId());
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// Landing Level Up.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_UP_DARK);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_UP_DARK));
 	}
 	
 	public void onHarbingerLandingLevelDown(int level)
@@ -584,15 +563,7 @@ public class AbyssLandingService
 		harbingerLanding().setLevel(level);
 		stopLanding(harbingerLanding().getId());
 		startLanding(harbingerLanding().getId());
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// Landing Weakened.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_DOWN);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_DOWN));
 	}
 	
 	public void onRedemptionLandinggLevelDown(int level)
@@ -600,19 +571,14 @@ public class AbyssLandingService
 		redemptionLanding().setLevel(level);
 		stopLanding(redemptionLanding().getId());
 		startLanding(redemptionLanding().getId());
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// Landing Weakened.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_DOWN);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_ABYSS_OP_LEVEL_DOWN));
 	}
 	
 	/**
 	 * MONUMENT
+	 * @param race
+	 * @param id
+	 * @param points
 	 */
 	public void onRewardMonuments(Race race, int id, int points)
 	{
@@ -646,6 +612,9 @@ public class AbyssLandingService
 	
 	/**
 	 * COMMANDER
+	 * @param race
+	 * @param id
+	 * @param points
 	 */
 	public void onRewardCommander(Race race, int id, int points)
 	{
@@ -679,6 +648,8 @@ public class AbyssLandingService
 	
 	/**
 	 * FACILITY
+	 * @param race
+	 * @param points
 	 */
 	public void onRewardFacility(Race race, int points)
 	{

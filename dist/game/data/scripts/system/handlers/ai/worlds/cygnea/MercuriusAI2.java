@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler (Encom)
@@ -61,14 +60,7 @@ public class MercuriusAI2 extends NpcAI2
 				{
 					announceLightLegionPortal();
 					spawn(702721, 1390.3015f, 658.4547f, 582.9584f, (byte) 92);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							despawnNpc(702721);
-						}
-					}, 300000); // 5 Minutes.
+					ThreadPoolManager.getInstance().schedule(() -> despawnNpc(702721), 300000); // 5 Minutes.
 					break;
 				}
 			}
@@ -79,17 +71,10 @@ public class MercuriusAI2 extends NpcAI2
 	
 	private void announceLightLegionPortal()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LIGHT_SIDE_LEGION_DIRECT_PORTAL_OPEN);
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LIGHT_SIDE_LEGION_DIRECT_PORTAL_OPEN));
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

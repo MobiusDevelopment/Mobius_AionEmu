@@ -31,7 +31,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler (Encom)
@@ -65,32 +64,17 @@ public class Suspicious_BoxAI2 extends NpcAI2
 			{
 				if (startedEvent.compareAndSet(false, true))
 				{
-					suspiciousChestTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+					suspiciousChestTask = ThreadPoolManager.getInstance().schedule(() -> eventChestStart(), 1000);
+					suspiciousChestTask = ThreadPoolManager.getInstance().schedule(() ->
 					{
-						@Override
-						public void run()
-						{
-							eventChestStart();
-						}
-					}, 1000);
-					suspiciousChestTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							getOwner().setNpcType(NpcType.ATTACKABLE);
-							PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 180));
-							PacketSendUtility.sendPacket(player, new SM_CUSTOM_SETTINGS(getOwner().getObjectId(), 0, NpcType.ATTACKABLE.getId(), 0));
-						}
+						getOwner().setNpcType(NpcType.ATTACKABLE);
+						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 180));
+						PacketSendUtility.sendPacket(player, new SM_CUSTOM_SETTINGS(getOwner().getObjectId(), 0, NpcType.ATTACKABLE.getId(), 0));
 					}, 3000);
-					suspiciousChestTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+					suspiciousChestTask = ThreadPoolManager.getInstance().schedule(() ->
 					{
-						@Override
-						public void run()
-						{
-							eventChestFail();
-							AI2Actions.deleteOwner(Suspicious_BoxAI2.this);
-						}
+						eventChestFail();
+						AI2Actions.deleteOwner(Suspicious_BoxAI2.this);
 					}, 180000);
 				}
 			}
@@ -99,27 +83,12 @@ public class Suspicious_BoxAI2 extends NpcAI2
 	
 	private void eventChestStart()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendSys3Message(player, "\uE005", "You have <3 Minutes> for remove a curse on chest");
-			}
-		});
+		getPosition().getWorldMapInstance().doOnAllPlayers(player -> PacketSendUtility.sendSys3Message(player, "\uE005", "You have <3 Minutes> for remove a curse on chest"));
 	}
 	
-	private void eventChestFail()
+	void eventChestFail()
 	{
-		getPosition().getWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				// The treasure chest has disappeared because you failed to destroy the monsters within the time limit.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDABRECORE_OOPS_REWARD_IS_GONE);
-			}
-		});
+		getPosition().getWorldMapInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_IDABRECORE_OOPS_REWARD_IS_GONE));
 	}
 	
 	@Override

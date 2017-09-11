@@ -46,6 +46,7 @@ public class PetSpawnService
 	/**
 	 * @param player
 	 * @param petId
+	 * @param isManualSpawn
 	 */
 	public static void summonPet(Player player, int petId, boolean isManualSpawn)
 	{

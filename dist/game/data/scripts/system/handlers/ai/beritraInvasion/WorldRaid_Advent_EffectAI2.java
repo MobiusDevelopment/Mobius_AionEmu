@@ -31,26 +31,12 @@ public class WorldRaid_Advent_EffectAI2 extends NpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				startLifeTask();
-			}
-		}, 1000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> startLifeTask(), 1000);
 	}
 	
-	private void startLifeTask()
+	void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(WorldRaid_Advent_EffectAI2.this);
-			}
-		}, 13800000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> AI2Actions.deleteOwner(WorldRaid_Advent_EffectAI2.this), 13800000);
 	}
 	
 	@Override

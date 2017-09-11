@@ -417,6 +417,7 @@ public class Player extends Creature
 	
 	/**
 	 * Only use for the Size admin command
+	 * @param savedPlayerAppearance
 	 * @param playerAppearance PlayerAppearance : The saved player's appearance, to rollback his appearance
 	 */
 	public void setSavedPlayerAppearance(PlayerAppearance savedPlayerAppearance)
@@ -1048,6 +1049,7 @@ public class Player extends Creature
 	
 	/**
 	 * Checks if object id's are the same
+	 * @param objectId
 	 * @return true if the object id is the same
 	 */
 	public boolean sameObjectId(int objectId)
@@ -1598,6 +1600,7 @@ public class Player extends Creature
 	
 	/**
 	 * Used in SM_NPC_INFO to check aggro irrespective to level
+	 * @param npc
 	 * @param npcTribe
 	 * @return
 	 */
@@ -1777,6 +1780,7 @@ public class Player extends Creature
 	}
 	
 	/**
+	 * @param limits
 	 * @param delayId
 	 * @return
 	 */
@@ -2056,6 +2060,8 @@ public class Player extends Creature
 	
 	/**
 	 * Quest completion
+	 * @param questId
+	 * @return
 	 */
 	public boolean isCompleteQuest(int questId)
 	{

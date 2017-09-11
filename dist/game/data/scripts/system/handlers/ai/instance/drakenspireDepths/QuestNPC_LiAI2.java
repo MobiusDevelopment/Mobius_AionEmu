@@ -35,18 +35,14 @@ public class QuestNPC_LiAI2 extends AggressiveNpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				despawnNpc(731580);
-				NpcShoutsService.getInstance().sendMsg(getOwner(), 1402941, 0);
-			}
+			despawnNpc(731580);
+			NpcShoutsService.getInstance().sendMsg(getOwner(), 1402941, 0);
 		}, 15000);
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

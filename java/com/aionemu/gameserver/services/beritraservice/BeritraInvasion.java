@@ -24,6 +24,7 @@ import com.aionemu.gameserver.services.BeritraService;
 
 /**
  * @author Rinzler (Encom)
+ * @param <BL>
  */
 public abstract class BeritraInvasion<BL extends BeritraLocation>
 {

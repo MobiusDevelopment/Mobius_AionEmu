@@ -138,7 +138,6 @@ import com.aionemu.gameserver.world.MapRegion;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldType;
 import com.aionemu.gameserver.world.geo.GeoService;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -820,7 +819,7 @@ public class PlayerController extends CreatureController<Player>
 		// Normal attack is already limited client side (ex. Press C and attacker approaches target)
 		// but need a check server side too also for Z axis issue
 		
-		if (!MathUtil.isInAttackRange(getOwner(), target, getOwner().getGameStats().getAttackRange().getCurrent() / 1000f + 1))
+		if (!MathUtil.isInAttackRange(getOwner(), target, (getOwner().getGameStats().getAttackRange().getCurrent() / 1000f) + 1))
 		{
 			return;
 		}
@@ -904,6 +903,7 @@ public class PlayerController extends CreatureController<Player>
 	 * @param y
 	 * @param z
 	 * @param clientHitTime
+	 * @param skillLevel
 	 */
 	public void useSkill(SkillTemplate template, int targetType, float x, float y, float z, int clientHitTime, int skillLevel)
 	{
@@ -1179,15 +1179,11 @@ public class PlayerController extends CreatureController<Player>
 	
 	public static void reachedPlayerLvl(Player player)
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(players ->
 		{
-			@Override
-			public void visit(Player players)
-			{
-				// "Player Name" has reached level %1.
-				final byte playerLevel = player.getLevel();
-				PacketSendUtility.sendPacket(players, new SM_SYSTEM_MESSAGE(1300086, player.getName(), playerLevel));
-			}
+			// "Player Name" has reached level %1.
+			final byte playerLevel = player.getLevel();
+			PacketSendUtility.sendPacket(players, new SM_SYSTEM_MESSAGE(1300086, player.getName(), playerLevel));
 		});
 	}
 	
@@ -1205,14 +1201,7 @@ public class PlayerController extends CreatureController<Player>
 			AttackUtil.cancelCastOn(getOwner());
 			AttackUtil.removeTargetFrom(getOwner());
 			PacketSendUtility.broadcastPacket(getOwner(), new SM_PLAYER_STATE(getOwner()), true);
-			final Future<?> task = ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stopProtectionActiveTask();
-				}
-			}, 60000);
+			final Future<?> task = ThreadPoolManager.getInstance().schedule(() -> stopProtectionActiveTask(), 60000);
 			addTask(TaskId.PROTECTION_ACTIVE, task);
 		}
 	}

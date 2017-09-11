@@ -81,74 +81,52 @@ public class KingConsierdAI2 extends AggressiveNpcAI2
 		if (isHome.compareAndSet(true, false))
 		{
 			startBloodThirstTask();
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 19691, 1, getTarget()).useNoAnimationSkill();
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							SkillEngine.getInstance().getSkill(getOwner(), 17954, 10, getTarget()).useNoAnimationSkill();
-						}
-					}, 4000);
-				}
+				SkillEngine.getInstance().getSkill(getOwner(), 19691, 1, getTarget()).useNoAnimationSkill();
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> SkillEngine.getInstance().getSkill(getOwner(), 17954, 10, getTarget()).useNoAnimationSkill(), 4000);
 			}, 2000);
 		}
 	}
 	
 	private void startBloodThirstTask()
 	{
-		eventTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				SkillEngine.getInstance().getSkill(getOwner(), 19624, 10, getOwner()).useNoAnimationSkill();
-			}
-		}, 180 * 1000);
+		eventTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> SkillEngine.getInstance().getSkill(getOwner(), 19624, 10, getOwner()).useNoAnimationSkill(), 180 * 1000);
 	}
 	
 	private void startSkillTask()
 	{
-		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		skillTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (isAlreadyDead())
 			{
-				if (isAlreadyDead())
+				cancelTasks();
+			}
+			else
+			{
+				SkillEngine.getInstance().getSkill(getOwner(), 17951, 10, getTarget()).useNoAnimationSkill();
+				final List<Player> players = getLifedPlayers();
+				if (!players.isEmpty())
 				{
-					cancelTasks();
-				}
-				else
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), 17951, 10, getTarget()).useNoAnimationSkill();
-					final List<Player> players = getLifedPlayers();
-					if (!players.isEmpty())
+					final int size = players.size();
+					if (players.size() < 6)
 					{
-						final int size = players.size();
-						if (players.size() < 6)
+						for (Player p : players)
 						{
-							for (Player p : players)
-							{
-								spawnBabyConsierd(p);
-							}
+							spawnBabyConsierd(p);
 						}
-						else
+					}
+					else
+					{
+						final int count = Rnd.get(1, size);
+						for (int i = 0; i < count; i++)
 						{
-							final int count = Rnd.get(1, size);
-							for (int i = 0; i < count; i++)
+							if (players.isEmpty())
 							{
-								if (players.isEmpty())
-								{
-									break;
-								}
-								spawnBabyConsierd(players.get(Rnd.get(players.size())));
-								SkillEngine.getInstance().getSkill(getOwner(), 17952, 10, getTarget()).useNoAnimationSkill();
+								break;
 							}
+							spawnBabyConsierd(players.get(Rnd.get(players.size())));
+							SkillEngine.getInstance().getSkill(getOwner(), 17952, 10, getTarget()).useNoAnimationSkill();
 						}
 					}
 				}
@@ -163,15 +141,11 @@ public class KingConsierdAI2 extends AggressiveNpcAI2
 		final float z = player.getZ();
 		if ((x > 0) && (y > 0) && (z > 0))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead())
 				{
-					if (!isAlreadyDead())
-					{
-						spawn(282378, x, y, z, (byte) 0); // Baby Consierd.
-					}
+					spawn(282378, x, y, z, (byte) 0); // Baby Consierd.
 				}
 			}, 3000);
 		}
@@ -190,7 +164,7 @@ public class KingConsierdAI2 extends AggressiveNpcAI2
 		return players;
 	}
 	
-	private void cancelTasks()
+	void cancelTasks()
 	{
 		if ((eventTask != null) && !eventTask.isDone())
 		{

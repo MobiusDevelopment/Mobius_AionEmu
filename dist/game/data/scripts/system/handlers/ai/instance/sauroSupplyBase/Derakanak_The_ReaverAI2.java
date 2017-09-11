@@ -79,7 +79,7 @@ public class Derakanak_The_ReaverAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void stage1()
+	void stage1()
 	{
 		final int delay = 45000;
 		if (isAlreadyDead() || !isStart)
@@ -115,14 +115,7 @@ public class Derakanak_The_ReaverAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stage2();
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage2(), delay);
 		}
 	}
 	
@@ -134,14 +127,7 @@ public class Derakanak_The_ReaverAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stage1();
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
 		}
 	}
 	

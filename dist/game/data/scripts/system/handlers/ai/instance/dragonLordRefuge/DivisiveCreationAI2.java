@@ -40,26 +40,12 @@ public class DivisiveCreationAI2 extends AggressiveNpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				startLifeTask();
-			}
-		}, 1000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> startLifeTask(), 1000);
 	}
 	
-	private void startLifeTask()
+	void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(DivisiveCreationAI2.this);
-			}
-		}, 20000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> AI2Actions.deleteOwner(DivisiveCreationAI2.this), 20000);
 	}
 	
 	@Override

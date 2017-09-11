@@ -64,6 +64,8 @@ public abstract class GLObject implements Cloneable
 	
 	/**
 	 * Protected constructor that doesn't allocate handle ref. This is used in subclasses for the createDestructableClone().
+	 * @param type
+	 * @param id
 	 */
 	protected GLObject(Type type, int id)
 	{

@@ -41,27 +41,16 @@ public class Petrification_CrystalAI2 extends AggressiveNpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				SkillEngine.getInstance().getSkill(getOwner(), 20159, 60, getOwner()).useNoAnimationSkill();
-				startLifeTask();
-			}
+			SkillEngine.getInstance().getSkill(getOwner(), 20159, 60, getOwner()).useNoAnimationSkill();
+			startLifeTask();
 		}, 1000);
 	}
 	
-	private void startLifeTask()
+	void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(Petrification_CrystalAI2.this);
-			}
-		}, 9000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> AI2Actions.deleteOwner(Petrification_CrystalAI2.this), 9000);
 	}
 	
 	@Override

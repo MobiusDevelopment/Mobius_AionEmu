@@ -93,7 +93,7 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void stage1()
+	void stage1()
 	{
 		final int delay = 25000;
 		if (isAlreadyDead() || !isStart)
@@ -184,14 +184,7 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stage4();
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage4(), delay);
 		}
 	}
 	
@@ -203,14 +196,7 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stage3();
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage3(), delay);
 		}
 	}
 	
@@ -222,14 +208,7 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stage1();
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
 		}
 	}
 	

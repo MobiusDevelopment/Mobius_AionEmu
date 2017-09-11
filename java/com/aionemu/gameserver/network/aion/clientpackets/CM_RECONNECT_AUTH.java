@@ -31,6 +31,8 @@ public class CM_RECONNECT_AUTH extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_RECONNECT_AUTH </tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_RECONNECT_AUTH(int opcode, State state, State... restStates)
 	{

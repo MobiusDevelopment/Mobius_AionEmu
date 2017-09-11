@@ -83,7 +83,7 @@ public class Commander_RanodimAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void stage1()
+	void stage1()
 	{
 		final int delay = 25000;
 		if (isAlreadyDead() || !isStart)
@@ -133,14 +133,7 @@ public class Commander_RanodimAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stage1();
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
 		}
 	}
 	
@@ -152,14 +145,7 @@ public class Commander_RanodimAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stage2();
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage2(), delay);
 		}
 	}
 	
@@ -171,14 +157,7 @@ public class Commander_RanodimAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stage3();
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage3(), delay);
 		}
 	}
 	

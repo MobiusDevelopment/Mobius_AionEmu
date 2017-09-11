@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.beritra.BeritraLocation;
 import com.aionemu.gameserver.model.beritra.BeritraStateType;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.spawns.SpawnGroup2;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.beritraspawns.BeritraSpawnTemplate;
@@ -42,7 +41,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -111,14 +109,7 @@ public class BeritraService
 			activeInvasions.put(id, invade);
 		}
 		invade.start();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				stopBeritraInvasion(id);
-			}
-		}, duration * 3600 * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> stopBeritraInvasion(id), duration * 3600 * 1000);
 	}
 	
 	public void stopBeritraInvasion(int id)
@@ -162,6 +153,8 @@ public class BeritraService
 	
 	/**
 	 * Beritra Invasion Msg.
+	 * @param id
+	 * @return
 	 */
 	public boolean invasionCorridorMsg(int id)
 	{
@@ -169,15 +162,7 @@ public class BeritraService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						// The Beritra Legion's Invasion Corridor has appeared.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_MESSAGE_01);
-					}
-				});
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_MESSAGE_01));
 				return true;
 			}
 			default:
@@ -193,15 +178,7 @@ public class BeritraService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						// The Devil Unit has infiltrated through the Invasion Corridor.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_MESSAGE_02);
-					}
-				});
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_MESSAGE_02));
 				return true;
 			}
 			default:
@@ -217,15 +194,7 @@ public class BeritraService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						// The Devil Unit is preparing for its return.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_MESSAGE_03);
-					}
-				});
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_MESSAGE_03));
 				return true;
 			}
 			default:
@@ -237,6 +206,8 @@ public class BeritraService
 	
 	/**
 	 * Ereshkigal Invasion Msg.
+	 * @param id
+	 * @return
 	 */
 	public boolean ereshkigalCorridorMsg(int id)
 	{
@@ -244,15 +215,7 @@ public class BeritraService
 		{
 			case 35:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						// The Ereshkigal Legion's Invasion Corridor has been created.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_Ere_MESSAGE_01);
-					}
-				});
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_Ere_MESSAGE_01));
 				return true;
 			}
 			default:
@@ -268,15 +231,7 @@ public class BeritraService
 		{
 			case 35:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						// The Ereshkigal Legion's Magic weapon has infiltrated through the Invasion Corridor.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_Ere_MESSAGE_02);
-					}
-				});
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_Ere_MESSAGE_02));
 				return true;
 			}
 			default:
@@ -292,15 +247,7 @@ public class BeritraService
 		{
 			case 35:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						// The Beritra Legion Devil Unit is preparing for its return.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_MESSAGE_03);
-					}
-				});
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_WORLDRAID_MESSAGE_03));
 				return true;
 			}
 			default:
@@ -312,6 +259,8 @@ public class BeritraService
 	
 	/**
 	 * Beritra Invasion Effect.
+	 * @param id
+	 * @return
 	 */
 	public boolean adventControlSP(int id)
 	{
@@ -563,6 +512,8 @@ public class BeritraService
 	
 	/**
 	 * Ereshkigal Invasion Effect.
+	 * @param id
+	 * @return
 	 */
 	public boolean adventControlEreshSP(int id)
 	{

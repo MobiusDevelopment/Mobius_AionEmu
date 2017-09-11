@@ -41,27 +41,16 @@ public class MagmaTachypshereMineAI2 extends AggressiveNpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				SkillEngine.getInstance().getSkill(getOwner(), 21804, 60, getOwner()).useNoAnimationSkill(); // Explosion.
-				startLifeTask();
-			}
+			SkillEngine.getInstance().getSkill(getOwner(), 21804, 60, getOwner()).useNoAnimationSkill(); // Explosion.
+			startLifeTask();
 		}, 1000);
 	}
 	
-	private void startLifeTask()
+	void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(MagmaTachypshereMineAI2.this);
-			}
-		}, 10000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> AI2Actions.deleteOwner(MagmaTachypshereMineAI2.this), 10000);
 	}
 	
 	@Override

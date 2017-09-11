@@ -63,6 +63,7 @@ public class FortressLocation extends SiegeLocation
 	}
 	
 	/**
+	 * @param creature
 	 * @return isEnemy
 	 */
 	public boolean isEnemy(Creature creature)

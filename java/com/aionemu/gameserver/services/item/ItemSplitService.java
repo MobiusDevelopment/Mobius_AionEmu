@@ -42,6 +42,13 @@ public class ItemSplitService
 	
 	/**
 	 * Move part of stack into different slot
+	 * @param player
+	 * @param itemObjId
+	 * @param destinationObjId
+	 * @param splitAmount
+	 * @param slotNum
+	 * @param sourceStorageType
+	 * @param destinationStorageType
 	 */
 	public static void splitItem(Player player, int itemObjId, int destinationObjId, long splitAmount, short slotNum, byte sourceStorageType, byte destinationStorageType)
 	{
@@ -125,6 +132,11 @@ public class ItemSplitService
 	
 	/**
 	 * Merge 2 stacks with simple validation
+	 * @param sourceStorage
+	 * @param destStorage
+	 * @param sourceItem
+	 * @param targetItem
+	 * @param count
 	 */
 	public static void mergeStacks(IStorage sourceStorage, IStorage destStorage, Item sourceItem, Item targetItem, long count)
 	{

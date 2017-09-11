@@ -39,42 +39,34 @@ public class IDTiamatDrakanNamed65AlAI2 extends AggressiveNpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startLifeTask();
-				// Are you... threatening me? Is this what passes for a joke among you people?.
-				sendMsg(1500613, getObjectId(), false, 3000);
-				// Don't worry. The tragedy will be all yours.
-				sendMsg(1500614, getObjectId(), false, 9000);
-				// You will feel despair such as you have never felt!
-				sendMsg(1500615, getObjectId(), false, 15000);
-				// Before I let Calindi destroy you, I will show you a glimpse of your people's ruin.
-				sendMsg(1500616, getObjectId(), false, 21000);
-				// I... yes. We are grateful. I don't know what we'd have done without your help...
-				sendMsg(1500617, getObjectId(), false, 27000);
-				SkillEngine.getInstance().getSkill(getOwner(), 20917, 1, getOwner()).useNoAnimationSkill(); // Charge Siel's Relics.
-			}
+			startLifeTask();
+			// Are you... threatening me? Is this what passes for a joke among you people?.
+			sendMsg(1500613, getObjectId(), false, 3000);
+			// Don't worry. The tragedy will be all yours.
+			sendMsg(1500614, getObjectId(), false, 9000);
+			// You will feel despair such as you have never felt!
+			sendMsg(1500615, getObjectId(), false, 15000);
+			// Before I let Calindi destroy you, I will show you a glimpse of your people's ruin.
+			sendMsg(1500616, getObjectId(), false, 21000);
+			// I... yes. We are grateful. I don't know what we'd have done without your help...
+			sendMsg(1500617, getObjectId(), false, 27000);
+			SkillEngine.getInstance().getSkill(getOwner(), 20917, 1, getOwner()).useNoAnimationSkill(); // Charge Siel's Relics.
 		}, 1000);
 	}
 	
 	private void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				spawn(236274, 470.5909f, 515.02856f, 417.40436f, (byte) 119); // IDTiamat_Kalrindy_Named_65_Al.
-				spawn(283174, 457.7215f, 514.4464f, 417.53998f, (byte) 0);
-				AI2Actions.deleteOwner(IDTiamatDrakanNamed65AlAI2.this);
-			}
+			spawn(236274, 470.5909f, 515.02856f, 417.40436f, (byte) 119); // IDTiamat_Kalrindy_Named_65_Al.
+			spawn(283174, 457.7215f, 514.4464f, 417.53998f, (byte) 0);
+			AI2Actions.deleteOwner(IDTiamatDrakanNamed65AlAI2.this);
 		}, 35000);
 	}
 	
-	private void sendMsg(int msg, int Obj, boolean isShout, int time)
+	void sendMsg(int msg, int Obj, boolean isShout, int time)
 	{
 		NpcShoutsService.getInstance().sendMsg(getPosition().getWorldMapInstance(), msg, Obj, isShout, 0, time);
 	}

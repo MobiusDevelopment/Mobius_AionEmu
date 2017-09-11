@@ -41,7 +41,6 @@ import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -98,60 +97,26 @@ public class StonespearReachInstance extends GeneralInstanceHandler
 	{
 		instanceTime = System.currentTimeMillis();
 		instanceReward.setInstanceStartTime();
-		stonespearTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		stonespearTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				spawn(855833, 251.47273f, 264.46713f, 96.30522f, (byte) 61);
-				spawn(855833, 230.85971f, 285.67032f, 96.418526f, (byte) 90);
-				spawn(855833, 211.20746f, 264.05276f, 96.53291f, (byte) 0);
-				spawn(855833, 231.29951f, 243.66095f, 96.36497f, (byte) 29);
-			}
+			spawn(855833, 251.47273f, 264.46713f, 96.30522f, (byte) 61);
+			spawn(855833, 230.85971f, 285.67032f, 96.418526f, (byte) 90);
+			spawn(855833, 211.20746f, 264.05276f, 96.53291f, (byte) 0);
+			spawn(855833, 231.29951f, 243.66095f, 96.36497f, (byte) 29);
 		}, 90000));
-		stonespearTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		stonespearTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-			}
 		}, 220000));
-		stonespearTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		stonespearTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-			}
 		}, 400000));
-		stonespearTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		stonespearTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-			}
 		}, 600000));
-		stonespearTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		stonespearTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-			}
 		}, 900000));
-		stonespearTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						stopInstance(player);
-					}
-				});
-			}
-		}, 1800000));
+		stonespearTask.add(ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player -> stopInstance(player)), 1800000));
 	}
 	
 	@Override
@@ -193,17 +158,13 @@ public class StonespearReachInstance extends GeneralInstanceHandler
 	
 	private void sendPacket(int nameId, int point)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (nameId != 0)
 			{
-				if (nameId != 0)
-				{
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
-				}
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId((nameId * 2) + 1), point));
 			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
 		});
 	}
 	
@@ -251,17 +212,13 @@ public class StonespearReachInstance extends GeneralInstanceHandler
 		if (instanceTimer == null)
 		{
 			instanceTime = System.currentTimeMillis();
-			instanceTimer = ThreadPoolManager.getInstance().schedule(new Runnable()
+			instanceTimer = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					deleteNpc(833284);
-					// The member recruitment window has passed. You cannot recruit any more members.
-					sendMsgByRace(1401181, Race.PC_ALL, 5000);
-					instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-					sendPacket(0, 0);
-				}
+				deleteNpc(833284);
+				// The member recruitment window has passed. You cannot recruit any more members.
+				sendMsgByRace(1401181, Race.PC_ALL, 5000);
+				instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+				sendPacket(0, 0);
 			}, 90000);
 		}
 		if (spawnRace == null)
@@ -338,7 +295,7 @@ public class StonespearReachInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void deleteNpc(int npcId)
+	void deleteNpc(int npcId)
 	{
 		if (getNpc(npcId) != null)
 		{
@@ -348,36 +305,18 @@ public class StonespearReachInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

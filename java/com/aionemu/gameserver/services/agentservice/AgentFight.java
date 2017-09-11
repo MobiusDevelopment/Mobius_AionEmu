@@ -24,8 +24,8 @@ import com.aionemu.gameserver.services.AgentService;
 
 /**
  * @author Rinzler (Encom)
+ * @param <AL>
  */
-
 public abstract class AgentFight<AL extends AgentLocation>
 {
 	private boolean started;

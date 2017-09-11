@@ -24,6 +24,7 @@ import com.aionemu.gameserver.services.InstanceRiftService;
 
 /**
  * @author Rinzler (Encom)
+ * @param <RL>
  */
 
 public abstract class RiftInstance<RL extends InstanceRiftLocation>

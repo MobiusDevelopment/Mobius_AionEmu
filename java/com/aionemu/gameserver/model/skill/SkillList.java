@@ -26,6 +26,9 @@ public interface SkillList<T extends Creature>
 	
 	/**
 	 * Add skill to list
+	 * @param creature
+	 * @param skillId
+	 * @param skillLevel
 	 * @return true if operation was successful
 	 */
 	boolean addSkill(T creature, int skillId, int skillLevel);
@@ -34,12 +37,15 @@ public interface SkillList<T extends Creature>
 	
 	/**
 	 * Remove skill from list
+	 * @param skillId
 	 * @return true if operation was successful
 	 */
 	boolean removeSkill(int skillId);
 	
 	/**
 	 * Check whether skill is present in list
+	 * @param skillId
+	 * @return
 	 */
 	boolean isSkillPresent(int skillId);
 	

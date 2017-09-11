@@ -34,6 +34,8 @@ public class SM_MACRO_LIST extends AionServerPacket
 	
 	/**
 	 * Constructs new <tt>SM_MACRO_LIST </tt> packet
+	 * @param player
+	 * @param secondPart
 	 */
 	public SM_MACRO_LIST(Player player, boolean secondPart)
 	{

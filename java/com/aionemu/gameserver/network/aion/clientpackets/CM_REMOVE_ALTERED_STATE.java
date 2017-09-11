@@ -30,6 +30,8 @@ public class CM_REMOVE_ALTERED_STATE extends AionClientPacket
 	
 	/**
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_REMOVE_ALTERED_STATE(int opcode, State state, State... restStates)
 	{

@@ -66,6 +66,7 @@ public class Array3f implements Reusable
 	
 	/**
 	 * Recycles a text builder {@link #newInstance() instance} immediately (on the stack when executing in a {@link javolution.context.StackContext StackContext}).
+	 * @param instance
 	 */
 	@SuppressWarnings("unchecked")
 	public static void recycle(Array3f instance)

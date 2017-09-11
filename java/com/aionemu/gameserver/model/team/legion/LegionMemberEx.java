@@ -42,6 +42,9 @@ public class LegionMemberEx extends LegionMember
 	
 	/**
 	 * If player is immediately after this constructor is called
+	 * @param player
+	 * @param legionMember
+	 * @param online
 	 */
 	public LegionMemberEx(Player player, LegionMember legionMember, boolean online)
 	{
@@ -58,6 +61,7 @@ public class LegionMemberEx extends LegionMember
 	
 	/**
 	 * If player is defined later on this constructor is called
+	 * @param playerObjId
 	 */
 	public LegionMemberEx(int playerObjId)
 	{
@@ -66,6 +70,7 @@ public class LegionMemberEx extends LegionMember
 	
 	/**
 	 * If player is defined later on this constructor is called
+	 * @param name
 	 */
 	public LegionMemberEx(String name)
 	{
@@ -114,6 +119,7 @@ public class LegionMemberEx extends LegionMember
 	
 	/**
 	 * sets the exp value
+	 * @param exp
 	 * @param admin : enable decrease level
 	 */
 	public void setExp(long exp)

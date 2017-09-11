@@ -41,6 +41,8 @@ public class CM_CHECK_NICKNAME extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_CHECK_NICKNAME </tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_CHECK_NICKNAME(int opcode, State state, State... restStates)
 	{

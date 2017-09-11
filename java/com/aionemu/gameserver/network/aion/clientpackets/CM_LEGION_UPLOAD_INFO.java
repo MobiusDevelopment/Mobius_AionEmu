@@ -36,6 +36,8 @@ public class CM_LEGION_UPLOAD_INFO extends AionClientPacket
 	
 	/**
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_LEGION_UPLOAD_INFO(int opcode, State state, State... restStates)
 	{

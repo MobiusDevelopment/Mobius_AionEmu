@@ -37,7 +37,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler (Encom)
@@ -74,16 +73,12 @@ public class Exterior_GateAI2 extends NpcAI2
 			player.getObserveController().attach(observer);
 			PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), getObjectId(), getTalkDelay(), startBarAnimation));
 			PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.START_QUESTLOOT, 0, getObjectId()), true);
-			player.getController().addTask(TaskId.ACTION_ITEM_NPC, ThreadPoolManager.getInstance().schedule(new Runnable()
+			player.getController().addTask(TaskId.ACTION_ITEM_NPC, ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
-				{
-					PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.END_QUESTLOOT, 0, getObjectId()), true);
-					PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), getObjectId(), getTalkDelay(), cancelBarAnimation));
-					player.getObserveController().removeObserver(observer);
-					handleUseItemFinish(player);
-				}
+				PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.END_QUESTLOOT, 0, getObjectId()), true);
+				PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), getObjectId(), getTalkDelay(), cancelBarAnimation));
+				player.getObserveController().removeObserver(observer);
+				handleUseItemFinish(player);
 			}, delay));
 		}
 		else
@@ -124,7 +119,7 @@ public class Exterior_GateAI2 extends NpcAI2
 		}
 	}
 	
-	private void moveToAcrossExteriorGate(Player responder)
+	void moveToAcrossExteriorGate(Player responder)
 	{
 		final int worldId = responder.getWorldId();
 		final double radian = Math.toRadians(MathUtil.convertHeadingToDegree(responder.getHeading()));
@@ -140,19 +135,15 @@ public class Exterior_GateAI2 extends NpcAI2
 	@Override
 	protected void handleDied()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			final AionObject winner = getAggroList().getMostDamage();
+			if (winner instanceof Creature)
 			{
-				final AionObject winner = getAggroList().getMostDamage();
-				if (winner instanceof Creature)
-				{
-					final Creature kill = (Creature) winner;
-					AI2Actions.deleteOwner(Exterior_GateAI2.this);
-					// "Player Name" of the "Race" destroyed the Castle Gate.
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301049, kill.getRace().getRaceDescriptionId(), kill.getName()));
-				}
+				final Creature kill = (Creature) winner;
+				AI2Actions.deleteOwner(Exterior_GateAI2.this);
+				// "Player Name" of the "Race" destroyed the Castle Gate.
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301049, kill.getRace().getRaceDescriptionId(), kill.getName()));
 			}
 		});
 	}

@@ -37,6 +37,8 @@ public class SM_RESTORE_CHARACTER extends AionServerPacket
 	
 	/**
 	 * Constructs new <tt>SM_RESTORE_CHARACTER </tt> packet
+	 * @param chaOid
+	 * @param success
 	 */
 	public SM_RESTORE_CHARACTER(int chaOid, boolean success)
 	{

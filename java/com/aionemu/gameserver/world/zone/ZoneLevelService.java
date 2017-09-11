@@ -31,6 +31,7 @@ public class ZoneLevelService
 	
 	/**
 	 * Check water level (start drowning) and map death level (die)
+	 * @param player
 	 */
 	public static void checkZoneLevels(Player player)
 	{
@@ -74,7 +75,7 @@ public class ZoneLevelService
 	/**
 	 * @param player
 	 */
-	private static void stopDrowning(Player player)
+	static void stopDrowning(Player player)
 	{
 		if (isDrowning(player))
 		{
@@ -97,26 +98,21 @@ public class ZoneLevelService
 	 */
 	private static void scheduleDrowningTask(Player player)
 	{
-		player.getController().addTask(TaskId.DROWN, ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		player.getController().addTask(TaskId.DROWN, ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
 		{
-			
-			@Override
-			public void run()
+			final int value = Math.round(player.getLifeStats().getMaxHp() / 10);
+			// TODO retail emotion, attack_status packets sending
+			if (!player.getLifeStats().isAlreadyDead())
 			{
-				final int value = Math.round(player.getLifeStats().getMaxHp() / 10);
-				// TODO retail emotion, attack_status packets sending
-				if (!player.getLifeStats().isAlreadyDead())
+				if (!player.isInvul())
 				{
-					if (!player.isInvul())
-					{
-						player.getLifeStats().reduceHp(value, player);
-						player.getLifeStats().sendHpPacketUpdate();
-					}
+					player.getLifeStats().reduceHp(value, player);
+					player.getLifeStats().sendHpPacketUpdate();
 				}
-				else
-				{
-					stopDrowning(player);
-				}
+			}
+			else
+			{
+				stopDrowning(player);
 			}
 		}, 0, DROWN_PERIOD));
 	}

@@ -71,16 +71,12 @@ public class Temple_GateAI2 extends NpcAI2
 			player.getObserveController().attach(observer);
 			PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), getObjectId(), getTalkDelay(), startBarAnimation));
 			PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.START_QUESTLOOT, 0, getObjectId()), true);
-			player.getController().addTask(TaskId.ACTION_ITEM_NPC, ThreadPoolManager.getInstance().schedule(new Runnable()
+			player.getController().addTask(TaskId.ACTION_ITEM_NPC, ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
-				{
-					PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.END_QUESTLOOT, 0, getObjectId()), true);
-					PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), getObjectId(), getTalkDelay(), cancelBarAnimation));
-					player.getObserveController().removeObserver(observer);
-					handleUseItemFinish(player);
-				}
+				PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.END_QUESTLOOT, 0, getObjectId()), true);
+				PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), getObjectId(), getTalkDelay(), cancelBarAnimation));
+				player.getObserveController().removeObserver(observer);
+				handleUseItemFinish(player);
 			}, delay));
 		}
 		else
@@ -121,7 +117,7 @@ public class Temple_GateAI2 extends NpcAI2
 		}
 	}
 	
-	private void moveToAcrossTempleGate(Player responder)
+	void moveToAcrossTempleGate(Player responder)
 	{
 		final int worldId = responder.getWorldId();
 		final double radian = Math.toRadians(MathUtil.convertHeadingToDegree(responder.getHeading()));

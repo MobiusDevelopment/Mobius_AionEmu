@@ -95,6 +95,7 @@ public class PetList
 	 * @param petId
 	 * @param decorationId
 	 * @param name
+	 * @param expireTime
 	 * @return
 	 */
 	public PetCommonData addPet(Player player, int petId, int decorationId, String name, int expireTime)

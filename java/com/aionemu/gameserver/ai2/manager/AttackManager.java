@@ -70,6 +70,8 @@ public class AttackManager
 	
 	/**
 	 * choose attack type
+	 * @param npcAI
+	 * @param delay
 	 */
 	protected static void chooseAttack(NpcAI2 npcAI, int delay)
 	{

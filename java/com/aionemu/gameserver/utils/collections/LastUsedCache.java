@@ -23,6 +23,8 @@ import com.aionemu.commons.utils.internal.chmv8.PlatformDependent;
 
 /**
  * @author Rolandas
+ * @param <K>
+ * @param <V>
  */
 @SuppressWarnings(
 {

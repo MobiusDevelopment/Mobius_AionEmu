@@ -38,7 +38,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler (Encom)
@@ -87,15 +86,11 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 				{
 					isStartTimer1 = true;
 					System.currentTimeMillis();
-					instance.doOnAllPlayers(new Visitor<Player>()
+					instance.doOnAllPlayers(player1 ->
 					{
-						@Override
-						public void visit(Player player)
+						if (player1.isOnline())
 						{
-							if (player.isOnline())
-							{
-								PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-							}
+							PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 300));
 						}
 					});
 					leftWingTreasureBox.add((Npc) spawn(700465, 212.09007f, 741.0567f, 366.20367f, (byte) 10));
@@ -110,15 +105,11 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					leftWingTreasureBox.add((Npc) spawn(700465, 197.46051f, 471.78418f, 365.32578f, (byte) 82));
 					leftWingTreasureBox.add((Npc) spawn(700465, 223.41487f, 409.03143f, 365.01053f, (byte) 26));
 					leftWingTreasureBox.add((Npc) spawn(700465, 213.39343f, 425.5012f, 366.57892f, (byte) 8));
-					chestLeftWingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+					chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
 					{
-						@Override
-						public void run()
-						{
-							StartTimer2();
-							sendMsg(1400245);
-							leftWingTreasureBox.get(0).getController().onDelete();
-						}
+						StartTimer2();
+						sendMsg(1400245);
+						leftWingTreasureBox.get(0).getController().onDelete();
 					}, 300000);
 				}
 				break;
@@ -132,26 +123,18 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 		{
 			isStartTimer2 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer3();
-					sendMsg(1400245);
-					leftWingTreasureBox.get(1).getController().onDelete();
-				}
+				StartTimer3();
+				sendMsg(1400245);
+				leftWingTreasureBox.get(1).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -162,26 +145,18 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 		{
 			isStartTimer3 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer4();
-					sendMsg(1400245);
-					leftWingTreasureBox.get(2).getController().onDelete();
-				}
+				StartTimer4();
+				sendMsg(1400245);
+				leftWingTreasureBox.get(2).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -192,26 +167,18 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 		{
 			isStartTimer4 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer5();
-					sendMsg(1400245);
-					leftWingTreasureBox.get(3).getController().onDelete();
-				}
+				StartTimer5();
+				sendMsg(1400245);
+				leftWingTreasureBox.get(3).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -222,26 +189,18 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 		{
 			isStartTimer5 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer6();
-					sendMsg(1400245);
-					leftWingTreasureBox.get(4).getController().onDelete();
-				}
+				StartTimer6();
+				sendMsg(1400245);
+				leftWingTreasureBox.get(4).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -252,26 +211,18 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 		{
 			isStartTimer6 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer7();
-					sendMsg(1400245);
-					leftWingTreasureBox.get(5).getController().onDelete();
-				}
+				StartTimer7();
+				sendMsg(1400245);
+				leftWingTreasureBox.get(5).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -282,26 +233,18 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 		{
 			isStartTimer7 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer8();
-					sendMsg(1400245);
-					leftWingTreasureBox.get(6).getController().onDelete();
-				}
+				StartTimer8();
+				sendMsg(1400245);
+				leftWingTreasureBox.get(6).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -312,26 +255,18 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 		{
 			isStartTimer8 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer9();
-					sendMsg(1400245);
-					leftWingTreasureBox.get(7).getController().onDelete();
-				}
+				StartTimer9();
+				sendMsg(1400245);
+				leftWingTreasureBox.get(7).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -342,56 +277,40 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 		{
 			isStartTimer9 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer10();
-					sendMsg(1400245);
-					leftWingTreasureBox.get(8).getController().onDelete();
-				}
+				StartTimer10();
+				sendMsg(1400245);
+				leftWingTreasureBox.get(8).getController().onDelete();
 			}, 300000);
 		}
 	}
 	
-	private void StartTimer10()
+	void StartTimer10()
 	{
 		if (!isStartTimer10)
 		{
 			isStartTimer10 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer11();
-					sendMsg(1400245);
-					leftWingTreasureBox.get(9).getController().onDelete();
-				}
+				StartTimer11();
+				sendMsg(1400245);
+				leftWingTreasureBox.get(9).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -402,26 +321,18 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 		{
 			isStartTimer11 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					StartTimer12();
-					sendMsg(1400245);
-					leftWingTreasureBox.get(10).getController().onDelete();
-				}
+				StartTimer12();
+				sendMsg(1400245);
+				leftWingTreasureBox.get(10).getController().onDelete();
 			}, 300000);
 		}
 	}
@@ -432,40 +343,25 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 		{
 			isStartTimer12 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isOnline())
 				{
-					if (player.isOnline())
-					{
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
-					}
+					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					sendMsg(1400244);
-					sendMsg(1400245);
-					leftWingTreasureBox.get(11).getController().onDelete();
-				}
+				sendMsg(1400244);
+				sendMsg(1400245);
+				leftWingTreasureBox.get(11).getController().onDelete();
 			}, 300000);
 		}
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void despawnNpc(Npc npc)

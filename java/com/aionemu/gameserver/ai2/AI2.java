@@ -37,6 +37,11 @@ public interface AI2
 	
 	/**
 	 * If already handled dialog return true.
+	 * @param player
+	 * @param dialogId
+	 * @param questId
+	 * @param extendedRewardIndex
+	 * @return
 	 */
 	boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex);
 	

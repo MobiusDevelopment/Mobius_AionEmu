@@ -40,6 +40,7 @@ public class ResponseRequester
 	/**
 	 * Adds this handler to this messageID, returns false if there already exists one
 	 * @param messageId ID of the request message
+	 * @param handler
 	 * @return true or false
 	 */
 	public synchronized boolean putRequest(int messageId, RequestResponseHandler handler)

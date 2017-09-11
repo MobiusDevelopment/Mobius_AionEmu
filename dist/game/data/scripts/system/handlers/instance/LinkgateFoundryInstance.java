@@ -39,7 +39,6 @@ import com.aionemu.gameserver.services.player.PlayerReviveService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler (Encom)
@@ -96,16 +95,12 @@ public class LinkgateFoundryInstance extends GeneralInstanceHandler
 		{
 			isStartTimer1 = true;
 			System.currentTimeMillis();
-			instance.doOnAllPlayers(new Visitor<Player>()
+			instance.doOnAllPlayers(player1 ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player1.isOnline())
 				{
-					if (player.isOnline())
-					{
-						startLinkgateTimer();
-						PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 1200)); // 20 Minutes.
-					}
+					startLinkgateTimer();
+					PacketSendUtility.sendPacket(player1, new SM_QUEST_ACTION(0, 1200)); // 20 Minutes.
 				}
 			});
 			// \\//\\//\\//***Dimensional Research Security***\//\\//\\//\\//
@@ -231,7 +226,7 @@ public class LinkgateFoundryInstance extends GeneralInstanceHandler
 		storage.decreaseByItemId(185000196, storage.getItemCountByItemId(185000196)); // Abyss Gap Sealing Key's.
 	}
 	
-	private void startLinkgateTimer()
+	void startLinkgateTimer()
 	{
 		// You have entered the Linkgate Foundry.
 		// Monsters in the lab, except Belsagos, will disappear in 20 minutes.
@@ -248,109 +243,105 @@ public class LinkgateFoundryInstance extends GeneralInstanceHandler
 		sendMessage(1402458, 19 * 60 * 1000);
 		// All monsters except Belsagos have disappeared from the Linkgate Foundry.
 		sendMessage(1402461, 20 * 60 * 1000);
-		linkgateTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+		linkgateTask = ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// ***Dimensional Research Security***//
-				Drs.get(0).getController().onDelete();
-				Drs.get(1).getController().onDelete();
-				Drs.get(2).getController().onDelete();
-				Drs.get(3).getController().onDelete();
-				Drs.get(4).getController().onDelete();
-				Drs.get(5).getController().onDelete();
-				Drs.get(6).getController().onDelete();
-				Drs.get(7).getController().onDelete();
-				Drs.get(8).getController().onDelete();
-				Drs.get(9).getController().onDelete();
-				Drs.get(10).getController().onDelete();
-				Drs.get(11).getController().onDelete();
-				Drs.get(12).getController().onDelete();
-				Drs.get(13).getController().onDelete();
-				Drs.get(14).getController().onDelete();
-				Drs.get(15).getController().onDelete();
-				Drs.get(16).getController().onDelete();
-				Drs.get(17).getController().onDelete();
-				Drs.get(18).getController().onDelete();
-				Drs.get(19).getController().onDelete();
-				Drs.get(20).getController().onDelete();
-				Drs.get(21).getController().onDelete();
-				Drs.get(22).getController().onDelete();
-				// ***Dimensional Research Security***//
-				Drs2.get(0).getController().onDelete();
-				Drs2.get(1).getController().onDelete();
-				Drs2.get(2).getController().onDelete();
-				Drs2.get(3).getController().onDelete();
-				Drs2.get(4).getController().onDelete();
-				Drs2.get(5).getController().onDelete();
-				// ***Dimensional Research Security***//
-				Drs3.get(0).getController().onDelete();
-				Drs3.get(1).getController().onDelete();
-				Drs3.get(2).getController().onDelete();
-				Drs3.get(3).getController().onDelete();
-				Drs3.get(4).getController().onDelete();
-				Drs3.get(5).getController().onDelete();
-				Drs3.get(6).getController().onDelete();
-				Drs3.get(7).getController().onDelete();
-				Drs3.get(8).getController().onDelete();
-				Drs3.get(9).getController().onDelete();
-				Drs3.get(10).getController().onDelete();
-				Drs3.get(11).getController().onDelete();
-				Drs3.get(12).getController().onDelete();
-				Drs3.get(13).getController().onDelete();
-				Drs3.get(14).getController().onDelete();
-				Drs3.get(15).getController().onDelete();
-				Drs3.get(16).getController().onDelete();
-				Drs3.get(17).getController().onDelete();
-				Drs3.get(18).getController().onDelete();
-				Drs3.get(19).getController().onDelete();
-				Drs3.get(20).getController().onDelete();
-				Drs3.get(21).getController().onDelete();
-				// ***Thecynon Bruiser***//
-				ThecynonBruiser.get(0).getController().onDelete();
-				ThecynonBruiser.get(1).getController().onDelete();
-				ThecynonBruiser.get(2).getController().onDelete();
-				ThecynonBruiser.get(3).getController().onDelete();
-				ThecynonBruiser.get(4).getController().onDelete();
-				ThecynonBruiser.get(5).getController().onDelete();
-				ThecynonBruiser.get(6).getController().onDelete();
-				// ***Irradiated Stog***//
-				IrradiatedStog.get(0).getController().onDelete();
-				IrradiatedStog.get(1).getController().onDelete();
-				IrradiatedStog.get(2).getController().onDelete();
-				IrradiatedStog.get(3).getController().onDelete();
-				IrradiatedStog.get(4).getController().onDelete();
-				IrradiatedStog.get(5).getController().onDelete();
-				IrradiatedStog.get(6).getController().onDelete();
-				IrradiatedStog.get(7).getController().onDelete();
-				IrradiatedStog.get(8).getController().onDelete();
-				// ***Iridescent Leowasp***//
-				IridescentLeowasp.get(0).getController().onDelete();
-				IridescentLeowasp.get(1).getController().onDelete();
-				IridescentLeowasp.get(2).getController().onDelete();
-				// ***Demented Ashulagen***//
-				DementedAshulagen.get(0).getController().onDelete();
-				DementedAshulagen.get(1).getController().onDelete();
-				DementedAshulagen.get(2).getController().onDelete();
-				DementedAshulagen.get(3).getController().onDelete();
-				DementedAshulagen.get(4).getController().onDelete();
-				DementedAshulagen.get(5).getController().onDelete();
-				DementedAshulagen.get(6).getController().onDelete();
-				DementedAshulagen.get(7).getController().onDelete();
-				DementedAshulagen.get(8).getController().onDelete();
-				DementedAshulagen.get(9).getController().onDelete();
-				DementedAshulagen.get(10).getController().onDelete();
-				DementedAshulagen.get(11).getController().onDelete();
-				// ***Tailed Buzz Bug***//
-				TailedBuzzBug.get(0).getController().onDelete();
-				TailedBuzzBug.get(1).getController().onDelete();
-				TailedBuzzBug.get(2).getController().onDelete();
-				// ***Vasharti Dracuni***//
-				VashartiDracuni.get(0).getController().onDelete();
-				VashartiDracuni.get(1).getController().onDelete();
-				VashartiDracuni.get(2).getController().onDelete();
-			}
+			// ***Dimensional Research Security***//
+			Drs.get(0).getController().onDelete();
+			Drs.get(1).getController().onDelete();
+			Drs.get(2).getController().onDelete();
+			Drs.get(3).getController().onDelete();
+			Drs.get(4).getController().onDelete();
+			Drs.get(5).getController().onDelete();
+			Drs.get(6).getController().onDelete();
+			Drs.get(7).getController().onDelete();
+			Drs.get(8).getController().onDelete();
+			Drs.get(9).getController().onDelete();
+			Drs.get(10).getController().onDelete();
+			Drs.get(11).getController().onDelete();
+			Drs.get(12).getController().onDelete();
+			Drs.get(13).getController().onDelete();
+			Drs.get(14).getController().onDelete();
+			Drs.get(15).getController().onDelete();
+			Drs.get(16).getController().onDelete();
+			Drs.get(17).getController().onDelete();
+			Drs.get(18).getController().onDelete();
+			Drs.get(19).getController().onDelete();
+			Drs.get(20).getController().onDelete();
+			Drs.get(21).getController().onDelete();
+			Drs.get(22).getController().onDelete();
+			// ***Dimensional Research Security***//
+			Drs2.get(0).getController().onDelete();
+			Drs2.get(1).getController().onDelete();
+			Drs2.get(2).getController().onDelete();
+			Drs2.get(3).getController().onDelete();
+			Drs2.get(4).getController().onDelete();
+			Drs2.get(5).getController().onDelete();
+			// ***Dimensional Research Security***//
+			Drs3.get(0).getController().onDelete();
+			Drs3.get(1).getController().onDelete();
+			Drs3.get(2).getController().onDelete();
+			Drs3.get(3).getController().onDelete();
+			Drs3.get(4).getController().onDelete();
+			Drs3.get(5).getController().onDelete();
+			Drs3.get(6).getController().onDelete();
+			Drs3.get(7).getController().onDelete();
+			Drs3.get(8).getController().onDelete();
+			Drs3.get(9).getController().onDelete();
+			Drs3.get(10).getController().onDelete();
+			Drs3.get(11).getController().onDelete();
+			Drs3.get(12).getController().onDelete();
+			Drs3.get(13).getController().onDelete();
+			Drs3.get(14).getController().onDelete();
+			Drs3.get(15).getController().onDelete();
+			Drs3.get(16).getController().onDelete();
+			Drs3.get(17).getController().onDelete();
+			Drs3.get(18).getController().onDelete();
+			Drs3.get(19).getController().onDelete();
+			Drs3.get(20).getController().onDelete();
+			Drs3.get(21).getController().onDelete();
+			// ***Thecynon Bruiser***//
+			ThecynonBruiser.get(0).getController().onDelete();
+			ThecynonBruiser.get(1).getController().onDelete();
+			ThecynonBruiser.get(2).getController().onDelete();
+			ThecynonBruiser.get(3).getController().onDelete();
+			ThecynonBruiser.get(4).getController().onDelete();
+			ThecynonBruiser.get(5).getController().onDelete();
+			ThecynonBruiser.get(6).getController().onDelete();
+			// ***Irradiated Stog***//
+			IrradiatedStog.get(0).getController().onDelete();
+			IrradiatedStog.get(1).getController().onDelete();
+			IrradiatedStog.get(2).getController().onDelete();
+			IrradiatedStog.get(3).getController().onDelete();
+			IrradiatedStog.get(4).getController().onDelete();
+			IrradiatedStog.get(5).getController().onDelete();
+			IrradiatedStog.get(6).getController().onDelete();
+			IrradiatedStog.get(7).getController().onDelete();
+			IrradiatedStog.get(8).getController().onDelete();
+			// ***Iridescent Leowasp***//
+			IridescentLeowasp.get(0).getController().onDelete();
+			IridescentLeowasp.get(1).getController().onDelete();
+			IridescentLeowasp.get(2).getController().onDelete();
+			// ***Demented Ashulagen***//
+			DementedAshulagen.get(0).getController().onDelete();
+			DementedAshulagen.get(1).getController().onDelete();
+			DementedAshulagen.get(2).getController().onDelete();
+			DementedAshulagen.get(3).getController().onDelete();
+			DementedAshulagen.get(4).getController().onDelete();
+			DementedAshulagen.get(5).getController().onDelete();
+			DementedAshulagen.get(6).getController().onDelete();
+			DementedAshulagen.get(7).getController().onDelete();
+			DementedAshulagen.get(8).getController().onDelete();
+			DementedAshulagen.get(9).getController().onDelete();
+			DementedAshulagen.get(10).getController().onDelete();
+			DementedAshulagen.get(11).getController().onDelete();
+			// ***Tailed Buzz Bug***//
+			TailedBuzzBug.get(0).getController().onDelete();
+			TailedBuzzBug.get(1).getController().onDelete();
+			TailedBuzzBug.get(2).getController().onDelete();
+			// ***Vasharti Dracuni***//
+			VashartiDracuni.get(0).getController().onDelete();
+			VashartiDracuni.get(1).getController().onDelete();
+			VashartiDracuni.get(2).getController().onDelete();
 		}, 1200000); // 20 Minutes.
 	}
 	
@@ -376,14 +367,7 @@ public class LinkgateFoundryInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void sendMessage(int msgId, long delay)
@@ -394,14 +378,7 @@ public class LinkgateFoundryInstance extends GeneralInstanceHandler
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					sendMsg(msgId);
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule(() -> sendMsg(msgId), delay);
 		}
 	}
 	

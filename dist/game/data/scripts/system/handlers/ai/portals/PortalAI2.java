@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.teleport.PortalService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import system.handlers.ai.ActionItemNpcAI2;
 
@@ -63,38 +62,20 @@ public class PortalAI2 extends ActionItemNpcAI2
 			case 802223: // Advance Corridor [Eternum Fortress].
 			case 802225: // Advance Corridor [Skyclash Fortress].
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						startLifeTask();
-					}
-				}, 1000);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> startLifeTask(), 1000);
 				break;
 			}
 		}
 	}
 	
-	private void startLifeTask()
+	void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
-			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						AI2Actions.deleteOwner(PortalAI2.this);
-						// You will be returned to the entrance you used upon closure of the Advance Corridor.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_SVS_DIRECT_PORTAL_CLOSE_COMPULSION_TELEPORT);
-					}
-				});
-			}
-		}, 600000); // 10 Minutes.
+			AI2Actions.deleteOwner(PortalAI2.this);
+			// You will be returned to the entrance you used upon closure of the Advance Corridor.
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_SVS_DIRECT_PORTAL_CLOSE_COMPULSION_TELEPORT);
+		}), 600000); // 10 Minutes.
 	}
 	
 	@Override

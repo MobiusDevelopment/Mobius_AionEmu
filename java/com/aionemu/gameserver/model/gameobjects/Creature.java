@@ -433,6 +433,7 @@ public abstract class Creature extends VisibleObject
 	}
 	
 	/**
+	 * @param model
 	 * @param transformModel the transformedModel to set
 	 */
 	public final void setTransformModel(TransformModel model)
@@ -455,6 +456,7 @@ public abstract class Creature extends VisibleObject
 	
 	/**
 	 * This is adding broadcast to player.
+	 * @param mode
 	 */
 	public final void addPacketBroadcastMask(BroadcastMode mode)
 	{
@@ -471,6 +473,7 @@ public abstract class Creature extends VisibleObject
 	
 	/**
 	 * This is removing broadcast from player.
+	 * @param mode
 	 */
 	public final void removePacketBroadcastMask(BroadcastMode mode)
 	{

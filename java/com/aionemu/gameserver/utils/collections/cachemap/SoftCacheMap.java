@@ -28,6 +28,8 @@ import org.slf4j.LoggerFactory;
  * <br>
  * Value may be stored in map really long, but it for sure will be removed if there is low memory (and of course there isn't any strong reference to value object)
  * @author Luno
+ * @param <K>
+ * @param <V>
  */
 class SoftCacheMap<K, V>extends AbstractCacheMap<K, V> implements CacheMap<K, V>
 {

@@ -33,32 +33,21 @@ public class FlameSmashAI2 extends NpcAI2
 	{
 		super.handleSpawned();
 		starLifeTask();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead())
 			{
-				if (!isAlreadyDead())
-				{
-					SkillEngine.getInstance().getSkill(getOwner(), getNpcId() == 283008 ? 20540 : 20539, 60, getOwner()).useNoAnimationSkill();
-				}
+				SkillEngine.getInstance().getSkill(getOwner(), getNpcId() == 283008 ? 20540 : 20539, 60, getOwner()).useNoAnimationSkill();
 			}
 		}, 500);
 	}
 	
 	private void starLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				despawn();
-			}
-		}, 7000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> despawn(), 7000);
 	}
 	
-	private void despawn()
+	void despawn()
 	{
 		if (!isAlreadyDead())
 		{

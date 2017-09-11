@@ -54,7 +54,7 @@ public class ManadarAI2 extends AggressiveNpcAI2
 		super.handleBackHome();
 	}
 	
-	private void check()
+	void check()
 	{
 		if (getPosition().isSpawned() && !isAlreadyDead() && isStart)
 		{
@@ -91,13 +91,6 @@ public class ManadarAI2 extends AggressiveNpcAI2
 	
 	private void doSchedule()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				check();
-			}
-		}, 6000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> check(), 6000);
 	}
 }

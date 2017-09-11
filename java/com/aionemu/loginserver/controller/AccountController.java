@@ -273,6 +273,7 @@ public class AccountController
 	/**
 	 * Refresh last_mac of account
 	 * @param accountId id of account
+	 * @param address
 	 * @param adress new macAdress
 	 * @return refreshed or not
 	 */

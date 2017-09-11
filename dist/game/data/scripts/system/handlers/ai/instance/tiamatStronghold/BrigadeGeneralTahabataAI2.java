@@ -76,38 +76,20 @@ public class BrigadeGeneralTahabataAI2 extends AggressiveNpcAI2
 	
 	private void phase1()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(283116, 679.88f, 1068.88f, 497.88f, (byte) 0); // Tahabata's Altar 1.
-			}
-		}, 5000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(283116, 679.88f, 1068.88f, 497.88f, (byte) 0), 5000);
 	}
 	
 	private void phase2()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(283118, 679.88f, 1068.88f, 497.88f, (byte) 0); // Tahabata's Altar 2.
-			}
-		}, 5000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(283118, 679.88f, 1068.88f, 497.88f, (byte) 0), 5000);
 	}
 	
 	private void phase3()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				spawn(283120, 679.88f, 1068.88f, 497.88f, (byte) 0); // Tahabata's Altar 3.
-				spawn(283102, 679.88f, 1068.88f, 497.88f, (byte) 0); // Fire Tornado.
-			}
+			spawn(283120, 679.88f, 1068.88f, 497.88f, (byte) 0); // Tahabata's Altar 3.
+			spawn(283102, 679.88f, 1068.88f, 497.88f, (byte) 0); // Fire Tornado.
 		}, 5000);
 	}
 	
@@ -116,7 +98,7 @@ public class BrigadeGeneralTahabataAI2 extends AggressiveNpcAI2
 		AI2Actions.useSkill(this, 20060); // Lava Eruption.
 	}
 	
-	private void startParalyze()
+	void startParalyze()
 	{
 		AI2Actions.useSkill(this, 20761); // Flame Terror.
 	}
@@ -127,14 +109,7 @@ public class BrigadeGeneralTahabataAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				startParalyze();
-			}
-		}, 10000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> startParalyze(), 10000);
 	}
 	
 	@Override

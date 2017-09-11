@@ -452,6 +452,7 @@ public class Effect implements StatOwner
 	
 	/**
 	 * @param attackStatusObserver the attackCalcObserver to set
+	 * @param i
 	 */
 	public void setAttackStatusObserver(AttackCalcObserver attackStatusObserver, int i)
 	{
@@ -473,6 +474,7 @@ public class Effect implements StatOwner
 	
 	/**
 	 * @param attackShieldObserver the attackShieldObserver to set
+	 * @param i
 	 */
 	public void setAttackShieldObserver(AttackCalcObserver attackShieldObserver, int i)
 	{
@@ -898,6 +900,7 @@ public class Effect implements StatOwner
 	
 	/**
 	 * Start effect which includes: - start effect defined in template - start subeffect if possible - activate toogle skill if needed - schedule end of effect
+	 * @param restored
 	 */
 	public void startEffect(boolean restored)
 	{
@@ -941,14 +944,7 @@ public class Effect implements StatOwner
 			duration = skillTemplate.getDuration();
 		}
 		endTime = System.currentTimeMillis() + duration;
-		task = ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				endEffect();
-			}
-		}, duration);
+		task = ThreadPoolManager.getInstance().schedule(() -> endEffect(), duration);
 	}
 	
 	/**
@@ -1125,6 +1121,7 @@ public class Effect implements StatOwner
 	
 	/**
 	 * @param observer the observer to set
+	 * @param i
 	 */
 	public void setActionObserver(ActionObserver observer, int i)
 	{
@@ -1179,16 +1176,11 @@ public class Effect implements StatOwner
 			return;
 		}
 		final int checktime = periodicActions.getChecktime();
-		periodicActionsTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		periodicActionsTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
 		{
-			
-			@Override
-			public void run()
+			for (PeriodicAction action : periodicActions.getPeriodicActions())
 			{
-				for (PeriodicAction action : periodicActions.getPeriodicActions())
-				{
-					action.act(Effect.this);
-				}
+				action.act(Effect.this);
 			}
 		}, 0, checktime);
 	}
@@ -1507,7 +1499,7 @@ public class Effect implements StatOwner
 	 * Check all in use equipment conditions
 	 * @return true if all conditions have been satisfied
 	 */
-	private boolean useEquipmentConditionsCheck()
+	boolean useEquipmentConditionsCheck()
 	{
 		final Conditions useEquipConditions = skillTemplate.getUseEquipmentconditions();
 		return useEquipConditions != null ? useEquipConditions.validate(this) : true;

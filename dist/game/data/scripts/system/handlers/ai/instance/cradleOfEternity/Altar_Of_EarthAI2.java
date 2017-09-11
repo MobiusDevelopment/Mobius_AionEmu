@@ -55,15 +55,11 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 			{
 				// The Malachite of Earth emits a light and starts to float.
 				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_02_SYSTEM_MSG_37, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
-					{
-						despawnNpc(834006);
-						AI2Actions.deleteOwner(Altar_Of_EarthAI2.this);
-						spawn(834006, 1025.1476f, 774.97748f, 1033.6420f, (byte) 0, 291);
-					}
+					despawnNpc(834006);
+					AI2Actions.deleteOwner(Altar_Of_EarthAI2.this);
+					spawn(834006, 1025.1476f, 774.97748f, 1033.6420f, (byte) 0, 291);
 				}, 5000);
 				break;
 			}
@@ -71,15 +67,11 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 			{
 				// The Malachite of Earth emits a light and starts to float.
 				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_02_SYSTEM_MSG_37, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
-					{
-						despawnNpc(834019);
-						AI2Actions.deleteOwner(Altar_Of_EarthAI2.this);
-						spawn(834019, 1027.2802f, 771.84601f, 1033.6420f, (byte) 0, 340);
-					}
+					despawnNpc(834019);
+					AI2Actions.deleteOwner(Altar_Of_EarthAI2.this);
+					spawn(834019, 1027.2802f, 771.84601f, 1033.6420f, (byte) 0, 340);
 				}, 5000);
 				break;
 			}
@@ -87,15 +79,11 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 			{
 				// The Malachite of Earth emits a light and starts to float.
 				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_02_SYSTEM_MSG_37, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
-					{
-						despawnNpc(834020);
-						AI2Actions.deleteOwner(Altar_Of_EarthAI2.this);
-						spawn(834020, 1027.4769f, 777.98260f, 1033.6420f, (byte) 0, 299);
-					}
+					despawnNpc(834020);
+					AI2Actions.deleteOwner(Altar_Of_EarthAI2.this);
+					spawn(834020, 1027.4769f, 777.98260f, 1033.6420f, (byte) 0, 299);
 				}, 5000);
 				break;
 			}
@@ -103,15 +91,11 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 			{
 				// The Malachite of Earth emits a light and starts to float.
 				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_02_SYSTEM_MSG_37, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
-					{
-						despawnNpc(834021);
-						AI2Actions.deleteOwner(Altar_Of_EarthAI2.this);
-						spawn(834021, 1031.0382f, 776.67932f, 1033.6420f, (byte) 0, 387);
-					}
+					despawnNpc(834021);
+					AI2Actions.deleteOwner(Altar_Of_EarthAI2.this);
+					spawn(834021, 1031.0382f, 776.67932f, 1033.6420f, (byte) 0, 387);
 				}, 5000);
 				break;
 			}
@@ -119,17 +103,13 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 			{
 				// The Malachite of Earth emits a light and starts to float.
 				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_IDEternity_02_SYSTEM_MSG_37, 5000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
-					{
-						despawnNpc(834017);
-						despawnNpc(834022);
-						AI2Actions.deleteOwner(Altar_Of_EarthAI2.this);
-						spawn(834022, 1030.9221f, 772.90582f, 1033.6420f, (byte) 0, 395);
-						spawn(834091, 974.25085f, 775.06488f, 1027.0811f, (byte) 0, 322);
-					}
+					despawnNpc(834017);
+					despawnNpc(834022);
+					AI2Actions.deleteOwner(Altar_Of_EarthAI2.this);
+					spawn(834022, 1030.9221f, 772.90582f, 1033.6420f, (byte) 0, 395);
+					spawn(834091, 974.25085f, 775.06488f, 1027.0811f, (byte) 0, 322);
 				}, 5000);
 				break;
 			}
@@ -142,7 +122,7 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 		return false;
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

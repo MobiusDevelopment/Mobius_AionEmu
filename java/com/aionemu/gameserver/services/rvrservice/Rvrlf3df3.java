@@ -24,6 +24,7 @@ import com.aionemu.gameserver.services.RvrService;
 
 /**
  * @author Rinzler (Encom)
+ * @param <RL>
  */
 
 public abstract class Rvrlf3df3<RL extends RvrLocation>

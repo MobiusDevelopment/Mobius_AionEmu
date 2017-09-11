@@ -58,6 +58,8 @@ public class CM_LEGION extends AionClientPacket
 	/**
 	 * Constructs new instance of CM_LEGION packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_LEGION(int opcode, State state, State... restStates)
 	{

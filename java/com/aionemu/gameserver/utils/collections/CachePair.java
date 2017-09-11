@@ -18,6 +18,8 @@ package com.aionemu.gameserver.utils.collections;
 
 /**
  * @author Rolandas
+ * @param <K>
+ * @param <V>
  */
 @SuppressWarnings(
 {

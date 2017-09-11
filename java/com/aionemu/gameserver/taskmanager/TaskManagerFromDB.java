@@ -133,6 +133,8 @@ public class TaskManagerFromDB
 	
 	/**
 	 * Run a fixed in the time (HH:MM:SS) task
+	 * @param handler
+	 * @param dbTask
 	 * @param task
 	 */
 	private void runFixedInTimeTask(TaskFromDBHandler handler, TaskFromDB dbTask)

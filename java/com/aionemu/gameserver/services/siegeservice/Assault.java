@@ -24,6 +24,7 @@ import com.aionemu.gameserver.model.siege.SiegeRace;
 
 /**
  * @author Luzien
+ * @param <siege>
  */
 public abstract class Assault<siege extends Siege<?>>
 {

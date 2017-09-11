@@ -49,6 +49,8 @@ public class CM_DELETE_CHARACTER extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_DELETE_CHARACTER </tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_DELETE_CHARACTER(int opcode, State state, State... restStates)
 	{

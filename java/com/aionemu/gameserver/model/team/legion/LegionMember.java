@@ -30,6 +30,7 @@ public class LegionMember
 	
 	/**
 	 * If player is defined later on this constructor is called
+	 * @param objectId
 	 */
 	public LegionMember(int objectId)
 	{
@@ -38,6 +39,9 @@ public class LegionMember
 	
 	/**
 	 * This constructor is called when a legion is created
+	 * @param objectId
+	 * @param legion
+	 * @param rank
 	 */
 	public LegionMember(int objectId, Legion legion, LegionRank rank)
 	{

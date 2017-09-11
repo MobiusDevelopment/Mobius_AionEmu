@@ -53,6 +53,7 @@ public class ItemEquipmentListener
 	
 	/**
 	 * @param item
+	 * @param owner
 	 * @param cgs
 	 */
 	public static void onItemEquipment(Item item, Player owner)
@@ -166,9 +167,11 @@ public class ItemEquipmentListener
 	}
 	
 	/**
+	 * @param item
 	 * @param itemTemplate
 	 * @param slot
 	 * @param cgs
+	 * @param player
 	 */
 	private static void onItemEquipment(Item item, CreatureGameStats<?> cgs, Player player)
 	{
@@ -390,6 +393,7 @@ public class ItemEquipmentListener
 	/**
 	 * All modifiers of stones will be applied to character
 	 * @param item
+	 * @param itemStones
 	 * @param cgs
 	 */
 	private static void addStonesStats(Item item, Set<? extends ManaStone> itemStones, CreatureGameStats<?> cgs)
@@ -444,6 +448,7 @@ public class ItemEquipmentListener
 	}
 	
 	/**
+	 * @param player
 	 * @param item
 	 */
 	private static void addGodstoneEffect(Player player, Item item)
@@ -455,6 +460,7 @@ public class ItemEquipmentListener
 	}
 	
 	/**
+	 * @param player
 	 * @param item
 	 */
 	private static void removeGodstoneEffect(Player player, Item item)

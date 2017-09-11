@@ -75,17 +75,10 @@ public class Dynamic_Norsvold_MonsterAI2 extends AggressiveNpcAI2
 				break;
 			}
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				despawnNpc(241054); // Portal.
-			}
-		}, 60000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> despawnNpc(241054), 60000);
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

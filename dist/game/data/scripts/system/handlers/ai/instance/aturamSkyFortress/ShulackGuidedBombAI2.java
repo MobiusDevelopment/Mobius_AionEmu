@@ -70,42 +70,34 @@ public class ShulackGuidedBombAI2 extends AggressiveNpcAI2
 	
 	private void starLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead() && !isDestroyed)
 			{
-				if (!isAlreadyDead() && !isDestroyed)
-				{
-					despawn();
-				}
+				despawn();
 			}
 		}, 10000);
 	}
 	
 	private void doSchedule(Creature creature)
 	{
-		task = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		task = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead() && !isDestroyed)
 			{
-				if (!isAlreadyDead() && !isDestroyed)
+				destroy(creature);
+			}
+			else
+			{
+				if (task != null)
 				{
-					destroy(creature);
-				}
-				else
-				{
-					if (task != null)
-					{
-						task.cancel(true);
-					}
+					task.cancel(true);
 				}
 			}
 		}, 1000, 1000);
 	}
 	
-	private void despawn()
+	void despawn()
 	{
 		if (!isAlreadyDead())
 		{
@@ -121,14 +113,7 @@ public class ShulackGuidedBombAI2 extends AggressiveNpcAI2
 			{
 				isDestroyed = true;
 				SkillEngine.getInstance().getSkill(getOwner(), 19415, 49, getOwner()).useNoAnimationSkill();
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						despawn();
-					}
-				}, 3200);
+				ThreadPoolManager.getInstance().schedule((Runnable) () -> despawn(), 3200);
 			}
 		}
 	}

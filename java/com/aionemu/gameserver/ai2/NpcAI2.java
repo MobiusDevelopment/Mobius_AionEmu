@@ -97,7 +97,7 @@ public class NpcAI2 extends AITemplate
 		return getOwner().getSkillList();
 	}
 	
-	protected VisibleObject getCreator()
+	public VisibleObject getCreator()
 	{
 		return getOwner().getCreator();
 	}

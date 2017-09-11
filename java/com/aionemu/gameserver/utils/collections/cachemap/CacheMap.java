@@ -19,6 +19,8 @@ package com.aionemu.gameserver.utils.collections.cachemap;
 /**
  * This interface represents a Map structure for cache usage.
  * @author Luno
+ * @param <K>
+ * @param <V>
  */
 public interface CacheMap<K, V>
 {

@@ -116,6 +116,7 @@ public abstract class WorldMapInstance
 	/**
 	 * Constructor.
 	 * @param parent
+	 * @param instanceId
 	 */
 	public WorldMapInstance(WorldMap parent, int instanceId)
 	{
@@ -327,6 +328,7 @@ public abstract class WorldMapInstance
 	}
 	
 	/**
+	 * @param p
 	 * @return List<트랩>
 	 */
 	public List<Trap> getTraps(Creature p)
@@ -548,6 +550,7 @@ public abstract class WorldMapInstance
 	}
 	
 	/**
+	 * @param object
 	 * @param player
 	 * @param zoneName
 	 * @return

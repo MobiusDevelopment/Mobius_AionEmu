@@ -42,7 +42,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -87,14 +86,7 @@ public class FallenPoetaInstance extends GeneralInstanceHandler
 		sendMsgByRace(1403417, Race.PC_ALL, 20000);
 		// Lieutenant Anuhart approaches.
 		sendMsgByRace(1403418, Race.PC_ALL, 120000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawn(243682, 285.35428f, 998.8121f, 112.34111f, (byte) 85); // Lieutenant Anuhart.
-			}
-		}, 120000);
+		ThreadPoolManager.getInstance().schedule(() -> spawn(243682, 285.35428f, 998.8121f, 112.34111f, (byte) 85), 120000);
 	}
 	
 	@Override
@@ -152,14 +144,7 @@ public class FallenPoetaInstance extends GeneralInstanceHandler
 						// The Dark Spore Road has turned into a sea of flames.
 						sendMsgByRace(1403421, Race.PC_ALL, 20000);
 						spawn(833854, 299.75082f, 916.8568f, 105.5561f, (byte) 106); // Animar.
-						ThreadPoolManager.getInstance().schedule(new Runnable()
-						{
-							@Override
-							public void run()
-							{
-								seaOfFlames1();
-							}
-						}, 20000);
+						ThreadPoolManager.getInstance().schedule(() -> seaOfFlames1(), 20000);
 						break;
 					case ASMODIANS:
 						despawnNpc(npc);
@@ -169,14 +154,7 @@ public class FallenPoetaInstance extends GeneralInstanceHandler
 						// The Dark Spore Road has turned into a sea of flames.
 						sendMsgByRace(1403421, Race.PC_ALL, 20000);
 						spawn(833858, 299.75082f, 916.8568f, 105.5561f, (byte) 106); // Kantil.
-						ThreadPoolManager.getInstance().schedule(new Runnable()
-						{
-							@Override
-							public void run()
-							{
-								seaOfFlames1();
-							}
-						}, 20000);
+						ThreadPoolManager.getInstance().schedule(() -> seaOfFlames1(), 20000);
 						break;
 				}
 				break;
@@ -191,14 +169,7 @@ public class FallenPoetaInstance extends GeneralInstanceHandler
 						// The Dark Spore Road has turned into a sea of flames.
 						sendMsgByRace(1403421, Race.PC_ALL, 20000);
 						spawn(833855, 299.75082f, 916.8568f, 105.5561f, (byte) 106); // Animar.
-						ThreadPoolManager.getInstance().schedule(new Runnable()
-						{
-							@Override
-							public void run()
-							{
-								seaOfFlames2();
-							}
-						}, 20000);
+						ThreadPoolManager.getInstance().schedule(() -> seaOfFlames2(), 20000);
 						break;
 					case ASMODIANS:
 						despawnNpc(npc);
@@ -208,14 +179,7 @@ public class FallenPoetaInstance extends GeneralInstanceHandler
 						// The Dark Spore Road has turned into a sea of flames.
 						sendMsgByRace(1403421, Race.PC_ALL, 20000);
 						spawn(833859, 299.75082f, 916.8568f, 105.5561f, (byte) 106); // Kantil.
-						ThreadPoolManager.getInstance().schedule(new Runnable()
-						{
-							@Override
-							public void run()
-							{
-								seaOfFlames2();
-							}
-						}, 20000);
+						ThreadPoolManager.getInstance().schedule(() -> seaOfFlames2(), 20000);
 						break;
 				}
 				break;
@@ -230,14 +194,7 @@ public class FallenPoetaInstance extends GeneralInstanceHandler
 						// The Dark Spore Road has turned into a sea of flames.
 						sendMsgByRace(1403421, Race.PC_ALL, 20000);
 						spawn(833856, 299.75082f, 916.8568f, 105.5561f, (byte) 106); // Animar.
-						ThreadPoolManager.getInstance().schedule(new Runnable()
-						{
-							@Override
-							public void run()
-							{
-								seaOfFlames3();
-							}
-						}, 20000);
+						ThreadPoolManager.getInstance().schedule(() -> seaOfFlames3(), 20000);
 						break;
 					case ASMODIANS:
 						despawnNpc(npc);
@@ -247,14 +204,7 @@ public class FallenPoetaInstance extends GeneralInstanceHandler
 						// The Dark Spore Road has turned into a sea of flames.
 						sendMsgByRace(1403421, Race.PC_ALL, 20000);
 						spawn(833860, 299.75082f, 916.8568f, 105.5561f, (byte) 106); // Kantil.
-						ThreadPoolManager.getInstance().schedule(new Runnable()
-						{
-							@Override
-							public void run()
-							{
-								seaOfFlames3();
-							}
-						}, 20000);
+						ThreadPoolManager.getInstance().schedule(() -> seaOfFlames3(), 20000);
 						break;
 				}
 				break;
@@ -272,14 +222,7 @@ public class FallenPoetaInstance extends GeneralInstanceHandler
 						// The Dark Spore Road has turned into a sea of flames.
 						sendMsgByRace(1403421, Race.PC_ALL, 20000);
 						spawn(833857, 299.75082f, 916.8568f, 105.5561f, (byte) 106); // Animar.
-						ThreadPoolManager.getInstance().schedule(new Runnable()
-						{
-							@Override
-							public void run()
-							{
-								seaOfFlames4();
-							}
-						}, 20000);
+						ThreadPoolManager.getInstance().schedule(() -> seaOfFlames4(), 20000);
 						break;
 					case ASMODIANS:
 						despawnNpc(npc);
@@ -292,14 +235,7 @@ public class FallenPoetaInstance extends GeneralInstanceHandler
 						// The Dark Spore Road has turned into a sea of flames.
 						sendMsgByRace(1403421, Race.PC_ALL, 20000);
 						spawn(833861, 299.75082f, 916.8568f, 105.5561f, (byte) 106); // Kantil.
-						ThreadPoolManager.getInstance().schedule(new Runnable()
-						{
-							@Override
-							public void run()
-							{
-								seaOfFlames4();
-							}
-						}, 20000);
+						ThreadPoolManager.getInstance().schedule(() -> seaOfFlames4(), 20000);
 						break;
 				}
 				break;
@@ -351,7 +287,7 @@ public class FallenPoetaInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void seaOfFlames1()
+	void seaOfFlames1()
 	{
 		spawn(243952, 288.4514f, 928.72723f, 104.85776f, (byte) 46);
 		spawn(243952, 279.38016f, 937.39996f, 103.04628f, (byte) 46);
@@ -664,36 +600,18 @@ public class FallenPoetaInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

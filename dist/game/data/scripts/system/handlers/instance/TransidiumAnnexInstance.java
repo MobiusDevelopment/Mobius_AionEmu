@@ -41,7 +41,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
@@ -110,15 +109,11 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 			sendMsgByRace(1401181, Race.PC_ALL, 50000);
 			// The effect of the Transidium Annex has weakened the Hangar Barricade.
 			sendMsgByRace(1402638, Race.PC_ALL, 1200000);
-			instanceTimer = ThreadPoolManager.getInstance().schedule(new Runnable()
+			instanceTimer = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
-				{
-					openFirstDoors();
-					sendMsg(1401838);
-					sendQuestionWindow();
-				}
+				openFirstDoors();
+				sendMsg(1401838);
+				sendQuestionWindow();
 			}, 60000);
 		}
 	}
@@ -165,22 +160,10 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402641, Race.PC_ALL, 7000);
 				// You will return to the fortress soon.
 				sendMsgByRace(1402642, Race.PC_ALL, 12000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								// [Arcadian Fortress]
-								TeleportService2.teleportTo(player, 400020000, 1023.73315f, 1023.5483f, 1530.4855f, (byte) 27, TeleportAnimation.BEAM_ANIMATION);
-							}
-						});
-						onInstanceDestroy();
-					}
+					instance.doOnAllPlayers(player -> TeleportService2.teleportTo(player, 400020000, 1023.73315f, 1023.5483f, 1530.4855f, (byte) 27, TeleportAnimation.BEAM_ANIMATION));
+					onInstanceDestroy();
 				}, 15000);
 				break;
 			}
@@ -194,22 +177,10 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402641, Race.PC_ALL, 7000);
 				// You will return to the fortress soon.
 				sendMsgByRace(1402642, Race.PC_ALL, 12000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								// [Umbral Fortress]
-								TeleportService2.teleportTo(player, 400040000, 1023.73315f, 1023.5483f, 1530.4855f, (byte) 27, TeleportAnimation.BEAM_ANIMATION);
-							}
-						});
-						onInstanceDestroy();
-					}
+					instance.doOnAllPlayers(player -> TeleportService2.teleportTo(player, 400040000, 1023.73315f, 1023.5483f, 1530.4855f, (byte) 27, TeleportAnimation.BEAM_ANIMATION));
+					onInstanceDestroy();
 				}, 15000);
 				break;
 			}
@@ -223,22 +194,10 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402641, Race.PC_ALL, 7000);
 				// You will return to the fortress soon.
 				sendMsgByRace(1402642, Race.PC_ALL, 12000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								// [Eternum Fortress]
-								TeleportService2.teleportTo(player, 400050000, 1023.73315f, 1023.5483f, 1530.4855f, (byte) 27, TeleportAnimation.BEAM_ANIMATION);
-							}
-						});
-						onInstanceDestroy();
-					}
+					instance.doOnAllPlayers(player -> TeleportService2.teleportTo(player, 400050000, 1023.73315f, 1023.5483f, 1530.4855f, (byte) 27, TeleportAnimation.BEAM_ANIMATION));
+					onInstanceDestroy();
 				}, 15000);
 				break;
 			}
@@ -252,22 +211,10 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 				sendMsgByRace(1402641, Race.PC_ALL, 7000);
 				// You will return to the fortress soon.
 				sendMsgByRace(1402642, Race.PC_ALL, 12000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
-					{
-						instance.doOnAllPlayers(new Visitor<Player>()
-						{
-							@Override
-							public void visit(Player player)
-							{
-								// [Skyclash Fortress]
-								TeleportService2.teleportTo(player, 400060000, 1023.73315f, 1023.5483f, 1530.4855f, (byte) 27, TeleportAnimation.BEAM_ANIMATION);
-							}
-						});
-						onInstanceDestroy();
-					}
+					instance.doOnAllPlayers(player -> TeleportService2.teleportTo(player, 400060000, 1023.73315f, 1023.5483f, 1530.4855f, (byte) 27, TeleportAnimation.BEAM_ANIMATION));
+					onInstanceDestroy();
 				}, 15000);
 				break;
 			}
@@ -390,16 +337,9 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void sendQuestionWindow()
+	void sendQuestionWindow()
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_QUESTION_WINDOW(SM_QUESTION_WINDOW.STR_MSG_SVS_DIRECT_PORTAL_OPEN_NOTICE, 0, 0));
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_QUESTION_WINDOW(SM_QUESTION_WINDOW.STR_MSG_SVS_DIRECT_PORTAL_OPEN_NOTICE, 0, 0)));
 	}
 	
 	protected void openDoor(int doorId)
@@ -557,36 +497,18 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override

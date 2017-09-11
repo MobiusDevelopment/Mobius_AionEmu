@@ -74,7 +74,7 @@ public class PetBuff implements StatOwner
 		PacketSendUtility.sendPacket(player, new SM_PET(true, 0, 0));// start cheering
 	}
 	
-	private void loopEffect(Player player, int time)
+	void loopEffect(Player player, int time)
 	{
 		if (time != 0)
 		{

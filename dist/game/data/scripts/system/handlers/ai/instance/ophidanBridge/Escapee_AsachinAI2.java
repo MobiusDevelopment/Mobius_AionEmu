@@ -67,14 +67,7 @@ public class Escapee_AsachinAI2 extends GeneralNpcAI2
 					NpcShoutsService.getInstance().sendMsg(getOwner(), 1402861, 240000);
 					// The fugitive will get away in 1 minute!
 					NpcShoutsService.getInstance().sendMsg(getOwner(), 1402862, 420000);
-					asachinTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							AI2Actions.deleteOwner(Escapee_AsachinAI2.this);
-						}
-					}, 480000);
+					asachinTask = ThreadPoolManager.getInstance().schedule((Runnable) () -> AI2Actions.deleteOwner(Escapee_AsachinAI2.this), 480000);
 					break;
 				}
 			}
@@ -97,15 +90,11 @@ public class Escapee_AsachinAI2 extends GeneralNpcAI2
 				WalkManager.startWalking(this);
 				getOwner().setState(1);
 				PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getObjectId()));
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
+					if (!isAlreadyDead())
 					{
-						if (!isAlreadyDead())
-						{
-							despawn();
-						}
+						despawn();
 					}
 				}, 6000);
 			}
@@ -137,15 +126,11 @@ public class Escapee_AsachinAI2 extends GeneralNpcAI2
 				WalkManager.startWalking(this);
 				getOwner().setState(1);
 				PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getObjectId()));
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
+					if (!isAlreadyDead())
 					{
-						if (!isAlreadyDead())
-						{
-							despawn();
-						}
+						despawn();
 					}
 				}, 6000);
 			}
@@ -162,15 +147,11 @@ public class Escapee_AsachinAI2 extends GeneralNpcAI2
 				WalkManager.startWalking(this);
 				getOwner().setState(1);
 				PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getObjectId()));
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
+					if (!isAlreadyDead())
 					{
-						if (!isAlreadyDead())
-						{
-							despawn();
-						}
+						despawn();
 					}
 				}, 6000);
 			}
@@ -187,15 +168,11 @@ public class Escapee_AsachinAI2 extends GeneralNpcAI2
 				WalkManager.startWalking(this);
 				getOwner().setState(1);
 				PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getObjectId()));
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
+					if (!isAlreadyDead())
 					{
-						if (!isAlreadyDead())
-						{
-							despawn();
-						}
+						despawn();
 					}
 				}, 6000);
 			}
@@ -212,15 +189,11 @@ public class Escapee_AsachinAI2 extends GeneralNpcAI2
 				WalkManager.startWalking(this);
 				getOwner().setState(1);
 				PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getObjectId()));
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					@Override
-					public void run()
+					if (!isAlreadyDead())
 					{
-						if (!isAlreadyDead())
-						{
-							despawn();
-						}
+						despawn();
 					}
 				}, 6000);
 			}
@@ -242,7 +215,7 @@ public class Escapee_AsachinAI2 extends GeneralNpcAI2
 		super.handleDied();
 	}
 	
-	private void despawn()
+	void despawn()
 	{
 		AI2Actions.deleteOwner(this);
 	}

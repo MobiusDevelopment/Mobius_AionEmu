@@ -811,14 +811,7 @@ public class DeathmatchBg extends Battleground
 				}
 			}
 		}
-		super.setExpireTask(ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				endDeathmatch();
-			}
-		}, getMatchLength() * 1000));
+		super.setExpireTask(ThreadPoolManager.getInstance().schedule(() -> endDeathmatch(), getMatchLength() * 1000));
 		super.startBackgroundTask();
 	}
 	
@@ -862,15 +855,11 @@ public class DeathmatchBg extends Battleground
 			killer.getLifeStats().increaseHp(SM_ATTACK_STATUS.TYPE.HP, 1000 + (200 * killer.getKillStreak()));
 			killer.getLifeStats().increaseMp(SM_ATTACK_STATUS.TYPE.MP, 1000 + (200 * killer.getKillStreak()));
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if ((player.getBattleground() != null) && (player.getBattleground() instanceof DeathmatchBg))
 			{
-				if ((player.getBattleground() != null) && (player.getBattleground() instanceof DeathmatchBg))
-				{
-					spawnPlayer(player, true);
-				}
+				spawnPlayer(player, true);
 			}
 		}, 6000);
 	}
@@ -905,7 +894,7 @@ public class DeathmatchBg extends Battleground
 		}
 	}
 	
-	private void endDeathmatch()
+	void endDeathmatch()
 	{
 		super.onEndFirstDefault();
 		Player winner = null;

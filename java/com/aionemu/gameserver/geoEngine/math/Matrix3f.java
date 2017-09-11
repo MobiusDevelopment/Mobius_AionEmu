@@ -1408,6 +1408,7 @@ public final class Matrix3f implements Cloneable, Reusable
 	
 	/**
 	 * Recycles a text builder {@link #newInstance() instance} immediately (on the stack when executing in a {@link javolution.context.StackContext StackContext}).
+	 * @param instance
 	 */
 	@SuppressWarnings("unchecked")
 	public static void recycle(Matrix3f instance)

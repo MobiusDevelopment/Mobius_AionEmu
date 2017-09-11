@@ -232,7 +232,7 @@ public class Equipment
 	 * @param itemSlotToEquip - must be slot combination for dual weapons
 	 * @param item
 	 */
-	private Item equip(long itemSlotToEquip, Item item)
+	Item equip(long itemSlotToEquip, Item item)
 	{
 		if (item.getOptionalSocket() == -1)
 		{
@@ -880,6 +880,7 @@ public class Equipment
 	}
 	
 	/**
+	 * @param itemSetTemplateId
 	 * @return Number of parts equipped belonging to requested itemset
 	 */
 	public int itemSetPartsEquipped(int itemSetTemplateId)
@@ -1144,6 +1145,9 @@ public class Equipment
 	
 	/**
 	 * increase item count and return left count
+	 * @param item
+	 * @param count
+	 * @return
 	 */
 	public long increaseEquippedItemCount(Item item, long count)
 	{
@@ -1469,19 +1473,15 @@ public class Equipment
 					}
 				};
 				player.getObserveController().attach(moveObserver);
-				player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable()
+				player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
-					{
-						player.getObserveController().removeObserver(moveObserver);
-						PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), item.getItemId(), 0, 6), true);
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_SOUL_BOUND_ITEM_SUCCEED(item.getNameId()));
-						item.setSoulBound(true);
-						ItemPacketService.updateItemAfterInfoChange(owner, item);
-						equip(slot, item);
-						PacketSendUtility.broadcastPacket(player, new SM_UPDATE_PLAYER_APPEARANCE(player.getObjectId(), getEquippedForApparence()), true);
-					}
+					player.getObserveController().removeObserver(moveObserver);
+					PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), item.getItemId(), 0, 6), true);
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_SOUL_BOUND_ITEM_SUCCEED(item.getNameId()));
+					item.setSoulBound(true);
+					ItemPacketService.updateItemAfterInfoChange(owner, item);
+					equip(slot, item);
+					PacketSendUtility.broadcastPacket(player, new SM_UPDATE_PLAYER_APPEARANCE(player.getObjectId(), getEquippedForApparence()), true);
 				}, 5000));
 			}
 			

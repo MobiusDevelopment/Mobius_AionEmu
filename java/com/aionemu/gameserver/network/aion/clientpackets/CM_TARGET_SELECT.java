@@ -47,6 +47,8 @@ public class CM_TARGET_SELECT extends AionClientPacket
 	/**
 	 * Constructs new client packet instance.
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_TARGET_SELECT(int opcode, State state, State... restStates)
 	{

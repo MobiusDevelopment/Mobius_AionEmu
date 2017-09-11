@@ -46,6 +46,7 @@ public class SkillEngine
 	 * This method is used for skills that were learned by player
 	 * @param player
 	 * @param skillId
+	 * @param firstTarget
 	 * @return Skill
 	 */
 	public Skill getSkillFor(Player player, int skillId, VisibleObject firstTarget)
@@ -103,6 +104,7 @@ public class SkillEngine
 	 * @param creature
 	 * @param skillId
 	 * @param skillLevel
+	 * @param firstTarget
 	 * @return Skill
 	 */
 	public Skill getSkill(Creature creature, int skillId, int skillLevel, VisibleObject firstTarget)

@@ -63,7 +63,6 @@ import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -125,52 +124,40 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 	{
 		instanceTime = System.currentTimeMillis();
 		landMarkReward.setInstanceStartTime();
-		landMarkTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		landMarkTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!landMarkReward.isRewarded())
 			{
-				if (!landMarkReward.isRewarded())
-				{
-					openFirstDoors();
-					spawn(833898, 264.65891f, 259.27396f, 88.502739f, (byte) 0, 60); // Sealed Reian Relic.
-					spawn(806303, 249.47313f, 172.33987f, 79.688995f, (byte) 0, 198); // Central Square Teleport.
-					spawn(806304, 279.98080f, 346.39691f, 79.695137f, (byte) 0, 197); // Central Square Teleport.
-					// The member recruitment window has passed. You cannot recruit any more members.
-					sendMsgByRace(1401181, Race.PC_ALL, 5000);
-					// You need to activate the Aether Supply Device.
-					sendMsgByRace(1403564, Race.PC_ALL, 10000);
-					landMarkReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-					startInstancePacket();
-					landMarkReward.sendPacket(4, null);
-				}
+				openFirstDoors();
+				spawn(833898, 264.65891f, 259.27396f, 88.502739f, (byte) 0, 60); // Sealed Reian Relic.
+				spawn(806303, 249.47313f, 172.33987f, 79.688995f, (byte) 0, 198); // Central Square Teleport.
+				spawn(806304, 279.98080f, 346.39691f, 79.695137f, (byte) 0, 197); // Central Square Teleport.
+				// The member recruitment window has passed. You cannot recruit any more members.
+				sendMsgByRace(1401181, Race.PC_ALL, 5000);
+				// You need to activate the Aether Supply Device.
+				sendMsgByRace(1403564, Race.PC_ALL, 10000);
+				landMarkReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+				startInstancePacket();
+				landMarkReward.sendPacket(4, null);
 			}
 		}, 90000));
-		landMarkTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		landMarkTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				sendPacket(false);
-				landMarkReward.sendPacket(4, null);
-				// A bomb support chest has appeared at the Blood War Room.
-				sendMsgByRace(1403625, Race.ELYOS, 0);
-				// A bomb support chest has appeared at the Blood War Room.
-				sendMsgByRace(1403626, Race.ASMODIANS, 0);
-				sp(834168, 252.9754f, 246.21234f, 92.94253f, (byte) 15, 0); // Bomb Support Box.
-				sp(834169, 276.4865f, 271.9778f, 92.94253f, (byte) 75, 0); // Bomb Restraint Support Box.
-			}
+			sendPacket(false);
+			landMarkReward.sendPacket(4, null);
+			// A bomb support chest has appeared at the Blood War Room.
+			sendMsgByRace(1403625, Race.ELYOS, 0);
+			// A bomb support chest has appeared at the Blood War Room.
+			sendMsgByRace(1403626, Race.ASMODIANS, 0);
+			sp(834168, 252.9754f, 246.21234f, 92.94253f, (byte) 15, 0); // Bomb Support Box.
+			sp(834169, 276.4865f, 271.9778f, 92.94253f, (byte) 75, 0); // Bomb Restraint Support Box.
 		}, 300000));
-		landMarkTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		landMarkTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!landMarkReward.isRewarded())
 			{
-				if (!landMarkReward.isRewarded())
-				{
-					final Race winnerRace = landMarkReward.getWinnerRaceByScore();
-					stopInstance(winnerRace);
-				}
+				final Race winnerRace = landMarkReward.getWinnerRaceByScore();
+				stopInstance(winnerRace);
 			}
 		}, 1200000));
 	}
@@ -196,24 +183,20 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 	
 	private void sendEnterPacket(Player player)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(opponent ->
 		{
-			@Override
-			public void visit(Player opponent)
+			if (player.getRace() != opponent.getRace())
 			{
-				if (player.getRace() != opponent.getRace())
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
+				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId()));
+			}
+			else
+			{
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
+				if (player.getObjectId() != opponent.getObjectId())
 				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId()));
-				}
-				else
-				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), opponent.getObjectId()));
-					if (player.getObjectId() != opponent.getObjectId())
-					{
-						PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId(), 20, 0));
-					}
+					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), player.getObjectId(), 20, 0));
 				}
 			}
 		});
@@ -224,16 +207,12 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 	
 	private void startInstancePacket()
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), landMarkReward, instance.getPlayersInside(), true));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(3, getTime(), landMarkReward, player.getObjectId(), 0, 0));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), landMarkReward, instance.getPlayersInside(), true));
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
-			}
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), landMarkReward, instance.getPlayersInside(), true));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(3, getTime(), landMarkReward, player.getObjectId(), 0, 0));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), landMarkReward, instance.getPlayersInside(), true));
+			PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(11, getTime(), getInstanceReward(), player.getObjectId()));
 		});
 	}
 	
@@ -241,25 +220,11 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 	{
 		if (isObjects)
 		{
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime(), landMarkReward, instance.getPlayersInside(), true));
-				}
-			});
+			instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime(), landMarkReward, instance.getPlayersInside(), true)));
 		}
 		else
 		{
-			instance.doOnAllPlayers(new Visitor<Player>()
-			{
-				@Override
-				public void visit(Player player)
-				{
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), landMarkReward, instance.getPlayersInside(), true));
-				}
-			});
+			instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(7, getTime(), landMarkReward, instance.getPlayersInside(), true)));
 		}
 	}
 	
@@ -328,24 +293,20 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		{
 			npc.getController().onDelete();
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
-					{
-						onExitInstance(player);
-					}
-					AutoGroupService.getInstance().unRegisterInstance(instanceId);
+					onExitInstance(player);
 				}
+				AutoGroupService.getInstance().unRegisterInstance(instanceId);
 			}
 		}, 60000);
 	}
 	
-	private int getTime()
+	int getTime()
 	{
 		final long result = System.currentTimeMillis() - instanceTime;
 		if (result < 90000)
@@ -677,18 +638,14 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int entityId, int time, int msg, Race race)
 	{
-		landMarkTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		landMarkTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				spawn(npcId, x, y, z, h, entityId);
+				if (msg > 0)
 				{
-					spawn(npcId, x, y, z, h, entityId);
-					if (msg > 0)
-					{
-						sendMsgByRace(msg, race, 0);
-					}
+					sendMsgByRace(msg, race, 0);
 				}
 			}
 		}, time));
@@ -696,53 +653,31 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 	
 	protected void sp(int npcId, float x, float y, float z, byte h, int time, String walkerId)
 	{
-		landMarkTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		landMarkTask.add(ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
-				{
-					final Npc npc = (Npc) spawn(npcId, x, y, z, h);
-					npc.getSpawn().setWalkerId(walkerId);
-					WalkManager.startWalking((NpcAI2) npc.getAi2());
-				}
+				final Npc npc = (Npc) spawn(npcId, x, y, z, h);
+				npc.getSpawn().setWalkerId(walkerId);
+				WalkManager.startWalking((NpcAI2) npc.getAi2());
 			}
 		}, time));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		landMarkTask.add(ThreadPoolManager.getInstance().schedule(new Runnable()
+		landMarkTask.add(ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time));
+		}), time));
 	}
 	
 	private void sendMsg(String str)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void stopInstanceTask()

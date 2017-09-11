@@ -141,6 +141,7 @@ public class Node extends Spatial implements Cloneable
 	 * <code>attachChildAt</code> attaches a child to this node at an index. This node becomes the child's parent. The current number of children maintained is returned. <br>
 	 * If the child already had a parent it is detached from that former parent.
 	 * @param child the child to attach to this node.
+	 * @param index
 	 * @return the number of children maintained by this node.
 	 * @throws NullPointerException if child is null.
 	 */
@@ -440,6 +441,9 @@ public class Node extends Spatial implements Cloneable
 	
 	/**
 	 * Convenience wrapper.
+	 * @param nameRegex
+	 * @param <T>
+	 * @return
 	 * @see #descendantMatches(Class<? extends Spatial>, String)
 	 */
 	public <T extends Spatial> List<T> descendantMatches(String nameRegex)

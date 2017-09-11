@@ -35,6 +35,10 @@ public class ItemRestrictionService
 	
 	/**
 	 * Check if item can be moved from storage by player
+	 * @param player
+	 * @param item
+	 * @param storage
+	 * @return
 	 */
 	public static boolean isItemRestrictedFrom(Player player, Item item, byte storage)
 	{
@@ -57,6 +61,10 @@ public class ItemRestrictionService
 	
 	/**
 	 * Check if item can be moved to storage by player
+	 * @param player
+	 * @param item
+	 * @param storage
+	 * @return
 	 */
 	public static boolean isItemRestrictedTo(Player player, Item item, byte storage)
 	{
@@ -104,7 +112,12 @@ public class ItemRestrictionService
 		return false;
 	}
 	
-	/** Check, whether the item can be removed */
+	/**
+	 * Check, whether the item can be removed
+	 * @param player
+	 * @param item
+	 * @return
+	 */
 	public static boolean canRemoveItem(Player player, Item item)
 	{
 		final ItemTemplate it = item.getItemTemplate();

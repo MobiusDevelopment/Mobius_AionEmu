@@ -55,14 +55,7 @@ public class Stygian_Mist_ProtectorAI2 extends AggressiveNpcAI2
 					spawn(235914, getOwner().getX(), getOwner().getY(), getOwner().getZ(), getOwner().getHeading());
 					AI2Actions.deleteOwner(Stygian_Mist_ProtectorAI2.this);
 					AI2Actions.scheduleRespawn(this);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							despawnNpc(235914);
-						}
-					}, 300000); // 5 Minutes.
+					ThreadPoolManager.getInstance().schedule(() -> despawnNpc(235914), 300000); // 5 Minutes.
 				}
 			}
 		}
@@ -74,7 +67,7 @@ public class Stygian_Mist_ProtectorAI2 extends AggressiveNpcAI2
 		return false;
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

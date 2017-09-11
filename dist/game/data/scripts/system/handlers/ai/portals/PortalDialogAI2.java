@@ -90,7 +90,8 @@ public class PortalDialogAI2 extends PortalAI2
 		}
 	}
 	
-	private void startLifeTask()
+	@Override
+	void startLifeTask()
 	{
 		ThreadPoolManager.getInstance().schedule(() -> AI2Actions.deleteOwner(PortalDialogAI2.this), 120000); // 2 Minutes.
 	}

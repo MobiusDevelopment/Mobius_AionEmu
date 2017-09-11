@@ -26,7 +26,6 @@ import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.iu.IuLocation;
 import com.aionemu.gameserver.model.iu.IuStateType;
 import com.aionemu.gameserver.model.templates.spawns.SpawnGroup2;
@@ -39,7 +38,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -62,24 +60,13 @@ public class IuService
 			{
 				spawn(loc, IuStateType.CLOSED);
 			}
-			CronService.getInstance().schedule(new Runnable()
+			CronService.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
+				for (IuLocation loc : getIuLocations().values())
 				{
-					for (IuLocation loc : getIuLocations().values())
-					{
-						startConcert(loc.getId());
-					}
-					World.getInstance().doOnAllPlayers(new Visitor<Player>()
-					{
-						@Override
-						public void visit(Player player)
-						{
-							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_OPEN);
-						}
-					});
+					startConcert(loc.getId());
 				}
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_OPEN));
 			}, CustomConfig.IU_SCHEDULE);
 		}
 		else
@@ -102,14 +89,7 @@ public class IuService
 		}
 		circusBound.start();
 		lPCHCountdownMsg(id);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				stopConcert(id);
-			}
-		}, duration * 3600 * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> stopConcert(id), duration * 3600 * 1000);
 	}
 	
 	public void stopConcert(int id)
@@ -151,6 +131,8 @@ public class IuService
 	
 	/**
 	 * Live Party Concert Hall Countdown.
+	 * @param id
+	 * @return
 	 */
 	public boolean lPCHCountdownMsg(int id)
 	{
@@ -158,32 +140,28 @@ public class IuService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
+				World.getInstance().doOnAllPlayers(player ->
 				{
-					@Override
-					public void visit(Player player)
-					{
-						// The entrance to the Live Party Concert Hall appeared.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_OPEN, 0);
-						// The entrance to the Live Party Concert Hall closes in 90 minutes. Escape will engage.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_90M, 1800000);
-						// The entrance to the Live Party Concert Hall closes in 60 minutes. Escape will engage.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_60M, 3600000);
-						// The entrance to the Live Party Concert Hall closes in 30 minutes. Escape will engage.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_30M, 5400000);
-						// The entrance to the Live Party Concert Hall closes in 15 minutes. Escape will engage.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_15M, 6300000);
-						// The entrance to the Live Party Concert Hall closes in 10 minutes. Escape will engage.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_10M, 6600000);
-						// The entrance to the Live Party Concert Hall closes in 5 minutes. Escape will engage.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_5M, 6900000);
-						// The entrance to the Live Party Concert Hall closes in 3 minutes. Escape will engage.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_3M, 7020000);
-						// The entrance to the Live Party Concert Hall closes in 2 minutes. Escape will engage.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_2M, 7080000);
-						// The entrance to the Live Party Concert Hall closes in 1 minutes. Escape will engage.
-						PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_1M, 7140000);
-					}
+					// The entrance to the Live Party Concert Hall appeared.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_OPEN, 0);
+					// The entrance to the Live Party Concert Hall closes in 90 minutes. Escape will engage.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_90M, 1800000);
+					// The entrance to the Live Party Concert Hall closes in 60 minutes. Escape will engage.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_60M, 3600000);
+					// The entrance to the Live Party Concert Hall closes in 30 minutes. Escape will engage.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_30M, 5400000);
+					// The entrance to the Live Party Concert Hall closes in 15 minutes. Escape will engage.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_15M, 6300000);
+					// The entrance to the Live Party Concert Hall closes in 10 minutes. Escape will engage.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_10M, 6600000);
+					// The entrance to the Live Party Concert Hall closes in 5 minutes. Escape will engage.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_5M, 6900000);
+					// The entrance to the Live Party Concert Hall closes in 3 minutes. Escape will engage.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_3M, 7020000);
+					// The entrance to the Live Party Concert Hall closes in 2 minutes. Escape will engage.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_2M, 7080000);
+					// The entrance to the Live Party Concert Hall closes in 1 minutes. Escape will engage.
+					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_EVENT_DIRECT_PORTAL_CLOSE_TIMER_1M, 7140000);
 				});
 				return true;
 			}

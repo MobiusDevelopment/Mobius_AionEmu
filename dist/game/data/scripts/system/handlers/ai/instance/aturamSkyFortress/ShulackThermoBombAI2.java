@@ -41,26 +41,18 @@ public class ShulackThermoBombAI2 extends AggressiveNpcAI2
 	
 	private void doSchedule()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead())
 			{
-				if (!isAlreadyDead())
+				SkillEngine.getInstance().getSkill(getOwner(), 19416, 49, getOwner()).useNoAnimationSkill();
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					SkillEngine.getInstance().getSkill(getOwner(), 19416, 49, getOwner()).useNoAnimationSkill();
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					if (!isAlreadyDead())
 					{
-						@Override
-						public void run()
-						{
-							if (!isAlreadyDead())
-							{
-								despawn();
-							}
-						}
-					}, 4000);
-				}
+						despawn();
+					}
+				}, 4000);
 			}
 		}, 2000);
 	}
@@ -105,7 +97,7 @@ public class ShulackThermoBombAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void despawn()
+	void despawn()
 	{
 		AI2Actions.deleteOwner(this);
 	}

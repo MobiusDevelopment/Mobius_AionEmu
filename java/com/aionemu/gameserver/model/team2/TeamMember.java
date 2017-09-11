@@ -18,6 +18,7 @@ package com.aionemu.gameserver.model.team2;
 
 /**
  * @author ATracer
+ * @param <M>
  */
 public interface TeamMember<M>
 {

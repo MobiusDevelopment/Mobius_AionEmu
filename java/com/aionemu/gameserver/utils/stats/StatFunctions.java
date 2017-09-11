@@ -75,6 +75,7 @@ public class StatFunctions
 	}
 	
 	/**
+	 * @param maxLevelInRange
 	 * @param player
 	 * @param target
 	 * @return "XP Group" reward from target
@@ -186,6 +187,8 @@ public class StatFunctions
 	
 	/**
 	 * @param defeated
+	 * @param maxRank
+	 * @param maxLevel
 	 * @param winner
 	 * @return Points Gained in PvP Kill
 	 */
@@ -240,6 +243,8 @@ public class StatFunctions
 	
 	/**
 	 * @param defeated
+	 * @param maxRank
+	 * @param maxLevel
 	 * @param winner
 	 * @return Glory Gained in PvP Kill
 	 */
@@ -406,6 +411,7 @@ public class StatFunctions
 	}
 	
 	/**
+	 * @param attacker
 	 * @param player
 	 * @param target
 	 * @param isMainHand
@@ -437,8 +443,10 @@ public class StatFunctions
 	}
 	
 	/**
+	 * @param attacker
 	 * @param player
 	 * @param target
+	 * @param isMainHand
 	 * @param effectTemplate
 	 * @param skillDamages
 	 * @return Damage made to target (-hp value)
@@ -651,6 +659,8 @@ public class StatFunctions
 	/**
 	 * Calculates MAGICAL CRITICAL chance
 	 * @param attacker
+	 * @param attacked
+	 * @param criticalProb
 	 * @param attacke
 	 * @return boolean
 	 */
@@ -688,6 +698,8 @@ public class StatFunctions
 	
 	/**
 	 * npcRating
+	 * @param npcRating
+	 * @return
 	 */
 	public static int calculateRatingMultipler(NpcRating npcRating)
 	{
@@ -729,6 +741,8 @@ public class StatFunctions
 	
 	/**
 	 * ApNpcRating
+	 * @param npcRating
+	 * @return
 	 */
 	public static int ApNpcRating(NpcRating npcRating)
 	{
@@ -773,7 +787,11 @@ public class StatFunctions
 	 * @ref:
 	 * @param attacker lvl
 	 * @param target lvl
+	 * @param damages
+	 * @param pvpDamage
+	 * @param useMovement
 	 * @param baseDamages
+	 * @return
 	 **/
 	public static float adjustDamages(Creature attacker, Creature target, float damages, int pvpDamage, boolean useMovement)
 	{
@@ -883,6 +901,7 @@ public class StatFunctions
 	 * Calculates DODGE chance
 	 * @param attacker
 	 * @param attacked
+	 * @param accMod
 	 * @return boolean
 	 */
 	public static boolean calculatePhysicalDodgeRate(Creature attacker, Creature attacked, int accMod)
@@ -977,6 +996,9 @@ public class StatFunctions
 	/**
 	 * Accuracy (includes evasion/parry/block formulas): Accuracy formula is based on opponents evasion/parry/block vs your own Accuracy. If your Accuracy is 300 or more above opponents evasion/parry/block then you can not be evaded, parried or blocked. <br>
 	 * https://docs.google.com/spreadsheet/ccc?key=0AqxBGNJV9RrzdF9tOWpwUlVLOXE5bVRWeHQtbGQxaUE&hl=en_US#gid=2
+	 * @param diff
+	 * @param upperCap
+	 * @return
 	 */
 	public static boolean calculatePhysicalEvasion(float diff, int upperCap)
 	{
@@ -993,6 +1015,10 @@ public class StatFunctions
 	 * http://www.wolframalpha.com/input/?i=quadratic+fit+%7B%7B300%2C+30.97%7D%2C+%7B320%2C+31.68%7D%2C+%7B340%2C+33.30%7D%2C+%7B360%2C+36.09%7D%2C+%7B380%2C+37.81%7D%2C+%7B400%2C+40.72%7D%2C+%7B420%2C+42.12%7D%2C+%7B440%2C+44.03%7D%2C+%7B480%2C+44.66%7D%2C+%7B500%2C+45.96%7D%2C%7B604%2C+51.84%7D%2C+%7B649%2C+52.69%7D%7D
 	 * http://www.aionsource.com/topic/40542-character-stats-xp-dp-origin-gerbatorteam-july-2009/ http://www.wolframalpha.com/input/?i=-0.000126341+x%5E2%2B0.184411+x-13.7738 https://docs.google.com/spreadsheet/ccc?key=0AqxBGNJV9RrzdGNjbEhQNHN3S3M5bUVfUVQxRkVIT3c&hl=en_US#gid=0
 	 * @param attacker
+	 * @param attacked
+	 * @param isMainHand
+	 * @param criticalProb
+	 * @param isSkill
 	 * @return double
 	 */
 	public static boolean calculatePhysicalCriticalRate(Creature attacker, Creature attacked, boolean isMainHand, int criticalProb, boolean isSkill)
@@ -1044,6 +1070,7 @@ public class StatFunctions
 	 * Calculates RESIST chance
 	 * @param attacker
 	 * @param attacked
+	 * @param accMod
 	 * @return int
 	 */
 	public static int calculateMagicalResistRate(Creature attacker, Creature attacked, int accMod)

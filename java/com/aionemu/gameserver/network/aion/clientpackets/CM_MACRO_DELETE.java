@@ -49,6 +49,8 @@ public class CM_MACRO_DELETE extends AionClientPacket
 	/**
 	 * Constructs new client packet instance.
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_MACRO_DELETE(int opcode, State state, State... restStates)
 	{

@@ -64,6 +64,7 @@ public class DropNpc
 	}
 	
 	/**
+	 * @param playerObjId
 	 * @return true if playerObjId is found in list
 	 */
 	public boolean containsKey(int playerObjId)
@@ -176,6 +177,7 @@ public class DropNpc
 	}
 	
 	/**
+	 * @param player
 	 * @param addPlayerStatus
 	 */
 	public void addPlayerStatus(Player player)
@@ -184,6 +186,7 @@ public class DropNpc
 	}
 	
 	/**
+	 * @param player
 	 * @param delPlayerStatus
 	 */
 	public void delPlayerStatus(Player player)
@@ -200,6 +203,7 @@ public class DropNpc
 	}
 	
 	/**
+	 * @param player
 	 * @return true if player is found in list
 	 */
 	public boolean containsPlayerStatus(Player player)

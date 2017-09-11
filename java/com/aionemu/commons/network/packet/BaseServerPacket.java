@@ -62,7 +62,7 @@ public abstract class BaseServerPacket extends BasePacket
 	 * Write int to buffer.
 	 * @param value
 	 */
-	protected final void writeD(int value)
+	public final void writeD(int value)
 	{
 		buf.putInt(value);
 	}
@@ -71,7 +71,7 @@ public abstract class BaseServerPacket extends BasePacket
 	 * Write short to buffer.
 	 * @param value
 	 */
-	protected final void writeH(int value)
+	public final void writeH(int value)
 	{
 		buf.putShort((short) value);
 	}
@@ -80,7 +80,7 @@ public abstract class BaseServerPacket extends BasePacket
 	 * Write byte to buffer.
 	 * @param value
 	 */
-	protected final void writeC(int value)
+	public final void writeC(int value)
 	{
 		buf.put((byte) value);
 	}
@@ -89,7 +89,7 @@ public abstract class BaseServerPacket extends BasePacket
 	 * Write double to buffer.
 	 * @param value
 	 */
-	protected final void writeDF(double value)
+	public final void writeDF(double value)
 	{
 		buf.putDouble(value);
 	}
@@ -98,7 +98,7 @@ public abstract class BaseServerPacket extends BasePacket
 	 * Write float to buffer.
 	 * @param value
 	 */
-	protected final void writeF(float value)
+	public final void writeF(float value)
 	{
 		buf.putFloat(value);
 	}
@@ -107,7 +107,7 @@ public abstract class BaseServerPacket extends BasePacket
 	 * Write long to buffer.
 	 * @param value
 	 */
-	protected final void writeQ(long value)
+	public final void writeQ(long value)
 	{
 		buf.putLong(value);
 	}
@@ -116,7 +116,7 @@ public abstract class BaseServerPacket extends BasePacket
 	 * Write String to buffer
 	 * @param text
 	 */
-	protected final void writeS(String text)
+	public final void writeS(String text)
 	{
 		if (text == null)
 		{
@@ -137,12 +137,12 @@ public abstract class BaseServerPacket extends BasePacket
 	 * Write byte array to buffer.
 	 * @param data
 	 */
-	protected final void writeB(byte[] data)
+	public final void writeB(byte[] data)
 	{
 		buf.put(data);
 	}
 	
-	protected final void writeB(String bytes)
+	public final void writeB(String bytes)
 	{
 		writeB(PrintUtils.hex2bytes(bytes));
 	}

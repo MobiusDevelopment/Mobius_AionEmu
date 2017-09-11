@@ -67,6 +67,7 @@ public class SpawnEngine
 	/**
 	 * Creates VisibleObject instance and spawns it using given {@link SpawnTemplate} instance.
 	 * @param spawn
+	 * @param instanceIndex
 	 * @return created and spawned VisibleObject
 	 */
 	public static VisibleObject spawnObject(SpawnTemplate spawn, int instanceIndex)
@@ -186,6 +187,15 @@ public class SpawnEngine
 	
 	/**
 	 * Should be used when you need to add a siegespawn through code and not from static_data spawns (e.g. CustomBalaurAssault)
+	 * @param worldId
+	 * @param npcId
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @param heading
+	 * @param creatorId
+	 * @param masterName
+	 * @return
 	 */
 	static SpawnTemplate createSpawnTemplate(int worldId, int npcId, float x, float y, float z, byte heading, int creatorId, String masterName)
 	{
@@ -327,6 +337,8 @@ public class SpawnEngine
 	/**
 	 * @param worldId
 	 * @param instanceId
+	 * @param difficultId
+	 * @param ownerId
 	 */
 	public static void spawnInstance(int worldId, int instanceId, int difficultId, int ownerId)
 	{

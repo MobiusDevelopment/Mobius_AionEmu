@@ -134,6 +134,7 @@ public class Eigen3f
 	
 	/**
 	 * Scale the matrix so its entries are in [-1,1]. The scaling is applied only when at least one matrix entry has magnitude larger than 1.
+	 * @param mat
 	 * @return the max magnitude in this matrix
 	 */
 	private float scaleMatrix(Matrix3f mat)

@@ -41,6 +41,7 @@ public class AttackCalcObserver
 	/**
 	 * @param attackList
 	 * @param effect
+	 * @param attacker
 	 * @return value
 	 */
 	public void checkShield(List<AttackResult> attackList, Effect effect, Creature attacker)

@@ -45,54 +45,42 @@ public class PopuchinAI2 extends AggressiveNpcAI2
 	{
 		if (!isAlreadyDead() && !isHome)
 		{
-			bombTask = ThreadPoolManager.getInstance().schedule(new Runnable()
+			bombTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
-				@Override
-				public void run()
+				if (!isAlreadyDead() && !isHome)
 				{
-					if (!isAlreadyDead() && !isHome)
+					final VisibleObject target = getTarget();
+					if ((target != null) && (target instanceof Player))
 					{
-						final VisibleObject target = getTarget();
-						if ((target != null) && (target instanceof Player))
-						{
-							SkillEngine.getInstance().getSkill(getOwner(), 19413, 49, target).useNoAnimationSkill();
-						}
-						ThreadPoolManager.getInstance().schedule(new Runnable()
-						{
-							@Override
-							public void run()
-							{
-								if (!isAlreadyDead() && !isHome)
-								{
-									SkillEngine.getInstance().getSkill(getOwner(), 19412, 49, getOwner()).useNoAnimationSkill();
-									ThreadPoolManager.getInstance().schedule(new Runnable()
-									{
-										@Override
-										public void run()
-										{
-											if (!isAlreadyDead() && !isHome && getOwner().isSpawned())
-											{
-												if (getLifeStats().getHpPercentage() > 50)
-												{
-													final WorldPosition p = getPosition();
-													if ((p != null) && (p.getWorldMapInstance() != null))
-													{
-														spawn(217374, p.getX(), p.getY(), p.getZ(), p.getHeading());
-														startBombTask();
-													}
-												}
-												else
-												{
-													spawnRndBombs();
-													startBombTask();
-												}
-											}
-										}
-									}, 1500);
-								}
-							}
-						}, 3000);
+						SkillEngine.getInstance().getSkill(getOwner(), 19413, 49, target).useNoAnimationSkill();
 					}
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
+					{
+						if (!isAlreadyDead() && !isHome)
+						{
+							SkillEngine.getInstance().getSkill(getOwner(), 19412, 49, getOwner()).useNoAnimationSkill();
+							ThreadPoolManager.getInstance().schedule((Runnable) () ->
+							{
+								if (!isAlreadyDead() && !isHome && getOwner().isSpawned())
+								{
+									if (getLifeStats().getHpPercentage() > 50)
+									{
+										final WorldPosition p = getPosition();
+										if ((p != null) && (p.getWorldMapInstance() != null))
+										{
+											spawn(217374, p.getX(), p.getY(), p.getZ(), p.getHeading());
+											startBombTask();
+										}
+									}
+									else
+									{
+										spawnRndBombs();
+										startBombTask();
+									}
+								}
+							}, 1500);
+						}
+					}, 3000);
 				}
 			}, 15500);
 		}
@@ -110,7 +98,7 @@ public class PopuchinAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void rndSpawnInRange(int npcId, float distance)
+	void rndSpawnInRange(int npcId, float distance)
 	{
 		final float direction = Rnd.get(0, 199) / 100f;
 		final float x1 = (float) (Math.cos(Math.PI * direction) * distance);
@@ -131,17 +119,13 @@ public class PopuchinAI2 extends AggressiveNpcAI2
 	
 	private void spawnRndBombs()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isAlreadyDead() && !isHome)
 			{
-				if (!isAlreadyDead() && !isHome)
+				for (int i = 0; i < 2; i++)
 				{
-					for (int i = 0; i < 2; i++)
-					{
-						rndSpawnInRange(217375, Rnd.get(1, 2));
-					}
+					rndSpawnInRange(217375, Rnd.get(1, 2));
 				}
 			}
 		}, 1500);

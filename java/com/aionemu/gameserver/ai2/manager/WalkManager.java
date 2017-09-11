@@ -264,16 +264,11 @@ public class WalkManager
 		{
 			npcAI.getOwner().getMoveController().abortMove();
 			npcAI.getOwner().getMoveController().chooseNextStep();
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
-				
-				@Override
-				public void run()
+				if (npcAI.isInState(AIState.WALKING))
 				{
-					if (npcAI.isInState(AIState.WALKING))
-					{
-						npcAI.getOwner().getMoveController().moveToNextPoint();
-					}
+					npcAI.getOwner().getMoveController().moveToNextPoint();
 				}
 			}, walkPause);
 		}
@@ -291,32 +286,27 @@ public class WalkManager
 		
 		final float distToSpawn = (float) owner.getDistanceToSpawnLocation();
 		
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			
-			@Override
-			public void run()
+			if (npcAI.isInState(AIState.WALKING))
 			{
-				if (npcAI.isInState(AIState.WALKING))
+				if (distToSpawn > walkRange)
 				{
-					if (distToSpawn > walkRange)
+					owner.getMoveController().moveToPoint(owner.getSpawn().getX(), owner.getSpawn().getY(), owner.getSpawn().getZ());
+				}
+				else
+				{
+					final int nextX = Rnd.nextInt(walkRange * 2) - walkRange;
+					final int nextY = Rnd.nextInt(walkRange * 2) - walkRange;
+					if (GeoDataConfig.GEO_ENABLE && GeoDataConfig.GEO_NPC_MOVE)
 					{
-						owner.getMoveController().moveToPoint(owner.getSpawn().getX(), owner.getSpawn().getY(), owner.getSpawn().getZ());
+						final byte flags = (byte) (CollisionIntention.PHYSICAL.getId() | CollisionIntention.DOOR.getId() | CollisionIntention.WALK.getId());
+						final Vector3f loc = GeoService.getInstance().getClosestCollision(owner, owner.getX() + nextX, owner.getY() + nextY, owner.getZ(), true, flags);
+						owner.getMoveController().moveToPoint(loc.x, loc.y, loc.z);
 					}
 					else
 					{
-						final int nextX = Rnd.nextInt(walkRange * 2) - walkRange;
-						final int nextY = Rnd.nextInt(walkRange * 2) - walkRange;
-						if (GeoDataConfig.GEO_ENABLE && GeoDataConfig.GEO_NPC_MOVE)
-						{
-							final byte flags = (byte) (CollisionIntention.PHYSICAL.getId() | CollisionIntention.DOOR.getId() | CollisionIntention.WALK.getId());
-							final Vector3f loc = GeoService.getInstance().getClosestCollision(owner, owner.getX() + nextX, owner.getY() + nextY, owner.getZ(), true, flags);
-							owner.getMoveController().moveToPoint(loc.x, loc.y, loc.z);
-						}
-						else
-						{
-							owner.getMoveController().moveToPoint(owner.getX() + nextX, owner.getY() + nextY, owner.getZ());
-						}
+						owner.getMoveController().moveToPoint(owner.getX() + nextX, owner.getY() + nextY, owner.getZ());
 					}
 				}
 			}
@@ -336,6 +326,7 @@ public class WalkManager
 	}
 	
 	/**
+	 * @param npcAI
 	 * @param owner
 	 * @return
 	 */

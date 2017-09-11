@@ -26,6 +26,7 @@ import javax.annotation.concurrent.ThreadSafe;
 
 /**
  * Optimistic approach to lock-free FIFO queue; E. Ladan-Mozes and N. Shavit algorithm, less CAS failures when enqueueing, if compared with Michael and Scott Nonblocking Queue, in ConcurrentLinkedQueue
+ * @param <E>
  */
 @ThreadSafe
 public class OptimisticLinkedQueue<E>extends AbstractQueue<E> implements Queue<E>, java.io.Serializable

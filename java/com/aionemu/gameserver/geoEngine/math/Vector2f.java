@@ -271,6 +271,8 @@ public final class Vector2f implements Cloneable
 	
 	/**
 	 * <code>distanceSquared</code> calculates the distance squared between this vector and vector v.
+	 * @param otherX
+	 * @param otherY
 	 * @param v the second vector to determine the distance squared.
 	 * @return the distance squared between the two vectors.
 	 */

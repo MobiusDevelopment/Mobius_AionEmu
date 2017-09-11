@@ -82,6 +82,8 @@ public class cmd_enchant extends PlayerCommand
 	
 	/**
 	 * Verify if the item is enchantble and/or socketble
+	 * @param item
+	 * @return
 	 */
 	public static boolean isUpgradeble(Item item)
 	{

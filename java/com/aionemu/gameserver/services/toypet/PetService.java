@@ -106,20 +106,16 @@ public class PetService
 	
 	private void schedule(Pet pet, Player player, Item item, int count, int action)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (!pet.getCommonData().getCancelFeed())
 			{
-				if (!pet.getCommonData().getCancelFeed())
-				{
-					checkFeeding(pet, player, item, count, action);
-				}
+				checkFeeding(pet, player, item, count, action);
 			}
 		}, 2500);
 	}
 	
-	private void checkFeeding(Pet pet, Player player, Item item, int count, int action)
+	void checkFeeding(Pet pet, Player player, Item item, int count, int action)
 	{
 		final PetCommonData commonData = pet.getCommonData();
 		final PetFeedProgress progress = commonData.getFeedProgress();
@@ -234,14 +230,7 @@ public class PetService
 					final int useAction = action;
 					final int useItemId = itemId;
 					final int useSlot = slot;
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							PacketSendUtility.sendPacket(player, new SM_PET(useAction, useItemId, useSlot));
-						}
-					}, useDelay);
+					ThreadPoolManager.getInstance().schedule(() -> PacketSendUtility.sendPacket(player, new SM_PET(useAction, useItemId, useSlot)), useDelay);
 					return;
 				}
 				if (!RestrictionsManager.canUseItem(player, useItem) || player.isProtectionActive())

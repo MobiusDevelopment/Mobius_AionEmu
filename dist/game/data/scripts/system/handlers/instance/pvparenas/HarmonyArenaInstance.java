@@ -49,7 +49,6 @@ import com.aionemu.gameserver.skillengine.model.DispelCategoryType;
 import com.aionemu.gameserver.skillengine.model.Effect;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author xTz
@@ -92,24 +91,20 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 		{
 			return;
 		}
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(opponent ->
 		{
-			@Override
-			public void visit(Player opponent)
+			if (!group.containPlayer(opponent.getObjectId()))
 			{
-				if (!group.containPlayer(opponent.getObjectId()))
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(10, getTime(), getInstanceReward(), object));
+				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(10, getTime(), getInstanceReward(), opponent.getObjectId()));
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), object));
+			}
+			else
+			{
+				PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(10, getTime(), getInstanceReward(), opponent.getObjectId()));
+				if (object != opponent.getObjectId())
 				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(10, getTime(), getInstanceReward(), object));
-					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(10, getTime(), getInstanceReward(), opponent.getObjectId()));
 					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), object));
-				}
-				else
-				{
-					PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(10, getTime(), getInstanceReward(), opponent.getObjectId()));
-					if (object != opponent.getObjectId())
-					{
-						PacketSendUtility.sendPacket(opponent, new SM_INSTANCE_SCORE(3, getTime(), getInstanceReward(), object));
-					}
 				}
 			}
 		});
@@ -236,67 +231,51 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 		instanceReward.setInstanceScoreType(InstanceScoreType.PREPARING);
 		instanceReward.setInstanceStartTime();
 		spawnRings();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed && !instanceReward.isRewarded() && canStart())
 			{
-				if (!isInstanceDestroyed && !instanceReward.isRewarded() && canStart())
+				openDoors();
+				// The member recruitment window has passed. You cannot recruit any more members.
+				sendMsgByRace(1401181, Race.PC_ALL, 0);
+				instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
+				instanceReward.sendPacket(10, null);
+				instanceReward.sendPacket(2, null);
+				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					openDoors();
-					// The member recruitment window has passed. You cannot recruit any more members.
-					sendMsgByRace(1401181, Race.PC_ALL, 0);
-					instanceReward.setInstanceScoreType(InstanceScoreType.START_PROGRESS);
-					instanceReward.sendPacket(10, null);
-					instanceReward.sendPacket(2, null);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					if (!isInstanceDestroyed && !instanceReward.isRewarded())
 					{
-						@Override
-						public void run()
+						instanceReward.setRound(2);
+						instanceReward.setRndZone();
+						instanceReward.sendPacket(10, null);
+						instanceReward.sendPacket(2, null);
+						changeZone();
+						// If you defeat a higher rank group in this round, you can earn additional points.
+						sendMsgByRace(1401491, Race.PC_ALL, 2000);
+						ThreadPoolManager.getInstance().schedule((Runnable) () ->
 						{
 							if (!isInstanceDestroyed && !instanceReward.isRewarded())
 							{
-								instanceReward.setRound(2);
+								instanceReward.setRound(3);
 								instanceReward.setRndZone();
 								instanceReward.sendPacket(10, null);
 								instanceReward.sendPacket(2, null);
 								changeZone();
 								// If you defeat a higher rank group in this round, you can earn additional points.
 								sendMsgByRace(1401491, Race.PC_ALL, 2000);
-								ThreadPoolManager.getInstance().schedule(new Runnable()
+								ThreadPoolManager.getInstance().schedule((Runnable) () ->
 								{
-									@Override
-									public void run()
+									if (!isInstanceDestroyed && !instanceReward.isRewarded())
 									{
-										if (!isInstanceDestroyed && !instanceReward.isRewarded())
-										{
-											instanceReward.setRound(3);
-											instanceReward.setRndZone();
-											instanceReward.sendPacket(10, null);
-											instanceReward.sendPacket(2, null);
-											changeZone();
-											// If you defeat a higher rank group in this round, you can earn additional points.
-											sendMsgByRace(1401491, Race.PC_ALL, 2000);
-											ThreadPoolManager.getInstance().schedule(new Runnable()
-											{
-												@Override
-												public void run()
-												{
-													if (!isInstanceDestroyed && !instanceReward.isRewarded())
-													{
-														instanceReward.setInstanceScoreType(InstanceScoreType.END_PROGRESS);
-														reward();
-														instanceReward.sendPacket(5, null);
-													}
-												}
-											}, 180000);
-										}
+										instanceReward.setInstanceScoreType(InstanceScoreType.END_PROGRESS);
+										reward();
+										instanceReward.sendPacket(5, null);
 									}
 								}, 180000);
 							}
-						}
-					}, 180000);
-				}
+						}, 180000);
+					}
+				}, 180000);
 			}
 		}, 120000);
 	}
@@ -305,7 +284,7 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 	{
 	}
 	
-	private boolean canStart()
+	boolean canStart()
 	{
 		if (instance.getPlayersInside().size() < 2)
 		{
@@ -322,30 +301,19 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 	
 	private void changeZone()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			for (Player player : instance.getPlayersInside())
 			{
-				for (Player player : instance.getPlayersInside())
-				{
-					instanceReward.portToPosition(player);
-					instanceReward.sendPacket(4, player.getObjectId());
-				}
+				instanceReward.portToPosition(player);
+				instanceReward.sendPacket(4, player.getObjectId());
 			}
 		}, 1000);
 	}
 	
 	private void sendPacket(AionServerPacket packet)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, packet);
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, packet));
 	}
 	
 	@Override
@@ -363,24 +331,13 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	@Override
@@ -446,23 +403,19 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 		{
 			npc.getController().onDelete();
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			if (!isInstanceDestroyed)
 			{
-				if (!isInstanceDestroyed)
+				for (Player player : instance.getPlayersInside())
 				{
-					for (Player player : instance.getPlayersInside())
+					if (CreatureActions.isAlreadyDead(player))
 					{
-						if (CreatureActions.isAlreadyDead(player))
-						{
-							PlayerReviveService.duelRevive(player);
-						}
-						onExitInstance(player);
+						PlayerReviveService.duelRevive(player);
 					}
-					AutoGroupService.getInstance().unRegisterInstance(instanceId);
+					onExitInstance(player);
 				}
+				AutoGroupService.getInstance().unRegisterInstance(instanceId);
 			}
 		}, 10000);
 	}

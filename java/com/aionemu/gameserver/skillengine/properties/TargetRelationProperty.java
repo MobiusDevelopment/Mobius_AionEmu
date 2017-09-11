@@ -150,6 +150,7 @@ public class TargetRelationProperty
 	}
 	
 	/**
+	 * @param effected
 	 * @param effect
 	 * @return true = allow buff, false = deny buff
 	 */

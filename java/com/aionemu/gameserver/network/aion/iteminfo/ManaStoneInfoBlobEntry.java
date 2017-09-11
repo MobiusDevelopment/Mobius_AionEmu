@@ -98,6 +98,7 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry
 	
 	/**
 	 * Writes plume stats
+	 * @param buf
 	 */
 	private void writePlumeStats(ByteBuffer buf)
 	{

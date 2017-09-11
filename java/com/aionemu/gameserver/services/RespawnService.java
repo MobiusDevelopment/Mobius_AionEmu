@@ -84,7 +84,7 @@ public class RespawnService
 	 * @param spawnTemplate
 	 * @param instanceId
 	 */
-	private static VisibleObject respawn(SpawnTemplate spawnTemplate, int instanceId)
+	static VisibleObject respawn(SpawnTemplate spawnTemplate, int instanceId)
 	{
 		if (spawnTemplate.isTemporarySpawn() && !spawnTemplate.getTemporarySpawn().canSpawn() && !spawnTemplate.getTemporarySpawn().isInSpawnTime())
 		{

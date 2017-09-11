@@ -44,6 +44,8 @@ public class RepurchaseService
 	
 	/**
 	 * Save items for repurchase for this player
+	 * @param player
+	 * @param items
 	 */
 	public void addRepurchaseItems(Player player, List<Item> items)
 	{
@@ -52,6 +54,7 @@ public class RepurchaseService
 	
 	/**
 	 * Delete all repurchase items for this player
+	 * @param player
 	 */
 	public void removeRepurchaseItems(Player player)
 	{

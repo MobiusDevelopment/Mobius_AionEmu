@@ -31,6 +31,8 @@ public class CM_OPEN_STATICDOOR extends AionClientPacket
 	
 	/**
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_OPEN_STATICDOOR(int opcode, State state, State... restStates)
 	{

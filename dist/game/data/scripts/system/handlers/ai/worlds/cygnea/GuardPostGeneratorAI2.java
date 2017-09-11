@@ -42,15 +42,11 @@ public class GuardPostGeneratorAI2 extends NpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				SkillEngine.getInstance().getSkill(getOwner(), 22776, 1, getOwner()).useNoAnimationSkill();
-				SkillEngine.getInstance().getSkill(getOwner(), 22781, 1, getOwner()).useNoAnimationSkill();
-				SkillEngine.getInstance().getSkill(getOwner(), 22783, 1, getOwner()).useNoAnimationSkill();
-			}
+			SkillEngine.getInstance().getSkill(getOwner(), 22776, 1, getOwner()).useNoAnimationSkill();
+			SkillEngine.getInstance().getSkill(getOwner(), 22781, 1, getOwner()).useNoAnimationSkill();
+			SkillEngine.getInstance().getSkill(getOwner(), 22783, 1, getOwner()).useNoAnimationSkill();
 		}, 1000);
 	}
 	
@@ -65,16 +61,12 @@ public class GuardPostGeneratorAI2 extends NpcAI2
 				deviceBroken1.setEntityId(951);
 				objects.put(230417, SpawnEngine.spawnObject(deviceBroken1, 1));
 				AI2Actions.deleteOwner(GuardPostGeneratorAI2.this);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
-					{
-						despawnNpc(230417);
-						final SpawnTemplate deviceBroken2 = SpawnEngine.addNewSingleTimeSpawn(210070000, 230413, 1513.6941f, 2400.3616f, 190.09221f, (byte) 0);
-						deviceBroken2.setEntityId(953);
-						objects.put(230413, SpawnEngine.spawnObject(deviceBroken2, 1));
-					}
+					despawnNpc(230417);
+					final SpawnTemplate deviceBroken2 = SpawnEngine.addNewSingleTimeSpawn(210070000, 230413, 1513.6941f, 2400.3616f, 190.09221f, (byte) 0);
+					deviceBroken2.setEntityId(953);
+					objects.put(230413, SpawnEngine.spawnObject(deviceBroken2, 1));
 				}, 300000); // 5 Minutes.
 				break;
 			}
@@ -84,16 +76,12 @@ public class GuardPostGeneratorAI2 extends NpcAI2
 				deviceBroken3.setEntityId(1192);
 				objects.put(230417, SpawnEngine.spawnObject(deviceBroken3, 1));
 				AI2Actions.deleteOwner(GuardPostGeneratorAI2.this);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
-					{
-						despawnNpc(230417);
-						final SpawnTemplate deviceBroken4 = SpawnEngine.addNewSingleTimeSpawn(210070000, 230416, 1755.8412f, 1714.2434f, 199.66138f, (byte) 0);
-						deviceBroken4.setEntityId(1191);
-						objects.put(230416, SpawnEngine.spawnObject(deviceBroken4, 1));
-					}
+					despawnNpc(230417);
+					final SpawnTemplate deviceBroken4 = SpawnEngine.addNewSingleTimeSpawn(210070000, 230416, 1755.8412f, 1714.2434f, 199.66138f, (byte) 0);
+					deviceBroken4.setEntityId(1191);
+					objects.put(230416, SpawnEngine.spawnObject(deviceBroken4, 1));
 				}, 300000); // 5 Minutes.
 				break;
 			}
@@ -106,7 +94,7 @@ public class GuardPostGeneratorAI2 extends NpcAI2
 		return false;
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler (Encom)
@@ -44,22 +43,18 @@ public class ShugoImperialTombSpawnManager
 		final String[] times = EventsConfig.IMPERIAL_TOMB_TIMES.split("\\|");
 		for (String cron : times)
 		{
-			CronService.getInstance().schedule(new Runnable()
+			CronService.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
+				for (RiftEnum rift : RiftEnum.values())
 				{
-					for (RiftEnum rift : RiftEnum.values())
-					{
-						spawnImperialTomb(rift);
-					}
+					spawnImperialTomb(rift);
 				}
 			}, cron);
 			log.info("Scheduled <Shugo Imperial Tomb 4.3>: based on cron expression: " + cron + " Duration: " + EventsConfig.IMPERIAL_TOMB_TIMER + " in minutes");
 		}
 	}
 	
-	private static void spawnImperialTomb(RiftEnum rift)
+	static void spawnImperialTomb(RiftEnum rift)
 	{
 		final SpawnTemplate spawn = SpawnEngine.addNewSpawn(rift.getWorldId(), rift.getNpcId(), rift.getX(), rift.getY(), rift.getZ(), (byte) 0, 0);
 		final VisibleObject visibleObject = SpawnEngine.spawnObject(spawn, 1);
@@ -70,16 +65,12 @@ public class ShugoImperialTombSpawnManager
 	
 	private static void scheduleDelete(VisibleObject visObj)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if ((visObj != null) && visObj.isSpawned())
 			{
-				if ((visObj != null) && visObj.isSpawned())
-				{
-					visObj.getController().delete();
-					tomb.remove(visObj);
-				}
+				visObj.getController().delete();
+				tomb.remove(visObj);
 			}
 		}, EventsConfig.IMPERIAL_TOMB_TIMER * 60 * 1000);
 	}
@@ -100,15 +91,11 @@ public class ShugoImperialTombSpawnManager
 		if (visObj.isSpawned())
 		{
 			final WorldMapInstance worldInstance = visObj.getPosition().getMapRegion().getParent();
-			worldInstance.doOnAllPlayers(new Visitor<Player>()
+			worldInstance.doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if (player.isSpawned())
 				{
-					if (player.isSpawned())
-					{
-						sendMessage(player, visObj.getObjectTemplate().getTemplateId());
-					}
+					sendMessage(player, visObj.getObjectTemplate().getTemplateId());
 				}
 			});
 		}

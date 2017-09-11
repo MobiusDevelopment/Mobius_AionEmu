@@ -46,6 +46,7 @@ public class SM_CAPTCHA extends AionServerPacket
 	
 	/**
 	 * @param isCorrect
+	 * @param banTime
 	 */
 	public SM_CAPTCHA(boolean isCorrect, int banTime)
 	{

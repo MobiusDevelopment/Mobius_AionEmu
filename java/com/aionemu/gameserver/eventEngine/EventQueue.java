@@ -28,6 +28,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Created by wanke on 12/02/2017.
+ * @param <E>
  */
 
 public class EventQueue<E extends DelayedEvent>extends AbstractQueue<E> implements BlockingQueue<E>

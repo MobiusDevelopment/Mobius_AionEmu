@@ -60,6 +60,8 @@ public class PrivateStore
 	
 	/**
 	 * This method will add an item to the list and price
+	 * @param itemObjId
+	 * @param tradeItem
 	 * @param tradeList
 	 * @param price
 	 */
@@ -70,6 +72,7 @@ public class PrivateStore
 	
 	/**
 	 * This method will remove an item from the list
+	 * @param itemObjId
 	 * @param item
 	 */
 	public void removeItem(int itemObjId)
@@ -89,7 +92,9 @@ public class PrivateStore
 	}
 	
 	/**
+	 * @param itemObjId
 	 * @param itemId return tradeItem
+	 * @return
 	 */
 	public TradePSItem getTradeItemByObjId(int itemObjId)
 	{

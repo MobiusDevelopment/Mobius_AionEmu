@@ -141,6 +141,7 @@ public class Skill
 	 * Each skill is a separate object upon invocation Skill level will be populated from player SkillList
 	 * @param skillTemplate
 	 * @param effector
+	 * @param firstTarget
 	 * @param world
 	 */
 	public Skill(SkillTemplate skillTemplate, Player effector, Creature firstTarget)
@@ -158,6 +159,7 @@ public class Skill
 	 * @param effector
 	 * @param skillLvl
 	 * @param firstTarget
+	 * @param itemTemplate
 	 */
 	public Skill(SkillTemplate skillTemplate, Creature effector, int skillLvl, Creature firstTarget, ItemTemplate itemTemplate)
 	{
@@ -1354,7 +1356,7 @@ public class Skill
 	/**
 	 * Apply effects and perform actions specified in skill template
 	 */
-	private void endCast()
+	void endCast()
 	{
 		if (!effector.isCasting())
 		{
@@ -1573,15 +1575,7 @@ public class Skill
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				
-				@Override
-				public void run()
-				{
-					applyEffect(effects);
-				}
-			}, hitTime);
+			ThreadPoolManager.getInstance().schedule(() -> applyEffect(effects), hitTime);
 		}
 		if ((skillMethod == SkillMethod.CAST) || (skillMethod == SkillMethod.ITEM))
 		{
@@ -1615,6 +1609,7 @@ public class Skill
 	
 	/**
 	 * @param spellStatus
+	 * @param dashStatus
 	 * @param effects
 	 */
 	private void sendCastspellEnd(int spellStatus, int dashStatus, List<Effect> effects)
@@ -1652,17 +1647,11 @@ public class Skill
 	
 	/**
 	 * Schedule actions/effects of skill (channeled skills)
+	 * @param delay
 	 */
 	private void schedule(int delay)
 	{
-		castingTask = ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				endCast();
-			}
-		}, delay);
+		castingTask = ThreadPoolManager.getInstance().schedule(() -> endCast(), delay);
 		
 		castStart = System.currentTimeMillis();
 	}
@@ -1790,6 +1779,7 @@ public class Skill
 	}
 	
 	/**
+	 * @param firstTargetAttribute
 	 * @param FirstTargetAttribute the firstTargetAttribute to set
 	 */
 	public void setFirstTargetAttribute(FirstTargetAttribute firstTargetAttribute)

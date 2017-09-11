@@ -35,6 +35,7 @@ public abstract class TaskFromDBDAO implements DAO
 	
 	/**
 	 * Set the last activation to NOW()
+	 * @param id
 	 */
 	public abstract void setLastActivation(int id);
 	

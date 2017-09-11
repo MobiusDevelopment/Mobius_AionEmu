@@ -58,38 +58,27 @@ public class SuramaTheTraitorAI2 extends GeneralNpcAI2
 		getOwner().setState(1);
 		getMoveController().moveToPoint(651, 1319, 487);
 		PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getOwner().getObjectId()));
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				startDialog();
-			}
-		}, 10000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> startDialog(), 10000);
 	}
 	
-	private void startDialog()
+	void startDialog()
 	{
 		final Npc laksyaka = getPosition().getWorldMapInstance().getNpc(219356); // Brigade General Laksyaka.
 		NpcShoutsService.getInstance().sendMsg(getOwner(), 390841, getOwner().getObjectId(), 0, 0);
 		NpcShoutsService.getInstance().sendMsg(getOwner(), 390842, getOwner().getObjectId(), 0, 3000);
 		NpcShoutsService.getInstance().sendMsg(laksyaka, 390843, laksyaka.getObjectId(), 0, 6000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
+			final WorldMapInstance instance = getPosition().getWorldMapInstance();
+			laksyaka.setTarget(getOwner());
+			SkillEngine.getInstance().getSkill(laksyaka, 20952, 60, getOwner()).useNoAnimationSkill();
+			laksyaka.setNpcType(NpcType.ATTACKABLE);
+			for (Player player : instance.getPlayersInside())
 			{
-				final WorldMapInstance instance = getPosition().getWorldMapInstance();
-				laksyaka.setTarget(getOwner());
-				SkillEngine.getInstance().getSkill(laksyaka, 20952, 60, getOwner()).useNoAnimationSkill();
-				laksyaka.setNpcType(NpcType.ATTACKABLE);
-				for (Player player : instance.getPlayersInside())
+				if (MathUtil.isIn3dRange(player, laksyaka, 100))
 				{
-					if (MathUtil.isIn3dRange(player, laksyaka, 100))
-					{
-						player.clearKnownlist();
-						player.updateKnownlist();
-					}
+					player.clearKnownlist();
+					player.updateKnownlist();
 				}
 			}
 		}, 8000);

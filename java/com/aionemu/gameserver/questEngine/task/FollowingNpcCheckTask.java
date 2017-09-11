@@ -34,6 +34,7 @@ public class FollowingNpcCheckTask implements Runnable
 	private final DestinationChecker destinationChecker;
 	
 	/**
+	 * @param env
 	 * @param player
 	 * @param npc
 	 * @param destinationChecker
@@ -66,6 +67,7 @@ public class FollowingNpcCheckTask implements Runnable
 	
 	/**
 	 * Following task succeeded, proceed with quest
+	 * @param env
 	 */
 	private final void onSuccess(QuestEnv env)
 	{
@@ -75,6 +77,7 @@ public class FollowingNpcCheckTask implements Runnable
 	
 	/**
 	 * Following task failed, abort further progress
+	 * @param env
 	 */
 	protected void onFail(QuestEnv env)
 	{

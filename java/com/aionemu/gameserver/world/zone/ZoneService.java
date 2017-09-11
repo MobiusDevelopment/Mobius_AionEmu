@@ -20,7 +20,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -318,6 +317,7 @@ public final class ZoneService implements GameEngine
 	 * @param geometry
 	 * @param worldId
 	 * @param materialId
+	 * @param failOnMissing
 	 */
 	public void createMaterialZoneTemplate(Spatial geometry, int worldId, int materialId, boolean failOnMissing)
 	{
@@ -434,15 +434,7 @@ public final class ZoneService implements GameEngine
 				}
 			}
 		}
-		Collections.sort(templates, new Comparator<ZoneTemplate>()
-		{
-			
-			@Override
-			public int compare(ZoneTemplate o1, ZoneTemplate o2)
-			{
-				return o1.getMapid() - o2.getMapid();
-			}
-		});
+		Collections.sort(templates, (o1, o2) -> o1.getMapid() - o2.getMapid());
 		
 		final ZoneData zoneData = new ZoneData();
 		zoneData.zoneList = templates;

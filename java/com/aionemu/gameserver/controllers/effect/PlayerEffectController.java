@@ -118,6 +118,8 @@ public class PlayerEffectController extends EffectController
 	/**
 	 * @param skillId
 	 * @param skillLvl
+	 * @param remainingTime
+	 * @param endTime
 	 * @param currentTime
 	 * @param reuseDelay
 	 */

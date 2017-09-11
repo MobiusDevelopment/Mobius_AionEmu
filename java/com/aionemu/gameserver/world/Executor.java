@@ -34,7 +34,7 @@ public abstract class Executor<T extends AionObject>
 	
 	public abstract boolean run(T object);
 	
-	private final void runImpl(Collection<T> objects)
+	final void runImpl(Collection<T> objects)
 	{
 		try
 		{
@@ -63,15 +63,7 @@ public abstract class Executor<T extends AionObject>
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().execute(new Runnable()
-			{
-				
-				@Override
-				public void run()
-				{
-					runImpl(objects);
-				}
-			});
+			ThreadPoolManager.getInstance().execute(() -> runImpl(objects));
 		}
 	}
 	

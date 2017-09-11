@@ -27,6 +27,8 @@ public class CM_MAY_QUIT extends AionClientPacket
 	
 	/**
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_MAY_QUIT(int opcode, State state, State... restStates)
 	{

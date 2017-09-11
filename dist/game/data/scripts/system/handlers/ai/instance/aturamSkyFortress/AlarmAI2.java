@@ -66,15 +66,11 @@ public class AlarmAI2 extends AggressiveNpcAI2
 					PacketSendUtility.broadcastPacket(getOwner(), new SM_EMOTION(getOwner(), EmotionType.START_EMOTE2, 0, getObjectId()));
 					getPosition().getWorldMapInstance().getDoors().get(128).setOpen(true);
 					getPosition().getWorldMapInstance().getDoors().get(138).setOpen(true);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule((Runnable) () ->
 					{
-						@Override
-						public void run()
+						if (!isAlreadyDead())
 						{
-							if (!isAlreadyDead())
-							{
-								despawn();
-							}
+							despawn();
 						}
 					}, 3000);
 				}
@@ -82,7 +78,7 @@ public class AlarmAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void despawn()
+	void despawn()
 	{
 		AI2Actions.deleteOwner(this);
 	}

@@ -37,27 +37,16 @@ public class Trap_Of_SlowingAI2 extends AggressiveNpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				startLifeTask();
-				AI2Actions.useSkill(Trap_Of_SlowingAI2.this, 18503);
-			}
+			startLifeTask();
+			AI2Actions.useSkill(Trap_Of_SlowingAI2.this, 18503);
 		}, 1000);
 	}
 	
-	private void startLifeTask()
+	void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(Trap_Of_SlowingAI2.this);
-			}
-		}, 5000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> AI2Actions.deleteOwner(Trap_Of_SlowingAI2.this), 5000);
 	}
 	
 	@Override

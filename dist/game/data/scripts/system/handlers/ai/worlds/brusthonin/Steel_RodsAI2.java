@@ -33,20 +33,13 @@ public class Steel_RodsAI2 extends NpcAI2
 	@Override
 	protected void handleDied()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				despawnNpc(209479); // Captured Griffon's Claw Legionnary.
-			}
-		}, 3000);
+		ThreadPoolManager.getInstance().schedule(() -> despawnNpc(209479), 3000);
 		super.handleDied();
 		AI2Actions.deleteOwner(this);
 		AI2Actions.scheduleRespawn(this);
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

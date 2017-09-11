@@ -31,6 +31,8 @@ public class SM_DELETE_CHARACTER extends AionServerPacket
 	
 	/**
 	 * Constructs new <tt>SM_DELETE_CHARACTER </tt> packet
+	 * @param playerObjId
+	 * @param deletionTime
 	 */
 	public SM_DELETE_CHARACTER(int playerObjId, int deletionTime)
 	{

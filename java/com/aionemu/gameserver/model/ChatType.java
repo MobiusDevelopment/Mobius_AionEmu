@@ -62,6 +62,7 @@ public enum ChatType
 	
 	/**
 	 * Constructor client chat type integer representation
+	 * @param intValue
 	 */
 	private ChatType(int intValue)
 	{

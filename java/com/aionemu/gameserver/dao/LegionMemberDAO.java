@@ -31,6 +31,7 @@ public abstract class LegionMemberDAO implements IDFactoryAwareDAO
 	
 	/**
 	 * Returns true if name is used, false in other case
+	 * @param playerObjId
 	 * @param name name to check
 	 * @return true if name is used, false in other case
 	 */
@@ -44,6 +45,8 @@ public abstract class LegionMemberDAO implements IDFactoryAwareDAO
 	
 	/**
 	 * Stores legion member to DB
+	 * @param playerObjId
+	 * @param legionMember
 	 * @param player
 	 */
 	public abstract void storeLegionMember(int playerObjId, LegionMember legionMember);
@@ -81,6 +84,7 @@ public abstract class LegionMemberDAO implements IDFactoryAwareDAO
 	
 	/**
 	 * Removes legion member and all related data (Done by CASCADE DELETION)
+	 * @param playerObjId
 	 * @param playerId legion member to delete
 	 */
 	public abstract void deleteLegionMember(int playerObjId);

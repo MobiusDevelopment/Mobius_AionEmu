@@ -114,6 +114,8 @@ public class MacroList
 	
 	/**
 	 * Returns an unmodifiable map of macro id to macro contents. NOTE: Retail sends only 7 macros per packet, that's why we have to split macros
+	 * @param secondPart
+	 * @return
 	 */
 	public Map<Integer, String> getMarcosPart(boolean secondPart)
 	{

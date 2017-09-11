@@ -106,6 +106,7 @@ public class BrokerPlayerCache
 	}
 	
 	/**
+	 * @param itemList
 	 * @param setSearchItemsList the searched item list to set
 	 */
 	public void setSearchItemsList(List<Integer> itemList)

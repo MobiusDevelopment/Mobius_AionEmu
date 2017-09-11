@@ -40,6 +40,8 @@ public class CM_MOVE_IN_AIR extends AionClientPacket
 	/**
 	 * Constructs new instance of <tt>CM_MOVE_IN_AIR </tt> packet
 	 * @param opcode
+	 * @param state
+	 * @param restStates
 	 */
 	public CM_MOVE_IN_AIR(int opcode, State state, State... restStates)
 	{

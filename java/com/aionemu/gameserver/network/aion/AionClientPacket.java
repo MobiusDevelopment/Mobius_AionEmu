@@ -82,7 +82,7 @@ public abstract class AionClientPacket extends BaseClientPacket<AionConnection> 
 	 * Send new AionServerPacket to connection that is owner of this packet. This method is equvalent to: getConnection().sendPacket(msg);
 	 * @param msg
 	 */
-	protected void sendPacket(AionServerPacket msg)
+	public void sendPacket(AionServerPacket msg)
 	{
 		getConnection().sendPacket(msg);
 	}

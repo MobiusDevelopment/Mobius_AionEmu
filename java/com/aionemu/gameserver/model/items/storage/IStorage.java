@@ -114,11 +114,15 @@ public interface IStorage
 	
 	/**
 	 * Add operation should be used for new items incoming into storage from outside
+	 * @param item
+	 * @return
 	 */
 	Item add(Item item);
 	
 	/**
 	 * Put operation is used in some operations like unequip
+	 * @param item
+	 * @return
 	 */
 	Item put(Item item);
 	

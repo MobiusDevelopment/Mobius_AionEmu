@@ -92,7 +92,7 @@ public class Chief_Gunner_KurmataAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void stage2()
+	void stage2()
 	{
 		final int delay = 20000;
 		if (isAlreadyDead() || !isStart)
@@ -114,14 +114,7 @@ public class Chief_Gunner_KurmataAI2 extends AggressiveNpcAI2
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					stage2();
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage2(), delay);
 		}
 	}
 	

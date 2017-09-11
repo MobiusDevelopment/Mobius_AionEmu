@@ -34,17 +34,10 @@ public class PCGuard_Da_GaspAI2 extends AggressiveNpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				despawnNpc(731580);
-			}
-		}, 15000);
+		ThreadPoolManager.getInstance().schedule(() -> despawnNpc(731580), 15000);
 	}
 	
-	private void despawnNpc(int npcId)
+	void despawnNpc(int npcId)
 	{
 		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
 		{

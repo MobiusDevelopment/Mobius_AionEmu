@@ -36,6 +36,7 @@ public class SM_ACCOUNT_LIST extends LsServerPacket
 	
 	/**
 	 * constructs new server packet with specified opcode.
+	 * @param accounts
 	 */
 	public SM_ACCOUNT_LIST(Map<Integer, AionConnection> accounts)
 	{
