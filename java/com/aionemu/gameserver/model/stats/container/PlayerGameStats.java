@@ -520,11 +520,14 @@ public class PlayerGameStats extends CreatureGameStats<Player>
 		final Item mainHandWeapon = equipment.getMainHandWeapon();
 		if (mainHandWeapon != null)
 		{
-			base = mainHandWeapon.getItemTemplate().getWeaponStats().getPhysicalCritical();
-		}
-		else if ((mainHandWeapon != null) && mainHandWeapon.hasFusionedItem())
-		{
-			base = mainHandWeapon.getItemTemplate().getWeaponStats().getPhysicalCritical() + mainHandWeapon.getFusionedItemTemplate().getWeaponStats().getPhysicalCritical();
+			if (mainHandWeapon.hasFusionedItem())
+			{
+				base = mainHandWeapon.getItemTemplate().getWeaponStats().getPhysicalCritical() + mainHandWeapon.getFusionedItemTemplate().getWeaponStats().getPhysicalCritical();
+			}
+			else
+			{
+				base = mainHandWeapon.getItemTemplate().getWeaponStats().getPhysicalCritical();
+			}
 		}
 		return getStat(StatEnum.PHYSICAL_CRITICAL, base);
 	}

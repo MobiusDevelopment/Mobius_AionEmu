@@ -77,10 +77,7 @@ public class _24041Training_In_The_Abyss extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int var = qs.getQuestVarById(0);
 		int targetId = env.getTargetId();
-		if (qs == null)
-		{
-			return false;
-		}
+		
 		if (env.getVisibleObject() instanceof Npc)
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();

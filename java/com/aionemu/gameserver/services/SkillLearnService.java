@@ -173,10 +173,6 @@ public class SkillLearnService
 		if (player.getSkillList().isSkillPresent(skillId))
 		{
 			Integer skillLevel = player.getSkillList().getSkillLevel(skillId);
-			if (skillLevel == null)
-			{
-				skillLevel = 1;
-			}
 			if (player.getEffectController().hasAbnormalEffect(skillId))
 			{
 				player.getEffectController().removeEffect(skillId);
@@ -191,10 +187,6 @@ public class SkillLearnService
 		if (player.getSkillList().isSkillPresent(skillId))
 		{
 			Integer skillLevel = player.getSkillList().getSkillLevel(skillId);
-			if (skillLevel == null)
-			{
-				skillLevel = 1;
-			}
 			if (player.getEffectController().hasAbnormalEffect(skillId))
 			{
 				player.getEffectController().removeEffect(skillId);

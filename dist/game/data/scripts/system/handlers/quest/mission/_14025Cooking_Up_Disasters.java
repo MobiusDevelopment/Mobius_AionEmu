@@ -120,10 +120,7 @@ public class _14025Cooking_Up_Disasters extends QuestHandler
 		final int var = qs.getQuestVarById(0);
 		final int var1 = qs.getQuestVarById(1);
 		final int var2 = qs.getQuestVarById(2);
-		if (qs == null)
-		{
-			return false;
-		}
+		
 		if (env.getVisibleObject() instanceof Npc)
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();

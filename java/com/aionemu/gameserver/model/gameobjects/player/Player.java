@@ -1795,11 +1795,6 @@ public class Player extends Creature
 			return false;
 		}
 		final Long coolDown = itemCoolDowns.get(limits.getDelayId()).getReuseTime();
-		if (coolDown == null)
-		{
-			return false;
-		}
-		
 		if (coolDown < System.currentTimeMillis())
 		{
 			itemCoolDowns.remove(limits.getDelayId());

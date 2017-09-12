@@ -308,6 +308,7 @@ public class MathUtil
 	static final BigDecimal TWO = new BigDecimal(2);
 	static final double SQRT_10 = 3.162277660168379332;
 	
+	@SuppressWarnings("unused")
 	public static BigDecimal bigSqrt(BigDecimal squarD, MathContext rootMC)
 	{
 		final int sign = squarD.signum();

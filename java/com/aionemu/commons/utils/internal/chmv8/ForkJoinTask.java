@@ -452,6 +452,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	 * constructor, we instead try to use a no-arg constructor, followed by initCause, to the same effect. If none of these apply, or any fail due to other exceptions, we return the recorded exception, which is still correct, although it may contain a misleading stack trace.
 	 * @return the exception, or null if none
 	 */
+	@SuppressWarnings("unused")
 	private Throwable getThrowableException()
 	{
 		if ((status & DONE_MASK) != EXCEPTIONAL)
@@ -487,7 +488,7 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 			try
 			{
 				Constructor<?> noArgCtor = null;
-				final Constructor<?>[] cs = ec.getConstructors();// public ctors only
+				final Constructor<?>[] cs = ec.getConstructors();// public actors only
 				for (Constructor<?> c : cs)
 				{
 					final Class<?>[] ps = c.getParameterTypes();

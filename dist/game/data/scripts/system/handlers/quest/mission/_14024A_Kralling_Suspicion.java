@@ -74,10 +74,7 @@ public class _14024A_Kralling_Suspicion extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
 		final int var = qs.getQuestVarById(0);
-		if (qs == null)
-		{
-			return false;
-		}
+		
 		if (qs.getStatus() == QuestStatus.START)
 		{
 			if (targetId == 203904)

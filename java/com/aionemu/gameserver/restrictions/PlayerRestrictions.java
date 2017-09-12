@@ -362,11 +362,12 @@ public class PlayerRestrictions extends AbstractRestrictions
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_UNION_INVITE_HIM(target.getName(), targetGroup.getLeader().getName()));
 				return false;
 			}
-			if ((alliance != null) && ((targetGroup.size() + alliance.size()) >= 48))
-			{
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FORCE_INVITE_FAILED_NOT_ENOUGH_SLOT);
-				return false;
-			}
+			// dead code?
+			// if ((alliance != null) && ((targetGroup.size() + alliance.size()) >= 48))
+			// {
+			// PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FORCE_INVITE_FAILED_NOT_ENOUGH_SLOT);
+			// return false;
+			// }
 		}
 		return true;
 	}

@@ -94,6 +94,7 @@ public class PingPongThread implements Runnable
 		serverPID = pid;
 	}
 	
+	@SuppressWarnings("unused")
 	public boolean validateResponse()
 	{
 		if (requests >= 2)
@@ -123,10 +124,7 @@ public class PingPongThread implements Runnable
 			}
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	public void closeMe()

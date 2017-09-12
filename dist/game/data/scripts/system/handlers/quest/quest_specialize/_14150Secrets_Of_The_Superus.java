@@ -64,7 +64,7 @@ public class _14150Secrets_Of_The_Superus extends QuestHandler
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
-		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
+		if (qs.getStatus() == QuestStatus.NONE)
 		{
 			if (targetId == 204501)
 			{ // Sarantus
@@ -72,15 +72,8 @@ public class _14150Secrets_Of_The_Superus extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
-		}
-		if (qs == null)
-		{
-			return false;
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
