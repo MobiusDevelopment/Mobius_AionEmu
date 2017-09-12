@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.network.aion.clientpackets;
 
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.model.team2.alliance.PlayerAlliance;
 import com.aionemu.gameserver.model.team2.alliance.PlayerAllianceService;
 import com.aionemu.gameserver.model.team2.common.legacy.LootDistribution;
 import com.aionemu.gameserver.model.team2.common.legacy.LootGroupRules;
@@ -124,7 +125,7 @@ public class CM_DISTRIBUTION_SETTINGS extends AionClientPacket
 		{
 			PlayerGroupService.changeGroupRules(group, new LootGroupRules(lootrules, autodistribution, common_item_above, superior_item_above, heroic_item_above, fabled_item_above, ethernal_item_above, misc));
 		}
-		final com.aionemu.gameserver.model.team2.alliance.PlayerAlliance alliance = leader.getPlayerAlliance2();
+		final PlayerAlliance alliance = leader.getPlayerAlliance2();
 		if (alliance != null)
 		{
 			PlayerAllianceService.changeGroupRules(alliance, new LootGroupRules(lootrules, autodistribution, common_item_above, superior_item_above, heroic_item_above, fabled_item_above, ethernal_item_above, misc));
