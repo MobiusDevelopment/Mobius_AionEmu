@@ -61,7 +61,6 @@ public class _26826Ruler_Typhon extends QuestHandler
 	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		final int targetId = env.getTargetId();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{

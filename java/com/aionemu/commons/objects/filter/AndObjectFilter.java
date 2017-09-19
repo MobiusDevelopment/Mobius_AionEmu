@@ -32,6 +32,7 @@ public class AndObjectFilter<T> implements ObjectFilter<T>
 	 * Constructs new <tt>AndObjectFilter</tt> object, that uses given filters.
 	 * @param filters
 	 */
+	@SafeVarargs
 	public AndObjectFilter(ObjectFilter<? super T>... filters)
 	{
 		this.filters = filters;

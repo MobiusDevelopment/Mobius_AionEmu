@@ -20,7 +20,6 @@ import com.aionemu.gameserver.model.TeleportAnimation;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
-import com.aionemu.gameserver.questEngine.model.QuestDialog;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
@@ -97,7 +96,6 @@ public class _14054Kralling_To_Kralltumagna extends QuestHandler
 		final Player player = env.getPlayer();
 		final int targetId = env.getTargetId();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final QuestDialog dialog = env.getDialog();
 		if (qs == null)
 		{
 			return false;
@@ -113,8 +111,6 @@ public class _14054Kralling_To_Kralltumagna extends QuestHandler
 		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
-			final int var1 = qs.getQuestVarById(1);
-			final int var2 = qs.getQuestVarById(2);
 			if (targetId == 204602)
 			{
 				switch (env.getDialog())

@@ -53,6 +53,7 @@ public class ItemEnchantTable
 	@XmlTransient
 	private final TIntObjectHashMap<List<StatFunction>> enchants = new TIntObjectHashMap();
 	
+	@SuppressWarnings("unchecked")
 	public List<StatFunction> getStats(int level)
 	{
 		for (ItemEnchantBonus ib : getItemEnchant())

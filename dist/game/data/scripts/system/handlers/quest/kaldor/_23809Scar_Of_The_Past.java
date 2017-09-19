@@ -60,15 +60,11 @@ public class _23809Scar_Of_The_Past extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
-			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
 				case 730969:

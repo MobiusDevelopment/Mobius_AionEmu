@@ -68,15 +68,9 @@ public class _80295Durable_Daevanion_Weapon extends QuestHandler
 					{
 						return sendQuestDialog(env, 1003);
 					}
-					else
-					{
-						return sendQuestDialog(env, 4762);
-					}
+					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -84,7 +78,6 @@ public class _80295Durable_Daevanion_Weapon extends QuestHandler
 			return false;
 		}
 		final int var = qs.getQuestVarById(0);
-		final int var1 = qs.getQuestVarById(1);
 		if (qs.getStatus() == QuestStatus.START)
 		{
 			if (targetId == 831387)

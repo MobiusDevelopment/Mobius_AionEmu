@@ -59,7 +59,7 @@ public class SpectralWarriorAI2 extends AggressiveNpcAI2
 			if (obj instanceof Npc)
 			{
 				final Npc npc = (Npc) obj;
-				if ((npc == null) || CreatureActions.isAlreadyDead(npc))
+				if (CreatureActions.isAlreadyDead(npc))
 				{
 					continue;
 				}

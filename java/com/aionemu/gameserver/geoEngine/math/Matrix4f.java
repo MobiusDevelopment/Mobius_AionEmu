@@ -1848,6 +1848,7 @@ public final class Matrix4f implements Cloneable
 	 * @param o the object to compare for equality
 	 * @return true if they are equal
 	 */
+	@SuppressWarnings("null")
 	@Override
 	public boolean equals(Object o)
 	{

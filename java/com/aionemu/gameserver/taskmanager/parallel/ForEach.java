@@ -47,6 +47,7 @@ public final class ForEach<E>extends CountedCompleter<E>
 		return null;
 	}
 	
+	@SafeVarargs
 	public static <E> ForkJoinTask<E> forEach(Predicate<E> operation, E... list)
 	{
 		if ((list != null) && (list.length > 0))
@@ -61,6 +62,7 @@ public final class ForEach<E>extends CountedCompleter<E>
 	final Predicate<E> operation;
 	final int lo, hi;
 	
+	@SafeVarargs
 	private ForEach(CountedCompleter<E> rootTask, Predicate<E> operation, int lo, int hi, E... list)
 	{
 		super(rootTask);

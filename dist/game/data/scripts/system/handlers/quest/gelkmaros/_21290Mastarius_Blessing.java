@@ -48,7 +48,6 @@ public class _21290Mastarius_Blessing extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.START))
 		{
@@ -94,10 +93,7 @@ public class _21290Mastarius_Blessing extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

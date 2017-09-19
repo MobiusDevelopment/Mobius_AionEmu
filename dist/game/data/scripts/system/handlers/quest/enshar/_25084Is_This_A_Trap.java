@@ -63,15 +63,11 @@ public class _25084Is_This_A_Trap extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			final int var = qs.getQuestVarById(0);
 			if (targetId == 804925)
 			{
 				if (dialog == QuestDialog.START_DIALOG)
@@ -108,10 +104,7 @@ public class _25084Is_This_A_Trap extends QuestHandler
 				{
 					return sendQuestDialog(env, 2034);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

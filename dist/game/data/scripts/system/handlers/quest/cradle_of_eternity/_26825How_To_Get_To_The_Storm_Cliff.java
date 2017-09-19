@@ -69,7 +69,6 @@ public class _26825How_To_Get_To_The_Storm_Cliff extends QuestHandler
 	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		final int targetId = env.getTargetId();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{

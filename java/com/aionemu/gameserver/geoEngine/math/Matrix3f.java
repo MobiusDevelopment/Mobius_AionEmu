@@ -1143,6 +1143,7 @@ public final class Matrix3f implements Cloneable, Reusable
 	 * @param o the object to compare for equality
 	 * @return true if they are equal
 	 */
+	@SuppressWarnings("null")
 	@Override
 	public boolean equals(Object o)
 	{
@@ -1399,10 +1400,7 @@ public final class Matrix3f implements Cloneable, Reusable
 		{
 			return (Matrix3f) FACTORY.object();
 		}
-		else
-		{
-			return new Matrix3f();
-		}
+		return new Matrix3f();
 	}
 	
 	/**
