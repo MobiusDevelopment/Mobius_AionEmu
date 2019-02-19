@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1979ExpertExpertofCooking extends QuestHandler
 {
-	
 	private static final int questId = 1979;
 	
 	public _1979ExpertExpertofCooking()
@@ -68,7 +67,7 @@ public class _1979ExpertExpertofCooking extends QuestHandler
 			}
 		}
 		
-		if (qs.getStatus() == QuestStatus.START)
+		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
 			switch (targetId)
 			{
@@ -98,7 +97,7 @@ public class _1979ExpertExpertofCooking extends QuestHandler
 				}
 			}
 		}
-		else if (qs.getStatus() == QuestStatus.REWARD)
+		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
 			if (targetId == 203784)
 			{

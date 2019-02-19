@@ -92,8 +92,11 @@ public class _28649Nerthus_Call extends QuestHandler
 					}
 					case SET_REWARD:
 					{
-						qs.setQuestVar(1);
-						qs.setStatus(QuestStatus.REWARD);
+						if (qs != null)
+						{
+							qs.setQuestVar(1);
+							qs.setStatus(QuestStatus.REWARD);
+						}
 						updateQuestStatus(env);
 						return closeDialogWindow(env);
 					}

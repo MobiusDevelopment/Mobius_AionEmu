@@ -293,7 +293,7 @@ public class MySQL5HousesDAO extends HousesDAO
 					continue;
 				}
 				house = new House(houseId, building, address, 0);
-				if (building.getType() == BuildingType.PERSONAL_FIELD)
+				if ((building != null) && (building.getType() == BuildingType.PERSONAL_FIELD))
 				{
 					addressHouseIds.put(address.getId(), houseId);
 				}

@@ -33,25 +33,28 @@ public class BossAnnounceKillerService
 		final DescriptionId NameId = new DescriptionId(owner.getObjectTemplate().getNameId());
 		if ((npcRank == NpcRank.EXPERT) || (npcRank == NpcRank.VETERAN) || (npcRank == NpcRank.MASTER))
 		{
-			if ((player == null) || !player.isOnline())
+			if (player != null)
 			{
-				PacketSendUtility.sendWhiteMessageOnCenter(player, "Player: [" + player.getName() + "] Race: [" + player.getCommonData().getRace() + "] has killed [" + NameId + "].");
-			}
-			if (!player.isInGroup2())
-			{
-				PacketSendUtility.sendWhiteMessageOnCenter(player, "Player: [" + player.getName() + "] Race: [" + player.getCommonData().getRace() + "] and his group has killed [" + NameId + "].");
-			}
-			if (!player.isInAlliance2())
-			{
-				PacketSendUtility.sendWhiteMessageOnCenter(player, "Player: [" + player.getName() + "] Race: [" + player.getCommonData().getRace() + "] and his alliance has killed [" + NameId + "].");
-			}
-			if (!player.isInLeague())
-			{
-				PacketSendUtility.sendWhiteMessageOnCenter(player, "Player: [" + player.getName() + "] Race: [" + player.getCommonData().getRace() + "] and his league has killed [" + NameId + "].");
-			}
-			else
-			{
-				PacketSendUtility.sendWhiteMessageOnCenter(player, "Player: [" + player.getName() + "] Race: [" + player.getCommonData().getRace() + "] has killed [" + NameId + "].");
+				if (!player.isOnline())
+				{
+					PacketSendUtility.sendWhiteMessageOnCenter(player, "Player: [" + player.getName() + "] Race: [" + player.getCommonData().getRace() + "] has killed [" + NameId + "].");
+				}
+				if (!player.isInGroup2())
+				{
+					PacketSendUtility.sendWhiteMessageOnCenter(player, "Player: [" + player.getName() + "] Race: [" + player.getCommonData().getRace() + "] and his group has killed [" + NameId + "].");
+				}
+				if (!player.isInAlliance2())
+				{
+					PacketSendUtility.sendWhiteMessageOnCenter(player, "Player: [" + player.getName() + "] Race: [" + player.getCommonData().getRace() + "] and his alliance has killed [" + NameId + "].");
+				}
+				if (!player.isInLeague())
+				{
+					PacketSendUtility.sendWhiteMessageOnCenter(player, "Player: [" + player.getName() + "] Race: [" + player.getCommonData().getRace() + "] and his league has killed [" + NameId + "].");
+				}
+				else
+				{
+					PacketSendUtility.sendWhiteMessageOnCenter(player, "Player: [" + player.getName() + "] Race: [" + player.getCommonData().getRace() + "] has killed [" + NameId + "].");
+				}
 			}
 		}
 	}

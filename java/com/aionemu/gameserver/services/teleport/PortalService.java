@@ -352,7 +352,7 @@ public class PortalService
 					{
 						instance = InstanceService.getNextAvailableInstance(mapId);
 					}
-					if (instance.getPlayersInside().size() < playerSize)
+					if ((instance != null) && (instance.getPlayersInside().size() < playerSize))
 					{
 						transfer(player, loc, instance, reenter);
 					}

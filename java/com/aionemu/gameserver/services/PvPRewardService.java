@@ -253,6 +253,7 @@ public class PvPRewardService
 			if (itemTemp == null)
 			{
 				log.warn("[PvP][Reward] Incorrect {Item ID: " + id + "} reward for {PlayerClass: " + pc.toString() + "}");
+				continue;
 			}
 			final int itemLevel = itemTemp.getLevel();
 			if ((itemLevel >= minLevel) && (itemLevel < maxLevel))

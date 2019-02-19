@@ -211,7 +211,7 @@ public class UseableItemObject extends HouseObject<HousingUseableItem>
 			try
 			{
 				PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), getObjectId(), 0, 9));
-				if ((action.getRemoveCount() != null) && (action.getRemoveCount() != 0))
+				if ((action.getRemoveCount() != null) && (action.getRemoveCount() != 0) && (requiredItem != null))
 				{
 					player.getInventory().decreaseByItemId(requiredItem, action.getRemoveCount());
 				}

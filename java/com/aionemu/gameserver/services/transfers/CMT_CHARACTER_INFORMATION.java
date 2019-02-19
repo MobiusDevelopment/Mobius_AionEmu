@@ -534,7 +534,10 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 			}
 		}
 		
-		player.setBindPoint(new BindPointPosition(Integer.parseInt(pos[0]), Float.parseFloat(pos[1]), Float.parseFloat(pos[2]), Float.parseFloat(pos[3]), Byte.parseByte(pos[4])));
+		if (pos != null)
+		{
+			player.setBindPoint(new BindPointPosition(Integer.parseInt(pos[0]), Float.parseFloat(pos[1]), Float.parseFloat(pos[2]), Float.parseFloat(pos[3]), Byte.parseByte(pos[4])));
+		}
 		DAOManager.getDAO(PlayerBindPointDAO.class).store(player);
 		
 		final int uilen = readD(), shortlen = readD();

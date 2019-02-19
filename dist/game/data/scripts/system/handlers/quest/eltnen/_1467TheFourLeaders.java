@@ -79,7 +79,7 @@ public class _1467TheFourLeaders extends QuestHandler
 					}
 					case STEP_TO_1:
 					{
-						if (QuestService.startQuest(env))
+						if ((qs != null) && QuestService.startQuest(env))
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
 							updateQuestStatus(env);
@@ -89,7 +89,7 @@ public class _1467TheFourLeaders extends QuestHandler
 					}
 					case STEP_TO_2:
 					{
-						if (QuestService.startQuest(env))
+						if ((qs != null) && QuestService.startQuest(env))
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 2);
 							updateQuestStatus(env);
@@ -99,7 +99,7 @@ public class _1467TheFourLeaders extends QuestHandler
 					}
 					case STEP_TO_3:
 					{
-						if (QuestService.startQuest(env))
+						if ((qs != null) && QuestService.startQuest(env))
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 3);
 							updateQuestStatus(env);
@@ -109,7 +109,7 @@ public class _1467TheFourLeaders extends QuestHandler
 					}
 					case STEP_TO_4:
 					{
-						if (QuestService.startQuest(env))
+						if ((qs != null) && QuestService.startQuest(env))
 						{
 							qs.setQuestVarById(0, qs.getQuestVarById(0) + 4);
 							updateQuestStatus(env);

@@ -79,7 +79,7 @@ public class _1851Dispatched_Shugo_Craftsmen extends QuestHandler
 				}
 			}
 		}
-		if (qs.getStatus() == QuestStatus.START)
+		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
 			switch (targetId)
 			{
@@ -118,7 +118,7 @@ public class _1851Dispatched_Shugo_Craftsmen extends QuestHandler
 				}
 			}
 		}
-		else if (qs.getStatus() == QuestStatus.REWARD)
+		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
 			if (targetId == 278533)
 			{ // Rentia

@@ -67,7 +67,7 @@ public class _30307SoulSummoning extends QuestHandler
 			}
 		}
 		
-		if (qs.getStatus() == QuestStatus.START)
+		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
 			switch (targetId)
 			{
@@ -91,7 +91,7 @@ public class _30307SoulSummoning extends QuestHandler
 				}
 			}
 		}
-		else if (qs.getStatus() == QuestStatus.REWARD)
+		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
 			if (targetId == 799322)
 			{

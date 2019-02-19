@@ -68,7 +68,7 @@ public class _2973ExpertWeaponsmithsFinalExam extends QuestHandler
 			}
 		}
 		
-		if (qs.getStatus() == QuestStatus.START)
+		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
 			switch (targetId)
 			{
@@ -92,7 +92,7 @@ public class _2973ExpertWeaponsmithsFinalExam extends QuestHandler
 				}
 			}
 		}
-		else if (qs.getStatus() == QuestStatus.REWARD)
+		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
 			if (targetId == 204104)
 			{

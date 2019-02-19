@@ -1309,13 +1309,18 @@ public class ForkJoinPool extends AbstractExecutorService
 					final int s = q.top;
 					boolean submitted = false;
 					try
-					{ // locked version of push
+					{
+						// locked version of push
 						if (((a != null) && (a.length > ((s + 1) - q.base))) || ((a = q.growArray()) != null))
-						{ // must presize
-							final int j = (((a.length - 1) & s) << ASHIFT) + ABASE;
-							U.putOrderedObject(a, j, task);
-							q.top = s + 1;
-							submitted = true;
+						{
+							// must presize
+							if (a != null)
+							{
+								final int j = (((a.length - 1) & s) << ASHIFT) + ABASE;
+								U.putOrderedObject(a, j, task);
+								q.top = s + 1;
+								submitted = true;
+							}
 						}
 					}
 					finally
@@ -1734,8 +1739,12 @@ public class ForkJoinPool extends AbstractExecutorService
 							}
 						}
 					}
-					for (;;)
-					{ // help stealer or descend to its stealer
+					if (v == null)
+					{
+						continue;
+					}
+					for (;;) // help stealer or descend to its stealer
+					{
 						ForkJoinTask[] a;
 						int b;
 						if (subtask.status < 0) // surround probes with

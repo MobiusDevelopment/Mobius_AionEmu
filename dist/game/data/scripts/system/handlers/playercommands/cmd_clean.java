@@ -124,12 +124,15 @@ public class cmd_clean extends PlayerCommand
 		final Item item = bag.getFirstItemByItemId(itemId);
 		if ((item != null) || (itemId == 0))
 		{
-			bag.decreaseByObjectId(item.getObjectId(), 1);
-			PacketSendUtility.sendMessage(player, "Item removed succesfully");
+			if (item != null)
+			{
+				bag.decreaseByObjectId(item.getObjectId(), 1);
+			}
+			PacketSendUtility.sendMessage(player, "Item removed succesfully.");
 		}
 		else
 		{
-			PacketSendUtility.sendMessage(player, "You don't have that item");
+			PacketSendUtility.sendMessage(player, "You don't have that item.");
 		}
 	}
 	

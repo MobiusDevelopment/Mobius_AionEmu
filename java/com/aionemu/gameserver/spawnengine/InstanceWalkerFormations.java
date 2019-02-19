@@ -104,7 +104,7 @@ public class InstanceWalkerFormations
 				// spawn the rest which didn't have the same coordinates
 				for (ClusteredNpc snpc : candidates)
 				{
-					if (npcs.contains(snpc))
+					if ((npcs != null) && npcs.contains(snpc))
 					{
 						continue;
 					}

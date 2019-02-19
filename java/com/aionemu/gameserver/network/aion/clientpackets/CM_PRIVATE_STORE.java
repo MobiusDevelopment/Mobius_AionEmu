@@ -115,7 +115,7 @@ public class CM_PRIVATE_STORE extends AionClientPacket
 				PacketSendUtility.sendMessage(activePlayer, "Invalid item.");
 				cancelStore = true;
 			}
-			else if (!item.isTradeable(activePlayer))
+			else if ((item != null) && !item.isTradeable(activePlayer))
 			{
 				PacketSendUtility.sendPacket(activePlayer, new SM_SYSTEM_MESSAGE(1300344, new DescriptionId(item.getNameId())));
 				cancelStore = true;

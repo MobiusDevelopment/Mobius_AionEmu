@@ -238,14 +238,17 @@ public class BonusService
 		}
 		final List<ItemRaceEntry> finalList = new ArrayList<>();
 		
-		for (ItemRaceEntry allReward : allRewards)
+		if (allRewards != null)
 		{
-			final ItemRaceEntry r = allReward;
-			if (!r.checkRace(player.getCommonData().getRace()))
+			for (ItemRaceEntry allReward : allRewards)
 			{
-				continue;
+				final ItemRaceEntry r = allReward;
+				if (!r.checkRace(player.getCommonData().getRace()))
+				{
+					continue;
+				}
+				finalList.add(r);
 			}
-			finalList.add(r);
 		}
 		
 		if (finalList.isEmpty())

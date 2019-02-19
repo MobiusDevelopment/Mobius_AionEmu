@@ -469,8 +469,14 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO
 				stmt.setInt(1, player.getObjectId());
 				stmt.addBatch();
 			}
-			stmt.executeBatch();
-			con.commit();
+			if (stmt != null)
+			{
+				stmt.executeBatch();
+			}
+			if (con != null)
+			{
+				con.commit();
+			}
 		}
 		catch (Exception e)
 		{

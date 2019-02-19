@@ -154,9 +154,12 @@ public class GatherableController extends VisibleObjectController<Gatherable>
 			}
 		}
 		mats = new RndSelector<>();
-		for (Material mat : materials)
+		if (materials != null)
 		{
-			mats.add(mat, mat.getRate());
+			for (Material mat : materials)
+			{
+				mats.add(mat, mat.getRate());
+			}
 		}
 		synchronized (state)
 		{

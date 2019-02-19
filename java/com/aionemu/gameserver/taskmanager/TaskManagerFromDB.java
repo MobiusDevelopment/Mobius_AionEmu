@@ -105,6 +105,11 @@ public class TaskManagerFromDB
 					log.error(e.getMessage(), e);
 				}
 				
+				if (currentTask == null)
+				{
+					continue;
+				}
+				
 				// Set informations for the task
 				currentTask.setId(task.getId());
 				currentTask.setParam(task.getParams());

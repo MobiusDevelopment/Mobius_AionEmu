@@ -67,7 +67,10 @@ public class _3044Recruiting_Announcement extends QuestHandler
 					{
 						QuestService.startQuest(env);
 						updateQuestStatus(env);
-						qs.setStatus(QuestStatus.REWARD);
+						if (qs != null)
+						{
+							qs.setStatus(QuestStatus.REWARD);
+						}
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
 						return true;
 					}
@@ -78,7 +81,7 @@ public class _3044Recruiting_Announcement extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			if (targetId == 798206)
 			{
@@ -92,7 +95,7 @@ public class _3044Recruiting_Announcement extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (targetId == 798206)
 			{

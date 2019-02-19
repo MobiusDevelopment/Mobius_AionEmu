@@ -73,8 +73,10 @@ final class PlatformDependent0
 				{
 					addressField = null;
 				}
-				final Cleaner cleaner = (Cleaner) cleanerField.get(direct);
-				cleaner.clean();
+				if (cleanerField != null)
+				{
+					((Cleaner) cleanerField.get(direct)).clean();
+				}
 			}
 		}
 		catch (Throwable t)

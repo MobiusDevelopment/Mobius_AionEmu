@@ -105,7 +105,7 @@ public class CM_USE_ITEM extends AionClientPacket
 		{
 			targetHouseObject = player.getHouseRegistry().getObjectByObjId(targetItemId);
 		}
-		if ((item.getItemTemplate().getTemplateId() == 165000001) && targetItem.getItemTemplate().canExtract())
+		if ((item.getItemTemplate().getTemplateId() == 165000001) && ((targetItem != null) && targetItem.getItemTemplate().canExtract()))
 		{
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_COLOR_ERROR);
 			return;
@@ -152,7 +152,7 @@ public class CM_USE_ITEM extends AionClientPacket
 			if ((targetHouseObject != null) && (itemAction instanceof HouseDyeAction))
 			{
 				final HouseDyeAction action = (HouseDyeAction) itemAction;
-				if ((action != null) && action.canAct(player, item, targetHouseObject))
+				if (action.canAct(player, item, targetHouseObject))
 				{
 					actions.add(itemAction);
 				}

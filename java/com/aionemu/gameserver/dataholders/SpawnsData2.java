@@ -957,6 +957,7 @@ public class SpawnsData2
 			try
 			{
 				fin = new FileInputStream(xml);
+				@SuppressWarnings("null")
 				final Unmarshaller unmarshaller = jc.createUnmarshaller();
 				unmarshaller.setSchema(schema);
 				data = (SpawnsData2) unmarshaller.unmarshal(fin);
@@ -1068,6 +1069,7 @@ public class SpawnsData2
 		{
 			xml.getParentFile().mkdir();
 			fos = new FileOutputStream(xml);
+			@SuppressWarnings("null")
 			final Marshaller marshaller = jc.createMarshaller();
 			marshaller.setSchema(schema);
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
