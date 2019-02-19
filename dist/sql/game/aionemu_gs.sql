@@ -1,4 +1,61 @@
 -- ----------------------------
+-- Table structure for players
+-- ----------------------------
+DROP TABLE IF EXISTS `players`;
+CREATE TABLE `players` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `account_id` int(11) NOT NULL,
+  `account_name` varchar(50) NOT NULL,
+  `exp` bigint(20) NOT NULL DEFAULT '0',
+  `recoverexp` bigint(20) NOT NULL DEFAULT '0',
+  `x` float NOT NULL,
+  `y` float NOT NULL,
+  `z` float NOT NULL,
+  `heading` int(11) NOT NULL,
+  `world_id` int(11) NOT NULL,
+  `gender` enum('MALE','FEMALE') NOT NULL,
+  `race` enum('ASMODIANS','ELYOS') NOT NULL,
+  `player_class` enum('WARRIOR','GLADIATOR','TEMPLAR','SCOUT','ASSASSIN','RANGER','MAGE','SORCERER','SPIRIT_MASTER','PRIEST','CLERIC','CHANTER','TECHNIST','GUNSLINGER','AETHERTECH','MUSE','SONGWEAVER') NOT NULL,
+  `creation_date` timestamp NULL DEFAULT NULL,
+  `deletion_date` timestamp NULL DEFAULT NULL,
+  `last_online` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `quest_expands` tinyint(1) NOT NULL DEFAULT '0',
+  `advenced_stigma_slot_size` tinyint(1) NOT NULL DEFAULT '0',
+  `warehouse_size` tinyint(1) NOT NULL DEFAULT '0',
+  `mailbox_letters` tinyint(4) NOT NULL DEFAULT '0',
+  `bind_point` int(11) NOT NULL DEFAULT '0',
+  `title_id` int(3) NOT NULL DEFAULT '-1',
+  `bonus_title_id` int(3) NOT NULL,
+  `online` tinyint(1) NOT NULL DEFAULT '0',
+  `note` text,
+  `npc_expands` tinyint(1) NOT NULL DEFAULT '0',
+  `world_owner` int(11) NOT NULL DEFAULT '0',
+  `dp` int(3) NOT NULL DEFAULT '0',
+  `soul_sickness` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `reposte_energy` bigint(20) NOT NULL DEFAULT '0',
+  `mentor_flag_time` int(11) NOT NULL DEFAULT '0',
+  `last_transfer_time` decimal(20,0) NOT NULL DEFAULT '0',
+  `stamps` int(11) NOT NULL DEFAULT '0',
+  `last_stamp` timestamp NOT NULL DEFAULT '2015-01-01 12:00:00',
+  `rewarded_pass` int(1) NOT NULL DEFAULT '0',
+  `is_archdaeva` tinyint(1) NOT NULL,
+  `creativity_point` int(11) NOT NULL DEFAULT '0',
+  `creativity_step` int(11) NOT NULL DEFAULT '0',
+  `growth_aura` bigint(30) NOT NULL DEFAULT '0',
+  `join_legion_id` int(11) NOT NULL DEFAULT '0',
+  `join_state` enum('NONE','DENIED','ACCEPTED') NOT NULL DEFAULT 'NONE',
+  `golden_points` bigint(30) NOT NULL DEFAULT '0',
+  `luna_consume` int(11) NOT NULL DEFAULT '0',
+  `muni_keys` int(11) NOT NULL DEFAULT '0',
+  `luna_consume_count` int(11) NOT NULL DEFAULT '0',
+  `wardrobe_slot` int(11) NOT NULL DEFAULT '2',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name_unique` (`name`),
+  KEY `account_id` (`account_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
 -- Table structure for abyss_landing
 -- ----------------------------
 DROP TABLE IF EXISTS `abyss_landing`;
@@ -518,63 +575,6 @@ CREATE TABLE `petitions` (
   `time` bigint(11) NOT NULL DEFAULT '0',
   `status` enum('PENDING','IN_PROGRESS','REPLIED') NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Table structure for players
--- ----------------------------
-DROP TABLE IF EXISTS `players`;
-CREATE TABLE `players` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `account_id` int(11) NOT NULL,
-  `account_name` varchar(50) NOT NULL,
-  `exp` bigint(20) NOT NULL DEFAULT '0',
-  `recoverexp` bigint(20) NOT NULL DEFAULT '0',
-  `x` float NOT NULL,
-  `y` float NOT NULL,
-  `z` float NOT NULL,
-  `heading` int(11) NOT NULL,
-  `world_id` int(11) NOT NULL,
-  `gender` enum('MALE','FEMALE') NOT NULL,
-  `race` enum('ASMODIANS','ELYOS') NOT NULL,
-  `player_class` enum('WARRIOR','GLADIATOR','TEMPLAR','SCOUT','ASSASSIN','RANGER','MAGE','SORCERER','SPIRIT_MASTER','PRIEST','CLERIC','CHANTER','TECHNIST','GUNSLINGER','AETHERTECH','MUSE','SONGWEAVER') NOT NULL,
-  `creation_date` timestamp NULL DEFAULT NULL,
-  `deletion_date` timestamp NULL DEFAULT NULL,
-  `last_online` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  `quest_expands` tinyint(1) NOT NULL DEFAULT '0',
-  `advenced_stigma_slot_size` tinyint(1) NOT NULL DEFAULT '0',
-  `warehouse_size` tinyint(1) NOT NULL DEFAULT '0',
-  `mailbox_letters` tinyint(4) NOT NULL DEFAULT '0',
-  `bind_point` int(11) NOT NULL DEFAULT '0',
-  `title_id` int(3) NOT NULL DEFAULT '-1',
-  `bonus_title_id` int(3) NOT NULL,
-  `online` tinyint(1) NOT NULL DEFAULT '0',
-  `note` text,
-  `npc_expands` tinyint(1) NOT NULL DEFAULT '0',
-  `world_owner` int(11) NOT NULL DEFAULT '0',
-  `dp` int(3) NOT NULL DEFAULT '0',
-  `soul_sickness` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `reposte_energy` bigint(20) NOT NULL DEFAULT '0',
-  `mentor_flag_time` int(11) NOT NULL DEFAULT '0',
-  `last_transfer_time` decimal(20,0) NOT NULL DEFAULT '0',
-  `stamps` int(11) NOT NULL DEFAULT '0',
-  `last_stamp` timestamp NOT NULL DEFAULT '2015-01-01 12:00:00',
-  `rewarded_pass` int(1) NOT NULL DEFAULT '0',
-  `is_archdaeva` tinyint(1) NOT NULL,
-  `creativity_point` int(11) NOT NULL DEFAULT '0',
-  `creativity_step` int(11) NOT NULL DEFAULT '0',
-  `growth_aura` bigint(30) NOT NULL DEFAULT '0',
-  `join_legion_id` int(11) NOT NULL DEFAULT '0',
-  `join_state` enum('NONE','DENIED','ACCEPTED') NOT NULL DEFAULT 'NONE',
-  `golden_points` bigint(30) NOT NULL DEFAULT '0',
-  `luna_consume` int(11) NOT NULL DEFAULT '0',
-  `muni_keys` int(11) NOT NULL DEFAULT '0',
-  `luna_consume_count` int(11) NOT NULL DEFAULT '0',
-  `wardrobe_slot` int(11) NOT NULL DEFAULT '2',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name_unique` (`name`),
-  KEY `account_id` (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
