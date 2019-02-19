@@ -56,11 +56,10 @@ public class _15301Two_Steps_Closer extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 805327)
-			{ // Rike.
+			if (targetId == 805327) // Rike.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -81,8 +80,9 @@ public class _15301Two_Steps_Closer extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 805328)
-			{ // Efaion.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 805328) // Efaion.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -141,16 +141,13 @@ public class _15301Two_Steps_Closer extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805327)
-			{ // Rike.
+			if (targetId == 805327) // Rike.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

@@ -46,9 +46,6 @@ public class cmd_divorce extends PlayerCommand
 		final Player partner1 = World.getInstance().findPlayer(Util.convertName(params[0]));
 		final Player partner2 = World.getInstance().findPlayer(Util.convertName(params[1]));
 		
-		final int ap1 = partner1.getAbyssRank().getAp();
-		final int ap2 = partner2.getAbyssRank().getAp();
-		
 		if ((partner1 == null) || (partner2 == null))
 		{
 			PacketSendUtility.sendMessage(admin, "The specified player is not online.");
@@ -68,11 +65,6 @@ public class cmd_divorce extends PlayerCommand
 		
 		WeddingService.getInstance().unDoWedding(partner1, partner2);
 		PacketSendUtility.sendMessage(admin, "\uE022Marriage\uE022 canceled.");
-	}
-	
-	private boolean hasItem(Player player, int itemId)
-	{
-		return player.getInventory().getItemCountByItemId(itemId) > 1000000;
 	}
 	
 	@Override

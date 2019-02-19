@@ -157,12 +157,12 @@ public class _15322Scouting_Enshar extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
-		final int var1 = qs.getQuestVarById(1);
 		if ((qs == null) || (qs.getStatus() != QuestStatus.START))
 		{
 			return false;
 		}
+		final int var = qs.getQuestVarById(0);
+		final int var1 = qs.getQuestVarById(1);
 		if ((var == 1) && (var1 >= 0) && (var1 < 9))
 		{
 			return defaultOnKillEvent(env, DF5_B, var1, var1 + 1, 1);

@@ -56,25 +56,22 @@ public class _14121Splitting_Stones extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203903)
-			{ // Valerius
+			if (targetId == 203903) // Valerius
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 204032)
-			{ // Lakaias
+			if (targetId == 204032) // Lakaias
+			{
+				final int var = qs.getQuestVarById(0);
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -105,8 +102,8 @@ public class _14121Splitting_Stones extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204032)
-			{ // Lakaias
+			if (targetId == 204032) // Lakaias
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

@@ -52,7 +52,6 @@ public class _14152_Spoiler_Alert extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		int targetId = env.getTargetId();
 		if (env.getVisibleObject() instanceof Npc)
 		{
@@ -60,8 +59,8 @@ public class _14152_Spoiler_Alert extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204504)
-			{ // Sofne.
+			if (targetId == 204504) // Sofne.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -75,7 +74,10 @@ public class _14152_Spoiler_Alert extends QuestHandler
 					case REFUSE_QUEST:
 					{
 						QuestService.startQuest(env);
-						qs.setQuestVarById(5, 1);
+						if (qs != null)
+						{
+							qs.setQuestVarById(5, 1);
+						}
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 1003);
 					}
@@ -88,8 +90,8 @@ public class _14152_Spoiler_Alert extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 204574)
-			{ // Finn.
+			if (targetId == 204574) // Finn.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -105,8 +107,8 @@ public class _14152_Spoiler_Alert extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 203705)
-			{ // Jumentis.
+			else if (targetId == 203705) // Jumentis.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -126,16 +128,13 @@ public class _14152_Spoiler_Alert extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204504)
-			{ // Sofne.
-				if ((env.getDialog() == QuestDialog.USE_OBJECT) && (var == 1))
+			if (targetId == 204504) // Sofne.
+			{
+				if ((env.getDialog() == QuestDialog.USE_OBJECT) && (qs.getQuestVarById(0) == 1))
 				{
 					return sendQuestDialog(env, 2375);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

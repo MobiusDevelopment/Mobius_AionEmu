@@ -16,11 +16,9 @@
  */
 package com.aionemu.gameserver.services.base;
 
-import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.ai2.AbstractAI;
 import com.aionemu.gameserver.ai2.eventcallback.OnDieEventCallback;
 import com.aionemu.gameserver.configs.main.CustomConfig;
-import com.aionemu.gameserver.dao.BaseDAO;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.AionObject;
 import com.aionemu.gameserver.model.gameobjects.Creature;
@@ -35,7 +33,6 @@ import com.aionemu.gameserver.services.HTMLService;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler
@@ -111,38 +108,34 @@ public class BaseBossDeathListener extends OnDieEventCallback
 	public void announceCapture(TemporaryPlayerTeam team, Creature kill)
 	{
 		final String baseName = base.getBaseLocation().getName();
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if ((team != null) && (kill == null))
 			{
-				if ((team != null) && (kill == null))
+				// %0 succeeded in conquering %1.
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301039, team.getRace().getRaceDescriptionId(), baseName));
+			}
+			else
+			{
+				// %0 succeeded in conquering %1.
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301039, kill.getRace().getRaceDescriptionId(), baseName));
+			}
+			// Abyss Landing 4.9.1
+			switch (player.getWorldId())
+			{
+				case 400010000: // Reshanta.
 				{
-					// %0 succeeded in conquering %1.
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301039, team.getRace().getRaceDescriptionId(), baseName));
-				}
-				else
-				{
-					// %0 succeeded in conquering %1.
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301039, kill.getRace().getRaceDescriptionId(), baseName));
-				}
-				// Abyss Landing 4.9.1
-				switch (player.getWorldId())
-				{
-					case 400010000: // Reshanta.
+					if ((team != null) && (kill == null))
 					{
-						if ((team != null) && (kill == null))
-						{
-							// %0 has occupied %1 Base and the Landing is now enhanced.
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403186, team.getRace().getRaceDescriptionId(), baseName));
-						}
-						else
-						{
-							// %0 has occupied %1 Base and the Landing is now enhanced.
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403186, kill.getRace().getRaceDescriptionId(), baseName));
-						}
-						break;
+						// %0 has occupied %1 Base and the Landing is now enhanced.
+						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403186, team.getRace().getRaceDescriptionId(), baseName));
 					}
+					else if (kill != null)
+					{
+						// %0 has occupied %1 Base and the Landing is now enhanced.
+						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403186, kill.getRace().getRaceDescriptionId(), baseName));
+					}
+					break;
 				}
 			}
 		});
@@ -150,23 +143,19 @@ public class BaseBossDeathListener extends OnDieEventCallback
 	
 	public void applyBaseBuff()
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.getCommonData().getRace() == Race.ELYOS)
 			{
-				if (player.getCommonData().getRace() == Race.ELYOS)
-				{
-					SkillEngine.getInstance().applyEffectDirectly(12115, player, player, 0); // Kaisinel's Bane.
-					// The power of Kaisinel's Protection surrounds you.
-					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_WEAK_RACE_BUFF_LIGHT_GAIN, 10000);
-				}
-				else if (player.getCommonData().getRace() == Race.ASMODIANS)
-				{
-					SkillEngine.getInstance().applyEffectDirectly(12117, player, player, 0); // Marchutan's Bane.
-					// The power of Marchutan's Protection surrounds you.
-					PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_WEAK_RACE_BUFF_DARK_GAIN, 10000);
-				}
+				SkillEngine.getInstance().applyEffectDirectly(12115, player, player, 0); // Kaisinel's Bane.
+				// The power of Kaisinel's Protection surrounds you.
+				PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_WEAK_RACE_BUFF_LIGHT_GAIN, 10000);
+			}
+			else if (player.getCommonData().getRace() == Race.ASMODIANS)
+			{
+				SkillEngine.getInstance().applyEffectDirectly(12117, player, player, 0); // Marchutan's Bane.
+				// The power of Marchutan's Protection surrounds you.
+				PacketSendUtility.playerSendPacketTime(player, SM_SYSTEM_MESSAGE.STR_MSG_WEAK_RACE_BUFF_DARK_GAIN, 10000);
 			}
 		});
 	}
@@ -210,10 +199,5 @@ public class BaseBossDeathListener extends OnDieEventCallback
 		{
 			AbyssLandingService.getInstance().updateRedemptionLanding(6000, LandingPointsEnum.BASE, true);
 		}
-	}
-	
-	private BaseDAO getDAO()
-	{
-		return DAOManager.getDAO(BaseDAO.class);
 	}
 }

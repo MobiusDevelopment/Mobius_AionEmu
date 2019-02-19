@@ -51,8 +51,6 @@ public class _4718Pressing_The_Attack extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final QuestDialog dialog = env.getDialog();
 		final int targetId = env.getTargetId();
-		final int var1 = qs.getQuestVarById(1);
-		final int var2 = qs.getQuestVarById(2);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
 			if (targetId == 278001)
@@ -61,10 +59,7 @@ public class _4718Pressing_The_Attack extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -73,6 +68,8 @@ public class _4718Pressing_The_Attack extends QuestHandler
 			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
+					final int var1 = qs.getQuestVarById(1);
+					final int var2 = qs.getQuestVarById(2);
 					if (qs.getQuestVarById(0) == 0)
 					{
 						return sendQuestDialog(env, 1011);

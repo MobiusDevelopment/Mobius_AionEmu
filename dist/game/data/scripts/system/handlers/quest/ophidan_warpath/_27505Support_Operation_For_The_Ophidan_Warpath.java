@@ -62,12 +62,12 @@ public class _27505Support_Operation_For_The_Ophidan_Warpath extends QuestHandle
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
+		final int var = qs == null ? 0 : qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806268)
-			{ // 바우프라.
+			if (targetId == 806268) // 바우프라.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -88,8 +88,8 @@ public class _27505Support_Operation_For_The_Ophidan_Warpath extends QuestHandle
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806271)
-			{ // 토고링.
+			if (targetId == 806271) // 토고링.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -113,8 +113,8 @@ public class _27505Support_Operation_For_The_Ophidan_Warpath extends QuestHandle
 					}
 				}
 			}
-			else if (targetId == 806269)
-			{ // 간게르.
+			else if (targetId == 806269) // 간게르.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -141,16 +141,13 @@ public class _27505Support_Operation_For_The_Ophidan_Warpath extends QuestHandle
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806268)
-			{ // 바우프라.
+			if (targetId == 806268) // 바우프라.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

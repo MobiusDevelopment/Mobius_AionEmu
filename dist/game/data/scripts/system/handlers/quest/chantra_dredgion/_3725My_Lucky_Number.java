@@ -52,28 +52,25 @@ public class _3725My_Lucky_Number extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final QuestDialog dialog = env.getDialog();
 		final int targetId = env.getTargetId();
-		final int var1 = qs.getQuestVarById(1);
-		final int var2 = qs.getQuestVarById(2);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 799069)
-			{ // Yannis.
+			if (targetId == 799069) // Yannis.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 798928)
-			{ // Yulia.
+			if (targetId == 798928) // Yulia.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
+					final int var1 = qs.getQuestVarById(1);
+					final int var2 = qs.getQuestVarById(2);
 					if ((var1 == 6) && (var2 == 15))
 					{
 						return sendQuestDialog(env, 10002);
@@ -102,8 +99,8 @@ public class _3725My_Lucky_Number extends QuestHandler
 	{
 		final int[] mobs =
 		{
-			216866
-		}; // Chantra Legatus.
+			216866 // Chantra Legatus.
+		};
 		return defaultOnKillEvent(env, mobs, 0, 15, 2);
 	}
 	

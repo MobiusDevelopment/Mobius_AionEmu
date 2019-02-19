@@ -104,20 +104,15 @@ public class _1640TeleporterRepairs extends QuestHandler
 			{
 				final int targetObjectId = env.getVisibleObject().getObjectId();
 				PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.SIT, 0, targetObjectId), true);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					
-					@Override
-					public void run()
+					if (!player.isTargeting(targetObjectId))
 					{
-						if (!player.isTargeting(targetObjectId))
-						{
-							return;
-						}
-						
-						qs.setStatus(QuestStatus.REWARD);
-						updateQuestStatus(env);
+						return;
 					}
+					
+					qs.setStatus(QuestStatus.REWARD);
+					updateQuestStatus(env);
 				}, 3000);
 			}
 		}
@@ -127,7 +122,7 @@ public class _1640TeleporterRepairs extends QuestHandler
 			{
 				removeQuestItem(env, 182201790, 1);
 				
-				if ((qs == null) || (qs.getStatus() != QuestStatus.REWARD))
+				if (qs.getStatus() != QuestStatus.REWARD)
 				{
 					return false;
 				}
@@ -146,15 +141,7 @@ public class _1640TeleporterRepairs extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.COMPLETE)
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				
-				@Override
-				public void run()
-				{
-					TeleportService2.teleportTo(player, WorldMapType.HEIRON.getId(), 187.71689f, 2712.14870f, 141.91672f, (byte) 195);
-				}
-			}, 1000);
+			ThreadPoolManager.getInstance().schedule(() -> TeleportService2.teleportTo(player, WorldMapType.HEIRON.getId(), 187.71689f, 2712.14870f, 141.91672f, (byte) 195), 1000);
 		}
 		return false;
 	}

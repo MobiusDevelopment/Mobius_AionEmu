@@ -65,22 +65,19 @@ public class _25326Controlling_Chaos extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 805331)
-			{ // Mashinee.
+			if (targetId == 805331) // Mashinee.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805331)
-			{ // Mashinee.
+			if (targetId == 805331) // Mashinee.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -103,12 +100,12 @@ public class _25326Controlling_Chaos extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
-		final int var1 = qs.getQuestVarById(1);
 		if ((qs == null) || (qs.getStatus() != QuestStatus.START))
 		{
 			return false;
 		}
+		final int var = qs.getQuestVarById(0);
+		final int var1 = qs.getQuestVarById(1);
 		if ((var == 0) && (var1 >= 0) && (var1 < 9))
 		{
 			return defaultOnKillEvent(env, Cygnea, var1, var1 + 1, 1);

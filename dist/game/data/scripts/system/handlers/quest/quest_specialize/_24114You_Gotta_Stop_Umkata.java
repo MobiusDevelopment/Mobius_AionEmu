@@ -69,25 +69,22 @@ public class _24114You_Gotta_Stop_Umkata extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203649)
-			{ // Gulkalla
+			if (targetId == 203649) // Gulkalla
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 203649)
-			{ // Gulkalla
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 203649) // Gulkalla
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -159,11 +156,11 @@ public class _24114You_Gotta_Stop_Umkata extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() != QuestStatus.START))
 		{
 			return false;
 		}
+		final int var = qs.getQuestVarById(0);
 		if ((var >= 0) && (var < 3))
 		{
 			return defaultOnKillEvent(env, heroSpirit, var, var + 1);

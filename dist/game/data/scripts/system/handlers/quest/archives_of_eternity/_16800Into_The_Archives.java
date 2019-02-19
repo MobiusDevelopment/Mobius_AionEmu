@@ -59,12 +59,11 @@ public class _16800Into_The_Archives extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -93,8 +92,9 @@ public class _16800Into_The_Archives extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806232)
-			{ // Etezar.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 806232) // Etezar.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -121,16 +121,13 @@ public class _16800Into_The_Archives extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806148)
-			{ // Weatha.
+			if (targetId == 806148) // Weatha.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

@@ -60,25 +60,22 @@ public class _14114Revolution_Intervention extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203098)
-			{ // Spatalos
+			if (targetId == 203098) // Spatalos
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 203183)
-			{ // Khidia
+			if (targetId == 203183) // Khidia
+			{
+				final int var = qs.getQuestVarById(0);
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -133,7 +130,7 @@ public class _14114Revolution_Intervention extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (targetId == 203098)
 			{
@@ -141,10 +138,7 @@ public class _14114Revolution_Intervention extends QuestHandler
 				{
 					return sendQuestDialog(env, 2375);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

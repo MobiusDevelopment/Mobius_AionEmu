@@ -61,8 +61,8 @@ public class _24155Leather_Wing_And_Shiny_Things extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204701)
-			{ // Hod
+			if (targetId == 204701) // Hod
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -76,7 +76,10 @@ public class _24155Leather_Wing_And_Shiny_Things extends QuestHandler
 					case ACCEPT_QUEST:
 					{
 						QuestService.startQuest(env);
-						qs.setQuestVarById(5, 1);
+						if (qs != null)
+						{
+							qs.setQuestVarById(5, 1);
+						}
 						updateQuestStatus(env);
 						return closeDialogWindow(env);
 					}
@@ -91,8 +94,8 @@ public class _24155Leather_Wing_And_Shiny_Things extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204785:
-				{ // Gwendolin
+				case 204785: // Gwendolin
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -107,8 +110,8 @@ public class _24155Leather_Wing_And_Shiny_Things extends QuestHandler
 						}
 					}
 				}
-				case 204701:
-				{ // Hod
+				case 204701: // Hod
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -128,16 +131,13 @@ public class _24155Leather_Wing_And_Shiny_Things extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204701)
-			{ // Hod
+			if (targetId == 204701) // Hod
+			{
 				if (env.getDialog() == QuestDialog.SELECT_REWARD)
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;
@@ -148,11 +148,11 @@ public class _24155Leather_Wing_And_Shiny_Things extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() != QuestStatus.START))
 		{
 			return false;
 		}
+		final int var = qs.getQuestVarById(0);
 		if (var < 3)
 		{
 			return defaultOnKillEvent(env, 700290, var, var + 1);

@@ -67,12 +67,11 @@ public class _15601Harthen_Ghost extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806158)
-			{ // Luabo.
+			if (targetId == 806158) // Luabo.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -93,8 +92,9 @@ public class _15601Harthen_Ghost extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806193)
-			{ // Harden Ghost.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 806193) // Harden Ghost.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -120,8 +120,8 @@ public class _15601Harthen_Ghost extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703135)
-			{ // 낡은 해적의 상자.
+			if (targetId == 703135) // 낡은 해적의 상자.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -139,8 +139,8 @@ public class _15601Harthen_Ghost extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806158)
-			{ // Luabo.
+			if (targetId == 806158) // Luabo.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -171,8 +171,8 @@ public class _15601Harthen_Ghost extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 241150:
-					{ // 바르테온.
+					case 241150: // 바르테온.
+					{
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 						return true;

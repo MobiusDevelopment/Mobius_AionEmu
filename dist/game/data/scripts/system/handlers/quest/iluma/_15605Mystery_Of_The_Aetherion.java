@@ -67,12 +67,11 @@ public class _15605Mystery_Of_The_Aetherion extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806162)
-			{ // Polonius.
+			if (targetId == 806162) // Polonius.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -93,8 +92,9 @@ public class _15605Mystery_Of_The_Aetherion extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806162)
-			{ // Polonius.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 806162) // Polonius.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -124,15 +124,12 @@ public class _15605Mystery_Of_The_Aetherion extends QuestHandler
 							changeQuestStep(env, 0, 1, false);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}
-			if (targetId == 703137)
-			{ // 희미한 고대의 유적.
+			if (targetId == 703137) // 희미한 고대의 유적.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -144,8 +141,8 @@ public class _15605Mystery_Of_The_Aetherion extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703138)
-			{ // 빛나는 고대의 유적.
+			if (targetId == 703138) // 빛나는 고대의 유적.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -160,8 +157,8 @@ public class _15605Mystery_Of_The_Aetherion extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806162)
-			{ // Polonius.
+			if (targetId == 806162) // Polonius.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -192,8 +189,8 @@ public class _15605Mystery_Of_The_Aetherion extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 241162:
-					{ // 라이노드.
+					case 241162: // 라이노드.
+					{
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 						return true;

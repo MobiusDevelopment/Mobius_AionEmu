@@ -56,7 +56,6 @@ public class _25302A_Tenacious_Spirit extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
 			if (targetId == 805339)
@@ -83,6 +82,7 @@ public class _25302A_Tenacious_Spirit extends QuestHandler
 		{
 			if (targetId == 805341)
 			{
+				final int var = qs.getQuestVarById(0);
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -145,10 +145,7 @@ public class _25302A_Tenacious_Spirit extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

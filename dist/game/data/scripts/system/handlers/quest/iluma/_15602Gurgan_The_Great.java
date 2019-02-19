@@ -67,12 +67,11 @@ public class _15602Gurgan_The_Great extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806159)
-			{ // Alexandria.
+			if (targetId == 806159) // Alexandria.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -93,8 +92,9 @@ public class _15602Gurgan_The_Great extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806194)
-			{ // Frogboy.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 806194) // Frogboy.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -120,15 +120,12 @@ public class _15602Gurgan_The_Great extends QuestHandler
 							changeQuestStep(env, 3, 4, true);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}
-			if (targetId == 703136)
-			{ // 셀라투의 공물 항아리.
+			if (targetId == 703136) // 셀라투의 공물 항아리.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -143,8 +140,8 @@ public class _15602Gurgan_The_Great extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806159)
-			{ // Alexandria.
+			if (targetId == 806159) // Alexandria.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -175,8 +172,8 @@ public class _15602Gurgan_The_Great extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 241153:
-					{ // 구르칸.
+					case 241153: // 구르칸.
+					{
 						qs.setQuestVar(3);
 						updateQuestStatus(env);
 						return true;

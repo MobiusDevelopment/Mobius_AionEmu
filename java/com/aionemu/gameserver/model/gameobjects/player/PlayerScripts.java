@@ -54,6 +54,7 @@ public class PlayerScripts
 		return Collections.unmodifiableMap(scripts);
 	}
 	
+	@SuppressWarnings("null")
 	public boolean addScript(int position, String scriptXML)
 	{
 		final PlayerScript script = scripts.get(position);
@@ -66,6 +67,7 @@ public class PlayerScripts
 		{
 			script.setData(new byte[0], 0);
 		}
+		
 		try
 		{
 			byte[] bytes = CompressUtil.Compress(scriptXML);
@@ -82,6 +84,7 @@ public class PlayerScripts
 			logger.error("Script compression failed: " + ex);
 			return false;
 		}
+		
 		return script == null;
 	}
 	

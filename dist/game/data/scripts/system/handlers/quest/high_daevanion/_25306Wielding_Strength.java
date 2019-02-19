@@ -116,7 +116,6 @@ public class _25306Wielding_Strength extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
 			if (targetId == 805339)
@@ -143,6 +142,7 @@ public class _25306Wielding_Strength extends QuestHandler
 		{
 			if (targetId == 805340)
 			{
+				final int var = qs.getQuestVarById(0);
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -209,8 +209,8 @@ public class _25306Wielding_Strength extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 702829)
-			{ // Sealed Book.
+			else if (targetId == 702829) // Sealed Book.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -219,8 +219,8 @@ public class _25306Wielding_Strength extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 702862)
-			{ // Cursed Book.
+			else if (targetId == 702862) // Cursed Book.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -238,10 +238,7 @@ public class _25306Wielding_Strength extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

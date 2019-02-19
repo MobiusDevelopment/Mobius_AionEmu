@@ -73,8 +73,8 @@ public class _24153The_Efficacy_Of_Fire extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204787)
-			{ // Chieftain Akagitan
+			if (targetId == 204787) // Chieftain Akagitan
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -88,7 +88,10 @@ public class _24153The_Efficacy_Of_Fire extends QuestHandler
 					case ACCEPT_QUEST:
 					{
 						QuestService.startQuest(env);
-						qs.setQuestVarById(5, 1);
+						if (qs != null)
+						{
+							qs.setQuestVarById(5, 1);
+						}
 						updateQuestStatus(env);
 						return closeDialogWindow(env);
 					}
@@ -103,8 +106,8 @@ public class _24153The_Efficacy_Of_Fire extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204784:
-				{ // Delris
+				case 204784: // Delris
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -120,8 +123,8 @@ public class _24153The_Efficacy_Of_Fire extends QuestHandler
 						}
 					}
 				}
-				case 204787:
-				{ // Chieftain Akagitan
+				case 204787: // Chieftain Akagitan
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -140,16 +143,13 @@ public class _24153The_Efficacy_Of_Fire extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204787)
-			{ // Chieftain Akagitan
+			if (targetId == 204787) // Chieftain Akagitan
+			{
 				if (env.getDialog() == QuestDialog.SELECT_REWARD)
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;
@@ -161,37 +161,37 @@ public class _24153The_Efficacy_Of_Fire extends QuestHandler
 		final int targetId = env.getTargetId();
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if ((qs == null) || (qs.getStatus() != QuestStatus.START))
+		{
+			return false;
+		}
 		final int var = qs.getQuestVarById(0);
 		final int var1 = qs.getQuestVarById(1);
 		final int var2 = qs.getQuestVarById(2);
 		final int var3 = qs.getQuestVarById(3);
 		final int var4 = qs.getQuestVarById(4);
-		if ((qs == null) || (qs.getStatus() != QuestStatus.START))
+		if ((targetId == 213730) && (var == 0) && (var < 1)) // Glaciont The Hardy
 		{
-			return false;
-		}
-		if ((targetId == 213730) && (var == 0) && (var < 1))
-		{ // Glaciont The Hardy
 			qs.setQuestVarById(0, 1);
 			updateQuestStatus(env);
 		}
-		else if ((targetId == 213788) && (var1 == 0) && (var1 < 1))
-		{ // Frostfist
+		else if ((targetId == 213788) && (var1 == 0) && (var1 < 1)) // Frostfist
+		{
 			qs.setQuestVarById(1, 1);
 			updateQuestStatus(env);
 		}
-		else if ((targetId == 213789) && (var2 == 0) && (var2 < 1))
-		{ // Iceback
+		else if ((targetId == 213789) && (var2 == 0) && (var2 < 1)) // Iceback
+		{
 			qs.setQuestVarById(2, 1);
 			updateQuestStatus(env);
 		}
-		else if ((targetId == 213790) && (var3 == 0) && (var3 < 1))
-		{ // Chillblow
+		else if ((targetId == 213790) && (var3 == 0) && (var3 < 1)) // Chillblow
+		{
 			qs.setQuestVarById(3, 1);
 			updateQuestStatus(env);
 		}
-		else if ((targetId == 213791) && (var4 == 0) && (var4 < 1))
-		{ // Snowfury
+		else if ((targetId == 213791) && (var4 == 0) && (var4 < 1)) // Snowfury
+		{
 			qs.setQuestVarById(4, 1);
 			updateQuestStatus(env);
 		}

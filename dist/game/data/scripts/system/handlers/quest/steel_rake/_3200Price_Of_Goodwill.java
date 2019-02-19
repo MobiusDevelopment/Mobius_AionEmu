@@ -81,24 +81,21 @@ public class _3200Price_Of_Goodwill extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204658)
-			{ // Roikinerk.
+			if (targetId == 204658) // Roikinerk.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 			return false;
 		}
 		final int var = qs.getQuestVarById(0);
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805832)
-			{ // Treminerk.
+			if (targetId == 805832) // Treminerk.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);
@@ -116,8 +113,8 @@ public class _3200Price_Of_Goodwill extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 204658)
-			{// Roikinerk.
+			if (targetId == 204658) // Roikinerk.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -139,8 +136,8 @@ public class _3200Price_Of_Goodwill extends QuestHandler
 					}
 				}
 			}
-			else if ((targetId == 798332) && (var == 1))
-			{ // Haorunerk.
+			else if ((targetId == 798332) && (var == 1)) // Haorunerk.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -161,8 +158,8 @@ public class _3200Price_Of_Goodwill extends QuestHandler
 					}
 				}
 			}
-			else if ((targetId == 700522) && (var == 2))
-			{ // Haorunerk's Bag.
+			else if ((targetId == 700522) && (var == 2)) // Haorunerk's Bag.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -174,8 +171,8 @@ public class _3200Price_Of_Goodwill extends QuestHandler
 					}
 				}
 			}
-			else if ((targetId == 278651) && (var == 3))
-			{ // Aurunerk.
+			else if ((targetId == 278651) && (var == 3)) // Aurunerk.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -200,7 +197,7 @@ public class _3200Price_Of_Goodwill extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if ((qs != null) || (qs.getQuestVarById(0) != 2))
+		if ((qs != null) && (qs.getQuestVarById(0) != 2))
 		{
 			TeleportService2.teleportTo(player, 400010000, 2887.3613f, 994.43134f, 1527.9968f, (byte) 103);
 			qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);

@@ -51,26 +51,23 @@ public class _14201Weapon_Of_Past_Destruction extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final QuestDialog dialog = env.getDialog();
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798155)
-			{ // Atropos.
+			if (targetId == 798155) // Atropos.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 800407)
-			{ // Hongras.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 800407) // Hongras.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -88,8 +85,8 @@ public class _14201Weapon_Of_Past_Destruction extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 798212)
-			{ // Serimnir.
+			else if (targetId == 798212) // Serimnir.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -107,8 +104,8 @@ public class _14201Weapon_Of_Past_Destruction extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 798155)
-			{ // Atropos.
+			else if (targetId == 798155) // Atropos.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -125,18 +122,15 @@ public class _14201Weapon_Of_Past_Destruction extends QuestHandler
 							changeQuestStep(env, 2, 2, true);
 							return sendQuestDialog(env, 5);
 						}
-						else
-						{
-							return closeDialogWindow(env);
-						}
+						return closeDialogWindow(env);
 					}
 				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798155)
-			{ // Atropos.
+			if (targetId == 798155) // Atropos.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

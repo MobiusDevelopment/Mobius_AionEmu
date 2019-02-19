@@ -100,16 +100,13 @@ public class _15325Courageous_Spirit extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805331)
-			{ // Machina.
+			if (targetId == 805331) // Machina.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -132,12 +129,12 @@ public class _15325Courageous_Spirit extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
-		final int var1 = qs.getQuestVarById(1);
 		if ((qs == null) || (qs.getStatus() != QuestStatus.START))
 		{
 			return false;
 		}
+		final int var = qs.getQuestVarById(0);
+		final int var1 = qs.getQuestVarById(1);
 		if ((var == 0) && (var1 >= 0) && (var1 < 29))
 		{
 			return defaultOnKillEvent(env, LF4C5DrakanFi, var1, var1 + 1, 1);

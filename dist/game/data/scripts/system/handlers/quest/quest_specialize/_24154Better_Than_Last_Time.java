@@ -72,11 +72,10 @@ public class _24154Better_Than_Last_Time extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204774)
-			{ // Tristran
+			if (targetId == 204774) // Tristran
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -103,8 +102,8 @@ public class _24154Better_Than_Last_Time extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204809:
-				{ // Stua
+				case 204809: // Stua
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -122,9 +121,9 @@ public class _24154Better_Than_Last_Time extends QuestHandler
 						}
 					}
 				}
-				case 700359:
-				{ // Secret Port Entrance
-					if ((env.getDialog() == QuestDialog.USE_OBJECT) && (var == 2))
+				case 700359: // Secret Port Entrance
+				{
+					if ((env.getDialog() == QuestDialog.USE_OBJECT) && (qs.getQuestVarById(0) == 2))
 					{
 						return playQuestMovie(env, 250);
 					}
@@ -133,16 +132,13 @@ public class _24154Better_Than_Last_Time extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204774)
-			{ // Tristran
+			if (targetId == 204774) // Tristran
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

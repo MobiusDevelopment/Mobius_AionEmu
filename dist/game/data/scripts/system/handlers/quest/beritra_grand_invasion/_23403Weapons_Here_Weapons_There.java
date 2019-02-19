@@ -65,11 +65,10 @@ public class _23403Weapons_Here_Weapons_There extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203557)
-			{ // Suthran.
+			if (targetId == 203557) // Suthran.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -90,8 +89,9 @@ public class _23403Weapons_Here_Weapons_There extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 203559)
-			{ // Meiyer.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 203559) // Meiyer.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -123,8 +123,8 @@ public class _23403Weapons_Here_Weapons_There extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 203628)
-			{ // Kueve.
+			if (targetId == 203628) // Kueve.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -157,8 +157,8 @@ public class _23403Weapons_Here_Weapons_There extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 804605)
-			{ // Shezen.
+			if (targetId == 804605) // Shezen.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -183,8 +183,8 @@ public class _23403Weapons_Here_Weapons_There extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731645)
-			{ // Ruined Invasion Generator.
+			if (targetId == 731645) // Ruined Invasion Generator.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -202,8 +202,8 @@ public class _23403Weapons_Here_Weapons_There extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731646)
-			{ // Malfunctioning Invasion Generator.
+			if (targetId == 731646) // Malfunctioning Invasion Generator.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -224,16 +224,13 @@ public class _23403Weapons_Here_Weapons_There extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203560)
-			{ // Morn.
+			if (targetId == 203560) // Morn.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

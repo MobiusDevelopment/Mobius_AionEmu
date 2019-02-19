@@ -59,12 +59,11 @@ public class _26800A_Call_For_Champions extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806079)
-			{ // Feregan.
+			if (targetId == 806079) // Feregan.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -93,8 +92,9 @@ public class _26800A_Call_For_Champions extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806233)
-			{ // Enfitenta.
+			if (targetId == 806233) // Enfitenta.
+			{
+				final int var = qs.getQuestVarById(0);
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -121,16 +121,13 @@ public class _26800A_Call_For_Champions extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806149)
-			{ // Feregan.
+			if (targetId == 806149) // Feregan.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

@@ -185,8 +185,8 @@ public class _15321Supporting_Kaisinel_Wings extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 805332)
-			{ // Nephoria.
+			if (targetId == 805332) // Nephoria.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -204,8 +204,8 @@ public class _15321Supporting_Kaisinel_Wings extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 805333)
-			{ // Prestelle.
+			else if (targetId == 805333) // Prestelle.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -223,8 +223,8 @@ public class _15321Supporting_Kaisinel_Wings extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 805334)
-			{ // Somation.
+			else if (targetId == 805334) // Somation.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -242,8 +242,8 @@ public class _15321Supporting_Kaisinel_Wings extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 805335)
-			{ // Spintel.
+			else if (targetId == 805335) // Spintel.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -261,8 +261,8 @@ public class _15321Supporting_Kaisinel_Wings extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 805336)
-			{ // Asteness.
+			else if (targetId == 805336) // Asteness.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -280,8 +280,8 @@ public class _15321Supporting_Kaisinel_Wings extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 805337)
-			{ // Tallesleon.
+			else if (targetId == 805337) // Tallesleon.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -302,8 +302,8 @@ public class _15321Supporting_Kaisinel_Wings extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805330)
-			{ // Potencia.
+			if (targetId == 805330) // Potencia.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -326,12 +326,12 @@ public class _15321Supporting_Kaisinel_Wings extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
-		final int var1 = qs.getQuestVarById(1);
 		if ((qs == null) || (qs.getStatus() != QuestStatus.START))
 		{
 			return false;
 		}
+		final int var = qs.getQuestVarById(0);
+		final int var1 = qs.getQuestVarById(1);
 		if ((var == 1) && (var1 >= 0) && (var1 < 29))
 		{
 			return defaultOnKillEvent(env, LF5_P1, var1, var1 + 1, 1);

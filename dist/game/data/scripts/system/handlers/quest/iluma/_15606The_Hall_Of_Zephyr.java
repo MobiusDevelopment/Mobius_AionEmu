@@ -60,12 +60,11 @@ public class _15606The_Hall_Of_Zephyr extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806163)
-			{ // Thaleia.
+			if (targetId == 806163) // Thaleia.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -86,8 +85,9 @@ public class _15606The_Hall_Of_Zephyr extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806163)
-			{ // Thaleia.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 806163) // Thaleia.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -114,15 +114,12 @@ public class _15606The_Hall_Of_Zephyr extends QuestHandler
 							changeQuestStep(env, 4, 5, true);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}
-			if (targetId == 703147)
-			{ // 고대 서풍의 데바 보관함.
+			if (targetId == 703147) // 고대 서풍의 데바 보관함.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -139,8 +136,8 @@ public class _15606The_Hall_Of_Zephyr extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806163)
-			{ // Thaleia.
+			if (targetId == 806163) // Thaleia.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

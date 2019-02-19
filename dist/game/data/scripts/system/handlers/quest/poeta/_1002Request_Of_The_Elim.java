@@ -233,14 +233,10 @@ public class _1002Request_Of_The_Elim extends QuestHandler
 								player.unsetState(CreatureState.ACTIVE);
 								player.setFlightTeleportId(1001);
 								PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 1001, 0));
-								ThreadPoolManager.getInstance().schedule(new Runnable()
+								ThreadPoolManager.getInstance().schedule(() ->
 								{
-									@Override
-									public void run()
-									{
-										changeQuestStep(env, 20, 14, false);
-										TeleportService2.teleportTo(player, 210010000, 1, 603, 1537, 116, (byte) 20);
-									}
+									changeQuestStep(env, 20, 14, false);
+									TeleportService2.teleportTo(player, 210010000, 1, 603, 1537, 116, (byte) 20);
 								}, 43000);
 								return true;
 							}
@@ -257,10 +253,7 @@ public class _1002Request_Of_The_Elim extends QuestHandler
 				{
 					return sendQuestDialog(env, 2716);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;
@@ -278,13 +271,10 @@ public class _1002Request_Of_The_Elim extends QuestHandler
 				PacketSendUtility.sendPacket(player, new SM_ASCENSION_MORPH(1));
 				return true;
 			}
-			else
+			final int var = qs.getQuestVarById(0);
+			if (var == 20)
 			{
-				final int var = qs.getQuestVarById(0);
-				if (var == 20)
-				{
-					changeQuestStep(env, 20, 13, false);
-				}
+				changeQuestStep(env, 20, 13, false);
 			}
 		}
 		return false;
@@ -298,8 +288,12 @@ public class _1002Request_Of_The_Elim extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (targetId == 730010)
 		{
+			if ((qs == null) || (qs.getStatus() != QuestStatus.START))
+			{
+				return false;
+			}
 			final int var = qs.getQuestVarById(0);
-			if ((qs == null) || (qs.getStatus() != QuestStatus.START) || ((var != 2) && (var != 4)))
+			if (((var != 2) && (var != 4)))
 			{
 				return false;
 			}

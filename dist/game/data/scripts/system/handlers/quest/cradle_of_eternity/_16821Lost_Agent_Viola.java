@@ -80,12 +80,12 @@ public class _16821Lost_Agent_Viola extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 806281)
-			{ // 베니오.
+			final int var = qs == null ? 0 : qs.getQuestVarById(0);
+			if (targetId == 806281) // 베니오.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -109,8 +109,8 @@ public class _16821Lost_Agent_Viola extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806426)
-			{ // 부르고스.
+			if (targetId == 806426) // 부르고스.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -140,8 +140,8 @@ public class _16821Lost_Agent_Viola extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (player.getWorldId() == 301550000)
-		{ // 지식의 정원.
+		if (player.getWorldId() == 301550000) // 지식의 정원.
+		{
 			if (qs == null)
 			{
 				env.setQuestId(questId);
@@ -181,8 +181,8 @@ public class _16821Lost_Agent_Viola extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 220526:
-					{ // 심안의 눈동자.
+					case 220526: // 심안의 눈동자.
+					{
 						qs.setQuestVar(6);
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);

@@ -105,7 +105,7 @@ public class _24015Totem_Plowed extends QuestHandler
 								PacketSendUtility.broadcastPacketAndReceive(player, new SM_TRANSFORM(player, true));
 								ThreadPoolManager.getInstance().schedule(() ->
 								{
-									if ((player == null) || !player.getTransformModel().isActive())
+									if (!player.getTransformModel().isActive())
 									{
 										return;
 									}

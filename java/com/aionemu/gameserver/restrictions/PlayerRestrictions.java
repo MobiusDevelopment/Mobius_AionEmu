@@ -270,11 +270,8 @@ public class PlayerRestrictions extends AbstractRestrictions
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_PARTY_ALLIANCE_HE_IS_ALREADY_MEMBER_OF_OUR_ALLIANCE(target.getName()));
 				return false;
 			}
-			else
-			{
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FORCE_ALREADY_OTHER_FORCE(target.getName()));
-				return false;
-			}
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FORCE_ALREADY_OTHER_FORCE(target.getName()));
+			return false;
 		}
 		if ((alliance != null) && alliance.isFull())
 		{
@@ -334,11 +331,8 @@ public class PlayerRestrictions extends AbstractRestrictions
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_UNION_ALREADY_MY_UNION(target.getName()));
 				return false;
 			}
-			else
-			{
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_UNION_ALREADY_OTHER_UNION(target.getName()));
-				return false;
-			}
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_UNION_ALREADY_OTHER_UNION(target.getName()));
+			return false;
 		}
 		if ((alliance != null) && alliance.isFull())
 		{
@@ -411,7 +405,6 @@ public class PlayerRestrictions extends AbstractRestrictions
 	@Override
 	public boolean canUseWarehouse(Player player)
 	{
-		final int level = player.getLevel();
 		if ((player == null) || !player.isOnline())
 		{
 			return false;
@@ -420,7 +413,8 @@ public class PlayerRestrictions extends AbstractRestrictions
 		{
 			return false;
 		}
-		if (level < 10)
+		
+		if (player.getLevel() < 10)
 		{
 			// Characters under level 10 who are using a free trial cannot use the Account warehouse.
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FREE_EXPERIENCE_CHARACTER_CANT_USE_ACCOUNT_WAREHOUSE("10"));
@@ -432,7 +426,6 @@ public class PlayerRestrictions extends AbstractRestrictions
 	@Override
 	public boolean canTrade(Player player)
 	{
-		final int level = player.getLevel();
 		if ((player == null) || !player.isOnline())
 		{
 			return false;
@@ -449,7 +442,7 @@ public class PlayerRestrictions extends AbstractRestrictions
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_EXCHANGE_CANT_EXCHANGE_WHILE_INVISIBLE);
 			return false;
 		}
-		if (level < 10)
+		if (player.getLevel() < 10)
 		{
 			// Characters under level 10 who are playing a free trial cannot trade.
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_FREE_EXPERIENCE_CHARACTER_CANT_TRADE("10"));

@@ -59,30 +59,26 @@ public class _14120The_Bucket_List extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203932)
-			{ // Phomona.
+			if (targetId == 203932) // Phomona.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 730019)
-			{ // Lodas
+			if (targetId == 730019) // Lodas
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
 					{
-						if (var == 1)
+						if (qs.getQuestVarById(0) == 1)
 						{
 							return sendQuestDialog(env, 2375);
 						}
@@ -97,18 +93,18 @@ public class _14120The_Bucket_List extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 700157)
-			{ // Kerubian Bucket
+			else if (targetId == 700157) // Kerubian Bucket
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return true;
 				}
 			}
-			else if (targetId == 730020)
-			{ // Demro.
+			else if (targetId == 730020) // Demro.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
-					if (var == 0)
+					if (qs.getQuestVarById(0) == 0)
 					{
 						return sendQuestDialog(env, 1352);
 					}
@@ -121,8 +117,8 @@ public class _14120The_Bucket_List extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 730019)
-			{ // Lodas.
+			if (targetId == 730019) // Lodas.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

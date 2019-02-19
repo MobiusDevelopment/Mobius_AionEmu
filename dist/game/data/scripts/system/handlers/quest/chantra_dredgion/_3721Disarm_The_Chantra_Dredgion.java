@@ -52,30 +52,26 @@ public class _3721Disarm_The_Chantra_Dredgion extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final QuestDialog dialog = env.getDialog();
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798928)
-			{ // Yulia.
+			if (targetId == 798928) // Yulia.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 799069)
-			{ // Yannis.
+			if (targetId == 799069) // Yannis.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
 					{
-						if (var == 0)
+						if (qs.getQuestVarById(0) == 0)
 						{
 							return sendQuestDialog(env, 1011);
 						}
@@ -86,8 +82,8 @@ public class _3721Disarm_The_Chantra_Dredgion extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 700948)
-			{ // Balaur Weapon.
+			else if (targetId == 700948) // Balaur Weapon.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					closeDialogWindow(env);
@@ -97,16 +93,13 @@ public class _3721Disarm_The_Chantra_Dredgion extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798928)
-			{ // Yulia.
+			if (targetId == 798928) // Yulia.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

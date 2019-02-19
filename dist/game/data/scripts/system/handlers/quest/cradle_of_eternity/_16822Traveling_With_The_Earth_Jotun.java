@@ -83,12 +83,12 @@ public class _16822Traveling_With_The_Earth_Jotun extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 220588)
-			{ // 전투중인 대지의 느빌림.
+			final int var = qs == null ? 0 : qs.getQuestVarById(0);
+			if (targetId == 220588) // 전투중인 대지의 느빌림.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -112,8 +112,8 @@ public class _16822Traveling_With_The_Earth_Jotun extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 220590)
-			{ // 대지의 느빌림.
+			if (targetId == 220590) // 대지의 느빌림.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -150,8 +150,8 @@ public class _16822Traveling_With_The_Earth_Jotun extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (player.getWorldId() == 301550000)
-		{ // 지식의 정원.
+		if (player.getWorldId() == 301550000) // 지식의 정원.
+		{
 			if (qs == null)
 			{
 				env.setQuestId(questId);
@@ -177,12 +177,12 @@ public class _16822Traveling_With_The_Earth_Jotun extends QuestHandler
 			{
 				final int[] IDEternity02NepilimBoss75Ah =
 				{
-					220534
-				}; // 타락한 물의 느빌림.
+					220534 // 타락한 물의 느빌림.
+				};
 				switch (targetId)
 				{
-					case 220534:
-					{ // 타락한 물의 느빌림.
+					case 220534: // 타락한 물의 느빌림.
+					{
 						qs.setQuestVar(6);
 						updateQuestStatus(env);
 						return defaultOnKillEvent(env, IDEternity02NepilimBoss75Ah, 0, 1, 1);

@@ -67,17 +67,15 @@ public class _25602The_Riddle_Of_Heartsblood_Copse extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		int targetId = env.getTargetId();
-		final Npc npc = (Npc) env.getVisibleObject();
 		if (env.getVisibleObject() instanceof Npc)
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806171)
-			{ // Phyndar.
+			if (targetId == 806171) // Phyndar.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -98,12 +96,13 @@ public class _25602The_Riddle_Of_Heartsblood_Copse extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806171)
-			{ // Phyndar.
+			if (targetId == 806171) // Phyndar.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
 					{
+						final int var = qs.getQuestVarById(0);
 						if (var == 1)
 						{
 							return sendQuestDialog(env, 1352);
@@ -126,10 +125,7 @@ public class _25602The_Riddle_Of_Heartsblood_Copse extends QuestHandler
 							changeQuestStep(env, 1, 2, false);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}

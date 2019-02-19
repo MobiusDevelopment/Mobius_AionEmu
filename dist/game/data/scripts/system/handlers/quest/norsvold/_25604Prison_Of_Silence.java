@@ -68,17 +68,15 @@ public class _25604Prison_Of_Silence extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		int targetId = env.getTargetId();
-		final Npc npc = (Npc) env.getVisibleObject();
 		if (env.getVisibleObject() instanceof Npc)
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806115)
-			{ // Svanhild.
+			if (targetId == 806115) // Svanhild.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -99,8 +97,9 @@ public class _25604Prison_Of_Silence extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806173)
-			{ // Groma.
+			if (targetId == 806173) // Groma.
+			{
+				final int var = qs.getQuestVarById(0);
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -145,18 +144,15 @@ public class _25604Prison_Of_Silence extends QuestHandler
 							changeQuestStep(env, 4, 5, true);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806115)
-			{ // Svanhild.
+			if (targetId == 806115) // Svanhild.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

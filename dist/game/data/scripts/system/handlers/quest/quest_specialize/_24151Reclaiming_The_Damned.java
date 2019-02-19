@@ -71,8 +71,8 @@ public class _24151Reclaiming_The_Damned extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204715)
-			{ // Grundt
+			if (targetId == 204715) // Grundt
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -86,7 +86,10 @@ public class _24151Reclaiming_The_Damned extends QuestHandler
 					case ACCEPT_QUEST:
 					{
 						QuestService.startQuest(env);
-						qs.setQuestVarById(5, 1);
+						if (qs != null)
+						{
+							qs.setQuestVarById(5, 1);
+						}
 						updateQuestStatus(env);
 						return closeDialogWindow(env);
 					}
@@ -129,16 +132,13 @@ public class _24151Reclaiming_The_Damned extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204801)
-			{ // Gigrite
+			if (targetId == 204801) // Gigrite
+			{
 				if (env.getDialog() == QuestDialog.SELECT_REWARD)
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;
@@ -149,11 +149,11 @@ public class _24151Reclaiming_The_Damned extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() != QuestStatus.START))
 		{
 			return false;
 		}
+		final int var = qs.getQuestVarById(0);
 		if (var < 5)
 		{
 			return defaultOnKillEvent(env, mob_ids, var, var + 1);

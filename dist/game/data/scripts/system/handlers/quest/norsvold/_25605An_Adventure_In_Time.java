@@ -72,7 +72,6 @@ public class _25605An_Adventure_In_Time extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		int targetId = env.getTargetId();
 		final Npc npc = (Npc) env.getVisibleObject();
 		if (env.getVisibleObject() instanceof Npc)
@@ -81,8 +80,8 @@ public class _25605An_Adventure_In_Time extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806174)
-			{ // Chardelil.
+			if (targetId == 806174) // Chardelil.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -103,8 +102,9 @@ public class _25605An_Adventure_In_Time extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806174)
-			{ // Chardelil.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 806174) // Chardelil.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -131,15 +131,12 @@ public class _25605An_Adventure_In_Time extends QuestHandler
 							changeQuestStep(env, 1, 2, false);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}
-			if (targetId == 806199)
-			{ // 차원에 묶인 데바.
+			if (targetId == 806199) // 차원에 묶인 데바.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -161,8 +158,8 @@ public class _25605An_Adventure_In_Time extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806174)
-			{ // Chardelil.
+			if (targetId == 806174) // Chardelil.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -193,8 +190,8 @@ public class _25605An_Adventure_In_Time extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 241217:
-					{ // 페르손.
+					case 241217: // 페르손.
+					{
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 						return true;

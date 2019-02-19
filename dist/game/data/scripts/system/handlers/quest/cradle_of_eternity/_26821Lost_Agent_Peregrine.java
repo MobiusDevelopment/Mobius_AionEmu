@@ -80,12 +80,12 @@ public class _26821Lost_Agent_Peregrine extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 806286)
-			{ // 잔그리케.
+			final int var = qs == null ? 0 : qs.getQuestVarById(0);
+			if (targetId == 806286) // 잔그리케.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -109,8 +109,8 @@ public class _26821Lost_Agent_Peregrine extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806427)
-			{ // 브레가트.
+			if (targetId == 806427) // 브레가트.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:

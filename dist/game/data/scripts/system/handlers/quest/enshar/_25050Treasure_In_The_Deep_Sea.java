@@ -52,7 +52,6 @@ public class _25050Treasure_In_The_Deep_Sea extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
 			if (targetId == 804915)
@@ -61,14 +60,12 @@ public class _25050Treasure_In_The_Deep_Sea extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
+			final int var = qs.getQuestVarById(0);
 			if (targetId == 804915)
 			{
 				switch (env.getDialog())
@@ -92,10 +89,7 @@ public class _25050Treasure_In_The_Deep_Sea extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 					case STEP_TO_2:
 					{
@@ -152,10 +146,7 @@ public class _25050Treasure_In_The_Deep_Sea extends QuestHandler
 				{
 					return sendQuestDialog(env, 2376);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

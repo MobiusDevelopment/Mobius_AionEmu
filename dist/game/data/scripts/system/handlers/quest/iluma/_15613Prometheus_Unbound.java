@@ -63,7 +63,6 @@ public class _15613Prometheus_Unbound extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		int targetId = env.getTargetId();
 		final Npc npc = (Npc) env.getVisibleObject();
 		if (env.getVisibleObject() instanceof Npc)
@@ -72,8 +71,8 @@ public class _15613Prometheus_Unbound extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806113)
-			{ // Volter.
+			if (targetId == 806113) // Volter.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -94,8 +93,9 @@ public class _15613Prometheus_Unbound extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806166)
-			{ // 세다르.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 806166) // 세다르.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -114,8 +114,8 @@ public class _15613Prometheus_Unbound extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731686)
-			{ // 프로메테우스.
+			if (targetId == 731686) // 프로메테우스.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -133,8 +133,8 @@ public class _15613Prometheus_Unbound extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806198)
-			{ // 프로메테우스.
+			if (targetId == 806198) // 프로메테우스.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -152,8 +152,8 @@ public class _15613Prometheus_Unbound extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806113)
-			{ // Volter.
+			if (targetId == 806113) // Volter.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -171,18 +171,15 @@ public class _15613Prometheus_Unbound extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806113)
-			{ // Volter.
+			if (targetId == 806113) // Volter.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

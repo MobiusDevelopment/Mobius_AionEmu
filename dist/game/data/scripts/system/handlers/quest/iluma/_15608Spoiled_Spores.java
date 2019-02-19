@@ -67,12 +67,11 @@ public class _15608Spoiled_Spores extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806165)
-			{ // Canella.
+			if (targetId == 806165) // Canella.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -93,8 +92,9 @@ public class _15608Spoiled_Spores extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806165)
-			{ // Canella.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 806165) // Canella.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -111,15 +111,12 @@ public class _15608Spoiled_Spores extends QuestHandler
 							changeQuestStep(env, 1, 2, false);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}
-			if (targetId == 703139)
-			{ // 검은 버섯.
+			if (targetId == 703139) // 검은 버섯.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -134,8 +131,8 @@ public class _15608Spoiled_Spores extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806165)
-			{ // Canella.
+			if (targetId == 806165) // Canella.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					removeQuestItem(env, 182215995, 1);
@@ -167,8 +164,8 @@ public class _15608Spoiled_Spores extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 241175:
-					{ // 텐타클루드.
+					case 241175: // 텐타클루드.
+					{
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 						return true;

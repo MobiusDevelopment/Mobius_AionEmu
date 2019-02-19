@@ -72,7 +72,6 @@ public class _25606The_White_Sinsye extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		int targetId = env.getTargetId();
 		final Npc npc = (Npc) env.getVisibleObject();
 		if (env.getVisibleObject() instanceof Npc)
@@ -81,8 +80,8 @@ public class _25606The_White_Sinsye extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806175)
-			{ // Chaelsean.
+			if (targetId == 806175) // Chaelsean.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -107,8 +106,9 @@ public class _25606The_White_Sinsye extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806178)
-			{ // 배회하는 영혼.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 806178) // 배회하는 영혼.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -134,8 +134,8 @@ public class _25606The_White_Sinsye extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806156)
-			{ // 기억을 잃은 여인.
+			if (targetId == 806156) // 기억을 잃은 여인.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -152,8 +152,8 @@ public class _25606The_White_Sinsye extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806157)
-			{ // 리니.
+			if (targetId == 806157) // 리니.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -171,8 +171,8 @@ public class _25606The_White_Sinsye extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703140)
-			{ // 리니의 소품 상자.
+			if (targetId == 703140) // 리니의 소품 상자.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -190,8 +190,8 @@ public class _25606The_White_Sinsye extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806175)
-			{ // Chaelsean.
+			if (targetId == 806175) // Chaelsean.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					removeQuestItem(env, 182216006, 1); // 리니의 일기장.
@@ -228,8 +228,8 @@ public class _25606The_White_Sinsye extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 241220:
-					{ // 백신시.
+					case 241220: // 백신시.
+					{
 						qs.setQuestVar(6);
 						updateQuestStatus(env);
 						QuestService.addNewSpawn(220110000, 1, 806157, npc.getX(), npc.getY(), npc.getZ(), (byte) 0); // 리니.

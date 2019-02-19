@@ -65,11 +65,10 @@ public class _13403Portal_Predictions extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203098)
-			{ // Spatalos.
+			if (targetId == 203098) // Spatalos.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -90,8 +89,9 @@ public class _13403Portal_Predictions extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 203096)
-			{ // William.
+			final int var = qs.getQuestVarById(0);
+			if (targetId == 203096) // William.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -123,8 +123,8 @@ public class _13403Portal_Predictions extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 203133)
-			{ // Beris.
+			if (targetId == 203133) // Beris.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -157,8 +157,8 @@ public class _13403Portal_Predictions extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 203170)
-			{ // Jenel.
+			if (targetId == 203170) // Jenel.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -183,8 +183,8 @@ public class _13403Portal_Predictions extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731643)
-			{ // Damaged Invasion Generator.
+			if (targetId == 731643) // Damaged Invasion Generator.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -202,8 +202,8 @@ public class _13403Portal_Predictions extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731644)
-			{ // Inoperable Invasion Generator.
+			if (targetId == 731644) // Inoperable Invasion Generator.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -224,16 +224,13 @@ public class _13403Portal_Predictions extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203106)
-			{ // Alisdair.
+			if (targetId == 203106) // Alisdair.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

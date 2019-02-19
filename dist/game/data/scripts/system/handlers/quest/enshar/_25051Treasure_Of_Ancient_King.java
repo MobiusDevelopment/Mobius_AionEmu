@@ -55,7 +55,6 @@ public class _25051Treasure_Of_Ancient_King extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
 			if (targetId == 804915)
@@ -64,14 +63,12 @@ public class _25051Treasure_Of_Ancient_King extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
+			final int var = qs.getQuestVarById(0);
 			if (targetId == 731553)
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -147,10 +144,7 @@ public class _25051Treasure_Of_Ancient_King extends QuestHandler
 				{
 					return sendQuestDialog(env, 2376);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

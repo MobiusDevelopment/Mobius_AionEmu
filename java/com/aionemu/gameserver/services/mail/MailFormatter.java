@@ -111,7 +111,6 @@ public final class MailFormatter
 	
 	public static void sendHouseAuctionMail(House ownedHouse, PlayerCommonData playerData, AuctionResult result, long time, long returnKinah)
 	{
-		final MailTemplate template = DataManager.SYSTEM_MAIL_TEMPLATES.getMailTemplate("$$HS_AUCTION_MAIL", "", playerData.getRace());
 		if ((ownedHouse == null) || (playerData == null) || (result == null))
 		{
 			return;
@@ -140,6 +139,7 @@ public final class MailFormatter
 				return "";
 			}
 		};
+		final MailTemplate template = DataManager.SYSTEM_MAIL_TEMPLATES.getMailTemplate("$$HS_AUCTION_MAIL", "", playerData.getRace());
 		final String title = template.getFormattedTitle(formatter);
 		final String message = template.getFormattedMessage(formatter);
 		SystemMailService.getInstance().sendMail("$$HS_AUCTION_MAIL", playerData.getName(), title, message, 0, 0, returnKinah, LetterType.NORMAL);

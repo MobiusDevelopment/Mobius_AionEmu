@@ -84,12 +84,12 @@ public class _16823Reunion_With_Agent_Viola extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 806284)
-			{ // 웨다.
+			final int var = qs == null ? 0 : qs.getQuestVarById(0);
+			if (targetId == 806284) // 웨다.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -126,8 +126,8 @@ public class _16823Reunion_With_Agent_Viola extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (player.getWorldId() == 301550000)
-		{ // 지식의 정원.
+		if (player.getWorldId() == 301550000) // 지식의 정원.
+		{
 			if (qs == null)
 			{
 				env.setQuestId(questId);
@@ -167,8 +167,8 @@ public class _16823Reunion_With_Agent_Viola extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 220540:
-					{ // 피톤.
+					case 220540: // 피톤.
+					{
 						playQuestMovie(env, 940);
 						qs.setQuestVar(5);
 						qs.setStatus(QuestStatus.REWARD);
