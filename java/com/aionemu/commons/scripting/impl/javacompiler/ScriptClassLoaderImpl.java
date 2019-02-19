@@ -113,8 +113,7 @@ public class ScriptClassLoaderImpl extends ScriptClassLoader
 		final ClassLoader parent = getParent();
 		if (parent instanceof ScriptClassLoaderImpl)
 		{
-			final ScriptClassLoaderImpl pscl = (ScriptClassLoaderImpl) parent;
-			result.addAll(pscl.getClassesForPackage(packageName));
+			result.addAll(((ScriptClassLoaderImpl) parent).getClassesForPackage(packageName));
 		}
 		
 		// load current classloader compiled classes

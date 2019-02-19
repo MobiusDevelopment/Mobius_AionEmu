@@ -47,6 +47,7 @@ public class Version
 		loadInformation(c);
 	}
 	
+	@SuppressWarnings("resource")
 	public void loadInformation(Class<?> c)
 	{
 		File jarName = null;
@@ -68,6 +69,7 @@ public class Version
 		
 	}
 	
+	@SuppressWarnings("resource")
 	public void transferInfo(String jarName, String type, File fileToWrite)
 	{
 		try
