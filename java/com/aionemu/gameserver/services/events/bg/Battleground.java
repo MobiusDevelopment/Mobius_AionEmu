@@ -84,7 +84,6 @@ public abstract class Battleground
 	protected static final int TELEPORT_DEFAULT_DELAY = 0;
 	protected final int K_VALUE = 20;
 	
-	@SuppressWarnings("serial")
 	protected static final Map<String, Class<?>> aliases = new HashMap<String, Class<?>>()
 	{
 		{
@@ -458,15 +457,11 @@ public abstract class Battleground
 		player.getEffectController().setAbnormal(AbnormalState.PARALYZE.getId());
 		player.getEffectController().updatePlayerEffectIcons();
 		player.getEffectController().broadCastEffects();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				player.getEffectController().unsetAbnormal(AbnormalState.PARALYZE.getId());
-				player.getEffectController().updatePlayerEffectIcons();
-				player.getEffectController().broadCastEffects();
-			}
+			player.getEffectController().unsetAbnormal(AbnormalState.PARALYZE.getId());
+			player.getEffectController().updatePlayerEffectIcons();
+			player.getEffectController().broadCastEffects();
 		}, duration);
 	}
 	
@@ -534,14 +529,7 @@ public abstract class Battleground
 	{
 		if (delay > 0)
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					PacketSendUtility.sendSys3Message(player, sender, msg);
-				}
-			}, delay);
+			ThreadPoolManager.getInstance().schedule(() -> PacketSendUtility.sendSys3Message(player, sender, msg), delay);
 		}
 		else
 		{
@@ -575,15 +563,11 @@ public abstract class Battleground
 	
 	protected void specAnnounce(String msg, int delay)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			for (Player player : getSpectators())
 			{
-				for (Player player : getSpectators())
-				{
-					PacketSendUtility.sendSys3Message(player, "BG", msg);
-				}
+				PacketSendUtility.sendSys3Message(player, "BG", msg);
 			}
 		}, delay);
 	}
@@ -598,30 +582,22 @@ public abstract class Battleground
 	
 	protected void scheduleGroupDisband(PlayerGroup group, int delay)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			while (group.size() > 0)
 			{
-				while (group.size() > 0)
-				{
-					PlayerGroupService.removePlayer((Player) group.getMembers().toArray()[0]);
-				}
+				PlayerGroupService.removePlayer((Player) group.getMembers().toArray()[0]);
 			}
 		}, delay);
 	}
 	
 	protected void scheduleAllianceDisband(PlayerAlliance alliance, int delay)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			while (alliance.size() > 0)
 			{
-				while (alliance.size() > 0)
-				{
-					PlayerAllianceService.removePlayer(((Player) alliance.getMembers().toArray()[0]));
-				}
+				PlayerAllianceService.removePlayer(((Player) alliance.getMembers().toArray()[0]));
 			}
 		}, delay);
 	}
@@ -659,22 +635,8 @@ public abstract class Battleground
 				scheduleAnnouncement(pl, "The match begin's!!!", time);
 				// sendEventPacket(StageType.PVP_STAGE_1, 0);
 			}
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					pl.getEffectController().removeAllEffects();
-				}
-			}, 2500);
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					createTimer(pl, getSecondsLeft());
-				}
-			}, time - 5000);
+			ThreadPoolManager.getInstance().schedule(() -> pl.getEffectController().removeAllEffects(), 2500);
+			ThreadPoolManager.getInstance().schedule(() -> createTimer(pl, getSecondsLeft()), time - 5000);
 		}
 		else
 		{
@@ -709,17 +671,13 @@ public abstract class Battleground
 	{
 		if (delay > 0)
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					player.clearKnownlist();
-					PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
-					PacketSendUtility.sendPacket(player, new SM_MOTION(player.getMotions().getMotions().values()));
-					player.getEffectController().updatePlayerEffectIcons();
-					player.getKnownList().doUpdate();
-				}
+				player.clearKnownlist();
+				PacketSendUtility.sendPacket(player, new SM_PLAYER_INFO(player, false));
+				PacketSendUtility.sendPacket(player, new SM_MOTION(player.getMotions().getMotions().values()));
+				player.getEffectController().updatePlayerEffectIcons();
+				player.getKnownList().doUpdate();
 			}, delay);
 		}
 		else
@@ -819,28 +777,20 @@ public abstract class Battleground
 	
 	protected void startBackgroundTask()
 	{
-		setBackgroundTask(ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		setBackgroundTask(ThreadPoolManager.getInstance().scheduleAtFixedRate(() ->
 		{
-			@Override
-			public void run()
+			backgroundCounter++;
+			zCheck();
+			if ((backgroundCounter % 5) == 0)
 			{
-				backgroundCounter++;
-				zCheck();
-				if ((backgroundCounter % 5) == 0)
-				{
-					backgroundCounter = 0;
-				}
+				backgroundCounter = 0;
 			}
 		}, 30 * 1000, 1 * 1000));
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (getBackgroundTask() != null)
 			{
-				if (getBackgroundTask() != null)
-				{
-					getBackgroundTask().cancel(true);
-				}
+				getBackgroundTask().cancel(true);
 			}
 		}, 10 * getMatchLength() * 1000);
 	}
@@ -1053,15 +1003,11 @@ public abstract class Battleground
 			{
 				freezePlayer(pl, 7500);
 			}
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
+				for (Player pl : getPlayers())
 				{
-					for (Player pl : getPlayers())
-					{
-						returnToPreviousLocation(pl);
-					}
+					returnToPreviousLocation(pl);
 				}
 			}, 5000);
 		}
@@ -1074,21 +1020,17 @@ public abstract class Battleground
 					freezePlayer(pl, 7500);
 				}
 			}
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
+				for (PlayerGroup group : getGroups())
 				{
-					for (PlayerGroup group : getGroups())
+					for (Player pl : group.getMembers())
 					{
-						for (Player pl : group.getMembers())
-						{
-							returnToPreviousLocation(pl);
-						}
-						if (!isTournament() && shouldDisband())
-						{
-							scheduleGroupDisband(group, 2000);
-						}
+						returnToPreviousLocation(pl);
+					}
+					if (!isTournament() && shouldDisband())
+					{
+						scheduleGroupDisband(group, 2000);
 					}
 				}
 			}, 5000);
@@ -1106,55 +1048,43 @@ public abstract class Battleground
 					freezePlayer(pl, 7500);
 				}
 			}
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
+				for (PlayerAlliance alliance : getAlliances())
 				{
-					for (PlayerAlliance alliance : getAlliances())
+					for (Player pl : alliance.getMembers())
 					{
-						for (Player pl : alliance.getMembers())
+						if (pl == null)
 						{
-							if (pl == null)
-							{
-								continue;
-							}
-							returnToPreviousLocation(pl);
+							continue;
 						}
-						if (!isTournament() && shouldDisband())
-						{
-							scheduleAllianceDisband(alliance, 2000);
-						}
+						returnToPreviousLocation(pl);
+					}
+					if (!isTournament() && shouldDisband())
+					{
+						scheduleAllianceDisband(alliance, 2000);
 					}
 				}
 			}, 5000);
 		}
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			final List<Player> spectators = getSpectators();
+			synchronized (spectators)
 			{
-				final List<Player> spectators = getSpectators();
-				synchronized (spectators)
+				for (Iterator<Player> it = spectators.iterator(); it.hasNext();)
 				{
-					for (Iterator<Player> it = spectators.iterator(); it.hasNext();)
-					{
-						final Player pl = it.next();
-						onSpectatorLeave(pl, true);
-						it.remove();
-					}
+					final Player pl = it.next();
+					onSpectatorLeave(pl, true);
+					it.remove();
 				}
 			}
 		}, 5000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			for (Player pl : getInstance().getPlayersInside())
 			{
-				for (Player pl : getInstance().getPlayersInside())
-				{
-					returnToPreviousLocation(pl);
-				}
+				returnToPreviousLocation(pl);
 			}
 		}, 15000);
 		
@@ -1183,18 +1113,14 @@ public abstract class Battleground
 	{
 		endTimer(spectator);
 		returnToPreviousLocation(spectator);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				spectator.getEffectController().unsetAbnormal(AbnormalState.HIDE.getId());
-				spectator.unsetVisualState(CreatureVisualState.HIDE3);
-				spectator.setInvul(false);
-				spectator.unsetSeeState(CreatureSeeState.SEARCH2);
-				spectator.setSpectating(false);
-				PacketSendUtility.broadcastPacket(spectator, new SM_PLAYER_STATE(spectator), true);
-			}
+			spectator.getEffectController().unsetAbnormal(AbnormalState.HIDE.getId());
+			spectator.unsetVisualState(CreatureVisualState.HIDE3);
+			spectator.setInvul(false);
+			spectator.unsetSeeState(CreatureSeeState.SEARCH2);
+			spectator.setSpectating(false);
+			PacketSendUtility.broadcastPacket(spectator, new SM_PLAYER_STATE(spectator), true);
 		}, TELEPORT_DEFAULT_DELAY);
 		if (!isIterating)
 		{

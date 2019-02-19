@@ -2600,7 +2600,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * @param <V>
 	 * @param <R>
 	 */
-	@SuppressWarnings("serial")
 	static class Traverser<K, V, R>extends CountedCompleter<R>
 	{
 		final ConcurrentHashMapV8<K, V> map;
@@ -3363,10 +3362,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	}
 	
 	/* ----------------Iterators -------------- */
-	@SuppressWarnings("serial")
 	static final class KeyIterator<K, V>extends Traverser<K, V, Object> implements Spliterator<K>, Enumeration<K>
 	{
-		
 		KeyIterator(ConcurrentHashMapV8<K, V> map)
 		{
 			super(map);
@@ -3407,10 +3404,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class ValueIterator<K, V>extends Traverser<K, V, Object> implements Spliterator<V>, Enumeration<V>
 	{
-		
 		ValueIterator(ConcurrentHashMapV8<K, V> map)
 		{
 			super(map);
@@ -3450,10 +3445,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class EntryIterator<K, V>extends Traverser<K, V, Object> implements Spliterator<Map.Entry<K, V>>
 	{
-		
 		EntryIterator(ConcurrentHashMapV8<K, V> map)
 		{
 			super(map);
@@ -5161,8 +5154,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	}
 	
 	/**
-	 * A view of a ConcurrentHashMapV8 as a {@link Set} of keys, in which additions may optionally be enabled by mapping to a common value. This class cannot be directly instantiated. See null null null null null null {@link #keySet()}, {@link #keySet(Object)}, {@link #newKeySet()},
-	 * {@link #newKeySet(int)}.
+	 * A view of a ConcurrentHashMapV8 as a {@link Set} of keys, in which additions may optionally be enabled by mapping to a common value. This class cannot be directly instantiated.
 	 * @param <K>
 	 * @param <V>
 	 */
@@ -5966,10 +5958,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * Task classes. Coded in a regular but ugly format/style to simplify checks that each variant differs in the right way from others. The null screenings exist because compilers cannot tell that we've already null-checked task arguments, so we force simplest hoisted bypass to help avoid
 	 * convoluted traps.
 	 */
-	@SuppressWarnings("serial")
 	static final class ForEachKeyTask<K, V>extends Traverser<K, V, Void>
 	{
-		
 		final Action<K> action;
 		
 		ForEachKeyTask(ConcurrentHashMapV8<K, V> m, Traverser<K, V, ?> p, int b, Action<K> action)
@@ -5998,10 +5988,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class ForEachValueTask<K, V>extends Traverser<K, V, Void>
 	{
-		
 		final Action<V> action;
 		
 		ForEachValueTask(ConcurrentHashMapV8<K, V> m, Traverser<K, V, ?> p, int b, Action<V> action)
@@ -6030,10 +6018,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class ForEachEntryTask<K, V>extends Traverser<K, V, Void>
 	{
-		
 		final Action<Entry<K, V>> action;
 		
 		ForEachEntryTask(ConcurrentHashMapV8<K, V> m, Traverser<K, V, ?> p, int b, Action<Entry<K, V>> action)
@@ -6063,10 +6049,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class ForEachMappingTask<K, V>extends Traverser<K, V, Void>
 	{
-		
 		final BiAction<K, V> action;
 		
 		ForEachMappingTask(ConcurrentHashMapV8<K, V> m, Traverser<K, V, ?> p, int b, BiAction<K, V> action)
@@ -6096,10 +6080,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class ForEachTransformedKeyTask<K, V, U>extends Traverser<K, V, Void>
 	{
-		
 		final Fun<? super K, ? extends U> transformer;
 		final Action<U> action;
 		
@@ -6137,10 +6119,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class ForEachTransformedValueTask<K, V, U>extends Traverser<K, V, Void>
 	{
-		
 		final Fun<? super V, ? extends U> transformer;
 		final Action<U> action;
 		
@@ -6178,10 +6158,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class ForEachTransformedEntryTask<K, V, U>extends Traverser<K, V, Void>
 	{
-		
 		final Fun<Map.Entry<K, V>, ? extends U> transformer;
 		final Action<U> action;
 		
@@ -6220,10 +6198,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class ForEachTransformedMappingTask<K, V, U>extends Traverser<K, V, Void>
 	{
-		
 		final BiFun<? super K, ? super V, ? extends U> transformer;
 		final Action<U> action;
 		
@@ -6262,10 +6238,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class SearchKeysTask<K, V, U>extends Traverser<K, V, U>
 	{
-		
 		final Fun<? super K, ? extends U> searchFunction;
 		final AtomicReference<U> result;
 		
@@ -6326,10 +6300,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class SearchValuesTask<K, V, U>extends Traverser<K, V, U>
 	{
-		
 		final Fun<? super V, ? extends U> searchFunction;
 		final AtomicReference<U> result;
 		
@@ -6391,10 +6363,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class SearchEntriesTask<K, V, U>extends Traverser<K, V, U>
 	{
-		
 		final Fun<Entry<K, V>, ? extends U> searchFunction;
 		final AtomicReference<U> result;
 		
@@ -6457,10 +6427,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class SearchMappingsTask<K, V, U>extends Traverser<K, V, U>
 	{
-		
 		final BiFun<? super K, ? super V, ? extends U> searchFunction;
 		final AtomicReference<U> result;
 		
@@ -6523,10 +6491,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class ReduceKeysTask<K, V>extends Traverser<K, V, K>
 	{
-		
 		final BiFun<? super K, ? super K, ? extends K> reducer;
 		K result;
 		ReduceKeysTask<K, V> rights, nextRight;
@@ -6581,10 +6547,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class ReduceValuesTask<K, V>extends Traverser<K, V, V>
 	{
-		
 		final BiFun<? super V, ? super V, ? extends V> reducer;
 		V result;
 		ReduceValuesTask<K, V> rights, nextRight;
@@ -6640,10 +6604,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class ReduceEntriesTask<K, V>extends Traverser<K, V, Map.Entry<K, V>>
 	{
-		
 		final BiFun<Map.Entry<K, V>, Map.Entry<K, V>, ? extends Map.Entry<K, V>> reducer;
 		Map.Entry<K, V> result;
 		ReduceEntriesTask<K, V> rights, nextRight;
@@ -6699,10 +6661,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceKeysTask<K, V, U>extends Traverser<K, V, U>
 	{
-		
 		final Fun<? super K, ? extends U> transformer;
 		final BiFun<? super U, ? super U, ? extends U> reducer;
 		U result;
@@ -6764,10 +6724,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceValuesTask<K, V, U>extends Traverser<K, V, U>
 	{
-		
 		final Fun<? super V, ? extends U> transformer;
 		final BiFun<? super U, ? super U, ? extends U> reducer;
 		U result;
@@ -6830,10 +6788,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceEntriesTask<K, V, U>extends Traverser<K, V, U>
 	{
-		
 		final Fun<Map.Entry<K, V>, ? extends U> transformer;
 		final BiFun<? super U, ? super U, ? extends U> reducer;
 		U result;
@@ -6896,10 +6852,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceMappingsTask<K, V, U>extends Traverser<K, V, U>
 	{
-		
 		final BiFun<? super K, ? super V, ? extends U> transformer;
 		final BiFun<? super U, ? super U, ? extends U> reducer;
 		U result;
@@ -6962,10 +6916,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceKeysToDoubleTask<K, V>extends Traverser<K, V, Double>
 	{
-		
 		final ObjectToDouble<? super K> transformer;
 		final DoubleByDoubleToDouble reducer;
 		final double basis;
@@ -7021,10 +6973,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceValuesToDoubleTask<K, V>extends Traverser<K, V, Double>
 	{
-		
 		final ObjectToDouble<? super V> transformer;
 		final DoubleByDoubleToDouble reducer;
 		final double basis;
@@ -7081,10 +7031,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceEntriesToDoubleTask<K, V>extends Traverser<K, V, Double>
 	{
-		
 		final ObjectToDouble<Map.Entry<K, V>> transformer;
 		final DoubleByDoubleToDouble reducer;
 		final double basis;
@@ -7141,10 +7089,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceMappingsToDoubleTask<K, V>extends Traverser<K, V, Double>
 	{
-		
 		final ObjectByObjectToDouble<? super K, ? super V> transformer;
 		final DoubleByDoubleToDouble reducer;
 		final double basis;
@@ -7201,10 +7147,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceKeysToLongTask<K, V>extends Traverser<K, V, Long>
 	{
-		
 		final ObjectToLong<? super K> transformer;
 		final LongByLongToLong reducer;
 		final long basis;
@@ -7260,10 +7204,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceValuesToLongTask<K, V>extends Traverser<K, V, Long>
 	{
-		
 		final ObjectToLong<? super V> transformer;
 		final LongByLongToLong reducer;
 		final long basis;
@@ -7320,10 +7262,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceEntriesToLongTask<K, V>extends Traverser<K, V, Long>
 	{
-		
 		final ObjectToLong<Map.Entry<K, V>> transformer;
 		final LongByLongToLong reducer;
 		final long basis;
@@ -7380,10 +7320,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceMappingsToLongTask<K, V>extends Traverser<K, V, Long>
 	{
-		
 		final ObjectByObjectToLong<? super K, ? super V> transformer;
 		final LongByLongToLong reducer;
 		final long basis;
@@ -7440,10 +7378,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceKeysToIntTask<K, V>extends Traverser<K, V, Integer>
 	{
-		
 		final ObjectToInt<? super K> transformer;
 		final IntByIntToInt reducer;
 		final int basis;
@@ -7499,10 +7435,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceValuesToIntTask<K, V>extends Traverser<K, V, Integer>
 	{
-		
 		final ObjectToInt<? super V> transformer;
 		final IntByIntToInt reducer;
 		final int basis;
@@ -7559,10 +7493,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceEntriesToIntTask<K, V>extends Traverser<K, V, Integer>
 	{
-		
 		final ObjectToInt<Map.Entry<K, V>> transformer;
 		final IntByIntToInt reducer;
 		final int basis;
@@ -7619,10 +7551,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		}
 	}
 	
-	@SuppressWarnings("serial")
 	static final class MapReduceMappingsToIntTask<K, V>extends Traverser<K, V, Integer>
 	{
-		
 		final ObjectByObjectToInt<? super K, ? super V> transformer;
 		final IntByIntToInt reducer;
 		final int basis;

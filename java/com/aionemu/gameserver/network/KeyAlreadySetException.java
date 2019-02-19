@@ -20,10 +20,8 @@ package com.aionemu.gameserver.network;
  * This Exception will be thrown when <code>Crypt</code> setKey method will be called more than one time.
  * @author -Nemesiss-
  */
-@SuppressWarnings("serial")
 public class KeyAlreadySetException extends RuntimeException
 {
-	
 	/**
 	 * Constructs an <code>KeyAlreadySetException</code> with no detail message.
 	 */

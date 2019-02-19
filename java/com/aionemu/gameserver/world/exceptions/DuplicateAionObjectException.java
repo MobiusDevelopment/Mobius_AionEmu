@@ -20,10 +20,8 @@ package com.aionemu.gameserver.world.exceptions;
  * This Exception will be thrown when some AionObject will be stored more then one time. This Exception indicating serious error.
  * @author -Nemesiss-
  */
-@SuppressWarnings("serial")
 public class DuplicateAionObjectException extends RuntimeException
 {
-	
 	/**
 	 * Constructs an <code>DuplicateAionObjectException</code> with no detail message.
 	 */

@@ -20,10 +20,8 @@ package com.aionemu.gameserver.world.exceptions;
  * This exception will be thrown when object without set position will be spawned or despawned. This exception indicating error when coder forget to set position but is spawning or despawning object.
  * @author -Nemesiss-
  */
-@SuppressWarnings("serial")
 public class NotSetPositionException extends RuntimeException
 {
-	
 	/**
 	 * Constructs an <code>NotSetPositionException</code> with no detail message.
 	 */

@@ -25,10 +25,8 @@ import com.aionemu.gameserver.model.templates.zone.Point2D;
  * It's valid for serializing and cloning.
  * @author SoulKeeper
  */
-@SuppressWarnings("serial")
 public class Point3D implements Cloneable, Serializable
 {
-	
 	/**
 	 * X coord of the point
 	 */

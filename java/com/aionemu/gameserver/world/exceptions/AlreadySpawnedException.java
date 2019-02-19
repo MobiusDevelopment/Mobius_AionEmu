@@ -20,7 +20,6 @@ package com.aionemu.gameserver.world.exceptions;
  * This exception will be thrown when object will be spawned more than one time (without despawning)
  * @author -Nemesiss-
  */
-@SuppressWarnings("serial")
 public class AlreadySpawnedException extends RuntimeException
 {
 	
