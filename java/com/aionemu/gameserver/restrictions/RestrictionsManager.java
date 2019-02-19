@@ -352,7 +352,7 @@ public final class RestrictionsManager
 			return Arrays.equals(METHOD.getParameterTypes(), method.getParameterTypes());
 		}
 		
-		private static final RestrictionMode[] VALUES = RestrictionMode.values();
+		static final RestrictionMode[] VALUES = RestrictionMode.values();
 		
 		private static RestrictionMode parse(Method method)
 		{

@@ -76,7 +76,7 @@ public class Effect implements StatOwner
 	private long endTime;
 	private final PeriodicActions periodicActions;
 	private SkillMoveType skillMoveType = SkillMoveType.DEFAULT;
-	private final Creature effected;
+	final Creature effected;
 	private final Creature effector;
 	private Future<?> task = null;
 	private Future<?>[] periodicTasks = null;

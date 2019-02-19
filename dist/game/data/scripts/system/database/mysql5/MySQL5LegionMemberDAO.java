@@ -25,7 +25,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.database.DB;
-import com.aionemu.commons.database.IUStH;
 import com.aionemu.commons.database.ParamReadStH;
 import com.aionemu.gameserver.dao.LegionMemberDAO;
 import com.aionemu.gameserver.dao.MySQL5DAOUtils;
@@ -42,7 +41,7 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 {
 	
 	/** Logger */
-	private static final Logger log = LoggerFactory.getLogger(MySQL5LegionMemberDAO.class);
+	static final Logger log = LoggerFactory.getLogger(MySQL5LegionMemberDAO.class);
 	/** LegionMember Queries */
 	private static final String INSERT_LEGIONMEMBER_QUERY = "INSERT INTO legion_members(`legion_id`, `player_id`, `rank`) VALUES (?, ?, ?)";
 	private static final String UPDATE_LEGIONMEMBER_QUERY = "UPDATE legion_members SET nickname=?, rank=?, selfintro=?, challenge_score=? WHERE player_id=?";
@@ -84,17 +83,12 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 	@Override
 	public boolean saveNewLegionMember(LegionMember legionMember)
 	{
-		final boolean success = DB.insertUpdate(INSERT_LEGIONMEMBER_QUERY, new IUStH()
+		final boolean success = DB.insertUpdate(INSERT_LEGIONMEMBER_QUERY, preparedStatement ->
 		{
-			
-			@Override
-			public void handleInsertUpdate(PreparedStatement preparedStatement) throws SQLException
-			{
-				preparedStatement.setInt(1, legionMember.getLegion().getLegionId());
-				preparedStatement.setInt(2, legionMember.getObjectId());
-				preparedStatement.setString(3, legionMember.getRank().toString());
-				preparedStatement.execute();
-			}
+			preparedStatement.setInt(1, legionMember.getLegion().getLegionId());
+			preparedStatement.setInt(2, legionMember.getObjectId());
+			preparedStatement.setString(3, legionMember.getRank().toString());
+			preparedStatement.execute();
 		});
 		return success;
 	}
@@ -105,19 +99,14 @@ public class MySQL5LegionMemberDAO extends LegionMemberDAO
 	@Override
 	public void storeLegionMember(int playerId, LegionMember legionMember)
 	{
-		DB.insertUpdate(UPDATE_LEGIONMEMBER_QUERY, new IUStH()
+		DB.insertUpdate(UPDATE_LEGIONMEMBER_QUERY, stmt ->
 		{
-			
-			@Override
-			public void handleInsertUpdate(PreparedStatement stmt) throws SQLException
-			{
-				stmt.setString(1, legionMember.getNickname());
-				stmt.setString(2, legionMember.getRank().toString());
-				stmt.setString(3, legionMember.getSelfIntro());
-				stmt.setInt(4, legionMember.getChallengeScore());
-				stmt.setInt(5, playerId);
-				stmt.execute();
-			}
+			stmt.setString(1, legionMember.getNickname());
+			stmt.setString(2, legionMember.getRank().toString());
+			stmt.setString(3, legionMember.getSelfIntro());
+			stmt.setInt(4, legionMember.getChallengeScore());
+			stmt.setInt(5, playerId);
+			stmt.execute();
 		});
 	}
 	

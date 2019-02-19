@@ -102,8 +102,9 @@ public final class BIHNode
 	public static final class BIHStackData
 	{
 		
-		private final BIHNode node;
-		private final float min, max;
+		final BIHNode node;
+		final float min;
+		final float max;
 		
 		BIHStackData(BIHNode node, float min, float max)
 		{

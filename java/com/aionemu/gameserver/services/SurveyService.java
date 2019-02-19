@@ -46,7 +46,7 @@ import javolution.util.FastMap;
 public class SurveyService
 {
 	
-	private static final Logger log = LoggerFactory.getLogger(SurveyService.class);
+	static final Logger log = LoggerFactory.getLogger(SurveyService.class);
 	private final FastMap<Integer, SurveyItem> activeItems;
 	private final String htmlTemplate;
 	

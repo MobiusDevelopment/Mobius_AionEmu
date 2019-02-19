@@ -19,13 +19,11 @@ package com.aionemu.gameserver.services.anohaservice;
 import java.util.Map;
 
 import com.aionemu.gameserver.model.anoha.AnohaLocation;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.AnohaService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler (Encom)
@@ -33,7 +31,7 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 public class AnohaStartRunnable implements Runnable
 {
-	private final int id;
+	final int id;
 	
 	public AnohaStartRunnable(int id)
 	{
@@ -45,39 +43,23 @@ public class AnohaStartRunnable implements Runnable
 	{
 		// Berserk Anoha Sword Effect.
 		AnohaService.getInstance().adventSwordEffectSP(id);
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
-			{
-				AnohaService.getInstance().sendRequest(player);
-				// Berserk Anoha will return to Kaldor in 30 minutes.
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Fortress_Named_Spawn_System);
-			}
+			AnohaService.getInstance().sendRequest(player);
+			// Berserk Anoha will return to Kaldor in 30 minutes.
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF5_Fortress_Named_Spawn_System);
 		});
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			final Map<Integer, AnohaLocation> locations = AnohaService.getInstance().getAnohaLocations();
+			for (AnohaLocation loc : locations.values())
 			{
-				final Map<Integer, AnohaLocation> locations = AnohaService.getInstance().getAnohaLocations();
-				for (AnohaLocation loc : locations.values())
+				if (loc.getId() == id)
 				{
-					if (loc.getId() == id)
-					{
-						AnohaService.getInstance().startAnoha(loc.getId());
-					}
+					AnohaService.getInstance().startAnoha(loc.getId());
 				}
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						// Summon Berserk Anoha.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_Anoha_Spawn);
-					}
-				});
 			}
+			World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_Anoha_Spawn));
 		}, 1800000);
 	}
 }

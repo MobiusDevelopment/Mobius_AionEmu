@@ -33,7 +33,6 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.database.DB;
 import com.aionemu.commons.database.DatabaseFactory;
-import com.aionemu.commons.database.IUStH;
 import com.aionemu.commons.database.ParamReadStH;
 import com.aionemu.commons.utils.GenericValidator;
 import com.aionemu.gameserver.configs.main.CacheConfig;
@@ -64,7 +63,7 @@ import javolution.util.FastMap;
  */
 public class MySQL5PlayerDAO extends PlayerDAO
 {
-	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerDAO.class);
+	static final Logger log = LoggerFactory.getLogger(MySQL5PlayerDAO.class);
 	private final FastMap<Integer, PlayerCommonData> playerCommonData = new FastMap<Integer, PlayerCommonData>().shared();
 	private final FastMap<String, PlayerCommonData> playerCommonDataByName = new FastMap<String, PlayerCommonData>().shared();
 	
@@ -495,16 +494,11 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	@Override
 	public void updateDeletionTime(int objectId, Timestamp deletionDate)
 	{
-		DB.insertUpdate("UPDATE players set deletion_date = ? where id = ?", new IUStH()
+		DB.insertUpdate("UPDATE players set deletion_date = ? where id = ?", preparedStatement ->
 		{
-			
-			@Override
-			public void handleInsertUpdate(PreparedStatement preparedStatement) throws SQLException
-			{
-				preparedStatement.setTimestamp(1, deletionDate);
-				preparedStatement.setInt(2, objectId);
-				preparedStatement.execute();
-			}
+			preparedStatement.setTimestamp(1, deletionDate);
+			preparedStatement.setInt(2, objectId);
+			preparedStatement.execute();
 		});
 	}
 	
@@ -514,32 +508,22 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	@Override
 	public void storeCreationTime(int objectId, Timestamp creationDate)
 	{
-		DB.insertUpdate("UPDATE players set creation_date = ? where id = ?", new IUStH()
+		DB.insertUpdate("UPDATE players set creation_date = ? where id = ?", preparedStatement ->
 		{
-			
-			@Override
-			public void handleInsertUpdate(PreparedStatement preparedStatement) throws SQLException
-			{
-				preparedStatement.setTimestamp(1, creationDate);
-				preparedStatement.setInt(2, objectId);
-				preparedStatement.execute();
-			}
+			preparedStatement.setTimestamp(1, creationDate);
+			preparedStatement.setInt(2, objectId);
+			preparedStatement.execute();
 		});
 	}
 	
 	@Override
 	public void storeLastOnlineTime(int objectId, Timestamp lastOnline)
 	{
-		DB.insertUpdate("UPDATE players set last_online = ? where id = ?", new IUStH()
+		DB.insertUpdate("UPDATE players set last_online = ? where id = ?", preparedStatement ->
 		{
-			
-			@Override
-			public void handleInsertUpdate(PreparedStatement preparedStatement) throws SQLException
-			{
-				preparedStatement.setTimestamp(1, lastOnline);
-				preparedStatement.setInt(2, objectId);
-				preparedStatement.execute();
-			}
+			preparedStatement.setTimestamp(1, lastOnline);
+			preparedStatement.setInt(2, objectId);
+			preparedStatement.execute();
 		});
 	}
 	
@@ -583,18 +567,13 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	@Override
 	public void onlinePlayer(Player player, boolean online)
 	{
-		DB.insertUpdate("UPDATE players SET online=? WHERE id=?", new IUStH()
+		DB.insertUpdate("UPDATE players SET online=? WHERE id=?", stmt ->
 		{
+			log.debug("[DAO: MySQL5PlayerDAO] online status " + player.getObjectId() + " " + player.getName());
 			
-			@Override
-			public void handleInsertUpdate(PreparedStatement stmt) throws SQLException
-			{
-				log.debug("[DAO: MySQL5PlayerDAO] online status " + player.getObjectId() + " " + player.getName());
-				
-				stmt.setBoolean(1, online);
-				stmt.setInt(2, player.getObjectId());
-				stmt.execute();
-			}
+			stmt.setBoolean(1, online);
+			stmt.setInt(2, player.getObjectId());
+			stmt.execute();
 		});
 	}
 	
@@ -604,15 +583,10 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	@Override
 	public void setPlayersOffline(boolean online)
 	{
-		DB.insertUpdate("UPDATE players SET online=?", new IUStH()
+		DB.insertUpdate("UPDATE players SET online=?", stmt ->
 		{
-			
-			@Override
-			public void handleInsertUpdate(PreparedStatement stmt) throws SQLException
-			{
-				stmt.setBoolean(1, online);
-				stmt.execute();
-			}
+			stmt.setBoolean(1, online);
+			stmt.execute();
 		});
 	}
 	
@@ -880,15 +854,11 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	@Override
 	public void setPlayerLastTransferTime(int playerId, long time)
 	{
-		DB.insertUpdate("UPDATE players SET last_transfer_time=? WHERE id=?", new IUStH()
+		DB.insertUpdate("UPDATE players SET last_transfer_time=? WHERE id=?", stmt ->
 		{
-			@Override
-			public void handleInsertUpdate(PreparedStatement stmt) throws SQLException
-			{
-				stmt.setLong(1, time);
-				stmt.setInt(2, playerId);
-				stmt.execute();
-			}
+			stmt.setLong(1, time);
+			stmt.setInt(2, playerId);
+			stmt.execute();
 		});
 	}
 	
@@ -931,15 +901,11 @@ public class MySQL5PlayerDAO extends PlayerDAO
 	@Override
 	public void updateLegionJoinRequestState(int playerId, LegionJoinRequestState state)
 	{
-		DB.insertUpdate("UPDATE players SET join_state=? WHERE id=?", new IUStH()
+		DB.insertUpdate("UPDATE players SET join_state=? WHERE id=?", stmt ->
 		{
-			@Override
-			public void handleInsertUpdate(PreparedStatement stmt) throws SQLException
-			{
-				stmt.setString(1, state.name());
-				stmt.setInt(2, playerId);
-				stmt.execute();
-			}
+			stmt.setString(1, state.name());
+			stmt.setInt(2, playerId);
+			stmt.execute();
 		});
 	}
 	

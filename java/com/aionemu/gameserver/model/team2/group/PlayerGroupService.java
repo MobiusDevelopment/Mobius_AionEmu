@@ -64,7 +64,7 @@ import javolution.util.FastMap;
 public class PlayerGroupService
 {
 	private static final Logger log = LoggerFactory.getLogger(PlayerGroupService.class);
-	private static final Map<Integer, PlayerGroup> groups = new ConcurrentHashMap<>();
+	static final Map<Integer, PlayerGroup> groups = new ConcurrentHashMap<>();
 	private static final AtomicBoolean offlineCheckStarted = new AtomicBoolean();
 	private static FastMap<Integer, PlayerGroup> groupMembers;
 	

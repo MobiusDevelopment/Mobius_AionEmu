@@ -110,6 +110,6 @@ public class CreativitySkillService
 	
 	private static class NewSingletonHolder
 	{
-		private static final CreativitySkillService INSTANCE = new CreativitySkillService();
+		static final CreativitySkillService INSTANCE = new CreativitySkillService();
 	}
 }

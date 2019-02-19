@@ -40,7 +40,7 @@ public abstract class PlayerLeavedEvent<TM extends TeamMember<Player>, T extends
 	}
 	
 	protected final T team;
-	protected final Player leavedPlayer;
+	public final Player leavedPlayer;
 	protected final LeaveReson reason;
 	protected final TM leavedTeamMember;
 	protected final String banPersonName;

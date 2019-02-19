@@ -36,7 +36,7 @@ public abstract class AbstractCollisionObserver extends ActionObserver
 	protected Vector3f oldPos;
 	protected Spatial geometry;
 	protected byte intentions;
-	private final AtomicBoolean isRunning = new AtomicBoolean();
+	final AtomicBoolean isRunning = new AtomicBoolean();
 	
 	public AbstractCollisionObserver(Creature creature, Spatial geometry, byte intentions)
 	{
@@ -52,29 +52,24 @@ public abstract class AbstractCollisionObserver extends ActionObserver
 	{
 		if (!isRunning.getAndSet(true))
 		{
-			ThreadPoolManager.getInstance().execute(new Runnable()
+			ThreadPoolManager.getInstance().execute(() ->
 			{
-				
-				@Override
-				public void run()
+				try
 				{
-					try
-					{
-						final Vector3f pos = new Vector3f(creature.getX(), creature.getY(), creature.getZ());
-						final Vector3f dir = oldPos.clone();
-						final Float limit = pos.distance(dir);
-						dir.subtractLocal(pos).normalizeLocal();
-						final Ray r = new Ray(pos, dir);
-						r.setLimit(limit);
-						final CollisionResults results = new CollisionResults(intentions, true, creature.getInstanceId());
-						geometry.collideWith(r, results);
-						onMoved(results);
-						oldPos = pos;
-					}
-					finally
-					{
-						isRunning.set(false);
-					}
+					final Vector3f pos = new Vector3f(creature.getX(), creature.getY(), creature.getZ());
+					final Vector3f dir = oldPos.clone();
+					final Float limit = pos.distance(dir);
+					dir.subtractLocal(pos).normalizeLocal();
+					final Ray r = new Ray(pos, dir);
+					r.setLimit(limit);
+					final CollisionResults results = new CollisionResults(intentions, true, creature.getInstanceId());
+					geometry.collideWith(r, results);
+					onMoved(results);
+					oldPos = pos;
+				}
+				finally
+				{
+					isRunning.set(false);
 				}
 			});
 		}

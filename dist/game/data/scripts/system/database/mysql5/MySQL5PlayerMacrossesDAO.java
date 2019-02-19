@@ -19,7 +19,6 @@ package system.database.mysql5;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,7 +27,6 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.database.DB;
 import com.aionemu.commons.database.DatabaseFactory;
-import com.aionemu.commons.database.IUStH;
 import com.aionemu.gameserver.dao.MySQL5DAOUtils;
 import com.aionemu.gameserver.dao.PlayerMacrossesDAO;
 import com.aionemu.gameserver.model.gameobjects.player.MacroList;
@@ -39,7 +37,7 @@ import com.aionemu.gameserver.model.gameobjects.player.MacroList;
 public class MySQL5PlayerMacrossesDAO extends PlayerMacrossesDAO
 {
 	
-	private static Logger log = LoggerFactory.getLogger(MySQL5PlayerMacrossesDAO.class);
+	static Logger log = LoggerFactory.getLogger(MySQL5PlayerMacrossesDAO.class);
 	public static final String INSERT_QUERY = "INSERT INTO `player_macrosses` (`player_id`, `order`, `macro`) VALUES (?,?,?)";
 	public static final String UPDATE_QUERY = "UPDATE `player_macrosses` SET `macro`=? WHERE `player_id`=? AND `order`=?";
 	public static final String DELETE_QUERY = "DELETE FROM `player_macrosses` WHERE `player_id`=? AND `order`=?";
@@ -53,36 +51,26 @@ public class MySQL5PlayerMacrossesDAO extends PlayerMacrossesDAO
 	@Override
 	public void addMacro(int playerId, int macroPosition, String macro)
 	{
-		DB.insertUpdate(INSERT_QUERY, new IUStH()
+		DB.insertUpdate(INSERT_QUERY, stmt ->
 		{
-			
-			@Override
-			public void handleInsertUpdate(PreparedStatement stmt) throws SQLException
-			{
-				log.debug("[DAO: MySQL5PlayerMacrossesDAO] storing macro " + playerId + " " + macroPosition);
-				stmt.setInt(1, playerId);
-				stmt.setInt(2, macroPosition);
-				stmt.setString(3, macro);
-				stmt.execute();
-			}
+			log.debug("[DAO: MySQL5PlayerMacrossesDAO] storing macro " + playerId + " " + macroPosition);
+			stmt.setInt(1, playerId);
+			stmt.setInt(2, macroPosition);
+			stmt.setString(3, macro);
+			stmt.execute();
 		});
 	}
 	
 	@Override
 	public void updateMacro(int playerId, int macroPosition, String macro)
 	{
-		DB.insertUpdate(UPDATE_QUERY, new IUStH()
+		DB.insertUpdate(UPDATE_QUERY, stmt ->
 		{
-			
-			@Override
-			public void handleInsertUpdate(PreparedStatement stmt) throws SQLException
-			{
-				log.debug("[DAO: MySQL5PlayerMacrossesDAO] updating macro " + playerId + " " + macroPosition);
-				stmt.setString(1, macro);
-				stmt.setInt(2, playerId);
-				stmt.setInt(3, macroPosition);
-				stmt.execute();
-			}
+			log.debug("[DAO: MySQL5PlayerMacrossesDAO] updating macro " + playerId + " " + macroPosition);
+			stmt.setString(1, macro);
+			stmt.setInt(2, playerId);
+			stmt.setInt(3, macroPosition);
+			stmt.execute();
 		});
 	}
 	
@@ -90,17 +78,12 @@ public class MySQL5PlayerMacrossesDAO extends PlayerMacrossesDAO
 	@Override
 	public void deleteMacro(int playerId, int macroPosition)
 	{
-		DB.insertUpdate(DELETE_QUERY, new IUStH()
+		DB.insertUpdate(DELETE_QUERY, stmt ->
 		{
-			
-			@Override
-			public void handleInsertUpdate(PreparedStatement stmt) throws SQLException
-			{
-				log.debug("[DAO: MySQL5PlayerMacrossesDAO] removing macro " + playerId + " " + macroPosition);
-				stmt.setInt(1, playerId);
-				stmt.setInt(2, macroPosition);
-				stmt.execute();
-			}
+			log.debug("[DAO: MySQL5PlayerMacrossesDAO] removing macro " + playerId + " " + macroPosition);
+			stmt.setInt(1, playerId);
+			stmt.setInt(2, macroPosition);
+			stmt.execute();
 		});
 	}
 	

@@ -40,7 +40,7 @@ public class FlyController
 	private static final Logger log = LoggerFactory.getLogger(FlyController.class);
 	
 	private static final long FLY_REUSE_TIME = 10000;
-	private final Player player;
+	final Player player;
 	private final ActionObserver glideObserver = new ActionObserver(ObserverType.ABNORMALSETTED)
 	{
 		

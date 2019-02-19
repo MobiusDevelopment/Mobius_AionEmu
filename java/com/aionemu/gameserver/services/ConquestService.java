@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.conquest.ConquestLocation;
 import com.aionemu.gameserver.model.conquest.ConquestStateType;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.spawns.SpawnGroup2;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.conquestspawns.ConquestSpawnTemplate;
@@ -41,7 +40,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -100,14 +98,7 @@ public class ConquestService
 			activeConquest.put(id, offering);
 		}
 		offering.start();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				stopConquest(id);
-			}
-		}, duration * 3600 * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> stopConquest(id), duration * 3600 * 1000);
 	}
 	
 	public void stopConquest(int id)
@@ -153,14 +144,7 @@ public class ConquestService
 		{
 			case 1:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						PacketSendUtility.sendSys3Message(player, "\uE005", "The <Conquest/Offering> a rare monster appeared !!!");
-					}
-				});
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendSys3Message(player, "\uE005", "The <Conquest/Offering> a rare monster appeared !!!"));
 				return true;
 			}
 			default:
@@ -176,14 +160,7 @@ public class ConquestService
 		{
 			case 3:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						PacketSendUtility.sendSys3Message(player, "\uE005", "Shugo Emperor's Vault 4.7.5 is now open !!!");
-					}
-				});
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendSys3Message(player, "\uE005", "Shugo Emperor's Vault 4.7.5 is now open !!!"));
 				return true;
 			}
 			default:
@@ -199,14 +176,7 @@ public class ConquestService
 		{
 			case 4:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						PacketSendUtility.sendSys3Message(player, "\uE005", "Emperor Trillirunerk's Safe 4.9.1 is now open !!!");
-					}
-				});
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendSys3Message(player, "\uE005", "Emperor Trillirunerk's Safe 4.9.1 is now open !!!"));
 				return true;
 			}
 			default:
@@ -222,14 +192,7 @@ public class ConquestService
 		{
 			case 7:
 			{
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						PacketSendUtility.sendSys3Message(player, "\uE005", "Smoldering Fire Temple 5.1 is now open !!!");
-					}
-				});
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendSys3Message(player, "\uE005", "Smoldering Fire Temple 5.1 is now open !!!"));
 				return true;
 			}
 			default:
@@ -281,6 +244,6 @@ public class ConquestService
 	
 	private static class ConquestServiceHolder
 	{
-		private static final ConquestService INSTANCE = new ConquestService();
+		static final ConquestService INSTANCE = new ConquestService();
 	}
 }

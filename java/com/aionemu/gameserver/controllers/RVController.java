@@ -45,7 +45,7 @@ public class RVController extends NpcController
 	private boolean isMaster = false;
 	private boolean isVortex = false;
 	protected FastMap<Integer, Player> passedPlayers = new FastMap<>();
-	private SpawnTemplate slaveSpawnTemplate;
+	SpawnTemplate slaveSpawnTemplate;
 	private Npc slave;
 	private final Integer maxEntries;
 	private final Integer minLevel;

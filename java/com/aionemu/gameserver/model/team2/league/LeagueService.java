@@ -40,7 +40,7 @@ import com.google.common.base.Preconditions;
  */
 public class LeagueService
 {
-	private static final Map<Integer, League> leagues = new ConcurrentHashMap<>();
+	static final Map<Integer, League> leagues = new ConcurrentHashMap<>();
 	
 	static
 	{

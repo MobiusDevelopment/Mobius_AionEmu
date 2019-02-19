@@ -16,7 +16,6 @@
  */
 package com.aionemu.gameserver.model.team2.league.events;
 
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.team2.alliance.PlayerAlliance;
 import com.aionemu.gameserver.model.team2.common.events.AlwaysTrueTeamEvent;
 import com.aionemu.gameserver.model.team2.league.League;
@@ -32,7 +31,7 @@ import com.google.common.base.Predicate;
 public class LeagueLeftEvent extends AlwaysTrueTeamEvent implements Predicate<LeagueMember>
 {
 	private final League league;
-	private final PlayerAlliance alliance;
+	final PlayerAlliance alliance;
 	private final LeaveReson reason;
 	
 	public static enum LeaveReson
@@ -93,26 +92,22 @@ public class LeagueLeftEvent extends AlwaysTrueTeamEvent implements Predicate<Le
 	public boolean apply(LeagueMember member)
 	{
 		final PlayerAlliance leagueAlliance = member.getObject();
-		leagueAlliance.applyOnMembers(new Predicate<Player>()
+		leagueAlliance.applyOnMembers(member1 ->
 		{
-			@Override
-			public boolean apply(Player member)
+			switch (reason)
 			{
-				switch (reason)
+				case LEAVE:
 				{
-					case LEAVE:
-					{
-						PacketSendUtility.sendPacket(member, new SM_ALLIANCE_INFO(alliance, SM_ALLIANCE_INFO.UNION_LEAVE, alliance.getLeader().getName()));
-						break;
-					}
-					case EXPEL:
-					{
-						PacketSendUtility.sendPacket(member, new SM_ALLIANCE_INFO(alliance, SM_ALLIANCE_INFO.UNION_BAN_HIM, alliance.getLeader().getName()));
-						break;
-					}
+					PacketSendUtility.sendPacket(member1, new SM_ALLIANCE_INFO(alliance, SM_ALLIANCE_INFO.UNION_LEAVE, alliance.getLeader().getName()));
+					break;
 				}
-				return true;
+				case EXPEL:
+				{
+					PacketSendUtility.sendPacket(member1, new SM_ALLIANCE_INFO(alliance, SM_ALLIANCE_INFO.UNION_BAN_HIM, alliance.getLeader().getName()));
+					break;
+				}
 			}
+			return true;
 		});
 		return true;
 	}

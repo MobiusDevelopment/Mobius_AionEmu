@@ -66,7 +66,7 @@ import com.google.common.base.Predicate;
 public class PlayerAllianceService
 {
 	private static final Logger log = LoggerFactory.getLogger(PlayerAllianceService.class);
-	private static final Map<Integer, PlayerAlliance> alliances = new ConcurrentHashMap<>();
+	static final Map<Integer, PlayerAlliance> alliances = new ConcurrentHashMap<>();
 	private static final AtomicBoolean offlineCheckStarted = new AtomicBoolean();
 	
 	public static void inviteToAlliance(Player inviter, Player invited)

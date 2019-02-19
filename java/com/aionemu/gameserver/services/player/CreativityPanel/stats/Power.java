@@ -59,6 +59,6 @@ public class Power implements StatOwner
 	
 	private static class NewSingletonHolder
 	{
-		private static final Power INSTANCE = new Power();
+		static final Power INSTANCE = new Power();
 	}
 }

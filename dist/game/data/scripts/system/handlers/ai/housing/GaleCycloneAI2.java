@@ -31,7 +31,7 @@ import javolution.util.FastMap;
 @AIName("galecyclone")
 public class GaleCycloneAI2 extends NpcAI2
 {
-	private boolean blocked;
+	boolean blocked;
 	private final FastMap<Integer, GaleCycloneObserver> observed = new FastMap<Integer, GaleCycloneObserver>().shared();
 	
 	@Override

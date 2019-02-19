@@ -21,12 +21,10 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.gameserver.ShutdownHook;
 import com.aionemu.gameserver.ShutdownHook.ShutdownMode;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.tasks.TaskFromDBHandler;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Divinity
@@ -37,7 +35,7 @@ public class RestartTask extends TaskFromDBHandler
 	private static final Logger log = LoggerFactory.getLogger(RestartTask.class);
 	
 	private int countDown;
-	private int announceInterval;
+	int announceInterval;
 	private int warnCountDown;
 	
 	@Override
@@ -62,24 +60,8 @@ public class RestartTask extends TaskFromDBHandler
 		announceInterval = Integer.parseInt(params[1]);
 		warnCountDown = Integer.parseInt(params[2]);
 		
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
-		{
-			
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendBrightYellowMessageOnCenter(player, "Automatic Task: The server will restart in " + warnCountDown + " seconds ! Please find a safe place and disconnect your character.");
-			}
-		});
+		World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendBrightYellowMessageOnCenter(player, "Automatic Task: The server will restart in " + warnCountDown + " seconds ! Please find a safe place and disconnect your character."));
 		
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				ShutdownHook.getInstance().doShutdown(countDown, announceInterval, ShutdownMode.RESTART);
-			}
-		}, warnCountDown * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> ShutdownHook.getInstance().doShutdown(countDown, announceInterval, ShutdownMode.RESTART), warnCountDown * 1000);
 	}
 }

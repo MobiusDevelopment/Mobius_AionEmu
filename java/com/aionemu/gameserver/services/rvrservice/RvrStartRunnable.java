@@ -28,7 +28,7 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 public class RvrStartRunnable implements Runnable
 {
-	private final int id;
+	final int id;
 	
 	public RvrStartRunnable(int id)
 	{
@@ -42,61 +42,45 @@ public class RvrStartRunnable implements Runnable
 		RvrService.getInstance().DF6G1Spawn01Msg(id);
 		// An Asmodian warship will invade in 10 minutes.
 		RvrService.getInstance().LF6G1Spawn01Msg(id);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// An Elyos warship will invade in 5 minutes.
-				RvrService.getInstance().DF6G1Spawn02Msg(id);
-				// An Asmodian warship will invade in 5 minutes.
-				RvrService.getInstance().LF6G1Spawn02Msg(id);
-			}
+			// An Elyos warship will invade in 5 minutes.
+			RvrService.getInstance().DF6G1Spawn02Msg(id);
+			// An Asmodian warship will invade in 5 minutes.
+			RvrService.getInstance().LF6G1Spawn02Msg(id);
 		}, 300000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// An Elyos warship will invade in 3 minutes.
-				RvrService.getInstance().DF6G1Spawn03Msg(id);
-				// An Asmodian warship will invade in 3 minutes.
-				RvrService.getInstance().LF6G1Spawn03Msg(id);
-			}
+			// An Elyos warship will invade in 3 minutes.
+			RvrService.getInstance().DF6G1Spawn03Msg(id);
+			// An Asmodian warship will invade in 3 minutes.
+			RvrService.getInstance().LF6G1Spawn03Msg(id);
 		}, 480000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// An Elyos warship will invade in 1 minute.
-				RvrService.getInstance().DF6G1Spawn04Msg(id);
-				// An Asmodian warship will invade in 1 minute.
-				RvrService.getInstance().LF6G1Spawn04Msg(id);
-			}
+			// An Elyos warship will invade in 1 minute.
+			RvrService.getInstance().DF6G1Spawn04Msg(id);
+			// An Asmodian warship will invade in 1 minute.
+			RvrService.getInstance().LF6G1Spawn04Msg(id);
 		}, 540000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			final Map<Integer, RvrLocation> locations = RvrService.getInstance().getRvrLocations();
+			for (RvrLocation loc : locations.values())
 			{
-				final Map<Integer, RvrLocation> locations = RvrService.getInstance().getRvrLocations();
-				for (RvrLocation loc : locations.values())
+				if (loc.getId() == id)
 				{
-					if (loc.getId() == id)
-					{
-						// Elyos warship Invasion.
-						RvrService.getInstance().DF6G1Spawn05Msg(id);
-						// Asmodian warship Invasion.
-						RvrService.getInstance().LF6G1Spawn05Msg(id);
-						RvrService.getInstance().startRvr(loc.getId());
-						// An Asmodian Troopers scout ship will arrive at the Sky Island in one minute.
-						// An Asmodian Troopers scout ship will soon arrive at the Sky Island.
-						RvrService.getInstance().LF6EventG2Start02Msg(id);
-						// An Aetos ship will arrive at the Sky Island in one minute.
-						// An Aetos ship will soon arrive at the Sky Island.
-						RvrService.getInstance().DF6EventG2Start02Msg(id);
-					}
+					// Elyos warship Invasion.
+					RvrService.getInstance().DF6G1Spawn05Msg(id);
+					// Asmodian warship Invasion.
+					RvrService.getInstance().LF6G1Spawn05Msg(id);
+					RvrService.getInstance().startRvr(loc.getId());
+					// An Asmodian Troopers scout ship will arrive at the Sky Island in one minute.
+					// An Asmodian Troopers scout ship will soon arrive at the Sky Island.
+					RvrService.getInstance().LF6EventG2Start02Msg(id);
+					// An Aetos ship will arrive at the Sky Island in one minute.
+					// An Aetos ship will soon arrive at the Sky Island.
+					RvrService.getInstance().DF6EventG2Start02Msg(id);
 				}
 			}
 		}, 600000);

@@ -26,7 +26,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.database.DB;
-import com.aionemu.commons.database.IUStH;
 import com.aionemu.commons.database.ParamReadStH;
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.BlockListDAO;
@@ -47,7 +46,7 @@ public class MySQL5BlockListDAO extends BlockListDAO
 	public static final String ADD_QUERY = "INSERT INTO blocks (player, blocked_player, reason) VALUES (?, ?, ?)";
 	public static final String DEL_QUERY = "DELETE FROM blocks WHERE player=? AND blocked_player=?";
 	public static final String SET_REASON_QUERY = "UPDATE blocks SET reason=? WHERE player=? AND blocked_player=?";
-	private static Logger log = LoggerFactory.getLogger(MySQL5BlockListDAO.class);
+	static Logger log = LoggerFactory.getLogger(MySQL5BlockListDAO.class);
 	
 	/**
 	 * {@inheritDoc}
@@ -55,17 +54,12 @@ public class MySQL5BlockListDAO extends BlockListDAO
 	@Override
 	public boolean addBlockedUser(int playerObjId, int objIdToBlock, String reason)
 	{
-		return DB.insertUpdate(ADD_QUERY, new IUStH()
+		return DB.insertUpdate(ADD_QUERY, stmt ->
 		{
-			
-			@Override
-			public void handleInsertUpdate(PreparedStatement stmt) throws SQLException
-			{
-				stmt.setInt(1, playerObjId);
-				stmt.setInt(2, objIdToBlock);
-				stmt.setString(3, reason);
-				stmt.execute();
-			}
+			stmt.setInt(1, playerObjId);
+			stmt.setInt(2, objIdToBlock);
+			stmt.setString(3, reason);
+			stmt.execute();
 		});
 	}
 	
@@ -75,16 +69,11 @@ public class MySQL5BlockListDAO extends BlockListDAO
 	@Override
 	public boolean delBlockedUser(int playerObjId, int objIdToDelete)
 	{
-		return DB.insertUpdate(DEL_QUERY, new IUStH()
+		return DB.insertUpdate(DEL_QUERY, stmt ->
 		{
-			
-			@Override
-			public void handleInsertUpdate(PreparedStatement stmt) throws SQLException
-			{
-				stmt.setInt(1, playerObjId);
-				stmt.setInt(2, objIdToDelete);
-				stmt.execute();
-			}
+			stmt.setInt(1, playerObjId);
+			stmt.setInt(2, objIdToDelete);
+			stmt.execute();
 		});
 	}
 	
@@ -134,18 +123,13 @@ public class MySQL5BlockListDAO extends BlockListDAO
 	@Override
 	public boolean setReason(int playerObjId, int blockedPlayerObjId, String reason)
 	{
-		return DB.insertUpdate(SET_REASON_QUERY, new IUStH()
+		return DB.insertUpdate(SET_REASON_QUERY, stmt ->
 		{
+			stmt.setString(1, reason);
+			stmt.setInt(2, playerObjId);
+			stmt.setInt(3, blockedPlayerObjId);
+			stmt.execute();
 			
-			@Override
-			public void handleInsertUpdate(PreparedStatement stmt) throws SQLException
-			{
-				stmt.setString(1, reason);
-				stmt.setInt(2, playerObjId);
-				stmt.setInt(3, blockedPlayerObjId);
-				stmt.execute();
-				
-			}
 		});
 	}
 	

@@ -199,6 +199,6 @@ public class CoalescenceService
 	
 	private static class NewSingletonHolder
 	{
-		private static final CoalescenceService INSTANCE = new CoalescenceService();
+		static final CoalescenceService INSTANCE = new CoalescenceService();
 	}
 }

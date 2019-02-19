@@ -216,6 +216,6 @@ public class RiftService
 	
 	private static class RiftServiceHolder
 	{
-		private static final RiftService INSTANCE = new RiftService();
+		static final RiftService INSTANCE = new RiftService();
 	}
 }

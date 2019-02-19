@@ -214,6 +214,6 @@ public class IuService
 	
 	private static class IuServiceHolder
 	{
-		private static final IuService INSTANCE = new IuService();
+		static final IuService INSTANCE = new IuService();
 	}
 }

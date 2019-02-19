@@ -30,7 +30,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_KISK_UPDATE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 import javolution.util.FastSet;
@@ -41,7 +40,7 @@ import javolution.util.FastSet;
 public class Kisk extends SummonedObject<Player>
 {
 	private final Legion ownerLegion;
-	private final Race ownerRace;
+	final Race ownerRace;
 	private KiskStatsTemplate kiskStatsTemplate;
 	private int remainingResurrections;
 	private final long kiskSpawnTime;
@@ -227,15 +226,11 @@ public class Kisk extends SummonedObject<Player>
 			}
 		}
 		final Kisk kisk = this;
-		getKnownList().doOnAllPlayers(new Visitor<Player>()
+		getKnownList().doOnAllPlayers(object ->
 		{
-			@Override
-			public void visit(Player object)
+			if (object.getRace() == ownerRace)
 			{
-				if (object.getRace() == ownerRace)
-				{
-					PacketSendUtility.sendPacket(object, new SM_KISK_UPDATE(kisk));
-				}
+				PacketSendUtility.sendPacket(object, new SM_KISK_UPDATE(kisk));
 			}
 		});
 	}

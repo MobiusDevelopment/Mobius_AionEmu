@@ -61,6 +61,6 @@ public class Health implements StatOwner
 	
 	private static class NewSingletonHolder
 	{
-		private static final Health INSTANCE = new Health();
+		static final Health INSTANCE = new Health();
 	}
 }

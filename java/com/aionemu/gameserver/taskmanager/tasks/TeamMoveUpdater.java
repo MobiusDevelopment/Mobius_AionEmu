@@ -32,7 +32,7 @@ public final class TeamMoveUpdater extends AbstractIterativePeriodicTaskManager<
 	private static final class SingletonHolder
 	{
 		
-		private static final TeamMoveUpdater INSTANCE = new TeamMoveUpdater();
+		static final TeamMoveUpdater INSTANCE = new TeamMoveUpdater();
 	}
 	
 	public static TeamMoveUpdater getInstance()

@@ -237,6 +237,6 @@ public class ZorshivDredgionService
 	
 	private static class ZorshivDredgionServiceHolder
 	{
-		private static final ZorshivDredgionService INSTANCE = new ZorshivDredgionService();
+		static final ZorshivDredgionService INSTANCE = new ZorshivDredgionService();
 	}
 }

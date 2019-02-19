@@ -213,7 +213,7 @@ public class BaseService
 	
 	private static class BaseServiceHolder
 	{
-		private static final BaseService INSTANCE = new BaseService();
+		static final BaseService INSTANCE = new BaseService();
 	}
 	
 	private BaseDAO getDAO()

@@ -241,6 +241,6 @@ public class AgentService
 	
 	private static class AgentServiceHolder
 	{
-		private static final AgentService INSTANCE = new AgentService();
+		static final AgentService INSTANCE = new AgentService();
 	}
 }

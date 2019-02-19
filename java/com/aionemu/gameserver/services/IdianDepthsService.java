@@ -42,7 +42,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -65,25 +64,17 @@ public class IdianDepthsService
 			{
 				spawn(loc, IdianDepthsStateType.CLOSED);
 			}
-			CronService.getInstance().schedule(new Runnable()
+			CronService.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
+				for (IdianDepthsLocation loc : getIdianDepthsLocations().values())
 				{
-					for (IdianDepthsLocation loc : getIdianDepthsLocations().values())
-					{
-						startIdianDepths(loc.getId());
-					}
-					World.getInstance().doOnAllPlayers(new Visitor<Player>()
-					{
-						@Override
-						public void visit(Player player)
-						{
-							sendRequest(player);
-							PacketSendUtility.sendSys3Message(player, "\uE0AA", "<Idian Depths> open !!!");
-						}
-					});
+					startIdianDepths(loc.getId());
 				}
+				World.getInstance().doOnAllPlayers(player ->
+				{
+					sendRequest(player);
+					PacketSendUtility.sendSys3Message(player, "\uE0AA", "<Idian Depths> open !!!");
+				});
 			}, CustomConfig.IDIAN_DEPTHS_SCHEDULE);
 		}
 		else
@@ -105,14 +96,7 @@ public class IdianDepthsService
 			activeIdianDepths.put(id, idian);
 		}
 		idian.start();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				stopIdianDepths(id);
-			}
-		}, duration * 3600 * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> stopIdianDepths(id), duration * 3600 * 1000);
 	}
 	
 	public void stopIdianDepths(int id)
@@ -231,6 +215,6 @@ public class IdianDepthsService
 	
 	private static class IdianDepthsServiceHolder
 	{
-		private static final IdianDepthsService INSTANCE = new IdianDepthsService();
+		static final IdianDepthsService INSTANCE = new IdianDepthsService();
 	}
 }

@@ -33,9 +33,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class EventQueue<E extends DelayedEvent>extends AbstractQueue<E> implements BlockingQueue<E>
 {
-	private final transient ReentrantLock lock = new ReentrantLock();
+	final transient ReentrantLock lock = new ReentrantLock();
 	private final transient Condition available = lock.newCondition();
-	private final PriorityQueue<E> q = new PriorityQueue<>();
+	final PriorityQueue<E> q = new PriorityQueue<>();
 	
 	public EventQueue()
 	{

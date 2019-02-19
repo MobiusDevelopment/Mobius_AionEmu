@@ -134,6 +134,6 @@ public class RiftManager
 	
 	private static class RiftManagerHolder
 	{
-		private static final RiftManager INSTANCE = new RiftManager();
+		static final RiftManager INSTANCE = new RiftManager();
 	}
 }

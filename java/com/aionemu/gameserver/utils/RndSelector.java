@@ -30,8 +30,8 @@ public class RndSelector<E>
 {
 	private class RndNode<T> implements Comparable<RndNode<T>>
 	{
-		private final T value;
-		private final int weight;
+		final T value;
+		final int weight;
 		
 		public RndNode(T value, int weight)
 		{

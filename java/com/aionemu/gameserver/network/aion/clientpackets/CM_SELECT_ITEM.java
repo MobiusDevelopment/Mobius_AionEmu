@@ -39,8 +39,8 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 public class CM_SELECT_ITEM extends AionClientPacket
 {
-	private int uniqueItemId;
-	private int index;
+	int uniqueItemId;
+	int index;
 	
 	@SuppressWarnings("unused")
 	private int unk;
@@ -81,21 +81,17 @@ public class CM_SELECT_ITEM extends AionClientPacket
 			}
 		};
 		player.getObserveController().attach(observer);
-		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable()
+		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			player.getObserveController().removeObserver(observer);
+			sendPacket(new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), player.getObjectId(), uniqueItemId, item.getItemId(), 0, 1, 1));
+			final boolean delete = player.getInventory().decreaseByObjectId(uniqueItemId, 1L);
+			if (delete)
 			{
-				player.getObserveController().removeObserver(observer);
-				sendPacket(new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), player.getObjectId(), uniqueItemId, item.getItemId(), 0, 1, 1));
-				final boolean delete = player.getInventory().decreaseByObjectId(uniqueItemId, 1L);
-				if (delete)
-				{
-					final SelectItems selectitem = DataManager.DECOMPOSABLE_SELECT_ITEM_DATA.getSelectItem(player.getPlayerClass(), player.getRace(), item.getItemId());
-					final SelectItem st = selectitem.getItems().get(index);
-					ItemService.addItem(player, st.getSelectItemId(), st.getCount());
-					sendPacket(new SM_SELECT_ITEM_ADD(uniqueItemId, index));
-				}
+				final SelectItems selectitem = DataManager.DECOMPOSABLE_SELECT_ITEM_DATA.getSelectItem(player.getPlayerClass(), player.getRace(), item.getItemId());
+				final SelectItem st = selectitem.getItems().get(index);
+				ItemService.addItem(player, st.getSelectItemId(), st.getCount());
+				sendPacket(new SM_SELECT_ITEM_ADD(uniqueItemId, index));
 			}
 		}, 1000));
 	}

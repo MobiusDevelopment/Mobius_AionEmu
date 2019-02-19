@@ -390,6 +390,6 @@ public class CreativityTransfoService
 	
 	private static class NewSingletonHolder
 	{
-		private static final CreativityTransfoService INSTANCE = new CreativityTransfoService();
+		static final CreativityTransfoService INSTANCE = new CreativityTransfoService();
 	}
 }

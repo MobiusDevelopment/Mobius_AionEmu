@@ -193,7 +193,7 @@ public class SummonsService
 	{
 		private final Summon owner;
 		private final UnsummonType unsummonType;
-		private final Player master;
+		final Player master;
 		private final VisibleObject target;
 		private final boolean isAttacked;
 		
@@ -226,14 +226,7 @@ public class SummonsService
 						final Creature lastAttacker = (Creature) target;
 						if (!master.getLifeStats().isAlreadyDead() && !lastAttacker.getLifeStats().isAlreadyDead() && isAttacked)
 						{
-							ThreadPoolManager.getInstance().schedule(new Runnable()
-							{
-								@Override
-								public void run()
-								{
-									lastAttacker.getAggroList().addHate(master, 1);
-								}
-							}, 1000);
+							ThreadPoolManager.getInstance().schedule(() -> lastAttacker.getAggroList().addHate(master, 1), 1000);
 						}
 					}
 					break;

@@ -43,7 +43,7 @@ public class PetBuff implements StatOwner
 	private final List<IStatFunction> functions = new ArrayList<>();
 	private final PetBonusAttr petBonusAttr;
 	private long startTime;
-	private ScheduledFuture<?> task = null;
+	ScheduledFuture<?> task = null;
 	
 	public PetBuff(int buffId)
 	{

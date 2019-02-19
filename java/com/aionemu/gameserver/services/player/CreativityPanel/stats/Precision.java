@@ -61,6 +61,6 @@ public class Precision implements StatOwner
 	
 	private static class NewSingletonHolder
 	{
-		private static final Precision INSTANCE = new Precision();
+		static final Precision INSTANCE = new Precision();
 	}
 }

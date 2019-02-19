@@ -30,7 +30,7 @@ public final class TeamEffectUpdater extends AbstractIterativePeriodicTaskManage
 {
 	private static final class SingletonHolder
 	{
-		private static final TeamEffectUpdater INSTANCE = new TeamEffectUpdater();
+		static final TeamEffectUpdater INSTANCE = new TeamEffectUpdater();
 	}
 	
 	public static TeamEffectUpdater getInstance()

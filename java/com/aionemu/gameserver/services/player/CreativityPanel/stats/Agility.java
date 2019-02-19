@@ -63,6 +63,6 @@ public class Agility implements StatOwner
 	
 	private static class NewSingletonHolder
 	{
-		private static final Agility INSTANCE = new Agility();
+		static final Agility INSTANCE = new Agility();
 	}
 }

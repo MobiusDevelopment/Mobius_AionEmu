@@ -61,6 +61,6 @@ public class Knowledge implements StatOwner
 	
 	private static class NewSingletonHolder
 	{
-		private static final Knowledge INSTANCE = new Knowledge();
+		static final Knowledge INSTANCE = new Knowledge();
 	}
 }

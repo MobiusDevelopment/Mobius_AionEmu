@@ -63,6 +63,6 @@ public class Will implements StatOwner
 	
 	private static class NewSingletonHolder
 	{
-		private static final Will INSTANCE = new Will();
+		static final Will INSTANCE = new Will();
 	}
 }

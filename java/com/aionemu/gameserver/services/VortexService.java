@@ -379,6 +379,6 @@ public class VortexService
 	
 	private static class VortexServiceHolder
 	{
-		private static final VortexService INSTANCE = new VortexService();
+		static final VortexService INSTANCE = new VortexService();
 	}
 }

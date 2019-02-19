@@ -106,14 +106,7 @@ public class AnohaService
 			activeAnoha.put(id, danuarhero);
 		}
 		danuarhero.start();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				stopAnoha(id);
-			}
-		}, duration * 3600 * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> stopAnoha(id), duration * 3600 * 1000);
 	}
 	
 	public void stopAnoha(int id)
@@ -234,6 +227,6 @@ public class AnohaService
 	
 	private static class AnohaServiceHolder
 	{
-		private static final AnohaService INSTANCE = new AnohaService();
+		static final AnohaService INSTANCE = new AnohaService();
 	}
 }

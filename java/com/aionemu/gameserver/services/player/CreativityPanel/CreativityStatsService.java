@@ -87,6 +87,6 @@ public class CreativityStatsService
 	
 	private static class NewSingletonHolder
 	{
-		private static final CreativityStatsService INSTANCE = new CreativityStatsService();
+		static final CreativityStatsService INSTANCE = new CreativityStatsService();
 	}
 }

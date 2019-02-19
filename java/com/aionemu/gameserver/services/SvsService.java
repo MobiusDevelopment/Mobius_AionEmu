@@ -312,6 +312,6 @@ public class SvsService
 	
 	private static class SvsServiceHolder
 	{
-		private static final SvsService INSTANCE = new SvsService();
+		static final SvsService INSTANCE = new SvsService();
 	}
 }

@@ -641,6 +641,6 @@ public class BeritraService
 	
 	private static class BeritraServiceHolder
 	{
-		private static final BeritraService INSTANCE = new BeritraService();
+		static final BeritraService INSTANCE = new BeritraService();
 	}
 }

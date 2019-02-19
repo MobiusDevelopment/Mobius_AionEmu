@@ -19,13 +19,11 @@ package com.aionemu.gameserver.services.agentservice;
 import java.util.Map;
 
 import com.aionemu.gameserver.model.agent.AgentLocation;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.AgentService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler (Encom)
@@ -33,7 +31,7 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 
 public class AgentStartRunnable implements Runnable
 {
-	private final int id;
+	final int id;
 	
 	public AgentStartRunnable(int id)
 	{
@@ -45,38 +43,18 @@ public class AgentStartRunnable implements Runnable
 	{
 		// The Agent battle will start in 10 minutes.
 		AgentService.getInstance().agentBattleMsg1(id);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> AgentService.getInstance().agentBattleMsg2(id), 300000);
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			final Map<Integer, AgentLocation> locations = AgentService.getInstance().getAgentLocations();
+			for (AgentLocation loc : locations.values())
 			{
-				// The Agent battle will start in 5 minutes.
-				AgentService.getInstance().agentBattleMsg2(id);
-			}
-		}, 300000);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				final Map<Integer, AgentLocation> locations = AgentService.getInstance().getAgentLocations();
-				for (AgentLocation loc : locations.values())
+				if (loc.getId() == id)
 				{
-					if (loc.getId() == id)
-					{
-						AgentService.getInstance().startAgentFight(loc.getId());
-					}
+					AgentService.getInstance().startAgentFight(loc.getId());
 				}
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						// An Agent has spawned.
-						PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF4_Advance_GodElite);
-					}
-				});
 			}
+			World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF4_Advance_GodElite));
 		}, 600000);
 	}
 }

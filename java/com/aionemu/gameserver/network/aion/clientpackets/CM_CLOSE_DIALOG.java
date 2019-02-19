@@ -30,7 +30,7 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 public class CM_CLOSE_DIALOG extends AionClientPacket
 {
-	private int targetObjectId;
+	int targetObjectId;
 	
 	public CM_CLOSE_DIALOG(int opcode, State state, State... restStates)
 	{
@@ -58,14 +58,7 @@ public class CM_CLOSE_DIALOG extends AionClientPacket
 			final Npc npc = (Npc) obj;
 			npc.getAi2().onCreatureEvent(AIEventType.DIALOG_FINISH, player);
 			DialogService.onCloseDialog(npc, player);
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					client.sendPacket(new SM_HEADING_UPDATE(targetObjectId, obj.getHeading()));
-				}
-			}, 1200);
+			ThreadPoolManager.getInstance().schedule(() -> client.sendPacket(new SM_HEADING_UPDATE(targetObjectId, obj.getHeading())), 1200);
 		}
 		if (player.getMailbox().mailBoxState != 0)
 		{

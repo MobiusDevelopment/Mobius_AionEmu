@@ -514,6 +514,6 @@ public class RvrService
 	
 	private static class RvrServiceHolder
 	{
-		private static final RvrService INSTANCE = new RvrService();
+		static final RvrService INSTANCE = new RvrService();
 	}
 }

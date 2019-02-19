@@ -40,7 +40,7 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 public class CM_TUNE extends AionClientPacket
 {
 	private int tuningScrollId;
-	private static int itemObjectId;
+	static int itemObjectId;
 	
 	public CM_TUNE(int opcode, AionConnection.State state, AionConnection.State... restStates)
 	{
@@ -103,26 +103,22 @@ public class CM_TUNE extends AionClientPacket
 			}
 		};
 		player.getObserveController().attach(observer);
-		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable()
+		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (item.getOptionalSocket() != -1)
 			{
-				if (item.getOptionalSocket() != -1)
-				{
-					return;
-				}
-				player.getObserveController().removeObserver(observer);
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjectId, itemId, 0, 1, 1), true);
-				item.setOptionalSocket(Rnd.get(0, item.getItemTemplate().getOptionSlotBonus()));
-				/*
-				 * if (item.getItemTemplate().getMaxEnchantBonus() > 0) { item.setEnchantBonus(Rnd.get(0, item.getItemTemplate().getMaxEnchantBonus())); }
-				 */
-				item.setRndBonus();
-				item.setPersistentState(PersistentState.UPDATE_REQUIRED);
-				PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, item));
-				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401626, new DescriptionId(nameId)));
+				return;
 			}
+			player.getObserveController().removeObserver(observer);
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjectId, itemId, 0, 1, 1), true);
+			item.setOptionalSocket(Rnd.get(0, item.getItemTemplate().getOptionSlotBonus()));
+			/*
+			 * if (item.getItemTemplate().getMaxEnchantBonus() > 0) { item.setEnchantBonus(Rnd.get(0, item.getItemTemplate().getMaxEnchantBonus())); }
+			 */
+			item.setRndBonus();
+			item.setPersistentState(PersistentState.UPDATE_REQUIRED);
+			PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, item));
+			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401626, new DescriptionId(nameId)));
 		}, 5000));
 	}
 }

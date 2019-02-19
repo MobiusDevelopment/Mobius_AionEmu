@@ -74,7 +74,7 @@ import javolution.util.FastList;
  */
 public class Equipment
 {
-	private Player owner;
+	Player owner;
 	private final Set<Long> markedFreeSlots = new HashSet<>();
 	private PersistentState persistentState = PersistentState.UPDATED;
 	private final SortedMap<Long, Item> equipment = new TreeMap<>();

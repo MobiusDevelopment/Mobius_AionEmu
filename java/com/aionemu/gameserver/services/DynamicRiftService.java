@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.dynamicrift.DynamicRiftLocation;
 import com.aionemu.gameserver.model.dynamicrift.DynamicRiftStateType;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.spawns.SpawnGroup2;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.dynamicriftspawns.DynamicRiftSpawnTemplate;
@@ -39,7 +38,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -62,77 +60,31 @@ public class DynamicRiftService
 			{
 				spawn(loc, DynamicRiftStateType.CLOSED);
 			}
-			CronService.getInstance().schedule(new Runnable()
+			CronService.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					startDynamicRift(1);
-					startDynamicRift(3);
-					World.getInstance().doOnAllPlayers(new Visitor<Player>()
-					{
-						@Override
-						public void visit(Player player)
-						{
-							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_PORTAL_OPEN_IDDF3_Dragon);
-						}
-					});
-				}
+				startDynamicRift(1);
+				startDynamicRift(3);
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_PORTAL_OPEN_IDDF3_Dragon));
 			}, CustomConfig.DYNAMIC_RIFT_DRAGON_SCHEDULE);
-			CronService.getInstance().schedule(new Runnable()
+			CronService.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					startDynamicRift(2);
-					startDynamicRift(4);
-					World.getInstance().doOnAllPlayers(new Visitor<Player>()
-					{
-						@Override
-						public void visit(Player player)
-						{
-							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_PORTAL_OPEN_IDLF3_Castle_Indratoo);
-						}
-					});
-				}
+				startDynamicRift(2);
+				startDynamicRift(4);
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_INSTANCE_PORTAL_OPEN_IDLF3_Castle_Indratoo));
 			}, CustomConfig.DYNAMIC_RIFT_INDRATOO_SCHEDULE);
 			// Shugo Merchant League
-			CronService.getInstance().schedule(new Runnable()
+			CronService.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					startDynamicRift(5);
-					startDynamicRift(6);
-					World.getInstance().doOnAllPlayers(new Visitor<Player>()
-					{
-						@Override
-						public void visit(Player player)
-						{
-							// The Shugo Merchant League has arrived.
-							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_HF_ShugoCaravanAppear);
-						}
-					});
-				}
+				startDynamicRift(5);
+				startDynamicRift(6);
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_HF_ShugoCaravanAppear));
 			}, CustomConfig.SHUGO_MERCHANT_LEAGUE_SCHEDULE);
 			// Tower Of Eternity
-			CronService.getInstance().schedule(new Runnable()
+			CronService.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					startDynamicRift(7);
-					startDynamicRift(8);
-					World.getInstance().doOnAllPlayers(new Visitor<Player>()
-					{
-						@Override
-						public void visit(Player player)
-						{
-							// Tower Of Eternity.
-							PacketSendUtility.sendSys3Message(player, "\uE04C", "<Tower Of Eternity> open !!!");
-						}
-					});
-				}
+				startDynamicRift(7);
+				startDynamicRift(8);
+				World.getInstance().doOnAllPlayers(player -> PacketSendUtility.sendSys3Message(player, "\uE04C", "<Tower Of Eternity> open !!!"));
 			}, CustomConfig.TOWER_OF_ETERNITY_SCHEDULE);
 		}
 		else
@@ -154,14 +106,7 @@ public class DynamicRiftService
 			activeDynamicRift.put(id, portal);
 		}
 		portal.start();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				stopDynamicRift(id);
-			}
-		}, duration * 3600 * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> stopDynamicRift(id), duration * 3600 * 1000);
 	}
 	
 	public void stopDynamicRift(int id)
@@ -243,6 +188,6 @@ public class DynamicRiftService
 	
 	private static class DynamicRiftServiceHolder
 	{
-		private static final DynamicRiftService INSTANCE = new DynamicRiftService();
+		static final DynamicRiftService INSTANCE = new DynamicRiftService();
 	}
 }
