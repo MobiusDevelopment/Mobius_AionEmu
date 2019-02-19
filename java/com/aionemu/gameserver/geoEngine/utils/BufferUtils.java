@@ -38,7 +38,6 @@ import com.aionemu.gameserver.geoEngine.math.Vector3f;
  */
 public final class BufferUtils
 {
-	
 	//// -- TEMP DATA OBJECTS -- ////
 	// private static final Vector2f _tempVec2 = new Vector2f();
 	// private static final Vector3f _tempVec3 = new Vector3f();

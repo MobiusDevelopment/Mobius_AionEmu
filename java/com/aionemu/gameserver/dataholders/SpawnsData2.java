@@ -1027,10 +1027,7 @@ public class SpawnsData2
 					oldSpot = s;
 					break;
 				}
-				else
-				{
-					return false; // nothing to change
-				}
+				return false; // nothing to change
 			}
 			else if ((changeX && (s.getY() == spot.getY()) && (s.getZ() == spot.getZ()) && (s.getHeading() == spot.getHeading())) || (changeY && (s.getX() == spot.getX()) && (s.getZ() == spot.getZ()) && (s.getHeading() == spot.getHeading())) || (changeZ && (s.getX() == spot.getX()) && (s.getY() == spot.getY()) && (s.getHeading() == spot.getHeading())) || (changeH && (s.getX() == spot.getX()) && (s.getY() == spot.getY()) && (s.getZ() == spot.getZ())))
 			{
@@ -1186,10 +1183,7 @@ public class SpawnsData2
 			{
 				continue;
 			}
-			if (entry.getValue().getEventTemplate().equals(visObj.getSpawn().getEventTemplate()))
-			{
-				allSpawnMaps.get(visObj.getWorldId()).remove(entry);
-			}
+			allSpawnMaps.get(visObj.getWorldId()).remove(visObj.getObjectTemplate().getTemplateId());
 		}
 	}
 	

@@ -659,7 +659,7 @@ public class MotionLoggingService
 		{
 			if (motionsForWeapons.containsKey(weapon))
 			{
-				if (!motionsForWeapons.containsValue(skillTime))
+				if (!motionsForWeapons.get(weapon).contains(skillTime))
 				{
 					motionsForWeapons.get(weapon).add(skillTime);
 					return true;

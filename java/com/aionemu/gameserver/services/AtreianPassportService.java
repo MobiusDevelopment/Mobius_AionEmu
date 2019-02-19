@@ -183,7 +183,7 @@ public class AtreianPassportService
 		{
 			if (pcd.getPlayerPassports().containsValue(pp))
 			{
-				pcd.playerPassports.remove(pp);
+				pcd.playerPassports.remove(pp.getId());
 			}
 			if (pp.getRewardId() == 0)
 			{
@@ -191,10 +191,7 @@ public class AtreianPassportService
 				{
 					continue;
 				}
-				else
-				{
-					pp.setRewardId(3);
-				}
+				pp.setRewardId(3);
 			}
 			else if ((pp.getRewardId() == 3) && (pp.getAttendType() == AttendType.CUMULATIVE))
 			{
@@ -239,10 +236,7 @@ public class AtreianPassportService
 		{
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	private boolean isCached()
@@ -251,10 +245,7 @@ public class AtreianPassportService
 		{
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	public void onStart()
@@ -314,7 +305,7 @@ public class AtreianPassportService
 	
 	public void getDailyPassports(int id, AtreianPassport atp)
 	{
-		if (daily.containsValue(id))
+		if (daily.containsKey(id))
 		{
 			return;
 		}
@@ -323,7 +314,7 @@ public class AtreianPassportService
 	
 	public void getCumulativePassports(int id, AtreianPassport atp)
 	{
-		if (cumu.containsValue(id))
+		if (cumu.containsKey(id))
 		{
 			return;
 		}
@@ -332,7 +323,7 @@ public class AtreianPassportService
 	
 	public void getAnniversaryPassports(int id, AtreianPassport atp)
 	{
-		if (anny.containsValue(id))
+		if (anny.containsKey(id))
 		{
 			return;
 		}
