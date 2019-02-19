@@ -31,9 +31,8 @@ import org.slf4j.LoggerFactory;
  * @param <K>
  * @param <V>
  */
-class SoftCacheMap<K, V>extends AbstractCacheMap<K, V> implements CacheMap<K, V>
+class SoftCacheMap<K, V>extends AbstractCacheMap<K, V>
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(SoftCacheMap.class);
 	
 	/**
@@ -42,7 +41,6 @@ class SoftCacheMap<K, V>extends AbstractCacheMap<K, V> implements CacheMap<K, V>
 	 */
 	private class SoftEntry extends SoftReference<V>
 	{
-		
 		private final K key;
 		
 		SoftEntry(K key, V referent, ReferenceQueue<? super V> q)

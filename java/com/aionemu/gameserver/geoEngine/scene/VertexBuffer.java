@@ -25,15 +25,13 @@ import java.nio.ShortBuffer;
 import com.aionemu.gameserver.geoEngine.math.FastMath;
 import com.aionemu.gameserver.geoEngine.utils.BufferUtils;
 
-public class VertexBuffer extends GLObject implements Cloneable
+public class VertexBuffer extends GLObject
 {
-	
 	/**
 	 * Type of buffer. Specifies the actual attribute it defines.
 	 */
 	public static enum Type
 	{
-		
 		/**
 		 * Position of the vertex (3 floats)
 		 */

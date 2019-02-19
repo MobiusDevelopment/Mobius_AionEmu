@@ -31,9 +31,8 @@ import org.slf4j.LoggerFactory;
  * @param <K>
  * @param <V>
  */
-class WeakCacheMap<K, V>extends AbstractCacheMap<K, V> implements CacheMap<K, V>
+class WeakCacheMap<K, V>extends AbstractCacheMap<K, V>
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(WeakCacheMap.class);
 	
 	/**

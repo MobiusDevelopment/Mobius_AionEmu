@@ -23,9 +23,8 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
 /**
  * @author ATracer
  */
-public class StatFunctionProxy implements IStatFunction, Comparable<IStatFunction>
+public class StatFunctionProxy implements IStatFunction
 {
-	
 	private final StatOwner owner;
 	private final IStatFunction proxiedFunction;
 	private final StatEnum stat;

@@ -18,7 +18,6 @@ package com.aionemu.gameserver.utils.collections;
 
 import java.util.AbstractQueue;
 import java.util.Iterator;
-import java.util.Queue;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
@@ -29,14 +28,10 @@ import javax.annotation.concurrent.ThreadSafe;
  * @param <E>
  */
 @ThreadSafe
-public class OptimisticLinkedQueue<E>extends AbstractQueue<E> implements Queue<E>, java.io.Serializable
+public class OptimisticLinkedQueue<E>extends AbstractQueue<E> implements java.io.Serializable
 {
-	
-	private static final long serialVersionUID = -3445502502831420722L;
-	
 	private static class Node<E>
 	{
-		
 		private volatile E item;
 		private volatile Node<E> next;
 		private volatile Node<E> prev;

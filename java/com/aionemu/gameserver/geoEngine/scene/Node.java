@@ -36,10 +36,10 @@ import com.aionemu.gameserver.geoEngine.math.Vector3f;
  * @author Gregg Patton
  * @author Joshua Slack
  */
-public class Node extends Spatial implements Cloneable
+public class Node extends Spatial
 {
-	
 	private static final Logger logger = Logger.getLogger(Node.class.getName());
+	
 	/**
 	 * This node's children.
 	 */
