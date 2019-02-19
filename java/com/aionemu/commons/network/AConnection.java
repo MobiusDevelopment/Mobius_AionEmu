@@ -22,8 +22,6 @@ import java.nio.ByteOrder;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.SocketChannel;
 
-import com.aionemu.commons.options.Assertion;
-
 /**
  * Class that represent Connection with server socket. Connection is created by <code>ConnectionFactory</code> and attached to <code>SelectionKey</code> key. Selection key is registered to one of Dispatchers <code>Selector</code> to handle io read and write.
  * @author -Nemesiss-
@@ -158,14 +156,6 @@ public abstract class AConnection
 	 */
 	final boolean onlyClose()
 	{
-		/**
-		 * Test if this build should use assertion. If NetworkAssertion == false javac will remove this code block
-		 */
-		if (Assertion.NetworkAssertion)
-		{
-			assert Thread.currentThread() == dispatcher;
-		}
-		
 		synchronized (guard)
 		{
 			if (closed)

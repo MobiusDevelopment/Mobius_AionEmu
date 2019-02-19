@@ -29,8 +29,6 @@ import java.util.concurrent.Executor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.aionemu.commons.options.Assertion;
-
 /**
  * Dispatcher that dispatch SelectionKeys set selected by Selector.
  * @author -Nemesiss-
@@ -175,14 +173,6 @@ public abstract class Dispatcher extends Thread
 		final ByteBuffer rb = con.readBuffer;
 		
 		/**
-		 * Test if this build should use assertion. If NetworkAssertion == false javac will remove this code block
-		 */
-		if (Assertion.NetworkAssertion)
-		{
-			assert con.readBuffer.hasRemaining();
-		}
-		
-		/**
 		 * Attempt to read off the channel
 		 */
 		int numRead;
@@ -224,14 +214,6 @@ public abstract class Dispatcher extends Thread
 		if (rb.hasRemaining())
 		{
 			con.readBuffer.compact();
-			
-			/**
-			 * Test if this build should use assertion. If NetworkAssertion == false javac will remove this code block
-			 */
-			if (Assertion.NetworkAssertion)
-			{
-				assert con.readBuffer.hasRemaining();
-			}
 		}
 		else
 		{
@@ -352,14 +334,6 @@ public abstract class Dispatcher extends Thread
 		}
 		
 		/**
-		 * Test if this build should use assertion. If NetworkAssertion == false javac will remove this code block
-		 */
-		if (Assertion.NetworkAssertion)
-		{
-			assert !wb.hasRemaining();
-		}
-		
-		/**
 		 * We wrote away all data, so we're no longer interested in writing on this socket.
 		 */
 		key.interestOps(key.interestOps() & ~SelectionKey.OP_WRITE);
@@ -379,14 +353,6 @@ public abstract class Dispatcher extends Thread
 	 */
 	protected final void closeConnectionImpl(AConnection con)
 	{
-		/**
-		 * Test if this build should use assertion. If NetworkAssertion == false javac will remove this code block
-		 */
-		if (Assertion.NetworkAssertion)
-		{
-			assert Thread.currentThread() == this;
-		}
-		
 		if (con.onlyClose()) // dcPool.scheduleDisconnection(new DisconnectionTask(con), con.getDisconnectionDelay());
 		{
 			dcPool.execute(new DisconnectionTask(con));

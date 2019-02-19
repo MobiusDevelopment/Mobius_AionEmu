@@ -28,7 +28,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.network.util.ThreadPoolManager;
-import com.aionemu.commons.options.Assertion;
 
 /**
  * NioServer instance that handle connections on specified addresses.
@@ -80,18 +79,6 @@ public class NioServer
 	 */
 	public NioServer(int readWriteThreads, ServerCfg... cfgs)
 	{
-		/**
-		 * Test if this build should use assertion and enforce it. If NetworkAssertion == false javac will remove this code block
-		 */
-		if (Assertion.NetworkAssertion)
-		{
-			boolean assertionEnabled = false;
-			assert assertionEnabled = true;
-			if (!assertionEnabled)
-			{
-				throw new RuntimeException("This is unstable build. Assertion must be enabled! Add -ea to your start script or consider using stable build instead.");
-			}
-		}
 		dcPool = ThreadPoolManager.getInstance();
 		this.readWriteThreads = readWriteThreads;
 		this.cfgs = cfgs;
