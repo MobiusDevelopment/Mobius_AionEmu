@@ -50,6 +50,7 @@ public class SvsSchedule
 		svssList = svsList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static SvsSchedule load()
 	{
 		SvsSchedule ss;

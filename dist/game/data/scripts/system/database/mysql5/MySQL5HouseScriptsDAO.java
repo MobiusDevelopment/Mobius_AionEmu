@@ -21,9 +21,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Types;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.commons.database.DatabaseFactory;
 import com.aionemu.gameserver.dao.HouseScriptsDAO;
 import com.aionemu.gameserver.dao.MySQL5DAOUtils;
@@ -34,8 +31,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerScripts;
  */
 public class MySQL5HouseScriptsDAO extends HouseScriptsDAO
 {
-	
-	private static Logger log = LoggerFactory.getLogger(MySQL5HouseScriptsDAO.class);
 	
 	public static final String INSERT_QUERY = "INSERT INTO `house_scripts` (`house_id`,`index`,`script`) VALUES (?,?,?)";
 	public static final String UPDATE_QUERY = "UPDATE `house_scripts` SET `script`=? WHERE `house_id`=? AND `index`=?";

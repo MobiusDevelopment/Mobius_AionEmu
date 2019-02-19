@@ -18,7 +18,6 @@ package system.handlers.ai.worlds.inggison;
 
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 import system.handlers.ai.ActionItemNpcAI2;
@@ -38,7 +37,6 @@ public class PlumaBaitAI2 extends ActionItemNpcAI2
 	@Override
 	protected void handleUseItemFinish(Player player)
 	{
-		final Npc owner = getOwner();
 		spawn(216608, 812.6227f, 352.1994f, 527.25f, (byte) 11); // Lightningbeak Pabu.
 		AI2Actions.deleteOwner(this);
 		AI2Actions.scheduleRespawn(this);

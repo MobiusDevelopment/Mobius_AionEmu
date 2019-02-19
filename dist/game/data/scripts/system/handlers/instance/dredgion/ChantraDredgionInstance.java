@@ -898,11 +898,6 @@ public class ChantraDredgionInstance extends GeneralInstanceHandler
 		}), time));
 	}
 	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
-	}
-	
 	private void stopInstanceTask()
 	{
 		for (FastList.Node<Future<?>> n = chantraTask.head(), end = chantraTask.tail(); (n = n.getNext()) != end;)

@@ -118,7 +118,6 @@ public class TheobomosTestChamberInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 220424: // IDF6_Lap_Sheluk_SN_67_Ae.

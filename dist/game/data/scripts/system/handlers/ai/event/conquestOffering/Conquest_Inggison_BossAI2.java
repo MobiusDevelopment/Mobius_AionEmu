@@ -76,50 +76,6 @@ public class Conquest_Inggison_BossAI2 extends AggressiveNpcAI2
 		}
 	}
 	
-	private void spawnQuestionablePortal()
-	{
-		final WorldPosition p = getPosition();
-		if (p != null)
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> spawn(833019, p.getX(), p.getY(), p.getZ(), (byte) 0), 15000);
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> despawnNpc(833019), 300000); // 5 Minutes.
-		}
-	}
-	
-	private void spawnConquestNpcBuff()
-	{
-		final WorldPosition p = getPosition();
-		if (p != null)
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () ->
-			{
-				switch (Rnd.get(1, 4))
-				{
-					case 1:
-					{
-						spawn(856175, p.getX(), p.getY(), p.getZ(), (byte) 0); // Pawrunerk.
-						break;
-					}
-					case 2:
-					{
-						spawn(856176, p.getX(), p.getY(), p.getZ(), (byte) 0); // Chitrunerk.
-						break;
-					}
-					case 3:
-					{
-						spawn(856177, p.getX(), p.getY(), p.getZ(), (byte) 0); // Rapirunerk.
-						break;
-					}
-					case 4:
-					{
-						spawn(856178, p.getX(), p.getY(), p.getZ(), (byte) 0); // Dandrunerk.
-						break;
-					}
-				}
-			}, 15000);
-		}
-	}
-	
 	private void boostDefense()
 	{
 		SkillEngine.getInstance().getSkill(getOwner(), 21923, 1, getOwner()).useNoAnimationSkill(); // Boost Defense.

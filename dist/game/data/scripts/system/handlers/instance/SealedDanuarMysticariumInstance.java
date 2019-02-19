@@ -56,8 +56,6 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 {
 	private Race spawnRace;
 	private Future<?> raidTask;
-	private Future<?> keyBoxTask;
-	private Future<?> prisonTask;
 	private boolean isStartTimer1 = false;
 	private boolean isStartTimer2 = false;
 	private Map<Integer, StaticDoor> doors;
@@ -137,7 +135,6 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 219980: // Sheban Espionage Cavalry.
@@ -171,7 +168,7 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 		sendMsgByRace(1402805, Race.PC_ALL, 300000);
 		// All monsters and key boxes in the library will disappear in 1 minute.
 		sendMessage(1402802, 4 * 60 * 1000);
-		keyBoxTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
 			spawn(702715, 172.09422f, 206.95068f, 188.01584f, (byte) 118); // Experimental Prison Teleporter.
 			AncientBox1.get(0).getController().onDelete();
@@ -219,7 +216,7 @@ public class SealedDanuarMysticariumInstance extends GeneralInstanceHandler
 		sendMessage(1402812, 3 * 60 * 1000);
 		// All monsters will disappear in 1 minute.
 		sendMessage(1402813, 4 * 60 * 1000);
-		prisonTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
 			TestSubject48012C.get(0).getController().onDelete();
 			TestSubject48013C.get(0).getController().onDelete();

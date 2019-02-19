@@ -19,7 +19,6 @@ package system.handlers.instance;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -34,7 +33,6 @@ import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.EmotionType;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.actions.CreatureActions;
-import com.aionemu.gameserver.model.drop.DropItem;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.StaticDoor;
@@ -52,7 +50,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_SCORE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
-import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.services.player.PlayerReviveService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
@@ -99,7 +96,6 @@ public class OphidanWarpathInstance extends GeneralInstanceHandler
 	@Override
 	public void onDropRegistered(Npc npc)
 	{
-		final Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		final int npcId = npc.getNpcId();
 		switch (npcId)
 		{
@@ -552,10 +548,6 @@ public class OphidanWarpathInstance extends GeneralInstanceHandler
 	
 	protected void reward()
 	{
-		final int ElyosPvPKills = getPvpKillsByRace(Race.ELYOS).intValue();
-		final int ElyosPoints = getPointsByRace(Race.ELYOS).intValue();
-		final int AsmoPvPKills = getPvpKillsByRace(Race.ASMODIANS).intValue();
-		final int AsmoPoints = getPointsByRace(Race.ASMODIANS).intValue();
 		for (Player player : instance.getPlayersInside())
 		{
 			if (CreatureActions.isAlreadyDead(player))
@@ -667,11 +659,6 @@ public class OphidanWarpathInstance extends GeneralInstanceHandler
 		}
 		updateScore(player, player, -points, false);
 		return true;
-	}
-	
-	private MutableInt getPvpKillsByRace(Race race)
-	{
-		return engulfedOphidanBridgeReward.getPvpKillsByRace(race);
 	}
 	
 	private MutableInt getPointsByRace(Race race)
@@ -788,7 +775,6 @@ public class OphidanWarpathInstance extends GeneralInstanceHandler
 		{
 			return;
 		}
-		final Race race = mostPlayerDamage.getRace();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 243962: // 눈길 고개 페슬롯.
@@ -976,11 +962,6 @@ public class OphidanWarpathInstance extends GeneralInstanceHandler
 				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
 		}), time));
-	}
-	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void stopInstanceTask()

@@ -23,6 +23,7 @@ import com.aionemu.gameserver.services.LegionService;
 
 public class CM_LEGION_JOIN_REQUEST extends AionClientPacket
 {
+	@SuppressWarnings("unused")
 	private String legionName;
 	private String joinRequestMsg;
 	private int legionId;

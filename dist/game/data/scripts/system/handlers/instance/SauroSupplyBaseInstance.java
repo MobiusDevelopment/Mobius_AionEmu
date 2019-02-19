@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.drop.DropItem;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.StaticDoor;
-import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.storage.Storage;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIE;
@@ -41,8 +40,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-
-import javolution.util.FastMap;
 
 /**
  * Author Rinzler (Encom) 第1区域:軍需基地の衛兵所>奪われたルーンの会堂 ■ 第1区域の進め方 1.大量のモンスターが密集している軍需基地の衛兵所を通り抜けて建物の内に入る。 2.1番のネームドモンスター警備隊長ロフカを倒すと、閉まっているドアが開く。 3.2番のネームドモンスター砲兵隊長クルマタを倒すと、1番 or 2番の休憩室の鍵を入手することができる。 4.入手した鍵を応じて、奪われたルーンの会堂内の休憩室に入る。内にいる精鋭モンスターを倒すと、2区域につながっているドアが開く。 第2区域:殺伐としたルーンの回廊>軍需基地の実験洞窟 ■ 第2区域の進め方
@@ -57,7 +54,6 @@ import javolution.util.FastMap;
 public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 {
 	private Map<Integer, StaticDoor> doors;
-	private final FastMap<Integer, VisibleObject> objects = new FastMap<>();
 	
 	@Override
 	public void onDropRegistered(Npc npc)
@@ -284,7 +280,6 @@ public class SauroSupplyBaseInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			/**

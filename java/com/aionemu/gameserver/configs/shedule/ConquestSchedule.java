@@ -50,6 +50,7 @@ public class ConquestSchedule
 		conquestsList = conquestList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static ConquestSchedule load()
 	{
 		ConquestSchedule cs;

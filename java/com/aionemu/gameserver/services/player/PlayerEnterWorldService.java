@@ -355,7 +355,7 @@ public final class PlayerEnterWorldService
 			client.sendPacket(new SM_SKILL_LIST(player, player.getSkillList().getBasicSkills()));
 			for (PlayerSkillEntry stigmaSkill : player.getSkillList().getStigmaSkills())
 			{
-				client.sendPacket(new SM_SKILL_LIST(player, stigmaSkill));
+				client.sendPacket(new SM_SKILL_LIST(stigmaSkill));
 			}
 			if (player.getSkillCoolDowns() != null)
 			{

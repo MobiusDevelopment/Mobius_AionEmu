@@ -126,7 +126,6 @@ public class _20034Rescue_The_Reians extends QuestHandler
 		final int var = qs.getQuestVarById(0);
 		final int var1 = qs.getQuestVarById(1);
 		int targetId = 0;
-		final QuestDialog dialog = env.getDialog();
 		if (env.getVisibleObject() instanceof Npc)
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();

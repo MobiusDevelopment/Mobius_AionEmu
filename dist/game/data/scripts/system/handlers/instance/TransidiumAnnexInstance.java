@@ -50,7 +50,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 @InstanceID(400030000)
 public class TransidiumAnnexInstance extends GeneralInstanceHandler
 {
-	private long startTime;
 	private int hangarBarricade;
 	private Future<?> instanceTimer;
 	private int transidiumAnnexBase;
@@ -99,7 +98,6 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler
 		super.onInstanceCreate(instance);
 		if (instanceTimer == null)
 		{
-			startTime = System.currentTimeMillis();
 			// Loading the Advance Corridor Shield... Please wait.
 			sendMsgByRace(1402252, Race.PC_ALL, 10000);
 			// The Advance Corridor Shield has been activated.

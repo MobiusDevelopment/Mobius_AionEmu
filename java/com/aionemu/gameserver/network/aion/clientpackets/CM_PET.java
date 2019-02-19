@@ -60,7 +60,9 @@ public class CM_PET extends AionClientPacket
 	private int dopingSlot1;
 	private int dopingSlot2;
 	private int activateLoot;
+	@SuppressWarnings("unused")
 	private int unk2;
+	@SuppressWarnings("unused")
 	private int unk3;
 	@SuppressWarnings("unused")
 	private int unk5;
@@ -69,12 +71,16 @@ public class CM_PET extends AionClientPacket
 	
 	// Cheer
 	private int activateCheering;
+	@SuppressWarnings("unused")
 	private int unkCheer2;
+	@SuppressWarnings("unused")
 	private int unkCheer3;
 	
 	// Merchand
 	private int activateAutoSell;
+	@SuppressWarnings("unused")
 	private int unkMerchand2;
+	@SuppressWarnings("unused")
 	private int unkMerchand3;
 	
 	public CM_PET(int opcode, State state, State... restStates)

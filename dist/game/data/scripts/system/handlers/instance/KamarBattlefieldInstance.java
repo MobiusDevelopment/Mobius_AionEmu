@@ -325,10 +325,6 @@ public class KamarBattlefieldInstance extends GeneralInstanceHandler
 	
 	protected void reward()
 	{
-		final int ElyosPvPKills = getPvpKillsByRace(Race.ELYOS).intValue();
-		final int ElyosPoints = getPointsByRace(Race.ELYOS).intValue();
-		final int AsmoPvPKills = getPvpKillsByRace(Race.ASMODIANS).intValue();
-		final int AsmoPoints = getPointsByRace(Race.ASMODIANS).intValue();
 		for (Player player : instance.getPlayersInside())
 		{
 			if (CreatureActions.isAlreadyDead(player))
@@ -458,11 +454,6 @@ public class KamarBattlefieldInstance extends GeneralInstanceHandler
 		return false;
 	}
 	
-	private MutableInt getPvpKillsByRace(Race race)
-	{
-		return kamarBattlefieldReward.getPvpKillsByRace(race);
-	}
-	
 	private MutableInt getPointsByRace(Race race)
 	{
 		return kamarBattlefieldReward.getPointsByRace(race);
@@ -564,7 +555,6 @@ public class KamarBattlefieldInstance extends GeneralInstanceHandler
 		{
 			return;
 		}
-		final Race race = mostPlayerDamage.getRace();
 		switch (npc.getNpcId())
 		{
 			case 232841: // Varga Raider Combatant.

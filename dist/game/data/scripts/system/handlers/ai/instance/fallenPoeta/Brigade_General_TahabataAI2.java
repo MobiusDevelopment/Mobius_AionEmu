@@ -84,15 +84,6 @@ public class Brigade_General_TahabataAI2 extends AggressiveNpcAI2
 		AI2Actions.useSkill(this, 20761); // Flame Terror.
 	}
 	
-	private void schedule()
-	{
-		if (isAlreadyDead())
-		{
-			return;
-		}
-		ThreadPoolManager.getInstance().schedule((Runnable) () -> startParalyze(), 10000);
-	}
-	
 	@Override
 	protected void handleDied()
 	{

@@ -43,7 +43,6 @@ import javolution.util.FastMap;
 @AIName("southern_shield_generator")
 public class Southern_Shield_GeneratorAI2 extends NpcAI2
 {
-	private boolean isInstanceDestroyed;
 	private final AtomicBoolean isAggred = new AtomicBoolean(false);
 	private final FastMap<Integer, VisibleObject> objects = new FastMap<>();
 	
@@ -163,6 +162,5 @@ public class Southern_Shield_GeneratorAI2 extends NpcAI2
 	
 	public void onInstanceDestroy()
 	{
-		isInstanceDestroyed = true;
 	}
 }

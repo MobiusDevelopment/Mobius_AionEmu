@@ -99,7 +99,6 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 	{
 		final Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		final int npcId = npc.getNpcId();
-		final int index = dropItems.size() + 1;
 		switch (npcId)
 		{
 			// Asmodians Reinforcements.
@@ -282,10 +281,6 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 	
 	protected void reward()
 	{
-		final int ElyosPvPKills = getPvpKillsByRace(Race.ELYOS).intValue();
-		final int ElyosPoints = getPointsByRace(Race.ELYOS).intValue();
-		final int AsmoPvPKills = getPvpKillsByRace(Race.ASMODIANS).intValue();
-		final int AsmoPoints = getPointsByRace(Race.ASMODIANS).intValue();
 		for (Player player : instance.getPlayersInside())
 		{
 			if (CreatureActions.isAlreadyDead(player))
@@ -409,11 +404,6 @@ public class IronWallWarfrontInstance extends GeneralInstanceHandler
 			return true;
 		}
 		return false;
-	}
-	
-	private MutableInt getPvpKillsByRace(Race race)
-	{
-		return ironWallWarfrontReward.getPvpKillsByRace(race);
 	}
 	
 	private MutableInt getPointsByRace(Race race)

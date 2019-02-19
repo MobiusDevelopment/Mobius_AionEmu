@@ -16,7 +16,6 @@
  */
 package com.aionemu.loginserver.network.aion;
 
-import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.security.interfaces.RSAPrivateKey;
@@ -112,12 +111,10 @@ public class LoginConnection extends AConnection
 	 * Constructor
 	 * @param sc
 	 * @param d
-	 * @throws IOException
 	 */
-	public LoginConnection(SocketChannel sc, Dispatcher d) throws IOException
+	public LoginConnection(SocketChannel sc, Dispatcher d)
 	{
 		super(sc, d, 8192 * 2, 8192 * 2);
-		
 	}
 	
 	/**

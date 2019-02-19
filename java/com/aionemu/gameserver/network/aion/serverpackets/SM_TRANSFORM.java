@@ -16,9 +16,7 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
-import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.Creature;
-import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.skillengine.model.TransformType;
@@ -56,7 +54,6 @@ public class SM_TRANSFORM extends AionServerPacket
 	@Override
 	protected void writeImpl(AionConnection con)
 	{
-		final NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(modelId);
 		writeD(creature.getObjectId());
 		writeD(modelId);
 		writeH(state);

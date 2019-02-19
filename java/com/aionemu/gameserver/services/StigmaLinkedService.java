@@ -18,9 +18,6 @@ package com.aionemu.gameserver.services;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -32,7 +29,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 
 public class StigmaLinkedService
 {
-	private static final Logger log = LoggerFactory.getLogger(StigmaLinkedService.class);
 	
 	public static void onLogOut(Player player)
 	{

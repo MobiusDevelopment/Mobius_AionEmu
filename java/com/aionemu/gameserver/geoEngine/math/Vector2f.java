@@ -641,10 +641,9 @@ public final class Vector2f implements Cloneable
 	 * Used with serialization. Not to be called manually.
 	 * @param in ObjectInput
 	 * @throws IOException
-	 * @throws ClassNotFoundException
 	 * @see java.io.Externalizable
 	 */
-	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException
+	public void readExternal(ObjectInput in) throws IOException
 	{
 		x = in.readFloat();
 		y = in.readFloat();

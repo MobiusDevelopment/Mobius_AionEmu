@@ -92,7 +92,6 @@ public class _10032Help_In_The_Hollow extends QuestHandler
 		}
 		final int var = qs.getQuestVarById(0);
 		int targetId = 0;
-		final QuestDialog dialog = env.getDialog();
 		if (env.getVisibleObject() instanceof Npc)
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();

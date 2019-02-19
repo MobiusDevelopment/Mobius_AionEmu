@@ -16,8 +16,6 @@
  */
 package system.handlers.ai.instance.rentusBase;
 
-import java.util.concurrent.Future;
-
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
@@ -30,8 +28,6 @@ import system.handlers.ai.AggressiveNpcAI2;
 @AIName("spilled_oil")
 public class SpilledOilAI2 extends AggressiveNpcAI2
 {
-	private Future<?> attackOilSoakTask;
-	
 	@Override
 	public void think()
 	{
@@ -47,32 +43,16 @@ public class SpilledOilAI2 extends AggressiveNpcAI2
 	
 	private void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(SpilledOilAI2.this);
-			}
-		}, 20000); // 20 Secondes.
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> AI2Actions.deleteOwner(SpilledOilAI2.this), 20000); // 20 Secondes.
 	}
 	
 	private void attackOilSoak()
 	{
-		attackOilSoakTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				AI2Actions.targetCreature(SpilledOilAI2.this, getPosition().getWorldMapInstance().getNpc(217311)); // Kuhara The Volatile.
-				AI2Actions.targetCreature(SpilledOilAI2.this, getPosition().getWorldMapInstance().getNpc(236298)); // Kuhara The Volatile.
-				AI2Actions.useSkill(SpilledOilAI2.this, 19658); // Oil Soak.
-			}
+			AI2Actions.targetCreature(SpilledOilAI2.this, getPosition().getWorldMapInstance().getNpc(217311)); // Kuhara The Volatile.
+			AI2Actions.targetCreature(SpilledOilAI2.this, getPosition().getWorldMapInstance().getNpc(236298)); // Kuhara The Volatile.
+			AI2Actions.useSkill(SpilledOilAI2.this, 19658); // Oil Soak.
 		}, 3000, 8000);
-	}
-	
-	private void delete()
-	{
-		AI2Actions.deleteOwner(this);
 	}
 }

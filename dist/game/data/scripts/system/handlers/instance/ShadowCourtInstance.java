@@ -61,7 +61,6 @@ public class ShadowCourtInstance extends GeneralInstanceHandler
 	{
 		final Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		final int npcId = npc.getNpcId();
-		final int index = dropItems.size() + 1;
 		switch (npcId)
 		{
 			case 214347: // Unfest Guard Captain.

@@ -40,6 +40,7 @@ public class SM_PLAYER_ESSENCE extends AionServerPacket
 {
 	Logger log = LoggerFactory.getLogger(SM_PLAYER_ESSENCE.class);
 	private int totalPoint;
+	@SuppressWarnings("unused")
 	private final int dotStep;
 	private int size;
 	private boolean onLogin;

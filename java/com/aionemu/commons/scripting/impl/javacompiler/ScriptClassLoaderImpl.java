@@ -104,6 +104,7 @@ public class ScriptClassLoaderImpl extends ScriptClassLoader
 	 * @return list of classes that are package members
 	 * @throws IOException if was unable to load class
 	 */
+	@SuppressWarnings("deprecation")
 	public Set<JavaFileObject> getClassesForPackage(String packageName) throws IOException
 	{
 		final Set<JavaFileObject> result = new HashSet<>();

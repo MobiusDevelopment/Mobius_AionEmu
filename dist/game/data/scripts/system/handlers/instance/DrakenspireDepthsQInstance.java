@@ -103,7 +103,6 @@ public class DrakenspireDepthsQInstance extends GeneralInstanceHandler
 	{
 		final Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		final int npcId = npc.getNpcId();
-		final int index = dropItems.size() + 1;
 		switch (npcId)
 		{
 			case 237224: // Fetid Phantomscorch Chimera.
@@ -889,11 +888,6 @@ public class DrakenspireDepthsQInstance extends GeneralInstanceHandler
 		raidSeal((Npc) spawn(237218, 687.77435f, 933.2536f, 1617.8989f, (byte) 68));
 		raidSeal((Npc) spawn(237218, 689.8956f, 929.0121f, 1617.4075f, (byte) 68));
 		raidSeal((Npc) spawn(237236, 688.66656f, 931.058f, 1617.5339f, (byte) 72));
-	}
-	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)

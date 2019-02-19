@@ -16,7 +16,6 @@
  */
 package system.handlers.instance.ophidanBridge;
 
-import java.util.Map;
 import java.util.Set;
 
 import com.aionemu.commons.utils.Rnd;
@@ -27,7 +26,6 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.drop.DropItem;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
-import com.aionemu.gameserver.model.gameobjects.StaticDoor;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
@@ -45,7 +43,6 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 @InstanceID(301320000)
 public class Lucky_OphidanBridgeInstance extends GeneralInstanceHandler
 {
-	private Map<Integer, StaticDoor> doors;
 	
 	@Override
 	public void onInstanceCreate(WorldMapInstance instance)
@@ -337,7 +334,6 @@ public class Lucky_OphidanBridgeInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 235768: // Spirited Velkur.

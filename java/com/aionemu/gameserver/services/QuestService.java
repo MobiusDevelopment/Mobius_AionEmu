@@ -25,8 +25,6 @@ import java.util.Set;
 import java.util.concurrent.Future;
 
 import org.joda.time.DateTime;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.configs.main.CustomConfig;
@@ -54,7 +52,6 @@ import com.aionemu.gameserver.model.team2.alliance.PlayerAlliance;
 import com.aionemu.gameserver.model.team2.common.legacy.LootRuleType;
 import com.aionemu.gameserver.model.team2.group.PlayerGroup;
 import com.aionemu.gameserver.model.templates.QuestTemplate;
-import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.model.templates.quest.CollectItem;
 import com.aionemu.gameserver.model.templates.quest.CollectItems;
 import com.aionemu.gameserver.model.templates.quest.HandlerSideDrop;
@@ -103,7 +100,6 @@ import com.google.common.collect.Multimap;
 public final class QuestService
 {
 	static QuestsData questsData = DataManager.QUEST_DATA;
-	private static final Logger log = LoggerFactory.getLogger(QuestService.class);
 	private static Multimap<Integer, QuestDrop> questDrop = ArrayListMultimap.create();
 	
 	public static boolean finishQuest(QuestEnv env)
@@ -384,7 +380,6 @@ public final class QuestService
 		}
 		if (rewards.getExp() != null)
 		{
-			final NpcTemplate npcTemplate = DataManager.NPC_DATA.getNpcTemplate(env.getTargetId());
 			player.getCommonData().addExp(rewards.getExp(), RewardType.QUEST);
 		}
 		// Aura Of Growth
@@ -1021,15 +1016,11 @@ public final class QuestService
 	
 	private static void despawnQuestNpc(Npc npc, int timeInMin)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if ((npc != null) && !npc.getLifeStats().isAlreadyDead())
 			{
-				if ((npc != null) && !npc.getLifeStats().isAlreadyDead())
-				{
-					npc.getController().onDelete();
-				}
+				npc.getController().onDelete();
 			}
 		}, 60000 * timeInMin);
 	}
@@ -1244,14 +1235,7 @@ public final class QuestService
 	public static boolean questTimerStart(QuestEnv env, int timeInSeconds)
 	{
 		final Player player = env.getPlayer();
-		final Future<?> task = ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				QuestEngine.getInstance().onQuestTimerEnd(new QuestEnv(null, player, 0, 0));
-			}
-		}, timeInSeconds * 1000);
+		final Future<?> task = ThreadPoolManager.getInstance().schedule(() -> QuestEngine.getInstance().onQuestTimerEnd(new QuestEnv(null, player, 0, 0)), timeInSeconds * 1000);
 		player.getController().addTask(TaskId.QUEST_TIMER, task);
 		PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(env.getQuestId(), timeInSeconds));
 		return true;
@@ -1260,14 +1244,7 @@ public final class QuestService
 	public static boolean invisibleTimerStart(QuestEnv env, int timeInSeconds)
 	{
 		final Player player = env.getPlayer();
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				QuestEngine.getInstance().onInvisibleTimerEnd(new QuestEnv(null, player, 0, 0));
-			}
-		}, timeInSeconds * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> QuestEngine.getInstance().onInvisibleTimerEnd(new QuestEnv(null, player, 0, 0)), timeInSeconds * 1000);
 		return true;
 	}
 	

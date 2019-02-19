@@ -217,24 +217,19 @@ public class _10520Covert_Communiques extends QuestHandler
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
 			final int var = qs.getQuestVarById(0);
-			final int instanceId = player.getInstanceId();
 			if (zoneName == ZoneName.get("LF6_SENSORY_AREA_Q10520_210100000"))
 			{
 				if (var == 3)
 				{
 					playQuestMovie(env, 995);
 					changeQuestStep(env, 3, 4, false);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule(() ->
 					{
-						@Override
-						public void run()
+						if (player != null)
 						{
-							if (player != null)
-							{
-								final WorldMapInstance SanctuaryDungeon = InstanceService.getNextAvailableInstance(301580000);
-								InstanceService.registerPlayerWithInstance(SanctuaryDungeon, player);
-								TeleportService2.teleportTo(player, 301580000, SanctuaryDungeon.getInstanceId(), 431, 491, 99);
-							}
+							final WorldMapInstance SanctuaryDungeon = InstanceService.getNextAvailableInstance(301580000);
+							InstanceService.registerPlayerWithInstance(SanctuaryDungeon, player);
+							TeleportService2.teleportTo(player, 301580000, SanctuaryDungeon.getInstanceId(), 431, 491, 99);
 						}
 					}, 43000);
 					return true;

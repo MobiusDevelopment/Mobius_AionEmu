@@ -18,7 +18,6 @@ package system.handlers.ai.instance.pvpArenas;
 
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.instance.instancereward.InstanceReward;
 import com.aionemu.gameserver.skillengine.SkillEngine;
@@ -45,7 +44,6 @@ public class AntiAirCraftGunAI2 extends ActionItemNpcAI2
 	@Override
 	protected void handleUseItemFinish(Player player)
 	{
-		final Npc owner = getOwner();
 		player.getController().stopProtectionActiveTask();
 		int morphSkill = 0;
 		switch (getNpcId())

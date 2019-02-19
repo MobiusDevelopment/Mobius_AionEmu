@@ -123,7 +123,6 @@ public class _10034Found_Underground extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int instanceId = player.getInstanceId();
 		if (qs == null)
 		{
 			return false;
@@ -295,7 +294,6 @@ public class _10034Found_Underground extends QuestHandler
 			return false;
 		}
 		final int var = qs.getQuestVarById(0);
-		final Npc npc = (Npc) env.getVisibleObject();
 		switch (env.getTargetId())
 		{
 			case 216531:

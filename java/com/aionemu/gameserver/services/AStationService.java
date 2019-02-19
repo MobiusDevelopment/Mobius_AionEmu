@@ -19,9 +19,6 @@ package com.aionemu.gameserver.services;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.configs.main.AStationConfig;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SERVER_IDS;
@@ -33,11 +30,9 @@ import com.aionemu.gameserver.world.WorldType;
 /**
  * @author Ranastic
  */
-
 public class AStationService
 {
 	private static final AStationService instance = new AStationService();
-	private final Logger log = LoggerFactory.getLogger(AStationService.class);
 	private final Map<Integer, Player> accountsOnAStation = new HashMap<>(1);
 	
 	public static AStationService getInstance()

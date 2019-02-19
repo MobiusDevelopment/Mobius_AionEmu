@@ -16,7 +16,6 @@
  */
 package com.aionemu.loginserver.network.gs;
 
-import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.util.ArrayDeque;
@@ -79,12 +78,10 @@ public class GsConnection extends AConnection
 	 * Constructor.
 	 * @param sc
 	 * @param d
-	 * @throws IOException
 	 */
-	public GsConnection(SocketChannel sc, Dispatcher d) throws IOException
+	public GsConnection(SocketChannel sc, Dispatcher d)
 	{
 		super(sc, d, 8192 * 8, 8192 * 8);
-		
 	}
 	
 	/**

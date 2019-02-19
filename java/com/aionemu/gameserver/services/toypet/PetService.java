@@ -41,7 +41,6 @@ import com.aionemu.gameserver.model.templates.pet.PetFeedResult;
 import com.aionemu.gameserver.model.templates.pet.PetFlavour;
 import com.aionemu.gameserver.model.templates.pet.PetFunction;
 import com.aionemu.gameserver.model.templates.pet.PetFunctionType;
-import com.aionemu.gameserver.model.templates.pet.PetMerchandEntry;
 import com.aionemu.gameserver.model.templates.pet.PetTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PET;
@@ -320,9 +319,6 @@ public class PetService
 	
 	public void activeAutoSell(Player player, boolean activate)
 	{
-		final Pet pet = player.getPet();
-		final PetTemplate petTemp = DataManager.PET_DATA.getPetTemplate(pet.getPetId());
-		final PetMerchandEntry merchand = DataManager.PET_MERCHAND_DATA.getMerchandTemplate(petTemp.getPetFunction(PetFunctionType.MERCHAND).getId());
 		if (player.getPet() == null)
 		{
 			return;

@@ -81,7 +81,6 @@ public class Chief_Gunner_KurmataAI2 extends AggressiveNpcAI2
 	
 	private void stage1()
 	{
-		final int delay = 0;
 		if (isAlreadyDead() || !isStart)
 		{
 			return;

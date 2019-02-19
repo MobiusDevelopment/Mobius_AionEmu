@@ -47,7 +47,6 @@ import javolution.util.FastMap;
 @InstanceID(300460000)
 public class SteelRakeCabineInstance extends GeneralInstanceHandler
 {
-	private boolean isInstanceDestroyed;
 	private final FastMap<Integer, VisibleObject> objects = new FastMap<>();
 	
 	@Override
@@ -137,7 +136,6 @@ public class SteelRakeCabineInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 700549: // Air Vent Cover.

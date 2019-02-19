@@ -72,7 +72,6 @@ public class _20502Evolving_Mysteries extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final Npc npc = (Npc) env.getVisibleObject();
 		if (qs == null)
 		{
 			return false;

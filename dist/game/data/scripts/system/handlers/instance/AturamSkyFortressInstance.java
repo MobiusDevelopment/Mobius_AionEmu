@@ -67,7 +67,6 @@ public class AturamSkyFortressInstance extends GeneralInstanceHandler
 {
 	private boolean msgIsSended;
 	private int energyGenerators;
-	private int balaurSpyCrystal;
 	private int drakanChiefOfStaff;
 	private int drakanPettyOfficer;
 	private boolean isInstanceDestroyed;

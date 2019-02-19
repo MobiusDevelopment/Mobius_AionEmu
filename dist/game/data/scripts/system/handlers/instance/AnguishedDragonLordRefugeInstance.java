@@ -663,11 +663,6 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 		return null;
 	}
 	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
-	}
-	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
 		ThreadPoolManager.getInstance().schedule((Runnable) () -> instance.doOnAllPlayers(player ->

@@ -99,7 +99,6 @@ public class CreativityEssenceService
 					point = player.getCreativityPoint() + 1;
 					player.setCreativityPoint(point);
 					final int totalPoint = player.getCreativityPoint();
-					final int size = DAOManager.getDAO(PlayerCPDAO.class).getSlotSize(player.getObjectId());
 					PacketSendUtility.sendPacket(player, new SM_PLAYER_ESSENCE(totalPoint, 2));
 					PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
 					// You have gained Essence.
@@ -438,7 +437,6 @@ public class CreativityEssenceService
 	
 	public void archDaevaSkills(Player player, int id, int point)
 	{
-		final PanelCp pcp = DataManager.PANEL_CP_DATA.getPanelCpId(id);
 		if (point >= 5)
 		{
 			switch (id)
@@ -640,6 +638,6 @@ public class CreativityEssenceService
 	
 	private static class NewSingletonHolder
 	{
-		private static final CreativityEssenceService INSTANCE = new CreativityEssenceService();
+		static final CreativityEssenceService INSTANCE = new CreativityEssenceService();
 	}
 }

@@ -16,7 +16,6 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -39,7 +38,6 @@ public class SM_PACKAGE_INFO_NOTIFY extends AionServerPacket
 	@Override
 	protected void writeImpl(AionConnection con)
 	{
-		final Player activePlayer = con.getActivePlayer();
 		writeH(count);
 		writeC(packId);
 		writeD(time);

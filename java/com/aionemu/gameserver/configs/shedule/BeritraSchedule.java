@@ -50,6 +50,7 @@ public class BeritraSchedule
 		beritrasList = beritraList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static BeritraSchedule load()
 	{
 		BeritraSchedule bs;

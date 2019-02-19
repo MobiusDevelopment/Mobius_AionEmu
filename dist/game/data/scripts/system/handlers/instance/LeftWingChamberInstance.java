@@ -19,7 +19,6 @@ package system.handlers.instance;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.Future;
 
 import com.aionemu.gameserver.instance.handlers.GeneralInstanceHandler;
 import com.aionemu.gameserver.instance.handlers.InstanceID;
@@ -57,7 +56,6 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 	private boolean isStartTimer10 = false;
 	private boolean isStartTimer11 = false;
 	private boolean isStartTimer12 = false;
-	private Future<?> chestLeftWingTask;
 	private Map<Integer, StaticDoor> doors;
 	private final List<Npc> leftWingTreasureBox = new ArrayList<>();
 	
@@ -71,7 +69,6 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 219617: // Balaur Barricade.
@@ -105,7 +102,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					leftWingTreasureBox.add((Npc) spawn(700465, 197.46051f, 471.78418f, 365.32578f, (byte) 82));
 					leftWingTreasureBox.add((Npc) spawn(700465, 223.41487f, 409.03143f, 365.01053f, (byte) 26));
 					leftWingTreasureBox.add((Npc) spawn(700465, 213.39343f, 425.5012f, 366.57892f, (byte) 8));
-					chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
+					ThreadPoolManager.getInstance().schedule(() ->
 					{
 						StartTimer2();
 						sendMsg(1400245);
@@ -130,7 +127,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer3();
 				sendMsg(1400245);
@@ -152,7 +149,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer4();
 				sendMsg(1400245);
@@ -174,7 +171,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer5();
 				sendMsg(1400245);
@@ -196,7 +193,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer6();
 				sendMsg(1400245);
@@ -218,7 +215,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer7();
 				sendMsg(1400245);
@@ -240,7 +237,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer8();
 				sendMsg(1400245);
@@ -262,7 +259,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer9();
 				sendMsg(1400245);
@@ -284,7 +281,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer10();
 				sendMsg(1400245);
@@ -306,7 +303,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer11();
 				sendMsg(1400245);
@@ -328,7 +325,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer12();
 				sendMsg(1400245);
@@ -350,7 +347,7 @@ public class LeftWingChamberInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestLeftWingTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				sendMsg(1400244);
 				sendMsg(1400245);

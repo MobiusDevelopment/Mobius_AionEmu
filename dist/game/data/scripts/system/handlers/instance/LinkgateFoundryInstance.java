@@ -19,7 +19,6 @@ package system.handlers.instance;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.Future;
 
 import com.aionemu.gameserver.instance.handlers.GeneralInstanceHandler;
 import com.aionemu.gameserver.instance.handlers.InstanceID;
@@ -46,7 +45,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @InstanceID(301270000)
 public class LinkgateFoundryInstance extends GeneralInstanceHandler
 {
-	private Future<?> linkgateTask;
 	private boolean isStartTimer1 = false;
 	private final List<Npc> Drs = new ArrayList<>();
 	private final List<Npc> Drs2 = new ArrayList<>();
@@ -206,7 +204,6 @@ public class LinkgateFoundryInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 233898: // Volatile Belsagos.
@@ -243,7 +240,7 @@ public class LinkgateFoundryInstance extends GeneralInstanceHandler
 		sendMessage(1402458, 19 * 60 * 1000);
 		// All monsters except Belsagos have disappeared from the Linkgate Foundry.
 		sendMessage(1402461, 20 * 60 * 1000);
-		linkgateTask = ThreadPoolManager.getInstance().schedule(() ->
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
 			// ***Dimensional Research Security***//
 			Drs.get(0).getController().onDelete();
@@ -355,14 +352,6 @@ public class LinkgateFoundryInstance extends GeneralInstanceHandler
 	public void onLeaveInstance(Player player)
 	{
 		removeItems(player);
-	}
-	
-	private void deleteNpc(int npcId)
-	{
-		if (getNpc(npcId) != null)
-		{
-			getNpc(npcId).getController().onDelete();
-		}
 	}
 	
 	private void sendMsg(String str)

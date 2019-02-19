@@ -18,7 +18,6 @@ package com.aionemu.gameserver.utils.rates;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 import com.aionemu.gameserver.configs.main.RateConfig;
 
@@ -27,7 +26,7 @@ import com.aionemu.gameserver.configs.main.RateConfig;
  */
 public class HolidayRates
 {
-	private static Calendar calendar = GregorianCalendar.getInstance();
+	private static Calendar calendar = Calendar.getInstance();
 	
 	public static int getHolidayRate(int membership)
 	{

@@ -92,7 +92,6 @@ public class CraftService
 				return true;
 			}
 		});
-		final ItemTemplate itemTemplate = DataManager.ITEM_DATA.getItemTemplate(productItemId);
 		final int gainedCraftExp = (int) RewardType.CRAFTING.calcReward(player, xpReward);
 		final int skillId = recipetemplate.getSkillid();
 		if ((skillId == 40001) || (skillId == 40002) || (skillId == 40003) || (skillId == 40004) || (skillId == 40007) || (skillId == 40008) || (skillId == 40010))
@@ -128,7 +127,6 @@ public class CraftService
 		final RecipeTemplate recipeTemplate = DataManager.RECIPE_DATA.getRecipeTemplateById(recipeId);
 		final int skillId = recipeTemplate.getSkillid();
 		final VisibleObject target = player.getKnownList().getObject(targetObjId);
-		final ItemTemplate itemTemplate = DataManager.ITEM_DATA.getItemTemplate(recipeTemplate.getProductid());
 		if (recipeTemplate.getDp() != null)
 		{
 			player.getCommonData().addDp(-recipeTemplate.getDp());
@@ -147,7 +145,6 @@ public class CraftService
 	
 	public static void stopAetherforging(Player player, int recipeId)
 	{
-		final RecipeTemplate recipeTemplate = DataManager.RECIPE_DATA.getRecipeTemplateById(recipeId);
 		final ItemUseObserver Aetherforging = new ItemUseObserver()
 		{
 			@Override
@@ -164,7 +161,6 @@ public class CraftService
 	{
 		final RecipeTemplate recipeTemplate = DataManager.RECIPE_DATA.getRecipeTemplateById(recipeId);
 		final int delayedTime = 4000;
-		final int skillLvl = 0;
 		final int skillId = recipeTemplate.getSkillid();
 		final ItemTemplate itemTemplate = DataManager.ITEM_DATA.getItemTemplate(recipeTemplate.getProductid());
 		PacketSendUtility.broadcastPacket(player, new SM_AETHERFORGING_ANIMATION(player, recipeTemplate.getId(), delayedTime, 0), true);
@@ -186,23 +182,17 @@ public class CraftService
 			}
 		};
 		player.getObserveController().attach(Aetherforging);
-		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable()
+		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			player.getController().cancelTask(TaskId.ITEM_USE);
+			player.getObserveController().removeObserver(Aetherforging);
+			ItemService.addItem(player, recipeTemplate.getProductid(), recipeTemplate.getQuantity(), new ItemUpdatePredicate(ItemAddType.AETHERFORGING, ItemUpdateType.INC_ITEM_COLLECT));
+			if ((Rnd.get(1, 6) == 6) && (player.getSkillList().getSkillLevel(40011) != 300))
 			{
-				final int xpReward = (int) (((0.008 * (recipeTemplate.getSkillpoint() + 100) * (recipeTemplate.getSkillpoint() + 100)) + 80));
-				final int gainedCraftExp = (int) RewardType.CRAFTING.calcReward(player, xpReward);
-				player.getController().cancelTask(TaskId.ITEM_USE);
-				player.getObserveController().removeObserver(Aetherforging);
-				ItemService.addItem(player, recipeTemplate.getProductid(), recipeTemplate.getQuantity(), new ItemUpdatePredicate(ItemAddType.AETHERFORGING, ItemUpdateType.INC_ITEM_COLLECT));
-				if ((Rnd.get(1, 6) == 6) && (player.getSkillList().getSkillLevel(40011) != 300))
-				{
-					player.getSkillList().addSkill(player, 40011, player.getSkillList().getSkillLevel(40011) + 1);
-				}
-				PacketSendUtility.sendPacket(player, new SM_AETHERFORGING_ANIMATION(player, recipeTemplate.getId(), 0, 2));
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CRAFT_SUCCESS_GETEXP);
+				player.getSkillList().addSkill(player, 40011, player.getSkillList().getSkillLevel(40011) + 1);
 			}
+			PacketSendUtility.sendPacket(player, new SM_AETHERFORGING_ANIMATION(player, recipeTemplate.getId(), 0, 2));
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CRAFT_SUCCESS_GETEXP);
 		}, delayedTime));
 	}
 	
@@ -251,41 +241,5 @@ public class CraftService
 				}
 			}
 		}
-	}
-	
-	private static int getBonusReqItem(int skillId)
-	{
-		switch (skillId)
-		{
-			case 40001: // Cooking.
-			{
-				return 169401081;
-			}
-			case 40002: // Weaponsmithing.
-			{
-				return 169401076;
-			}
-			case 40003: // Armorsmithing.
-			{
-				return 169401077;
-			}
-			case 40004: // Tailoring.
-			{
-				return 169401078;
-			}
-			case 40007: // Alchemy.
-			{
-				return 169401080;
-			}
-			case 40008: // Handicrafting.
-			{
-				return 169401079;
-			}
-			case 40010: // Menuisier.
-			{
-				return 169401082;
-			}
-		}
-		return 0;
 	}
 }

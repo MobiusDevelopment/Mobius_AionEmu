@@ -97,7 +97,6 @@ public class Item extends AionObject implements IExpirable, StatOwner
 	private int SkinSkill = 0;
 	private boolean luna_reskin = false;
 	private int ReductionLevel = 0;
-	private final boolean isSeal = false;
 	private int unSeal = 0;
 	
 	/**

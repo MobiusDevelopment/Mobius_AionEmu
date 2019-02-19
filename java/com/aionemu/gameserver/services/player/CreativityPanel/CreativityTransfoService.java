@@ -16,10 +16,8 @@
  */
 package com.aionemu.gameserver.services.player.CreativityPanel;
 
-import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.model.templates.panel_cp.PanelCp;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_ESSENCE_CONTROL;
 import com.aionemu.gameserver.services.SkillLearnService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -41,7 +39,6 @@ public class CreativityTransfoService
 	
 	public void learnTransfo(Player player, int id, int point)
 	{
-		final PanelCp pcp = DataManager.PANEL_CP_DATA.getPanelCpId(id);
 		if (point >= 1)
 		{
 			switch (id)
@@ -370,7 +367,6 @@ public class CreativityTransfoService
 	
 	public void enchantTransfo(Player player, int id, int point)
 	{
-		final PanelCp pcp = DataManager.PANEL_CP_DATA.getPanelCpId(id);
 		if (point >= 1)
 		{
 			switch (id)

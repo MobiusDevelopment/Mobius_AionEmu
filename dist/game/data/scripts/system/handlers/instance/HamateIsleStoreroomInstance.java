@@ -19,7 +19,6 @@ package system.handlers.instance;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.Future;
 
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.instance.handlers.GeneralInstanceHandler;
@@ -62,7 +61,6 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 @InstanceID(300070000)
 public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 {
-	private Future<?> hamateIsleStoreroomTask;
 	private boolean isStartTimer = false;
 	private final List<Npc> HamateIsleStoreroomTreasureBoxSuscess = new ArrayList<>();
 	
@@ -200,7 +198,7 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 	
 	void startHamateIsleStoreroomTimer()
 	{
-		hamateIsleStoreroomTask = ThreadPoolManager.getInstance().schedule(() ->
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
 			// All Balaur treasure chests have disappeared.
 			sendMsg(1400244);
@@ -208,11 +206,6 @@ public class HamateIsleStoreroomInstance extends GeneralInstanceHandler
 			HamateIsleStoreroomTreasureBoxSuscess.get(1).getController().onDelete();
 			HamateIsleStoreroomTreasureBoxSuscess.get(2).getController().onDelete();
 		}, 900000); // 15 Minutes.
-	}
-	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	@Override

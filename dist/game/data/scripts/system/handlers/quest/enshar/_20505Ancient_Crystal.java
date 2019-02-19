@@ -71,7 +71,6 @@ public class _20505Ancient_Crystal extends QuestHandler
 	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		final Npc npc = (Npc) env.getVisibleObject();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs == null)
 		{

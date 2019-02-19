@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.Future;
 
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.instance.handlers.GeneralInstanceHandler;
@@ -61,7 +60,6 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 	private boolean isStartTimer10 = false;
 	private boolean isStartTimer11 = false;
 	private boolean isStartTimer12 = false;
-	private Future<?> chestTheHexwayTask;
 	private Map<Integer, StaticDoor> doors;
 	private final List<Npc> theHexwayTreasureBox = new ArrayList<>();
 	
@@ -77,7 +75,6 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 	{
 		final Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		final int npcId = npc.getNpcId();
-		final int index = dropItems.size() + 1;
 		switch (npcId)
 		{
 			case 219609: // Captain Jarka.
@@ -123,7 +120,6 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 219617: // Balaur Barricade.
@@ -157,7 +153,7 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					theHexwayTreasureBox.add((Npc) spawn(701664, 197.46051f, 471.78418f, 365.32578f, (byte) 82));
 					theHexwayTreasureBox.add((Npc) spawn(701664, 223.41487f, 409.03143f, 365.01053f, (byte) 26));
 					theHexwayTreasureBox.add((Npc) spawn(701664, 213.39343f, 425.5012f, 366.57892f, (byte) 8));
-					chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
+					ThreadPoolManager.getInstance().schedule(() ->
 					{
 						StartTimer2();
 						sendMsg(1400245);
@@ -182,7 +178,7 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer3();
 				sendMsg(1400245);
@@ -204,7 +200,7 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer4();
 				sendMsg(1400245);
@@ -226,7 +222,7 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer5();
 				sendMsg(1400245);
@@ -248,7 +244,7 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer6();
 				sendMsg(1400245);
@@ -270,7 +266,7 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer7();
 				sendMsg(1400245);
@@ -292,7 +288,7 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer8();
 				sendMsg(1400245);
@@ -314,7 +310,7 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer9();
 				sendMsg(1400245);
@@ -336,7 +332,7 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer10();
 				sendMsg(1400245);
@@ -358,7 +354,7 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer11();
 				sendMsg(1400245);
@@ -380,7 +376,7 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				StartTimer12();
 				sendMsg(1400245);
@@ -402,7 +398,7 @@ public class TheHexwayInstance extends GeneralInstanceHandler
 					PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 300));
 				}
 			});
-			chestTheHexwayTask = ThreadPoolManager.getInstance().schedule(() ->
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
 				sendMsg(1400244);
 				sendMsg(1400245);

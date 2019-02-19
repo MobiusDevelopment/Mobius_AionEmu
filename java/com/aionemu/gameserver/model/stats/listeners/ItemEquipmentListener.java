@@ -181,7 +181,6 @@ public class ItemEquipmentListener
 		}
 		
 		List<StatFunction> allModifiers = null;
-		final List<StatFunction> decreaseAllModifiers = null;
 		
 		if ((slot & ItemSlot.MAIN_OR_SUB.getSlotIdMask()) != 0)
 		{

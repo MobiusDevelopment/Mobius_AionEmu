@@ -21,6 +21,7 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 
 public class CM_TUNE_RESULT extends AionClientPacket
 {
+	@SuppressWarnings("unused")
 	private int itemObjectId;
 	private int unk;
 	private int accept;

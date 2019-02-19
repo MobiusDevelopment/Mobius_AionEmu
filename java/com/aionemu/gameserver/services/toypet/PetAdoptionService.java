@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.services.toypet;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.player.PetCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -32,7 +29,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class PetAdoptionService
 {
-	private static final Logger log = LoggerFactory.getLogger(PetAdoptionService.class);
 	
 	public static void adoptPet(Player player, int eggObjId, int petId, String name, int decorationId)
 	{

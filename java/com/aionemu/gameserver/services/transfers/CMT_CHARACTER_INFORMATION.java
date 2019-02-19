@@ -310,7 +310,6 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 			{
 				godstone = readD();
 			}
-			final int colorExpires = readD();
 			final int bonusNum = readD();
 			final int randomNum = readD();
 			final int wrappingNum = readD();

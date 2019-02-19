@@ -31,6 +31,7 @@ public class CM_AETHERFORGING extends AionClientPacket
 	@SuppressWarnings("unused")
 	private long itemCount;
 	private int actionId;
+	@SuppressWarnings("unused")
 	private int targetTemplateId;
 	private int recipeId;
 	private int materialsCount;

@@ -16,8 +16,6 @@
  */
 package system.handlers.ai.instance.darkPoeta;
 
-import java.util.concurrent.Future;
-
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
@@ -34,8 +32,6 @@ import system.handlers.ai.AggressiveNpcAI2;
 @AIName("drana_lump")
 public class Drana_LumpAI2 extends AggressiveNpcAI2
 {
-	private Future<?> dranaBreakTask;
-	
 	@Override
 	public void think()
 	{
@@ -73,16 +69,12 @@ public class Drana_LumpAI2 extends AggressiveNpcAI2
 	
 	private void dranaBreak()
 	{
-		dranaBreakTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				AI2Actions.targetCreature(Drana_LumpAI2.this, getPosition().getWorldMapInstance().getNpc(214880)); // Spaller Echtra.
-				AI2Actions.targetCreature(Drana_LumpAI2.this, getPosition().getWorldMapInstance().getNpc(215388)); // Spaller Rakanatra.
-				AI2Actions.targetCreature(Drana_LumpAI2.this, getPosition().getWorldMapInstance().getNpc(215389)); // Spaller Dhatra.
-				AI2Actions.useSkill(Drana_LumpAI2.this, 18536); // Drana Break.
-			}
+			AI2Actions.targetCreature(Drana_LumpAI2.this, getPosition().getWorldMapInstance().getNpc(214880)); // Spaller Echtra.
+			AI2Actions.targetCreature(Drana_LumpAI2.this, getPosition().getWorldMapInstance().getNpc(215388)); // Spaller Rakanatra.
+			AI2Actions.targetCreature(Drana_LumpAI2.this, getPosition().getWorldMapInstance().getNpc(215389)); // Spaller Dhatra.
+			AI2Actions.useSkill(Drana_LumpAI2.this, 18536); // Drana Break.
 		}, 1000, 6000);
 	}
 	

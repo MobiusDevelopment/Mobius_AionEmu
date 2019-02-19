@@ -56,7 +56,6 @@ import javolution.util.FastMap;
 @InstanceID(300510000)
 public class TiamatStrongholdInstance extends GeneralInstanceHandler
 {
-	private int kills;
 	private int protectorate;
 	private boolean startSuramaEvent;
 	private Map<Integer, StaticDoor> doors;
@@ -237,7 +236,6 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 219369: // Protectorate Elite Fighter.
@@ -515,11 +513,6 @@ public class TiamatStrongholdInstance extends GeneralInstanceHandler
 		PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
 		PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));
 		return true;
-	}
-	
-	private boolean isDead(Npc npc)
-	{
-		return ((npc == null) || npc.getLifeStats().isAlreadyDead());
 	}
 	
 	private void deleteNpc(int npcId)

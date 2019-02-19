@@ -57,7 +57,6 @@ public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 		final Player player = env.getPlayer();
 		int targetId = 0;
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final QuestDialog dialog = env.getDialog();
 		if (env.getVisibleObject() instanceof Npc)
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();

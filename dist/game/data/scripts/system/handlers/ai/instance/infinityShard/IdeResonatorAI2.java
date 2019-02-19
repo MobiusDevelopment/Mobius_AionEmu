@@ -17,7 +17,6 @@
 package system.handlers.ai.instance.infinityShard;
 
 import java.util.List;
-import java.util.concurrent.Future;
 
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.ai2.AI2Actions;
@@ -37,7 +36,6 @@ import system.handlers.ai.AggressiveNpcAI2;
 @AIName("ide_resonator")
 public class IdeResonatorAI2 extends AggressiveNpcAI2
 {
-	private Future<?> attackBoostTask;
 	
 	@Override
 	public void think()
@@ -87,7 +85,7 @@ public class IdeResonatorAI2 extends AggressiveNpcAI2
 	
 	private void attackBoost()
 	{
-		attackBoostTask = ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
+		ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
 			AI2Actions.targetCreature(IdeResonatorAI2.this, getPosition().getWorldMapInstance().getNpc(231073)); // Hyperion.
 			AI2Actions.useSkill(IdeResonatorAI2.this, 21257);

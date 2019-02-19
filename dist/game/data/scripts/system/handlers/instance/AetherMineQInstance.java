@@ -71,7 +71,6 @@ public class AetherMineQInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 244111: // LF6_Mission_Dark_Fi_75_An.

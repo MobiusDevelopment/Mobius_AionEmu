@@ -42,6 +42,7 @@ public class CM_LUNA_SHOP extends AionClientPacket
 	private int teleportId;
 	private int slot;
 	private int ItemObjId;
+	@SuppressWarnings("unused")
 	private int lunaCost;
 	
 	public CM_LUNA_SHOP(int opcode, State state, State... restStates)

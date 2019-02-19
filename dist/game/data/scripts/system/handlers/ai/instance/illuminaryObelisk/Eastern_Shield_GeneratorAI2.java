@@ -43,7 +43,6 @@ import javolution.util.FastMap;
 @AIName("eastern_shield_generator")
 public class Eastern_Shield_GeneratorAI2 extends NpcAI2
 {
-	private boolean isInstanceDestroyed;
 	private final AtomicBoolean isAggred = new AtomicBoolean(false);
 	private final FastMap<Integer, VisibleObject> objects = new FastMap<>();
 	
@@ -159,10 +158,5 @@ public class Eastern_Shield_GeneratorAI2 extends NpcAI2
 		npc.setState(1);
 		npc.getMoveController().moveToPoint(x, y, z);
 		PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
-	}
-	
-	public void onInstanceDestroy()
-	{
-		isInstanceDestroyed = true;
 	}
 }

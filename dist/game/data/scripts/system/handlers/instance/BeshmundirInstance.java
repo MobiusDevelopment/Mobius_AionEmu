@@ -41,7 +41,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -53,7 +52,7 @@ public class BeshmundirInstance extends GeneralInstanceHandler
 {
 	private int macunbelloSouls;
 	private int warriorMonument;
-	private WorldMapInstance instance;
+	WorldMapInstance instance;
 	private Map<Integer, StaticDoor> doors;
 	private final List<Integer> movies = new ArrayList<>();
 	private final FastMap<Integer, VisibleObject> objects = new FastMap<>();
@@ -89,14 +88,7 @@ public class BeshmundirInstance extends GeneralInstanceHandler
 				{
 					// Ahbana the Wicked has appeared in the Watcher's Nexus.
 					sendMsgByRace(1400470, Race.PC_ALL, 5000);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							spawn(216239, 1356.9945f, 149.51117f, 246.27036f, (byte) 29); // Ahbana The Wicked.
-						}
-					}, 3000);
+					ThreadPoolManager.getInstance().schedule(() -> spawn(216239, 1356.9945f, 149.51117f, 246.27036f, (byte) 29), 3000);
 				}
 				despawnNpc(npc);
 				// The Warrior Monument has been destroyed. Ahbana the Wicked is on alert.
@@ -174,14 +166,7 @@ public class BeshmundirInstance extends GeneralInstanceHandler
 				deleteNpc(281649); // Chopper.
 				// Hiding Lupukin has appeared.
 				sendMsgByRace(1400471, Race.PC_ALL, 2000);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(216527, 1164.5264f, 1210.8931f, 283.3387f, (byte) 107); // Lupukin.
-					}
-				}, 3000);
+				ThreadPoolManager.getInstance().schedule(() -> spawn(216527, 1164.5264f, 1210.8931f, 283.3387f, (byte) 107), 3000);
 				break;
 			}
 			case 216248: // Taros Lifebane.
@@ -212,14 +197,7 @@ public class BeshmundirInstance extends GeneralInstanceHandler
 				deleteNpc(281796);
 				deleteNpc(281797);
 				deleteNpc(281798);
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						spawn(730287, 565.25275f, 1376.6252f, 224.79459f, (byte) 74); // Prison Of Ice Exit.
-					}
-				}, 3000);
+				ThreadPoolManager.getInstance().schedule(() -> spawn(730287, 565.25275f, 1376.6252f, 224.79459f, (byte) 74), 3000);
 				break;
 			}
 		}
@@ -260,38 +238,15 @@ public class BeshmundirInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendMessage(player, str);
-			}
-		});
-	}
-	
 	protected void sendMsgByRace(int msg, Race race, int time)
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() -> instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void run()
+			if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
 			{
-				instance.doOnAllPlayers(new Visitor<Player>()
-				{
-					@Override
-					public void visit(Player player)
-					{
-						if (player.getRace().equals(race) || race.equals(Race.PC_ALL))
-						{
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
-						}
-					}
-				});
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
-		}, time);
+		}), time);
 	}
 	
 	private void despawnNpc(Npc npc)

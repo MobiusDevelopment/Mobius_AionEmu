@@ -94,7 +94,6 @@ public class _20033Drana_Solution extends QuestHandler
 		}
 		final int var = qs.getQuestVarById(0);
 		int targetId = 0;
-		final QuestDialog dialog = env.getDialog();
 		if (env.getVisibleObject() instanceof Npc)
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
@@ -187,17 +186,13 @@ public class _20033Drana_Solution extends QuestHandler
 			return HandlerResult.UNKNOWN;
 		}
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 3000, 0, 0), true);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
-				playQuestMovie(env, 553);
-				removeQuestItem(env, 182215594, 1);
-				qs.setStatus(QuestStatus.REWARD);
-				updateQuestStatus(env);
-			}
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
+			playQuestMovie(env, 553);
+			removeQuestItem(env, 182215594, 1);
+			qs.setStatus(QuestStatus.REWARD);
+			updateQuestStatus(env);
 		}, 3000);
 		return HandlerResult.SUCCESS;
 	}

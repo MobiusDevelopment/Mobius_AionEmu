@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.storage.Storage;
@@ -29,12 +26,10 @@ import com.aionemu.gameserver.services.item.ItemPacketService.ItemDeleteType;
 /**
  * @author Ranastic
  */
-
 public class CM_SELL_TERMINATED_ITEMS extends AionClientPacket
 {
 	private int size;
 	private int itemObjId;
-	private static final Logger log = LoggerFactory.getLogger(CM_SELL_TERMINATED_ITEMS.class);
 	
 	public CM_SELL_TERMINATED_ITEMS(int opcode, State state, State... restStates)
 	{

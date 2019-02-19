@@ -50,6 +50,7 @@ public class InstanceSchedule
 		instancesList = instanceList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static InstanceSchedule load()
 	{
 		InstanceSchedule is;

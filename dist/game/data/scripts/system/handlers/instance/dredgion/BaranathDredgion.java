@@ -378,7 +378,6 @@ public class BaranathDredgion extends GeneralInstanceHandler
 		{
 			return;
 		}
-		final Race race = mostPlayerDamage.getRace();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			/**
@@ -893,11 +892,6 @@ public class BaranathDredgion extends GeneralInstanceHandler
 				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
 		}), time));
-	}
-	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void stopInstanceTask()

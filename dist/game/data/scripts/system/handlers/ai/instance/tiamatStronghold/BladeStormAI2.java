@@ -16,8 +16,6 @@
  */
 package system.handlers.ai.instance.tiamatStronghold;
 
-import java.util.concurrent.Future;
-
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
@@ -30,8 +28,6 @@ import system.handlers.ai.AggressiveNpcAI2;
 @AIName("bladestorm")
 public class BladeStormAI2 extends AggressiveNpcAI2
 {
-	private Future<?> stormBladeTask;
-	
 	@Override
 	public void think()
 	{
@@ -47,27 +43,16 @@ public class BladeStormAI2 extends AggressiveNpcAI2
 	
 	private void stormBlade()
 	{
-		stormBladeTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				AI2Actions.targetCreature(BladeStormAI2.this, getPosition().getWorldMapInstance().getNpc(219357)); // Adjudant Anuhart.
-				AI2Actions.useSkill(BladeStormAI2.this, 20748); // Storm Blade.
-			}
+			AI2Actions.targetCreature(BladeStormAI2.this, getPosition().getWorldMapInstance().getNpc(219357)); // Adjudant Anuhart.
+			AI2Actions.useSkill(BladeStormAI2.this, 20748); // Storm Blade.
 		}, 3000, 8000);
 	}
 	
 	private void startLifeTask()
 	{
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				AI2Actions.deleteOwner(BladeStormAI2.this);
-			}
-		}, 10000);
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> AI2Actions.deleteOwner(BladeStormAI2.this), 10000);
 	}
 	
 	@Override

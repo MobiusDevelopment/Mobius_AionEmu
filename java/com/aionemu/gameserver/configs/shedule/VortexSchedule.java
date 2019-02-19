@@ -50,6 +50,7 @@ public class VortexSchedule
 		vortexsList = vortexList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static VortexSchedule load()
 	{
 		VortexSchedule vs;

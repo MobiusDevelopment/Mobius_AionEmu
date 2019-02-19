@@ -32,7 +32,6 @@ import com.aionemu.gameserver.model.instance.instancereward.HarmonyArenaReward;
 import com.aionemu.gameserver.model.instance.instancereward.InstanceReward;
 import com.aionemu.gameserver.model.instance.playerreward.HarmonyGroupReward;
 import com.aionemu.gameserver.model.instance.playerreward.PvPArenaPlayerReward;
-import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_SCORE;
@@ -108,7 +107,6 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 				}
 			}
 		});
-		final Integer NullObject = null;
 		PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(6, getTime(), getInstanceReward(), null));
 		instanceReward.sendPacket(4, object);
 	}
@@ -309,11 +307,6 @@ public class HarmonyArenaInstance extends GeneralInstanceHandler
 				instanceReward.sendPacket(4, player.getObjectId());
 			}
 		}, 1000);
-	}
-	
-	private void sendPacket(AionServerPacket packet)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, packet));
 	}
 	
 	@Override

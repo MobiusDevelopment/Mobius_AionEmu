@@ -25,9 +25,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.dao.LadderDAO;
@@ -77,10 +74,8 @@ import javolution.util.FastMap;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 public abstract class Battleground
 {
-	private static final Logger log = LoggerFactory.getLogger(Battleground.class);
 	protected static final int TELEPORT_DEFAULT_DELAY = 0;
 	protected final int K_VALUE = 20;
 	
@@ -168,10 +163,7 @@ public abstract class Battleground
 		{
 			return new ArrayList<>();
 		}
-		else
-		{
-			return map.getSpawnPoints();
-		}
+		return map.getSpawnPoints();
 	}
 	
 	public boolean isInBg(Player player)
@@ -1198,7 +1190,10 @@ public abstract class Battleground
 		{
 			player.setBattleground(this);
 			preparePlayer(player, 0, false);
-			performTeleport(player, pos.getX(), pos.getY(), pos.getZ());
+			if (pos != null)
+			{
+				performTeleport(player, pos.getX(), pos.getY(), pos.getZ());
+			}
 			getLadderDAO().setLeaves(player, getLadderDAO().getLeaves(player) - 1);
 			getLadderDAO().addRating(player, K_VALUE);
 		}

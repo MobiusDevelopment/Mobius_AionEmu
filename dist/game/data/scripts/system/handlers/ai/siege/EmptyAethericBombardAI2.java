@@ -19,7 +19,6 @@ package system.handlers.ai.siege;
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.cache.HTMLCache;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.services.HTMLService;
 import com.aionemu.gameserver.skillengine.SkillEngine;
@@ -41,7 +40,6 @@ public class EmptyAethericBombardAI2 extends ActionItemNpcAI2
 	@Override
 	protected void handleUseItemFinish(Player player)
 	{
-		final Npc owner = getOwner();
 		HTMLService.showHTML(player, HTMLCache.getInstance().getHTML("weapon_siege/weaponSiege.xhtml"));
 		SkillEngine.getInstance().getSkill(player, 21385, 1, player).useNoAnimationSkill();
 		AI2Actions.deleteOwner(this);

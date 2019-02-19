@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.model.EmotionType;
 import com.aionemu.gameserver.model.actions.PlayerMode;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -35,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class CM_WINDSTREAM extends AionClientPacket
 {
-	private final Logger log = LoggerFactory.getLogger(CM_WINDSTREAM.class);
 	int teleportId;
 	int distance;
 	int state;

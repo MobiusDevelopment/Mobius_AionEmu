@@ -817,11 +817,6 @@ public class TerathDredgionInstance extends GeneralInstanceHandler
 		}), time));
 	}
 	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
-	}
-	
 	private void stopInstanceTask()
 	{
 		for (FastList.Node<Future<?>> n = terathTask.head(), end = terathTask.tail(); (n = n.getNext()) != end;)

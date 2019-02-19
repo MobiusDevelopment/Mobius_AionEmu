@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.services;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.model.EmotionType;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -38,8 +35,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class PrivateStoreService
 {
-	
-	private static final Logger log = LoggerFactory.getLogger("EXCHANGE_LOG");
 	
 	/**
 	 * @param activePlayer

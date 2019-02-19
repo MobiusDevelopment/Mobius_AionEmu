@@ -16,7 +16,6 @@
  */
 package system.handlers.instance;
 
-import java.util.Map;
 import java.util.Set;
 
 import com.aionemu.commons.utils.Rnd;
@@ -26,7 +25,6 @@ import com.aionemu.gameserver.model.EmotionType;
 import com.aionemu.gameserver.model.drop.DropItem;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
-import com.aionemu.gameserver.model.gameobjects.StaticDoor;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.storage.Storage;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIE;
@@ -45,8 +43,6 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 @InstanceID(310050000)
 public class AetherogeneticsLabInstance extends GeneralInstanceHandler
 {
-	private Map<Integer, StaticDoor> doors;
-	
 	@Override
 	public void onDropRegistered(Npc npc)
 	{
@@ -107,7 +103,6 @@ public class AetherogeneticsLabInstance extends GeneralInstanceHandler
 	public void onInstanceCreate(WorldMapInstance instance)
 	{
 		super.onInstanceCreate(instance);
-		doors = instance.getDoors();
 		switch (Rnd.get(1, 2))
 		{
 			case 1:

@@ -18,7 +18,6 @@ package system.handlers.ai.worlds.inggison;
 
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 import system.handlers.ai.ActionItemNpcAI2;
@@ -38,7 +37,6 @@ public class SpiritcallerIncenseBurnerAI2 extends ActionItemNpcAI2
 	@Override
 	protected void handleUseItemFinish(Player player)
 	{
-		final Npc owner = getOwner();
 		spawn(216609, 2926.172f, 524.7669f, 339.41217f, (byte) 76); // Celodus Twistrings.
 		AI2Actions.deleteOwner(this);
 		AI2Actions.scheduleRespawn(this);

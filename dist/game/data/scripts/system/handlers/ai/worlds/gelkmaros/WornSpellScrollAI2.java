@@ -18,7 +18,6 @@ package system.handlers.ai.worlds.gelkmaros;
 
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 import system.handlers.ai.ActionItemNpcAI2;
@@ -38,7 +37,6 @@ public class WornSpellScrollAI2 extends ActionItemNpcAI2
 	@Override
 	protected void handleUseItemFinish(Player player)
 	{
-		final Npc owner = getOwner();
 		spawn(216629, 256.4549f, 1591.9225f, 360.12985f, (byte) 31); // Sorceress Imilyana.
 		AI2Actions.deleteOwner(this);
 		AI2Actions.scheduleRespawn(this);

@@ -110,7 +110,6 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 	
 	private void stage2()
 	{
-		final int delay = 10000;
 		if (isAlreadyDead() || !isStart)
 		{
 			return;

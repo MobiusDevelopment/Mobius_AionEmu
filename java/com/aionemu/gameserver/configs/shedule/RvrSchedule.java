@@ -50,6 +50,7 @@ public class RvrSchedule
 		rvrsList = rvrList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static RvrSchedule load()
 	{
 		RvrSchedule rs;

@@ -46,6 +46,7 @@ public class SiegeSchedule
 		fortressesList = fortressList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static SiegeSchedule load()
 	{
 		SiegeSchedule ss;

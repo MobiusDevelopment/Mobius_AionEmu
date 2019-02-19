@@ -48,7 +48,6 @@ public class CollisionDieActor extends AbstractCollisionObserver implements IAct
 		{
 			if (GeoDataConfig.GEO_MATERIALS_SHOWDETAILS && (creature instanceof Player))
 			{
-				final Player player = (Player) creature;
 			}
 			act();
 		}

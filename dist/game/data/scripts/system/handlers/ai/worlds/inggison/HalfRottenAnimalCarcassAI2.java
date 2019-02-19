@@ -18,7 +18,6 @@ package system.handlers.ai.worlds.inggison;
 
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 import system.handlers.ai.ActionItemNpcAI2;
@@ -38,7 +37,6 @@ public class HalfRottenAnimalCarcassAI2 extends ActionItemNpcAI2
 	@Override
 	protected void handleUseItemFinish(Player player)
 	{
-		final Npc owner = getOwner();
 		spawn(216614, 1706.4016f, 977.078f, 401.375f, (byte) 5); // Twister.
 		AI2Actions.deleteOwner(this);
 		AI2Actions.scheduleRespawn(this);

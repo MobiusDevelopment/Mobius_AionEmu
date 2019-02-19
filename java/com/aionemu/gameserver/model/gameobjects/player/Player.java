@@ -298,14 +298,10 @@ public class Player extends Creature
 	private int cp_slot1 = 0, cp_slot2 = 0, cp_slot3 = 0, cp_slot4 = 0, cp_slot5 = 0, cp_slot6 = 0;
 	private boolean enchantBoost;
 	private boolean authorizeBoost;
-	private int enchantBoostValue;
-	private int authorizeBoostValue;
 	
 	/*
 	 * This variables are for the custom PvE and PK system *Outlaw*
 	 */
-	private boolean setInPvEMode;
-	private boolean setInPkMode;
 	private boolean isInPkMode;
 	private boolean isInPvEMode;
 	
@@ -1439,10 +1435,7 @@ public class Player extends Creature
 			{
 				return false;
 			}
-			else
-			{
-				return true;
-			}
+			return true;
 		}
 		
 		if (enemy.isBandit() || isBandit())
@@ -1485,39 +1478,33 @@ public class Player extends Creature
 			{
 				return (!isInDisablePvPZone() && !enemy.isInDisablePvPZone());
 			}
-			else
-			{
-				return (isInPvPZone() && enemy.isInPvPZone());
-			}
+			return (isInPvPZone() && enemy.isInPvPZone());
 		}
-		else
+		if ((worldId != 210020000) && // Elten.
+			(worldId != 210040000) && // Heiron.
+			(worldId != 210050000) && // Inggison.
+			(worldId != 210060000) && // Theobomos.
+			(worldId != 210070000) && // Cygnea.
+			(worldId != 210100000) && // Iluma.
+			(worldId != 220020000) && // Morheim.
+			(worldId != 220040000) && // Beluslan.
+			(worldId != 220050000) && // Brusthonin.
+			(worldId != 220070000) && // Gelkmaros.
+			(worldId != 220080000) && // Enshar.
+			(worldId != 220110000) && // Norsvold.
+			(// \\//\\//\\//\\//\\//
+			worldId != 400010000) && // Reshanta.
+			(// \\//Panesterra//\\//
+			worldId != 400020000) && // Belus.
+			(worldId != 400040000) && // Aspida.
+			(worldId != 400050000) && // Atanatos.
+			(worldId != 400060000) && // Disillon.
+			(// \\//\\//\\//\\//\\//
+			worldId != 600010000) && // Silentera Canyon.
+			(worldId != 600090000) && // Kaldor.
+			(worldId != 600100000)) // Levinshor.
 		{
-			if ((worldId != 210020000) && // Elten.
-				(worldId != 210040000) && // Heiron.
-				(worldId != 210050000) && // Inggison.
-				(worldId != 210060000) && // Theobomos.
-				(worldId != 210070000) && // Cygnea.
-				(worldId != 210100000) && // Iluma.
-				(worldId != 220020000) && // Morheim.
-				(worldId != 220040000) && // Beluslan.
-				(worldId != 220050000) && // Brusthonin.
-				(worldId != 220070000) && // Gelkmaros.
-				(worldId != 220080000) && // Enshar.
-				(worldId != 220110000) && // Norsvold.
-				(// \\//\\//\\//\\//\\//
-				worldId != 400010000) && // Reshanta.
-				(// \\//Panesterra//\\//
-				worldId != 400020000) && // Belus.
-				(worldId != 400040000) && // Aspida.
-				(worldId != 400050000) && // Atanatos.
-				(worldId != 400060000) && // Disillon.
-				(// \\//\\//\\//\\//\\//
-				worldId != 600010000) && // Silentera Canyon.
-				(worldId != 600090000) && // Kaldor.
-				(worldId != 600100000))
-			{ // Levinshor.
-				return (isInsideZoneType(ZoneType.PVP) && enemy.isInsideZoneType(ZoneType.PVP) && !isInSameTeam(enemy));
-			}
+			return (isInsideZoneType(ZoneType.PVP) && enemy.isInsideZoneType(ZoneType.PVP) && !isInSameTeam(enemy));
 		}
 		return false;
 	}
@@ -2412,10 +2399,7 @@ public class Player extends Creature
 		{
 			return 2;
 		}
-		else
-		{
-			return 1;
-		}
+		return 1;
 	}
 	
 	/**

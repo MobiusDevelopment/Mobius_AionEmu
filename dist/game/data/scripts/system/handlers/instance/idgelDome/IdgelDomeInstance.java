@@ -266,10 +266,6 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 	
 	protected void reward()
 	{
-		final int ElyosPvPKills = getPvpKillsByRace(Race.ELYOS).intValue();
-		final int ElyosPoints = getPointsByRace(Race.ELYOS).intValue();
-		final int AsmoPvPKills = getPvpKillsByRace(Race.ASMODIANS).intValue();
-		final int AsmoPoints = getPointsByRace(Race.ASMODIANS).intValue();
 		for (Player player : instance.getPlayersInside())
 		{
 			if (CreatureActions.isAlreadyDead(player))
@@ -395,11 +391,6 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 			return true;
 		}
 		return false;
-	}
-	
-	private MutableInt getPvpKillsByRace(Race race)
-	{
-		return idgelDomeReward.getPvpKillsByRace(race);
 	}
 	
 	private MutableInt getPointsByRace(Race race)
@@ -650,11 +641,6 @@ public class IdgelDomeInstance extends GeneralInstanceHandler
 				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
 		}), time));
-	}
-	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void stopInstanceTask()

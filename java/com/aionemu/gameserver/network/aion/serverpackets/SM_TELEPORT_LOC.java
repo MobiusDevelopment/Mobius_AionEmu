@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_TELEPORT_LOC extends AionServerPacket
 {
-	private final int portAnimation;
 	private final int mapId;
 	private final int instanceId;
 	private final float x;
@@ -34,7 +33,7 @@ public class SM_TELEPORT_LOC extends AionServerPacket
 	private final byte heading;
 	private final boolean isInstance;
 	
-	public SM_TELEPORT_LOC(boolean isInstance, int instanceId, int mapId, float x, float y, float z, byte heading, int portAnimation)
+	public SM_TELEPORT_LOC(boolean isInstance, int instanceId, int mapId, float x, float y, float z, byte heading)
 	{
 		this.isInstance = isInstance;
 		this.instanceId = instanceId;
@@ -43,7 +42,6 @@ public class SM_TELEPORT_LOC extends AionServerPacket
 		this.y = y;
 		this.z = z;
 		this.heading = heading;
-		this.portAnimation = portAnimation;
 	}
 	
 	@Override

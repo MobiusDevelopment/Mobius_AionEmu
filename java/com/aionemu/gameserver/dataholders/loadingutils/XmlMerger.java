@@ -357,6 +357,7 @@ public class XmlMerger
 		}
 	}
 	
+	@SuppressWarnings("deprecation")
 	static Collection<File> listFiles(File root, boolean recursive)
 	{
 		final IOFileFilter dirFilter = recursive ? makeSVNAware(HiddenFileFilter.VISIBLE) : null;

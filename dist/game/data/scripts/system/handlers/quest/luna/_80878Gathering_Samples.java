@@ -49,7 +49,6 @@ public class _80878Gathering_Samples extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
 			if (targetId == 834463)

@@ -89,7 +89,6 @@ public class IsleOfRootsStoreroomInstance extends GeneralInstanceHandler
 	{
 		final Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		final int npcId = npc.getNpcId();
-		final int index = dropItems.size() + 1;
 		switch (npcId)
 		{
 			case 215130: // Treasurer Wasukani.
@@ -174,7 +173,6 @@ public class IsleOfRootsStoreroomInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 215104: // Ranx Patrol Legate.

@@ -18,7 +18,6 @@ package system.handlers.quest.mission;
 
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
-import com.aionemu.gameserver.questEngine.model.QuestDialog;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
@@ -101,7 +100,6 @@ public class _24024A_Nepra_Protector extends QuestHandler
 		}
 		final int var = qs.getQuestVarById(0);
 		final int targetId = env.getTargetId();
-		final QuestDialog dialog = env.getDialog();
 		if (qs.getStatus() == QuestStatus.START)
 		{
 			switch (targetId)

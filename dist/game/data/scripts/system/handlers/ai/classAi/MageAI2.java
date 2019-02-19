@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.actions.CreatureActions;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.services.NpcShoutsService;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
@@ -149,11 +148,6 @@ public class MageAI2 extends AggressiveNpcAI2
 	public boolean canThink()
 	{
 		return canThink;
-	}
-	
-	private void sendMsg(int msg)
-	{
-		NpcShoutsService.getInstance().sendMsg(getOwner(), msg, getObjectId(), false, 0, 0);
 	}
 	
 	private List<Player> getLifedPlayers()

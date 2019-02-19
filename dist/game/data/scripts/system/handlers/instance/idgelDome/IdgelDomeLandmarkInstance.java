@@ -49,7 +49,6 @@ import com.aionemu.gameserver.model.items.storage.Storage;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_SCORE;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
@@ -77,7 +76,6 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 	protected LandMarkReward landMarkReward;
 	private float loosingGroupMultiplier = 1;
 	private boolean isInstanceDestroyed = false;
-	private final List<Integer> movies = new ArrayList<>();
 	protected AtomicBoolean isInstanceStarted = new AtomicBoolean(false);
 	private final FastList<Future<?>> landMarkTask = FastList.newInstance();
 	
@@ -97,7 +95,6 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 	{
 		final Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		final int npcId = npc.getNpcId();
-		final int index = dropItems.size() + 1;
 		switch (npcId)
 		{
 			case 834168: // Bomb Support Box.
@@ -240,10 +237,6 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 	
 	protected void reward()
 	{
-		final int ElyosPvPKills = getPvpKillsByRace(Race.ELYOS).intValue();
-		final int ElyosPoints = getPointsByRace(Race.ELYOS).intValue();
-		final int AsmoPvPKills = getPvpKillsByRace(Race.ASMODIANS).intValue();
-		final int AsmoPoints = getPointsByRace(Race.ASMODIANS).intValue();
 		for (Player player : instance.getPlayersInside())
 		{
 			if (CreatureActions.isAlreadyDead(player))
@@ -357,11 +350,6 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		}
 		updateScore(player, player, -points, false);
 		return true;
-	}
-	
-	private MutableInt getPvpKillsByRace(Race race)
-	{
-		return landMarkReward.getPvpKillsByRace(race);
 	}
 	
 	private MutableInt getPointsByRace(Race race)
@@ -594,14 +582,6 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		}
 	}
 	
-	private void deleteNpc(int npcId)
-	{
-		if (getNpc(npcId) != null)
-		{
-			getNpc(npcId).getController().onDelete();
-		}
-	}
-	
 	@Override
 	public void onInstanceDestroy()
 	{
@@ -675,11 +655,6 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 		}), time));
 	}
 	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
-	}
-	
 	private void stopInstanceTask()
 	{
 		for (FastList.Node<Future<?>> n = landMarkTask.head(), end = landMarkTask.tail(); (n = n.getNext()) != end;)
@@ -731,15 +706,6 @@ public class IdgelDomeLandmarkInstance extends GeneralInstanceHandler
 	public void onPlayerLogOut(Player player)
 	{
 		removeItems(player);
-	}
-	
-	private void sendMovie(Player player, int movie)
-	{
-		if (!movies.contains(movie))
-		{
-			movies.add(movie);
-			PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(0, movie));
-		}
 	}
 	
 	@Override

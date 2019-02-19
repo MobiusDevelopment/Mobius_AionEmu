@@ -16,7 +16,6 @@
  */
 package com.aionemu.loginserver.network.aion;
 
-import java.io.IOException;
 import java.nio.channels.SocketChannel;
 
 import com.aionemu.commons.network.AConnection;
@@ -37,12 +36,11 @@ public class AionConnectionFactoryImpl implements ConnectionFactory
 	 * @param socket that new {@link com.aionemu.commons.network.AConnection AConnection} instance will represent.<br>
 	 * @param dispatcher to witch new connection will be registered.<br>
 	 * @return a new instance of {@link com.aionemu.commons.network.AConnection AConnection}<br>
-	 * @throws IOException
 	 * @see com.aionemu.commons.network.AConnection
 	 * @see com.aionemu.commons.network.Dispatcher
 	 */
 	@Override
-	public AConnection create(SocketChannel socket, Dispatcher dispatcher) throws IOException
+	public AConnection create(SocketChannel socket, Dispatcher dispatcher)
 	{
 		if (Config.ENABLE_FLOOD_PROTECTION)
 		{

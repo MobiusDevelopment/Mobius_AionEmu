@@ -23,8 +23,6 @@ import java.util.concurrent.locks.ReentrantLock;
 import javax.annotation.Nonnull;
 
 import org.apache.commons.lang.NullArgumentException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ATTACK_STATUS;
@@ -40,7 +38,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public abstract class CreatureLifeStats<T extends Creature>
 {
-	private static final Logger log = LoggerFactory.getLogger(CreatureLifeStats.class);
 	protected int currentHp;
 	protected int currentMp;
 	protected boolean alreadyDead = false;

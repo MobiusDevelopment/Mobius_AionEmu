@@ -16,8 +16,6 @@
  */
 package system.handlers.ai.instance.fallenPoeta;
 
-import java.util.concurrent.Future;
-
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
@@ -30,8 +28,6 @@ import system.handlers.ai.AggressiveNpcAI2;
 @AIName("Balaur_Explosives_Stockpile")
 public class Balaur_Explosives_StockpileAI2 extends AggressiveNpcAI2
 {
-	private Future<?> attackBoostTask;
-	
 	@Override
 	public void think()
 	{
@@ -46,14 +42,10 @@ public class Balaur_Explosives_StockpileAI2 extends AggressiveNpcAI2
 	
 	private void attackBoost()
 	{
-		attackBoostTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable()
+		ThreadPoolManager.getInstance().scheduleAtFixedRate((Runnable) () ->
 		{
-			@Override
-			public void run()
-			{
-				AI2Actions.targetCreature(Balaur_Explosives_StockpileAI2.this, getPosition().getWorldMapInstance().getNpc(243682)); // Lieutenant Anuhart.
-				AI2Actions.useSkill(Balaur_Explosives_StockpileAI2.this, 0);
-			}
+			AI2Actions.targetCreature(Balaur_Explosives_StockpileAI2.this, getPosition().getWorldMapInstance().getNpc(243682)); // Lieutenant Anuhart.
+			AI2Actions.useSkill(Balaur_Explosives_StockpileAI2.this, 0);
 		}, 3000, 8000);
 	}
 	

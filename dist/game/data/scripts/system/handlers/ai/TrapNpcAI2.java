@@ -40,7 +40,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 @AIName("trap")
 public class TrapNpcAI2 extends NpcAI2
 {
-	private int sensoryRange = 0;
 	private Future<?> despawnTask;
 	public static int EVENT_SET_TRAP_RANGE = 1;
 	
@@ -80,15 +79,7 @@ public class TrapNpcAI2 extends NpcAI2
 	{
 		if (eventId == EVENT_SET_TRAP_RANGE)
 		{
-			final String ownerName = getObjectTemplate().getName().toLowerCase();
-			if (ownerName.equals("snare trap") || ownerName.equals("caltrop") || ownerName.equals("spike trap") || ownerName.equals("shock trap") || ownerName.equals("sleep trap") || ownerName.equals("blazing trap") || ownerName.equals("explosion trap") || ownerName.equals("specter's trap") || ownerName.equals("explosive trap") || ownerName.equals("poisoning trap") || ownerName.equals("sandstorm trap") || ownerName.equals("trap of slowing") || ownerName.equals("trap of silence") || ownerName.equals("propelling trap") || ownerName.equals("spike bite trap") || ownerName.equals("EV_RA_N_Light_SleepingTrap_G1_NPC") || ownerName.equals("EV_RA_N_Dark_SleepingTrap_G1_NPC"))
-			{
-				sensoryRange = 4;
-			}
-			else if (ownerName.equals("trap") || ownerName.equals("web trap") || ownerName.equals("ice trap") || ownerName.equals("storm mine") || ownerName.equals("swamp trap") || ownerName.equals("flame trap") || ownerName.equals("sticky trap") || ownerName.equals("skybound trap") || ownerName.equals("paralyze trap") || ownerName.equals("protect symbol") || ownerName.equals("drakan net trap") || ownerName.equals("thornburst trap") || ownerName.equals("thorntwist trap") || ownerName.equals("drakan mine trap") || ownerName.equals("symbol of spirit") || ownerName.equals("destruction trap") || ownerName.equals("unidentified trap") || ownerName.equals("symbol of solidity") || ownerName.equals("symbol of recovery") || ownerName.equals("symbol of protection") || ownerName.equals("trap of clairvoyance") || ownerName.equals("symbol of castle wall") || ownerName.equals("scrapped mechanisms") || ownerName.equals("Thorn Tentacle Trap") || ownerName.equals("trap of infernal blaze") || ownerName.equals("Highdeva_Fire_NPC_L_G1") || ownerName.equals("Highdeva_Fire_NPC_D_G1"))
-			{
-				sensoryRange = 10;
-			}
+			// ?
 		}
 	}
 	

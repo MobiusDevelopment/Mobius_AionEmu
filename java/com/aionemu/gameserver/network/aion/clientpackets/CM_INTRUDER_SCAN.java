@@ -25,9 +25,9 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 /**
  * @author Ranastic (Encom)
  */
-
 public class CM_INTRUDER_SCAN extends AionClientPacket
 {
+	@SuppressWarnings("unused")
 	private int value;
 	
 	Logger log = LoggerFactory.getLogger(CM_INTRUDER_SCAN.class);

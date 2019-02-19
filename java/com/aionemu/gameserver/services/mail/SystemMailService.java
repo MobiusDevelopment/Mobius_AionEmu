@@ -180,14 +180,7 @@ public class SystemMailService
 	{
 		final String title = sysTitle;
 		final String message = sysMessage;
-		final Item attachedItem = item;
-		int attachedItemObjId = 0;
-		long attachedItemCount = 0;
-		if (attachedItem != null)
-		{
-			attachedItemObjId = attachedItem.getItemId();
-			attachedItemCount = attachedItem.getItemCount();
-		}
+		
 		final PlayerCommonData recipientCommonData = DAOManager.getDAO(PlayerDAO.class).loadPlayerCommonDataByName(recipientName);
 		if (recipientCommonData == null)
 		{
@@ -214,18 +207,21 @@ public class SystemMailService
 		{
 			onlineRecipient = World.getInstance().findPlayer(recipientCommonData.getPlayerObjId());
 		}
-		attachedItem.setEquipped(false);
-		attachedItem.setEquipmentSlot(0);
-		attachedItem.setItemLocation(StorageType.MAILBOX.getId());
+		if (item != null)
+		{
+			item.setEquipped(false);
+			item.setEquipmentSlot(0);
+			item.setItemLocation(StorageType.MAILBOX.getId());
+		}
 		final Timestamp time = new Timestamp(System.currentTimeMillis());
-		final Letter newLetter = new Letter(IDFactory.getInstance().nextId(), recipientCommonData.getPlayerObjId(), attachedItem, attachedKinahCount, title, message, sender, time, true, type);
+		final Letter newLetter = new Letter(IDFactory.getInstance().nextId(), recipientCommonData.getPlayerObjId(), item, attachedKinahCount, title, message, sender, time, true, type);
 		if (!DAOManager.getDAO(MailDAO.class).storeLetter(time, newLetter))
 		{
 			return false;
 		}
-		if (attachedItem != null)
+		if (item != null)
 		{
-			if (!DAOManager.getDAO(InventoryDAO.class).store(attachedItem, recipientCommonData.getPlayerObjId()))
+			if (!DAOManager.getDAO(InventoryDAO.class).store(item, recipientCommonData.getPlayerObjId()))
 			{
 				return false;
 			}

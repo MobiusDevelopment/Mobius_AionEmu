@@ -50,6 +50,7 @@ public class RiftSchedule
 		riftsList = riftList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static RiftSchedule load()
 	{
 		RiftSchedule rs;

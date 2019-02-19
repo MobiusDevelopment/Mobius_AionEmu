@@ -23,7 +23,6 @@ import java.util.Set;
 
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.commons.utils.Rnd;
-import com.aionemu.gameserver.controllers.effect.PlayerEffectController;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.instance.handlers.GeneralInstanceHandler;
 import com.aionemu.gameserver.instance.handlers.InstanceID;
@@ -344,7 +343,6 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 	
 	private void removeEffects(Player player)
 	{
-		final PlayerEffectController effectController = player.getEffectController();
 	}
 	
 	@Override
@@ -424,14 +422,6 @@ public class OccupiedRentusBaseInstance extends GeneralInstanceHandler
 		if (getNpc(npcId) != null)
 		{
 			getNpc(npcId).getController().onDelete();
-		}
-	}
-	
-	private void despawnNpcs(List<Npc> npcs)
-	{
-		for (Npc npc : npcs)
-		{
-			npc.getController().onDelete();
 		}
 	}
 	

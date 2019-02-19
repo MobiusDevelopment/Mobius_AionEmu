@@ -61,7 +61,6 @@ public class _2948Huron_Letter extends QuestHandler
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
 			final int var = qs.getQuestVarById(0);
-			final int instanceId = player.getInstanceId();
 			if (zoneName == ZoneName.get("VIFROST_BRIDGE_120010000"))
 			{
 				if (var == 0)

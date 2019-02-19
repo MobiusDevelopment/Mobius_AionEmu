@@ -40,7 +40,6 @@ import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.dataholders.PlayerInitialData;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.gameobjects.Npc;
-import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.BindPointPosition;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.siege.SiegeNpc;
@@ -76,7 +75,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldType;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -114,8 +112,6 @@ public class SiegeService
 	 * And maybe other useful information (in future).
 	 */
 	private SiegeSchedule siegeSchedule;
-	
-	private final FastMap<Integer, VisibleObject> treasureBoxSuccess = new FastMap<>();
 	
 	private Map<Integer, ArtifactLocation> artifacts;
 	private Map<Integer, FortressLocation> fortresses;
@@ -200,29 +196,21 @@ public class SiegeService
 			}
 		}
 		updateFortressNextState();
-		CronService.getInstance().schedule(new Runnable()
+		CronService.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			updateFortressNextState();
+			World.getInstance().doOnAllPlayers(player ->
 			{
-				updateFortressNextState();
-				World.getInstance().doOnAllPlayers(new Visitor<Player>()
+				for (FortressLocation fortress1 : getFortresses().values())
 				{
-					@Override
-					public void visit(Player player)
-					{
-						for (FortressLocation fortress : getFortresses().values())
-						{
-							PacketSendUtility.sendPacket(player, new SM_FORTRESS_INFO(fortress.getLocationId(), false));
-						}
-						PacketSendUtility.sendPacket(player, new SM_FORTRESS_STATUS());
-						for (FortressLocation fortress : getFortresses().values())
-						{
-							PacketSendUtility.sendPacket(player, new SM_FORTRESS_INFO(fortress.getLocationId(), true));
-						}
-					}
-				});
-			}
+					PacketSendUtility.sendPacket(player, new SM_FORTRESS_INFO(fortress1.getLocationId(), false));
+				}
+				PacketSendUtility.sendPacket(player, new SM_FORTRESS_STATUS());
+				for (FortressLocation fortress2 : getFortresses().values())
+				{
+					PacketSendUtility.sendPacket(player, new SM_FORTRESS_INFO(fortress2.getLocationId(), true));
+				}
+			});
 		}, SIEGE_LOCATION_STATUS_BROADCAST_SCHEDULE);
 	}
 	
@@ -262,15 +250,7 @@ public class SiegeService
 		}
 		
 		// schedule siege end
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				stopSiege(siegeLocationId);
-			}
-		}, siege.getSiegeLocation().getSiegeDuration() * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> stopSiege(siegeLocationId), siege.getSiegeLocation().getSiegeDuration() * 1000);
 	}
 	
 	public void stopSiege(int siegeLocationId)
@@ -320,15 +300,7 @@ public class SiegeService
 		
 		// filter fortress siege start runnables
 		Map<Runnable, JobDetail> siegeStartRunables = CronService.getInstance().getRunnables();
-		siegeStartRunables = Maps.filterKeys(siegeStartRunables, new Predicate<Runnable>()
-		{
-			
-			@Override
-			public boolean apply(@Nullable Runnable runnable)
-			{
-				return (runnable instanceof SiegeStartRunnable);
-			}
-		});
+		siegeStartRunables = Maps.filterKeys(siegeStartRunables, (Predicate<Runnable>) (@Nullable Runnable runnable) -> (runnable instanceof SiegeStartRunnable));
 		
 		// Create map FortressId-To-AllTriggers
 		final Map<Integer, List<Trigger>> siegeIdToStartTriggers = Maps.newHashMap();
@@ -482,30 +454,12 @@ public class SiegeService
 	
 	public Map<Integer, ArtifactLocation> getStandaloneArtifacts()
 	{
-		return Maps.filterValues(artifacts, new Predicate<ArtifactLocation>()
-		{
-			
-			@Override
-			public boolean apply(@Nullable ArtifactLocation input)
-			{
-				return (input != null) && input.isStandAlone();
-			}
-			
-		});
+		return Maps.filterValues(artifacts, (Predicate<ArtifactLocation>) (@Nullable ArtifactLocation input) -> (input != null) && input.isStandAlone());
 	}
 	
 	public Map<Integer, ArtifactLocation> getFortressArtifacts()
 	{
-		return Maps.filterValues(artifacts, new Predicate<ArtifactLocation>()
-		{
-			
-			@Override
-			public boolean apply(@Nullable ArtifactLocation input)
-			{
-				return (input != null) && (input.getOwningFortress() != null);
-			}
-			
-		});
+		return Maps.filterValues(artifacts, (Predicate<ArtifactLocation>) (@Nullable ArtifactLocation input) -> (input != null) && (input.getOwningFortress() != null));
 	}
 	
 	public Map<Integer, SiegeLocation> getSiegeLocations()
@@ -672,19 +626,15 @@ public class SiegeService
 	
 	public void broadcast(AionServerPacket pkt1, AionServerPacket pkt2)
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (pkt1 != null)
 			{
-				if (pkt1 != null)
-				{
-					PacketSendUtility.sendPacket(player, pkt1);
-				}
-				if (pkt2 != null)
-				{
-					PacketSendUtility.sendPacket(player, pkt2);
-				}
+				PacketSendUtility.sendPacket(player, pkt1);
+			}
+			if (pkt2 != null)
+			{
+				PacketSendUtility.sendPacket(player, pkt2);
 			}
 		});
 	}
@@ -699,17 +649,13 @@ public class SiegeService
 	
 	private void broadcast(AionServerPacket pkt, AionServerPacket info, SiegeRace race)
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.getRace().getRaceId() == race.getRaceId())
 			{
-				if (player.getRace().getRaceId() == race.getRaceId())
-				{
-					PacketSendUtility.sendPacket(player, info);
-				}
-				PacketSendUtility.sendPacket(player, pkt);
+				PacketSendUtility.sendPacket(player, info);
 			}
+			PacketSendUtility.sendPacket(player, pkt);
 		});
 	}
 	
@@ -733,16 +679,12 @@ public class SiegeService
 	
 	private void broadcast(SM_RIFT_ANNOUNCE rift, SM_SYSTEM_MESSAGE info)
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			PacketSendUtility.sendPacket(player, rift);
+			if (((info != null) && player.getWorldType().equals(WorldType.BALAUREA)) || ((info != null) && player.getWorldType().equals(WorldType.PANESTERRA)))
 			{
-				PacketSendUtility.sendPacket(player, rift);
-				if (((info != null) && player.getWorldType().equals(WorldType.BALAUREA)) || ((info != null) && player.getWorldType().equals(WorldType.PANESTERRA)))
-				{
-					PacketSendUtility.sendPacket(player, info);
-				}
+				PacketSendUtility.sendPacket(player, info);
 			}
 		});
 	}

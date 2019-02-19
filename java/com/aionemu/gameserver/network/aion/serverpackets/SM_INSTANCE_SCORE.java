@@ -56,7 +56,6 @@ import com.aionemu.gameserver.model.instance.playerreward.SealedArgentManorPlaye
 import com.aionemu.gameserver.model.instance.playerreward.SecretMunitionsFactoryPlayerReward;
 import com.aionemu.gameserver.model.instance.playerreward.ShugoEmperorVaultPlayerReward;
 import com.aionemu.gameserver.model.instance.playerreward.SmolderingPlayerReward;
-import com.aionemu.gameserver.model.instance.playerreward.StonespearReachPlayerReward;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -1082,7 +1081,6 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 			}
 			case 301500000: // Stonespear Reach 4.8
 			{
-				for (StonespearReachPlayerReward playerReward : (FastList<StonespearReachPlayerReward>) instanceReward.getInstanceRewards())
 				{
 					final StonespearReachReward srr = (StonespearReachReward) instanceReward;
 					writeD(srr.getPoints());
@@ -1468,7 +1466,6 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 	{
 		int count = 0;
 		final KamarBattlefieldReward kbr = (KamarBattlefieldReward) instanceReward;
-		final boolean isFirst = false;
 		for (Player player : players)
 		{
 			if (!race.equals(player.getRace()))
@@ -1497,7 +1494,6 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 	{
 		int count = 0;
 		final EngulfedOphidanBridgeReward eobr = (EngulfedOphidanBridgeReward) instanceReward;
-		final boolean isFirst = false;
 		for (Player player : players)
 		{
 			if (!race.equals(player.getRace()))
@@ -1526,7 +1522,6 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 	{
 		int count = 0;
 		final IronWallWarfrontReward iwwr = (IronWallWarfrontReward) instanceReward;
-		final boolean isFirst = false;
 		for (Player player : players)
 		{
 			if (!race.equals(player.getRace()))
@@ -1555,7 +1550,6 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 	{
 		int count = 0;
 		final IdgelDomeReward idr = (IdgelDomeReward) instanceReward;
-		final boolean isFirst = false;
 		for (Player player : players)
 		{
 			if (!race.equals(player.getRace()))
@@ -1584,7 +1578,6 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 	{
 		int count = 0;
 		final LandMarkReward lmr = (LandMarkReward) instanceReward;
-		final boolean isFirst = false;
 		for (Player player : players)
 		{
 			if (!race.equals(player.getRace()))

@@ -16,14 +16,10 @@
  */
 package com.aionemu.gameserver.services.siegeservice;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.configs.main.SiegeConfig;
 import com.aionemu.gameserver.dao.SiegeDAO;
 import com.aionemu.gameserver.model.DescriptionId;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.landing.LandingPointsEnum;
 import com.aionemu.gameserver.model.siege.FortressLocation;
 import com.aionemu.gameserver.model.siege.SiegeLocation;
@@ -37,11 +33,9 @@ import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 public class SiegeAutoRace
 {
-	private static final Logger log = LoggerFactory.getLogger("SIEGE_LOG");
 	private static String[] siegeIds = SiegeConfig.SIEGE_AUTO_LOCID.split(";");
 	
 	public static void AutoSiegeRace(int locid)
@@ -49,14 +43,7 @@ public class SiegeAutoRace
 		final SiegeLocation loc = SiegeService.getInstance().getSiegeLocation(locid);
 		if (!loc.getRace().equals(SiegeRace.ASMODIANS) || !loc.getRace().equals(SiegeRace.ELYOS))
 		{
-			ThreadPoolManager.getInstance().schedule(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					SiegeService.getInstance().startSiege(locid);
-				}
-			}, 300000);
+			ThreadPoolManager.getInstance().schedule(() -> SiegeService.getInstance().startSiege(locid), 300000);
 			SiegeService.getInstance().deSpawnNpcs(locid);
 			final int oldOwnerRaceId = loc.getRace().getRaceId();
 			final int legionId = loc.getLegionId();
@@ -71,22 +58,18 @@ public class SiegeAutoRace
 				loc.setRace(SiegeRace.ASMODIANS);
 			}
 			loc.setLegionId(0);
-			World.getInstance().doOnAllPlayers(new Visitor<Player>()
+			World.getInstance().doOnAllPlayers(player ->
 			{
-				@Override
-				public void visit(Player player)
+				if ((legionId != 0) && (player.getRace().getRaceId() == oldOwnerRaceId))
 				{
-					if ((legionId != 0) && (player.getRace().getRaceId() == oldOwnerRaceId))
-					{
-						// %0 has conquered %1.
-						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301038, legionName, NameId));
-					}
-					// %0 succeeded in conquering %1.
-					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301039, loc.getRace().getDescriptionId(), NameId));
-					// %0 has occupied %0 and the Landing is now enhanced.
-					AbyssLandingService.getInstance().AnnounceToPoints(player, loc.getRace().getDescriptionId(), NameId, 0, LandingPointsEnum.SIEGE);
-					PacketSendUtility.sendPacket(player, new SM_SIEGE_LOCATION_INFO(loc));
+					// %0 has conquered %1.
+					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301038, legionName, NameId));
 				}
+				// %0 succeeded in conquering %1.
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1301039, loc.getRace().getDescriptionId(), NameId));
+				// %0 has occupied %0 and the Landing is now enhanced.
+				AbyssLandingService.getInstance().AnnounceToPoints(player, loc.getRace().getDescriptionId(), NameId, 0, LandingPointsEnum.SIEGE);
+				PacketSendUtility.sendPacket(player, new SM_SIEGE_LOCATION_INFO(loc));
 			});
 			if (ElyosAutoSiege(locid))
 			{

@@ -34,26 +34,14 @@ public class SM_SKILL_LIST extends AionServerPacket
 	private String skillLvl;
 	public static final int YOU_LEARNED_SKILL = 1300050;
 	boolean isNew = false;
-	private Player player;
-	private int state;
 	
 	public SM_SKILL_LIST(Player player, PlayerSkillEntry[] basicSkills)
 	{
-		this.player = player;
 		skillList = player.getSkillList().getBasicSkills();
 		messageId = 0;
 	}
 	
-	public SM_SKILL_LIST(Player player, PlayerSkillEntry[] linkedSkills, int state)
-	{
-		this.player = player;
-		skillList = player.getSkillList().getLinkedSkills();
-		this.state = state;
-		messageId = 0;
-		isNew = true;
-	}
-	
-	public SM_SKILL_LIST(Player player, PlayerSkillEntry stigmaSkill)
+	public SM_SKILL_LIST(PlayerSkillEntry stigmaSkill)
 	{
 		skillList = new PlayerSkillEntry[]
 		{

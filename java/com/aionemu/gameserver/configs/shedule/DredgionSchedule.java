@@ -50,6 +50,7 @@ public class DredgionSchedule
 		dredgionsList = dredgionList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static DredgionSchedule load()
 	{
 		DredgionSchedule ds;

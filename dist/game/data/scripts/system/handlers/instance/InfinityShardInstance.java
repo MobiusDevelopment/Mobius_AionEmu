@@ -52,7 +52,6 @@ import javolution.util.FastMap;
 public class InfinityShardInstance extends GeneralInstanceHandler
 {
 	private int ideForcefieldGenerator;
-	private boolean isInstanceDestroyed = false;
 	private final FastMap<Integer, VisibleObject> objects = new FastMap<>();
 	
 	@Override
@@ -137,7 +136,6 @@ public class InfinityShardInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 231096: // Hyperion Defense Combatant.
@@ -210,12 +208,6 @@ public class InfinityShardInstance extends GeneralInstanceHandler
 		{
 			npc.getController().onDelete();
 		}
-	}
-	
-	@Override
-	public void onInstanceDestroy()
-	{
-		isInstanceDestroyed = true;
 	}
 	
 	private void sendMsg(String str)

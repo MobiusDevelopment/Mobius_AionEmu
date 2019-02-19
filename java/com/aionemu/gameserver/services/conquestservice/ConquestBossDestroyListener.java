@@ -22,10 +22,10 @@ import com.aionemu.gameserver.ai2.eventcallback.OnDieEventCallback;
 /**
  * @author Rinzler (Encom)
  */
-
 @SuppressWarnings("rawtypes")
 public class ConquestBossDestroyListener extends OnDieEventCallback
 {
+	@SuppressWarnings("unused")
 	private final ConquestOffering<?> conquestOffering;
 	
 	public ConquestBossDestroyListener(ConquestOffering conquestOffering)

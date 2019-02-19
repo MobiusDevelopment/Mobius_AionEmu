@@ -89,7 +89,6 @@ public class TwilightBattlefieldStoreroomInstance extends GeneralInstanceHandler
 	{
 		final Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		final int npcId = npc.getNpcId();
-		final int index = dropItems.size() + 1;
 		switch (npcId)
 		{
 			case 215216: // Treasurer Karpasha.
@@ -174,7 +173,6 @@ public class TwilightBattlefieldStoreroomInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 215189: // Ranx Scout Captain.

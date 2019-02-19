@@ -3208,7 +3208,6 @@ public class cmd_vipadd extends PlayerCommand
 			{
 				if (player.getAccessLevel() > 1)
 				{
-					final long count = ItemService.addItem(receiver, itemId, itemCount);
 					PacketSendUtility.sendMessage(player, "You successfully gave " + itemCount + " x [item:" + itemId + "] to " + receiver.getName() + ".");
 					PacketSendUtility.sendMessage(receiver, "You successfully received " + itemCount + " x [item:" + itemId + "] from " + player.getName() + ".");
 				}
@@ -3221,7 +3220,6 @@ public class cmd_vipadd extends PlayerCommand
 			{
 				if (player.getAccessLevel() > 1)
 				{
-					final long count = ItemService.addItem(receiver, itemId, itemCount);
 					PacketSendUtility.sendMessage(player, "You successfully received " + itemCount + " x [item:" + itemId + "]");
 				}
 				else
@@ -3233,7 +3231,6 @@ public class cmd_vipadd extends PlayerCommand
 					}
 					else
 					{
-						final long count = ItemService.addItem(receiver, itemId, itemCount);
 						PacketSendUtility.sendMessage(player, "You successfully received " + itemCount + " x [item:" + itemId + "]");
 					}
 				}

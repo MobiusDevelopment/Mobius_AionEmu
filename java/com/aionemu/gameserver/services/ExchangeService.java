@@ -20,9 +20,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.dao.InventoryDAO;
 import com.aionemu.gameserver.model.gameobjects.Item;
@@ -48,8 +45,6 @@ import com.aionemu.gameserver.utils.audit.AuditLogger;
  */
 public class ExchangeService
 {
-	
-	private static final Logger log = LoggerFactory.getLogger("EXCHANGE_LOG");
 	
 	private final Map<Integer, Exchange> exchanges = new HashMap<>();
 	
@@ -268,7 +263,6 @@ public class ExchangeService
 		PacketSendUtility.sendPacket(activePlayer, new SM_EXCHANGE_ADD_ITEM(0, exchangeItem.getItem(), activePlayer));
 		PacketSendUtility.sendPacket(partner, new SM_EXCHANGE_ADD_ITEM(1, exchangeItem.getItem(), partner));
 		
-		final Item exchangedItem = exchangeItem.getItem();
 	}
 	
 	/**

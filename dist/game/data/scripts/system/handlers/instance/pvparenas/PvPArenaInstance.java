@@ -33,7 +33,6 @@ import com.aionemu.gameserver.model.instance.instancereward.InstanceReward;
 import com.aionemu.gameserver.model.instance.instancereward.PvPArenaReward;
 import com.aionemu.gameserver.model.instance.playerreward.PvPArenaPlayerReward;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
-import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ATTACK_STATUS;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
@@ -178,11 +177,6 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 			instanceReward.portToPosition(player);
 		}
 		sendPacket();
-	}
-	
-	private void sendPacket(AionServerPacket packet)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, packet));
 	}
 	
 	private void spawnBlessedRelics(int time)

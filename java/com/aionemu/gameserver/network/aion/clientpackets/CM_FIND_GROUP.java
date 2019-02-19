@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
@@ -31,12 +28,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CM_FIND_GROUP extends AionClientPacket
 {
-	
-	/**
-	 * Logger
-	 */
-	private static final Logger log = LoggerFactory.getLogger(CM_FIND_GROUP.class);
-	
 	private int action;
 	private int playerObjId;
 	private String message;

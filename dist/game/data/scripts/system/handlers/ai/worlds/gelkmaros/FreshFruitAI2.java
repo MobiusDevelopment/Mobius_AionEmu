@@ -18,7 +18,6 @@ package system.handlers.ai.worlds.gelkmaros;
 
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 
 import system.handlers.ai.ActionItemNpcAI2;
@@ -38,7 +37,6 @@ public class FreshFruitAI2 extends ActionItemNpcAI2
 	@Override
 	protected void handleUseItemFinish(Player player)
 	{
-		final Npc owner = getOwner();
 		spawn(216640, 767.43256f, 2882.9648f, 400.41046f, (byte) 88); // Rokbak.
 		AI2Actions.deleteOwner(this);
 		AI2Actions.scheduleRespawn(this);

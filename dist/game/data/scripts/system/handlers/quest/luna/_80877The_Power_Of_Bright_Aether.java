@@ -49,7 +49,6 @@ public class _80877The_Power_Of_Bright_Aether extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
 			if (targetId == 834463)

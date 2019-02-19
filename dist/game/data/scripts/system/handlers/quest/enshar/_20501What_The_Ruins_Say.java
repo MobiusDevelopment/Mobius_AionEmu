@@ -75,7 +75,6 @@ public class _20501What_The_Ruins_Say extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final Npc npc = (Npc) env.getVisibleObject();
 		if (qs == null)
 		{
 			return false;

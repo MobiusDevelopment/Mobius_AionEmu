@@ -181,10 +181,9 @@ public class Point3D implements Cloneable, Serializable
 	/**
 	 * Clones this point
 	 * @return copy of this point
-	 * @throws CloneNotSupportedException never thrown
 	 */
 	@Override
-	public Point3D clone() throws CloneNotSupportedException
+	public Point3D clone()
 	{
 		return new Point3D(this);
 	}

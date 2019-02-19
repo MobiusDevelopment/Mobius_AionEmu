@@ -45,7 +45,6 @@ import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.services.mail.AbyssSiegeLevel;
 import com.aionemu.gameserver.services.mail.MailFormatter;
 import com.aionemu.gameserver.services.mail.SiegeResult;
-import com.aionemu.gameserver.services.player.PlayerService;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
@@ -354,7 +353,6 @@ public class FortressSiege extends Siege<FortressLocation>
 	{
 		final Map<Integer, Long> playerAbyssPoints = winnerDamage.getPlayerAbyssPoints();
 		final List<Integer> topPlayersIds = Lists.newArrayList(playerAbyssPoints.keySet());
-		final Map<Integer, String> playerNames = PlayerService.getPlayerNames(playerAbyssPoints.keySet());
 		final SiegeResult resultPlayers = isBossKilled() ? SiegeResult.OCCUPY : SiegeResult.DEFENDER;
 		int i = 0;
 		final List<SiegeReward> playerRewards = getSiegeLocation().getReward();

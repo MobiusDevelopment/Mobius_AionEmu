@@ -118,7 +118,6 @@ public class AdmaFallInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 220417: // IDF6_Adma_Zombie_SN_67_Ae.

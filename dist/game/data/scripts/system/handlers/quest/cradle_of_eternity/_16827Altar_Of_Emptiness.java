@@ -56,7 +56,6 @@ public class _16827Altar_Of_Emptiness extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final int targetId = env.getTargetId();
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			QuestService.finishQuest(env);

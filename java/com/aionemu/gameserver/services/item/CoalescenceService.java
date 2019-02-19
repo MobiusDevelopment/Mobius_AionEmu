@@ -40,7 +40,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 public class CoalescenceService
 {
-	private static final int ItemId = 0;
 	
 	public static void startCoalescence(Player player, int upgradedItemObjectId, List<Integer> ItemsList)
 	{
@@ -174,26 +173,22 @@ public class CoalescenceService
 		};
 		
 		player.getObserveController().attach(observer);
-		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable()
+		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			final int random = list.get(new Random().nextInt(list.size()));
+			final int description = DataManager.ITEM_DATA.getItemTemplate(random).getNameId();
+			for (Integer ItemObjId : ItemsList)
 			{
-				final int random = list.get(new Random().nextInt(list.size()));
-				final int description = DataManager.ITEM_DATA.getItemTemplate(random).getNameId();
-				for (Integer ItemObjId : ItemsList)
-				{
-					player.getInventory().decreaseByObjectId(ItemObjId, 1);
-				}
-				player.getInventory().decreaseByObjectId(upgradedItemObjectId, 1);
-				player.getObserveController().removeObserver(observer);
-				PacketSendUtility.sendPacket(player, new SM_COALESCENCE_RESULT(firstItem.getItemId(), firstItem.getObjectId()));
-				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403620, new DescriptionId(description)));
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, upgradedItemObjectId, firstItem.getItemId(), 0, 24, 0), true);
-				ItemService.addItem(player, random, 1);
-				ItemsList.clear();
-				list.clear();
+				player.getInventory().decreaseByObjectId(ItemObjId, 1);
 			}
+			player.getInventory().decreaseByObjectId(upgradedItemObjectId, 1);
+			player.getObserveController().removeObserver(observer);
+			PacketSendUtility.sendPacket(player, new SM_COALESCENCE_RESULT(firstItem.getItemId(), firstItem.getObjectId()));
+			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403620, new DescriptionId(description)));
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), 0, upgradedItemObjectId, firstItem.getItemId(), 0, 24, 0), true);
+			ItemService.addItem(player, random, 1);
+			ItemsList.clear();
+			list.clear();
 		}, 4000));
 	}
 	

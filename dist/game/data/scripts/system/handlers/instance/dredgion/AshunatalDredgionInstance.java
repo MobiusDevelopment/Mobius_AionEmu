@@ -819,11 +819,6 @@ public class AshunatalDredgionInstance extends GeneralInstanceHandler
 		}), time));
 	}
 	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
-	}
-	
 	private void stopInstanceTask()
 	{
 		for (FastList.Node<Future<?>> n = asyunatarTask.head(), end = asyunatarTask.tail(); (n = n.getNext()) != end;)

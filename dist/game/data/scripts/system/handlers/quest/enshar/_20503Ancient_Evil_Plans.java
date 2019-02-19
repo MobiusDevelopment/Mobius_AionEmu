@@ -72,7 +72,6 @@ public class _20503Ancient_Evil_Plans extends QuestHandler
 	public boolean onDialogEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		final Npc npc = (Npc) env.getVisibleObject();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs == null)
 		{

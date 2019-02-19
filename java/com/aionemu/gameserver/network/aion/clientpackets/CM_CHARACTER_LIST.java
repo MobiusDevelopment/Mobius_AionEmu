@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.configs.administration.AdminConfig;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
@@ -31,8 +28,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_CHARACTER_LIST;
  */
 public class CM_CHARACTER_LIST extends AionClientPacket
 {
-	private static Logger log = LoggerFactory.getLogger(CM_CHARACTER_LIST.class);
-	
 	private int playOk2;
 	
 	public CM_CHARACTER_LIST(int opcode, State state, State... restStates)

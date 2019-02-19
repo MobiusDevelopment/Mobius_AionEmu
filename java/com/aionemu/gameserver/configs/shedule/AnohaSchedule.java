@@ -50,6 +50,7 @@ public class AnohaSchedule
 		anohasList = anohaList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static AnohaSchedule load()
 	{
 		AnohaSchedule as;

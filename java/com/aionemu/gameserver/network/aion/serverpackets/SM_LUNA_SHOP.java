@@ -19,9 +19,6 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.model.dorinerk_wardrobe.PlayerWardrobeEntry;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
@@ -32,7 +29,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Ranastic
  */
-
 public class SM_LUNA_SHOP extends AionServerPacket
 {
 	private final int actionId;
@@ -41,7 +37,9 @@ public class SM_LUNA_SHOP extends AionServerPacket
 	private int fail;
 	private ItemTemplate item;
 	// Karunerk's Workshop
+	@SuppressWarnings("unused")
 	private int unkCraft1;
+	@SuppressWarnings("unused")
 	private int unkCraft2;
 	private int craftItemID;
 	private int craftItemCount;
@@ -54,7 +52,6 @@ public class SM_LUNA_SHOP extends AionServerPacket
 	private int applySlot;
 	private int itemId;
 	private int itemSize;
-	private static final Logger log = LoggerFactory.getLogger(SM_LUNA_SHOP.class);
 	
 	public SM_LUNA_SHOP(int actionId)
 	{

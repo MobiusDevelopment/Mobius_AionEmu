@@ -48,7 +48,6 @@ public class TerritoryService
 	{
 		final LegionService ls = LegionService.getInstance();
 		final Collection<Legion> legions = new ArrayList<>();
-		int counter = 0;
 		for (int i = 1; i <= 6; i++)
 		{
 			territories.put(i, new LegionTerritory(i));
@@ -62,7 +61,6 @@ public class TerritoryService
 			final LegionTerritory territory = legion.getTerritory();
 			territories.remove(territory.getId());
 			territories.put(territory.getId(), territory);
-			counter++;
 		}
 	}
 	

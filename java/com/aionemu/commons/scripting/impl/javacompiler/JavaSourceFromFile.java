@@ -45,6 +45,7 @@ public class JavaSourceFromFile extends SimpleJavaFileObject
 	 * @return class source
 	 * @throws IOException if something goes wrong
 	 */
+	@SuppressWarnings("deprecation")
 	@Override
 	public CharSequence getCharContent(boolean ignoreEncodingErrors) throws IOException
 	{

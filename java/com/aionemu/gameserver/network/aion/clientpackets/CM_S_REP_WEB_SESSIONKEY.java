@@ -27,6 +27,7 @@ public class CM_S_REP_WEB_SESSIONKEY extends AionClientPacket
 	
 	private static Logger log = LoggerFactory.getLogger(CM_S_REP_WEB_SESSIONKEY.class);
 	
+	@SuppressWarnings("unused")
 	private int unk;
 	private String text;
 	

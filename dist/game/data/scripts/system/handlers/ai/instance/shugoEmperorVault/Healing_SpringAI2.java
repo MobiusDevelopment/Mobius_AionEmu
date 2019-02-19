@@ -36,7 +36,6 @@ public class Healing_SpringAI2 extends AggressiveNpcAI2
 		CreatureEventHandler.onCreatureSee(this, creature);
 		if (creature instanceof Player)
 		{
-			final Player player = (Player) creature;
 			if (!creature.getEffectController().hasAbnormalEffect(17560))
 			{ // Bless Of Guardian Spring.
 				SkillEngine.getInstance().getSkill(getOwner(), 17560, 1, creature).useNoAnimationSkill(); // Bless Of Guardian Spring.

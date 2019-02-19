@@ -39,13 +39,11 @@ public class ItemStorage
 	private final FastMap<Integer, Item> items;
 	private int limit;
 	private final int specialLimit;
-	private final StorageType storageType;
 	
 	public ItemStorage(StorageType storageType)
 	{
 		limit = storageType.getLimit();
 		specialLimit = storageType.getSpecialLimit();
-		this.storageType = storageType;
 		items = FastMap.newInstance();
 	}
 	
@@ -145,10 +143,7 @@ public class ItemStorage
 		{
 			return item.getEquipmentSlot();
 		}
-		else
-		{
-			return -1;
-		}
+		return -1;
 	}
 	
 	public long getNextAvailableSlot()

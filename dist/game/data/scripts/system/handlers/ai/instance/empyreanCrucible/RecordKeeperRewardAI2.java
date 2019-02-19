@@ -18,7 +18,6 @@ package system.handlers.ai.instance.empyreanCrucible;
 
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.ai2.NpcAI2;
-import com.aionemu.gameserver.instance.handlers.InstanceHandler;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
 import com.aionemu.gameserver.services.NpcShoutsService;
@@ -39,7 +38,6 @@ public class RecordKeeperRewardAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		final InstanceHandler instanceHandler = getPosition().getWorldMapInstance().getInstanceHandler();
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));
 		if (dialogId == 10000)
 		{

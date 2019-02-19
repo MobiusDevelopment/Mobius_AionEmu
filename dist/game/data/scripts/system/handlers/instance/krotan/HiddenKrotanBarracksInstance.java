@@ -211,7 +211,6 @@ public class HiddenKrotanBarracksInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 237288: // Ereshkigal Luksha Keeper.

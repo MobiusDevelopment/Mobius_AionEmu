@@ -32,7 +32,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_NPC_INFO;
 import com.aionemu.gameserver.services.base.Base;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastMap;
 
@@ -63,57 +62,52 @@ public class BaseService
 	
 	public void initBaseReset()
 	{
-		final Race race = null;
 		log.info("Base Reset");
 		final String weekly = "0 0 9 ? * WED *";
-		CronService.getInstance().schedule(new Runnable()
+		CronService.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
-			{
-				// Elten.
-				capture(45, Race.NPC);
-				capture(46, Race.NPC);
-				// Heiron.
-				capture(47, Race.NPC);
-				capture(48, Race.NPC);
-				// Morheim.
-				capture(49, Race.NPC);
-				capture(50, Race.NPC);
-				// Beluslan.
-				capture(51, Race.NPC);
-				capture(52, Race.NPC);
-				// Reshanta.
-				capture(53, Race.NPC);
-				capture(54, Race.NPC);
-				capture(55, Race.NPC);
-				capture(56, Race.NPC);
-				capture(57, Race.NPC);
-				capture(58, Race.NPC);
-				capture(59, Race.NPC);
-				capture(60, Race.NPC);
-				capture(61, Race.NPC);
-				capture(62, Race.NPC);
-				capture(63, Race.NPC);
-				capture(64, Race.NPC);
-				// Levinshor.
-				capture(90, Race.NPC);
-				capture(91, Race.NPC);
-				capture(92, Race.NPC);
-				capture(93, Race.NPC);
-				capture(94, Race.NPC);
-				capture(95, Race.NPC);
-				capture(96, Race.NPC);
-				capture(97, Race.NPC);
-				capture(98, Race.NPC);
-				capture(99, Race.NPC);
-				capture(100, Race.NPC);
-				capture(101, Race.NPC);
-				capture(102, Race.NPC);
-				// Kaldor.
-				capture(103, Race.NPC);
-				capture(104, Race.NPC);
-			}
+			// Elten.
+			capture(45, Race.NPC);
+			capture(46, Race.NPC);
+			// Heiron.
+			capture(47, Race.NPC);
+			capture(48, Race.NPC);
+			// Morheim.
+			capture(49, Race.NPC);
+			capture(50, Race.NPC);
+			// Beluslan.
+			capture(51, Race.NPC);
+			capture(52, Race.NPC);
+			// Reshanta.
+			capture(53, Race.NPC);
+			capture(54, Race.NPC);
+			capture(55, Race.NPC);
+			capture(56, Race.NPC);
+			capture(57, Race.NPC);
+			capture(58, Race.NPC);
+			capture(59, Race.NPC);
+			capture(60, Race.NPC);
+			capture(61, Race.NPC);
+			capture(62, Race.NPC);
+			capture(63, Race.NPC);
+			capture(64, Race.NPC);
+			// Levinshor.
+			capture(90, Race.NPC);
+			capture(91, Race.NPC);
+			capture(92, Race.NPC);
+			capture(93, Race.NPC);
+			capture(94, Race.NPC);
+			capture(95, Race.NPC);
+			capture(96, Race.NPC);
+			capture(97, Race.NPC);
+			capture(98, Race.NPC);
+			capture(99, Race.NPC);
+			capture(100, Race.NPC);
+			capture(101, Race.NPC);
+			capture(102, Race.NPC);
+			// Kaldor.
+			capture(103, Race.NPC);
+			capture(104, Race.NPC);
 		}, weekly);
 	}
 	
@@ -201,17 +195,13 @@ public class BaseService
 	
 	public void broadcastUpdate(BaseLocation baseLocation)
 	{
-		World.getInstance().getWorldMap(baseLocation.getWorldId()).getMainWorldMapInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().getWorldMap(baseLocation.getWorldId()).getMainWorldMapInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (isActive(baseLocation.getId()))
 			{
-				if (isActive(baseLocation.getId()))
-				{
-					final Base<?> base = getActiveBase(baseLocation.getId());
-					PacketSendUtility.sendPacket(player, new SM_NPC_INFO(base.getFlag(), player));
-					player.getController().updateNearbyQuests();
-				}
+				final Base<?> base = getActiveBase(baseLocation.getId());
+				PacketSendUtility.sendPacket(player, new SM_NPC_INFO(base.getFlag(), player));
+				player.getController().updateNearbyQuests();
 			}
 		});
 	}

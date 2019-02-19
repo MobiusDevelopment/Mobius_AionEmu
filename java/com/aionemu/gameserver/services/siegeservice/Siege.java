@@ -236,10 +236,8 @@ public abstract class Siege<SL extends SiegeLocation>
 	// }
 	
 	/**
-	 * TODO: This should be done in some other, more "gentle" way...
-	 * @deprecated This should be removed
+	 * TODO: This should be done in some other, more "gentle" way... This should be removed.
 	 */
-	@Deprecated
 	protected void initSiegeBoss()
 	{
 		SiegeNpc boss = null;

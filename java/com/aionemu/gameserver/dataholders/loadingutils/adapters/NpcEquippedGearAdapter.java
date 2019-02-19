@@ -25,15 +25,13 @@ import com.aionemu.gameserver.model.items.NpcEquippedGear;
  */
 public class NpcEquippedGearAdapter extends XmlAdapter<NpcEquipmentList, NpcEquippedGear>
 {
-	
 	/*
 	 * (non-Javadoc)
 	 * @see javax.xml.bind.annotation.adapters.XmlAdapter#marshal(java.lang.Object)
 	 */
 	@Override
-	public NpcEquipmentList marshal(NpcEquippedGear v) throws Exception
+	public NpcEquipmentList marshal(NpcEquippedGear v)
 	{
-		// TODO Auto-generated method stub
 		return null;
 	}
 	
@@ -42,9 +40,8 @@ public class NpcEquippedGearAdapter extends XmlAdapter<NpcEquipmentList, NpcEqui
 	 * @see javax.xml.bind.annotation.adapters.XmlAdapter#unmarshal(java.lang.Object)
 	 */
 	@Override
-	public NpcEquippedGear unmarshal(NpcEquipmentList v) throws Exception
+	public NpcEquippedGear unmarshal(NpcEquipmentList v)
 	{
 		return new NpcEquippedGear(v);
 	}
-	
 }

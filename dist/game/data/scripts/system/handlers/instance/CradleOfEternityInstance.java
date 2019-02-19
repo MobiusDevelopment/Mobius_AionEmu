@@ -54,7 +54,6 @@ import javolution.util.FastMap;
 public class CradleOfEternityInstance extends GeneralInstanceHandler
 {
 	private Race spawnRace;
-	private long startTime;
 	private int covetousFallen;
 	private Future<?> instanceTimer;
 	private Map<Integer, StaticDoor> doors;
@@ -132,7 +131,6 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 		sendMsgByRace(1403504, Race.PC_ALL, 130000);
 		if (instanceTimer == null)
 		{
-			startTime = System.currentTimeMillis();
 			instanceTimer = ThreadPoolManager.getInstance().schedule(() ->
 			{
 				deleteNpc(834123);
@@ -150,7 +148,6 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 220470: // Covetous Fallen Guardian.

@@ -328,10 +328,6 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 	
 	protected void reward()
 	{
-		final int ElyosPvPKills = getPvpKillsByRace(Race.ELYOS).intValue();
-		final int ElyosPoints = getPointsByRace(Race.ELYOS).intValue();
-		final int AsmoPvPKills = getPvpKillsByRace(Race.ASMODIANS).intValue();
-		final int AsmoPoints = getPointsByRace(Race.ASMODIANS).intValue();
 		for (Player player : instance.getPlayersInside())
 		{
 			if (CreatureActions.isAlreadyDead(player))
@@ -443,11 +439,6 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 		}
 		updateScore(player, player, -points, false);
 		return true;
-	}
-	
-	private MutableInt getPvpKillsByRace(Race race)
-	{
-		return engulfedOphidanBridgeReward.getPvpKillsByRace(race);
 	}
 	
 	private MutableInt getPointsByRace(Race race)
@@ -1195,11 +1186,6 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(msg));
 			}
 		}), time));
-	}
-	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	private void stopInstanceTask()

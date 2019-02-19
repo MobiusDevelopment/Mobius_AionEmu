@@ -94,7 +94,6 @@ public class _20032All_About_Abnormal_Aether extends QuestHandler
 		}
 		final int var = qs.getQuestVarById(0);
 		int targetId = 0;
-		final QuestDialog dialog = env.getDialog();
 		if (env.getVisibleObject() instanceof Npc)
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();

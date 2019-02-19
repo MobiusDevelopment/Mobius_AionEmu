@@ -217,24 +217,19 @@ public class _20520Lost_Destiny extends QuestHandler
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
 			final int var = qs.getQuestVarById(0);
-			final int instanceId = player.getInstanceId();
 			if (zoneName == ZoneName.get("DF6_SENSORY_AREA_Q20520_220110000"))
 			{
 				if (var == 3)
 				{
 					playQuestMovie(env, 867);
 					changeQuestStep(env, 3, 4, false);
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule(() ->
 					{
-						@Override
-						public void run()
+						if (player != null)
 						{
-							if (player != null)
-							{
-								final WorldMapInstance SanctuaryDungeon = InstanceService.getNextAvailableInstance(301580000);
-								InstanceService.registerPlayerWithInstance(SanctuaryDungeon, player);
-								TeleportService2.teleportTo(player, 301580000, SanctuaryDungeon.getInstanceId(), 431, 491, 99);
-							}
+							final WorldMapInstance SanctuaryDungeon = InstanceService.getNextAvailableInstance(301580000);
+							InstanceService.registerPlayerWithInstance(SanctuaryDungeon, player);
+							TeleportService2.teleportTo(player, 301580000, SanctuaryDungeon.getInstanceId(), 431, 491, 99);
 						}
 					}, 43000);
 					return true;

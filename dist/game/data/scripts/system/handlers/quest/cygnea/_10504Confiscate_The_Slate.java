@@ -73,7 +73,6 @@ public class _10504Confiscate_The_Slate extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final Npc npc = (Npc) env.getVisibleObject();
 		if (qs == null)
 		{
 			return false;

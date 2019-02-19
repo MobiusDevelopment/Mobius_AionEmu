@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.actions.CreatureActions;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.services.NpcShoutsService;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.world.WorldPosition;
 
@@ -190,10 +189,5 @@ public class VanktristAI2 extends AggressiveNpcAI2
 				npc.getController().onDelete();
 			}
 		}
-	}
-	
-	private void sendMsg(int msg, int Obj, boolean isShout, int time)
-	{
-		NpcShoutsService.getInstance().sendMsg(getPosition().getWorldMapInstance(), msg, Obj, isShout, 0, time);
 	}
 }

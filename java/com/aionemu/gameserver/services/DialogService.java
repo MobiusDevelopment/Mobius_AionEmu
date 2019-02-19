@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.services;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.Race;
@@ -65,7 +62,6 @@ import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
  */
 public class DialogService
 {
-	private static final Logger log = LoggerFactory.getLogger(DialogService.class);
 	
 	public static void onCloseDialog(Npc npc, Player player)
 	{

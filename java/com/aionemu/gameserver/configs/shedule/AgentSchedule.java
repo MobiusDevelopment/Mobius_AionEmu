@@ -50,6 +50,7 @@ public class AgentSchedule
 		agentsList = agentList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static AgentSchedule load()
 	{
 		AgentSchedule as;

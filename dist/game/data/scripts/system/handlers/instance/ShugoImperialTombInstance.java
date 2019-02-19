@@ -56,7 +56,6 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 	private int diligentKoboldWorker;
 	private int swiftKrallGraverobber;
 	private int krallLookoutCommander;
-	private boolean isInstanceDestroyed;
 	
 	/**
 	 * Rewards (Update to 4.3!) Here is a list of items you can get. Note that you need one key for a small chest and three keys for a big chest. Ceranium Medals Mithril Medals Ancient Coins Abyssal Relics AP Crowns Blessed Manastone Socketing Supplement (Fabled) Blessed Manastone Socketing
@@ -877,14 +876,6 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 		effectController.removeEffect(21096);
 	}
 	
-	private void despawnNpc(Npc npc)
-	{
-		if (npc != null)
-		{
-			npc.getController().onDelete();
-		}
-	}
-	
 	private void deleteNpc(int npcId)
 	{
 		if (getNpc(npcId) != null)
@@ -907,11 +898,6 @@ public class ShugoImperialTombInstance extends GeneralInstanceHandler
 	{
 		removeItems(player);
 		removeEffects(player);
-	}
-	
-	private void sendMsg(String str)
-	{
-		instance.doOnAllPlayers(player -> PacketSendUtility.sendMessage(player, str));
 	}
 	
 	protected void sendMsgByRace(int msg, Race race, int time)

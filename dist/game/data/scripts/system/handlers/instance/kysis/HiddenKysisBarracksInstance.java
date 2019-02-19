@@ -211,7 +211,6 @@ public class HiddenKysisBarracksInstance extends GeneralInstanceHandler
 	@Override
 	public void onDie(Npc npc)
 	{
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 237303: // Ereshkigal Saldi Warden.

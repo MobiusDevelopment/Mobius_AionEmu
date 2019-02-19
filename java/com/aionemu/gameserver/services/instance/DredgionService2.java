@@ -18,9 +18,6 @@ package com.aionemu.gameserver.services.instance;
 
 import java.util.Iterator;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.commons.services.CronService;
 import com.aionemu.gameserver.configs.main.AutoGroupConfig;
@@ -35,7 +32,6 @@ import javolution.util.FastList;
 
 public class DredgionService2
 {
-	private static final Logger log = LoggerFactory.getLogger(DredgionService2.class);
 	
 	private boolean registerAvailable;
 	private final FastList<Integer> playersWithCooldown = new FastList<>();

@@ -16,7 +16,6 @@
  */
 package com.aionemu.gameserver.network.ls;
 
-import java.io.IOException;
 import java.nio.channels.SocketChannel;
 
 import com.aionemu.commons.network.AConnection;
@@ -35,7 +34,6 @@ public class LoginConnectionFactoryImpl implements ConnectionFactory
 	 * @param socket that new {@link com.aionemu.commons.network.AConnection AConnection} instance will represent.<br>
 	 * @param dispatcher to witch new connection will be registered.<br>
 	 * @return a new instance of {@link com.aionemu.commons.network.AConnection AConnection}<br>
-	 * @throws IOException
 	 * @see com.aionemu.commons.network.AConnection
 	 * @see com.aionemu.commons.network.Dispatcher
 	 */
@@ -45,7 +43,7 @@ public class LoginConnectionFactoryImpl implements ConnectionFactory
 	 * @see com.aionemu.commons.network.ConnectionFactory#create(java.nio.channels.SocketChannel, com.aionemu.commons.network.Dispatcher)
 	 */
 	@Override
-	public AConnection create(SocketChannel socket, Dispatcher dispatcher) throws IOException
+	public AConnection create(SocketChannel socket, Dispatcher dispatcher)
 	{
 		return new LoginServerConnection(socket, dispatcher);
 	}

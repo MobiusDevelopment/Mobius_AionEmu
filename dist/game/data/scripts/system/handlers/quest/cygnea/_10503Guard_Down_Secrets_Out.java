@@ -78,7 +78,6 @@ public class _10503Guard_Down_Secrets_Out extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final Npc npc = (Npc) env.getVisibleObject();
 		if (qs == null)
 		{
 			return false;

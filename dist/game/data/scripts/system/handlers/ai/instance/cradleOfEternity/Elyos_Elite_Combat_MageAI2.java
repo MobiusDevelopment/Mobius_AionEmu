@@ -16,11 +16,8 @@
  */
 package system.handlers.ai.instance.cradleOfEternity;
 
-import java.util.List;
-
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.ai2.NpcAI2;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -62,17 +59,5 @@ public class Elyos_Elite_Combat_MageAI2 extends NpcAI2
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));
 		return true;
-	}
-	
-	private void despawnNpc(int npcId)
-	{
-		if (getPosition().getWorldMapInstance().getNpcs(npcId) != null)
-		{
-			final List<Npc> npcs = getPosition().getWorldMapInstance().getNpcs(npcId);
-			for (Npc npc : npcs)
-			{
-				npc.getController().onDelete();
-			}
-		}
 	}
 }

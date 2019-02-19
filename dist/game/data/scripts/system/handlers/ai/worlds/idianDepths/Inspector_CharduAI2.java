@@ -18,7 +18,6 @@ package system.handlers.ai.worlds.idianDepths;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Future;
 
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.commons.utils.Rnd;
@@ -39,7 +38,6 @@ public class Inspector_CharduAI2 extends AggressiveNpcAI2
 {
 	private int stage = 0;
 	private boolean isStart = false;
-	private Future<?> enrageTask;
 	
 	@Override
 	protected void handleCreatureAggro(Creature creature)
@@ -82,7 +80,6 @@ public class Inspector_CharduAI2 extends AggressiveNpcAI2
 	
 	private void stage1()
 	{
-		final int delay = 0;
 		if (isAlreadyDead() || !isStart)
 		{
 			return;

@@ -199,7 +199,7 @@ public class TeleportService2
 	private static void sendLoc(Player player, int mapId, int instanceId, float x, float y, float z, byte h, TeleportAnimation animation)
 	{
 		final boolean isInstance = DataManager.WORLD_MAPS_DATA.getTemplate(mapId).isInstance();
-		PacketSendUtility.sendPacket(player, new SM_TELEPORT_LOC(isInstance, instanceId, mapId, x, y, z, h, animation.getStartAnimationId()));
+		PacketSendUtility.sendPacket(player, new SM_TELEPORT_LOC(isInstance, instanceId, mapId, x, y, z, h));
 		player.unsetPlayerMode(PlayerMode.RIDE);
 		playerTransformation(player);
 		instanceTransformation(player);

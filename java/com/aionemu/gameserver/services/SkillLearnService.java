@@ -16,9 +16,6 @@
  */
 package com.aionemu.gameserver.services;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.configs.main.MembershipConfig;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.PlayerClass;
@@ -37,8 +34,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class SkillLearnService
 {
-	private static final Logger log = LoggerFactory.getLogger(SkillLearnService.class);
-	
 	public static void addNewSkills(Player player)
 	{
 		final int level = player.getCommonData().getLevel();
@@ -67,7 +62,7 @@ public class SkillLearnService
 			PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, player.getSkillList().getBasicSkills()));
 			for (PlayerSkillEntry stigmaSkill : player.getSkillList().getStigmaSkills())
 			{
-				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, stigmaSkill));
+				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(stigmaSkill));
 			}
 		}
 	}
@@ -91,7 +86,7 @@ public class SkillLearnService
 			PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, player.getSkillList().getBasicSkills()));
 			for (PlayerSkillEntry stigmaSkill : player.getSkillList().getStigmaSkills())
 			{
-				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, stigmaSkill));
+				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(stigmaSkill));
 			}
 		}
 	}
@@ -114,10 +109,7 @@ public class SkillLearnService
 			{
 				continue;
 			}
-			else
-			{
-				playerSkillList.addSkill(player, template.getSkillId(), template.getSkillLevel());
-			}
+			playerSkillList.addSkill(player, template.getSkillId(), template.getSkillLevel());
 		}
 	}
 	

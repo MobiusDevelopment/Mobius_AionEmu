@@ -26,7 +26,6 @@ import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.model.gameobjects.Creature;
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.skillengine.SkillEngine;
 
 import system.handlers.ai.AggressiveNpcAI2;
@@ -185,16 +184,5 @@ public class AdjutantAnuhartAI2 extends AggressiveNpcAI2
 		cancelTask();
 		percents.clear();
 		super.handleDied();
-	}
-	
-	private void deleteNpcs(List<Npc> npcs)
-	{
-		for (Npc npc : npcs)
-		{
-			if (npc != null)
-			{
-				npc.getController().onDelete();
-			}
-		}
 	}
 }

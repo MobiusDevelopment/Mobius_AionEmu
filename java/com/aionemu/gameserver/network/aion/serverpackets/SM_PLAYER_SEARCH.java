@@ -19,9 +19,6 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
@@ -33,8 +30,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_PLAYER_SEARCH extends AionServerPacket
 {
-	private static final Logger log = LoggerFactory.getLogger(SM_PLAYER_SEARCH.class);
-	
 	private final List<Player> players;
 	private final int region;
 	

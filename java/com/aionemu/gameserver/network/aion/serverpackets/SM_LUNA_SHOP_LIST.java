@@ -18,10 +18,6 @@ package com.aionemu.gameserver.network.aion.serverpackets;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -31,11 +27,13 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 public class SM_LUNA_SHOP_LIST extends AionServerPacket
 {
-	private static final Logger log = LoggerFactory.getLogger(SM_LUNA_SHOP_LIST.class);
 	private final int actionId;
+	@SuppressWarnings("unused")
 	private long points;
+	@SuppressWarnings("unused")
 	private int keys;
 	private int costId;
+	@SuppressWarnings("unused")
 	private int entryCount;
 	private int tableId;
 	private List<Integer> idList;
@@ -82,7 +80,6 @@ public class SM_LUNA_SHOP_LIST extends AionServerPacket
 	@Override
 	protected void writeImpl(AionConnection con)
 	{
-		final Player player = con.getActivePlayer();
 		writeC(actionId);// actionid
 		switch (actionId)
 		{

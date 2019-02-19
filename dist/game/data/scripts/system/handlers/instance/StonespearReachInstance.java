@@ -16,17 +16,13 @@
  */
 package system.handlers.instance;
 
-import java.util.Set;
 import java.util.concurrent.Future;
 
-import com.aionemu.gameserver.ai2.AIState;
-import com.aionemu.gameserver.ai2.AbstractAI;
 import com.aionemu.gameserver.instance.handlers.GeneralInstanceHandler;
 import com.aionemu.gameserver.instance.handlers.InstanceID;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.EmotionType;
 import com.aionemu.gameserver.model.Race;
-import com.aionemu.gameserver.model.drop.DropItem;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -37,7 +33,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_DIE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_SCORE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
@@ -53,7 +48,6 @@ public class StonespearReachInstance extends GeneralInstanceHandler
 	private Race spawnRace;
 	private long instanceTime;
 	private Future<?> instanceTimer;
-	private boolean isInstanceDestroyed;
 	private StonespearReachReward instanceReward;
 	private final FastList<Future<?>> stonespearTask = FastList.newInstance();
 	
@@ -80,7 +74,6 @@ public class StonespearReachInstance extends GeneralInstanceHandler
 	@Override
 	public void onDropRegistered(Npc npc)
 	{
-		final Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
 		final int npcId = npc.getNpcId();
 		switch (npcId)
 		{
@@ -123,8 +116,6 @@ public class StonespearReachInstance extends GeneralInstanceHandler
 	public void onDie(Npc npc)
 	{
 		int points = 0;
-		final int npcId = npc.getNpcId();
-		final Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId())
 		{
 			case 855833:
@@ -244,19 +235,6 @@ public class StonespearReachInstance extends GeneralInstanceHandler
 	{
 	}
 	
-	private void moveToForward(Npc npc, float x, float y, float z, boolean despawn)
-	{
-		((AbstractAI) npc.getAi2()).setStateIfNot(AIState.WALKING);
-		npc.setState(1);
-		npc.getMoveController().moveToPoint(x, y, z);
-		PacketSendUtility.broadcastPacket(npc, new SM_EMOTION(npc, EmotionType.START_EMOTE2, 0, npc.getObjectId()));
-	}
-	
-	private void startAssault1()
-	{
-		moveToForward((Npc) spawn(0, 0f, 0f, 0f, (byte) 0), 0f, 0f, 0f, false);
-	}
-	
 	private void stopInstanceTask()
 	{
 		for (FastList.Node<Future<?>> n = stonespearTask.head(), end = stonespearTask.tail(); (n = n.getNext()) != end;)
@@ -284,7 +262,6 @@ public class StonespearReachInstance extends GeneralInstanceHandler
 		{
 			instanceTimer.cancel(false);
 		}
-		isInstanceDestroyed = true;
 	}
 	
 	private void despawnNpc(Npc npc)

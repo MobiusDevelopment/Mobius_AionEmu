@@ -60,8 +60,6 @@ public class cmd_enchant extends PlayerCommand
 	
 	private void enchant(Player player, int enchant)
 	{
-		final int enchantLevel;
-		final int maxEnchant;
 		
 		for (Item targetItem : player.getEquipment().getEquippedItemsWithoutStigma())
 		{

@@ -17,7 +17,6 @@
 package system.handlers.ai.instance.seizedDanuarSanctuary;
 
 import java.util.List;
-import java.util.concurrent.Future;
 
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.ai2.AIName;
@@ -35,7 +34,6 @@ public class Warmage_SuyarokaAI2 extends AggressiveNpcAI2
 {
 	private int stage = 0;
 	private boolean isStart = false;
-	private Future<?> enrageTask;
 	
 	@Override
 	protected void handleCreatureAggro(Creature creature)
@@ -73,19 +71,16 @@ public class Warmage_SuyarokaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			SkillEngine.getInstance().getSkill(getOwner(), 20657, 1, getOwner()).useNoAnimationSkill(); // Summoning Ritual.
-			ShebanMysticalTyrhund();
-			scheduleDelayStage1(delay);
-		}
+		SkillEngine.getInstance().getSkill(getOwner(), 20657, 1, getOwner()).useNoAnimationSkill(); // Summoning Ritual.
+		ShebanMysticalTyrhund();
+		scheduleDelayStage1(delay);
 	}
 	
 	private void ShebanMysticalTyrhund()
 	{
 		if (!isAlreadyDead())
 		{
-			enrageTask = ThreadPoolManager.getInstance().schedule((Runnable) () ->
+			ThreadPoolManager.getInstance().schedule((Runnable) () ->
 			{
 				if (!isAlreadyDead())
 				{
@@ -102,10 +97,7 @@ public class Warmage_SuyarokaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
-		}
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
 	}
 	
 	private void despawnNpcs(int npcId)

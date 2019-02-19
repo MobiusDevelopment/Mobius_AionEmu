@@ -50,6 +50,7 @@ public class MoltenusSchedule
 		moltenussList = moltenusList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static MoltenusSchedule load()
 	{
 		MoltenusSchedule ms;

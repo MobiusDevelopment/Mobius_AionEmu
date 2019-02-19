@@ -50,6 +50,7 @@ public class CircusSchedule
 		circussList = circusList;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static CircusSchedule load()
 	{
 		CircusSchedule cs;

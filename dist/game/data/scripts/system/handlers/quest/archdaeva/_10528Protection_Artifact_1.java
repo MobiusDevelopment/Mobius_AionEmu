@@ -91,7 +91,6 @@ public class _10528Protection_Artifact_1 extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		final Npc npc = (Npc) env.getVisibleObject();
 		if (qs == null)
 		{
 			return false;
@@ -296,14 +295,10 @@ public class _10528Protection_Artifact_1 extends QuestHandler
 			}
 			if (var == 11)
 			{
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
-					{
-						giveQuestItem(env, 164002347, 1); // 잠이 든 데자보보.
-						TeleportService2.teleportTo(env.getPlayer(), 210100000, 2412.4185f, 775.91626f, 236.68776f, (byte) 79, TeleportAnimation.BEAM_ANIMATION);
-					}
+					giveQuestItem(env, 164002347, 1); // 잠이 든 데자보보.
+					TeleportService2.teleportTo(env.getPlayer(), 210100000, 2412.4185f, 775.91626f, 236.68776f, (byte) 79, TeleportAnimation.BEAM_ANIMATION);
 				}, 5000);
 				return HandlerResult.fromBoolean(useQuestItem(env, item, 11, 12, true));
 			}

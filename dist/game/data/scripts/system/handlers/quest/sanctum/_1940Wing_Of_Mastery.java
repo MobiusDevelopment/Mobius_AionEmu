@@ -61,7 +61,6 @@ public class _1940Wing_Of_Mastery extends QuestHandler
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
 			final int var = qs.getQuestVarById(0);
-			final int instanceId = player.getInstanceId();
 			if (zoneName == ZoneName.get("EXALTED_PATH_110010000"))
 			{
 				if (var == 0)
