@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.templates.rewards.IdReward;
  * @author Rolandas
  *
  */
-
 /**
  * <p>
  * Java class for OreGroup complex type.
@@ -53,7 +52,6 @@ import com.aionemu.gameserver.model.templates.rewards.IdReward;
 @XmlType(name = "OreGroup")
 public class OreGroup extends BonusItemGroup
 {
-	
 	@XmlElement(name = "item")
 	protected List<ItemRaceEntry> items;
 	

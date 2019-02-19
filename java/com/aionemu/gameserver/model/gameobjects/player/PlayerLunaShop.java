@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
 /**
  * Created by wanke on 13/02/2017.
  */
-
 public class PlayerLunaShop
 {
 	Logger log = LoggerFactory.getLogger(PlayerLunaShop.class);

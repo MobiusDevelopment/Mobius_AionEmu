@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_TARGET_UPDATE extends AionServerPacket
 {
-	
 	private final Player player;
 	
 	public SM_TARGET_UPDATE(Player player)

@@ -41,7 +41,6 @@ import com.aionemu.gameserver.model.templates.zone.Point2D;
  */
 public class WalkerGroup
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(WalkerGroup.class);
 	
 	private final List<ClusteredNpc> members;

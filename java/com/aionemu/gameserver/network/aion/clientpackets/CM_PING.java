@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.audit.AuditLogger;
  */
 public class CM_PING extends AionClientPacket
 {
-	
 	/**
 	 * Constructs new instance of <tt>CM_PING </tt> packet
 	 * @param opcode

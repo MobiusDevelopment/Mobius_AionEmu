@@ -36,7 +36,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DecomposableItemsData
 {
-	
 	@XmlElement(name = "decomposable")
 	private List<DecomposableItemInfo> decomposableItemsTemplates;
 	private final TIntObjectHashMap<List<ExtractedItemsCollection>> decomposableItemsInfo = new TIntObjectHashMap<>();

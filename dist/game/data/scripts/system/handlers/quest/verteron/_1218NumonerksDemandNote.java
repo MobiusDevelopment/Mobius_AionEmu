@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1218NumonerksDemandNote extends QuestHandler
 {
-	
 	private static final int questId = 1218;
 	
 	public _1218NumonerksDemandNote()

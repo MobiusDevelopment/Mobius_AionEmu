@@ -29,7 +29,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler (Encom)
  */
-
 public class ConquestLocation
 {
 	protected int id;

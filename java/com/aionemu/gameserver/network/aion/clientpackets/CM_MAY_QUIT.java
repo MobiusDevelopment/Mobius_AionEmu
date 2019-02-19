@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_MAY_QUIT extends AionClientPacket
 {
-	
 	/**
 	 * @param opcode
 	 * @param state

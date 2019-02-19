@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.PositionUtil;
  */
 public class TargetRangeProperty
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(TargetRangeProperty.class);
 	
 	/**

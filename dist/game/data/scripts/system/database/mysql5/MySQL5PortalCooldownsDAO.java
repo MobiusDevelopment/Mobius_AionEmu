@@ -35,7 +35,6 @@ import javolution.util.FastMap;
 
 public class MySQL5PortalCooldownsDAO extends PortalCooldownsDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PortalCooldownsDAO.class);
 	
 	public static final String INSERT_QUERY = "INSERT INTO `portal_cooldowns` (`player_id`, `world_id`, `reuse_time`, `entry_count`) VALUES (?,?,?,?)";

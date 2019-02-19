@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LEGION_UPDATE_NICKNAME extends AionServerPacket
 {
-	
 	private final int playerObjId;
 	private final String newNickname;
 	

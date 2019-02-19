@@ -29,7 +29,6 @@ import com.google.common.base.Predicate;
  */
 public interface Team<M, TM extends TeamMember<M>>
 {
-	
 	Integer getTeamId();
 	
 	TM getMember(Integer objectId);

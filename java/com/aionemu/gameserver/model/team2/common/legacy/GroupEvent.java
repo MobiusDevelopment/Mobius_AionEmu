@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.team2.common.legacy;
  */
 public enum GroupEvent
 {
-	
 	LEAVE(0),
 	MOVEMENT(1),
 	DISCONNECTED(3),

@@ -23,7 +23,6 @@ import java.util.EnumSet;
  */
 public enum CollisionIntention
 {
-	
 	NONE(0),
 	PHYSICAL(1 << 0), // Physical collision
 	MATERIAL(1 << 1), // Mesh materials with skills

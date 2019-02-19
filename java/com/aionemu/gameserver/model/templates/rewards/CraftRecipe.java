@@ -25,7 +25,6 @@ import javax.xml.bind.annotation.XmlType;
  * @author Rolandas
  *
  */
-
 /**
  * <p>
  * Java class for CraftRecipe complex type.

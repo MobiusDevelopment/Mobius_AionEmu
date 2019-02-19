@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1605TheLepharistSituation extends QuestHandler
 {
-	
 	private static final int questId = 1605;
 	
 	public _1605TheLepharistSituation()

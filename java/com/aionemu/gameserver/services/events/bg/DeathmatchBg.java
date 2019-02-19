@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 public class DeathmatchBg extends Battleground
 {
 	public DeathmatchBg()

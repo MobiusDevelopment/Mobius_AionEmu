@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "player_stats_template")
 public class PlayerStatsTemplate extends StatsTemplate
 {
-	
 	@XmlAttribute(name = "power")
 	private int power;
 	@XmlAttribute(name = "health")

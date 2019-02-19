@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Online extends AdminCommand
 {
-	
 	public Online()
 	{
 		super("online");

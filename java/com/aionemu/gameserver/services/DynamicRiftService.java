@@ -44,7 +44,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler (Encom)
  */
-
 public class DynamicRiftService
 {
 	private Map<Integer, DynamicRiftLocation> dynamicRift;

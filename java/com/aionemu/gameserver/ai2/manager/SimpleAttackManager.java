@@ -32,7 +32,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
  */
 public class SimpleAttackManager
 {
-	
 	/**
 	 * @param npcAI
 	 * @param delay
@@ -158,7 +157,6 @@ public class SimpleAttackManager
 			attackAction(npcAI);
 			npcAI = null;
 		}
-		
 	}
 	
 	private static final class SimpleCheckedAttackAction implements Runnable
@@ -187,7 +185,6 @@ public class SimpleAttackManager
 			}
 			npcAI = null;
 		}
-		
 	}
 	
 }

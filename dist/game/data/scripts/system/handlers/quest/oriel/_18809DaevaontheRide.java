@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _18809DaevaontheRide extends QuestHandler
 {
-	
 	private static final int questId = 18809;
 	
 	public _18809DaevaontheRide()

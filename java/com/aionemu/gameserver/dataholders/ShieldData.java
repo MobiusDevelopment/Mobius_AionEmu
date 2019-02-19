@@ -34,7 +34,6 @@ import com.aionemu.gameserver.model.templates.shield.ShieldTemplate;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ShieldData
 {
-	
 	@XmlElement(name = "shield")
 	private List<ShieldTemplate> shieldTemplates;
 	

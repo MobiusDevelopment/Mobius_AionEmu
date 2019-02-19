@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2239MalodorAntidote extends QuestHandler
 {
-	
 	private static final int questId = 2239;
 	
 	public _2239MalodorAntidote()

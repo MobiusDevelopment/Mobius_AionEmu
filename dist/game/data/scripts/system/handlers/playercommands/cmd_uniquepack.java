@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
 /***************************/
 public class cmd_uniquepack extends PlayerCommand
 {
-	
 	public cmd_uniquepack()
 	{
 		super("uniquepack");
@@ -344,7 +343,6 @@ public class cmd_uniquepack extends PlayerCommand
 		{
 			PacketSendUtility.sendMessage(player, "----- \uE079 Unique's Pack Information \uE079 -----\n" + "STUFF:\n" + "For Scrolls Type: ' .uniquepack scrolls '\n" + "For Potions Type: ' .uniquepack potions '\n" + "For 'goodies' Shards , Titles , Idians , ETC Type: ' .uniquepack goodies '\n" + "--------------------------------------------------------------------------\n" + "GEAR:\n" + "For \uE079 GLADIATOR \uE079 Type: ' .uniquepack gladiator '\n" + "For \uE079 TEMPLAR \uE079 Type: ' .uniquepack templar '\n" + "For \uE079 CLERIC \uE079 Type: ' .uniquepack cleric '\n" + "For \uE079 CHANTER \uE079 Type: ' .uniquepack chanter '\n" + "For \uE079 ASSASSIN \uE079 Type: ' .uniquepack assassin '\n" + "For \uE079 RANGER \uE079 Type: ' .uniquepack ranger '\n" + "For \uE079 SORCERER \uE079 Type: ' .uniquepack sorcerer '\n" + "For \uE079 SPIRITMASTER \uE079 Type: ' .uniquepack spiritmaster '\n" + "For \uE079 GUNNER \uE079 Type: ' .uniquepack gunner '\n" + "For \uE079 AETHERTECH \uE079 Type: ' .uniquepack aethertech '\n" + "For \uE079 SONGWEAVER \uE079 Type: ' .uniquepack songweaver '\n" + "\uE020 Have fun kickin ass! \uE020");
 		}
-		
 	}
 	
 	@Override

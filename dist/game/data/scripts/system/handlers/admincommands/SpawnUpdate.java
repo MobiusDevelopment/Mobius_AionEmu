@@ -44,7 +44,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class SpawnUpdate extends AdminCommand
 {
-	
 	public SpawnUpdate()
 	{
 		super("spawnu");

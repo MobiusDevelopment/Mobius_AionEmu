@@ -32,7 +32,6 @@ import com.aionemu.gameserver.skillengine.change.Func;
 /**
  * @author Ranastic (Encom)
  */
-
 public class PlayersBonus implements StatOwner
 {
 	// private static final Logger log = LoggerFactory.getLogger(PlayersBonus.class);

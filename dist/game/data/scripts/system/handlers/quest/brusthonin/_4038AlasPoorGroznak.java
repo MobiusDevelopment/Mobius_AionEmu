@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _4038AlasPoorGroznak extends QuestHandler
 {
-	
 	private static final int questId = 4038;
 	
 	public _4038AlasPoorGroznak()

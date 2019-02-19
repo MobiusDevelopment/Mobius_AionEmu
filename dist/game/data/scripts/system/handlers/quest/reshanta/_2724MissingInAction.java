@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2724MissingInAction extends QuestHandler
 {
-	
 	private static final int questId = 2724;
 	
 	public _2724MissingInAction()

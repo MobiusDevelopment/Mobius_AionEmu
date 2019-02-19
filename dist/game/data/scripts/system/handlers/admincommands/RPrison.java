@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class RPrison extends AdminCommand
 {
-	
 	public RPrison()
 	{
 		super("rprison");

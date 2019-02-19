@@ -23,7 +23,6 @@ import com.aionemu.commons.database.dao.DAO;
  */
 public abstract class PlayerPasskeyDAO implements DAO
 {
-	
 	/**
 	 * @param accountId
 	 * @param passkey

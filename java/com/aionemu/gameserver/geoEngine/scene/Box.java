@@ -29,7 +29,6 @@ import com.aionemu.gameserver.geoEngine.utils.BufferUtils;
  */
 public class Box extends AbstractBox
 {
-	
 	private static final short[] GEOMETRY_INDICES_DATA =
 	{
 		2,

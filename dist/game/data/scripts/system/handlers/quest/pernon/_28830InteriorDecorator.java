@@ -33,7 +33,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _28830InteriorDecorator extends QuestHandler
 {
-	
 	private static final int questId = 28830;
 	private static final Set<Integer> butlers;
 	

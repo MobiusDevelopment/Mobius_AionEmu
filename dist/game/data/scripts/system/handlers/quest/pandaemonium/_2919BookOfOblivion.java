@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2919BookOfOblivion extends QuestHandler
 {
-	
 	private static final int questId = 2919;
 	
 	public _2919BookOfOblivion()

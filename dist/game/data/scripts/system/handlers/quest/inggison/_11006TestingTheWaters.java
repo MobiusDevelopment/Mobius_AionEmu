@@ -30,7 +30,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _11006TestingTheWaters extends QuestHandler
 {
-	
 	private static final int questId = 11006;
 	
 	public _11006TestingTheWaters()

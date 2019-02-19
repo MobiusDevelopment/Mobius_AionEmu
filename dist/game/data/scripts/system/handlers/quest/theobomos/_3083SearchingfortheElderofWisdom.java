@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _3083SearchingfortheElderofWisdom extends QuestHandler
 {
-	
 	private static final int questId = 3083;
 	
 	public _3083SearchingfortheElderofWisdom()

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Ranastic
  */
-
 public class SM_LUNA_SHOP_LIST extends AionServerPacket
 {
 	private final int actionId;

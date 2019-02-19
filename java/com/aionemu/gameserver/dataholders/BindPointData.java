@@ -35,7 +35,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BindPointData
 {
-	
 	@XmlElement(name = "bind_point")
 	private List<BindPointTemplate> bplist;
 	

@@ -30,10 +30,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _1482ATeleportationAdventure extends QuestHandler
 {
-	
 	private static final int questId = 1482;
 	
 	public _1482ATeleportationAdventure()

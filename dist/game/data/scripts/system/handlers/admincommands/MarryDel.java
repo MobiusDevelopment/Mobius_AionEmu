@@ -28,7 +28,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class MarryDel extends AdminCommand
 {
-	
 	public MarryDel()
 	{
 		super("marrydel");

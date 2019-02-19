@@ -28,7 +28,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  */
 public class ConditioningInfoBlobEntry extends ItemBlobEntry
 {
-	
 	ConditioningInfoBlobEntry()
 	{
 		super(ItemBlobType.CONDITIONING_INFO);

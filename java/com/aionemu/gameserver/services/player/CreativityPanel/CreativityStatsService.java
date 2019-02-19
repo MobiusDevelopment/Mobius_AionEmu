@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Ranastic (Encom)
  */
-
 public class CreativityStatsService
 {
 	public void onEssenceApply(Player player, int type, int size, int id, int point)

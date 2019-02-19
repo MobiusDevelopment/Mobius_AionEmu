@@ -26,7 +26,6 @@ import com.aionemu.loginserver.network.gs.GsClientPacket;
  */
 public class CM_ACCOUNT_DISCONNECTED extends GsClientPacket
 {
-	
 	/**
 	 * AccountId of account that was disconnected form GameServer.
 	 */

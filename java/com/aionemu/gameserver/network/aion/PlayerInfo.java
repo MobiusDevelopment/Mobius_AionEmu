@@ -36,7 +36,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
  */
 public abstract class PlayerInfo extends AionServerPacket
 {
-	
 	private static Logger log = LoggerFactory.getLogger(PlayerInfo.class);
 	
 	protected PlayerInfo()

@@ -22,10 +22,8 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 /**
  * @author synchro2
  */
-
 public abstract class WeddingDAO implements DAO
 {
-	
 	@Override
 	public final String getClassName()
 	{

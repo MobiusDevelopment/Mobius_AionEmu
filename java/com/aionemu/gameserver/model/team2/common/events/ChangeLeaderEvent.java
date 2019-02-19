@@ -29,7 +29,6 @@ import com.aionemu.gameserver.model.team2.group.events.ChangeGroupLeaderEvent;
  */
 public abstract class ChangeLeaderEvent<T extends TemporaryPlayerTeam<?>>extends AbstractTeamPlayerEvent<T>
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(ChangeGroupLeaderEvent.class);
 	
 	public ChangeLeaderEvent(T team, Player eventPlayer)

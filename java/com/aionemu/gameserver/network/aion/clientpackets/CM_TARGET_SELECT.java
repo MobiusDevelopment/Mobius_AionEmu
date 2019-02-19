@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.audit.AuditLogger;
  */
 public class CM_TARGET_SELECT extends AionClientPacket
 {
-	
 	/**
 	 * Target object id that client wants to select or 0 if wants to unselect
 	 */

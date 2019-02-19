@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.WorldPosition;
  */
 public class Pet extends VisibleObject
 {
-	
 	private final Player master;
 	private final MoveController moveController;
 	private final PetTemplate petTemplate;

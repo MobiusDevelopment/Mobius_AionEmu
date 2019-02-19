@@ -23,7 +23,6 @@ import java.nio.ByteBuffer;
  */
 public class EncryptionKeyPair
 {
-	
 	/**
 	 * keys index to access SERVER encryption key
 	 */

@@ -77,7 +77,6 @@ public class LevelUp extends AdminCommand
 		{
 			PacketSendUtility.sendMessage(player, "The value of <level> will plus calculated to the current player level!");
 		}
-		
 	}
 	
 	@Override

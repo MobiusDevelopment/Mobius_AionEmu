@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
  */
 public class LegionEmblem
 {
-	
 	private int emblemId = 0x00;
 	private int color_r = 0x00;
 	private int color_g = 0x00;

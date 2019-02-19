@@ -34,7 +34,6 @@ import com.aionemu.gameserver.model.Announcement;
  */
 public class MySQL5Announcements extends AnnouncementsDAO
 {
-	
 	/**
 	 * {@inheritDoc}
 	 */

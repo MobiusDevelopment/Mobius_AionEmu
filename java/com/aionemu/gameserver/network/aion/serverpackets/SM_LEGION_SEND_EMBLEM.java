@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LEGION_SEND_EMBLEM extends AionServerPacket
 {
-	
 	/** Legion information **/
 	private final int legionId;
 	private final int emblemId;

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.Petition;
  */
 public abstract class PetitionDAO implements DAO
 {
-	
 	public abstract int getNextAvailableId();
 	
 	public abstract void insertPetition(Petition p);

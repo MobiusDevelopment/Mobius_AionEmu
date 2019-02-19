@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _18835StemCutting extends QuestHandler
 {
-	
 	private static final int questId = 18835;
 	
 	public _18835StemCutting()

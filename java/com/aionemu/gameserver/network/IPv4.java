@@ -21,7 +21,6 @@ package com.aionemu.gameserver.network;
  */
 public class IPv4
 {
-	
 	public static String getIP(int ip)
 	{
 		final byte[] s = new byte[]

@@ -23,7 +23,6 @@ import org.slf4j.LoggerFactory;
  */
 public class Plane3D
 {
-	
 	private static final double[] column = new double[]
 	{
 		1,

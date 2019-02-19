@@ -31,7 +31,6 @@ import com.aionemu.loginserver.network.gs.GsConnection.State;
  */
 public class GameServerInfo
 {
-	
 	/**
 	 * Id of this GameServer
 	 */

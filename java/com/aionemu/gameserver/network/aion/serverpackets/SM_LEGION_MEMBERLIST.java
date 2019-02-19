@@ -29,7 +29,6 @@ import com.aionemu.gameserver.services.HousingService;
  */
 public class SM_LEGION_MEMBERLIST extends AionServerPacket
 {
-	
 	private static final int OFFLINE = 0x00;
 	private static final int ONLINE = 0x01;
 	private final boolean isFirst;

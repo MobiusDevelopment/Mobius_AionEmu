@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.agent.AgentStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class Fight extends AgentFight<AgentLocation>
 {
 	public Fight(AgentLocation agent)

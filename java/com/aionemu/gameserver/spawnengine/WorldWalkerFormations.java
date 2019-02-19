@@ -25,7 +25,6 @@ import com.aionemu.commons.utils.internal.chmv8.PlatformDependent;
  */
 public class WorldWalkerFormations
 {
-	
 	private final Map<Integer, InstanceWalkerFormations> formations;
 	
 	public WorldWalkerFormations()

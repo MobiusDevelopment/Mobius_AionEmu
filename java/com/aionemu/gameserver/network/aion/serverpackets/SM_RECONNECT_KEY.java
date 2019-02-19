@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_RECONNECT_KEY extends AionServerPacket
 {
-	
 	/**
 	 * key for reconnection - will be used for authentication
 	 */

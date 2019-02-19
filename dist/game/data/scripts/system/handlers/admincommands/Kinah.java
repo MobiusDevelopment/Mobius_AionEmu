@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Kinah extends AdminCommand
 {
-	
 	public Kinah()
 	{
 		super("kinah");

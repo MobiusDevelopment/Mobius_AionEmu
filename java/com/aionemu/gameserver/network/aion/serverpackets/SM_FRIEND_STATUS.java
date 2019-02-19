@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_FRIEND_STATUS extends AionServerPacket
 {
-	
 	byte status;
 	
 	public SM_FRIEND_STATUS(byte status)

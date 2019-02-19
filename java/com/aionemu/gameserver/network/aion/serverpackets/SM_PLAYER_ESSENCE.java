@@ -35,7 +35,6 @@ import com.aionemu.gameserver.services.player.CreativityPanel.stats.Will;
 /**
  * @author Ranastic (Encom)
  */
-
 public class SM_PLAYER_ESSENCE extends AionServerPacket
 {
 	Logger log = LoggerFactory.getLogger(SM_PLAYER_ESSENCE.class);

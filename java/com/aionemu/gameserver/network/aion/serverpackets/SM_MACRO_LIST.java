@@ -28,7 +28,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_MACRO_LIST extends AionServerPacket
 {
-	
 	private final Player player;
 	private final boolean secondPart;
 	

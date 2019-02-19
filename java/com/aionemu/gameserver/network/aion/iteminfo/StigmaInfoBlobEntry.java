@@ -29,7 +29,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  */
 public class StigmaInfoBlobEntry extends ItemBlobEntry
 {
-	
 	StigmaInfoBlobEntry()
 	{
 		super(ItemBlobType.STIGMA_INFO);

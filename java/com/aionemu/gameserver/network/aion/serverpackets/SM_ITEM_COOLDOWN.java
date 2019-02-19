@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_ITEM_COOLDOWN extends AionServerPacket
 {
-	
 	private final Map<Integer, ItemCooldown> cooldowns;
 	
 	public SM_ITEM_COOLDOWN(Map<Integer, ItemCooldown> cooldowns)

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerAppearance;
  */
 public abstract class PlayerAppearanceDAO implements DAO
 {
-	
 	/**
 	 * Returns unique identifier for PlayerAppearanceDAO
 	 * @return unique identifier for PlayerAppearanceDAO

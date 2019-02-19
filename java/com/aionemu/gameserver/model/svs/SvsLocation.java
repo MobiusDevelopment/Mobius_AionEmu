@@ -29,7 +29,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler (Encom)
  */
-
 public class SvsLocation
 {
 	protected int id;

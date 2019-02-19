@@ -28,7 +28,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LEGION_INFO extends AionServerPacket
 {
-	
 	/** Legion information **/
 	private final Legion legion;
 	

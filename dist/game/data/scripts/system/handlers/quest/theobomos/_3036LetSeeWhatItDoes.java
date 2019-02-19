@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _3036LetSeeWhatItDoes extends QuestHandler
 {
-	
 	private static final int questId = 3036;
 	
 	public _3036LetSeeWhatItDoes()

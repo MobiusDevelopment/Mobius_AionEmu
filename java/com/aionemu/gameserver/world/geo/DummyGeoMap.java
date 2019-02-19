@@ -25,7 +25,6 @@ import com.aionemu.gameserver.geoEngine.scene.Spatial;
  */
 public class DummyGeoMap extends GeoMap
 {
-	
 	public DummyGeoMap(String name, int worldSize)
 	{
 		super(name, worldSize);

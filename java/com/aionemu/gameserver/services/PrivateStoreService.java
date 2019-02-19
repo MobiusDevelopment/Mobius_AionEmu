@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class PrivateStoreService
 {
-	
 	/**
 	 * @param activePlayer
 	 * @param tradePSItems

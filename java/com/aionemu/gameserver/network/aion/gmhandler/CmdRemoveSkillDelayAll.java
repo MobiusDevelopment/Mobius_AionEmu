@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class CmdRemoveSkillDelayAll extends AbstractGMHandler
 {
-	
 	public CmdRemoveSkillDelayAll(Player admin)
 	{
 		super(admin, "");

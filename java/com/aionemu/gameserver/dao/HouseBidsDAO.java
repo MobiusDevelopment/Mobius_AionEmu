@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.house.PlayerHouseBid;
  */
 public abstract class HouseBidsDAO implements DAO
 {
-	
 	@Override
 	public final String getClassName()
 	{

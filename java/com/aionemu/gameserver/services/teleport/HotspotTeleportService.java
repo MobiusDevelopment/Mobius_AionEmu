@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * @author Ranastic
  */
-
 public class HotspotTeleportService
 {
 	private static final Logger log = LoggerFactory.getLogger(HotspotTeleportService.class);

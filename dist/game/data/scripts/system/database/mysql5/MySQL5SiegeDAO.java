@@ -37,7 +37,6 @@ import com.aionemu.gameserver.model.siege.SiegeRace;
  */
 public class MySQL5SiegeDAO extends SiegeDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5SiegeDAO.class);
 	
 	public static final String SELECT_QUERY = "SELECT `id`, `race`, `legion_id` FROM `siege_locations`";

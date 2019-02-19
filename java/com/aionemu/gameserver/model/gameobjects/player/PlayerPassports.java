@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.templates.event.AtreianPassport;
  */
 public class PlayerPassports
 {
-	
 	private final SortedMap<Integer, AtreianPassport> passports = new TreeMap<>();
 	
 	public synchronized boolean addPassport(int id, AtreianPassport ap)

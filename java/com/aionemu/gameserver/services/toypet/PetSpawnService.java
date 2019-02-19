@@ -42,7 +42,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class PetSpawnService
 {
-	
 	/**
 	 * @param player
 	 * @param petId
@@ -149,6 +148,5 @@ public class PetSpawnService
 			player.setToyPet(null);
 			toyPet.getController().delete();
 		}
-		
 	}
 }

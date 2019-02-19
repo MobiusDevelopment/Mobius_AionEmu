@@ -67,7 +67,6 @@ import javolution.util.FastMap;
  */
 public final class ZoneService implements GameEngine
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(ZoneService.class);
 	private final TIntObjectHashMap<List<ZoneInfo>> zoneByMapIdMap;
 	private final Map<ZoneName, Class<? extends ZoneHandler>> handlers = new HashMap<>();

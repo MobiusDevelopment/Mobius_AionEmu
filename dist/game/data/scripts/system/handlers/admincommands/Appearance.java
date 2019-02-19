@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Appearance extends AdminCommand
 {
-	
 	public Appearance()
 	{
 		super("appearance");

@@ -33,7 +33,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "zorshiv_dredgion")
 public class ZorshivDredgionData

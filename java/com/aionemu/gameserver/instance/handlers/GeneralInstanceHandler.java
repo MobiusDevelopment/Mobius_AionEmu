@@ -34,7 +34,6 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
  */
 public class GeneralInstanceHandler implements InstanceHandler
 {
-	
 	protected final long creationTime;
 	public WorldMapInstance instance;
 	protected int instanceId;

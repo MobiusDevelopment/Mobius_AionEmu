@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.zorshivdredgion.ZorshivDredgionStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class ZorshivDredgionSpawnTemplate extends SpawnTemplate
 {
 	private int id;

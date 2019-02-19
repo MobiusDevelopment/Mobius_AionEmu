@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class TradeList
 {
-	
 	private int sellerObjId;
 	
 	private final List<TradeItem> tradeItems = new ArrayList<>();

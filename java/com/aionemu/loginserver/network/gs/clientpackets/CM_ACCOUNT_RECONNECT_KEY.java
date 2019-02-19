@@ -32,7 +32,6 @@ import com.aionemu.loginserver.network.gs.serverpackets.SM_ACCOUNT_RECONNECT_KEY
  */
 public class CM_ACCOUNT_RECONNECT_KEY extends GsClientPacket
 {
-	
 	/**
 	 * Logger for this class.
 	 */

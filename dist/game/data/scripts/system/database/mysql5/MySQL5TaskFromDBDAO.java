@@ -36,7 +36,6 @@ import com.aionemu.gameserver.model.tasks.TaskFromDB;
  */
 public class MySQL5TaskFromDBDAO extends TaskFromDBDAO
 {
-	
 	/**
 	 * Logger for this class.
 	 */

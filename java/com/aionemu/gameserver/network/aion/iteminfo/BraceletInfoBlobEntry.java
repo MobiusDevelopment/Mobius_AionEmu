@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
 /**
  * @author Ranastic (Encom)
  */
-
 public class BraceletInfoBlobEntry extends ItemBlobEntry
 {
 	BraceletInfoBlobEntry()

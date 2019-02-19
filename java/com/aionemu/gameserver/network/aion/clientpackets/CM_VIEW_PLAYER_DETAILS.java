@@ -33,7 +33,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_VIEW_PLAYER_DETAILS;
  */
 public class CM_VIEW_PLAYER_DETAILS extends AionClientPacket
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(CM_VIEW_PLAYER_DETAILS.class);
 	
 	private int targetObjectId;

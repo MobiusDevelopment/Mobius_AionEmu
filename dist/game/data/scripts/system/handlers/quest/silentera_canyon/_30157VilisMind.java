@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _30157VilisMind extends QuestHandler
 {
-	
 	private static final int questId = 30157;
 	
 	public _30157VilisMind()

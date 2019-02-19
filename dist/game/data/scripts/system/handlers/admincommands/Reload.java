@@ -62,7 +62,6 @@ import com.aionemu.gameserver.utils.chathandlers.ChatProcessor;
  */
 public class Reload extends AdminCommand
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(Reload.class);
 	
 	public Reload()
@@ -226,7 +225,6 @@ public class Reload extends AdminCommand
 		{
 			PacketSendUtility.sendMessage(admin, "syntax //reload <quest | skill | portal | spawn | commands | drop | gameshop | events | config>");
 		}
-		
 	}
 	
 	private Schema getSchema(String xml_schema)

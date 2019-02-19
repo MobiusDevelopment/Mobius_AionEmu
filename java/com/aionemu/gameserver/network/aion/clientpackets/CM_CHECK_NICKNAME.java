@@ -32,7 +32,6 @@ import com.aionemu.gameserver.services.player.PlayerService;
  */
 public class CM_CHECK_NICKNAME extends AionClientPacket
 {
-	
 	/**
 	 * nick name that need to be checked
 	 */

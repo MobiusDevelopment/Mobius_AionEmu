@@ -30,7 +30,6 @@ import com.aionemu.gameserver.questEngine.QuestEngine;
  */
 public class QuestHandlerLoader implements ClassListener
 {
-	
 	private static final Logger logger = LoggerFactory.getLogger(QuestHandlerLoader.class);
 	
 	public QuestHandlerLoader()

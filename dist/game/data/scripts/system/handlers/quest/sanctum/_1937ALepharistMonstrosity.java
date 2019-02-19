@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1937ALepharistMonstrosity extends QuestHandler
 {
-	
 	private static final int questId = 1937;
 	
 	public _1937ALepharistMonstrosity()

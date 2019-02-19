@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _21137BerokinImageMarble extends QuestHandler
 {
-	
 	private static final int questId = 21137;
 	
 	public _21137BerokinImageMarble()

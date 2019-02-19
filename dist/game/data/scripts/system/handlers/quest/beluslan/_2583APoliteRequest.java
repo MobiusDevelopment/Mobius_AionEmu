@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2583APoliteRequest extends QuestHandler
 {
-	
 	private static final int questId = 2583;
 	
 	public _2583APoliteRequest()

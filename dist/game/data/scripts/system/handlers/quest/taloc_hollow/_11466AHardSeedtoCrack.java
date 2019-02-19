@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _11466AHardSeedtoCrack extends QuestHandler
 {
-	
 	private static final int questId = 11466;
 	
 	public _11466AHardSeedtoCrack()

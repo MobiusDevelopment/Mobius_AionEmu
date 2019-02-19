@@ -61,7 +61,6 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
  */
 public class SpawnEngine
 {
-	
 	private static Logger log = LoggerFactory.getLogger(SpawnEngine.class);
 	
 	/**

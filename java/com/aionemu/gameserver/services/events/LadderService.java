@@ -53,7 +53,6 @@ import javolution.util.FastMap;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 public class LadderService
 {
 	private static Logger log = LoggerFactory.getLogger(LadderService.class);

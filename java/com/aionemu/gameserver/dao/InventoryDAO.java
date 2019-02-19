@@ -32,7 +32,6 @@ import javolution.util.FastList;
  */
 public abstract class InventoryDAO implements IDFactoryAwareDAO
 {
-	
 	/**
 	 * @param playerId
 	 * @param storageType

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CM_BAN_RESPONSE extends LsClientPacket
 {
-	
 	public CM_BAN_RESPONSE(int opCode)
 	{
 		super(opCode);

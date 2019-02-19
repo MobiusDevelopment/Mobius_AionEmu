@@ -24,7 +24,6 @@ import com.aionemu.gameserver.services.ZorshivDredgionService;
 /**
  * @author Rinzler (Encom)
  */
-
 public class DredgionStartRunnable implements Runnable
 {
 	private final int id;

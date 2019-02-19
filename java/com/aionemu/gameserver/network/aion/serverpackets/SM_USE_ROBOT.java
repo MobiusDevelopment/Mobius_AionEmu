@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_USE_ROBOT extends AionServerPacket
 {
-	
 	private final Player player;
 	private final int robotInfo;
 	

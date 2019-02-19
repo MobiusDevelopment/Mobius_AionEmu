@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.gameobjects.BrokerItem;
  */
 public class BrokerPlayerCache
 {
-	
 	private BrokerItem[] brokerListCache = new BrokerItem[0];
 	private int brokerMaskCache;
 	private int brokerSoftTypeCache;

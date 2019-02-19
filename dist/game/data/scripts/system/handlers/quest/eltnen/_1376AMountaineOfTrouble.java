@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1376AMountaineOfTrouble extends QuestHandler
 {
-	
 	private static final int questId = 1376;
 	
 	public _1376AMountaineOfTrouble()

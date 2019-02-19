@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.utils3d;
  */
 public class Matrix3D
 {
-	
 	public static final double[][] IDENTITY = new double[][]
 	{
 		{

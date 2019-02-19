@@ -34,7 +34,6 @@ import com.aionemu.gameserver.model.templates.road.RoadTemplate;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RoadData
 {
-	
 	@XmlElement(name = "road")
 	private List<RoadTemplate> roadTemplates;
 	

@@ -32,7 +32,6 @@ import com.aionemu.gameserver.services.item.ItemService;
  */
 public class _4074GainOrLose extends QuestHandler
 {
-	
 	private static final int questId = 4074;
 	private int reward = -1;
 	

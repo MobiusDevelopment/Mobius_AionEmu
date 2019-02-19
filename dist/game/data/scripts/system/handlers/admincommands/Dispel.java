@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Dispel extends AdminCommand
 {
-	
 	public Dispel()
 	{
 		super("dispel");

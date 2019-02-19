@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ItemPart
 {
-	
 	@XmlAttribute
 	protected int itemid;
 	

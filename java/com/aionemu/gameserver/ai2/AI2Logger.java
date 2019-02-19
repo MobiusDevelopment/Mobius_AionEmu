@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
  */
 public class AI2Logger
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(AI2Logger.class);
 	
 	public static void info(AbstractAI ai, String message)

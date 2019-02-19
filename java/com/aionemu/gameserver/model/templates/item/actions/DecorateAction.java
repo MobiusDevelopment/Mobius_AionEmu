@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class DecorateAction extends AbstractItemAction
 {
-	
 	@XmlAttribute(name = "id")
 	private Integer partId;
 	

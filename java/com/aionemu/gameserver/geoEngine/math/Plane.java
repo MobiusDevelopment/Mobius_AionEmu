@@ -25,7 +25,6 @@ import java.util.logging.Logger;
  */
 public class Plane implements Cloneable
 {
-	
 	private static final Logger logger = Logger.getLogger(Plane.class.getName());
 	
 	public static enum Side

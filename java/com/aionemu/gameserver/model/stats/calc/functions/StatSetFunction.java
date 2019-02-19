@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
  */
 public class StatSetFunction extends StatFunction
 {
-	
 	public StatSetFunction()
 	{
 	}

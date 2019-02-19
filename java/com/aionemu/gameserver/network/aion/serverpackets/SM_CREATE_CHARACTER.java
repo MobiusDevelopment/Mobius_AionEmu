@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.PlayerInfo;
  */
 public class SM_CREATE_CHARACTER extends PlayerInfo
 {
-	
 	/** If response is ok */
 	public static final int RESPONSE_OK = 0x00;
 	

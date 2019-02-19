@@ -41,7 +41,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
  */
 public class MySQL5BlockListDAO extends BlockListDAO
 {
-	
 	public static final String LOAD_QUERY = "SELECT blocked_player, reason FROM blocks WHERE player=?";
 	public static final String ADD_QUERY = "INSERT INTO blocks (player, blocked_player, reason) VALUES (?, ?, ?)";
 	public static final String DEL_QUERY = "DELETE FROM blocks WHERE player=? AND blocked_player=?";

@@ -21,7 +21,6 @@ import com.aionemu.loginserver.utils.ThreadPoolManager;
 
 public class ThreadPoolManagerRunnableRunner extends RunnableRunner
 {
-	
 	@Override
 	public void executeRunnable(Runnable r)
 	{

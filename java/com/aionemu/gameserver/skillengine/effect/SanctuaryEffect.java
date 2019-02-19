@@ -23,7 +23,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
  */
 public class SanctuaryEffect extends EffectTemplate
 {
-	
 	@Override
 	public void applyEffect(Effect effect)
 	{

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
  */
 public class BrokerContainsFilter extends BrokerFilter
 {
-	
 	private final int[] masks;
 	
 	/**

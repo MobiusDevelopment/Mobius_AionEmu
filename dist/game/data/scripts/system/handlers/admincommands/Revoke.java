@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Revoke extends AdminCommand
 {
-	
 	public Revoke()
 	{
 		super("revoke");

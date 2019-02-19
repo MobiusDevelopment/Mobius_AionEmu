@@ -31,7 +31,6 @@ import sun.misc.Unsafe;
  */
 final class PlatformDependent0
 {
-	
 	private static final Unsafe UNSAFE;
 	private static final long CLEANER_FIELD_OFFSET;
 	private static final long ADDRESS_FIELD_OFFSET;

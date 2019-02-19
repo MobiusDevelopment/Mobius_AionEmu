@@ -27,10 +27,8 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  * Developer's note please dont remove Duoc goi ra khi trong group va su dung assign group leader khi doi tuong dang offline
  * @author Lyahim, ATracer, Simple, xTz
  */
-
 public class CM_PLAYER_STATUS_INFO extends AionClientPacket
 {
-	
 	private int commandCode;
 	private int playerObjId;
 	private int allianceGroupId;

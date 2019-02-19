@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.ls.LsServerPacket;
  */
 public class SM_MACBAN_CONTROL extends LsServerPacket
 {
-	
 	private final byte type;
 	private final String address;
 	private final String details;

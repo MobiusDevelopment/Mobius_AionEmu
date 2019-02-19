@@ -32,7 +32,6 @@ import com.aionemu.commons.utils.ExitCode;
  */
 public class DeadLockDetector extends Thread
 {
-	
 	/**
 	 * Logger for this class.
 	 */

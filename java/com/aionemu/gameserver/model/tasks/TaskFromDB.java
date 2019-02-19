@@ -23,7 +23,6 @@ import java.sql.Timestamp;
  */
 public class TaskFromDB
 {
-	
 	private final int id;
 	private final String name;
 	private final String type;

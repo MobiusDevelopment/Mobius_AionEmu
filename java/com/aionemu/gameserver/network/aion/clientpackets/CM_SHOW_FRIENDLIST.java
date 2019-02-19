@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_FRIEND_LIST;
  */
 public class CM_SHOW_FRIENDLIST extends AionClientPacket
 {
-	
 	public CM_SHOW_FRIENDLIST(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

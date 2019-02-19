@@ -37,7 +37,6 @@ import com.aionemu.gameserver.model.gameobjects.player.npcFaction.NpcFactions;
  */
 public class MySQL5PlayerNpcFactionsDAO extends PlayerNpcFactionsDAO
 {
-	
 	/** Logger */
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerNpcFactionsDAO.class);
 	

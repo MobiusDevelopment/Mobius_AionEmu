@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model;
  */
 public class Petition
 {
-	
 	private final int petitionId;
 	private final int playerObjId;
 	private final PetitionType type;

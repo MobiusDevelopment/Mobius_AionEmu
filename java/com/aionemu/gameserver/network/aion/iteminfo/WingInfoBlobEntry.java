@@ -29,7 +29,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  */
 public class WingInfoBlobEntry extends ItemBlobEntry
 {
-	
 	WingInfoBlobEntry()
 	{
 		super(ItemBlobType.SLOTS_WING);

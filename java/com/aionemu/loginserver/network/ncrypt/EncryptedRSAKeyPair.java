@@ -27,7 +27,6 @@ import java.security.interfaces.RSAPublicKey;
  */
 public class EncryptedRSAKeyPair
 {
-	
 	/**
 	 * KeyPair
 	 */

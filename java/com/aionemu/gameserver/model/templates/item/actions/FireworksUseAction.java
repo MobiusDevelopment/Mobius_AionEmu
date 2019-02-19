@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @XmlType(name = "FireworksUseAction")
 public class FireworksUseAction extends AbstractItemAction
 {
-	
 	@Override
 	public boolean canAct(Player player, Item parentItem, Item targetItem)
 	{

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
 /**
  * @author Rolandas
  */
-
 /**
  * <p>
  * Java class for NpcShout complex type.

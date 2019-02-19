@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _3091TheLostDrakie extends QuestHandler
 {
-	
 	private static final int questId = 3091;
 	
 	public _3091TheLostDrakie()

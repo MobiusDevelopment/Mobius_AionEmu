@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _3088InCiderTrading extends QuestHandler
 {
-	
 	private static final int questId = 3088;
 	
 	public _3088InCiderTrading()

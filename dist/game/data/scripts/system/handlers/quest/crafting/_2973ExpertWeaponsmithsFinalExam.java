@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2973ExpertWeaponsmithsFinalExam extends QuestHandler
 {
-	
 	private static final int questId = 2973;
 	
 	public _2973ExpertWeaponsmithsFinalExam()

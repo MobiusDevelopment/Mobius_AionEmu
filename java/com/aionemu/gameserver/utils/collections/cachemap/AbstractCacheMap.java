@@ -31,7 +31,6 @@ import org.slf4j.Logger;
  */
 abstract class AbstractCacheMap<K, V> implements CacheMap<K, V>
 {
-	
 	private final Logger log;
 	
 	protected final String cacheName;

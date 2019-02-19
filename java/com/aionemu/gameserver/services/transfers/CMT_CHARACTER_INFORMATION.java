@@ -69,7 +69,6 @@ import javolution.util.FastList;
  */
 public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 {
-	
 	protected CMT_CHARACTER_INFORMATION(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

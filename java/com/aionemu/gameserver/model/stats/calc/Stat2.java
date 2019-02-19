@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
  */
 public abstract class Stat2
 {
-	
 	float bonusRate = 1f;
 	int base;
 	int bonus;

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
  */
 public class ActivateEventHandler
 {
-	
 	public static void onActivate(NpcAI2 npcAI)
 	{
 		if (npcAI.isInState(AIState.IDLE))

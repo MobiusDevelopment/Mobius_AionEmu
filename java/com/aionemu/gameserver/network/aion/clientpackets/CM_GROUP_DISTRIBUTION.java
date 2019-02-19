@@ -28,7 +28,6 @@ import com.aionemu.gameserver.restrictions.RestrictionsManager;
  */
 public class CM_GROUP_DISTRIBUTION extends AionClientPacket
 {
-	
 	private long amount;
 	private int partyType;
 	

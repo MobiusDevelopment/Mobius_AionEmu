@@ -44,7 +44,6 @@ import com.aionemu.commons.utils.ClassUtils;
  */
 public class ScriptClassLoaderImpl extends ScriptClassLoader
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(ScriptClassLoaderImpl.class);
 	
 	/**

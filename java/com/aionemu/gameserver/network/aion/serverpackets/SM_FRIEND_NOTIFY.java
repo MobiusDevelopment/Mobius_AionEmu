@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_FRIEND_NOTIFY extends AionServerPacket
 {
-	
 	/**
 	 * Buddy has logged in (Or become visible)
 	 */

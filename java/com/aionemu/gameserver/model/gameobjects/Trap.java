@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
  */
 public class Trap extends SummonedObject<Creature>
 {
-	
 	/**
 	 * @param objId
 	 * @param controller

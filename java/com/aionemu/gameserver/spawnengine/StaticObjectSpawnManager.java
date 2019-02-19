@@ -32,7 +32,6 @@ import com.aionemu.gameserver.world.knownlist.PlayerAwareKnownList;
  */
 public class StaticObjectSpawnManager
 {
-	
 	/**
 	 * @param spawn
 	 * @param instanceIndex

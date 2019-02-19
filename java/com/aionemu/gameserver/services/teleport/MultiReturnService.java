@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.portal.PortalLoc;
 /**
  * @author Rinzler (Encom)
  */
-
 public class MultiReturnService
 {
 	public static void Teleport(Player player, int LocId, int worldId)

@@ -33,7 +33,6 @@ import javolution.util.FastMap;
  */
 public class TemporarySpawnEngine
 {
-	
 	private static final FastList<SpawnGroup2> temporarySpawns = new FastList<>();
 	private static final FastMap<SpawnGroup2, HashSet<Integer>> tempSpawnInstanceMap = new FastMap<>();
 	

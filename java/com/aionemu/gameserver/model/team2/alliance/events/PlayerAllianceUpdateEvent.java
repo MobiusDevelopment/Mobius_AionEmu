@@ -30,7 +30,6 @@ import com.google.common.base.Predicate;
  */
 public class PlayerAllianceUpdateEvent extends AlwaysTrueTeamEvent implements Predicate<PlayerAllianceMember>
 {
-	
 	private final PlayerAlliance alliance;
 	private final Player player;
 	private final PlayerAllianceEvent allianceEvent;
@@ -61,7 +60,6 @@ public class PlayerAllianceUpdateEvent extends AlwaysTrueTeamEvent implements Pr
 				break;
 			}
 		}
-		
 	}
 	
 	@Override

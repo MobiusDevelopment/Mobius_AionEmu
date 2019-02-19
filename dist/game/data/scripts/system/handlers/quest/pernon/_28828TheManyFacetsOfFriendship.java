@@ -36,7 +36,6 @@ import com.aionemu.gameserver.services.HousingService;
  */
 public class _28828TheManyFacetsOfFriendship extends QuestHandler
 {
-	
 	private static final int questId = 28828;
 	private static final Set<Integer> butlers;
 	

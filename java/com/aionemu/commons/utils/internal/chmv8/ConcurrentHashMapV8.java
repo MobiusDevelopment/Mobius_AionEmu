@@ -132,9 +132,6 @@ import sun.misc.Unsafe;
  */
 public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializable
 {
-	
-	private static final long serialVersionUID = 7249069246763182397L;
-	
 	/**
 	 * A partitionable iterator. A Spliterator can be traversed directly, but can also be partitioned (before traversal) by creating another Spliterator that covers a non-overlapping portion of the elements, and so may be amenable to parallel execution.
 	 * <p/>
@@ -405,8 +402,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 */
 	static final class TreeBin<V>extends AbstractQueuedSynchronizer
 	{
-		
-		private static final long serialVersionUID = 2249069246763182397L;
 		transient TreeNode<V> root; // root of tree
 		transient TreeNode<V> first; // head of next-pointer list
 		
@@ -3573,8 +3568,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 */
 	static class Segment<K, V> implements Serializable
 	{
-		
-		private static final long serialVersionUID = 2249069246763182397L;
 		final float loadFactor;
 		
 		Segment(float lf)
@@ -5160,7 +5153,6 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 */
 	public static class KeySetView<K, V>extends CHMView<K, V> implements Set<K>, java.io.Serializable
 	{
-		private static final long serialVersionUID = 7249069246763182397L;
 		private final V value;
 		
 		KeySetView(ConcurrentHashMapV8<K, V> map, V value)

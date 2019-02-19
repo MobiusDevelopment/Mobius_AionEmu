@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2985AnExpertsReward extends QuestHandler
 {
-	
 	private static final int questId = 2985;
 	
 	public _2985AnExpertsReward()

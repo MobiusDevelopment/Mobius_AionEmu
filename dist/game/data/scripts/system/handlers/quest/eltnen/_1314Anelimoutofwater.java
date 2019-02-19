@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1314Anelimoutofwater extends QuestHandler
 {
-	
 	private static final int questId = 1314;
 	
 	public _1314Anelimoutofwater()

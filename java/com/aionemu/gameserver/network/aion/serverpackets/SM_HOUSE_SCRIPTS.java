@@ -28,7 +28,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_HOUSE_SCRIPTS extends AionServerPacket
 {
-	
 	private final int address;
 	private final PlayerScripts scripts;
 	int from;

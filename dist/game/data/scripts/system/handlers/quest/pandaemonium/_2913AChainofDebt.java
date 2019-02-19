@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2913AChainofDebt extends QuestHandler
 {
-	
 	private static final int questId = 2913;
 	
 	public _2913AChainofDebt()

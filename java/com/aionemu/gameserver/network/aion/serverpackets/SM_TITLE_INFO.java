@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_TITLE_INFO extends AionServerPacket
 {
-	
 	private TitleList titleList;
 	private int bonusTitleId;
 	private final int action; // 0: list, 1: self set, 3: broad set

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21033ExorcisingInfisto extends QuestHandler
 {
-	
 	private static final int questId = 21033;
 	
 	public _21033ExorcisingInfisto()

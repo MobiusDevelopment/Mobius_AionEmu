@@ -28,7 +28,6 @@ import com.aionemu.gameserver.services.QuestService;
 
 public class CM_DELETE_QUEST extends AionClientPacket
 {
-	
 	static QuestsData questsData = DataManager.QUEST_DATA;
 	public int questId;
 	

@@ -33,7 +33,6 @@ import javolution.util.FastList;
  */
 public class LootGroupRules
 {
-	
 	private final LootRuleType lootRule;
 	private final LootDistribution autodistribution;
 	private final int common_item_above;

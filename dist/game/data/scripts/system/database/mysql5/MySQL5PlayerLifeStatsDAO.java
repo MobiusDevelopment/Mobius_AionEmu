@@ -34,7 +34,6 @@ import com.aionemu.gameserver.model.stats.container.PlayerLifeStats;
  */
 public class MySQL5PlayerLifeStatsDAO extends PlayerLifeStatsDAO
 {
-	
 	/** Logger */
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerLifeStatsDAO.class);
 	public static final String INSERT_QUERY = "INSERT INTO `player_life_stats` (`player_id`, `hp`, `mp`, `fp`) VALUES (?,?,?,?)";

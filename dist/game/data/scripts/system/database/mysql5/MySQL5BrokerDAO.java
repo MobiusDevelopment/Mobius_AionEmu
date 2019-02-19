@@ -42,7 +42,6 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
  */
 public class MySQL5BrokerDAO extends BrokerDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5BrokerDAO.class);
 	
 	@Override

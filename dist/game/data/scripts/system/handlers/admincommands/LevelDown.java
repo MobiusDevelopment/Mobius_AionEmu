@@ -76,7 +76,6 @@ public class LevelDown extends AdminCommand
 		{
 			PacketSendUtility.sendMessage(player, "The value of <level> will minus calculated to the current player level!");
 		}
-		
 	}
 	
 	@Override

@@ -34,7 +34,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CM_INVITE_TO_GROUP extends AionClientPacket
 {
-	
 	private String name;
 	private int inviteType;
 	

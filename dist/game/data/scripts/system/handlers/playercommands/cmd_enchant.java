@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_enchant extends PlayerCommand
 {
-	
 	public cmd_enchant()
 	{
 		super("enchant");
@@ -55,7 +54,6 @@ public class cmd_enchant extends PlayerCommand
 		{
 			PacketSendUtility.sendMessage(player, "You cannot enchant higher than 16 using the command!");
 		}
-		
 	}
 	
 	private void enchant(Player player, int enchant)

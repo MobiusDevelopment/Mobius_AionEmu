@@ -22,7 +22,6 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 class DelayedEvent extends Event implements Comparable<DelayedEvent>
 {
 	private final Date forecast;

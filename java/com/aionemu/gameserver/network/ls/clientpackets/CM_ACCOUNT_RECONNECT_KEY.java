@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.ls.LsClientPacket;
  */
 public class CM_ACCOUNT_RECONNECT_KEY extends LsClientPacket
 {
-	
 	public CM_ACCOUNT_RECONNECT_KEY(int opCode)
 	{
 		super(opCode);

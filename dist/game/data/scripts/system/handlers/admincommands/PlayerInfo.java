@@ -42,7 +42,6 @@ import com.google.common.base.Predicate;
  */
 public class PlayerInfo extends AdminCommand
 {
-	
 	public PlayerInfo()
 	{
 		super("playerinfo");

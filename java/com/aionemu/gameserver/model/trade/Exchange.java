@@ -30,7 +30,6 @@ import javolution.util.FastList;
  */
 public class Exchange
 {
-	
 	private final Player activeplayer;
 	private final Player targetPlayer;
 	

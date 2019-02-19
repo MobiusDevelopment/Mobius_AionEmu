@@ -21,7 +21,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 
 public class CM_UNK extends AionClientPacket
 {
-	
 	int size;
 	
 	public CM_UNK(int opcode, State state, State... restStates)

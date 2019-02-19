@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LEGION_EDIT extends AionServerPacket
 {
-	
 	private final int type;
 	private Legion legion;
 	private int unixTime;

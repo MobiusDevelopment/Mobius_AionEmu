@@ -22,7 +22,6 @@ package com.aionemu.gameserver.model;
  */
 public class Announcement
 {
-	
 	private int id;
 	private final String faction;
 	private final String announce;

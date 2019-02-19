@@ -23,7 +23,6 @@ import com.aionemu.gameserver.world.WorldPosition;
  */
 public class ChatUtil
 {
-	
 	public static String position(String label, WorldPosition pos)
 	{
 		return position(label, pos.getMapId(), pos.getX(), pos.getY(), pos.getZ());

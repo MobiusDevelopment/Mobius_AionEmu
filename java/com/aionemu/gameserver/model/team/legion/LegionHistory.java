@@ -23,7 +23,6 @@ import java.sql.Timestamp;
  */
 public class LegionHistory
 {
-	
 	private final LegionHistoryType legionHistoryType;
 	private String name = "";
 	private final Timestamp time;

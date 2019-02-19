@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
 /**
  * @author Ranastic
  */
-
 public class CM_MEGAPHONE_MESSAGE extends AionClientPacket
 {
 	private String chatMessage;

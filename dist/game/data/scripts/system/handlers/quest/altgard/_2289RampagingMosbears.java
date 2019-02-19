@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2289RampagingMosbears extends QuestHandler
 {
-	
 	private static final int questId = 2289;
 	
 	public _2289RampagingMosbears()

@@ -35,7 +35,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _18828UserFriendly extends QuestHandler
 {
-	
 	private static final int questId = 18828;
 	private static final Set<Integer> butlers;
 	

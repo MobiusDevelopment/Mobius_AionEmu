@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.idfactory.IDFactory;
  */
 public class ItemFactory
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(ItemFactory.class);
 	
 	public static Item newItem(int itemId)

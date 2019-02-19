@@ -25,7 +25,6 @@ import com.aionemu.loginserver.taskmanager.handler.implementations.ShutdownHandl
  */
 public enum TaskFromDBHandlerHolder
 {
-	
 	SHUTDOWN(ShutdownHandler.class),
 	RESTART(RestartHandler.class),
 	CLEAN_ACCOUNTS(CleanAccountsHandler.class);

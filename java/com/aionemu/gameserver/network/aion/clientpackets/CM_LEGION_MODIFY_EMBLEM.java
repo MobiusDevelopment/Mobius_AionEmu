@@ -27,7 +27,6 @@ import com.aionemu.gameserver.services.LegionService;
  */
 public class CM_LEGION_MODIFY_EMBLEM extends AionClientPacket
 {
-	
 	/** Emblem related information **/
 	private int legionId;
 	private int emblemId;

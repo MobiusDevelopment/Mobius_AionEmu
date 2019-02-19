@@ -38,7 +38,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public final class ShoutEventHandler
 {
-	
 	public static void onSee(NpcAI2 npcAI, Creature target)
 	{
 		final Npc npc = npcAI.getOwner();

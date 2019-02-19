@@ -23,7 +23,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 class EventScheduleWrapper implements Runnable
 {
 	private static final int RECHECK_DELAY = 2;

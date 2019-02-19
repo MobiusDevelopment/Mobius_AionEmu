@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _21221RustyRelic extends QuestHandler
 {
-	
 	private static final int questId = 21221;
 	
 	public _21221RustyRelic()

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1351EarningMaranasRespect extends QuestHandler
 {
-	
 	private static final int questId = 1351;
 	
 	public _1351EarningMaranasRespect()

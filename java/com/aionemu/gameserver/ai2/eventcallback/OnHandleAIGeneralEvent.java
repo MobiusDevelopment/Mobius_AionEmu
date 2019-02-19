@@ -28,7 +28,6 @@ import com.aionemu.gameserver.ai2.event.AIEventType;
 @SuppressWarnings("rawtypes")
 public abstract class OnHandleAIGeneralEvent implements Callback<AbstractAI>
 {
-	
 	@Override
 	public CallbackResult beforeCall(AbstractAI obj, Object[] args)
 	{

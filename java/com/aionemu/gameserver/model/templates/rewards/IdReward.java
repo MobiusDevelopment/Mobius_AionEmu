@@ -29,7 +29,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 /**
  * @author Rolandas
  */
-
 /**
  * <p>
  * Java class for IdReward complex type.

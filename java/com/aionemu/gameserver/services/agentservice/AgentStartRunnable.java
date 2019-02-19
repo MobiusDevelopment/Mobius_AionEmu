@@ -28,7 +28,6 @@ import com.aionemu.gameserver.world.World;
 /**
  * @author Rinzler (Encom)
  */
-
 public class AgentStartRunnable implements Runnable
 {
 	final int id;

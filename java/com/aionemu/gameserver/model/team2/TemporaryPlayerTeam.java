@@ -36,7 +36,6 @@ import com.google.common.base.Predicates;
  */
 public abstract class TemporaryPlayerTeam<TM extends TeamMember<Player>>extends GeneralTeam<Player, TM>
 {
-	
 	private LootGroupRules lootGroupRules = new LootGroupRules();
 	
 	public TemporaryPlayerTeam(Integer objId)

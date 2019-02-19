@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class QuestTimer
 {
-	
 	private Timer timer;
 	
 	private int Time = 0;

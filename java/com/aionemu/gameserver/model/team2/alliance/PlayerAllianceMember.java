@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.team2.PlayerTeamMember;
  */
 public class PlayerAllianceMember extends PlayerTeamMember
 {
-	
 	private int allianceId;
 	
 	public PlayerAllianceMember(Player player)

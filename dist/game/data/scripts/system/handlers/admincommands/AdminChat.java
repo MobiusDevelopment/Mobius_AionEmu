@@ -27,7 +27,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class AdminChat extends AdminCommand
 {
-	
 	public AdminChat()
 	{
 		super("s");

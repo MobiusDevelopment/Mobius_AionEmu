@@ -27,7 +27,6 @@ import com.aionemu.loginserver.GameServerInfo;
  */
 public abstract class GameServersDAO implements DAO
 {
-	
 	/**
 	 * Returns all gameservers from database.
 	 * @return all gameservers from database.

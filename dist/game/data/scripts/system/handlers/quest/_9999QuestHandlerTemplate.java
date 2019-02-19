@@ -38,7 +38,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class _9999QuestHandlerTemplate extends QuestHandler
 {
-	
 	private static final int questId = 9999;
 	
 	public _9999QuestHandlerTemplate()

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.ai2.event.AIEventType;
  */
 public abstract class OnDieEventCallback extends OnHandleAIGeneralEvent
 {
-	
 	@Override
 	protected void onBeforeHandleGeneralEvent(AbstractAI obj, AIEventType eventType)
 	{

@@ -24,7 +24,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Rinzler
  */
-
 @XmlType(name = "merch")
 @XmlAccessorType(XmlAccessType.NONE)
 public class PetMerchandEntry

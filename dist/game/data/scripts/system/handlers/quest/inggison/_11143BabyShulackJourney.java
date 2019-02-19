@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _11143BabyShulackJourney extends QuestHandler
 {
-	
 	private static final int questId = 11143;
 	
 	public _11143BabyShulackJourney()

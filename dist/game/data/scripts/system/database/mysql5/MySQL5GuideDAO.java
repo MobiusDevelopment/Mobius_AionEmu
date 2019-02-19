@@ -38,7 +38,6 @@ import com.aionemu.gameserver.model.guide.Guide;
  */
 public class MySQL5GuideDAO extends GuideDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5GuideDAO.class);
 	public static final String DELETE_QUERY = "DELETE FROM `guides` WHERE `guide_id`=?";
 	public static final String SELECT_QUERY = "SELECT * FROM `guides` WHERE `player_id`=?";

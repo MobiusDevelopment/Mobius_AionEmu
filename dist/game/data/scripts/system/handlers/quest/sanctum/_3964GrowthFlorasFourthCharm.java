@@ -31,7 +31,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _3964GrowthFlorasFourthCharm extends QuestHandler
 {
-	
 	private static final int questId = 3964;
 	
 	public _3964GrowthFlorasFourthCharm()

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_SKILL_CANCEL extends AionServerPacket
 {
-	
 	private final Creature creature;
 	private final int skillId;
 	

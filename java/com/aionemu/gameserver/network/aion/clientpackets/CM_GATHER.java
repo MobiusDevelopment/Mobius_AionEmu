@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_GATHER extends AionClientPacket
 {
-	
 	boolean isStartGather = false;
 	
 	public CM_GATHER(int opcode, State state, State... restStates)

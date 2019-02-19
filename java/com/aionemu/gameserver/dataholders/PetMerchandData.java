@@ -32,7 +32,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 /**
  * @author Rinzler
  */
-
 @XmlRootElement(name = "merchands")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PetMerchandData

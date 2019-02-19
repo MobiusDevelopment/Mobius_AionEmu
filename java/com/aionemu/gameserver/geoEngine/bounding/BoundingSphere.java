@@ -40,7 +40,6 @@ import com.aionemu.gameserver.geoEngine.utils.BufferUtils;
  */
 public class BoundingSphere extends BoundingVolume
 {
-	
 	private static final Logger logger = Logger.getLogger(BoundingSphere.class.getName());
 	float radius;
 	private static final float RADIUS_EPSILON = 1f + 0.00001f;

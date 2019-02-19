@@ -23,7 +23,6 @@ import com.aionemu.commons.configuration.Property;
  */
 public class PricesConfig
 {
-	
 	/**
 	 * Controls the "Prices:" value in influence tab.
 	 */

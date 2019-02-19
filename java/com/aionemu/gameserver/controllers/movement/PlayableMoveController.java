@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.World;
  */
 public abstract class PlayableMoveController<T extends Creature>extends CreatureMoveController<T>
 {
-	
 	private boolean sendMovePacket = true;
 	private int movementHeading = -1;
 	

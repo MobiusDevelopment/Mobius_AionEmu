@@ -23,7 +23,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 public class _1964ASouvenirForNoris extends QuestHandler
 {
-	
 	private static final int questId = 1964;
 	
 	public _1964ASouvenirForNoris()

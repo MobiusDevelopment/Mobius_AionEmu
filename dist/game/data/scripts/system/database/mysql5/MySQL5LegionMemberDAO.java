@@ -39,7 +39,6 @@ import com.aionemu.gameserver.services.LegionService;
  */
 public class MySQL5LegionMemberDAO extends LegionMemberDAO
 {
-	
 	/** Logger */
 	static final Logger log = LoggerFactory.getLogger(MySQL5LegionMemberDAO.class);
 	/** LegionMember Queries */

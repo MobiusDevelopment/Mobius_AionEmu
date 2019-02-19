@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2954DeliveringOdellaJuice extends QuestHandler
 {
-	
 	private static final int questId = 2954;
 	
 	public _2954DeliveringOdellaJuice()

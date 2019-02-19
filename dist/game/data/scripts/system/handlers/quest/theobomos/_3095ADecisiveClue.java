@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class _3095ADecisiveClue extends QuestHandler
 {
-	
 	private static final int questId = 3095;
 	
 	public _3095ADecisiveClue()

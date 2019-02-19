@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.team2.common.legacy;
  */
 public enum LootDistribution
 {
-	
 	NORMAL(0),
 	ROLL_DICE(2),
 	BID(3);

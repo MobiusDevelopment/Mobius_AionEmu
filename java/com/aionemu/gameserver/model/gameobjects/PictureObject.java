@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.housing.HousingPicture;
  */
 public class PictureObject extends HouseObject<HousingPicture>
 {
-	
 	public PictureObject(House owner, int objId, int templateId)
 	{
 		super(owner, objId, templateId);

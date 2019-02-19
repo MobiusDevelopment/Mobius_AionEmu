@@ -29,7 +29,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  */
 public class ArmorInfoBlobEntry extends ItemBlobEntry
 {
-	
 	ArmorInfoBlobEntry()
 	{
 		super(ItemBlobType.SLOTS_ARMOR);

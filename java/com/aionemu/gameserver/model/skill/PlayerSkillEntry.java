@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
  */
 public class PlayerSkillEntry extends SkillEntry
 {
-	
 	private final boolean isStigma;
 	private final boolean isLinked;
 	

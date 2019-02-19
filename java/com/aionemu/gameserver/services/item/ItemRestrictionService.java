@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class ItemRestrictionService
 {
-	
 	/**
 	 * Check if item can be moved from storage by player
 	 * @param player

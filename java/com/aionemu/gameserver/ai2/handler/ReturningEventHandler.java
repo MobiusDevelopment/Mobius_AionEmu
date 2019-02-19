@@ -29,7 +29,6 @@ import com.aionemu.gameserver.model.geometry.Point3D;
  */
 public class ReturningEventHandler
 {
-	
 	/**
 	 * @param npcAI
 	 */

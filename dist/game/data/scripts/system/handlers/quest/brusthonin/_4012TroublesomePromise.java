@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _4012TroublesomePromise extends QuestHandler
 {
-	
 	private static final int questId = 4012;
 	
 	public _4012TroublesomePromise()

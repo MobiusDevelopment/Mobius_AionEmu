@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.npcshout.ShoutEventType;
  */
 public abstract class AITemplate extends AbstractAI
 {
-	
 	@Override
 	public void think()
 	{

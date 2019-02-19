@@ -28,10 +28,8 @@ import com.aionemu.gameserver.services.QuestService;
 /**
  * @author stpavel
  */
-
 public class _2332MeatyTreats extends QuestHandler
 {
-	
 	private static final int questId = 2332;
 	
 	public _2332MeatyTreats()

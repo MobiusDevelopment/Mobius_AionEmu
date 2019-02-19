@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Dr.Nism
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "charge_skill")
 public class ChargeSkillTemplate

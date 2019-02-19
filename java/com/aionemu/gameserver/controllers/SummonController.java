@@ -45,7 +45,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class SummonController extends CreatureController<Summon>
 {
-	
 	private long lastAttackMilis = 0;
 	private final boolean isAttacked = false;
 	private int releaseAfterSkill = -1;

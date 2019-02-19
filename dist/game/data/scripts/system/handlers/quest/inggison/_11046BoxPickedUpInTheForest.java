@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _11046BoxPickedUpInTheForest extends QuestHandler
 {
-	
 	private static final int questId = 11046;
 	
 	public _11046BoxPickedUpInTheForest()

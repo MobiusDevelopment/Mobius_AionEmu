@@ -35,7 +35,6 @@ import com.aionemu.gameserver.model.templates.walker.WalkerTemplate;
  */
 public class WalkerFormator
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(WalkerFormator.class);
 	
 	/**

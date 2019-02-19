@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
  */
 public class NpcFaction
 {
-	
 	private final int id;
 	private int time;
 	private boolean active;

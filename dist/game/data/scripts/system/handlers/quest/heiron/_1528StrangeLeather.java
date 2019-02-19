@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1528StrangeLeather extends QuestHandler
 {
-	
 	private static final int questId = 1528;
 	
 	public _1528StrangeLeather()

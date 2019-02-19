@@ -29,10 +29,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  * @author Balthazar
  * @reworked vlog
  */
-
 public class _3092VisonTheDrakie extends QuestHandler
 {
-	
 	private static final int questId = 3092;
 	
 	public _3092VisonTheDrakie()

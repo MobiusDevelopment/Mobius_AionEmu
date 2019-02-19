@@ -26,7 +26,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
  */
 public class MpUsePeriodicAction extends PeriodicAction
 {
-	
 	@XmlAttribute(name = "value")
 	protected int value;
 	

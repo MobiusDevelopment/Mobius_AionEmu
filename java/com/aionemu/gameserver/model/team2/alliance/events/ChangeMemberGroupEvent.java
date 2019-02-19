@@ -31,7 +31,6 @@ import com.google.common.base.Predicate;
  */
 public class ChangeMemberGroupEvent extends AlwaysTrueTeamEvent implements Predicate<PlayerAllianceMember>
 {
-	
 	private final PlayerAlliance alliance;
 	private final int firstMemberId;
 	private final int secondMemberId;

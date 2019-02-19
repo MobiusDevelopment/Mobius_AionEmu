@@ -43,7 +43,6 @@ import com.aionemu.gameserver.world.World;
  */
 public abstract class Siege<SL extends SiegeLocation>
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(Siege.class);
 	private final SiegeBossDeathListener siegeBossDeathListener = new SiegeBossDeathListener(this);
 	private final SiegeBossDoAddDamageListener siegeBossDoAddDamageListener = new SiegeBossDoAddDamageListener(this);

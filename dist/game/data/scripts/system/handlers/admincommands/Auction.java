@@ -40,7 +40,6 @@ import javolution.util.FastList;
  */
 public class Auction extends AdminCommand
 {
-	
 	public Auction()
 	{
 		super("auction");
@@ -371,7 +370,6 @@ public class Auction extends AdminCommand
 		{
 			onFail(admin, null);
 		}
-		
 	}
 	
 	@Override

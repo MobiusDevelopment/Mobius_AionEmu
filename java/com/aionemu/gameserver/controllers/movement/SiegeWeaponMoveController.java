@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class SiegeWeaponMoveController extends SummonMoveController
 {
-	
 	private float pointX;
 	private float pointY;
 	private float pointZ;

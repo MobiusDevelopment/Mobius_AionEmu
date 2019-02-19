@@ -22,7 +22,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Ranastic
  */
-
 public class SM_A_STATION_MOVE extends AionServerPacket
 {
 	private final int currentServerId;

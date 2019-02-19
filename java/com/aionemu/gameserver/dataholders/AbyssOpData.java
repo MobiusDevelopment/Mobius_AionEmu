@@ -34,7 +34,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlRootElement(name = "abyss_ops")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AbyssOpData

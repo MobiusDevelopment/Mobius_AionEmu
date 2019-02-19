@@ -34,7 +34,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlRootElement(name = "panel_cps")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PanelCpData

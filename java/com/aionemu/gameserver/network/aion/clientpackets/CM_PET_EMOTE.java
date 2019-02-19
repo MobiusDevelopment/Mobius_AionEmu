@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CM_PET_EMOTE extends AionClientPacket
 {
-	
 	private PetEmote emote;
 	private int emoteId;
 	

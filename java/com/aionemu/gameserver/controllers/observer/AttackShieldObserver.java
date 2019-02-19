@@ -43,7 +43,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class AttackShieldObserver extends AttackCalcObserver
 {
-	
 	private final int hit;
 	private int totalHit;
 	private final boolean hitPercent;

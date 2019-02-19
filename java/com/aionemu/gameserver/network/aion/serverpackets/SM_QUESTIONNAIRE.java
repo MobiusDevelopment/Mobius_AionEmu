@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_QUESTIONNAIRE extends AionServerPacket
 {
-	
 	private final int messageId;
 	private final byte chunk;
 	private final byte count;

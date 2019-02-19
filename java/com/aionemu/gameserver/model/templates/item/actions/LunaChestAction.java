@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * Created by wanke on 14/02/2017.
  */
-
 public class LunaChestAction extends AbstractItemAction
 {
 	@XmlAttribute

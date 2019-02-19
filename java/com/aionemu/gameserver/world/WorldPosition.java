@@ -25,7 +25,6 @@ import org.slf4j.LoggerFactory;
  */
 public class WorldPosition
 {
-	
 	public WorldPosition(int mapId)
 	{
 		this.mapId = mapId;

@@ -28,10 +28,8 @@ import com.aionemu.gameserver.utils.MathUtil;
 /**
  * @author Balthazar
  */
-
 public class _1604ToCatchASpy extends QuestHandler
 {
-	
 	private static final int questId = 1604;
 	
 	public _1604ToCatchASpy()

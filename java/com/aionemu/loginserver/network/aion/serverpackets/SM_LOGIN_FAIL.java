@@ -25,7 +25,6 @@ import com.aionemu.loginserver.network.aion.LoginConnection;
  */
 public class SM_LOGIN_FAIL extends AionServerPacket
 {
-	
 	/**
 	 * response - why login fail
 	 */

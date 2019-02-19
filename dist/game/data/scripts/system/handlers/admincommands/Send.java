@@ -57,7 +57,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Send extends AdminCommand
 {
-	
 	public Send()
 	{
 		super("send");

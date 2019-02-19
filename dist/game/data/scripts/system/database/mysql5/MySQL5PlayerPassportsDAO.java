@@ -39,7 +39,6 @@ import com.aionemu.gameserver.services.AtreianPassportService;
  */
 public class MySQL5PlayerPassportsDAO extends PlayerPassportsDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerPassportsDAO.class);
 	public static final String SELECT_QUERY = "SELECT `passportid`, `rewarded` FROM `player_passports` WHERE `player_id`=?";
 	public static final String UPDATE_QUERY = "UPDATE `player_passports` SET `rewarded`=? WHERE `player_id`=? AND `passportid`=?";

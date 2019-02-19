@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1537FishOnTheLine extends QuestHandler
 {
-	
 	private static final int questId = 1537;
 	
 	public _1537FishOnTheLine()

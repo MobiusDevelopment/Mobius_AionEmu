@@ -47,7 +47,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler (Encom)
  */
-
 public class SvsService
 {
 	private SvsSchedule svsSchedule;

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _11460TheShulackofTaloc extends QuestHandler
 {
-	
 	private static final int questId = 11460;
 	
 	public _11460TheShulackofTaloc()

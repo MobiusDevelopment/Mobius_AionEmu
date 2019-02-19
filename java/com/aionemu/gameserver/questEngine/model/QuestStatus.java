@@ -21,7 +21,6 @@ import javax.xml.bind.annotation.XmlEnum;
 /**
  * @author MrPoke
  */
-
 @XmlEnum
 public enum QuestStatus
 {

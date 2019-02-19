@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1574AFeatForAVillage extends QuestHandler
 {
-	
 	private static final int questId = 1574;
 	
 	public _1574AFeatForAVillage()

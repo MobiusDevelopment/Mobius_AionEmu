@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_STOP_TRAINING extends AionClientPacket
 {
-	
 	public CM_STOP_TRAINING(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

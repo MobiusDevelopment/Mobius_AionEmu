@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.RepurchaseService;
  */
 public class SM_REPURCHASE extends AionServerPacket
 {
-	
 	private final Player player;
 	private final int targetObjectId;
 	private final Collection<Item> items;

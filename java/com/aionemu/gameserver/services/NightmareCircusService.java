@@ -46,7 +46,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler (Encom)
  */
-
 public class NightmareCircusService
 {
 	private CircusSchedule circusSchedule;

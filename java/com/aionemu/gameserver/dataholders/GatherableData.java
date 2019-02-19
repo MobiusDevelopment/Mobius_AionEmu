@@ -36,7 +36,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GatherableData
 {
-	
 	@XmlElement(name = "gatherable_template")
 	private List<GatherableTemplate> gatherables;
 	

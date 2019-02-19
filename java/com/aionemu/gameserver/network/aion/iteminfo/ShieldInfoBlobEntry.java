@@ -29,7 +29,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  */
 public class ShieldInfoBlobEntry extends ItemBlobEntry
 {
-	
 	ShieldInfoBlobEntry()
 	{
 		super(ItemBlobType.SLOTS_SHIELD);

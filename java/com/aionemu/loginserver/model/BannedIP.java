@@ -24,7 +24,6 @@ import java.sql.Timestamp;
  */
 public class BannedIP
 {
-	
 	/**
 	 * Returns id of ip ban
 	 */

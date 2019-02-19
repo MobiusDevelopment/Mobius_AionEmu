@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.TitleTemplate;
  */
 public class Title implements IExpirable
 {
-	
 	private final TitleTemplate template;
 	private final int id;
 	private final int dispearTime;

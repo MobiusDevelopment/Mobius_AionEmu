@@ -35,7 +35,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob;
  */
 public class SM_INVENTORY_INFO extends AionServerPacket
 {
-	
 	public static final int EMPTY = 0;
 	public static final int FULL = 1;
 	public int npcExpandsSize = 0;

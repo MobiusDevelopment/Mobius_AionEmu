@@ -37,7 +37,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class cmd_vipadd extends PlayerCommand
 {
-	
 	public cmd_vipadd()
 	{
 		super("vipadd");
@@ -3234,7 +3233,6 @@ public class cmd_vipadd extends PlayerCommand
 		{
 			PacketSendUtility.sendMessage(player, "Item couldn't be added");
 		}
-		
 	}
 	
 	private boolean isRestrictedItem(int itemId)

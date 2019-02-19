@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.templates.housing.HousingJukeBox;
  */
 public class JukeBoxObject extends HouseObject<HousingJukeBox>
 {
-	
 	public JukeBoxObject(House owner, int objId, int templateId)
 	{
 		super(owner, objId, templateId);

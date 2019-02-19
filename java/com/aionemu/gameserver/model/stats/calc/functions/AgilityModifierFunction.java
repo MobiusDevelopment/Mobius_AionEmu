@@ -21,7 +21,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
 
 class AgilityModifierFunction extends StatFunction
 {
-	
 	private final float modifier;
 	
 	AgilityModifierFunction(StatEnum stat, float modifier)

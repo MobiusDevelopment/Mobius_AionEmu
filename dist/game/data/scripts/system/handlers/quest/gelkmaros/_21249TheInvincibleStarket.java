@@ -30,7 +30,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _21249TheInvincibleStarket extends QuestHandler
 {
-	
 	private static final int questId = 21249;
 	
 	public _21249TheInvincibleStarket()

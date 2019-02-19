@@ -22,7 +22,6 @@ import javolution.util.FastComparator;
 
 public class CallbackPriorityFastComparator extends FastComparator<Callback<?>>
 {
-	private static final long serialVersionUID = 5346780764438744817L;
 	private final CallbackPriorityComparator cpc = new CallbackPriorityComparator();
 	
 	@Override

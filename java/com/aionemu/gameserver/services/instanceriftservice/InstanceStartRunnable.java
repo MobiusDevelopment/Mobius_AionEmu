@@ -24,7 +24,6 @@ import com.aionemu.gameserver.services.InstanceRiftService;
 /**
  * @author Rinzler (Encom)
  */
-
 public class InstanceStartRunnable implements Runnable
 {
 	private final int id;

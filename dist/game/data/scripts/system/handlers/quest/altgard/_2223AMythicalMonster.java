@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _2223AMythicalMonster extends QuestHandler
 {
-	
 	private static final int questId = 2223;
 	
 	public _2223AMythicalMonster()

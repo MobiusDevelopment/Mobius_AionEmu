@@ -28,7 +28,6 @@ import javolution.util.FastMap;
  */
 public class RoadController extends VisibleObjectController<Road>
 {
-	
 	FastMap<Integer, RoadObserver> observed = new FastMap<Integer, RoadObserver>().shared();
 	
 	@Override

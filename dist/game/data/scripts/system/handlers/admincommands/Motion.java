@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Motion extends AdminCommand implements StatOwner
 {
-	
 	public Motion()
 	{
 		super("motion");

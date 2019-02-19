@@ -33,7 +33,6 @@ import org.slf4j.LoggerFactory;
 /**
  * @author Rolandas
  */
-
 import com.aionemu.commons.utils.SystemPropertyUtil;
 
 /**

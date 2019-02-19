@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _11465MysteriousSeed extends QuestHandler
 {
-	
 	private static final int questId = 11465;
 	
 	public _11465MysteriousSeed()

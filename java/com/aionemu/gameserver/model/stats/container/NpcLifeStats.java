@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.LifeStatsRestoreService;
  */
 public class NpcLifeStats extends CreatureLifeStats<Npc>
 {
-	
 	/**
 	 * @param owner
 	 */

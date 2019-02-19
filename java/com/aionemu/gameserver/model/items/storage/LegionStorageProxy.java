@@ -31,7 +31,6 @@ import javolution.util.FastList;
  */
 public class LegionStorageProxy extends Storage
 {
-	
 	private final Player actor;
 	private final Storage storage;
 	

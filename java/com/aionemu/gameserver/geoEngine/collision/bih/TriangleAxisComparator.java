@@ -22,7 +22,6 @@ import com.aionemu.gameserver.geoEngine.math.Vector3f;
 
 public class TriangleAxisComparator implements Comparator<BIHTriangle>
 {
-	
 	private final int axis;
 	
 	public TriangleAxisComparator(int axis)

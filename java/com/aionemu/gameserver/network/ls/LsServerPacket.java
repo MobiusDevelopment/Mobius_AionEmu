@@ -26,7 +26,6 @@ import com.aionemu.commons.network.packet.BaseServerPacket;
  */
 public abstract class LsServerPacket extends BaseServerPacket
 {
-	
 	/**
 	 * constructs new server packet with specified opcode.
 	 * @param opcode packet id

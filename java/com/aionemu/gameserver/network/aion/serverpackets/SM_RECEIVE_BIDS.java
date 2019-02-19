@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_RECEIVE_BIDS extends AionServerPacket
 {
-	
 	int unk;
 	
 	public SM_RECEIVE_BIDS(int unk)

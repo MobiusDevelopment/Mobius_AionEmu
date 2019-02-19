@@ -30,7 +30,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2493BringingUpTayga extends QuestHandler
 {
-	
 	private static final int questId = 2493;
 	
 	public _2493BringingUpTayga()

@@ -44,7 +44,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public abstract class ReloadableData
 {
-	
 	protected static final Logger log = LoggerFactory.getLogger(ReloadableData.class);
 	
 	public abstract void reload(Player admin);

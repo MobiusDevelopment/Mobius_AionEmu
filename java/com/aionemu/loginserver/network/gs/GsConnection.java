@@ -38,7 +38,6 @@ import com.aionemu.loginserver.utils.ThreadPoolManager;
  */
 public class GsConnection extends AConnection
 {
-	
 	/**
 	 * Logger for this class.
 	 */

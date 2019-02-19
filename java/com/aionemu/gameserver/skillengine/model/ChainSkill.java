@@ -21,7 +21,6 @@ package com.aionemu.gameserver.skillengine.model;
  */
 public class ChainSkill
 {
-	
 	private String category;
 	private int chainCount = 0;
 	private long useTime;

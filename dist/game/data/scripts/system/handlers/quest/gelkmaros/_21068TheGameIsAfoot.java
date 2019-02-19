@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21068TheGameIsAfoot extends QuestHandler
 {
-	
 	private static final int questId = 21068;
 	
 	public _21068TheGameIsAfoot()

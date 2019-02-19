@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Announcements extends AdminCommand
 {
-	
 	private final AnnouncementService announceService;
 	
 	public Announcements()

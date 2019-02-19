@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.gameobjects.player.RecipeList;
  */
 public abstract class PlayerRecipesDAO implements DAO
 {
-	
 	@Override
 	public String getClassName()
 	{

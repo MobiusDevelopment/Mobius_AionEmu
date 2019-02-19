@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1928ChasingaCriminal extends QuestHandler
 {
-	
 	private static final int questId = 1928;
 	
 	public _1928ChasingaCriminal()

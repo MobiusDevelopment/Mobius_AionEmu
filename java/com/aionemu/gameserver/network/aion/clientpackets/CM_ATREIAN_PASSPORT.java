@@ -27,7 +27,6 @@ import com.aionemu.gameserver.services.AtreianPassportService;
 /**
  * @author Ranastic
  */
-
 public class CM_ATREIAN_PASSPORT extends AionClientPacket
 {
 	private List<Integer> passportId;

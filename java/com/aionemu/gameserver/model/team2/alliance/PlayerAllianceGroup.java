@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.team2.TemporaryPlayerTeam;
  */
 public class PlayerAllianceGroup extends TemporaryPlayerTeam<PlayerAllianceMember>
 {
-	
 	private final PlayerAlliance alliance;
 	
 	public PlayerAllianceGroup(PlayerAlliance alliance, Integer objId)

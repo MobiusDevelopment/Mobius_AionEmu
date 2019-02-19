@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class TeamKinahDistributionEvent<T extends TemporaryPlayerTeam<? extends TeamMember<Player>>>extends AbstractTeamPlayerEvent<T>
 {
-	
 	private final long amount;
 	private long rewardPerPlayer;
 	private long teamSize;

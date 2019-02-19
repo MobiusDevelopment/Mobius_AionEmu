@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2135ForLoveofNegi extends QuestHandler
 {
-	
 	private static final int questId = 2135;
 	
 	public _2135ForLoveofNegi()

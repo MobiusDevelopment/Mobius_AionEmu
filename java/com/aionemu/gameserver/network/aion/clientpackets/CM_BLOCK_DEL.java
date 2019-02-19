@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.SocialService;
  */
 public class CM_BLOCK_DEL extends AionClientPacket
 {
-	
 	private static Logger log = LoggerFactory.getLogger(CM_BLOCK_DEL.class);
 	
 	private String targetName;

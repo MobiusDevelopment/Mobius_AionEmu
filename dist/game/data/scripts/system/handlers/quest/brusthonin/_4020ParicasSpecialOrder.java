@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _4020ParicasSpecialOrder extends QuestHandler
 {
-	
 	private static final int questId = 4020;
 	
 	public _4020ParicasSpecialOrder()

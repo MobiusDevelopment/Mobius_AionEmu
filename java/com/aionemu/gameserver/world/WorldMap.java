@@ -32,7 +32,6 @@ import javolution.util.FastMap;
  */
 public class WorldMap
 {
-	
 	private final WorldMapTemplate worldMapTemplate;
 	
 	private final AtomicInteger nextInstanceId = new AtomicInteger(0);

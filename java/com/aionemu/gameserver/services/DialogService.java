@@ -62,7 +62,6 @@ import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
  */
 public class DialogService
 {
-	
 	public static void onCloseDialog(Npc npc, Player player)
 	{
 		switch (npc.getObjectTemplate().getTitleId())

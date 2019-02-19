@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2914ATokenofLostLove extends QuestHandler
 {
-	
 	private static final int questId = 2914;
 	
 	public _2914ATokenofLostLove()

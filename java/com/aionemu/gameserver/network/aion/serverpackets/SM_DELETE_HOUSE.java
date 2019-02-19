@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_DELETE_HOUSE extends AionServerPacket
 {
-	
 	private final int address;
 	
 	public SM_DELETE_HOUSE(int address)

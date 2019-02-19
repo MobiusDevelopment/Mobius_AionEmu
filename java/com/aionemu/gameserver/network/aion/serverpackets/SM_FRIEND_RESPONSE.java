@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_FRIEND_RESPONSE extends AionServerPacket
 {
-	
 	/**
 	 * The friend was successfully added to your list
 	 */

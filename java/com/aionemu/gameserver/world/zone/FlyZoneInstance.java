@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.audit.AuditLogger;
  */
 public class FlyZoneInstance extends ZoneInstance
 {
-	
 	public FlyZoneInstance(int mapId, ZoneInfo template)
 	{
 		super(mapId, template);

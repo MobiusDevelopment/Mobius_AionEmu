@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.templates.rewards.IdReward;
  * @author Rolandas
  *
  */
-
 /**
  * <p>
  * Java class for ManastoneGroup complex type.

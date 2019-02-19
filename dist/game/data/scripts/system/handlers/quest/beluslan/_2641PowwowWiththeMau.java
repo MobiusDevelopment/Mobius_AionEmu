@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2641PowwowWiththeMau extends QuestHandler
 {
-	
 	private static final int questId = 2641;
 	
 	public _2641PowwowWiththeMau()

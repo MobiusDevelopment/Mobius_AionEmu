@@ -39,16 +39,12 @@ import java.io.Serializable;
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-
 /**
  * This class has the same behavior than {@link Polygon2D}, except that the figure is not closed.
  * @version $Id: Polyline2D.java 594018 2007-11-12 04:17:41Z cam $
  */
 class Polyline2D implements Shape, Cloneable, Serializable
 {
-	
-	private static final long serialVersionUID = 8555427697285636463L;
-	
 	private static final float ASSUME_ZERO = 0.001f;
 	
 	/**

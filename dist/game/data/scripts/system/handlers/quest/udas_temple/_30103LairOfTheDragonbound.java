@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30103LairOfTheDragonbound extends QuestHandler
 {
-	
 	private static final int questId = 30103;
 	
 	public _30103LairOfTheDragonbound()

@@ -23,7 +23,6 @@ import com.aionemu.gameserver.skillengine.model.HitType;
  */
 public class AttackResult
 {
-	
 	private int damage;
 	
 	private final AttackStatus attackStatus;

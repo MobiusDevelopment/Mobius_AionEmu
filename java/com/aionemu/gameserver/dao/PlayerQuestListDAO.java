@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.gameobjects.player.QuestStateList;
  */
 public abstract class PlayerQuestListDAO implements DAO
 {
-	
 	/**
 	 * {@inheritDoc}
 	 */

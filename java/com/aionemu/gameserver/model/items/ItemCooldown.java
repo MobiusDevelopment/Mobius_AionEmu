@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.items;
  */
 public class ItemCooldown
 {
-	
 	/**
 	 * time of next reuse
 	 */

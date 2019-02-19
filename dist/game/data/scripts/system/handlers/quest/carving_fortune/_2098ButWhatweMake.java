@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2098ButWhatweMake extends QuestHandler
 {
-	
 	private static final int questId = 2098;
 	
 	public _2098ButWhatweMake()

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class MoveToMe extends AdminCommand
 {
-	
 	public MoveToMe()
 	{
 		super("movetome");

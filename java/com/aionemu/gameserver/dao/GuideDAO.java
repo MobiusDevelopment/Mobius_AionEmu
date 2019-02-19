@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.guide.Guide;
  */
 public abstract class GuideDAO implements IDFactoryAwareDAO
 {
-	
 	@Override
 	public final String getClassName()
 	{

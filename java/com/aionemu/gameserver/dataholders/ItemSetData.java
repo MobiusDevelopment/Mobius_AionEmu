@@ -36,7 +36,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ItemSetData
 {
-	
 	@XmlElement(name = "itemset")
 	protected List<ItemSetTemplate> itemsetList;
 	

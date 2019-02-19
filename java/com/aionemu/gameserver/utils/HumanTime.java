@@ -24,7 +24,6 @@ import java.util.Iterator;
 
 public class HumanTime implements Externalizable, Comparable<HumanTime>, Cloneable
 {
-	private static final long serialVersionUID = 5179328390732826722L;
 	private static final long SECOND = 1000;
 	private static final long MINUTE = SECOND * 60;
 	private static final long HOUR = MINUTE * 60;

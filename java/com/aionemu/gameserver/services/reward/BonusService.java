@@ -46,7 +46,6 @@ import com.aionemu.gameserver.model.templates.rewards.MedalItem;
  */
 public class BonusService
 {
-	
 	private static BonusService instance = new BonusService();
 	private ItemGroupsData itemGroups = DataManager.ITEM_GROUPS_DATA;
 	private static final Logger log = LoggerFactory.getLogger(BonusService.class);

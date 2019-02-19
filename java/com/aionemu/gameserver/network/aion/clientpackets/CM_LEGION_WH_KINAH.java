@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CM_LEGION_WH_KINAH extends AionClientPacket
 {
-	
 	public CM_LEGION_WH_KINAH(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

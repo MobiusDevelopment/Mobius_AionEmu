@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_luna extends PlayerCommand
 {
-	
 	public cmd_luna()
 	{
 		super("luna");

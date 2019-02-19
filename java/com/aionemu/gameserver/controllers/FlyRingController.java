@@ -28,7 +28,6 @@ import javolution.util.FastMap;
  */
 public class FlyRingController extends VisibleObjectController<FlyRing>
 {
-	
 	FastMap<Integer, FlyRingObserver> observed = new FastMap<Integer, FlyRingObserver>().shared();
 	
 	@Override

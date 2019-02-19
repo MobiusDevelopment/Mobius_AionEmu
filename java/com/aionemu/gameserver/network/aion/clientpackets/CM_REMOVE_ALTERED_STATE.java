@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_REMOVE_ALTERED_STATE extends AionClientPacket
 {
-	
 	private int skillid;
 	
 	/**

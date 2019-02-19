@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.DynamicRiftService;
  * @author Rinzler (Encom)
  * @param <DL>
  */
-
 public abstract class DynamicRift<DL extends DynamicRiftLocation>
 {
 	private boolean started;

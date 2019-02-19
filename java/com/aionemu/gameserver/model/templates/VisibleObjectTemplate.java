@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.templates;
  */
 public abstract class VisibleObjectTemplate
 {
-	
 	/**
 	 * For Npcs it will return npcid from templates xml
 	 * @return id of object template

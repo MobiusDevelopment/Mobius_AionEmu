@@ -30,7 +30,6 @@ import com.aionemu.loginserver.utils.FloodProtector;
  */
 public class AionConnectionFactoryImpl implements ConnectionFactory
 {
-	
 	/**
 	 * Create a new {@link com.aionemu.commons.network.AConnection AConnection} instance.<br>
 	 * @param socket that new {@link com.aionemu.commons.network.AConnection AConnection} instance will represent.<br>

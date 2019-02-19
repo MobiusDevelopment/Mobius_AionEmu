@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.gameobjects.player.title.TitleList;
  */
 public abstract class PlayerTitleListDAO implements DAO
 {
-	
 	@Override
 	public final String getClassName()
 	{

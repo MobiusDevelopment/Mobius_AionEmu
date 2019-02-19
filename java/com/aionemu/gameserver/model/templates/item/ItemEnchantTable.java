@@ -36,7 +36,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "ItemEnchantTable")
 public class ItemEnchantTable
 {
-	
 	@XmlAttribute(name = "id")
 	private int id;
 	@XmlAttribute(name = "type")

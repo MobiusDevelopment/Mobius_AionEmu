@@ -34,7 +34,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class EventCaller extends AdminCommand
 {
-	
 	public EventCaller()
 	{
 		super("eventcaller");

@@ -32,7 +32,6 @@ import com.aionemu.gameserver.model.templates.QuestTemplate;
  */
 public class QuestState
 {
-	
 	private final int questId;
 	private final QuestVars questVars;
 	private QuestStatus status;

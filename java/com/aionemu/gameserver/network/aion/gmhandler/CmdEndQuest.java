@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CmdEndQuest extends AbstractGMHandler
 {
-	
 	public CmdEndQuest(Player admin, String params)
 	{
 		super(admin, params);

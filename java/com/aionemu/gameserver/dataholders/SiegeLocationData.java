@@ -40,7 +40,6 @@ import javolution.util.FastMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SiegeLocationData
 {
-	
 	@XmlElement(name = "siege_location")
 	private List<SiegeLocationTemplate> siegeLocationTemplates;
 	/**

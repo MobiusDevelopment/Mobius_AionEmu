@@ -37,7 +37,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class SocialService
 {
-	
 	/**
 	 * Blocks the given object ID for the given player.<br />
 	 * <ul>
@@ -167,6 +166,5 @@ public class SocialService
 				}
 			}
 		}
-		
 	}
 }

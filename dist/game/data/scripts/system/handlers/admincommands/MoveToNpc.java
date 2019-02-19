@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class MoveToNpc extends AdminCommand
 {
-	
 	public MoveToNpc()
 	{
 		super("movetonpc");

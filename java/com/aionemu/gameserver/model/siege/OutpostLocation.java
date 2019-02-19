@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.templates.siegelocation.SiegeLocationTemplat
  */
 public class OutpostLocation extends SiegeLocation
 {
-	
 	public OutpostLocation()
 	{
 	}

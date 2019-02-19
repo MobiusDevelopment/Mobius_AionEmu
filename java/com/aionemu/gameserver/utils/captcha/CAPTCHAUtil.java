@@ -28,7 +28,6 @@ import java.nio.ByteBuffer;
  */
 public class CAPTCHAUtil
 {
-	
 	private static final int DEFAULT_WORD_LENGTH = 6;
 	private static final String WORD = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
 	

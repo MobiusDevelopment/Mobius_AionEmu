@@ -33,7 +33,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class _24022Sneak_Behind_The_Ice_Claw extends QuestHandler
 {
-	
 	private static final int questId = 24022;
 	
 	public _24022Sneak_Behind_The_Ice_Claw()

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.AbyssLandingService;
 /**
  * @author Ranastic & Lightning (Encom)
  */
-
 public class SM_ABYSS_LANDING extends AionServerPacket
 {
 	private final Map<Integer, LandingLocation> locations;

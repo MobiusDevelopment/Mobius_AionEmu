@@ -34,7 +34,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlRootElement(name = "game_experience_items")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GameExperienceData

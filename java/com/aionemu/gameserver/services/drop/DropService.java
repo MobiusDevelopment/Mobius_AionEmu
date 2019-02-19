@@ -707,7 +707,6 @@ public class DropService
 			}
 			return false;
 		}
-		
 	}
 	
 	private static class SingletonHolder

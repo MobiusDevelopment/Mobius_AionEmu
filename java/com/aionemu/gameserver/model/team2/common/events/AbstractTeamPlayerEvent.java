@@ -27,7 +27,6 @@ import com.google.common.base.Predicate;
  */
 public abstract class AbstractTeamPlayerEvent<T extends TemporaryPlayerTeam<?>> implements Predicate<Player>, TeamEvent
 {
-	
 	public final T team;
 	protected final Player eventPlayer;
 	

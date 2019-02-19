@@ -34,7 +34,6 @@ import com.google.common.collect.Multimap;
  */
 public class RepurchaseService
 {
-	
 	private final Multimap<Integer, Item> repurchaseItems;
 	
 	public RepurchaseService()

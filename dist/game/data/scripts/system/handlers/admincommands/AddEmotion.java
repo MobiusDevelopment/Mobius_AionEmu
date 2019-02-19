@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class AddEmotion extends AdminCommand
 {
-	
 	public AddEmotion()
 	{
 		super("addemotion");

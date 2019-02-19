@@ -32,7 +32,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CM_BLOCK_ADD extends AionClientPacket
 {
-	
 	private static Logger log = LoggerFactory.getLogger(CM_BLOCK_ADD.class);
 	
 	private String targetName;
@@ -99,7 +98,6 @@ public class CM_BLOCK_ADD extends AionClientPacket
 		{
 			log.error("Failed to add " + targetPlayer.getName() + " to the block list for " + activePlayer.getName() + " - check database setup.");
 		}
-		
 	}
 	
 }

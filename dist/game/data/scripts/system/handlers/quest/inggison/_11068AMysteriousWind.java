@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _11068AMysteriousWind extends QuestHandler
 {
-	
 	private static final int questId = 11068;
 	private static final int[] npc_ids =
 	{

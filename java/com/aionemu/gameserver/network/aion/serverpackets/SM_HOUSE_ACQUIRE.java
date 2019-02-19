@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_HOUSE_ACQUIRE extends AionServerPacket
 {
-	
 	private final int playerId;
 	private final int address;
 	private final boolean acquire;

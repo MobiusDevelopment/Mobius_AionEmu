@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class PetController extends VisibleObjectController<Pet>
 {
-	
 	@Override
 	public void see(VisibleObject object)
 	{

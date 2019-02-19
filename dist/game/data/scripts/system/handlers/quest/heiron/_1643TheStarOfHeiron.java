@@ -30,10 +30,8 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * @author Balthazar
  */
-
 public class _1643TheStarOfHeiron extends QuestHandler
 {
-	
 	private static final int questId = 1643;
 	
 	public _1643TheStarOfHeiron()

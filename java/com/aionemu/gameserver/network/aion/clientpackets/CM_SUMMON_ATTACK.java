@@ -28,7 +28,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_SUMMON_ATTACK extends AionClientPacket
 {
-	
 	private int summonObjId;
 	private int targetObjId;
 	@SuppressWarnings("unused")

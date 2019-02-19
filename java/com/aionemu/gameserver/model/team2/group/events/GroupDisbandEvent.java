@@ -27,7 +27,6 @@ import com.google.common.base.Predicate;
  */
 public class GroupDisbandEvent extends AlwaysTrueTeamEvent implements Predicate<Player>
 {
-	
 	private final PlayerGroup group;
 	
 	/**

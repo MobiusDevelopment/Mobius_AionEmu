@@ -31,7 +31,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerScripts;
  */
 public class MySQL5HouseScriptsDAO extends HouseScriptsDAO
 {
-	
 	public static final String INSERT_QUERY = "INSERT INTO `house_scripts` (`house_id`,`index`,`script`) VALUES (?,?,?)";
 	public static final String UPDATE_QUERY = "UPDATE `house_scripts` SET `script`=? WHERE `house_id`=? AND `index`=?";
 	public static final String DELETE_QUERY = "DELETE FROM `house_scripts` WHERE `house_id`=? AND `index`=?";

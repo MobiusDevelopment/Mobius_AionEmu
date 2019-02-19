@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class FixPath extends AdminCommand
 {
-	
 	static volatile boolean canceled = false;
 	static volatile boolean isRunning = false;
 	static Player runner = null;

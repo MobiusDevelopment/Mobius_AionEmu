@@ -19,10 +19,8 @@ package com.aionemu.gameserver.questEngine.model;
 /**
  * @author MrPoke
  */
-
 public class QuestVars
 {
-	
 	private final Integer[] questVars = new Integer[6];
 	
 	public QuestVars()

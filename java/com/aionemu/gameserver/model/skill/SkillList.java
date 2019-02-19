@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
  */
 public interface SkillList<T extends Creature>
 {
-	
 	/**
 	 * Add skill to list
 	 * @param creature

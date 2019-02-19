@@ -24,7 +24,6 @@ import com.aionemu.loginserver.network.gs.GsClientPacket;
  */
 public class CM_GS_PONG extends GsClientPacket
 {
-	
 	private byte serverId;
 	private int pid;
 	

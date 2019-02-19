@@ -30,7 +30,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTargetSlot;
  */
 public class DispelEffect extends EffectTemplate
 {
-	
 	@XmlElement(type = Integer.class)
 	protected List<Integer> effectids;
 	@XmlElement

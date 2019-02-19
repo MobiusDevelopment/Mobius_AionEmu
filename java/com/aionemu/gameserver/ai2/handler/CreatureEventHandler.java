@@ -33,7 +33,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
  */
 public class CreatureEventHandler
 {
-	
 	/**
 	 * @param npcAI
 	 * @param creature

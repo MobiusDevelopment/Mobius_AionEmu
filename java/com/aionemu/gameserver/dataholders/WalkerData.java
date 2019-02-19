@@ -49,7 +49,6 @@ import javolution.util.FastMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class WalkerData
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(WalkerData.class);
 	
 	@XmlElement(name = "walker_template")

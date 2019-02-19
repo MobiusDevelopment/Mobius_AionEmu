@@ -27,7 +27,6 @@ import com.aionemu.commons.network.packet.BaseClientPacket;
  */
 public abstract class GsClientPacket extends BaseClientPacket<GsConnection>
 {
-	
 	public GsClientPacket()
 	{
 		super(0);

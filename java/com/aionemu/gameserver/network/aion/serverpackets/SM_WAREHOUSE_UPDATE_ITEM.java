@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
  */
 public class SM_WAREHOUSE_UPDATE_ITEM extends AionServerPacket
 {
-	
 	private final Player player;
 	private final Item item;
 	private final int warehouseType;

@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _2136TheLostAxe extends QuestHandler
 {
-	
 	private static final int questId = 2136;
 	private static final int[] npc_ids =
 	{

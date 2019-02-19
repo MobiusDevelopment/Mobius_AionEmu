@@ -29,10 +29,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _3056InSearchOfZirius extends QuestHandler
 {
-	
 	private static final int questId = 3056;
 	
 	public _3056InSearchOfZirius()

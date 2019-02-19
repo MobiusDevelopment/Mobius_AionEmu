@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 
 public class CM_EVENT_DICE extends AionClientPacket
 {
-	
 	private int action;
 	private static final Logger log = LoggerFactory.getLogger(CM_EVENT_DICE.class);
 	

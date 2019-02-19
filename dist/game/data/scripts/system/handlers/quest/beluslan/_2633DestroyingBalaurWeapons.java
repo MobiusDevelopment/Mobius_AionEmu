@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2633DestroyingBalaurWeapons extends QuestHandler
 {
-	
 	private static final int questId = 2633;
 	private static final int[] npc_ids =
 	{

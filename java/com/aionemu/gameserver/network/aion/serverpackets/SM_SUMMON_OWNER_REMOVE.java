@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_SUMMON_OWNER_REMOVE extends AionServerPacket
 {
-	
 	private final int summonObjId;
 	
 	public SM_SUMMON_OWNER_REMOVE(int summonObjId)

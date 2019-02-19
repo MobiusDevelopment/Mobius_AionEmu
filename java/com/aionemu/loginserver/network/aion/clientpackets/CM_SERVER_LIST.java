@@ -30,7 +30,6 @@ import com.aionemu.loginserver.network.aion.serverpackets.SM_LOGIN_FAIL;
  */
 public class CM_SERVER_LIST extends AionClientPacket
 {
-	
 	/**
 	 * accountId is part of session key - its used for security purposes
 	 */

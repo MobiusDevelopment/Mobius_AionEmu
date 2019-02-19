@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_ENTER_WORLD_CHECK extends AionServerPacket
 {
-	
 	private byte msg = 0x00;
 	
 	public SM_ENTER_WORLD_CHECK(byte msg)

@@ -23,7 +23,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
 
 public class cmd_solo extends PlayerCommand
 {
-	
 	public cmd_solo()
 	{
 		super("vs");

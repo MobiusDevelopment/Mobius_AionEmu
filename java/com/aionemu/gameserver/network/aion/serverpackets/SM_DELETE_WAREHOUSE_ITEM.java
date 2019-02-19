@@ -25,7 +25,6 @@ import com.aionemu.gameserver.services.item.ItemPacketService.ItemDeleteType;
  */
 public class SM_DELETE_WAREHOUSE_ITEM extends AionServerPacket
 {
-	
 	private final int warehouseType;
 	private final int itemObjId;
 	private final ItemDeleteType deleteType;

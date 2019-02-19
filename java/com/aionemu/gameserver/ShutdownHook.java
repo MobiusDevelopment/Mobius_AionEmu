@@ -41,7 +41,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class ShutdownHook extends Thread
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(ShutdownHook.class);
 	
 	public static ShutdownHook getInstance()

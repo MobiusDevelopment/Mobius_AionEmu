@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.knownlist.SphereKnownList;
  */
 public class Road extends VisibleObject
 {
-	
 	private RoadTemplate template = null;
 	private String name = null;
 	private Plane3D plane = null;

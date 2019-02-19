@@ -29,7 +29,6 @@ import com.aionemu.gameserver.model.templates.npcskill.NpcSkillTemplates;
  */
 public class SiegeWeaponController extends SummonController
 {
-	
 	private final NpcSkillTemplates skills;
 	
 	public SiegeWeaponController(int npcId)

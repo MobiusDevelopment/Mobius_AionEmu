@@ -46,7 +46,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler (Encom) http://aion.power.plaync.com/wiki/%EB%B6%84%EB%85%B8%EC%9D%98+%ED%8C%8C%ED%8E%B8+%EB%A9%94%EB%85%B8%ED%8B%B0%EC%98%A4%EC%8A%A4
  */
-
 public class MoltenusService
 {
 	private MoltenusSchedule moltenusSchedule;

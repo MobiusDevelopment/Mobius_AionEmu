@@ -49,7 +49,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class SystemMailService
 {
-	
 	private static final Logger log = LoggerFactory.getLogger("SYSMAIL_LOG");
 	
 	public static SystemMailService getInstance()

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.templates.rewards.IdLevelReward;
  * @author Rolandas
  *
  */
-
 /**
  * <p>
  * Java class for EnchantGroup complex type.

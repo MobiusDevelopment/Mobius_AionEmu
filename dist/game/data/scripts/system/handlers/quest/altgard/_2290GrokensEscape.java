@@ -32,7 +32,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _2290GrokensEscape extends QuestHandler
 {
-	
 	private static final int questId = 2290;
 	
 	public _2290GrokensEscape()

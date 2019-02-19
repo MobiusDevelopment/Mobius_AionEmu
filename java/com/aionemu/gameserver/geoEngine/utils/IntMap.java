@@ -28,7 +28,6 @@ import com.aionemu.gameserver.geoEngine.utils.IntMap.Entry;
 @SuppressWarnings("rawtypes")
 public final class IntMap<T> implements Iterable<Entry>, Cloneable
 {
-	
 	Entry[] table;
 	private final float loadFactor;
 	int size;

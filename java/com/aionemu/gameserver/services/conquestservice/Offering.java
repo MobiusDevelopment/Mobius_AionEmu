@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.conquest.ConquestStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class Offering extends ConquestOffering<ConquestLocation>
 {
 	public Offering(ConquestLocation conquest)

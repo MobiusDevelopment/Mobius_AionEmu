@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _28808OpenSaysMe extends QuestHandler
 {
-	
 	private static final int questId = 28808;
 	
 	public _28808OpenSaysMe()

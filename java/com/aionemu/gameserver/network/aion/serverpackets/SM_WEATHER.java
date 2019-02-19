@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_WEATHER extends AionServerPacket
 {
-	
 	private final WeatherEntry[] weatherEntries;
 	
 	public SM_WEATHER(WeatherEntry[] weatherEntries)

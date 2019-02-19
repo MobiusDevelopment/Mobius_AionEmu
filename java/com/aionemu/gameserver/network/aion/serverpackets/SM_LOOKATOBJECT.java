@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LOOKATOBJECT extends AionServerPacket
 {
-	
 	private final VisibleObject visibleObject;
 	private int targetObjectId;
 	private int heading;

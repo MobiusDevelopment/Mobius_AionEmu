@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1560AJobForPobinerk extends QuestHandler
 {
-	
 	private static final int questId = 1560;
 	
 	public _1560AJobForPobinerk()

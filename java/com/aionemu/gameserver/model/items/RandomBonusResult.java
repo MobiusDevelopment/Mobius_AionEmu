@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.templates.stats.ModifiersTemplate;
  */
 public class RandomBonusResult
 {
-	
 	private final ModifiersTemplate template;
 	private final int templateNumber;
 	

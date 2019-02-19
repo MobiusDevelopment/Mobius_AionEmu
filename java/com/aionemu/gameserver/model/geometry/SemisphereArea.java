@@ -24,7 +24,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class SemisphereArea extends SphereArea
 {
-	
 	public SemisphereArea(ZoneName zoneName, int worldId, float x, float y, float z, float r)
 	{
 		super(zoneName, worldId, x, y, z, r);

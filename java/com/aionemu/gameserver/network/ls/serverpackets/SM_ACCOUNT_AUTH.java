@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.ls.LsServerPacket;
  */
 public class SM_ACCOUNT_AUTH extends LsServerPacket
 {
-	
 	/**
 	 * accountId [part of session key]
 	 */

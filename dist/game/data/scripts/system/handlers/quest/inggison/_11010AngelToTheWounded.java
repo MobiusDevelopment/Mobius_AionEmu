@@ -28,10 +28,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  * @author dta3000
  * @reworked Gigi
  */
-
 public class _11010AngelToTheWounded extends QuestHandler
 {
-	
 	private static final int questId = 11010;
 	
 	public _11010AngelToTheWounded()

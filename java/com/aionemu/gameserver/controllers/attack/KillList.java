@@ -29,7 +29,6 @@ import javolution.util.FastMap;
  */
 public class KillList
 {
-	
 	private final FastMap<Integer, List<Long>> killList;
 	
 	public KillList()

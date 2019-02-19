@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1319PrioritesMoney extends QuestHandler
 {
-	
 	private static final int questId = 1319;
 	
 	public _1319PrioritesMoney()

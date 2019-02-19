@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
  */
 public class ThinkEventHandler
 {
-	
 	/**
 	 * @param npcAI
 	 */
@@ -118,7 +117,6 @@ public class ThinkEventHandler
 				}
 			}
 		}
-		
 	}
 	
 	/**

@@ -23,7 +23,6 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
  */
 public class WorldMap3DInstance extends WorldMapInstance
 {
-	
 	/**
 	 * @param parent
 	 * @param instanceId

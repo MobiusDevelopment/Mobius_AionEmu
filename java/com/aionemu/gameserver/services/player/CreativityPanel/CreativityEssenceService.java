@@ -47,7 +47,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Ranastic (Encom)
  */
-
 public class CreativityEssenceService
 {
 	Logger log = LoggerFactory.getLogger(CreativityEssenceService.class);

@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.stats.calc.Stat2;
  */
 public class StatSubFunction extends StatFunction
 {
-	
 	@Override
 	public void apply(Stat2 stat)
 	{

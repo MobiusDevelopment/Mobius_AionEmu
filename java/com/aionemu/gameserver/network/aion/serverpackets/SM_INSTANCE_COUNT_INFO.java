@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_INSTANCE_COUNT_INFO extends AionServerPacket
 {
-	
 	private final int mapId;
 	private final int instanceId;
 	

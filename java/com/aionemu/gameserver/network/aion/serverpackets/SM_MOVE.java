@@ -29,7 +29,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_MOVE extends AionServerPacket
 {
-	
 	/**
 	 * Object that is moving.
 	 */

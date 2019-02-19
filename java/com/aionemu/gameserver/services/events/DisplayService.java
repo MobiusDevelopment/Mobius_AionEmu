@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.templates.item.ArmorType;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 public class DisplayService
 {
 	public static int getDisplayTemplate(Player player, Item item)

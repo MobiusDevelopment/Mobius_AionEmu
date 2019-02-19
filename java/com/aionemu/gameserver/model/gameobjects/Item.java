@@ -57,7 +57,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class Item extends AionObject implements IExpirable, StatOwner
 {
-	
 	private final Logger log = LoggerFactory.getLogger(Item.class);
 	private long itemCount = 1;
 	private int itemColor = 0;
@@ -711,7 +710,6 @@ public class Item extends AionObject implements IExpirable, StatOwner
 				this.persistentState = persistentState;
 			}
 		}
-		
 	}
 	
 	public void setItemLocation(int storageType)

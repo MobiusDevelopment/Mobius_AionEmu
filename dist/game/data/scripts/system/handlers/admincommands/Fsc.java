@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Fsc extends AdminCommand
 {
-	
 	public Fsc()
 	{
 		super("fsc");

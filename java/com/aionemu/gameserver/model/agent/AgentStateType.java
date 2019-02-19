@@ -19,7 +19,6 @@ package com.aionemu.gameserver.model.agent;
 /**
  * @author Rinzler (Encom)
  */
-
 public enum AgentStateType
 {
 	FIGHT,

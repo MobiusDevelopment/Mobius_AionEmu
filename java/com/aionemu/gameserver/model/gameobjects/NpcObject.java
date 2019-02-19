@@ -27,7 +27,6 @@ import com.aionemu.gameserver.spawnengine.SpawnEngine;
  */
 public class NpcObject extends HouseObject<HousingNpc>
 {
-	
 	Npc npc = null;
 	
 	public NpcObject(House owner, int objId, int templateId)

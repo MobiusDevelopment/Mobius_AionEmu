@@ -29,10 +29,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _1634TheWreckOfTheArgos extends QuestHandler
 {
-	
 	private static final int questId = 1634;
 	
 	public _1634TheWreckOfTheArgos()

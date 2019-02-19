@@ -37,7 +37,6 @@ import com.aionemu.gameserver.world.zone.ZoneAttributes;
 @XmlAccessorType(XmlAccessType.NONE)
 public class WorldMapTemplate
 {
-	
 	@XmlAttribute(name = "name")
 	protected String name = "";
 	

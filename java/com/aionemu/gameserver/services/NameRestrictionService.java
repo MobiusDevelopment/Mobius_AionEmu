@@ -23,7 +23,6 @@ import com.aionemu.gameserver.configs.main.NameConfig;
  */
 public class NameRestrictionService
 {
-	
 	private static final String ENCODED_BAD_WORD = "----";
 	private static String[] forbiddenSequences;
 	private static String[] forbiddenByClient;

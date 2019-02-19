@@ -20,7 +20,6 @@ import java.util.logging.Logger;
 
 public class Eigen3f
 {
-	
 	private static final Logger logger = Logger.getLogger(Eigen3f.class.getName());
 	float[] eigenValues = new float[3];
 	Vector3f[] eigenVectors = new Vector3f[3];

@@ -29,7 +29,6 @@ import com.aionemu.loginserver.utils.ThreadPoolManager;
  */
 public class FixedInTimeTrigger extends TaskFromDBTrigger
 {
-	
 	private static Logger log = LoggerFactory.getLogger(FixedInTimeTrigger.class);
 	private final int DAY_IN_MSEC = 24 * 60 * 60 * 1000;
 	private int hour, minute, second;

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  */
 public class WeaponInfoBlobEntry extends ItemBlobEntry
 {
-	
 	WeaponInfoBlobEntry()
 	{
 		super(ItemBlobType.SLOTS_WEAPON);

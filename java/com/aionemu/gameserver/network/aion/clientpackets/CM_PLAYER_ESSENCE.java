@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Ranastic (Encom)
  */
-
 public class CM_PLAYER_ESSENCE extends AionClientPacket
 {
 	@SuppressWarnings("unused")

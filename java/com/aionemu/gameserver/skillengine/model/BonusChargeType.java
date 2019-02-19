@@ -22,7 +22,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Rinzler
  */
-
 @XmlType(name = "bonusChargeType")
 @XmlEnum
 public enum BonusChargeType

@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.zorshivdredgion.ZorshivDredgionStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class Zorshiv extends ZorshivDredgion<ZorshivDredgionLocation>
 {
 	public Zorshiv(ZorshivDredgionLocation zorshivDredgion)

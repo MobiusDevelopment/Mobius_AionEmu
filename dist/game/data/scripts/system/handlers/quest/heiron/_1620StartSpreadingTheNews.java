@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1620StartSpreadingTheNews extends QuestHandler
 {
-	
 	private static final int questId = 1620;
 	
 	public _1620StartSpreadingTheNews()

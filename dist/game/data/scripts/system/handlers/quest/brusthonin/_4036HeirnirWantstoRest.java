@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _4036HeirnirWantstoRest extends QuestHandler
 {
-	
 	private static final int questId = 4036;
 	
 	public _4036HeirnirWantstoRest()

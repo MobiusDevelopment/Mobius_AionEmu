@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2231SiblingRivalry extends QuestHandler
 {
-	
 	private static final int questId = 2231;
 	
 	public _2231SiblingRivalry()

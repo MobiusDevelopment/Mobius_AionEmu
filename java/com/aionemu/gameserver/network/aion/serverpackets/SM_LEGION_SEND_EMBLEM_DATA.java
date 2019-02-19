@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LEGION_SEND_EMBLEM_DATA extends AionServerPacket
 {
-	
 	private final int size;
 	private final byte[] data;
 	

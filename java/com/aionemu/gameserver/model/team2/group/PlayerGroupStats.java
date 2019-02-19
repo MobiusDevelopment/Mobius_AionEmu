@@ -24,7 +24,6 @@ import com.google.common.base.Predicate;
  */
 public class PlayerGroupStats implements Predicate<Player>
 {
-	
 	private final PlayerGroup group;
 	private int minExpPlayerLevel;
 	private int maxExpPlayerLevel;

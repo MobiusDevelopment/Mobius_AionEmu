@@ -28,7 +28,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class GroupToMe extends AdminCommand
 {
-	
 	public GroupToMe()
 	{
 		super("grouptome");

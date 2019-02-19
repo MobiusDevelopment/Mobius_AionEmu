@@ -29,10 +29,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _1691TheLittleLeatherSlipper extends QuestHandler
 {
-	
 	private static final int questId = 1691;
 	
 	public _1691TheLittleLeatherSlipper()

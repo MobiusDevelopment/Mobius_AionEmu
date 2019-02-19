@@ -35,7 +35,6 @@ import com.aionemu.loginserver.network.aion.clientpackets.CM_UPDATE_SESSION;
  */
 public class AionPacketHandlerFactory
 {
-	
 	/**
 	 * logger for this class
 	 */

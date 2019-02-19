@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
 /**
  * @author Ranastic (Encom)
  */
-
 public class Health implements StatOwner
 {
 	private final List<IStatFunction> health = new ArrayList<>();

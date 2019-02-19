@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
  */
 public class DropItem
 {
-	
 	private int index = 0;
 	private long count = 0;
 	private final Drop dropTemplate;

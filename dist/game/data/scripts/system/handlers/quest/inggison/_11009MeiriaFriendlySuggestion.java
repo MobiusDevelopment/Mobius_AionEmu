@@ -29,10 +29,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author dta3000
  */
-
 public class _11009MeiriaFriendlySuggestion extends QuestHandler
 {
-	
 	private static final int questId = 11009;
 	
 	public _11009MeiriaFriendlySuggestion()

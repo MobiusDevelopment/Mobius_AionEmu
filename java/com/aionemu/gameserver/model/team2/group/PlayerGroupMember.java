@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.team2.PlayerTeamMember;
  */
 public class PlayerGroupMember extends PlayerTeamMember
 {
-	
 	public PlayerGroupMember(Player player)
 	{
 		super(player);

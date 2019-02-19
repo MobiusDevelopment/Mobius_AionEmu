@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.MathUtil;
  */
 public class _3057CursedZirius extends QuestHandler
 {
-	
 	private static final int questId = 3057;
 	
 	public _3057CursedZirius()

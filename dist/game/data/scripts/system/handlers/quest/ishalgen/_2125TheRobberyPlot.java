@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2125TheRobberyPlot extends QuestHandler
 {
-	
 	private static final int questId = 2125;
 	
 	public _2125TheRobberyPlot()

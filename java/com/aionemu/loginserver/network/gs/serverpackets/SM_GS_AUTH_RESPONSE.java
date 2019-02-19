@@ -27,7 +27,6 @@ import com.aionemu.loginserver.network.gs.GsServerPacket;
  */
 public class SM_GS_AUTH_RESPONSE extends GsServerPacket
 {
-	
 	/**
 	 * Response for Gameserver authentication
 	 */

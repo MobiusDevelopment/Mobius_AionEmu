@@ -38,7 +38,6 @@ import com.aionemu.gameserver.world.World;
  * @author Rinzler
  * @reworked Ranastic
  */
-
 @SuppressWarnings("rawtypes")
 public class BaseBossDeathListener extends OnDieEventCallback
 {

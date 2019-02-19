@@ -21,7 +21,6 @@ package com.aionemu.gameserver.controllers.observer;
  */
 public class StartMovingListener extends ActionObserver
 {
-	
 	private boolean effectorMoved = false;
 	
 	public StartMovingListener()

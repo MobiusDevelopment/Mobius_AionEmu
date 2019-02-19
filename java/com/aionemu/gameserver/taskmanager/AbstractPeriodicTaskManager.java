@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public abstract class AbstractPeriodicTaskManager extends AbstractLockManager implements Runnable, StartupHook
 {
-	
 	protected static final Logger log = LoggerFactory.getLogger(AbstractPeriodicTaskManager.class);
 	
 	private final int period;

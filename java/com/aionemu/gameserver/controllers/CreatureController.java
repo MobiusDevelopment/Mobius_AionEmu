@@ -67,7 +67,6 @@ import javolution.util.FastMap;
  */
 public abstract class CreatureController<T extends Creature>extends VisibleObjectController<Creature>
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(CreatureController.class);
 	private final FastMap<Integer, Future<?>> tasks = new FastMap<Integer, Future<?>>().shared();
 	private float healingSkillBoost = 1.0f;
@@ -657,7 +656,6 @@ public abstract class CreatureController<T extends Creature>extends VisibleObjec
 			target = null;
 			creature = null;
 		}
-		
 	}
 	
 	public float getHealingSkillsBoost()

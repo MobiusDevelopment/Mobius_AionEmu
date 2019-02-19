@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _21105CoweringRefugee extends QuestHandler
 {
-	
 	private static final int questId = 21105;
 	
 	public _21105CoweringRefugee()

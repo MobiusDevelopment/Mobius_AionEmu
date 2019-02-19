@@ -24,7 +24,6 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
  */
 public interface AdvencedZoneHandler extends ZoneHandler
 {
-	
 	/**
 	 * This call if creature die in zone.
 	 * @param attacker

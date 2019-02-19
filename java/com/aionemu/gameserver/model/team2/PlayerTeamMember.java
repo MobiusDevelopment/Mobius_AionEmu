@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class PlayerTeamMember implements TeamMember<Player>
 {
-	
 	final Player player;
 	private long lastOnlineTime;
 	

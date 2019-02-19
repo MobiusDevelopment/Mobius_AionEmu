@@ -24,7 +24,6 @@ import com.aionemu.gameserver.ai2.NpcAI2;
  */
 public class SpawnEventHandler
 {
-	
 	/**
 	 * @param npcAI
 	 */

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_CRAFT_ANIMATION extends AionServerPacket
 {
-	
 	private final int senderObjectId;
 	private final int targetObjectId;
 	private final int skillId;

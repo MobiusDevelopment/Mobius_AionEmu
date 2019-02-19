@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
 /**
  * @author Ranastic (Encom)
  */
-
 public class CM_ARCHDAEVA_CREATIVITY_RESET extends AionClientPacket
 {
 	private static final Logger log = LoggerFactory.getLogger(CM_ARCHDAEVA_CREATIVITY_RESET.class);

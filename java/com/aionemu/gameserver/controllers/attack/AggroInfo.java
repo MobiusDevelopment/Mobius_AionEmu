@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.gameobjects.AionObject;
  */
 public class AggroInfo
 {
-	
 	private final AionObject attacker;
 	private int hate;
 	private int damage;

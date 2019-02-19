@@ -36,7 +36,6 @@ import com.aionemu.gameserver.world.WorldMapInstance;
  */
 public class PlayerAllianceLeavedEvent extends PlayerLeavedEvent<PlayerAllianceMember, PlayerAlliance>
 {
-	
 	public PlayerAllianceLeavedEvent(PlayerAlliance alliance, Player player)
 	{
 		super(alliance, player);

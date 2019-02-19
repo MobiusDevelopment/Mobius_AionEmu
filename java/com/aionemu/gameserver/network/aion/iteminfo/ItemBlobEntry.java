@@ -31,7 +31,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  */
 public abstract class ItemBlobEntry extends PacketWriteHelper
 {
-	
 	private final ItemBlobType type;
 	Player owner;
 	Item ownerItem;

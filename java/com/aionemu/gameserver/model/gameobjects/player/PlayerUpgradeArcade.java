@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
 /**
  * @author Ranastic
  */
-
 public class PlayerUpgradeArcade
 {
 	Logger log = LoggerFactory.getLogger(PlayerUpgradeArcade.class);

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 public class cmd_ffa extends PlayerCommand
 {
 	public cmd_ffa()

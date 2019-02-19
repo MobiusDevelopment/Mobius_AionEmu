@@ -29,7 +29,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
  */
 public class TargetSpeciesProperty
 {
-	
 	public static boolean set(Skill skill, Properties properties)
 	{
 		final TargetSpeciesAttribute value = properties.getTargetSpecies();

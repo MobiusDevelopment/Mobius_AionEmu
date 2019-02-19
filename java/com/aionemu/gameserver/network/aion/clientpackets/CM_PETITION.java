@@ -29,7 +29,6 @@ import com.aionemu.gameserver.services.PetitionService;
  */
 public class CM_PETITION extends AionClientPacket
 {
-	
 	private int action;
 	private String title = "";
 	private String text = "";

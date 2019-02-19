@@ -28,7 +28,6 @@ import com.aionemu.gameserver.world.WorldPosition;
  */
 public class Friend
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(Friend.class);
 	private PlayerCommonData pcd;
 	

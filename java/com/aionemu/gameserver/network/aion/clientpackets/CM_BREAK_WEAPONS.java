@@ -25,7 +25,6 @@ import com.aionemu.gameserver.services.ArmsfusionService;
  */
 public class CM_BREAK_WEAPONS extends AionClientPacket
 {
-	
 	public CM_BREAK_WEAPONS(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

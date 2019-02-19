@@ -31,7 +31,6 @@ import com.aionemu.commons.utils.Rnd;
  */
 public class Crypt
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(Crypt.class);
 	
 	/**

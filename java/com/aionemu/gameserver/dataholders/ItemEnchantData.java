@@ -33,12 +33,10 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 /**
  * @author Ranastic (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "enchant_templates")
 public class ItemEnchantData
 {
-	
 	@XmlElement(name = "enchant_template", required = true)
 	protected List<ItemEnchantTemplate> enchantTemplates;
 	

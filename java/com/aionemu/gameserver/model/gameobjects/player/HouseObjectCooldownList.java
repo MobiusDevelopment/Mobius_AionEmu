@@ -23,7 +23,6 @@ import javolution.util.FastMap;
  */
 public class HouseObjectCooldownList
 {
-	
 	private FastMap<Integer, Long> houseObjectCooldowns;
 	
 	HouseObjectCooldownList(Player owner)

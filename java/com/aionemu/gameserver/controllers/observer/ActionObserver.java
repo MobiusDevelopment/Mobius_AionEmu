@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
  */
 public class ActionObserver
 {
-	
 	private AtomicBoolean used;
 	
 	private final ObserverType observerType;

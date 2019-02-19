@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.MathUtil;
  */
 public class FollowingNpcCheckTask implements Runnable
 {
-	
 	private final QuestEnv env;
 	private final DestinationChecker destinationChecker;
 	

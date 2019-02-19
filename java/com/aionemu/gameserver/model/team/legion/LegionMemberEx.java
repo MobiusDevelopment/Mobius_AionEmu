@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class LegionMemberEx extends LegionMember
 {
-	
 	private static Logger log = LoggerFactory.getLogger(LegionMemberEx.class);
 	
 	private String name;

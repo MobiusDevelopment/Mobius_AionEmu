@@ -42,7 +42,6 @@ import com.aionemu.gameserver.world.WorldPosition;
  */
 public class Summon extends Creature
 {
-	
 	private Player master;
 	private SummonMode mode = SummonMode.GUARD;
 	private final byte level;

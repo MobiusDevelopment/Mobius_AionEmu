@@ -26,7 +26,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
  */
 public class Geo extends AdminCommand
 {
-	
 	public Geo()
 	{
 		super("geo");

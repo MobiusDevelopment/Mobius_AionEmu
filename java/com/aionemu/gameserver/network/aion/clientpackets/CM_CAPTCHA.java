@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CM_CAPTCHA extends AionClientPacket
 {
-	
 	/**
 	 * Logger
 	 */

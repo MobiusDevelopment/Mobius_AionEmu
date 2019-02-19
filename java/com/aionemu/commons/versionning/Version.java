@@ -66,7 +66,6 @@ public class Version
 		{
 			log.error("Unable to get Soft information\nFile name '" + (jarName == null ? "null" : jarName.getAbsolutePath()) + "' isn't a valid jar", e);
 		}
-		
 	}
 	
 	@SuppressWarnings("resource")

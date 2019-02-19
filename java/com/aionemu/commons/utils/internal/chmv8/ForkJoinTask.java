@@ -105,7 +105,6 @@ import sun.misc.Unsafe;
  */
 public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 {
-	
 	/*
 	 * See the internal documentation of class ForkJoinPool for a general implementation overview. ForkJoinTasks are mainly responsible for maintaining their "status" field amidst relays to methods in ForkJoinWorkerThread and ForkJoinPool. The methods of this class are more-or-less layered into (1)
 	 * basic status maintenance (2) execution and awaiting completion (3) user-level methods that additionally report results. This is sometimes hard to see because this file orders exported methods in a way that flows well in javadocs.
@@ -1321,8 +1320,6 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 		{
 			invoke();
 		}
-		
-		private static final long serialVersionUID = 5232453952276885070L;
 	}
 	
 	/**
@@ -1365,8 +1362,6 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 		{
 			invoke();
 		}
-		
-		private static final long serialVersionUID = 5232453952276885070L;
 	}
 	
 	/**
@@ -1427,8 +1422,6 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 		{
 			invoke();
 		}
-		
-		private static final long serialVersionUID = 2838392045355241008L;
 	}
 	
 	/**
@@ -1463,9 +1456,6 @@ public abstract class ForkJoinTask<V> implements Future<V>, Serializable
 	{
 		return new AdaptedCallable<>(callable);
 	}
-	
-	// Serialization support
-	private static final long serialVersionUID = -7721805057305804111L;
 	
 	/**
 	 * Saves this task to a stream (that is, serializes it).

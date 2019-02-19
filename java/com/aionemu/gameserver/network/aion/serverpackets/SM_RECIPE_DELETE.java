@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_RECIPE_DELETE extends AionServerPacket
 {
-	
 	private final int recipeId;
 	
 	public SM_RECIPE_DELETE(int recipeId)

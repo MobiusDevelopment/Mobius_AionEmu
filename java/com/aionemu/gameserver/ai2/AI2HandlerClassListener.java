@@ -29,7 +29,6 @@ import com.aionemu.commons.utils.ClassUtils;
  */
 public class AI2HandlerClassListener implements ClassListener
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(AI2HandlerClassListener.class);
 	
 	@SuppressWarnings("unchecked")

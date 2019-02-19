@@ -27,7 +27,6 @@ import com.aionemu.loginserver.network.gs.GsConnectionFactoryImpl;
  */
 public class NetConnector
 {
-	
 	/**
 	 * NioServer instance that will handle io.
 	 */

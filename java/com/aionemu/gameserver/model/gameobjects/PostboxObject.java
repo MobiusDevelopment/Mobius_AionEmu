@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class PostboxObject extends HouseObject<HousingPostbox>
 {
-	
 	final AtomicReference<Player> usingPlayer = new AtomicReference<>();
 	
 	public PostboxObject(House owner, int objId, int templateId)

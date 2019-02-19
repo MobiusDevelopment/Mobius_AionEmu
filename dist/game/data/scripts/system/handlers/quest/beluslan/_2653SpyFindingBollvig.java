@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2653SpyFindingBollvig extends QuestHandler
 {
-	
 	private static final int questId = 2653;
 	
 	public _2653SpyFindingBollvig()

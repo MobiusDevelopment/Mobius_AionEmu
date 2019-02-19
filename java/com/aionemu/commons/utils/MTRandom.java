@@ -38,11 +38,6 @@ import java.util.Random;
  */
 public class MTRandom extends Random
 {
-	/**
-	 * Auto-generated serial version UID. Note that MTRandom does NOT support serialisation of its internal state and it may even be necessary to implement read/write methods to re-seed it properly. This is only here to make Eclipse shut up about it being missing.
-	 */
-	private static final long serialVersionUID = -515082678588212038L;
-	
 	// Constants used in the original C implementation
 	private static final int UPPER_MASK = 0x80000000;
 	private static final int LOWER_MASK = 0x7fffffff;

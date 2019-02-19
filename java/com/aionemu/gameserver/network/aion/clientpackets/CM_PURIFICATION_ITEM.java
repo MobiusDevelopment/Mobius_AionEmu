@@ -30,7 +30,6 @@ import com.aionemu.gameserver.services.item.ItemUpgradeService;
 /**
  * @author Ranastic (Encom)
  */
-
 public class CM_PURIFICATION_ITEM extends AionClientPacket
 {
 	@SuppressWarnings("unused")

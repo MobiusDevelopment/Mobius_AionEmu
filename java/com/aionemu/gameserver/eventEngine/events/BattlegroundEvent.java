@@ -25,7 +25,6 @@ import com.aionemu.gameserver.services.events.LadderService;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 public class BattlegroundEvent extends Event
 {
 	private final List<Integer> battlegrounds = new ArrayList<>();

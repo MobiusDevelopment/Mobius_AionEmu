@@ -31,7 +31,6 @@ import com.aionemu.gameserver.geoEngine.utils.BufferUtils;
  */
 public final class Matrix4f implements Cloneable
 {
-	
 	private static final Logger logger = Logger.getLogger(Matrix4f.class.getName());
 	public float m00, m01, m02, m03;
 	public float m10, m11, m12, m13;

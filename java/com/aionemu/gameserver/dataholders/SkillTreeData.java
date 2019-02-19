@@ -38,7 +38,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SkillTreeData
 {
-	
 	@XmlElement(name = "skill")
 	private List<SkillLearnTemplate> skillTemplates;
 	

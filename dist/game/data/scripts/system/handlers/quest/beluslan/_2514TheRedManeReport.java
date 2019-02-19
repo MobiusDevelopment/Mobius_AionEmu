@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2514TheRedManeReport extends QuestHandler
 {
-	
 	private static final int questId = 2514;
 	
 	public _2514TheRedManeReport()

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1169LightningfootTuka extends QuestHandler
 {
-	
 	private static final int questId = 1169;
 	
 	public _1169LightningfootTuka()

@@ -27,7 +27,6 @@ import com.aionemu.loginserver.taskmanager.handler.TaskFromDBHandler;
  */
 public class ShutdownHandler extends TaskFromDBHandler
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(ShutdownHandler.class);
 	
 	@Override

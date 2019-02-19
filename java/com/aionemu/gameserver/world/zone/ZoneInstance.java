@@ -37,7 +37,6 @@ import javolution.util.FastMap;
  */
 public class ZoneInstance implements Comparable<ZoneInstance>
 {
-	
 	private final ZoneInfo template;
 	private final int mapId;
 	private final Map<Integer, Creature> creatures = new FastMap<>();

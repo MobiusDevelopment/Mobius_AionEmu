@@ -23,7 +23,6 @@ import com.aionemu.commons.configuration.Property;
  */
 public class PunishmentConfig
 {
-	
 	@Property(key = "gameserver.punishment.enable", defaultValue = "false")
 	public static boolean PUNISHMENT_ENABLE;
 	

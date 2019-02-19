@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.QuestEngine;
  */
 public class QuestEnv
 {
-	
 	private VisibleObject visibleObject;
 	private Player player;
 	private int questId;

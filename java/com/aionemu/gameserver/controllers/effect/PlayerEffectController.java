@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class PlayerEffectController extends EffectController
 {
-	
 	public PlayerEffectController(Creature owner)
 	{
 		super(owner);
@@ -148,7 +147,6 @@ public class PlayerEffectController extends EffectController
 		{
 			PacketSendUtility.sendPacket(getOwner(), new SM_ABNORMAL_STATE(Collections.singletonList(effect), abnormals));
 		}
-		
 	}
 	
 	@Override

@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.templates.mail;
  */
 public abstract interface IMailFormatter
 {
-	
 	MailPartType getType();
 	
 	String getFormattedString(MailPartType paramMailPartType);

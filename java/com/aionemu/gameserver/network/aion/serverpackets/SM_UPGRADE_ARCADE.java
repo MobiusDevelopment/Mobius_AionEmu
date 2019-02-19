@@ -22,7 +22,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Ranastic
  */
-
 public class SM_UPGRADE_ARCADE extends AionServerPacket
 {
 	private final int type;

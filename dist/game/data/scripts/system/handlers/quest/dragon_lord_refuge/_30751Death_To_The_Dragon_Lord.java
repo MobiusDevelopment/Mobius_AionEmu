@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30751Death_To_The_Dragon_Lord extends QuestHandler
 {
-	
 	private static final int questId = 30751;
 	private static final int npcs[] =
 	{

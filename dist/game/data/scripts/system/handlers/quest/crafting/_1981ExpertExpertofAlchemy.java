@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1981ExpertExpertofAlchemy extends QuestHandler
 {
-	
 	private static final int questId = 1981;
 	
 	public _1981ExpertExpertofAlchemy()

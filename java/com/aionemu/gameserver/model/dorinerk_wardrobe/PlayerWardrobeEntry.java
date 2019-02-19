@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
  */
 public class PlayerWardrobeEntry extends WardrobeEntry
 {
-	
 	private PersistentState persistentState;
 	
 	public PlayerWardrobeEntry(int itemId, int slot, int reskin_count, PersistentState persistentState)

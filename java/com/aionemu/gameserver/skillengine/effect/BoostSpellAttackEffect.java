@@ -27,5 +27,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "BoostSpellAttackEffect")
 public class BoostSpellAttackEffect extends BuffEffect
 {
-	
 }

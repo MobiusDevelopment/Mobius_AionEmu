@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.ls.serverpackets.SM_GS_CHARACTER;
  */
 public class CM_GS_CHARACTER_RESPONSE extends LsClientPacket
 {
-	
 	public CM_GS_CHARACTER_RESPONSE(int opCode)
 	{
 		super(opCode);

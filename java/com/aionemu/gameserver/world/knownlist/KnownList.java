@@ -41,7 +41,6 @@ import javolution.util.FastMap;
  */
 public class KnownList
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(KnownList.class);
 	
 	/**

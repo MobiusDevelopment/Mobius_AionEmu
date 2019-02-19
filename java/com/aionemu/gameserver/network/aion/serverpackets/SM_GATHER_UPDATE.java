@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_GATHER_UPDATE extends AionServerPacket
 {
-	
 	private final GatherableTemplate template;
 	private final int action;
 	private final int itemId;

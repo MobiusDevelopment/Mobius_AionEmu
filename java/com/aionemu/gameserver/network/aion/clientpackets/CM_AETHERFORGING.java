@@ -24,7 +24,6 @@ import com.aionemu.gameserver.services.craft.CraftService;
 /**
  * @author Ranastic
  */
-
 public class CM_AETHERFORGING extends AionClientPacket
 {
 	private int itemID;

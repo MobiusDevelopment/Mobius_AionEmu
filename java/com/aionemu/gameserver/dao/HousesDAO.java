@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.templates.housing.HousingLand;
  */
 public abstract class HousesDAO implements IDFactoryAwareDAO
 {
-	
 	@Override
 	public String getClassName()
 	{

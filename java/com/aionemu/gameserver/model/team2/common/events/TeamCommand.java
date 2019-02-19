@@ -25,7 +25,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public enum TeamCommand
 {
-	
 	GROUP_BAN_MEMBER(2),
 	GROUP_SET_LEADER(3),
 	GROUP_REMOVE_MEMBER(6),

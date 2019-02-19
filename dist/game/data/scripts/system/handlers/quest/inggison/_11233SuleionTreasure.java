@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _11233SuleionTreasure extends QuestHandler
 {
-	
 	private static final int questId = 11233;
 	
 	public _11233SuleionTreasure()

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.geoEngine.math.Vector3f;
  */
 public class Intersection
 {
-	
 	private static void findMinMax(float x0, float x1, float x2, Vector3f minMax)
 	{
 		minMax.set(x0, x0, 0);

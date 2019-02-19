@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class FollowStartService
 {
-	
 	public static Future<?> newFollowingToTargetCheckTask(Summon follower, Creature leading)
 	{
 		return ThreadPoolManager.getInstance().scheduleAtFixedRate(new FollowSummonTaskAI(leading, follower), 1000, 1000);

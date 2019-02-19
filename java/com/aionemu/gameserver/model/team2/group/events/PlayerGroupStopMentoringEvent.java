@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class PlayerGroupStopMentoringEvent extends PlayerStopMentoringEvent<PlayerGroup>
 {
-	
 	/**
 	 * @param group
 	 * @param player

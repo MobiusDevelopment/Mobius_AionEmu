@@ -61,7 +61,6 @@ import com.google.common.base.Preconditions;
  */
 public class Npc extends Creature
 {
-	
 	private WalkerGroup walkerGroup;
 	private boolean isQuestBusy = false;
 	private final NpcSkillList skillList;

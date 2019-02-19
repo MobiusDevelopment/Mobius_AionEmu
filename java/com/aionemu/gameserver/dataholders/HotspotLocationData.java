@@ -31,7 +31,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlRootElement(name = "hotspot_location")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HotspotLocationData

@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.templates.assemblednpc.AssembledNpcTemplate.
  */
 public class AssembledNpcPart
 {
-	
 	private final Integer object;
 	private final AssembledNpcPartTemplate template;
 	

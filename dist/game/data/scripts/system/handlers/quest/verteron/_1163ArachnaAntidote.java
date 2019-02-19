@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1163ArachnaAntidote extends QuestHandler
 {
-	
 	private static final int questId = 1163;
 	
 	public _1163ArachnaAntidote()

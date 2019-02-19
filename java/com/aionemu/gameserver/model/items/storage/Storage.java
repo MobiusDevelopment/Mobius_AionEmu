@@ -38,7 +38,6 @@ import javolution.util.FastList;
  */
 public abstract class Storage implements IStorage
 {
-	
 	private final ItemStorage itemStorage;
 	private Item kinahItem;
 	private final StorageType storageType;

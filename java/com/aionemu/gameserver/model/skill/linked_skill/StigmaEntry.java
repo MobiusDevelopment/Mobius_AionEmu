@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
  */
 public abstract class StigmaEntry
 {
-	
 	protected final int itemId;
 	protected final String itemName;
 	

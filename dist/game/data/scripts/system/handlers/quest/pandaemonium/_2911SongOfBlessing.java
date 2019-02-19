@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2911SongOfBlessing extends QuestHandler
 {
-	
 	private static final int questId = 2911;
 	
 	public _2911SongOfBlessing()

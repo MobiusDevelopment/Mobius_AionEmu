@@ -32,7 +32,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class cmd_gmlist extends PlayerCommand
 {
-	
 	public cmd_gmlist()
 	{
 		super("gmlist");
@@ -154,6 +153,5 @@ public class cmd_gmlist extends PlayerCommand
 			PacketSendUtility.sendMessage(player, "There are no GM Online!");
 			PacketSendUtility.sendMessage(player, "====================");
 		}
-		
 	}
 }

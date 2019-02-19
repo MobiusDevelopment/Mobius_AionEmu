@@ -24,7 +24,6 @@ import com.aionemu.loginserver.network.gs.GsServerPacket;
  */
 public class SM_PREMIUM_RESPONSE extends GsServerPacket
 {
-	
 	private final int requestId;
 	private final int result;
 	private final long points;

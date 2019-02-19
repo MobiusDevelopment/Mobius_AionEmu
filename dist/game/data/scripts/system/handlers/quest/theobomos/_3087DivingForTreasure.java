@@ -28,10 +28,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _3087DivingForTreasure extends QuestHandler
 {
-	
 	private static final int questId = 3087;
 	
 	public _3087DivingForTreasure()

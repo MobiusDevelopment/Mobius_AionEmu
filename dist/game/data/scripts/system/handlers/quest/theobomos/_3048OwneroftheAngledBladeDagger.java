@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _3048OwneroftheAngledBladeDagger extends QuestHandler
 {
-	
 	private static final int questId = 3048;
 	
 	public _3048OwneroftheAngledBladeDagger()

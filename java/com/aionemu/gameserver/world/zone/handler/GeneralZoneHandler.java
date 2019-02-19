@@ -24,7 +24,6 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
  */
 public class GeneralZoneHandler implements ZoneHandler
 {
-	
 	@Override
 	public void onEnterZone(Creature player, ZoneInstance zone)
 	{

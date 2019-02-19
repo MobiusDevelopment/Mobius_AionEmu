@@ -21,7 +21,6 @@ package com.aionemu.loginserver.service.ptransfer;
  */
 public enum PlayerTransferResultStatus
 {
-	
 	SEND_INFO(20),
 	OK(21),
 	ERROR(22),

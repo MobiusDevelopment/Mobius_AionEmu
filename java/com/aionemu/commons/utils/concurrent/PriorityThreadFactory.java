@@ -27,7 +27,6 @@ import com.aionemu.commons.network.util.ThreadUncaughtExceptionHandler;
  */
 public class PriorityThreadFactory implements ThreadFactory
 {
-	
 	/**
 	 * Priority of new threads
 	 */

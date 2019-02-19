@@ -27,7 +27,6 @@ import com.aionemu.gameserver.services.events.EventsService;
 
 public class _80001FestiveDaevasDay extends QuestHandler
 {
-	
 	private static final int questId = 80001;
 	
 	public _80001FestiveDaevasDay()

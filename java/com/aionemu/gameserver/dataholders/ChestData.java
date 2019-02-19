@@ -37,7 +37,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ChestData
 {
-	
 	@XmlElement(name = "chest")
 	private List<ChestTemplate> chests;
 	

@@ -33,7 +33,6 @@ import com.google.common.base.Predicate;
  */
 public class PlayerDisconnectedEvent implements TeamEvent, Predicate<PlayerAllianceMember>
 {
-	
 	private final PlayerAlliance alliance;
 	private final Player disconnected;
 	private final PlayerAllianceMember disconnectedMember;

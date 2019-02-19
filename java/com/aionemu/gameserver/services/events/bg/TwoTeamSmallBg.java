@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 public class TwoTeamSmallBg extends Battleground
 {
 	private final ScheduledFuture<?> extraTask = null;

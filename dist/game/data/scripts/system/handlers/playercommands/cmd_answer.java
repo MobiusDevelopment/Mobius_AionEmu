@@ -65,7 +65,6 @@ public class cmd_answer extends PlayerCommand
 			PacketSendUtility.sendMessage(player, "You decide.");
 			WeddingService.getInstance().cancelWedding(player);
 		}
-		
 	}
 	
 	@Override

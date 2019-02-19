@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1111InsomniaMedicine extends QuestHandler
 {
-	
 	private static final int questId = 1111;
 	
 	public _1111InsomniaMedicine()

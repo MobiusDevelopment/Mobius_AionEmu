@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerScripts;
  */
 public abstract class HouseScriptsDAO implements DAO
 {
-	
 	@Override
 	public final String getClassName()
 	{

@@ -37,7 +37,6 @@ import javolution.util.FastMap;
 @XmlRootElement(name = "rift_locations")
 public class RiftData
 {
-	
 	@XmlElement(name = "rift_location")
 	private List<RiftTemplate> riftTemplates;
 	@XmlTransient

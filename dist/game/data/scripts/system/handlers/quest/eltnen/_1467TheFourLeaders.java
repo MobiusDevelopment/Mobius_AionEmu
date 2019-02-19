@@ -29,10 +29,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _1467TheFourLeaders extends QuestHandler
 {
-	
 	private static final int questId = 1467;
 	
 	public _1467TheFourLeaders()

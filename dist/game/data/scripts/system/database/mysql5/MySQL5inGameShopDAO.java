@@ -37,7 +37,6 @@ import javolution.util.FastMap;
  */
 public class MySQL5inGameShopDAO extends InGameShopDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5inGameShopDAO.class);
 	public static final String SELECT_QUERY = "SELECT `object_id`, `item_id`, `item_count`, `item_price`, `category`, `sub_category`, `list`, `sales_ranking`, `item_type`, `gift`, `title_description`, `description` FROM `ingameshop`";
 	public static final String DELETE_QUERY = "DELETE FROM `ingameshop` WHERE `item_id`=? AND `category`=? AND `sub_category`=? AND `list`=?";

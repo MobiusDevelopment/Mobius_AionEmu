@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_FIND_GROUP extends AionServerPacket
 {
-	
 	private final int action;
 	private int lastUpdate;
 	private Collection<FindGroup> findGroups;

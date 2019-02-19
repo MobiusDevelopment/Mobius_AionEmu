@@ -34,7 +34,6 @@ import com.aionemu.loginserver.model.BannedIP;
  */
 public class BannedIpController
 {
-	
 	/**
 	 * Logger for this class.
 	 */

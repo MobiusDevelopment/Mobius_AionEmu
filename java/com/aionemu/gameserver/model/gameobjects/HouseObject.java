@@ -39,7 +39,6 @@ import com.aionemu.gameserver.world.knownlist.PlayerAwareKnownList;
  */
 public abstract class HouseObject<T extends PlaceableHouseObject>extends VisibleObject implements IExpirable
 {
-	
 	private int expireEnd;
 	private float x;
 	private float y;

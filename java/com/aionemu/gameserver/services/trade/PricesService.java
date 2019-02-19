@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.siege.Influence;
  */
 public class PricesService
 {
-	
 	/**
 	 * Used in SM_PRICES
 	 * @param playerRace

@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.svs.SvsStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class Gate extends Panesterra<SvsLocation>
 {
 	public Gate(SvsLocation svs)

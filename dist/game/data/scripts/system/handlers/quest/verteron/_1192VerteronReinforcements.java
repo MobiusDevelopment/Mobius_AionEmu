@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1192VerteronReinforcements extends QuestHandler
 {
-	
 	private static final int questId = 1192;
 	
 	public _1192VerteronReinforcements()

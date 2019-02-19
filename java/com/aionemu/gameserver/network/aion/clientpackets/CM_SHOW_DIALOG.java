@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_SHOW_DIALOG extends AionClientPacket
 {
-	
 	private int targetObjectId;
 	
 	/**

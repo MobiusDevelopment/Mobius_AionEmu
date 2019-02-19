@@ -25,7 +25,6 @@ import com.aionemu.gameserver.services.abyss.AbyssPointsService;
  */
 public class AbyssPointsListener extends AbyssPointsService.AddAPGlobalCallback
 {
-	
 	private final Siege<?> siege;
 	
 	public AbyssPointsListener(Siege<?> siege)

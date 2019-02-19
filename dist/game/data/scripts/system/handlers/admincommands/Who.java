@@ -26,7 +26,6 @@ import com.aionemu.gameserver.world.World;
 
 public class Who extends AdminCommand
 {
-	
 	public Who()
 	{
 		super("who");

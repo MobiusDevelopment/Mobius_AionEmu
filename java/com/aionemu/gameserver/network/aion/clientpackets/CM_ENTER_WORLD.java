@@ -27,7 +27,6 @@ import com.aionemu.gameserver.services.player.PlayerEnterWorldService;
  */
 public class CM_ENTER_WORLD extends AionClientPacket
 {
-	
 	/**
 	 * Object Id of player that is entering world
 	 */

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_UPDATE_NOTE;
  */
 public class CM_SET_NOTE extends AionClientPacket
 {
-	
 	private String note;
 	
 	public CM_SET_NOTE(int opcode, State state, State... restStates)

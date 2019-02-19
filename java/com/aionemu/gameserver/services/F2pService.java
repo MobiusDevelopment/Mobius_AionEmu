@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * Created by wanke on 11/02/2017.
  */
-
 public class F2pService
 {
 	private static F2pBonus f2p;

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.IuService;
  * @author Rinzler (Encom)
  * @param <IUL>
  */
-
 public abstract class Iu<IUL extends IuLocation>
 {
 	private boolean started;

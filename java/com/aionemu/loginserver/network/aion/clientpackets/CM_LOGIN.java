@@ -42,7 +42,6 @@ import com.aionemu.loginserver.utils.BruteForceProtector;
  */
 public class CM_LOGIN extends AionClientPacket
 {
-	
 	/**
 	 * Logger for this class.
 	 */

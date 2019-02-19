@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _3968PalentinesRequest extends QuestHandler
 {
-	
 	private static final int questId = 3968;
 	
 	public _3968PalentinesRequest()

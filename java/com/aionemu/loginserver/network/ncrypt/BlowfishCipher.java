@@ -22,7 +22,6 @@ package com.aionemu.loginserver.network.ncrypt;
  */
 public class BlowfishCipher
 {
-	
 	/**
 	 * HEX-digits of Pi (Math), arranged in four S boxes and one P array for Blowfish Cipher
 	 */

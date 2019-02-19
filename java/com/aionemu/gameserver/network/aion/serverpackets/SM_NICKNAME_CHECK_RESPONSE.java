@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_NICKNAME_CHECK_RESPONSE extends AionServerPacket
 {
-	
 	/**
 	 * Value of response object
 	 */

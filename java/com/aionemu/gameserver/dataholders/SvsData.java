@@ -33,7 +33,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "svs")
 public class SvsData

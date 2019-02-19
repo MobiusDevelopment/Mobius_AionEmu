@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class UnBanChar extends AdminCommand
 {
-	
 	public UnBanChar()
 	{
 		super("unbanchar");

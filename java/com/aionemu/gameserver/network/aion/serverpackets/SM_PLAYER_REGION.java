@@ -25,7 +25,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class SM_PLAYER_REGION extends AionServerPacket
 {
-	
 	private final ZoneName subZone;
 	
 	public SM_PLAYER_REGION(ZoneName subZone)

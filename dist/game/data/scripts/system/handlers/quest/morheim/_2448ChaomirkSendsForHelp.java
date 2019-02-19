@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2448ChaomirkSendsForHelp extends QuestHandler
 {
-	
 	private static final int questId = 2448;
 	
 	int rewardIndex;

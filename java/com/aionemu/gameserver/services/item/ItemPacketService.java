@@ -45,7 +45,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class ItemPacketService
 {
-	
 	public static enum ItemUpdateType
 	{
 		EQUIP_UNEQUIP(-1, false), // internal usage only

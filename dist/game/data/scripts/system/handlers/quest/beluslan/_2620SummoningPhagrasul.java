@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _2620SummoningPhagrasul extends QuestHandler
 {
-	
 	private static final int questId = 2620;
 	private static final int[] mob_ids =
 	{

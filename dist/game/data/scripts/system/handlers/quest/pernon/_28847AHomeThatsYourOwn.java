@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _28847AHomeThatsYourOwn extends QuestHandler
 {
-	
 	private static final int questId = 28847;
 	
 	public _28847AHomeThatsYourOwn()

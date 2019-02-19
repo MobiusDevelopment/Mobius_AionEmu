@@ -43,7 +43,6 @@ import gnu.trove.map.hash.THashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PlayerInitialData
 {
-	
 	@XmlElement(name = "player_data")
 	private List<PlayerCreationData> dataList = new ArrayList<>();
 	

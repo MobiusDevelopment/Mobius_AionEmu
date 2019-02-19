@@ -22,11 +22,6 @@ package com.aionemu.commons.database.dao;
  */
 public class DAOAlreadyRegisteredException extends DAOException
 {
-	/**
-	 * SerialID
-	 */
-	private static final long serialVersionUID = -4966845154050833016L;
-	
 	public DAOAlreadyRegisteredException()
 	{
 	}

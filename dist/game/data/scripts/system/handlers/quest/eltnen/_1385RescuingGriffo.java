@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1385RescuingGriffo extends QuestHandler
 {
-	
 	private static final int questId = 1385;
 	
 	public _1385RescuingGriffo()

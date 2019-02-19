@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2965AncientWeapons extends QuestHandler
 {
-	
 	private static final int questId = 2965;
 	
 	public _2965AncientWeapons()

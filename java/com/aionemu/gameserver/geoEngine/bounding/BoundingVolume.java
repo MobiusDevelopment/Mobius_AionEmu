@@ -31,7 +31,6 @@ import com.aionemu.gameserver.geoEngine.math.Vector3f;
  */
 public abstract class BoundingVolume implements Collidable
 {
-	
 	public enum Type
 	{
 		

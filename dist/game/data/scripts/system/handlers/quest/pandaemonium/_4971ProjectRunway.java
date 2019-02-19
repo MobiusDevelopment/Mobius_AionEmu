@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _4971ProjectRunway extends QuestHandler
 {
-	
 	private static final int questId = 4971;
 	
 	public _4971ProjectRunway()

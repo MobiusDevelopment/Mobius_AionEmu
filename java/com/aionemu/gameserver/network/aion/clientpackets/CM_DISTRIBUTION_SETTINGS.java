@@ -32,7 +32,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_DISTRIBUTION_SETTINGS extends AionClientPacket
 {
-	
 	@SuppressWarnings("unused")
 	private int unk1;
 	private int lootrul;

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_CHARACTER_SELECT extends AionServerPacket
 {
-	
 	private final int type; // 0: new passkey input window, 1: passkey input window, 2: message window
 	private int messageType; // 0: newpasskey complete, 2: passkey edit complete, 3: passkey input
 	private int wrongCount;

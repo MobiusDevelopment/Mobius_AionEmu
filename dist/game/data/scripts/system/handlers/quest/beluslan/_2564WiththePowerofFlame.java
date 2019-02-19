@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2564WiththePowerofFlame extends QuestHandler
 {
-	
 	private static final int questId = 2564;
 	private static final int[] npc_ids =
 	{

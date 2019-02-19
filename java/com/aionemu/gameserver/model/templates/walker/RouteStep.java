@@ -30,7 +30,6 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RouteStep
 {
-	
 	@XmlAttribute(name = "rest_time", required = true)
 	private Integer time = 0;
 	

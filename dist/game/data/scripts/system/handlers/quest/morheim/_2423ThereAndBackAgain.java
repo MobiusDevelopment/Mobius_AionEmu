@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
  */
 public class _2423ThereAndBackAgain extends QuestHandler
 {
-	
 	private static final int questId = 2423;
 	
 	public _2423ThereAndBackAgain()

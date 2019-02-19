@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30003SecretOfTheUdasTemple extends QuestHandler
 {
-	
 	private static final int questId = 30003;
 	
 	public _30003SecretOfTheUdasTemple()

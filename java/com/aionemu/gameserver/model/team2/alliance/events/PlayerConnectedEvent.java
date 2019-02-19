@@ -33,7 +33,6 @@ import com.google.common.base.Predicate;
  */
 public class PlayerConnectedEvent extends AlwaysTrueTeamEvent implements Predicate<PlayerAllianceMember>
 {
-	
 	private final PlayerAlliance alliance;
 	private final Player connected;
 	private PlayerAllianceMember connectedMember;

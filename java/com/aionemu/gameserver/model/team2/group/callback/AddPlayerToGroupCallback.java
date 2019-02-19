@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.team2.group.PlayerGroup;
 @SuppressWarnings("rawtypes")
 public abstract class AddPlayerToGroupCallback implements Callback
 {
-	
 	@Override
 	public CallbackResult beforeCall(Object obj, Object[] args)
 	{

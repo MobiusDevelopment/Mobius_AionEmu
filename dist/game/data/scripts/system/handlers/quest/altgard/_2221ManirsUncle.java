@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2221ManirsUncle extends QuestHandler
 {
-	
 	private static final int questId = 2221;
 	
 	public _2221ManirsUncle()

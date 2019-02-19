@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _1182AncientStoneFragment extends QuestHandler
 {
-	
 	private static final int questId = 1182;
 	
 	public _1182AncientStoneFragment()

@@ -32,7 +32,6 @@ import javolution.util.FastList;
 
 public class DredgionService2
 {
-	
 	private boolean registerAvailable;
 	private final FastList<Integer> playersWithCooldown = new FastList<>();
 	private final SM_AUTO_GROUP[] autoGroupUnreg, autoGroupReg;

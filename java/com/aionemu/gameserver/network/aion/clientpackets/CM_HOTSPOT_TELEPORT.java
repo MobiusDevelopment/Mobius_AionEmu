@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Ranastic
  */
-
 public class CM_HOTSPOT_TELEPORT extends AionClientPacket
 {
 	private int action;

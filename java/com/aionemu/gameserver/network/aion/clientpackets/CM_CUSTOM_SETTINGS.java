@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CM_CUSTOM_SETTINGS extends AionClientPacket
 {
-	
 	private int display;
 	private int deny;
 	

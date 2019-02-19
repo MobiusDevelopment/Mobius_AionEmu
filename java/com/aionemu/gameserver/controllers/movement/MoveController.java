@@ -21,7 +21,6 @@ package com.aionemu.gameserver.controllers.movement;
  */
 public interface MoveController
 {
-	
 	void moveToDestination();
 	
 	float getTargetX2();

@@ -23,7 +23,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class LimitedItem
 {
-	
 	private int itemId;
 	private int sellLimit;
 	private int buyLimit;

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2539TrystoftheShadow extends QuestHandler
 {
-	
 	private static final int questId = 2539;
 	
 	public _2539TrystoftheShadow()

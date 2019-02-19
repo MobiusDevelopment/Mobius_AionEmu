@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1122DeliveringPernossRobe extends QuestHandler
 {
-	
 	private static final int questId = 1122;
 	
 	public _1122DeliveringPernossRobe()

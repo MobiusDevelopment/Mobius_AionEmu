@@ -26,10 +26,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Balthazar
  */
-
 public class _1626LightThePath extends QuestHandler
 {
-	
 	private static final int questId = 1626;
 	
 	public _1626LightThePath()

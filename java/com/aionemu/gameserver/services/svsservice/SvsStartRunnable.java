@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * @author Rinzler (Encom)
  */
-
 public class SvsStartRunnable implements Runnable
 {
 	final int id;

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class AddSkill extends AdminCommand
 {
-	
 	public AddSkill()
 	{
 		super("addskill");

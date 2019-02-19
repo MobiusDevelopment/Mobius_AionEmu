@@ -23,7 +23,6 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
  */
 public class WorldMap2DInstance extends WorldMapInstance
 {
-	
 	private int ownerId;
 	
 	public WorldMap2DInstance(WorldMap parent, int instanceId, int ownerId)

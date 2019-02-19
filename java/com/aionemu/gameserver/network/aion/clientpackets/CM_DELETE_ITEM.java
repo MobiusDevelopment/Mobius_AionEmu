@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CM_DELETE_ITEM extends AionClientPacket
 {
-	
 	public int itemObjectId;
 	
 	public CM_DELETE_ITEM(int opcode, State state, State... restStates)

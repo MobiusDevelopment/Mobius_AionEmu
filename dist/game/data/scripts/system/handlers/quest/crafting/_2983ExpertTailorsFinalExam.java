@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2983ExpertTailorsFinalExam extends QuestHandler
 {
-	
 	private static final int questId = 2983;
 	
 	public _2983ExpertTailorsFinalExam()

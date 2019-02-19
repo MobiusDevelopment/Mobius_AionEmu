@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _4004TheSeedsOfHope extends QuestHandler
 {
-	
 	private static final int questId = 4004;
 	
 	public _4004TheSeedsOfHope()

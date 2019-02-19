@@ -37,7 +37,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NpcSkillData
 {
-	
 	@XmlElement(name = "npcskills")
 	private List<NpcSkillTemplates> npcSkills;
 	
@@ -55,7 +54,6 @@ public class NpcSkillData
 				LoggerFactory.getLogger(NpcSkillData.class).error("NO SKILL");
 			}
 		}
-		
 	}
 	
 	public int size()

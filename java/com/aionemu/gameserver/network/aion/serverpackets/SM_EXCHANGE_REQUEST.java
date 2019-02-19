@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_EXCHANGE_REQUEST extends AionServerPacket
 {
-	
 	private final String receiver;
 	
 	public SM_EXCHANGE_REQUEST(String receiver)

@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.gm;
  */
 public enum GmPanelCommands
 {
-	
 	/**
 	 * @STANDARD FUNCTION TAB
 	 */

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public abstract class WeddingCommand extends ChatCommand
 {
-	
 	public WeddingCommand(String alias)
 	{
 		super(alias);

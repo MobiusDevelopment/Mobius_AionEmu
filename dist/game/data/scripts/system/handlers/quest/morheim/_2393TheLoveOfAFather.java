@@ -35,7 +35,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class _2393TheLoveOfAFather extends QuestHandler
 {
-	
 	private static final int questId = 2393;
 	
 	public _2393TheLoveOfAFather()

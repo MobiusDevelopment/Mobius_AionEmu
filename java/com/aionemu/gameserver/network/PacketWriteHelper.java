@@ -23,7 +23,6 @@ import java.nio.ByteBuffer;
  */
 public abstract class PacketWriteHelper
 {
-	
 	protected abstract void writeMe(ByteBuffer buf);
 	
 	/**

@@ -19,7 +19,6 @@ package com.aionemu.gameserver.model.anoha;
 /**
  * @author Rinzler (Encom)
  */
-
 public enum AnohaStateType
 {
 	FIGHT,

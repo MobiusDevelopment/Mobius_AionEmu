@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Cooldown extends AdminCommand
 {
-	
 	public Cooldown()
 	{
 		super("cooldown");

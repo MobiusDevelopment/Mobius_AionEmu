@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_ASCENSION_MORPH extends AionServerPacket
 {
-	
 	private final int inascension;
 	
 	public SM_ASCENSION_MORPH(int inascension)

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _29048SeriphimTeachings extends QuestHandler
 {
-	
 	private static final int questId = 29048;
 	
 	public _29048SeriphimTeachings()

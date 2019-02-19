@@ -122,7 +122,6 @@ public abstract class HealOverTimeEffect extends AbstractOverTimeEffect
 				break;
 			}
 		}
-		
 	}
 	
 	protected abstract int getCurrentStatValue(Effect effect);

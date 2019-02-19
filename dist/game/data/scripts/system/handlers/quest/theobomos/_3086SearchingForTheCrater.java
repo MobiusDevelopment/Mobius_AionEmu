@@ -26,10 +26,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Balthazar
  */
-
 public class _3086SearchingForTheCrater extends QuestHandler
 {
-	
 	private static final int questId = 3086;
 	
 	public _3086SearchingForTheCrater()

@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.gameobjects.player.MacroList;
  */
 public abstract class PlayerMacrossesDAO implements DAO
 {
-	
 	/**
 	 * Returns unique identifier for PlayerMacroDAO
 	 * @return unique identifier for PlayerMacroDAO

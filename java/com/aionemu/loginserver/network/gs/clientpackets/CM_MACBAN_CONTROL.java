@@ -24,7 +24,6 @@ import com.aionemu.loginserver.network.gs.GsClientPacket;
  */
 public class CM_MACBAN_CONTROL extends GsClientPacket
 {
-	
 	private byte type;
 	private String address;
 	private String details;

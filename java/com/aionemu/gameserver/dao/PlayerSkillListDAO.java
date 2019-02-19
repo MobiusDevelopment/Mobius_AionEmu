@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.skill.PlayerSkillList;
  */
 public abstract class PlayerSkillListDAO implements DAO
 {
-	
 	/**
 	 * Returns unique identifier for PlayerSkillListDAO
 	 * @return unique identifier for PlayerSkillListDAO

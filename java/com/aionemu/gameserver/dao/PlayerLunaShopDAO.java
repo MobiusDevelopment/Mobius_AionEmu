@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 /**
  * Created by wanke on 13/02/2017.
  */
-
 public abstract class PlayerLunaShopDAO implements DAO
 {
 	@Override

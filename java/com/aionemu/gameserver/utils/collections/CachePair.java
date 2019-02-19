@@ -28,7 +28,6 @@ package com.aionemu.gameserver.utils.collections;
 })
 public class CachePair<K extends Comparable, V> implements Comparable<CachePair>
 {
-	
 	public CachePair(K key, V value)
 	{
 		this.key = key;

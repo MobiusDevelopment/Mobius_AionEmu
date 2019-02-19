@@ -37,7 +37,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PetSkillData
 {
-	
 	@XmlElement(name = "pet_skill")
 	private List<PetSkillTemplate> petSkills;
 	

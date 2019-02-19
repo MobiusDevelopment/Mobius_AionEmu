@@ -19,7 +19,6 @@ package com.aionemu.gameserver.model.dynamicrift;
 /**
  * @author Rinzler (Encom)
  */
-
 public enum DynamicRiftStateType
 {
 	OPEN,

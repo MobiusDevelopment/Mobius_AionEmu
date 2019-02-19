@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Html extends AdminCommand
 {
-	
 	public Html()
 	{
 		super("html");

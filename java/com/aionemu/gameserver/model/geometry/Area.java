@@ -27,7 +27,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public interface Area
 {
-	
 	/**
 	 * Returns true if point is inside area ignoring z value
 	 * @param point point to check

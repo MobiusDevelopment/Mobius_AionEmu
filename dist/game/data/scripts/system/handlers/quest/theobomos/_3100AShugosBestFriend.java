@@ -28,10 +28,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _3100AShugosBestFriend extends QuestHandler
 {
-	
 	private static final int questId = 3100;
 	
 	public _3100AShugosBestFriend()

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _3008WickedThiefKelaino extends QuestHandler
 {
-	
 	private static final int questId = 3008;
 	
 	public _3008WickedThiefKelaino()

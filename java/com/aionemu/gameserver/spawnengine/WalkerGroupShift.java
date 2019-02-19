@@ -21,7 +21,6 @@ package com.aionemu.gameserver.spawnengine;
  */
 public class WalkerGroupShift
 {
-	
 	private float sagittalShift; // left and right (sides)
 	private float coronalShift; // or dorsoventral (back and front)
 	private float angle; // if positioned in circle

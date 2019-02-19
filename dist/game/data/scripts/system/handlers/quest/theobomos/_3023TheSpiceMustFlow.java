@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _3023TheSpiceMustFlow extends QuestHandler
 {
-	
 	private static final int questId = 3023;
 	
 	public _3023TheSpiceMustFlow()

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LEGION_UPDATE_MEMBER extends AionServerPacket
 {
-	
 	private static final byte OFFLINE = 0x00;
 	private static final byte ONLINE = 0x01;
 	private Player player;

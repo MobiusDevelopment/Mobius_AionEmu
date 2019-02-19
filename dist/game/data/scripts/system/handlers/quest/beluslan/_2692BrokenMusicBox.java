@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2692BrokenMusicBox extends QuestHandler
 {
-	
 	private static final int questId = 2692;
 	
 	public _2692BrokenMusicBox()

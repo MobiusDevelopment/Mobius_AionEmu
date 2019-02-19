@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.templates.item.WeaponType;
  */
 public class StatWeaponMasteryFunction extends StatRateFunction
 {
-	
 	private final WeaponType weaponType;
 	
 	public StatWeaponMasteryFunction(WeaponType weaponType, StatEnum name, int value, boolean bonus)
@@ -65,7 +64,6 @@ public class StatWeaponMasteryFunction extends StatRateFunction
 				}
 			}
 		}
-		
 	}
 	
 }

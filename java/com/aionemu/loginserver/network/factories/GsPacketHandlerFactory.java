@@ -44,7 +44,6 @@ import com.aionemu.loginserver.network.gs.clientpackets.CM_PTRANSFER_CONTROL;
  */
 public class GsPacketHandlerFactory
 {
-	
 	/**
 	 * logger for this class
 	 */

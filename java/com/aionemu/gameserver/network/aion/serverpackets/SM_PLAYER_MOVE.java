@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_PLAYER_MOVE extends AionServerPacket
 {
-	
 	private final float x;
 	private final float y;
 	private final float z;

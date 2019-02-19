@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Ranastic (Encom)
  */
-
 public class CreativitySkillService
 {
 	public void onSkillApply(Player player, int type, int size, int id, int point)

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
  */
 public class StatRateFunction extends StatFunction
 {
-	
 	public StatRateFunction()
 	{
 	}

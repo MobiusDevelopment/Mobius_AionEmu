@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.ls.LoginServer;
 // TODO: L2AUTH? Really? :O
 public class CM_L2AUTH_LOGIN_CHECK extends AionClientPacket
 {
-	
 	/**
 	 * playOk2 is part of session key - its used for security purposes we will check if this is the key what login server sends.
 	 */

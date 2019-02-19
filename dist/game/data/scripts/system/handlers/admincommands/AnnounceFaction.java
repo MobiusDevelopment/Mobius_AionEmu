@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class AnnounceFaction extends AdminCommand
 {
-	
 	public AnnounceFaction()
 	{
 		super("announcefaction");

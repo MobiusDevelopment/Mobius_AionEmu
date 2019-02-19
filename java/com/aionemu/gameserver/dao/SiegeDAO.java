@@ -28,7 +28,6 @@ import com.aionemu.gameserver.services.LegionService;
  */
 public abstract class SiegeDAO implements DAO
 {
-	
 	@Override
 	public final String getClassName()
 	{

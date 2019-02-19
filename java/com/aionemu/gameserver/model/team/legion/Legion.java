@@ -43,7 +43,6 @@ import javolution.util.FastMap;
  */
 public class Legion
 {
-	
 	/** Legion Information **/
 	private ServiceBuff serviceBuff;
 	private int legionId = 0;

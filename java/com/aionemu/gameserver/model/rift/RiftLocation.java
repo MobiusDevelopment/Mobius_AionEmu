@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.templates.rift.RiftTemplate;
  */
 public class RiftLocation
 {
-	
 	private boolean opened;
 	protected RiftTemplate template;
 	private final List<VisibleObject> spawned = new ArrayList<>();

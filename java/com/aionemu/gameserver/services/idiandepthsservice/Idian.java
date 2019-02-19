@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.idiandepths.IdianDepthsStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class Idian extends IdianDepths<IdianDepthsLocation>
 {
 	public Idian(IdianDepthsLocation idianDepths)

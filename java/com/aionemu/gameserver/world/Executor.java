@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public abstract class Executor<T extends AionObject>
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(Executor.class);
 	
 	public abstract boolean run(T object);

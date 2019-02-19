@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CM_GROUP_DATA_EXCHANGE extends AionClientPacket
 {
-	
 	private int groupType;
 	private int action;
 	private int unk2;

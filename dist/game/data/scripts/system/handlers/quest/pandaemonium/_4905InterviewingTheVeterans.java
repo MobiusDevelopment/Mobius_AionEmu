@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _4905InterviewingTheVeterans extends QuestHandler
 {
-	
 	private static final int questId = 4905;
 	
 	public _4905InterviewingTheVeterans()

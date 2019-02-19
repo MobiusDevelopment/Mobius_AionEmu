@@ -23,7 +23,6 @@ import javax.xml.bind.annotation.XmlAttribute;
  */
 public class WeaponStats
 {
-	
 	@XmlAttribute(name = "min_damage")
 	protected int minDamage;
 	@XmlAttribute(name = "max_damage")

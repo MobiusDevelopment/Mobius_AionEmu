@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1553MirrorMirror extends QuestHandler
 {
-	
 	private static final int questId = 1553;
 	
 	public _1553MirrorMirror()

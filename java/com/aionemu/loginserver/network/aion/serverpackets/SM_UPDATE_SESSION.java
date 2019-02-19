@@ -26,7 +26,6 @@ import com.aionemu.loginserver.network.aion.SessionKey;
  */
 public class SM_UPDATE_SESSION extends AionServerPacket
 {
-	
 	/**
 	 * accountId is part of session key - its used for security purposes
 	 */

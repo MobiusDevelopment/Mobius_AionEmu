@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class PolyArea extends AbstractArea
 {
-	
 	/**
 	 * Polygon used to calculate isInside()
 	 */

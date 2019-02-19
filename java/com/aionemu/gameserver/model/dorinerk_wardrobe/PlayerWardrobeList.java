@@ -31,7 +31,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public final class PlayerWardrobeList implements WardrobeList<Player>
 {
-	
 	private final Map<Integer, PlayerWardrobeEntry> entry;
 	
 	public PlayerWardrobeList()

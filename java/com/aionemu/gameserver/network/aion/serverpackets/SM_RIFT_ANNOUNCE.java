@@ -27,7 +27,6 @@ import javolution.util.FastMap;
  */
 public class SM_RIFT_ANNOUNCE extends AionServerPacket
 {
-	
 	private final int actionId;
 	private RVController rift;
 	private FastMap<Integer, Integer> rifts;

@@ -47,7 +47,6 @@ import com.google.common.collect.Collections2;
  */
 public class MySQL5PlayerQuestListDAO extends PlayerQuestListDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerQuestListDAO.class);
 	public static final String SELECT_QUERY = "SELECT `quest_id`, `status`, `quest_vars`, `complete_count`, `next_repeat_time`, `reward`, `complete_time` FROM `player_quests` WHERE `player_id`=?";
 	public static final String UPDATE_QUERY = "UPDATE `player_quests` SET `status`=?, `quest_vars`=?, `complete_count`=?, `next_repeat_time`=?, `reward`=?, `complete_time`=? WHERE `player_id`=? AND `quest_id`=?";

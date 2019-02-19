@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2247TheGergersDisguise extends QuestHandler
 {
-	
 	private static final int questId = 2247;
 	
 	public _2247TheGergersDisguise()

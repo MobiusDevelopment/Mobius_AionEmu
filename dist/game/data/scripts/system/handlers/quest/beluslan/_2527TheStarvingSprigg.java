@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2527TheStarvingSprigg extends QuestHandler
 {
-	
 	private static final int questId = 2527;
 	
 	public _2527TheStarvingSprigg()

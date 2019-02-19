@@ -32,7 +32,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _11036UncommonRecipe extends QuestHandler
 {
-	
 	private static final int questId = 11036;
 	
 	public _11036UncommonRecipe()

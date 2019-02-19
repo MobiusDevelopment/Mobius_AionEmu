@@ -20,7 +20,6 @@ import com.aionemu.commons.configuration.Property;
 
 public class PvPConfig
 {
-	
 	@Property(key = "gameserver.pvp.chainkill.time.restriction", defaultValue = "0")
 	public static int CHAIN_KILL_TIME_RESTRICTION;
 	

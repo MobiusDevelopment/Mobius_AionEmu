@@ -24,7 +24,6 @@ import java.nio.IntBuffer;
  */
 public class IndexIntBuffer extends IndexBuffer
 {
-	
 	private final IntBuffer buf;
 	
 	public IndexIntBuffer(IntBuffer buffer)

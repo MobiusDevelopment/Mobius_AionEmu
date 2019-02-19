@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.gametime.DateTimeUtil;
 /**
  * @author Ranastic
  */
-
 @XmlRootElement(name = "login_event")
 @XmlAccessorType(XmlAccessType.NONE)
 public class AtreianPassport

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class _2722TheComfortsofHome extends QuestHandler
 {
-	
 	private static final int questId = 2722;
 	
 	public _2722TheComfortsofHome()

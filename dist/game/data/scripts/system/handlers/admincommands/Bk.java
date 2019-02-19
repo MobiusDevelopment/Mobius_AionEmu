@@ -263,7 +263,6 @@ public class Bk extends AdminCommand
 
 class Bookmark
 {
-	
 	private final String name;
 	private final float x;
 	private final float y;

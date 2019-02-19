@@ -29,7 +29,6 @@ import com.aionemu.gameserver.model.templates.rewards.IdReward;
  * @author Rolandas
  *
  */
-
 /**
  * <p>
  * Java class for ItemGroup complex type.
@@ -63,7 +62,6 @@ import com.aionemu.gameserver.model.templates.rewards.IdReward;
 })
 public abstract class ItemGroup
 {
-	
 	@XmlAttribute(name = "bonusType", required = true)
 	protected BonusType bonusType;
 	

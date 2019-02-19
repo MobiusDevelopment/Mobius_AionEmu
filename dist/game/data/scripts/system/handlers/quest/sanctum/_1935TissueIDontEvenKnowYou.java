@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1935TissueIDontEvenKnowYou extends QuestHandler
 {
-	
 	private static final int questId = 1935;
 	
 	public _1935TissueIDontEvenKnowYou()

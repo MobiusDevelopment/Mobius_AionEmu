@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
  */
 public class PlayerAggroList extends AggroList
 {
-	
 	/**
 	 * @param owner
 	 */

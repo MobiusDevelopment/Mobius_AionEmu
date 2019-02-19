@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_DELETE extends AionServerPacket
 {
-	
 	/**
 	 * Object that is no longer visible.
 	 */

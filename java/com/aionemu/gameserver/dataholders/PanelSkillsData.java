@@ -35,7 +35,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "polymorph_panels")
 public class PanelSkillsData
 {
-	
 	@XmlElement(name = "panel")
 	protected List<SkillPanel> templates;
 	private final TIntObjectHashMap<SkillPanel> skillPanels = new TIntObjectHashMap<>();

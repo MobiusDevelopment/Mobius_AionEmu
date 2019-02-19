@@ -24,7 +24,6 @@ import com.aionemu.gameserver.services.MoltenusService;
 /**
  * @author Rinzler (Encom)
  */
-
 public class MoltenusStartRunnable implements Runnable
 {
 	private final int id;

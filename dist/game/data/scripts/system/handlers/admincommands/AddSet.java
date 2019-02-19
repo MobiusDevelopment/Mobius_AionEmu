@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class AddSet extends AdminCommand
 {
-	
 	public AddSet()
 	{
 		super("addset");

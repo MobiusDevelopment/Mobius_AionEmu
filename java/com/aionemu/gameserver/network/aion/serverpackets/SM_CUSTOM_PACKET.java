@@ -28,7 +28,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_CUSTOM_PACKET extends AionServerPacket
 {
-	
 	/** Enumeration of types of packet elements. */
 	public static enum PacketElementType
 	{

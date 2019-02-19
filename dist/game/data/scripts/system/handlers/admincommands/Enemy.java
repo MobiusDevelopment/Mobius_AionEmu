@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Enemy extends AdminCommand
 {
-	
 	public Enemy()
 	{
 		super("enemy");

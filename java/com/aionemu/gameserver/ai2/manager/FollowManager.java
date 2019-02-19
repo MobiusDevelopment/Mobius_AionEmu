@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
  */
 public class FollowManager
 {
-	
 	public static void targetTooFar(NpcAI2 npcAI)
 	{
 		final Npc npc = npcAI.getOwner();

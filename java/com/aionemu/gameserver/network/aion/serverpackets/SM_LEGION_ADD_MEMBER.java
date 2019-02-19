@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LEGION_ADD_MEMBER extends AionServerPacket
 {
-	
 	private final Player player;
 	private final boolean isMember;
 	private final int msgId;

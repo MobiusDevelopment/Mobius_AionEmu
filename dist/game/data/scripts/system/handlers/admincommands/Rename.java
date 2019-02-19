@@ -41,7 +41,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Rename extends AdminCommand
 {
-	
 	public Rename()
 	{
 		super("rename");

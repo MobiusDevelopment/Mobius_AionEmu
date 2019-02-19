@@ -24,7 +24,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTemplate;
  */
 public abstract class SkillEntry
 {
-	
 	protected final int skillId;
 	
 	protected int skillLevel;

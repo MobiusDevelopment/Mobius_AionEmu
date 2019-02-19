@@ -36,7 +36,6 @@ import javolution.util.FastMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AssembledNpcsData
 {
-	
 	@XmlElement(name = "assembled_npc", type = AssembledNpcTemplate.class)
 	private List<AssembledNpcTemplate> templates;
 	private final Map<Integer, AssembledNpcTemplate> assembledNpcsTemplates = new FastMap<Integer, AssembledNpcTemplate>().shared();

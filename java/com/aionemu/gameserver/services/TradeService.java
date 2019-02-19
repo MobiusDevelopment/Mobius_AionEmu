@@ -60,7 +60,6 @@ import com.aionemu.gameserver.utils.audit.AuditLogger;
  */
 public class TradeService
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(TradeService.class);
 	private static final TradeListData tradeListData = DataManager.TRADE_LIST_DATA;
 	private static final GoodsListData goodsListData = DataManager.GOODSLIST_DATA;

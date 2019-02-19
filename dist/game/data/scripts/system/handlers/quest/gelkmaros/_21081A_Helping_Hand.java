@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21081A_Helping_Hand extends QuestHandler
 {
-	
 	private static final int questId = 21081;
 	
 	public _21081A_Helping_Hand()

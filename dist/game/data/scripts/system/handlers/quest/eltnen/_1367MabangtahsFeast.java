@@ -27,10 +27,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Atomics
  */
-
 public class _1367MabangtahsFeast extends QuestHandler
 {
-	
 	private static final int questId = 1367;
 	
 	public _1367MabangtahsFeast()

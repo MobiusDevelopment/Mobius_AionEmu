@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.stats.calc.Stat2;
  */
 public class SummonedObjectGameStats extends NpcGameStats
 {
-	
 	public SummonedObjectGameStats(Npc owner)
 	{
 		super(owner);

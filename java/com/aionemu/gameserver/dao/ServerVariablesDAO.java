@@ -23,7 +23,6 @@ import com.aionemu.commons.database.dao.DAO;
  */
 public abstract class ServerVariablesDAO implements DAO
 {
-	
 	/**
 	 * {@inheritDoc}
 	 */

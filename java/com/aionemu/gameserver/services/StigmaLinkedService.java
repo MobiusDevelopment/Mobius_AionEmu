@@ -26,10 +26,8 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 /**
  * @author DrNism
  */
-
 public class StigmaLinkedService
 {
-	
 	public static void onLogOut(Player player)
 	{
 		StigmaLinkedService.DeleteLinkedSkills(player);

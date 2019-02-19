@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.ls.LsServerPacket;
  */
 public class SM_LS_CONTROL extends LsServerPacket
 {
-	
 	private final String accountName;
 	
 	private final String adminName;

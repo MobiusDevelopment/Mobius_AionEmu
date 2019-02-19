@@ -29,10 +29,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  * @author Balthazar
  * @reworked vlog
  */
-
 public class _1687TheTigrakiAgreement extends QuestHandler
 {
-	
 	private static final int questId = 1687;
 	private int rewardGroup;
 	

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1578WhereDoRotronsComeFrom extends QuestHandler
 {
-	
 	private static final int questId = 1578;
 	
 	public _1578WhereDoRotronsComeFrom()

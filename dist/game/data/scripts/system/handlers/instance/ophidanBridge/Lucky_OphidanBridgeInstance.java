@@ -43,7 +43,6 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 @InstanceID(301320000)
 public class Lucky_OphidanBridgeInstance extends GeneralInstanceHandler
 {
-	
 	@Override
 	public void onInstanceCreate(WorldMapInstance instance)
 	{

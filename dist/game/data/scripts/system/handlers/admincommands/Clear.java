@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Clear extends AdminCommand
 {
-	
 	public Clear()
 	{
 		super("clear");

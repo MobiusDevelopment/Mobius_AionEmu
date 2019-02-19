@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2443TaisanMessage extends QuestHandler
 {
-	
 	private static final int questId = 2443;
 	
 	public _2443TaisanMessage()

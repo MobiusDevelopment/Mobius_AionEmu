@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 @AIName("summon")
 public class AISummon extends AITemplate
 {
-	
 	@Override
 	public Summon getOwner()
 	{

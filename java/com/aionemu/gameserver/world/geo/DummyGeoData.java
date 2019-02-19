@@ -25,7 +25,6 @@ import com.aionemu.gameserver.geoEngine.models.GeoMap;
  */
 public class DummyGeoData implements GeoData
 {
-	
 	public static final DummyGeoMap DUMMY_MAP = new DummyGeoMap(StringUtils.EMPTY, 0);
 	
 	@Override

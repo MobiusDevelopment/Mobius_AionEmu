@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _18833LeafyCutting extends QuestHandler
 {
-	
 	private static final int questId = 18833;
 	
 	public _18833LeafyCutting()

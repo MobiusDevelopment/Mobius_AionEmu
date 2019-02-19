@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _4972JudgeNot extends QuestHandler
 {
-	
 	private static final int questId = 4972;
 	
 	public _4972JudgeNot()

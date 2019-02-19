@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _4082GatheringtheHerbPouches extends QuestHandler
 {
-	
 	private static final int questId = 4082;
 	
 	public _4082GatheringtheHerbPouches()

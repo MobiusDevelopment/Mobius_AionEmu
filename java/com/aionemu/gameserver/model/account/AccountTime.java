@@ -22,7 +22,6 @@ package com.aionemu.gameserver.model.account;
  */
 public class AccountTime
 {
-	
 	/**
 	 * Accumulated online time in millis
 	 */

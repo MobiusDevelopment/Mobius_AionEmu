@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1548KlawControl extends QuestHandler
 {
-	
 	private static final int questId = 1548;
 	
 	public _1548KlawControl()

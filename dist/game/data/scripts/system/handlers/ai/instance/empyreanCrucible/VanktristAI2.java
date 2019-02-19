@@ -39,7 +39,6 @@ import system.handlers.ai.AggressiveNpcAI2;
  * to focus on them first. Once he reaches 50%, he will add the Young Adrift skill to his attacks, which deals moderate damage and is used fairly often. Since defeating Vanktrist is essential to progressing your bonus round quest, be sure to pull out all the stops, utilizing potions, DP, and high
  * cooldown skills to make sure you are victorious!
  */
-
 @AIName("vanktrist")
 public class VanktristAI2 extends AggressiveNpcAI2
 {

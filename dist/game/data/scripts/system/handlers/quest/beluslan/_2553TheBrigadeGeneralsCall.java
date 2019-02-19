@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2553TheBrigadeGeneralsCall extends QuestHandler
 {
-	
 	private static final int questId = 2553;
 	
 	public _2553TheBrigadeGeneralsCall()

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.MathUtil;
  */
 public class FollowEventHandler
 {
-	
 	/**
 	 * @param npcAI
 	 * @param creature

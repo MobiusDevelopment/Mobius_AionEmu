@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1141BelbuasTreasure extends QuestHandler
 {
-	
 	private static final int questId = 1141;
 	
 	public _1141BelbuasTreasure()

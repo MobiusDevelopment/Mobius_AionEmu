@@ -48,7 +48,6 @@ import com.aionemu.gameserver.services.SkillLearnService;
  */
 public class ItemEquipmentListener
 {
-	
 	static Logger log = LoggerFactory.getLogger(ItemEquipmentListener.class);
 	
 	/**

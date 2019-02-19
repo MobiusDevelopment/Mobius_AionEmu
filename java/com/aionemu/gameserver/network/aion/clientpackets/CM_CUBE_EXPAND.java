@@ -24,7 +24,6 @@ import com.aionemu.gameserver.services.CubeExpandService;
 /**
  * @author Ranastic (Encom)
  */
-
 public class CM_CUBE_EXPAND extends AionClientPacket
 {
 	int type;

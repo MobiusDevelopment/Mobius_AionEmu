@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.gametime.GameTimeManager;
  */
 public class SM_GAME_TIME extends AionServerPacket
 {
-	
 	/**
 	 * {@inheritDoc}
 	 */

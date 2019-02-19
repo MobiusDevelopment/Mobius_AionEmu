@@ -37,7 +37,6 @@ import gnu.trove.map.hash.THashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MotionData
 {
-	
 	@XmlElement(name = "motion_time")
 	protected List<MotionTime> motionTimes;
 	

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1096APastMission extends QuestHandler
 {
-	
 	private static final int questId = 1096;
 	private static final int[] npc_ids =
 	{

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class _21080MessageInAWindstream extends QuestHandler
 {
-	
 	private static final int questId = 21080;
 	
 	public _21080MessageInAWindstream()

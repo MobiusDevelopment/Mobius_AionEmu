@@ -32,7 +32,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 {
-	
 	private static final int questId = 11216;
 	
 	public _11216How_Many_Draks_Does_It_Take_To_Map()

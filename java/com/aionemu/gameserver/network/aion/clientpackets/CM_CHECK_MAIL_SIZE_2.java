@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_CHECK_MAIL_SIZE_2 extends AionClientPacket
 {
-	
 	public CM_CHECK_MAIL_SIZE_2(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

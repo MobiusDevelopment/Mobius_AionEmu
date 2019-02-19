@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Speed extends AdminCommand implements StatOwner
 {
-	
 	public Speed()
 	{
 		super("speed");

@@ -38,7 +38,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LunaConsumeRewardsData
 {
-	
 	@XmlElement(name = "luna_consume_reward")
 	private List<LunaConsumeRewardsTemplate> lunaList;
 	

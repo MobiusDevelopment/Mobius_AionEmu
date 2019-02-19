@@ -19,7 +19,6 @@ package com.aionemu.gameserver.services;
 /**
  * @author KorLightning (Encom)
  */
-
 public class ColorChat
 {
 	/**

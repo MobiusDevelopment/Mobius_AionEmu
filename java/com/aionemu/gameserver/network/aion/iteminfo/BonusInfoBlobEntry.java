@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  */
 public class BonusInfoBlobEntry extends ItemBlobEntry
 {
-	
 	public BonusInfoBlobEntry()
 	{
 		super(ItemBlobType.STAT_BONUSES);

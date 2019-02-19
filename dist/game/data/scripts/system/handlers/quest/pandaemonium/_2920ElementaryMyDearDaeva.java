@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2920ElementaryMyDearDaeva extends QuestHandler
 {
-	
 	private static final int questId = 2920;
 	private int choice = 0;
 	

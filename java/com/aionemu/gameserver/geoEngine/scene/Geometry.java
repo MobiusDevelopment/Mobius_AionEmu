@@ -26,7 +26,6 @@ import com.aionemu.gameserver.geoEngine.math.Vector3f;
 
 public class Geometry extends Spatial
 {
-	
 	/**
 	 * The mesh contained herein
 	 */

@@ -27,7 +27,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
  */
 public class CM_CHANGE_CHANNEL extends AionClientPacket
 {
-	
 	private int channel;
 	
 	public CM_CHANGE_CHANNEL(int opcode, State state, State... restStates)

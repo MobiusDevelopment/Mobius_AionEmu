@@ -23,7 +23,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Ranastic
  */
-
 public class SM_HOTSPOT_TELEPORT extends AionServerPacket
 {
 	int playerObjId;

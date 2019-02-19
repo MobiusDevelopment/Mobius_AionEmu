@@ -22,7 +22,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 
 public class Whisper extends AdminCommand
 {
-	
 	public Whisper()
 	{
 		super("whisper");

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2501FallingFragments extends QuestHandler
 {
-	
 	private static final int questId = 2501;
 	
 	public _2501FallingFragments()

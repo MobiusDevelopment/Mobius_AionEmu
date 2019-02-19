@@ -23,7 +23,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
 /**
  * @author Ranastic
  */
-
 public class WrappInfoBlobEntry extends ItemBlobEntry
 {
 	WrappInfoBlobEntry()

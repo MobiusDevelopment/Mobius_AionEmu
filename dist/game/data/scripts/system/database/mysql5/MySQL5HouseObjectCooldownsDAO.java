@@ -37,7 +37,6 @@ import javolution.util.FastMap;
  */
 public class MySQL5HouseObjectCooldownsDAO extends HouseObjectCooldownsDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5CraftCooldownsDAO.class);
 	
 	public static final String INSERT_QUERY = "INSERT INTO `house_object_cooldowns` (`player_id`, `object_id`, `reuse_time`) VALUES (?,?,?)";

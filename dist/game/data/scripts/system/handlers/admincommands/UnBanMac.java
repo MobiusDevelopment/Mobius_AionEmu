@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class UnBanMac extends AdminCommand
 {
-	
 	public UnBanMac()
 	{
 		super("unbanmac");

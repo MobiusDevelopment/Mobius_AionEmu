@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _11031CanIEatIt extends QuestHandler
 {
-	
 	private static final int questId = 11031;
 	
 	public _11031CanIEatIt()

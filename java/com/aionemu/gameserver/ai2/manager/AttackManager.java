@@ -29,7 +29,6 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
  */
 public class AttackManager
 {
-	
 	/**
 	 * @param npcAI
 	 */

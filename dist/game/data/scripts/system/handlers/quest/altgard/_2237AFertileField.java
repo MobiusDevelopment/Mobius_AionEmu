@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2237AFertileField extends QuestHandler
 {
-	
 	private static final int questId = 2237;
 	
 	public _2237AFertileField()

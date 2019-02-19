@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LEGION_UPDATE_SELF_INTRO extends AionServerPacket
 {
-	
 	private final String selfintro;
 	private final int playerObjId;
 	

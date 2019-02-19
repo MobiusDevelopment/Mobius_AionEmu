@@ -19,7 +19,6 @@ package com.aionemu.gameserver.model.zorshivdredgion;
 /**
  * @author Rinzler (Encom)
  */
-
 public enum ZorshivDredgionStateType
 {
 	LANDING,

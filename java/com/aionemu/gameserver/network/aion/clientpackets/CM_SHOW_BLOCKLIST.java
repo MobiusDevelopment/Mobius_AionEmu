@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_BLOCK_LIST;
  */
 public class CM_SHOW_BLOCKLIST extends AionClientPacket
 {
-	
 	public CM_SHOW_BLOCKLIST(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

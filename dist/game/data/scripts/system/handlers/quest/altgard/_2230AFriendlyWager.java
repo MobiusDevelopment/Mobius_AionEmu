@@ -27,7 +27,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _2230AFriendlyWager extends QuestHandler
 {
-	
 	private static final int questId = 2230;
 	
 	public _2230AFriendlyWager()

@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.moltenus.MoltenusStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class Boss extends MoltenusFight<MoltenusLocation>
 {
 	public Boss(MoltenusLocation moltenus)

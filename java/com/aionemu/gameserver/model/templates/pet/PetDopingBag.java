@@ -23,7 +23,6 @@ import java.util.Arrays;
  */
 public class PetDopingBag
 {
-	
 	private int[] itemBag = null;
 	private boolean isDirty = false;
 	

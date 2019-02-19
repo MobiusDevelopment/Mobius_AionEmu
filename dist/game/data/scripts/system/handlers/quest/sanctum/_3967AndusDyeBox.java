@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _3967AndusDyeBox extends QuestHandler
 {
-	
 	private static final int questId = 3967;
 	
 	public _3967AndusDyeBox()

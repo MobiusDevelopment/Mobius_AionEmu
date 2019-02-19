@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class RecipeList
 {
-	
 	private Set<Integer> recipeList = new HashSet<>();
 	
 	public RecipeList(HashSet<Integer> recipeList)

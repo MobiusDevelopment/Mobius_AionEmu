@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2912FollowtheRibbon extends QuestHandler
 {
-	
 	private static final int questId = 2912;
 	
 	public _2912FollowtheRibbon()

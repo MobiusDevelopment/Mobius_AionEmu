@@ -32,7 +32,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _18806HeartofRock extends QuestHandler
 {
-	
 	private static final int questId = 18806;
 	
 	private static final Set<Integer> butlers;

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Ranastic (Encom)
  */
-
 public class CreativityTransfoService
 {
 	public void onTransfoApply(Player player, int type, int size, int id, int point)

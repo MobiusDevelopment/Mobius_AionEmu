@@ -32,7 +32,6 @@ import javolution.lang.Reusable;
  */
 public final class Matrix3f implements Cloneable, Reusable
 {
-	
 	private static final Logger logger = Logger.getLogger(Matrix3f.class.getName());
 	@SuppressWarnings("rawtypes")
 	private static final ObjectFactory FACTORY = new ObjectFactory()

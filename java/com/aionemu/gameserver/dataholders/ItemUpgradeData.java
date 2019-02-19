@@ -37,7 +37,6 @@ import javolution.util.FastMap;
 /**
  * @author Ranastic (Encom)
  */
-
 @XmlRootElement(name = "item_upgrades")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ItemUpgradeData

@@ -33,7 +33,6 @@ import com.google.common.base.Predicate;
 public final class ForEach<E>extends CountedCompleter<E>
 {
 	private static final Logger log = LoggerFactory.getLogger(ForEach.class);
-	private static final long serialVersionUID = 7902148320917998146L;
 	
 	public static <E> ForkJoinTask<E> forEach(Collection<E> list, Predicate<E> operation)
 	{

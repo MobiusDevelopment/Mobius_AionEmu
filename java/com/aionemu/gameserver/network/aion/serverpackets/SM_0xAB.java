@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 public class SM_0xAB extends AionServerPacket
 {
-	
 	private final int unk;
 	private final int unk1;
 	private static final Logger log = LoggerFactory.getLogger(SM_0xAB.class);

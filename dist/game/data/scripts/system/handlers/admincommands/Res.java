@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Res extends AdminCommand
 {
-	
 	public Res()
 	{
 		super("res");

@@ -33,7 +33,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class _1373WaterTherapy extends QuestHandler
 {
-	
 	private static final int questId = 1373;
 	
 	public _1373WaterTherapy()

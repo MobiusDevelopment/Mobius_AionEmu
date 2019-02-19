@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.anoha.AnohaStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class DanuarHero extends BerserkAnoha<AnohaLocation>
 {
 	public DanuarHero(AnohaLocation anoha)

@@ -31,10 +31,8 @@ import com.aionemu.gameserver.dao.OldNamesDAO;
 /**
  * @author synchro2
  */
-
 public class MySQL5OldNamesDAO extends OldNamesDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5OldNamesDAO.class);
 	
 	private static final String INSERT_QUERY = "INSERT INTO `old_names` (`player_id`, `old_name`, `new_name`) VALUES (?,?,?)";

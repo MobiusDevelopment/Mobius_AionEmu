@@ -210,7 +210,6 @@ public class CmdAttrBonus extends AbstractGMHandler implements StatOwner
 			}
 			throw new IllegalArgumentException("Unsupported type: " + value);
 		}
-		
 	}
 	
 	class StatChangeFunction extends StatFunction

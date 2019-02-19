@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public abstract class ItemCooldownsDAO implements DAO
 {
-	
 	/**
 	 * Returns unique identifier for ItemCooldownsDAO
 	 * @return unique identifier for ItemCooldownsDAO

@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model;
  */
 public class AbyssRankingResult
 {
-	
 	private String playerName;
 	private int playerAbyssRank;
 	private final int oldRankPos;

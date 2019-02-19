@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1725CenturionsForgetfulness extends QuestHandler
 {
-	
 	private static final int questId = 1725;
 	
 	public _1725CenturionsForgetfulness()

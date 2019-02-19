@@ -26,7 +26,6 @@ import com.aionemu.gameserver.geoEngine.scene.Spatial;
  */
 public class MaterialZoneTemplate extends ZoneTemplate
 {
-	
 	public MaterialZoneTemplate(Spatial geometry, int mapId)
 	{
 		mapid = mapId;

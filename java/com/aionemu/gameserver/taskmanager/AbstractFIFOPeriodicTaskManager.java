@@ -28,7 +28,6 @@ import com.aionemu.commons.utils.concurrent.RunnableStatsManager;
  */
 public abstract class AbstractFIFOPeriodicTaskManager<T>extends AbstractPeriodicTaskManager
 {
-	
 	protected static final Logger log = LoggerFactory.getLogger(AbstractFIFOPeriodicTaskManager.class);
 	
 	private final AEFastSet<T> queue = new AEFastSet<>();

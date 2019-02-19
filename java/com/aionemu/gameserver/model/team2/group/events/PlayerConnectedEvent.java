@@ -35,7 +35,6 @@ import com.google.common.base.Predicate;
  */
 public class PlayerConnectedEvent extends AlwaysTrueTeamEvent implements Predicate<Player>
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(PlayerConnectedEvent.class);
 	private final PlayerGroup group;
 	private final Player player;

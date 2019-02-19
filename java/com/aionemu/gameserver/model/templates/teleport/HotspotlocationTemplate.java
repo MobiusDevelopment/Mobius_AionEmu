@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.Race;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlRootElement(name = "hotspot_template")
 @XmlAccessorType(XmlAccessType.NONE)
 public class HotspotlocationTemplate

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2367APrizedPossession extends QuestHandler
 {
-	
 	private static final int questId = 2367;
 	
 	int rewardIndex;

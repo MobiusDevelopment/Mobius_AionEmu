@@ -24,7 +24,6 @@ import com.aionemu.gameserver.dataholders.DataManager;
  */
 public class WorldZoneTemplate extends ZoneTemplate
 {
-	
 	public WorldZoneTemplate(int size, Integer mapId)
 	{
 		final float maxZ = Math.round((float) size / WorldConfig.WORLD_REGION_SIZE) * WorldConfig.WORLD_REGION_SIZE;

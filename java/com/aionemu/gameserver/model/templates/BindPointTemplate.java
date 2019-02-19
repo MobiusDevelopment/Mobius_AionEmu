@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.NONE)
 public class BindPointTemplate
 {
-	
 	@XmlAttribute(name = "name", required = true)
 	private String name;
 	

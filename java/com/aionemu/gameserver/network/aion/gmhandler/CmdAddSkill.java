@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CmdAddSkill extends AbstractGMHandler
 {
-	
 	public CmdAddSkill(Player admin, String params)
 	{
 		super(admin, params);

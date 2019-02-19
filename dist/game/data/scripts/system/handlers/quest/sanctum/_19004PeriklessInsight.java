@@ -30,7 +30,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _19004PeriklessInsight extends QuestHandler
 {
-	
 	private static final int questId = 19004;
 	private static final int[] npcs =
 	{

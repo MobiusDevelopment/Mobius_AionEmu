@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Invis extends AdminCommand
 {
-	
 	public Invis()
 	{
 		super("invis");

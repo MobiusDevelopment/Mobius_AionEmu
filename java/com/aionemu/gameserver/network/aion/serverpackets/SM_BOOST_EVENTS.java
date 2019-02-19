@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * Created by wanke on 01/02/2017.
  */
-
 public class SM_BOOST_EVENTS extends AionServerPacket
 {
 	private final int eventStartTime = (int) (Calendar.getInstance().getTimeInMillis() / 1000);

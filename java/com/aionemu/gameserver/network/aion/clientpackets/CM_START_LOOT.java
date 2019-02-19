@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.drop.DropService;
  */
 public class CM_START_LOOT extends AionClientPacket
 {
-	
 	/**
 	 * Target object id that client wants to TALK WITH or 0 if wants to unselect
 	 */

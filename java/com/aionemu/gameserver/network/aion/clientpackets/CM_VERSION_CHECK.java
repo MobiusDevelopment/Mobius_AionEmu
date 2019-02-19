@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_VERSION_CHECK;
  */
 public class CM_VERSION_CHECK extends AionClientPacket
 {
-	
 	/**
 	 * Aion Client version
 	 */

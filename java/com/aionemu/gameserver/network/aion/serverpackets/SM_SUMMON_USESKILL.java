@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_SUMMON_USESKILL extends AionServerPacket
 {
-	
 	private final int summonId;
 	private final int skillId;
 	private final int skillLvl;

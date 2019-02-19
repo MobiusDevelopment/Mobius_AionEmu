@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
  */
 public class PlayerSettings
 {
-	
 	private PersistentState persistentState;
 	
 	private byte[] uiSettings;

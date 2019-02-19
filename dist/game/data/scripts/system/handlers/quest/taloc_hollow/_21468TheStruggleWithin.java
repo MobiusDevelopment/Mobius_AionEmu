@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21468TheStruggleWithin extends QuestHandler
 {
-	
 	private static final int questId = 21468;
 	
 	public _21468TheStruggleWithin()

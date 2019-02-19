@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _11033YouMakeMeSick extends QuestHandler
 {
-	
 	private static final int questId = 11033;
 	
 	public _11033YouMakeMeSick()

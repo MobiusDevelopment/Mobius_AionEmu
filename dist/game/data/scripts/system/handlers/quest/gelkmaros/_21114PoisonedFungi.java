@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21114PoisonedFungi extends QuestHandler
 {
-	
 	private static final int questId = 21114;
 	
 	public _21114PoisonedFungi()

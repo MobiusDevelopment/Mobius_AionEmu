@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
  */
 public class TradeItem
 {
-	
 	private final int itemId;
 	private long count;
 	private ItemTemplate itemTemplate;

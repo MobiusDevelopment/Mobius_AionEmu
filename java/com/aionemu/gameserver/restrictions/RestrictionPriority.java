@@ -34,7 +34,6 @@ import java.lang.annotation.Target;
 })
 public @interface RestrictionPriority
 {
-	
 	public static final double DEFAULT_PRIORITY = 0.0;
 	
 	double value() default DEFAULT_PRIORITY;

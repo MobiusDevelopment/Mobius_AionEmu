@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CmdChangeClass extends AbstractGMHandler
 {
-	
 	public CmdChangeClass(Player admin, String params)
 	{
 		super(admin, params);

@@ -29,7 +29,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler (Encom)
  */
-
 public class BeritraLocation
 {
 	protected int id;

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public abstract class CraftCooldownsDAO implements DAO
 {
-	
 	@Override
 	public final String getClassName()
 	{

@@ -35,7 +35,6 @@ import com.aionemu.gameserver.services.player.PlayerService;
  */
 public class CM_MACRO_DELETE extends AionClientPacket
 {
-	
 	/**
 	 * Logger
 	 */

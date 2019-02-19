@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.ExchangeService;
  */
 public class CM_EXCHANGE_ADD_KINAH extends AionClientPacket
 {
-	
 	public int unk;
 	public int itemCount;
 	

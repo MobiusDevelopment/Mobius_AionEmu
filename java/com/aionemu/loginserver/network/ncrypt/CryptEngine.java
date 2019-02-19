@@ -24,7 +24,6 @@ import com.aionemu.commons.utils.Rnd;
  */
 public class CryptEngine
 {
-	
 	/**
 	 * A key
 	 */

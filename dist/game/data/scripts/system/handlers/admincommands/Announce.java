@@ -28,7 +28,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Announce extends AdminCommand
 {
-	
 	public Announce()
 	{
 		super("announce");

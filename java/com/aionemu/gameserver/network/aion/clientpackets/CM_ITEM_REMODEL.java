@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.item.ItemRemodelService;
  */
 public class CM_ITEM_REMODEL extends AionClientPacket
 {
-	
 	private int keepItemId;
 	private int extractItemId;
 	

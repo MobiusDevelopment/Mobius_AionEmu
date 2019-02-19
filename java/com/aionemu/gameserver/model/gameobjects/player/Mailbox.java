@@ -38,7 +38,6 @@ import javolution.util.FastMap;
  */
 public class Mailbox
 {
-	
 	private final Map<Integer, Letter> mails = new FastMap<Integer, Letter>().shared();
 	private final Map<Integer, Letter> reserveMail = new FastMap<Integer, Letter>().shared();
 	private final Player owner;

@@ -54,7 +54,6 @@ import javolution.util.FastMap;
  */
 public class InGameShopEn
 {
-	
 	private static InGameShopEn instance = new InGameShopEn();
 	private final Logger log = LoggerFactory.getLogger("INGAMESHOP_LOG");
 	private FastMap<Byte, List<IGItem>> items;

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1149MissingPoppy extends QuestHandler
 {
-	
 	private static final int questId = 1149;
 	
 	public _1149MissingPoppy()

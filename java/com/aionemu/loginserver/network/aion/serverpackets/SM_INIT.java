@@ -26,7 +26,6 @@ import com.aionemu.loginserver.network.aion.LoginConnection;
  */
 public final class SM_INIT extends AionServerPacket
 {
-	
 	/**
 	 * Session Id of this connection
 	 */

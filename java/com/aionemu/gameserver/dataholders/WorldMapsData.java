@@ -37,7 +37,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.NONE)
 public class WorldMapsData implements Iterable<WorldMapTemplate>
 {
-	
 	@XmlElement(name = "map")
 	protected List<WorldMapTemplate> worldMaps;
 	

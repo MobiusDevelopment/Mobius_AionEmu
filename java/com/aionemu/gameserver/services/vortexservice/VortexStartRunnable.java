@@ -24,7 +24,6 @@ import com.aionemu.gameserver.services.VortexService;
 /**
  * @author Rinzler (Encom)
  */
-
 public class VortexStartRunnable implements Runnable
 {
 	private final int id;

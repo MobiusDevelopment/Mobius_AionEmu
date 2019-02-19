@@ -24,7 +24,6 @@ import java.nio.ShortBuffer;
  */
 public class IndexShortBuffer extends IndexBuffer
 {
-	
 	private final ShortBuffer buf;
 	
 	public IndexShortBuffer(ShortBuffer buffer)

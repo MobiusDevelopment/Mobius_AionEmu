@@ -24,7 +24,6 @@ import com.aionemu.gameserver.services.ConquestService;
 /**
  * @author Rinzler (Encom)
  */
-
 public class ConquestStartRunnable implements Runnable
 {
 	private final int id;

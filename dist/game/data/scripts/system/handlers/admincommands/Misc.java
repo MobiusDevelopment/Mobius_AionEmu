@@ -38,7 +38,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Misc extends AdminCommand
 {
-	
 	public Misc()
 	{
 		super("misc");
@@ -152,7 +151,6 @@ public class Misc extends AdminCommand
 			SkillEngine.getInstance().applyEffectDirectly(18147, admin, player, 1);
 			return;
 		}
-		
 	}
 	
 	public String getRandomMsg(String state)

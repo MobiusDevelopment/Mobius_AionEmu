@@ -39,7 +39,6 @@ import com.aionemu.gameserver.services.toypet.PetHungryLevel;
  */
 public class MySQL5PlayerPetsDAO extends PlayerPetsDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerPetsDAO.class);
 	
 	@Override

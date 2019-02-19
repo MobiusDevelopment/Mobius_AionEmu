@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.ingameshop;
  */
 public class IGRequest
 {
-	
 	public boolean gift = false, sync = false;
 	public int playerId;
 	public int cost;

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class _24013Poison_In_The_Waters extends QuestHandler
 {
-	
 	private static final int questId = 24013;
 	private static final int[] mobs =
 	{

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.services.transfers.AStation;
  */
 public class SM_SERVER_IDS extends AionServerPacket
 {
-	
 	private final AStation settings;
 	
 	public SM_SERVER_IDS(AStation settings)

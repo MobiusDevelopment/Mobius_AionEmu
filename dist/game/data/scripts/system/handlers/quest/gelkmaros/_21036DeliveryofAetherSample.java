@@ -26,7 +26,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21036DeliveryofAetherSample extends QuestHandler
 {
-	
 	private static final int questId = 21036;
 	
 	public _21036DeliveryofAetherSample()

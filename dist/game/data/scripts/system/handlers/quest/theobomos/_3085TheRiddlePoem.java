@@ -28,10 +28,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _3085TheRiddlePoem extends QuestHandler
 {
-	
 	private static final int questId = 3085;
 	
 	public _3085TheRiddlePoem()

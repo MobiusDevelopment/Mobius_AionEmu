@@ -29,7 +29,6 @@ import com.google.common.base.Predicate;
  */
 public class PlayerGroupUpdateEvent extends AlwaysTrueTeamEvent implements Predicate<Player>
 {
-	
 	private final PlayerGroup group;
 	private final Player player;
 	private final GroupEvent groupEvent;

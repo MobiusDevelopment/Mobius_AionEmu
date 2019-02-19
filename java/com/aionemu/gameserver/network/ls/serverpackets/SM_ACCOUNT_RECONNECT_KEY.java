@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.ls.LsServerPacket;
  */
 public class SM_ACCOUNT_RECONNECT_KEY extends LsServerPacket
 {
-	
 	/**
 	 * AccountId of client that is requested reconnection to LoginServer.
 	 */

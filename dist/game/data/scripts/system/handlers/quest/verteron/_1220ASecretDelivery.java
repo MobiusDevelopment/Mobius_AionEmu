@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1220ASecretDelivery extends QuestHandler
 {
-	
 	private static final int questId = 1220;
 	
 	public _1220ASecretDelivery()

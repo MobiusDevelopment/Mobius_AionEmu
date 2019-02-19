@@ -26,7 +26,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 /**
  * @author Ranastic (Encom)
  */
-
 @XmlRootElement(name = "UpgradeMaterials")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UpgradeMaterials

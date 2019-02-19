@@ -23,7 +23,6 @@ import javolution.util.FastMap;
  */
 public class CraftCooldownList
 {
-	
 	private FastMap<Integer, Long> craftCooldowns;
 	
 	CraftCooldownList(Player owner)

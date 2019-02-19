@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Ranastic
  */
-
 public class SM_A_STATION extends AionServerPacket
 {
 	private boolean isFirst = false;

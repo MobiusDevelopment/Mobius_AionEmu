@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CM_LEGION extends AionClientPacket
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(CM_LEGION.class);
 	
 	/**

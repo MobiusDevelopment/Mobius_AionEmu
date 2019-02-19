@@ -33,7 +33,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _28831justaSteptotheLeft extends QuestHandler
 {
-	
 	private static final int questId = 28831;
 	private static final Set<Integer> butlers;
 	

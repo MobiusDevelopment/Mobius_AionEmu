@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
 /**
  * @author Ranastic (Encom)
  */
-
 public class Precision implements StatOwner
 {
 	private final List<IStatFunction> accuracy = new ArrayList<>();

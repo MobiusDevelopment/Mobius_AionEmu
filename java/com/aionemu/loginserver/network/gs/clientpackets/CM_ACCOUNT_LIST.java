@@ -28,7 +28,6 @@ import com.aionemu.loginserver.network.gs.serverpackets.SM_REQUEST_KICK_ACCOUNT;
  */
 public class CM_ACCOUNT_LIST extends GsClientPacket
 {
-	
 	/**
 	 * Array with accounts that are logged in
 	 */

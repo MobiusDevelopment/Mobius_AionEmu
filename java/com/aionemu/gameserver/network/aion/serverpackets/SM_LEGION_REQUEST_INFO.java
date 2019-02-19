@@ -21,7 +21,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 public class SM_LEGION_REQUEST_INFO extends AionServerPacket
 {
-	
 	private final int legionId;
 	private final String legionName;
 	

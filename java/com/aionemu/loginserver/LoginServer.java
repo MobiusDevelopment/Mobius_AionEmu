@@ -56,7 +56,6 @@ import ch.qos.logback.core.joran.spi.JoranException;
  */
 public class LoginServer
 {
-	
 	/**
 	 * Logger for this class.
 	 */

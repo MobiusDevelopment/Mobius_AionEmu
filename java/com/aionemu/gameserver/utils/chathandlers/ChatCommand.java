@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public abstract class ChatCommand
 {
-	
 	private final String alias;
 	private Byte level;
 	static final String[] EMPTY_PARAMS = new String[] {};

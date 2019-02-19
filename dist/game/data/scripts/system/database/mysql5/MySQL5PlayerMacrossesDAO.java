@@ -36,7 +36,6 @@ import com.aionemu.gameserver.model.gameobjects.player.MacroList;
  */
 public class MySQL5PlayerMacrossesDAO extends PlayerMacrossesDAO
 {
-	
 	static Logger log = LoggerFactory.getLogger(MySQL5PlayerMacrossesDAO.class);
 	public static final String INSERT_QUERY = "INSERT INTO `player_macrosses` (`player_id`, `order`, `macro`) VALUES (?,?,?)";
 	public static final String UPDATE_QUERY = "UPDATE `player_macrosses` SET `macro`=? WHERE `player_id`=? AND `order`=?";

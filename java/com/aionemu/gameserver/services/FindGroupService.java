@@ -47,7 +47,6 @@ import javolution.util.FastMap;
  */
 public class FindGroupService
 {
-	
 	private final FastMap<Integer, FindGroup> elyosRecruitFindGroups = new FastMap<Integer, FindGroup>().shared();
 	private final FastMap<Integer, FindGroup> elyosApplyFindGroups = new FastMap<Integer, FindGroup>().shared();
 	private final FastMap<Integer, FindGroup> asmodianRecruitFindGroups = new FastMap<Integer, FindGroup>().shared();
@@ -341,7 +340,6 @@ public class FindGroupService
 				FindGroupService.getInstance().addFindGroupList(player, 0x02, inviterFindGroup.getMessage(), inviterFindGroup.getGroupType());
 			}
 		}
-		
 	}
 	
 	static class FindGroupAllianceDisbandListener extends PlayerAllianceDisbandCallback
@@ -380,7 +378,6 @@ public class FindGroupService
 				FindGroupService.getInstance().addFindGroupList(player, 0x02, inviterFindGroup.getMessage(), inviterFindGroup.getGroupType());
 			}
 		}
-		
 	}
 	
 	static class FindGroupOnAddPlayerToAllianceListener extends AddPlayerToAllianceCallback
@@ -401,6 +398,5 @@ public class FindGroupService
 				FindGroupService.getInstance().removeFindGroup(alliance.getRace(), 0, alliance.getObjectId());
 			}
 		}
-		
 	}
 }

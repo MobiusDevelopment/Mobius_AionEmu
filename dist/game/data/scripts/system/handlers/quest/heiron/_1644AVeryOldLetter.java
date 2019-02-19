@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _1644AVeryOldLetter extends QuestHandler
 {
-	
 	private static final int questId = 1644;
 	
 	public _1644AVeryOldLetter()

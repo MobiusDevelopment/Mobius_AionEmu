@@ -28,7 +28,6 @@ import com.aionemu.gameserver.taskmanager.AbstractIterativePeriodicTaskManager;
  */
 public final class TeamMoveUpdater extends AbstractIterativePeriodicTaskManager<Player>
 {
-	
 	private static final class SingletonHolder
 	{
 		

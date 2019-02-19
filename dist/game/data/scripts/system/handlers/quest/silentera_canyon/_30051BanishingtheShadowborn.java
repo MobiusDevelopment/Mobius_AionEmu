@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30051BanishingtheShadowborn extends QuestHandler
 {
-	
 	private static final int questId = 30051;
 	
 	public _30051BanishingtheShadowborn()

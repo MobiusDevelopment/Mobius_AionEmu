@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.chathandlers.WeddingCommand;
  */
 public class missyou extends WeddingCommand
 {
-	
 	public missyou()
 	{
 		super("missyou");

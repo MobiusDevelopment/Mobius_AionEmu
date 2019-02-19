@@ -38,7 +38,6 @@ import com.aionemu.gameserver.model.templates.stats.ModifiersTemplate;
 @XmlRootElement(name = "title_templates")
 public class TitleTemplate implements StatOwner
 {
-	
 	@XmlAttribute(name = "id", required = true)
 	@XmlID
 	private String id;

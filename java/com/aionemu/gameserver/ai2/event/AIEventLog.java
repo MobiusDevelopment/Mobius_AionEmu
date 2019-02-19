@@ -23,9 +23,6 @@ import java.util.concurrent.LinkedBlockingDeque;
  */
 public class AIEventLog extends LinkedBlockingDeque<AIEventType>
 {
-	
-	private static final long serialVersionUID = -7234174243343636729L;
-	
 	public AIEventLog()
 	{
 		super();

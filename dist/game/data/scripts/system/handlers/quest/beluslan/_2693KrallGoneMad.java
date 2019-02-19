@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2693KrallGoneMad extends QuestHandler
 {
-	
 	private static final int questId = 2693;
 	
 	public _2693KrallGoneMad()

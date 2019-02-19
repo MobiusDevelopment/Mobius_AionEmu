@@ -34,7 +34,6 @@ import com.aionemu.gameserver.services.instance.IronWallWarfrontService;
 /**
  * @author Rinzler (Encom)
  */
-
 public class AutoIronWallWarfrontInstance extends AutoInstance
 {
 	@Override

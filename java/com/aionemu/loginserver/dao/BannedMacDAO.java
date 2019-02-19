@@ -26,7 +26,6 @@ import com.aionemu.loginserver.model.base.BannedMacEntry;
  */
 public abstract class BannedMacDAO implements DAO
 {
-	
 	public abstract boolean update(BannedMacEntry entry);
 	
 	public abstract boolean remove(String address);

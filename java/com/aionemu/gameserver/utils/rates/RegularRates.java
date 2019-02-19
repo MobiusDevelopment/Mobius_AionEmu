@@ -24,7 +24,6 @@ import com.aionemu.gameserver.configs.main.RateConfig;
  */
 public class RegularRates extends Rates
 {
-	
 	int holidayRate = HolidayRates.getHolidayRate(0);
 	
 	@Override

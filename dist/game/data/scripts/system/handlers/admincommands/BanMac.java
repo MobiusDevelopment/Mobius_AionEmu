@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class BanMac extends AdminCommand
 {
-	
 	public BanMac()
 	{
 		super("banmac");

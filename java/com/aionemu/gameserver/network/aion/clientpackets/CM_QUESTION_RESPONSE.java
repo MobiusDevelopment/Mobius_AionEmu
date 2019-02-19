@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_QUESTION_RESPONSE extends AionClientPacket
 {
-	
 	private int questionid;
 	private int response;
 	@SuppressWarnings("unused")

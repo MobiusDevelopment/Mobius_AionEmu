@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_CAPTCHA extends AionServerPacket
 {
-	
 	private final int type;
 	private int count;
 	private int size;

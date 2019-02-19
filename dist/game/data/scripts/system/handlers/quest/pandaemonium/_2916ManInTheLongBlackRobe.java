@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2916ManInTheLongBlackRobe extends QuestHandler
 {
-	
 	private static final int questId = 2916;
 	
 	public _2916ManInTheLongBlackRobe()

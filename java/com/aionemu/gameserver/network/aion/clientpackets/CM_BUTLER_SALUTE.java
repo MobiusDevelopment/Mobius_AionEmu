@@ -23,7 +23,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_BUTLER_SALUTE;
 /**
  * @author Ranastic
  */
-
 public class CM_BUTLER_SALUTE extends AionClientPacket
 {
 	private int playerObjId;

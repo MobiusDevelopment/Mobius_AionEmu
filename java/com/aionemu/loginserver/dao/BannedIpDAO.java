@@ -28,7 +28,6 @@ import com.aionemu.loginserver.model.BannedIP;
  */
 public abstract class BannedIpDAO implements DAO
 {
-	
 	/**
 	 * Inserts ip mask to database, returns BannedIP object that represents inserted mask or null if error.<br>
 	 * Expire time is null so ban never expires.<br>

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.templates.housing.HousingPassiveItem;
  */
 public class PassiveObject extends HouseObject<HousingPassiveItem>
 {
-	
 	public PassiveObject(House owner, int objId, int templateId)
 	{
 		super(owner, objId, templateId);

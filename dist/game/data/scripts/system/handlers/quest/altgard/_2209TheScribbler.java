@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2209TheScribbler extends QuestHandler
 {
-	
 	private static final int questId = 2209;
 	
 	public _2209TheScribbler()

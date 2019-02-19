@@ -54,7 +54,6 @@ import com.aionemu.gameserver.model.templates.pet.PetRewards;
  */
 public final class PetFeedCalculator
 {
-	
 	static byte ITEM_MAX_LEVEL = 60;
 	static final short[] fullCounts;
 	static final byte[] itemLevels;

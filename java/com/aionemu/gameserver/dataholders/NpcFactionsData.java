@@ -35,7 +35,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NpcFactionsData
 {
-	
 	@XmlElement(name = "npc_faction", required = true)
 	protected List<NpcFactionTemplate> npcFactionsData;
 	private final TIntObjectHashMap<NpcFactionTemplate> factionsById = new TIntObjectHashMap<>();

@@ -23,7 +23,6 @@ import javolution.util.FastList;
  */
 public class LimitedTradeNpc
 {
-	
 	private final FastList<LimitedItem> limitedItems;
 	
 	public LimitedTradeNpc(FastList<LimitedItem> limitedItems)

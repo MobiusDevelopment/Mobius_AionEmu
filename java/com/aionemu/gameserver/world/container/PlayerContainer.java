@@ -34,7 +34,6 @@ import javolution.util.FastMap;
  */
 public class PlayerContainer implements Iterable<Player>
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(PlayerContainer.class);
 	
 	/**

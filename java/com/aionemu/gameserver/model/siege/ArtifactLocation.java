@@ -28,7 +28,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTemplate;
  */
 public class ArtifactLocation extends SiegeLocation
 {
-	
 	private ArtifactStatus status;
 	
 	public ArtifactLocation()

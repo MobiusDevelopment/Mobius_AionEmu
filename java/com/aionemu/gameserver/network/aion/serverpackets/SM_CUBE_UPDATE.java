@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_CUBE_UPDATE extends AionServerPacket
 {
-	
 	private final int action;
 	/**
 	 * for action 0 - its storage type<br>

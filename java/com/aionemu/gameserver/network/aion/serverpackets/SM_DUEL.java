@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_DUEL extends AionServerPacket
 {
-	
 	private String playerName;
 	private DuelResult result;
 	private int requesterObjId;

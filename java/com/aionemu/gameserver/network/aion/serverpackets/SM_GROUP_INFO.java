@@ -29,7 +29,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_GROUP_INFO extends AionServerPacket
 {
-	
 	private final LootGroupRules lootRules;
 	private final int groupId;
 	private final int leaderId;

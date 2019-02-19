@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
  */
 public class FreezeEventHandler
 {
-	
 	public static void onUnfreeze(AbstractAI ai)
 	{
 		if (ai.isInSubState(AISubState.FREEZE))

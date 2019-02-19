@@ -24,7 +24,6 @@ import java.sql.Timestamp;
  */
 public class AccountTime
 {
-	
 	/**
 	 * Time the account has last logged in
 	 */

@@ -54,7 +54,6 @@ import com.google.common.collect.Collections2;
  */
 public class ItemService
 {
-	
 	private static final Logger log = LoggerFactory.getLogger("ITEM_LOG");
 	
 	public static final ItemUpdatePredicate DEFAULT_UPDATE_PREDICATE = new ItemUpdatePredicate(ItemAddType.ITEM_COLLECT, ItemUpdateType.INC_ITEM_COLLECT);

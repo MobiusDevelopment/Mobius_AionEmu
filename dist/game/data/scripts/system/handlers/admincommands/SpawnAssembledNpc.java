@@ -36,7 +36,6 @@ import javolution.util.FastList;
  */
 public class SpawnAssembledNpc extends AdminCommand
 {
-	
 	public SpawnAssembledNpc()
 	{
 		super("spawnAssembledNpc");

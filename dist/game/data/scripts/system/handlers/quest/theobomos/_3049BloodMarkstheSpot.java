@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _3049BloodMarkstheSpot extends QuestHandler
 {
-	
 	private static final int questId = 3049;
 	
 	public _3049BloodMarkstheSpot()

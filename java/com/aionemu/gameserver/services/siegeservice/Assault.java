@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.siege.SiegeRace;
  */
 public abstract class Assault<siege extends Siege<?>>
 {
-	
 	protected final SiegeLocation siegeLocation;
 	protected final int locationId;
 	protected final SiegeNpc boss;

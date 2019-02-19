@@ -35,7 +35,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class _1466RespectForDeltras extends QuestHandler
 {
-	
 	private static final int questId = 1466;
 	
 	public _1466RespectForDeltras()

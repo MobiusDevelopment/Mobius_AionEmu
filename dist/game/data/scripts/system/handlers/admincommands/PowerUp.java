@@ -24,7 +24,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class PowerUp extends AdminCommand
 {
-	
 	public PowerUp()
 	{
 		super("powerup");

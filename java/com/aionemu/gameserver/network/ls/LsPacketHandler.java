@@ -31,7 +31,6 @@ import com.aionemu.gameserver.network.ls.LoginServerConnection.State;
  */
 public class LsPacketHandler
 {
-	
 	/**
 	 * logger for this class
 	 */

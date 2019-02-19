@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Neutral extends AdminCommand
 {
-	
 	public Neutral()
 	{
 		super("neutral");

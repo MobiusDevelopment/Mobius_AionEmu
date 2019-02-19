@@ -29,7 +29,6 @@ import com.aionemu.gameserver.services.SocialService;
  */
 public class CM_BLOCK_SET_REASON extends AionClientPacket
 {
-	
 	String targetName;
 	String reason;
 	

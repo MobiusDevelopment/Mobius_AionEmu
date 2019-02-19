@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _11012PracticalNursing extends QuestHandler
 {
-	
 	private static final int questId = 11012;
 	
 	public _11012PracticalNursing()

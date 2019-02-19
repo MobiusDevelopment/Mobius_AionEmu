@@ -26,7 +26,6 @@ import javolution.util.FastList;
  */
 public abstract class RewardServiceDAO implements DAO
 {
-	
 	@Override
 	public final String getClassName()
 	{

@@ -32,7 +32,6 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
  */
 public class SummonedObject<T extends VisibleObject>extends Npc
 {
-	
 	private final byte level;
 	
 	/**

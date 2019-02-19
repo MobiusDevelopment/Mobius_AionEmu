@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_CUSTOM_SETTINGS extends AionServerPacket
 {
-	
 	private final Integer obj;
 	private int unk = 0;
 	private final int display;

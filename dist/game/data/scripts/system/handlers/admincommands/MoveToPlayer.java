@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class MoveToPlayer extends AdminCommand
 {
-	
 	public MoveToPlayer()
 	{
 		super("movetoplayer");

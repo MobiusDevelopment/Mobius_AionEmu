@@ -29,10 +29,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author dta3000
  */
-
 public class _11008LetterOfEncouragement extends QuestHandler
 {
-	
 	private static final int questId = 11008;
 	
 	public _11008LetterOfEncouragement()

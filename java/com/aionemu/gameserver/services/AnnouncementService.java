@@ -44,7 +44,6 @@ import javolution.util.FastSet;
  */
 public class AnnouncementService
 {
-	
 	/**
 	 * Logger for this class.
 	 */

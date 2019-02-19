@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2523GrassfortheGraveRobbers extends QuestHandler
 {
-	
 	private static final int questId = 2523;
 	
 	public _2523GrassfortheGraveRobbers()

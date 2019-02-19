@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _2288PutYourMoneyWhereYourMouthIs extends QuestHandler
 {
-	
 	private static final int questId = 2288;
 	
 	public _2288PutYourMoneyWhereYourMouthIs()

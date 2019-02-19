@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
  */
 public class _2422LiquorThatMakesYouVanish extends QuestHandler
 {
-	
 	private static final int questId = 2422;
 	
 	public _2422LiquorThatMakesYouVanish()

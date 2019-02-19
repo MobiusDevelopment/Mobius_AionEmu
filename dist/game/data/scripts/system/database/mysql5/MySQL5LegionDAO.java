@@ -49,10 +49,8 @@ import javolution.util.FastList;
  * @author Simple
  * @modified cura
  */
-
 public class MySQL5LegionDAO extends LegionDAO
 {
-	
 	/** Logger */
 	private static final Logger log = LoggerFactory.getLogger(MySQL5LegionDAO.class);
 	/** Legion Queries */

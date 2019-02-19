@@ -29,7 +29,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _38001RadiantOpsRecruitment extends QuestHandler
 {
-	
 	public static final int questId = 38001;
 	
 	public _38001RadiantOpsRecruitment()

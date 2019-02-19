@@ -27,7 +27,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
  */
 public class SM_ABNORMAL_STATE extends AionServerPacket
 {
-	
 	private final Collection<Effect> effects;
 	private final int abnormals;
 	

@@ -25,7 +25,6 @@ import com.aionemu.commons.utils.internal.chmv8.PlatformDependent;
  */
 class WalkerFormationsCache
 {
-	
 	private static Map<Integer, WorldWalkerFormations> formations = PlatformDependent.newConcurrentHashMap();
 	
 	private WalkerFormationsCache()

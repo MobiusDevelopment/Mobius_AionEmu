@@ -29,7 +29,6 @@ import com.aionemu.gameserver.services.HTMLService;
  */
 public class CM_QUESTIONNAIRE extends AionClientPacket
 {
-	
 	private int objectId;
 	private int itemId;
 	@SuppressWarnings("unused")

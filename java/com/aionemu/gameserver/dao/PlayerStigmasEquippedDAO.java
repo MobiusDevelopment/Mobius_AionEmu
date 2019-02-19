@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.skill.linked_skill.PlayerEquippedStigmaList;
 
 public abstract class PlayerStigmasEquippedDAO implements DAO
 {
-	
 	@Override
 	public final String getClassName()
 	{

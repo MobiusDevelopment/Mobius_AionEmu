@@ -26,7 +26,6 @@ import javolution.util.FastList;
  */
 public abstract class PlayerTransferDAO implements DAO
 {
-	
 	public abstract FastList<PlayerTransferTask> getNew();
 	
 	public abstract boolean update(PlayerTransferTask task);

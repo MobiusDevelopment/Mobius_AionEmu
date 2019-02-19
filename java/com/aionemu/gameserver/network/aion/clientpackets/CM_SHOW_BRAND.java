@@ -28,7 +28,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_SHOW_BRAND extends AionClientPacket
 {
-	
 	@SuppressWarnings("unused")
 	private int action;
 	private int brandId;

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class _2727TransparentMotives extends QuestHandler
 {
-	
 	private static final int questId = 2727;
 	
 	public _2727TransparentMotives()

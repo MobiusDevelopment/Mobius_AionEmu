@@ -31,7 +31,6 @@ import com.aionemu.gameserver.questEngine.QuestEngine;
  */
 public class QuestNpc
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(QuestNpc.class);
 	private final List<Integer> onQuestStart;
 	private final List<Integer> onKillEvent;

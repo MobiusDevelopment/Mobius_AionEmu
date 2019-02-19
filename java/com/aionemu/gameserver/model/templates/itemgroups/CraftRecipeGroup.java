@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.templates.rewards.CraftRecipe;
  * @author Rolandas
  *
  */
-
 /**
  * <p>
  * Java class for CraftRecipeGroup complex type.

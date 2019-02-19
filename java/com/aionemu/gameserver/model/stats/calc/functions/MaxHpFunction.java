@@ -20,7 +20,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
 
 class MaxHpFunction extends StatFunction
 {
-	
 	MaxHpFunction()
 	{
 		stat = StatEnum.MAXHP;

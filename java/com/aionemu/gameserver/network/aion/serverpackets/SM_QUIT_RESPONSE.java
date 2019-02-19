@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_QUIT_RESPONSE extends AionServerPacket
 {
-	
 	private boolean edit_mode = false;
 	
 	public SM_QUIT_RESPONSE()

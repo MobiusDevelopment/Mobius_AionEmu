@@ -23,7 +23,6 @@ import com.aionemu.commons.configuration.Property;
  */
 public class PeriodicSaveConfig
 {
-	
 	/**
 	 * Time in seconds for saving player data
 	 */

@@ -27,5 +27,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ExtendAuraRangeEffect")
 public class ExtendAuraRangeEffect extends BuffEffect
 {
-	
 }

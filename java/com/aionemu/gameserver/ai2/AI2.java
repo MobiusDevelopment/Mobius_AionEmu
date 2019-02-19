@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.templates.item.ItemAttackType;
  */
 public interface AI2
 {
-	
 	void onCreatureEvent(AIEventType event, Creature creature);
 	
 	void onCustomEvent(int eventId, Object... args);

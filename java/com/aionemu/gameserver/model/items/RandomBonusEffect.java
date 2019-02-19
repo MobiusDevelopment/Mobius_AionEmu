@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.templates.stats.ModifiersTemplate;
  */
 public class RandomBonusEffect implements StatOwner
 {
-	
 	private final ModifiersTemplate template;
 	
 	public RandomBonusEffect(StatBonusType type, int polishSetId, int polishNumber)

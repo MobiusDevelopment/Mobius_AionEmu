@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class State extends AdminCommand
 {
-	
 	public State()
 	{
 		super("state");

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30201SuppliesParty extends QuestHandler
 {
-	
 	private static final int questId = 30201;
 	
 	public _30201SuppliesParty()

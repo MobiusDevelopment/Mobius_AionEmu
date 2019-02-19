@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
  */
 public class PlayerStorage extends Storage
 {
-	
 	private Player actor;
 	
 	/**

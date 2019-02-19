@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LEGION_UPDATE_TITLE extends AionServerPacket
 {
-	
 	private final int objectId;
 	private final int legionId;
 	private final String legionName;

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Sys extends AdminCommand
 {
-	
 	public Sys()
 	{
 		super("sys");

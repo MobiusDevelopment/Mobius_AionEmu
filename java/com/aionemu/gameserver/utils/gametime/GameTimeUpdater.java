@@ -22,7 +22,6 @@ package com.aionemu.gameserver.utils.gametime;
  */
 public class GameTimeUpdater implements Runnable
 {
-	
 	private final GameTime time;
 	
 	/**

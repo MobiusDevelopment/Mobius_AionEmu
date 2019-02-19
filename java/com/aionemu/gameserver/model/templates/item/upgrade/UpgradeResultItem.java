@@ -24,7 +24,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 /**
  * @author Ranastic (Encom)
  */
-
 @XmlRootElement(name = "UpgradeResultItem")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UpgradeResultItem

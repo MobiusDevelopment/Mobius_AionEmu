@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2428TheAbsolutelyEssentialBook extends QuestHandler
 {
-	
 	private static final int questId = 2428;
 	
 	public _2428TheAbsolutelyEssentialBook()

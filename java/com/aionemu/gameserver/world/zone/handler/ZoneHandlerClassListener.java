@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.zone.ZoneService;
  */
 public class ZoneHandlerClassListener implements ClassListener
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(InstanceHandlerClassListener.class);
 	
 	@SuppressWarnings("unchecked")

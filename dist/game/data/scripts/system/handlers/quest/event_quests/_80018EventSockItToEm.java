@@ -35,7 +35,6 @@ import com.aionemu.gameserver.services.events.EventsService;
  */
 public class _80018EventSockItToEm extends QuestHandler
 {
-	
 	private static final int questId = 80018;
 	
 	public _80018EventSockItToEm()

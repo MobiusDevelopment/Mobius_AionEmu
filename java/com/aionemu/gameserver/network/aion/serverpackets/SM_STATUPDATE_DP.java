@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_STATUPDATE_DP extends AionServerPacket
 {
-	
 	private final int currentDp;
 	
 	/**

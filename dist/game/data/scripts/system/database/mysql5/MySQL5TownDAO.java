@@ -39,7 +39,6 @@ import com.aionemu.gameserver.model.town.Town;
  */
 public class MySQL5TownDAO extends TownDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5TownDAO.class);
 	private static final String SELECT_QUERY = "SELECT * FROM `towns` WHERE `race` = ?";
 	private static final String INSERT_QUERY = "INSERT INTO `towns`(`id`,`level`,`points`, `race`) VALUES (?,?,?,?)";

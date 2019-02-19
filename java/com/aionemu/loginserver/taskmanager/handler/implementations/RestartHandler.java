@@ -27,7 +27,6 @@ import com.aionemu.loginserver.taskmanager.handler.TaskFromDBHandler;
  */
 public class RestartHandler extends TaskFromDBHandler
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(RestartHandler.class);
 	
 	@Override

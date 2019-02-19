@@ -28,7 +28,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CM_USE_HOUSE_OBJECT extends AionClientPacket
 {
-	
 	int itemObjectId;
 	
 	public CM_USE_HOUSE_OBJECT(int opcode, State state, State... restStates)

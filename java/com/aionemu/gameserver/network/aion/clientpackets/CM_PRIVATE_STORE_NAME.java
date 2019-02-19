@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.PrivateStoreService;
  */
 public class CM_PRIVATE_STORE_NAME extends AionClientPacket
 {
-	
 	private String name;
 	
 	/**

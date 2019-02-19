@@ -24,10 +24,8 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
 /**
  * @author Ghostfur
  */
-
 public class cmd_expandcube extends PlayerCommand
 {
-	
 	public cmd_expandcube()
 	{
 		super("expandcube");

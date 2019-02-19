@@ -25,7 +25,6 @@ import javolution.util.FastMap;
  */
 public class SeenCreatureList
 {
-	
 	private FastMap<Integer, Creature> seenCreatures;
 	
 	public boolean add(Creature creature)

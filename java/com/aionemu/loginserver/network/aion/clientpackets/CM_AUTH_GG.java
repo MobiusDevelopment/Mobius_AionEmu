@@ -28,7 +28,6 @@ import com.aionemu.loginserver.network.aion.serverpackets.SM_LOGIN_FAIL;
  */
 public class CM_AUTH_GG extends AionClientPacket
 {
-	
 	/**
 	 * session id - its should match sessionId that was send in Init packet.
 	 */

@@ -37,7 +37,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerLunaShop;
  */
 public class MySQL5PlayerLunaShopDAO extends PlayerLunaShopDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerLunaShopDAO.class);
 	
 	public static final String ADD_QUERY = "INSERT INTO `player_luna_shop` (`player_id`, `free_under`, `free_munition`, `free_chest`) VALUES (?,?,?,?)";

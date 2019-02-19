@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _21467SpawningTheSapSuckers extends QuestHandler
 {
-	
 	private static final int questId = 21467;
 	
 	public _21467SpawningTheSapSuckers()

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.services.item.ItemChargeService;
  */
 public class CM_CHARGE_ITEM extends AionClientPacket
 {
-	
 	private int targetNpcObjectId;
 	private int chargeLevel;
 	private Collection<Integer> itemIds;
@@ -51,7 +50,6 @@ public class CM_CHARGE_ITEM extends AionClientPacket
 		{
 			itemIds.add(readD());
 		}
-		
 	}
 	
 	@Override

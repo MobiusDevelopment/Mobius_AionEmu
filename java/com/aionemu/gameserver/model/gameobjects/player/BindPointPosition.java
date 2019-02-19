@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
  */
 public class BindPointPosition
 {
-	
 	private final int mapId;
 	private final float x;
 	private final float y;

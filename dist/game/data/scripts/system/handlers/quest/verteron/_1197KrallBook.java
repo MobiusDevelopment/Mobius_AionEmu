@@ -38,7 +38,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _1197KrallBook extends QuestHandler
 {
-	
 	private static final int questId = 1197;
 	
 	public _1197KrallBook()

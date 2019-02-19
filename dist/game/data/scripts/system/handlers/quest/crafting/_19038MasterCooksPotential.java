@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _19038MasterCooksPotential extends QuestHandler
 {
-	
 	private static final int questId = 19038;
 	
 	public _19038MasterCooksPotential()

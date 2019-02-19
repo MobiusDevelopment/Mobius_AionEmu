@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class DelayedFpAtkInstantEffect extends EffectTemplate
 {
-	
 	@XmlAttribute
 	protected int delay;
 	

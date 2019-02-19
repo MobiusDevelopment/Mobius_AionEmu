@@ -31,7 +31,6 @@ import com.aionemu.loginserver.network.aion.LoginConnection;
  */
 public class SM_SERVER_LIST extends AionServerPacket
 {
-	
 	public SM_SERVER_LIST()
 	{
 		super(0x04);

@@ -33,7 +33,6 @@ import javolution.util.FastMap;
 /**
  * @author Source
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "base_locations")
 public class BaseData

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.ls.LsServerPacket;
  */
 public class SM_MAC extends LsServerPacket
 {
-	
 	private final int accountId;
 	private final String address;
 	private final String hdd;

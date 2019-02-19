@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class PlayerLifeStats extends CreatureLifeStats<Player>
 {
-	
 	protected int currentFp;
 	private final ReentrantLock fpLock = new ReentrantLock();
 	

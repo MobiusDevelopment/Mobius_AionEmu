@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.World;
 /**
  * Created by wanke on 13/02/2017.
  */
-
 public class cmd_pk extends PlayerCommand
 {
 	public cmd_pk()

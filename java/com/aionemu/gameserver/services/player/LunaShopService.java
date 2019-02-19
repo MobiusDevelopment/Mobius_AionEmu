@@ -60,7 +60,6 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 /**
  * @author Ranastic
  */
-
 public class LunaShopService
 {
 	private final Logger log = LoggerFactory.getLogger(LunaShopService.class);

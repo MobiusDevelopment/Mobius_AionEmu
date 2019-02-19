@@ -34,7 +34,6 @@ import com.aionemu.gameserver.services.instance.SuspiciousOphidanBridgeService;
 /**
  * @author Rinzler (Encom)
  */
-
 public class AutoSuspiciousOphidanBridgeInstance extends AutoInstance
 {
 	@Override

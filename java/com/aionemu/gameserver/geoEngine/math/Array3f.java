@@ -26,7 +26,6 @@ import javolution.lang.Reusable;
  */
 public class Array3f implements Reusable
 {
-	
 	@SuppressWarnings("rawtypes")
 	private static final ObjectFactory FACTORY = new ObjectFactory()
 	{

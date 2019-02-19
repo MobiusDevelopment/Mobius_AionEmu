@@ -23,7 +23,6 @@ import com.aionemu.commons.database.dao.DAO;
  */
 public abstract class PremiumDAO implements DAO
 {
-	
 	public abstract long getPoints(int accountId);
 	
 	public abstract boolean updatePoints(int accountId, long points, long required);

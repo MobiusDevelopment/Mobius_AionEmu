@@ -32,7 +32,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
  */
 public class StaticDoor extends StaticObject
 {
-	
 	private final EnumSet<StaticDoorState> states;
 	private String doorName;
 	

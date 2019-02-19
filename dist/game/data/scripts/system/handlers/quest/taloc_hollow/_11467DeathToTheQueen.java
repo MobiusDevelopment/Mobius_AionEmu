@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _11467DeathToTheQueen extends QuestHandler
 {
-	
 	private static final int questId = 11467;
 	
 	public _11467DeathToTheQueen()

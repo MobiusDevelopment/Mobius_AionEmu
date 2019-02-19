@@ -48,7 +48,6 @@ import com.aionemu.loginserver.utils.AccountUtils;
  */
 public class AccountController
 {
-	
 	/**
 	 * Map with accounts that are active on LoginServer or joined GameServer and are not authenticated yet.
 	 */

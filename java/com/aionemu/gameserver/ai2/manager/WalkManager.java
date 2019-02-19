@@ -39,7 +39,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
  */
 public class WalkManager
 {
-	
 	private static final int WALK_RANDOM_RANGE = 5;
 	
 	/**

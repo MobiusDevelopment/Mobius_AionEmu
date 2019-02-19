@@ -24,7 +24,6 @@ import javax.xml.bind.annotation.XmlEnum;
 @XmlEnum
 public enum ConditionOperation
 {
-	
 	EQUAL,
 	GREATER,
 	GREATER_EQUAL,

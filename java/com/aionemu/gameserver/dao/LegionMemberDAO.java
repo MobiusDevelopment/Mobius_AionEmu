@@ -25,10 +25,8 @@ import com.aionemu.gameserver.model.team.legion.LegionMemberEx;
  * Class that is responsible for storing/loading legion data
  * @author Simple
  */
-
 public abstract class LegionMemberDAO implements IDFactoryAwareDAO
 {
-	
 	/**
 	 * Returns true if name is used, false in other case
 	 * @param playerObjId

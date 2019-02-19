@@ -31,7 +31,6 @@ import com.aionemu.gameserver.model.gameobjects.VisibleObject;
  */
 public class TargetEventHandler
 {
-	
 	/**
 	 * @param npcAI
 	 */

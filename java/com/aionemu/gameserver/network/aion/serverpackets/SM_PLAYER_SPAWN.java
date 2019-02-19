@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.WorldMapType;
 /**
  * @author Ranastic (Encom)
  */
-
 public class SM_PLAYER_SPAWN extends AionServerPacket
 {
 	private final Player player;

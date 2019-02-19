@@ -28,7 +28,6 @@ import com.aionemu.gameserver.world.WorldMapType;
  */
 public class MoveTo extends AdminCommand
 {
-	
 	public MoveTo()
 	{
 		super("moveto");

@@ -28,7 +28,6 @@ import com.aionemu.loginserver.network.gs.GsServerPacket;
  */
 public class SM_MACBAN_LIST extends GsServerPacket
 {
-	
 	private final Map<String, BannedMacEntry> bannedList;
 	
 	public SM_MACBAN_LIST()

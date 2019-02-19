@@ -33,7 +33,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 public class MySQL5LadderDAO extends LadderDAO
 {
 	@Override

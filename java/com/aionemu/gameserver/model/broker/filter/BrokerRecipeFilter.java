@@ -29,7 +29,6 @@ import com.aionemu.gameserver.model.templates.recipe.RecipeTemplate;
  */
 public class BrokerRecipeFilter extends BrokerFilter
 {
-	
 	private final int craftSkillId;
 	private final int[] masks;
 	

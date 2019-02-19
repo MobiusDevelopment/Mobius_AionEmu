@@ -23,7 +23,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public enum PetEmote
 {
-	
 	MOVE_STOP(0),
 	MOVETO(12),
 	ALARM(-114),

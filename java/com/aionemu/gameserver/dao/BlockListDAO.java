@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public abstract class BlockListDAO implements DAO
 {
-	
 	/**
 	 * Loads the blocklist for the player given
 	 * @param player

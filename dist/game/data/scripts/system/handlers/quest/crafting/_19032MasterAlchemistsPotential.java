@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _19032MasterAlchemistsPotential extends QuestHandler
 {
-	
 	private static final int questId = 19032;
 	
 	public _19032MasterAlchemistsPotential()

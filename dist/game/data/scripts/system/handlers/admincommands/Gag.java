@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Gag extends AdminCommand
 {
-	
 	public Gag()
 	{
 		super("gag");

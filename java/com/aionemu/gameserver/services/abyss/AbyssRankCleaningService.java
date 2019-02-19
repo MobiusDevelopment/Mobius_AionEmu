@@ -33,7 +33,6 @@ import com.aionemu.gameserver.world.World;
 
 public class AbyssRankCleaningService
 {
-	
 	private final Logger log = LoggerFactory.getLogger(AbyssRankCleaningService.class);
 	
 	private final int SECURITY_MINIMUM_PERIOD = 30;

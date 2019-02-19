@@ -31,7 +31,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public abstract class AionClientPacket extends BaseClientPacket<AionConnection> implements Cloneable
 {
-	
 	/**
 	 * Logger for this class.
 	 */

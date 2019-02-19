@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CmdResurrect extends AbstractGMHandler
 {
-	
 	public CmdResurrect(Player admin, String params)
 	{
 		super(admin, params);

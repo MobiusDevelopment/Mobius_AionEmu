@@ -23,7 +23,6 @@ import com.aionemu.gameserver.ai2.NpcAI2;
  */
 public class NpcAIPolls
 {
-	
 	/**
 	 * @param npcAI
 	 * @return

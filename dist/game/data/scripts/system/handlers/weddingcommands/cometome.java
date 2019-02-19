@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.chathandlers.WeddingCommand;
  */
 public class cometome extends WeddingCommand
 {
-	
 	public cometome()
 	{
 		super("cometome");

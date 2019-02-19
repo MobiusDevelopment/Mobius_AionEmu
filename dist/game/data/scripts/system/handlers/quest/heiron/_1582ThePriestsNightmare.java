@@ -27,10 +27,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Balthazar
  */
-
 public class _1582ThePriestsNightmare extends QuestHandler
 {
-	
 	private static final int questId = 1582;
 	
 	public _1582ThePriestsNightmare()

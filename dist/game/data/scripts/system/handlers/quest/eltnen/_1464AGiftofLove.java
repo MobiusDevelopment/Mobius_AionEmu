@@ -27,10 +27,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Balthazar
  */
-
 public class _1464AGiftofLove extends QuestHandler
 {
-	
 	private static final int questId = 1464;
 	
 	public _1464AGiftofLove()

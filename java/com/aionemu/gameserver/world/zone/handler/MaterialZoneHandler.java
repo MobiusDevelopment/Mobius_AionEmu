@@ -33,7 +33,6 @@ import javolution.util.FastMap;
  */
 public class MaterialZoneHandler implements ZoneHandler
 {
-	
 	FastMap<Integer, IActor> observed = new FastMap<>();
 	
 	private final Spatial geometry;

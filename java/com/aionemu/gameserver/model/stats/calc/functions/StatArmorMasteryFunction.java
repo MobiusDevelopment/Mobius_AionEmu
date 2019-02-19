@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.templates.item.ArmorType;
  */
 public class StatArmorMasteryFunction extends StatRateFunction
 {
-	
 	private final ArmorType armorType;
 	
 	public StatArmorMasteryFunction(ArmorType armorType, StatEnum name, int value, boolean bonus)

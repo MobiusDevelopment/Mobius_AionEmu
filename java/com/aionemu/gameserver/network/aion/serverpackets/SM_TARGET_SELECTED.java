@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_TARGET_SELECTED extends AionServerPacket
 {
-	
 	private int level;
 	private int maxHp;
 	private int currentHp;

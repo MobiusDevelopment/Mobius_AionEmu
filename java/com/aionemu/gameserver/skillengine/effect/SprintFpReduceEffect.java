@@ -27,5 +27,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "SprintFpReduceEffect")
 public class SprintFpReduceEffect extends BuffEffect
 {
-	
 }

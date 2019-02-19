@@ -29,7 +29,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  */
 public class AccessoryInfoBlobEntry extends ItemBlobEntry
 {
-	
 	AccessoryInfoBlobEntry()
 	{
 		super(ItemBlobType.SLOTS_ACCESSORY);

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2963OnBehalfOfAFriend extends QuestHandler
 {
-	
 	private static final int questId = 2963;
 	
 	public _2963OnBehalfOfAFriend()

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2222ManirsMessage extends QuestHandler
 {
-	
 	private static final int questId = 2222;
 	
 	public _2222ManirsMessage()

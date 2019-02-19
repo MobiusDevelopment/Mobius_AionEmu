@@ -28,7 +28,6 @@ import com.aionemu.gameserver.world.WorldMapType;
  */
 public class CM_TELEPORT_DONE extends AionClientPacket
 {
-	
 	public CM_TELEPORT_DONE(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

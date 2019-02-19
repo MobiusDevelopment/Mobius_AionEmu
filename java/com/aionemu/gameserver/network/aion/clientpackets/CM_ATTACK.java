@@ -30,7 +30,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_ATTACK extends AionClientPacket
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(CM_ATTACK.class);
 	/**
 	 * Target object id that client wants to TALK WITH or 0 if wants to unselect

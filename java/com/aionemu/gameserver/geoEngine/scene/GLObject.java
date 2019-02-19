@@ -21,7 +21,6 @@ package com.aionemu.gameserver.geoEngine.scene;
  */
 public abstract class GLObject implements Cloneable
 {
-	
 	/**
 	 * The ID of the object, usually depends on its type. Typically returned from calls like glGenTextures, glGenBuffers, etc.
 	 */

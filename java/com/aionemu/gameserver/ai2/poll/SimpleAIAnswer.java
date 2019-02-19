@@ -21,7 +21,6 @@ package com.aionemu.gameserver.ai2.poll;
  */
 public class SimpleAIAnswer implements AIAnswer
 {
-	
 	private final boolean answer;
 	
 	/**

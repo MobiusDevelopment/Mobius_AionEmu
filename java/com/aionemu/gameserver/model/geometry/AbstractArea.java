@@ -26,7 +26,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public abstract class AbstractArea implements Area
 {
-	
 	/**
 	 * Minimal z of area
 	 */

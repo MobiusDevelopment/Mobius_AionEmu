@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CM_TOGGLE_SKILL_DEACTIVATE extends AionClientPacket
 {
-	
 	private int skillId;
 	
 	public CM_TOGGLE_SKILL_DEACTIVATE(int opcode, State state, State... restStates)

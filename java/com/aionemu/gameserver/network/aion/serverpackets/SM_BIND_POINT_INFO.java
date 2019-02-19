@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_BIND_POINT_INFO extends AionServerPacket
 {
-	
 	private final int mapId;
 	private final float x;
 	private final float y;

@@ -32,7 +32,6 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlRootElement(name = "svs_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SvsSchedule

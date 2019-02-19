@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1535TheColdColdGround extends QuestHandler
 {
-	
 	private static final int questId = 1535;
 	
 	public _1535TheColdColdGround()

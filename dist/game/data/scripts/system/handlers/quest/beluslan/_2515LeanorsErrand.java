@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2515LeanorsErrand extends QuestHandler
 {
-	
 	private static final int questId = 2515;
 	
 	public _2515LeanorsErrand()

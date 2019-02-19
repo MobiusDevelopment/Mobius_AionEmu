@@ -22,7 +22,6 @@ package com.aionemu.gameserver.model.gameobjects.player;
  */
 public class BlockedPlayer
 {
-	
 	PlayerCommonData pcd;
 	String reason;
 	

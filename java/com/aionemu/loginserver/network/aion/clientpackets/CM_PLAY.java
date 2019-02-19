@@ -33,7 +33,6 @@ import com.aionemu.loginserver.network.aion.serverpackets.SM_PLAY_OK;
  */
 public class CM_PLAY extends AionClientPacket
 {
-	
 	/**
 	 * accountId is part of session key - its used for security purposes
 	 */

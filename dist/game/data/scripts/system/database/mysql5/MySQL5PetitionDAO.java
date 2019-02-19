@@ -37,7 +37,6 @@ import com.aionemu.gameserver.model.PetitionStatus;
  */
 public class MySQL5PetitionDAO extends PetitionDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PetitionDAO.class);
 	
 	@Override

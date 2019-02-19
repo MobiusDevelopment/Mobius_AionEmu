@@ -27,7 +27,6 @@ import com.aionemu.gameserver.services.LegionService;
  */
 public class CM_LEGION_SEND_EMBLEM_INFO extends AionClientPacket
 {
-	
 	private int legionId;
 	
 	public CM_LEGION_SEND_EMBLEM_INFO(int opcode, State state, State... restStates)

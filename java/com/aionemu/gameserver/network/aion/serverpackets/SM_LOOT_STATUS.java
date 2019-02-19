@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LOOT_STATUS extends AionServerPacket
 {
-	
 	private final int targetObjectId;
 	private final int state;
 	

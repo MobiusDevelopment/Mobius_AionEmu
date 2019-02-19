@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _4101ElimofBrusthonin extends QuestHandler
 {
-	
 	private static final int questId = 4101;
 	
 	public _4101ElimofBrusthonin()

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob;
  */
 public class SM_VIEW_PLAYER_DETAILS extends AionServerPacket
 {
-	
 	private final List<Item> items;
 	private final int itemSize;
 	private final int targetObjId;

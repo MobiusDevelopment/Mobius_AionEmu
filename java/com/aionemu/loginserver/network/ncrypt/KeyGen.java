@@ -35,7 +35,6 @@ import com.aionemu.commons.utils.Rnd;
  */
 public class KeyGen
 {
-	
 	/**
 	 * Logger for this class.
 	 */

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.MathUtil;
  */
 public class _1157GaphyrksLove extends QuestHandler
 {
-	
 	private static final int questId = 1157;
 	
 	public _1157GaphyrksLove()

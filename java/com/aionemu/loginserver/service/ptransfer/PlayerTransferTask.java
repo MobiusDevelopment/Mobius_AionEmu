@@ -21,7 +21,6 @@ package com.aionemu.loginserver.service.ptransfer;
  */
 public class PlayerTransferTask
 {
-	
 	public int sourceAccountId, targetAccountId, playerId;
 	public byte sourceServerId, targetServerId;
 	public int id;

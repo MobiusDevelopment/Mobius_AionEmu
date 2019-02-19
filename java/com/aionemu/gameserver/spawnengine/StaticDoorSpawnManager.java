@@ -38,7 +38,6 @@ import com.aionemu.gameserver.world.knownlist.PlayerAwareKnownList;
  */
 public class StaticDoorSpawnManager
 {
-	
 	private static Logger log = LoggerFactory.getLogger(StaticDoorSpawnManager.class);
 	
 	/**

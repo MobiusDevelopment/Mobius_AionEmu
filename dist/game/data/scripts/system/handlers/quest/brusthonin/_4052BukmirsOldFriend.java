@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _4052BukmirsOldFriend extends QuestHandler
 {
-	
 	private static final int questId = 4052;
 	
 	public _4052BukmirsOldFriend()

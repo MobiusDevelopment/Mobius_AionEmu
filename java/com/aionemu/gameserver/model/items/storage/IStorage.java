@@ -33,7 +33,6 @@ import javolution.util.FastList;
  */
 public interface IStorage
 {
-	
 	/**
 	 * @param player
 	 */

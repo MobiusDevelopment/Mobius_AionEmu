@@ -45,7 +45,6 @@ import com.aionemu.loginserver.network.ncrypt.KeyGen;
  */
 public class LoginConnection extends AConnection
 {
-	
 	/**
 	 * Logger for this class.
 	 */

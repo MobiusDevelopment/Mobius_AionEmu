@@ -27,7 +27,6 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 public abstract class Event implements Runnable
 {
 	public static final int MAX_PRIORITY = 10;

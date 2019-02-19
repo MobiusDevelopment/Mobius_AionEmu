@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public final class StorageObject extends HouseObject<HousingStorage>
 {
-	
 	public StorageObject(House owner, int objId, int templateId)
 	{
 		super(owner, objId, templateId);

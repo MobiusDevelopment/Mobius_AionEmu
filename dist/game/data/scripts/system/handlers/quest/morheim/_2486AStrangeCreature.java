@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2486AStrangeCreature extends QuestHandler
 {
-	
 	private static final int questId = 2486;
 	
 	public _2486AStrangeCreature()

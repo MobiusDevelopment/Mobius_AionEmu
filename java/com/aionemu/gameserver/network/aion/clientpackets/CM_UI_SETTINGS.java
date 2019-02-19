@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_UI_SETTINGS extends AionClientPacket
 {
-	
 	int settingsType;
 	byte[] data;
 	int size;

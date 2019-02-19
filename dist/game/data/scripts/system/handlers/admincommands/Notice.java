@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Notice extends AdminCommand
 {
-	
 	public Notice()
 	{
 		super("notice");

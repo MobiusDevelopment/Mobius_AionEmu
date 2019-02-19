@@ -27,7 +27,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CmdGiveTitle extends AbstractGMHandler
 {
-	
 	public CmdGiveTitle(Player admin, String params)
 	{
 		super(admin, params);

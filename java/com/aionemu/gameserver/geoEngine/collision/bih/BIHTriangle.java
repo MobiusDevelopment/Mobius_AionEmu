@@ -21,7 +21,6 @@ import com.aionemu.gameserver.geoEngine.math.Vector3f;
 
 public final class BIHTriangle
 {
-	
 	private final Vector3f pointa = new Vector3f();
 	private final Vector3f pointb = new Vector3f();
 	private final Vector3f pointc = new Vector3f();

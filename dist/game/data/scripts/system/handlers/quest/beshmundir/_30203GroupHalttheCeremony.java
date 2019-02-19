@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30203GroupHalttheCeremony extends QuestHandler
 {
-	
 	private static final int questId = 30203;
 	private static final int[] npc_ids =
 	{

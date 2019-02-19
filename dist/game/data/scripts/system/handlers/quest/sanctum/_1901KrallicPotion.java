@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1901KrallicPotion extends QuestHandler
 {
-	
 	private static final int questId = 1901;
 	
 	public _1901KrallicPotion()

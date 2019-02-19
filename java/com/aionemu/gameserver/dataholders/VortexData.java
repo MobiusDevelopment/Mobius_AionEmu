@@ -37,7 +37,6 @@ import javolution.util.FastMap;
 @XmlRootElement(name = "dimensional_vortex")
 public class VortexData
 {
-	
 	@XmlElement(name = "vortex_location")
 	private List<VortexTemplate> vortexTemplates;
 	@XmlTransient

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _30155StonetoFlesh extends QuestHandler
 {
-	
 	private static final int questId = 30155;
 	
 	public _30155StonetoFlesh()

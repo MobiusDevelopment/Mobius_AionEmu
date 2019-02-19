@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.gameobjects.PersistentState;
  */
 public class EquippedStigmasEntry extends StigmaEntry
 {
-	
 	private PersistentState persistentState;
 	
 	public EquippedStigmasEntry(int itemId, String itemName, PersistentState persistentState)

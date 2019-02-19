@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1423ExpertAdvice extends QuestHandler
 {
-	
 	private static final int questId = 1423;
 	
 	public _1423ExpertAdvice()

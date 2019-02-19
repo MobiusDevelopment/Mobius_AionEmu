@@ -45,7 +45,6 @@ import com.aionemu.gameserver.utils.audit.AuditLogger;
  */
 public class ExchangeService
 {
-	
 	private final Map<Integer, Exchange> exchanges = new HashMap<>();
 	
 	private final ExchangePeriodicTaskManager saveManager;
@@ -488,7 +487,6 @@ public class ExchangeService
 		{
 			return CALLED_METHOD_NAME;
 		}
-		
 	}
 	
 	/**

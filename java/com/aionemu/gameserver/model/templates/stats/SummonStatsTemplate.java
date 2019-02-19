@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "summon_stats_template")
 public class SummonStatsTemplate extends StatsTemplate
 {
-	
 	@XmlAttribute(name = "pdefense")
 	private int pdefense;
 	@XmlAttribute(name = "mresist")

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _4078ALightThroughtheTrees extends QuestHandler
 {
-	
 	private static final int questId = 4078;
 	private static final int[] npc_ids =
 	{

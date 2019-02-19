@@ -26,7 +26,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
  */
 public class AbnormalDamageModifier extends ActionModifier
 {
-	
 	@XmlAttribute(required = true)
 	protected AbnormalState state;
 	

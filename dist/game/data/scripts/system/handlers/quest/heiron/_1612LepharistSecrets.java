@@ -27,10 +27,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Balthazar
  */
-
 public class _1612LepharistSecrets extends QuestHandler
 {
-	
 	private static final int questId = 1612;
 	
 	public _1612LepharistSecrets()

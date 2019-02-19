@@ -36,7 +36,6 @@ import com.aionemu.gameserver.network.ls.clientpackets.CM_REQUEST_KICK_ACCOUNT;
  */
 public class LsPacketHandlerFactory
 {
-	
 	private final LsPacketHandler handler = new LsPacketHandler();
 	
 	public static LsPacketHandlerFactory getInstance()

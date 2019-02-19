@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _4011AnOldSettlersLetter extends QuestHandler
 {
-	
 	private static final int questId = 4011;
 	private static final int[] npc_ids =
 	{

@@ -51,7 +51,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler (Encom)
  */
-
 public class AnohaService
 {
 	private AnohaSchedule anohaSchedule;

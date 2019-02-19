@@ -19,7 +19,6 @@ package com.aionemu.gameserver.model.instancerift;
 /**
  * @author Rinzler (Encom)
  */
-
 public enum InstanceRiftStateType
 {
 	OPEN,

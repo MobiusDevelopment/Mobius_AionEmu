@@ -26,7 +26,6 @@ import javolution.lang.Reusable;
 /*
  * -- Added *Local methods to cut down on object creation - JS
  */
-
 /**
  * <code>Vector3f</code> defines a Vector for a three float value tuple. <code>Vector3f</code> can represent any three dimensional value, such as a vertex, a normal, etc. Utility methods are also included to aid in mathematical calculations.
  * @author Mark Powell
@@ -34,7 +33,6 @@ import javolution.lang.Reusable;
  */
 public final class Vector3f implements Cloneable, Reusable
 {
-	
 	private static final Logger logger = Logger.getLogger(Vector3f.class.getName());
 	@SuppressWarnings("rawtypes")
 	private static final ObjectFactory FACTORY = new ObjectFactory()

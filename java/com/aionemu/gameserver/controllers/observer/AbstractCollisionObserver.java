@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public abstract class AbstractCollisionObserver extends ActionObserver
 {
-	
 	protected Creature creature;
 	protected Vector3f oldPos;
 	protected Spatial geometry;

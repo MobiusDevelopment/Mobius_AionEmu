@@ -27,7 +27,6 @@ import com.aionemu.gameserver.services.mail.MailService;
  */
 public class CM_SEND_MAIL extends AionClientPacket
 {
-	
 	private String recipientName;
 	private String title;
 	private String message;

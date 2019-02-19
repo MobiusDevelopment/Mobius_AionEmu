@@ -33,7 +33,6 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
  */
 public class AttackEventHandler
 {
-	
 	/**
 	 * @param npcAI
 	 * @param creature

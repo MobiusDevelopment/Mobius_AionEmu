@@ -38,7 +38,6 @@ import com.aionemu.gameserver.model.gameobjects.player.title.TitleList;
  */
 public class MySQL5PlayerTitleListDAO extends PlayerTitleListDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerTitleListDAO.class);
 	private static final String LOAD_QUERY = "SELECT `title_id`, `remaining` FROM `player_titles` WHERE `player_id`=?";
 	private static final String INSERT_QUERY = "INSERT INTO `player_titles`(`player_id`,`title_id`, `remaining`) VALUES (?,?,?)";

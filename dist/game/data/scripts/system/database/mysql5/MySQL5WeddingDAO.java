@@ -34,7 +34,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class MySQL5WeddingDAO extends WeddingDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PortalCooldownsDAO.class);
 	
 	public static final String INSERT_QUERY = "INSERT INTO `weddings` (`player1`, `player2`) VALUES (?,?)";

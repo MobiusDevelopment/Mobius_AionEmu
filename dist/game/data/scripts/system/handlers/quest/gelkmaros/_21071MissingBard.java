@@ -26,7 +26,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21071MissingBard extends QuestHandler
 {
-	
 	private static final int questId = 21071;
 	
 	public _21071MissingBard()

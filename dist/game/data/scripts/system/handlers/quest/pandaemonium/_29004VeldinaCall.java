@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _29004VeldinaCall extends QuestHandler
 {
-	
 	private static final int questId = 29004;
 	
 	public _29004VeldinaCall()

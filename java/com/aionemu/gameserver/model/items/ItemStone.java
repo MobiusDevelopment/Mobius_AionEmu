@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.stats.calc.StatOwner;
  */
 public class ItemStone implements StatOwner
 {
-	
 	private final int itemObjId;
 	
 	private final int itemId;

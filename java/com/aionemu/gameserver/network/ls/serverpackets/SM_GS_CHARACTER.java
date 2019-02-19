@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.ls.LsServerPacket;
  */
 public class SM_GS_CHARACTER extends LsServerPacket
 {
-	
 	private final int accountId;
 	private final int characterCount;
 	

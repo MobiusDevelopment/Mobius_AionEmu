@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public abstract class PlayerLifeStatsDAO implements DAO
 {
-	
 	/**
 	 * Returns unique identifier for PlayerLifeStatsDAO
 	 * @return unique identifier for PlayerLifeStatsDAO

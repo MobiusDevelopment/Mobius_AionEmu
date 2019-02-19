@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _3965TotheGalleriaofGrandeur extends QuestHandler
 {
-	
 	private static final int questId = 3965;
 	
 	public _3965TotheGalleriaofGrandeur()

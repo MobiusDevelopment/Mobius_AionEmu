@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _3001UnearthingtheTruth extends QuestHandler
 {
-	
 	private static final int questId = 3001;
 	
 	public _3001UnearthingtheTruth()

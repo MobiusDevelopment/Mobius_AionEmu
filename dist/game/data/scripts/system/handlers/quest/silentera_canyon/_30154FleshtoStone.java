@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30154FleshtoStone extends QuestHandler
 {
-	
 	private static final int questId = 30154;
 	
 	public _30154FleshtoStone()

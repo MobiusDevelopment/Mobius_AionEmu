@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30005HealMeKillMe extends QuestHandler
 {
-	
 	private static final int questId = 30005;
 	private final int[] mobs =
 	{

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.services.NightmareCircusService;
 /**
  * @author Rinzler (Encom)
  */
-
 public class CircusStartRunnable implements Runnable
 {
 	private final int id;

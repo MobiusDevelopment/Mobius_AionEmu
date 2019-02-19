@@ -22,7 +22,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author KorLightNing
  */
-
 public class SM_CASH_BUFF extends AionServerPacket
 {
 	@Override

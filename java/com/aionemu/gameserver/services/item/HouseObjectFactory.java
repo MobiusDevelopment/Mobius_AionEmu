@@ -49,7 +49,6 @@ import com.aionemu.gameserver.utils.idfactory.IDFactory;
  */
 public final class HouseObjectFactory
 {
-	
 	public static HouseObject<?> createNew(House house, int objectId, int objectTemplateId)
 	{
 		final PlaceableHouseObject template = DataManager.HOUSING_OBJECT_DATA.getTemplateById(objectTemplateId);

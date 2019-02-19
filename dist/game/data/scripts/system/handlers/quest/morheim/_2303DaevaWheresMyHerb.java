@@ -29,7 +29,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _2303DaevaWheresMyHerb extends QuestHandler
 {
-	
 	private static final int questId = 2303;
 	private int choice = 0;
 	

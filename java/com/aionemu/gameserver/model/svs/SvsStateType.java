@@ -19,7 +19,6 @@ package com.aionemu.gameserver.model.svs;
 /**
  * @author Rinzler (Encom)
  */
-
 public enum SvsStateType
 {
 	SVS,

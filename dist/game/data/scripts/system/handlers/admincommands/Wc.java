@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
  */
 public class Wc extends AdminCommand
 {
-	
 	public Wc()
 	{
 		super("wc");

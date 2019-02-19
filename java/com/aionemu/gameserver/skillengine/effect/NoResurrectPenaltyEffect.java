@@ -20,7 +20,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 
 public class NoResurrectPenaltyEffect extends BuffEffect
 {
-	
 	@Override
 	public void calculate(Effect effect)
 	{

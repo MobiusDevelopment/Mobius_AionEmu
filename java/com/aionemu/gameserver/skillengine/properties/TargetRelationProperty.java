@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
  */
 public class TargetRelationProperty
 {
-	
 	/**
 	 * @param skill
 	 * @param properties

@@ -24,7 +24,6 @@ import java.nio.Buffer;
  */
 public abstract class IndexBuffer
 {
-	
 	public abstract int get(int i);
 	
 	public abstract void put(int i, int value);

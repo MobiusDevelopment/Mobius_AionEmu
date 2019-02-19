@@ -38,7 +38,6 @@ import com.aionemu.loginserver.utils.ThreadPoolManager;
  */
 public class CM_GS_AUTH extends GsClientPacket
 {
-	
 	private final Logger log = LoggerFactory.getLogger(CM_GS_AUTH.class);
 	/**
 	 * Password for authentication

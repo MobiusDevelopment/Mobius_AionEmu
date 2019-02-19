@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * Rework LightNing (ENCOM)
  */
-
 public class CM_SELECT_ITEM extends AionClientPacket
 {
 	int uniqueItemId;

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1363ThankingMabangtah extends QuestHandler
 {
-	
 	private static final int questId = 1363;
 	
 	public _1363ThankingMabangtah()

@@ -126,7 +126,6 @@ public class RespawnService
 				visibleObject.getController().onDelete();
 			}
 		}
-		
 	}
 	
 	private static class RespawnTask implements Runnable
@@ -151,7 +150,6 @@ public class RespawnService
 			}
 			respawn(spawn, instanceId);
 		}
-		
 	}
 	
 }

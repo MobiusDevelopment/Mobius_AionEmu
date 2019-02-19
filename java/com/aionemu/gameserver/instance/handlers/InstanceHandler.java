@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
  */
 public interface InstanceHandler
 {
-	
 	/**
 	 * Executed during instance creation.<br>
 	 * This method will run after spawns are loaded

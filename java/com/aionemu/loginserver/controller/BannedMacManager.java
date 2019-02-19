@@ -30,7 +30,6 @@ import javolution.util.FastMap;
  */
 public class BannedMacManager
 {
-	
 	private static BannedMacManager manager = new BannedMacManager();
 	private Map<String, BannedMacEntry> bannedList = new FastMap<>();
 	

@@ -25,7 +25,6 @@ import com.aionemu.loginserver.network.gs.GsServerPacket;
  */
 public class SM_ACCOUNT_RECONNECT_KEY extends GsServerPacket
 {
-	
 	/**
 	 * accountId of account that will be reconnecting.
 	 */

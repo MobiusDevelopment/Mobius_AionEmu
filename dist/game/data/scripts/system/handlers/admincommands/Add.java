@@ -3173,7 +3173,6 @@ public class Add extends AdminCommand
 		{
 			PacketSendUtility.sendMessage(player, "Item couldn't be added");
 		}
-		
 	}
 	
 	private boolean isRestrictedItem(int itemId)

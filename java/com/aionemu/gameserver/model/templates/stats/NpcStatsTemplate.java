@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "npc_stats_template")
 public class NpcStatsTemplate extends StatsTemplate
 {
-	
 	@XmlAttribute(name = "run_speed_fight")
 	private float runSpeedFight;
 	@XmlAttribute(name = "pdef")

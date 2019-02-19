@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _11110KillingTime extends QuestHandler
 {
-	
 	private static final int questId = 11110;
 	
 	public _11110KillingTime()

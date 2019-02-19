@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2512FoodforRemotePlaces extends QuestHandler
 {
-	
 	private static final int questId = 2512;
 	
 	public _2512FoodforRemotePlaces()

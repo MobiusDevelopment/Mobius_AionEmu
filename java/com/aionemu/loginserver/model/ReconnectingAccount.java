@@ -22,7 +22,6 @@ package com.aionemu.loginserver.model;
  */
 public class ReconnectingAccount
 {
-	
 	/**
 	 * Account object of account that will be reconnecting.
 	 */

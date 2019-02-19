@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_ALLIANCE_READY_CHECK extends AionServerPacket
 {
-	
 	private final int playerObjectId;
 	private final int statusCode;
 	

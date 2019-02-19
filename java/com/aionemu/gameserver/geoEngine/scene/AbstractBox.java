@@ -29,7 +29,6 @@ import com.aionemu.gameserver.geoEngine.math.Vector3f;
  */
 public abstract class AbstractBox extends Mesh
 {
-	
 	public final Vector3f center = new Vector3f(0f, 0f, 0f);
 	public float xExtent, yExtent, zExtent;
 	

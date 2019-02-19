@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.knownlist.SphereKnownList;
  */
 public class Shield extends VisibleObject
 {
-	
 	private ShieldTemplate template = null;
 	private String name = null;
 	private int id = 0;

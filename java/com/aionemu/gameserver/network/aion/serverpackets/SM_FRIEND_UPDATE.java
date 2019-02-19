@@ -29,7 +29,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_FRIEND_UPDATE extends AionServerPacket
 {
-	
 	private final int friendObjId;
 	
 	private static Logger log = LoggerFactory.getLogger(SM_FRIEND_UPDATE.class);

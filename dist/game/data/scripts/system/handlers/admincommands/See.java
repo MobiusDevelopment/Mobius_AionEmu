@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class See extends AdminCommand
 {
-	
 	public See()
 	{
 		super("see");

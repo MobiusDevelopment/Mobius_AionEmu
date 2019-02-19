@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _28620Kaliga_Collection_Dagger extends QuestHandler
 {
-	
 	private static final int questId = 28620;
 	
 	public _28620Kaliga_Collection_Dagger()

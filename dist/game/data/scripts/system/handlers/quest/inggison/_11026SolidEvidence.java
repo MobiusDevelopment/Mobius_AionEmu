@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _11026SolidEvidence extends QuestHandler
 {
-	
 	private static final int questId = 11026;
 	
 	public _11026SolidEvidence()

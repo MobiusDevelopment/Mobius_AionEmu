@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.dorinerk_wardrobe;
  */
 public class WardrobeEntry
 {
-	
 	private final int itemId;
 	private final int slot;
 	private final int reskin_count;

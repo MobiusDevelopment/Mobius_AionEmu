@@ -26,7 +26,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
  */
 public class MoveEventHandler
 {
-	
 	/**
 	 * @param npcAI
 	 */

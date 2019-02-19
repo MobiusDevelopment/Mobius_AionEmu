@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _19008MasterWeaponsmithsPotential extends QuestHandler
 {
-	
 	private static final int questId = 19008;
 	
 	public _19008MasterWeaponsmithsPotential()

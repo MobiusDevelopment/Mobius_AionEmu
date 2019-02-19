@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_SUMMON_PANEL extends AionServerPacket
 {
-	
 	private final Summon summon;
 	
 	public SM_SUMMON_PANEL(Summon summon)

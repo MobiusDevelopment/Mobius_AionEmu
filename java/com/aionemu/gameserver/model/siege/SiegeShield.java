@@ -34,7 +34,6 @@ import javolution.util.FastMap;
  */
 public class SiegeShield implements ZoneHandler
 {
-	
 	FastMap<Integer, IActor> observed = new FastMap<>();
 	private final Spatial geometry;
 	private int siegeLocationId;

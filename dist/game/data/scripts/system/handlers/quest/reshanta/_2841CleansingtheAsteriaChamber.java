@@ -27,10 +27,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Hilgert
  */
-
 public class _2841CleansingtheAsteriaChamber extends QuestHandler
 {
-	
 	private static final int questId = 2841;
 	
 	public _2841CleansingtheAsteriaChamber()

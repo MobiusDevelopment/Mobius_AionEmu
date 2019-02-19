@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CM_CHAT_GROUP_INFO extends AionClientPacket
 {
-	
 	private String playerName;
 	@SuppressWarnings("unused")
 	private int unk;

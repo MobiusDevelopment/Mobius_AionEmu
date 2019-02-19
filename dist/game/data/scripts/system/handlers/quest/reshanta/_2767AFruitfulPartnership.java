@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class _2767AFruitfulPartnership extends QuestHandler
 {
-	
 	private static final int questId = 2767;
 	
 	public _2767AFruitfulPartnership()

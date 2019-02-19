@@ -49,7 +49,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class LoginServer
 {
-	
 	/**
 	 * Logger for this class.
 	 */

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class UnBanIp extends AdminCommand
 {
-	
 	public UnBanIp()
 	{
 		super("unbanip");

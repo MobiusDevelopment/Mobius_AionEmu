@@ -28,7 +28,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  */
 public class GeneralInfoBlobEntry extends ItemBlobEntry
 {
-	
 	GeneralInfoBlobEntry()
 	{
 		super(ItemBlobType.GENERAL_INFO);

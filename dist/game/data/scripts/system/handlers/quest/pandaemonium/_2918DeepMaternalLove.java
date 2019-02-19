@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2918DeepMaternalLove extends QuestHandler
 {
-	
 	private static final int questId = 2918;
 	
 	public _2918DeepMaternalLove()

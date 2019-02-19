@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.templates.zone;
  */
 public enum ZoneType
 {
-	
 	FLY(0),
 	DAMAGE(1),
 	WATER(2),

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.World;
 /**
  * @author Ranastic (Encom)
  */
-
 public class CM_SILENCE_REPORT extends AionClientPacket
 {
 	private int report;

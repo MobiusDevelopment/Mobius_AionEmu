@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _4974TheSecretOfHisSuccess extends QuestHandler
 {
-	
 	private static final int questId = 4974;
 	
 	public _4974TheSecretOfHisSuccess()

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _2477ADishForDukar extends QuestHandler
 {
-	
 	private static final int questId = 2477;
 	
 	public _2477ADishForDukar()

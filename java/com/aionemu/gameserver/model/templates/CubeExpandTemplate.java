@@ -33,7 +33,6 @@ import com.aionemu.gameserver.model.templates.expand.Expand;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CubeExpandTemplate
 {
-	
 	@XmlElement(name = "expand", required = true)
 	protected List<Expand> cubeExpands;
 	

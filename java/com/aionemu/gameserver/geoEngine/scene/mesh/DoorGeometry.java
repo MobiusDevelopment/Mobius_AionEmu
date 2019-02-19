@@ -29,7 +29,6 @@ import com.aionemu.gameserver.geoEngine.scene.Mesh;
  */
 public class DoorGeometry extends Geometry
 {
-	
 	BitSet instances = new BitSet();
 	private boolean foundTemplate = false;
 	

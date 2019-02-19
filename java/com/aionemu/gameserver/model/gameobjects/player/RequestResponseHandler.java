@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
  */
 public abstract class RequestResponseHandler
 {
-	
 	private final Creature requester;
 	
 	public RequestResponseHandler(Creature requester)

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Cube extends AdminCommand
 {
-	
 	public Cube()
 	{
 		super("cube");

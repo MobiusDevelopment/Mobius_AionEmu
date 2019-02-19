@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2449ExtricatingChaomirk extends QuestHandler
 {
-	
 	private static final int questId = 2449;
 	
 	public _2449ExtricatingChaomirk()

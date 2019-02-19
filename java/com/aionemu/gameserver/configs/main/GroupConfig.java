@@ -20,7 +20,6 @@ import com.aionemu.commons.configuration.Property;
 
 public class GroupConfig
 {
-	
 	/**
 	 * Group remove time
 	 */

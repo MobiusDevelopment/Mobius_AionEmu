@@ -35,7 +35,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_FRIEND_UPDATE;
  */
 public class FriendList implements Iterable<Friend>
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(FriendList.class);
 	private Status status = Status.OFFLINE;
 	private volatile byte friendListSent = 0;
@@ -197,7 +196,6 @@ public class FriendList implements Iterable<Friend>
 				}
 			}
 		}
-		
 	}
 	
 	/**

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
  */
 public class ScenarioTemplate implements AI2Scenario
 {
-	
 	@Override
 	public void onCreatureEvent(AbstractAI ai, AIEventType event, Creature creature)
 	{

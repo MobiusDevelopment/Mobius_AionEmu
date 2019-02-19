@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_SKILL_ACTIVATION extends AionServerPacket
 {
-	
 	private final boolean isActive;
 	private final int unk;
 	private final int skillId;

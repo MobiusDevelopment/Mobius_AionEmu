@@ -30,7 +30,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
  */
 public class _11076ProofOfTalent extends QuestHandler
 {
-	
 	private static final int questId = 11076;
 	
 	public _11076ProofOfTalent()

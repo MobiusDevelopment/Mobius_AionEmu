@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.MathUtil;
  */
 public class MaxCountProperty
 {
-	
 	public static boolean set(Skill skill, Properties properties)
 	{
 		final TargetRangeAttribute value = properties.getTargetType();

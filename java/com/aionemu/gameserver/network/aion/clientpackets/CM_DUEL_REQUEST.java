@@ -30,7 +30,6 @@ import com.aionemu.gameserver.services.DuelService;
  */
 public class CM_DUEL_REQUEST extends AionClientPacket
 {
-	
 	/**
 	 * Target object id that client wants to start duel with
 	 */

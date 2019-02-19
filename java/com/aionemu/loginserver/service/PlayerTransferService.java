@@ -44,7 +44,6 @@ import javolution.util.FastMap;
  */
 public class PlayerTransferService
 {
-	
 	private static PlayerTransferService instance = new PlayerTransferService();
 	private final Logger log = LoggerFactory.getLogger(PlayerTransferService.class);
 	

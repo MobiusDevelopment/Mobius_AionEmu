@@ -29,7 +29,6 @@ import com.google.common.base.Predicate;
  */
 public class ChangeAllianceLootRulesEvent extends AlwaysTrueTeamEvent implements Predicate<Player>
 {
-	
 	private final PlayerAlliance alliance;
 	private final LootGroupRules lootGroupRules;
 	

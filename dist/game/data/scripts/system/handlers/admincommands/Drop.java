@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Drop extends AdminCommand
 {
-	
 	public Drop()
 	{
 		super("drop");

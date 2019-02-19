@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21070TheSummation extends QuestHandler
 {
-	
 	private static final int questId = 21070;
 	
 	public _21070TheSummation()

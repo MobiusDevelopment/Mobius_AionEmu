@@ -25,7 +25,6 @@ import com.aionemu.loginserver.network.aion.SessionKey;
  */
 public class SM_LOGIN_OK extends AionServerPacket
 {
-	
 	/**
 	 * accountId is part of session key - its used for security purposes
 	 */

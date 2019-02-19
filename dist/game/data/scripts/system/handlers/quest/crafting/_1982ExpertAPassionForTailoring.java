@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1982ExpertAPassionForTailoring extends QuestHandler
 {
-	
 	private static final int questId = 1982;
 	
 	public _1982ExpertAPassionForTailoring()

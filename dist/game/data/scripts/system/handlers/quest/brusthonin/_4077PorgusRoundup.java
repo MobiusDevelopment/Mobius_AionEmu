@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.MathUtil;
  */
 public class _4077PorgusRoundup extends QuestHandler
 {
-	
 	private static final int questId = 4077;
 	
 	public _4077PorgusRoundup()

@@ -30,10 +30,8 @@ import com.aionemu.gameserver.services.QuestService;
  * @author Balthazar
  * @reworked vlog
  */
-
 public class _1562CrossedDestiny extends QuestHandler
 {
-	
 	private static final int questId = 1562;
 	
 	public _1562CrossedDestiny()

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_DP_INFO extends AionServerPacket
 {
-	
 	private final int playerObjectId;
 	private final int currentDp;
 	

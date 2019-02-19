@@ -33,7 +33,6 @@ import com.aionemu.gameserver.model.team.legion.LegionMember;
  */
 public class PlayerAccountData
 {
-	
 	private final CharacterBanInfo cbi;
 	private PlayerCommonData playerCommonData;
 	private final PlayerAppearance appereance;

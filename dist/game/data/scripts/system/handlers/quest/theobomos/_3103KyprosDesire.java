@@ -32,10 +32,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _3103KyprosDesire extends QuestHandler
 {
-	
 	private static final int questId = 3103;
 	
 	public _3103KyprosDesire()

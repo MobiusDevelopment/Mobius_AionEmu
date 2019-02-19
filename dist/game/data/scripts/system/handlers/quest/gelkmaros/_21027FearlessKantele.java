@@ -26,7 +26,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21027FearlessKantele extends QuestHandler
 {
-	
 	private static final int questId = 21027;
 	
 	public _21027FearlessKantele()

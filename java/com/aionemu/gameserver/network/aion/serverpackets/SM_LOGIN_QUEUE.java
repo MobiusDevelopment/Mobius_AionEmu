@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LOGIN_QUEUE extends AionServerPacket
 {
-	
 	private final int waitingPosition; // What is the player's position in line
 	private final int waitingTime; // Per waiting position in seconds
 	private final int waitingCount; // How many are waiting in line

@@ -27,5 +27,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "OneTimeBoostHealEffect")
 public class OneTimeBoostHealEffect extends BuffEffect
 {
-	
 }

@@ -27,7 +27,6 @@ import com.aionemu.commons.utils.ClassUtils;
  */
 public class ChatCommandsLoader implements ClassListener
 {
-	
 	private final ChatProcessor processor;
 	
 	public ChatCommandsLoader(ChatProcessor processor)

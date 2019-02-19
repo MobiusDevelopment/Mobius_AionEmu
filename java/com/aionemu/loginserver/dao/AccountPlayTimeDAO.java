@@ -24,7 +24,6 @@ import com.aionemu.loginserver.model.AccountTime;
  */
 public abstract class AccountPlayTimeDAO implements DAO
 {
-	
 	public abstract boolean update(Integer accountId, AccountTime accountTime);
 	
 	@Override

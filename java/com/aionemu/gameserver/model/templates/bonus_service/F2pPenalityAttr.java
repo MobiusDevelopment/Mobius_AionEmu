@@ -27,7 +27,6 @@ import com.aionemu.gameserver.skillengine.change.Func;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "F2pPenalityAttr")
 public class F2pPenalityAttr

@@ -21,7 +21,6 @@ import com.aionemu.gameserver.geoEngine.collision.CollisionResults;
 
 public abstract class AbstractTriangle implements Collidable
 {
-	
 	public abstract Vector3f get1();
 	
 	public abstract Vector3f get2();

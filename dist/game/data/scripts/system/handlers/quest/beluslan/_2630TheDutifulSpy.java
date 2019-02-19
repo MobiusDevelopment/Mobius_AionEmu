@@ -26,7 +26,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2630TheDutifulSpy extends QuestHandler
 {
-	
 	private static final int questId = 2630;
 	
 	public _2630TheDutifulSpy()

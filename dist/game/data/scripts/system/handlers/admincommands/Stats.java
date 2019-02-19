@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Stats extends AdminCommand implements StatOwner
 {
-	
 	public Stats()
 	{
 		super("stats");

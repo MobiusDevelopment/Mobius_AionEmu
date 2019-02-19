@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Say extends AdminCommand
 {
-	
 	public Say()
 	{
 		super("say");

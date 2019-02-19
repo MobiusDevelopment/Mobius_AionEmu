@@ -27,5 +27,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "BoostSkillCastingTimeEffect")
 public class BoostSkillCastingTimeEffect extends BuffEffect
 {
-	
 }

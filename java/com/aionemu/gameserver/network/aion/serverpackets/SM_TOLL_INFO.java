@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_TOLL_INFO extends AionServerPacket
 {
-	
 	private final long tollCount;
 	
 	public SM_TOLL_INFO(long tollCount)

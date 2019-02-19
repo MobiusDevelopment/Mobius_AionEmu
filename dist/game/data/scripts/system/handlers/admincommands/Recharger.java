@@ -32,7 +32,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Recharger extends AdminCommand
 {
-	
 	public Recharger()
 	{
 		super("recharger");

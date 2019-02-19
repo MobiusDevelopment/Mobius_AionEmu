@@ -28,7 +28,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
  */
 public class CM_CLIENT_COMMAND_LOC extends AionClientPacket
 {
-	
 	/**
 	 * Constructs new client packet instance.
 	 * @param opcode

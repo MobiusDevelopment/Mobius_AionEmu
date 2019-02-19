@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.audit.AuditLogger;
  */
 public class FlyController
 {
-	
 	@SuppressWarnings("unused")
 	private static final Logger log = LoggerFactory.getLogger(FlyController.class);
 	

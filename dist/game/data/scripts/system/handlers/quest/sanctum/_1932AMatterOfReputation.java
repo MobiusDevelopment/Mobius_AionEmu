@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1932AMatterOfReputation extends QuestHandler
 {
-	
 	private static final int questId = 1932;
 	private static final int[] npcs =
 	{

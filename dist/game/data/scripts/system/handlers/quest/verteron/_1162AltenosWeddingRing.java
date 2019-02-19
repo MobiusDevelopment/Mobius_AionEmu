@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1162AltenosWeddingRing extends QuestHandler
 {
-	
 	private static final int questId = 1162;
 	
 	public _1162AltenosWeddingRing()

@@ -33,7 +33,6 @@ import com.google.common.base.Predicate;
  */
 public class PlayerEnteredEvent implements Predicate<Player>, TeamEvent
 {
-	
 	private final PlayerGroup group;
 	private final Player enteredPlayer;
 	

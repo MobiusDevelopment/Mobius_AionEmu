@@ -47,7 +47,6 @@ import com.google.common.collect.Lists;
  */
 public class MySQL5PlayerSkillListDAO extends PlayerSkillListDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerSkillListDAO.class);
 	public static final String INSERT_QUERY = "INSERT INTO `player_skills` (`player_id`, `skill_id`, `skill_level`) VALUES (?,?,?)";
 	public static final String UPDATE_QUERY = "UPDATE `player_skills` set skill_level=? where player_id=? AND skill_id=?";

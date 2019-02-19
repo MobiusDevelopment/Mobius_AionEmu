@@ -29,7 +29,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_ABYSS_RANKING_PLAYERS extends AionServerPacket
 {
-	
 	private final List<AbyssRankingResult> data;
 	private final int lastUpdate;
 	private final int race;

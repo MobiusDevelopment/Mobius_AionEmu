@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.StaticDoorService;
  */
 public class CM_OPEN_STATICDOOR extends AionClientPacket
 {
-	
 	private int doorId;
 	
 	/**

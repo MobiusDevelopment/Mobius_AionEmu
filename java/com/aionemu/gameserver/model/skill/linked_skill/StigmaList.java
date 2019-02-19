@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public interface StigmaList<T extends Creature>
 {
-	
 	boolean addItem(T creature, int itemId, String itemName);
 	
 	boolean remove(Player player, int itemId);

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
  */
 public class PlayerVisualStateService
 {
-	
 	public static void hideValidate(Player hiden)
 	{
 		hiden.getKnownList().doOnAllPlayers(new Visitor<Player>()

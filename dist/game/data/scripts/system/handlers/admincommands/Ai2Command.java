@@ -41,7 +41,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Ai2Command extends AdminCommand
 {
-	
 	public Ai2Command()
 	{
 		super("ai2");

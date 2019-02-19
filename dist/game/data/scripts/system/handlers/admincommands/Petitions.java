@@ -36,7 +36,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Petitions extends AdminCommand
 {
-	
 	public Petitions()
 	{
 		super("petition");

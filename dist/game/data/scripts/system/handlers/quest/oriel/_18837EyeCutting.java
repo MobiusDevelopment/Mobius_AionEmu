@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _18837EyeCutting extends QuestHandler
 {
-	
 	private static final int questId = 18837;
 	
 	public _18837EyeCutting()

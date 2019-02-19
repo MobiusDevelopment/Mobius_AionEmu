@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_EXCHANGE_CONFIRMATION extends AionServerPacket
 {
-	
 	private final int action;
 	
 	public SM_EXCHANGE_CONFIRMATION(int action)

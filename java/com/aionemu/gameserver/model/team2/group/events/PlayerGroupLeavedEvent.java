@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class PlayerGroupLeavedEvent extends PlayerLeavedEvent<PlayerGroupMember, PlayerGroup>
 {
-	
 	public PlayerGroupLeavedEvent(PlayerGroup alliance, Player player)
 	{
 		super(alliance, player);

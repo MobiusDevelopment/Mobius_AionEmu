@@ -29,10 +29,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _3031Pirates extends QuestHandler
 {
-	
 	private static final int questId = 3031;
 	
 	public _3031Pirates()

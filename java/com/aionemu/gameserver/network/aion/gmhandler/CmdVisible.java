@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CmdVisible extends AbstractGMHandler
 {
-	
 	public CmdVisible(Player admin, String params)
 	{
 		super(admin, params);

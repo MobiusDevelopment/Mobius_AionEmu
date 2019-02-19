@@ -26,7 +26,6 @@ import com.aionemu.commons.network.packet.BaseClientPacket;
  */
 public abstract class LsClientPacket extends BaseClientPacket<LoginServerConnection> implements Cloneable
 {
-	
 	/**
 	 * Logger for this class.
 	 */

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_SKILL_REMOVE extends AionServerPacket
 {
-	
 	private final int skillId;
 	private final int skillLevel;
 	private final boolean isStigma;

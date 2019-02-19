@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 @AIName("recharger") // 730397
 public class RechargerAI2 extends ActionItemNpcAI2
 {
-	
 	@Override
 	protected void handleUseItemFinish(Player player)
 	{

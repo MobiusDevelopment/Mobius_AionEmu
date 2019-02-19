@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _3060TheRedJournal extends QuestHandler
 {
-	
 	private static final int questId = 3060;
 	
 	public _3060TheRedJournal()

@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class SummonGameStats extends CreatureGameStats<Summon>
 {
-	
 	private int cachedSpeed;
 	private final SummonStatsTemplate statsTemplate;
 	

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class SM_UPDATE_NOTE extends AionServerPacket
 {
-	
 	private final int targetObjId;
 	private final String note;
 	

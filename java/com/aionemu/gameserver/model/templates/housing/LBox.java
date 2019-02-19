@@ -26,7 +26,6 @@ import javax.xml.bind.annotation.XmlElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LBox implements Cloneable
 {
-	
 	@XmlElement(required = true)
 	protected int id;
 	

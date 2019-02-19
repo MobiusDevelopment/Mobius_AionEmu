@@ -48,7 +48,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler (Encom)
  */
-
 public class IdianDepthsService
 {
 	private Map<Integer, IdianDepthsLocation> idianDepths;

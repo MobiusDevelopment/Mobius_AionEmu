@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2482CaryatidOfAbyss extends QuestHandler
 {
-	
 	private static final int questId = 2482;
 	
 	public _2482CaryatidOfAbyss()

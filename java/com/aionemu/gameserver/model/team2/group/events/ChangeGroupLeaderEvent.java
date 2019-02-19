@@ -29,7 +29,6 @@ import com.google.common.base.Predicate;
  */
 public class ChangeGroupLeaderEvent extends ChangeLeaderEvent<PlayerGroup>
 {
-	
 	public ChangeGroupLeaderEvent(PlayerGroup team, Player eventPlayer)
 	{
 		super(team, eventPlayer);

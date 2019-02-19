@@ -43,7 +43,6 @@ import javolution.util.FastMap;
  */
 public class ChatProcessor implements GameEngine
 {
-	
 	private static final Logger log = LoggerFactory.getLogger("ADMINAUDIT_LOG");
 	private static ChatProcessor instance = new ChatProcessor();
 	private Map<String, ChatCommand> commands = new FastMap<>();

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2928PowerofLove extends QuestHandler
 {
-	
 	private static final int questId = 2928;
 	
 	public _2928PowerofLove()

@@ -38,7 +38,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class MySQL5PlayerWardrobeDAO extends PlayerWardrobeDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerWardrobeDAO.class);
 	
 	public static final String INSERT_OR_UPDATE = "INSERT INTO `player_wardrobe` (`player_id`, `item_id`, `slot`, `reskin_count`) VALUES(?,?,?,?) ON DUPLICATE KEY UPDATE `item_id` = VALUES(`item_id`), `slot` = VALUES(`slot`)";

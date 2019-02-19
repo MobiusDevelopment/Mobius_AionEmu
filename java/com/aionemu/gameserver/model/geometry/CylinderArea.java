@@ -26,7 +26,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class CylinderArea extends AbstractArea
 {
-	
 	/**
 	 * Center of cylinder
 	 */

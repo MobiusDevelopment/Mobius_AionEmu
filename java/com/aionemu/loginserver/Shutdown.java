@@ -33,7 +33,6 @@ import com.aionemu.loginserver.utils.ThreadPoolManager;
  */
 public class Shutdown extends Thread
 {
-	
 	/**
 	 * Logger for this class
 	 */

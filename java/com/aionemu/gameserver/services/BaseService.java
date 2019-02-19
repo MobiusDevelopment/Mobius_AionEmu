@@ -38,7 +38,6 @@ import javolution.util.FastMap;
 /**
  * @author Rinzler
  */
-
 public class BaseService
 {
 	private static final Logger log = LoggerFactory.getLogger(BaseService.class);

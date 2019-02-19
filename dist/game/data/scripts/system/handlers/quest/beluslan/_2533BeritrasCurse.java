@@ -33,7 +33,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class _2533BeritrasCurse extends QuestHandler
 {
-	
 	private static final int questId = 2533;
 	
 	public _2533BeritrasCurse()

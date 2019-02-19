@@ -28,7 +28,6 @@ import javolution.util.FastMap;
  */
 public class LegionMemberContainer
 {
-	
 	private final FastMap<Integer, LegionMember> legionMemberById = new FastMap<Integer, LegionMember>().shared();
 	
 	private final FastMap<Integer, LegionMemberEx> legionMemberExById = new FastMap<Integer, LegionMemberEx>().shared();

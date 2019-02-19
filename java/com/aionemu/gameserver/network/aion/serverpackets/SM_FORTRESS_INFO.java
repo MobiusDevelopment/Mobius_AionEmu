@@ -21,7 +21,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 public class SM_FORTRESS_INFO extends AionServerPacket
 {
-	
 	private final int locationId;
 	private final boolean teleportStatus;
 	private int unk;

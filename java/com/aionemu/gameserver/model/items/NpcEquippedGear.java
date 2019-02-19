@@ -33,7 +33,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 @XmlJavaTypeAdapter(NpcEquippedGearAdapter.class)
 public class NpcEquippedGear implements Iterable<Entry<ItemSlot, ItemTemplate>>
 {
-	
 	private Map<ItemSlot, ItemTemplate> items;
 	private short mask;
 	

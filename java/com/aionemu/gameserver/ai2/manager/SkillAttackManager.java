@@ -124,7 +124,6 @@ public class SkillAttackManager
 			npcAI.setSubStateIfNot(AISubState.NONE);
 			npcAI.onGeneralEvent(AIEventType.TARGET_GIVEUP);
 		}
-		
 	}
 	
 	public static void afterUseSkill(NpcAI2 npcAI)

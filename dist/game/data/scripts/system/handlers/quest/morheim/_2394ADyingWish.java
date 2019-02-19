@@ -41,7 +41,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class _2394ADyingWish extends QuestHandler
 {
-	
 	private static final int questId = 2394;
 	
 	public _2394ADyingWish()

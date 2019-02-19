@@ -178,7 +178,6 @@ public class MotionLoggingService
 		{
 			PacketSendUtility.sendMessage(player, "Couldnt add baseTime: " + baseTime + " for motion: " + motionName + "!");
 		}
-		
 	}
 	
 	public void createAnalyzeFiles()

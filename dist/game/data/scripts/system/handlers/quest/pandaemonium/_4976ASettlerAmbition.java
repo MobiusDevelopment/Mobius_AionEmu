@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _4976ASettlerAmbition extends QuestHandler
 {
-	
 	private static final int questId = 4976;
 	
 	public _4976ASettlerAmbition()

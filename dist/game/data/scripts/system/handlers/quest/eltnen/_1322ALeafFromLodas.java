@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1322ALeafFromLodas extends QuestHandler
 {
-	
 	private static final int questId = 1322;
 	
 	public _1322ALeafFromLodas()

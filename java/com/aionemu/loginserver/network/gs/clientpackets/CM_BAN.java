@@ -36,7 +36,6 @@ import com.aionemu.loginserver.network.gs.serverpackets.SM_BAN_RESPONSE;
  */
 public class CM_BAN extends GsClientPacket
 {
-	
 	/**
 	 * Ban type 1 = account 2 = IP 3 = Full ban (account and IP)
 	 */

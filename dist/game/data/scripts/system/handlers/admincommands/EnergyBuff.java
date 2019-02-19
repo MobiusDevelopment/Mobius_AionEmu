@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class EnergyBuff extends AdminCommand
 {
-	
 	public EnergyBuff()
 	{
 		super("energy");

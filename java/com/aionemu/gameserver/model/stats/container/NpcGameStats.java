@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class NpcGameStats extends CreatureGameStats<Npc>
 {
-	
 	int currentRunSpeed = 0;
 	private long lastAttackTime = 0;
 	private long lastAttackedTime = 0;

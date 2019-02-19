@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Unstuck extends AdminCommand
 {
-	
 	public Unstuck()
 	{
 		super("unstuck");

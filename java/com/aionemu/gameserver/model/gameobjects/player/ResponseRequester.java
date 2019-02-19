@@ -27,7 +27,6 @@ import org.slf4j.LoggerFactory;
  */
 public class ResponseRequester
 {
-	
 	private final Player player;
 	private final HashMap<Integer, RequestResponseHandler> map = new HashMap<>();
 	private static Logger log = LoggerFactory.getLogger(ResponseRequester.class);

@@ -22,7 +22,6 @@ package com.aionemu.gameserver.world.exceptions;
  */
 public class AlreadySpawnedException extends RuntimeException
 {
-	
 	/**
 	 * Constructs an <code>AlreadySpawnedException</code> with no detail message.
 	 */

@@ -27,7 +27,6 @@ import com.aionemu.loginserver.network.gs.GsClientPacket;
  */
 public class CM_ACCOUNT_TOLL_INFO extends GsClientPacket
 {
-	
 	private int type;
 	private long toll;
 	private String accountName;

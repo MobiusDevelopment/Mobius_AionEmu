@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2980ExpertAlchemistsTest extends QuestHandler
 {
-	
 	private static final int questId = 2980;
 	
 	public _2980ExpertAlchemistsTest()

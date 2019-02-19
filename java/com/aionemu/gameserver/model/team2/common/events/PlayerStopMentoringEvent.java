@@ -30,7 +30,6 @@ import com.google.common.base.Predicate;
  */
 public abstract class PlayerStopMentoringEvent<T extends TemporaryPlayerTeam<? extends TeamMember<Player>>>extends AlwaysTrueTeamEvent implements Predicate<Player>
 {
-	
 	protected final T team;
 	protected final Player player;
 	

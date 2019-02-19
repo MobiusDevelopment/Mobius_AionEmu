@@ -28,7 +28,6 @@ import com.google.common.base.Function;
  */
 public abstract class AionObject
 {
-	
 	public static Function<AionObject, Integer> OBJECT_TO_ID_TRANSFORMER = new Function<AionObject, Integer>()
 	{
 		@Override

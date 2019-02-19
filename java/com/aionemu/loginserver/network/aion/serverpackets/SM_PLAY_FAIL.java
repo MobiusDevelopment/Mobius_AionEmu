@@ -25,7 +25,6 @@ import com.aionemu.loginserver.network.aion.LoginConnection;
  */
 public class SM_PLAY_FAIL extends AionServerPacket
 {
-	
 	/**
 	 * response - why play fail
 	 */

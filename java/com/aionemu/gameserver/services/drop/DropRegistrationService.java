@@ -58,7 +58,6 @@ import javolution.util.FastMap;
  */
 public class DropRegistrationService
 {
-	
 	private final Map<Integer, Set<DropItem>> currentDropMap = new FastMap<Integer, Set<DropItem>>().shared();
 	private final Map<Integer, DropNpc> dropRegistrationMap = new FastMap<Integer, DropNpc>().shared();
 	private final FastList<Integer> noReductionMaps;

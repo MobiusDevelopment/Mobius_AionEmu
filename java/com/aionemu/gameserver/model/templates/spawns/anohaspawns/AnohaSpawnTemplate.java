@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 /**
  * @author Rinzler (Encom)
  */
-
 public class AnohaSpawnTemplate extends SpawnTemplate
 {
 	private int id;

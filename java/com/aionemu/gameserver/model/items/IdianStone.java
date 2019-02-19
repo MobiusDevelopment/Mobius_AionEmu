@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class IdianStone extends ItemStone
 {
-	
 	private ActionObserver actionListener;
 	private int polishCharge;
 	private final int polishSetId;

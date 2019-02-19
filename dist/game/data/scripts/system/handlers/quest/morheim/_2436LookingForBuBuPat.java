@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2436LookingForBuBuPat extends QuestHandler
 {
-	
 	private static final int questId = 2436;
 	private static final int[] npcs =
 	{

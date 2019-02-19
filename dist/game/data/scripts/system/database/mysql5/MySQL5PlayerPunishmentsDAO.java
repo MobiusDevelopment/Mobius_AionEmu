@@ -34,7 +34,6 @@ import com.aionemu.gameserver.services.PunishmentService.PunishmentType;
  */
 public class MySQL5PlayerPunishmentsDAO extends PlayerPunishmentsDAO
 {
-	
 	public static final String SELECT_QUERY = "SELECT `player_id`, `start_time`, `duration`, `reason` FROM `player_punishments` WHERE `player_id`=? AND `punishment_type`=?";
 	public static final String UPDATE_QUERY = "UPDATE `player_punishments` SET `duration`=? WHERE `player_id`=? AND `punishment_type`=?";
 	public static final String REPLACE_QUERY = "REPLACE INTO `player_punishments` VALUES (?,?,?,?,?)";

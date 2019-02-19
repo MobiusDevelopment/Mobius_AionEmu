@@ -30,7 +30,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _2430SecretInformation extends QuestHandler
 {
-	
 	private static final int questId = 2430;
 	
 	public _2430SecretInformation()

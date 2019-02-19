@@ -45,7 +45,6 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
  */
 public class HTMLService
 {
-	
 	private static final Logger log = LoggerFactory.getLogger("ITEM_HTML_LOG");
 	
 	public static String getHTMLTemplate(GuideTemplate template)

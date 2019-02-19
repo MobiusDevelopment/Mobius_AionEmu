@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_FLY_TIME extends AionServerPacket
 {
-	
 	private final int currentFp;
 	private final int maxFp;
 	

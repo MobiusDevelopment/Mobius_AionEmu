@@ -21,7 +21,6 @@ package com.aionemu.loginserver.utils;
  */
 public class Util
 {
-	
 	/**
 	 * @param s
 	 */

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _3020AgrintAfire extends QuestHandler
 {
-	
 	private static final int questId = 3020;
 	
 	public _3020AgrintAfire()

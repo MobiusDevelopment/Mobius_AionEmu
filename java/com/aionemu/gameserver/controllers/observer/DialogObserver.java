@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.MathUtil;
  */
 public abstract class DialogObserver extends ActionObserver
 {
-	
 	private final Player responder;
 	private final Creature requester;
 	private final int maxDistance;

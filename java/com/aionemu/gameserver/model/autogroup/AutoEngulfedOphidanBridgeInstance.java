@@ -34,7 +34,6 @@ import com.aionemu.gameserver.services.instance.EngulfedOphidanBridgeService;
 /**
  * @author Rinzler (Encom)
  */
-
 public class AutoEngulfedOphidanBridgeInstance extends AutoInstance
 {
 	@Override

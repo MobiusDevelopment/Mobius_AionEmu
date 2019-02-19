@@ -34,7 +34,6 @@ import com.aionemu.gameserver.services.instance.IdgelDomeLandmarkService;
 /**
  * @author Rinzler (Encom)
  */
-
 public class AutoIdgelDomeLandmarkInstance extends AutoInstance
 {
 	@Override

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.item.ItemSplitService;
  */
 public class CM_SPLIT_ITEM extends AionClientPacket
 {
-	
 	int sourceItemObjId;
 	byte sourceStorageType;
 	long itemAmount;

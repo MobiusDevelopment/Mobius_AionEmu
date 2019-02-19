@@ -29,7 +29,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
  */
 public class SM_ABNORMAL_EFFECT extends AionServerPacket
 {
-	
 	private final int effectedId;
 	private int effectType = 1;// 1: creature 2: effected is player
 	private final int abnormals;

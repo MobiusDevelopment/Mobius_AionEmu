@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Ranastic
  */
-
 public class CM_LUNA_SHOP extends AionClientPacket
 {
 	// private static final Logger log = LoggerFactory.getLogger(CM_LUNA_SHOP.class);

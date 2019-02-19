@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.events.EventsService;
 
 public class _80009TheCakeIsTheTruth extends QuestHandler
 {
-	
 	private static final int questId = 80009;
 	
 	public _80009TheCakeIsTheTruth()

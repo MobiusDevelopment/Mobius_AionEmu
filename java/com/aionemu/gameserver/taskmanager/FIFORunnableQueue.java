@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public abstract class FIFORunnableQueue<T extends Runnable>extends FIFOSimpleExecutableQueue<T>
 {
-	
 	@Override
 	protected final void removeAndExecuteFirst()
 	{

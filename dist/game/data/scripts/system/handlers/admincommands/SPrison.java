@@ -28,7 +28,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class SPrison extends AdminCommand
 {
-	
 	public SPrison()
 	{
 		super("sprison");
@@ -64,7 +63,6 @@ public class SPrison extends AdminCommand
 		{
 			sendInfo(admin);
 		}
-		
 	}
 	
 	@Override

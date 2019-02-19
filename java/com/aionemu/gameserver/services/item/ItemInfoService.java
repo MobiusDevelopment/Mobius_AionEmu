@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
  */
 public class ItemInfoService
 {
-	
 	public static ItemQuality getQuality(int itemId)
 	{
 		return getItemTemplate(itemId).getItemQuality();

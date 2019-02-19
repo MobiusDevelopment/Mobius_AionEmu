@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "petfunction")
 public class PetFunction
 {
-	
 	@XmlAttribute(name = "type")
 	private PetFunctionType type;
 	@XmlAttribute(name = "id")

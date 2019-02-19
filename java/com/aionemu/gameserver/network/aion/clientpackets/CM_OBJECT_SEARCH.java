@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SHOW_NPC_ON_MAP;
  */
 public class CM_OBJECT_SEARCH extends AionClientPacket
 {
-	
 	private int npcId;
 	
 	/**

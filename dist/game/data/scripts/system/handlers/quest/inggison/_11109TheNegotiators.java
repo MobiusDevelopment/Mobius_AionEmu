@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _11109TheNegotiators extends QuestHandler
 {
-	
 	private static final int questId = 11109;
 	private static final int[] npc_ids =
 	{

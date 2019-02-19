@@ -39,7 +39,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
  */
 public class AggroEventHandler
 {
-	
 	/**
 	 * @param npcAI
 	 * @param myTarget
@@ -122,7 +121,6 @@ public class AggroEventHandler
 			aggressive = null;
 			target = null;
 		}
-		
 	}
 	
 }

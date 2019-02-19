@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.housing.HousingChair;
  */
 public class ChairObject extends HouseObject<HousingChair>
 {
-	
 	public ChairObject(House owner, int objId, int templateId)
 	{
 		super(owner, objId, templateId);

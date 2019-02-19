@@ -19,7 +19,6 @@ package com.aionemu.gameserver.model.moltenus;
 /**
  * @author Rinzler (Encom)
  */
-
 public enum MoltenusStateType
 {
 	FIGHT,

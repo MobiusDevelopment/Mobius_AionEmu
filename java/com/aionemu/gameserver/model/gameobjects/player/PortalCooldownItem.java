@@ -18,7 +18,6 @@ package com.aionemu.gameserver.model.gameobjects.player;
 
 public class PortalCooldownItem
 {
-	
 	private final int worldId;
 	private int entryCount;
 	private long cooldown;

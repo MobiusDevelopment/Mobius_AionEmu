@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _4906TalesOfHeroes extends QuestHandler
 {
-	
 	private static final int questId = 4906;
 	
 	public _4906TalesOfHeroes()

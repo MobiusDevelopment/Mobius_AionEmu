@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_DELETE_CHARACTER extends AionServerPacket
 {
-	
 	private final int playerObjId;
 	private final int deletionTime;
 	

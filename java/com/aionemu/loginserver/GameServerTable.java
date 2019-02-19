@@ -39,7 +39,6 @@ import com.aionemu.loginserver.network.gs.serverpackets.SM_REQUEST_KICK_ACCOUNT;
  */
 public class GameServerTable
 {
-	
 	/**
 	 * Logger for this class.
 	 */

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.templates.itemgroups.ItemRaceEntry;
  * @author Rolandas
  *
  */
-
 /**
  * <p>
  * Java class for CraftReward complex type.

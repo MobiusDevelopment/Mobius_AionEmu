@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _4087NoOrdinaryBranch extends QuestHandler
 {
-	
 	private static final int questId = 4087;
 	
 	public _4087NoOrdinaryBranch()

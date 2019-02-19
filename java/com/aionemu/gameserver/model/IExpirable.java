@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public interface IExpirable
 {
-	
 	int getExpireTime();
 	
 	void expireEnd(Player player);

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_FORCED_MOVE extends AionServerPacket
 {
-	
 	private final Creature creature;
 	private final int objectId;
 	private final float x;

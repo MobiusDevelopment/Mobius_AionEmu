@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LEGION_TABS extends AionServerPacket
 {
-	
 	private final int page;
 	private final Collection<LegionHistory> legionHistory;
 	private final int tabId;

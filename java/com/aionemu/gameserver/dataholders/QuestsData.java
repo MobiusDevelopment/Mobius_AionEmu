@@ -40,7 +40,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "quests")
 public class QuestsData
 {
-	
 	@XmlElement(name = "quest", required = true)
 	protected List<QuestTemplate> questsData;
 	private final TIntObjectHashMap<QuestTemplate> questData = new TIntObjectHashMap<>();

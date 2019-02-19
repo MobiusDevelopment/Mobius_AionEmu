@@ -24,7 +24,6 @@ import com.aionemu.loginserver.network.aion.LoginConnection;
  */
 public class SM_AUTH_GG extends AionServerPacket
 {
-	
 	/**
 	 * Session Id of this connection
 	 */

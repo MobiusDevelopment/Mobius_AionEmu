@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.ls.LsClientPacket;
  */
 public class CM_ACOUNT_AUTH_RESPONSE extends LsClientPacket
 {
-	
 	public CM_ACOUNT_AUTH_RESPONSE(int opCode)
 	{
 		super(opCode);

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_SUMMON_PANEL_REMOVE extends AionServerPacket
 {
-	
 	@Override
 	protected void writeImpl(AionConnection con)
 	{

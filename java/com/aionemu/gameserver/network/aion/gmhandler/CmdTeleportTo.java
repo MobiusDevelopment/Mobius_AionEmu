@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.WorldMapType;
  */
 public class CmdTeleportTo extends AbstractGMHandler
 {
-	
 	public CmdTeleportTo(Player admin, String params)
 	{
 		super(admin, params);

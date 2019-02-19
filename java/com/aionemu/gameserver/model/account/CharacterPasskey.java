@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.account;
  */
 public class CharacterPasskey
 {
-	
 	private int objectId;
 	private int wrongCount = 0;
 	private boolean isPass = false;

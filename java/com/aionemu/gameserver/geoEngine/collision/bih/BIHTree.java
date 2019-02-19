@@ -36,7 +36,6 @@ import com.aionemu.gameserver.geoEngine.scene.mesh.IndexBuffer;
 
 public class BIHTree implements CollisionData
 {
-	
 	public static final int MAX_TREE_DEPTH = 100;
 	public static final int MAX_TRIS_PER_NODE = 21;
 	private BIHNode root;

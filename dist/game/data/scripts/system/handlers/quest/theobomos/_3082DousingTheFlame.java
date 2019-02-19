@@ -30,7 +30,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _3082DousingTheFlame extends QuestHandler
 {
-	
 	private static final int questId = 3082;
 	
 	public _3082DousingTheFlame()

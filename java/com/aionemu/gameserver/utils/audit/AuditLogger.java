@@ -30,7 +30,6 @@ import com.google.common.base.Preconditions;
  */
 public class AuditLogger
 {
-	
 	private static final Logger log = LoggerFactory.getLogger("AUDIT_LOG");
 	
 	public static void info(Player player, String message)

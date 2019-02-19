@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CM_APPEARANCE extends AionClientPacket
 {
-	
 	private int type;
 	
 	private int itemObjId;
@@ -59,7 +58,6 @@ public class CM_APPEARANCE extends AionClientPacket
 				break;
 			}
 		}
-		
 	}
 	
 	@Override

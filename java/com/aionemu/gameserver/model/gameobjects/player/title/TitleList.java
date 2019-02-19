@@ -37,7 +37,6 @@ import javolution.util.FastMap;
  */
 public class TitleList
 {
-	
 	private final FastMap<Integer, Title> titles;
 	private Player owner;
 	

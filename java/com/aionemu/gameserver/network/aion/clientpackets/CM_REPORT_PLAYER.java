@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.audit.AuditLogger;
  */
 public class CM_REPORT_PLAYER extends AionClientPacket
 {
-	
 	private String player;
 	
 	/**

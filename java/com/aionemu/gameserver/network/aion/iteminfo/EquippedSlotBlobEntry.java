@@ -28,7 +28,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  */
 public class EquippedSlotBlobEntry extends ItemBlobEntry
 {
-	
 	EquippedSlotBlobEntry()
 	{
 		super(ItemBlobType.EQUIPPED_SLOT);

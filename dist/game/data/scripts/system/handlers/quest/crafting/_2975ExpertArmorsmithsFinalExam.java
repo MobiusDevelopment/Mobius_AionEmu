@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2975ExpertArmorsmithsFinalExam extends QuestHandler
 {
-	
 	private static final int questId = 2975;
 	
 	public _2975ExpertArmorsmithsFinalExam()

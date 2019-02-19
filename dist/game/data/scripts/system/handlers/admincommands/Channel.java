@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Channel extends AdminCommand
 {
-	
 	public Channel()
 	{
 		super("channel");

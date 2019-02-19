@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class PetAdoptionService
 {
-	
 	public static void adoptPet(Player player, int eggObjId, int petId, String name, int decorationId)
 	{
 		final int eggId = player.getInventory().getItemByObjId(eggObjId).getItemId();

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Pet extends AdminCommand
 {
-	
 	public Pet()
 	{
 		super("pet");

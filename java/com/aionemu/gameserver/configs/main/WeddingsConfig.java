@@ -23,7 +23,6 @@ import com.aionemu.commons.configuration.Property;
  */
 public class WeddingsConfig
 {
-	
 	@Property(key = "gameserver.weddings.enable", defaultValue = "false")
 	public static boolean WEDDINGS_ENABLE;
 	

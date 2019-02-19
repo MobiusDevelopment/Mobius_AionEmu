@@ -27,5 +27,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "WeaponStatboostEffect")
 public class WeaponStatboostEffect extends BuffEffect
 {
-	
 }

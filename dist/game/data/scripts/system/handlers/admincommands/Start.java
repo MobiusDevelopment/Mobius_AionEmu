@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 
 public class Start extends AdminCommand
 {
-	
 	public Start()
 	{
 		super("start");

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _19014MasterArmorsmithsPotential extends QuestHandler
 {
-	
 	private static final int questId = 19014;
 	
 	public _19014MasterArmorsmithsPotential()

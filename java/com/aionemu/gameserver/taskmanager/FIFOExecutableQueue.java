@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public abstract class FIFOExecutableQueue implements Runnable
 {
-	
 	private static final byte NONE = 0;
 	private static final byte QUEUED = 1;
 	private static final byte RUNNING = 2;

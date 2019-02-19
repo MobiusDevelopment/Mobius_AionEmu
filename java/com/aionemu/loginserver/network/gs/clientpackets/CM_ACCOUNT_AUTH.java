@@ -26,7 +26,6 @@ import com.aionemu.loginserver.network.gs.GsClientPacket;
  */
 public class CM_ACCOUNT_AUTH extends GsClientPacket
 {
-	
 	/**
 	 * SessionKey that GameServer needs to check if is valid at Loginserver side.
 	 */

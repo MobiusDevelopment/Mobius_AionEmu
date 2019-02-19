@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.dynamicrift.DynamicRiftStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class Portal extends DynamicRift<DynamicRiftLocation>
 {
 	public Portal(DynamicRiftLocation dynamicRift)

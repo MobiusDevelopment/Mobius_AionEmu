@@ -38,7 +38,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GuideHtmlData
 {
-	
 	@XmlElement(name = "guide", type = GuideTemplate.class)
 	private List<GuideTemplate> guideTemplates;
 	private final TIntObjectHashMap<ArrayList<GuideTemplate>> templates = new TIntObjectHashMap<>();

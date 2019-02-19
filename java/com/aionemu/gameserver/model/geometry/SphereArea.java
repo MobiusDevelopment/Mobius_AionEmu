@@ -25,7 +25,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class SphereArea implements Area
 {
-	
 	protected float x;
 	protected float y;
 	protected float z;

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.ls.LsServerPacket;
  */
 public class SM_ACCOUNT_DISCONNECTED extends LsServerPacket
 {
-	
 	/**
 	 * AccountId of account that is no longer on GameServer.
 	 */

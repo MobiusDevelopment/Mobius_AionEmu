@@ -48,7 +48,6 @@ import com.aionemu.gameserver.utils.idfactory.IDFactory;
  */
 public class CM_CREATE_CHARACTER extends AionClientPacket
 {
-	
 	/** Character appearance */
 	private PlayerAppearance playerAppearance;
 	/** Player base data */

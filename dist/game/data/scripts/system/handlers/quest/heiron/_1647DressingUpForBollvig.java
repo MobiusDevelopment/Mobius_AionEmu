@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1647DressingUpForBollvig extends QuestHandler
 {
-	
 	private static final int questId = 1647;
 	
 	public _1647DressingUpForBollvig()

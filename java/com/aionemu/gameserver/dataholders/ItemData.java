@@ -45,7 +45,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ItemData extends ReloadableData
 {
-	
 	@XmlElement(name = "item_template")
 	private List<ItemTemplate> its;
 	

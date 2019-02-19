@@ -31,7 +31,6 @@ import javolution.util.FastMap;
  */
 public abstract class CraftGroup extends BonusItemGroup
 {
-	
 	private FastMap<Integer, FastMap<IntRange, List<CraftReward>>> dataHolder;
 	
 	public ItemRaceEntry[] getRewards(Integer skillId)

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 // TODO Rename
 public class SM_ABYSS_RANK_UPDATE extends AionServerPacket
 {
-	
 	private final Player player;
 	private final int action;
 	

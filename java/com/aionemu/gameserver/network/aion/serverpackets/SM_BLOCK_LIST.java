@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_BLOCK_LIST extends AionServerPacket
 {
-	
 	@Override
 	protected void writeImpl(AionConnection con)
 	{

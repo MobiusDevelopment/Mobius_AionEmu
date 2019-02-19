@@ -32,7 +32,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_ALLIANCE_INFO extends AionServerPacket
 {
-	
 	private LootGroupRules lootRules;
 	private final PlayerAlliance alliance;
 	private final int leaderid;

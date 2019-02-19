@@ -42,7 +42,6 @@ import com.google.common.collect.Maps;
  */
 public class MySQL5PlayerCooldownsDAO extends PlayerCooldownsDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerCooldownsDAO.class);
 	
 	public static final String INSERT_QUERY = "INSERT INTO `player_cooldowns` (`player_id`, `cooldown_id`, `reuse_delay`) VALUES (?,?,?)";

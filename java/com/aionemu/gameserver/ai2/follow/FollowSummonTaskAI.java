@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.MathUtil;
  */
 public class FollowSummonTaskAI implements Runnable
 {
-	
 	private final Creature target;
 	private final Summon summon;
 	private final Player master;

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2937UnexpectedReward extends QuestHandler
 {
-	
 	private static final int questId = 2937;
 	
 	public _2937UnexpectedReward()

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.skillengine.model.Effect;
  */
 public class StatDualWeaponMasteryFunction extends StatFunctionProxy
 {
-	
 	public StatDualWeaponMasteryFunction(Effect effect, IStatFunction statFunction)
 	{
 		super(effect, statFunction);

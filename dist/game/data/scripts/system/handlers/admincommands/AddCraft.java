@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class AddCraft extends AdminCommand
 {
-	
 	private static final String LIST = "list";
 	private static final String ESSENCETAPPING = "essencetapping";
 	private static final String AETHERTAPPING = "aethertapping";

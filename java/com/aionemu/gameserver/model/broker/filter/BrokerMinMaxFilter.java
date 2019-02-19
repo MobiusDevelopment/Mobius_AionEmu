@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.templates.item.ItemTemplate;
  */
 public class BrokerMinMaxFilter extends BrokerFilter
 {
-	
 	private final int min;
 	private final int max;
 	

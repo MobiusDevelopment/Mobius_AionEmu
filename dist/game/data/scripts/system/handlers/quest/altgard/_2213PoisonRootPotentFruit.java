@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2213PoisonRootPotentFruit extends QuestHandler
 {
-	
 	private static final int questId = 2213;
 	
 	public _2213PoisonRootPotentFruit()

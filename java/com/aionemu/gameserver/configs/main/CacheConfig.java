@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
  */
 public class CacheConfig
 {
-	
 	/**
 	 */
 	@Property(key = "gameserver.cache.softcache", defaultValue = "false")

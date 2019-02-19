@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2953DeliveringSupplyRequest extends QuestHandler
 {
-	
 	private static final int questId = 2953;
 	
 	public _2953DeliveringSupplyRequest()

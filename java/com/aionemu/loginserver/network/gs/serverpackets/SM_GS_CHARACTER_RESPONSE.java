@@ -24,7 +24,6 @@ import com.aionemu.loginserver.network.gs.GsServerPacket;
  */
 public class SM_GS_CHARACTER_RESPONSE extends GsServerPacket
 {
-	
 	private final int accountId;
 	
 	/**

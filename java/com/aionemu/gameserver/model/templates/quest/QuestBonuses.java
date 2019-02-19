@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.templates.rewards.BonusType;
  * @author Rolandas
  *
  */
-
 /**
  * <p>
  * Java class for QuestBonuses complex type.

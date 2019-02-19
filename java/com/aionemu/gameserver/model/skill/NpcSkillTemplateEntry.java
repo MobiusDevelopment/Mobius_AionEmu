@@ -21,7 +21,6 @@ import com.aionemu.gameserver.model.templates.npcskill.NpcSkillTemplate;
 
 class NpcSkillTemplateEntry extends NpcSkillEntry
 {
-	
 	private final NpcSkillTemplate template;
 	
 	public NpcSkillTemplateEntry(NpcSkillTemplate template)

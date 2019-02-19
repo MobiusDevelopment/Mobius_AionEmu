@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_RECIPE_LIST extends AionServerPacket
 {
-	
 	private final Integer[] recipeIds;
 	private final int count;
 	

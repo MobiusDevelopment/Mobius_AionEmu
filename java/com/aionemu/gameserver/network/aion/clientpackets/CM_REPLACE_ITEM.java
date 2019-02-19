@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.item.ItemMoveService;
  */
 public class CM_REPLACE_ITEM extends AionClientPacket
 {
-	
 	private byte sourceStorageType;
 	private int sourceItemObjId;
 	private byte replaceStorageType;

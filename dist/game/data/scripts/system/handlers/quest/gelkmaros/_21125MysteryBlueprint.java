@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _21125MysteryBlueprint extends QuestHandler
 {
-	
 	private static final int questId = 21125;
 	
 	public _21125MysteryBlueprint()

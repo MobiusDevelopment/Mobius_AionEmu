@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1609MessageToArbolusHaven extends QuestHandler
 {
-	
 	private static final int questId = 1609;
 	
 	public _1609MessageToArbolusHaven()

@@ -25,7 +25,6 @@ import com.aionemu.loginserver.model.Account;
  */
 public abstract class AccountDAO implements DAO
 {
-	
 	/**
 	 * Returns account by name or null
 	 * @param name account name

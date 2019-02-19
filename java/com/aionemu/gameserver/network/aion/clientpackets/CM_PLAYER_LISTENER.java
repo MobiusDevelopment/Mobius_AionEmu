@@ -27,7 +27,6 @@ import com.aionemu.gameserver.services.reward.RewardService;
  */
 public class CM_PLAYER_LISTENER extends AionClientPacket
 {
-	
 	public CM_PLAYER_LISTENER(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

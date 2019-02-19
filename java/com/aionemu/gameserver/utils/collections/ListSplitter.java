@@ -27,7 +27,6 @@ import java.util.List;
  */
 public class ListSplitter<T>
 {
-	
 	private T[] objects;
 	private Class<?> componentType;
 	private int splitCount;

@@ -25,7 +25,6 @@ import com.aionemu.loginserver.network.gs.GsClientPacket;
  */
 public class CM_GS_CHARACTER extends GsClientPacket
 {
-	
 	private int accountId;
 	private int characterCount;
 	

@@ -30,7 +30,6 @@ import com.aionemu.gameserver.instance.handlers.InstanceHandler;
  */
 public class InstanceHandlerClassListener implements ClassListener
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(InstanceHandlerClassListener.class);
 	
 	@SuppressWarnings("unchecked")

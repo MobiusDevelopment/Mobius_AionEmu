@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_BLOCK_RESPONSE extends AionServerPacket
 {
-	
 	/**
 	 * You have blocked %0
 	 */

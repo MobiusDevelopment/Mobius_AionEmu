@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
  */
 public interface IStatFunction extends Comparable<IStatFunction>
 {
-	
 	StatEnum getName();
 	
 	boolean isBonus();

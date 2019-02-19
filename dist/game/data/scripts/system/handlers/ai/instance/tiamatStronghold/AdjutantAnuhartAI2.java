@@ -36,7 +36,6 @@ import system.handlers.ai.AggressiveNpcAI2;
 @AIName("adjutantanuhart")
 public class AdjutantAnuhartAI2 extends AggressiveNpcAI2
 {
-	
 	private Future<?> bladeStormTask;
 	private final AtomicBoolean isAggred = new AtomicBoolean(false);
 	private final List<Integer> percents = new ArrayList<>();

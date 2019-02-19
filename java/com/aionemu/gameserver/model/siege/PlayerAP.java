@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class PlayerAP implements Comparable<PlayerAP>
 {
-	
 	private final Player player;
 	private final Race race;
 	private int ap;

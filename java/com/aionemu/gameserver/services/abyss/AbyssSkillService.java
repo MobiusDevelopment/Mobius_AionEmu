@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
  */
 public class AbyssSkillService
 {
-	
 	/**
 	 * @param player
 	 */

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.geoEngine.collision.UnsupportedCollisionException;
  */
 public final class Ray implements Cloneable, Collidable
 {
-	
 	/**
 	 * The ray's begining point.
 	 */

@@ -21,7 +21,6 @@ import javax.xml.bind.annotation.XmlEnum;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlEnum
 public enum AccountType
 {

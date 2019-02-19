@@ -28,7 +28,6 @@ import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
  */
 public class LegionWarehouse extends Storage
 {
-	
 	private Legion legion;
 	private int curentWhUser;
 	

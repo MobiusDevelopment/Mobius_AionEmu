@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
  */
 public class RiftSpawnTemplate extends SpawnTemplate
 {
-	
 	private int id;
 	
 	public RiftSpawnTemplate(SpawnGroup2 spawnGroup, SpawnSpotTemplate spot)

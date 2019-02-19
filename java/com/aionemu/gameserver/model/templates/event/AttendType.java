@@ -21,7 +21,6 @@ import javax.xml.bind.annotation.XmlEnum;
 /**
  * @author Ranastic
  */
-
 @XmlEnum
 public enum AttendType
 {

@@ -44,7 +44,6 @@ import com.aionemu.gameserver.geoEngine.utils.BufferUtils;
  */
 public class BoundingBox extends BoundingVolume
 {
-	
 	float xExtent, yExtent, zExtent;
 	
 	/**

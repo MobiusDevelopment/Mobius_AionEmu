@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21111TestYourMight extends QuestHandler
 {
-	
 	private static final int questId = 21111;
 	
 	public _21111TestYourMight()

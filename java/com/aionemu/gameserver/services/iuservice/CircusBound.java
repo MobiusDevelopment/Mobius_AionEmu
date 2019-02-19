@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.iu.IuStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class CircusBound extends Iu<IuLocation>
 {
 	public CircusBound(IuLocation iu)

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
  */
 public abstract class MailDAO implements IDFactoryAwareDAO
 {
-	
 	@Override
 	public String getClassName()
 	{

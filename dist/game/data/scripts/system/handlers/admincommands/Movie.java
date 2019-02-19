@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Movie extends AdminCommand
 {
-	
 	public Movie()
 	{
 		super("movie");

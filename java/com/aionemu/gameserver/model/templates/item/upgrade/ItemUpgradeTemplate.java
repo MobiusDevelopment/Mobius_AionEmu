@@ -29,7 +29,6 @@ import com.aionemu.gameserver.model.stats.calc.StatOwner;
 /**
  * @author Ranastic (Encom)
  */
-
 @XmlRootElement(name = "ItemUpgrade")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ItemUpgradeTemplate implements StatOwner

@@ -26,10 +26,8 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author Balthazar
  */
-
 public class _1540BaittheHooks extends QuestHandler
 {
-	
 	private static final int questId = 1540;
 	
 	public _1540BaittheHooks()

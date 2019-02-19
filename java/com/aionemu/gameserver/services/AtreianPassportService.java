@@ -42,7 +42,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Ranastic
  */
-
 public class AtreianPassportService
 {
 	private static final Logger log = LoggerFactory.getLogger(AtreianPassportService.class);

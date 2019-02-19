@@ -31,7 +31,6 @@ import javolution.util.FastMap;
  */
 public class SiegeZoneInstance extends ZoneInstance
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(SiegeZoneInstance.class);
 	
 	private final FastMap<Integer, Player> players = new FastMap<>();

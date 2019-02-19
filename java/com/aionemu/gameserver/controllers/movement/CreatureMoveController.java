@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public abstract class CreatureMoveController<T extends VisibleObject> implements MoveController
 {
-	
 	protected T owner;
 	protected byte heading;
 	protected long lastMoveUpdate = System.currentTimeMillis();

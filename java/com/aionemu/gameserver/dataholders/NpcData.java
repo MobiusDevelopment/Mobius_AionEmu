@@ -38,7 +38,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NpcData
 {
-	
 	@XmlElement(name = "npc_template")
 	private List<NpcTemplate> npcs;
 	

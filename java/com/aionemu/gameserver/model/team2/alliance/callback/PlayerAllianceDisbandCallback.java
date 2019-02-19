@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.team2.alliance.PlayerAlliance;
 @SuppressWarnings("rawtypes")
 public abstract class PlayerAllianceDisbandCallback implements Callback
 {
-	
 	@Override
 	public CallbackResult beforeCall(Object obj, Object[] args)
 	{

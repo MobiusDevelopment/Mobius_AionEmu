@@ -27,5 +27,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "OdellaRecoverIncreaseEffect")
 public class OdellaRecoverIncreaseEffect extends BuffEffect
 {
-	
 }

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _3035EnhancingtheStone extends QuestHandler
 {
-	
 	private static final int questId = 3035;
 	
 	public _3035EnhancingtheStone()

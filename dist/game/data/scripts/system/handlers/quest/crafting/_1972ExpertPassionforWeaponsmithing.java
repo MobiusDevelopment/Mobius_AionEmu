@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1972ExpertPassionforWeaponsmithing extends QuestHandler
 {
-	
 	private static final int questId = 1972;
 	
 	public _1972ExpertPassionforWeaponsmithing()

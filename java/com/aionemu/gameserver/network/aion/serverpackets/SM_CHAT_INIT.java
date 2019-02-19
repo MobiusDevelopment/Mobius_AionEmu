@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_CHAT_INIT extends AionServerPacket
 {
-	
 	private final byte[] token;
 	
 	/**

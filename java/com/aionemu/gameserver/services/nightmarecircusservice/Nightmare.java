@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.nightmarecircus.NightmareCircusStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class Nightmare extends CircusInstance<NightmareCircusLocation>
 {
 	public Nightmare(NightmareCircusLocation nightmareCircus)

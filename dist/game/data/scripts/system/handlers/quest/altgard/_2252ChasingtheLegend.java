@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _2252ChasingtheLegend extends QuestHandler
 {
-	
 	private static final int questId = 2252;
 	private static final int[] mob_ids =
 	{

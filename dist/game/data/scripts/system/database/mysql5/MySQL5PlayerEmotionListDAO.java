@@ -35,7 +35,6 @@ import com.aionemu.gameserver.model.gameobjects.player.emotion.EmotionList;
  */
 public class MySQL5PlayerEmotionListDAO extends PlayerEmotionListDAO
 {
-	
 	/** Logger */
 	private static final Logger log = LoggerFactory.getLogger(PlayerEmotionListDAO.class);
 	public static final String INSERT_QUERY = "INSERT INTO `player_emotions` (`player_id`, `emotion`, `remaining`) VALUES (?,?,?)";

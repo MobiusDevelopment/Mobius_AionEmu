@@ -33,7 +33,6 @@ import com.aionemu.gameserver.model.templates.stats.ModifiersTemplate;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FullBonus
 {
-	
 	@XmlElement(name = "modifiers", required = false)
 	protected ModifiersTemplate modifiers;
 	

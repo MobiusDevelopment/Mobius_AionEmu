@@ -33,7 +33,6 @@ import com.aionemu.gameserver.questEngine.handlers.models.XMLQuest;
 @XmlRootElement(name = "quest_scripts")
 public class XMLQuests
 {
-	
 	@XmlElements(
 	{
 		@XmlElement(name = "report_to", type = com.aionemu.gameserver.questEngine.handlers.models.ReportToData.class),

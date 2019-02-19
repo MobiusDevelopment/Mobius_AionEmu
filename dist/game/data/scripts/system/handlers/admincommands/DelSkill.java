@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class DelSkill extends AdminCommand
 {
-	
 	public DelSkill()
 	{
 		super("delskill");
@@ -164,7 +163,6 @@ public class DelSkill extends AdminCommand
 			
 			PacketSendUtility.sendMessage(admin, "You have success delete All skills.");
 		}
-		
 	}
 	
 	@Override

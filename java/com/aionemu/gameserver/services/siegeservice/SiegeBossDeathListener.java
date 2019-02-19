@@ -23,7 +23,6 @@ import com.aionemu.gameserver.services.SiegeService;
 @SuppressWarnings("rawtypes")
 public class SiegeBossDeathListener extends OnDieEventCallback
 {
-	
 	private final Siege<?> siege;
 	
 	public SiegeBossDeathListener(Siege siege)

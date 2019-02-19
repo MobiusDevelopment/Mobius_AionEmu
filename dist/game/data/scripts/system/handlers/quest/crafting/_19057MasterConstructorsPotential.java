@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _19057MasterConstructorsPotential extends QuestHandler
 {
-	
 	private static final int questId = 19057;
 	private static final int[] recipesItemIds =
 	{

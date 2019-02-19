@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_TARGET_IMMOBILIZE extends AionServerPacket
 {
-	
 	private final Creature creature;
 	
 	public SM_TARGET_IMMOBILIZE(Creature creature)

@@ -22,7 +22,6 @@ package com.aionemu.loginserver.network.gs;
  */
 public enum GsAuthResponse
 {
-	
 	/**
 	 * Everything is OK
 	 */

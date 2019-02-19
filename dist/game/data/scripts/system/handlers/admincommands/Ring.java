@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Ring extends AdminCommand
 {
-	
 	public Ring()
 	{
 		super("ring");

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_DELETE_HOUSE_OBJECT extends AionServerPacket
 {
-	
 	private final int itemObjectId;
 	
 	public SM_DELETE_HOUSE_OBJECT(int itemObjectId)

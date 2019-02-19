@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Ranastic (Encom)
  */
-
 public class SM_PLAYER_ESSENCE_CONTROL extends AionServerPacket
 {
 	Logger log = LoggerFactory.getLogger(SM_PLAYER_ESSENCE_CONTROL.class);

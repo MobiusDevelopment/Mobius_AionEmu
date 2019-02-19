@@ -36,7 +36,6 @@ import javolution.util.FastMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AIData
 {
-	
 	@XmlElement(name = "ai", type = Ai.class)
 	private List<Ai> templates;
 	private final FastMap<Integer, AITemplate> aiTemplate = new FastMap<>();

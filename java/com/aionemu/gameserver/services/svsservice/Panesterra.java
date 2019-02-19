@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.SvsService;
  * @author Rinzler (Encom)
  * @param <PL>
  */
-
 public abstract class Panesterra<PL extends SvsLocation>
 {
 	private boolean started;

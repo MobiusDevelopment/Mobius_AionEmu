@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
  */
 public interface AI2Scenario
 {
-	
 	void onCreatureEvent(AbstractAI ai, AIEventType event, Creature creature);
 	
 	void onGeneralEvent(AbstractAI ai, AIEventType event);

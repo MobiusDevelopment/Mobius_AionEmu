@@ -34,7 +34,6 @@ import com.aionemu.gameserver.model.stats.calc.StatOwner;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ItemSetTemplate implements StatOwner
 {
-	
 	@XmlElement(required = true)
 	protected List<ItemPart> itempart;
 	@XmlElement(required = true)

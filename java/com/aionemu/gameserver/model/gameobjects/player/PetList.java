@@ -31,7 +31,6 @@ import javolution.util.FastMap;
  */
 public class PetList
 {
-	
 	private final Player player;
 	private int lastUsedPetId;
 	

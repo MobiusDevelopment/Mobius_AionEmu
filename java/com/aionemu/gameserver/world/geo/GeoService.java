@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.MathUtil;
  */
 public class GeoService
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(GeoService.class);
 	private GeoData geoData;
 	

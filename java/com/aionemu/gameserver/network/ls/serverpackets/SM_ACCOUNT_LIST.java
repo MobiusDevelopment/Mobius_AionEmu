@@ -28,7 +28,6 @@ import com.aionemu.gameserver.network.ls.LsServerPacket;
  */
 public class SM_ACCOUNT_LIST extends LsServerPacket
 {
-	
 	/**
 	 * Map with loaded accounts
 	 */

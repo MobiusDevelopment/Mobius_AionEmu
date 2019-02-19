@@ -32,7 +32,6 @@ import com.aionemu.gameserver.dao.ServerVariablesDAO;
  */
 public class MySQL5ServerVariablesDAO extends ServerVariablesDAO
 {
-	
 	private static Logger log = LoggerFactory.getLogger(ServerVariablesDAO.class);
 	
 	/**

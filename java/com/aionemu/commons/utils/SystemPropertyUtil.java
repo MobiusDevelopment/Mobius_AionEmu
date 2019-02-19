@@ -27,7 +27,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class SystemPropertyUtil
 {
-	
 	@SuppressWarnings("all")
 	private static boolean initializedLogger;
 	private static final Logger logger;

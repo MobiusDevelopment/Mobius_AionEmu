@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1722RastinsHomesickness extends QuestHandler
 {
-	
 	private static final int questId = 1722;
 	private static final int[] npc_ids =
 	{

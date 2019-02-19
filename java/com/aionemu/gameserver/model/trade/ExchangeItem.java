@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.gameobjects.Item;
  */
 public class ExchangeItem
 {
-	
 	private final int itemObjId;
 	private long itemCount;
 	private final int itemDesc;

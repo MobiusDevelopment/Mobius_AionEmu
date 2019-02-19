@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.guide;
  */
 public class Guide
 {
-	
 	private final int guide_id;
 	private final int player_id;
 	private final String title;

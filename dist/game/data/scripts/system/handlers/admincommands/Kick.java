@@ -28,7 +28,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Kick extends AdminCommand
 {
-	
 	public Kick()
 	{
 		super("kick");
@@ -65,7 +64,6 @@ public class Kick extends AdminCommand
 			player.getClientConnection().close(new SM_QUIT_RESPONSE(), false);
 			PacketSendUtility.sendMessage(admin, "Kicked player : " + player.getName());
 		}
-		
 	}
 	
 	@Override

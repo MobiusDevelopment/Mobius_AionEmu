@@ -29,10 +29,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _1648UndeadWarAlert extends QuestHandler
 {
-	
 	private static final int questId = 1648;
 	
 	public _1648UndeadWarAlert()

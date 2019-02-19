@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob.ItemBlobType;
  */
 public class PremiumOptionInfoBlobEntry extends ItemBlobEntry
 {
-	
 	public PremiumOptionInfoBlobEntry()
 	{
 		super(ItemBlobType.PREMIUM_OPTION);

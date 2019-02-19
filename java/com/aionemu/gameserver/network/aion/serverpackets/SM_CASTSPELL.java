@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_CASTSPELL extends AionServerPacket
 {
-	
 	private final int attackerObjectId;
 	private final int spellId;
 	private final int level;

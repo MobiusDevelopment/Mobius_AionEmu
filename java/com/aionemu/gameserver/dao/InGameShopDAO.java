@@ -28,7 +28,6 @@ import javolution.util.FastMap;
  */
 public abstract class InGameShopDAO implements DAO
 {
-	
 	public abstract boolean deleteIngameShopItem(int itemId, byte category, byte list, int param);
 	
 	public abstract FastMap<Byte, List<IGItem>> loadInGameShopItems();

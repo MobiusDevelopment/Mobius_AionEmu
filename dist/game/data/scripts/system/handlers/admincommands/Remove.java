@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Remove extends AdminCommand
 {
-	
 	public Remove()
 	{
 		super("remove");

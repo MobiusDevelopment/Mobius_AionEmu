@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_PLAYER_STATE extends AionServerPacket
 {
-	
 	private final int playerObjId;
 	private final int visualState;
 	private final int seeState;

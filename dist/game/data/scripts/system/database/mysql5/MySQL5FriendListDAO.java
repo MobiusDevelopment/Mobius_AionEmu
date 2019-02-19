@@ -43,7 +43,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
  */
 public class MySQL5FriendListDAO extends FriendListDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5FriendListDAO.class);
 	public static final String LOAD_QUERY = "SELECT * FROM `friends` WHERE `player`=?";
 	public static final String ADD_QUERY = "INSERT INTO `friends` (`player`,`friend`) VALUES (?, ?)";

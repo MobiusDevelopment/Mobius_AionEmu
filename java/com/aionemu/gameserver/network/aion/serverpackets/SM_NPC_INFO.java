@@ -44,7 +44,6 @@ import com.aionemu.gameserver.services.TownService;
  */
 public class SM_NPC_INFO extends AionServerPacket
 {
-	
 	/**
 	 * Visible npc
 	 */

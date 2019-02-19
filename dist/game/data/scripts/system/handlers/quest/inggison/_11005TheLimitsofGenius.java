@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _11005TheLimitsofGenius extends QuestHandler
 {
-	
 	private static final int questId = 11005;
 	
 	public _11005TheLimitsofGenius()

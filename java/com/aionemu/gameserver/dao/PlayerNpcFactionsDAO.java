@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public abstract class PlayerNpcFactionsDAO implements DAO
 {
-	
 	@Override
 	public String getClassName()
 	{

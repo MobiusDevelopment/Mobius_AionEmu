@@ -30,7 +30,6 @@ import com.aionemu.gameserver.services.player.PlayerService;
  */
 public class CM_MACRO_CREATE extends AionClientPacket
 {
-	
 	/**
 	 * Logger
 	 */

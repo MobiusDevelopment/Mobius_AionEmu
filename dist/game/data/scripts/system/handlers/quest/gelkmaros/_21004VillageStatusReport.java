@@ -26,7 +26,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21004VillageStatusReport extends QuestHandler
 {
-	
 	private static final int questId = 21004;
 	
 	public _21004VillageStatusReport()

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2488PretorsInBeluslan extends QuestHandler
 {
-	
 	private static final int questId = 2488;
 	
 	public _2488PretorsInBeluslan()

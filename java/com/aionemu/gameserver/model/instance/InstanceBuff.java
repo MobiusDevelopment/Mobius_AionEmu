@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * @author Ranastic (Encom)
  */
-
 public class InstanceBuff implements StatOwner
 {
 	private Future<?> task;

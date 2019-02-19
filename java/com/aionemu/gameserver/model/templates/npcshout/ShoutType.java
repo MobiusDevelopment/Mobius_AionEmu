@@ -22,7 +22,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Rolandas
  */
-
 @XmlType(name = "ShoutType")
 @XmlEnum
 public enum ShoutType

@@ -36,7 +36,6 @@ import javolution.util.FastMap;
 /**
  * @author Ranastic (Encom)
  */
-
 public class ItemUpgradeService
 {
 	private static final Logger log = LoggerFactory.getLogger(ItemUpgradeService.class);

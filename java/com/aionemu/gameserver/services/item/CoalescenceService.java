@@ -37,10 +37,8 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * @author ione542
  */
-
 public class CoalescenceService
 {
-	
 	public static void startCoalescence(Player player, int upgradedItemObjectId, List<Integer> ItemsList)
 	{
 		final Item firstItem = player.getInventory().getItemByObjId(upgradedItemObjectId);

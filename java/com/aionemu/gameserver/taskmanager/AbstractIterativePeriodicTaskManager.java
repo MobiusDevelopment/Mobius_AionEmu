@@ -28,7 +28,6 @@ import javolution.util.FastSet;
  */
 public abstract class AbstractIterativePeriodicTaskManager<T>extends AbstractPeriodicTaskManager
 {
-	
 	private final Set<T> startList = new FastSet<>();
 	private final Set<T> stopList = new FastSet<>();
 	

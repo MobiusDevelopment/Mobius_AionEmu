@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _4015TheMissingLaborers extends QuestHandler
 {
-	
 	private static final int questId = 4015;
 	
 	public _4015TheMissingLaborers()

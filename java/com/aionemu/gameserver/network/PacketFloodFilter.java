@@ -29,7 +29,6 @@ import com.aionemu.gameserver.configs.main.SecurityConfig;
  */
 public class PacketFloodFilter
 {
-	
 	private static PacketFloodFilter pff = new PacketFloodFilter();
 	
 	private final Logger log = LoggerFactory.getLogger(PacketFloodFilter.class);

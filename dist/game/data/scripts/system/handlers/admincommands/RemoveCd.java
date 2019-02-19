@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class RemoveCd extends AdminCommand
 {
-	
 	public RemoveCd()
 	{
 		super("removecd");

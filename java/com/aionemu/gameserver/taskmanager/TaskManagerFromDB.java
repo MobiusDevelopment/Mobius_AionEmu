@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class TaskManagerFromDB
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(TaskManagerFromDB.class);
 	
 	private final ArrayList<TaskFromDB> tasksList;

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
  */
 public class _1693AreYouMyFather extends QuestHandler
 {
-	
 	private static final int questId = 1693;
 	private static final int[] npcs =
 	{

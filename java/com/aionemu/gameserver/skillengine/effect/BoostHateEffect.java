@@ -27,5 +27,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "BoostHateEffect")
 public class BoostHateEffect extends BuffEffect
 {
-	
 }

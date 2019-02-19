@@ -33,7 +33,6 @@ import com.aionemu.gameserver.model.gameobjects.player.RecipeList;
  */
 public class MySQL5PlayerRecipesDAO extends PlayerRecipesDAO
 {
-	
 	private static final String SELECT_QUERY = "SELECT `recipe_id` FROM player_recipes WHERE `player_id`=?";
 	private static final String ADD_QUERY = "INSERT INTO player_recipes (`player_id`, `recipe_id`) VALUES (?, ?)";
 	private static final String DELETE_QUERY = "DELETE FROM player_recipes WHERE `player_id`=? AND `recipe_id`=?";

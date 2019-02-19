@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.ls.LsClientPacket;
  */
 public class CM_REQUEST_KICK_ACCOUNT extends LsClientPacket
 {
-	
 	public CM_REQUEST_KICK_ACCOUNT(int opCode)
 	{
 		super(opCode);

@@ -34,7 +34,6 @@ import javolution.util.FastMap;
  */
 public class MySQL5PlayerVarsDAO extends PlayerVarsDAO
 {
-	
 	@Override
 	public Map<String, Object> load(int playerId)
 	{

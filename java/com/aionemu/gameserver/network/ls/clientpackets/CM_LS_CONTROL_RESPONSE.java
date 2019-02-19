@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CM_LS_CONTROL_RESPONSE extends LsClientPacket
 {
-	
 	public CM_LS_CONTROL_RESPONSE(int opCode)
 	{
 		super(opCode);

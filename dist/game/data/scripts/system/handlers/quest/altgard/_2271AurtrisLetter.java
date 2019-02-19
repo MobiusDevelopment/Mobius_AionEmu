@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2271AurtrisLetter extends QuestHandler
 {
-	
 	private static final int questId = 2271;
 	
 	public _2271AurtrisLetter()

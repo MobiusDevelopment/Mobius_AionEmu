@@ -29,7 +29,6 @@ import com.google.common.base.Predicate;
  */
 public class CheckAllianceReadyEvent extends AlwaysTrueTeamEvent implements Predicate<Player>
 {
-	
 	private final PlayerAlliance alliance;
 	private final Player player;
 	private final TeamCommand eventCode;

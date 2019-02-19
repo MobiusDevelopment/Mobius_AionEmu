@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.drop.DropService;
  */
 public class CM_LOOT_ITEM extends AionClientPacket
 {
-	
 	private int targetObjectId;
 	private int index;
 	

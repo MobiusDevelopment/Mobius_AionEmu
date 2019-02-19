@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.gameobjects.player;
  */
 public class InRoll
 {
-	
 	private int npcId;
 	private int itemId;
 	private int rollType;

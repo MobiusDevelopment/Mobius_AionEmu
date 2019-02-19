@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.ls.LsServerPacket;
  */
 public class SM_ACCOUNT_TOLL_INFO extends LsServerPacket
 {
-	
 	private final long toll;
 	private final long luna;
 	

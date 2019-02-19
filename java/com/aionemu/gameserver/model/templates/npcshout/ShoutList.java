@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Rolandas
  */
-
 /**
  * <p>
  * Java class for ShoutList complex type.

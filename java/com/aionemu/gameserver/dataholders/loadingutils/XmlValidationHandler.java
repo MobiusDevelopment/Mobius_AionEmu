@@ -28,7 +28,6 @@ import org.slf4j.LoggerFactory;
  */
 public class XmlValidationHandler implements ValidationEventHandler
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(XmlValidationHandler.class);
 	
 	@Override

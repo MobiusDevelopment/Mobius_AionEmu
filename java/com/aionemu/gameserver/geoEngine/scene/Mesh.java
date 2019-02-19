@@ -45,7 +45,6 @@ import com.aionemu.gameserver.geoEngine.utils.IntMap.Entry;
 
 public class Mesh
 {
-	
 	// TODO: Document this enum
 	public enum Mode
 	{

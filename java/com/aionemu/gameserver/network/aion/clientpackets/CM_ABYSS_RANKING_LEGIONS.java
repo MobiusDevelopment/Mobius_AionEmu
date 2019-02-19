@@ -32,7 +32,6 @@ import com.aionemu.gameserver.services.abyss.AbyssRankingCache;
  */
 public class CM_ABYSS_RANKING_LEGIONS extends AionClientPacket
 {
-	
 	private Race queriedRace;
 	private AbyssRankUpdateType updateType;
 	private int raceId;

@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.spawns.basespawns.BaseSpawnTemplat
 /**
  * @author Ranastic
  */
-
 public class BaseNpc extends Npc
 {
 	private final int baseId;

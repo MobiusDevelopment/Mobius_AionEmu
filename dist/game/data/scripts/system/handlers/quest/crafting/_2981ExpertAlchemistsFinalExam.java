@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2981ExpertAlchemistsFinalExam extends QuestHandler
 {
-	
 	private static final int questId = 2981;
 	
 	public _2981ExpertAlchemistsFinalExam()

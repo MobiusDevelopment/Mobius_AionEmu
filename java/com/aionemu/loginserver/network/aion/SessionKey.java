@@ -24,7 +24,6 @@ import com.aionemu.loginserver.model.Account;
  */
 public class SessionKey
 {
-	
 	/**
 	 * accountId - will be used for authentication on Game Server side.
 	 */

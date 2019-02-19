@@ -23,7 +23,6 @@ import java.util.concurrent.CountDownLatch;
  */
 public interface GameEngine
 {
-	
 	/**
 	 * Load resources for engine
 	 * @param progressLatch

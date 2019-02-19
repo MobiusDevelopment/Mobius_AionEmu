@@ -24,7 +24,6 @@ import com.aionemu.gameserver.services.MotionLoggingService;
  */
 public class WeaponTypeWrapper implements Comparable<WeaponTypeWrapper>
 {
-	
 	private WeaponType mainHand = null;
 	private WeaponType offHand = null;
 	

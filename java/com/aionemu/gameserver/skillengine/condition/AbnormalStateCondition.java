@@ -27,7 +27,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
  */
 public class AbnormalStateCondition extends Condition
 {
-	
 	@XmlAttribute(required = true)
 	protected AbnormalState value;
 	

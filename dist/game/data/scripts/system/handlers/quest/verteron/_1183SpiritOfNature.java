@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1183SpiritOfNature extends QuestHandler
 {
-	
 	private static final int questId = 1183;
 	
 	public _1183SpiritOfNature()

@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_MAY_LOGIN_INTO_GAME;
  */
 public class CM_MAY_LOGIN_INTO_GAME extends AionClientPacket
 {
-	
 	/**
 	 * Constructs new instance of <tt>CM_MAY_LOGIN_INTO_GAME </tt> packet
 	 * @param opcode

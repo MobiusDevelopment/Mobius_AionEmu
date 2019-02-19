@@ -52,7 +52,6 @@ import javolution.util.FastList;
  */
 public class MySQL5InventoryDAO extends InventoryDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5InventoryDAO.class);
 	public static final String SELECT_QUERY = "SELECT `item_unique_id`, `item_id`, `item_count`, `item_color`, `color_expires`, `item_creator`, `expire_time`, `activation_count`, `is_equiped`, `is_soul_bound`, `slot`, `enchant`, `enchant_bonus`, `item_skin`, `fusioned_item`, `optional_socket`, `optional_fusion_socket`, `charge`, `rnd_bonus`, `rnd_count`, `wrappable_count`, `is_packed`, `tempering_level`, `is_topped`, `strengthen_skill`, `skin_skill`, `luna_reskin`, `reduction_level`, `is_seal`  FROM `inventory` WHERE `item_owner`=? AND `item_location`=? AND `is_equiped`=?";
 	public static final String INSERT_QUERY = "INSERT INTO `inventory` (`item_unique_id`, `item_id`, `item_count`, `item_color`, `color_expires`, `item_creator`, `expire_time`, `activation_count`, `item_owner`, `is_equiped`, is_soul_bound, `slot`, `item_location`, `enchant`, `enchant_bonus`, `item_skin`, `fusioned_item`, `optional_socket`, `optional_fusion_socket`, `charge`, `rnd_bonus`, `rnd_count`, `wrappable_count`, `is_packed`, `tempering_level`, `is_topped`, `strengthen_skill`, `skin_skill`, `luna_reskin`, `reduction_level`, `is_seal`) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";

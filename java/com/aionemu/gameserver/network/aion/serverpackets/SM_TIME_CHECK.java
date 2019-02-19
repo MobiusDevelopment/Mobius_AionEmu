@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_TIME_CHECK extends AionServerPacket
 {
-	
 	// Don't be fooled with empty class :D
 	// This packet is just sending opcode, without any content
 	

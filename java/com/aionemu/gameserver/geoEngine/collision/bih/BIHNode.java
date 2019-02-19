@@ -35,7 +35,6 @@ import javolution.util.FastList;
  */
 public final class BIHNode
 {
-	
 	private int leftIndex, rightIndex;
 	private BIHNode left;
 	private BIHNode right;

@@ -33,7 +33,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Ranastic
  */
-
 public class CM_UNPACK_ITEM extends AionClientPacket
 {
 	private int uniqueItemId;

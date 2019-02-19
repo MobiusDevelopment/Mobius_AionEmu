@@ -33,7 +33,6 @@ import com.aionemu.loginserver.network.gs.serverpackets.SM_PING;
  */
 public class PingPongThread implements Runnable
 {
-	
 	private final Logger log = LoggerFactory.getLogger(PingPongThread.class);
 	private final GsConnection connection;
 	public volatile boolean uptime = true;

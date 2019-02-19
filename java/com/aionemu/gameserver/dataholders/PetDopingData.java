@@ -36,7 +36,6 @@ import gnu.trove.map.hash.TShortObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PetDopingData
 {
-	
 	@XmlElement(name = "doping")
 	private List<PetDopingEntry> list;
 	

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2978ExpertCooksTest extends QuestHandler
 {
-	
 	private static final int questId = 2978;
 	
 	public _2978ExpertCooksTest()

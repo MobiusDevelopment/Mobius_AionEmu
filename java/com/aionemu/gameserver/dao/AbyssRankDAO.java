@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
  */
 public abstract class AbyssRankDAO implements DAO
 {
-	
 	@Override
 	public final String getClassName()
 	{

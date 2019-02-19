@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2976ExpertHandicraftersTest extends QuestHandler
 {
-	
 	private static final int questId = 2976;
 	
 	public _2976ExpertHandicraftersTest()

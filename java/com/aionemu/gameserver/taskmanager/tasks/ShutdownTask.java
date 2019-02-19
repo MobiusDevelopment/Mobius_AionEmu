@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class ShutdownTask extends TaskFromDBHandler
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(ShutdownTask.class);
 	
 	private int countDown;

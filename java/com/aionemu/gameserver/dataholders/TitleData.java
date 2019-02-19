@@ -35,7 +35,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TitleData
 {
-	
 	@XmlElement(name = "title")
 	private List<TitleTemplate> tts;
 	

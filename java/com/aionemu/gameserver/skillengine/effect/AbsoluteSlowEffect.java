@@ -27,5 +27,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "AbsoluteSlowEffect")
 public class AbsoluteSlowEffect extends BuffEffect
 {
-	
 }

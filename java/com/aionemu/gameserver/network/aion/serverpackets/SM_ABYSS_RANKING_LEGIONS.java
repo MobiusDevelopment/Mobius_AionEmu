@@ -30,7 +30,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_ABYSS_RANKING_LEGIONS extends AionServerPacket
 {
-	
 	private final List<AbyssRankingResult> data;
 	private final Race race;
 	private final int updateTime;

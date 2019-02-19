@@ -24,7 +24,6 @@ import com.aionemu.loginserver.network.gs.GsServerPacket;
  */
 public class SM_PING extends GsServerPacket
 {
-	
 	@Override
 	protected void writeImpl(GsConnection con)
 	{

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_LEGION_LEAVE_MEMBER extends AionServerPacket
 {
-	
 	private final String name;
 	private String name1;
 	private final int playerObjId;

@@ -42,7 +42,6 @@ import com.sun.tools.javac.api.JavacTool;
  */
 public class ScriptCompilerImpl implements ScriptCompiler
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(ScriptCompilerImpl.class);
 	
 	/**

@@ -38,7 +38,6 @@ import javolution.util.FastMap;
 /**
  * @author Rolandas
  */
-
 /**
  * <p>
  * Java class for anonymous complex type.

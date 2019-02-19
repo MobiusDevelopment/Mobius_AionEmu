@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.rvr.RvrStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class DirectPortal extends Rvrlf3df3<RvrLocation>
 {
 	public DirectPortal(RvrLocation rvr)

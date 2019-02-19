@@ -28,7 +28,6 @@ import com.aionemu.gameserver.services.PunishmentService;
  */
 public class AutoBan
 {
-	
 	protected static void punishment(Player player, String message)
 	{
 		

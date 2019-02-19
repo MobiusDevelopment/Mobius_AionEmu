@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_GATHER_STATUS extends AionServerPacket
 {
-	
 	private final int status;
 	private final int playerobjid;
 	private final int gatherableobjid;

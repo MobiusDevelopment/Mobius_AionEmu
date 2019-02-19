@@ -21,7 +21,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 public class SM_WINDSTREAM extends AionServerPacket
 {
-	
 	private final int unk1;
 	private final int unk2;
 	

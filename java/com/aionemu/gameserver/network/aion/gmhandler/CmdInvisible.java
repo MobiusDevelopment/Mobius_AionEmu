@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CmdInvisible extends AbstractGMHandler
 {
-	
 	public CmdInvisible(Player admin, String params)
 	{
 		super(admin, params);

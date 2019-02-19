@@ -24,7 +24,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 public class CM_COALESCENCE_WINDOW extends AionClientPacket
 {
-	
 	public CM_COALESCENCE_WINDOW(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

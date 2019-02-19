@@ -36,7 +36,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Repairkit extends AdminCommand
 {
-	
 	public Repairkit()
 	{
 		super("repairkit");
@@ -89,7 +88,6 @@ public class Repairkit extends AdminCommand
 			
 			wipeInventoryExceptEquiped(admin, playerToWipe);
 		}
-		
 	}
 	
 	private void removeItemFromDatabase(Player admin, int itemId)

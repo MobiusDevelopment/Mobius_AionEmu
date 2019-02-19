@@ -20,7 +20,6 @@ import com.aionemu.commons.configuration.Property;
 
 public class FallDamageConfig
 {
-	
 	/**
 	 * Fall damage enable
 	 */

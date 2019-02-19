@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _30056DirvisiasSorrow extends QuestHandler
 {
-	
 	private static final int questId = 30056;
 	
 	public _30056DirvisiasSorrow()

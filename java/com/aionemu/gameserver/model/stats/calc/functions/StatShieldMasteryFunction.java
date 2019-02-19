@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
  */
 public class StatShieldMasteryFunction extends StatRateFunction
 {
-	
 	public StatShieldMasteryFunction(StatEnum name, int value, boolean bonus)
 	{
 		super(name, value, bonus);

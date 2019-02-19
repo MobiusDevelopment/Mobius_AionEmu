@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30054PetrificationandPride extends QuestHandler
 {
-	
 	private static final int questId = 30054;
 	
 	public _30054PetrificationandPride()

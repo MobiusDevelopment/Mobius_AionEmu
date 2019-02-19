@@ -23,7 +23,6 @@ import com.aionemu.gameserver.configs.main.WorldConfig;
  */
 public class RegionUtil
 {
-	
 	public static final int X_3D_OFFSET = 1000000;
 	public static final int Y_3D_OFFSET = 1000;
 	public static final int X_2D_OFFSET = 1000;

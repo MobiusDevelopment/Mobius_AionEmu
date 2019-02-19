@@ -24,9 +24,6 @@ package com.aionemu.gameserver;
  */
 public class GameServerError extends Error
 {
-	
-	private static final long serialVersionUID = -7445873741878754767L;
-	
 	/**
 	 * Constructs a new error with <code>null</code> as its detail message. The cause is not initialized, and may subsequently be initialized by a call to {@link #initCause}.
 	 */

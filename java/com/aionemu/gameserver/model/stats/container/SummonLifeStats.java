@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class SummonLifeStats extends CreatureLifeStats<Summon>
 {
-	
 	public SummonLifeStats(Summon owner)
 	{
 		super(owner, owner.getGameStats().getMaxHp().getCurrent(), owner.getGameStats().getMaxMp().getCurrent());

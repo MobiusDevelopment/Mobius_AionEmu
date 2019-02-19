@@ -26,7 +26,6 @@ import com.aionemu.commons.utils.PrintUtils;
  */
 public abstract class BaseServerPacket extends BasePacket
 {
-	
 	/**
 	 * ByteBuffer that contains this packet data
 	 */

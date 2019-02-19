@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2421AsgeirrsRequest extends QuestHandler
 {
-	
 	private static final int questId = 2421;
 	
 	public _2421AsgeirrsRequest()

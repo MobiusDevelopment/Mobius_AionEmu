@@ -29,7 +29,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class UnBan extends AdminCommand
 {
-	
 	public UnBan()
 	{
 		super("unban");

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class ZoneLevelService
 {
-	
 	private static final long DROWN_PERIOD = 2000;
 	
 	/**
@@ -81,7 +80,6 @@ public class ZoneLevelService
 		{
 			player.getController().cancelTask(TaskId.DROWN);
 		}
-		
 	}
 	
 	/**

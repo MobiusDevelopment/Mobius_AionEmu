@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.trade.TradePSItem;
  */
 public class PrivateStore
 {
-	
 	private final Player owner;
 	private LinkedHashMap<Integer, TradePSItem> items;
 	private String storeMessage;

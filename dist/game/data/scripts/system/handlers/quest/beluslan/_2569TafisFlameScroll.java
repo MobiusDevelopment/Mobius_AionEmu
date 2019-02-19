@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2569TafisFlameScroll extends QuestHandler
 {
-	
 	private static final int questId = 2569;
 	
 	public _2569TafisFlameScroll()

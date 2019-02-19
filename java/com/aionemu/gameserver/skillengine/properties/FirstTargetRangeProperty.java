@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
  */
 public class FirstTargetRangeProperty
 {
-	
 	/**
 	 * @param skill
 	 * @param properties

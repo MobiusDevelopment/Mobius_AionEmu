@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.ls.LsServerPacket;
  */
 public class SM_BAN extends LsServerPacket
 {
-	
 	/**
 	 * Ban type 1 = account 2 = IP 3 = Full ban (account and IP)
 	 */

@@ -23,7 +23,6 @@ import com.aionemu.commons.configuration.Property;
  */
 public class CleaningConfig
 {
-	
 	@Property(key = "gameserver.cleaning.enable", defaultValue = "false")
 	public static boolean CLEANING_ENABLE;
 	

@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class DisciplineInstancePosition extends GenerealInstancePosition
 {
-	
 	@Override
 	public void port(Player player, int zone, int position)
 	{

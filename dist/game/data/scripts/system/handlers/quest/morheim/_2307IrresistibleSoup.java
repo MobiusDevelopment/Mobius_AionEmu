@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2307IrresistibleSoup extends QuestHandler
 {
-	
 	private static final int questId = 2307; // INGREDIENT CHECK NEED TO SCRIPT
 	
 	public _2307IrresistibleSoup()

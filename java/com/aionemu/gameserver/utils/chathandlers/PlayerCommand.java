@@ -24,7 +24,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public abstract class PlayerCommand extends ChatCommand
 {
-	
 	public PlayerCommand(String alias)
 	{
 		super(alias);

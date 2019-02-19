@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class Zone extends AdminCommand
 {
-	
 	public Zone()
 	{
 		super("zone");

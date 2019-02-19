@@ -27,7 +27,6 @@ import javolution.util.FastList;
 
 public class SM_ABYSS_ARTIFACT_INFO extends AionServerPacket
 {
-	
 	private final Collection<SiegeLocation> locations;
 	
 	public SM_ABYSS_ARTIFACT_INFO(Collection<SiegeLocation> collection)

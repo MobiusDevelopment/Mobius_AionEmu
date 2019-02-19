@@ -23,7 +23,6 @@ import com.aionemu.commons.configuration.Property;
  */
 public class ShutdownConfig
 {
-	
 	/**
 	 * Shutdown Hook Mode.
 	 */

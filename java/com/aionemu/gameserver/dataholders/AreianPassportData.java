@@ -38,7 +38,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AreianPassportData
 {
-	
 	@XmlElement(name = "login_event")
 	private List<AtreianPassport> tlist;
 	

@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2600HumongousMalek extends QuestHandler
 {
-	
 	private static final int questId = 2600;
 	private static final int[] npc_ids =
 	{

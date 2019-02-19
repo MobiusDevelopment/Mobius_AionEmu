@@ -75,7 +75,6 @@ import com.aionemu.gameserver.world.geo.GeoService;
  */
 public class Skill
 {
-	
 	private SkillMethod skillMethod = SkillMethod.CAST;
 	
 	private final List<Creature> effectedList;

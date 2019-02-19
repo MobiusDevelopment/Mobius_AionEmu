@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Damage extends AdminCommand
 {
-	
 	public Damage()
 	{
 		super("damage");

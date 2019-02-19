@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21460AShulacksStory extends QuestHandler
 {
-	
 	private static final int questId = 21460;
 	
 	public _21460AShulacksStory()

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.network.aion.iteminfo.ItemInfoBlob;
  */
 public class SM_WAREHOUSE_INFO extends AionServerPacket
 {
-	
 	private final int warehouseType;
 	private Collection<Item> itemList;
 	private final boolean firstPacket;

@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_RENAME extends AionServerPacket
 {
-	
 	private final int playerObjectId;
 	private final String oldName;
 	private final String newName;

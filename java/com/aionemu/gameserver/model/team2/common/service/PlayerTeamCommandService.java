@@ -31,7 +31,6 @@ import com.google.common.base.Preconditions;
  */
 public class PlayerTeamCommandService
 {
-	
 	public static void executeCommand(Player player, TeamCommand command, int playerObjId)
 	{
 		final Player teamSubjective = getTeamSubjective(player, playerObjId);

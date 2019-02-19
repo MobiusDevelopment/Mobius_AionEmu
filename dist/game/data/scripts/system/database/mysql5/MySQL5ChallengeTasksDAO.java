@@ -44,7 +44,6 @@ import javolution.util.FastMap;
  */
 public class MySQL5ChallengeTasksDAO extends ChallengeTasksDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5ChallengeTasksDAO.class);
 	
 	private static final String SELECT_QUERY = "SELECT * FROM `challenge_tasks` WHERE `owner_id` = ? AND `owner_type` = ?";

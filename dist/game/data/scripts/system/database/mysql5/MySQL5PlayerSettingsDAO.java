@@ -38,7 +38,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerSettings;
  */
 public class MySQL5PlayerSettingsDAO extends PlayerSettingsDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerSettingsDAO.class);
 	
 	/**

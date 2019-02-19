@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21075FatedHeartbreak extends QuestHandler
 {
-	
 	private static final int questId = 21075;
 	private int rewardIndex;
 	

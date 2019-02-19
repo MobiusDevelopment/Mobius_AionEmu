@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.gameobjects.player.motion.Motion;
  */
 public abstract class MotionDAO implements DAO
 {
-	
 	public abstract void loadMotionList(Player player);
 	
 	public abstract boolean storeMotion(int objectId, Motion motion);

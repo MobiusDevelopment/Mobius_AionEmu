@@ -25,7 +25,6 @@ import com.aionemu.loginserver.network.aion.SessionKey;
  */
 public class SM_PLAY_OK extends AionServerPacket
 {
-	
 	/**
 	 * playOk1 is part of session key - its used for security purposes [checked at game server side]
 	 */

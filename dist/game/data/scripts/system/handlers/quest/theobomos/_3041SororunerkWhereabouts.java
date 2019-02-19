@@ -28,10 +28,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _3041SororunerkWhereabouts extends QuestHandler
 {
-	
 	private static final int questId = 3041;
 	
 	public _3041SororunerkWhereabouts()

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.item.ItemMoveService;
  */
 public class CM_MOVE_ITEM extends AionClientPacket
 {
-	
 	/**
 	 * Target object id that client wants to TALK WITH or 0 if wants to unselect
 	 */

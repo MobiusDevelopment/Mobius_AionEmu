@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _30156NepsLove extends QuestHandler
 {
-	
 	private static final int questId = 30156;
 	
 	public _30156NepsLove()

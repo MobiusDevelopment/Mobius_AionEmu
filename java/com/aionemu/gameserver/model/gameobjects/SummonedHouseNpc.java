@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
  */
 public class SummonedHouseNpc extends SummonedObject<House>
 {
-	
 	String masterName;
 	
 	public SummonedHouseNpc(int objId, NpcController controller, SpawnTemplate spawnTemplate, NpcTemplate npcTemplate, House house, String masterName)

@@ -21,7 +21,6 @@ import com.aionemu.commons.configuration.Property;
 /**
  * @author Ranastic
  */
-
 public class AStationConfig
 {
 	@Property(key = "a.station.server.id", defaultValue = "2")

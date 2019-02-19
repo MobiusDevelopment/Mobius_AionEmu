@@ -32,7 +32,6 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-
 @XmlRootElement(name = "moltenus_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MoltenusSchedule

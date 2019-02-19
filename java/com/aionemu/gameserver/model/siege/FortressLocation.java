@@ -34,7 +34,6 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
  */
 public class FortressLocation extends SiegeLocation
 {
-	
 	protected List<SiegeReward> siegeRewards;
 	protected List<SiegeLegionReward> siegeLegionRewards;
 	protected boolean isUnderShield;

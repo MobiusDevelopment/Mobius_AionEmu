@@ -41,7 +41,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class PlayerGameStats extends CreatureGameStats<Player>
 {
-	
 	private int cachedSpeed;
 	private int cachedAttackSpeed;
 	

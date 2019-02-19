@@ -37,7 +37,6 @@ import com.aionemu.gameserver.spawnengine.WalkerGroupType;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class WalkerTemplate
 {
-	
 	@XmlAttribute(name = "reversed")
 	private Boolean isReversed = false;
 	

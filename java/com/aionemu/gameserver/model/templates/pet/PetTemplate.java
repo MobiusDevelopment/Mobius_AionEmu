@@ -35,7 +35,6 @@ import com.aionemu.gameserver.model.templates.stats.PetStatsTemplate;
 @XmlRootElement(name = "pet")
 public class PetTemplate
 {
-	
 	@XmlAttribute(name = "id", required = true)
 	private int id;
 	

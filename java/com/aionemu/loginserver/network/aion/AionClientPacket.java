@@ -30,7 +30,6 @@ import com.aionemu.loginserver.model.Account;
  */
 public abstract class AionClientPacket extends BaseClientPacket<LoginConnection>
 {
-	
 	/**
 	 * Logger for this class.
 	 */

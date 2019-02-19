@@ -25,7 +25,6 @@ import com.aionemu.loginserver.network.gs.GsServerPacket;
  */
 public class SM_REQUEST_KICK_ACCOUNT extends GsServerPacket
 {
-	
 	/**
 	 * Account that must be kicked at GameServer side.
 	 */

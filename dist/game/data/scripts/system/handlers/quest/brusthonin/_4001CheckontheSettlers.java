@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _4001CheckontheSettlers extends QuestHandler
 {
-	
 	private static final int questId = 4001;
 	
 	public _4001CheckontheSettlers()

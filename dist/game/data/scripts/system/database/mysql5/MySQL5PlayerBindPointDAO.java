@@ -35,7 +35,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class MySQL5PlayerBindPointDAO extends PlayerBindPointDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerBindPointDAO.class);
 	
 	public static final String INSERT_QUERY = "REPLACE INTO `player_bind_point` (`player_id`, `map_id`, `x`, `y`, `z`, `heading`) VALUES (?,?,?,?,?,?)";

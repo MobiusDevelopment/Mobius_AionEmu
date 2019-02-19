@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Status extends AdminCommand
 {
-	
 	public Status()
 	{
 		super("status");

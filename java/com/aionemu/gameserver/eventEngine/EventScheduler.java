@@ -27,7 +27,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 /**
  * Created by wanke on 12/02/2017.
  */
-
 public class EventScheduler implements Runnable
 {
 	private static final Logger log = LoggerFactory.getLogger(EventScheduler.class);

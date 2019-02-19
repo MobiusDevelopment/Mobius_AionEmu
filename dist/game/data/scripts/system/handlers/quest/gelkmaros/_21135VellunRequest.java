@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21135VellunRequest extends QuestHandler
 {
-	
 	private static final int questId = 21135;
 	
 	public _21135VellunRequest()

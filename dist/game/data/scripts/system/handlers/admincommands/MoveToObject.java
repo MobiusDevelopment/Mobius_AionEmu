@@ -28,7 +28,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class MoveToObject extends AdminCommand
 {
-	
 	public MoveToObject()
 	{
 		super("movetoobj");

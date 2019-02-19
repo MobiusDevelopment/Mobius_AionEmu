@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _11032EverythingsBetterWithTentacles extends QuestHandler
 {
-	
 	private static final int questId = 11032;
 	
 	public _11032EverythingsBetterWithTentacles()

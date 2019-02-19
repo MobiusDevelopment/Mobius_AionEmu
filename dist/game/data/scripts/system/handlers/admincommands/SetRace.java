@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.WorldMapType;
  */
 public class SetRace extends AdminCommand
 {
-	
 	public SetRace()
 	{
 		super("setrace");

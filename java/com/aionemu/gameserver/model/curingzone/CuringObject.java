@@ -28,7 +28,6 @@ import com.aionemu.gameserver.world.knownlist.NpcKnownList;
  */
 public class CuringObject extends VisibleObject
 {
-	
 	private final CuringTemplate template;
 	private final float range;
 	

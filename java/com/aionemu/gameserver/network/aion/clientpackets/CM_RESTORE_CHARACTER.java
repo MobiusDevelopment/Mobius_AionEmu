@@ -29,7 +29,6 @@ import com.aionemu.gameserver.services.player.PlayerService;
  */
 public class CM_RESTORE_CHARACTER extends AionClientPacket
 {
-	
 	/**
 	 * PlayOk2 - we dont care...
 	 */

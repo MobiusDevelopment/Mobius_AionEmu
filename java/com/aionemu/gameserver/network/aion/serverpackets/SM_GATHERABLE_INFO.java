@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_GATHERABLE_INFO extends AionServerPacket
 {
-	
 	private final VisibleObject visibleObject;
 	
 	public SM_GATHERABLE_INFO(VisibleObject visibleObject)

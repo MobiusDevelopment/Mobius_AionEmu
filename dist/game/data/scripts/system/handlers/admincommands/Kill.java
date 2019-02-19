@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Kill extends AdminCommand
 {
-	
 	public Kill()
 	{
 		super("kill");

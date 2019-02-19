@@ -27,7 +27,6 @@ import com.aionemu.gameserver.world.WorldPosition;
  */
 public class SM_CHANNEL_INFO extends AionServerPacket
 {
-	
 	int instanceCount = 0;
 	int currentChannel = 0;
 	
@@ -55,7 +54,6 @@ public class SM_CHANNEL_INFO extends AionServerPacket
 			}
 			currentChannel = position.getInstanceId() - 1;
 		}
-		
 	}
 	
 	/**

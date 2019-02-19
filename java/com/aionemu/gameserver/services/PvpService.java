@@ -60,7 +60,6 @@ import javolution.util.FastMap;
  */
 public class PvpService
 {
-	
 	private static Logger log = LoggerFactory.getLogger("KILL_LOG");
 	
 	public static PvpService getInstance()

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class NpcSkill extends AdminCommand
 {
-	
 	public NpcSkill()
 	{
 		super("npcskill");

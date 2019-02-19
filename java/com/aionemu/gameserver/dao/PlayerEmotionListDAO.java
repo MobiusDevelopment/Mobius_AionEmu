@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.gameobjects.player.emotion.Emotion;
  */
 public abstract class PlayerEmotionListDAO implements DAO
 {
-	
 	/*
 	 * (non-Javadoc)
 	 * @see com.aionemu.commons.database.dao.DAO#getClassName()

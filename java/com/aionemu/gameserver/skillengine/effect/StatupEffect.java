@@ -27,5 +27,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "StatupEffect")
 public class StatupEffect extends BuffEffect
 {
-	
 }

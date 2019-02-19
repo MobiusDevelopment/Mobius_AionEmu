@@ -39,10 +39,8 @@ import com.aionemu.gameserver.world.WorldMapType;
 /**
  * @author Balthazar
  */
-
 public class _1640TeleporterRepairs extends QuestHandler
 {
-	
 	private static final int questId = 1640;
 	
 	public _1640TeleporterRepairs()

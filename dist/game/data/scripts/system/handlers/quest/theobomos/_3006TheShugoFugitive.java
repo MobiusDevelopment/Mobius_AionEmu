@@ -28,10 +28,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _3006TheShugoFugitive extends QuestHandler
 {
-	
 	private static final int questId = 3006;
 	
 	public _3006TheShugoFugitive()

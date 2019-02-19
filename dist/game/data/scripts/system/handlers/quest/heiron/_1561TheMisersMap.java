@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _1561TheMisersMap extends QuestHandler
 {
-	
 	private static final int questId = 1561;
 	
 	public _1561TheMisersMap()

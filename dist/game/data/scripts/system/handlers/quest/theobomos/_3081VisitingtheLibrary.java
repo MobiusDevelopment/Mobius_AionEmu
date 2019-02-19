@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _3081VisitingtheLibrary extends QuestHandler
 {
-	
 	private static final int questId = 3081;
 	
 	public _3081VisitingtheLibrary()

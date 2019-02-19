@@ -26,7 +26,6 @@ import com.aionemu.loginserver.network.gs.GsClientPacket;
  */
 public class CM_MAC extends GsClientPacket
 {
-	
 	private int accountId;
 	private String address;
 	

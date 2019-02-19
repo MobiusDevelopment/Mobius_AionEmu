@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _30202SuspiciousCeremony extends QuestHandler
 {
-	
 	private static final int questId = 30202;
 	
 	public _30202SuspiciousCeremony()

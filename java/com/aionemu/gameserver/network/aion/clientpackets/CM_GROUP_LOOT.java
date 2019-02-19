@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.drop.DropDistributionService;
  */
 public class CM_GROUP_LOOT extends AionClientPacket
 {
-	
 	@SuppressWarnings("unused")
 	private int groupId;
 	private int index;

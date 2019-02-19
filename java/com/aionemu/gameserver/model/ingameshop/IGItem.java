@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.ingameshop;
  */
 public class IGItem
 {
-	
 	private final int objectId;
 	private final int itemId;
 	private final long itemCount;

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2921LoveAtFirstSight extends QuestHandler
 {
-	
 	private static final int questId = 2921;
 	
 	public _2921LoveAtFirstSight()

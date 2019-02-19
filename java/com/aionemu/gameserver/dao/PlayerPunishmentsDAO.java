@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.PunishmentService.PunishmentType;
  */
 public abstract class PlayerPunishmentsDAO implements DAO
 {
-	
 	@Override
 	public final String getClassName()
 	{

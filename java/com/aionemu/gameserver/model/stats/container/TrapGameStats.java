@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.stats.calc.Stat2;
  */
 public class TrapGameStats extends NpcGameStats
 {
-	
 	public TrapGameStats(Npc owner)
 	{
 		super(owner);

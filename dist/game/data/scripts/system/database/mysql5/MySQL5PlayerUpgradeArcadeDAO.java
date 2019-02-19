@@ -35,7 +35,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerUpgradeArcade;
 /**
  * @author Ranastic
  */
-
 public class MySQL5PlayerUpgradeArcadeDAO extends PlayerUpgradeArcadeDAO
 {
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerUpgradeArcadeDAO.class);

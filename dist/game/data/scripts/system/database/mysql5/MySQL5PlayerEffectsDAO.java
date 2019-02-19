@@ -43,7 +43,6 @@ import com.google.common.collect.Iterators;
  */
 public class MySQL5PlayerEffectsDAO extends PlayerEffectsDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5PlayerEffectsDAO.class);
 	
 	public static final String INSERT_QUERY = "INSERT INTO `player_effects` (`player_id`, `skill_id`, `skill_lvl`, `current_time`, `end_time`) VALUES (?,?,?,?,?)";

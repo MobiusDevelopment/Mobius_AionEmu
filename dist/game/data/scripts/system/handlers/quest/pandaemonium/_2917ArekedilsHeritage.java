@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2917ArekedilsHeritage extends QuestHandler
 {
-	
 	private static final int questId = 2917;
 	
 	public _2917ArekedilsHeritage()

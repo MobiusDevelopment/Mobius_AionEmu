@@ -23,7 +23,6 @@ import com.aionemu.gameserver.services.LegionService;
 
 public class CM_LEGION_JOIN_CANCEL extends AionClientPacket
 {
-	
 	private int legionId;
 	
 	public CM_LEGION_JOIN_CANCEL(int opcode, State state, State... restStates)

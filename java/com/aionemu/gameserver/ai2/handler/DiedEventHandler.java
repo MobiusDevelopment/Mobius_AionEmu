@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
  */
 public class DiedEventHandler
 {
-	
 	public static void onDie(NpcAI2 npcAI)
 	{
 		if (npcAI.isLogging())

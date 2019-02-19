@@ -26,7 +26,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_TRANSFORM_IN_SUMMON extends AionServerPacket
 {
-	
 	private final Player player;
 	private final int summonObject;
 	

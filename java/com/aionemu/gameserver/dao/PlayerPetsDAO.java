@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.templates.pet.PetDopingBag;
  */
 public abstract class PlayerPetsDAO implements DAO
 {
-	
 	@Override
 	public final String getClassName()
 	{

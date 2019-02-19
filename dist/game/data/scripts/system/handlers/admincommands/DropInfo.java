@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class DropInfo extends AdminCommand
 {
-	
 	public DropInfo()
 	{
 		super("dropinfo");

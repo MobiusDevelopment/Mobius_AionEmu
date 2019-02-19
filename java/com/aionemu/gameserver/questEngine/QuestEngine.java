@@ -76,7 +76,6 @@ import javolution.util.FastMap;
  */
 public class QuestEngine implements GameEngine
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(QuestEngine.class);
 	private static final FastMap<Integer, QuestHandler> questHandlers = new FastMap<>();
 	private static ScriptManager scriptManager = new ScriptManager();

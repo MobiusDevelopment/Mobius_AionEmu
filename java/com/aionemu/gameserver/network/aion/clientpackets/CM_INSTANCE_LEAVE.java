@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionConnection.State;
  */
 public class CM_INSTANCE_LEAVE extends AionClientPacket
 {
-	
 	public CM_INSTANCE_LEAVE(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

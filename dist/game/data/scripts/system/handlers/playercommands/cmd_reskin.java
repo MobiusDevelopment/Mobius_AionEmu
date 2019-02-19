@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.chathandlers.PlayerCommand;
  */
 public class cmd_reskin extends PlayerCommand
 {
-	
 	public cmd_reskin()
 	{
 		super("reskin");

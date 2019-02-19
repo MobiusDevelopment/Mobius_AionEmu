@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
  */
 public class SiegeSpawnTemplate extends SpawnTemplate
 {
-	
 	private int siegeId;
 	private SiegeRace siegeRace;
 	private SiegeSpawnType siegeSpawnType;

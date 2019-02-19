@@ -24,7 +24,6 @@ import com.aionemu.gameserver.services.AbyssLandingService;
 /**
  * @author Ranastic & Lightning (Encom)
  */
-
 public class CM_ABYSS_LANDING extends AionClientPacket
 {
 	public CM_ABYSS_LANDING(int opcode, State state, State... restStates)

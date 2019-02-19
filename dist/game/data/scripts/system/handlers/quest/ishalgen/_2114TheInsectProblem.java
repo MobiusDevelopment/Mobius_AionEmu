@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2114TheInsectProblem extends QuestHandler
 {
-	
 	private static final int questId = 2114;
 	
 	public _2114TheInsectProblem()

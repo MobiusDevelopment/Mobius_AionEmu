@@ -36,7 +36,6 @@ import com.aionemu.gameserver.world.knownlist.KnownList;
  */
 public abstract class VisibleObject extends AionObject
 {
-	
 	protected VisibleObjectTemplate objectTemplate;
 	
 	// how far player will see visible object

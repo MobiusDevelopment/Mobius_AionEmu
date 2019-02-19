@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class CM_GS_AUTH_RESPONSE extends LsClientPacket
 {
-	
 	public CM_GS_AUTH_RESPONSE(int opCode)
 	{
 		super(opCode);

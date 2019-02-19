@@ -31,7 +31,6 @@ import com.aionemu.gameserver.skillengine.model.SkillTemplate;
  */
 public class SkillEngine
 {
-	
 	public static final SkillEngine skillEngine = new SkillEngine();
 	
 	/**

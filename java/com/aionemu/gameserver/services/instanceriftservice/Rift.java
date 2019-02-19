@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.instancerift.InstanceRiftStateType;
 /**
  * @author Rinzler (Encom)
  */
-
 public class Rift extends RiftInstance<InstanceRiftLocation>
 {
 	public Rift(InstanceRiftLocation instanceRift)

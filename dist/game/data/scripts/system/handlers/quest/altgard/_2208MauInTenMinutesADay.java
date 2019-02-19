@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _2208MauInTenMinutesADay extends QuestHandler
 {
-	
 	private static final int questId = 2208;
 	
 	public _2208MauInTenMinutesADay()

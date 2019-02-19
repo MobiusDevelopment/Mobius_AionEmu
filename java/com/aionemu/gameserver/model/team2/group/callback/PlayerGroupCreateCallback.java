@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 @SuppressWarnings("rawtypes")
 public abstract class PlayerGroupCreateCallback implements Callback
 {
-	
 	@Override
 	public CallbackResult beforeCall(Object obj, Object[] args)
 	{

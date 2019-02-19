@@ -37,7 +37,6 @@ import javolution.util.FastList;
  */
 public class QuestStateList
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(QuestStateList.class);
 	
 	private final SortedMap<Integer, QuestState> _quests;

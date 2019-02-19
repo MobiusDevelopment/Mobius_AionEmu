@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21138OddStrigik extends QuestHandler
 {
-	
 	private static final int questId = 21138;
 	
 	public _21138OddStrigik()

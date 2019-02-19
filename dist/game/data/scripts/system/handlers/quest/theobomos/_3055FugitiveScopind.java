@@ -33,10 +33,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _3055FugitiveScopind extends QuestHandler
 {
-	
 	private static final int questId = 3055;
 	
 	public _3055FugitiveScopind()

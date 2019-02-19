@@ -30,7 +30,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class PasskeyReset extends AdminCommand
 {
-	
 	public PasskeyReset()
 	{
 		super("passkeyreset");

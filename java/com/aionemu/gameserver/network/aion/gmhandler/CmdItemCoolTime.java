@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CmdItemCoolTime extends AbstractGMHandler
 {
-	
 	public CmdItemCoolTime(Player admin)
 	{
 		super(admin, "");
@@ -90,7 +89,6 @@ public class CmdItemCoolTime extends AbstractGMHandler
 				}
 			}
 		}
-		
 	}
 	
 }

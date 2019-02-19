@@ -37,7 +37,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class ItemSplitService
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(ItemSplitService.class);
 	
 	/**
@@ -147,7 +146,6 @@ public class ItemSplitService
 			final long leftCount = destStorage.increaseItemCount(targetItem, count, sourceStorage.getStorageType() == destStorage.getStorageType() ? ItemUpdateType.INC_ITEM_MERGE : ItemUpdateType.INC_ITEM_COLLECT);
 			sourceStorage.decreaseItemCount(sourceItem, count - leftCount, sourceStorage.getStorageType() == destStorage.getStorageType() ? ItemUpdateType.DEC_ITEM_SPLIT : ItemUpdateType.DEC_ITEM_SPLIT_MOVE);
 		}
-		
 	}
 	
 	private static void moveKinah(Player player, IStorage source, long splitAmount)

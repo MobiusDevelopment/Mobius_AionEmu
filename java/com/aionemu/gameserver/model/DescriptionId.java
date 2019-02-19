@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model;
  */
 public final class DescriptionId
 {
-	
 	private int value;
 	
 	public DescriptionId(int value)

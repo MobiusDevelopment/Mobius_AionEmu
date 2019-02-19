@@ -26,7 +26,6 @@ import com.aionemu.gameserver.model.templates.walker.WalkerTemplate;
  */
 public class ClusteredNpc
 {
-	
 	private Npc npc;
 	private final int instance;
 	private final WalkerTemplate walkTemplate;

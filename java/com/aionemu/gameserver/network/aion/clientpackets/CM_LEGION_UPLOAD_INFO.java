@@ -27,7 +27,6 @@ import com.aionemu.gameserver.services.LegionService;
  */
 public class CM_LEGION_UPLOAD_INFO extends AionClientPacket
 {
-	
 	/** Emblem related information **/
 	private int totalSize;
 	private int red;

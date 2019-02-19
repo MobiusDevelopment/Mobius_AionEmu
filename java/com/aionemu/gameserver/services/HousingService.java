@@ -63,7 +63,6 @@ import javolution.util.FastList;
  */
 public class HousingService
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(HousingService.class);
 	private static final Map<Integer, List<House>> housesByMapId = new HashMap<>();
 	private final Map<Integer, House> customHouses;

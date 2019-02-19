@@ -72,7 +72,6 @@ import javolution.util.FastList;
 /**
  * @author Rinzler (Encom)
  */
-
 @InstanceID(301210000)
 public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 {

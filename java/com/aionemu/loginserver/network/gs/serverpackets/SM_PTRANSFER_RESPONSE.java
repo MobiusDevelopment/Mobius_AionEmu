@@ -28,7 +28,6 @@ import com.aionemu.loginserver.service.ptransfer.PlayerTransferTask;
  */
 public class SM_PTRANSFER_RESPONSE extends GsServerPacket
 {
-	
 	private final PlayerTransferResultStatus result;
 	private Account account;
 	private PlayerTransferRequest request;

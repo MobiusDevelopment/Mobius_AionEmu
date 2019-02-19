@@ -30,7 +30,6 @@ import com.aionemu.gameserver.model.templates.rewards.IdLevelReward;
  * @author Rolandas
  *
  */
-
 /**
  * <p>
  * Java class for MedicineGroup complex type.

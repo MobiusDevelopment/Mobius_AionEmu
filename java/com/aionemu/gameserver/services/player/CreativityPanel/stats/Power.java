@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
 /**
  * @author Ranastic (Encom)
  */
-
 public class Power implements StatOwner
 {
 	private final List<IStatFunction> power = new ArrayList<>();

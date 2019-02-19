@@ -28,7 +28,6 @@ import javolution.lang.Reusable;
  */
 public class Triangle extends AbstractTriangle implements Reusable
 {
-	
 	@SuppressWarnings("rawtypes")
 	private static final ObjectFactory FACTORY = new ObjectFactory()
 	{

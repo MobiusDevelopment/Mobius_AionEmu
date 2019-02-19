@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "petstats")
 public class PetStatsTemplate
 {
-	
 	@XmlAttribute(name = "reaction", required = true)
 	private String reaction;
 	

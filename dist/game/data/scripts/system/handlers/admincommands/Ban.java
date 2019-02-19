@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Ban extends AdminCommand
 {
-	
 	public Ban()
 	{
 		super("ban");

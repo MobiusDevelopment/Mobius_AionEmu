@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2480ElimOfElysea extends QuestHandler
 {
-	
 	private static final int questId = 2480;
 	
 	public _2480ElimOfElysea()

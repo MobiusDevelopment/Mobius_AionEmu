@@ -23,7 +23,6 @@ import java.sql.Timestamp;
  */
 public class BannedMacEntry
 {
-	
 	private final String mac;
 	private String details;
 	private Timestamp timeEnd;

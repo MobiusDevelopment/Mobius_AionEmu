@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1900RingImbuedAether extends QuestHandler
 {
-	
 	private static final int questId = 1900;
 	
 	public _1900RingImbuedAether()

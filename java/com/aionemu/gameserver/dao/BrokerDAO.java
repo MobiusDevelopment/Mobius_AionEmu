@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.gameobjects.BrokerItem;
 
 public abstract class BrokerDAO implements IDFactoryAwareDAO
 {
-	
 	public abstract List<BrokerItem> loadBroker();
 	
 	public abstract boolean store(BrokerItem brokerItem);

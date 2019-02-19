@@ -24,7 +24,6 @@ import com.aionemu.loginserver.network.gs.GsClientPacket;
  */
 public class CM_PREMIUM_CONTROL extends GsClientPacket
 {
-	
 	private int accountId;
 	private int requestId;
 	private long requiredCost;

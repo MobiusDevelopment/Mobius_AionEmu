@@ -36,7 +36,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class WarehouseExpandData
 {
-	
 	@XmlElement(name = "warehouse_npc")
 	private List<WarehouseExpandTemplate> clist;
 	private final TIntObjectHashMap<WarehouseExpandTemplate> npctlistData = new TIntObjectHashMap<>();

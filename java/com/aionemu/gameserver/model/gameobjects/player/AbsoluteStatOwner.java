@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.stats.ModifiersTemplate;
  */
 public class AbsoluteStatOwner implements StatOwner
 {
-	
 	Player target;
 	ModifiersTemplate template;
 	boolean isActive = false;

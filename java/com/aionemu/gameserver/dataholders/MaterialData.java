@@ -39,7 +39,6 @@ import com.aionemu.gameserver.model.templates.materials.MaterialTemplate;
 /**
  * @author Rolandas
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder =
 {

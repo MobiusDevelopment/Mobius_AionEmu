@@ -28,7 +28,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class CM_CLIENT_COMMAND_ROLL extends AionClientPacket
 {
-	
 	private int maxRoll;
 	private int roll;
 	

@@ -36,7 +36,6 @@ import com.aionemu.gameserver.model.gameobjects.player.motion.MotionList;
  */
 public class MySQL5MotionDAO extends MotionDAO
 {
-	
 	/** Logger */
 	private static final Logger log = LoggerFactory.getLogger(PlayerEmotionListDAO.class);
 	public static final String INSERT_QUERY = "INSERT INTO `player_motions` (`player_id`, `motion_id`, `active`,  `time`) VALUES (?,?,?,?)";

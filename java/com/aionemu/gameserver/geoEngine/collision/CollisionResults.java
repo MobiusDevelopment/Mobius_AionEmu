@@ -22,7 +22,6 @@ import java.util.Iterator;
 
 public class CollisionResults implements Iterable<CollisionResult>
 {
-	
 	private final ArrayList<CollisionResult> results = new ArrayList<>();
 	private boolean sorted = true;
 	private final boolean onlyFirst;

@@ -34,7 +34,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CM_FRIEND_ADD extends AionClientPacket
 {
-	
 	String targetName;
 	
 	public CM_FRIEND_ADD(int opcode, State state, State... restStates)

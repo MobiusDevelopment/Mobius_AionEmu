@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
  */
 public class GroupGate extends SummonedObject<Creature>
 {
-	
 	/**
 	 * @param objId
 	 * @param controller

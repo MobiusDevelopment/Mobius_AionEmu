@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _3037WanderersStaff extends QuestHandler
 {
-	
 	private static final int questId = 3037;
 	
 	public _3037WanderersStaff()

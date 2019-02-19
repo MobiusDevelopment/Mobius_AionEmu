@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21136InSearchOfAWitness extends QuestHandler
 {
-	
 	private static final int questId = 21136;
 	
 	public _21136InSearchOfAWitness()

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _1311AGermOfHope extends QuestHandler
 {
-	
 	private static final int questId = 1311;
 	
 	public _1311AGermOfHope()

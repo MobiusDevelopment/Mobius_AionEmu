@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _29020MasterTailorsPotential extends QuestHandler
 {
-	
 	private static final int questId = 29020;
 	
 	public _29020MasterTailorsPotential()

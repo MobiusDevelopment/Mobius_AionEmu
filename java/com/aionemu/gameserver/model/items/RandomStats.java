@@ -22,7 +22,6 @@ import com.aionemu.gameserver.model.templates.item.bonuses.StatBonusType;
 /**
  * @author xTz
  */
-
 public class RandomStats
 {
 	private final RandomBonusEffect rndBonusEffect;

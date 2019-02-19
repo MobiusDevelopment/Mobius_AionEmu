@@ -22,7 +22,6 @@ import com.aionemu.commons.configuration.Property;
 
 public class NetworkConfig
 {
-	
 	/**
 	 * Game Server port
 	 */

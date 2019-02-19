@@ -31,7 +31,6 @@ import com.aionemu.gameserver.world.WorldType;
  */
 public class RoadObserver extends ActionObserver
 {
-	
 	private final Player player;
 	private final Road road;
 	private Point3D oldPosition;

@@ -41,7 +41,6 @@ import javolution.util.FastMap;
  */
 public class GeoMap extends Node
 {
-	
 	private short[] terrainData;
 	private final List<BoundingBox> tmpBox = new ArrayList<>();
 	private final Map<String, DoorGeometry> doors = new FastMap<>();

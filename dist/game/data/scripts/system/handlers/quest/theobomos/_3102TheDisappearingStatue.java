@@ -28,10 +28,8 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 /**
  * @author Balthazar
  */
-
 public class _3102TheDisappearingStatue extends QuestHandler
 {
-	
 	private static final int questId = 3102;
 	
 	public _3102TheDisappearingStatue()

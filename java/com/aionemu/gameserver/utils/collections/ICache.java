@@ -27,7 +27,6 @@ package com.aionemu.gameserver.utils.collections;
 })
 public interface ICache<K extends Comparable, V>
 {
-	
 	V get(K obj);
 	
 	void put(K key, V obj);

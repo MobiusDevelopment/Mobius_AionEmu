@@ -62,7 +62,6 @@ import javolution.util.FastMap;
  */
 public abstract class WorldMapInstance
 {
-	
 	/**
 	 * Logger for this class.
 	 */

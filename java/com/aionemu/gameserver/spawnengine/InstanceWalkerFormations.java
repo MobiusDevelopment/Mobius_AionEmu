@@ -36,7 +36,6 @@ import ch.lambdaj.group.Group;
  */
 public class InstanceWalkerFormations
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(InstanceWalkerFormations.class);
 	
 	private final Map<String, List<ClusteredNpc>> groupedSpawnObjects;

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21073ListentoMySongStrigiks extends QuestHandler
 {
-	
 	private static final int questId = 21073;
 	
 	public _21073ListentoMySongStrigiks()

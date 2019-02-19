@@ -925,7 +925,6 @@ public class AttackUtil
 		{
 			return AttackStatus.NORMALHIT;
 		}
-		
 	}
 	
 	public static void cancelCastOn(Creature target)

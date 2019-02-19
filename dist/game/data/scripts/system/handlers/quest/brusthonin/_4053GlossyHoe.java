@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _4053GlossyHoe extends QuestHandler
 {
-	
 	private static final int questId = 4053;
 	
 	public _4053GlossyHoe()

@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.ExchangeService;
  */
 public class CM_EXCHANGE_OK extends AionClientPacket
 {
-	
 	public CM_EXCHANGE_OK(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

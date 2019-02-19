@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Delete extends AdminCommand
 {
-	
 	public Delete()
 	{
 		super("delete");

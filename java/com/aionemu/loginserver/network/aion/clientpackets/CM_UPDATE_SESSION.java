@@ -28,7 +28,6 @@ import com.aionemu.loginserver.network.aion.LoginConnection;
  */
 public class CM_UPDATE_SESSION extends AionClientPacket
 {
-	
 	/**
 	 * accountId is part of session key - its used for security purposes
 	 */

@@ -29,7 +29,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _2207ConversingWithaSkurv extends QuestHandler
 {
-	
 	private static final int questId = 2207;
 	
 	public _2207ConversingWithaSkurv()

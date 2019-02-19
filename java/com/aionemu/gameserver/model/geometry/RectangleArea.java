@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.zone.ZoneName;
  */
 public class RectangleArea extends AbstractArea
 {
-	
 	/**
 	 * Min x point
 	 */

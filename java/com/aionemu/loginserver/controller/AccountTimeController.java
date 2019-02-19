@@ -30,7 +30,6 @@ import com.aionemu.loginserver.model.AccountTime;
  */
 public class AccountTimeController
 {
-	
 	/**
 	 * Update account time when character logins. The following field are being updated: - LastLoginTime (set to CurrentTime) - RestTime (set to (RestTime + (CurrentTime-LastLoginTime - SessionDuration))
 	 * @param account

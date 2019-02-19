@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2458RoastGadillForAFriend extends QuestHandler
 {
-	
 	private static final int questId = 2458;
 	
 	public _2458RoastGadillForAFriend()

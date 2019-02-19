@@ -37,7 +37,6 @@ import com.aionemu.gameserver.model.templates.ingameshop.IGCategory;
 @XmlRootElement(name = "in_game_shop")
 public class InGameShopProperty
 {
-	
 	@XmlElement(name = "category", required = true)
 	private List<IGCategory> categories;
 	

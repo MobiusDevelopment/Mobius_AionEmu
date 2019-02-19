@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_TIME_CHECK;
  */
 public class CM_TIME_CHECK extends AionClientPacket
 {
-	
 	/**
 	 * Nano time / 1000000
 	 */

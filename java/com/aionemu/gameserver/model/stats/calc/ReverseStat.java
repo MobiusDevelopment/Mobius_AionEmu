@@ -24,7 +24,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
  */
 public class ReverseStat extends Stat2
 {
-	
 	public ReverseStat(StatEnum stat, int base, Creature owner)
 	{
 		super(stat, base, owner);

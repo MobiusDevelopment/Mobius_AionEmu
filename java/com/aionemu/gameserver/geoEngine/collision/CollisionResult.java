@@ -24,7 +24,6 @@ import com.aionemu.gameserver.geoEngine.scene.Geometry;
  */
 public class CollisionResult implements Comparable<CollisionResult>
 {
-	
 	private Geometry geometry;
 	private Vector3f contactPoint;
 	private Vector3f contactNormal;

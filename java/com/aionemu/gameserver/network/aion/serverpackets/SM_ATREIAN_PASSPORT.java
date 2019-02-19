@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Ranastic
  */
-
 public class SM_ATREIAN_PASSPORT extends AionServerPacket
 {
 	private final int stamps;

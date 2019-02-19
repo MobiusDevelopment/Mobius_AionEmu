@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.mail.MailService;
  */
 public class CM_READ_MAIL extends AionClientPacket
 {
-	
 	int mailObjId;
 	
 	public CM_READ_MAIL(int opcode, State state, State... restStates)

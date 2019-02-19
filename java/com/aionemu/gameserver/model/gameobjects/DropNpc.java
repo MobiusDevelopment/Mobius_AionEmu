@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
  */
 public class DropNpc
 {
-	
 	private Collection<Integer> allowedList = new ArrayList<>();
 	private Collection<Player> inRangePlayers = new ArrayList<>();
 	private final Collection<Player> playerStatus = new ArrayList<>();

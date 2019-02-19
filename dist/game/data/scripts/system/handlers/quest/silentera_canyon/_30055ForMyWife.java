@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30055ForMyWife extends QuestHandler
 {
-	
 	private static final int questId = 30055;
 	
 	public _30055ForMyWife()

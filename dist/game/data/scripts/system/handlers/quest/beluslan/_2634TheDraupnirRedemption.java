@@ -35,7 +35,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _2634TheDraupnirRedemption extends QuestHandler
 {
-	
 	private static final int questId = 2634;
 	private static final int[] npcs =
 	{

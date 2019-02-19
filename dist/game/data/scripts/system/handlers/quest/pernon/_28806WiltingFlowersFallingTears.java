@@ -32,7 +32,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _28806WiltingFlowersFallingTears extends QuestHandler
 {
-	
 	private static final int questId = 28806;
 	
 	private static final Set<Integer> butlers;

@@ -31,7 +31,6 @@ import com.aionemu.gameserver.model.templates.npcskill.NpcSkillTemplates;
  */
 public class NpcSkillList implements SkillList<Npc>
 {
-	
 	private List<NpcSkillEntry> skills;
 	
 	public NpcSkillList(Npc owner)

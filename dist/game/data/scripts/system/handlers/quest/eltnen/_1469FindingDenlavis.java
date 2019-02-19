@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _1469FindingDenlavis extends QuestHandler
 {
-	
 	private static final int questId = 1469;
 	
 	public _1469FindingDenlavis()

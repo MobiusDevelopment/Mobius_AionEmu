@@ -25,7 +25,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Teleportation extends AdminCommand
 {
-	
 	public Teleportation()
 	{
 		super("teleportation");

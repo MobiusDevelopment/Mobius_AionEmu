@@ -23,7 +23,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
 /**
  * @author Ranastic
  */
-
 public class SM_MEGAPHONE_MESSAGE extends AionServerPacket
 {
 	private final Player player;

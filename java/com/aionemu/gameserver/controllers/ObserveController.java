@@ -48,7 +48,6 @@ import javolution.util.FastList;
  */
 public class ObserveController
 {
-	
 	private final ReentrantLock lock = new ReentrantLock();
 	protected Collection<ActionObserver> observers = new FastList<ActionObserver>(0).shared();
 	protected FastList<ActionObserver> onceUsedObservers = new FastList<>(0);

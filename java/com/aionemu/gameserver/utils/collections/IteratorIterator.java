@@ -54,7 +54,6 @@ import java.util.NoSuchElementException;
  */
 public class IteratorIterator<V> implements Iterator<V>
 {
-	
 	/** 1st Level iterator */
 	private final Iterator<? extends Iterable<V>> firstLevelIterator;
 	

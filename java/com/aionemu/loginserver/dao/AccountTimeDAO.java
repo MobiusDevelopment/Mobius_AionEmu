@@ -24,7 +24,6 @@ import com.aionemu.loginserver.model.AccountTime;
  */
 public abstract class AccountTimeDAO implements DAO
 {
-	
 	/**
 	 * Updates @link com.aionemu.loginserver.model.AccountTime data of account
 	 * @param accountId account id

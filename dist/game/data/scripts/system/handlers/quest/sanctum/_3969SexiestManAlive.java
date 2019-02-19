@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _3969SexiestManAlive extends QuestHandler
 {
-	
 	private static final int questId = 3969;
 	
 	public _3969SexiestManAlive()

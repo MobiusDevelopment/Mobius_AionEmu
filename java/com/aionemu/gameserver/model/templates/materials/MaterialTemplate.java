@@ -27,7 +27,6 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * @author Rolandas
  */
-
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MaterialTemplate", propOrder =
 {

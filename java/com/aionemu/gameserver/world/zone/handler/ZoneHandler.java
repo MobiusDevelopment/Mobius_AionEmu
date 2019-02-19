@@ -24,7 +24,6 @@ import com.aionemu.gameserver.world.zone.ZoneInstance;
  */
 public interface ZoneHandler
 {
-	
 	void onEnterZone(Creature player, ZoneInstance zone);
 	
 	void onLeaveZone(Creature player, ZoneInstance zone);

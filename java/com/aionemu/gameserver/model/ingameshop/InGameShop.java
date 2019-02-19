@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.ingameshop;
  */
 public class InGameShop
 {
-	
 	private byte subCategory;
 	private byte category = 2;
 	

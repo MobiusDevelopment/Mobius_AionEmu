@@ -27,5 +27,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ReturnCoolReduceEffect")
 public class ReturnCoolReduceEffect extends BuffEffect
 {
-	
 }

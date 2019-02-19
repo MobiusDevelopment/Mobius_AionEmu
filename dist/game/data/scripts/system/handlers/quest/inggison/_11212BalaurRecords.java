@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _11212BalaurRecords extends QuestHandler
 {
-	
 	private static final int questId = 11212;
 	
 	public _11212BalaurRecords()

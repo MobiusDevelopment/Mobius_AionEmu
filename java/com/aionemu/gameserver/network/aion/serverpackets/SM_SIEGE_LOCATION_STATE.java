@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_SIEGE_LOCATION_STATE extends AionServerPacket
 {
-	
 	private final int locationId;
 	private final int state;
 	

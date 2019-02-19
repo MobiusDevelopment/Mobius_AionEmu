@@ -34,7 +34,6 @@ import com.aionemu.gameserver.model.stats.calc.functions.StatFunction;
 @XmlRootElement(name = "modifiers")
 public class ModifiersTemplate
 {
-	
 	@XmlElements(
 	{
 		@XmlElement(name = "sub", type = com.aionemu.gameserver.model.stats.calc.functions.StatSubFunction.class),

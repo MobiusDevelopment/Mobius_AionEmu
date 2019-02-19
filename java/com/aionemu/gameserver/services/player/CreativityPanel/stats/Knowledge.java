@@ -28,7 +28,6 @@ import com.aionemu.gameserver.model.stats.container.StatEnum;
 /**
  * @author Ranastic (Encom)
  */
-
 public class Knowledge implements StatOwner
 {
 	private final List<IStatFunction> knowledge = new ArrayList<>();

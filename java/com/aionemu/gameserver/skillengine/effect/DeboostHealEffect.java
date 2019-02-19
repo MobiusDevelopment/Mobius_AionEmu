@@ -27,5 +27,4 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "DeboostHealEffect")
 public class DeboostHealEffect extends BuffEffect
 {
-	
 }

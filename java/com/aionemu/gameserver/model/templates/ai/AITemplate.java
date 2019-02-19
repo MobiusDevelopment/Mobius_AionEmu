@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.ai.Summons;
  */
 public class AITemplate
 {
-	
 	private int npcId;
 	private Summons summons;
 	private Bombs bombs;

@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _18847Housewarming extends QuestHandler
 {
-	
 	private static final int questId = 18847;
 	
 	public _18847Housewarming()

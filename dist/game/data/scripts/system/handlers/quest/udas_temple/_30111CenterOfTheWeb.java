@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _30111CenterOfTheWeb extends QuestHandler
 {
-	
 	private static final int questId = 30111;
 	
 	public _30111CenterOfTheWeb()

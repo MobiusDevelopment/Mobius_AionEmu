@@ -36,7 +36,6 @@ import system.handlers.ai.AggressiveNpcAI2;
 @AIName("ide_resonator")
 public class IdeResonatorAI2 extends AggressiveNpcAI2
 {
-	
 	@Override
 	public void think()
 	{

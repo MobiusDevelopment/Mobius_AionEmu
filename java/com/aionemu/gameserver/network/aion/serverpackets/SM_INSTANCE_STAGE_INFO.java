@@ -24,7 +24,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_INSTANCE_STAGE_INFO extends AionServerPacket
 {
-	
 	private final int type;
 	private final int event;
 	private final int unk;

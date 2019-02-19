@@ -24,7 +24,6 @@ import java.nio.ByteBuffer;
  */
 public class IndexByteBuffer extends IndexBuffer
 {
-	
 	private final ByteBuffer buf;
 	
 	public IndexByteBuffer(ByteBuffer buffer)

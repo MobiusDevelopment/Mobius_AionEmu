@@ -25,7 +25,6 @@ import com.aionemu.loginserver.network.gs.GsServerPacket;
  */
 public class SM_BAN_RESPONSE extends GsServerPacket
 {
-	
 	private final byte type;
 	private final int accountId;
 	private final String ip;

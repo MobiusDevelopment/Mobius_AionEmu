@@ -25,7 +25,6 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_RESTORE_CHARACTER extends AionServerPacket
 {
-	
 	/**
 	 * Character object id.
 	 */

@@ -38,7 +38,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlRootElement(name = "enchant_tables")
 public class ItemEnchantTableData
 {
-	
 	@XmlElement(name = "enchant_table", required = true)
 	protected List<ItemEnchantTable> enchantTables;
 	

@@ -21,7 +21,6 @@ package com.aionemu.gameserver.model.account;
  */
 public class CharacterBanInfo
 {
-	
 	private final int playerId;
 	private final long start;
 	private final long end;

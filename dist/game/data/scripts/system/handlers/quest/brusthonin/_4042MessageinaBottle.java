@@ -32,7 +32,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _4042MessageinaBottle extends QuestHandler
 {
-	
 	private static final int questId = 4042;
 	
 	public _4042MessageinaBottle()

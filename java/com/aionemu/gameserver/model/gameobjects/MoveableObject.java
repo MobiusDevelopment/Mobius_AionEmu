@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.housing.HousingMoveableItem;
  */
 public class MoveableObject extends HouseObject<HousingMoveableItem>
 {
-	
 	public MoveableObject(House owner, int objId, int templateId)
 	{
 		super(owner, objId, templateId);

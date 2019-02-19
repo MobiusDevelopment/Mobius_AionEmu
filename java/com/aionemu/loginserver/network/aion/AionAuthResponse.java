@@ -22,7 +22,6 @@ package com.aionemu.loginserver.network.aion;
  */
 public enum AionAuthResponse
 {
-	
 	/**
 	 * that one is not being sent to client, it's only for internal use. Everything is OK
 	 */

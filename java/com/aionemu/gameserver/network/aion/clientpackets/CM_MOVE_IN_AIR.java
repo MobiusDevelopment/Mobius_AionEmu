@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class CM_MOVE_IN_AIR extends AionClientPacket
 {
-	
 	float x, y, z;
 	int distance;
 	@SuppressWarnings("unused")

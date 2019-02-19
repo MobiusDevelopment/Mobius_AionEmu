@@ -27,7 +27,6 @@ import com.aionemu.gameserver.network.ls.LoginServer;
  */
 public class CM_RECONNECT_AUTH extends AionClientPacket
 {
-	
 	/**
 	 * Constructs new instance of <tt>CM_RECONNECT_AUTH </tt> packet
 	 * @param opcode

@@ -24,7 +24,6 @@ package com.aionemu.gameserver.utils.collections.cachemap;
  */
 public interface CacheMap<K, V>
 {
-	
 	/**
 	 * Adds a pair <key,value> to cache map.<br>
 	 * <br>

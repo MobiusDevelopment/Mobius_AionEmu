@@ -26,7 +26,6 @@ import com.aionemu.gameserver.skillengine.model.Skill;
  */
 public abstract class AbstractRestrictions implements Restrictions
 {
-	
 	public void activate()
 	{
 		RestrictionsManager.activate(this);

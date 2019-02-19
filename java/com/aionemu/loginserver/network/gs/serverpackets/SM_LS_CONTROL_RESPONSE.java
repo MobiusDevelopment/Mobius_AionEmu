@@ -24,7 +24,6 @@ import com.aionemu.loginserver.network.gs.GsServerPacket;
  */
 public class SM_LS_CONTROL_RESPONSE extends GsServerPacket
 {
-	
 	private final int type;
 	private final boolean result;
 	private final String playerName;

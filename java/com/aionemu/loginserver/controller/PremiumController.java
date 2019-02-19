@@ -30,7 +30,6 @@ import com.aionemu.loginserver.network.gs.serverpackets.SM_PREMIUM_RESPONSE;
  */
 public class PremiumController
 {
-	
 	private final Logger log = LoggerFactory.getLogger("PREMIUM_CTRL");
 	private static PremiumController controller = new PremiumController();
 	

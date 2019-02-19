@@ -31,7 +31,6 @@ import com.aionemu.gameserver.configs.main.GSConfig;
 @XmlAccessorType(XmlAccessType.NONE)
 public class PlayerExperienceTable
 {
-	
 	/** Exp table */
 	@XmlElement(name = "exp")
 	private long[] experience;

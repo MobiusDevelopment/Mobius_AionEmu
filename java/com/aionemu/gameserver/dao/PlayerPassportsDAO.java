@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.gameobjects.player.PlayerPassports;
 /**
  * @author Ranastic
  */
-
 public abstract class PlayerPassportsDAO implements DAO
 {
 	@Override

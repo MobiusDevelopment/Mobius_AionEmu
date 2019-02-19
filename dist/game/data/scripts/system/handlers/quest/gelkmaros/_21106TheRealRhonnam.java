@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21106TheRealRhonnam extends QuestHandler
 {
-	
 	private static final int questId = 21106;
 	
 	public _21106TheRealRhonnam()

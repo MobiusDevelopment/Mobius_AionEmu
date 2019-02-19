@@ -35,7 +35,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class StaticDoorData
 {
-	
 	@XmlElement(name = "world")
 	private List<StaticDoorWorld> staticDorWorlds;
 	

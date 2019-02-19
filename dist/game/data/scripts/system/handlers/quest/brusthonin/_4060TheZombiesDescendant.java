@@ -36,7 +36,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
  */
 public class _4060TheZombiesDescendant extends QuestHandler
 {
-	
 	private static final int questId = 4060;
 	
 	public _4060TheZombiesDescendant()

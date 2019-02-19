@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _18808FoolproofPackaging extends QuestHandler
 {
-	
 	private static final int questId = 18808;
 	
 	public _18808FoolproofPackaging()

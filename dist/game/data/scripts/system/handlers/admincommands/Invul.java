@@ -26,7 +26,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Invul extends AdminCommand
 {
-	
 	public Invul()
 	{
 		super("invul");

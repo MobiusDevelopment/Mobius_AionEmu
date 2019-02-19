@@ -47,13 +47,11 @@ import com.aionemu.gameserver.model.house.PlayerHouseBid;
  *  You should have received a copy of the GNU General Public License
  *  along with aion-lightning.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 /**
  * @author Rolandas
  */
 public class MySQL5HouseBidsDAO extends HouseBidsDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5HouseBidsDAO.class);
 	
 	public static final String LOAD_QUERY = "SELECT * FROM `house_bids`";
@@ -149,7 +147,6 @@ public class MySQL5HouseBidsDAO extends HouseBidsDAO
 		{
 			DatabaseFactory.close(con);
 		}
-		
 	}
 	
 	@Override
@@ -172,7 +169,6 @@ public class MySQL5HouseBidsDAO extends HouseBidsDAO
 		{
 			DatabaseFactory.close(con);
 		}
-		
 	}
 	
 }

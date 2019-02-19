@@ -56,7 +56,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class AccountService
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(AccountService.class);
 	
 	private static CacheMap<Integer, Account> accountsMap = CacheMapFactory.createSoftCacheMap("Account", "account");

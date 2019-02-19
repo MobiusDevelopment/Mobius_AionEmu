@@ -26,7 +26,6 @@ import com.aionemu.gameserver.services.ExchangeService;
  */
 public class CM_EXCHANGE_LOCK extends AionClientPacket
 {
-	
 	public CM_EXCHANGE_LOCK(int opcode, State state, State... restStates)
 	{
 		super(opcode, state, restStates);

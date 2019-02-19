@@ -30,7 +30,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class Promote extends AdminCommand
 {
-	
 	public Promote()
 	{
 		super("promote");

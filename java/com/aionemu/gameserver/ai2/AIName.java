@@ -28,7 +28,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 public @interface AIName
 {
-	
 	/**
 	 * @return name of AI
 	 */

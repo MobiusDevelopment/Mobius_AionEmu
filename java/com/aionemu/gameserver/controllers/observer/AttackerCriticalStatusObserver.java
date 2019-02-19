@@ -23,7 +23,6 @@ import com.aionemu.gameserver.controllers.attack.AttackStatus;
  */
 public class AttackerCriticalStatusObserver extends AttackCalcObserver
 {
-	
 	protected AttackerCriticalStatus acStatus = null;
 	protected AttackStatus status;
 	

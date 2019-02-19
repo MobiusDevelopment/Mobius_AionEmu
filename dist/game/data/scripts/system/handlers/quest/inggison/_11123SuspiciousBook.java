@@ -31,7 +31,6 @@ import com.aionemu.gameserver.services.QuestService;
  */
 public class _11123SuspiciousBook extends QuestHandler
 {
-	
 	private static final int questId = 11123;
 	
 	public _11123SuspiciousBook()

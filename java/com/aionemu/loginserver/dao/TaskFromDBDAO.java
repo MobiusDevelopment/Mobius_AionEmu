@@ -26,7 +26,6 @@ import com.aionemu.loginserver.taskmanager.trigger.TaskFromDBTrigger;
  */
 public abstract class TaskFromDBDAO implements DAO
 {
-	
 	/**
 	 * Return all tasks from DB
 	 * @return all tasks

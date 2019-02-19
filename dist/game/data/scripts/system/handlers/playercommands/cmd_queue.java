@@ -29,7 +29,6 @@ import com.aionemu.gameserver.world.World;
  */
 public class cmd_queue extends PlayerCommand
 {
-	
 	public cmd_queue()
 	{
 		super("queue");

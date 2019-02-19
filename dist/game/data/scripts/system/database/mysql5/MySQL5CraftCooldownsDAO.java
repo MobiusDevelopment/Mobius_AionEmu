@@ -37,7 +37,6 @@ import javolution.util.FastMap;
  */
 public class MySQL5CraftCooldownsDAO extends CraftCooldownsDAO
 {
-	
 	private static final Logger log = LoggerFactory.getLogger(MySQL5CraftCooldownsDAO.class);
 	
 	public static final String INSERT_QUERY = "INSERT INTO `craft_cooldowns` (`player_id`, `delay_id`, `reuse_time`) VALUES (?,?,?)";

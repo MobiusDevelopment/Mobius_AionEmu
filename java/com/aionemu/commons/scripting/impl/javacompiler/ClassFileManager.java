@@ -41,7 +41,6 @@ import com.aionemu.commons.scripting.ScriptClassLoader;
  */
 public class ClassFileManager extends ForwardingJavaFileManager<JavaFileManager>
 {
-	
 	/**
 	 * This map contains classes compiled for this classloader
 	 */

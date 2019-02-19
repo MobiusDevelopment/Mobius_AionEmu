@@ -23,7 +23,6 @@ import com.aionemu.loginserver.model.Account;
  */
 public class PlayerTransferRequest
 {
-	
 	public PlayerTransferStatus status;
 	public byte serverId;
 	public byte targetServerId;

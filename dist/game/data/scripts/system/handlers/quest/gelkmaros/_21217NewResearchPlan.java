@@ -28,7 +28,6 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  */
 public class _21217NewResearchPlan extends QuestHandler
 {
-	
 	private static final int questId = 21217;
 	
 	public _21217NewResearchPlan()

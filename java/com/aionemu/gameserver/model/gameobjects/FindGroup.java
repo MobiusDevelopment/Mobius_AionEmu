@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.team2.group.PlayerGroup;
  */
 public class FindGroup
 {
-	
 	private final AionObject object;
 	private String message;
 	private final int groupType;

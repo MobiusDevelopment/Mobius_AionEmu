@@ -40,7 +40,6 @@ import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
  */
 public class Info extends AdminCommand
 {
-	
 	public Info()
 	{
 		super("info");

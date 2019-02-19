@@ -34,7 +34,6 @@ import com.aionemu.gameserver.utils.Util;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class WarehouseExpandTemplate
 {
-	
 	@XmlElement(name = "expand", required = true)
 	protected List<Expand> warehouseExpands;
 	

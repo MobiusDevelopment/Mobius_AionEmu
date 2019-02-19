@@ -31,7 +31,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
  */
 public class _19026MasterHandicraftersPotential extends QuestHandler
 {
-	
 	private static final int questId = 19026;
 	
 	public _19026MasterHandicraftersPotential()
