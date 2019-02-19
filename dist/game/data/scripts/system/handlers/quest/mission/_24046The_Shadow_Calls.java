@@ -161,14 +161,11 @@ public class _24046The_Shadow_Calls extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
+				final int[] questItems =
 				{
-					final int[] questItems =
-					{
-						182205502
-					};
-					return sendQuestEndDialog(env, questItems);
-				}
+					182205502
+				};
+				return sendQuestEndDialog(env, questItems);
 			}
 		}
 		return false;

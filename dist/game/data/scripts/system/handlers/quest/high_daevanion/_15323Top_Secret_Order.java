@@ -90,10 +90,7 @@ public class _15323Top_Secret_Order extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}

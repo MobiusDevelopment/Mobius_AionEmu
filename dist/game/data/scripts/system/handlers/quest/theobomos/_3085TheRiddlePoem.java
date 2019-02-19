@@ -130,10 +130,7 @@ public class _3085TheRiddlePoem extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

@@ -211,10 +211,7 @@ public class _24026A_Hand_From_Each_Side extends QuestHandler
 				{
 					return sendQuestDialog(env, 2375);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

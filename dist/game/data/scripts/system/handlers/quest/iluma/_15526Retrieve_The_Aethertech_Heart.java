@@ -99,10 +99,7 @@ public class _15526Retrieve_The_Aethertech_Heart extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 					case FINISH_DIALOG:
 					{

@@ -55,10 +55,7 @@ public class _18400The_Vanishings extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if ((targetId == 799584) || (targetId == 799585))

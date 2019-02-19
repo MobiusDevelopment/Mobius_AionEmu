@@ -90,10 +90,7 @@ public class _15405Collect_Broken_Hitonium extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}

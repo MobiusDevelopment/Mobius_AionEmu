@@ -73,15 +73,7 @@ public class _4082GatheringtheHerbPouches extends QuestHandler
 		}
 		
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 3000, 0, 0), true);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			
-			@Override
-			public void run()
-			{
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
-			}
-		}, 3000);
+		ThreadPoolManager.getInstance().schedule(() -> PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true), 3000);
 		return HandlerResult.SUCCESS;
 	}
 	
@@ -132,10 +124,7 @@ public class _4082GatheringtheHerbPouches extends QuestHandler
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 5);
 					}
-					else
-					{
-						return sendQuestDialog(env, 2716);
-					}
+					return sendQuestDialog(env, 2716);
 				}
 				else
 				{

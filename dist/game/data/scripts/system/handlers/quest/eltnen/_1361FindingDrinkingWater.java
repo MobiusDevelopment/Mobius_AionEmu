@@ -73,18 +73,13 @@ public class _1361FindingDrinkingWater extends QuestHandler
 			return HandlerResult.UNKNOWN;
 		}
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 3000, 0, 0), true);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			
-			@Override
-			public void run()
-			{
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
-				player.getInventory().decreaseByObjectId(itemObjId, 1);
-				giveQuestItem(env, 182201327, 1);
-				qs.setQuestVar(1);
-				updateQuestStatus(env);
-			}
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
+			player.getInventory().decreaseByObjectId(itemObjId, 1);
+			giveQuestItem(env, 182201327, 1);
+			qs.setQuestVar(1);
+			updateQuestStatus(env);
 		}, 3000);
 		return HandlerResult.SUCCESS;
 	}
@@ -113,10 +108,7 @@ public class _1361FindingDrinkingWater extends QuestHandler
 					{
 						return sendQuestStartDialog(env);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
 				else
 				{

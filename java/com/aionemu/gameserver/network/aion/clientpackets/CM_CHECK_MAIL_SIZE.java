@@ -46,9 +46,6 @@ public class CM_CHECK_MAIL_SIZE extends AionClientPacket
 		{
 			return;
 		}
-		else
-		{
-			player.getMailbox().sendMailList(false);
-		}
+		player.getMailbox().sendMailList(false);
 	}
 }

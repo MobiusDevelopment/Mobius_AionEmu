@@ -106,10 +106,7 @@ public class _20032All_About_Abnormal_Aether extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 			return false;
 		}
@@ -190,22 +187,16 @@ public class _20032All_About_Abnormal_Aether extends QuestHandler
 						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must leave your group or alliance to enter <Taloc Hollow>", ChatType.BRIGHT_YELLOW_CENTER), true);
 						return true;
 					}
-					else
+					if (giveQuestItem(env, 182215592, 1) && giveQuestItem(env, 182215593, 1))
 					{
-						if (giveQuestItem(env, 182215592, 1) && giveQuestItem(env, 182215593, 1))
-						{
-							final WorldMapInstance talocHollow = InstanceService.getNextAvailableInstance(300190000);
-							InstanceService.registerPlayerWithInstance(talocHollow, player);
-							TeleportService2.teleportTo(player, 300190000, talocHollow.getInstanceId(), 202.26694f, 226.0532f, 1098.236f, (byte) 30);
-							changeQuestStep(env, 2, 3, false);
-							return closeDialogWindow(env);
-						}
-						else
-						{
-							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_WAREHOUSE_FULL_INVENTORY);
-							return sendQuestSelectionDialog(env);
-						}
+						final WorldMapInstance talocHollow = InstanceService.getNextAvailableInstance(300190000);
+						InstanceService.registerPlayerWithInstance(talocHollow, player);
+						TeleportService2.teleportTo(player, 300190000, talocHollow.getInstanceId(), 202.26694f, 226.0532f, 1098.236f, (byte) 30);
+						changeQuestStep(env, 2, 3, false);
+						return closeDialogWindow(env);
 					}
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_WAREHOUSE_FULL_INVENTORY);
+					return sendQuestSelectionDialog(env);
 				}
 				case FINISH_DIALOG:
 				{

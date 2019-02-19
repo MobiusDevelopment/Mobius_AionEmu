@@ -134,10 +134,7 @@ public class _2001Thinking_Ahead extends QuestHandler
 				{
 					return sendQuestDialog(env, 2034);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

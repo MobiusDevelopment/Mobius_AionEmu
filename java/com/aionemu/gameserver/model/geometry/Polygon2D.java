@@ -335,10 +335,7 @@ public class Polygon2D implements Shape, Cloneable, Serializable
 		{
 			return null;
 		}
-		else
-		{
-			return bounds.getBounds();
-		}
+		return bounds.getBounds();
 	}
 	
 	/**
@@ -459,10 +456,7 @@ public class Polygon2D implements Shape, Cloneable, Serializable
 		{
 			return null;
 		}
-		else
-		{
-			return closedPath.getPathIterator(at);
-		}
+		return closedPath.getPathIterator(at);
 	}
 	
 	/**

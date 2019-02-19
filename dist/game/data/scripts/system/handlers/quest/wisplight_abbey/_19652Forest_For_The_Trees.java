@@ -80,11 +80,8 @@ public class _19652Forest_For_The_Trees extends QuestHandler
 						{ // Abbey Return Stone.
 							return sendQuestDialog(env, 4762);
 						}
-						else
-						{
-							PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
-							return true;
-						}
+						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
+						return true;
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:

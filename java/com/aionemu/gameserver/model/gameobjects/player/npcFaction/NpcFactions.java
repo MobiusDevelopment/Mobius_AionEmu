@@ -99,10 +99,7 @@ public class NpcFactions
 		{
 			return activeNpcFaction[1];
 		}
-		else
-		{
-			return activeNpcFaction[0];
-		}
+		return activeNpcFaction[0];
 	}
 	
 	public NpcFaction setActive(int npcFactionId)

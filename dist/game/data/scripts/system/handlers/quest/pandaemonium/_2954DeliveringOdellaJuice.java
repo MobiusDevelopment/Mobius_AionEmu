@@ -61,10 +61,7 @@ public class _2954DeliveringOdellaJuice extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182207040, 1);
-				}
+				return sendQuestStartDialog(env, 182207040, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

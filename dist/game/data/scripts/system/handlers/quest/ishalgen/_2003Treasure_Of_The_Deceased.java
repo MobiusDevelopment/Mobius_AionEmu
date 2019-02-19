@@ -115,10 +115,7 @@ public class _2003Treasure_Of_The_Deceased extends QuestHandler
 								updateQuestStatus(env);
 								return sendQuestDialog(env, 5);
 							}
-							else
-							{
-								return sendQuestDialog(env, 1693);
-							}
+							return sendQuestDialog(env, 1693);
 						}
 					}
 				}

@@ -142,10 +142,7 @@ public class _24013Poison_In_The_Waters extends QuestHandler
 				{
 					return sendQuestDialog(env, 2375);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

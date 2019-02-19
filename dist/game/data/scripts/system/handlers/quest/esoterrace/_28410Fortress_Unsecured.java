@@ -88,10 +88,7 @@ public class _28410Fortress_Unsecured extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (targetId == 799563)

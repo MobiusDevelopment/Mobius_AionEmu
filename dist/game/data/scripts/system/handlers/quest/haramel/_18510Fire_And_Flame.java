@@ -72,10 +72,7 @@ public class _18510Fire_And_Flame extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182212009, 1);
-				}
+				return sendQuestStartDialog(env, 182212009, 1);
 			}
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))

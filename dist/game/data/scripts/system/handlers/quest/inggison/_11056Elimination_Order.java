@@ -83,10 +83,7 @@ public class _11056Elimination_Order extends QuestHandler
 						player.getInventory().decreaseKinah(10000000);
 						return sendQuestDialog(env, 5);
 					}
-					else
-					{
-						return sendQuestDialog(env, 3739);
-					}
+					return sendQuestDialog(env, 3739);
 				}
 				else
 				{

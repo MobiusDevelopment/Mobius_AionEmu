@@ -94,10 +94,7 @@ public class _2303DaevaWheresMyHerb extends QuestHandler
 							choice = 0;
 							return sendQuestDialog(env, 1012);
 						}
-						else
-						{
-							return sendQuestSelectionDialog(env);
-						}
+						return sendQuestSelectionDialog(env);
 					}
 					case STEP_TO_20:
 					{
@@ -107,10 +104,7 @@ public class _2303DaevaWheresMyHerb extends QuestHandler
 							choice = 1;
 							return sendQuestDialog(env, 1097);
 						}
-						else
-						{
-							return sendQuestSelectionDialog(env);
-						}
+						return sendQuestSelectionDialog(env);
 					}
 					case FINISH_DIALOG:
 					{
@@ -134,10 +128,7 @@ public class _2303DaevaWheresMyHerb extends QuestHandler
 					{
 						return sendQuestDialog(env, 1003);
 					}
-					else
-					{
-						return sendQuestSelectionDialog(env);
-					}
+					return sendQuestSelectionDialog(env);
 				}
 				else if (dialog == QuestDialog.STEP_TO_10)
 				{

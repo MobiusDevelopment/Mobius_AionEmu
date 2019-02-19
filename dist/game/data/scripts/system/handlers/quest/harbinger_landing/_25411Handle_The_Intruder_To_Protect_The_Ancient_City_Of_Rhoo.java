@@ -63,10 +63,7 @@ public class _25411Handle_The_Intruder_To_Protect_The_Ancient_City_Of_Rhoo exten
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -95,10 +92,7 @@ public class _25411Handle_The_Intruder_To_Protect_The_Ancient_City_Of_Rhoo exten
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

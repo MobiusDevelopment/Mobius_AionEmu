@@ -67,10 +67,7 @@ public class ArtifactLocation extends SiegeLocation
 		{
 			return 0;
 		}
-		else
-		{
-			return (int) ((i - l) / 1000);
-		}
+		return (int) ((i - l) / 1000);
 	}
 	
 	/**

@@ -65,10 +65,7 @@ public class _3090In_Search_Of_Pippi_The_Porgus extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -98,10 +95,7 @@ public class _3090In_Search_Of_Pippi_The_Porgus extends QuestHandler
 						player.getInventory().decreaseKinah(10000);
 						return defaultCloseDialog(env, 2, 3);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1779);
-					}
+					return sendQuestDialog(env, 1779);
 				}
 				else if (dialog == QuestDialog.SELECT_ACTION_1779)
 				{

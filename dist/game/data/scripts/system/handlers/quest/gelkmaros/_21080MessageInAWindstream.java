@@ -63,10 +63,7 @@ public class _21080MessageInAWindstream extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182207939, 1);
-				}
+				return sendQuestStartDialog(env, 182207939, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

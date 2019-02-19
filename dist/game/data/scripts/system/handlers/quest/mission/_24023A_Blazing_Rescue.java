@@ -169,10 +169,7 @@ public class _24023A_Blazing_Rescue extends QuestHandler
 									updateQuestStatus(env);
 									return sendQuestDialog(env, 10000);
 								}
-								else
-								{
-									return sendQuestDialog(env, 10001);
-								}
+								return sendQuestDialog(env, 10001);
 							}
 						}
 					}
@@ -188,10 +185,7 @@ public class _24023A_Blazing_Rescue extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

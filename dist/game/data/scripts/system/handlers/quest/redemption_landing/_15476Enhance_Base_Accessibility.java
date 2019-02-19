@@ -116,10 +116,7 @@ public class _15476Enhance_Base_Accessibility extends QuestHandler
 			{
 				return sendQuestDialog(env, 10002);
 			}
-			else
-			{
-				return sendQuestEndDialog(env);
-			}
+			return sendQuestEndDialog(env);
 		}
 		return false;
 	}

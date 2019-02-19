@@ -72,10 +72,7 @@ public class _13800New_Lands_To_Behold extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)

@@ -80,10 +80,7 @@ public class _3934The_Quest_For_Templars extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -254,10 +251,7 @@ public class _3934The_Quest_For_Templars extends QuestHandler
 								removeQuestItem(env, 186000080, 1);
 								return defaultCloseDialog(env, 8, 8, true, false, 0);
 							}
-							else
-							{
-								return sendQuestDialog(env, 3825);
-							}
+							return sendQuestDialog(env, 3825);
 						}
 						case FINISH_DIALOG:
 						{
@@ -280,10 +274,7 @@ public class _3934The_Quest_For_Templars extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

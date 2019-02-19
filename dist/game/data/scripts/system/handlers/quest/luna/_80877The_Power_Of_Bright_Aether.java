@@ -89,10 +89,7 @@ public class _80877The_Power_Of_Bright_Aether extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 					case FINISH_DIALOG:
 					{

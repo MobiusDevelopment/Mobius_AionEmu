@@ -80,10 +80,7 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -253,10 +250,7 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 								removeQuestItem(env, 186000084, 1);
 								return defaultCloseDialog(env, 8, 8, true, false, 0);
 							}
-							else
-							{
-								return sendQuestDialog(env, 3825);
-							}
+							return sendQuestDialog(env, 3825);
 						}
 						case FINISH_DIALOG:
 						{
@@ -275,10 +269,7 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

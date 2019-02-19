@@ -60,10 +60,7 @@ public class _25334A_Prayer_Of_Devotion extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182215920, 1);
-				}
+				return sendQuestStartDialog(env, 182215920, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

@@ -68,10 +68,7 @@ public class _2239MalodorAntidote extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -117,10 +114,7 @@ public class _2239MalodorAntidote extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
-							else
-							{
-								return sendQuestDialog(env, 1694);
-							}
+							return sendQuestDialog(env, 1694);
 						}
 					}
 				}

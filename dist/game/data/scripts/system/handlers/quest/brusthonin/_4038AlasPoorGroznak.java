@@ -71,10 +71,7 @@ public class _4038AlasPoorGroznak extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
@@ -149,10 +146,7 @@ public class _4038AlasPoorGroznak extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

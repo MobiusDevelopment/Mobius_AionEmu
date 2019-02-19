@@ -268,11 +268,8 @@ public class _2947Following_Through extends QuestHandler
 					updateQuestStatus(env);
 					return true;
 				}
-				else
-				{
-					playQuestMovie(env, 167);
-					return true;
-				}
+				playQuestMovie(env, 167);
+				return true;
 			}
 		}
 		return false;

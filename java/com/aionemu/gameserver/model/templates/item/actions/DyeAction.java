@@ -61,11 +61,8 @@ public class DyeAction extends AbstractItemAction implements HouseDyeAction
 		{
 			return 0;
 		}
-		else
-		{
-			final int rgb = Integer.parseInt(color, 16);
-			return 0xFF | ((rgb & 0xFF) << 24) | ((rgb & 0xFF00) << 8) | ((rgb & 0xFF0000) >>> 8);
-		}
+		final int rgb = Integer.parseInt(color, 16);
+		return 0xFF | ((rgb & 0xFF) << 24) | ((rgb & 0xFF00) << 8) | ((rgb & 0xFF0000) >>> 8);
 	}
 	
 	@Override

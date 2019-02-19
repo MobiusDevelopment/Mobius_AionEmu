@@ -143,10 +143,7 @@ public class _24021Ghosts_In_The_Desert extends QuestHandler
 							{
 								return defaultCloseDialog(env, 3, 4, 182215363, 1, 0, 0);
 							}
-							else
-							{
-								return sendQuestSelectionDialog(env);
-							}
+							return sendQuestSelectionDialog(env);
 						}
 						case FINISH_DIALOG:
 						{
@@ -164,10 +161,7 @@ public class _24021Ghosts_In_The_Desert extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

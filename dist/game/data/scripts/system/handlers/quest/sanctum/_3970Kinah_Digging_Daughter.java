@@ -60,10 +60,7 @@ public class _3970Kinah_Digging_Daughter extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182206112, 1);
-				}
+				return sendQuestStartDialog(env, 182206112, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

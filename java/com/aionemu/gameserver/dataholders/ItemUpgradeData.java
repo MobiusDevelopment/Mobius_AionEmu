@@ -83,15 +83,9 @@ public class ItemUpgradeData
 			{
 				return upgradeResultItemMap.get(baseItemId);
 			}
-			else
-			{
-				return null;
-			}
-		}
-		else
-		{
 			return null;
 		}
+		return null;
 	}
 	
 	public int size()

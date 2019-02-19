@@ -100,12 +100,9 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			sendMsg(1500775);
-			SkillEngine.getInstance().getSkill(getOwner(), 21188, 60, getOwner()).useNoAnimationSkill(); // Lingering Doom.
-			scheduleDelayStage1(delay);
-		}
+		sendMsg(1500775);
+		SkillEngine.getInstance().getSkill(getOwner(), 21188, 60, getOwner()).useNoAnimationSkill(); // Lingering Doom.
+		scheduleDelayStage1(delay);
 	}
 	
 	private void stage2()
@@ -114,14 +111,11 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			sendMsg(1500774);
-			SkillEngine.getInstance().getSkill(getOwner(), 21189, 0, getOwner()).useNoAnimationSkill(); // Danuar Henchman.
-			spawn(284435, 900.12497f, 879.17401f, 411.625f, (byte) 0); // Corrupted Danuar.
-			spawn(284435, 887.1312f, 889.20688f, 411.875f, (byte) 0); // Corrupted Danuar.
-			spawn(284435, 900.1312f, 901.20688f, 411.875f, (byte) 0); // Corrupted Danuar.
-		}
+		sendMsg(1500774);
+		SkillEngine.getInstance().getSkill(getOwner(), 21189, 0, getOwner()).useNoAnimationSkill(); // Danuar Henchman.
+		spawn(284435, 900.12497f, 879.17401f, 411.625f, (byte) 0); // Corrupted Danuar.
+		spawn(284435, 887.1312f, 889.20688f, 411.875f, (byte) 0); // Corrupted Danuar.
+		spawn(284435, 900.1312f, 901.20688f, 411.875f, (byte) 0); // Corrupted Danuar.
 	}
 	
 	private void stage3()
@@ -131,12 +125,9 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			sendMsg(1500777);
-			SkillEngine.getInstance().getSkill(getOwner(), 21183, 60, getOwner()).useNoAnimationSkill(); // Out Of Body.
-			scheduleDelayStage3(delay);
-		}
+		sendMsg(1500777);
+		SkillEngine.getInstance().getSkill(getOwner(), 21183, 60, getOwner()).useNoAnimationSkill(); // Out Of Body.
+		scheduleDelayStage3(delay);
 	}
 	
 	private void stage4()
@@ -146,33 +137,30 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
+		sendMsg(1500776);
+		SkillEngine.getInstance().getSkill(getOwner(), 21184, 0, getOwner()).useNoAnimationSkill(); // Danuar Channeling.
+		switch (Rnd.get(1, 2))
 		{
-			sendMsg(1500776);
-			SkillEngine.getInstance().getSkill(getOwner(), 21184, 0, getOwner()).useNoAnimationSkill(); // Danuar Channeling.
-			switch (Rnd.get(1, 2))
+			case 1:
 			{
-				case 1:
-				{
-					despawnNpcs(284436); // Enslaved Danuar.
-					spawn(284436, 900.12497f, 889.17401f, 412.1f, (byte) 0);
-					break;
-				}
-				case 2:
-				{
-					despawnNpcs(284436);
-					spawn(284436, 913.12497f, 876.17401f, 412.1f, (byte) 45); // Enslaved Danuar.
-					spawn(284436, 900.12497f, 870.17401f, 412.1f, (byte) 30); // Enslaved Danuar.
-					spawn(284436, 886.12497f, 876.17401f, 412.1f, (byte) 16); // Enslaved Danuar.
-					spawn(284436, 881.12497f, 889.17401f, 412.1f, (byte) 0); // Enslaved Danuar.
-					spawn(284436, 899.12497f, 909.17401f, 412.1f, (byte) 90); // Enslaved Danuar.
-					spawn(284436, 913.12497f, 902.17401f, 412.1f, (byte) 78); // Enslaved Danuar.
-					spawn(284436, 918.12497f, 890.17401f, 412.1f, (byte) 61); // Enslaved Danuar.
-					break;
-				}
+				despawnNpcs(284436); // Enslaved Danuar.
+				spawn(284436, 900.12497f, 889.17401f, 412.1f, (byte) 0);
+				break;
 			}
-			scheduleDelayStage4(delay);
+			case 2:
+			{
+				despawnNpcs(284436);
+				spawn(284436, 913.12497f, 876.17401f, 412.1f, (byte) 45); // Enslaved Danuar.
+				spawn(284436, 900.12497f, 870.17401f, 412.1f, (byte) 30); // Enslaved Danuar.
+				spawn(284436, 886.12497f, 876.17401f, 412.1f, (byte) 16); // Enslaved Danuar.
+				spawn(284436, 881.12497f, 889.17401f, 412.1f, (byte) 0); // Enslaved Danuar.
+				spawn(284436, 899.12497f, 909.17401f, 412.1f, (byte) 90); // Enslaved Danuar.
+				spawn(284436, 913.12497f, 902.17401f, 412.1f, (byte) 78); // Enslaved Danuar.
+				spawn(284436, 918.12497f, 890.17401f, 412.1f, (byte) 61); // Enslaved Danuar.
+				break;
+			}
 		}
+		scheduleDelayStage4(delay);
 	}
 	
 	private void scheduleDelayStage4(int delay)
@@ -181,10 +169,7 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage4(), delay);
-		}
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> stage4(), delay);
 	}
 	
 	private void scheduleDelayStage3(int delay)
@@ -193,10 +178,7 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage3(), delay);
-		}
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> stage3(), delay);
 	}
 	
 	private void scheduleDelayStage1(int delay)
@@ -205,10 +187,7 @@ public class The_Brigade_General_ShebaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
-		}
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
 	}
 	
 	private void despawnNpcs(int npcId)

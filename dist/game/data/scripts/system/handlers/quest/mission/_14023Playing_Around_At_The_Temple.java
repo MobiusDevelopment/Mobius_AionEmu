@@ -140,10 +140,7 @@ public class _14023Playing_Around_At_The_Temple extends QuestHandler
 				{
 					return sendQuestDialog(env, 2034);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

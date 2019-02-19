@@ -71,15 +71,9 @@ public class _19001ExpertEssencetappingExpert extends QuestHandler
 					{
 						return sendQuestDialog(env, 1011);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -112,12 +106,9 @@ public class _19001ExpertEssencetappingExpert extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					player.getSkillList().addSkill(player, 30002, 400);
-					removeQuestItem(env, 182206127, 1);
-					return sendQuestEndDialog(env);
-				}
+				player.getSkillList().addSkill(player, 30002, 400);
+				removeQuestItem(env, 182206127, 1);
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

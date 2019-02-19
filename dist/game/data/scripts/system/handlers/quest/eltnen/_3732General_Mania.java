@@ -59,10 +59,7 @@ public class _3732General_Mania extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182202179, 1);
-				}
+				return sendQuestStartDialog(env, 182202179, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
@@ -73,10 +70,7 @@ public class _3732General_Mania extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

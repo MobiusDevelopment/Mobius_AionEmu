@@ -66,10 +66,7 @@ public class _1111InsomniaMedicine extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
@@ -121,10 +118,7 @@ public class _1111InsomniaMedicine extends QuestHandler
 					updateQuestStatus(env);
 					return sendQuestDialog(env, 1353);
 				}
-				else
-				{
-					return sendQuestDialog(env, 1693);
-				}
+				return sendQuestDialog(env, 1693);
 			}
 			else if ((env.getDialog() == QuestDialog.STEP_TO_1) && (qs.getStatus() != QuestStatus.COMPLETE) && (qs.getStatus() != QuestStatus.NONE))
 			{

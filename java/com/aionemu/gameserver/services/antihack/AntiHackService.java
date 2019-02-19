@@ -52,10 +52,7 @@ public class AntiHackService
 					punish(player, x, y, type, forcedMove, "Detected illegal Action (Anti-Abnormal Hack)");
 					return false;
 				}
-				else
-				{
-					player.abnormalHackCounter++;
-				}
+				player.abnormalHackCounter++;
 			}
 			else
 			{

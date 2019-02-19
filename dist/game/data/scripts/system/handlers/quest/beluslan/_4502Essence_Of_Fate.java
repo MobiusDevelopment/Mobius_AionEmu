@@ -93,11 +93,8 @@ public class _4502Essence_Of_Fate extends QuestHandler
 						{
 							return sendQuestDialog(env, 1011);
 						}
-						else
-						{
-							changeQuestStep(env, 0, 1, false);
-							return sendQuestDialog(env, 0);
-						}
+						changeQuestStep(env, 0, 1, false);
+						return sendQuestDialog(env, 0);
 					}
 					break;
 				}

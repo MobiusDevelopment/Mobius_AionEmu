@@ -86,10 +86,7 @@ public class _1926Secret_Library_Access extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 			else if (((qs.getStatus() == QuestStatus.REWARD) && (qs.getQuestVarById(0) == 0)) || (qs.getStatus() == QuestStatus.COMPLETE))
 			{
@@ -108,14 +105,7 @@ public class _1926Secret_Library_Access extends QuestHandler
 				{
 					return sendQuestEndDialog(env);
 				}
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						TeleportService2.teleportTo(player, 110010000, 2035.021f, 1473.966f, 592.22534f, (byte) 8, TeleportAnimation.BEAM_ANIMATION);
-					}
-				}, 1000);
+				ThreadPoolManager.getInstance().schedule(() -> TeleportService2.teleportTo(player, 110010000, 2035.021f, 1473.966f, 592.22534f, (byte) 8, TeleportAnimation.BEAM_ANIMATION), 1000);
 			}
 		}
 		else if (targetId == 203701)
@@ -128,10 +118,7 @@ public class _1926Secret_Library_Access extends QuestHandler
 					{
 						return sendQuestDialog(env, 1011);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1097);
-					}
+					return sendQuestDialog(env, 1097);
 				}
 				else if (env.getDialogId() == 10255)
 				{

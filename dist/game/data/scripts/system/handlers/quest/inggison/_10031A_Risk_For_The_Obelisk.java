@@ -297,22 +297,19 @@ public class _10031A_Risk_For_The_Obelisk extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
+				final int[] inggisonMission =
 				{
-					final int[] inggisonMission =
-					{
-						10031,
-						10032,
-						10033,
-						10034,
-						10035
-					};
-					for (int quest : inggisonMission)
-					{
-						QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
-					}
-					return sendQuestEndDialog(env);
+					10031,
+					10032,
+					10033,
+					10034,
+					10035
+				};
+				for (int quest : inggisonMission)
+				{
+					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
 				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

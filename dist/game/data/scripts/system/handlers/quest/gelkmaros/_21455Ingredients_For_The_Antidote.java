@@ -78,10 +78,7 @@ public class _21455Ingredients_For_The_Antidote extends QuestHandler
 					{
 						return sendQuestStartDialog(env);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
 				else
 				{

@@ -61,10 +61,7 @@ public class _1152OdellaRecipe extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182200526, 1);
-				}
+				return sendQuestStartDialog(env, 182200526, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

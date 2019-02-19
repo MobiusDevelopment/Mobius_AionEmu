@@ -58,10 +58,7 @@ public class Array3f implements Reusable
 		{
 			return (Array3f) FACTORY.object();
 		}
-		else
-		{
-			return new Array3f();
-		}
+		return new Array3f();
 	}
 	
 	/**

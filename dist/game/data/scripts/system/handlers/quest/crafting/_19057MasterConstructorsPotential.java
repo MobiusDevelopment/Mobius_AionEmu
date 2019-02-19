@@ -79,10 +79,7 @@ public class _19057MasterConstructorsPotential extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		
@@ -129,10 +126,7 @@ public class _19057MasterConstructorsPotential extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
-							else
-							{
-								return sendQuestDialog(env, 4400);
-							}
+							return sendQuestDialog(env, 4400);
 						}
 						case STEP_TO_20:
 						{
@@ -148,10 +142,7 @@ public class _19057MasterConstructorsPotential extends QuestHandler
 								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 								return true;
 							}
-							else
-							{
-								return sendQuestDialog(env, 4400);
-							}
+							return sendQuestDialog(env, 4400);
 						}
 					}
 					break;
@@ -172,24 +163,21 @@ public class _19057MasterConstructorsPotential extends QuestHandler
 								updateQuestStatus(env);
 								return sendQuestDialog(env, 5);
 							}
-							else
+							int checkFailId = 3398;
+							if (player.getRecipeList().isRecipePresent(recipesIds[0]) || player.getRecipeList().isRecipePresent(recipesIds[1]))
 							{
-								int checkFailId = 3398;
-								if (player.getRecipeList().isRecipePresent(recipesIds[0]) || player.getRecipeList().isRecipePresent(recipesIds[1]))
-								{
-									checkFailId = 2716;
-								}
-								else if ((player.getInventory().getItemCountByItemId(recipesItemIds[0]) > 0) || (player.getInventory().getItemCountByItemId(recipesItemIds[1]) > 0))
-								{
-									checkFailId = 3057;
-								}
-								if (checkFailId == 3398)
-								{
-									qs.setQuestVar(2);
-									updateQuestStatus(env);
-								}
-								return sendQuestDialog(env, checkFailId);
+								checkFailId = 2716;
 							}
+							else if ((player.getInventory().getItemCountByItemId(recipesItemIds[0]) > 0) || (player.getInventory().getItemCountByItemId(recipesItemIds[1]) > 0))
+							{
+								checkFailId = 3057;
+							}
+							if (checkFailId == 3398)
+							{
+								qs.setQuestVar(2);
+								updateQuestStatus(env);
+							}
+							return sendQuestDialog(env, checkFailId);
 						}
 					}
 					break;

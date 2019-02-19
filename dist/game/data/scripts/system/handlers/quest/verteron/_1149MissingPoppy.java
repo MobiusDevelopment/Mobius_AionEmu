@@ -70,10 +70,7 @@ public class _1149MissingPoppy extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
@@ -81,10 +78,7 @@ public class _1149MissingPoppy extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 			else
 			{

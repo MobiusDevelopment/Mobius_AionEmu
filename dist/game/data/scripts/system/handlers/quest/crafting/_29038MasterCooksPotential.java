@@ -65,10 +65,7 @@ public class _29038MasterCooksPotential extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))

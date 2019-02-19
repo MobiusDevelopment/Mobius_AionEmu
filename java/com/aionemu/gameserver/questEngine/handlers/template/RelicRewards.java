@@ -94,15 +94,9 @@ public class RelicRewards extends QuestHandler
 								QuestService.startQuest(env);
 								return sendQuestDialog(env, 1011);
 							}
-							else
-							{
-								return sendQuestDialog(env, 3398);
-							}
-						}
-						else
-						{
 							return sendQuestDialog(env, 3398);
 						}
+						return sendQuestDialog(env, 3398);
 					}
 				}
 			}
@@ -132,10 +126,7 @@ public class RelicRewards extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 5);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1009);
-						}
+						return sendQuestDialog(env, 1009);
 					}
 					case SELECT_ACTION_1352:
 					{
@@ -148,10 +139,7 @@ public class RelicRewards extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 6);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1009);
-						}
+						return sendQuestDialog(env, 1009);
 					}
 					case SELECT_ACTION_1693:
 					{
@@ -164,10 +152,7 @@ public class RelicRewards extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 7);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1009);
-						}
+						return sendQuestDialog(env, 1009);
 					}
 					case SELECT_ACTION_2034:
 					{
@@ -180,10 +165,7 @@ public class RelicRewards extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 8);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1009);
-						}
+						return sendQuestDialog(env, 1009);
 					}
 				}
 			}

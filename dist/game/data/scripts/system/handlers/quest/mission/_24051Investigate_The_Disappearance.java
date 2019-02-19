@@ -157,10 +157,7 @@ public class _24051Investigate_The_Disappearance extends QuestHandler
 					removeQuestItem(env, 182215376, 1);
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;
@@ -198,14 +195,7 @@ public class _24051Investigate_The_Disappearance extends QuestHandler
 			{
 				if (var == 5)
 				{
-					ThreadPoolManager.getInstance().schedule(new Runnable()
-					{
-						@Override
-						public void run()
-						{
-							playQuestMovie(env, 236);
-						}
-					}, 10000);
+					ThreadPoolManager.getInstance().schedule(() -> playQuestMovie(env, 236), 10000);
 				}
 			}
 		}

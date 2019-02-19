@@ -119,10 +119,7 @@ public class MonsterHunt extends QuestHandler
 				{
 					return sendQuestDialog(env, startDialog != 0 ? startDialog : 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -212,10 +209,7 @@ public class MonsterHunt extends QuestHandler
 						}
 					}
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

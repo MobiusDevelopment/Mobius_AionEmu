@@ -77,11 +77,8 @@ public class _4937Recognition_Of_The_Preceptors extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					giveQuestItem(env, 182207112, 1);
-					return sendQuestStartDialog(env);
-				}
+				giveQuestItem(env, 182207112, 1);
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -235,10 +232,7 @@ public class _4937Recognition_Of_The_Preceptors extends QuestHandler
 					{
 						return sendQuestEndDialog(env);
 					}
-					else
-					{
-						return sendQuestSelectionDialog(env);
-					}
+					return sendQuestSelectionDialog(env);
 				}
 			}
 		}

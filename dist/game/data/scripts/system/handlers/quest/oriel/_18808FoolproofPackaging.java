@@ -66,15 +66,9 @@ public class _18808FoolproofPackaging extends QuestHandler
 					{
 						return sendQuestStartDialog(env);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

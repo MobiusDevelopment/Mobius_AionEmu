@@ -54,10 +54,7 @@ public class _2392Beautiful_Feather extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
@@ -78,10 +75,7 @@ public class _2392Beautiful_Feather extends QuestHandler
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 5);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1097);
-					}
+					return sendQuestDialog(env, 1097);
 				}
 				else if (dialog == QuestDialog.STEP_TO_2)
 				{
@@ -93,10 +87,7 @@ public class _2392Beautiful_Feather extends QuestHandler
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 6);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1097);
-					}
+					return sendQuestDialog(env, 1097);
 				}
 				else if (dialog == QuestDialog.STEP_TO_3)
 				{
@@ -108,10 +99,7 @@ public class _2392Beautiful_Feather extends QuestHandler
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 7);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1097);
-					}
+					return sendQuestDialog(env, 1097);
 				}
 			}
 		}

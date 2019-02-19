@@ -979,10 +979,7 @@ public final class Vector3f implements Cloneable, Reusable
 			vector3f.x = vector3f.y = vector3f.z = 0;
 			return vector3f;
 		}
-		else
-		{
-			return new Vector3f();
-		}
+		return new Vector3f();
 	}
 	
 	/**

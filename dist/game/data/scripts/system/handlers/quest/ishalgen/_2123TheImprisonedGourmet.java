@@ -91,10 +91,7 @@ public class _2123TheImprisonedGourmet extends QuestHandler
 								removeQuestItem(env, 182203121, 1);
 								return sendQuestDialog(env, 5);
 							}
-							else
-							{
-								return sendQuestDialog(env, 1693);
-							}
+							return sendQuestDialog(env, 1693);
 						}
 						case STEP_TO_2:
 						{
@@ -106,10 +103,7 @@ public class _2123TheImprisonedGourmet extends QuestHandler
 								removeQuestItem(env, 182203122, 1);
 								return sendQuestDialog(env, 6);
 							}
-							else
-							{
-								return sendQuestDialog(env, 1693);
-							}
+							return sendQuestDialog(env, 1693);
 						}
 						case STEP_TO_3:
 						{
@@ -121,10 +115,7 @@ public class _2123TheImprisonedGourmet extends QuestHandler
 								removeQuestItem(env, 182203123, 1);
 								return sendQuestDialog(env, 7);
 							}
-							else
-							{
-								return sendQuestDialog(env, 1693);
-							}
+							return sendQuestDialog(env, 1693);
 						}
 						case FINISH_DIALOG:
 						{

@@ -863,10 +863,7 @@ public class DialogService
 							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_INSTANCE_ENTER_LEVEL);
 							return;
 						}
-						else
-						{
-							TeleportService2.teleportTo(player, 220020000, 2434.500f, 553.600f, 334.600f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
-						}
+						TeleportService2.teleportTo(player, 220020000, 2434.500f, 553.600f, 334.600f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
 						break;
 					}
 					case 730052: // Statue Of Mau Hero [The Hand Behind The IceClaw]
@@ -877,10 +874,7 @@ public class DialogService
 							PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_INSTANCE_ENTER_LEVEL);
 							return;
 						}
-						else
-						{
-							TeleportService2.teleportTo(player, 220020000, 1252.900f, 266.000f, 534.200f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
-						}
+						TeleportService2.teleportTo(player, 220020000, 1252.900f, 266.000f, 534.200f, (byte) 0, TeleportAnimation.JUMP_ANIMATION);
 						break;
 					}
 					case 730053: // Statue Of Mau Hero [The Hand Behind The IceClaw]
@@ -1028,10 +1022,7 @@ public class DialogService
 								PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_INSTANCE_ENTER_LEVEL);
 								return;
 							}
-							else
-							{
-								TeleportService2.teleportTo(player, 210040000, 2599.130f, 2182.7583f, 154.74075f, (byte) 27, TeleportAnimation.JUMP_ANIMATION);
-							}
+							TeleportService2.teleportTo(player, 210040000, 2599.130f, 2182.7583f, 154.74075f, (byte) 27, TeleportAnimation.JUMP_ANIMATION);
 							break;
 						}
 						case 800245: // Naerty [Inggison]

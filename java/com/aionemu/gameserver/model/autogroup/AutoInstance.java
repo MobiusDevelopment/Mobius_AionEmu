@@ -60,10 +60,7 @@ public abstract class AutoInstance extends AbstractLockManager implements AutoIn
 			{
 				break;
 			}
-			else
-			{
-				count = l;
-			}
+			count = l;
 		}
 		return true;
 	}

@@ -75,10 +75,7 @@ public class _2230AFriendlyWager extends QuestHandler
 							QuestService.questTimerStart(env, 1800);
 							return true;
 						}
-						else
-						{
-							return false;
-						}
+						return false;
 					}
 				}
 			}
@@ -112,10 +109,7 @@ public class _2230AFriendlyWager extends QuestHandler
 								QuestService.questTimerEnd(env);
 								return sendQuestDialog(env, 5);
 							}
-							else
-							{
-								return sendQuestDialog(env, 2716);
-							}
+							return sendQuestDialog(env, 2716);
 						}
 					}
 				}

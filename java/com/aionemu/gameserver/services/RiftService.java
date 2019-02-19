@@ -81,14 +81,11 @@ public class RiftService
 		{
 			return RiftService.getInstance().getRiftLocations().keySet().contains(id);
 		}
-		else
+		for (RiftLocation loc : RiftService.getInstance().getRiftLocations().values())
 		{
-			for (RiftLocation loc : RiftService.getInstance().getRiftLocations().values())
+			if (loc.getWorldId() == id)
 			{
-				if (loc.getWorldId() == id)
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 		return false;
@@ -166,14 +163,7 @@ public class RiftService
 		location.setOpened(true);
 		RiftManager.getInstance().spawnRift(location);
 		activeRifts.putEntry(location.getId(), location);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				closeRifts();
-			}
-		}, duration * 3600 * 1000);
+		ThreadPoolManager.getInstance().schedule(() -> closeRifts(), duration * 3600 * 1000);
 	}
 	
 	public void closeRift(RiftLocation location)

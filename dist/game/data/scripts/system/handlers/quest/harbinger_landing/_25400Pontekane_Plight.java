@@ -238,10 +238,7 @@ public class _25400Pontekane_Plight extends QuestHandler
 							changeQuestStep(env, 3, 4, false);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}

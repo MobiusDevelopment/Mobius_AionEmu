@@ -86,10 +86,7 @@ public class _28621Kaliga_Collection_Polearm extends QuestHandler
 					{
 						return sendQuestDialog(env, 1011);
 					}
-					else
-					{
-						return sendQuestStartDialog(env);
-					}
+					return sendQuestStartDialog(env);
 				}
 				else if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
 				{
@@ -108,10 +105,7 @@ public class _28621Kaliga_Collection_Polearm extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 5);
 						}
-						else
-						{
-							return sendQuestDialog(env, 2716);
-						}
+						return sendQuestDialog(env, 2716);
 					}
 				}
 				else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))

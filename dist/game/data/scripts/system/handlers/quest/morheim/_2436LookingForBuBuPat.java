@@ -75,10 +75,7 @@ public class _2436LookingForBuBuPat extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
@@ -106,10 +103,7 @@ public class _2436LookingForBuBuPat extends QuestHandler
 				{
 					return sendQuestDialog(env, 1693);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

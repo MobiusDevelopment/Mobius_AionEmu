@@ -97,16 +97,13 @@ public class EventQueue<E extends DelayedEvent>extends AbstractQueue<E> implemen
 			{
 				return null;
 			}
-			else
+			final E x = q.poll();
+			assert x != null;
+			if (q.size() != 0)
 			{
-				final E x = q.poll();
-				assert x != null;
-				if (q.size() != 0)
-				{
-					available.signalAll();
-				}
-				return x;
+				available.signalAll();
 			}
+			return x;
 		}
 		finally
 		{
@@ -172,10 +169,7 @@ public class EventQueue<E extends DelayedEvent>extends AbstractQueue<E> implemen
 					{
 						return null;
 					}
-					else
-					{
-						nanos = available.awaitNanos(nanos);
-					}
+					nanos = available.awaitNanos(nanos);
 				}
 				else
 				{

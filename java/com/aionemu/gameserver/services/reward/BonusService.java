@@ -145,10 +145,7 @@ public class BonusService
 					chosenGroup = gr;
 					break;
 				}
-				else
-				{
-					percent -= chance;
-				}
+				percent -= chance;
 			}
 		}
 		return chosenGroup;

@@ -186,15 +186,11 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 						if (var == 2)
 						{
 							playQuestMovie(env, 999);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule(() ->
 							{
-								@Override
-								public void run()
-								{
-									final WorldMapInstance ArchivesOfEternity = InstanceService.getNextAvailableInstance(301570000);
-									InstanceService.registerPlayerWithInstance(ArchivesOfEternity, player);
-									TeleportService2.teleportTo(player, 301570000, ArchivesOfEternity.getInstanceId(), 691, 432, 468);
-								}
+								final WorldMapInstance ArchivesOfEternity = InstanceService.getNextAvailableInstance(301570000);
+								InstanceService.registerPlayerWithInstance(ArchivesOfEternity, player);
+								TeleportService2.teleportTo(player, 301570000, ArchivesOfEternity.getInstanceId(), 691, 432, 468);
 							}, 20000);
 							changeQuestStep(env, 2, 3, false);
 							return closeDialogWindow(env);
@@ -304,15 +300,11 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 					// Where are we ?
 					case STEP_TO_9:
 					{
-						ThreadPoolManager.getInstance().schedule(new Runnable()
+						ThreadPoolManager.getInstance().schedule(() ->
 						{
-							@Override
-							public void run()
-							{
-								QuestService.addNewSpawn(301570000, player.getInstanceId(), 857948, (float) 446.12146, (float) 654.5927, (float) 468.97745, (byte) 19); // IDEternity_Q_Sado_Wi_65_An_02.
-								QuestService.addNewSpawn(301570000, player.getInstanceId(), 857903, (float) 451.2063, (float) 654.0501, (float) 468.97745, (byte) 20); // IDEternity_Q_Sado_Wi_N_65_An_01.
-								QuestService.addNewSpawn(301570000, player.getInstanceId(), 857948, (float) 453.82755, (float) 650.27997, (float) 468.97745, (byte) 19); // IDEternity_Q_Sado_Wi_65_An_02.
-							}
+							QuestService.addNewSpawn(301570000, player.getInstanceId(), 857948, (float) 446.12146, (float) 654.5927, (float) 468.97745, (byte) 19); // IDEternity_Q_Sado_Wi_65_An_02.
+							QuestService.addNewSpawn(301570000, player.getInstanceId(), 857903, (float) 451.2063, (float) 654.0501, (float) 468.97745, (byte) 20); // IDEternity_Q_Sado_Wi_N_65_An_01.
+							QuestService.addNewSpawn(301570000, player.getInstanceId(), 857948, (float) 453.82755, (float) 650.27997, (float) 468.97745, (byte) 19); // IDEternity_Q_Sado_Wi_65_An_02.
 						}, 3000);
 						final Npc npc = (Npc) env.getVisibleObject();
 						npc.getController().onDelete();
@@ -402,15 +394,11 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 					// But what if I want to ?
 					case STEP_TO_12:
 					{
-						ThreadPoolManager.getInstance().schedule(new Runnable()
+						ThreadPoolManager.getInstance().schedule(() ->
 						{
-							@Override
-							public void run()
-							{
-								QuestService.addNewSpawn(301570000, player.getInstanceId(), 857915, (float) 346.18872, (float) 516.0532, (float) 468.937, (byte) 119); // IDEternity_Q_Cube_As_65_An.
-								QuestService.addNewSpawn(301570000, player.getInstanceId(), 857916, (float) 347.85834, (float) 511.8845, (float) 468.937, (byte) 0); // IDEternity_Q_Energy_Wi_65_An.
-								QuestService.addNewSpawn(301570000, player.getInstanceId(), 857915, (float) 346.09894, (float) 507.7084, (float) 468.937, (byte) 119); // IDEternity_Q_Cube_As_65_An.
-							}
+							QuestService.addNewSpawn(301570000, player.getInstanceId(), 857915, (float) 346.18872, (float) 516.0532, (float) 468.937, (byte) 119); // IDEternity_Q_Cube_As_65_An.
+							QuestService.addNewSpawn(301570000, player.getInstanceId(), 857916, (float) 347.85834, (float) 511.8845, (float) 468.937, (byte) 0); // IDEternity_Q_Energy_Wi_65_An.
+							QuestService.addNewSpawn(301570000, player.getInstanceId(), 857915, (float) 346.09894, (float) 507.7084, (float) 468.937, (byte) 119); // IDEternity_Q_Cube_As_65_An.
 						}, 3000);
 						final Npc npc = (Npc) env.getVisibleObject();
 						npc.getController().onDelete();
@@ -432,30 +420,22 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 								case MALE:
 								{
 									PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(0, 923));
-									ThreadPoolManager.getInstance().schedule(new Runnable()
+									ThreadPoolManager.getInstance().schedule(() ->
 									{
-										@Override
-										public void run()
-										{
-											// You are graced with the aura of Blessed Breath.
-											PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403364));
-											QuestService.addNewSpawn(301570000, player.getInstanceId(), 857788, (float) 231.63109, (float) 511.9707, (float) 468.80215, (byte) 0); // IDEternity_Q_HD_Wind_Li_M_N_65_An.
-										}
+										// You are graced with the aura of Blessed Breath.
+										PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403364));
+										QuestService.addNewSpawn(301570000, player.getInstanceId(), 857788, (float) 231.63109, (float) 511.9707, (float) 468.80215, (byte) 0); // IDEternity_Q_HD_Wind_Li_M_N_65_An.
 									}, 50000);
 									break;
 								}
 								case FEMALE:
 								{
 									PacketSendUtility.sendPacket(player, new SM_PLAY_MOVIE(0, 924));
-									ThreadPoolManager.getInstance().schedule(new Runnable()
+									ThreadPoolManager.getInstance().schedule(() ->
 									{
-										@Override
-										public void run()
-										{
-											// You are graced with the aura of Blessed Breath.
-											PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403364));
-											QuestService.addNewSpawn(301570000, player.getInstanceId(), 857795, (float) 231.63109, (float) 511.9707, (float) 468.80215, (byte) 0); // IDEternity_Q_HD_Wind_Li_F_N_65_An.
-										}
+										// You are graced with the aura of Blessed Breath.
+										PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403364));
+										QuestService.addNewSpawn(301570000, player.getInstanceId(), 857795, (float) 231.63109, (float) 511.9707, (float) 468.80215, (byte) 0); // IDEternity_Q_HD_Wind_Li_F_N_65_An.
 									}, 50000);
 									break;
 								}
@@ -477,10 +457,7 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 			{
 				return sendQuestDialog(env, 10002);
 			}
-			else
-			{
-				return sendQuestEndDialog(env);
-			}
+			return sendQuestEndDialog(env);
 		}
 		return false;
 	}

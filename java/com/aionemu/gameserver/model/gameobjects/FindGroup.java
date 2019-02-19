@@ -150,10 +150,7 @@ public class FindGroup
 		{
 			return 65557;
 		}
-		else
-		{
-			return 0;
-		}
+		return 0;
 	}
 	
 	/**

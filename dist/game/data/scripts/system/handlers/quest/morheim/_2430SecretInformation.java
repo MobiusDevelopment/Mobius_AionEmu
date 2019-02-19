@@ -271,10 +271,7 @@ public class _2430SecretInformation extends QuestHandler
 								{
 									return sendQuestDialog(env, 3739);
 								}
-								else
-								{
-									return sendQuestDialog(env, 3825);
-								}
+								return sendQuestDialog(env, 3825);
 							}
 						}
 						case SELECT_REWARD:

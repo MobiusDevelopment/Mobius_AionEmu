@@ -71,11 +71,8 @@ public class _19648Cooperation_Request_For_Elimination_Of_Beritra extends QuestH
 						{ // Abbey Return Stone.
 							return sendQuestDialog(env, 4762);
 						}
-						else
-						{
-							PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
-							return true;
-						}
+						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
+						return true;
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:

@@ -170,10 +170,7 @@ public class _2004A_Charmed_Cube extends QuestHandler
 				{
 					return sendQuestDialog(env, 2375);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

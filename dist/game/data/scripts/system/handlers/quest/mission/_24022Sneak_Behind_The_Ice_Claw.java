@@ -203,10 +203,7 @@ public class _24022Sneak_Behind_The_Ice_Claw extends QuestHandler
 					removeQuestItem(env, 182215364, 1);
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

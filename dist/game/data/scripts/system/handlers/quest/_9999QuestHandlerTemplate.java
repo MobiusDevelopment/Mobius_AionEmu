@@ -69,10 +69,7 @@ public class _9999QuestHandlerTemplate extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011); // can be different
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -132,10 +129,7 @@ public class _9999QuestHandlerTemplate extends QuestHandler
 				{
 					return sendQuestDialog(env, 20001);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

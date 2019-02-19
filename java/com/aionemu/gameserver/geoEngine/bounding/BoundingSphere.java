@@ -766,10 +766,7 @@ public class BoundingSphere extends BoundingVolume
 			final Ray ray = (Ray) other;
 			return collideWithRay(ray, results);
 		}
-		else
-		{
-			throw new UnsupportedCollisionException();
-		}
+		throw new UnsupportedCollisionException();
 	}
 	
 	@Override

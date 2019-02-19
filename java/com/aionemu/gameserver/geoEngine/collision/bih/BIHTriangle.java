@@ -104,47 +104,26 @@ public final class BIHTriangle
 				{
 					return v1;
 				}
-				else
-				{
-					return v3;
-				}
+				return v3;
 			}
-			else
+			if (v2 < v3)
 			{
-				if (v2 < v3)
-				{
-					return v2;
-				}
-				else
-				{
-					return v3;
-				}
+				return v2;
 			}
+			return v3;
 		}
-		else
+		if (v1 > v2)
 		{
-			if (v1 > v2)
+			if (v1 > v3)
 			{
-				if (v1 > v3)
-				{
-					return v1;
-				}
-				else
-				{
-					return v3;
-				}
+				return v1;
 			}
-			else
-			{
-				if (v2 > v3)
-				{
-					return v2;
-				}
-				else
-				{
-					return v3;
-				}
-			}
+			return v3;
 		}
+		if (v2 > v3)
+		{
+			return v2;
+		}
+		return v3;
 	}
 }

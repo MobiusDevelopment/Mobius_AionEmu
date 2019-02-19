@@ -60,10 +60,7 @@ public class _15334Devoted_Prayers extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182215919, 1);
-				}
+				return sendQuestStartDialog(env, 182215919, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

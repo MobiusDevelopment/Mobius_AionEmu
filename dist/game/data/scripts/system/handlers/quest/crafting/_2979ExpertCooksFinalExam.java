@@ -64,10 +64,7 @@ public class _2979ExpertCooksFinalExam extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		
@@ -95,10 +92,7 @@ public class _2979ExpertCooksFinalExam extends QuestHandler
 								updateQuestStatus(env);
 								return sendQuestDialog(env, 2375);
 							}
-							else
-							{
-								return sendQuestDialog(env, 2716);
-							}
+							return sendQuestDialog(env, 2716);
 						}
 					}
 				}
@@ -112,10 +106,7 @@ public class _2979ExpertCooksFinalExam extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

@@ -127,10 +127,7 @@ public class ChestAI2 extends ActionItemNpcAI2
 				i++;
 				continue;
 			}
-			else
-			{
-				return false;
-			}
+			return false;
 		}
 		if (i == keyItems.size())
 		{

@@ -62,10 +62,7 @@ public class _2925AHeartfeltConfession extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -80,10 +77,7 @@ public class _2925AHeartfeltConfession extends QuestHandler
 						{
 							return sendQuestDialog(env, 1011);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1097);
-						}
+						return sendQuestDialog(env, 1097);
 					}
 					else if (qs.getQuestVarById(0) == 4)
 					{

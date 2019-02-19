@@ -109,10 +109,7 @@ public class _3018Fork_Ear_Rokes extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
-						else
-						{
-							return sendQuestDialog(env, 5);
-						}
+						return sendQuestDialog(env, 5);
 					}
 				}
 			}

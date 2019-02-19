@@ -3002,11 +3002,8 @@ public class cmd_vipadd extends PlayerCommand
 				PacketSendUtility.sendMessage(player, "Item ( [item:" + itemId + "] ) is a blocked item!!");
 				return;
 			}
-			else
-			{
-				PacketSendUtility.sendMessage(player, "Item ( [item:" + itemId + "] ) is available to add!!");
-				return;
-			}
+			PacketSendUtility.sendMessage(player, "Item ( [item:" + itemId + "] ) is available to add!!");
+			return;
 			
 		}
 		
@@ -3229,10 +3226,7 @@ public class cmd_vipadd extends PlayerCommand
 						PacketSendUtility.sendMessage(player, "This items is blocked items, you can't add using command, contact Game Master for Info!");
 						return;
 					}
-					else
-					{
-						PacketSendUtility.sendMessage(player, "You successfully received " + itemCount + " x [item:" + itemId + "]");
-					}
+					PacketSendUtility.sendMessage(player, "You successfully received " + itemCount + " x [item:" + itemId + "]");
 				}
 			}
 		}

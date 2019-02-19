@@ -270,10 +270,7 @@ public class _10507A_Big_Plot_To_Foil extends QuestHandler
 								updateQuestStatus(env);
 								return true;
 							}
-							else
-							{
-								return defaultOnKillEvent(env, mobs, 4, 5, 1);
-							}
+							return defaultOnKillEvent(env, mobs, 4, 5, 1);
 						}
 						break;
 					}
@@ -291,10 +288,7 @@ public class _10507A_Big_Plot_To_Foil extends QuestHandler
 								updateQuestStatus(env);
 								return true;
 							}
-							else
-							{
-								return defaultOnKillEvent(env, chest, 2, 3, 2);
-							}
+							return defaultOnKillEvent(env, chest, 2, 3, 2);
 						}
 						break;
 					}

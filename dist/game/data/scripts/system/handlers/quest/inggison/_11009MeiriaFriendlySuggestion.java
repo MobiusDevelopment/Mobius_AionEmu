@@ -74,10 +74,7 @@ public class _11009MeiriaFriendlySuggestion extends QuestHandler
 					{
 						return sendQuestStartDialog(env);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
 				else
 				{
@@ -163,10 +160,7 @@ public class _11009MeiriaFriendlySuggestion extends QuestHandler
 				{
 					return sendQuestDialog(env, 2375);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

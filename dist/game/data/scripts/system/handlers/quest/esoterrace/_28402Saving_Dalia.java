@@ -56,10 +56,7 @@ public class _28402Saving_Dalia extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 			{

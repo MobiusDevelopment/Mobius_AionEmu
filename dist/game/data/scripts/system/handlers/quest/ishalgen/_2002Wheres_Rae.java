@@ -230,10 +230,7 @@ public class _2002Wheres_Rae extends QuestHandler
 									updateQuestStatus(env);
 									return sendQuestDialog(env, 2461);
 								}
-								else
-								{
-									return sendQuestDialog(env, 2376);
-								}
+								return sendQuestDialog(env, 2376);
 							}
 							break;
 						}

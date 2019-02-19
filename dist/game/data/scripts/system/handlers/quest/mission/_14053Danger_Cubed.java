@@ -125,10 +125,7 @@ public class _14053Danger_Cubed extends QuestHandler
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 5);
 					}
-					else
-					{
-						return sendQuestDialog(env, 10001);
-					}
+					return sendQuestDialog(env, 10001);
 				}
 				case SELECT_ACTION_1694:
 				{

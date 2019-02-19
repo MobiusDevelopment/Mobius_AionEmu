@@ -89,10 +89,7 @@ public class _18410Pursuing_The_Prisoners extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (targetId == 799563)

@@ -58,10 +58,7 @@ public class _29028Handicrafting_Master extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 152232016, 1);
-				}
+				return sendQuestStartDialog(env, 152232016, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -82,10 +79,7 @@ public class _29028Handicrafting_Master extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}

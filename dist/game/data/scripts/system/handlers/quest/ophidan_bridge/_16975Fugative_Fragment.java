@@ -60,10 +60,7 @@ public class _16975Fugative_Fragment extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182215759, 1);
-				}
+				return sendQuestStartDialog(env, 182215759, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

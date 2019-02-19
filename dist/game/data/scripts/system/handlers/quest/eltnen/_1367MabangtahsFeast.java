@@ -63,10 +63,7 @@ public class _1367MabangtahsFeast extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 			else if (qs.getStatus() == QuestStatus.START)
 			{
@@ -82,10 +79,7 @@ public class _1367MabangtahsFeast extends QuestHandler
 					{
 						return sendQuestDialog(env, 1352);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1693);
-					}
+					return sendQuestDialog(env, 1693);
 				}
 				else if (env.getDialog() == QuestDialog.STEP_TO_1)
 				{
@@ -97,10 +91,7 @@ public class _1367MabangtahsFeast extends QuestHandler
 						qs.setQuestVarById(0, 1);
 						return sendQuestDialog(env, 5);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1352);
-					}
+					return sendQuestDialog(env, 1352);
 				}
 				else if (env.getDialog() == QuestDialog.STEP_TO_2)
 				{
@@ -112,10 +103,7 @@ public class _1367MabangtahsFeast extends QuestHandler
 						qs.setQuestVarById(0, 2);
 						return sendQuestDialog(env, 6);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1352);
-					}
+					return sendQuestDialog(env, 1352);
 				}
 				else if (env.getDialog() == QuestDialog.STEP_TO_3)
 				{
@@ -128,10 +116,7 @@ public class _1367MabangtahsFeast extends QuestHandler
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 7);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1352);
-					}
+					return sendQuestDialog(env, 1352);
 				}
 				else
 				{

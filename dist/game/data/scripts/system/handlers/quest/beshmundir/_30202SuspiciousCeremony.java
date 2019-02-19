@@ -72,10 +72,7 @@ public class _30202SuspiciousCeremony extends QuestHandler
 					{
 						return sendQuestStartDialog(env);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
 				else
 				{

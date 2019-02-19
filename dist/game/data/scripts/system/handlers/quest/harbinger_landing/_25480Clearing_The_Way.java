@@ -130,10 +130,7 @@ public class _25480Clearing_The_Way extends QuestHandler
 			{
 				return sendQuestDialog(env, 10002);
 			}
-			else
-			{
-				return sendQuestEndDialog(env);
-			}
+			return sendQuestEndDialog(env);
 		}
 		return false;
 	}

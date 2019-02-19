@@ -136,10 +136,7 @@ public class PlayerEffectController extends EffectController
 			{
 				return;
 			}
-			else
-			{
-				remainingTime = (int) (endTime - System.currentTimeMillis());
-			}
+			remainingTime = (int) (endTime - System.currentTimeMillis());
 		}
 		
 		final Effect effect = new Effect(getOwner(), getOwner(), template, skillLvl, remainingTime);

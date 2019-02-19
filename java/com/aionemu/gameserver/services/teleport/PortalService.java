@@ -183,19 +183,13 @@ public class PortalService
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANNOT_MAKE_INSTANCE_COOL_TIME);
 				return;
 			}
-			else
+			if (!instance.isRegistered(player.getObjectId()))
 			{
-				if (!instance.isRegistered(player.getObjectId()))
-				{
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANNOT_MAKE_INSTANCE_COOL_TIME);
-					return;
-				}
-				else
-				{
-					reenter = true;
-					log.debug(player.getName() + "has been in intance and also have cd, can reenter.");
-				}
+				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANNOT_MAKE_INSTANCE_COOL_TIME);
+				return;
 			}
+			reenter = true;
+			log.debug(player.getName() + "has been in intance and also have cd, can reenter.");
 		}
 		else
 		{

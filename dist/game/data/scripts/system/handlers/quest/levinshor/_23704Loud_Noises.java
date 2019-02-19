@@ -60,10 +60,7 @@ public class _23704Loud_Noises extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182215533, 1); // Intrusion Mine.
-				}
+				return sendQuestStartDialog(env, 182215533, 1); // Intrusion Mine.
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

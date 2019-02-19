@@ -67,10 +67,7 @@ public class _4969GrowthNinissFourthCharm extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -117,10 +114,7 @@ public class _4969GrowthNinissFourthCharm extends QuestHandler
 								changeQuestStep(env, 1, 1, true); // reward
 								return sendQuestDialog(env, 5);
 							}
-							else
-							{
-								return sendQuestDialog(env, 2716);
-							}
+							return sendQuestDialog(env, 2716);
 						}
 						case FINISH_DIALOG:
 						{

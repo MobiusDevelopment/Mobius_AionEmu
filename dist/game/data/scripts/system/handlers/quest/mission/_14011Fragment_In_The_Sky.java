@@ -140,10 +140,7 @@ public class _14011Fragment_In_The_Sky extends QuestHandler
 				{
 					return sendQuestDialog(env, 1693);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

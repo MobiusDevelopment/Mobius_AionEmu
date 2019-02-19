@@ -67,10 +67,7 @@ public class _3058StoneofMabolo extends QuestHandler
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
 				return true;
 			}
-			else
-			{
-				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
-			}
+			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
 		}
 		if (qs == null)
 		{

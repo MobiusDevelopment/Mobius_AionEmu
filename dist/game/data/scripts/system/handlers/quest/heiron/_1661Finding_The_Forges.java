@@ -85,10 +85,7 @@ public class _1661Finding_The_Forges extends QuestHandler
 				{
 					return sendQuestDialog(env, 1352);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

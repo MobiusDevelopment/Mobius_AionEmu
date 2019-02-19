@@ -22,7 +22,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author ATracer
@@ -69,40 +68,29 @@ public class AbyssService
 			{
 				return true;
 			}
-			else
-			{
-				continue;
-			}
+			continue;
 		}
 		return false;
 	}
 	
 	public static void rankedKillAnnounce(Player victim)
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(p ->
 		{
-			@Override
-			public void visit(Player p)
+			if ((p != victim) && (victim.getWorldId() == p.getWorldId()))
 			{
-				if ((p != victim) && (victim.getWorldId() == p.getWorldId()))
-				{
-					PacketSendUtility.sendPacket(p, SM_SYSTEM_MESSAGE.STR_ABYSS_ORDER_RANKER_DIE(victim, AbyssRankEnum.getRankDescriptionId(victim)));
-				}
+				PacketSendUtility.sendPacket(p, SM_SYSTEM_MESSAGE.STR_ABYSS_ORDER_RANKER_DIE(victim, AbyssRankEnum.getRankDescriptionId(victim)));
 			}
 		});
 	}
 	
 	public static void rankerSkillAnnounce(Player player, int nameId)
 	{
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(p ->
 		{
-			@Override
-			public void visit(Player p)
+			if ((p != player) && (player.getWorldType() == p.getWorldType()) && !p.isInInstance())
 			{
-				if ((p != player) && (player.getWorldType() == p.getWorldType()) && !p.isInInstance())
-				{
-					PacketSendUtility.sendPacket(p, SM_SYSTEM_MESSAGE.STR_SKILL_ABYSS_SKILL_IS_FIRED(player, new DescriptionId(nameId)));
-				}
+				PacketSendUtility.sendPacket(p, SM_SYSTEM_MESSAGE.STR_SKILL_ABYSS_SKILL_IS_FIRED(player, new DescriptionId(nameId)));
 			}
 		});
 	}

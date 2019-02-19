@@ -99,10 +99,7 @@ public class _3013AClueLeftByTheDead extends QuestHandler
 								{
 									return sendQuestDialog(env, 1011);
 								}
-								else
-								{
-									return sendQuestDialog(env, 10001);
-								}
+								return sendQuestDialog(env, 10001);
 							}
 						}
 						case CHECK_COLLECTED_ITEMS:

@@ -89,10 +89,7 @@ public class _80881Unknown_Creatures extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 					case FINISH_DIALOG:
 					{

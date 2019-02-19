@@ -78,10 +78,7 @@ public class _2136TheLostAxe extends QuestHandler
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
 				return true;
 			}
-			else
-			{
-				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
-			}
+			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(0, 0));
 		}
 		
 		if (qs == null)
@@ -96,15 +93,7 @@ public class _2136TheLostAxe extends QuestHandler
 			if (targetId == 790009)
 			{
 				final Npc npc = (Npc) env.getVisibleObject();
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					
-					@Override
-					public void run()
-					{
-						npc.getController().onDelete();
-					}
-				}, 10000);
+				ThreadPoolManager.getInstance().schedule(() -> npc.getController().onDelete(), 10000);
 				return sendQuestEndDialog(env);
 			}
 		}

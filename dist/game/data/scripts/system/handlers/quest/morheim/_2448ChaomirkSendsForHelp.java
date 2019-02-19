@@ -62,10 +62,7 @@ public class _2448ChaomirkSendsForHelp extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182204210, 1);
-				}
+				return sendQuestStartDialog(env, 182204210, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

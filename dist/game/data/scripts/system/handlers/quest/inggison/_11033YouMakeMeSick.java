@@ -123,10 +123,7 @@ public class _11033YouMakeMeSick extends QuestHandler
 									PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 									return true;
 								}
-								else
-								{
-									return sendQuestDialog(env, 10001);
-								}
+								return sendQuestDialog(env, 10001);
 							}
 						}
 						case STEP_TO_2:

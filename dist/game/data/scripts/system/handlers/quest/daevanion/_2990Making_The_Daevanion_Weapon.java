@@ -95,15 +95,9 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 					{
 						return sendQuestDialog(env, 4848);
 					}
-					else
-					{
-						return sendQuestDialog(env, 4762);
-					}
+					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -147,10 +141,7 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 								updateQuestStatus(env);
 								return sendQuestDialog(env, 10000);
 							}
-							else
-							{
-								return sendQuestDialog(env, 10001);
-							}
+							return sendQuestDialog(env, 10001);
 						}
 						break;
 					}
@@ -173,10 +164,7 @@ public class _2990Making_The_Daevanion_Weapon extends QuestHandler
 								updateQuestStatus(env);
 								return sendQuestDialog(env, 5);
 							}
-							else
-							{
-								return sendQuestDialog(env, 2120);
-							}
+							return sendQuestDialog(env, 2120);
 						}
 						break;
 					}

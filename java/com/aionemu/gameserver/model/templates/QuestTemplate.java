@@ -632,10 +632,7 @@ public class QuestTemplate
 		{
 			return false;
 		}
-		else
-		{
-			return cannotShare;
-		}
+		return cannotShare;
 	}
 	
 	/**
@@ -648,10 +645,7 @@ public class QuestTemplate
 		{
 			return false;
 		}
-		else
-		{
-			return cannotGiveup;
-		}
+		return cannotGiveup;
 	}
 	
 	public boolean isBountyReward()
@@ -660,10 +654,7 @@ public class QuestTemplate
 		{
 			return false;
 		}
-		else
-		{
-			return bountyReward;
-		}
+		return bountyReward;
 	}
 	
 	public boolean isUseSingleClassReward()
@@ -672,10 +663,7 @@ public class QuestTemplate
 		{
 			return false;
 		}
-		else
-		{
-			return useClassReward == 1;
-		}
+		return useClassReward == 1;
 	}
 	
 	public boolean isUseRepeatedClassReward()
@@ -684,10 +672,7 @@ public class QuestTemplate
 		{
 			return false;
 		}
-		else
-		{
-			return useClassReward == 2;
-		}
+		return useClassReward == 2;
 	}
 	
 	public boolean isRepeatable()
@@ -733,10 +718,7 @@ public class QuestTemplate
 		{
 			return false;
 		}
-		else
-		{
-			return timer;
-		}
+		return timer;
 	}
 	
 	public QuestCategory getCategory()

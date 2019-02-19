@@ -150,14 +150,7 @@ public class _1643TheStarOfHeiron extends QuestHandler
 							updateQuestStatus(env);
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							final Npc npc = (Npc) env.getVisibleObject();
-							ThreadPoolManager.getInstance().schedule(new Runnable()
-							{
-								@Override
-								public void run()
-								{
-									npc.getController().onDelete();
-								}
-							}, 40000);
+							ThreadPoolManager.getInstance().schedule(() -> npc.getController().onDelete(), 40000);
 							return true;
 						}
 					}
@@ -172,10 +165,7 @@ public class _1643TheStarOfHeiron extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

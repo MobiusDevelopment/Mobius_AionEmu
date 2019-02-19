@@ -62,10 +62,7 @@ public class _3965TotheGalleriaofGrandeur extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182206120, 2);
-				}
+				return sendQuestStartDialog(env, 182206120, 2);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

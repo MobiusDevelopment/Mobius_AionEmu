@@ -61,10 +61,7 @@ public class _21217NewResearchPlan extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182207890, 1);
-				}
+				return sendQuestStartDialog(env, 182207890, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

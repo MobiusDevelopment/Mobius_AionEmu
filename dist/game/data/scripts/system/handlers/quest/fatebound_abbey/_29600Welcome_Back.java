@@ -77,11 +77,8 @@ public class _29600Welcome_Back extends QuestHandler
 						{ // Abbey Return Stone.
 							return sendQuestDialog(env, 1011);
 						}
-						else
-						{
-							PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
-							return true;
-						}
+						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
+						return true;
 					}
 					case SELECT_ACTION_1012:
 					{

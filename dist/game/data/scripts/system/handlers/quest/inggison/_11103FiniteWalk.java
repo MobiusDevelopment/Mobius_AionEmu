@@ -61,10 +61,7 @@ public class _11103FiniteWalk extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182206750, 1);
-				}
+				return sendQuestStartDialog(env, 182206750, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

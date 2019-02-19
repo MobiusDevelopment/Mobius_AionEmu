@@ -319,10 +319,7 @@ public class CraftSkillUpdateService
 		{
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	public static boolean canLearnMoreMasterCraftingSkill(Player player)
@@ -331,10 +328,7 @@ public class CraftSkillUpdateService
 		{
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	@SuppressWarnings("synthetic-access")

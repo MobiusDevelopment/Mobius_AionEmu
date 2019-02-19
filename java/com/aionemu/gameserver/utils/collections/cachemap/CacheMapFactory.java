@@ -38,10 +38,7 @@ public class CacheMapFactory
 		{
 			return createSoftCacheMap(cacheName, valueName);
 		}
-		else
-		{
-			return createWeakCacheMap(cacheName, valueName);
-		}
+		return createWeakCacheMap(cacheName, valueName);
 	}
 	
 	/**

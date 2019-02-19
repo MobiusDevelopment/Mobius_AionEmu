@@ -302,22 +302,19 @@ public class _20031Go_To_Gelkmaros extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
+				final int[] gelkmarosMission =
 				{
-					final int[] gelkmarosMission =
-					{
-						20031,
-						20032,
-						20033,
-						20034,
-						20035
-					};
-					for (int quest : gelkmarosMission)
-					{
-						QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
-					}
-					return sendQuestEndDialog(env);
+					20031,
+					20032,
+					20033,
+					20034,
+					20035
+				};
+				for (int quest : gelkmarosMission)
+				{
+					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
 				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

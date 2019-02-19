@@ -95,10 +95,7 @@ public class _4217The_Imprisoned_Executor extends QuestHandler
 						{
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}

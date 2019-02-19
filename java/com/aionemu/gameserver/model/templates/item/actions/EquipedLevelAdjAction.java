@@ -92,17 +92,13 @@ public class EquipedLevelAdjAction extends AbstractItemAction
 		player.getObserveController().attach(observer);
 		final boolean isReductionSuccess = isReductionSuccess(player);
 		final int reductionCount = reductionCount(player);
-		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable()
+		player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			if (player.getInventory().decreaseByItemId(parentItem.getItemId(), 1))
 			{
-				if (player.getInventory().decreaseByItemId(parentItem.getItemId(), 1))
-				{
-					player.getController().cancelTask(TaskId.ITEM_USE);
-					player.getObserveController().removeObserver(observer);
-					EnchantService.reductItemAct(player, parentItem, targetItem, targetItem.getReductionLevel(), isReductionSuccess, reductionCount);
-				}
+				player.getController().cancelTask(TaskId.ITEM_USE);
+				player.getObserveController().removeObserver(observer);
+				EnchantService.reductItemAct(player, parentItem, targetItem, targetItem.getReductionLevel(), isReductionSuccess, reductionCount);
 			}
 		}, 5000));
 	}
@@ -118,14 +114,11 @@ public class EquipedLevelAdjAction extends AbstractItemAction
 			}
 			return true;
 		}
-		else
+		if (player.getAccessLevel() > 0)
 		{
-			if (player.getAccessLevel() > 0)
-			{
-				PacketSendUtility.sendMessage(player, "Fail! Reduction Level: " + reduction + " Lucky: 600");
-			}
-			return false;
+			PacketSendUtility.sendMessage(player, "Fail! Reduction Level: " + reduction + " Lucky: 600");
 		}
+		return false;
 	}
 	
 	public int reductionCount(Player player)

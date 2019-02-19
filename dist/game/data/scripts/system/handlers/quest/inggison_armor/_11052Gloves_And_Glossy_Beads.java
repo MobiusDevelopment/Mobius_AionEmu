@@ -54,10 +54,7 @@ public class _11052Gloves_And_Glossy_Beads extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -79,10 +76,7 @@ public class _11052Gloves_And_Glossy_Beads extends QuestHandler
 						changeQuestStep(env, 0, 0, true);
 						return sendQuestDialog(env, 5);
 					}
-					else
-					{
-						return sendQuestDialog(env, 2716);
-					}
+					return sendQuestDialog(env, 2716);
 				}
 				else if (dialog == QuestDialog.FINISH_DIALOG)
 				{

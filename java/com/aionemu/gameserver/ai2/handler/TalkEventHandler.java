@@ -56,11 +56,8 @@ public class TalkEventHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(npcAI.getOwner().getObjectId(), 44));
 						return;
 					}
-					else
-					{
-						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(npcAI.getOwner().getObjectId(), 10));
-						return;
-					}
+					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(npcAI.getOwner().getObjectId(), 10));
+					return;
 				}
 				default:
 				{

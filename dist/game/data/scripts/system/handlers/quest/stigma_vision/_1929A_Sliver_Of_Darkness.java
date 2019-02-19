@@ -220,11 +220,8 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 								{
 									return sendQuestDialog(env, 2716);
 								}
-								else
-								{
-									PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 1));
-									return closeDialogWindow(env);
-								}
+								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 1));
+								return closeDialogWindow(env);
 							}
 						}
 						case START_DIALOG:
@@ -286,10 +283,7 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

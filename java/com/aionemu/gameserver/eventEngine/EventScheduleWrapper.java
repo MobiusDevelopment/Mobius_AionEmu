@@ -61,10 +61,7 @@ class EventScheduleWrapper implements Runnable
 			EventScheduler.getInstance().schedule(event, 10);
 			return true;
 		}
-		else
-		{
-			event.cancel(true);
-			return false;
-		}
+		event.cancel(true);
+		return false;
 	}
 }

@@ -24,7 +24,6 @@ import static ch.lambdaj.Lambda.sum;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,7 +39,6 @@ import com.aionemu.gameserver.model.instance.playerreward.PvPArenaPlayerReward;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_SCORE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 import javolution.util.FastList;
 
@@ -210,14 +208,7 @@ public class PvPArenaReward extends InstanceReward<PvPArenaPlayerReward>
 	
 	public List<PvPArenaPlayerReward> sortPoints()
 	{
-		return sort(getInstanceRewards(), on(PvPArenaPlayerReward.class).getScorePoints(), new Comparator<Integer>()
-		{
-			@Override
-			public int compare(Integer o1, Integer o2)
-			{
-				return o2 != null ? o2.compareTo(o1) : -o1.compareTo(o2);
-			}
-		});
+		return sort(getInstanceRewards(), on(PvPArenaPlayerReward.class).getScorePoints(), (o1, o2) -> o2 != null ? o2.compareTo(o1) : -o1.compareTo(o2));
 	}
 	
 	public boolean canRewardOpportunityToken(PvPArenaPlayerReward rewardedPlayer)
@@ -323,10 +314,7 @@ public class PvPArenaReward extends InstanceReward<PvPArenaPlayerReward>
 		{
 			return (int) (120000 - result);
 		}
-		else
-		{
-			return (int) ((180000 * getRound()) - (result - 120000));
-		}
+		return (int) ((180000 * getRound()) - (result - 120000));
 	}
 	
 	@Override
@@ -338,14 +326,7 @@ public class PvPArenaReward extends InstanceReward<PvPArenaPlayerReward>
 	public void sendPacket()
 	{
 		final List<Player> players = instance.getPlayersInside();
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), getInstanceReward(), players));
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), getInstanceReward(), players)));
 	}
 	
 	public byte getBuffId()

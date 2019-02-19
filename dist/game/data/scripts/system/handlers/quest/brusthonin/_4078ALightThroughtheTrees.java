@@ -70,10 +70,7 @@ public class _4078ALightThroughtheTrees extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		
@@ -134,10 +131,7 @@ public class _4078ALightThroughtheTrees extends QuestHandler
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 10000);
 					}
-					else
-					{
-						return sendQuestDialog(env, 10001);
-					}
+					return sendQuestDialog(env, 10001);
 				}
 			}
 		}

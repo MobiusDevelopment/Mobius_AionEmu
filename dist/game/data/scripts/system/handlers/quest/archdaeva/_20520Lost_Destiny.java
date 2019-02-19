@@ -184,26 +184,23 @@ public class _20520Lost_Destiny extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
+				final int[] norsvoldMission =
 				{
-					final int[] norsvoldMission =
-					{
-						20521,
-						20522,
-						20523,
-						20524,
-						20525,
-						20526,
-						20527,
-						20528,
-						20529
-					};
-					for (int quest : norsvoldMission)
-					{
-						QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
-					}
-					return sendQuestEndDialog(env);
+					20521,
+					20522,
+					20523,
+					20524,
+					20525,
+					20526,
+					20527,
+					20528,
+					20529
+				};
+				for (int quest : norsvoldMission)
+				{
+					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
 				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

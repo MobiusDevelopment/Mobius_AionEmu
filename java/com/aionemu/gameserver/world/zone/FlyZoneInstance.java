@@ -42,10 +42,7 @@ public class FlyZoneInstance extends ZoneInstance
 			creature.setInsideZoneType(ZoneType.FLY);
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	@Override
@@ -63,9 +60,6 @@ public class FlyZoneInstance extends ZoneInstance
 			}
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 }

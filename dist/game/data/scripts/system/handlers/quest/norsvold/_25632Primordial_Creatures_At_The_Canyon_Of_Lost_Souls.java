@@ -60,10 +60,7 @@ public class _25632Primordial_Creatures_At_The_Canyon_Of_Lost_Souls extends Ques
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

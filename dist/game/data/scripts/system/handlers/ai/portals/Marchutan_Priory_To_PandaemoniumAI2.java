@@ -57,10 +57,7 @@ public class Marchutan_Priory_To_PandaemoniumAI2 extends NpcAI2
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_HOUSING_CANT_OWN_NOT_COMPLETE_QUEST(20521)); // 다시 찾은 운명.
 				return true;
 			}
-			else
-			{
-				TeleportService2.teleportTo(player, 220110000, 1760.1392f, 2007.7195f, 196.34007f, (byte) 110, TeleportAnimation.BEAM_ANIMATION);
-			}
+			TeleportService2.teleportTo(player, 220110000, 1760.1392f, 2007.7195f, 196.34007f, (byte) 110, TeleportAnimation.BEAM_ANIMATION);
 		}
 		return true;
 	}

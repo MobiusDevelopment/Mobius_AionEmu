@@ -152,10 +152,7 @@ public class _20502Evolving_Mysteries extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 					case STEP_TO_5:
 					{

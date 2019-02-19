@@ -112,10 +112,7 @@ public class _2252ChasingtheLegend extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -155,25 +152,21 @@ public class _2252ChasingtheLegend extends QuestHandler
 							final int targetObjectId = env.getVisibleObject().getObjectId();
 							PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), targetObjectId, 3000, 1));
 							PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.NEUTRALMODE2, 0, targetObjectId), true);
-							ThreadPoolManager.getInstance().schedule(new Runnable()
+							ThreadPoolManager.getInstance().schedule(() ->
 							{
-								@Override
-								public void run()
+								final Npc npc1 = (Npc) player.getTarget();
+								if ((npc1 == null) || (npc1.getObjectId() != targetObjectId))
 								{
-									final Npc npc = (Npc) player.getTarget();
-									if ((npc == null) || (npc.getObjectId() != targetObjectId))
-									{
-										return;
-									}
-									QuestService.addNewSpawn(player.getWorldId(), player.getInstanceId(), 210634, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading()); // Minusha's Spirit
-									if ((player.getTarget() == null) || (player.getTarget().getObjectId() != targetObjectId))
-									{
-										return;
-									}
-									PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), targetObjectId, 3000, 0));
-									PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.START_LOOT, 0, targetObjectId), true);
-									((Npc) player.getTarget()).getController().onDie(null);
+									return;
 								}
+								QuestService.addNewSpawn(player.getWorldId(), player.getInstanceId(), 210634, npc1.getX(), npc1.getY(), npc1.getZ(), npc1.getHeading()); // Minusha's Spirit
+								if ((player.getTarget() == null) || (player.getTarget().getObjectId() != targetObjectId))
+								{
+									return;
+								}
+								PacketSendUtility.sendPacket(player, new SM_USE_OBJECT(player.getObjectId(), targetObjectId, 3000, 0));
+								PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.START_LOOT, 0, targetObjectId), true);
+								((Npc) player.getTarget()).getController().onDie(null);
 							}, 3000);
 						}
 					}

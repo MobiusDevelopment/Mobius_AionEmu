@@ -72,10 +72,7 @@ public class _28510End_Of_The_Shift_In_Haramel extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182212021, 1);
-				}
+				return sendQuestStartDialog(env, 182212021, 1);
 			}
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))

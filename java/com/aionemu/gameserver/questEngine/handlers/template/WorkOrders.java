@@ -121,10 +121,7 @@ public class WorkOrders extends QuestHandler
 						}
 						return sendQuestDialog(env, 5);
 					}
-					else
-					{
-						return sendQuestSelectionDialog(env);
-					}
+					return sendQuestSelectionDialog(env);
 				}
 			}
 			else if (qs.getStatus() == QuestStatus.REWARD)
@@ -147,10 +144,7 @@ public class WorkOrders extends QuestHandler
 					env.setQuestId(workOrdersData.getId());
 					return sendQuestDialog(env, 1008);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

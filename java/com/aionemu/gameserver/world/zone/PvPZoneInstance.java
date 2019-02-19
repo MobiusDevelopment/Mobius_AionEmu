@@ -38,10 +38,7 @@ public class PvPZoneInstance extends SiegeZoneInstance
 			creature.setInsideZoneType(ZoneType.PVP);
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	@Override
@@ -52,9 +49,6 @@ public class PvPZoneInstance extends SiegeZoneInstance
 			creature.unsetInsideZoneType(ZoneType.PVP);
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 }

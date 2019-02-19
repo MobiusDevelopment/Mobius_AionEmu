@@ -113,10 +113,7 @@ public class _24054Crisis_In_Beluslan extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

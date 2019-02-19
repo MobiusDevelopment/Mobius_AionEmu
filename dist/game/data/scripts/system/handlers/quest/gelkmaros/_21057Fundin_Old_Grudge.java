@@ -86,10 +86,7 @@ public class _21057Fundin_Old_Grudge extends QuestHandler
 						player.getInventory().decreaseKinah(15000000);
 						return sendQuestDialog(env, 5);
 					}
-					else
-					{
-						return sendQuestDialog(env, 3739);
-					}
+					return sendQuestDialog(env, 3739);
 				}
 				else
 				{

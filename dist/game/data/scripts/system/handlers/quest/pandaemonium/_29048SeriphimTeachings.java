@@ -62,10 +62,7 @@ public class _29048SeriphimTeachings extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182212217, 1);
-				}
+				return sendQuestStartDialog(env, 182212217, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

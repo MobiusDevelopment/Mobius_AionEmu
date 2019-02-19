@@ -183,14 +183,11 @@ public class _15300Taking_Arms extends QuestHandler
 							PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must leave your group or alliance to enter <Drakenspire Depths>", ChatType.BRIGHT_YELLOW_CENTER), true);
 							return true;
 						}
-						else
-						{
-							final WorldMapInstance drakenspireDepthsQ = InstanceService.getNextAvailableInstance(301520000);
-							InstanceService.registerPlayerWithInstance(drakenspireDepthsQ, player);
-							TeleportService2.teleportTo(player, 301520000, drakenspireDepthsQ.getInstanceId(), 326, 183, 1687);
-							changeQuestStep(env, 2, 3, false);
-							return closeDialogWindow(env);
-						}
+						final WorldMapInstance drakenspireDepthsQ = InstanceService.getNextAvailableInstance(301520000);
+						InstanceService.registerPlayerWithInstance(drakenspireDepthsQ, player);
+						TeleportService2.teleportTo(player, 301520000, drakenspireDepthsQ.getInstanceId(), 326, 183, 1687);
+						changeQuestStep(env, 2, 3, false);
+						return closeDialogWindow(env);
 					}
 				}
 			}

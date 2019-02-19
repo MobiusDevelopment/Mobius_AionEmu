@@ -64,10 +64,7 @@ public class _2207ConversingWithaSkurv extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (targetId == 203591)

@@ -184,26 +184,23 @@ public class _10520Covert_Communiques extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
+				final int[] ilumaMission =
 				{
-					final int[] ilumaMission =
-					{
-						10521,
-						10522,
-						10523,
-						10524,
-						10525,
-						10526,
-						10527,
-						10528,
-						10529
-					};
-					for (int quest : ilumaMission)
-					{
-						QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
-					}
-					return sendQuestEndDialog(env);
+					10521,
+					10522,
+					10523,
+					10524,
+					10525,
+					10526,
+					10527,
+					10528,
+					10529
+				};
+				for (int quest : ilumaMission)
+				{
+					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
 				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

@@ -93,10 +93,7 @@ public class CylinderArea extends AbstractArea
 		{
 			return 0;
 		}
-		else
-		{
-			return Math.abs(MathUtil.getDistance(centerX, centerY, x, y) - radius);
-		}
+		return Math.abs(MathUtil.getDistance(centerX, centerY, x, y) - radius);
 	}
 	
 	/**
@@ -119,10 +116,7 @@ public class CylinderArea extends AbstractArea
 			{
 				return MathUtil.getDistance(centerX, centerY, getMinZ(), x, y, z);
 			}
-			else
-			{
-				return MathUtil.getDistance(centerX, centerY, getMaxZ(), x, y, z);
-			}
+			return MathUtil.getDistance(centerX, centerY, getMaxZ(), x, y, z);
 		}
 	}
 	
@@ -136,15 +130,12 @@ public class CylinderArea extends AbstractArea
 		{
 			return new Point2D(x, y);
 		}
-		else
-		{
-			final float vX = x - centerX;
-			final float vY = y - centerY;
-			final double magV = MathUtil.getDistance(centerX, centerY, x, y);
-			final double pointX = centerX + ((vX / magV) * radius);
-			final double pointY = centerY + ((vY / magV) * radius);
-			return new Point2D((float) pointX, (float) pointY);
-		}
+		final float vX = x - centerX;
+		final float vY = y - centerY;
+		final double magV = MathUtil.getDistance(centerX, centerY, x, y);
+		final double pointX = centerX + ((vX / magV) * radius);
+		final double pointY = centerY + ((vY / magV) * radius);
+		return new Point2D((float) pointX, (float) pointY);
 	}
 	
 	@Override

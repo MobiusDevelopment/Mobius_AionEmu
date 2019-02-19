@@ -70,16 +70,13 @@ public class Fissure_Of_Memory_AAI2 extends NpcAI2
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_HOUSING_CANT_OWN_NOT_COMPLETE_QUEST(26804));
 				return true;
 			}
-			else
+			WorldMapInstance cradleOfEternity = InstanceService.getRegisteredInstance(301550000, group.getTeamId());
+			if (cradleOfEternity == null)
 			{
-				WorldMapInstance cradleOfEternity = InstanceService.getRegisteredInstance(301550000, group.getTeamId());
-				if (cradleOfEternity == null)
-				{
-					cradleOfEternity = InstanceService.getNextAvailableInstance(301550000);
-					InstanceService.registerGroupWithInstance(cradleOfEternity, group);
-				}
-				TeleportService2.teleportTo(player, 301550000, cradleOfEternity.getInstanceId(), 1477.0000f, 774.0000f, 1035.0000f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
+				cradleOfEternity = InstanceService.getNextAvailableInstance(301550000);
+				InstanceService.registerGroupWithInstance(cradleOfEternity, group);
 			}
+			TeleportService2.teleportTo(player, 301550000, cradleOfEternity.getInstanceId(), 1477.0000f, 774.0000f, 1035.0000f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
 		}
 		return true;
 	}

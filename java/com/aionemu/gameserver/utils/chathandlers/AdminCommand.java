@@ -88,9 +88,6 @@ public abstract class AdminCommand extends ChatCommand
 			PacketSendUtility.sendMessage(player, "<You have failed to execute " + text + ">");
 			return true;
 		}
-		else
-		{
-			return success;
-		}
+		return success;
 	}
 }

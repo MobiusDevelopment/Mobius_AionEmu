@@ -59,10 +59,7 @@ public class _3547Enemy_Harassing_The_Elim extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -98,10 +95,7 @@ public class _3547Enemy_Harassing_The_Elim extends QuestHandler
 							changeQuestStep(env, 1, 1, true);
 							return sendQuestDialog(env, 5);
 						}
-						else
-						{
-							return closeDialogWindow(env);
-						}
+						return closeDialogWindow(env);
 					}
 				}
 			}

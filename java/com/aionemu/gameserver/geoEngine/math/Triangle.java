@@ -364,10 +364,7 @@ public class Triangle extends AbstractTriangle implements Reusable
 		{
 			return (Triangle) FACTORY.object();
 		}
-		else
-		{
-			return new Triangle();
-		}
+		return new Triangle();
 	}
 	
 	/**

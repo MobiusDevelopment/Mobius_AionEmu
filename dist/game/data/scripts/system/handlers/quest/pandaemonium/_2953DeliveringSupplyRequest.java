@@ -61,10 +61,7 @@ public class _2953DeliveringSupplyRequest extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182207039, 1);
-				}
+				return sendQuestStartDialog(env, 182207039, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

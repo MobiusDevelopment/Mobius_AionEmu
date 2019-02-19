@@ -71,10 +71,7 @@ public class _11294Spawning_An_Investigation extends QuestHandler
 					{
 						return sendQuestStartDialog(env);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
 				else
 				{

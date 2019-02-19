@@ -60,10 +60,7 @@ public class _25060Take_Down_The_Barricade extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -92,10 +89,7 @@ public class _25060Take_Down_The_Barricade extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;
@@ -132,10 +126,7 @@ public class _25060Take_Down_The_Barricade extends QuestHandler
 								updateQuestStatus(env);
 								return true;
 							}
-							else
-							{
-								return defaultOnKillEvent(env, 220033, 0, 1, 1);
-							}
+							return defaultOnKillEvent(env, 220033, 0, 1, 1);
 						}
 						break;
 					}
@@ -154,10 +145,7 @@ public class _25060Take_Down_The_Barricade extends QuestHandler
 								updateQuestStatus(env);
 								return true;
 							}
-							else
-							{
-								return defaultOnKillEvent(env, 220034, 0, 1, 2);
-							}
+							return defaultOnKillEvent(env, 220034, 0, 1, 2);
 						}
 						break;
 					}
@@ -176,10 +164,7 @@ public class _25060Take_Down_The_Barricade extends QuestHandler
 								updateQuestStatus(env);
 								return true;
 							}
-							else
-							{
-								return defaultOnKillEvent(env, 220035, 0, 1, 3);
-							}
+							return defaultOnKillEvent(env, 220035, 0, 1, 3);
 						}
 						break;
 					}

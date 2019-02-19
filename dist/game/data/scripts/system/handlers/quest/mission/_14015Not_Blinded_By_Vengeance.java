@@ -91,10 +91,7 @@ public class _14015Not_Blinded_By_Vengeance extends QuestHandler
 						updateQuestStatus(env);
 						return sendQuestDialog(env, 5);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1097);
-					}
+					return sendQuestDialog(env, 1097);
 				}
 			}
 		}

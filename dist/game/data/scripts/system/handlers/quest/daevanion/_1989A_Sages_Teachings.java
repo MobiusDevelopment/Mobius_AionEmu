@@ -77,10 +77,7 @@ public class _1989A_Sages_Teachings extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -103,10 +100,7 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestDialog(env, 1352);
 							}
-							else
-							{
-								return sendQuestDialog(env, 1438);
-							}
+							return sendQuestDialog(env, 1438);
 						}
 						case STEP_TO_1:
 						{
@@ -128,10 +122,7 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestDialog(env, 1693);
 							}
-							else
-							{
-								return sendQuestDialog(env, 1779);
-							}
+							return sendQuestDialog(env, 1779);
 						}
 						case STEP_TO_1:
 						{
@@ -153,10 +144,7 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestDialog(env, 2034);
 							}
-							else
-							{
-								return sendQuestDialog(env, 2120);
-							}
+							return sendQuestDialog(env, 2120);
 						}
 						case STEP_TO_1:
 						{
@@ -178,10 +166,7 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestDialog(env, 2375);
 							}
-							else
-							{
-								return sendQuestDialog(env, 2461);
-							}
+							return sendQuestDialog(env, 2461);
 						}
 						case STEP_TO_1:
 						{
@@ -203,10 +188,7 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestDialog(env, 2548);
 							}
-							else
-							{
-								return sendQuestDialog(env, 2568);
-							}
+							return sendQuestDialog(env, 2568);
 						}
 						case STEP_TO_1:
 						{
@@ -228,10 +210,7 @@ public class _1989A_Sages_Teachings extends QuestHandler
 							{
 								return sendQuestDialog(env, 2633);
 							}
-							else
-							{
-								return sendQuestDialog(env, 2653);
-							}
+							return sendQuestDialog(env, 2653);
 						}
 						case STEP_TO_1:
 						{
@@ -263,10 +242,7 @@ public class _1989A_Sages_Teachings extends QuestHandler
 								{
 									return sendQuestDialog(env, 3484);
 								}
-								else
-								{
-									return sendQuestDialog(env, 3398);
-								}
+								return sendQuestDialog(env, 3398);
 							}
 							else if (var == 4)
 							{
@@ -274,10 +250,7 @@ public class _1989A_Sages_Teachings extends QuestHandler
 								{
 									return sendQuestDialog(env, 3825);
 								}
-								else
-								{
-									return sendQuestDialog(env, 3739);
-								}
+								return sendQuestDialog(env, 3739);
 							}
 						}
 						case SELECT_REWARD:

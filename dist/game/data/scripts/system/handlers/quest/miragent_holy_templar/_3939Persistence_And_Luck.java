@@ -75,10 +75,7 @@ public class _3939Persistence_And_Luck extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -137,10 +134,7 @@ public class _3939Persistence_And_Luck extends QuestHandler
 							{
 								return defaultCloseDialog(env, 1, 2, 122001274, 1, 0, 0);
 							}
-							else
-							{
-								return sendQuestDialog(env, 1438);
-							}
+							return sendQuestDialog(env, 1438);
 						}
 						case FINISH_DIALOG:
 						{
@@ -175,10 +169,7 @@ public class _3939Persistence_And_Luck extends QuestHandler
 								removeQuestItem(env, 186000080, 1);
 								return defaultCloseDialog(env, 3, 3, true, false, 0);
 							}
-							else
-							{
-								return sendQuestDialog(env, 2120);
-							}
+							return sendQuestDialog(env, 2120);
 						}
 						case FINISH_DIALOG:
 						{
@@ -201,10 +192,7 @@ public class _3939Persistence_And_Luck extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

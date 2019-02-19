@@ -148,10 +148,7 @@ public class EffectController
 										{
 											return;
 										}
-										else
-										{
-											effect.endEffect();
-										}
+										effect.endEffect();
 									}
 								}
 							}
@@ -755,10 +752,7 @@ public class EffectController
 		{
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	/**
@@ -1022,10 +1016,7 @@ public class EffectController
 			{
 				return TransformType.AVATAR;
 			}
-			else
-			{
-				return eff.getTransformType();
-			}
+			return eff.getTransformType();
 		}
 		return TransformType.NONE;
 	}
@@ -1129,10 +1120,7 @@ public class EffectController
 								}
 								return true;
 							}
-							else
-							{
-								effect.endEffect();
-							}
+							effect.endEffect();
 						}
 					}
 				}

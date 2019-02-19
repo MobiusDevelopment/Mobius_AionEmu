@@ -63,10 +63,7 @@ public class _2611Consulting_The_Leaders extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 			else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 			{

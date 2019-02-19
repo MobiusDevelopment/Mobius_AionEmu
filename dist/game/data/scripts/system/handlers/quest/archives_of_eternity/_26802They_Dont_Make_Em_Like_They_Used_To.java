@@ -136,10 +136,7 @@ public class _26802They_Dont_Make_Em_Like_They_Used_To extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

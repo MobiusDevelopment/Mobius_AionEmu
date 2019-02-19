@@ -73,10 +73,7 @@ public class _1724ReaperExpertise extends QuestHandler
 					{
 						return sendQuestStartDialog(env);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
 				else
 				{

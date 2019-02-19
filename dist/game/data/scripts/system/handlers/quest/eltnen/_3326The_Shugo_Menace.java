@@ -65,10 +65,7 @@ public class _3326The_Shugo_Menace extends QuestHandler
 				{
 					return sendQuestDialog(env, 4);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -107,10 +104,7 @@ public class _3326The_Shugo_Menace extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

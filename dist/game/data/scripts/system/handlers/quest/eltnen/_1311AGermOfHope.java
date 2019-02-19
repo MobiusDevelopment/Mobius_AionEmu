@@ -70,10 +70,7 @@ public class _1311AGermOfHope extends QuestHandler
 					{
 						return sendQuestDialog(env, 4);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
 				else
 				{

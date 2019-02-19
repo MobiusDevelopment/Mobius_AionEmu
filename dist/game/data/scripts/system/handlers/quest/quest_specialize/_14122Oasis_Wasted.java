@@ -59,10 +59,7 @@ public class _14122Oasis_Wasted extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182215480, 1);
-				}
+				return sendQuestStartDialog(env, 182215480, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

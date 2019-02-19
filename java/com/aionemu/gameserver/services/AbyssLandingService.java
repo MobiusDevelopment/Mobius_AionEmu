@@ -182,10 +182,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setBasePoints(loc.getBasePoints() - points);
-					}
+					loc.setBasePoints(loc.getBasePoints() - points);
 					break;
 				}
 				case SIEGE:
@@ -194,10 +191,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setSiegePoints(loc.getSiegePoints() - points);
-					}
+					loc.setSiegePoints(loc.getSiegePoints() - points);
 					break;
 				}
 				case COMMANDER:
@@ -206,10 +200,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setCommanderPoints(loc.getCommanderPoints() - points);
-					}
+					loc.setCommanderPoints(loc.getCommanderPoints() - points);
 					break;
 				}
 				case ARTIFACT:
@@ -218,10 +209,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setArtifactPoints(loc.getArtifactPoints() - points);
-					}
+					loc.setArtifactPoints(loc.getArtifactPoints() - points);
 					break;
 				}
 				case QUEST:
@@ -230,10 +218,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setQuestPoints(loc.getQuestPoints() - (points * questRate));
-					}
+					loc.setQuestPoints(loc.getQuestPoints() - (points * questRate));
 					break;
 				}
 				case MONUMENT:
@@ -242,10 +227,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setMonumentsPoints(loc.getMonumentsPoints() - points);
-					}
+					loc.setMonumentsPoints(loc.getMonumentsPoints() - points);
 					break;
 				}
 				case FACILITY:
@@ -254,10 +236,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setFacilityPoints(loc.getFacilityPoints() - points);
-					}
+					loc.setFacilityPoints(loc.getFacilityPoints() - points);
 					break;
 				}
 			}
@@ -329,10 +308,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setBasePoints(loc.getBasePoints() - points);
-					}
+					loc.setBasePoints(loc.getBasePoints() - points);
 					break;
 				}
 				case SIEGE:
@@ -341,10 +317,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setSiegePoints(loc.getSiegePoints() - points);
-					}
+					loc.setSiegePoints(loc.getSiegePoints() - points);
 					break;
 				}
 				case COMMANDER:
@@ -353,10 +326,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setCommanderPoints(loc.getCommanderPoints() - points);
-					}
+					loc.setCommanderPoints(loc.getCommanderPoints() - points);
 					break;
 				}
 				case ARTIFACT:
@@ -365,10 +335,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setArtifactPoints(loc.getArtifactPoints() - points);
-					}
+					loc.setArtifactPoints(loc.getArtifactPoints() - points);
 					break;
 				}
 				case QUEST:
@@ -377,10 +344,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setQuestPoints(loc.getQuestPoints() - (points * questRate));
-					}
+					loc.setQuestPoints(loc.getQuestPoints() - (points * questRate));
 					break;
 				}
 				case MONUMENT:
@@ -389,10 +353,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setMonumentsPoints(loc.getMonumentsPoints() - points);
-					}
+					loc.setMonumentsPoints(loc.getMonumentsPoints() - points);
 					break;
 				}
 				case FACILITY:
@@ -401,10 +362,7 @@ public class AbyssLandingService
 					{
 						return;
 					}
-					else
-					{
-						loc.setFacilityPoints(loc.getFacilityPoints() - points);
-					}
+					loc.setFacilityPoints(loc.getFacilityPoints() - points);
 					break;
 				}
 			}

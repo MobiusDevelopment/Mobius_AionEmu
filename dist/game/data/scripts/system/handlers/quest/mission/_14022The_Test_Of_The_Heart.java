@@ -131,10 +131,7 @@ public class _14022The_Test_Of_The_Heart extends QuestHandler
 				{
 					return sendQuestDialog(env, 2716);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

@@ -215,10 +215,7 @@ public class Npc extends Creature
 		{
 			return true;
 		}
-		else
-		{
-			return ((creature instanceof Npc) && guardAgainst((Npc) creature));
-		}
+		return ((creature instanceof Npc) && guardAgainst((Npc) creature));
 	}
 	
 	/**
@@ -528,37 +525,32 @@ public class Npc extends Creature
 		final SM_SYSTEM_MESSAGE message = new SM_SYSTEM_MESSAGE(true, shout.getStringId(), getObjectId(), 1, param);
 		lastShoutedSeconds = System.currentTimeMillis() / 1000;
 		
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			
-			@Override
-			public void run()
+			if (thisNpc.getLifeStats().isAlreadyDead() && (shout.getWhen() != ShoutEventType.DIED) && (shout.getWhen() != ShoutEventType.BEFORE_DESPAWN))
 			{
-				if (thisNpc.getLifeStats().isAlreadyDead() && (shout.getWhen() != ShoutEventType.DIED) && (shout.getWhen() != ShoutEventType.BEFORE_DESPAWN))
+				return;
+			}
+			
+			// message for the specific player (when IDLE we are already broadcasting!!!)
+			if ((shout.getShoutType() == ShoutType.SAY) || (shout.getWhen() == ShoutEventType.IDLE))
+			{
+				// [RR] Should we have lastShoutedSeconds separated from broadcasts (??)
+				PacketSendUtility.sendPacket((Player) target, message);
+			}
+			else
+			{
+				final Iterator<Player> iter = thisNpc.getKnownList().getKnownPlayers().values().iterator();
+				while (iter.hasNext())
 				{
-					return;
-				}
-				
-				// message for the specific player (when IDLE we are already broadcasting!!!)
-				if ((shout.getShoutType() == ShoutType.SAY) || (shout.getWhen() == ShoutEventType.IDLE))
-				{
-					// [RR] Should we have lastShoutedSeconds separated from broadcasts (??)
-					PacketSendUtility.sendPacket((Player) target, message);
-				}
-				else
-				{
-					final Iterator<Player> iter = thisNpc.getKnownList().getKnownPlayers().values().iterator();
-					while (iter.hasNext())
+					final Player kObj = iter.next();
+					if (kObj.getLifeStats().isAlreadyDead() || !kObj.isOnline())
 					{
-						final Player kObj = iter.next();
-						if (kObj.getLifeStats().isAlreadyDead() || !kObj.isOnline())
-						{
-							continue;
-						}
-						if (MathUtil.isIn3dRange(kObj, thisNpc, shoutRange))
-						{
-							PacketSendUtility.sendPacket(kObj, message);
-						}
+						continue;
+					}
+					if (MathUtil.isIn3dRange(kObj, thisNpc, shoutRange))
+					{
+						PacketSendUtility.sendPacket(kObj, message);
 					}
 				}
 			}

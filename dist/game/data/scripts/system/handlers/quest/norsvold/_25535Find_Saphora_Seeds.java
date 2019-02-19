@@ -99,10 +99,7 @@ public class _25535Find_Saphora_Seeds extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 					case FINISH_DIALOG:
 					{

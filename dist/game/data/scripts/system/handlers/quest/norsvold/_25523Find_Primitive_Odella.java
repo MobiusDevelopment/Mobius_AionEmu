@@ -99,10 +99,7 @@ public class _25523Find_Primitive_Odella extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 					case FINISH_DIALOG:
 					{

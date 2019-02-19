@@ -120,24 +120,21 @@ public class _10500Expedition_Coalition extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
+				final int[] cygneaMission =
 				{
-					final int[] cygneaMission =
-					{
-						10501,
-						10502,
-						10503,
-						10504,
-						10505,
-						10506,
-						10507
-					};
-					for (int quest : cygneaMission)
-					{
-						QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
-					}
-					return sendQuestEndDialog(env);
+					10501,
+					10502,
+					10503,
+					10504,
+					10505,
+					10506,
+					10507
+				};
+				for (int quest : cygneaMission)
+				{
+					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
 				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

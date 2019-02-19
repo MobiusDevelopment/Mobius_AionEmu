@@ -93,10 +93,7 @@ public class _24053The_Mauling_Of_The_Mau extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 			return false;
 		}

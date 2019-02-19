@@ -132,9 +132,6 @@ public class AdminService
 			
 			return value;
 		}
-		else
-		{
-			return true;
-		}
+		return true;
 	}
 }

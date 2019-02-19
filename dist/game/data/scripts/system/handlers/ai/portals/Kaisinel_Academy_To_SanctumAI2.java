@@ -57,10 +57,7 @@ public class Kaisinel_Academy_To_SanctumAI2 extends NpcAI2
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_HOUSING_CANT_OWN_NOT_COMPLETE_QUEST(10521)); // 다시 찾은 기억.
 				return true;
 			}
-			else
-			{
-				TeleportService2.teleportTo(player, 210100000, 1451.8922f, 1297.8304f, 335.6076f, (byte) 65, TeleportAnimation.BEAM_ANIMATION);
-			}
+			TeleportService2.teleportTo(player, 210100000, 1451.8922f, 1297.8304f, 335.6076f, (byte) 65, TeleportAnimation.BEAM_ANIMATION);
 		}
 		return true;
 	}

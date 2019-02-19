@@ -71,11 +71,8 @@ public class _19666To_Iluma extends QuestHandler
 						{ // Abbey Return Stone.
 							return sendQuestDialog(env, 4762);
 						}
-						else
-						{
-							PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
-							return true;
-						}
+						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
+						return true;
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
@@ -125,10 +122,7 @@ public class _19666To_Iluma extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

@@ -101,10 +101,7 @@ public class _21467SpawningTheSapSuckers extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env, rewInd);
-				}
+				return sendQuestEndDialog(env, rewInd);
 			}
 		}
 		return false;

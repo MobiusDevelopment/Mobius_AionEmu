@@ -128,15 +128,9 @@ public class ReportToMany extends QuestHandler
 					{
 						return sendQuestDialog(env, startDialog);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1011);
-					}
+					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

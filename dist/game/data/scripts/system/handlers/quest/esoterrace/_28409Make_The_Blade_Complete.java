@@ -63,10 +63,7 @@ public class _28409Make_The_Blade_Complete extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (targetId == 799557)

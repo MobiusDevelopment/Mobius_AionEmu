@@ -20,7 +20,6 @@ import static ch.lambdaj.Lambda.maxFrom;
 import static ch.lambdaj.Lambda.on;
 import static ch.lambdaj.Lambda.sort;
 
-import java.util.Comparator;
 import java.util.List;
 
 import org.apache.commons.lang.mutable.MutableInt;
@@ -34,7 +33,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_SCORE;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Rinzler (Encom)
@@ -73,10 +71,7 @@ public class EngulfedOphidanBridgeReward extends InstanceReward<EngulfedOphidanB
 		{
 			return isWin ? (Win + TimeUp) : (Loss + TimeUp);
 		}
-		else
-		{
-			return isWin ? Win : Loss;
-		}
+		return isWin ? Win : Loss;
 	}
 	
 	public int GloryReward(boolean isWin, boolean isTimeUp)
@@ -88,10 +83,7 @@ public class EngulfedOphidanBridgeReward extends InstanceReward<EngulfedOphidanB
 		{
 			return isWin ? (Win + TimeUp) : (Loss + TimeUp);
 		}
-		else
-		{
-			return isWin ? Win : Loss;
-		}
+		return isWin ? Win : Loss;
 	}
 	
 	public int ExpReward(boolean isWin, boolean isTimeUp)
@@ -103,22 +95,12 @@ public class EngulfedOphidanBridgeReward extends InstanceReward<EngulfedOphidanB
 		{
 			return isWin ? (Win + TimeUp) : (Loss + TimeUp);
 		}
-		else
-		{
-			return isWin ? Win : Loss;
-		}
+		return isWin ? Win : Loss;
 	}
 	
 	public List<EngulfedOphidanBridgePlayerReward> sortPoints()
 	{
-		return sort(getInstanceRewards(), on(PvPArenaPlayerReward.class).getScorePoints(), new Comparator<Integer>()
-		{
-			@Override
-			public int compare(Integer o1, Integer o2)
-			{
-				return o2 != null ? o2.compareTo(o1) : -o1.compareTo(o2);
-			}
-		});
+		return sort(getInstanceRewards(), on(PvPArenaPlayerReward.class).getScorePoints(), (o1, o2) -> o2 != null ? o2.compareTo(o1) : -o1.compareTo(o2));
 	}
 	
 	private void setStartPositions()
@@ -214,23 +196,19 @@ public class EngulfedOphidanBridgeReward extends InstanceReward<EngulfedOphidanB
 	
 	public void sendPacket(int type, Integer object)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
+		instance.doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			switch (player.getWorldId())
 			{
-				switch (player.getWorldId())
+				case 301210000: // Engulfed Ophidan Bridge 4.7
 				{
-					case 301210000: // Engulfed Ophidan Bridge 4.7
-					{
-						PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(type, getTime(), getInstanceReward(), object));
-						break;
-					}
-					case 301670000: // Ophidan Warpath 5.1
-					{
-						PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(type, getTime2(), getInstanceReward(), object));
-						break;
-					}
+					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(type, getTime(), getInstanceReward(), object));
+					break;
+				}
+				case 301670000: // Ophidan Warpath 5.1
+				{
+					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(type, getTime2(), getInstanceReward(), object));
+					break;
 				}
 			}
 		});

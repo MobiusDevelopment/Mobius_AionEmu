@@ -64,10 +64,7 @@ public class _3936Decorations_Of_Sanctum extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -113,10 +110,7 @@ public class _3936Decorations_Of_Sanctum extends QuestHandler
 								changeQuestStep(env, 1, 1, true);
 								return sendQuestDialog(env, 5);
 							}
-							else
-							{
-								return sendQuestDialog(env, 10001);
-							}
+							return sendQuestDialog(env, 10001);
 						}
 					}
 					break;

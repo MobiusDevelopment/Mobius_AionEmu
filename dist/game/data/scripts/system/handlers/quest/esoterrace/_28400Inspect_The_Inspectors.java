@@ -58,10 +58,7 @@ public class _28400Inspect_The_Inspectors extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if ((targetId == 799587) || (targetId == 799588))

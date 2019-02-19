@@ -60,10 +60,7 @@ public class _25639Primordial_Creatures_At_Nightbloom_Forest extends QuestHandle
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

@@ -83,15 +83,9 @@ public class _1990A_Sages_Gift extends QuestHandler
 					{
 						return sendQuestDialog(env, 4762);
 					}
-					else
-					{
-						return sendQuestDialog(env, 4848);
-					}
+					return sendQuestDialog(env, 4848);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -133,10 +127,7 @@ public class _1990A_Sages_Gift extends QuestHandler
 							changeQuestStep(env, 3, 3, true);
 							return sendQuestDialog(env, 5);
 						}
-						else
-						{
-							return sendQuestDialog(env, 2120);
-						}
+						return sendQuestDialog(env, 2120);
 					}
 					case STEP_TO_2:
 					{

@@ -72,10 +72,7 @@ public class _1122DeliveringPernossRobe extends QuestHandler
 					{
 						return sendQuestStartDialog(env);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
 				else
 				{
@@ -106,10 +103,7 @@ public class _1122DeliveringPernossRobe extends QuestHandler
 							removeQuestItem(env, 182200216, 1);
 							return sendQuestDialog(env, 1523);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1608);
-						}
+						return sendQuestDialog(env, 1608);
 					}
 					case STEP_TO_2:
 					{
@@ -123,10 +117,7 @@ public class _1122DeliveringPernossRobe extends QuestHandler
 							removeQuestItem(env, 182200216, 1);
 							return sendQuestDialog(env, 1438);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1608);
-						}
+						return sendQuestDialog(env, 1608);
 					}
 					case STEP_TO_3:
 					{
@@ -140,10 +131,7 @@ public class _1122DeliveringPernossRobe extends QuestHandler
 							removeQuestItem(env, 182200216, 1);
 							return sendQuestDialog(env, 1353);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1608);
-						}
+						return sendQuestDialog(env, 1608);
 					}
 					default:
 					{

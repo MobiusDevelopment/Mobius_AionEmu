@@ -73,17 +73,12 @@ public class _1466RespectForDeltras extends QuestHandler
 			return HandlerResult.UNKNOWN;
 		}
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 3000, 0, 0), true);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			
-			@Override
-			public void run()
-			{
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
-				player.getInventory().decreaseByObjectId(itemObjId, 1);
-				qs.setStatus(QuestStatus.REWARD);
-				updateQuestStatus(env);
-			}
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
+			player.getInventory().decreaseByObjectId(itemObjId, 1);
+			qs.setStatus(QuestStatus.REWARD);
+			updateQuestStatus(env);
 		}, 3000);
 		return HandlerResult.SUCCESS;
 	}
@@ -112,10 +107,7 @@ public class _1466RespectForDeltras extends QuestHandler
 					{
 						return sendQuestStartDialog(env);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
 				else
 				{

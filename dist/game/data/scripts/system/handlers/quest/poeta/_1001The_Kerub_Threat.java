@@ -144,20 +144,14 @@ public class _1001The_Kerub_Threat extends QuestHandler
 								{
 									return sendQuestDialog(env, 1694);
 								}
-								else
-								{
-									removeQuestItem(env, 182200001, itemCount);
-									qs.setQuestVarById(0, var + 1);
-									qs.setStatus(QuestStatus.REWARD);
-									updateQuestStatus(env);
-									PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
-									return true;
-								}
+								removeQuestItem(env, 182200001, itemCount);
+								qs.setQuestVarById(0, var + 1);
+								qs.setStatus(QuestStatus.REWARD);
+								updateQuestStatus(env);
+								PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
+								return true;
 							}
-							else
-							{
-								return sendQuestDialog(env, 1779);
-							}
+							return sendQuestDialog(env, 1779);
 						}
 					}
 						return true;

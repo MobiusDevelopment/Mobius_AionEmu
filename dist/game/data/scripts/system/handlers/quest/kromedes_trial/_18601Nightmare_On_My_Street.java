@@ -72,10 +72,7 @@ public class _18601Nightmare_On_My_Street extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182213002, 1);
-				}
+				return sendQuestStartDialog(env, 182213002, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

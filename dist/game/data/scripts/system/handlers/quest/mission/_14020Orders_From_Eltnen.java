@@ -71,10 +71,7 @@ public class _14020Orders_From_Eltnen extends QuestHandler
 				updateQuestStatus(env);
 				return sendQuestDialog(env, 1011);
 			}
-			else
-			{
-				return sendQuestStartDialog(env);
-			}
+			return sendQuestStartDialog(env);
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{

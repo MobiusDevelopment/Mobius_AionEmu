@@ -71,10 +71,7 @@ public class _21296Padmarashka_Legacy extends QuestHandler
 					{
 						return sendQuestStartDialog(env);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
 				else
 				{

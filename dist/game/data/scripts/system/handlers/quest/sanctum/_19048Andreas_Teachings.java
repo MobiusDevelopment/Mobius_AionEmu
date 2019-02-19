@@ -57,10 +57,7 @@ public class _19048Andreas_Teachings extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182212216, 1);
-				}
+				return sendQuestStartDialog(env, 182212216, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

@@ -190,10 +190,7 @@ public class _1004Neutralizing_Odium extends QuestHandler
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 1694);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1779);
-						}
+						return sendQuestDialog(env, 1779);
 					}
 				}
 			}

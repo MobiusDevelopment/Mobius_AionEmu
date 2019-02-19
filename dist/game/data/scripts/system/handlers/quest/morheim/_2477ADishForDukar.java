@@ -112,11 +112,8 @@ public class _2477ADishForDukar extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					removeQuestItem(env, 182204197, 1);
-					return sendQuestEndDialog(env);
-				}
+				removeQuestItem(env, 182204197, 1);
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

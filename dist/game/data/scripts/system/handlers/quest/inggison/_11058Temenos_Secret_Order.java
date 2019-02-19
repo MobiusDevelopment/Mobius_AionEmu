@@ -86,10 +86,7 @@ public class _11058Temenos_Secret_Order extends QuestHandler
 						player.getInventory().decreaseKinah(20000000);
 						return sendQuestDialog(env, 5);
 					}
-					else
-					{
-						return sendQuestDialog(env, 3739);
-					}
+					return sendQuestDialog(env, 3739);
 				}
 				else
 				{

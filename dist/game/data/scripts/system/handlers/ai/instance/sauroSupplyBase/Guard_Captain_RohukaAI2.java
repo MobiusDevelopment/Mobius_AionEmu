@@ -96,10 +96,7 @@ public class Guard_Captain_RohukaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			SkillEngine.getInstance().getSkill(getOwner(), 21135, 60, getOwner()).useNoAnimationSkill(); // Beritra's Favor.
-		}
+		SkillEngine.getInstance().getSkill(getOwner(), 21135, 60, getOwner()).useNoAnimationSkill(); // Beritra's Favor.
 	}
 	
 	private void stage2()
@@ -109,11 +106,8 @@ public class Guard_Captain_RohukaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			skill();
-			scheduleDelayStage2(delay);
-		}
+		skill();
+		scheduleDelayStage2(delay);
 	}
 	
 	private void skill()
@@ -128,10 +122,7 @@ public class Guard_Captain_RohukaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage2(), delay);
-		}
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> stage2(), delay);
 	}
 	
 	private void stage3()
@@ -141,10 +132,7 @@ public class Guard_Captain_RohukaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			scheduleDelayStage3(delay);
-		}
+		scheduleDelayStage3(delay);
 	}
 	
 	private void scheduleDelayStage3(int delay)
@@ -153,14 +141,11 @@ public class Guard_Captain_RohukaAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
+		ThreadPoolManager.getInstance().schedule((Runnable) () ->
 		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () ->
-			{
-				getRandomTarget();
-				stage3();
-			}, delay);
-		}
+			getRandomTarget();
+			stage3();
+		}, delay);
 	}
 	
 	void getRandomTarget()

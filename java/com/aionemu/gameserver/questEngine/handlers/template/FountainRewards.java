@@ -80,26 +80,20 @@ public class FountainRewards extends QuestHandler
 						{
 							return true;
 						}
-						else
-						{
-							if ((targetId == 730142) || // Teminon Coin Fountain.
-								(targetId == 730143) || // Primum Coin Fountain.
-								(targetId == 730241) || // Inggison Coin Fountain.
-								(targetId == 730242) || // Gelkmaros Coin Fountain.
-								(targetId == 701429) || // Oriel Coin Fountain.
-								(targetId == 701430) || // Pernon Coin Fountain.
-								(targetId == 804759) || // Enshar Coin Fountain.
-								(targetId == 804788) || // Cygnea Coin Fountain.
-								(targetId == 805778) || // Iluma Coin Fountain.
-								(targetId == 805753))
-							{ // Norsvold Coin Fountain.
-								return sendQuestDialog(env, 1011);
-							}
-							else
-							{
-								return sendQuestSelectionDialog(env);
-							}
+						if ((targetId == 730142) || // Teminon Coin Fountain.
+							(targetId == 730143) || // Primum Coin Fountain.
+							(targetId == 730241) || // Inggison Coin Fountain.
+							(targetId == 730242) || // Gelkmaros Coin Fountain.
+							(targetId == 701429) || // Oriel Coin Fountain.
+							(targetId == 701430) || // Pernon Coin Fountain.
+							(targetId == 804759) || // Enshar Coin Fountain.
+							(targetId == 804788) || // Cygnea Coin Fountain.
+							(targetId == 805778) || // Iluma Coin Fountain.
+							(targetId == 805753))
+						{ // Norsvold Coin Fountain.
+							return sendQuestDialog(env, 1011);
 						}
+						return sendQuestSelectionDialog(env);
 					}
 					case STEP_TO_1:
 					{

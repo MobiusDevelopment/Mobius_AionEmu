@@ -80,10 +80,7 @@ public class _11070CraftyMessenger extends QuestHandler
 					{
 						return sendQuestStartDialog(env);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
 				else
 				{

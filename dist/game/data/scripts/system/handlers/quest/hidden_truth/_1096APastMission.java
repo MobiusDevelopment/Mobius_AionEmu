@@ -134,10 +134,7 @@ public class _1096APastMission extends QuestHandler
 				{
 					return sendQuestDialog(env, 1693);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

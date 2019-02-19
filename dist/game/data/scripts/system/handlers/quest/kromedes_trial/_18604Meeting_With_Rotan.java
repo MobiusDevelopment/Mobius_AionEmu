@@ -70,12 +70,9 @@ public class _18604Meeting_With_Rotan extends QuestHandler
 					env.setQuestId(0);
 					return sendQuestDialog(env, 27);
 				}
-				else
-				{
-					env.setQuestId(0);
-					giveQuestItem(env, 164000141, 1);
-					return sendQuestDialog(env, 1012);
-				}
+				env.setQuestId(0);
+				giveQuestItem(env, 164000141, 1);
+				return sendQuestDialog(env, 1012);
 			}
 		}
 		return false;

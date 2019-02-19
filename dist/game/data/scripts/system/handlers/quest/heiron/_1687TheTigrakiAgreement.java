@@ -68,10 +68,7 @@ public class _1687TheTigrakiAgreement extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -95,10 +92,7 @@ public class _1687TheTigrakiAgreement extends QuestHandler
 							removeQuestItem(env, 186000036, 5);
 							return sendQuestDialog(env, 1352); // choose your reward
 						}
-						else
-						{
-							return sendQuestDialog(env, 1097);
-						}
+						return sendQuestDialog(env, 1097);
 					}
 					case FINISH_DIALOG:
 					{

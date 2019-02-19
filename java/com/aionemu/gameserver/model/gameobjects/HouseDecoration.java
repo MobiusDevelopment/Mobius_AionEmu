@@ -104,10 +104,7 @@ public class HouseDecoration extends AionObject
 		{
 			return false;
 		}
-		else
-		{
-			return ((HouseDecoration) object).getObjectId().equals(getObjectId());
-		}
+		return ((HouseDecoration) object).getObjectId().equals(getObjectId());
 	}
 	
 	@Override

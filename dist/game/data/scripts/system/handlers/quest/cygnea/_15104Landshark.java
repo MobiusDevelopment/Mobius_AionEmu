@@ -60,10 +60,7 @@ public class _15104Landshark extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -92,10 +89,7 @@ public class _15104Landshark extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;
@@ -137,10 +131,7 @@ public class _15104Landshark extends QuestHandler
 								updateQuestStatus(env);
 								return true;
 							}
-							else
-							{
-								return defaultOnKillEvent(env, mobs, 4, 5, 1);
-							}
+							return defaultOnKillEvent(env, mobs, 4, 5, 1);
 						}
 						break;
 					}
@@ -159,10 +150,7 @@ public class _15104Landshark extends QuestHandler
 								updateQuestStatus(env);
 								return true;
 							}
-							else
-							{
-								return defaultOnKillEvent(env, 235947, 4, 5, 2);
-							}
+							return defaultOnKillEvent(env, 235947, 4, 5, 2);
 						}
 						break;
 					}

@@ -119,10 +119,7 @@ public class _2005Teaching_A_Lesson extends QuestHandler
 									updateQuestStatus(env);
 									return sendQuestDialog(env, 5);
 								}
-								else
-								{
-									return sendQuestDialog(env, 1693);
-								}
+								return sendQuestDialog(env, 1693);
 							}
 							break;
 						}

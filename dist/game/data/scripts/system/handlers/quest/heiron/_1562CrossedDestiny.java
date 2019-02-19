@@ -101,10 +101,7 @@ public class _1562CrossedDestiny extends QuestHandler
 							{
 								return sendQuestDialog(env, 1352);
 							}
-							else
-							{
-								return sendQuestDialog(env, 1438);
-							}
+							return sendQuestDialog(env, 1438);
 						}
 						case FINISH_DIALOG:
 						{
@@ -137,10 +134,7 @@ public class _1562CrossedDestiny extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

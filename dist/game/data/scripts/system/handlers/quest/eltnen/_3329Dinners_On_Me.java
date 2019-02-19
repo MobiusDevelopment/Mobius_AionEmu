@@ -69,10 +69,7 @@ public class _3329Dinners_On_Me extends QuestHandler
 		{
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	@Override
@@ -94,10 +91,7 @@ public class _3329Dinners_On_Me extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

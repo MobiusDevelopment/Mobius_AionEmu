@@ -141,10 +141,7 @@ public class _10101Dismal_Developments extends QuestHandler
 								changeQuestStep(env, 1, 2, false, 0);
 								return sendQuestDialog(env, 10000);
 							}
-							else
-							{
-								return sendQuestDialog(env, 10001);
-							}
+							return sendQuestDialog(env, 10001);
 						}
 					}
 					break;
@@ -231,10 +228,7 @@ public class _10101Dismal_Developments extends QuestHandler
 					removeQuestItem(env, 182215577, 1);
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

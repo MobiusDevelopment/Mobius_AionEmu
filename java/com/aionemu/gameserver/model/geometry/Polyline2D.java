@@ -262,10 +262,7 @@ class Polyline2D implements Shape, Cloneable, Serializable
 		{
 			return null;
 		}
-		else
-		{
-			return bounds.getBounds();
-		}
+		return bounds.getBounds();
 	}
 	
 	private void updateComputingPath()
@@ -390,10 +387,7 @@ class Polyline2D implements Shape, Cloneable, Serializable
 		{
 			return null;
 		}
-		else
-		{
-			return path.getPathIterator(at);
-		}
+		return path.getPathIterator(at);
 	}
 	
 	/*

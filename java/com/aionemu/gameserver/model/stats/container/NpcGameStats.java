@@ -466,10 +466,7 @@ public class NpcGameStats extends CreatureGameStats<Npc>
 		{
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	@Override

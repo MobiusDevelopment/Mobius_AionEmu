@@ -87,10 +87,7 @@ public class _4944Loyalty_And_Affableness extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -155,10 +152,7 @@ public class _4944Loyalty_And_Affableness extends QuestHandler
 							{
 								return checkItemExistence(env, 5, 5, false, 186000087, 1, true, 2718, 2887, 0, 0);
 							}
-							else
-							{
-								return sendQuestDialog(env, 2802);
-							}
+							return sendQuestDialog(env, 2802);
 						}
 						case SET_REWARD:
 						{
@@ -182,10 +176,7 @@ public class _4944Loyalty_And_Affableness extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

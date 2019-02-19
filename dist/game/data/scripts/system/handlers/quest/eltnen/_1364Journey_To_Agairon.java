@@ -65,10 +65,7 @@ public class _1364Journey_To_Agairon extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -102,10 +99,7 @@ public class _1364Journey_To_Agairon extends QuestHandler
 				{
 					return sendQuestDialog(env, 1352);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

@@ -202,10 +202,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 						{
 							return closeDialogWindow(env);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1003);
-						}
+						return sendQuestDialog(env, 1003);
 					}
 				}
 			}
@@ -285,10 +282,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 				{
 					return closeDialogWindow(env);
 				}
-				else
-				{
-					return sendQuestSelectionDialog(env);
-				}
+				return sendQuestSelectionDialog(env);
 			}
 			return false;
 		}
@@ -375,10 +369,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 			{
 				return closeDialogWindow(env);
 			}
-			else
-			{
-				return sendQuestSelectionDialog(env);
-			}
+			return sendQuestSelectionDialog(env);
 		}
 		return false;
 	}
@@ -418,10 +409,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 				changeQuestStep(env, step, nextStep, reward);
 				return sendQuestDialog(env, checkOkId);
 			}
-			else
-			{
-				return sendQuestDialog(env, checkFailId);
-			}
+			return sendQuestDialog(env, checkFailId);
 		}
 		return false;
 	}
@@ -455,10 +443,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 				changeQuestStep(env, step, nextStep, reward);
 				return sendQuestDialog(env, checkOkId);
 			}
-			else
-			{
-				return closeDialogWindow(env);
-			}
+			return closeDialogWindow(env);
 		}
 		return false;
 	}
@@ -496,10 +481,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 				changeQuestStep(env, step, nextStep, reward);
 				return sendQuestDialog(env, checkOkId);
 			}
-			else
-			{
-				return sendQuestDialog(env, checkFailId);
-			}
+			return sendQuestDialog(env, checkFailId);
 		}
 		return false;
 	}
@@ -526,10 +508,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 			}
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	public void sendEmotion(QuestEnv env, Creature emoteCreature, EmotionId emotion, boolean broadcast)
@@ -558,11 +537,8 @@ public abstract class QuestHandler extends AbstractQuestHandler
 				final int itemsToGive = (int) (itemCount - existentItemCount);
 				return (ItemService.addQuestItems(player, Collections.singletonList(new QuestItems(itemId, itemsToGive))));
 			}
-			else
-			{
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CAN_NOT_GET_LORE_ITEM((new DescriptionId(item.getNameId()))));
-				return true;
-			}
+			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CAN_NOT_GET_LORE_ITEM((new DescriptionId(item.getNameId()))));
+			return true;
 		}
 		return false;
 	}
@@ -842,10 +818,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 		{
 			return true;
 		}
-		else
-		{
-			return defaultCloseDialog(env, step, nextStep);
-		}
+		return defaultCloseDialog(env, step, nextStep);
 	}
 	
 	/**
@@ -873,10 +846,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 		{
 			return true;
 		}
-		else
-		{
-			return defaultCloseDialog(env, step, nextStep);
-		}
+		return defaultCloseDialog(env, step, nextStep);
 	}
 	
 	public boolean defaultStartFollowEvent(QuestEnv env, Npc follower, ZoneName zonename, int step, int nextStep)
@@ -893,10 +863,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 		{
 			return true;
 		}
-		else
-		{
-			return defaultCloseDialog(env, step, nextStep);
-		}
+		return defaultCloseDialog(env, step, nextStep);
 	}
 	
 	/**
@@ -1343,10 +1310,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 				{
 					return sendQuestDialog(env, reportDialogId);
 				}
-				else
-				{
-					return sendQuestEndDialog(env, rewardId);
-				}
+				return sendQuestEndDialog(env, rewardId);
 			}
 		}
 		return false;
@@ -1376,10 +1340,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 				{
 					return sendQuestDialog(env, dialogId);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		return false;
@@ -1417,20 +1378,11 @@ public abstract class QuestHandler extends AbstractQuestHandler
 						{
 							return sendQuestStartDialog(env);
 						}
-						else
-						{
-							return true;
-						}
+						return true;
 					}
-					else
-					{
-						return sendQuestStartDialog(env);
-					}
-				}
-				else
-				{
 					return sendQuestStartDialog(env);
 				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		return false;

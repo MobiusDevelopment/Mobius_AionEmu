@@ -60,10 +60,7 @@ public class _13708Proximity_Protect extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182215529, 1); // Proximity Alarm.
-				}
+				return sendQuestStartDialog(env, 182215529, 1); // Proximity Alarm.
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

@@ -69,10 +69,7 @@ public class _1482ATeleportationAdventure extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -105,10 +102,7 @@ public class _1482ATeleportationAdventure extends QuestHandler
 										updateQuestStatus(env);
 										return sendQuestDialog(env, 1352);
 									}
-									else
-									{
-										return sendQuestDialog(env, 10001);
-									}
+									return sendQuestDialog(env, 10001);
 								}
 								case 2:
 								{
@@ -151,10 +145,7 @@ public class _1482ATeleportationAdventure extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

@@ -91,16 +91,13 @@ public class _24052A_Frozen_City extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
+				final int[] questItems =
 				{
-					final int[] questItems =
-					{
-						182215378,
-						182215379,
-						182215380
-					};
-					return sendQuestEndDialog(env, questItems);
-				}
+					182215378,
+					182215379,
+					182215380
+				};
+				return sendQuestEndDialog(env, questItems);
 			}
 		}
 		else if (qs.getStatus() != QuestStatus.START)
@@ -176,34 +173,30 @@ public class _24052A_Frozen_City extends QuestHandler
 			return HandlerResult.FAILED;
 		}
 		PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 2000, 0, 0), true);
-		ThreadPoolManager.getInstance().schedule(new Runnable()
+		ThreadPoolManager.getInstance().schedule(() ->
 		{
-			@Override
-			public void run()
+			PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
+			if (qs.getQuestVarById(0) == 1)
 			{
-				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
-				if (qs.getQuestVarById(0) == 1)
-				{
-					playQuestMovie(env, 243);
-					removeQuestItem(env, id, 1);
-					qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
-					updateQuestStatus(env);
-				}
-				else if (qs.getQuestVarById(0) == 2)
-				{
-					playQuestMovie(env, 244);
-					removeQuestItem(env, id, 1);
-					qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
-					updateQuestStatus(env);
-				}
-				else if ((qs.getQuestVarById(0) == 3) && (qs.getStatus() != QuestStatus.COMPLETE) && (qs.getStatus() != QuestStatus.NONE))
-				{
-					removeQuestItem(env, id, 1);
-					playQuestMovie(env, 245);
-					QuestService.addNewSpawn(220040000, 1, 233864, 2060, 116, 370, (byte) 36); // Parasitic Ice Spirit.
-					qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
-					updateQuestStatus(env);
-				}
+				playQuestMovie(env, 243);
+				removeQuestItem(env, id, 1);
+				qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
+				updateQuestStatus(env);
+			}
+			else if (qs.getQuestVarById(0) == 2)
+			{
+				playQuestMovie(env, 244);
+				removeQuestItem(env, id, 1);
+				qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
+				updateQuestStatus(env);
+			}
+			else if ((qs.getQuestVarById(0) == 3) && (qs.getStatus() != QuestStatus.COMPLETE) && (qs.getStatus() != QuestStatus.NONE))
+			{
+				removeQuestItem(env, id, 1);
+				playQuestMovie(env, 245);
+				QuestService.addNewSpawn(220040000, 1, 233864, 2060, 116, 370, (byte) 36); // Parasitic Ice Spirit.
+				qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
+				updateQuestStatus(env);
 			}
 		}, 2000);
 		return HandlerResult.SUCCESS;

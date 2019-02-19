@@ -64,10 +64,7 @@ public class _18409Tiamat_Power_Unleashed extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (targetId == 799552)

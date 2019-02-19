@@ -189,10 +189,7 @@ public class _14043Drawling_Balaur extends QuestHandler
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 						return true;
 					}
-					else
-					{
-						return sendQuestDialog(env, 1355);
-					}
+					return sendQuestDialog(env, 1355);
 				}
 				case STEP_TO_12:
 				{

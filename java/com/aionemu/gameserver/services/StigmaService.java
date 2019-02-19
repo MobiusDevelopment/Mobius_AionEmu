@@ -106,10 +106,7 @@ public class StigmaService
 				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_STIGMA_NOT_ENOUGH_MONEY);
 				return false;
 			}
-			else
-			{
-				player.getInventory().decreaseKinah(getPriceByQuality(resultItem));
-			}
+			player.getInventory().decreaseKinah(getPriceByQuality(resultItem));
 			for (int i = 1; i <= player.getLevel(); i++)
 			{
 				final SkillLearnTemplate[] skillTemplates = DataManager.SKILL_TREE_DATA.getTemplatesFor(player.getPlayerClass(), i, player.getRace());

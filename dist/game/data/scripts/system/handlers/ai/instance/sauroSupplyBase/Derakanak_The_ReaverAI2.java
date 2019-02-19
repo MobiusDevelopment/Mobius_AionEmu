@@ -86,11 +86,8 @@ public class Derakanak_The_ReaverAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			SkillEngine.getInstance().getSkill(getOwner(), 17888, 60, getOwner()).useNoAnimationSkill(); // Fear Casting.
-			scheduleDelayStage1(delay);
-		}
+		SkillEngine.getInstance().getSkill(getOwner(), 17888, 60, getOwner()).useNoAnimationSkill(); // Fear Casting.
+		scheduleDelayStage1(delay);
 	}
 	
 	private void stage2()
@@ -100,11 +97,8 @@ public class Derakanak_The_ReaverAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{ // 16918: Flame Spurt & 16881: Magic Missile.
-			SkillEngine.getInstance().getSkill(getOwner(), Rnd.get(2) == 0 ? 16918 : 16881, 60, getTarget()).useNoAnimationSkill();
-			scheduleDelayStage2(delay);
-		}
+		SkillEngine.getInstance().getSkill(getOwner(), Rnd.get(2) == 0 ? 16918 : 16881, 60, getTarget()).useNoAnimationSkill();
+		scheduleDelayStage2(delay);
 	}
 	
 	private void scheduleDelayStage2(int delay)
@@ -113,10 +107,7 @@ public class Derakanak_The_ReaverAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage2(), delay);
-		}
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> stage2(), delay);
 	}
 	
 	private void scheduleDelayStage1(int delay)
@@ -125,10 +116,7 @@ public class Derakanak_The_ReaverAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
-		}
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
 	}
 	
 	@Override

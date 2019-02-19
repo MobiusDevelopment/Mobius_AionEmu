@@ -73,15 +73,9 @@ public class _30308GroupSummonRespondentUtra extends QuestHandler
 					{
 						return sendQuestDialog(env, 4762);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		

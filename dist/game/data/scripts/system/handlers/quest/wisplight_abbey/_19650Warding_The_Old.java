@@ -80,11 +80,8 @@ public class _19650Warding_The_Old extends QuestHandler
 						{ // Abbey Return Stone.
 							return sendQuestDialog(env, 4762);
 						}
-						else
-						{
-							PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
-							return true;
-						}
+						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
+						return true;
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:

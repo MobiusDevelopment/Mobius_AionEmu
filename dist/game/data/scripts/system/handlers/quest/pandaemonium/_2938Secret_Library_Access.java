@@ -86,10 +86,7 @@ public class _2938Secret_Library_Access extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 			else if (((qs.getStatus() == QuestStatus.REWARD) && (qs.getQuestVarById(0) == 0)) || (qs.getStatus() == QuestStatus.COMPLETE))
 			{
@@ -108,14 +105,7 @@ public class _2938Secret_Library_Access extends QuestHandler
 				{
 					return sendQuestEndDialog(env);
 				}
-				ThreadPoolManager.getInstance().schedule(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						TeleportService2.teleportTo(player, 120010000, 1403.7645f, 1063.2236f, 206.02371f, (byte) 89, TeleportAnimation.BEAM_ANIMATION);
-					}
-				}, 1000);
+				ThreadPoolManager.getInstance().schedule(() -> TeleportService2.teleportTo(player, 120010000, 1403.7645f, 1063.2236f, 206.02371f, (byte) 89, TeleportAnimation.BEAM_ANIMATION), 1000);
 			}
 		}
 		else if (targetId == 203557)
@@ -128,10 +118,7 @@ public class _2938Secret_Library_Access extends QuestHandler
 					{
 						return sendQuestDialog(env, 1011);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1097);
-					}
+					return sendQuestDialog(env, 1097);
 				}
 				else if (env.getDialogId() == 10255)
 				{

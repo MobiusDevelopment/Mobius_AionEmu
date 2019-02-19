@@ -137,18 +137,15 @@ public class QuestEngine implements GameEngine
 					{
 						return true;
 					}
-					else
+					final QuestTemplate qt = DataManager.QUEST_DATA.getQuestById(env.getQuestId());
+					if ((qt != null) && (qt.getCategory() == QuestCategory.CHALLENGE_TASK) && (player.getAccessLevel() > 0))
 					{
-						final QuestTemplate qt = DataManager.QUEST_DATA.getQuestById(env.getQuestId());
-						if ((qt != null) && (qt.getCategory() == QuestCategory.CHALLENGE_TASK) && (player.getAccessLevel() > 0))
-						{
-							PacketSendUtility.sendMessage(player, "You're GM! So system won't apply countNextRepeatTime()");
-							return true;
-						}
-						else if ((qt != null) && (qt.getCategory() == QuestCategory.CHALLENGE_TASK) && (player.getAccessLevel() == 0))
-						{
-							PacketSendUtility.sendPacket(env.getPlayer(), new SM_SYSTEM_MESSAGE(1400855, 9));
-						}
+						PacketSendUtility.sendMessage(player, "You're GM! So system won't apply countNextRepeatTime()");
+						return true;
+					}
+					else if ((qt != null) && (qt.getCategory() == QuestCategory.CHALLENGE_TASK) && (player.getAccessLevel() == 0))
+					{
+						PacketSendUtility.sendPacket(env.getPlayer(), new SM_SYSTEM_MESSAGE(1400855, 9));
 					}
 				}
 			}

@@ -92,10 +92,7 @@ public class ReportTo extends QuestHandler
 						{
 							return sendQuestDialog(env, startDialogId);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1011);
-						}
+						return sendQuestDialog(env, 1011);
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
@@ -108,10 +105,7 @@ public class ReportTo extends QuestHandler
 							}
 							return false;
 						}
-						else
-						{
-							return sendQuestStartDialog(env);
-						}
+						return sendQuestStartDialog(env);
 					}
 					default:
 					{
@@ -139,10 +133,7 @@ public class ReportTo extends QuestHandler
 						{
 							return sendQuestDialog(env, startDialogId2);
 						}
-						else
-						{
-							return sendQuestDialog(env, 2375);
-						}
+						return sendQuestDialog(env, 2375);
 					}
 					case SELECT_REWARD:
 					{

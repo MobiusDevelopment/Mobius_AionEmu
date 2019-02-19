@@ -114,10 +114,7 @@ public class _10504Confiscate_The_Slate extends QuestHandler
 							changeQuestStep(env, 3, 4, true);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 				}
 			}

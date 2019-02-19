@@ -87,11 +87,8 @@ public class _29667Protect_The_Morninglight_Plains extends QuestHandler
 						{ // Abbey Return Stone.
 							return sendQuestDialog(env, 4762);
 						}
-						else
-						{
-							PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
-							return true;
-						}
+						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
+						return true;
 					}
 					case ACCEPT_QUEST:
 					case ACCEPT_QUEST_SIMPLE:
@@ -135,10 +132,7 @@ public class _29667Protect_The_Morninglight_Plains extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

@@ -292,13 +292,10 @@ public class MySQL5HousesDAO extends HousesDAO
 					log.warn("Duplicate house address " + address.getId() + "!");
 					continue;
 				}
-				else
+				house = new House(houseId, building, address, 0);
+				if (building.getType() == BuildingType.PERSONAL_FIELD)
 				{
-					house = new House(houseId, building, address, 0);
-					if (building.getType() == BuildingType.PERSONAL_FIELD)
-					{
-						addressHouseIds.put(address.getId(), houseId);
-					}
+					addressHouseIds.put(address.getId(), houseId);
 				}
 				house.setOwnerId(rset.getInt("player_id"));
 				house.setAcquiredTime(rset.getTimestamp("acquire_time"));

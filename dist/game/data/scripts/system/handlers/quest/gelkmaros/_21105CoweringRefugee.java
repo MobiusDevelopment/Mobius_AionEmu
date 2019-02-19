@@ -64,10 +64,7 @@ public class _21105CoweringRefugee extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182207857, 1);
-				}
+				return sendQuestStartDialog(env, 182207857, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

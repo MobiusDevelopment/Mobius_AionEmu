@@ -85,10 +85,7 @@ public class Chief_Gunner_KurmataAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			SkillEngine.getInstance().getSkill(getOwner(), 20701, 60, getOwner()).useNoAnimationSkill(); // Blessing of Blood.
-		}
+		SkillEngine.getInstance().getSkill(getOwner(), 20701, 60, getOwner()).useNoAnimationSkill(); // Blessing of Blood.
 	}
 	
 	void stage2()
@@ -98,11 +95,8 @@ public class Chief_Gunner_KurmataAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			SkillEngine.getInstance().getSkill(getOwner(), 20858, 60, getOwner()).useNoAnimationSkill(); // Thunder Crash Fallout.
-			scheduleDelayStage2(delay);
-		}
+		SkillEngine.getInstance().getSkill(getOwner(), 20858, 60, getOwner()).useNoAnimationSkill(); // Thunder Crash Fallout.
+		scheduleDelayStage2(delay);
 	}
 	
 	private void scheduleDelayStage2(int delay)
@@ -111,10 +105,7 @@ public class Chief_Gunner_KurmataAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage2(), delay);
-		}
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> stage2(), delay);
 	}
 	
 	@Override

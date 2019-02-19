@@ -120,24 +120,21 @@ public class _20500Enshar_Expedition extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
+				final int[] ensharMission =
 				{
-					final int[] ensharMission =
-					{
-						20501,
-						20502,
-						20503,
-						20504,
-						20505,
-						20506,
-						20507
-					};
-					for (int quest : ensharMission)
-					{
-						QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
-					}
-					return sendQuestEndDialog(env);
+					20501,
+					20502,
+					20503,
+					20504,
+					20505,
+					20506,
+					20507
+				};
+				for (int quest : ensharMission)
+				{
+					QuestEngine.getInstance().onEnterZoneMissionEnd(new QuestEnv(env.getVisibleObject(), env.getPlayer(), quest, env.getDialogId()));
 				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

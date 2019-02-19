@@ -66,10 +66,7 @@ public class _1464AGiftofLove extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		
@@ -92,10 +89,7 @@ public class _1464AGiftofLove extends QuestHandler
 								updateQuestStatus(env);
 								return sendQuestDialog(env, 10000);
 							}
-							else
-							{
-								return sendQuestDialog(env, 10001);
-							}
+							return sendQuestDialog(env, 10001);
 						}
 					}
 				}
@@ -109,10 +103,7 @@ public class _1464AGiftofLove extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

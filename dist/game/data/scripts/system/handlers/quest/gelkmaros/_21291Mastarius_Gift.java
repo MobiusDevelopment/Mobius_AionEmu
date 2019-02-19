@@ -57,10 +57,7 @@ public class _21291Mastarius_Gift extends QuestHandler
 			{
 				return sendQuestDialog(env, 4);
 			}
-			else
-			{
-				return sendQuestStartDialog(env);
-			}
+			return sendQuestStartDialog(env);
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{

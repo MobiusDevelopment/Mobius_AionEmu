@@ -90,11 +90,8 @@ public class Commander_RanodimAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			SkillEngine.getInstance().getSkill(getOwner(), 20702, 60, getOwner()).useNoAnimationSkill(); // Area Blood Sucking.
-			scheduleDelayStage1(delay);
-		}
+		SkillEngine.getInstance().getSkill(getOwner(), 20702, 60, getOwner()).useNoAnimationSkill(); // Area Blood Sucking.
+		scheduleDelayStage1(delay);
 	}
 	
 	private void stage2()
@@ -104,11 +101,8 @@ public class Commander_RanodimAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			SkillEngine.getInstance().getSkill(getOwner(), 20703, 60, getOwner()).useNoAnimationSkill(); // Blood Sucking.
-			scheduleDelayStage2(delay);
-		}
+		SkillEngine.getInstance().getSkill(getOwner(), 20703, 60, getOwner()).useNoAnimationSkill(); // Blood Sucking.
+		scheduleDelayStage2(delay);
 	}
 	
 	private void stage3()
@@ -118,11 +112,8 @@ public class Commander_RanodimAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			SkillEngine.getInstance().getSkill(getOwner(), 20704, 60, getOwner()).useNoAnimationSkill(); // Area Press.
-			scheduleDelayStage3(delay);
-		}
+		SkillEngine.getInstance().getSkill(getOwner(), 20704, 60, getOwner()).useNoAnimationSkill(); // Area Press.
+		scheduleDelayStage3(delay);
 	}
 	
 	private void scheduleDelayStage1(int delay)
@@ -131,10 +122,7 @@ public class Commander_RanodimAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
-		}
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> stage1(), delay);
 	}
 	
 	private void scheduleDelayStage2(int delay)
@@ -143,10 +131,7 @@ public class Commander_RanodimAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage2(), delay);
-		}
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> stage2(), delay);
 	}
 	
 	private void scheduleDelayStage3(int delay)
@@ -155,10 +140,7 @@ public class Commander_RanodimAI2 extends AggressiveNpcAI2
 		{
 			return;
 		}
-		else
-		{
-			ThreadPoolManager.getInstance().schedule((Runnable) () -> stage3(), delay);
-		}
+		ThreadPoolManager.getInstance().schedule((Runnable) () -> stage3(), delay);
 	}
 	
 	@Override

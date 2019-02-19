@@ -76,10 +76,7 @@ public class _4939Proving_Ground extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -155,10 +152,7 @@ public class _4939Proving_Ground extends QuestHandler
 									changeQuestStep(env, 3, 4, false);
 									return sendQuestDialog(env, 10000);
 								}
-								else
-								{
-									return sendQuestDialog(env, 10001);
-								}
+								return sendQuestDialog(env, 10001);
 							}
 						}
 					}
@@ -182,10 +176,7 @@ public class _4939Proving_Ground extends QuestHandler
 								removeQuestItem(env, 186000084, 1);
 								return defaultCloseDialog(env, 4, 4, true, false, 0);
 							}
-							else
-							{
-								return sendQuestDialog(env, 2461);
-							}
+							return sendQuestDialog(env, 2461);
 						}
 						case FINISH_DIALOG:
 						{
@@ -208,10 +199,7 @@ public class _4939Proving_Ground extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

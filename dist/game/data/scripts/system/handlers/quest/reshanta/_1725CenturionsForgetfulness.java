@@ -76,10 +76,7 @@ public class _1725CenturionsForgetfulness extends QuestHandler
 						{
 							return sendQuestDialog(env, 1003);
 						}
-						else
-						{
-							return true;
-						}
+						return true;
 					}
 				}
 				else

@@ -96,11 +96,8 @@ public class PolyArea extends AbstractArea
 		{
 			return 0;
 		}
-		else
-		{
-			final Point2D cp = getClosestPoint(x, y);
-			return MathUtil.getDistance(cp.getX(), cp.getY(), x, y);
-		}
+		final Point2D cp = getClosestPoint(x, y);
+		return MathUtil.getDistance(cp.getX(), cp.getY(), x, y);
 	}
 	
 	/**

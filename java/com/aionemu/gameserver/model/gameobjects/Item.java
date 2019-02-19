@@ -1263,10 +1263,7 @@ public class Item extends AionObject implements IExpirable, StatOwner
 		{
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	public int getUnSeal()

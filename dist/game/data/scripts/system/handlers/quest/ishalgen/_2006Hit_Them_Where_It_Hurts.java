@@ -120,10 +120,7 @@ public class _2006Hit_Them_Where_It_Hurts extends QuestHandler
 				{
 					return sendQuestDialog(env, 1693);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

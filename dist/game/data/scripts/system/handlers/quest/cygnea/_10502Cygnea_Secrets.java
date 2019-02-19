@@ -142,10 +142,7 @@ public class _10502Cygnea_Secrets extends QuestHandler
 							changeQuestStep(env, 2, 3, false);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 					case STEP_TO_4:
 					{

@@ -58,10 +58,7 @@ public class _30310RankandBile extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		
@@ -87,10 +84,7 @@ public class _30310RankandBile extends QuestHandler
 						changeQuestStep(env, 0, 0, true, 0);
 						return sendQuestDialog(env, 10000);
 					}
-					else
-					{
-						return sendQuestDialog(env, 10001);
-					}
+					return sendQuestDialog(env, 10001);
 				}
 				return false;
 			}

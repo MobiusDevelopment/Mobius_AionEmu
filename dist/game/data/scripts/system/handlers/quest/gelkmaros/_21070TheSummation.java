@@ -60,10 +60,7 @@ public class _21070TheSummation extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182207938, 1);
-				}
+				return sendQuestStartDialog(env, 182207938, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

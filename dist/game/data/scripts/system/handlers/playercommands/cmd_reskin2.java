@@ -180,11 +180,8 @@ public class cmd_reskin2 extends PlayerCommand
 				PacketSendUtility.sendMessage(admin, "Old itemID character taken to the Target is not found in the inventory.");
 				return;
 			}
-			else
-			{
-				PacketSendUtility.sendMessage(admin, "Old itemID Not Found in inventory.");
-				return;
-			}
+			PacketSendUtility.sendMessage(admin, "Old itemID Not Found in inventory.");
+			return;
 		}
 		final Iterator<Item> iter = items.iterator();
 		final Item item = iter.next();

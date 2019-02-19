@@ -767,10 +767,7 @@ public final class QuestService
 		{
 			return;
 		}
-		else
-		{
-			player.getQuestStateList().addQuest(questId, new QuestState(questId, status, 0, 0, null, 0, null));
-		}
+		player.getQuestStateList().addQuest(questId, new QuestState(questId, status, 0, 0, null, 0, null));
 		PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(questId, status.value(), 0));
 	}
 	

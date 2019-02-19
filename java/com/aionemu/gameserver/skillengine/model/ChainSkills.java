@@ -81,10 +81,7 @@ public class ChainSkills
 		{
 			return true;
 		}
-		else
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	public void addChainSkill(String category, boolean multiCast)

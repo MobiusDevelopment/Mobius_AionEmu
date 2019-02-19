@@ -66,10 +66,7 @@ public class _3083SearchingfortheElderofWisdom extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 			else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 			{

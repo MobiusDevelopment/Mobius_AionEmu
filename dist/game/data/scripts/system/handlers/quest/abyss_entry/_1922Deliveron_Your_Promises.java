@@ -266,11 +266,8 @@ public class _1922Deliveron_Your_Promises extends QuestHandler
 					updateQuestStatus(env);
 					return true;
 				}
-				else
-				{
-					playQuestMovie(env, 165);
-					return true;
-				}
+				playQuestMovie(env, 165);
+				return true;
 			}
 		}
 		return false;

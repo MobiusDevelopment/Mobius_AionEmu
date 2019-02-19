@@ -70,10 +70,7 @@ public class _41041Get_These_Enemies extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 			{
@@ -81,10 +78,7 @@ public class _41041Get_These_Enemies extends QuestHandler
 				{
 					return sendQuestDialog(env, 1352);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

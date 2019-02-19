@@ -100,10 +100,7 @@ public class _1098PearlofProtection extends QuestHandler
 					removeQuestItem(env, 182206065, 1);
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

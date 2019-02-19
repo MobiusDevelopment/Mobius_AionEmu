@@ -54,9 +54,6 @@ public class BaseNpc extends Npc
 		{
 			return true;
 		}
-		else
-		{
-			return super.isEnemyFrom(creature);
-		}
+		return super.isEnemyFrom(creature);
 	}
 }

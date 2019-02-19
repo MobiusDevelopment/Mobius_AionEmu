@@ -60,10 +60,7 @@ public class _1909ASongOfPraise extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (env.getTargetId() == 203726)

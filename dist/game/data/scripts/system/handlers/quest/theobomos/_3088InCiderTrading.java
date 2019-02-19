@@ -63,10 +63,7 @@ public class _3088InCiderTrading extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -86,10 +83,7 @@ public class _3088InCiderTrading extends QuestHandler
 					{
 						return sendQuestDialog(env, 1012);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1267);
-					}
+					return sendQuestDialog(env, 1267);
 				}
 				else if (dialog == QuestDialog.SELECT_ACTION_1097)
 				{
@@ -97,10 +91,7 @@ public class _3088InCiderTrading extends QuestHandler
 					{
 						return sendQuestDialog(env, 1097);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1267);
-					}
+					return sendQuestDialog(env, 1267);
 				}
 				else if (dialog == QuestDialog.SELECT_ACTION_1182)
 				{
@@ -108,10 +99,7 @@ public class _3088InCiderTrading extends QuestHandler
 					{
 						return sendQuestDialog(env, 1182);
 					}
-					else
-					{
-						return sendQuestDialog(env, 1267);
-					}
+					return sendQuestDialog(env, 1267);
 				}
 				else if (dialog == QuestDialog.SELECT_ACTION_1011)
 				{

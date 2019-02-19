@@ -201,10 +201,7 @@ public class BIHTree implements CollisionData
 		{
 			return bbox.getMin(null).get(axis);
 		}
-		else
-		{
-			return bbox.getMax(null).get(axis);
-		}
+		return bbox.getMax(null).get(axis);
 	}
 	
 	// private BIHNode createNode2(int l, int r, BoundingBox nodeBbox, int depth){

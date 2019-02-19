@@ -64,10 +64,7 @@ public class _4941Group_Pandaemonium_Honors extends QuestHandler
 				{
 					return sendQuestDialog(env, 4762);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		if (qs == null)
@@ -107,10 +104,7 @@ public class _4941Group_Pandaemonium_Honors extends QuestHandler
 								changeQuestStep(env, 1, 1, true);
 								return sendQuestDialog(env, 5);
 							}
-							else
-							{
-								return sendQuestDialog(env, 10001);
-							}
+							return sendQuestDialog(env, 10001);
 						}
 					}
 					break;

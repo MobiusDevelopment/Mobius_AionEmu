@@ -109,10 +109,7 @@ public class _3019Black_Widow extends QuestHandler
 							PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
 							return true;
 						}
-						else
-						{
-							return sendQuestDialog(env, 5);
-						}
+						return sendQuestDialog(env, 5);
 					}
 				}
 			}

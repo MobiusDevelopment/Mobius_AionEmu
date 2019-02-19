@@ -93,10 +93,7 @@ public class _2994A_New_Choice extends QuestHandler
 					QuestService.startQuest(env);
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
@@ -135,10 +132,7 @@ public class _2994A_New_Choice extends QuestHandler
 						{
 							return sendQuestDialog(env, 1013);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1352);
-						}
+						return sendQuestDialog(env, 1352);
 					}
 					case 10000:
 					case 10001:

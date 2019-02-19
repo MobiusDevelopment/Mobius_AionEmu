@@ -60,10 +60,7 @@ public class _4970TheFashionistas extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182206120, 1);
-				}
+				return sendQuestStartDialog(env, 182206120, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)

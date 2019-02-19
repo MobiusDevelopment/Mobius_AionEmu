@@ -257,10 +257,7 @@ public class _2900No_Escaping_Destiny extends QuestHandler
 									changeQuestStep(env, 96, 99, false);
 									return sendQuestDialog(env, 3058);
 								}
-								else
-								{
-									return closeDialogWindow(env);
-								}
+								return closeDialogWindow(env);
 							}
 							else if (var == 99)
 							{

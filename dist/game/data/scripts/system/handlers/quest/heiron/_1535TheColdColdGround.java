@@ -74,10 +74,7 @@ public class _1535TheColdColdGround extends QuestHandler
 			{
 				return sendQuestDialog(env, 4762);
 			}
-			else
-			{
-				return sendQuestStartDialog(env);
-			}
+			return sendQuestStartDialog(env);
 		}
 		
 		if (qs.getStatus() == QuestStatus.START)

@@ -90,10 +90,7 @@ public class InstanceCooltimeData
 		{
 			return clt.getMaxEntriesCount();
 		}
-		else
-		{
-			return 0;
-		}
+		return 0;
 	}
 	
 	public long getInstanceEntranceCooltime(Player player, int worldId)

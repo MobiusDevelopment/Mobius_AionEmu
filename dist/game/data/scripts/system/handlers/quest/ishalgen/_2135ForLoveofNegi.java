@@ -71,10 +71,7 @@ public class _2135ForLoveofNegi extends QuestHandler
 					{
 						return sendQuestStartDialog(env);
 					}
-					else
-					{
-						return true;
-					}
+					return true;
 				}
 				else
 				{

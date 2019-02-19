@@ -102,10 +102,7 @@ public class LandingLocation
 		{
 			return level + 1;
 		}
-		else
-		{
-			return level;
-		}
+		return level;
 	}
 	
 	public void setLevel(int level)
@@ -214,10 +211,7 @@ public class LandingLocation
 		{
 			return;
 		}
-		else
-		{
-			persistentState = state;
-		}
+		persistentState = state;
 	}
 	
 	public Race getRace()

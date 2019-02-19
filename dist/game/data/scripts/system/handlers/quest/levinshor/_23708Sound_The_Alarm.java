@@ -60,10 +60,7 @@ public class _23708Sound_The_Alarm extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182215535, 1); // Proximity Alarm.
-				}
+				return sendQuestStartDialog(env, 182215535, 1); // Proximity Alarm.
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

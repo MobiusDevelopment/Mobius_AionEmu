@@ -85,10 +85,7 @@ public class Announcement
 		{
 			return id;
 		}
-		else
-		{
-			return -1;
-		}
+		return -1;
 	}
 	
 	/**

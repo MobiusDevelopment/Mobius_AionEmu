@@ -73,10 +73,7 @@ public class _2988The_Wise_In_Disguise extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (targetId == 204338)
@@ -135,10 +132,7 @@ public class _2988The_Wise_In_Disguise extends QuestHandler
 					{
 						return sendQuestDialog(env, 2035);
 					}
-					else
-					{
-						return sendQuestDialog(env, 2120);
-					}
+					return sendQuestDialog(env, 2120);
 				}
 				else if (env.getDialogId() == 1009)
 				{

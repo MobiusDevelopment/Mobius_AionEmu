@@ -60,10 +60,7 @@ public class _26975A_Mysterious_Shard extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env, 182215760, 1);
-				}
+				return sendQuestStartDialog(env, 182215760, 1);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

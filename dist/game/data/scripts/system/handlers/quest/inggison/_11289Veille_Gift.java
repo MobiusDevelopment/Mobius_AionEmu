@@ -57,10 +57,7 @@ public class _11289Veille_Gift extends QuestHandler
 			{
 				return sendQuestDialog(env, 4);
 			}
-			else
-			{
-				return sendQuestStartDialog(env);
-			}
+			return sendQuestStartDialog(env);
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{

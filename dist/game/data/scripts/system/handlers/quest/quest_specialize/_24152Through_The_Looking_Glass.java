@@ -121,10 +121,7 @@ public class _24152Through_The_Looking_Glass extends QuestHandler
 								removeQuestItem(env, 182215461, 1);
 								return sendQuestDialog(env, 5);
 							}
-							else
-							{
-								return closeDialogWindow(env);
-							}
+							return closeDialogWindow(env);
 						}
 					}
 				}
@@ -138,10 +135,7 @@ public class _24152Through_The_Looking_Glass extends QuestHandler
 				{
 					return sendQuestDialog(env, 5);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

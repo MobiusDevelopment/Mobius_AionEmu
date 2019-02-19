@@ -153,10 +153,7 @@ public class _24016A_Strange_New_Threat extends QuestHandler
 				{
 					return sendQuestDialog(env, 1352);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

@@ -66,10 +66,7 @@ public class _4074GainOrLose extends QuestHandler
 					{
 						return sendQuestDialog(env, 1011);
 					}
-					else
-					{
-						return sendQuestSelectionDialog(env);
-					}
+					return sendQuestSelectionDialog(env);
 				}
 			}
 		}
@@ -93,10 +90,7 @@ public class _4074GainOrLose extends QuestHandler
 							reward = 0;
 							return sendQuestDialog(env, 5);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1009);
-						}
+						return sendQuestDialog(env, 1009);
 					}
 					case SELECT_ACTION_1352:
 					{
@@ -106,10 +100,7 @@ public class _4074GainOrLose extends QuestHandler
 							reward = 1;
 							return sendQuestDialog(env, 6);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1009);
-						}
+						return sendQuestDialog(env, 1009);
 					}
 					case SELECT_ACTION_1693:
 					{
@@ -119,10 +110,7 @@ public class _4074GainOrLose extends QuestHandler
 							reward = 2;
 							return sendQuestDialog(env, 7);
 						}
-						else
-						{
-							return sendQuestDialog(env, 1009);
-						}
+						return sendQuestDialog(env, 1009);
 					}
 					case FINISH_DIALOG:
 					{
@@ -175,10 +163,7 @@ public class _4074GainOrLose extends QuestHandler
 					}
 					return closeDialogWindow(env);
 				}
-				else
-				{
-					QuestService.abandonQuest(player, questId);
-				}
+				QuestService.abandonQuest(player, questId);
 			}
 		}
 		return false;

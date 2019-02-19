@@ -27,7 +27,6 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.PersistentState;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.spawns.Spawn;
 import com.aionemu.gameserver.model.templates.spawns.SpawnSpotTemplate;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
@@ -35,7 +34,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_TOWNS_LIST;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author ViAl
@@ -144,15 +142,11 @@ public class Town
 		final Map<Integer, Town> data = new HashMap<>(1);
 		data.put(id, this);
 		final SM_TOWNS_LIST packet = new SM_TOWNS_LIST(data);
-		World.getInstance().doOnAllPlayers(new Visitor<Player>()
+		World.getInstance().doOnAllPlayers(player ->
 		{
-			@Override
-			public void visit(Player player)
+			if (player.getRace() == race)
 			{
-				if (player.getRace() == race)
-				{
-					PacketSendUtility.sendPacket(player, packet);
-				}
+				PacketSendUtility.sendPacket(player, packet);
 			}
 		});
 	}
@@ -208,9 +202,6 @@ public class Town
 		{
 			return;
 		}
-		else
-		{
-			persistentState = state;
-		}
+		persistentState = state;
 	}
 }

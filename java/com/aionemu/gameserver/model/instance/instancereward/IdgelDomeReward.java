@@ -20,7 +20,6 @@ import static ch.lambdaj.Lambda.maxFrom;
 import static ch.lambdaj.Lambda.on;
 import static ch.lambdaj.Lambda.sort;
 
-import java.util.Comparator;
 import java.util.List;
 
 import org.apache.commons.lang.mutable.MutableInt;
@@ -34,7 +33,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_SCORE;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author GiGatR00n v4.7.5.x
@@ -73,10 +71,7 @@ public class IdgelDomeReward extends InstanceReward<IdgelDomePlayerReward>
 		{
 			return isWin ? (Win + KunaxKilled) : (Loss + KunaxKilled);
 		}
-		else
-		{
-			return isWin ? Win : Loss;
-		}
+		return isWin ? Win : Loss;
 	}
 	
 	public int GloryReward(boolean isWin, boolean isKunaxKilled)
@@ -88,10 +83,7 @@ public class IdgelDomeReward extends InstanceReward<IdgelDomePlayerReward>
 		{
 			return isWin ? (Win + KunaxKilled) : (Loss + KunaxKilled);
 		}
-		else
-		{
-			return isWin ? Win : Loss;
-		}
+		return isWin ? Win : Loss;
 	}
 	
 	public int ExpReward(boolean isWin, boolean isKunaxKilled)
@@ -103,22 +95,12 @@ public class IdgelDomeReward extends InstanceReward<IdgelDomePlayerReward>
 		{
 			return isWin ? (Win + KunaxKilled) : (Loss + KunaxKilled);
 		}
-		else
-		{
-			return isWin ? Win : Loss;
-		}
+		return isWin ? Win : Loss;
 	}
 	
 	public List<IdgelDomePlayerReward> sortPoints()
 	{
-		return sort(getInstanceRewards(), on(PvPArenaPlayerReward.class).getScorePoints(), new Comparator<Integer>()
-		{
-			@Override
-			public int compare(Integer o1, Integer o2)
-			{
-				return o2 != null ? o2.compareTo(o1) : -o1.compareTo(o2);
-			}
-		});
+		return sort(getInstanceRewards(), on(PvPArenaPlayerReward.class).getScorePoints(), (o1, o2) -> o2 != null ? o2.compareTo(o1) : -o1.compareTo(o2));
 	}
 	
 	private void setStartPositions()
@@ -214,14 +196,7 @@ public class IdgelDomeReward extends InstanceReward<IdgelDomePlayerReward>
 	
 	public void sendPacket(int type, Integer object)
 	{
-		instance.doOnAllPlayers(new Visitor<Player>()
-		{
-			@Override
-			public void visit(Player player)
-			{
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(type, getTime(), getInstanceReward(), object));
-			}
-		});
+		instance.doOnAllPlayers(player -> PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(type, getTime(), getInstanceReward(), object)));
 	}
 	
 	public int getTime()

@@ -131,10 +131,7 @@ public class _10503Guard_Down_Secrets_Out extends QuestHandler
 							changeQuestStep(env, 2, 3, false);
 							return sendQuestDialog(env, 10000);
 						}
-						else
-						{
-							return sendQuestDialog(env, 10001);
-						}
+						return sendQuestDialog(env, 10001);
 					}
 					case STEP_TO_4:
 					{

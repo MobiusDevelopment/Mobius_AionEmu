@@ -245,10 +245,7 @@ public class GatherableController extends VisibleObjectController<Gatherable>
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400376, new DescriptionId(template.getRequiredItemNameId())));
 					return 0;
 				}
-				else
-				{
-					return 1;
-				}
+				return 1;
 			}
 		}
 		return 2;

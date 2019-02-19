@@ -65,10 +65,7 @@ public class _2223AMythicalMonster extends QuestHandler
 				{
 					return sendQuestDialog(env, 1011);
 				}
-				else
-				{
-					return sendQuestStartDialog(env);
-				}
+				return sendQuestStartDialog(env);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.START)
@@ -92,11 +89,8 @@ public class _2223AMythicalMonster extends QuestHandler
 								{
 									return sendQuestDialog(env, 1694);
 								}
-								else
-								{
-									giveQuestItem(env, 182203217, 1);
-									return sendQuestDialog(env, 1779);
-								}
+								giveQuestItem(env, 182203217, 1);
+								return sendQuestDialog(env, 1779);
 							}
 						}
 						case STEP_TO_1:

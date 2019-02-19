@@ -182,10 +182,7 @@ public class _14021To_Cure_A_Curse extends QuestHandler
 				{
 					return sendQuestDialog(env, 3398);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

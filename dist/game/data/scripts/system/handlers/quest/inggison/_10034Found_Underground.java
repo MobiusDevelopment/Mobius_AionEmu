@@ -94,12 +94,9 @@ public class _10034Found_Underground extends QuestHandler
 					updateQuestStatus(env);
 					return true;
 				}
-				else
+				if (player.getInventory().getItemCountByItemId(182215627) == 0)
 				{
-					if (player.getInventory().getItemCountByItemId(182215627) == 0)
-					{
-						return giveQuestItem(env, 182215627, 1);
-					}
+					return giveQuestItem(env, 182215627, 1);
 				}
 			}
 			else if ((var >= 4) && (var < 7))
@@ -212,10 +209,7 @@ public class _10034Found_Underground extends QuestHandler
 									TeleportService2.teleportTo(player, 300160000, IDTempleLow.getInstanceId(), 795.28143f, 918.806f, 149.80243f, (byte) 73, TeleportAnimation.JUMP_ANIMATION);
 									return true;
 								}
-								else
-								{
-									return sendQuestDialog(env, 10001);
-								}
+								return sendQuestDialog(env, 10001);
 							}
 						}
 					}
@@ -254,10 +248,7 @@ public class _10034Found_Underground extends QuestHandler
 				{
 					return sendQuestDialog(env, 10002);
 				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;
