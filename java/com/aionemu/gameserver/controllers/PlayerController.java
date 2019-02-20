@@ -604,8 +604,8 @@ public class PlayerController extends CreatureController<Player>
 		}
 		final long lastOnline = getOwner().getCommonData().getLastOnline().getTime();
 		final long secondsOffline = (System.currentTimeMillis() / 1000) - (lastOnline / 1000);
-		if (secondsOffline > (10 * 60))
-		{ // Logout in no-recall zone sends you to bindpoint after 10 (??) minutes
+		if (secondsOffline > (10 * 60)) // Logout in no-recall zone sends you to bindpoint after 10 (??) minutes
+		{
 			for (ZoneInstance zone : getOwner().getPosition().getMapRegion().getZones(getOwner()))
 			{
 				if (!zone.canRecall())
@@ -614,7 +614,6 @@ public class PlayerController extends CreatureController<Player>
 					break;
 				}
 			}
-			
 		}
 		
 		if (moveToBind)
@@ -1160,7 +1159,8 @@ public class PlayerController extends CreatureController<Player>
 			}
 		}
 		if (level == 66)
-		{ // TODO This is temporary solution, player need to complete quests to become highdeava, i guess
+		{
+			// TODO This is temporary solution, player need to complete quests to become highdeava, i guess
 			player.getCommonData().setArchDaeva(true);
 		}
 		if ((level >= 66) && (level <= 83))

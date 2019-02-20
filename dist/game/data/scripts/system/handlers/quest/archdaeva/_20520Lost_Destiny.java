@@ -71,8 +71,8 @@ public class _20520Lost_Destiny extends QuestHandler
 	public boolean onEnterWorldEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		if (player.getWorldId() == 120010000)
-		{ // Pandaemonium.
+		if (player.getWorldId() == 120010000) // Pandaemonium.
+		{
 			final QuestState qs = player.getQuestStateList().getQuestState(questId);
 			if (qs == null)
 			{
@@ -104,8 +104,8 @@ public class _20520Lost_Destiny extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806077)
-			{ // Edorin.
+			if (targetId == 806077) // Edorin.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -129,8 +129,8 @@ public class _20520Lost_Destiny extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 204191)
-			{ // Doman.
+			if (targetId == 204191) // Doman.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -156,8 +156,8 @@ public class _20520Lost_Destiny extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806080)
-			{ // Feregran.
+			if (targetId == 806080) // Feregran.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -178,8 +178,8 @@ public class _20520Lost_Destiny extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806080)
-			{ // Feregran.
+			if (targetId == 806080) // Feregran.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

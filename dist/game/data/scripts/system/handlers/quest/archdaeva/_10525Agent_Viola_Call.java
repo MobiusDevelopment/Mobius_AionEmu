@@ -90,8 +90,8 @@ public class _10525Agent_Viola_Call extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -115,8 +115,8 @@ public class _10525Agent_Viola_Call extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806134)
-			{ // Aldor.
+			if (targetId == 806134) // Aldor.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -175,8 +175,8 @@ public class _10525Agent_Viola_Call extends QuestHandler
 			if ((targetId == 806224) || // Este.
 				(targetId == 806225) || // Ovest.
 				(targetId == 806226) || // Meridies.
-				(targetId == 806227))
-			{ // Ceber.
+				(targetId == 806227)) // Ceber.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -189,8 +189,8 @@ public class _10525Agent_Viola_Call extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

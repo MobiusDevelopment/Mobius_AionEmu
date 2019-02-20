@@ -92,8 +92,8 @@ public class _24046The_Shadow_Calls extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 798300:
-				{ // Phyper.
+				case 798300: // Phyper.
+				{
 					if ((dialog == QuestDialog.START_DIALOG) && (var == 0))
 					{
 						return sendQuestDialog(env, 1011);
@@ -104,8 +104,8 @@ public class _24046The_Shadow_Calls extends QuestHandler
 					}
 					break;
 				}
-				case 204253:
-				{ // Khrudgelmir.
+				case 204253: // Khrudgelmir.
+				{
 					if ((dialog == QuestDialog.START_DIALOG) && (var == 2))
 					{
 						return sendQuestDialog(env, 1693);
@@ -125,8 +125,8 @@ public class _24046The_Shadow_Calls extends QuestHandler
 					}
 					break;
 				}
-				case 700369:
-				{ // Shadow Court Dungeon Exit.
+				case 700369: // Shadow Court Dungeon Exit.
+				{
 					if ((dialog == QuestDialog.USE_OBJECT) && (var == 5))
 					{
 						TeleportService2.teleportTo(player, 120010000, 1003.02637f, 1531.2028f, 222.19403f, (byte) 105, TeleportAnimation.BEAM_ANIMATION);
@@ -135,8 +135,8 @@ public class _24046The_Shadow_Calls extends QuestHandler
 					}
 					break;
 				}
-				case 204089:
-				{ // Garm.
+				case 204089: // Garm.
+				{
 					if ((dialog == QuestDialog.START_DIALOG) && (var == 3))
 					{
 						return sendQuestDialog(env, 2034);
@@ -155,8 +155,8 @@ public class _24046The_Shadow_Calls extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203550)
-			{ // Munin.
+			if (targetId == 203550) // Munin.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);
@@ -194,8 +194,8 @@ public class _24046The_Shadow_Calls extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if ((player.getWorldId() == 320120000) || (qs == null) || (qs.getStatus() != QuestStatus.START))
-		{ // Shadow Court Dungeon.
+		if ((player.getWorldId() == 320120000) || (qs == null) || (qs.getStatus() != QuestStatus.START)) // Shadow Court Dungeon.
+		{
 			return false;
 		}
 		final int var = qs.getQuestVarById(0);

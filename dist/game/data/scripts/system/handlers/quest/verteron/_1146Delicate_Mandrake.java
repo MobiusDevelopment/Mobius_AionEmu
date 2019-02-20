@@ -54,8 +54,8 @@ public class _1146Delicate_Mandrake extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203123)
-			{ // Gano.
+			if (targetId == 203123) // Gano.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -90,8 +90,8 @@ public class _1146Delicate_Mandrake extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 203139)
-			{ // Krodis.
+			if (targetId == 203139) // Krodis.
+			{
 				switch (dialog)
 				{
 					case USE_OBJECT:
@@ -113,8 +113,8 @@ public class _1146Delicate_Mandrake extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203139)
-			{ // Krodis.
+			if (targetId == 203139) // Krodis.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

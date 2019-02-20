@@ -72,8 +72,8 @@ public class _15563Broken_Archon_Medals extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 806114:
-				{ // Ilisia.
+				case 806114: // Ilisia.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -91,8 +91,8 @@ public class _15563Broken_Archon_Medals extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806114)
-			{ // Ilisia.
+			if (targetId == 806114) // Ilisia.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

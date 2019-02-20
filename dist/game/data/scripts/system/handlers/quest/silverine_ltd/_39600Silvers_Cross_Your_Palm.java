@@ -59,8 +59,8 @@ public class _39600Silvers_Cross_Your_Palm extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 800939)
-			{ // Danurinerk.
+			if (targetId == 800939) // Danurinerk.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _39600Silvers_Cross_Your_Palm extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 800939:
-				{ // Danurinerk.
+				case 800939: // Danurinerk.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _39600Silvers_Cross_Your_Palm extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 800939)
-			{ // Danurinerk.
+			if (targetId == 800939) // Danurinerk.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

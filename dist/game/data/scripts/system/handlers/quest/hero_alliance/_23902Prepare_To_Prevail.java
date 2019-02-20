@@ -59,8 +59,8 @@ public class _23902Prepare_To_Prevail extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 799225)
-			{ // Richelle.
+			if (targetId == 799225) // Richelle.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _23902Prepare_To_Prevail extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 799225:
-				{ // Richelle.
+				case 799225: // Richelle.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _23902Prepare_To_Prevail extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799225)
-			{ // Richelle.
+			if (targetId == 799225) // Richelle.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

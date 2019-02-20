@@ -56,8 +56,8 @@ public class _2221ManirsUncle extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203607)
-			{ // Manir
+			if (targetId == 203607) // Manir
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -70,8 +70,8 @@ public class _2221ManirsUncle extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 203608:
-				{ // Groken
+				case 203608: // Groken
+				{
 					if (dialog == QuestDialog.START_DIALOG)
 					{
 						if (var == 0)
@@ -95,8 +95,8 @@ public class _2221ManirsUncle extends QuestHandler
 					}
 					break;
 				}
-				case 700214:
-				{ // Groken's Safe
+				case 700214: // Groken's Safe
+				{
 					if (dialog == QuestDialog.USE_OBJECT)
 					{
 						if (var == 1)
@@ -113,8 +113,8 @@ public class _2221ManirsUncle extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203608)
-			{ // Groken
+			if (targetId == 203608) // Groken
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

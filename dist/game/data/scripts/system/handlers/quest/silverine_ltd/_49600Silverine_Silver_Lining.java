@@ -59,8 +59,8 @@ public class _49600Silverine_Silver_Lining extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 800942)
-			{ // Dumurinerk.
+			if (targetId == 800942) // Dumurinerk.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _49600Silverine_Silver_Lining extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 800942:
-				{ // Dumurinerk.
+				case 800942: // Dumurinerk.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _49600Silverine_Silver_Lining extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 800942)
-			{ // Dumurinerk.
+			if (targetId == 800942) // Dumurinerk.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

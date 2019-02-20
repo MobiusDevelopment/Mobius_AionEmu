@@ -75,8 +75,8 @@ public class _24043Lazy_Language_Lessons extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 278003:
-				{ // Hisui.
+				case 278003: // Hisui.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -93,8 +93,8 @@ public class _24043Lazy_Language_Lessons extends QuestHandler
 					}
 					break;
 				}
-				case 278086:
-				{ // Sinjah.
+				case 278086: // Sinjah.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -111,8 +111,8 @@ public class _24043Lazy_Language_Lessons extends QuestHandler
 					}
 					break;
 				}
-				case 278039:
-				{ // Grunn.
+				case 278039: // Grunn.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -129,8 +129,8 @@ public class _24043Lazy_Language_Lessons extends QuestHandler
 					}
 					break;
 				}
-				case 279027:
-				{ // Kaoranerk.
+				case 279027: // Kaoranerk.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -161,8 +161,8 @@ public class _24043Lazy_Language_Lessons extends QuestHandler
 					}
 					break;
 				}
-				case 204210:
-				{ // Phosphor.
+				case 204210: // Phosphor.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -182,8 +182,8 @@ public class _24043Lazy_Language_Lessons extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 278003)
-			{ // Hisui.
+			if (targetId == 278003) // Hisui.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

@@ -83,8 +83,8 @@ public class _28996Unstable_Cursed_Canyon_Fragment extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 806253)
-			{ // Vienste.
+			if (targetId == 806253) // Vienste.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -107,8 +107,8 @@ public class _28996Unstable_Cursed_Canyon_Fragment extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 834035)
-			{ // 로라코.
+			if (targetId == 834035) // 로라코.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -125,8 +125,8 @@ public class _28996Unstable_Cursed_Canyon_Fragment extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -165,12 +165,12 @@ public class _28996Unstable_Cursed_Canyon_Fragment extends QuestHandler
 				}; // 트몰리아 폐광 입구 철책.
 				switch (targetId)
 				{
-					case 703290:
-					{ // 어두운 포자길 철책.
+					case 703290: // 어두운 포자길 철책.
+					{
 						return defaultOnKillEvent(env, IDLF1TBarricadeDragon01, 0, 1, 1);
 					}
-					case 703292:
-					{ // 트몰리아 폐광 입구 철책.
+					case 703292: // 트몰리아 폐광 입구 철책.
+					{
 						qs.setQuestVar(3);
 						updateQuestStatus(env);
 						return defaultOnKillEvent(env, IDLF1TBarricadeDragon03, 0, 1, 2);
@@ -181,8 +181,8 @@ public class _28996Unstable_Cursed_Canyon_Fragment extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 243683:
-					{ // 군단장 타하바타.
+					case 243683: // 군단장 타하바타.
+					{
 						qs.setQuestVar(4);
 						updateQuestStatus(env);
 						return true;
@@ -193,8 +193,8 @@ public class _28996Unstable_Cursed_Canyon_Fragment extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 243684:
-					{ // 아티팩트를 지배하는 크로반.
+					case 243684: // 아티팩트를 지배하는 크로반.
+					{
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 						return true;

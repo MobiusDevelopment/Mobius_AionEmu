@@ -59,8 +59,8 @@ public class _23700Advancement_In_Levinshor extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802353)
-			{ // Yasan.
+			if (targetId == 802353) // Yasan.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _23700Advancement_In_Levinshor extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 802353:
-				{ // Yasan.
+				case 802353: // Yasan.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -99,8 +99,8 @@ public class _23700Advancement_In_Levinshor extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802353)
-			{ // Yasan.
+			if (targetId == 802353) // Yasan.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

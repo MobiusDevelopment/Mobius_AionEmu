@@ -87,8 +87,8 @@ public class _3502Nereus_Need_You extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 730192:
-				{ // Balaur Operation Orders.
+				case 730192: // Balaur Operation Orders.
+				{
 					if ((dialog == QuestDialog.USE_OBJECT) && (var == 0))
 					{
 						return sendQuestDialog(env, 1011);
@@ -103,8 +103,8 @@ public class _3502Nereus_Need_You extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204656)
-			{ // Maloren.
+			if (targetId == 204656) // Maloren.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

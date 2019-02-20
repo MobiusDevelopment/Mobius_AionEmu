@@ -57,8 +57,8 @@ public class _21289Aid_To_The_Agent extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 799340)
-			{ // Athana.
+			if (targetId == 799340) // Athana.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -80,8 +80,8 @@ public class _21289Aid_To_The_Agent extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799095)
-			{ // Mijien.
+			if (targetId == 799095) // Mijien.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -102,8 +102,8 @@ public class _21289Aid_To_The_Agent extends QuestHandler
 			final int itemId = item.getItemId();
 			final int var = qs.getQuestVarById(0);
 			final int var1 = qs.getQuestVarById(1);
-			if (itemId == 164000103)
-			{ // Blessing Of Concentration.
+			if (itemId == 164000103) // Blessing Of Concentration.
+			{
 				if (var == 0)
 				{
 					if ((var1 >= 0) && (var1 < 9) && player.isInsideZone(ZoneName.get("LOST_CITY_OF_MARAYAS_220070000")))

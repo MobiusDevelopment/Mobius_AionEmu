@@ -32,8 +32,8 @@ public class Hidden_PassageAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(185000179) != null)
-		{ // Danuar Omphanium Key.
+		if (player.getInventory().getFirstItemByItemId(185000179) != null) // Danuar Omphanium Key.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 		}
 		else
@@ -46,12 +46,12 @@ public class Hidden_PassageAI2 extends NpcAI2
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		final int instanceId = getPosition().getInstanceId();
-		if ((dialogId == 20008) && player.getInventory().decreaseByItemId(185000179, 1))
-		{ // Danuar Omphanium Key.
+		if ((dialogId == 20008) && player.getInventory().decreaseByItemId(185000179, 1)) // Danuar Omphanium Key.
+		{
 			TeleportService2.teleportTo(player, 301130000, instanceId, 689.85376f, 903.41785f, 411.45676f, (byte) 105); // Guard Captain Ahuradim's.
 		}
-		else if ((dialogId == 20009) && player.getInventory().decreaseByItemId(185000179, 2))
-		{ // Danuar Omphanium Key.
+		else if ((dialogId == 20009) && player.getInventory().decreaseByItemId(185000179, 2)) // Danuar Omphanium Key.
+		{
 			TeleportService2.teleportTo(player, 301130000, instanceId, 886.4798f, 876.16693f, 411.45676f, (byte) 15); // The Brigade General Sheba's.
 		}
 		return true;

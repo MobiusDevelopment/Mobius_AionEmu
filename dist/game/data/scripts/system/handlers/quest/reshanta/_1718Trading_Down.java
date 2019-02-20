@@ -86,8 +86,8 @@ public class _1718Trading_Down extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 203190)
-			{ // Gaione.
+			if (targetId == 203190) // Gaione.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1352);
@@ -101,8 +101,8 @@ public class _1718Trading_Down extends QuestHandler
 					return true;
 				}
 			}
-			else if (targetId == 204028)
-			{ // Griffonix.
+			else if (targetId == 204028) // Griffonix.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1693);
@@ -116,8 +116,8 @@ public class _1718Trading_Down extends QuestHandler
 					return true;
 				}
 			}
-			else if (targetId == 204611)
-			{ // Wailing Moroch.
+			else if (targetId == 204611) // Wailing Moroch.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2034);
@@ -131,8 +131,8 @@ public class _1718Trading_Down extends QuestHandler
 					return true;
 				}
 			}
-			else if (targetId == 279029)
-			{ // Lugbug.
+			else if (targetId == 279029) // Lugbug.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2375);

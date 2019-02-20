@@ -56,8 +56,8 @@ public class _23812They_Got_A_Plot extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802430)
-			{ // Tortius.
+			if (targetId == 802430) // Tortius.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

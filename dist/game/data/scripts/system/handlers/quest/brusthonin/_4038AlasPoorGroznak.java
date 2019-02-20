@@ -64,8 +64,8 @@ public class _4038AlasPoorGroznak extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 205150)
-			{ // Surt
+			if (targetId == 205150) // Surt
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -78,8 +78,8 @@ public class _4038AlasPoorGroznak extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 730155:
-				{ // Groznak's Skull
+				case 730155: // Groznak's Skull
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -112,24 +112,24 @@ public class _4038AlasPoorGroznak extends QuestHandler
 					}
 					break;
 				}
-				case 700380:
-				{ // Weathered Skeleton
+				case 700380: // Weathered Skeleton
+				{
 					if (var == 1)
 					{
 						return true; // loot
 					}
 					break;
 				}
-				case 700381:
-				{ // Intact Skeleton
+				case 700381: // Intact Skeleton
+				{
 					if (var == 1)
 					{
 						return true; // loot
 					}
 					break;
 				}
-				case 700382:
-				{ // Muddy Skeleton
+				case 700382: // Muddy Skeleton
+				{
 					if (var == 1)
 					{
 						return true; // loot
@@ -139,8 +139,8 @@ public class _4038AlasPoorGroznak extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (targetId == 205150)
-			{ // Surt
+			if (targetId == 205150) // Surt
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

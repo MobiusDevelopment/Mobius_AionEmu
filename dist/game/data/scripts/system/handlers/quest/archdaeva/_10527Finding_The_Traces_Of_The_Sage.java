@@ -103,8 +103,8 @@ public class _10527Finding_The_Traces_Of_The_Sage extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -165,8 +165,8 @@ public class _10527Finding_The_Traces_Of_The_Sage extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806291)
-			{ // 데자보보.
+			if (targetId == 806291) // 데자보보.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -183,8 +183,8 @@ public class _10527Finding_The_Traces_Of_The_Sage extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703313)
-			{ // 움찔거리는 나무 덩굴.
+			if (targetId == 703313) // 움찔거리는 나무 덩굴.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -197,8 +197,8 @@ public class _10527Finding_The_Traces_Of_The_Sage extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731705)
-			{ // 빛나는 영원의 탑 조각.
+			if (targetId == 731705) // 빛나는 영원의 탑 조각.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -211,8 +211,8 @@ public class _10527Finding_The_Traces_Of_The_Sage extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703314)
-			{ // 움직이는 냄비.
+			if (targetId == 703314) // 움직이는 냄비.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -225,8 +225,8 @@ public class _10527Finding_The_Traces_Of_The_Sage extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731706)
-			{ // 영롱한 영원의 탑 조각.
+			if (targetId == 731706) // 영롱한 영원의 탑 조각.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -239,8 +239,8 @@ public class _10527Finding_The_Traces_Of_The_Sage extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703315)
-			{ // 꿈틀대는 자루.
+			if (targetId == 703315) // 꿈틀대는 자루.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -263,8 +263,8 @@ public class _10527Finding_The_Traces_Of_The_Sage extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

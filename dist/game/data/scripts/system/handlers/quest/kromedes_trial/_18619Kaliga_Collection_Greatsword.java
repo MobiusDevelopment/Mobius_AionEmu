@@ -55,8 +55,8 @@ public class _18619Kaliga_Collection_Greatsword extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(env.getQuestId());
 		final int targetId = env.getTargetId();
-		if (targetId == 730327)
-		{ // Kaliga's Greatsword Rack.
+		if (targetId == 730327) // Kaliga's Greatsword Rack.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 			{
 				return true;
@@ -75,8 +75,8 @@ public class _18619Kaliga_Collection_Greatsword extends QuestHandler
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (targetId == 730327)
-		{ // Kaliga's Greatsword Rack.
+		if (targetId == 730327) // Kaliga's Greatsword Rack.
+		{
 			final PlayerClass playerClass = player.getCommonData().getPlayerClass();
 			if (((playerClass == PlayerClass.WARRIOR) || (playerClass == PlayerClass.GLADIATOR) || (playerClass == PlayerClass.TEMPLAR)) && (player.getCommonData().getRace() == Race.ELYOS))
 			{

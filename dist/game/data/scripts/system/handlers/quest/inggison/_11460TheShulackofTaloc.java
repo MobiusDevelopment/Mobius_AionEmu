@@ -54,8 +54,8 @@ public class _11460TheShulackofTaloc extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798954)
-			{ // Tialla
+			if (targetId == 798954) // Tialla
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -68,8 +68,8 @@ public class _11460TheShulackofTaloc extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 799502:
-				{ // Dorkin
+				case 799502: // Dorkin
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -86,8 +86,8 @@ public class _11460TheShulackofTaloc extends QuestHandler
 					}
 					break;
 				}
-				case 798985:
-				{ // Seikin
+				case 798985: // Seikin
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -111,8 +111,8 @@ public class _11460TheShulackofTaloc extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798985)
-			{ // Seikin
+			if (targetId == 798985) // Seikin
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

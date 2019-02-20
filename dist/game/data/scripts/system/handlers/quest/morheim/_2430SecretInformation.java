@@ -66,8 +66,8 @@ public class _2430SecretInformation extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204327)
-			{ // Sveinn
+			if (targetId == 204327) // Sveinn
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -146,8 +146,8 @@ public class _2430SecretInformation extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 204327:
-				{ // Sveinn
+				case 204327: // Sveinn
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -183,8 +183,8 @@ public class _2430SecretInformation extends QuestHandler
 					}
 					break;
 				}
-				case 204377:
-				{ // Grall
+				case 204377: // Grall
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -203,8 +203,8 @@ public class _2430SecretInformation extends QuestHandler
 					}
 					break;
 				}
-				case 798078:
-				{ // Hugorunerk
+				case 798078: // Hugorunerk
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -221,8 +221,8 @@ public class _2430SecretInformation extends QuestHandler
 					}
 					break;
 				}
-				case 798081:
-				{ // Nicoyerk
+				case 798081: // Nicoyerk
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -239,8 +239,8 @@ public class _2430SecretInformation extends QuestHandler
 					}
 					break;
 				}
-				case 798082:
-				{ // Bicorunerk
+				case 798082: // Bicorunerk
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -258,8 +258,8 @@ public class _2430SecretInformation extends QuestHandler
 					}
 					break;
 				}
-				case 204300:
-				{ // Bolverk
+				case 204300: // Bolverk
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -292,24 +292,24 @@ public class _2430SecretInformation extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 204377:
-				{ // Grall
+				case 204377: // Grall
+				{
 					if (var == 2)
 					{
 						return sendQuestEndDialog(env, 0);
 					}
 					break;
 				}
-				case 798082:
-				{ // Bicorunerk
+				case 798082: // Bicorunerk
+				{
 					if (var == 6)
 					{
 						return sendQuestEndDialog(env, 1);
 					}
 					break;
 				}
-				case 204300:
-				{ // Bolverk
+				case 204300: // Bolverk
+				{
 					if (var == 8)
 					{
 						return sendQuestEndDialog(env, 2);

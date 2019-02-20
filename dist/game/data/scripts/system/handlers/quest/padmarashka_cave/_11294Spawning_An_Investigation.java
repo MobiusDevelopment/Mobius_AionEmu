@@ -59,8 +59,8 @@ public class _11294Spawning_An_Investigation extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs == null)
 		{
-			if (targetId == 799092)
-			{ // Jamia.
+			if (targetId == 799092) // Jamia.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -87,8 +87,8 @@ public class _11294Spawning_An_Investigation extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 798926:
-				{ // Outremus.
+				case 798926: // Outremus.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -104,8 +104,8 @@ public class _11294Spawning_An_Investigation extends QuestHandler
 						}
 					}
 				}
-				case 799010:
-				{ // Wivius.
+				case 799010: // Wivius.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -129,8 +129,8 @@ public class _11294Spawning_An_Investigation extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799010)
-			{ // Wivius.
+			if (targetId == 799010) // Wivius.
+			{
 				switch (env.getDialog())
 				{
 					case SELECT_REWARD:

@@ -330,12 +330,12 @@ public class VortexService
 	
 	public VortexLocation getLocationByWorld(int worldId)
 	{
-		if (worldId == 210060000)
-		{ // Theobomos.
+		if (worldId == 210060000) // Theobomos.
+		{
 			return getVortexLocation(1);
 		}
-		else if (worldId == 220050000)
-		{ // Brusthonin.
+		else if (worldId == 220050000) // Brusthonin.
+		{
 			return getVortexLocation(2);
 		}
 		else

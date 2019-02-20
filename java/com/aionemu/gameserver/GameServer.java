@@ -345,7 +345,8 @@ public class GameServer
 		TerritoryService.getInstance().initTerritory();
 		// Event 4.3/4.7
 		if (EventsConfig.IMPERIAL_TOMB_ENABLE)
-		{ // Shugo Imperial Tomb 4.3
+		{
+			// Shugo Imperial Tomb 4.3
 			ShugoImperialTombSpawnManager.getInstance().start();
 		}
 		if (EventsConfig.ENABLE_CRAZY)

@@ -38,8 +38,8 @@ public class Walk_Of_HonorAI2 extends GeneralNpcAI2
 		switch (getNpcId())
 		{
 			case 731193: // Walk Of Honor
-			case 731194:
-			{ // Walk Of Glory
+			case 731194: // Walk Of Glory
+			{
 				super.handleDialogStart(player);
 				break;
 			}

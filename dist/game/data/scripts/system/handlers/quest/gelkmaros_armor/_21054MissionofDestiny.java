@@ -51,8 +51,8 @@ public class _21054MissionofDestiny extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 799318)
-			{ // Batalrion
+			if (targetId == 799318) // Batalrion
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -80,8 +80,8 @@ public class _21054MissionofDestiny extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 799318)
-			{ // Batalrion
+			if (targetId == 799318) // Batalrion
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -97,8 +97,8 @@ public class _21054MissionofDestiny extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799318)
-			{ // Batalrion
+			if (targetId == 799318) // Batalrion
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

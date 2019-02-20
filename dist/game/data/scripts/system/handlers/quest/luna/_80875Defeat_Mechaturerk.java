@@ -53,8 +53,8 @@ public class _80875Defeat_Mechaturerk extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 834166)
-			{ // Eli.
+			if (targetId == 834166) // Eli.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -73,8 +73,8 @@ public class _80875Defeat_Mechaturerk extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 703381)
-		{ // Mechaturerk’s Footlocker.
+		else if (targetId == 703381) // Mechaturerk’s Footlocker.
+		{
 			if (dialog == QuestDialog.USE_OBJECT)
 			{
 				closeDialogWindow(env);
@@ -83,8 +83,8 @@ public class _80875Defeat_Mechaturerk extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 834166)
-			{ // Eli.
+			if (targetId == 834166) // Eli.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -110,8 +110,8 @@ public class _80875Defeat_Mechaturerk extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 834166)
-			{ // Eli.
+			if (targetId == 834166) // Eli.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

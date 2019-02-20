@@ -92,8 +92,8 @@ public class _24051Investigate_The_Disappearance extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204707:
-				{ // Mani.
+				case 204707: // Mani.
+				{
 					if ((dialog == QuestDialog.START_DIALOG) && (var == 0))
 					{
 						return sendQuestDialog(env, 1011);
@@ -112,8 +112,8 @@ public class _24051Investigate_The_Disappearance extends QuestHandler
 					}
 					break;
 				}
-				case 204749:
-				{ // Paeru.
+				case 204749: // Paeru.
+				{
 					if ((dialog == QuestDialog.START_DIALOG) && (var == 1))
 					{
 						return sendQuestDialog(env, 1352);
@@ -124,8 +124,8 @@ public class _24051Investigate_The_Disappearance extends QuestHandler
 					}
 					break;
 				}
-				case 204800:
-				{ // Hammel.
+				case 204800: // Hammel.
+				{
 					if ((dialog == QuestDialog.START_DIALOG) && (var == 4))
 					{
 						return sendQuestDialog(env, 2375);
@@ -137,8 +137,8 @@ public class _24051Investigate_The_Disappearance extends QuestHandler
 					}
 					break;
 				}
-				case 700359:
-				{ // Port.
+				case 700359: // Port.
+				{
 					if ((dialog == QuestDialog.USE_OBJECT) && (var == 5) && (player.getInventory().getItemCountByItemId(182215377) >= 1))
 					{
 						TeleportService2.teleportTo(player, player.getWorldId(), player.getInstanceId(), 1757.82f, 1392.94f, 401.75f, (byte) 94);
@@ -150,8 +150,8 @@ public class _24051Investigate_The_Disappearance extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204707)
-			{ // Mani.
+			if (targetId == 204707) // Mani.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					removeQuestItem(env, 182215376, 1);

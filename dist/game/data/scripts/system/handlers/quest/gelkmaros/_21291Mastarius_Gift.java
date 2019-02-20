@@ -61,12 +61,12 @@ public class _21291Mastarius_Gift extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 799340)
-			{ // Athana.
+			if (targetId == 799340) // Athana.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
-					if (checkItemExistence(env, 182213148, 1, true))
-					{ // A Letter From Mastarius.
+					if (checkItemExistence(env, 182213148, 1, true)) // A Letter From Mastarius.
+					{
 						changeQuestStep(env, 0, 0, true);
 						return sendQuestDialog(env, 2375);
 					}
@@ -75,8 +75,8 @@ public class _21291Mastarius_Gift extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (targetId == 799340)
-			{ // Athana.
+			if (targetId == 799340) // Athana.
+			{
 				switch (dialog)
 				{
 					case USE_OBJECT:

@@ -113,8 +113,8 @@ public class ShugoImperialTombSpawnManager
 		}
 	}
 	
-	public enum RiftEnum
-	{ // Shugo Imperial Tomb 4.3/4.8
+	public enum RiftEnum // Shugo Imperial Tomb 4.3/4.8
+	{
 		Indiarunark_Sanctum(831117, 110010000, 1454.038f, 1520.621f, 573.0719f, (byte) 60),
 		Indiarunark_Inggison(831117, 210050000, 1358.8662f, 299.00287f, 588.7499f, (byte) 0),
 		Indiarunark_Cygnea(831117, 210070000, 2930.079f, 825.9626f, 569.5f, (byte) 71),

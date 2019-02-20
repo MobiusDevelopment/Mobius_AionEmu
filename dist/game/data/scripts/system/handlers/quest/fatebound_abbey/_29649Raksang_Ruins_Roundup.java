@@ -67,8 +67,8 @@ public class _29649Raksang_Ruins_Roundup extends QuestHandler
 				{
 					case START_DIALOG:
 					{
-						if (player.getInventory().getItemCountByItemId(164000336) >= 1)
-						{ // Abbey Return Stone.
+						if (player.getInventory().getItemCountByItemId(164000336) >= 1) // Abbey Return Stone.
+						{
 							return sendQuestDialog(env, 4762);
 						}
 						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
@@ -94,8 +94,8 @@ public class _29649Raksang_Ruins_Roundup extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 804732:
-				{ // DF5 Cnut.
+				case 804732: // DF5 Cnut.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -116,8 +116,8 @@ public class _29649Raksang_Ruins_Roundup extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804732)
-			{ // DF5 Cnut.
+			if (targetId == 804732) // DF5 Cnut.
+			{
 				switch (dialog)
 				{
 					case SELECT_REWARD:

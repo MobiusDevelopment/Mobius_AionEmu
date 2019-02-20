@@ -64,8 +64,8 @@ public class _24044Change_The_Future extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 278036:
-				{ // Scoda
+				case 278036: // Scoda
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -82,8 +82,8 @@ public class _24044Change_The_Future extends QuestHandler
 					}
 					break;
 				}
-				case 203550:
-				{ // Munin
+				case 203550: // Munin
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -100,8 +100,8 @@ public class _24044Change_The_Future extends QuestHandler
 					}
 					break;
 				}
-				case 204207:
-				{ // Kasir
+				case 204207: // Kasir
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -118,8 +118,8 @@ public class _24044Change_The_Future extends QuestHandler
 					}
 					break;
 				}
-				case 798067:
-				{ // Lyeanenerk
+				case 798067: // Lyeanenerk
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -136,8 +136,8 @@ public class _24044Change_The_Future extends QuestHandler
 					}
 					break;
 				}
-				case 279029:
-				{ // Lugbug
+				case 279029: // Lugbug
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -162,8 +162,8 @@ public class _24044Change_The_Future extends QuestHandler
 					}
 					break;
 				}
-				case 700355:
-				{ // Artifact Of The Inception.
+				case 700355: // Artifact Of The Inception.
+				{
 					switch (dialog)
 					{
 						case USE_OBJECT:
@@ -183,8 +183,8 @@ public class _24044Change_The_Future extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 278036)
-			{ // Scoda.
+			if (targetId == 278036) // Scoda.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

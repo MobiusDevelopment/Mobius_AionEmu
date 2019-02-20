@@ -56,8 +56,8 @@ public class _15042Calling_Kaisinel_Butterfly extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 804885)
-			{ // Telos
+			if (targetId == 804885) // Telos
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -67,8 +67,8 @@ public class _15042Calling_Kaisinel_Butterfly extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804885)
-			{ // Telos
+			if (targetId == 804885) // Telos
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

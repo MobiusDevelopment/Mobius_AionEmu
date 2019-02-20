@@ -55,8 +55,8 @@ public class _13913Dragon_In_The_Annex extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798515)
-			{ // Perna.
+			if (targetId == 798515) // Perna.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}
@@ -70,8 +70,8 @@ public class _13913Dragon_In_The_Annex extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			if (env.getTargetId() == 277224)
-			{ // Ahserion.
+			if (env.getTargetId() == 277224) // Ahserion.
+			{
 				qs.setStatus(QuestStatus.REWARD);
 				updateQuestStatus(env);
 				return true;

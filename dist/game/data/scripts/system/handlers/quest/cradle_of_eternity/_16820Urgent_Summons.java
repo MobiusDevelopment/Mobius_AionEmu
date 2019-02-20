@@ -62,8 +62,8 @@ public class _16820Urgent_Summons extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (player.getWorldId() == 301550000)
-		{ // 지식의 정원.
+		if (player.getWorldId() == 301550000) // 지식의 정원.
+		{
 			if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 			{
 				final int var = qs.getQuestVars().getQuestVars();
@@ -85,8 +85,8 @@ public class _16820Urgent_Summons extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 806232)
-			{ // 에테자르.
+			if (targetId == 806232) // 에테자르.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -112,8 +112,8 @@ public class _16820Urgent_Summons extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806134)
-			{ // 에테자르.
+			if (targetId == 806134) // 에테자르.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

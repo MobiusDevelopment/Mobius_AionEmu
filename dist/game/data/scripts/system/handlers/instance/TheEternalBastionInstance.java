@@ -753,12 +753,12 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 	private int getTime()
 	{
 		final long result = System.currentTimeMillis() - instanceTime;
-		if (result < 60000)
-		{ // 60 Secondes.
+		if (result < 60000) // 60 Secondes.
+		{
 			return (int) (60000 - result);
 		}
-		else if (result < 1800000)
-		{ // 30 Minutes.
+		else if (result < 1800000) // 30 Minutes.
+		{
 			return (int) (1800000 - (result - 60000)); // 60 Secondes.
 		}
 		return 0;
@@ -778,28 +778,28 @@ public class TheEternalBastionInstance extends GeneralInstanceHandler
 	
 	private int checkRank(int totalPoints)
 	{
-		if (totalPoints > 90000)
-		{ // Rank S.
+		if (totalPoints > 90000) // Rank S.
+		{
 			rank = 1;
 		}
-		else if (totalPoints > 82000)
-		{ // Rank A.
+		else if (totalPoints > 82000) // Rank A.
+		{
 			rank = 2;
 		}
-		else if (totalPoints > 60000)
-		{ // Rank B.
+		else if (totalPoints > 60000) // Rank B.
+		{
 			rank = 3;
 		}
-		else if (totalPoints > 30000)
-		{ // Rank C.
+		else if (totalPoints > 30000) // Rank C.
+		{
 			rank = 4;
 		}
-		else if (totalPoints > 5000)
-		{ // Rank D.
+		else if (totalPoints > 5000) // Rank D.
+		{
 			rank = 5;
 		}
-		else if (totalPoints >= 2000)
-		{ // Rank F.
+		else if (totalPoints >= 2000) // Rank F.
+		{
 			rank = 8;
 		}
 		else

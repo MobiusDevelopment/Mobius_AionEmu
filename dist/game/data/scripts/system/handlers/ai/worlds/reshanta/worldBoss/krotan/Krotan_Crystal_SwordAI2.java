@@ -36,8 +36,8 @@ public class Krotan_Crystal_SwordAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(185000245) != null)
-		{ // Spirit Of Krotan's Pendant.
+		if (player.getInventory().getFirstItemByItemId(185000245) != null) // Spirit Of Krotan's Pendant.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));
 		}
 		else
@@ -51,8 +51,8 @@ public class Krotan_Crystal_SwordAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000245, 1))
-		{ // Spirit Of Krotan's Pendant.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000245, 1)) // Spirit Of Krotan's Pendant.
+		{
 			switch (getNpcId())
 			{
 				case 702840: // Krotan's Crystal Sword [Elyos]

@@ -32,8 +32,8 @@ public class TheCatacombsEntranceAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(185000181) != null)
-		{ // The Catacombs Key.
+		if (player.getInventory().getFirstItemByItemId(185000181) != null) // The Catacombs Key.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 		}
 		else
@@ -54,8 +54,8 @@ public class TheCatacombsEntranceAI2 extends NpcAI2
 				{
 					case 301140000: // Seized Danuar Sanctuary 4.8
 					{
-						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000181, 1))
-						{ // The Catacombs Key.
+						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000181, 1)) // The Catacombs Key.333
+						{
 							TeleportService2.teleportTo(player, 301140000, instanceId, 1032.0134f, 369.56287f, 297.8753f, (byte) 32);
 						}
 						break;
@@ -65,8 +65,8 @@ public class TheCatacombsEntranceAI2 extends NpcAI2
 				{
 					case 301380000: // Danuar Sanctuary 4.8
 					{
-						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000181, 1))
-						{ // The Catacombs Key.
+						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000181, 1)) // The Catacombs Key.
+						{
 							TeleportService2.teleportTo(player, 301380000, instanceId, 1032.0134f, 369.56287f, 297.8753f, (byte) 32);
 						}
 						break;

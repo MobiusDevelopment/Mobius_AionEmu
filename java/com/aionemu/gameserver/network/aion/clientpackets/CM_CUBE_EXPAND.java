@@ -43,8 +43,8 @@ public class CM_CUBE_EXPAND extends AionClientPacket
 	protected void runImpl()
 	{
 		final Player activePlayer = getConnection().getActivePlayer();
-		if (type == 0)
-		{ // Kinah
+		if (type == 0) // Kinah
+		{
 			if (activePlayer.getNpcExpands() < 15)
 			{
 				if (activePlayer.getNpcExpands() == 0)
@@ -124,115 +124,115 @@ public class CM_CUBE_EXPAND extends AionClientPacket
 		{
 			if (activePlayer.getNpcExpands() < 10)
 			{
-				if (activePlayer.getInventory().decreaseByItemId(186000419, 5))
-				{ // Cube Expansion Coin.
+				if (activePlayer.getInventory().decreaseByItemId(186000419, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000440, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000440, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000444, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000444, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000445, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000445, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
 			}
 			else if (activePlayer.getNpcExpands() < 11)
 			{
-				if (activePlayer.getInventory().decreaseByItemId(186000419, 5))
-				{ // Cube Expansion Coin.
+				if (activePlayer.getInventory().decreaseByItemId(186000419, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000440, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000440, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000444, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000444, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000445, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000445, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
 			}
 			else if (activePlayer.getNpcExpands() < 12)
 			{
-				if (activePlayer.getInventory().decreaseByItemId(186000419, 5))
-				{ // Cube Expansion Coin.
+				if (activePlayer.getInventory().decreaseByItemId(186000419, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000440, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000440, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000444, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000444, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000445, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000445, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
 			}
 			else if (activePlayer.getNpcExpands() < 13)
 			{
-				if (activePlayer.getInventory().decreaseByItemId(186000419, 5))
-				{ // Cube Expansion Coin.
+				if (activePlayer.getInventory().decreaseByItemId(186000419, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000440, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000440, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000444, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000444, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000445, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000445, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
 			}
 			else if (activePlayer.getNpcExpands() < 14)
 			{
-				if (activePlayer.getInventory().decreaseByItemId(186000419, 5))
-				{ // Cube Expansion Coin.
+				if (activePlayer.getInventory().decreaseByItemId(186000419, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000440, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000440, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000444, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000444, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000445, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000445, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
 			}
 			else if (activePlayer.getNpcExpands() < 15)
 			{
-				if (activePlayer.getInventory().decreaseByItemId(186000419, 5))
-				{ // Cube Expansion Coin.
+				if (activePlayer.getInventory().decreaseByItemId(186000419, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000440, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000440, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000444, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000444, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
-				else if (activePlayer.getInventory().decreaseByItemId(186000445, 5))
-				{ // Cube Expansion Coin.
+				else if (activePlayer.getInventory().decreaseByItemId(186000445, 5)) // Cube Expansion Coin.
+				{
 					CubeExpandService.expand(activePlayer, true);
 				}
 			}

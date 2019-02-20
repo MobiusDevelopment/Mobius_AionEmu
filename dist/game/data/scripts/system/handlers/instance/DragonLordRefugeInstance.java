@@ -137,8 +137,8 @@ public class DragonLordRefugeInstance extends GeneralInstanceHandler
 				deleteNpc(730695); // Surkana.
 				deleteNpc(283130); // Blaze Engraving.
 				deleteNpc(283132); // Blaze Engraving.
-				if (getNpcs(219359).isEmpty())
-				{ // Calindi Flamelord.
+				if (getNpcs(219359).isEmpty()) // Calindi Flamelord.
+				{
 					spawnTiamatTrueForm();
 				}
 				if (player != null)

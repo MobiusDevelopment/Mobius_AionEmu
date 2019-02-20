@@ -112,8 +112,8 @@ public class TradeService
 			item = LimitedItemTradeService.getInstance().getLimitedItem(tradeItem.getItemId(), npc.getNpcId());
 			if (item != null)
 			{
-				if ((item.getBuyLimit() == 0) && (item.getDefaultSellLimit() != 0))
-				{ // type A
+				if ((item.getBuyLimit() == 0) && (item.getDefaultSellLimit() != 0)) // type A
+				{
 					item.getBuyCount().putIfAbsent(player.getObjectId(), 0);
 					if ((item.getSellLimit() - tradeItem.getCount()) < 0)
 					{
@@ -121,8 +121,8 @@ public class TradeService
 					}
 					item.setSellLimit(item.getSellLimit() - (int) tradeItem.getCount());
 				}
-				else if ((item.getBuyLimit() != 0) && (item.getDefaultSellLimit() == 0))
-				{ // type B
+				else if ((item.getBuyLimit() != 0) && (item.getDefaultSellLimit() == 0)) // type B
+				{
 					item.getBuyCount().putIfAbsent(player.getObjectId(), 0);
 					if ((item.getBuyLimit() - tradeItem.getCount()) < 0)
 					{
@@ -140,8 +140,8 @@ public class TradeService
 						}
 					}
 				}
-				else if ((item.getBuyLimit() != 0) && (item.getDefaultSellLimit() != 0))
-				{ // type C
+				else if ((item.getBuyLimit() != 0) && (item.getDefaultSellLimit() != 0)) // type C
+				{
 					item.getBuyCount().putIfAbsent(player.getObjectId(), 0);
 					if (((item.getBuyLimit() - tradeItem.getCount()) < 0) || ((item.getSellLimit() - tradeItem.getCount()) < 0))
 					{
@@ -382,7 +382,8 @@ public class TradeService
 			}
 			
 			if (!item.isSellable())
-			{ // %0 is not an item that can be sold.
+			{
+				// %0 is not an item that can be sold.
 				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300344, new DescriptionId(item.getNameId())));
 				return false;
 			}

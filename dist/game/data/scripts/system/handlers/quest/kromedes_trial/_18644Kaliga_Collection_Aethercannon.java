@@ -55,8 +55,8 @@ public class _18644Kaliga_Collection_Aethercannon extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(env.getQuestId());
 		final int targetId = env.getTargetId();
-		if (targetId == 730776)
-		{ // Kaliga's Aethercannon Rack.
+		if (targetId == 730776) // Kaliga's Aethercannon Rack.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 			{
 				return true;
@@ -75,8 +75,8 @@ public class _18644Kaliga_Collection_Aethercannon extends QuestHandler
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (targetId == 730776)
-		{ // Kaliga's Aethercannon Rack.
+		if (targetId == 730776) // Kaliga's Aethercannon Rack.
+		{
 			final PlayerClass playerClass = player.getCommonData().getPlayerClass();
 			if (((playerClass == PlayerClass.TECHNIST) || (playerClass == PlayerClass.GUNSLINGER)) && (player.getCommonData().getRace() == Race.ELYOS))
 			{

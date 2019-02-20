@@ -61,8 +61,8 @@ public class _21073ListentoMySongStrigiks extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 799407)
-			{ // Skilving
+			if (targetId == 799407) // Skilving
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -73,8 +73,8 @@ public class _21073ListentoMySongStrigiks extends QuestHandler
 		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
-			if (targetId == 799408)
-			{ // Svasuth
+			if (targetId == 799408) // Svasuth
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if (var == 0)
@@ -87,8 +87,8 @@ public class _21073ListentoMySongStrigiks extends QuestHandler
 					return defaultCloseDialog(env, 0, 1); // 1
 				}
 			}
-			else if (targetId == 799407)
-			{ // Skilving
+			else if (targetId == 799407) // Skilving
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if (var == 1)
@@ -105,8 +105,8 @@ public class _21073ListentoMySongStrigiks extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799407)
-			{ // Skilving
+			if (targetId == 799407) // Skilving
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

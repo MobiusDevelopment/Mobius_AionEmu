@@ -89,8 +89,8 @@ public class _25462Facing_The_Kysis_Guardian_Spirit extends QuestHandler
 			if (var == 0)
 			{
 				final int targetId = env.getTargetId();
-				if (targetId == 884029)
-				{ // Spirit Of Kysis.
+				if (targetId == 884029) // Spirit Of Kysis.
+				{
 					return defaultOnKillEvent(env, 884029, 1, true); // Spirit Of Kysis.
 				}
 			}

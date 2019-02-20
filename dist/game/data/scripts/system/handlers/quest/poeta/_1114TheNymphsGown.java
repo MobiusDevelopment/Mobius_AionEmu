@@ -181,8 +181,8 @@ public class _1114TheNymphsGown extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 700008)
-		{ // Seirenia's clothes
+		else if (targetId == 700008) // Seirenia's clothes
+		{
 			switch (env.getDialog())
 			{
 				case USE_OBJECT:

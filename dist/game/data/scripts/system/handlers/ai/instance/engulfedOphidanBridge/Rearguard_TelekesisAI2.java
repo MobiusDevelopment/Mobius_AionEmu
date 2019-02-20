@@ -33,8 +33,8 @@ public class Rearguard_TelekesisAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(164000279) != null)
-		{ // Advance Route Teleport Scroll.
+		if (player.getInventory().getFirstItemByItemId(164000279) != null) // Advance Route Teleport Scroll.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 		}
 		else
@@ -49,20 +49,20 @@ public class Rearguard_TelekesisAI2 extends NpcAI2
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		final int instanceId = getPosition().getInstanceId();
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(164000279, 1))
-		{ // Advance Route Teleport Scroll.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(164000279, 1)) // Advance Route Teleport Scroll.
+		{
 			TeleportService2.teleportTo(player, 301210000, instanceId, 692.0453f, 485.75558f, 599.91113f, (byte) 71);
 		}
-		if ((dialogId == 10001) && player.getInventory().decreaseByItemId(164000279, 1))
-		{ // Advance Route Teleport Scroll.
+		if ((dialogId == 10001) && player.getInventory().decreaseByItemId(164000279, 1)) // Advance Route Teleport Scroll.
+		{
 			TeleportService2.teleportTo(player, 301210000, instanceId, 535.967f, 458.2419f, 619.88727f, (byte) 85);
 		}
-		if ((dialogId == 10002) && player.getInventory().decreaseByItemId(164000279, 1))
-		{ // Advance Route Teleport Scroll.
+		if ((dialogId == 10002) && player.getInventory().decreaseByItemId(164000279, 1)) // Advance Route Teleport Scroll.
+		{
 			TeleportService2.teleportTo(player, 301210000, instanceId, 597.6529f, 571.45654f, 590.91034f, (byte) 100);
 		}
-		if ((dialogId == 10003) && player.getInventory().decreaseByItemId(164000279, 1))
-		{ // Advance Route Teleport Scroll.
+		if ((dialogId == 10003) && player.getInventory().decreaseByItemId(164000279, 1)) // Advance Route Teleport Scroll.
+		{
 			TeleportService2.teleportTo(player, 301210000, instanceId, 475.34265f, 522.1061f, 597.375f, (byte) 15);
 		}
 		else if (dialogId == 1352)

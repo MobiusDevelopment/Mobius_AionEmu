@@ -61,12 +61,12 @@ public class _11289Veille_Gift extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 799038)
-			{ // Laestrygos.
+			if (targetId == 799038) // Laestrygos.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
-					if (checkItemExistence(env, 182213147, 1, true))
-					{ // A Letter From Veille.
+					if (checkItemExistence(env, 182213147, 1, true)) // A Letter From Veille.
+					{
 						changeQuestStep(env, 0, 0, true);
 						return sendQuestDialog(env, 2375);
 					}
@@ -75,8 +75,8 @@ public class _11289Veille_Gift extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (targetId == 799038)
-			{ // Laestrygos.
+			if (targetId == 799038) // Laestrygos.
+			{
 				switch (dialog)
 				{
 					case USE_OBJECT:

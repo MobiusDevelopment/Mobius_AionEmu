@@ -65,8 +65,8 @@ public class _48000SummonsFromTheWardens extends QuestHandler
 		
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 799845)
-			{ // Deryk
+			if (targetId == 799845) // Deryk
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -80,8 +80,8 @@ public class _48000SummonsFromTheWardens extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (targetId == 799845)
-			{ // Deryk
+			if (targetId == 799845) // Deryk
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

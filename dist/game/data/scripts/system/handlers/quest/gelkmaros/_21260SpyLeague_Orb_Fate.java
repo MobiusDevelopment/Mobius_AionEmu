@@ -62,8 +62,8 @@ public class _21260SpyLeague_Orb_Fate extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final QuestDialog dialog = env.getDialog();
-		if (env.getTargetId() == 799340)
-		{ // Athana.
+		if (env.getTargetId() == 799340) // Athana.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 			{
 				switch (dialog)
@@ -85,8 +85,8 @@ public class _21260SpyLeague_Orb_Fate extends QuestHandler
 			}
 			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
-				if (env.getTargetId() == 799340)
-				{ // Athana.
+				if (env.getTargetId() == 799340) // Athana.
+				{
 					if (env.getDialog() == QuestDialog.START_DIALOG)
 					{
 						return sendQuestDialog(env, 5);

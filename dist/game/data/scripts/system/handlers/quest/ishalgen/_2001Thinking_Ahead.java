@@ -79,8 +79,8 @@ public class _2001Thinking_Ahead extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 203518)
-			{ // Boromer.
+			if (targetId == 203518) // Boromer.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -128,8 +128,8 @@ public class _2001Thinking_Ahead extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203518)
-			{ // Boromer.
+			if (targetId == 203518) // Boromer.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 2034);

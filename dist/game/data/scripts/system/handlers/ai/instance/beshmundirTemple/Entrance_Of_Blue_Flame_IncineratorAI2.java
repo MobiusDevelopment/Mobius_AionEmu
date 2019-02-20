@@ -30,8 +30,8 @@ public class Entrance_Of_Blue_Flame_IncineratorAI2 extends ActionItemNpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getItemCountByItemId(185000091) > 0)
-		{ // Incinerator Key.
+		if (player.getInventory().getItemCountByItemId(185000091) > 0) // Incinerator Key.
+		{
 			super.handleUseItemStart(player);
 		}
 		else

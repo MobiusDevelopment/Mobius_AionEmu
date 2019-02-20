@@ -64,8 +64,8 @@ public class _1562CrossedDestiny extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204589)
-			{ // Berone
+			if (targetId == 204589) // Berone
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -89,8 +89,8 @@ public class _1562CrossedDestiny extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204616:
-				{ // Litonos
+				case 204616: // Litonos
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -126,8 +126,8 @@ public class _1562CrossedDestiny extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204589)
-			{ // Berone
+			if (targetId == 204589) // Berone
+			{
 				if (env.getDialogId() == 1009)
 				{
 					return sendQuestDialog(env, 10002);

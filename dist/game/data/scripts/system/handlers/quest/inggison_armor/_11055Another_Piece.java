@@ -48,8 +48,8 @@ public class _11055Another_Piece extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 798990)
-			{ // Titus
+			if (targetId == 798990) // Titus
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -77,8 +77,8 @@ public class _11055Another_Piece extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 798990)
-			{ // Titus
+			if (targetId == 798990) // Titus
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -94,8 +94,8 @@ public class _11055Another_Piece extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798990)
-			{ // Titus
+			if (targetId == 798990) // Titus
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

@@ -55,8 +55,8 @@ public class _18208IllusionOrInfiltration extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 205316)
-			{ // Inggril
+			if (targetId == 205316) // Inggril
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -66,8 +66,8 @@ public class _18208IllusionOrInfiltration extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 205309)
-			{ // Molfus
+			if (targetId == 205309) // Molfus
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

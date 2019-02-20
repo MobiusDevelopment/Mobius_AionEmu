@@ -32,8 +32,8 @@ public class TheCryptsEntranceAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(185000182) != null)
-		{ // The Crypts Key.
+		if (player.getInventory().getFirstItemByItemId(185000182) != null) // The Crypts Key.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 		}
 		else
@@ -54,8 +54,8 @@ public class TheCryptsEntranceAI2 extends NpcAI2
 				{
 					case 301140000: // Seized Danuar Sanctuary 4.8
 					{
-						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000182, 1))
-						{ // The Crypts Key.
+						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000182, 1)) // The Crypts Key.
+						{
 							TeleportService2.teleportTo(player, 301140000, instanceId, 823.4411f, 956.04785f, 304.96292f, (byte) 93);
 						}
 						break;
@@ -65,8 +65,8 @@ public class TheCryptsEntranceAI2 extends NpcAI2
 				{
 					case 301380000: // Danuar Sanctuary 4.8
 					{
-						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000182, 1))
-						{ // The Crypts Key.
+						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000182, 1)) // The Crypts Key.
+						{
 							TeleportService2.teleportTo(player, 301380000, instanceId, 823.4411f, 956.04785f, 304.96292f, (byte) 93);
 						}
 						break;

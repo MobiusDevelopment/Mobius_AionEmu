@@ -38,8 +38,8 @@ public class ViolaAI2 extends GeneralNpcAI2
 	{
 		switch (getNpcId())
 		{
-			case 806148:
-			{ // Viola.
+			case 806148: // Viola.
+			{
 				super.handleDialogStart(player);
 				break;
 			}

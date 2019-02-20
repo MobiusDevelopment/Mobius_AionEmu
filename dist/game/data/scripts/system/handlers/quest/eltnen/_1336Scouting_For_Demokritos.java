@@ -85,8 +85,8 @@ public class _1336Scouting_For_Demokritos extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204006)
-			{ // Demokritos.
+			if (targetId == 204006) // Demokritos.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -96,8 +96,8 @@ public class _1336Scouting_For_Demokritos extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204006)
-			{ // Demokritos.
+			if (targetId == 204006) // Demokritos.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

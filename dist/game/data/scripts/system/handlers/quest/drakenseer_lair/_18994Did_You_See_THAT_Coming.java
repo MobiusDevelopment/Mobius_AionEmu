@@ -61,8 +61,8 @@ public class _18994Did_You_See_THAT_Coming extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -72,8 +72,8 @@ public class _18994Did_You_See_THAT_Coming extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806241)
-			{ // Riseon.
+			if (targetId == 806241) // Riseon.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -88,8 +88,8 @@ public class _18994Did_You_See_THAT_Coming extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if (qs.getQuestVarById(0) == 3)
@@ -106,8 +106,8 @@ public class _18994Did_You_See_THAT_Coming extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				if (env.getDialogId() == 1352)
 				{
 					return sendQuestDialog(env, 5);
@@ -145,8 +145,8 @@ public class _18994Did_You_See_THAT_Coming extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 220450:
-					{ // Drakenseer Akhal.
+					case 220450: // Drakenseer Akhal.
+					{
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 						return true;

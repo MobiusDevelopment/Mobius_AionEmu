@@ -100,8 +100,8 @@ public class _2947Following_Through extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204053:
-				{ // Kvasir.
+				case 204053: // Kvasir.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -137,8 +137,8 @@ public class _2947Following_Through extends QuestHandler
 					}
 					break;
 				}
-				case 204089:
-				{ // Garm.
+				case 204089: // Garm.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -176,8 +176,8 @@ public class _2947Following_Through extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204301:
-				{ // Aegir.
+				case 204301: // Aegir.
+				{
 					return sendQuestEndDialog(env, choice);
 				}
 			}

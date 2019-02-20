@@ -190,8 +190,8 @@ public class Dalia_CharlandsAI2 extends AggressiveNpcAI2
 	protected void handleDied()
 	{
 		cancelPhaseTask();
-		if (getNpcId() == 217185)
-		{ // Dalia Charlands.
+		if (getNpcId() == 217185) // Dalia Charlands.
+		{
 			// Release me...from this curse.
 			sendMsg(1500239, getObjectId(), false, 0);
 			spawn(282178, 1234.8602f, 654.7392f, 296.61374f, (byte) 0); // Esoterrace Alarm.

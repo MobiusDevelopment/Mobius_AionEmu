@@ -34,8 +34,8 @@ public class Defense_CannonAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(185000136) != null)
-		{ // Aetheric Power Crystal.
+		if (player.getInventory().getFirstItemByItemId(185000136) != null) // Aetheric Power Crystal.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));
 		}
 		else
@@ -48,8 +48,8 @@ public class Defense_CannonAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000136, 1))
-		{ // Aetheric Power Crystal.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000136, 1)) // Aetheric Power Crystal.
+		{
 			switch (getNpcId())
 			{
 				// Defense Cannon Elyos.

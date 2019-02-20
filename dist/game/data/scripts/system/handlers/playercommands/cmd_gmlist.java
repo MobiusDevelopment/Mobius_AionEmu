@@ -104,40 +104,40 @@ public class cmd_gmlist extends PlayerCommand
 			{
 				String tag = "";
 				String tagEnd = "";
-				if (admin.getAccessLevel() == 2)
-				{ // trialGM
+				if (admin.getAccessLevel() == 2) // trialGM
+				{
 					tag = AdminConfig.ADMIN_TAG_2;
 				}
-				else if (admin.getAccessLevel() == 3)
-				{ // GM
+				else if (admin.getAccessLevel() == 3) // GM
+				{
 					tag = AdminConfig.ADMIN_TAG_3;
 				}
-				else if (admin.getAccessLevel() == 4)
-				{ // HGM
+				else if (admin.getAccessLevel() == 4) // HGM
+				{
 					tag = AdminConfig.ADMIN_TAG_4;
 				}
-				else if (admin.getAccessLevel() == 5)
-				{ // Dev
+				else if (admin.getAccessLevel() == 5) // Dev
+				{
 					tag = AdminConfig.ADMIN_TAG_5;
 				}
-				else if (admin.getAccessLevel() == 6)
-				{ // Custom
+				else if (admin.getAccessLevel() == 6) // Custom
+				{
 					tag = AdminConfig.ADMIN_TAG_6;
 				}
-				else if (admin.getAccessLevel() == 7)
-				{ // Custom
+				else if (admin.getAccessLevel() == 7) // Custom
+				{
 					tag = AdminConfig.ADMIN_TAG_7;
 				}
-				else if (admin.getAccessLevel() == 8)
-				{ // Custom
+				else if (admin.getAccessLevel() == 8) // Custom
+				{
 					tag = AdminConfig.ADMIN_TAG_8;
 				}
-				else if (admin.getAccessLevel() == 9)
-				{ // Custom
+				else if (admin.getAccessLevel() == 9) // Custom
+				{
 					tag = AdminConfig.ADMIN_TAG_9;
 				}
-				else if (admin.getAccessLevel() == 10)
-				{ // Custom
+				else if (admin.getAccessLevel() == 10) // Custom
+				{
 					tag = AdminConfig.ADMIN_TAG_10;
 				} // "\uE050 \uE042 Senior-GM \uE043 %s \uE050")
 				tagEnd = tag.substring(tag.length() - 2);

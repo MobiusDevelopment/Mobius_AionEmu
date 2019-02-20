@@ -97,8 +97,8 @@ public class FirstTargetProperty
 			}
 			case TARGET:
 			{
-				if ((skill.getSkillId() <= 8217) || (skill.getSkillId() >= 9180))
-				{ // 5.1
+				if ((skill.getSkillId() <= 8217) || (skill.getSkillId() >= 9180)) // 5.1
+				{
 					if ((skill.getSkillTemplate().getDispelCategory() != DispelCategoryType.NPC_BUFF) && (skill.getSkillTemplate().getDispelCategory() != DispelCategoryType.NPC_DEBUFF_PHYSICAL))
 					{
 						if (((skill.getFirstTarget() == null) || (skill.getFirstTarget().equals(skill.getEffector()))) && ((skill.getEffector() instanceof Player)))

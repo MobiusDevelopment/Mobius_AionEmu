@@ -1383,8 +1383,8 @@ public class EmpyreanCrucibleInstance extends CrucibleInstance
 				sp(217750, 1626.7312f, 156.94821f, 126.0f, (byte) 91, 2000);
 				ThreadPoolManager.getInstance().schedule((Runnable) () ->
 				{
-					if (getNpc(217750) != null)
-					{ // Administrator Arminos.
+					if (getNpc(217750) != null) // Administrator Arminos.
+					{
 						ThreadPoolManager.getInstance().schedule((Runnable) () ->
 						{
 							if (getNpc(217750) != null)

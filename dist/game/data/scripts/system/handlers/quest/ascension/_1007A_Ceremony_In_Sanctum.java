@@ -87,8 +87,8 @@ public class _1007A_Ceremony_In_Sanctum extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 790001:
-				{ // Pernos.
+				case 790001: // Pernos.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -107,8 +107,8 @@ public class _1007A_Ceremony_In_Sanctum extends QuestHandler
 					}
 					break;
 				}
-				case 203725:
-				{ // Leah.
+				case 203725: // Leah.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -129,8 +129,8 @@ public class _1007A_Ceremony_In_Sanctum extends QuestHandler
 					}
 					break;
 				}
-				case 203752:
-				{ // Jucleas.
+				case 203752: // Jucleas.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -194,8 +194,8 @@ public class _1007A_Ceremony_In_Sanctum extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if ((targetId == 203758) && (var == 10))
-			{ // Macus.
+			if ((targetId == 203758) && (var == 10)) // Macus.
+			{
 				switch (env.getDialogId())
 				{
 					case -1:
@@ -224,8 +224,8 @@ public class _1007A_Ceremony_In_Sanctum extends QuestHandler
 					}
 				}
 			}
-			else if ((targetId == 203759) && (var == 20))
-			{ // Eumelos.
+			else if ((targetId == 203759) && (var == 20)) // Eumelos.
+			{
 				switch (env.getDialogId())
 				{
 					case -1:
@@ -254,8 +254,8 @@ public class _1007A_Ceremony_In_Sanctum extends QuestHandler
 					}
 				}
 			}
-			else if ((targetId == 203760) && (var == 30))
-			{ // Bellia.
+			else if ((targetId == 203760) && (var == 30)) // Bellia.
+			{
 				switch (env.getDialogId())
 				{
 					case -1:
@@ -284,8 +284,8 @@ public class _1007A_Ceremony_In_Sanctum extends QuestHandler
 					}
 				}
 			}
-			else if ((targetId == 203761) && (var == 40))
-			{ // Hygea.
+			else if ((targetId == 203761) && (var == 40)) // Hygea.
+			{
 				switch (env.getDialogId())
 				{
 					case -1:
@@ -314,8 +314,8 @@ public class _1007A_Ceremony_In_Sanctum extends QuestHandler
 					}
 				}
 			}
-			else if ((targetId == 801212) && (var == 50))
-			{ // Brynner.
+			else if ((targetId == 801212) && (var == 50)) // Brynner.
+			{
 				switch (env.getDialogId())
 				{
 					case -1:
@@ -344,8 +344,8 @@ public class _1007A_Ceremony_In_Sanctum extends QuestHandler
 					}
 				}
 			}
-			else if ((targetId == 801213) && (var == 60))
-			{ // Mayu.
+			else if ((targetId == 801213) && (var == 60)) // Mayu.
+			{
 				switch (env.getDialogId())
 				{
 					case -1:

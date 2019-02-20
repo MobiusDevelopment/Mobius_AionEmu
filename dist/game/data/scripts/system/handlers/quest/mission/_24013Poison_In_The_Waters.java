@@ -89,8 +89,8 @@ public class _24013Poison_In_The_Waters extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 203631:
-				{ // Nokir.
+				case 203631: // Nokir.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -112,8 +112,8 @@ public class _24013Poison_In_The_Waters extends QuestHandler
 					}
 					break;
 				}
-				case 203621:
-				{ // Shania.
+				case 203621: // Shania.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -135,8 +135,8 @@ public class _24013Poison_In_The_Waters extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203631)
-			{ // Nokir.
+			if (targetId == 203631) // Nokir.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2375);

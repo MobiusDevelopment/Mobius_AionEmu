@@ -55,8 +55,8 @@ public class _3722My_New_Toy extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 799069)
-			{ // Yannis.
+			if (targetId == 799069) // Yannis.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -66,8 +66,8 @@ public class _3722My_New_Toy extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799069)
-			{ // Yannis.
+			if (targetId == 799069) // Yannis.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

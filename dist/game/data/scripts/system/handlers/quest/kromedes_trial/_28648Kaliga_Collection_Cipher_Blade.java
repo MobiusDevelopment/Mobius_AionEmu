@@ -55,8 +55,8 @@ public class _28648Kaliga_Collection_Cipher_Blade extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(env.getQuestId());
 		final int targetId = env.getTargetId();
-		if (targetId == 730887)
-		{ // Kaliga's Cipher-Blade Rack.
+		if (targetId == 730887) // Kaliga's Cipher-Blade Rack.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 			{
 				return true;
@@ -75,8 +75,8 @@ public class _28648Kaliga_Collection_Cipher_Blade extends QuestHandler
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (targetId == 730887)
-		{ // Kaliga's Cipher-Blade Rack.
+		if (targetId == 730887) // Kaliga's Cipher-Blade Rack.
+		{
 			final PlayerClass playerClass = player.getCommonData().getPlayerClass();
 			if (((playerClass == PlayerClass.TECHNIST) || (playerClass == PlayerClass.AETHERTECH)) && (player.getCommonData().getRace() == Race.ASMODIANS))
 			{

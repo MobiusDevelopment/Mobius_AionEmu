@@ -121,8 +121,8 @@ public class SimpleAttackManager
 		final Creature target = (Creature) npc.getTarget();
 		if ((target != null) && !target.getLifeStats().isAlreadyDead())
 		{
-			if (!npc.canSee(target) || !GeoService.getInstance().canSee(npc, target))
-			{ // delete check geo when the Path Finding
+			if (!npc.canSee(target) || !GeoService.getInstance().canSee(npc, target)) // delete check geo when the Path Finding
+			{
 				npc.getController().cancelCurrentSkill();
 				npcAI.onGeneralEvent(AIEventType.TARGET_GIVEUP);
 				return;

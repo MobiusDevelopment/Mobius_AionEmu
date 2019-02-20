@@ -57,8 +57,8 @@ public class _18826Todays_Find extends QuestHandler
 			switch (targetId)
 			{
 				case 830660: // Gomirunerk.
-				case 830661:
-				{ // Lisandinerk.
+				case 830661: // Lisandinerk.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -75,8 +75,8 @@ public class _18826Todays_Find extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 730522)
-			{ // Vintage Grab Box.
+			if (targetId == 730522) // Vintage Grab Box.
+			{
 				switch (dialog)
 				{
 					case USE_OBJECT:
@@ -93,8 +93,8 @@ public class _18826Todays_Find extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 730522)
-			{ // Vintage Grab Box.
+			if (targetId == 730522) // Vintage Grab Box.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

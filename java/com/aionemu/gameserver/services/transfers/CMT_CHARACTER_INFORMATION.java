@@ -171,7 +171,8 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		int cnt = readD();
 		final FastList<String> itemOut = FastList.newInstance();
 		for (int a = 0; a < cnt; a++)
-		{ // inventory
+		{
+			// inventory
 			final int objIdOld = readD();
 			final int itemId = readD();
 			final long itemCnt = readQ();
@@ -266,7 +267,8 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		
 		cnt = readD();
 		for (int a = 0; a < cnt; a++)
-		{ // warehouse
+		{
+			// warehouse
 			final int objIdOld = readD();
 			final int itemId = readD();
 			final long itemCnt = readQ();
@@ -368,7 +370,8 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		textLog.info("EmotionList:" + cnt);
 		player.setEmotions(new EmotionList(player));
 		for (int a = 0; a < cnt; a++)
-		{ // emotes
+		{
+			// emotes
 			if (PlayerTransferConfig.ALLOW_EMOTIONS)
 			{
 				player.getEmotions().add(readD(), readD(), true);
@@ -383,7 +386,8 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		textLog.info("MotionList:" + cnt);
 		player.setMotions(new MotionList(player));
 		for (int i = 0; i < cnt; i++)
-		{ // motions
+		{
+			// motions
 			if (PlayerTransferConfig.ALLOW_MOTIONS)
 			{
 				player.getMotions().add(new Motion(readD(), readD(), readC() == 1), true);
@@ -398,7 +402,8 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		textLog.info("MacroList:" + cnt);
 		player.setMacroList(new MacroList());
 		for (int a = 0; a < cnt; a++)
-		{ // macros
+		{
+			// macros
 			if (PlayerTransferConfig.ALLOW_MACRO)
 			{
 				PlayerService.addMacro(player, readD(), readS());
@@ -414,7 +419,8 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		textLog.info("NpcFactions:" + cnt);
 		player.setNpcFactions(new NpcFactions(player));
 		for (int a = 0; a < cnt; a++)
-		{ // npc factions
+		{
+			// npc factions
 			if (PlayerTransferConfig.ALLOW_NPCFACTIONS)
 			{
 				player.getNpcFactions().addNpcFaction(new NpcFaction(readD(), readD(), readD() == 1, ENpcFactionQuestState.valueOf(readS()), readD()));
@@ -434,7 +440,8 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		cnt = readD();
 		textLog.info("Pets:" + cnt);
 		for (int i = 0; i < cnt; i++)
-		{ // pets
+		{
+			// pets
 			if (PlayerTransferConfig.ALLOW_PETS)
 			{
 				final int petId = readD();
@@ -457,7 +464,8 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		textLog.info("RecipeList:" + cnt);
 		player.setRecipeList(new RecipeList());
 		for (int a = 0; a < cnt; a++)
-		{ // recipes
+		{
+			// recipes
 			if (PlayerTransferConfig.ALLOW_RECIPES)
 			{
 				player.getRecipeList().addRecipe(player.getObjectId(), readD());
@@ -473,7 +481,8 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		player.setSkillList(new PlayerSkillList());
 		final boolean rsCheck = rsList.size() > 0;
 		for (int a = 0; a < cnt; a++)
-		{ // skills
+		{
+			// skills
 			final int skillId = readD();
 			final int skillLvl = readD();
 			
@@ -500,7 +509,8 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		textLog.info("TitleList:" + cnt);
 		player.setTitleList(new TitleList());
 		for (int a = 0; a < cnt; a++)
-		{ // titles
+		{
+			// titles
 			if (PlayerTransferConfig.ALLOW_TITLES)
 			{
 				player.getTitleList().addEntry(readD(), readD());
@@ -548,7 +558,8 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket
 		textLog.info("QuestStateList:" + cnt);
 		player.setQuestStateList(new QuestStateList());
 		for (int a = 0; a < cnt; a++)
-		{ // quests
+		{
+			// quests
 			final int questId = readD();
 			if (PlayerTransferConfig.ALLOW_QUESTS)
 			{

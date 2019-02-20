@@ -119,8 +119,8 @@ public class _25640Mysterious_Organisms_In_Norsvold extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 806101)
-			{ // Vadorei.
+			if (targetId == 806101) // Vadorei.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -130,8 +130,8 @@ public class _25640Mysterious_Organisms_In_Norsvold extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806101)
-			{ // Vadorei.
+			if (targetId == 806101) // Vadorei.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if (qs.getQuestVarById(0) == 30)
@@ -148,8 +148,8 @@ public class _25640Mysterious_Organisms_In_Norsvold extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806101)
-			{ // Vadorei.
+			if (targetId == 806101) // Vadorei.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

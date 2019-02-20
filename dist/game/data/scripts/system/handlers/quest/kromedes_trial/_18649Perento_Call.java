@@ -56,8 +56,8 @@ public class _18649Perento_Call extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (player.getWorldId() == 300230000)
-		{ // Kromede Trial.
+		if (player.getWorldId() == 300230000) // Kromede Trial.
+		{
 			if (qs == null)
 			{
 				env.setQuestId(questId);

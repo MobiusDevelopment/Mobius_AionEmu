@@ -49,8 +49,8 @@ public class _29000ExpertEssencetappersTest extends QuestHandler
 	public boolean onEnterWorldEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		if (player.getWorldId() == 120010000)
-		{ // Pandaemonium.
+		if (player.getWorldId() == 120010000) // Pandaemonium.
+		{
 			final QuestState qs = player.getQuestStateList().getQuestState(questId);
 			if (qs == null)
 			{
@@ -72,8 +72,8 @@ public class _29000ExpertEssencetappersTest extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204096)
-			{ // Latatusk.
+			if (targetId == 204096) // Latatusk.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -86,8 +86,8 @@ public class _29000ExpertEssencetappersTest extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 204097:
-				{ // Relir.
+				case 204097: // Relir.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -107,8 +107,8 @@ public class _29000ExpertEssencetappersTest extends QuestHandler
 					}
 					break;
 				}
-				case 204096:
-				{ // Latatusk.
+				case 204096: // Latatusk.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:

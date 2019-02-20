@@ -95,8 +95,8 @@ public class _1002Request_Of_The_Elim extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 203076:
-				{ // Ampeis.
+				case 203076: // Ampeis.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -113,8 +113,8 @@ public class _1002Request_Of_The_Elim extends QuestHandler
 					}
 					break;
 				}
-				case 730007:
-				{ // Forest Protector Noah.
+				case 730007: // Forest Protector Noah.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -170,8 +170,8 @@ public class _1002Request_Of_The_Elim extends QuestHandler
 					}
 					break;
 				}
-				case 730010:
-				{ // Sleeping Elder.
+				case 730010: // Sleeping Elder.
+				{
 					if (dialog == QuestDialog.USE_OBJECT)
 					{
 						if (player.getInventory().getItemCountByItemId(182200002) == 1)
@@ -192,8 +192,8 @@ public class _1002Request_Of_The_Elim extends QuestHandler
 					}
 					break;
 				}
-				case 730008:
-				{ // Daminu.
+				case 730008: // Daminu.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -221,8 +221,8 @@ public class _1002Request_Of_The_Elim extends QuestHandler
 					}
 					break;
 				}
-				case 205000:
-				{ // Belpartan.
+				case 205000: // Belpartan.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -247,8 +247,8 @@ public class _1002Request_Of_The_Elim extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203067)
-			{ // Kalio.
+			if (targetId == 203067) // Kalio.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 2716);

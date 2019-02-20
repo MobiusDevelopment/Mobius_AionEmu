@@ -302,8 +302,8 @@ public class MapRegion
 	{
 		for (VisibleObject visObject : objects.values())
 		{
-			if ((visObject instanceof Creature) && !((SiegeConfig.BALAUR_AUTO_ASSAULT && (visObject instanceof SiegeNpc)) || !(visObject instanceof BaseNpc)))
-			{ // Tweak
+			if ((visObject instanceof Creature) && !((SiegeConfig.BALAUR_AUTO_ASSAULT && (visObject instanceof SiegeNpc)) || !(visObject instanceof BaseNpc))) // Tweak
+			{
 				final Creature creature = (Creature) visObject;
 				creature.getAi2().onGeneralEvent(AIEventType.DEACTIVATE);
 			}

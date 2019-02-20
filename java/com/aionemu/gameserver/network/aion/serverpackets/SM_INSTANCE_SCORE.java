@@ -1341,8 +1341,8 @@ public class SM_INSTANCE_SCORE extends AionServerPacket
 					writeD(rewardedPlayer.getRankingGP());
 					writeD(rewardedPlayer.getScoreAP());
 					writeD(rewardedPlayer.getScoreGP());
-					if (mapId == 300550000)
-					{ // Arena Of Glory.
+					if (mapId == 300550000) // Arena Of Glory.
+					{
 						writeB(new byte[32]);
 						if (rewardedPlayer.getMithrilMedal() != 0)
 						{

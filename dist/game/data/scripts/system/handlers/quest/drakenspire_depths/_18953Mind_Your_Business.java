@@ -73,8 +73,8 @@ public class _18953Mind_Your_Business extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 702769)
-		{ // Ominous Darkness.
+		else if (targetId == 702769) // Ominous Darkness.
+		{
 			if (dialog == QuestDialog.USE_OBJECT)
 			{
 				closeDialogWindow(env);

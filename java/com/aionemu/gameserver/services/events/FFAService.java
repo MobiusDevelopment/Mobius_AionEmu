@@ -2477,8 +2477,8 @@ public class FFAService
 					});
 				}
 			}
-			if ((incrementCounter % 600) == 0)
-			{ // Change map every 10 Min.
+			if ((incrementCounter % 600) == 0) // Change map every 10 Min.
+			{
 				pickArenaMap();
 			}
 			if ((incrementCounter % 3600) == 0)

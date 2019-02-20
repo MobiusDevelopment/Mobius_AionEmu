@@ -70,8 +70,8 @@ public class _16831Source_Of_The_Contamination_At_The_3rd_Library extends QuestH
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (player.getWorldId() == 301550000)
-		{ // 지식의 정원.
+		if (player.getWorldId() == 301550000) // 지식의 정원.
+		{
 			if (qs == null)
 			{
 				env.setQuestId(questId);

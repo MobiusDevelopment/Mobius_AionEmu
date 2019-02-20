@@ -51,8 +51,8 @@ public class _11288Veille_Blessing extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 799094)
-			{ // Yushin.
+			if (targetId == 799094) // Yushin.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -70,8 +70,8 @@ public class _11288Veille_Blessing extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 799094)
-			{ // Yushin.
+			if (targetId == 799094) // Yushin.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -87,8 +87,8 @@ public class _11288Veille_Blessing extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799094)
-			{ // Yushin.
+			if (targetId == 799094) // Yushin.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

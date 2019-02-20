@@ -42,8 +42,8 @@ public class Altar_Of_EmptinessAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(182215992) != null)
-		{ // Completed Records Of Life.
+		if (player.getInventory().getFirstItemByItemId(182215992) != null) // Completed Records Of Life.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 		}
 		else
@@ -57,8 +57,8 @@ public class Altar_Of_EmptinessAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(182215992, 1))
-		{ // Completed Records Of Life.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(182215992, 1)) // Completed Records Of Life.
+		{
 			switch (getNpcId())
 			{
 				case 833999: // Altar Of Emptiness.

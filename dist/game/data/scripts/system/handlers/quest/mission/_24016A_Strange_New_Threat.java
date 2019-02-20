@@ -147,8 +147,8 @@ public class _24016A_Strange_New_Threat extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203557)
-			{ // Suthran.
+			if (targetId == 203557) // Suthran.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 1352);

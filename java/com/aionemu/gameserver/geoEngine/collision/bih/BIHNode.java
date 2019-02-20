@@ -226,8 +226,8 @@ public final class BIHNode
 			final BIHStackData data = stack.remove(stack.size() - 1);
 			BIHNode node = data.node;
 			
-			while (node.axis != 3)
-			{ // while node is not a leaf
+			while (node.axis != 3) // while node is not a leaf
+			{
 				BIHNode nearNode, farNode;
 				nearNode = node.left;
 				farNode = node.right;
@@ -312,8 +312,8 @@ public final class BIHNode
 				continue;
 			}
 			
-			while (node.axis != 3)
-			{ // while node is not a leaf
+			while (node.axis != 3) // while node is not a leaf
+			{
 				final int a = node.axis;
 				
 				// find the origin and direction value for the given axis

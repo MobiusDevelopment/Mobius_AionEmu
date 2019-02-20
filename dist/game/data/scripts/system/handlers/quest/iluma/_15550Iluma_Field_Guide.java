@@ -60,8 +60,8 @@ public class _15550Iluma_Field_Guide extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806114)
-			{ // Ilisia.
+			if (targetId == 806114) // Ilisia.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -77,8 +77,8 @@ public class _15550Iluma_Field_Guide extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 806113:
-				{ // Volter.
+				case 806113: // Volter.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -94,8 +94,8 @@ public class _15550Iluma_Field_Guide extends QuestHandler
 						}
 					}
 				}
-				case 806134:
-				{ // Ador.
+				case 806134: // Ador.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -111,8 +111,8 @@ public class _15550Iluma_Field_Guide extends QuestHandler
 						}
 					}
 				}
-				case 806089:
-				{ // Aquaris.
+				case 806089: // Aquaris.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -132,8 +132,8 @@ public class _15550Iluma_Field_Guide extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806089)
-			{ // Aquaris.
+			if (targetId == 806089) // Aquaris.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

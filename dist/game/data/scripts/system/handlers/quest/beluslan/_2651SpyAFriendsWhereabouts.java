@@ -55,8 +55,8 @@ public class _2651SpyAFriendsWhereabouts extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204775)
-			{ // Betoni
+			if (targetId == 204775) // Betoni
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -69,8 +69,8 @@ public class _2651SpyAFriendsWhereabouts extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 204764:
-				{ // Epona
+				case 204764: // Epona
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -87,8 +87,8 @@ public class _2651SpyAFriendsWhereabouts extends QuestHandler
 					}
 					break;
 				}
-				case 204650:
-				{ // Nesteto
+				case 204650: // Nesteto
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -109,8 +109,8 @@ public class _2651SpyAFriendsWhereabouts extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204650)
-			{ // Nesteto
+			if (targetId == 204650) // Nesteto
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

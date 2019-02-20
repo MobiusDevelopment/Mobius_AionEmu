@@ -35,8 +35,8 @@ public class Anoha_SwordAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(185000215) != null)
-		{ // Anoha Sealing Stone.
+		if (player.getInventory().getFirstItemByItemId(185000215) != null) // Anoha Sealing Stone.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));
 		}
 		else
@@ -48,8 +48,8 @@ public class Anoha_SwordAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000215, 1))
-		{ // Anoha Sealing Stone.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000215, 1)) // Anoha Sealing Stone.
+		{
 			switch (getNpcId())
 			{
 				case 804576: // Anoha Sword [Elyos]

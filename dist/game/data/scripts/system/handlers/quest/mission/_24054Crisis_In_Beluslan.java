@@ -79,12 +79,12 @@ public class _24054Crisis_In_Beluslan extends QuestHandler
 			final int targetId = env.getTargetId();
 			switch (targetId)
 			{
-				case 700290:
-				{ // Field Suppressor.
+				case 700290: // Field Suppressor.
+				{
 					return defaultOnKillEvent(env, 700290, 2, 5);
 				}
-				case 233865:
-				{ // Officer Bakuram.
+				case 233865: // Officer Bakuram.
+				{
 					return defaultOnKillEvent(env, 233865, 5, 6);
 				}
 			}
@@ -107,8 +107,8 @@ public class _24054Crisis_In_Beluslan extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204702)
-			{ // Nerita.
+			if (targetId == 204702) // Nerita.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -120,8 +120,8 @@ public class _24054Crisis_In_Beluslan extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204702:
-				{ // Nerita.
+				case 204702: // Nerita.
+				{
 					if ((dialog == QuestDialog.START_DIALOG) && (var == 0))
 					{
 						return sendQuestDialog(env, 1011);
@@ -132,8 +132,8 @@ public class _24054Crisis_In_Beluslan extends QuestHandler
 					}
 					break;
 				}
-				case 802053:
-				{ // Fafner.
+				case 802053: // Fafner.
+				{
 					if ((dialog == QuestDialog.START_DIALOG) && (var == 1))
 					{
 						return sendQuestDialog(env, 1352);
@@ -144,8 +144,8 @@ public class _24054Crisis_In_Beluslan extends QuestHandler
 					}
 					break;
 				}
-				case 204701:
-				{ // Hod.
+				case 204701: // Hod.
+				{
 					if ((dialog == QuestDialog.START_DIALOG) && (var == 6))
 					{
 						return sendQuestDialog(env, 2375);

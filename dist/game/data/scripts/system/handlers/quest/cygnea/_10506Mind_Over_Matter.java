@@ -150,8 +150,8 @@ public class _10506Mind_Over_Matter extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 702666)
-			{ // Beritra Invasion Corridor.
+			if (targetId == 702666) // Beritra Invasion Corridor.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -161,8 +161,8 @@ public class _10506Mind_Over_Matter extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 702667)
-			{ // Beritra Invasion Corridor.
+			if (targetId == 702667) // Beritra Invasion Corridor.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:

@@ -59,8 +59,8 @@ public class _13305Meet_Stifas_The_Stiff extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 801281)
-			{ // Demades.
+			if (targetId == 801281) // Demades.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _13305Meet_Stifas_The_Stiff extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 801281:
-				{ // Demades.
+				case 801281: // Demades.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _13305Meet_Stifas_The_Stiff extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801281)
-			{ // Demades.
+			if (targetId == 801281) // Demades.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

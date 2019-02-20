@@ -55,8 +55,8 @@ public class _28624Kaliga_Collection_Staff extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(env.getQuestId());
 		final int targetId = env.getTargetId();
-		if (targetId == 730332)
-		{ // Kaliga's Staff Rack.
+		if (targetId == 730332) // Kaliga's Staff Rack.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 			{
 				return true;
@@ -75,8 +75,8 @@ public class _28624Kaliga_Collection_Staff extends QuestHandler
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (targetId == 730332)
-		{ // Kaliga's Staff Rack.
+		if (targetId == 730332) // Kaliga's Staff Rack.
+		{
 			final PlayerClass playerClass = player.getCommonData().getPlayerClass();
 			if (((playerClass == PlayerClass.PRIEST) || (playerClass == PlayerClass.CHANTER) || (playerClass == PlayerClass.CLERIC)) && (player.getCommonData().getRace() == Race.ASMODIANS))
 			{

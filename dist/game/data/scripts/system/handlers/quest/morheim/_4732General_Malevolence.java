@@ -53,8 +53,8 @@ public class _4732General_Malevolence extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 800519)
-			{ // Kelmar.
+			if (targetId == 800519) // Kelmar.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -64,8 +64,8 @@ public class _4732General_Malevolence extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 800519)
-			{ // Kelmar.
+			if (targetId == 800519) // Kelmar.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

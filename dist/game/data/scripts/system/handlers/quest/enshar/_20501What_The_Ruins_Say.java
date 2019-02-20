@@ -123,8 +123,8 @@ public class _20501What_The_Ruins_Say extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731538)
-			{ // Crumbled Ruins.
+			if (targetId == 731538) // Crumbled Ruins.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -141,8 +141,8 @@ public class _20501What_The_Ruins_Say extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731539)
-			{ // Destroyed Balaur Ruins.
+			if (targetId == 731539) // Destroyed Balaur Ruins.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -159,8 +159,8 @@ public class _20501What_The_Ruins_Say extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731540)
-			{ // Intact Balaur Ruins.
+			if (targetId == 731540) // Intact Balaur Ruins.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:

@@ -49,8 +49,8 @@ public class _1987ABiggerWarehouse extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (qs == null)
 		{
-			if (targetId == 203700)
-			{ // Fasimedes.
+			if (targetId == 203700) // Fasimedes.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -60,8 +60,8 @@ public class _1987ABiggerWarehouse extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 203749)
-			{ // Bustant.
+			if (targetId == 203749) // Bustant.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -78,8 +78,8 @@ public class _1987ABiggerWarehouse extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203749)
-			{ // Bustant.
+			if (targetId == 203749) // Bustant.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

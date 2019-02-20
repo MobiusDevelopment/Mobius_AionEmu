@@ -52,8 +52,8 @@ public class cmd_luna extends PlayerCommand
 		{
 			return;
 		}
-		if (luna > 500)
-		{ // max amount of Luna Coins
+		if (luna > 500) // max amount of Luna Coins
+		{
 			// PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.LUNATOBIG));
 			PacketSendUtility.sendMessage(player, "Luna To Big.");
 			return;

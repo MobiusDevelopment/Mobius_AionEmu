@@ -409,12 +409,12 @@ public final class QuestService
 		{
 			player.getTitleList().addTitle(rewards.getTitle(), true, 0);
 		}
-		if (rewards.getAp() != null)
-		{ // Abyss Points
+		if (rewards.getAp() != null) // Abyss Points
+		{
 			AbyssPointsService.addAp(player, (int) (player.getRates().getQuestApRate() * rewards.getAp()));
 		}
-		if (rewards.getGp() != null)
-		{ // Glory Points
+		if (rewards.getGp() != null) // Glory Points
+		{
 			AbyssPointsService.addGp(player, (int) (player.getRates().getQuestGpRate() * rewards.getGp()));
 		}
 		if (rewards.getExtendInventory() != null)
@@ -1158,8 +1158,8 @@ public final class QuestService
 		final QuestTemplate qt = DataManager.QUEST_DATA.getQuestById(questId);
 		if (player.isInAlliance2())
 		{
-			if (!qt.getTargetType().equals(QuestTargetType.UNION))
-			{ // League.
+			if (!qt.getTargetType().equals(QuestTargetType.UNION)) // League.
+			{
 				return false;
 			}
 		}

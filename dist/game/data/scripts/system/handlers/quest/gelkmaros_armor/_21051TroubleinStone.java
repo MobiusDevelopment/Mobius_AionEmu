@@ -52,8 +52,8 @@ public class _21051TroubleinStone extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 799291)
-			{ // Aquila.
+			if (targetId == 799291) // Aquila.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -69,8 +69,8 @@ public class _21051TroubleinStone extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 799291)
-			{ // Aquila.
+			if (targetId == 799291) // Aquila.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -90,8 +90,8 @@ public class _21051TroubleinStone extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799291)
-			{ // Aquila.
+			if (targetId == 799291) // Aquila.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

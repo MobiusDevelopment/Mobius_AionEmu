@@ -118,8 +118,8 @@ public class _10504Confiscate_The_Slate extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 702671)
-			{ // Cracked Oath Slate.
+			if (targetId == 702671) // Cracked Oath Slate.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:

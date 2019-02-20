@@ -57,8 +57,8 @@ public class _4004TheSeedsOfHope extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 205128)
-			{ // Randet
+			if (targetId == 205128) // Randet
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -82,8 +82,8 @@ public class _4004TheSeedsOfHope extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 700340:
-				{ // Earth Mound
+				case 700340: // Earth Mound
+				{
 					if ((qs != null) && (env.getDialog() == QuestDialog.USE_OBJECT))
 					{
 						if (var < 4)

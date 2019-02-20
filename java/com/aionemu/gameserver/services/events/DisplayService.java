@@ -92,12 +92,12 @@ public class DisplayService
 					}
 				}
 			}
-			else if (player.isFFA() && (item.getEquipmentSlot() == 8))
-			{ // Executioner's Outfit.
+			else if (player.isFFA() && (item.getEquipmentSlot() == 8)) // Executioner's Outfit.
+			{
 				return 110901014;
 			}
-			else if (player.isFFA() && (item.getEquipmentSlot() == 4))
-			{ // Executioner's Mask.
+			else if (player.isFFA() && (item.getEquipmentSlot() == 4)) // Executioner's Mask.
+			{
 				return 125045594;
 			}
 			else if (item.getItemTemplate().getArmorType() == ArmorType.SHIELD)

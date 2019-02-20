@@ -76,8 +76,8 @@ public class _24042A_Ready_Rescue extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 278002:
-				{ // Jebal.
+				case 278002: // Jebal.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -94,8 +94,8 @@ public class _24042A_Ready_Rescue extends QuestHandler
 					}
 					break;
 				}
-				case 278019:
-				{ // Lakadi.
+				case 278019: // Lakadi.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -112,8 +112,8 @@ public class _24042A_Ready_Rescue extends QuestHandler
 					}
 					break;
 				}
-				case 278088:
-				{ // Glati.
+				case 278088: // Glati.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -130,8 +130,8 @@ public class _24042A_Ready_Rescue extends QuestHandler
 					}
 					break;
 				}
-				case 253626:
-				{ // Captured Asmodian Prisoner.
+				case 253626: // Captured Asmodian Prisoner.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -157,8 +157,8 @@ public class _24042A_Ready_Rescue extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 278019)
-			{ // Lakadi.
+			if (targetId == 278019) // Lakadi.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

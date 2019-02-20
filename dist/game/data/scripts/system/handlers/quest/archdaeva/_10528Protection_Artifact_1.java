@@ -103,8 +103,8 @@ public class _10528Protection_Artifact_1 extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -137,8 +137,8 @@ public class _10528Protection_Artifact_1 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806291)
-			{ // 데자보보.
+			if (targetId == 806291) // 데자보보.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -157,8 +157,8 @@ public class _10528Protection_Artifact_1 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703316)
-			{ // 바르테온의 보물 상자.
+			if (targetId == 703316) // 바르테온의 보물 상자.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -226,8 +226,8 @@ public class _10528Protection_Artifact_1 extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -262,15 +262,15 @@ public class _10528Protection_Artifact_1 extends QuestHandler
 				}; // 바르탈 해적 일꾼.
 				switch (targetId)
 				{
-					case 244109:
-					{ // 바르탈 해적 일꾼.
+					case 244109: // 바르탈 해적 일꾼.
+					{
 						return defaultOnKillEvent(env, LF6MissionTesinon73An, 0, 10, 1);
 					}
 				}
 				switch (targetId)
 				{
-					case 244110:
-					{ // 탐욕스런 데쎄오.
+					case 244110: // 탐욕스런 데쎄오.
+					{
 						qs.setQuestVar(5);
 						updateQuestStatus(env);
 						return true;

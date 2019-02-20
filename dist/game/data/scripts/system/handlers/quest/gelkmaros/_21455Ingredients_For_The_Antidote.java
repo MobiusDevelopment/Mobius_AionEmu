@@ -64,8 +64,8 @@ public class _21455Ingredients_For_The_Antidote extends QuestHandler
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (targetId == 799404)
-		{ // Miener.
+		if (targetId == 799404) // Miener.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -93,8 +93,8 @@ public class _21455Ingredients_For_The_Antidote extends QuestHandler
 		final int var = qs.getQuestVarById(0);
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799244)
-			{ // Greeta.
+			if (targetId == 799244) // Greeta.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 2375);
@@ -113,8 +113,8 @@ public class _21455Ingredients_For_The_Antidote extends QuestHandler
 		{
 			return false;
 		}
-		if (targetId == 799240)
-		{ // Wistron.
+		if (targetId == 799240) // Wistron.
+		{
 			switch (env.getDialog())
 			{
 				case START_DIALOG:

@@ -103,8 +103,8 @@ public class _14014Turning_The_Ide extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 203146:
-				{ // Estino.
+				case 203146: // Estino.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -122,8 +122,8 @@ public class _14014Turning_The_Ide extends QuestHandler
 					}
 					break;
 				}
-				case 203147:
-				{ // Meteina.
+				case 203147: // Meteina.
+				{
 					switch (dialog)
 					{
 						case USE_OBJECT:
@@ -140,8 +140,8 @@ public class _14014Turning_The_Ide extends QuestHandler
 					}
 					break;
 				}
-				case 802045:
-				{ // Livanon.
+				case 802045: // Livanon.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -167,8 +167,8 @@ public class _14014Turning_The_Ide extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203098)
-			{ // Spatalos.
+			if (targetId == 203098) // Spatalos.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -190,8 +190,8 @@ public class _14014Turning_The_Ide extends QuestHandler
 		}
 		final int var = qs.getQuestVarById(0);
 		final int id = item.getItemTemplate().getTemplateId();
-		if (id == 182215314)
-		{ // Transformation Potion 4.7
+		if (id == 182215314) // Transformation Potion 4.7
+		{
 			if ((var == 1) && player.isInsideZone(ZoneName.get("TURSIN_OUTPOST_ENTRANCE_210030000")))
 			{
 				return HandlerResult.fromBoolean(useQuestItem(env, item, 1, 2, false, 18));

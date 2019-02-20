@@ -55,8 +55,8 @@ public class _13817The_Fury_Within extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 804595)
-			{ // Commander Anoha.
+			if (targetId == 804595) // Commander Anoha.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -73,8 +73,8 @@ public class _13817The_Fury_Within extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804585)
-			{ // Gantis.
+			if (targetId == 804585) // Gantis.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}
@@ -92,8 +92,8 @@ public class _13817The_Fury_Within extends QuestHandler
 			if (var == 0)
 			{
 				final int targetId = env.getTargetId();
-				if (targetId == 855263)
-				{ // Berserk Anoha.
+				if (targetId == 855263) // Berserk Anoha.
+				{
 					final Npc npc = (Npc) env.getVisibleObject();
 					QuestService.addNewSpawn(600090000, player.getInstanceId(), 804595, npc.getX(), npc.getY(), npc.getZ(), (byte) 0); // Commander Anoha.
 					return defaultOnKillEvent(env, 855263, 1, true); // Berserk Anoha.

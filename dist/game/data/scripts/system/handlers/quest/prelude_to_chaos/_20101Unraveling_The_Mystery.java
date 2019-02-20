@@ -102,8 +102,8 @@ public class _20101Unraveling_The_Mystery extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 802463:
-				{ // Kahrun.
+				case 802463: // Kahrun.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -120,8 +120,8 @@ public class _20101Unraveling_The_Mystery extends QuestHandler
 					}
 					break;
 				}
-				case 731531:
-				{ // Stonepike Invasion Corridor.
+				case 731531: // Stonepike Invasion Corridor.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -146,8 +146,8 @@ public class _20101Unraveling_The_Mystery extends QuestHandler
 					}
 					break;
 				}
-				case 804556:
-				{ // Spy Ditono.
+				case 804556: // Spy Ditono.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -165,8 +165,8 @@ public class _20101Unraveling_The_Mystery extends QuestHandler
 					}
 					break;
 				}
-				case 731532:
-				{ // Secret Zone Invasion Corridor.
+				case 731532: // Secret Zone Invasion Corridor.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -188,8 +188,8 @@ public class _20101Unraveling_The_Mystery extends QuestHandler
 					}
 					break;
 				}
-				case 802361:
-				{ // Kisian.
+				case 802361: // Kisian.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -221,8 +221,8 @@ public class _20101Unraveling_The_Mystery extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802433)
-			{ // Keroz.
+			if (targetId == 802433) // Keroz.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					removeQuestItem(env, 182215578, 1);

@@ -59,8 +59,8 @@ public class SM_SKILL_REMOVE extends AionServerPacket
 			writeC(1);
 			writeC(3);
 		}
-		else
-		{ // remove skills active or passive
+		else // remove skills active or passive
+		{
 			writeC(skillLevel);
 		}
 	}

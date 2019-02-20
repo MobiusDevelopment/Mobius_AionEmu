@@ -52,8 +52,8 @@ public class _18940Into_The_Dome extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802431)
-			{ // Alphioh.
+			if (targetId == 802431) // Alphioh.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -72,8 +72,8 @@ public class _18940Into_The_Dome extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 802383:
-				{ // Talle.
+				case 802383: // Talle.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -91,8 +91,8 @@ public class _18940Into_The_Dome extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802383)
-			{ // Talle.
+			if (targetId == 802383) // Talle.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

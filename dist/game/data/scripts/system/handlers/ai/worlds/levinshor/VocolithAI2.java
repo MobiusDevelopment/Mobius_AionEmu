@@ -35,8 +35,8 @@ public class VocolithAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(185000216) != null)
-		{ // Ancestor's Relic.
+		if (player.getInventory().getFirstItemByItemId(185000216) != null) // Ancestor's Relic.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 		}
 		else

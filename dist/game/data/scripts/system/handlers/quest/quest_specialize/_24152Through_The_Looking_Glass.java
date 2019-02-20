@@ -60,8 +60,8 @@ public class _24152Through_The_Looking_Glass extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204768)
-			{ // Sleipnir
+			if (targetId == 204768) // Sleipnir
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -87,8 +87,8 @@ public class _24152Through_The_Looking_Glass extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204739:
-				{ // Baugi
+				case 204739: // Baugi
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -103,8 +103,8 @@ public class _24152Through_The_Looking_Glass extends QuestHandler
 						}
 					}
 				}
-				case 802364:
-				{ // Dojer
+				case 802364: // Dojer
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -129,8 +129,8 @@ public class _24152Through_The_Looking_Glass extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802364)
-			{ // Dojer
+			if (targetId == 802364) // Dojer
+			{
 				if (env.getDialog() == QuestDialog.SELECT_REWARD)
 				{
 					return sendQuestDialog(env, 5);

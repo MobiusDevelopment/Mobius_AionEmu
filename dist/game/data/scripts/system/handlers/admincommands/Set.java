@@ -83,7 +83,7 @@ public class Set extends AdminCommand
 			setClass(target, oldClass, newClass);
 		}
 		else if (params[0].equals("exp"))
-		{ // 120086901
+		{
 			if (admin.getAccessLevel() < CommandsConfig.SET)
 			{
 				PacketSendUtility.sendMessage(admin, "You dont have enough rights to execute this command");
@@ -202,8 +202,8 @@ public class Set extends AdminCommand
 				return;
 			}
 			final Player player = target;
-			if (titleId <= 330)
-			{ // Aion 5.1 Title
+			if (titleId <= 330) // Aion 5.1 Title
+			{
 				setTitle(player, titleId);
 			}
 			PacketSendUtility.sendMessage(admin, "Set " + player.getCommonData().getName() + " title to " + titleId);

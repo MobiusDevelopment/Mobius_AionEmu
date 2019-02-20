@@ -71,8 +71,8 @@ public class _10520Covert_Communiques extends QuestHandler
 	public boolean onEnterWorldEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		if (player.getWorldId() == 110010000)
-		{ // Sanctum.
+		if (player.getWorldId() == 110010000) // Sanctum.
+		{
 			final QuestState qs = player.getQuestStateList().getQuestState(questId);
 			if (qs == null)
 			{
@@ -104,8 +104,8 @@ public class _10520Covert_Communiques extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806073)
-			{ // Felen.
+			if (targetId == 806073) // Felen.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -129,8 +129,8 @@ public class _10520Covert_Communiques extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 203726)
-			{ // Polyidus.
+			if (targetId == 203726) // Polyidus.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -156,8 +156,8 @@ public class _10520Covert_Communiques extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806076)
-			{ // Weatha.
+			if (targetId == 806076) // Weatha.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -178,8 +178,8 @@ public class _10520Covert_Communiques extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806076)
-			{ // Weatha.
+			if (targetId == 806076) // Weatha.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

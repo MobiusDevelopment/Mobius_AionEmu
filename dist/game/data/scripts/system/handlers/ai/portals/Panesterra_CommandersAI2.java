@@ -38,8 +38,8 @@ public class Panesterra_CommandersAI2 extends GeneralNpcAI2
 		switch (getNpcId())
 		{
 			case 730940: // Advance Corridor For Commanders
-			case 730941:
-			{ // Advance Corridor For Commanders
+			case 730941: // Advance Corridor For Commanders
+			{
 				super.handleDialogStart(player);
 				break;
 			}

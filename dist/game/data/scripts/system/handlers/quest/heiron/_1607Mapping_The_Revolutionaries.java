@@ -84,8 +84,8 @@ public class _1607Mapping_The_Revolutionaries extends QuestHandler
 			final int var2 = qs.getQuestVarById(2);
 			final int var3 = qs.getQuestVarById(3);
 			final int var4 = qs.getQuestVarById(4);
-			if (targetId == 204578)
-			{ // Kuobe.
+			if (targetId == 204578) // Kuobe.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -98,8 +98,8 @@ public class _1607Mapping_The_Revolutionaries extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 204574)
-			{ // Finn.
+			else if (targetId == 204574) // Finn.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if ((var == 1) && (var1 == 1) && (var2 == 1) && (var3 == 1) && (var4 == 1))
@@ -116,8 +116,8 @@ public class _1607Mapping_The_Revolutionaries extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204574)
-			{ // Finn.
+			if (targetId == 204574) // Finn.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

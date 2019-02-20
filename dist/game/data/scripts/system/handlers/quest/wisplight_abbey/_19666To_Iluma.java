@@ -61,14 +61,14 @@ public class _19666To_Iluma extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 806243)
-			{ // Gilios.
+			if (targetId == 806243) // Gilios.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
 					{
-						if (player.getInventory().getItemCountByItemId(164000335) >= 1)
-						{ // Abbey Return Stone.
+						if (player.getInventory().getItemCountByItemId(164000335) >= 1) // Abbey Return Stone.
+						{
 							return sendQuestDialog(env, 4762);
 						}
 						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
@@ -94,8 +94,8 @@ public class _19666To_Iluma extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 806114:
-				{ // Ilisia.
+				case 806114: // Ilisia.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -116,8 +116,8 @@ public class _19666To_Iluma extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806114)
-			{ // Ilisia.
+			if (targetId == 806114) // Ilisia.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

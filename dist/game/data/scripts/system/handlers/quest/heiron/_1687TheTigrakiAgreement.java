@@ -60,8 +60,8 @@ public class _1687TheTigrakiAgreement extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 204601)
-			{ // Brosia
+			if (targetId == 204601) // Brosia
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -72,8 +72,8 @@ public class _1687TheTigrakiAgreement extends QuestHandler
 		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
-			if (targetId == 204601)
-			{ // Brosia
+			if (targetId == 204601) // Brosia
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -116,8 +116,8 @@ public class _1687TheTigrakiAgreement extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204601)
-			{ // Brosia
+			if (targetId == 204601) // Brosia
+			{
 				return sendQuestEndDialog(env, rewardGroup);
 			}
 		}

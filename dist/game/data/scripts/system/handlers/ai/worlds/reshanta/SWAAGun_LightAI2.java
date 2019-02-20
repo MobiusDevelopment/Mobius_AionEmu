@@ -34,8 +34,8 @@ public class SWAAGun_LightAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(186000246) != null)
-		{ // Magic Cannonball.
+		if (player.getInventory().getFirstItemByItemId(186000246) != null) // Magic Cannonball.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));
 		}
 		else

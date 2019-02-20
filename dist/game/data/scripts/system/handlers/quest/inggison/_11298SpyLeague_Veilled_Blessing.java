@@ -62,8 +62,8 @@ public class _11298SpyLeague_Veilled_Blessing extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final QuestDialog dialog = env.getDialog();
-		if (env.getTargetId() == 799038)
-		{ // Laestrygos.
+		if (env.getTargetId() == 799038) // Laestrygos.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 			{
 				switch (dialog)
@@ -85,8 +85,8 @@ public class _11298SpyLeague_Veilled_Blessing extends QuestHandler
 			}
 			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
-				if (env.getTargetId() == 799038)
-				{ // Laestrygos.
+				if (env.getTargetId() == 799038) // Laestrygos.
+				{
 					if (env.getDialog() == QuestDialog.START_DIALOG)
 					{
 						return sendQuestDialog(env, 5);

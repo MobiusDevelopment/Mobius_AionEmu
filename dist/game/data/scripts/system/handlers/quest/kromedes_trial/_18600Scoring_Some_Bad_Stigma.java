@@ -66,8 +66,8 @@ public class _18600Scoring_Some_Bad_Stigma extends QuestHandler
 		final Player player = env.getPlayer();
 		final int targetId = env.getTargetId();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (targetId == 204500)
-		{ // Perento.
+		if (targetId == 204500) // Perento.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -101,8 +101,8 @@ public class _18600Scoring_Some_Bad_Stigma extends QuestHandler
 				}
 			}
 		}
-		if (targetId == 804601)
-		{ // Kurochinerk.
+		if (targetId == 804601) // Kurochinerk.
+		{
 			if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -115,8 +115,8 @@ public class _18600Scoring_Some_Bad_Stigma extends QuestHandler
 				}
 			}
 		}
-		if (targetId == 205228)
-		{ // Herthia.
+		if (targetId == 205228) // Herthia.
+		{
 			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)

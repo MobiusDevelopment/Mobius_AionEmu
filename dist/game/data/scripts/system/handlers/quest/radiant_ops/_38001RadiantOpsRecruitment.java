@@ -65,8 +65,8 @@ public class _38001RadiantOpsRecruitment extends QuestHandler
 		
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 799828)
-			{ // Pompo
+			if (targetId == 799828) // Pompo
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -80,8 +80,8 @@ public class _38001RadiantOpsRecruitment extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (targetId == 799828)
-			{ // Pompo
+			if (targetId == 799828) // Pompo
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

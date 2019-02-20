@@ -58,8 +58,8 @@ public class _1636AFluteForTheFixing extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204535)
-			{ // Maximus
+			if (targetId == 204535) // Maximus
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -72,8 +72,8 @@ public class _1636AFluteForTheFixing extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 203792:
-				{ // Utsida
+				case 203792: // Utsida
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -113,8 +113,8 @@ public class _1636AFluteForTheFixing extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204535)
-			{ // Maximus
+			if (targetId == 204535) // Maximus
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

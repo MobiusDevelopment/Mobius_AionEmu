@@ -61,8 +61,8 @@ public class _3092VisonTheDrakie extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798191)
-			{ // Tityus
+			if (targetId == 798191) // Tityus
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -80,8 +80,8 @@ public class _3092VisonTheDrakie extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 798214:
-				{ // Vison
+				case 798214: // Vison
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:

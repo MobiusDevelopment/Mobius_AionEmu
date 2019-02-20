@@ -87,8 +87,8 @@ public class _2948Huron_Letter extends QuestHandler
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
-		if (targetId != 204274)
-		{ // Huron.
+		if (targetId != 204274) // Huron.
+		{
 			return false;
 		}
 		if (qs.getStatus() == QuestStatus.START)

@@ -66,8 +66,8 @@ public class _14150Secrets_Of_The_Superus extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.NONE)
 		{
-			if (targetId == 204501)
-			{ // Sarantus
+			if (targetId == 204501) // Sarantus
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -77,8 +77,8 @@ public class _14150Secrets_Of_The_Superus extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 204501)
-			{ // Sarantus
+			if (targetId == 204501) // Sarantus
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -101,8 +101,8 @@ public class _14150Secrets_Of_The_Superus extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 204582)
-			{ // Ibelia
+			else if (targetId == 204582) // Ibelia
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -123,8 +123,8 @@ public class _14150Secrets_Of_The_Superus extends QuestHandler
 					}
 				}
 			}
-			else if ((targetId == 700217) && (qs.getQuestVarById(0) == 1))
-			{ // Engraved Stone Tablet
+			else if ((targetId == 700217) && (qs.getQuestVarById(0) == 1)) // Engraved Stone Tablet
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -137,8 +137,8 @@ public class _14150Secrets_Of_The_Superus extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204501)
-			{ // Sarantus
+			if (targetId == 204501) // Sarantus
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

@@ -61,8 +61,8 @@ public class _28994The_Legion_Knocks extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -72,8 +72,8 @@ public class _28994The_Legion_Knocks extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806242)
-			{ // Bakao.
+			if (targetId == 806242) // Bakao.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -88,8 +88,8 @@ public class _28994The_Legion_Knocks extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if (qs.getQuestVarById(0) == 3)
@@ -106,8 +106,8 @@ public class _28994The_Legion_Knocks extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (env.getDialogId() == 1352)
 				{
 					return sendQuestDialog(env, 5);
@@ -145,8 +145,8 @@ public class _28994The_Legion_Knocks extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 220450:
-					{ // Drakenseer Akhal.
+					case 220450: // Drakenseer Akhal.
+					{
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 						return true;

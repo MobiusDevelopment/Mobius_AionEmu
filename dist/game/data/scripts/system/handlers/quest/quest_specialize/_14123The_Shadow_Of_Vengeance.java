@@ -110,8 +110,8 @@ public class _14123The_Shadow_Of_Vengeance extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203991)
-			{ // Dionera
+			if (targetId == 203991) // Dionera
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

@@ -320,8 +320,8 @@ public class SteelRakeInstance extends GeneralInstanceHandler
 				break;
 			}
 		}
-		switch (Rnd.get(1, 6))
-		{ // Special Delivery.
+		switch (Rnd.get(1, 6)) // Special Delivery.
+		{
 			case 1:
 			{
 				spawn(215054, 461.933350f, 510.545654f, 877.618103f, (byte) 90);

@@ -59,8 +59,8 @@ public class _23305A_Fierce_Struggle extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 801280)
-			{ // Lundvarr.
+			if (targetId == 801280) // Lundvarr.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _23305A_Fierce_Struggle extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 801280:
-				{ // Lundvarr.
+				case 801280: // Lundvarr.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _23305A_Fierce_Struggle extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801280)
-			{ // Lundvarr.
+			if (targetId == 801280) // Lundvarr.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

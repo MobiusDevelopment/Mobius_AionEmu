@@ -86,8 +86,8 @@ public class _2718Trading_Down extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 204396)
-			{ // Baba Tak.
+			if (targetId == 204396) // Baba Tak.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1352);
@@ -101,8 +101,8 @@ public class _2718Trading_Down extends QuestHandler
 					return true;
 				}
 			}
-			else if (targetId == 204386)
-			{ // Vivi.
+			else if (targetId == 204386) // Vivi.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1693);
@@ -116,8 +116,8 @@ public class _2718Trading_Down extends QuestHandler
 					return true;
 				}
 			}
-			else if (targetId == 204811)
-			{ // Gark.
+			else if (targetId == 204811) // Gark.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2034);
@@ -131,8 +131,8 @@ public class _2718Trading_Down extends QuestHandler
 					return true;
 				}
 			}
-			else if (targetId == 279029)
-			{ // Lugbug.
+			else if (targetId == 279029) // Lugbug.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2375);

@@ -59,8 +59,8 @@ public class _18993Return_To_The_Test_Chamber extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 806215)
-			{ // Stochio.
+			if (targetId == 806215) // Stochio.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -70,8 +70,8 @@ public class _18993Return_To_The_Test_Chamber extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806215)
-			{ // Stochio.
+			if (targetId == 806215) // Stochio.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if (qs.getQuestVarById(0) == 2)
@@ -88,8 +88,8 @@ public class _18993Return_To_The_Test_Chamber extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806215)
-			{ // Stochio.
+			if (targetId == 806215) // Stochio.
+			{
 				if (env.getDialogId() == 1352)
 				{
 					return sendQuestDialog(env, 5);

@@ -59,8 +59,8 @@ public class _21296Padmarashka_Legacy extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs == null)
 		{
-			if (targetId == 799444)
-			{ // Kimin.
+			if (targetId == 799444) // Kimin.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -87,8 +87,8 @@ public class _21296Padmarashka_Legacy extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 799318:
-				{ // Batalrion.
+				case 799318: // Batalrion.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -104,8 +104,8 @@ public class _21296Padmarashka_Legacy extends QuestHandler
 						}
 					}
 				}
-				case 799225:
-				{ // Richelle.
+				case 799225: // Richelle.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -129,8 +129,8 @@ public class _21296Padmarashka_Legacy extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799225)
-			{ // Richelle.
+			if (targetId == 799225) // Richelle.
+			{
 				switch (env.getDialog())
 				{
 					case SELECT_REWARD:

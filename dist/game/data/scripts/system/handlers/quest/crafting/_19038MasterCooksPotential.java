@@ -58,8 +58,8 @@ public class _19038MasterCooksPotential extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203784)
-			{ // Hestia
+			if (targetId == 203784) // Hestia
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -72,8 +72,8 @@ public class _19038MasterCooksPotential extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 203785:
-				{ // Luelas
+				case 203785: // Luelas
+				{
 					final long kinah = player.getInventory().getKinah();
 					switch (dialog)
 					{
@@ -189,8 +189,8 @@ public class _19038MasterCooksPotential extends QuestHandler
 					}
 					break;
 				}
-				case 203784:
-				{ // Hestia
+				case 203784: // Hestia
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -241,8 +241,8 @@ public class _19038MasterCooksPotential extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203784)
-			{ // Hestia
+			if (targetId == 203784) // Hestia
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

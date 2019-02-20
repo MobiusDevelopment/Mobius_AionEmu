@@ -52,8 +52,8 @@ public class _1230Message_To_Madeline extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 801032)
-			{ // Ellino.
+			if (targetId == 801032) // Ellino.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -72,8 +72,8 @@ public class _1230Message_To_Madeline extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 801033:
-				{ // Madeline.
+				case 801033: // Madeline.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -91,8 +91,8 @@ public class _1230Message_To_Madeline extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801033)
-			{ // Madeline.
+			if (targetId == 801033) // Madeline.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

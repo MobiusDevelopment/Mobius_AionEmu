@@ -154,8 +154,8 @@ public class SealedArgentManorInstance extends GeneralInstanceHandler
 				final float y = npc.getY();
 				final float z = npc.getZ();
 				final byte h = npc.getHeading();
-				if (player.getInventory().decreaseByItemId(185000242, 1))
-				{ // Rechargeable Electric Fuel.
+				if (player.getInventory().decreaseByItemId(185000242, 1)) // Rechargeable Electric Fuel.
+				{
 					// Electric fuel used.
 					sendMsgByRace(1402978, Race.PC_ALL, 0);
 					// Hetgolem activated.
@@ -246,8 +246,8 @@ public class SealedArgentManorInstance extends GeneralInstanceHandler
 		{
 			return (int) (60000 - result);
 		}
-		else if (result < 900000)
-		{ // 15 Minutes.
+		else if (result < 900000) // 15 Minutes.
+		{
 			return (int) (900000 - (result - 60000));
 		}
 		return 0;
@@ -267,28 +267,28 @@ public class SealedArgentManorInstance extends GeneralInstanceHandler
 	
 	private int checkRank(int totalPoints)
 	{
-		if (totalPoints > 16000)
-		{ // Rank S.
+		if (totalPoints > 16000) // Rank S.
+		{
 			rank = 1;
 		}
-		else if (totalPoints > 13000)
-		{ // Rank A.
+		else if (totalPoints > 13000) // Rank A.
+		{
 			rank = 2;
 		}
-		else if (totalPoints > 11500)
-		{ // Rank B.
+		else if (totalPoints > 11500) // Rank B.
+		{
 			rank = 3;
 		}
-		else if (totalPoints > 10100)
-		{ // Rank C.
+		else if (totalPoints > 10100) // Rank C.
+		{
 			rank = 4;
 		}
-		else if (totalPoints > 8100)
-		{ // Rank D.
+		else if (totalPoints > 8100) // Rank D.
+		{
 			rank = 5;
 		}
-		else if (totalPoints >= 0)
-		{ // Rank F.
+		else if (totalPoints >= 0) // Rank F.
+		{
 			rank = 8;
 		}
 		else

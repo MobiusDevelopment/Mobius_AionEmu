@@ -33,8 +33,8 @@ public class Advance_Route_TeleportAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(164000279) != null)
-		{ // Advance Route Teleport Scroll.
+		if (player.getInventory().getFirstItemByItemId(164000279) != null) // Advance Route Teleport Scroll.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 		}
 		else
@@ -49,12 +49,12 @@ public class Advance_Route_TeleportAI2 extends NpcAI2
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		final int instanceId = getPosition().getInstanceId();
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(164000279, 1))
-		{ // Advance Route Teleport Scroll.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(164000279, 1)) // Advance Route Teleport Scroll.
+		{
 			TeleportService2.teleportTo(player, 301210000, instanceId, 535.967f, 458.2419f, 619.88727f, (byte) 85);
 		}
-		else if ((dialogId == 10001) && player.getInventory().decreaseByItemId(164000279, 1))
-		{ // Advance Route Teleport Scroll.
+		else if ((dialogId == 10001) && player.getInventory().decreaseByItemId(164000279, 1)) // Advance Route Teleport Scroll.
+		{
 			TeleportService2.teleportTo(player, 301210000, instanceId, 597.6529f, 571.45654f, 590.91034f, (byte) 100);
 		}
 		return true;

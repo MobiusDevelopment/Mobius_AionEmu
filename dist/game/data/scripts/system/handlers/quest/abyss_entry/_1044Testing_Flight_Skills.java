@@ -80,8 +80,8 @@ public class _1044Testing_Flight_Skills extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 203901:
-				{ // Telemachus.
+				case 203901: // Telemachus.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -102,8 +102,8 @@ public class _1044Testing_Flight_Skills extends QuestHandler
 					}
 					break;
 				}
-				case 203930:
-				{ // Daedalus.
+				case 203930: // Daedalus.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -167,8 +167,8 @@ public class _1044Testing_Flight_Skills extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203901)
-			{ // Telemachus.
+			if (targetId == 203901) // Telemachus.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

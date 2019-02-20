@@ -100,8 +100,8 @@ public class _13830Stigma_101 extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203711)
-			{ // Miriya.
+			if (targetId == 203711) // Miriya.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

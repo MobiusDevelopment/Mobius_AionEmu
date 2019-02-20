@@ -53,8 +53,8 @@ public class _2920ElementaryMyDearDaeva extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204141)
-			{ // Deyla
+			if (targetId == 204141) // Deyla
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -64,8 +64,8 @@ public class _2920ElementaryMyDearDaeva extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 204141)
-			{ // Deyla
+			if (targetId == 204141) // Deyla
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -97,8 +97,8 @@ public class _2920ElementaryMyDearDaeva extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204141)
-			{ // Deyla
+			if (targetId == 204141) // Deyla
+			{
 				return sendQuestEndDialog(env, choice);
 			}
 		}

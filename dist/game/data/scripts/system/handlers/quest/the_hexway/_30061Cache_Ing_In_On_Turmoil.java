@@ -56,8 +56,8 @@ public class _30061Cache_Ing_In_On_Turmoil extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 798927)
-			{ // Versetti.
+			if (targetId == 798927) // Versetti.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -70,8 +70,8 @@ public class _30061Cache_Ing_In_On_Turmoil extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 799381)
-			{ // Lania.
+			else if (targetId == 799381) // Lania.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -88,8 +88,8 @@ public class _30061Cache_Ing_In_On_Turmoil extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799381)
-			{ // Lania.
+			if (targetId == 799381) // Lania.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

@@ -84,8 +84,8 @@ public class _3940Loyalty extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if (qs == null)
 		{
-			if (targetId == 203701)
-			{ // Lavirintos.
+			if (targetId == 203701) // Lavirintos.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -102,8 +102,8 @@ public class _3940Loyalty extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 203701:
-				{ // Lavirintos.
+				case 203701: // Lavirintos.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -142,8 +142,8 @@ public class _3940Loyalty extends QuestHandler
 					}
 					break;
 				}
-				case 203752:
-				{ // Jucleas.
+				case 203752: // Jucleas.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -177,8 +177,8 @@ public class _3940Loyalty extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203701)
-			{ // Lavirintos.
+			if (targetId == 203701) // Lavirintos.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

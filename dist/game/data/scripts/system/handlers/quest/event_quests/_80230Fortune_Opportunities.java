@@ -58,8 +58,8 @@ public class _80230Fortune_Opportunities extends QuestHandler
 				return true;
 			}
 		}
-		else if (env.getTargetId() == 831148)
-		{ // Orung.
+		else if (env.getTargetId() == 831148) // Orung.
+		{
 			if (qs != null)
 			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (qs.getStatus() == QuestStatus.START))

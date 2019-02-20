@@ -196,8 +196,8 @@ public class _25321The_Grace_Of_The_Mace extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 805344)
-			{ // Nuiage.
+			if (targetId == 805344) // Nuiage.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -215,8 +215,8 @@ public class _25321The_Grace_Of_The_Mace extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 805345)
-			{ // Sturumwind.
+			else if (targetId == 805345) // Sturumwind.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -234,8 +234,8 @@ public class _25321The_Grace_Of_The_Mace extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 805346)
-			{ // Korperchen.
+			else if (targetId == 805346) // Korperchen.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -253,8 +253,8 @@ public class _25321The_Grace_Of_The_Mace extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 805347)
-			{ // Fenke.
+			else if (targetId == 805347) // Fenke.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -272,8 +272,8 @@ public class _25321The_Grace_Of_The_Mace extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 805348)
-			{ // Sach.
+			else if (targetId == 805348) // Sach.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -291,8 +291,8 @@ public class _25321The_Grace_Of_The_Mace extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 805349)
-			{ // Jelewoe.
+			else if (targetId == 805349) // Jelewoe.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -313,8 +313,8 @@ public class _25321The_Grace_Of_The_Mace extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805342)
-			{ // Hikait.
+			if (targetId == 805342) // Hikait.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

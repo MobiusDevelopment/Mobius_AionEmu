@@ -80,8 +80,8 @@ public class _10100Kahrun_Intrigue extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 804699:
-				{ // Atmis.
+				case 804699: // Atmis.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -100,8 +100,8 @@ public class _10100Kahrun_Intrigue extends QuestHandler
 					}
 					break;
 				}
-				case 802359:
-				{ // Tarena.
+				case 802359: // Tarena.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -118,8 +118,8 @@ public class _10100Kahrun_Intrigue extends QuestHandler
 					}
 					break;
 				}
-				case 802462:
-				{ // Kahrun.
+				case 802462: // Kahrun.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -139,8 +139,8 @@ public class _10100Kahrun_Intrigue extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802462)
-			{ // Kahrun.
+			if (targetId == 802462) // Kahrun.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

@@ -67,8 +67,8 @@ public class _29618Recovering_From_Betrayal extends QuestHandler
 				{
 					case START_DIALOG:
 					{
-						if (player.getInventory().getItemCountByItemId(164000336) >= 1)
-						{ // Abbey Return Stone.
+						if (player.getInventory().getItemCountByItemId(164000336) >= 1) // Abbey Return Stone.
+						{
 							return sendQuestDialog(env, 4762);
 						}
 						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
@@ -94,8 +94,8 @@ public class _29618Recovering_From_Betrayal extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 805156:
-				{ // DF5 Ekios.
+				case 805156: // DF5 Ekios.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -116,8 +116,8 @@ public class _29618Recovering_From_Betrayal extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805156)
-			{ // DF5 Ekios.
+			if (targetId == 805156) // DF5 Ekios.
+			{
 				switch (dialog)
 				{
 					case SELECT_REWARD:

@@ -276,11 +276,13 @@ public final class FastMath
 	{
 		radians %= TWO_PI; // put us in -2PI to +2PI space
 		if (Math.abs(radians) > PI)
-		{ // put us in -PI to +PI space
+		{
+			// put us in -PI to +PI space
 			radians = radians - (TWO_PI);
 		}
 		if (Math.abs(radians) > HALF_PI)
-		{// put us in -PI/2 to +PI/2 space
+		{
+			// put us in -PI/2 to +PI/2 space
 			radians = PI - radians;
 		}
 		

@@ -103,8 +103,8 @@ public class _24151Reclaiming_The_Damned extends QuestHandler
 		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
-			if (targetId == 204801)
-			{ // Gigrite
+			if (targetId == 204801) // Gigrite
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:

@@ -45,8 +45,8 @@ public class Old_Relic_ChestAI2 extends NpcAI2
 			{
 				case 730340: // Old Relic Chest.
 				{
-					if (player.getInventory().getItemCountByItemId(164000140) < 1)
-					{ // Explosive Bead.
+					if (player.getInventory().getItemCountByItemId(164000140) < 1) // Explosive Bead.
+					{
 						PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1012));
 						PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400701));
 						ItemService.addItem(player, 164000140, 1); // Explosive Bead.

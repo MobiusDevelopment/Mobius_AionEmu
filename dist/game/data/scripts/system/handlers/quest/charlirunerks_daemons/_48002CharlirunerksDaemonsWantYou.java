@@ -65,8 +65,8 @@ public class _48002CharlirunerksDaemonsWantYou extends QuestHandler
 		
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 799886)
-			{ // Tikalanerk
+			if (targetId == 799886) // Tikalanerk
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -80,8 +80,8 @@ public class _48002CharlirunerksDaemonsWantYou extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (targetId == 799886)
-			{ // Tikalanerk
+			if (targetId == 799886) // Tikalanerk
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

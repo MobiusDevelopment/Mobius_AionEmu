@@ -65,8 +65,8 @@ public class SummonTrapEffect extends SummonEffect
 		final int worldId = effector.getWorldId();
 		final int instanceId = effector.getInstanceId();
 		if ((npcId == 749300) || (npcId == 749301) || // Scrapped Mechanisms.
-			(npcId == 833699) || (npcId == 833700))
-		{ // Highdeva_Fire_NPC.
+			(npcId == 833699) || (npcId == 833700)) // Highdeva_Fire_NPC.
+		{
 			x = effector.getX();
 			y = effector.getY();
 			z = effector.getZ();

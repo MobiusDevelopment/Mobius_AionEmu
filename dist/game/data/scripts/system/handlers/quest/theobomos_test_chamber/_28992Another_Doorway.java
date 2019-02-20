@@ -76,8 +76,8 @@ public class _28992Another_Doorway extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -87,8 +87,8 @@ public class _28992Another_Doorway extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806217)
-			{ // Guranka.
+			if (targetId == 806217) // Guranka.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -103,8 +103,8 @@ public class _28992Another_Doorway extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if (qs.getQuestVarById(0) == 3)
@@ -121,8 +121,8 @@ public class _28992Another_Doorway extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (env.getDialogId() == 1352)
 				{
 					return sendQuestDialog(env, 5);
@@ -150,12 +150,12 @@ public class _28992Another_Doorway extends QuestHandler
 		}
 		if (var == 1)
 		{
-			if (targetId == 220424)
-			{ // 피의 계약을 맺은 아라크네.
+			if (targetId == 220424) // 피의 계약을 맺은 아라크네.
+			{
 				qs.setQuestVarById(1, 1);
 			}
-			else if (targetId == 220425)
-			{ // 피의 계약을 맺은 갈라테이아.
+			else if (targetId == 220425) // 피의 계약을 맺은 갈라테이아.
+			{
 				qs.setQuestVarById(2, 1);
 			}
 			updateQuestStatus(env);
@@ -166,8 +166,8 @@ public class _28992Another_Doorway extends QuestHandler
 		}
 		else if (var == 2)
 		{
-			if (targetId == 220426)
-			{ // 아티팩트를 지배하는 원소 군주.
+			if (targetId == 220426) // 아티팩트를 지배하는 원소 군주.
+			{
 				qs.setStatus(QuestStatus.REWARD);
 				updateQuestStatus(env);
 			}

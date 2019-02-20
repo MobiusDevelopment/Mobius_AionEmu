@@ -37,8 +37,8 @@ public class ExceedKeyBuyerAI2 extends NpcAI2
 	{
 		// 손상된 돌파석을 가지고 계시다면 저에게 가져 오십시오.
 		// 상당한 가격으로 매입하겠습니다.
-		if (player.getInventory().getFirstItemByItemId(166500002) != null)
-		{ // Amplification Stone.
+		if (player.getInventory().getFirstItemByItemId(166500002) != null) // Amplification Stone.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));
 		}
 		else
@@ -51,8 +51,8 @@ public class ExceedKeyBuyerAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(166500002, 1))
-		{ // Amplification Stone.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(166500002, 1)) // Amplification Stone.
+		{
 			switch (getNpcId())
 			{
 				case 805716: // Arados.

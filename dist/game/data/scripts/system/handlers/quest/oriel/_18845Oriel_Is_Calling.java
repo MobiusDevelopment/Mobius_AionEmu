@@ -59,8 +59,8 @@ public class _18845Oriel_Is_Calling extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798458)
-			{ // Harinus.
+			if (targetId == 798458) // Harinus.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _18845Oriel_Is_Calling extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 830365:
-				{ // Izunius.
+				case 830365: // Izunius.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _18845Oriel_Is_Calling extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 830365)
-			{ // Izunius.
+			if (targetId == 830365) // Izunius.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

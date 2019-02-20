@@ -52,8 +52,8 @@ public class _19002ExpertAethertappersTest extends QuestHandler
 	public boolean onEnterWorldEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		if (player.getWorldId() == 110010000)
-		{ // Sanctum.
+		if (player.getWorldId() == 110010000) // Sanctum.
+		{
 			final QuestState qs = player.getQuestStateList().getQuestState(questId);
 			if (qs == null)
 			{

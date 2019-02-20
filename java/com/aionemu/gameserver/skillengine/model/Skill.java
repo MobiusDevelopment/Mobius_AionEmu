@@ -1099,8 +1099,8 @@ public class Skill
 		
 		// 70% of base skill duration cap
 		// No cast speed cap for skill Summoning Alacrity I(skillId: 3779) and Nimble Fingers I(skillId: 913)
-		if (!effector.getEffectController().hasAbnormalEffect(3779) && !effector.getEffectController().hasAbnormalEffect(913))
-		{ // 4.8
+		if (!effector.getEffectController().hasAbnormalEffect(3779) && !effector.getEffectController().hasAbnormalEffect(913)) // 4.8
+		{
 			final int baseDurationCap = Math.round(skillTemplate.getDuration() * 0.3f);
 			if (duration < baseDurationCap)
 			{
@@ -1140,8 +1140,8 @@ public class Skill
 		 * exceptions for certain skills -herb and mana treatment -traps
 		 */
 		// dont check herb , mana treatment and concentration enhancement
-		switch (getSkillId())
-		{ // 4.8
+		switch (getSkillId()) // 4.8
+		{
 			case 245: // Bandage Heal
 			case 246: // Herb Treatment I
 			case 247: // Herb Treatment II

@@ -174,7 +174,8 @@ public class AttackManager
 		}
 		// start thinking about home after 100 meters and no attack for 10 seconds (only for default monsters)
 		if (chaseHome <= 6)
-		{ // TODO: Check Client and use chase_user_by_trace value
+		{
+			// TODO: Check Client and use chase_user_by_trace value
 			if (((npc.getGameStats().getLastAttackTimeDelta() > 20) && (npc.getGameStats().getLastAttackedTimeDelta() > 20)) || ((distanceToHome > (chaseHome / 2)) && (npc.getGameStats().getLastAttackedTimeDelta() > 2)))
 			{
 				return true;

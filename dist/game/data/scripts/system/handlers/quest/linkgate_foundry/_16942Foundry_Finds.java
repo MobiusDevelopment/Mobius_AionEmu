@@ -63,8 +63,8 @@ public class _16942Foundry_Finds extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802350)
-			{ // Eljer.
+			if (targetId == 802350) // Eljer.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -89,8 +89,8 @@ public class _16942Foundry_Finds extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 206361)
-			{ // Ketesivius.
+			if (targetId == 206361) // Ketesivius.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -108,8 +108,8 @@ public class _16942Foundry_Finds extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 802350)
-			{ // Eljer.
+			if (targetId == 802350) // Eljer.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -131,8 +131,8 @@ public class _16942Foundry_Finds extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802350)
-			{ // Eljer.
+			if (targetId == 802350) // Eljer.
+			{
 				removeQuestItem(env, 182215786, 3);
 				removeQuestItem(env, 182215788, 1);
 				return sendQuestEndDialog(env);

@@ -34,8 +34,8 @@ public class Blessed_RelicsAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(186000344) != null)
-		{ // Prestige Crystal.
+		if (player.getInventory().getFirstItemByItemId(186000344) != null) // Prestige Crystal.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));
 		}
 		else
@@ -48,8 +48,8 @@ public class Blessed_RelicsAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(186000344, 1))
-		{ // Prestige Crystal.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(186000344, 1)) // Prestige Crystal.
+		{
 			switch (getNpcId())
 			{
 				case 831987: // Lesser Blessed Relics.

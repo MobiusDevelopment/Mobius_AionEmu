@@ -408,8 +408,8 @@ public class CrucibleChallengeInstance extends CrucibleInstance
 						final QuestState qs = player.getQuestStateList().getQuestState(player.getRace() == Race.ASMODIANS ? 28208 : 18208);
 						if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 						{
-							if ((qs.getQuestVarById(0) == 1) || (qs.getQuestVarById(1) == 4))
-							{ // Kill x5 Vanktrist Spacetwine.
+							if ((qs.getQuestVarById(0) == 1) || (qs.getQuestVarById(1) == 4)) // Kill x5 Vanktrist Spacetwine.
+							{
 								sp(730459, 1765.7104f, 1281.2388f, 389.11743f, (byte) 0, 2000);
 								return;
 							}

@@ -36,8 +36,8 @@ public class Kysis_Crystal_SwordAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(185000246) != null)
-		{ // Spirit Of Kysis's Pendant.
+		if (player.getInventory().getFirstItemByItemId(185000246) != null) // Spirit Of Kysis's Pendant.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));
 		}
 		else
@@ -51,8 +51,8 @@ public class Kysis_Crystal_SwordAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000246, 1))
-		{ // Spirit Of Kysis's Pendant.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000246, 1)) // Spirit Of Kysis's Pendant.
+		{
 			switch (getNpcId())
 			{
 				case 702844: // Kysis's Crystal Sword [Elyos]

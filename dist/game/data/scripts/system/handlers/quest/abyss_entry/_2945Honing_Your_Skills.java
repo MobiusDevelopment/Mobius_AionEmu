@@ -62,8 +62,8 @@ public class _2945Honing_Your_Skills extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 204075:
-				{ // Balder.
+				case 204075: // Balder.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -80,8 +80,8 @@ public class _2945Honing_Your_Skills extends QuestHandler
 					}
 					break;
 				}
-				case 204088:
-				{ // Therf.
+				case 204088: // Therf.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -102,8 +102,8 @@ public class _2945Honing_Your_Skills extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204075)
-			{ // Balder.
+			if (targetId == 204075) // Balder.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

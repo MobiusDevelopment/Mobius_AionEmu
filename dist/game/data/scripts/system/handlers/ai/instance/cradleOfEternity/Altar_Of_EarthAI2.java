@@ -43,8 +43,8 @@ public class Altar_Of_EarthAI2 extends ActionItemNpcAI2
 	@Override
 	protected void handleUseItemFinish(Player player)
 	{
-		if (!player.getInventory().decreaseByItemId(185000266, 1))
-		{ // Earthen Malachite.
+		if (!player.getInventory().decreaseByItemId(185000266, 1)) // Earthen Malachite.
+		{
 			// You don’t have a Malachite of Earth to place on the altar.
 			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403447));
 			return;

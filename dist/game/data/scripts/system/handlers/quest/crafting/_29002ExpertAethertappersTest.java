@@ -52,8 +52,8 @@ public class _29002ExpertAethertappersTest extends QuestHandler
 	public boolean onEnterWorldEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		if (player.getWorldId() == 120010000)
-		{ // Pandaemonium.
+		if (player.getWorldId() == 120010000) // Pandaemonium.
+		{
 			final QuestState qs = player.getQuestStateList().getQuestState(questId);
 			if (qs == null)
 			{

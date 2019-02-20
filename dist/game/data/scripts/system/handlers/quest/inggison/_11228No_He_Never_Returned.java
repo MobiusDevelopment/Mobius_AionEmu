@@ -60,8 +60,8 @@ public class _11228No_He_Never_Returned extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 799077)
-			{ // Zaniah
+			if (targetId == 799077) // Zaniah
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -77,8 +77,8 @@ public class _11228No_He_Never_Returned extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 798979:
-				{ // Gelon
+				case 798979: // Gelon
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -94,8 +94,8 @@ public class _11228No_He_Never_Returned extends QuestHandler
 						}
 					}
 				}
-				case 257225:
-				{ // Jennathea.
+				case 257225: // Jennathea.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -111,8 +111,8 @@ public class _11228No_He_Never_Returned extends QuestHandler
 						}
 					}
 				}
-				case 799078:
-				{ // Alphecca.
+				case 799078: // Alphecca.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -128,8 +128,8 @@ public class _11228No_He_Never_Returned extends QuestHandler
 						}
 					}
 				}
-				case 799077:
-				{ // Zaniah
+				case 799077: // Zaniah
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -153,8 +153,8 @@ public class _11228No_He_Never_Returned extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799077)
-			{ // Zaniah
+			if (targetId == 799077) // Zaniah
+			{
 				switch (env.getDialog())
 				{
 					case SELECT_REWARD:

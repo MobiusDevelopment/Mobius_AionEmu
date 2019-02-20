@@ -36,8 +36,8 @@ public class Clone_Of_BarrierAI2 extends AggressiveNpcAI2
 			if (object instanceof Npc)
 			{
 				final Npc npc = (Npc) object;
-				if (npc.getNpcId() == 216516)
-				{ // Omega.
+				if (npc.getNpcId() == 216516) // Omega.
+				{
 					npc.getEffectController().removeEffect(18671); // Magic Ward.
 					break;
 				}

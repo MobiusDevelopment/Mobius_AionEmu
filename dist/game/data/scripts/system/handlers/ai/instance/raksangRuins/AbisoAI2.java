@@ -39,8 +39,8 @@ public class AbisoAI2 extends GeneralNpcAI2
 		{
 			case 206378: // Abiso Way A.
 			case 206379: // Abiso Way B.
-			case 206380:
-			{ // Abiso Way C.
+			case 206380: // Abiso Way C.
+			{
 				super.handleDialogStart(player);
 				break;
 			}

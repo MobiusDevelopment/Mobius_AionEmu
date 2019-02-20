@@ -64,8 +64,8 @@ public class _2290GrokensEscape extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203608)
-			{ // Groken
+			if (targetId == 203608) // Groken
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -101,15 +101,15 @@ public class _2290GrokensEscape extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 203608)
-			{ // Groken
+			if (targetId == 203608) // Groken
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (qs.getQuestVarById(0) == 0))
 				{
 					return defaultStartFollowEvent(env, (Npc) env.getVisibleObject(), 700178, 0, 1); // 1
 				}
 			}
-			else if (targetId == 203607)
-			{ // Groken
+			else if (targetId == 203607) // Groken
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (qs.getQuestVarById(0) == 3))
 				{
 					return sendQuestDialog(env, 1693);
@@ -122,8 +122,8 @@ public class _2290GrokensEscape extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203607)
-			{ // Manir
+			if (targetId == 203607) // Manir
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 5);

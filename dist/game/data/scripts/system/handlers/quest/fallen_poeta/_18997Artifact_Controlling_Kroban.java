@@ -59,8 +59,8 @@ public class _18997Artifact_Controlling_Kroban extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 806252)
-			{ // Favoni.
+			if (targetId == 806252) // Favoni.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -70,8 +70,8 @@ public class _18997Artifact_Controlling_Kroban extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806252)
-			{ // Favoni.
+			if (targetId == 806252) // Favoni.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if (qs.getQuestVarById(0) == 2)
@@ -88,8 +88,8 @@ public class _18997Artifact_Controlling_Kroban extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806252)
-			{ // Favoni.
+			if (targetId == 806252) // Favoni.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

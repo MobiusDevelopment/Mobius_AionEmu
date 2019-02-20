@@ -326,8 +326,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	 * which is never negative and always less than length. Note that, to be correct wrt arbitrary concurrency errors by users, bounds checks must operate on local variables, which accounts for some odd-looking inline assignments below.
 	 */
 	@SuppressWarnings("unchecked")
-	static <V> Node<V> tabAt(Node<V>[] tab, int i)
-	{ // used by Traverser
+	static <V> Node<V> tabAt(Node<V>[] tab, int i) // used by Traverser
+	{
 		return (Node<V>) U.getObjectVolatile(tab, ((long) i << ASHIFT) + ABASE);
 	}
 	
@@ -628,8 +628,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 			final Class<?> c = k.getClass();
 			TreeNode<V> pp = root, p = null;
 			int dir = 0;
-			while (pp != null)
-			{ // find existing node or leaf to insert at
+			while (pp != null) // find existing node or leaf to insert at
+			{
 				int ph;
 				Object pk;
 				Class<?> pc;
@@ -679,8 +679,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 			{
 				root = x;
 			}
-			else
-			{ // attach and rebalance; adapted from CLR
+			else // attach and rebalance; adapted from CLR
+			{
 				TreeNode<V> xp, xpp;
 				if (f != null)
 				{
@@ -800,8 +800,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 				p.red = c; // swap colors
 				final TreeNode<V> sr = s.right;
 				final TreeNode<V> pp = p.parent;
-				if (s == pr)
-				{ // p was s's direct parent
+				if (s == pr) // p was s's direct parent
+				{
 					p.parent = s;
 					s.right = p;
 				}
@@ -883,8 +883,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 				}
 				p.left = p.right = p.parent = null;
 			}
-			if (!p.red)
-			{ // rebalance, from CLR
+			if (!p.red) // rebalance, from CLR
+			{
 				TreeNode<V> x = replacement;
 				while (x != null)
 				{
@@ -948,8 +948,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 							}
 						}
 					}
-					else
-					{ // symmetric
+					else // symmetric
+					{
 						TreeNode<V> sib = xpl;
 						if ((sib != null) && sib.red)
 						{
@@ -1454,8 +1454,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 			}
 			else
 			{
-				for (Node<V> e = f; e != null; e = e.next)
-				{ // prescan
+				for (Node<V> e = f; e != null; e = e.next) // prescan
+				{
 					Object ek;
 					V ev;
 					if ((e.hash == h) && ((ev = e.val) != null) && (((ek = e.key) == k) || k.equals(ek)))
@@ -1850,8 +1850,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		tryPresize(m.size());
 		long delta = 0L; // number of uncommitted additions
 		boolean npe = false; // to throw exception on exit for nulls
-		try
-		{ // to clean up counts on other exceptions
+		try // to clean up counts on other exceptions
+		{
 			for (Map.Entry<?, ? extends V> entry : m.entrySet())
 			{
 				Object k;
@@ -2007,8 +2007,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 						{
 							for (Node<V> p = t.first; p != null; p = p.next)
 							{
-								if (p.val != null)
-								{ // (currently always true)
+								if (p.val != null) // (currently always true)
+								{
 									p.val = null;
 									--delta;
 								}
@@ -2036,8 +2036,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 					{
 						for (Node<V> e = f; e != null; e = e.next)
 						{
-							if (e.val != null)
-							{ // (currently always true)
+							if (e.val != null) // (currently always true)
+							{
 								e.val = null;
 								--delta;
 							}
@@ -2226,16 +2226,16 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 		{
 			stride = MIN_TRANSFER_STRIDE; // subdivide range
 		}
-		if (nextTab == null)
-		{ // initiating
+		if (nextTab == null) // initiating
+		{
 			try
 			{
 				@SuppressWarnings("rawtypes")
 				final Node[] tb = new Node[n << 1];
 				nextTab = tb;
 			}
-			catch (Throwable ex)
-			{ // try to cope with OOME
+			catch (Throwable ex) // try to cope with OOME
+			{
 				sizeCtl = Integer.MAX_VALUE;
 				return;
 			}
@@ -2243,8 +2243,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 			transferOrigin = n;
 			transferIndex = n;
 			final Node<V> rev = new Node<>(MOVED, tab, null, null);
-			for (int k = n; k > 0;)
-			{ // progressively reveal ready slots
+			for (int k = n; k > 0;) // progressively reveal ready slots
+			{
 				final int nextk = (k > stride) ? k - stride : 0;
 				for (int m = nextk; m < k; ++m)
 				{
@@ -2472,14 +2472,14 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 				a = as[(n - 1) & h];
 				if (a == null)
 				{
-					if (counterBusy == 0)
-					{ // Try to attach new Cell
+					if (counterBusy == 0) // Try to attach new Cell
+					{
 						final CounterCell r = new CounterCell(x); // Optimistic create
 						if ((counterBusy == 0) && U.compareAndSwapInt(this, COUNTERBUSY, 0, 1))
 						{
 							boolean created = false;
-							try
-							{ // Recheck under lock
+							try // Recheck under lock
+							{
 								CounterCell[] rs;
 								int m, j;
 								rs = counterCells;
@@ -2546,8 +2546,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 			else if ((counterBusy == 0) && (counterCells == as) && U.compareAndSwapInt(this, COUNTERBUSY, 0, 1))
 			{
 				boolean init = false;
-				try
-				{ // Initialize table
+				try // Initialize table
+				{
 					if (counterCells == as)
 					{
 						final CounterCell[] rs = new CounterCell[2];
@@ -2628,8 +2628,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 			super(it);
 			this.batch = batch;
 			this.map = map;
-			if ((this.map != null) && (it != null))
-			{ // split parent
+			if ((this.map != null) && (it != null)) // split parent
+			{
 				Node<V>[] t = it.tab;
 				if ((t == null) && ((t = it.tab = map.table) != null))
 				{
@@ -2657,8 +2657,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 				{
 					e = e.next;
 				}
-				while (e == null)
-				{ // get to next non-null bin
+				while (e == null) // get to next non-null bin
+				{
 					ConcurrentHashMapV8<K, V> m;
 					Node<V>[] t;
 					int b, i, n;
@@ -2740,8 +2740,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 			Node<V>[] t;
 			ForkJoinPool pool;
 			b = batch;
-			if ((b < 0) && ((m = map) != null))
-			{ // force initialization
+			if ((b < 0) && ((m = map) != null)) // force initialization
+			{
 				t = tab;
 				if ((t == null) && ((t = tab = m.table) != null))
 				{
@@ -3585,8 +3585,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	@SuppressWarnings("unchecked")
 	private void writeObject(java.io.ObjectOutputStream s) throws java.io.IOException
 	{
-		if (segments == null)
-		{ // for serialization compatibility
+		if (segments == null) // for serialization compatibility
+		{
 			segments = (Segment<K, V>[]) new Segment<?, ?>[DEFAULT_CONCURRENCY_LEVEL];
 			for (int i = 0; i < segments.length; ++i)
 			{
@@ -3683,8 +3683,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 				{
 					sizeCtl = sc;
 				}
-				if (collide)
-				{ // rescan and convert to TreeBins
+				if (collide) // rescan and convert to TreeBins
+				{
 					final Node<V>[] tab = table;
 					for (int i = 0; i < tab.length; ++i)
 					{
@@ -3700,8 +3700,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 					}
 				}
 			}
-			if (!init)
-			{ // Can only happen if unsafely published.
+			if (!init) // Can only happen if unsafely published.
+			{
 				while (p != null)
 				{
 					internalPut((K) p.key, p.val, false);
@@ -5155,8 +5155,8 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 	{
 		private final V value;
 		
-		KeySetView(ConcurrentHashMapV8<K, V> map, V value)
-		{ // non-public
+		KeySetView(ConcurrentHashMapV8<K, V> map, V value) // non-public
+		{
 			super(map);
 			this.value = value;
 		}

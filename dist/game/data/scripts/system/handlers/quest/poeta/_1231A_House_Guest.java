@@ -52,8 +52,8 @@ public class _1231A_House_Guest extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 801033)
-			{ // Madeline.
+			if (targetId == 801033) // Madeline.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -72,8 +72,8 @@ public class _1231A_House_Guest extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 801032:
-				{ // Ellino.
+				case 801032: // Ellino.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -91,8 +91,8 @@ public class _1231A_House_Guest extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801032)
-			{ // Ellino.
+			if (targetId == 801032) // Ellino.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

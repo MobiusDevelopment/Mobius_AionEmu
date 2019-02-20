@@ -56,8 +56,8 @@ public class _30161Hexway_Hideout extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 799225)
-			{ // Richelle.
+			if (targetId == 799225) // Richelle.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -70,8 +70,8 @@ public class _30161Hexway_Hideout extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 799383)
-			{ // Vergelan.
+			else if (targetId == 799383) // Vergelan.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -88,8 +88,8 @@ public class _30161Hexway_Hideout extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799383)
-			{ // Vergelan.
+			if (targetId == 799383) // Vergelan.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

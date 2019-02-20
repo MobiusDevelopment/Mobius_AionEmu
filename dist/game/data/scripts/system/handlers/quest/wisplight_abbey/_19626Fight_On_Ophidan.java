@@ -67,8 +67,8 @@ public class _19626Fight_On_Ophidan extends QuestHandler
 				{
 					case START_DIALOG:
 					{
-						if (player.getInventory().getItemCountByItemId(164000335) >= 1)
-						{ // Abbey Return Stone.
+						if (player.getInventory().getItemCountByItemId(164000335) >= 1) // Abbey Return Stone.
+						{
 							return sendQuestDialog(env, 4762);
 						}
 						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
@@ -94,8 +94,8 @@ public class _19626Fight_On_Ophidan extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 801763:
-				{ // IDLDF5_Under_01_Theano.
+				case 801763: // IDLDF5_Under_01_Theano.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -116,8 +116,8 @@ public class _19626Fight_On_Ophidan extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801763)
-			{ // IDLDF5_Under_01_Theano.
+			if (targetId == 801763) // IDLDF5_Under_01_Theano.
+			{
 				switch (dialog)
 				{
 					case SELECT_REWARD:

@@ -112,144 +112,144 @@ public class UpgradeArcadeService
 		int itemIdTier1 = getRewardTier1();
 		int countTier1 = 0;
 		/** Reward Tier 1 **/
-		if (itemIdTier1 == 167010180)
-		{ // [Event] Manastone: Attack +6
+		if (itemIdTier1 == 167010180) // [Event] Manastone: Attack +6
+		{
 			countTier1 = 1;
 		}
-		else if (itemIdTier1 == 188053620)
-		{ // Manastone Bundle
+		else if (itemIdTier1 == 188053620) // Manastone Bundle
+		{
 			countTier1 = 1;
 		}
-		else if (itemIdTier1 == 186000237)
-		{ // Ancien Coin
+		else if (itemIdTier1 == 186000237) // Ancien Coin
+		{
 			countTier1 = 20;
 		}
-		else if (itemIdTier1 == 186000247)
-		{ // Major Danuar Relic
+		else if (itemIdTier1 == 186000247) // Major Danuar Relic
+		{
 			countTier1 = 1;
 		}
-		else if (itemIdTier1 == 188051853)
-		{ // [Event] Form Candy Bundle
+		else if (itemIdTier1 == 188051853) // [Event] Form Candy Bundle
+		{
 			countTier1 = 1;
 		}
-		else if (itemIdTier1 == 188053616)
-		{ // Tidal Idian Bundle
+		else if (itemIdTier1 == 188053616) // Tidal Idian Bundle
+		{
 			countTier1 = 1;
 		}
-		else if (itemIdTier1 == 188052822)
-		{ // Noble Ancient Manastone Chest
+		else if (itemIdTier1 == 188052822) // Noble Ancient Manastone Chest
+		{
 			countTier1 = 20;
 		}
-		else if (itemIdTier1 == 188052674)
-		{ // [Event] Heroic Godstone Bundle I
+		else if (itemIdTier1 == 188052674) // [Event] Heroic Godstone Bundle I
+		{
 			countTier1 = 1;
 		}
 		
 		/** Reward Tier 2 **/
 		int itemIdTier2 = getRewardTier2();
 		int countTier2 = 0;
-		if (itemIdTier2 == 110900830)
-		{ // Astronaut's Costume
+		if (itemIdTier2 == 110900830) // Astronaut's Costume
+		{
 			countTier2 = 1;
 		}
-		else if (itemIdTier2 == 188052674)
-		{ // [Event] Heroic Godstone Bundle I
+		else if (itemIdTier2 == 188052674) // [Event] Heroic Godstone Bundle I
+		{
 			countTier2 = 1;
 		}
-		else if (itemIdTier2 == 167010180)
-		{ // [Event] Manastone: Attack +6
+		else if (itemIdTier2 == 167010180) // [Event] Manastone: Attack +6
+		{
 			countTier2 = 1;
 		}
-		else if (itemIdTier2 == 188053624)
-		{ // Unified Return Scroll Bundle
+		else if (itemIdTier2 == 188053624) // Unified Return Scroll Bundle
+		{
 			countTier2 = 20;
 		}
-		else if (itemIdTier2 == 188052654)
-		{ // Noble Ancient Manastone Bundle
+		else if (itemIdTier2 == 188052654) // Noble Ancient Manastone Bundle
+		{
 			countTier2 = 1;
 		}
-		else if (itemIdTier2 == 166100008)
-		{ // Greater Supplements (Eternal)
+		else if (itemIdTier2 == 166100008) // Greater Supplements (Eternal)
+		{
 			countTier2 = 100;
 		}
-		else if (itemIdTier2 == 188053628)
-		{ // Pallasite Bundle
+		else if (itemIdTier2 == 188053628) // Pallasite Bundle
+		{
 			countTier2 = 1;
 		}
-		else if (itemIdTier2 == 188053213)
-		{ // [Event] Remodeled Danuar Weapon Chest
+		else if (itemIdTier2 == 188053213) // [Event] Remodeled Danuar Weapon Chest
+		{
 			countTier2 = 1;
 		}
 		
 		/** Reward Tier 3 **/
 		int itemIdTier3 = getRewardTier3();
 		int countTier3 = 0;
-		if (itemIdTier3 == 125045493)
-		{ // Astronaut's Helmet
+		if (itemIdTier3 == 125045493) // Astronaut's Helmet
+		{
 			countTier3 = 1;
 		}
-		else if (itemIdTier3 == 188053645)
-		{ // Shugo's Special Reward Chest
+		else if (itemIdTier3 == 188053645) // Shugo's Special Reward Chest
+		{
 			countTier3 = 1;
 		}
-		else if (itemIdTier3 == 188053617)
-		{ // Noble Tidal Idian Bundle
+		else if (itemIdTier3 == 188053617) // Noble Tidal Idian Bundle
+		{
 			countTier3 = 1;
 		}
-		else if (itemIdTier3 == 188053626)
-		{ // Strong Wyvern Form Candy Bundle
+		else if (itemIdTier3 == 188053626) // Strong Wyvern Form Candy Bundle
+		{
 			countTier3 = 1;
 		}
-		else if (itemIdTier3 == 188053002)
-		{ // [Event] Noble Composite Manastone Bundle
+		else if (itemIdTier3 == 188053002) // [Event] Noble Composite Manastone Bundle
+		{
 			countTier3 = 1;
 		}
-		else if (itemIdTier3 == 166100011)
-		{ // Greater Supplements (Mythic)
+		else if (itemIdTier3 == 166100011) // Greater Supplements (Mythic)
+		{
 			countTier3 = 200;
 		}
-		else if (itemIdTier3 == 190020214)
-		{ // Royal Kitter Egg
+		else if (itemIdTier3 == 190020214) // Royal Kitter Egg
+		{
 			countTier3 = 1;
 		}
-		else if (itemIdTier3 == 188053618)
-		{ // Honorable Elim's Idian Bundle
+		else if (itemIdTier3 == 188053618) // Honorable Elim's Idian Bundle
+		{
 			countTier3 = 1;
 		}
 		
 		/** Reward Tier 4 **/
 		int itemIdTier4 = getRewardTier4();
 		int countTier4 = 0;
-		if (itemIdTier4 == 188053627)
-		{ // Sleek Hovercycle Chest
+		if (itemIdTier4 == 188053627) // Sleek Hovercycle Chest
+		{
 			countTier4 = 1;
 		}
-		else if (itemIdTier4 == 188053628)
-		{ // Pallasite Bundle
+		else if (itemIdTier4 == 188053628) // Pallasite Bundle
+		{
 			countTier4 = 1;
 		}
-		else if (itemIdTier4 == 166150019)
-		{ // Assured Greater Felicitous Socketing (Mythic)
+		else if (itemIdTier4 == 166150019) // Assured Greater Felicitous Socketing (Mythic)
+		{
 			countTier4 = 1;
 		}
-		else if (itemIdTier4 == 188053002)
-		{ // [Event] Noble Composite Manastone Bundle
+		else if (itemIdTier4 == 188053002) // [Event] Noble Composite Manastone Bundle
+		{
 			countTier4 = 1;
 		}
-		else if (itemIdTier4 == 188053614)
-		{ // Illusion Godstone Bundle
+		else if (itemIdTier4 == 188053614) // Illusion Godstone Bundle
+		{
 			countTier4 = 1;
 		}
-		else if (itemIdTier4 == 188052675)
-		{ // [Event] Heroic Godstone Bundle II
+		else if (itemIdTier4 == 188052675) // [Event] Heroic Godstone Bundle II
+		{
 			countTier4 = 1;
 		}
-		else if (itemIdTier4 == 188053003)
-		{ // [Event] Weapon Shard Box
+		else if (itemIdTier4 == 188053003) // [Event] Weapon Shard Box
+		{
 			countTier4 = 1;
 		}
-		else if (itemIdTier4 == 187060161)
-		{ // Blitzbolt Wings
+		else if (itemIdTier4 == 187060161) // Blitzbolt Wings
+		{
 			countTier4 = 1;
 		}
 		if ((getCurrentUpgradeLvlFromDB >= 1) && (getCurrentUpgradeLvlFromDB <= 3))

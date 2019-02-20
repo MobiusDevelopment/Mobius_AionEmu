@@ -61,8 +61,8 @@ public class _1149MissingPoppy extends QuestHandler
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		
-		if (targetId == 203145)
-		{ // Cannon
+		if (targetId == 203145) // Cannon
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -84,8 +84,8 @@ public class _1149MissingPoppy extends QuestHandler
 				return false;
 			}
 		}
-		else if (targetId == 203191)
-		{ // Poppy
+		else if (targetId == 203191) // Poppy
+		{
 			if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 			{
 				final int var = qs.getQuestVarById(0);

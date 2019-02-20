@@ -51,8 +51,8 @@ public class _3074Dangerous_Probability extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 798193)
-			{ // Nagrunerk.
+			if (targetId == 798193) // Nagrunerk.
+			{
 				if (dialog == QuestDialog.EXCHANGE_COIN)
 				{
 					if (QuestService.startQuest(env))
@@ -65,8 +65,8 @@ public class _3074Dangerous_Probability extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 798193)
-			{ // Nagrunerk.
+			if (targetId == 798193) // Nagrunerk.
+			{
 				final long kinahAmount = player.getInventory().getKinah();
 				final long angelsEye = player.getInventory().getItemCountByItemId(186000037);
 				switch (dialog)
@@ -114,8 +114,8 @@ public class _3074Dangerous_Probability extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798193)
-			{ // Nagrunerk.
+			if (targetId == 798193) // Nagrunerk.
+			{
 				if (dialog == QuestDialog.SELECT_NO_REWARD)
 				{
 					switch (reward)

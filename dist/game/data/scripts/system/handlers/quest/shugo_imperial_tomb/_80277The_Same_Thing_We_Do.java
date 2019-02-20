@@ -58,8 +58,8 @@ public class _80277The_Same_Thing_We_Do extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || qs.canRepeat())
 		{
-			if (targetId == 831131)
-			{ // Alberto Einshudison.
+			if (targetId == 831131) // Alberto Einshudison.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -76,8 +76,8 @@ public class _80277The_Same_Thing_We_Do extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 831131:
-				{ // Alberto Einshudison.
+				case 831131: // Alberto Einshudison.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -102,8 +102,8 @@ public class _80277The_Same_Thing_We_Do extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 831131)
-			{ // Alberto Einshudison.
+			if (targetId == 831131) // Alberto Einshudison.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

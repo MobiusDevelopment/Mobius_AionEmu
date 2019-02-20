@@ -108,8 +108,8 @@ public class _2099ToFaceTheFuture extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 203550:
-				{ // Munin.
+				case 203550: // Munin.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -132,8 +132,8 @@ public class _2099ToFaceTheFuture extends QuestHandler
 					}
 					break;
 				}
-				case 700551:
-				{ // Fissure Of Destiny.
+				case 700551: // Fissure Of Destiny.
+				{
 					if ((env.getDialog() == QuestDialog.USE_OBJECT) && (var == 1))
 					{
 						final WorldMapInstance AtaxiarD = InstanceService.getNextAvailableInstance(320140000);
@@ -143,8 +143,8 @@ public class _2099ToFaceTheFuture extends QuestHandler
 					}
 					break;
 				}
-				case 205020:
-				{ // Hagen.
+				case 205020: // Hagen.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -177,8 +177,8 @@ public class _2099ToFaceTheFuture extends QuestHandler
 					}
 					break;
 				}
-				case 205118:
-				{ // Lephar.
+				case 205118: // Lephar.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -199,8 +199,8 @@ public class _2099ToFaceTheFuture extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204052)
-			{ // Vidar.
+			if (targetId == 204052) // Vidar.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

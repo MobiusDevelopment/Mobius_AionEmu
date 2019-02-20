@@ -82,8 +82,8 @@ public class _16825Escape_From_The_Contaminated_Library extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (player.getWorldId() == 301550000)
-		{ // 지식의 정원.
+		if (player.getWorldId() == 301550000) // 지식의 정원.
+		{
 			if ((qs == null) || qs.canRepeat())
 			{
 				env.setQuestId(questId);

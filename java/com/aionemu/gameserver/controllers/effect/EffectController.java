@@ -228,7 +228,8 @@ public class EffectController
 	}
 	
 	public boolean isAethertechEffect(int skillId)
-	{ // 4.8
+	{
+		// 4.8
 		switch (skillId)
 		{
 			// Embark

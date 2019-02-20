@@ -60,8 +60,8 @@ public class _4969GrowthNinissFourthCharm extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798385)
-			{ // Ninis
+			if (targetId == 798385) // Ninis
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -74,8 +74,8 @@ public class _4969GrowthNinissFourthCharm extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 798068:
-				{ // Maochinicherk
+				case 798068: // Maochinicherk
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -126,8 +126,8 @@ public class _4969GrowthNinissFourthCharm extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798385)
-			{ // Ninis
+			if (targetId == 798385) // Ninis
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

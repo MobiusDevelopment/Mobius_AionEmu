@@ -77,8 +77,8 @@ public class _19647Eukraton_In_Need extends QuestHandler
 				{
 					case START_DIALOG:
 					{
-						if (player.getInventory().getItemCountByItemId(164000335) >= 1)
-						{ // Abbey Return Stone.
+						if (player.getInventory().getItemCountByItemId(164000335) >= 1) // Abbey Return Stone.
+						{
 							return sendQuestDialog(env, 4762);
 						}
 						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
@@ -100,8 +100,8 @@ public class _19647Eukraton_In_Need extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 804704:
-				{ // LF5 Eukraton.
+				case 804704: // LF5 Eukraton.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -122,8 +122,8 @@ public class _19647Eukraton_In_Need extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804704)
-			{ // LF5 Eukraton.
+			if (targetId == 804704) // LF5 Eukraton.
+			{
 				switch (dialog)
 				{
 					case SELECT_REWARD:

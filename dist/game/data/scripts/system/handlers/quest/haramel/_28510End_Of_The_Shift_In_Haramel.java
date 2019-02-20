@@ -66,8 +66,8 @@ public class _28510End_Of_The_Shift_In_Haramel extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 804605)
-			{ // Shezen.
+			if (targetId == 804605) // Shezen.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -80,8 +80,8 @@ public class _28510End_Of_The_Shift_In_Haramel extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 700953:
-				{ // Processed Odella.
+				case 700953: // Processed Odella.
+				{
 					if (dialog == QuestDialog.USE_OBJECT)
 					{
 						if ((var >= 3) && (var < 5))
@@ -100,8 +100,8 @@ public class _28510End_Of_The_Shift_In_Haramel extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804605)
-			{ // Shezen.
+			if (targetId == 804605) // Shezen.
+			{
 				switch (dialog)
 				{
 					case USE_OBJECT:

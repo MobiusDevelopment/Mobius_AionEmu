@@ -76,8 +76,8 @@ public class _19650Warding_The_Old extends QuestHandler
 				{
 					case START_DIALOG:
 					{
-						if (player.getInventory().getItemCountByItemId(164000335) >= 1)
-						{ // Abbey Return Stone.
+						if (player.getInventory().getItemCountByItemId(164000335) >= 1) // Abbey Return Stone.
+						{
 							return sendQuestDialog(env, 4762);
 						}
 						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
@@ -99,8 +99,8 @@ public class _19650Warding_The_Old extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 804709:
-				{ // LF5 Brontte.
+				case 804709: // LF5 Brontte.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -121,8 +121,8 @@ public class _19650Warding_The_Old extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804709)
-			{ // LF5 Brontte.
+			if (targetId == 804709) // LF5 Brontte.
+			{
 				switch (dialog)
 				{
 					case SELECT_REWARD:

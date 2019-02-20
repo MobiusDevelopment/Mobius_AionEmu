@@ -63,8 +63,8 @@ public class _21458Practical_Research extends QuestHandler
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (targetId == 799249)
-		{ // Irkale.
+		if (targetId == 799249) // Irkale.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -92,8 +92,8 @@ public class _21458Practical_Research extends QuestHandler
 		final int var = qs.getQuestVarById(0);
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799249)
-			{ // Irkale.
+			if (targetId == 799249) // Irkale.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 2375);
@@ -112,8 +112,8 @@ public class _21458Practical_Research extends QuestHandler
 		{
 			return false;
 		}
-		if (targetId == 204052)
-		{ // Vidar.
+		if (targetId == 204052) // Vidar.
+		{
 			switch (env.getDialog())
 			{
 				case START_DIALOG:

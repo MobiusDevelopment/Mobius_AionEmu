@@ -65,14 +65,14 @@ public class _19601Meet_Your_Instructors extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 804651)
-			{ // Lena.
+			if (targetId == 804651) // Lena.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
 					{
-						if (player.getInventory().getItemCountByItemId(164000335) >= 1)
-						{ // Abbey Return Stone.
+						if (player.getInventory().getItemCountByItemId(164000335) >= 1) // Abbey Return Stone.
+						{
 							return sendQuestDialog(env, 4762);
 						}
 						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
@@ -98,8 +98,8 @@ public class _19601Meet_Your_Instructors extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 805304:
-				{ // Margges.
+				case 805304: // Margges.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -115,8 +115,8 @@ public class _19601Meet_Your_Instructors extends QuestHandler
 						}
 					}
 				}
-				case 804652:
-				{ // Rosette.
+				case 804652: // Rosette.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -132,8 +132,8 @@ public class _19601Meet_Your_Instructors extends QuestHandler
 						}
 					}
 				}
-				case 804653:
-				{ // Deronis.
+				case 804653: // Deronis.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -149,8 +149,8 @@ public class _19601Meet_Your_Instructors extends QuestHandler
 						}
 					}
 				}
-				case 804654:
-				{ // Agnes.
+				case 804654: // Agnes.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -171,8 +171,8 @@ public class _19601Meet_Your_Instructors extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804655)
-			{ // Kiran.
+			if (targetId == 804655) // Kiran.
+			{
 				switch (dialog)
 				{
 					case SELECT_REWARD:

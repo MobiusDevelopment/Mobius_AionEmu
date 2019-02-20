@@ -36,8 +36,8 @@ public class Miren_Crystal_SwordAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(185000247) != null)
-		{ // Spirit Of Miren's Pendant.
+		if (player.getInventory().getFirstItemByItemId(185000247) != null) // Spirit Of Miren's Pendant.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));
 		}
 		else
@@ -51,8 +51,8 @@ public class Miren_Crystal_SwordAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000247, 1))
-		{ // Spirit of Miren's Pendant.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000247, 1)) // Spirit of Miren's Pendant.
+		{
 			switch (getNpcId())
 			{
 				case 702842: // Miren's Crystal Sword [Elyos]

@@ -394,8 +394,8 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 		{
 			return (int) (90000 - result);
 		}
-		else if (result < 1800000)
-		{ // 30-Mins
+		else if (result < 1800000) // 30-Mins
+		{
 			return (int) (1800000 - (result - 90000));
 		}
 		return 0;
@@ -970,8 +970,8 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 			case 701947: // Elyos Field Gun.
 			case 701949: // Elyos Field Gun.
 			{
-				if (player.getInventory().decreaseByItemId(164000277, 1))
-				{ // Power Breaker.
+				if (player.getInventory().decreaseByItemId(164000277, 1)) // Power Breaker.
+				{
 					// You've used one Power Breaker.
 					sendMsgByRace(1402010, Race.PC_ALL, 1000);
 					SkillEngine.getInstance().getSkill(player, 21065, 1, player).useNoAnimationSkill();
@@ -986,8 +986,8 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 			case 701948: // Asmodians Field Gun.
 			case 701950: // Asmodians Field Gun.
 			{
-				if (player.getInventory().decreaseByItemId(164000277, 1))
-				{ // Power Breaker.
+				if (player.getInventory().decreaseByItemId(164000277, 1)) // Power Breaker.
+				{
 					// You've used one Power Breaker.
 					sendMsgByRace(1402010, Race.PC_ALL, 1000);
 					SkillEngine.getInstance().getSkill(player, 21066, 1, player).useNoAnimationSkill();
@@ -1001,8 +1001,8 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 			}
 			case 701969: // Chokepoint Defense Post Mortar.
 			{
-				if (player.getInventory().decreaseByItemId(164000278, 1))
-				{ // Bombing Device Activation Key.
+				if (player.getInventory().decreaseByItemId(164000278, 1)) // Bombing Device Activation Key.
+				{
 					// Bombardment has been activated on the siege base.\nBombing will begin soon.
 					sendMsgByRace(1402110, Race.PC_ALL, 0);
 					// You've used one Ophidan Bombing Device Activation Key.
@@ -1024,8 +1024,8 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 			}
 			case 701970: // Northern Approach Post Mortar.
 			{
-				if (player.getInventory().decreaseByItemId(164000278, 1))
-				{ // Bombing Device Activation Key.
+				if (player.getInventory().decreaseByItemId(164000278, 1)) // Bombing Device Activation Key.
+				{
 					// Bombardment has been activated on the siege base.\nBombing will begin soon.
 					sendMsgByRace(1402110, Race.PC_ALL, 0);
 					// You've used one Ophidan Bombing Device Activation Key.
@@ -1047,8 +1047,8 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 			}
 			case 701971: // Southern Approach Post Mortar.
 			{
-				if (player.getInventory().decreaseByItemId(164000278, 1))
-				{ // Bombing Device Activation Key.
+				if (player.getInventory().decreaseByItemId(164000278, 1)) // Bombing Device Activation Key.
+				{
 					// Bombardment has been activated on the siege base.\nBombing will begin soon.
 					sendMsgByRace(1402110, Race.PC_ALL, 0);
 					// You've used one Ophidan Bombing Device Activation Key.
@@ -1072,8 +1072,8 @@ public class EngulfedOphidanBridgeInstance extends GeneralInstanceHandler
 			}
 			case 701972: // Bridge Watchpost Mortar.
 			{
-				if (player.getInventory().decreaseByItemId(164000278, 1))
-				{ // Bombing Device Activation Key.
+				if (player.getInventory().decreaseByItemId(164000278, 1)) // Bombing Device Activation Key.
+				{
 					// Bombardment has been activated on the siege base.\nBombing will begin soon.
 					sendMsgByRace(1402110, Race.PC_ALL, 0);
 					// You've used one Ophidan Bombing Device Activation Key.

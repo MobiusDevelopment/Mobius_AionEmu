@@ -60,8 +60,8 @@ public class _25000Getting_to_Know_You extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 804718)
-			{ // CogelHogan.
+			if (targetId == 804718) // CogelHogan.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -77,8 +77,8 @@ public class _25000Getting_to_Know_You extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 804753:
-				{ // Migrak.
+				case 804753: // Migrak.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -94,8 +94,8 @@ public class _25000Getting_to_Know_You extends QuestHandler
 						}
 					}
 				}
-				case 804990:
-				{ // Toporinerk.
+				case 804990: // Toporinerk.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -111,8 +111,8 @@ public class _25000Getting_to_Know_You extends QuestHandler
 						}
 					}
 				}
-				case 805000:
-				{ // Funen.
+				case 805000: // Funen.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -132,8 +132,8 @@ public class _25000Getting_to_Know_You extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804718)
-			{ // CogelHogan.
+			if (targetId == 804718) // CogelHogan.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

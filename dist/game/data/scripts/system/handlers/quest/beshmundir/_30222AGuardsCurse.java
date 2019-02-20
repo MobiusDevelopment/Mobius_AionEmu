@@ -54,8 +54,8 @@ public class _30222AGuardsCurse extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798979)
-			{ // Gelon
+			if (targetId == 798979) // Gelon
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -66,8 +66,8 @@ public class _30222AGuardsCurse extends QuestHandler
 		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
-			if (targetId == 798979)
-			{ // Gelon
+			if (targetId == 798979) // Gelon
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -87,8 +87,8 @@ public class _30222AGuardsCurse extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798979)
-			{ // Gelon
+			if (targetId == 798979) // Gelon
+			{
 				return sendQuestEndDialog(env);
 			}
 		}
@@ -104,16 +104,16 @@ public class _30222AGuardsCurse extends QuestHandler
 		
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			switch (targetId)
+			switch (targetId) // Warrior Monument
 			{
-				// case 216739: { // Warrior Monument
+				// case 216739: {
 				// Npc npc = (Npc) env.getVisibleObject();
 				// QuestService.addNewSpawn(player.getWorldId(), player.getInstanceId(), 216239, npc.getX(), npc.getY(),
 				// npc.getZ(), npc.getHeading());
 				// return true;
 				// }
-				case 216239:
-				{ // Ahbana the Wicked
+				case 216239: // Ahbana the Wicked
+				{
 					return defaultOnKillEvent(env, 216239, 0, 1); // 1
 				}
 			}

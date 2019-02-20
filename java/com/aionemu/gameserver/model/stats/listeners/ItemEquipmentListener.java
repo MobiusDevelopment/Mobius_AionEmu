@@ -203,8 +203,8 @@ public class ItemEquipmentListener
 					if ((weaponType == WeaponType.ORB_2H) || (weaponType == WeaponType.BOOK_2H) || (weaponType == WeaponType.GUN_1H) || // 4.3
 						(weaponType == WeaponType.CANNON_2H) || // 4.3
 						(weaponType == WeaponType.HARP_2H) || // 4.3
-						(weaponType == WeaponType.KEYBLADE_2H))
-					{ // 4.5
+						(weaponType == WeaponType.KEYBLADE_2H)) // 4.5
+					{
 						allModifiers.add(new StatAddFunction(StatEnum.MAGICAL_ATTACK, attack, false));
 						allModifiers.add(new StatAddFunction(StatEnum.BOOST_MAGICAL_SKILL, boostMagicalSkill, false));
 					}

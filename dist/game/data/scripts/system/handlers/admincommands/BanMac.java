@@ -66,8 +66,8 @@ public class BanMac extends AdminCommand
 		{
 			address = params[1];
 		}
-		else
-		{ // no address defined
+		else // no address defined
+		{
 			final VisibleObject target = player.getTarget();
 			if ((target != null) && (target instanceof Player))
 			{

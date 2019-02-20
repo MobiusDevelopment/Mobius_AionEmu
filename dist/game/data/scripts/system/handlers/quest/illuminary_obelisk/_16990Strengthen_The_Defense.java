@@ -59,8 +59,8 @@ public class _16990Strengthen_The_Defense extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802048)
-			{ // Tolanda.
+			if (targetId == 802048) // Tolanda.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _16990Strengthen_The_Defense extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 802048:
-				{ // Tolanda.
+				case 802048: // Tolanda.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _16990Strengthen_The_Defense extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802048)
-			{ // Tolanda.
+			if (targetId == 802048) // Tolanda.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

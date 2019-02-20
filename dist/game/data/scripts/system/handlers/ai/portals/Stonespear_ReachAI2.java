@@ -34,8 +34,8 @@ public class Stonespear_ReachAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(185000230) != null)
-		{ // Stonespear Key.
+		if (player.getInventory().getFirstItemByItemId(185000230) != null) // Stonespear Key.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));
 		}
 		else
@@ -53,8 +53,8 @@ public class Stonespear_ReachAI2 extends NpcAI2
 			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_Ab1_Fortress_Entrance_In02);
 			return true;
 		}
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000230, 1))
-		{ // Stonespear Key.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000230, 1)) // Stonespear Key.
+		{
 			switch (getNpcId())
 			{
 				case 833024: // Stonespear Reach Elyos [Elyos]

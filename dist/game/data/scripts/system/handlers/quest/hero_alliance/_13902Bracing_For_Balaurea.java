@@ -59,8 +59,8 @@ public class _13902Bracing_For_Balaurea extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798926)
-			{ // Outremus.
+			if (targetId == 798926) // Outremus.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _13902Bracing_For_Balaurea extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 798926:
-				{ // Outremus.
+				case 798926: // Outremus.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _13902Bracing_For_Balaurea extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798926)
-			{ // Outremus.
+			if (targetId == 798926) // Outremus.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

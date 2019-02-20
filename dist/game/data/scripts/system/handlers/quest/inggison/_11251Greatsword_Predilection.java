@@ -52,8 +52,8 @@ public class _11251Greatsword_Predilection extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 799038)
-			{ // Laestrygos.
+			if (targetId == 799038) // Laestrygos.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -69,8 +69,8 @@ public class _11251Greatsword_Predilection extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 798316)
-			{ // Anusis.
+			if (targetId == 798316) // Anusis.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2375);

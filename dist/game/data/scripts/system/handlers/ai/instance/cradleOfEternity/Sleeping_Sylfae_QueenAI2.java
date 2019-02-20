@@ -37,8 +37,8 @@ public class Sleeping_Sylfae_QueenAI2 extends GeneralNpcAI2
 	{
 		switch (getNpcId())
 		{
-			case 834039:
-			{ // Sleeping Sylfae Queen.
+			case 834039: // Sleeping Sylfae Queen.
+			{
 				super.handleDialogStart(player);
 				break;
 			}

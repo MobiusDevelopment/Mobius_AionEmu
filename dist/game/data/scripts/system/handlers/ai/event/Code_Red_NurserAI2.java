@@ -47,8 +47,8 @@ public class Code_Red_NurserAI2 extends GeneralNpcAI2
 			case 831441: // Hylian.
 			case 831442: // Rordah.
 			case 831443: // Mazka.
-			case 831524:
-			{ // Desha.
+			case 831524: // Desha.
+			{
 				super.handleDialogStart(player);
 				break;
 			}

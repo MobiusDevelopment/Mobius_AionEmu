@@ -65,8 +65,8 @@ public class RandomMoveLocEffect extends EffectTemplate
 		effect.addSucessEffect(this);
 		if (((Player) effect.getEffector()).getRobotId() != 0)
 		{
-			if ((effect.getSkill().getSkillId() == 2424) || (effect.getSkill().getSkillId() == 2425))
-			{ // Hypergate Detonation.
+			if ((effect.getSkill().getSkillId() == 2424) || (effect.getSkill().getSkillId() == 2425)) // Hypergate Detonation.
+			{
 				effect.setDashStatus(DashStatus.RANDOMMOVELOC);
 			}
 			else
@@ -76,8 +76,8 @@ public class RandomMoveLocEffect extends EffectTemplate
 		}
 		else
 		{
-			if (effect.getSkillId() == 4697)
-			{ // Mercurial Blast.
+			if (effect.getSkillId() == 4697) // Mercurial Blast.
+			{
 				effect.setDashStatus(DashStatus.RIDERMOVELOC);
 			}
 			else
@@ -87,8 +87,8 @@ public class RandomMoveLocEffect extends EffectTemplate
 			effect.setSkillMoveType(SkillMoveType.MOVEBEHIND);
 		}
 		final Player effector = (Player) effect.getEffector();
-		if ((effect.getSkill().getSkillId() == 2424) || (effect.getSkill().getSkillId() == 2425))
-		{ // Hypergate Detonation.
+		if ((effect.getSkill().getSkillId() == 2424) || (effect.getSkill().getSkillId() == 2425)) // Hypergate Detonation.
+		{
 			RemoveSkill((Player) effect.getEffector());
 			PacketSendUtility.broadcastPacket(effector, new SM_USE_ROBOT(effector, 0), true);
 			effector.setUseRobot(false);

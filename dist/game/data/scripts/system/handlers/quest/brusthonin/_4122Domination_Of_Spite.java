@@ -141,28 +141,28 @@ public class _4122Domination_Of_Spite extends QuestHandler
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
 			final int var = qs.getQuestVarById(0);
-			if (var == 0)
-			{ // Suspicious Pot.
+			if (var == 0) // Suspicious Pot.
+			{
 				return defaultOnKillEvent(env, 237245, 0, 1);
 			}
-			else if (var == 1)
-			{ // Enthralled Gutorum.
+			else if (var == 1) // Enthralled Gutorum.
+			{
 				return defaultOnKillEvent(env, 237240, 1, 2);
 			}
-			else if (var == 2)
-			{ // Enthralled Karemiwen.
+			else if (var == 2) // Enthralled Karemiwen.
+			{
 				return defaultOnKillEvent(env, 237241, 2, 3);
 			}
-			else if (var == 3)
-			{ // Enthralled Zeeturun.
+			else if (var == 3) // Enthralled Zeeturun.
+			{
 				return defaultOnKillEvent(env, 237243, 3, 4);
 			}
-			else if (var == 4)
-			{ // Enthralled Lannok.
+			else if (var == 4) // Enthralled Lannok.
+			{
 				return defaultOnKillEvent(env, 237244, 4, 5);
 			}
-			else if (var == 5)
-			{ // Death Reaper.
+			else if (var == 5) // Death Reaper.
+			{
 				return defaultOnKillEvent(env, 237239, 5, true);
 			}
 		}

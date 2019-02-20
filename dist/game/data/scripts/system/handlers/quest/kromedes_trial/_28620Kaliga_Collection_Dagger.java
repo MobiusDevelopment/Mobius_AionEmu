@@ -55,8 +55,8 @@ public class _28620Kaliga_Collection_Dagger extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(env.getQuestId());
 		final int targetId = env.getTargetId();
-		if (targetId == 730328)
-		{ // Kaliga's Dagger Rack.
+		if (targetId == 730328) // Kaliga's Dagger Rack.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 			{
 				return true;
@@ -75,8 +75,8 @@ public class _28620Kaliga_Collection_Dagger extends QuestHandler
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (targetId == 730328)
-		{ // Kaliga's Dagger Rack.
+		if (targetId == 730328) // Kaliga's Dagger Rack.
+		{
 			final PlayerClass playerClass = player.getCommonData().getPlayerClass();
 			if (((playerClass == PlayerClass.WARRIOR) || (playerClass == PlayerClass.SCOUT) || (playerClass == PlayerClass.GLADIATOR) || (playerClass == PlayerClass.ASSASSIN) || (playerClass == PlayerClass.RANGER)) && (player.getCommonData().getRace() == Race.ASMODIANS))
 			{

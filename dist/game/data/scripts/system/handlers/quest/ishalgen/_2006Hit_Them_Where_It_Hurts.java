@@ -73,8 +73,8 @@ public class _2006Hit_Them_Where_It_Hurts extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 203540:
-				{ // Mijou.
+				case 203540: // Mijou.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -103,8 +103,8 @@ public class _2006Hit_Them_Where_It_Hurts extends QuestHandler
 					}
 					break;
 				}
-				case 700095:
-				{ // Mau Grain Sack.
+				case 700095: // Mau Grain Sack.
+				{
 					if (var == 1)
 					{
 						return true;
@@ -114,8 +114,8 @@ public class _2006Hit_Them_Where_It_Hurts extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203516)
-			{ // Ulgorn.
+			if (targetId == 203516) // Ulgorn.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 1693);

@@ -54,8 +54,8 @@ public class _1152OdellaRecipe extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203132)
-			{ // Nemia
+			if (targetId == 203132) // Nemia
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -66,8 +66,8 @@ public class _1152OdellaRecipe extends QuestHandler
 		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
-			if (targetId == 203130)
-			{ // Eradis
+			if (targetId == 203130) // Eradis
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -98,8 +98,8 @@ public class _1152OdellaRecipe extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203130)
-			{ // Eradis
+			if (targetId == 203130) // Eradis
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

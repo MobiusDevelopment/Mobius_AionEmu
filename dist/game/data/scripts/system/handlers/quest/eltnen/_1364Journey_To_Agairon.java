@@ -59,8 +59,8 @@ public class _1364Journey_To_Agairon extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203944)
-			{ // Ernia.
+			if (targetId == 203944) // Ernia.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -72,8 +72,8 @@ public class _1364Journey_To_Agairon extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 203945:
-				{ // Teos.
+				case 203945: // Teos.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -93,8 +93,8 @@ public class _1364Journey_To_Agairon extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 790007)
-			{ // Dellome.
+			if (targetId == 790007) // Dellome.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1352);

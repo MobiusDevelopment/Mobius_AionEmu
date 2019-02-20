@@ -55,8 +55,8 @@ public class _1527Rotten_Rotrons extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204555)
-			{ // Mirborante.
+			if (targetId == 204555) // Mirborante.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -64,8 +64,8 @@ public class _1527Rotten_Rotrons extends QuestHandler
 				return sendQuestStartDialog(env);
 			}
 		}
-		else if (targetId == 204562)
-		{ // Sirilis.
+		else if (targetId == 204562) // Sirilis.
+		{
 			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -85,8 +85,8 @@ public class _1527Rotten_Rotrons extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 205229)
-		{ // Trajanus.
+		else if (targetId == 205229) // Trajanus.
+		{
 			if (qs != null)
 			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (qs.getStatus() == QuestStatus.START))

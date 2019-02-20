@@ -405,10 +405,12 @@ public class Equipment
 	{
 		final ItemSlot[] allSlots = ItemSlot.getSlotsFor(slot);
 		final Item item = equipment.remove(allSlots[0].getSlotIdMask());
+		// NPE check, there is no item in the given slot.
 		if (item == null)
-		{ // NPE check, there is no item in the given slot.
+		{
 			return;
 		}
+		
 		if (allSlots.length > 1)
 		{
 			if (!item.getItemTemplate().isTwoHandWeapon())
@@ -527,9 +529,11 @@ public class Equipment
 			}
 		}
 		else
-		{ // adding one-handed weapon
+		{
+			// adding one-handed weapon
 			if (itemInRightHand != null)
-			{ // main hand is already occupied
+			{
+				// main hand is already occupied
 				final boolean addingLeftHand = (item.getEquipmentSlot() & ItemSlot.LEFT_HAND.getSlotIdMask()) != 0;
 				// if occupied by 2H weapon, we have to unequip both slots, skills are not required
 				if (mainIsTwoHand)

@@ -86,8 +86,8 @@ public class _3725My_Lucky_Number extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798928)
-			{ // Yulia.
+			if (targetId == 798928) // Yulia.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

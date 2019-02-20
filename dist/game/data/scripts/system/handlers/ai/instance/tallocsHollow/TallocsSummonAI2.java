@@ -44,8 +44,8 @@ public class TallocsSummonAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 64) && isTransformed.compareAndSet(false, true))
-		{ // 4.3
+		if ((dialogId == 64) && isTransformed.compareAndSet(false, true)) // 4.3
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));
 			if (player.getSummon() != null)
 			{

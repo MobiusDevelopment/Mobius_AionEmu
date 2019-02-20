@@ -59,8 +59,8 @@ public class Veille_Aetheric_ConcentratorAI2 extends ActionItemNpcAI2
 			// Veille's Aetheric Concentrator I
 			case 296907:
 			{
-				if (player.getInventory().decreaseByItemId(164000103, 1))
-				{ // Blessing Of Concentration.
+				if (player.getInventory().decreaseByItemId(164000103, 1)) // Blessing Of Concentration.
+				{
 					announceVeilleI();
 					AI2Actions.targetCreature(Veille_Aetheric_ConcentratorAI2.this, getPosition().getWorldMapInstance().getNpc(258200)); // Enraged Veille.
 					AI2Actions.targetCreature(Veille_Aetheric_ConcentratorAI2.this, getPosition().getWorldMapInstance().getNpc(235064)); // Empowered Veille.
@@ -76,8 +76,8 @@ public class Veille_Aetheric_ConcentratorAI2 extends ActionItemNpcAI2
 			// Veille's Aetheric Concentrator II
 			case 296908:
 			{
-				if (player.getInventory().decreaseByItemId(164000103, 1))
-				{ // Blessing Of Concentration.
+				if (player.getInventory().decreaseByItemId(164000103, 1)) // Blessing Of Concentration.
+				{
 					announceVeilleII();
 					AI2Actions.targetCreature(Veille_Aetheric_ConcentratorAI2.this, getPosition().getWorldMapInstance().getNpc(258200)); // Enraged Veille.
 					AI2Actions.targetCreature(Veille_Aetheric_ConcentratorAI2.this, getPosition().getWorldMapInstance().getNpc(235064)); // Empowered Veille.
@@ -93,8 +93,8 @@ public class Veille_Aetheric_ConcentratorAI2 extends ActionItemNpcAI2
 			// Veille's Aetheric Concentrator III
 			case 296909:
 			{
-				if (player.getInventory().decreaseByItemId(164000103, 1))
-				{ // Blessing Of Concentration.
+				if (player.getInventory().decreaseByItemId(164000103, 1)) // Blessing Of Concentration.
+				{
 					announceVeilleII();
 					AI2Actions.targetCreature(Veille_Aetheric_ConcentratorAI2.this, getPosition().getWorldMapInstance().getNpc(258200)); // Enraged Veille.
 					AI2Actions.targetCreature(Veille_Aetheric_ConcentratorAI2.this, getPosition().getWorldMapInstance().getNpc(235064)); // Empowered Veille.

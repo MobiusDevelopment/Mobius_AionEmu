@@ -180,8 +180,8 @@ public class ProtectorConquerorService
 		{
 			return;
 		}
-		if (!isEnemyWorld(player))
-		{ // Protector.
+		if (!isEnemyWorld(player)) // Protector.
+		{
 			final int objId = player.getObjectId();
 			info.setRank(1);
 			if (info.getRank() >= 1)
@@ -214,8 +214,8 @@ public class ProtectorConquerorService
 				}
 			});
 		}
-		else if (isEnemyWorld(player))
-		{ // Conqueror.
+		else if (isEnemyWorld(player)) // Conqueror.
+		{
 			final int objId = player.getObjectId();
 			infoConqueror.setRank(1);
 			if (infoConqueror.getRank() >= 1)
@@ -265,8 +265,8 @@ public class ProtectorConquerorService
 		{
 			return;
 		}
-		if (!isEnemyWorld(player))
-		{ // Protector.
+		if (!isEnemyWorld(player)) // Protector.
+		{
 			final Protector info = player.getProtectorInfo();
 			final FastList<Player> kill = new FastList<>();
 			final FastMap<Integer, Player> guards = getWorldProtector(worldId);
@@ -285,8 +285,8 @@ public class ProtectorConquerorService
 				}
 			}
 		}
-		else if (isEnemyWorld(player))
-		{ // Conqueror.
+		else if (isEnemyWorld(player)) // Conqueror.
+		{
 			final Conqueror info = player.getConquerorInfo();
 			final FastList<Player> kill = new FastList<>();
 			final FastMap<Integer, Player> killers = getWorldConqueror(worldId);
@@ -321,8 +321,8 @@ public class ProtectorConquerorService
 	
 	public void updateRanks(Player killer, Player victim)
 	{
-		if (!isEnemyWorld(killer))
-		{ // Protector.
+		if (!isEnemyWorld(killer)) // Protector.
+		{
 			final Protector info = killer.getProtectorInfo();
 			if (killer.getLevel() >= (victim.getLevel() + levelDiff))
 			{
@@ -362,8 +362,8 @@ public class ProtectorConquerorService
 				}
 			}
 		}
-		else if (isEnemyWorld(killer))
-		{ // Conqueror.
+		else if (isEnemyWorld(killer)) // Conqueror.
+		{
 			final Conqueror info = killer.getConquerorInfo();
 			if (killer.getLevel() >= (victim.getLevel() + levelDiff))
 			{

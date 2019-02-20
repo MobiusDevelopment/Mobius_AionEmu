@@ -97,12 +97,12 @@ public class _14025Cooking_Up_Disasters extends QuestHandler
 				};
 				switch (targetId)
 				{
-					case 211776:
-					{ // Crack Kaidan Warmonger.
+					case 211776: // Crack Kaidan Warmonger.
+					{
 						return defaultOnKillEvent(env, KrallWarriorHK38Ae, 0, 4, 1);
 					}
-					case 217090:
-					{ // Shaman Kalabar.
+					case 217090: // Shaman Kalabar.
+					{
 						return defaultOnKillEvent(env, LF2KrallShaQnmd39An, 0, 1, 2);
 					}
 				}
@@ -127,15 +127,15 @@ public class _14025Cooking_Up_Disasters extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203901)
-			{ // Telemachus.
+			if (targetId == 203901) // Telemachus.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 203989)
-			{ // Tumblusen.
+			if (targetId == 203989) // Tumblusen.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -193,8 +193,8 @@ public class _14025Cooking_Up_Disasters extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 204020)
-			{ // Mabangtah.
+			if (targetId == 204020) // Mabangtah.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:

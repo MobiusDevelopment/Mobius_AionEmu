@@ -34,8 +34,8 @@ public class FateboundAbbeyPortalAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(164000336) != null)
-		{ // Abbey Return Stone.
+		if (player.getInventory().getFirstItemByItemId(164000336) != null) // Abbey Return Stone.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 		}
 		else

@@ -158,8 +158,8 @@ public class _10502Cygnea_Secrets extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 702669)
-			{ // Shining Lump Of Soil.
+			if (targetId == 702669) // Shining Lump Of Soil.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -169,8 +169,8 @@ public class _10502Cygnea_Secrets extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731537)
-			{ // Ancient Fossil.
+			if (targetId == 731537) // Ancient Fossil.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:

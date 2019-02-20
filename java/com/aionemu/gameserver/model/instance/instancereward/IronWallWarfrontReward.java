@@ -207,8 +207,8 @@ public class IronWallWarfrontReward extends InstanceReward<IronWallWarfrontPlaye
 		{
 			return (int) (90000 - result);
 		}
-		else if (result < 2400000)
-		{ // 40-Mins
+		else if (result < 2400000) // 40-Mins
+		{
 			return (int) (2400000 - (result - 90000));
 		}
 		return 0;

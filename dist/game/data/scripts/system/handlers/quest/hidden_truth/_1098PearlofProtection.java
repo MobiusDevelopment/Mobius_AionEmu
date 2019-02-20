@@ -90,10 +90,10 @@ public class _1098PearlofProtection extends QuestHandler
 		}
 		final int var = qs.getQuestVarById(0);
 		
-		if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
-		{ // Reward
-			if (targetId == 790001)
-			{ // Pernos
+		if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD)) // Reward
+		{
+			if (targetId == 790001) // Pernos
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					removeQuestItem(env, 182206065, 1);
@@ -104,8 +104,8 @@ public class _1098PearlofProtection extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 790001)
-			{ // Pernos
+			if (targetId == 790001) // Pernos
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 0))
 				{
 					return sendQuestDialog(env, 1011);
@@ -115,8 +115,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 0, 1, 182206062, 1, 0, 0); // 1
 				}
 			}
-			else if (targetId == 730008)
-			{ // Daminu
+			else if (targetId == 730008) // Daminu
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 1))
 				{
 					return sendQuestDialog(env, 1352);
@@ -126,8 +126,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 1, 2); // 2
 				}
 			}
-			else if (targetId == 730019)
-			{ // Lodas
+			else if (targetId == 730019) // Lodas
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 2))
 				{
 					return sendQuestDialog(env, 1693);
@@ -137,8 +137,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 2, 3); // 3
 				}
 			}
-			else if (targetId == 204647)
-			{ // Voice of Arbolu
+			else if (targetId == 204647) // Voice of Arbolu
+			{
 				if (((env.getDialog() == QuestDialog.START_DIALOG) || (env.getDialog() == QuestDialog.USE_OBJECT)) && (var == 3))
 				{
 					return sendQuestDialog(env, 2034);
@@ -148,8 +148,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 3, 4, 182206063, 1, 182206062, 1); // 4
 				}
 			}
-			else if (targetId == 203183)
-			{ // Khidia
+			else if (targetId == 203183) // Khidia
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 4))
 				{
 					return sendQuestDialog(env, 2375);
@@ -159,8 +159,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 4, 5); // 5
 				}
 			}
-			else if (targetId == 203989)
-			{ // Tumblusen
+			else if (targetId == 203989) // Tumblusen
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 5))
 				{
 					return sendQuestDialog(env, 2716);
@@ -170,8 +170,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 5, 6); // 6
 				}
 			}
-			else if (targetId == 798155)
-			{ // Atropos
+			else if (targetId == 798155) // Atropos
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 6))
 				{
 					return sendQuestDialog(env, 3057);
@@ -181,8 +181,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 6, 7); // 7
 				}
 			}
-			else if (targetId == 204549)
-			{ // Aphesius
+			else if (targetId == 204549) // Aphesius
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 7))
 				{
 					return sendQuestDialog(env, 3398);
@@ -192,8 +192,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 7, 8); // 8
 				}
 			}
-			else if (targetId == 203752)
-			{ // Jucleas
+			else if (targetId == 203752) // Jucleas
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 8))
 				{
 					return sendQuestDialog(env, 3739);
@@ -203,8 +203,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 8, 9, 182206064, 1, 182206063, 1); // 9
 				}
 			}
-			else if (targetId == 203164)
-			{ // Morai
+			else if (targetId == 203164) // Morai
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 9))
 				{
 					return sendQuestDialog(env, 4080);
@@ -214,8 +214,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 9, 10); // 10
 				}
 			}
-			else if (targetId == 203917)
-			{ // Gaia
+			else if (targetId == 203917) // Gaia
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 10))
 				{
 					return sendQuestDialog(env, 1608);
@@ -225,8 +225,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 10, 11); // 11
 				}
 			}
-			else if (targetId == 203996)
-			{ // Kimeia
+			else if (targetId == 203996) // Kimeia
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 11))
 				{
 					return sendQuestDialog(env, 1949);
@@ -236,8 +236,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 11, 12); // 12
 				}
 			}
-			else if (targetId == 798176)
-			{ // Jamanok
+			else if (targetId == 798176) // Jamanok
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 12))
 				{
 					return sendQuestDialog(env, 2290);
@@ -247,8 +247,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 12, 13); // 13
 				}
 			}
-			else if (targetId == 798212)
-			{ // Serimnir
+			else if (targetId == 798212) // Serimnir
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 13))
 				{
 					return sendQuestDialog(env, 2631);
@@ -258,8 +258,8 @@ public class _1098PearlofProtection extends QuestHandler
 					return defaultCloseDialog(env, 13, 14); // 14
 				}
 			}
-			else if (targetId == 204535)
-			{ // Maximus
+			else if (targetId == 204535) // Maximus
+			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (var == 14))
 				{
 					return sendQuestDialog(env, 2972);

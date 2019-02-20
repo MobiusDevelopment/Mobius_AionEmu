@@ -318,7 +318,7 @@ public class LegionCommand extends AdminCommand
 				}
 			}
 			if (bgplayer == null)
-			{ // TODO
+			{
 				PacketSendUtility.sendMessage(player, "You can't assign a new general while old is offline.");
 				return;
 			}

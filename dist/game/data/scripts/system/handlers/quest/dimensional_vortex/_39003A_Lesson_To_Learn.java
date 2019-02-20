@@ -59,8 +59,8 @@ public class _39003A_Lesson_To_Learn extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 800500)
-			{ // Giniki.
+			if (targetId == 800500) // Giniki.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -76,8 +76,8 @@ public class _39003A_Lesson_To_Learn extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 800512:
-				{ // Ionia.
+				case 800512: // Ionia.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -94,8 +94,8 @@ public class _39003A_Lesson_To_Learn extends QuestHandler
 						}
 					}
 				}
-				case 800504:
-				{ // Nevma.
+				case 800504: // Nevma.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -119,8 +119,8 @@ public class _39003A_Lesson_To_Learn extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 800504)
-			{ // Nevma.
+			if (targetId == 800504) // Nevma.
+			{
 				switch (env.getDialog())
 				{
 					case SELECT_REWARD:

@@ -60,8 +60,8 @@ public class _3093Secret_Dumpling_Recipe extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798185)
-			{ // Bororinerk.
+			if (targetId == 798185) // Bororinerk.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -95,8 +95,8 @@ public class _3093Secret_Dumpling_Recipe extends QuestHandler
 				return sendQuestEndDialog(env);
 			}
 		}
-		else if (targetId == 798177)
-		{ // Gastak.
+		else if (targetId == 798177) // Gastak.
+		{
 			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -116,8 +116,8 @@ public class _3093Secret_Dumpling_Recipe extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 798179)
-		{ // Jabala.
+		else if (targetId == 798179) // Jabala.
+		{
 			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 2))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -137,8 +137,8 @@ public class _3093Secret_Dumpling_Recipe extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 203784)
-		{ // Hestia.
+		else if (targetId == 203784) // Hestia.
+		{
 			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 3))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)

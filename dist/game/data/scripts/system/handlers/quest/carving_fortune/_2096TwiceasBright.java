@@ -65,8 +65,8 @@ public class _2096TwiceasBright extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204206:
-				{ // Cavalorn
+				case 204206: // Cavalorn
+				{
 					if ((dialog == QuestDialog.START_DIALOG) && (var == 0))
 					{
 						return sendQuestDialog(env, 1011);
@@ -77,8 +77,8 @@ public class _2096TwiceasBright extends QuestHandler
 					}
 					break;
 				}
-				case 204207:
-				{ // Kasir
+				case 204207: // Kasir
+				{
 					if ((dialog == QuestDialog.START_DIALOG) && (var == 1))
 					{
 						return sendQuestDialog(env, 1352);
@@ -89,8 +89,8 @@ public class _2096TwiceasBright extends QuestHandler
 					}
 					break;
 				}
-				case 203550:
-				{ // Munin
+				case 203550: // Munin
+				{
 					if ((dialog == QuestDialog.START_DIALOG) && (var == 2))
 					{
 						changeQuestStep(env, 2, 2, true); // reward
@@ -101,8 +101,8 @@ public class _2096TwiceasBright extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203550)
-			{ // Munin
+			if (targetId == 203550) // Munin
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

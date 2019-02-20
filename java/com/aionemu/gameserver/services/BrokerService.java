@@ -785,8 +785,8 @@ public class BrokerService
 		
 		searchItems = itemsFound.toArray(new BrokerItem[itemsFound.size()]);
 		
-		if (sortType == 1)
-		{ // Current Low
+		if (sortType == 1) // Current Low
+		{
 			if (searchItems.length > 1)
 			{
 				sortBrokerItems(searchItems, 6); // PIECE_PRICE_SORT_ASC
@@ -794,8 +794,8 @@ public class BrokerService
 			return searchItems[0].getPiecePrice();
 			
 		}
-		else if (sortType == 2)
-		{ // Current High
+		else if (sortType == 2) // Current High
+		{
 			if (searchItems.length > 1)
 			{
 				sortBrokerItems(searchItems, 7); // PIECE_PRICE_SORT_DESC
@@ -803,8 +803,8 @@ public class BrokerService
 			return searchItems[0].getPiecePrice();
 			
 		}
-		else if (sortType == 3)
-		{ // 7-day Average
+		else if (sortType == 3) // 7-day Average
+		{
 			return AveItemPrice;
 			
 		}

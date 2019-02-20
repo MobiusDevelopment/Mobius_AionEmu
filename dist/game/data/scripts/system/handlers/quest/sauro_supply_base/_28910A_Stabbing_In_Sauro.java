@@ -59,8 +59,8 @@ public class _28910A_Stabbing_In_Sauro extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 801947)
-			{ // Giriltia.
+			if (targetId == 801947) // Giriltia.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _28910A_Stabbing_In_Sauro extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 801947:
-				{ // Giriltia.
+				case 801947: // Giriltia.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _28910A_Stabbing_In_Sauro extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801947)
-			{ // Giriltia.
+			if (targetId == 801947) // Giriltia.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

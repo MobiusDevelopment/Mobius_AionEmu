@@ -65,8 +65,8 @@ public class _48001CallOfTheCrusade extends QuestHandler
 		
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 799868)
-			{ // Viscum
+			if (targetId == 799868) // Viscum
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -80,8 +80,8 @@ public class _48001CallOfTheCrusade extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (targetId == 799868)
-			{ // Viscum
+			if (targetId == 799868) // Viscum
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

@@ -59,8 +59,8 @@ public class _15307Kaisinel_Oath extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 805327)
-			{ // Rike.
+			if (targetId == 805327) // Rike.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -81,8 +81,8 @@ public class _15307Kaisinel_Oath extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 805327)
-			{ // Rike.
+			if (targetId == 805327) // Rike.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -104,8 +104,8 @@ public class _15307Kaisinel_Oath extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805327)
-			{ // Rike.
+			if (targetId == 805327) // Rike.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

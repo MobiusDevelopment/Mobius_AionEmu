@@ -59,8 +59,8 @@ public class _15590Tower_Of_Eternity_Fragment_Report extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 806114)
-			{ // Ilisia.
+			if (targetId == 806114) // Ilisia.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -76,8 +76,8 @@ public class _15590Tower_Of_Eternity_Fragment_Report extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 806224:
-				{ // Este.
+				case 806224: // Este.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -91,8 +91,8 @@ public class _15590Tower_Of_Eternity_Fragment_Report extends QuestHandler
 						}
 					}
 				}
-				case 806225:
-				{ // Ovest.
+				case 806225: // Ovest.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -106,8 +106,8 @@ public class _15590Tower_Of_Eternity_Fragment_Report extends QuestHandler
 						}
 					}
 				}
-				case 806226:
-				{ // Meridies.
+				case 806226: // Meridies.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -121,8 +121,8 @@ public class _15590Tower_Of_Eternity_Fragment_Report extends QuestHandler
 						}
 					}
 				}
-				case 806227:
-				{ // Ceber.
+				case 806227: // Ceber.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -142,8 +142,8 @@ public class _15590Tower_Of_Eternity_Fragment_Report extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806114)
-			{ // Ilisia.
+			if (targetId == 806114) // Ilisia.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

@@ -144,8 +144,8 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 				deleteNpc(730696); // Surkana.
 				deleteNpc(283130); // Blaze Engraving.
 				deleteNpc(283132); // Blaze Engraving.
-				if (getNpcs(236274).isEmpty())
-				{ // Calindi Flamelord.
+				if (getNpcs(236274).isEmpty()) // Calindi Flamelord.
+				{
 					spawnIDTiamatDragonNamed65Al();
 				}
 				if (player != null)
@@ -292,8 +292,8 @@ public class AnguishedDragonLordRefugeInstance extends GeneralInstanceHandler
 				}
 				// Gravity Incarnate has collapsed.
 				sendMsgByRace(1401536, Race.PC_ALL, 0);
-				if (getNpcs(236281).isEmpty())
-				{ // Petriscale.
+				if (getNpcs(236281).isEmpty()) // Petriscale.
+				{
 					spawnIDTiamatDragonDyingNamed65Al();
 				}
 				if (player != null)

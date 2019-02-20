@@ -54,8 +54,8 @@ public class _16975Fugative_Fragment extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 801763)
-			{ // Theana.
+			if (targetId == 801763) // Theana.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -65,8 +65,8 @@ public class _16975Fugative_Fragment extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801763)
-			{ // Theana.
+			if (targetId == 801763) // Theana.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 2375);

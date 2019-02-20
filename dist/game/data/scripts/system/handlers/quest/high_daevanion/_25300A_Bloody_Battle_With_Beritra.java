@@ -98,8 +98,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 805339)
-			{ // Skuldun.
+			if (targetId == 805339) // Skuldun.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -123,8 +123,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 805365)
-			{ // God Marchutan.
+			if (targetId == 805365) // God Marchutan.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -158,8 +158,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 805364)
-			{ // Grito.
+			if (targetId == 805364) // Grito.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -191,8 +191,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 209883)
-			{ // Parsia.
+			if (targetId == 209883) // Parsia.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -216,8 +216,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 805366)
-			{ // Aimah.
+			if (targetId == 805366) // Aimah.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -243,8 +243,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 805377)
-			{ // Agony's Well.
+			if (targetId == 805377) // Agony's Well.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -265,8 +265,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805339)
-			{ // Skuldun.
+			if (targetId == 805339) // Skuldun.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);
@@ -298,8 +298,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 				switch (targetId)
 				{
 					case 237228: // Lava Protector.
-					case 237229:
-					{ // Heatvent Protector.
+					case 237229: // Heatvent Protector.
+					{
 						qs.setQuestVar(4);
 						updateQuestStatus(env);
 						return true;
@@ -310,8 +310,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 237224:
-					{ // Fetid Phantomscorch Chimera.
+					case 237224: // Fetid Phantomscorch Chimera.
+					{
 						qs.setQuestVar(6);
 						updateQuestStatus(env);
 						return true;
@@ -322,8 +322,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 237225:
-					{ // Rapacious Kadena.
+					case 237225: // Rapacious Kadena.
+					{
 						qs.setQuestVar(7);
 						updateQuestStatus(env);
 						return true;
@@ -334,8 +334,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 237231:
-					{ // Exhausted Orissan.
+					case 237231: // Exhausted Orissan.
+					{
 						qs.setQuestVar(8);
 						updateQuestStatus(env);
 						return true;
@@ -346,8 +346,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 237236:
-					{ // Commander Virtsha.
+					case 237236: // Commander Virtsha.
+					{
 						qs.setQuestVar(11);
 						updateQuestStatus(env);
 						return true;
@@ -358,8 +358,8 @@ public class _25300A_Bloody_Battle_With_Beritra extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 237238:
-					{ // Beritra [Dragon Form].
+					case 237238: // Beritra [Dragon Form].
+					{
 						qs.setQuestVar(13);
 						updateQuestStatus(env);
 						return true;

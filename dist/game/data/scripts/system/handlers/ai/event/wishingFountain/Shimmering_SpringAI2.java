@@ -33,8 +33,8 @@ public class Shimmering_SpringAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(186000406) != null)
-		{ // [Event] Petal Of Magic.
+		if (player.getInventory().getFirstItemByItemId(186000406) != null) // [Event] Petal Of Magic.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));
 		}
 		else
@@ -46,8 +46,8 @@ public class Shimmering_SpringAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(186000406, 1))
-		{ // [Event] Petal Of Magic.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(186000406, 1)) // [Event] Petal Of Magic.
+		{
 			switch (getNpcId())
 			{
 				case 833501: // Shimmering Spring.

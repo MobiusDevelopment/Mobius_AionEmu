@@ -156,7 +156,8 @@ public final class PetFeedCalculator
 	{
 		final PetHungryLevel currHungryLevel = progress.getHungryLevel();
 		if (progress.isLovedFeeded())
-		{ // loved food
+		{
+			// loved food
 			if (progress.getLovedFoodRemaining() == 0)
 			{
 				return;
@@ -218,7 +219,8 @@ public final class PetFeedCalculator
 		}
 		
 		if (progress.isLovedFeeded())
-		{ // for cash feed
+		{
+			// for cash feed
 			if (rewardGroup.getResults().size() == 1)
 			{
 				return rewardGroup.getResults().get(0);

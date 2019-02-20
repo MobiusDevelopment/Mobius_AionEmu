@@ -76,8 +76,8 @@ public class _28990Fallen_Doorways extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -87,8 +87,8 @@ public class _28990Fallen_Doorways extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806216)
-			{ // Petur.
+			if (targetId == 806216) // Petur.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -103,8 +103,8 @@ public class _28990Fallen_Doorways extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if (qs.getQuestVarById(0) == 3)
@@ -121,8 +121,8 @@ public class _28990Fallen_Doorways extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (env.getDialogId() == 1352)
 				{
 					return sendQuestDialog(env, 5);
@@ -150,12 +150,12 @@ public class _28990Fallen_Doorways extends QuestHandler
 		}
 		if (var == 1)
 		{
-			if (targetId == 220417)
-			{ // 악령의 저주를 받은 지투른.
+			if (targetId == 220417) // 악령의 저주를 받은 지투른.
+			{
 				qs.setQuestVarById(1, 1);
 			}
-			else if (targetId == 220418)
-			{ // 악령의 저주를 받은 카르미웬.
+			else if (targetId == 220418) // 악령의 저주를 받은 카르미웬.
+			{
 				qs.setQuestVarById(2, 1);
 			}
 			updateQuestStatus(env);
@@ -166,8 +166,8 @@ public class _28990Fallen_Doorways extends QuestHandler
 		}
 		else if (var == 2)
 		{
-			if (targetId == 220427)
-			{ // 아티팩트를 지배하는 악령.
+			if (targetId == 220427) // 아티팩트를 지배하는 악령.
+			{
 				qs.setStatus(QuestStatus.REWARD);
 				updateQuestStatus(env);
 			}

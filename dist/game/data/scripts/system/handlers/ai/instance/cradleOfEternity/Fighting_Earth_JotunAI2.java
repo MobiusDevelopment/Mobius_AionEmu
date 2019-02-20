@@ -36,8 +36,8 @@ public class Fighting_Earth_JotunAI2 extends GeneralNpcAI2
 	{
 		switch (getNpcId())
 		{
-			case 220588:
-			{ // Fighting Earth Jotun.
+			case 220588: // Fighting Earth Jotun.
+			{
 				super.handleDialogStart(player);
 				break;
 			}

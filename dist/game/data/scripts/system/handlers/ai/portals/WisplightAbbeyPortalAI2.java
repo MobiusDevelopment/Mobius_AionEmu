@@ -34,8 +34,8 @@ public class WisplightAbbeyPortalAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(164000335) != null)
-		{ // Abbey Return Stone.
+		if (player.getInventory().getFirstItemByItemId(164000335) != null) // Abbey Return Stone.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 		}
 		else

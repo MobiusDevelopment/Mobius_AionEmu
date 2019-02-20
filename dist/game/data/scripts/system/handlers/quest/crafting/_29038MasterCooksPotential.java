@@ -58,8 +58,8 @@ public class _29038MasterCooksPotential extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204100)
-			{ // Lainita
+			if (targetId == 204100) // Lainita
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -72,8 +72,8 @@ public class _29038MasterCooksPotential extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 204101:
-				{ // Daraia
+				case 204101: // Daraia
+				{
 					final long kinah = player.getInventory().getKinah();
 					switch (dialog)
 					{
@@ -189,8 +189,8 @@ public class _29038MasterCooksPotential extends QuestHandler
 					}
 					break;
 				}
-				case 204100:
-				{ // Lainita
+				case 204100: // Lainita
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -241,8 +241,8 @@ public class _29038MasterCooksPotential extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204100)
-			{ // Lainita
+			if (targetId == 204100) // Lainita
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

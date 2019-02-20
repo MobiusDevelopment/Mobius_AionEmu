@@ -677,15 +677,15 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 	private int checkRank(int totalPoints)
 	{
 		int rank = 0;
-		if (totalPoints > 19643)
-		{ // Rank S.
+		if (totalPoints > 19643) // Rank S.
+		{
 			// You may only battle Tahabata Pyrelord within the given time limit.
 			sendMsgByRace(1400257, Race.PC_ALL, 3000);
 			spawn(215280, 1176f, 1227f, 145f, (byte) 14); // Tahabata Pyrelord.
 			rank = 1;
 		}
-		else if (totalPoints > 17046)
-		{ // Rank A.
+		else if (totalPoints > 17046) // Rank A.
+		{
 			// Tahabata Pyrelord has left the battle.
 			sendMsgByRace(1400258, Race.PC_ALL, 3000);
 			// You may only battle Calindi Flamelord within the given time limit.
@@ -693,25 +693,25 @@ public class DarkPoetaInstance extends GeneralInstanceHandler
 			spawn(215281, 1176f, 1227f, 145f, (byte) 14); // Calindi Flamelord.
 			rank = 2;
 		}
-		else if (totalPoints > 13055)
-		{ // Rank B.
+		else if (totalPoints > 13055) // Rank B.
+		{
 			// Calindi Flamelord has left the battle.
 			sendMsgByRace(1400260, Race.PC_ALL, 3000);
 			spawn(215282, 1176f, 1227f, 145f, (byte) 14); // Vanuka Infernus.
 			rank = 3;
 		}
-		else if (totalPoints > 9334)
-		{ // Rank C.
+		else if (totalPoints > 9334) // Rank C.
+		{
 			spawn(215283, 1176f, 1227f, 145f, (byte) 14); // Asaratu Bloodshade.
 			rank = 4;
 		}
-		else if (totalPoints > 6556)
-		{ // Rank D.
+		else if (totalPoints > 6556) // Rank D.
+		{
 			spawn(215284, 1176f, 1227f, 145f, (byte) 14); // Chramati Firetail.
 			rank = 5;
 		}
-		else if (totalPoints > 1254)
-		{ // Rank F.
+		else if (totalPoints > 1254) // Rank F.
+		{
 			rank = 6;
 		}
 		else

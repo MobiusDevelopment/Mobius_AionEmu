@@ -72,8 +72,8 @@ public class _25563Broken_Guardian_Accomodations extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 806116:
-				{ // Reinhard.
+				case 806116: // Reinhard.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -91,8 +91,8 @@ public class _25563Broken_Guardian_Accomodations extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806116)
-			{ // Reinhard.
+			if (targetId == 806116) // Reinhard.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

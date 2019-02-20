@@ -51,8 +51,8 @@ public class _21052DragonHuntin extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 799268)
-			{ // Nysdvor
+			if (targetId == 799268) // Nysdvor
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -81,8 +81,8 @@ public class _21052DragonHuntin extends QuestHandler
 		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
-			if (targetId == 799268)
-			{ // Nysdvor
+			if (targetId == 799268) // Nysdvor
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -106,8 +106,8 @@ public class _21052DragonHuntin extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799268)
-			{ // Nysdvor
+			if (targetId == 799268) // Nysdvor
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

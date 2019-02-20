@@ -94,8 +94,8 @@ public class _15325Courageous_Spirit extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 805331)
-			{ // Machina.
+			if (targetId == 805331) // Machina.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);

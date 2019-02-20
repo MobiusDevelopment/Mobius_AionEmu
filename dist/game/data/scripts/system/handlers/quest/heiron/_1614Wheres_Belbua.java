@@ -60,8 +60,8 @@ public class _1614Wheres_Belbua extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204519)
-			{ // Phuthollo.
+			if (targetId == 204519) // Phuthollo.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -73,8 +73,8 @@ public class _1614Wheres_Belbua extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204645:
-				{ // Belbua.
+				case 204645: // Belbua.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -94,8 +94,8 @@ public class _1614Wheres_Belbua extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204519)
-			{ // Phuthollo.
+			if (targetId == 204519) // Phuthollo.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

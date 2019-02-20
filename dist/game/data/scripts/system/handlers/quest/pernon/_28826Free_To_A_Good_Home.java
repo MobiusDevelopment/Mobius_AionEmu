@@ -57,8 +57,8 @@ public class _28826Free_To_A_Good_Home extends QuestHandler
 			switch (targetId)
 			{
 				case 830662: // Logirunerk.
-				case 830663:
-				{ // Davinrinerk.
+				case 830663: // Davinrinerk.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -75,8 +75,8 @@ public class _28826Free_To_A_Good_Home extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 730525)
-			{ // Vintage Grab Box.
+			if (targetId == 730525) // Vintage Grab Box.
+			{
 				switch (dialog)
 				{
 					case USE_OBJECT:
@@ -93,8 +93,8 @@ public class _28826Free_To_A_Good_Home extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 730525)
-			{ // Vintage Grab Box.
+			if (targetId == 730525) // Vintage Grab Box.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

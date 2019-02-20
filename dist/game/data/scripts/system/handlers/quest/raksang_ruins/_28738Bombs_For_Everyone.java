@@ -100,8 +100,8 @@ public class _28738Bombs_For_Everyone extends QuestHandler
 				final int itemId = item.getItemId();
 				final int var = qs.getQuestVarById(0);
 				final int var1 = qs.getQuestVarById(1);
-				if (itemId == 164000342)
-				{ // Improved Life Drain Bomb.
+				if (itemId == 164000342) // Improved Life Drain Bomb.
+				{
 					if (var == 0)
 					{
 						if ((var1 >= 0) && (var1 < 9))

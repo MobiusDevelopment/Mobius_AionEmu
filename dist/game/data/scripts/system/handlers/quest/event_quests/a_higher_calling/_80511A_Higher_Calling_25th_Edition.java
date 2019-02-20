@@ -59,8 +59,8 @@ public class _80511A_Higher_Calling_25th_Edition extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 831031)
-			{ // Nebrith.
+			if (targetId == 831031) // Nebrith.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _80511A_Higher_Calling_25th_Edition extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 831031:
-				{ // Nebrith.
+				case 831031: // Nebrith.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _80511A_Higher_Calling_25th_Edition extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 831031)
-			{ // Nebrith.
+			if (targetId == 831031) // Nebrith.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

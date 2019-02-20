@@ -223,8 +223,8 @@ public class _10034Found_Underground extends QuestHandler
 					}
 					break;
 				}
-				case 730229:
-				{ // Traveller's Bag.
+				case 730229: // Traveller's Bag.
+				{
 					if (dialog == QuestDialog.USE_OBJECT)
 					{
 						if (var == 6)

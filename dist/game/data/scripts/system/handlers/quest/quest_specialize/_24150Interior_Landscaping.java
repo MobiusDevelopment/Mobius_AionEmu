@@ -59,8 +59,8 @@ public class _24150Interior_Landscaping extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204702)
-			{ // Nerita
+			if (targetId == 204702) // Nerita
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -86,8 +86,8 @@ public class _24150Interior_Landscaping extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204733:
-				{ // Bestla
+				case 204733: // Bestla
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -103,8 +103,8 @@ public class _24150Interior_Landscaping extends QuestHandler
 						}
 					}
 				}
-				case 204734:
-				{ // Horu
+				case 204734: // Horu
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -119,8 +119,8 @@ public class _24150Interior_Landscaping extends QuestHandler
 						}
 					}
 				}
-				case 204702:
-				{ // Nerita
+				case 204702: // Nerita
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -139,8 +139,8 @@ public class _24150Interior_Landscaping extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204702)
-			{ // Nerita
+			if (targetId == 204702) // Nerita
+			{
 				if (env.getDialog() == QuestDialog.SELECT_REWARD)
 				{
 					return sendQuestDialog(env, 5);

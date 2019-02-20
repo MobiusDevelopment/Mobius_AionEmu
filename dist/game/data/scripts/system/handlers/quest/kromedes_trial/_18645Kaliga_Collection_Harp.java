@@ -55,8 +55,8 @@ public class _18645Kaliga_Collection_Harp extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(env.getQuestId());
 		final int targetId = env.getTargetId();
-		if (targetId == 730777)
-		{ // Kaliga's Harp Rack.
+		if (targetId == 730777) // Kaliga's Harp Rack.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 			{
 				return true;
@@ -75,8 +75,8 @@ public class _18645Kaliga_Collection_Harp extends QuestHandler
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (targetId == 730777)
-		{ // Kaliga's Harp Rack.
+		if (targetId == 730777) // Kaliga's Harp Rack.
+		{
 			final PlayerClass playerClass = player.getCommonData().getPlayerClass();
 			if (((playerClass == PlayerClass.MUSE) || (playerClass == PlayerClass.SONGWEAVER)) && (player.getCommonData().getRace() == Race.ELYOS))
 			{

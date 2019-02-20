@@ -87,8 +87,8 @@ public class _1940Wing_Of_Mastery extends QuestHandler
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
-		if (targetId != 203879)
-		{ // Idomeneus.
+		if (targetId != 203879) // Idomeneus.
+		{
 			return false;
 		}
 		if (qs.getStatus() == QuestStatus.START)

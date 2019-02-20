@@ -62,8 +62,8 @@ public class _1920Testing_Your_Mettle extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 203752:
-				{ // Jucleas.
+				case 203752: // Jucleas.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -80,8 +80,8 @@ public class _1920Testing_Your_Mettle extends QuestHandler
 					}
 					break;
 				}
-				case 203876:
-				{ // Rinos.
+				case 203876: // Rinos.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -102,8 +102,8 @@ public class _1920Testing_Your_Mettle extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203752)
-			{ // Jucleas.
+			if (targetId == 203752) // Jucleas.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

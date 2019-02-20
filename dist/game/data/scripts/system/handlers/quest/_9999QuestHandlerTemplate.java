@@ -62,8 +62,8 @@ public class _9999QuestHandlerTemplate extends QuestHandler
 		// If this is a mission, the qs should be != null and you will not need this
 		if ((qs == null) || qs.canRepeat())
 		{
-			if (targetId == 000000)
-			{ // Viktor Logwin
+			if (targetId == 000000) // Viktor Logwin
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011); // can be different
@@ -76,8 +76,8 @@ public class _9999QuestHandlerTemplate extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 111111:
-				{ // Oliver
+				case 111111: // Oliver
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -122,8 +122,8 @@ public class _9999QuestHandlerTemplate extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 000000)
-			{ // Viktor Logwin
+			if (targetId == 000000) // Viktor Logwin
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 20001);
@@ -147,8 +147,8 @@ public class _9999QuestHandlerTemplate extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			if (player.isInsideZone(ZoneName.get("DF1A_ITEMUSEAREA_Q2016")))
-			{ // example zone
+			if (player.isInsideZone(ZoneName.get("DF1A_ITEMUSEAREA_Q2016"))) // example zone
+			{
 				return HandlerResult.fromBoolean(useQuestItem(env, item, 3, 4, false));
 			}
 		}

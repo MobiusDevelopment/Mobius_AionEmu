@@ -61,8 +61,8 @@ public class _3050Rescuing_Ruria extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798211)
-			{ // Ruria.
+			if (targetId == 798211) // Ruria.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -80,8 +80,8 @@ public class _3050Rescuing_Ruria extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 798211:
-				{ // Ruria.
+				case 798211: // Ruria.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -115,8 +115,8 @@ public class _3050Rescuing_Ruria extends QuestHandler
 					}
 				}
 					break;
-				case 798208:
-				{ // Melleas.
+				case 798208: // Melleas.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -136,8 +136,8 @@ public class _3050Rescuing_Ruria extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798190)
-			{ // Rosina.
+			if (targetId == 798190) // Rosina.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

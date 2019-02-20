@@ -61,14 +61,14 @@ public class _29666To_Norsvold extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 806244)
-			{ // Biolis.
+			if (targetId == 806244) // Biolis.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
 					{
-						if (player.getInventory().getItemCountByItemId(164000336) >= 1)
-						{ // Abbey Return Stone.
+						if (player.getInventory().getItemCountByItemId(164000336) >= 1) // Abbey Return Stone.
+						{
 							return sendQuestDialog(env, 4762);
 						}
 						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
@@ -94,8 +94,8 @@ public class _29666To_Norsvold extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 806116:
-				{ // Reinhard.
+				case 806116: // Reinhard.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -116,8 +116,8 @@ public class _29666To_Norsvold extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806116)
-			{ // Reinhard.
+			if (targetId == 806116) // Reinhard.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

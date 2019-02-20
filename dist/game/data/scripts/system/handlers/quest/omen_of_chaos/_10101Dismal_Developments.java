@@ -102,8 +102,8 @@ public class _10101Dismal_Developments extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 802462:
-				{ // Kahrun.
+				case 802462: // Kahrun.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -120,8 +120,8 @@ public class _10101Dismal_Developments extends QuestHandler
 					}
 					break;
 				}
-				case 731530:
-				{ // Aetherbrak Invasion Corridor.
+				case 731530: // Aetherbrak Invasion Corridor.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -146,8 +146,8 @@ public class _10101Dismal_Developments extends QuestHandler
 					}
 					break;
 				}
-				case 804556:
-				{ // Spy Ditono.
+				case 804556: // Spy Ditono.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -165,8 +165,8 @@ public class _10101Dismal_Developments extends QuestHandler
 					}
 					break;
 				}
-				case 731532:
-				{ // Secret Zone Invasion Corridor.
+				case 731532: // Secret Zone Invasion Corridor.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -188,8 +188,8 @@ public class _10101Dismal_Developments extends QuestHandler
 					}
 					break;
 				}
-				case 802357:
-				{ // Voltin.
+				case 802357: // Voltin.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -221,8 +221,8 @@ public class _10101Dismal_Developments extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802431)
-			{ // Alphioh.
+			if (targetId == 802431) // Alphioh.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					removeQuestItem(env, 182215577, 1);

@@ -106,8 +106,8 @@ public class DisputeLandService
 				(world == 210100000) || // Iluma.
 				(world == 220110000) || // Norsvold.
 				(world == 600090000) || // Kaldor.
-				(world == 600100000))
-			{ // Levinshor.
+				(world == 600100000)) // Levinshor.
+			{
 				continue;
 			}
 			if (active)

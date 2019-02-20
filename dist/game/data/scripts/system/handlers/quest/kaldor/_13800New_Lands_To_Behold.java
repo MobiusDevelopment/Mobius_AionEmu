@@ -100,8 +100,8 @@ public class _13800New_Lands_To_Behold extends QuestHandler
 						}
 					}
 				}
-				case 802431:
-				{ // Alphioh.
+				case 802431: // Alphioh.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -125,8 +125,8 @@ public class _13800New_Lands_To_Behold extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802431)
-			{ // Alphioh.
+			if (targetId == 802431) // Alphioh.
+			{
 				switch (env.getDialog())
 				{
 					case SELECT_REWARD:

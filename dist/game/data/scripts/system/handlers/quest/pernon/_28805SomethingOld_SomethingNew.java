@@ -54,8 +54,8 @@ public class _28805SomethingOld_SomethingNew extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 830154)
-			{ // Sarara.
+			if (targetId == 830154) // Sarara.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -69,8 +69,8 @@ public class _28805SomethingOld_SomethingNew extends QuestHandler
 			switch (targetId)
 			{
 				case 830662: // Logirunerk.
-				case 830663:
-				{ // Davinrinerk.
+				case 830663: // Davinrinerk.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -95,8 +95,8 @@ public class _28805SomethingOld_SomethingNew extends QuestHandler
 						}
 					}
 				}
-				case 730525:
-				{ // Vintage Grab Box.
+				case 730525: // Vintage Grab Box.
+				{
 					switch (dialog)
 					{
 						case USE_OBJECT:

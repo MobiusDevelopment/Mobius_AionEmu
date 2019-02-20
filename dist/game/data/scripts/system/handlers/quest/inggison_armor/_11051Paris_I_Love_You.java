@@ -48,8 +48,8 @@ public class _11051Paris_I_Love_You extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || qs.canRepeat())
 		{
-			if (targetId == 798989)
-			{ // Corocota
+			if (targetId == 798989) // Corocota
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -59,8 +59,8 @@ public class _11051Paris_I_Love_You extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 798989)
-			{ // Corocota
+			if (targetId == 798989) // Corocota
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2375);

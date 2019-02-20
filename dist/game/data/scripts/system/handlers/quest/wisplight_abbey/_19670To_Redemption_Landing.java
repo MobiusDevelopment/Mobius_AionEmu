@@ -63,14 +63,14 @@ public class _19670To_Redemption_Landing extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 804651)
-			{ // Rena.
+			if (targetId == 804651) // Rena.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
 					{
-						if (player.getInventory().getItemCountByItemId(164000335) >= 1)
-						{ // Abbey Return Stone.
+						if (player.getInventory().getItemCountByItemId(164000335) >= 1) // Abbey Return Stone.
+						{
 							return sendQuestDialog(env, 4762);
 						}
 						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
@@ -96,8 +96,8 @@ public class _19670To_Redemption_Landing extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 804654:
-				{ // Agnes.
+				case 804654: // Agnes.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -113,8 +113,8 @@ public class _19670To_Redemption_Landing extends QuestHandler
 						}
 					}
 				}
-				case 804782:
-				{ // Vernea.
+				case 804782: // Vernea.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -134,8 +134,8 @@ public class _19670To_Redemption_Landing extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805351)
-			{ // Giscours.
+			if (targetId == 805351) // Giscours.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

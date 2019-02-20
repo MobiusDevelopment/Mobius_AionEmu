@@ -37,8 +37,8 @@ public class Imperial_ShrineAI2 extends GeneralNpcAI2
 	{
 		switch (getNpcId())
 		{
-			case 831350:
-			{ // Imperial Shrine.
+			case 831350: // Imperial Shrine.
+			{
 				super.handleDialogStart(player);
 				break;
 			}
@@ -60,16 +60,16 @@ public class Imperial_ShrineAI2 extends GeneralNpcAI2
 		{
 			return true;
 		}
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(182006989, 1))
-		{ // Emperor's Golden Tag.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(182006989, 1)) // Emperor's Golden Tag.
+		{
 			TeleportService2.teleportTo(player, 300560000, instanceId, 354.1076f, 188.2339f, 304.3324f, (byte) 110);
 		}
-		if ((dialogId == 10001) && player.getInventory().decreaseByItemId(182006990, 1))
-		{ // Empress' Silver Tag.
+		if ((dialogId == 10001) && player.getInventory().decreaseByItemId(182006990, 1)) // Empress' Silver Tag.
+		{
 			TeleportService2.teleportTo(player, 300560000, instanceId, 354.89645f, 39.509903f, 358.38965f, (byte) 38);
 		}
-		if ((dialogId == 10002) && player.getInventory().decreaseByItemId(182006991, 1))
-		{ // Crown Prince's Brass Tag.
+		if ((dialogId == 10002) && player.getInventory().decreaseByItemId(182006991, 1)) // Crown Prince's Brass Tag.
+		{
 			TeleportService2.teleportTo(player, 300560000, instanceId, 200.2623f, 61.517563f, 464.48865f, (byte) 11);
 		}
 		else if ((dialogId == 1011) && (questId != 0))

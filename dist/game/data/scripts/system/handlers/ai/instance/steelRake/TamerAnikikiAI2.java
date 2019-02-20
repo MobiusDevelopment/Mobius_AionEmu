@@ -77,8 +77,8 @@ public class TamerAnikikiAI2 extends AggressiveNpcAI2
 	{
 		final int point = getOwner().getMoveController().getCurrentPoint();
 		super.handleMoveArrived();
-		if (getNpcId() == 215412)
-		{ // Tamer Anikiki.
+		if (getNpcId() == 215412) // Tamer Anikiki.
+		{
 			if (point == 8)
 			{
 				getOwner().setState(64);
@@ -97,8 +97,8 @@ public class TamerAnikikiAI2 extends AggressiveNpcAI2
 	protected void handleSpawned()
 	{
 		super.handleSpawned();
-		if (getNpcId() != 215412)
-		{ // Tamer Anikiki.
+		if (getNpcId() != 215412) // Tamer Anikiki.
+		{
 			ThreadPoolManager.getInstance().schedule(new Runnable()
 			{
 				@Override

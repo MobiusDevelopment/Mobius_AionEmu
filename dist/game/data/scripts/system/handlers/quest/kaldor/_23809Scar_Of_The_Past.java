@@ -54,8 +54,8 @@ public class _23809Scar_Of_The_Past extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802429)
-			{ // Vidarr.
+			if (targetId == 802429) // Vidarr.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -67,8 +67,8 @@ public class _23809Scar_Of_The_Past extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 730969:
-				{ // Scorched Tree.
+				case 730969: // Scorched Tree.
+				{
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
@@ -78,8 +78,8 @@ public class _23809Scar_Of_The_Past extends QuestHandler
 					}
 					break;
 				}
-				case 730970:
-				{ // Cindery Tree.
+				case 730970: // Cindery Tree.
+				{
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
@@ -89,8 +89,8 @@ public class _23809Scar_Of_The_Past extends QuestHandler
 					}
 					break;
 				}
-				case 730971:
-				{ // Burnt Tree.
+				case 730971: // Burnt Tree.
+				{
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
@@ -100,8 +100,8 @@ public class _23809Scar_Of_The_Past extends QuestHandler
 					}
 					break;
 				}
-				case 802429:
-				{ // Vidarr.
+				case 802429: // Vidarr.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -119,8 +119,8 @@ public class _23809Scar_Of_The_Past extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802429)
-			{ // Vidarr.
+			if (targetId == 802429) // Vidarr.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

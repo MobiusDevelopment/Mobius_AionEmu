@@ -54,8 +54,8 @@ public class _23708Sound_The_Alarm extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802344)
-			{ // Kestum.
+			if (targetId == 802344) // Kestum.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -65,8 +65,8 @@ public class _23708Sound_The_Alarm extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802344)
-			{ // Kestum.
+			if (targetId == 802344) // Kestum.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 2375);

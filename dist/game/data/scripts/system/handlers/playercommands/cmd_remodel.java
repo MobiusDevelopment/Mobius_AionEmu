@@ -49,8 +49,8 @@ public class cmd_remodel extends PlayerCommand
 		if (params.length == 1)
 		{
 			final int itemId = Integer.parseInt(params[0]);
-			if (player.getInventory().decreaseByItemId(186000202, 1))
-			{ // Tiamat Bloody tear
+			if (player.getInventory().decreaseByItemId(186000202, 1)) // Tiamat Bloody tear
+			{
 				if (remodelItem(player, itemId))
 				{
 					PacketSendUtility.sendMessage(player, "Successfully remodelled an item of the player!");

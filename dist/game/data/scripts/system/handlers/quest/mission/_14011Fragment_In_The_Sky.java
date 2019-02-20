@@ -92,8 +92,8 @@ public class _14011Fragment_In_The_Sky extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 203109)
-			{ // Kairon.
+			if (targetId == 203109) // Kairon.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -113,8 +113,8 @@ public class _14011Fragment_In_The_Sky extends QuestHandler
 					}
 				}
 			}
-			else if (targetId == 203122)
-			{ // Hynops.
+			else if (targetId == 203122) // Hynops.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -134,8 +134,8 @@ public class _14011Fragment_In_The_Sky extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203109)
-			{ // Kairon.
+			if (targetId == 203109) // Kairon.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 1693);

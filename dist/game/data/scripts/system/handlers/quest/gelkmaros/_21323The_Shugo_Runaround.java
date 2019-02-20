@@ -63,8 +63,8 @@ public class _21323The_Shugo_Runaround extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 799226)
-			{ // Barretta.
+			if (targetId == 799226) // Barretta.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -87,8 +87,8 @@ public class _21323The_Shugo_Runaround extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 702726:
-				{ // Taserunerk.
+				case 702726: // Taserunerk.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -104,8 +104,8 @@ public class _21323The_Shugo_Runaround extends QuestHandler
 						}
 					}
 				}
-				case 702728:
-				{ // Uzirunerk.
+				case 702728: // Uzirunerk.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -121,8 +121,8 @@ public class _21323The_Shugo_Runaround extends QuestHandler
 						}
 					}
 				}
-				case 702746:
-				{ // Zinarunerk.
+				case 702746: // Zinarunerk.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -138,8 +138,8 @@ public class _21323The_Shugo_Runaround extends QuestHandler
 						}
 					}
 				}
-				case 702747:
-				{ // Ruinrunerk.
+				case 702747: // Ruinrunerk.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -155,8 +155,8 @@ public class _21323The_Shugo_Runaround extends QuestHandler
 						}
 					}
 				}
-				case 702748:
-				{ // Potarunerk.
+				case 702748: // Potarunerk.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -177,8 +177,8 @@ public class _21323The_Shugo_Runaround extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799226)
-			{ // Barretta.
+			if (targetId == 799226) // Barretta.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

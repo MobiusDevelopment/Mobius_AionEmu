@@ -59,8 +59,8 @@ public class _28845Pernon_Awaits_You extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798459)
-			{ // Randiten.
+			if (targetId == 798459) // Randiten.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _28845Pernon_Awaits_You extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 830532:
-				{ // Hariton.
+				case 830532: // Hariton.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _28845Pernon_Awaits_You extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 830532)
-			{ // Hariton.
+			if (targetId == 830532) // Hariton.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

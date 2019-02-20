@@ -132,36 +132,36 @@ public class CraftSkillUpdateService
 			recipelist = DAOManager.getDAO(PlayerRecipesDAO.class).load(object);
 			if (race == Race.ELYOS)
 			{
-				if (!recipelist.isRecipePresent(155000005))
-				{ // Morph Method: Iron Ore.
+				if (!recipelist.isRecipePresent(155000005)) // Morph Method: Iron Ore.
+				{
 					DAOManager.getDAO(PlayerRecipesDAO.class).addRecipe(object, 155000005);
 					PacketSendUtility.sendPacket(player, new SM_LEARN_RECIPE(155000005));
 				}
-				if (!recipelist.isRecipePresent(155000002))
-				{ // Morph Method: Inina.
+				if (!recipelist.isRecipePresent(155000002)) // Morph Method: Inina.
+				{
 					DAOManager.getDAO(PlayerRecipesDAO.class).addRecipe(object, 155000002);
 					PacketSendUtility.sendPacket(player, new SM_LEARN_RECIPE(155000002));
 				}
-				if (!recipelist.isRecipePresent(155000001))
-				{ // Morph Method: Aria.
+				if (!recipelist.isRecipePresent(155000001)) // Morph Method: Aria.
+				{
 					DAOManager.getDAO(PlayerRecipesDAO.class).addRecipe(object, 155000001);
 					PacketSendUtility.sendPacket(player, new SM_LEARN_RECIPE(155000001));
 				}
 			}
 			else if (race == Race.ASMODIANS)
 			{
-				if (!recipelist.isRecipePresent(155005005))
-				{ // Morph Method: Iron Ore.
+				if (!recipelist.isRecipePresent(155005005)) // Morph Method: Iron Ore.
+				{
 					DAOManager.getDAO(PlayerRecipesDAO.class).addRecipe(object, 155005005);
 					PacketSendUtility.sendPacket(player, new SM_LEARN_RECIPE(155005005));
 				}
-				if (!recipelist.isRecipePresent(155005002))
-				{ // Morph Method: Conide.
+				if (!recipelist.isRecipePresent(155005002)) // Morph Method: Conide.
+				{
 					DAOManager.getDAO(PlayerRecipesDAO.class).addRecipe(object, 155005002);
 					PacketSendUtility.sendPacket(player, new SM_LEARN_RECIPE(155005002));
 				}
-				if (!recipelist.isRecipePresent(155005001))
-				{ // Morph Method: Azpha.
+				if (!recipelist.isRecipePresent(155005001)) // Morph Method: Azpha.
+				{
 					DAOManager.getDAO(PlayerRecipesDAO.class).addRecipe(object, 155005001);
 					PacketSendUtility.sendPacket(player, new SM_LEARN_RECIPE(155005001));
 				}

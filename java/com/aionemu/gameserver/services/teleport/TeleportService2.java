@@ -134,7 +134,8 @@ public class TeleportService2
 			{
 				final QuestState qs = player.getQuestStateList().getQuestState(location.getRequiredQuest());
 				if ((qs == null) || (qs.getStatus() != QuestStatus.COMPLETE))
-				{ // Memories Of Eternity.
+				{
+					// Memories Of Eternity.
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_HOUSING_CANT_OWN_NOT_COMPLETE_QUEST(10521));
 					return;
 				}
@@ -143,7 +144,8 @@ public class TeleportService2
 			{
 				final QuestState qs = player.getQuestStateList().getQuestState(location.getRequiredQuest());
 				if ((qs == null) || (qs.getStatus() != QuestStatus.COMPLETE))
-				{ // Recovered Destiny.
+				{
+					// Recovered Destiny.
 					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_HOUSING_CANT_OWN_NOT_COMPLETE_QUEST(20521));
 					return;
 				}

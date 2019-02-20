@@ -40,8 +40,8 @@ public class Senior_AgentAI2 extends GeneralNpcAI2
 			case 805327: // Rike [Cygnea]
 			case 805692: // Rike [Cloister Of Kaisinel]
 			case 805339: // Skuldun [Enshar]
-			case 805693:
-			{ // Skuldun [Convent Of Marchutan]
+			case 805693: // Skuldun [Convent Of Marchutan]
+			{
 				super.handleDialogStart(player);
 				break;
 			}

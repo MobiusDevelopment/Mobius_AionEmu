@@ -54,8 +54,8 @@ public class _2954DeliveringOdellaJuice extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 204191)
-			{ // Doman
+			if (targetId == 204191) // Doman
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -66,8 +66,8 @@ public class _2954DeliveringOdellaJuice extends QuestHandler
 		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
-			if (targetId == 204221)
-			{ // Haven
+			if (targetId == 204221) // Haven
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1352);
@@ -77,8 +77,8 @@ public class _2954DeliveringOdellaJuice extends QuestHandler
 					return defaultCloseDialog(env, 0, 1); // 1
 				}
 			}
-			else if (targetId == 204191)
-			{ // Doman
+			else if (targetId == 204191) // Doman
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if (var == 1)
@@ -95,8 +95,8 @@ public class _2954DeliveringOdellaJuice extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204191)
-			{ // Doman
+			if (targetId == 204191) // Doman
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

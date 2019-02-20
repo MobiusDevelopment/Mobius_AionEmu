@@ -99,8 +99,8 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 203752:
-				{ // Jucleas.
+				case 203752: // Jucleas.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -117,8 +117,8 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 					}
 					break;
 				}
-				case 203852:
-				{ // Ludina.
+				case 203852: // Ludina.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -137,8 +137,8 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 					}
 					break;
 				}
-				case 203164:
-				{ // Morai.
+				case 203164: // Morai.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -171,8 +171,8 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 					}
 					break;
 				}
-				case 205110:
-				{ // Icaronix.
+				case 205110: // Icaronix.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -197,8 +197,8 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 					}
 					break;
 				}
-				case 700240:
-				{ // Icaronix's Box.
+				case 700240: // Icaronix's Box.
+				{
 					if (dialog == QuestDialog.USE_OBJECT)
 					{
 						if (var == 94)
@@ -208,8 +208,8 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 					}
 					break;
 				}
-				case 205111:
-				{ // Ecus.
+				case 205111: // Ecus.
+				{
 					switch (dialog)
 					{
 						case USE_OBJECT:
@@ -256,8 +256,8 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 					}
 					break;
 				}
-				case 203701:
-				{ // Lavirintos.
+				case 203701: // Lavirintos.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -277,8 +277,8 @@ public class _1929A_Sliver_Of_Darkness extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203711)
-			{ // Miriya.
+			if (targetId == 203711) // Miriya.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

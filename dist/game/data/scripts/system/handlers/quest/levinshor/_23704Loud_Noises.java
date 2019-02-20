@@ -54,8 +54,8 @@ public class _23704Loud_Noises extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802343)
-			{ // Rink.
+			if (targetId == 802343) // Rink.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -65,8 +65,8 @@ public class _23704Loud_Noises extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802343)
-			{ // Rink.
+			if (targetId == 802343) // Rink.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 2375);

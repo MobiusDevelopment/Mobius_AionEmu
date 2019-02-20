@@ -221,8 +221,8 @@ public class EngulfedOphidanBridgeReward extends InstanceReward<EngulfedOphidanB
 		{
 			return (int) (90000 - result);
 		}
-		else if (result < 1800000)
-		{ // 30-Mins
+		else if (result < 1800000) // 30-Mins
+		{
 			return (int) (1800000 - (result - 90000));
 		}
 		return 0;
@@ -235,8 +235,8 @@ public class EngulfedOphidanBridgeReward extends InstanceReward<EngulfedOphidanB
 		{
 			return (int) (90000 - result);
 		}
-		else if (result < 1200000)
-		{ // 20-Mins
+		else if (result < 1200000) // 20-Mins
+		{
 			return (int) (1200000 - (result - 90000));
 		}
 		return 0;

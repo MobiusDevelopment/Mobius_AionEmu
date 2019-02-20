@@ -51,8 +51,8 @@ public class _19000ExpertEssencetappersTest extends QuestHandler
 	public boolean onEnterWorldEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		if (player.getWorldId() == 110010000)
-		{ // Sanctum.
+		if (player.getWorldId() == 110010000) // Sanctum.
+		{
 			final QuestState qs = player.getQuestStateList().getQuestState(questId);
 			if (qs == null)
 			{
@@ -75,8 +75,8 @@ public class _19000ExpertEssencetappersTest extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203780)
-			{ // Cornelius.
+			if (targetId == 203780) // Cornelius.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -89,8 +89,8 @@ public class _19000ExpertEssencetappersTest extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 203781:
-				{ // Sabotes.
+				case 203781: // Sabotes.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -108,8 +108,8 @@ public class _19000ExpertEssencetappersTest extends QuestHandler
 					}
 					break;
 				}
-				case 203780:
-				{ // Cornelius.
+				case 203780: // Cornelius.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -133,8 +133,8 @@ public class _19000ExpertEssencetappersTest extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203780)
-			{ // Cornelius.
+			if (targetId == 203780) // Cornelius.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

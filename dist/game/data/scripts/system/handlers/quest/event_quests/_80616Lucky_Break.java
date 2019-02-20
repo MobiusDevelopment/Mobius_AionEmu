@@ -56,8 +56,8 @@ public class _80616Lucky_Break extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 832866)
-			{ // Lukrunerk.
+			if (targetId == 832866) // Lukrunerk.
+			{
 				removeQuestItem(env, 182215582, 1); // [Event] Right Of Luck.
 				return sendQuestEndDialog(env);
 			}

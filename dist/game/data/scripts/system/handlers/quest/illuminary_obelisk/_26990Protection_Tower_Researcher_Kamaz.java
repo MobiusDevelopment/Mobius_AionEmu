@@ -59,8 +59,8 @@ public class _26990Protection_Tower_Researcher_Kamaz extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802049)
-			{ // Kamaz.
+			if (targetId == 802049) // Kamaz.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _26990Protection_Tower_Researcher_Kamaz extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 802049:
-				{ // Kamaz.
+				case 802049: // Kamaz.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _26990Protection_Tower_Researcher_Kamaz extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802049)
-			{ // Kamaz.
+			if (targetId == 802049) // Kamaz.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

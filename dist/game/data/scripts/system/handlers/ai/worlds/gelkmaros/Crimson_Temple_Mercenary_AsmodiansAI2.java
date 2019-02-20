@@ -40,8 +40,8 @@ public class Crimson_Temple_Mercenary_AsmodiansAI2 extends GeneralNpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(186000236, 11))
-		{ // Blood Mark.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(186000236, 11)) // Blood Mark.
+		{
 			announceMercenaries();
 		}
 		return true;

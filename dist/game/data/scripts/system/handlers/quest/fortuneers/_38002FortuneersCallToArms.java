@@ -65,8 +65,8 @@ public class _38002FortuneersCallToArms extends QuestHandler
 		
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 799840)
-			{ // Juris Po
+			if (targetId == 799840) // Juris Po
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -80,8 +80,8 @@ public class _38002FortuneersCallToArms extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (targetId == 799840)
-			{ // Juris Po
+			if (targetId == 799840) // Juris Po
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

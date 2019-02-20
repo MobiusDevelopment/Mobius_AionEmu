@@ -103,8 +103,8 @@ public class _20527Finding_The_Traces_Of_The_Sage_Of_The_Tower_Of_Eternity exten
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -165,8 +165,8 @@ public class _20527Finding_The_Traces_Of_The_Sage_Of_The_Tower_Of_Eternity exten
 					}
 				}
 			}
-			if (targetId == 806296)
-			{ // 위자보보.
+			if (targetId == 806296) // 위자보보.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -183,8 +183,8 @@ public class _20527Finding_The_Traces_Of_The_Sage_Of_The_Tower_Of_Eternity exten
 					}
 				}
 			}
-			if (targetId == 703321)
-			{ // 움찔거리는 나무 넝쿨.
+			if (targetId == 703321) // 움찔거리는 나무 넝쿨.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -197,8 +197,8 @@ public class _20527Finding_The_Traces_Of_The_Sage_Of_The_Tower_Of_Eternity exten
 					}
 				}
 			}
-			if (targetId == 731711)
-			{ // 빛나는 영원의 탑 파편.
+			if (targetId == 731711) // 빛나는 영원의 탑 파편.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -211,8 +211,8 @@ public class _20527Finding_The_Traces_Of_The_Sage_Of_The_Tower_Of_Eternity exten
 					}
 				}
 			}
-			if (targetId == 703322)
-			{ // 움직이는 가마솥.
+			if (targetId == 703322) // 움직이는 가마솥.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -225,8 +225,8 @@ public class _20527Finding_The_Traces_Of_The_Sage_Of_The_Tower_Of_Eternity exten
 					}
 				}
 			}
-			if (targetId == 731712)
-			{ // 영롱한 영원의 탑 파편.
+			if (targetId == 731712) // 영롱한 영원의 탑 파편.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -239,8 +239,8 @@ public class _20527Finding_The_Traces_Of_The_Sage_Of_The_Tower_Of_Eternity exten
 					}
 				}
 			}
-			if (targetId == 703323)
-			{ // 꿈틀거리는 자루.
+			if (targetId == 703323) // 꿈틀거리는 자루.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -263,8 +263,8 @@ public class _20527Finding_The_Traces_Of_The_Sage_Of_The_Tower_Of_Eternity exten
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

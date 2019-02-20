@@ -67,8 +67,8 @@ public class _80360The_First_Drink_Is_Free extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 831806)
-			{ // Rezar.
+			if (targetId == 831806) // Rezar.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -87,8 +87,8 @@ public class _80360The_First_Drink_Is_Free extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 831806:
-				{ // Rezar.
+				case 831806: // Rezar.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -106,8 +106,8 @@ public class _80360The_First_Drink_Is_Free extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 831806)
-			{ // Rezar.
+			if (targetId == 831806) // Rezar.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

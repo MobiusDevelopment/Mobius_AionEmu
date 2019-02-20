@@ -107,8 +107,8 @@ public class _20521Recovered_Destiny extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806135)
-			{ // Conrto.
+			if (targetId == 806135) // Conrto.
+			{
 				switch (env.getDialog())
 				{
 					// Well met, [%username].
@@ -143,8 +143,8 @@ public class _20521Recovered_Destiny extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				switch (env.getDialog())
 				{
 					// Welcome, [%username].
@@ -177,8 +177,8 @@ public class _20521Recovered_Destiny extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703165)
-			{ // Tower Fragment
+			if (targetId == 703165) // Tower Fragment
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -198,8 +198,8 @@ public class _20521Recovered_Destiny extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731667)
-			{ // IDEternity_Q_FOBJ_Q10521_A
+			if (targetId == 731667) // IDEternity_Q_FOBJ_Q10521_A
+			{
 				switch (env.getDialog())
 				{
 					// Protector of Atreia
@@ -234,8 +234,8 @@ public class _20521Recovered_Destiny extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731668)
-			{ // IDEternity_Q_FOBJ_Q10521_B
+			if (targetId == 731668) // IDEternity_Q_FOBJ_Q10521_B
+			{
 				switch (env.getDialog())
 				{
 					// "Empyrean Lord's Proposal"
@@ -272,8 +272,8 @@ public class _20521Recovered_Destiny extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806136)
-			{ // IDEternity_Q_Leibo01_E
+			if (targetId == 806136) // IDEternity_Q_Leibo01_E
+			{
 				switch (env.getDialog())
 				{
 					// Go away. I'm busy, so don't bother me.
@@ -312,8 +312,8 @@ public class _20521Recovered_Destiny extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731669)
-			{ // IDEternity_Q_FOBJ_Q10521_C
+			if (targetId == 731669) // IDEternity_Q_FOBJ_Q10521_C
+			{
 				switch (env.getDialog())
 				{
 					// "Ancient Memory"
@@ -366,8 +366,8 @@ public class _20521Recovered_Destiny extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806137)
-			{ // IDEternity_Q_Leibo02_E
+			if (targetId == 806137) // IDEternity_Q_Leibo02_E
+			{
 				switch (env.getDialog())
 				{
 					// Oh! What!
@@ -406,8 +406,8 @@ public class _20521Recovered_Destiny extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703130)
-			{ // IDEternity_Q_FOBJ_Q10521_D.
+			if (targetId == 703130) // IDEternity_Q_FOBJ_Q10521_D.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -511,8 +511,8 @@ public class _20521Recovered_Destiny extends QuestHandler
 			if (var == 13)
 			{
 				if ((env.getTargetId() == 857796) || // IDEternity_Q_HD_Fire_Da_M_N_65_An.
-					(env.getTargetId() == 857800))
-				{ // IDEternity_Q_HD_Fire_Da_L_N_65_An.
+					(env.getTargetId() == 857800)) // IDEternity_Q_HD_Fire_Da_L_N_65_An.
+				{
 					changeQuestStep(env, 13, 14, true);
 					qs.setStatus(QuestStatus.REWARD);
 					updateQuestStatus(env);

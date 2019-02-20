@@ -124,8 +124,8 @@ public class _20526Special_Secret_Mission extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -149,8 +149,8 @@ public class _20526Special_Secret_Mission extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806394)
-			{ // Varotta.
+			if (targetId == 806394) // Varotta.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -167,8 +167,8 @@ public class _20526Special_Secret_Mission extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806296)
-			{ // 데자보보.
+			if (targetId == 806296) // 데자보보.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -187,8 +187,8 @@ public class _20526Special_Secret_Mission extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703318)
-			{ // 수상한 오드 파편.
+			if (targetId == 703318) // 수상한 오드 파편.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -207,8 +207,8 @@ public class _20526Special_Secret_Mission extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703319)
-			{ // 불가사의한 오드 파편.
+			if (targetId == 703319) // 불가사의한 오드 파편.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -227,8 +227,8 @@ public class _20526Special_Secret_Mission extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703320)
-			{ // 기묘한 오드 파편.
+			if (targetId == 703320) // 기묘한 오드 파편.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -250,8 +250,8 @@ public class _20526Special_Secret_Mission extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806297)
-			{ // 잠에서 깬 위자보보.
+			if (targetId == 806297) // 잠에서 깬 위자보보.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -273,8 +273,8 @@ public class _20526Special_Secret_Mission extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

@@ -256,8 +256,8 @@ public class _10507A_Big_Plot_To_Foil extends QuestHandler
 				switch (targetId)
 				{
 					case 236264: // Beritra Trailblazer Assassin.
-					case 236265:
-					{ // Beritra Trailblazer Spelltongue.
+					case 236265: // Beritra Trailblazer Spelltongue.
+					{
 						if (var1 < 4)
 						{
 							return defaultOnKillEvent(env, mobs, 0, 4, 1);
@@ -274,8 +274,8 @@ public class _10507A_Big_Plot_To_Foil extends QuestHandler
 						}
 						break;
 					}
-					case 702668:
-					{ // Beritra Supplies Box.
+					case 702668: // Beritra Supplies Box.
+					{
 						if (var2 < 2)
 						{
 							return defaultOnKillEvent(env, chest, 0, 2, 2);

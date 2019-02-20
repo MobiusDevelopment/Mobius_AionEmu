@@ -213,8 +213,8 @@ public class PlayerTransferService
 		acp.setBuffer(ByteBuffer.wrap(db).order(ByteOrder.LITTLE_ENDIAN));
 		final Player cha = acp.readInfo(name, targetAccountId, account, rsList, textLog);
 		
-		if (cha == null)
-		{ // something went wrong!
+		if (cha == null) // something went wrong!
+		{
 			log.error("clone failed #" + taskId + " `" + name + "`");
 			LoginServer.getInstance().sendPacket(new SM_PTRANSFER_CONTROL(SM_PTRANSFER_CONTROL.ERROR, taskId, "unexpected sql error while creating a clone"));
 		}

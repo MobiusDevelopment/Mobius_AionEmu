@@ -145,8 +145,8 @@ public class _10503Guard_Down_Secrets_Out extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 702670)
-			{ // Scattered Balaur Document.
+			if (targetId == 702670) // Scattered Balaur Document.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:

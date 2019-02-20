@@ -52,8 +52,8 @@ public class _28940All_For_One extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802433)
-			{ // Salade.
+			if (targetId == 802433) // Salade.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -72,8 +72,8 @@ public class _28940All_For_One extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 802384:
-				{ // Salade.
+				case 802384: // Salade.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -91,8 +91,8 @@ public class _28940All_For_One extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802384)
-			{ // Salade.
+			if (targetId == 802384) // Salade.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

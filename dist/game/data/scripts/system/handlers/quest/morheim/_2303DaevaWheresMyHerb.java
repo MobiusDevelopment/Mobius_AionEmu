@@ -65,8 +65,8 @@ public class _2303DaevaWheresMyHerb extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798082)
-			{ // Bicorunerk
+			if (targetId == 798082) // Bicorunerk
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -115,8 +115,8 @@ public class _2303DaevaWheresMyHerb extends QuestHandler
 		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
-			if (targetId == 798082)
-			{ // Bicorunerk
+			if (targetId == 798082) // Bicorunerk
+			{
 				if (dialog == QuestDialog.FINISH_DIALOG)
 				{
 					return sendQuestSelectionDialog(env);
@@ -146,8 +146,8 @@ public class _2303DaevaWheresMyHerb extends QuestHandler
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			final int var = qs.getQuestVarById(0);
-			if (targetId == 798082)
-			{ // Bicorunerk
+			if (targetId == 798082) // Bicorunerk
+			{
 				switch (dialog)
 				{
 					case USE_OBJECT:

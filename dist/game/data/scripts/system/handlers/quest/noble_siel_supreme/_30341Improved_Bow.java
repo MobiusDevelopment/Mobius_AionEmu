@@ -61,8 +61,8 @@ public class _30341Improved_Bow extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 799336)
-			{ // Tataka.
+			if (targetId == 799336) // Tataka.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -72,8 +72,8 @@ public class _30341Improved_Bow extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799336)
-			{ // Tataka.
+			if (targetId == 799336) // Tataka.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					if (player.getInventory().getItemCountByItemId(182209739) > 0)
@@ -101,8 +101,8 @@ public class _30341Improved_Bow extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 215795:
-				{ // Debilkarim The Maker.
+				case 215795: // Debilkarim The Maker.
+				{
 					if (QuestService.collectItemCheck(env, true))
 					{
 						return giveQuestItem(env, 182209739, 1);

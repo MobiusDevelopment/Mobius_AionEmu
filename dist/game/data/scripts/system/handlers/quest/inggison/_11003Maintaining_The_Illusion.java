@@ -55,8 +55,8 @@ public class _11003Maintaining_The_Illusion extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798933)
-			{ // Phailos.
+			if (targetId == 798933) // Phailos.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -68,8 +68,8 @@ public class _11003Maintaining_The_Illusion extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 798942:
-				{ // Harknes.
+				case 798942: // Harknes.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -90,8 +90,8 @@ public class _11003Maintaining_The_Illusion extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798942)
-			{ // Harknes.
+			if (targetId == 798942) // Harknes.
+			{
 				if (env.getDialogId() == 39)
 				{
 					return sendQuestDialog(env, 5);

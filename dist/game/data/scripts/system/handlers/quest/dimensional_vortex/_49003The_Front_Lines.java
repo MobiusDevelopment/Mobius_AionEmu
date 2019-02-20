@@ -59,8 +59,8 @@ public class _49003The_Front_Lines extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 800502)
-			{ // Salla.
+			if (targetId == 800502) // Salla.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -76,8 +76,8 @@ public class _49003The_Front_Lines extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 800511:
-				{ // Nohrn.
+				case 800511: // Nohrn.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -94,8 +94,8 @@ public class _49003The_Front_Lines extends QuestHandler
 						}
 					}
 				}
-				case 800505:
-				{ // Dromic.
+				case 800505: // Dromic.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -119,8 +119,8 @@ public class _49003The_Front_Lines extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 800505)
-			{ // Dromic.
+			if (targetId == 800505) // Dromic.
+			{
 				switch (env.getDialog())
 				{
 					case SELECT_REWARD:

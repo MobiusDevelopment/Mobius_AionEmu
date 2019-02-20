@@ -56,8 +56,8 @@ public class _80615Coming_Up_Heart extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 832866)
-			{ // Lukrunerk.
+			if (targetId == 832866) // Lukrunerk.
+			{
 				removeQuestItem(env, 182215581, 1); // [Event] Right Of Luck.
 				return sendQuestEndDialog(env);
 			}

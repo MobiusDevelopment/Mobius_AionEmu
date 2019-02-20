@@ -59,8 +59,8 @@ public class _25099How_the_Ship extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 804963)
-			{ // DF5_Ship_ZoneTeleport_D.
+			if (targetId == 804963) // DF5_Ship_ZoneTeleport_D.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _25099How_the_Ship extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 804963:
-				{ // DF5_Ship_ZoneTeleport_D.
+				case 804963: // DF5_Ship_ZoneTeleport_D.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _25099How_the_Ship extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804963)
-			{ // DF5_Ship_ZoneTeleport_D.
+			if (targetId == 804963) // DF5_Ship_ZoneTeleport_D.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

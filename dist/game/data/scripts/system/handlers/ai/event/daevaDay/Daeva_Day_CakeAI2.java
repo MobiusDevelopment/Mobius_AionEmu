@@ -36,8 +36,8 @@ public class Daeva_Day_CakeAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(186000188) != null)
-		{ // [Event] Aether Flame.
+		if (player.getInventory().getFirstItemByItemId(186000188) != null) // [Event] Aether Flame.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 		}
 		else
@@ -50,8 +50,8 @@ public class Daeva_Day_CakeAI2 extends NpcAI2
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		final PlayerEffectController effectController = player.getEffectController();
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(186000188, 1))
-		{ // [Event] Aether Flame.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(186000188, 1)) // [Event] Aether Flame.
+		{
 			switch (getNpcId())
 			{
 				case 832180: // Daeva's Day Cake E.

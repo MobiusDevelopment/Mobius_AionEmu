@@ -56,8 +56,8 @@ public class _2493BringingUpTayga extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204325)
-			{ // Ipoderr
+			if (targetId == 204325) // Ipoderr
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -68,8 +68,8 @@ public class _2493BringingUpTayga extends QuestHandler
 		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
-			if (targetId == 204435)
-			{ // Purra?
+			if (targetId == 204435) // Purra?
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if (var == 0)
@@ -89,8 +89,8 @@ public class _2493BringingUpTayga extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204325)
-			{ // Ipoderr
+			if (targetId == 204325) // Ipoderr
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

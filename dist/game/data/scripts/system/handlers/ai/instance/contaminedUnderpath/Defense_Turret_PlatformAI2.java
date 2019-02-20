@@ -48,18 +48,18 @@ public class Defense_Turret_PlatformAI2 extends NpcAI2
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
 		// Rapid Fire Multiple Fire Cannon Installation (1 Bright Aether).
-		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(182007405, 1))
-		{ // Bright Aether.
+		if ((dialogId == 10000) && player.getInventory().decreaseByItemId(182007405, 1)) // Bright Aether.
+		{
 			spawn(833808, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0); // Single Fire Cannon.
 		}
 		// Ranged Cannon Installation (2 Bright Aether)
-		else if ((dialogId == 10001) && player.getInventory().decreaseByItemId(182007405, 2))
-		{ // Bright Aether.
+		else if ((dialogId == 10001) && player.getInventory().decreaseByItemId(182007405, 2)) // Bright Aether.
+		{
 			spawn(833809, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0); // Area Antiaircraft Gun.
 		}
 		// Powerful Magic Cannon Installation (2 Bright Aether).
-		else if ((dialogId == 10002) && player.getInventory().decreaseByItemId(182007405, 2))
-		{ // Bright Aether.
+		else if ((dialogId == 10002) && player.getInventory().decreaseByItemId(182007405, 2)) // Bright Aether.
+		{
 			spawn(833810, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) 0); // Wide Area Capture Device.
 		}
 		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));

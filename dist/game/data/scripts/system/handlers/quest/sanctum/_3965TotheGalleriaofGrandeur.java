@@ -55,8 +55,8 @@ public class _3965TotheGalleriaofGrandeur extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798311)
-			{ // Senarinrinerk
+			if (targetId == 798311) // Senarinrinerk
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -69,8 +69,8 @@ public class _3965TotheGalleriaofGrandeur extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 798391:
-				{ // Andu
+				case 798391: // Andu
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -87,8 +87,8 @@ public class _3965TotheGalleriaofGrandeur extends QuestHandler
 					}
 					break;
 				}
-				case 798390:
-				{ // Palentine
+				case 798390: // Palentine
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -110,8 +110,8 @@ public class _3965TotheGalleriaofGrandeur extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798390)
-			{ // Palentine
+			if (targetId == 798390) // Palentine
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

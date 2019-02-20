@@ -115,8 +115,8 @@ public class _10529Protection_Artifact_2 extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (player.getWorldId() == 301690000)
-		{ // 오드광산.
+		if (player.getWorldId() == 301690000) // 오드광산.
+		{
 			if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 			{
 				final int var = qs.getQuestVars().getQuestVars();
@@ -146,8 +146,8 @@ public class _10529Protection_Artifact_2 extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -181,8 +181,8 @@ public class _10529Protection_Artifact_2 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806295)
-			{ // 데제르.
+			if (targetId == 806295) // 데제르.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -199,8 +199,8 @@ public class _10529Protection_Artifact_2 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731710)
-			{ // 부서진 천족 회랑 장치.
+			if (targetId == 731710) // 부서진 천족 회랑 장치.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -242,8 +242,8 @@ public class _10529Protection_Artifact_2 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806293)
-			{ // 데자보보.
+			if (targetId == 806293) // 데자보보.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -260,8 +260,8 @@ public class _10529Protection_Artifact_2 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703317)
-			{ // 마족 차원의 소용돌이.
+			if (targetId == 703317) // 마족 차원의 소용돌이.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -284,8 +284,8 @@ public class _10529Protection_Artifact_2 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806294)
-			{ // 쓰러진 데자보보.
+			if (targetId == 806294) // 쓰러진 데자보보.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -315,8 +315,8 @@ public class _10529Protection_Artifact_2 extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -355,12 +355,12 @@ public class _10529Protection_Artifact_2 extends QuestHandler
 				}; // 그림자 아칸 마법병.
 				switch (targetId)
 				{
-					case 244111:
-					{ // 그림자 아칸 전투병.
+					case 244111: // 그림자 아칸 전투병.
+					{
 						return defaultOnKillEvent(env, LF6MissionDarkFi75An, 0, 7, 1);
 					}
-					case 244112:
-					{ // 그림자 아칸 마법병.
+					case 244112: // 그림자 아칸 마법병.
+					{
 						qs.setQuestVar(7);
 						updateQuestStatus(env);
 						return defaultOnKillEvent(env, LF6MissionDarkWi75An, 0, 3, 2);
@@ -371,8 +371,8 @@ public class _10529Protection_Artifact_2 extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 244113:
-					{ // 헬뇨르.
+					case 244113: // 헬뇨르.
+					{
 						qs.setQuestVar(9);
 						updateQuestStatus(env);
 						return true;

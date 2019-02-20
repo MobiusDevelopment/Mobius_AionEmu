@@ -91,8 +91,8 @@ public class _2004A_Charmed_Cube extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 203539:
-				{ // Derot.
+				case 203539: // Derot.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -126,8 +126,8 @@ public class _2004A_Charmed_Cube extends QuestHandler
 					}
 					break;
 				}
-				case 700047:
-				{ // Tombstone.
+				case 700047: // Tombstone.
+				{
 					if ((var == 1) && (env.getVisibleObject().getObjectTemplate().getTemplateId() == 700047) && (dialog == QuestDialog.USE_OBJECT))
 					{
 						final Npc npc = (Npc) env.getVisibleObject();
@@ -135,8 +135,8 @@ public class _2004A_Charmed_Cube extends QuestHandler
 						return true;
 					}
 				}
-				case 203550:
-				{ // Munin.
+				case 203550: // Munin.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -164,8 +164,8 @@ public class _2004A_Charmed_Cube extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203539)
-			{ // Derot.
+			if (targetId == 203539) // Derot.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 2375);

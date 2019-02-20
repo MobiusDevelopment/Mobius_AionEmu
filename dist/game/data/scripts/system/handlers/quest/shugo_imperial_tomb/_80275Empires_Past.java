@@ -58,8 +58,8 @@ public class _80275Empires_Past extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || qs.canRepeat())
 		{
-			if (targetId == 831117)
-			{ // Indianerk.
+			if (targetId == 831117) // Indianerk.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -76,8 +76,8 @@ public class _80275Empires_Past extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 831117:
-				{ // Indianerk.
+				case 831117: // Indianerk.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -102,8 +102,8 @@ public class _80275Empires_Past extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 831117)
-			{ // Indianerk.
+			if (targetId == 831117) // Indianerk.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

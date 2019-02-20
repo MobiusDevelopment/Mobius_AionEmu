@@ -41,8 +41,8 @@ public class Mechaturerk_CannonAI2 extends ActionItemNpcAI2
 		final WorldPosition worldPosition = player.getPosition();
 		if (worldPosition.isInstanceMap())
 		{
-			if (worldPosition.getMapId() == 301640000)
-			{ // Secret Munitions Factory.
+			if (worldPosition.getMapId() == 301640000) // Secret Munitions Factory.
+			{
 				// A heavy door has opened somewhere.
 				PacketSendUtility.npcSendPacketTime(getOwner(), SM_SYSTEM_MESSAGE.STR_MSG_IDLDF5_Under_02_Canon, 5000);
 				SkillEngine.getInstance().getSkill(getOwner(), 21126, 60, getOwner()).useNoAnimationSkill(); // Destroy Seal.

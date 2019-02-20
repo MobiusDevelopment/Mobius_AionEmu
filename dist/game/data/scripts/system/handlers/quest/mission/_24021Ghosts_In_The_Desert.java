@@ -78,8 +78,8 @@ public class _24021Ghosts_In_The_Desert extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204302:
-				{ // Bragi.
+				case 204302: // Bragi.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -93,8 +93,8 @@ public class _24021Ghosts_In_The_Desert extends QuestHandler
 					}
 					break;
 				}
-				case 204329:
-				{ // Tofa.
+				case 204329: // Tofa.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -118,8 +118,8 @@ public class _24021Ghosts_In_The_Desert extends QuestHandler
 						}
 					}
 				}
-				case 802046:
-				{ // Tofynir.
+				case 802046: // Tofynir.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -155,8 +155,8 @@ public class _24021Ghosts_In_The_Desert extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204329)
-			{ // Tofa.
+			if (targetId == 204329) // Tofa.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

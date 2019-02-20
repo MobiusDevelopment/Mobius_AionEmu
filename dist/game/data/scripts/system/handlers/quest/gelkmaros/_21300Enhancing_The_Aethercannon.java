@@ -52,8 +52,8 @@ public class _21300Enhancing_The_Aethercannon extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 799340)
-			{ // Athana.
+			if (targetId == 799340) // Athana.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -69,8 +69,8 @@ public class _21300Enhancing_The_Aethercannon extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 798317)
-			{ // Usener.
+			if (targetId == 798317) // Usener.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2375);

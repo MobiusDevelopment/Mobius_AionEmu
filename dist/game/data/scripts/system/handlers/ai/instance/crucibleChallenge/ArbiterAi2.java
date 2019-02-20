@@ -32,8 +32,8 @@ public class ArbiterAi2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(186000124) != null)
-		{ // Worthiness Ticket.
+		if (player.getInventory().getFirstItemByItemId(186000124) != null) // Worthiness Ticket.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 		}
 		else

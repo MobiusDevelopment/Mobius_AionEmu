@@ -94,8 +94,8 @@ public class _2900No_Escaping_Destiny extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204182:
-				{ // Heimdall.
+				case 204182: // Heimdall.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -113,8 +113,8 @@ public class _2900No_Escaping_Destiny extends QuestHandler
 					}
 					break;
 				}
-				case 203550:
-				{ // Munin.
+				case 203550: // Munin.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -141,8 +141,8 @@ public class _2900No_Escaping_Destiny extends QuestHandler
 					}
 					break;
 				}
-				case 790003:
-				{ // Urd.
+				case 790003: // Urd.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -160,8 +160,8 @@ public class _2900No_Escaping_Destiny extends QuestHandler
 					}
 					break;
 				}
-				case 790002:
-				{ // Verdandi.
+				case 790002: // Verdandi.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -179,8 +179,8 @@ public class _2900No_Escaping_Destiny extends QuestHandler
 					}
 					break;
 				}
-				case 203546:
-				{ // Skuld.
+				case 203546: // Skuld.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -214,8 +214,8 @@ public class _2900No_Escaping_Destiny extends QuestHandler
 					}
 					break;
 				}
-				case 204264:
-				{ // Skuld.
+				case 204264: // Skuld.
+				{
 					switch (dialog)
 					{
 						case USE_OBJECT:
@@ -288,8 +288,8 @@ public class _2900No_Escaping_Destiny extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204061)
-			{ // Aud.
+			if (targetId == 204061) // Aud.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

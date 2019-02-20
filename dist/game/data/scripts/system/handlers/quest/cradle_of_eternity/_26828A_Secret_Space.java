@@ -77,8 +77,8 @@ public class _26828A_Secret_Space extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (player.getWorldId() == 301550000)
-		{ // 지식의 정원.
+		if (player.getWorldId() == 301550000) // 지식의 정원.
+		{
 			if (qs == null)
 			{
 				env.setQuestId(questId);

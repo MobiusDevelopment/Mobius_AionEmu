@@ -93,11 +93,11 @@ public class Stigma
 	{
 		final List<Integer> ids = new ArrayList<>();
 		final List<String> skill = this.skill;
-		if (skill.size() != 1)
-		{ // Dual Skills like Exhausting Wave
+		if (skill.size() != 1) // Dual Skills like Exhausting Wave
+		{
 			String[] tempArray = new String[0];
-			for (String parts : skill)
-			{ // loops each of the 1:534 and 1:4342
+			for (String parts : skill) // loops each of the 1:534 and 1:4342
+			{
 				tempArray = parts.split(":");
 				ids.add(Integer.parseInt(tempArray[1]));
 			}

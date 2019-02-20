@@ -53,8 +53,8 @@ public class _2123TheImprisonedGourmet extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203550)
-			{ // Munin
+			if (targetId == 203550) // Munin
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -72,8 +72,8 @@ public class _2123TheImprisonedGourmet extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 203550:
-				{ // Munin
+				case 203550: // Munin
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -123,16 +123,16 @@ public class _2123TheImprisonedGourmet extends QuestHandler
 					}
 					break;
 				}
-				case 700128:
-				{ // Methu Egg
+				case 700128: // Methu Egg
+				{
 					return true;
 				}
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203550)
-			{ // Munin
+			if (targetId == 203550) // Munin
+			{
 				return sendQuestEndDialog(env, qs.getQuestVarById(0) - 5);
 			}
 		}

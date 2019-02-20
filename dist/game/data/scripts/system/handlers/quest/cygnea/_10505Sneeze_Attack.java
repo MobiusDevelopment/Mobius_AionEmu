@@ -86,8 +86,8 @@ public class _10505Sneeze_Attack extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 804707)
-			{ // Averse.
+			if (targetId == 804707) // Averse.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -111,8 +111,8 @@ public class _10505Sneeze_Attack extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 804708)
-			{ // Erinos.
+			if (targetId == 804708) // Erinos.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -160,8 +160,8 @@ public class _10505Sneeze_Attack extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 702672)
-			{ // Torn Plan Page.
+			if (targetId == 702672) // Torn Plan Page.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -174,8 +174,8 @@ public class _10505Sneeze_Attack extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804707)
-			{ // Averse.
+			if (targetId == 804707) // Averse.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

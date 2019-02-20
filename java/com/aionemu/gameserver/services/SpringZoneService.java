@@ -56,7 +56,8 @@ public class SpringZoneService
 				obj.getKnownList().doOnAllPlayers(player ->
 				{
 					if ((MathUtil.isIn3dRange(obj, player, obj.getRange())) && (!player.getEffectController().hasAbnormalEffect(17560)))
-					{ // Bless Of Guardian Spring.
+					{
+						// Bless Of Guardian Spring.
 						SkillEngine.getInstance().getSkill(player, 17560, 1, player).useNoAnimationSkill();
 					}
 				});

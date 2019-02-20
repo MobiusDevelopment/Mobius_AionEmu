@@ -74,8 +74,8 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204053)
-			{ // Kvasir.
+			if (targetId == 204053) // Kvasir.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -88,8 +88,8 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 798367:
-				{ // Riikaard.
+				case 798367: // Riikaard.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -106,8 +106,8 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 					}
 					break;
 				}
-				case 798368:
-				{ // Herosir.
+				case 798368: // Herosir.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -124,8 +124,8 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 					}
 					break;
 				}
-				case 798369:
-				{ // Gellner.
+				case 798369: // Gellner.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -142,8 +142,8 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 					}
 					break;
 				}
-				case 798370:
-				{ // Natorp.
+				case 798370: // Natorp.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -160,8 +160,8 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 					}
 					break;
 				}
-				case 798371:
-				{ // Needham.
+				case 798371: // Needham.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -178,8 +178,8 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 					}
 					break;
 				}
-				case 798372:
-				{ // Landsberg.
+				case 798372: // Landsberg.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -196,8 +196,8 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 					}
 					break;
 				}
-				case 798373:
-				{ // Levinard.
+				case 798373: // Levinard.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -214,8 +214,8 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 					}
 					break;
 				}
-				case 798374:
-				{ // Lonergan.
+				case 798374: // Lonergan.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -232,8 +232,8 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 					}
 					break;
 				}
-				case 204075:
-				{ // Balder.
+				case 204075: // Balder.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -263,8 +263,8 @@ public class _4938Work_Of_The_Fenris_Fangs extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204053)
-			{ // Kvasir.
+			if (targetId == 204053) // Kvasir.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

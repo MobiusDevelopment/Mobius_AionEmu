@@ -59,8 +59,8 @@ public class _80315The_Reason_Why_The_Hero_Of_Guardians_Shines extends QuestHand
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 831423)
-			{ // Celta.
+			if (targetId == 831423) // Celta.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _80315The_Reason_Why_The_Hero_Of_Guardians_Shines extends QuestHand
 		{
 			switch (targetId)
 			{
-				case 831423:
-				{ // Celta.
+				case 831423: // Celta.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _80315The_Reason_Why_The_Hero_Of_Guardians_Shines extends QuestHand
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 831423)
-			{ // Celta.
+			if (targetId == 831423) // Celta.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

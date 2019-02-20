@@ -38,8 +38,8 @@ public class LightbinderAI2 extends AggressiveNpcAI2
 		if (creature instanceof Player)
 		{
 			final Player player = (Player) creature;
-			if (!creature.getEffectController().hasAbnormalEffect(20664))
-			{ // Conqueror's Passion.
+			if (!creature.getEffectController().hasAbnormalEffect(20664)) // Conqueror's Passion.
+			{
 				if (player.getCommonData().getRace() == Race.ELYOS)
 				{
 					SkillEngine.getInstance().getSkill(getOwner(), 20664, 1, creature).useNoAnimationSkill(); // Conqueror's Passion.

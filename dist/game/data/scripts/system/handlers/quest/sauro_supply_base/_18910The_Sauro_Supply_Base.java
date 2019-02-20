@@ -59,8 +59,8 @@ public class _18910The_Sauro_Supply_Base extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 801945)
-			{ // Kanix.
+			if (targetId == 801945) // Kanix.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _18910The_Sauro_Supply_Base extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 801945:
-				{ // Kanix.
+				case 801945: // Kanix.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _18910The_Sauro_Supply_Base extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801945)
-			{ // Kanix.
+			if (targetId == 801945) // Kanix.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

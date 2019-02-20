@@ -57,8 +57,8 @@ public class JianaAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if (dialogId == 10000)
-		{ // Yes please! I lost mine.
+		if (dialogId == 10000) // Yes please! I lost mine.
+		{
 			switch (getNpcId())
 			{
 				case 799445: // Jiana.

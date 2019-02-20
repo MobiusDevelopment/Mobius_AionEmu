@@ -105,8 +105,8 @@ public class _14031A_Hyper_vention extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203700)
-			{ // Fasimedes.
+			if (targetId == 203700) // Fasimedes.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}
@@ -114,8 +114,8 @@ public class _14031A_Hyper_vention extends QuestHandler
 		{
 			return false;
 		}
-		if (targetId == 203700)
-		{ // Fasimedes.
+		if (targetId == 203700) // Fasimedes.
+		{
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
@@ -128,8 +128,8 @@ public class _14031A_Hyper_vention extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 801216)
-		{ // Iostes.
+		else if (targetId == 801216) // Iostes.
+		{
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
@@ -145,8 +145,8 @@ public class _14031A_Hyper_vention extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 790001)
-		{ // Pernos.
+		else if (targetId == 790001) // Pernos.
+		{
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
@@ -163,8 +163,8 @@ public class _14031A_Hyper_vention extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 203183)
-		{ // Khidia.
+		else if (targetId == 203183) // Khidia.
+		{
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
@@ -181,8 +181,8 @@ public class _14031A_Hyper_vention extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 203989)
-		{ // Tumblusen.
+		else if (targetId == 203989) // Tumblusen.
+		{
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
@@ -255,8 +255,8 @@ public class _14031A_Hyper_vention extends QuestHandler
 		}
 		final int targetId = env.getTargetId();
 		final int var = qs.getQuestVarById(0);
-		if (targetId == 233878)
-		{ // Captain Tarbana.
+		if (targetId == 233878) // Captain Tarbana.
+		{
 			if (var == 9)
 			{
 				qs.setQuestVarById(0, var + 1);
@@ -279,8 +279,8 @@ public class _14031A_Hyper_vention extends QuestHandler
 			return HandlerResult.UNKNOWN;
 		}
 		final int var = qs.getQuestVarById(0);
-		if ((var == 3) && (id == 182215388))
-		{ // Poeta Ide Detection Device.
+		if ((var == 3) && (id == 182215388)) // Poeta Ide Detection Device.
+		{
 			if (!player.isInsideZone(ZoneName.get("LF1_USE_ITEM_AREA_Q14031")))
 			{
 				return HandlerResult.UNKNOWN;
@@ -300,8 +300,8 @@ public class _14031A_Hyper_vention extends QuestHandler
 			}, 3000);
 			return HandlerResult.SUCCESS;
 		}
-		else if ((var == 5) && (id == 182215389))
-		{ // Verteron Ide Detection Device.
+		else if ((var == 5) && (id == 182215389)) // Verteron Ide Detection Device.
+		{
 			if (!player.isInsideZone(ZoneName.get("LF1A_USE_ITEM_AREA_Q14031")))
 			{
 				return HandlerResult.UNKNOWN;
@@ -321,8 +321,8 @@ public class _14031A_Hyper_vention extends QuestHandler
 			}, 3000);
 			return HandlerResult.SUCCESS;
 		}
-		else if ((var == 7) && (id == 182215390))
-		{ // Eltnen Ide Detection Device.
+		else if ((var == 7) && (id == 182215390)) // Eltnen Ide Detection Device.
+		{
 			if (!player.isInsideZone(ZoneName.get("LF2_USE_ITEM_AREA_Q14031")))
 			{
 				return HandlerResult.UNKNOWN;

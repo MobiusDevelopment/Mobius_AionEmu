@@ -80,8 +80,8 @@ public class _2042The_Last_Checkpoint extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204301:
-				{ // Aegir.
+				case 204301: // Aegir.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -102,8 +102,8 @@ public class _2042The_Last_Checkpoint extends QuestHandler
 					}
 					break;
 				}
-				case 204319:
-				{ // Yornduf.
+				case 204319: // Yornduf.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -162,8 +162,8 @@ public class _2042The_Last_Checkpoint extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204301)
-			{ // Aegir.
+			if (targetId == 204301) // Aegir.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

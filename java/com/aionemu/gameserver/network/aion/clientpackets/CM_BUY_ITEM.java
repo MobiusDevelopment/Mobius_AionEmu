@@ -166,8 +166,8 @@ public class CM_BUY_ITEM extends AionClientPacket
 						(npc.getObjectTemplate().getTitleId() == 370408) || // Ancien Icon Custodian.
 						(npc.getObjectTemplate().getTitleId() == 370409) || // Ancien Seal Custodian.
 						(npc.getObjectTemplate().getTitleId() == 370410) || // Ancien Goblet Custodian.
-						(npc.getObjectTemplate().getTitleId() == 370411))
-					{ // Ancien Crown Custodian.
+						(npc.getObjectTemplate().getTitleId() == 370411)) // Ancien Crown Custodian.
+					{
 						TradeService.performSellForAPToShop(player, tradeList, purchaseTemplate);
 					}
 					// Sell To Shop [Purchase List Kinah 4.3]
@@ -222,8 +222,8 @@ public class CM_BUY_ITEM extends AionClientPacket
 				}
 			}
 		}
-		if (tradeActionId == 18)
-		{ // Inventory Shop
+		if (tradeActionId == 18) // Inventory Shop
+		{
 			TradeService.performSellToShop(player, tradeList);
 		}
 	}

@@ -151,13 +151,13 @@ public class PvPArenaInstance extends GeneralInstanceHandler
 		updatePoints(npc);
 		final int npcId = npc.getNpcId();
 		if ((npcId == 701173) || // Blessed Relics.
-			(npcId == 701187))
-		{ // Blessed Relics.
+			(npcId == 701187)) // Blessed Relics.
+		{
 			spawnBlessedRelics(30000);
 		}
 		if ((npcId == 701174) || // Cursed Relics.
-			(npcId == 701188))
-		{ // Cursed Relics.
+			(npcId == 701188)) // Cursed Relics.
+		{
 			spawnCursedRelics(30000);
 		}
 	}

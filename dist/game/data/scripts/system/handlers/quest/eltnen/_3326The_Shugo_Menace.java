@@ -59,8 +59,8 @@ public class _3326The_Shugo_Menace extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || (qs.getStatus() == QuestStatus.COMPLETE))
 		{
-			if (targetId == 798053)
-			{ // Gyabrunerk.
+			if (targetId == 798053) // Gyabrunerk.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4);
@@ -74,8 +74,8 @@ public class _3326The_Shugo_Menace extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 798053)
-			{ // Gyabrunerk.
+			if (targetId == 798053) // Gyabrunerk.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -98,8 +98,8 @@ public class _3326The_Shugo_Menace extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798053)
-			{ // Gyabrunerk.
+			if (targetId == 798053) // Gyabrunerk.
+			{
 				if (env.getDialog() == QuestDialog.SELECT_REWARD)
 				{
 					return sendQuestDialog(env, 5);
@@ -131,8 +131,8 @@ public class _3326The_Shugo_Menace extends QuestHandler
 			(targetId == 210873) || // Dune Ampha.
 			(targetId == 210900) || // Dune Ampha.
 			(targetId == 210919) || // Wasteland Ampha.
-			(targetId == 211754))
-		{ // Rotting Gnarl.
+			(targetId == 211754)) // Rotting Gnarl.
+		{
 			if ((var >= 0) && (var < 20))
 			{
 				qs.setQuestVarById(0, var + 1);

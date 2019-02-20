@@ -585,8 +585,8 @@ public class DialogService
 				LegionService.getInstance().recreateLegion(npc, player);
 				break;
 			}
-			case 26:
-			{ // 4.3-4.7-4.8-4.9
+			case 26: // 4.3-4.7-4.8-4.9
+			{
 				// Warehouse.
 				switch (titleId)
 				{
@@ -701,8 +701,8 @@ public class DialogService
 				}
 				break;
 			}
-			case 31:
-			{ // 4.3
+			case 31: // 4.3
+			{
 				// Quest.
 				if (questId != 0)
 				{
@@ -729,8 +729,8 @@ public class DialogService
 				}
 				break;
 			}
-			case 33:
-			{ // 4.3
+			case 33: // 4.3
+			{
 				// Trade Broker.
 				final int level = player.getLevel();
 				if (level < 10)
@@ -755,8 +755,8 @@ public class DialogService
 				}
 				break;
 			}
-			case 35:
-			{ // 4.3
+			case 35: // 4.3
+			{
 				// Soul Healing.
 				final long expLost = player.getCommonData().getExpRecoverable();
 				if (expLost == 0)
@@ -805,8 +805,8 @@ public class DialogService
 				}
 				break;
 			}
-			case 36:
-			{ // 4.3
+			case 36: // 4.3
+			{
 				// Arena City Teleporter.
 				final int level = player.getLevel();
 				switch (npc.getNpcId())
@@ -890,8 +890,8 @@ public class DialogService
 					}
 				}
 			}
-			case 37:
-			{ // 4.3
+			case 37: // 4.3
+			{
 				// Arena City Teleporter.
 				switch (npc.getNpcId())
 				{
@@ -913,20 +913,20 @@ public class DialogService
 				}
 				break;
 			}
-			case 42:
-			{ // 4.3
+			case 42: // 4.3
+			{
 				// Remove Mana Stone.
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 20));
 				break;
 			}
-			case 43:
-			{ // 4.3
+			case 43: // 4.3
+			{
 				// Modify Appearance.
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 19));
 				break;
 			}
-			case 44:
-			{ // 4.3
+			case 44: // 4.3
+			{
 				// Flight And Teleport.
 				if (CustomConfig.ENABLE_SIMPLE_2NDCLASS)
 				{
@@ -1106,8 +1106,8 @@ public class DialogService
 				break;
 			}
 			case 45: // 4.3
-			case 46:
-			{ // 4.3
+			case 46: // 4.3
+			{
 				// Learn Craft.
 				// Improve Extraction.
 				final int level = player.getLevel();
@@ -1119,20 +1119,20 @@ public class DialogService
 				CraftSkillUpdateService.getInstance().learnSkill(player, npc);
 				break;
 			}
-			case 47:
-			{ // 4.3
+			case 47: // 4.3
+			{
 				// Expand Cube.
 				CubeExpandService.expandCube(player, npc);
 				break;
 			}
-			case 48:
-			{ // 4.3
+			case 48: // 4.3
+			{
 				// Expand Warehouse.
 				WarehouseService.expandWarehouse(player, npc);
 				break;
 			}
-			case 53:
-			{ // 4.3
+			case 53: // 4.3
+			{
 				// Legion Warehouse.
 				final int level = player.getLevel();
 				if (level < 10)
@@ -1165,26 +1165,26 @@ public class DialogService
 				}
 				break;
 			}
-			case 56:
-			{ // 4.3
+			case 56: // 4.3
+			{
 				// Close Legion Warehouse.
 				break;
 			}
-			case 58:
-			{ // 4.3
+			case 58: // 4.3
+			{
 				// Work Order.
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 28));
 				break;
 			}
-			case 59:
-			{ // 4.3
+			case 59: // 4.3
+			{
 				// Coin's Reward.
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 3));
 				break;
 			}
 			case 61: // 4.3
-			case 62:
-			{ // 4.3
+			case 62: // 4.3
+			{
 				byte changesex = 0;
 				byte check_ticket = 2;
 				if (dialogId == 62)
@@ -1196,8 +1196,8 @@ public class DialogService
 						(player.getInventory().getItemCountByItemId(169660002) > 0) || // Gender Switch Ticket (60 min)
 						(player.getInventory().getItemCountByItemId(169660003) > 0) || // [Event] Gender Switch Ticket
 						(player.getInventory().getItemCountByItemId(169660004) > 0) || // [Event] Gender Switch Ticket
-						(player.getInventory().getItemCountByItemId(169660005) > 0))
-					{ // Gender Switch Ticket
+						(player.getInventory().getItemCountByItemId(169660005) > 0)) // Gender Switch Ticket
+					{
 						check_ticket = 1;
 					}
 				}
@@ -1216,8 +1216,8 @@ public class DialogService
 						(player.getInventory().getItemCountByItemId(169650009) > 0) || // Plastic Surgery Ticket
 						(player.getInventory().getItemCountByItemId(169650010) > 0) || // Plastic Surgery Ticket (60 mins)
 						(player.getInventory().getItemCountByItemId(169650011) > 0) || // [Stamp] Plastic Surgery Ticket
-						(player.getInventory().getItemCountByItemId(169691000) > 0))
-					{ // Plastic Surgery Ticket
+						(player.getInventory().getItemCountByItemId(169691000) > 0)) // Plastic Surgery Ticket
+					{
 						check_ticket = 1;
 					}
 				}
@@ -1225,32 +1225,32 @@ public class DialogService
 				player.setEditMode(true);
 				break;
 			}
-			case 66:
-			{ // 4.3
+			case 66: // 4.3
+			{
 				// Armsfusion.
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 29));
 				break;
 			}
-			case 67:
-			{ // 4.3
+			case 67: // 4.3
+			{
 				// Armsbreaking.
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 30));
 				break;
 			}
-			case 68:
-			{ // 4.3
+			case 68: // 4.3
+			{
 				// Join Faction.
 				player.getNpcFactions().enterGuild(npc);
 				break;
 			}
-			case 69:
-			{ // 4.3
+			case 69: // 4.3
+			{
 				// Leave Faction.
 				player.getNpcFactions().leaveNpcFaction(npc);
 				break;
 			}
-			case 70:
-			{ // 4.3
+			case 70: // 4.3
+			{
 				// Repurchase.
 				if (player.isInPlayerMode(PlayerMode.RIDE))
 				{
@@ -1260,44 +1260,44 @@ public class DialogService
 				PacketSendUtility.sendPacket(player, new SM_REPURCHASE(player, npc.getObjectId()));
 				break;
 			}
-			case 71:
-			{ // 4.3
+			case 71: // 4.3
+			{
 				// Adopt Pet.
 				PacketSendUtility.sendPacket(player, new SM_PET(6));
 				break;
 			}
-			case 72:
-			{ // 4.3
+			case 72: // 4.3
+			{
 				// Surrender Pet.
 				PacketSendUtility.sendPacket(player, new SM_PET(7));
 				break;
 			}
-			case 73:
-			{ // 4.3
+			case 73: // 4.3
+			{
 				// Housing Build 3.0
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 32));
 				break;
 			}
-			case 74:
-			{ // 4.3
+			case 74: // 4.3
+			{
 				// Housing Destruct 3.0
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 33));
 				break;
 			}
-			case 75:
-			{ // 4.3
+			case 75: // 4.3
+			{
 				// Deep Conditioning Individual Item 2.7
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 35));
 				break;
 			}
-			case 76:
-			{ // 4.3
+			case 76: // 4.3
+			{
 				// Deep Conditioning All Item 2.7
 				ItemChargeService.startChargingEquippedItems(player, targetObjectId, 1);
 				break;
 			}
-			case 78:
-			{ // 4.3
+			case 78: // 4.3
+			{
 				// News Mod Buy/Exchange 2.7
 				final TradeListTemplate tradeListTemplate = DataManager.TRADE_LIST_DATA.getTradeInListTemplate(npc.getNpcId());
 				if (tradeListTemplate == null)
@@ -1313,20 +1313,20 @@ public class DialogService
 				PacketSendUtility.sendPacket(player, new SM_TRADE_IN_LIST(npc, tradeListTemplate, 100));
 				break;
 			}
-			case 79:
-			{ // 4.3
+			case 79: // 4.3
+			{
 				RelinquishCraftStatus.getInstance();
 				RelinquishCraftStatus.relinquishExpertStatus(player, npc);
 				break;
 			}
-			case 80:
-			{ // 4.3
+			case 80: // 4.3
+			{
 				RelinquishCraftStatus.getInstance();
 				RelinquishCraftStatus.relinquishMasterStatus(player, npc);
 				break;
 			}
-			case 84:
-			{ // 4.3
+			case 84: // 4.3
+			{
 				// Sell & Buy House 3.0
 				if ((player.getBuildingOwnerStates() & PlayerHouseOwnerFlags.BIDDING_ALLOWED.getId()) == 0)
 				{
@@ -1343,44 +1343,44 @@ public class DialogService
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 38));
 				break;
 			}
-			case 92:
-			{ // 4.3
+			case 92: // 4.3
+			{
 				// Pet's 3.0 (Great Sidekick)
 				PacketSendUtility.sendPacket(player, new SM_PET(16));
 				break;
 			}
-			case 93:
-			{ // 4.3
+			case 93: // 4.3
+			{
 				// Pet's 3.0 (Bannish Sidekick)
 				PacketSendUtility.sendPacket(player, new SM_PET(17));
 				break;
 			}
-			case 94:
-			{ // 4.3
+			case 94: // 4.3
+			{
 				// Augmenting Individual Item 3.0
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 42));
 				break;
 			}
-			case 95:
-			{ // 4.3
+			case 95: // 4.3
+			{
 				// Augmenting All Item 3.0
 				ItemChargeService.startChargingEquippedItems(player, targetObjectId, 2);
 				break;
 			}
-			case 96:
-			{ // 4.3
+			case 96: // 4.3
+			{
 				// Housing Studio 3.0
 				HousingService.getInstance().recreatePlayerStudio(player);
 				break;
 			}
-			case 100:
-			{ // 4.3
+			case 100: // 4.3
+			{
 				// Town 3.9
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 43));
 				break;
 			}
-			case 103:
-			{ // 4.3
+			case 103: // 4.3
+			{
 				// Purchase List 4.3
 				final int level = player.getLevel();
 				final TradeListTemplate tradeListTemplate = DataManager.TRADE_LIST_DATA.getPurchaseListTemplate(npc.getNpcId());
@@ -1410,25 +1410,25 @@ public class DialogService
 				PacketSendUtility.sendPacket(player, new SM_SELL_ITEM(targetObjectId, tradeListTemplate));
 				break;
 			}
-			case 106:
-			{ // 4.7
+			case 106: // 4.7
+			{
 				// Move Item Skin 4.7
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 51));
 				break;
 			}
-			case 107:
-			{ // 4.7
+			case 107: // 4.7
+			{
 				// Trade In Upgrade 4.7
 				break;
 			}
-			case 109:
-			{ // 4.7
+			case 109: // 4.7
+			{
 				// Item Upgrade 4.7
 				PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(targetObjectId, 52));
 				break;
 			}
-			case 125:
-			{ // 4.8
+			case 125: // 4.8
+			{
 				// Stigma Enchant 4.8
 				switch (titleId)
 				{

@@ -55,8 +55,8 @@ public enum XPLossEnum
 	
 	public static long getExpLoss(int level, long expNeed)
 	{
-		if (level < 11)
-		{ // 5.0
+		if (level < 11) // 5.0
+		{
 			return 0;
 		}
 		for (XPLossEnum xpLossEnum : values())

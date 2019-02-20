@@ -54,8 +54,8 @@ public class _21460AShulacksStory extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 799258)
-			{ // Denskel
+			if (targetId == 799258) // Denskel
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -68,8 +68,8 @@ public class _21460AShulacksStory extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 799502:
-				{ // Dorkin
+				case 799502: // Dorkin
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -86,8 +86,8 @@ public class _21460AShulacksStory extends QuestHandler
 					}
 					break;
 				}
-				case 799276:
-				{ // Chenkiki
+				case 799276: // Chenkiki
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -111,8 +111,8 @@ public class _21460AShulacksStory extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799276)
-			{ // Chenkiki
+			if (targetId == 799276) // Chenkiki
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

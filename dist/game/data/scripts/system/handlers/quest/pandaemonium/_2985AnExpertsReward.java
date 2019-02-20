@@ -53,8 +53,8 @@ public class _2985AnExpertsReward extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204052)
-			{ // Vidar
+			if (targetId == 204052) // Vidar
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -64,8 +64,8 @@ public class _2985AnExpertsReward extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 204072)
-			{ // Roskva
+			if (targetId == 204072) // Roskva
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -82,8 +82,8 @@ public class _2985AnExpertsReward extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204072)
-			{ // Roskva
+			if (targetId == 204072) // Roskva
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

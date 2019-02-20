@@ -133,8 +133,8 @@ public class _15322Scouting_Enshar extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805330)
-			{ // Potencia.
+			if (targetId == 805330) // Potencia.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

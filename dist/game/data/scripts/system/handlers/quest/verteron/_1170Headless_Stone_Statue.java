@@ -55,8 +55,8 @@ public class _1170Headless_Stone_Statue extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 730000)
-			{ // Headless Stone Statue.
+			if (targetId == 730000) // Headless Stone Statue.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -66,8 +66,8 @@ public class _1170Headless_Stone_Statue extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 700033)
-			{ // Head Of Stone Statue.
+			if (targetId == 700033) // Head Of Stone Statue.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return giveQuestItem(env, 182200504, 1);
@@ -76,8 +76,8 @@ public class _1170Headless_Stone_Statue extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 730000)
-			{ // Headless Stone Statue.
+			if (targetId == 730000) // Headless Stone Statue.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 1352);

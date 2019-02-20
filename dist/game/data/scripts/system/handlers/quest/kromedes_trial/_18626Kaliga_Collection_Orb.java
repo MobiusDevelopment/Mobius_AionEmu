@@ -55,8 +55,8 @@ public class _18626Kaliga_Collection_Orb extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(env.getQuestId());
 		final int targetId = env.getTargetId();
-		if (targetId == 730334)
-		{ // Kaliga's Orb Rack.
+		if (targetId == 730334) // Kaliga's Orb Rack.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 			{
 				return true;
@@ -75,8 +75,8 @@ public class _18626Kaliga_Collection_Orb extends QuestHandler
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (targetId == 730334)
-		{ // Kaliga's Orb Rack.
+		if (targetId == 730334) // Kaliga's Orb Rack.
+		{
 			final PlayerClass playerClass = player.getCommonData().getPlayerClass();
 			if (((playerClass == PlayerClass.MAGE) || (playerClass == PlayerClass.SPIRIT_MASTER) || (playerClass == PlayerClass.SORCERER)) && (player.getCommonData().getRace() == Race.ELYOS))
 			{

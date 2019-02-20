@@ -68,8 +68,8 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 	public boolean onEnterWorldEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		if (player.getWorldId() == 400010000)
-		{ // Reshanta.
+		if (player.getWorldId() == 400010000) // Reshanta.
+		{
 			final QuestState qs = player.getQuestStateList().getQuestState(questId);
 			if (qs == null)
 			{
@@ -100,8 +100,8 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 805351)
-			{ // Giscours.
+			if (targetId == 805351) // Giscours.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -118,8 +118,8 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 805352)
-			{ // Kirwan.
+			if (targetId == 805352) // Kirwan.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -143,8 +143,8 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 805353)
-			{ // Buard.
+			if (targetId == 805353) // Buard.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -161,8 +161,8 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 702830)
-			{ // Beritra Supply Unit Box.
+			if (targetId == 702830) // Beritra Supply Unit Box.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -179,8 +179,8 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 702831)
-			{ // Destroyed Gate Reinforcer.
+			if (targetId == 702831) // Destroyed Gate Reinforcer.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -197,8 +197,8 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 702832)
-			{ // Heavy Bomb Box.
+			if (targetId == 702832) // Heavy Bomb Box.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -215,8 +215,8 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 805354)
-			{ // Lagund.
+			if (targetId == 805354) // Lagund.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -242,8 +242,8 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 805355)
-			{ // Ferriere.
+			if (targetId == 805355) // Ferriere.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -264,8 +264,8 @@ public class _15400Aiding_General_Giscours extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805351)
-			{ // Giscours.
+			if (targetId == 805351) // Giscours.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

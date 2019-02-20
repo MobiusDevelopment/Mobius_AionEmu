@@ -105,8 +105,8 @@ public class _24031Enemy_At_The_Doorstep extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204052)
-			{ // Vidar.
+			if (targetId == 204052) // Vidar.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}
@@ -114,8 +114,8 @@ public class _24031Enemy_At_The_Doorstep extends QuestHandler
 		{
 			return false;
 		}
-		if (targetId == 204052)
-		{ // Vidar.
+		if (targetId == 204052) // Vidar.
+		{
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
@@ -128,8 +128,8 @@ public class _24031Enemy_At_The_Doorstep extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 801224)
-		{ // Rapidefire Rita.
+		else if (targetId == 801224) // Rapidefire Rita.
+		{
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
@@ -145,8 +145,8 @@ public class _24031Enemy_At_The_Doorstep extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 203550)
-		{ // Munin.
+		else if (targetId == 203550) // Munin.
+		{
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
@@ -163,8 +163,8 @@ public class _24031Enemy_At_The_Doorstep extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 203654)
-		{ // Aurtri.
+		else if (targetId == 203654) // Aurtri.
+		{
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
@@ -181,8 +181,8 @@ public class _24031Enemy_At_The_Doorstep extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 204369)
-		{ // Tyr.
+		else if (targetId == 204369) // Tyr.
+		{
 			switch (env.getDialog())
 			{
 				case START_DIALOG:
@@ -255,8 +255,8 @@ public class _24031Enemy_At_The_Doorstep extends QuestHandler
 		}
 		final int targetId = env.getTargetId();
 		final int var = qs.getQuestVarById(0);
-		if (targetId == 233879)
-		{ // Captain Hagarkan.
+		if (targetId == 233879) // Captain Hagarkan.
+		{
 			if (var == 9)
 			{
 				qs.setQuestVarById(0, var + 1);
@@ -279,8 +279,8 @@ public class _24031Enemy_At_The_Doorstep extends QuestHandler
 			return HandlerResult.UNKNOWN;
 		}
 		final int var = qs.getQuestVarById(0);
-		if ((var == 3) && (id == 182215394))
-		{ // Munin's Dimension Investigation Device.
+		if ((var == 3) && (id == 182215394)) // Munin's Dimension Investigation Device.
+		{
 			if (!player.isInsideZone(ZoneName.get("DF1_USE_ITEM_AREA_Q24031")))
 			{
 				return HandlerResult.UNKNOWN;
@@ -300,8 +300,8 @@ public class _24031Enemy_At_The_Doorstep extends QuestHandler
 			}, 3000);
 			return HandlerResult.SUCCESS;
 		}
-		else if ((var == 5) && (id == 182215395))
-		{ // Aurtri's Dimension Investigation Device.
+		else if ((var == 5) && (id == 182215395)) // Aurtri's Dimension Investigation Device.
+		{
 			if (!player.isInsideZone(ZoneName.get("DF1A_USE_ITEM_AREA_Q24031")))
 			{
 				return HandlerResult.UNKNOWN;
@@ -321,8 +321,8 @@ public class _24031Enemy_At_The_Doorstep extends QuestHandler
 			}, 3000);
 			return HandlerResult.SUCCESS;
 		}
-		else if ((var == 7) && (id == 182215396))
-		{ // Tyr's Dimension Investigation Device.
+		else if ((var == 7) && (id == 182215396)) // Tyr's Dimension Investigation Device.
+		{
 			if (!player.isInsideZone(ZoneName.get("DF2_USE_ITEM_AREA_Q24031")))
 			{
 				return HandlerResult.UNKNOWN;

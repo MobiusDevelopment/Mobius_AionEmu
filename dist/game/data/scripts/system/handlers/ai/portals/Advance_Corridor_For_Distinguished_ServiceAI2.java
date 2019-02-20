@@ -37,8 +37,8 @@ public class Advance_Corridor_For_Distinguished_ServiceAI2 extends GeneralNpcAI2
 		switch (getNpcId())
 		{
 			case 730967: // Advance Corridor For Distinguished Service.
-			case 730968:
-			{ // Advance Corridor For Distinguished Service.
+			case 730968: // Advance Corridor For Distinguished Service.
+			{
 				super.handleDialogStart(player);
 				break;
 			}

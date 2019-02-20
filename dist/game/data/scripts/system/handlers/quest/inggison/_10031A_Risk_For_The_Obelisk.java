@@ -346,8 +346,8 @@ public class _10031A_Risk_For_The_Obelisk extends QuestHandler
 			{
 				if ((var1 + var2) < 11)
 				{
-					if (targetId == 215508)
-					{ // Armored Spaller.
+					if (targetId == 215508) // Armored Spaller.
+					{
 						if (var2 < 2)
 						{
 							return defaultOnKillEvent(env, armoredSpaller, var2, var2 + 1, 2);

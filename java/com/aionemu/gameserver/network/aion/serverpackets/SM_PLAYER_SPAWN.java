@@ -127,8 +127,8 @@ public class SM_PLAYER_SPAWN extends AionServerPacket
 		// [Lucky] Ophidan Bridge & [Lucky] Danuar Reliquary 4.5
 		else if (((player.getWorldId() == 301320000) || (player.getWorldId() == 301330000) || (// Shugo Emperor's Vault 4.7.5 & Emperor Trillirunerk's Safe 4.9.1
 		player.getWorldId() == 301400000) || (player.getWorldId() == 301590000) || (// Hidden Munition Factory & Contaminated Underground Passage 5.1
-		player.getWorldId() == 301630000) || (player.getWorldId() == 301640000) || (player.getWorldId() == 302000000)))
-		{ // Fire Temple Of Memories 5.1
+		player.getWorldId() == 301630000) || (player.getWorldId() == 301640000) || (player.getWorldId() == 302000000))) // Fire Temple Of Memories 5.1
+		{
 			writeD(14);
 			instanceBuff = new InstanceBuff(14);
 			instanceBuff.applyPledge(player, 14);

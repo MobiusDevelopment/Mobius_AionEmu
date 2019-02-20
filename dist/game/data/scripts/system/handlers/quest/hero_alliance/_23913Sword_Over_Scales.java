@@ -55,8 +55,8 @@ public class _23913Sword_Over_Scales extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798719)
-			{ // Eldran.
+			if (targetId == 798719) // Eldran.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}
@@ -70,8 +70,8 @@ public class _23913Sword_Over_Scales extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			if (env.getTargetId() == 277224)
-			{ // Ahserion.
+			if (env.getTargetId() == 277224) // Ahserion.
+			{
 				qs.setStatus(QuestStatus.REWARD);
 				updateQuestStatus(env);
 				return true;

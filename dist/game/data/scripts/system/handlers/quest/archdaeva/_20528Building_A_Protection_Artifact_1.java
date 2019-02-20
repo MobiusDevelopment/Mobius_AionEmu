@@ -103,8 +103,8 @@ public class _20528Building_A_Protection_Artifact_1 extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -137,8 +137,8 @@ public class _20528Building_A_Protection_Artifact_1 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806296)
-			{ // 데자보보.
+			if (targetId == 806296) // 데자보보.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -157,8 +157,8 @@ public class _20528Building_A_Protection_Artifact_1 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703324)
-			{ // 바르테온의 보물 상자.
+			if (targetId == 703324) // 바르테온의 보물 상자.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -174,8 +174,8 @@ public class _20528Building_A_Protection_Artifact_1 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731714)
-			{ // 감춰진 하늘섬 이동석.
+			if (targetId == 731714) // 감춰진 하늘섬 이동석.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -226,8 +226,8 @@ public class _20528Building_A_Protection_Artifact_1 extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -262,15 +262,15 @@ public class _20528Building_A_Protection_Artifact_1 extends QuestHandler
 				}; // 스피리투스의 새끼.
 				switch (targetId)
 				{
-					case 244125:
-					{ // 바르탈 해적 일꾼.
+					case 244125: // 바르탈 해적 일꾼.
+					{
 						return defaultOnKillEvent(env, DF6MissionGriffon73An, 0, 10, 1);
 					}
 				}
 				switch (targetId)
 				{
-					case 244126:
-					{ // 탐욕스런 퓨케.
+					case 244126: // 탐욕스런 퓨케.
+					{
 						qs.setQuestVar(5);
 						updateQuestStatus(env);
 						return true;

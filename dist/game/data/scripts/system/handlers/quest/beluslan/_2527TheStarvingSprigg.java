@@ -53,8 +53,8 @@ public class _2527TheStarvingSprigg extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (qs == null)
 		{
-			if (targetId == 204811)
-			{ // Gark
+			if (targetId == 204811) // Gark
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -64,8 +64,8 @@ public class _2527TheStarvingSprigg extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 204811)
-			{ // Gark
+			if (targetId == 204811) // Gark
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2375);
@@ -75,8 +75,8 @@ public class _2527TheStarvingSprigg extends QuestHandler
 					return checkQuestItems(env, 0, 0, true, 5, 2716); // reward
 				}
 			}
-			else if (targetId == 700328)
-			{ // Food Pouche
+			else if (targetId == 700328) // Food Pouche
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return true; // loot
@@ -85,8 +85,8 @@ public class _2527TheStarvingSprigg extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204811)
-			{ // Gark
+			if (targetId == 204811) // Gark
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

@@ -39,8 +39,8 @@ public class Goldenspark_ApparatusAI2 extends ActionItemNpcAI2
 		final WorldPosition worldPosition = player.getPosition();
 		if (worldPosition.isInstanceMap())
 		{
-			if (worldPosition.getMapId() == 301640000)
-			{ // Secret Munitions Factory.
+			if (worldPosition.getMapId() == 301640000) // Secret Munitions Factory.
+			{
 				final WorldMapInstance worldMapInstance = worldPosition.getWorldMapInstance();
 				killNpc(worldMapInstance.getNpcs(243662)); // Golden Living Bomb.
 			}

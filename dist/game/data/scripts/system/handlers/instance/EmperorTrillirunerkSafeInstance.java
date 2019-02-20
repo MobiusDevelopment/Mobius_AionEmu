@@ -384,8 +384,8 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 		{
 			return (int) (60000 - result);
 		}
-		else if (result < 600000)
-		{ // 10 Minutes.
+		else if (result < 600000) // 10 Minutes.
+		{
 			return (int) (600000 - (result - 60000));
 		}
 		return 0;
@@ -405,28 +405,28 @@ public class EmperorTrillirunerkSafeInstance extends GeneralInstanceHandler
 	
 	private int checkRank(int totalPoints)
 	{
-		if (totalPoints > 878600)
-		{ // Rank S.
+		if (totalPoints > 878600) // Rank S.
+		{
 			rank = 1;
 		}
-		else if (totalPoints > 463800)
-		{ // Rank A.
+		else if (totalPoints > 463800) // Rank A.
+		{
 			rank = 2;
 		}
-		else if (totalPoints > 165100)
-		{ // Rank B.
+		else if (totalPoints > 165100) // Rank B.
+		{
 			rank = 3;
 		}
-		else if (totalPoints > 54000)
-		{ // Rank C.
+		else if (totalPoints > 54000) // Rank C.
+		{
 			rank = 4;
 		}
-		else if (totalPoints > 180)
-		{ // Rank D.
+		else if (totalPoints > 180) // Rank D.
+		{
 			rank = 5;
 		}
-		else if (totalPoints >= 0)
-		{ // Rank F.
+		else if (totalPoints >= 0) // Rank F.
+		{
 			rank = 8;
 		}
 		else

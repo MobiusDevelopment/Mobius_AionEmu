@@ -60,8 +60,8 @@ public class _25550A_Norsvold_Story extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806116)
-			{ // Reinhard.
+			if (targetId == 806116) // Reinhard.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -77,8 +77,8 @@ public class _25550A_Norsvold_Story extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 806115:
-				{ // Svanhild.
+				case 806115: // Svanhild.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -94,8 +94,8 @@ public class _25550A_Norsvold_Story extends QuestHandler
 						}
 					}
 				}
-				case 806135:
-				{ // Conrto.
+				case 806135: // Conrto.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -111,8 +111,8 @@ public class _25550A_Norsvold_Story extends QuestHandler
 						}
 					}
 				}
-				case 806101:
-				{ // Vadorei.
+				case 806101: // Vadorei.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -132,8 +132,8 @@ public class _25550A_Norsvold_Story extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806101)
-			{ // Vadorei.
+			if (targetId == 806101) // Vadorei.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

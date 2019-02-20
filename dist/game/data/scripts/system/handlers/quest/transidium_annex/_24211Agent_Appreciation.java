@@ -55,8 +55,8 @@ public class _24211Agent_Appreciation extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 804750)
-			{ // Pasha.
+			if (targetId == 804750) // Pasha.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -75,8 +75,8 @@ public class _24211Agent_Appreciation extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 804750:
-				{ // Pasha.
+				case 804750: // Pasha.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -94,8 +94,8 @@ public class _24211Agent_Appreciation extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804750)
-			{ // Pasha.
+			if (targetId == 804750) // Pasha.
+			{
 				final Npc npc = (Npc) env.getVisibleObject();
 				npc.getController().onDelete();
 				return sendQuestEndDialog(env);
@@ -115,8 +115,8 @@ public class _24211Agent_Appreciation extends QuestHandler
 			if (var == 0)
 			{
 				final int targetId = env.getTargetId();
-				if (targetId == 277224)
-				{ // Ahserion.
+				if (targetId == 277224) // Ahserion.
+				{
 					final Npc npc = (Npc) env.getVisibleObject();
 					QuestService.addNewSpawn(400030000, player.getInstanceId(), 804750, npc.getX(), npc.getY(), npc.getZ(), (byte) 0); // Pasha.
 					return defaultOnKillEvent(env, 277224, 1, true); // Ahserion.

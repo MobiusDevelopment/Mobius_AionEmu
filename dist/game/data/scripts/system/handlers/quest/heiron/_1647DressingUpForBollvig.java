@@ -54,8 +54,8 @@ public class _1647DressingUpForBollvig extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 790019)
-			{ // Zetus
+			if (targetId == 790019) // Zetus
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -71,8 +71,8 @@ public class _1647DressingUpForBollvig extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 700272)
-			{ // Suspicious Stone Statue
+			if (targetId == 700272) // Suspicious Stone Statue
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					// Wearing Stenon Blouse and Stenon Skirt
@@ -90,8 +90,8 @@ public class _1647DressingUpForBollvig extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 790019)
-			{ // Zetus
+			if (targetId == 790019) // Zetus
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:

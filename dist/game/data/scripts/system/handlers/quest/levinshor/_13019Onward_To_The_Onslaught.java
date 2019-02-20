@@ -59,8 +59,8 @@ public class _13019Onward_To_The_Onslaught extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 804598)
-			{ // Floric.
+			if (targetId == 804598) // Floric.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _13019Onward_To_The_Onslaught extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 804598:
-				{ // Floric.
+				case 804598: // Floric.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _13019Onward_To_The_Onslaught extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804598)
-			{ // Floric.
+			if (targetId == 804598) // Floric.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

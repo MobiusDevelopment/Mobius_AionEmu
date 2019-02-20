@@ -73,8 +73,8 @@ public class _28953Essence_Of_Darkness extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 702769)
-		{ // Ominous Darkness.
+		else if (targetId == 702769) // Ominous Darkness.
+		{
 			if (dialog == QuestDialog.USE_OBJECT)
 			{
 				closeDialogWindow(env);

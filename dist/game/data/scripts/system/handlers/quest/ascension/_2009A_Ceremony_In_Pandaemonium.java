@@ -317,8 +317,8 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 					}
 				}
 			}
-			else if ((targetId == 801220) && (var == 50))
-			{ // Mezaina.
+			else if ((targetId == 801220) && (var == 50)) // Mezaina.
+			{
 				switch (env.getDialogId())
 				{
 					case -1:
@@ -347,8 +347,8 @@ public class _2009A_Ceremony_In_Pandaemonium extends QuestHandler
 					}
 				}
 			}
-			else if ((targetId == 801221) && (var == 60))
-			{ // Machi.
+			else if ((targetId == 801221) && (var == 60)) // Machi.
+			{
 				switch (env.getDialogId())
 				{
 					case -1:

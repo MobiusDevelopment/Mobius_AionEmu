@@ -54,8 +54,8 @@ public class _27500Relics_At_Idgel_Dome_Landmark extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806264)
-			{ // 일마리넨.
+			if (targetId == 806264) // 일마리넨.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -80,8 +80,8 @@ public class _27500Relics_At_Idgel_Dome_Landmark extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806265)
-			{ // 자이크세네.
+			if (targetId == 806265) // 자이크세네.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -98,8 +98,8 @@ public class _27500Relics_At_Idgel_Dome_Landmark extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806264)
-			{ // 일마리넨.
+			if (targetId == 806264) // 일마리넨.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

@@ -163,8 +163,8 @@ public class PlayerGameStats extends CreatureGameStats<Player>
 		final int casterClass = owner.getPlayerClass().getClassId();
 		if ((casterClass == 7) || // Sorcerer.
 			(casterClass == 8) || // Spirit-Master.
-			(casterClass == 16))
-		{ // Songweaver.
+			(casterClass == 16)) // Songweaver.
+		{
 			base = 800;
 		}
 		return getStat(StatEnum.BOOST_CASTING_TIME, base);

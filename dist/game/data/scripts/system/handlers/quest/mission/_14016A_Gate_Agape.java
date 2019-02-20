@@ -148,8 +148,8 @@ public class _14016A_Gate_Agape extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203098)
-			{ // Spatalos.
+			if (targetId == 203098) // Spatalos.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 5);

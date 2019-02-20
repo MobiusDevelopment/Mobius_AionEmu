@@ -83,8 +83,8 @@ public class _30752Dredgion_Control_Infiltration extends QuestHandler
 		final int var = qs.getQuestVarById(0);
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 730702)
-			{ // Model Terath Dredgion.
+			if (targetId == 730702) // Model Terath Dredgion.
+			{
 				switch (dialog)
 				{
 					case USE_OBJECT:

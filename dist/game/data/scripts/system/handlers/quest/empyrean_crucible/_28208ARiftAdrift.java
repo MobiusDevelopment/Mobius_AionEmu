@@ -55,8 +55,8 @@ public class _28208ARiftAdrift extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 205320)
-			{ // Inggness
+			if (targetId == 205320) // Inggness
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -66,8 +66,8 @@ public class _28208ARiftAdrift extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 205321)
-			{ // Anja
+			if (targetId == 205321) // Anja
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

@@ -59,8 +59,8 @@ public class _25590Collating_The_Reports extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 806114)
-			{ // Ilisia.
+			if (targetId == 806114) // Ilisia.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -76,8 +76,8 @@ public class _25590Collating_The_Reports extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 806228:
-				{ // Bastok.
+				case 806228: // Bastok.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -91,8 +91,8 @@ public class _25590Collating_The_Reports extends QuestHandler
 						}
 					}
 				}
-				case 806229:
-				{ // Duisys.
+				case 806229: // Duisys.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -106,8 +106,8 @@ public class _25590Collating_The_Reports extends QuestHandler
 						}
 					}
 				}
-				case 806230:
-				{ // Sieden.
+				case 806230: // Sieden.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -121,8 +121,8 @@ public class _25590Collating_The_Reports extends QuestHandler
 						}
 					}
 				}
-				case 806231:
-				{ // Norte.
+				case 806231: // Norte.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -142,8 +142,8 @@ public class _25590Collating_The_Reports extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806116)
-			{ // Reinhard.
+			if (targetId == 806116) // Reinhard.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

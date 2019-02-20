@@ -76,8 +76,8 @@ public class _14153A_Storm_Of_Vengeance extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.NONE)
 		{
-			if (targetId == 204504)
-			{ // Sofne
+			if (targetId == 204504) // Sofne
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);

@@ -71,8 +71,8 @@ public class _4937Recognition_Of_The_Preceptors extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204053)
-			{ // Kvasir.
+			if (targetId == 204053) // Kvasir.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -86,8 +86,8 @@ public class _4937Recognition_Of_The_Preceptors extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 204059:
-				{ // Freyr.
+				case 204059: // Freyr.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -101,8 +101,8 @@ public class _4937Recognition_Of_The_Preceptors extends QuestHandler
 					}
 					break;
 				}
-				case 204058:
-				{ // Sif.
+				case 204058: // Sif.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -119,8 +119,8 @@ public class _4937Recognition_Of_The_Preceptors extends QuestHandler
 					}
 					break;
 				}
-				case 204057:
-				{ // Sigyn.
+				case 204057: // Sigyn.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -137,8 +137,8 @@ public class _4937Recognition_Of_The_Preceptors extends QuestHandler
 					}
 					break;
 				}
-				case 204056:
-				{ // Traufnir.
+				case 204056: // Traufnir.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -155,8 +155,8 @@ public class _4937Recognition_Of_The_Preceptors extends QuestHandler
 					}
 					break;
 				}
-				case 801222:
-				{ // Hadubrant.
+				case 801222: // Hadubrant.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -173,8 +173,8 @@ public class _4937Recognition_Of_The_Preceptors extends QuestHandler
 					}
 					break;
 				}
-				case 801223:
-				{ // Brynhilde.
+				case 801223: // Brynhilde.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -191,8 +191,8 @@ public class _4937Recognition_Of_The_Preceptors extends QuestHandler
 					}
 					break;
 				}
-				case 204075:
-				{ // Balder.
+				case 204075: // Balder.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -216,8 +216,8 @@ public class _4937Recognition_Of_The_Preceptors extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204053)
-			{ // Kvasir.
+			if (targetId == 204053) // Kvasir.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

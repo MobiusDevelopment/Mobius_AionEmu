@@ -108,8 +108,8 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806134)
-			{ // Ador.
+			if (targetId == 806134) // Ador.
+			{
 				switch (env.getDialog())
 				{
 					// Welcome, [%username].
@@ -143,8 +143,8 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806075)
-			{ // Weatha.
+			if (targetId == 806075) // Weatha.
+			{
 				switch (env.getDialog())
 				{
 					// Arieluma and the Lady's blessings upon you, [%username].
@@ -177,8 +177,8 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703164)
-			{ // Tower Fragment
+			if (targetId == 703164) // Tower Fragment
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -198,8 +198,8 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731667)
-			{ // IDEternity_Q_FOBJ_Q10521_A
+			if (targetId == 731667) // IDEternity_Q_FOBJ_Q10521_A
+			{
 				switch (env.getDialog())
 				{
 					// Protector of Atreia
@@ -234,8 +234,8 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731668)
-			{ // IDEternity_Q_FOBJ_Q10521_B
+			if (targetId == 731668) // IDEternity_Q_FOBJ_Q10521_B
+			{
 				switch (env.getDialog())
 				{
 					// "Empyrean Lord's Proposal"
@@ -273,8 +273,8 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806136)
-			{ // IDEternity_Q_Leibo01_E
+			if (targetId == 806136) // IDEternity_Q_Leibo01_E
+			{
 				switch (env.getDialog())
 				{
 					// Go away. I'm busy, so don't bother me.
@@ -313,8 +313,8 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731669)
-			{ // IDEternity_Q_FOBJ_Q10521_C
+			if (targetId == 731669) // IDEternity_Q_FOBJ_Q10521_C
+			{
 				switch (env.getDialog())
 				{
 					// "Ancient Memory"
@@ -367,8 +367,8 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806137)
-			{ // IDEternity_Q_Leibo02_E
+			if (targetId == 806137) // IDEternity_Q_Leibo02_E
+			{
 				switch (env.getDialog())
 				{
 					// Oh! What!
@@ -407,8 +407,8 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703130)
-			{ // IDEternity_Q_FOBJ_Q10521_D.
+			if (targetId == 703130) // IDEternity_Q_FOBJ_Q10521_D.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -513,8 +513,8 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 			if (var == 13)
 			{
 				if ((env.getTargetId() == 857785) || // IDEternity_Q_HD_Fire_Li_M_N_65_An.
-					(env.getTargetId() == 857792))
-				{ // IDEternity_Q_HD_Fire_Li_F_N_65_An.
+					(env.getTargetId() == 857792)) // IDEternity_Q_HD_Fire_Li_F_N_65_An.
+				{
 					changeQuestStep(env, 13, 14, false);
 					return true;
 				}
@@ -528,8 +528,8 @@ public class _10521Memories_Of_Eternity extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (player.getWorldId() == 210100000)
-		{ // Iluma.
+		if (player.getWorldId() == 210100000) // Iluma.
+		{
 			if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 			{
 				final int var = qs.getQuestVars().getQuestVars();

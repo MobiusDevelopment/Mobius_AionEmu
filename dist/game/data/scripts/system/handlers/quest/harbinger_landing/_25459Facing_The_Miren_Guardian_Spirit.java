@@ -89,8 +89,8 @@ public class _25459Facing_The_Miren_Guardian_Spirit extends QuestHandler
 			if (var == 0)
 			{
 				final int targetId = env.getTargetId();
-				if (targetId == 884028)
-				{ // Spirit Of Miren.
+				if (targetId == 884028) // Spirit Of Miren.
+				{
 					return defaultOnKillEvent(env, 884028, 1, true); // Spirit Of Miren.
 				}
 			}

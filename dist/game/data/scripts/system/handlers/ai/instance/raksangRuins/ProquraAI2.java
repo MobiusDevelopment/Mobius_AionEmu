@@ -39,8 +39,8 @@ public class ProquraAI2 extends GeneralNpcAI2
 		{
 			case 206395: // Proqura A.
 			case 206396: // Proqura B.
-			case 206397:
-			{ // Proqura C.
+			case 206397: // Proqura C.
+			{
 				super.handleDialogStart(player);
 				break;
 			}

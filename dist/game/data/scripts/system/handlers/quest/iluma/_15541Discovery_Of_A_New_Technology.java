@@ -58,8 +58,8 @@ public class _15541Discovery_Of_A_New_Technology extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 834136)
-			{ // 칼리오.
+			if (targetId == 834136) // 칼리오.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -80,8 +80,8 @@ public class _15541Discovery_Of_A_New_Technology extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 834136)
-			{ // 펠렌.
+			if (targetId == 834136) // 펠렌.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -107,8 +107,8 @@ public class _15541Discovery_Of_A_New_Technology extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 834136)
-			{ // 펠렌.
+			if (targetId == 834136) // 펠렌.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

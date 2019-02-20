@@ -54,8 +54,8 @@ public class _18805Going_Thrifting extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 830070)
-			{ // Parion.
+			if (targetId == 830070) // Parion.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -69,8 +69,8 @@ public class _18805Going_Thrifting extends QuestHandler
 			switch (targetId)
 			{
 				case 830660: // Gomirunerk
-				case 830661:
-				{ // Lisandinerk.
+				case 830661: // Lisandinerk.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -95,8 +95,8 @@ public class _18805Going_Thrifting extends QuestHandler
 						}
 					}
 				}
-				case 730522:
-				{ // Vintage Grab Box.
+				case 730522: // Vintage Grab Box.
+				{
 					switch (dialog)
 					{
 						case USE_OBJECT:

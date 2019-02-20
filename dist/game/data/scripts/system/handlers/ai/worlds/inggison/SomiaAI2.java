@@ -58,8 +58,8 @@ public class SomiaAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if (dialogId == 10000)
-		{ // Please may I have another orb ?
+		if (dialogId == 10000) // Please may I have another orb ?
+		{
 			switch (getNpcId())
 			{
 				case 799091: // Somia.

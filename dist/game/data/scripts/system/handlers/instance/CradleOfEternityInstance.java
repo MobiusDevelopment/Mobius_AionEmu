@@ -263,8 +263,8 @@ public class CradleOfEternityInstance extends GeneralInstanceHandler
 			}
 			case 834007: // Altar Of Sun.
 			{
-				if (player.getInventory().decreaseByItemId(185000267, 1))
-				{ // Sun Quartz.
+				if (player.getInventory().decreaseByItemId(185000267, 1)) // Sun Quartz.
+				{
 					ThreadPoolManager.getInstance().schedule(() ->
 					{
 						deleteNpc(834007);

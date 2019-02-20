@@ -98,8 +98,8 @@ public class _1561TheMisersMap extends QuestHandler
 		
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 700188)
-			{ // Jewel Box
+			if (targetId == 700188) // Jewel Box
+			{
 				if (var == 0)
 				{
 					if ((env.getDialog() == QuestDialog.START_DIALOG) || (env.getDialog() == QuestDialog.USE_OBJECT))
@@ -115,8 +115,8 @@ public class _1561TheMisersMap extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 700188)
-			{ // Jewel Box
+			if (targetId == 700188) // Jewel Box
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

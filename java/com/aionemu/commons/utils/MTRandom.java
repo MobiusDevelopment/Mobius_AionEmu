@@ -256,9 +256,8 @@ public class MTRandom extends Random
 	{
 		// ---- Begin Mersenne Twister Algorithm ----
 		int y, kk;
-		if (mti >= N)
-		{ // generate N words at one time
-			
+		if (mti >= N) // generate N words at one time
+		{
 			// In the original C implementation, mti is checked here
 			// to determine if initialisation has occurred; if not
 			// it initialises this instance with DEFAULT_SEED (5489).

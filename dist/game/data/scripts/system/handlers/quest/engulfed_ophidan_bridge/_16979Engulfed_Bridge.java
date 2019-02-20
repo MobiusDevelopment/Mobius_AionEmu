@@ -52,8 +52,8 @@ public class _16979Engulfed_Bridge extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802025)
-			{ // Moireste.
+			if (targetId == 802025) // Moireste.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -72,8 +72,8 @@ public class _16979Engulfed_Bridge extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 801762:
-				{ // Timarchus.
+				case 801762: // Timarchus.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -91,8 +91,8 @@ public class _16979Engulfed_Bridge extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801762)
-			{ // Timarchus.
+			if (targetId == 801762) // Timarchus.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

@@ -54,8 +54,8 @@ public class _18604Meeting_With_Rotan extends QuestHandler
 		{
 			return false;
 		}
-		if (env.getTargetId() == 700961)
-		{ // Grave Robber's Corpse.
+		if (env.getTargetId() == 700961) // Grave Robber's Corpse.
+		{
 			if (env.getDialog() == QuestDialog.USE_OBJECT)
 			{
 				if (qs.getStatus() == QuestStatus.START)

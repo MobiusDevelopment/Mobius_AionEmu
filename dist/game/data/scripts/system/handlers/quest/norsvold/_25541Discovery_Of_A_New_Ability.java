@@ -58,8 +58,8 @@ public class _25541Discovery_Of_A_New_Ability extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 834138)
-			{ // 퀘렌딜.
+			if (targetId == 834138) // 퀘렌딜.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -80,8 +80,8 @@ public class _25541Discovery_Of_A_New_Ability extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 834138)
-			{ // 퀘렌딜.
+			if (targetId == 834138) // 퀘렌딜.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -107,8 +107,8 @@ public class _25541Discovery_Of_A_New_Ability extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 834138)
-			{ // 퀘렌딜.
+			if (targetId == 834138) // 퀘렌딜.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

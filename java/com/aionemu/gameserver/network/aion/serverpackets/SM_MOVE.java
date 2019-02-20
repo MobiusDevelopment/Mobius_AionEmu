@@ -91,7 +91,7 @@ public class SM_MOVE extends AionServerPacket
 				writeF(moveData.getTargetZ2());
 			}
 			else if ((moveData.getMovementMask() & MovementMask.NPC_RUN_SLOW) == MovementMask.NPC_RUN_SLOW)
-			{ // 5.0 Test
+			{
 				writeF(moveData.getTargetX2());
 				writeF(moveData.getTargetY2());
 				writeF(moveData.getTargetZ2());

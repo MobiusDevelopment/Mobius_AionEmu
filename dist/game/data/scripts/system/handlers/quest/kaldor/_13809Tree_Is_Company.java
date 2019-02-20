@@ -54,8 +54,8 @@ public class _13809Tree_Is_Company extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802427)
-			{ // Caetess.
+			if (targetId == 802427) // Caetess.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -67,8 +67,8 @@ public class _13809Tree_Is_Company extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 730969:
-				{ // Scorched Tree.
+				case 730969: // Scorched Tree.
+				{
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
@@ -78,8 +78,8 @@ public class _13809Tree_Is_Company extends QuestHandler
 					}
 					break;
 				}
-				case 730970:
-				{ // Cindery Tree.
+				case 730970: // Cindery Tree.
+				{
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
@@ -89,8 +89,8 @@ public class _13809Tree_Is_Company extends QuestHandler
 					}
 					break;
 				}
-				case 730971:
-				{ // Burnt Tree.
+				case 730971: // Burnt Tree.
+				{
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
@@ -100,8 +100,8 @@ public class _13809Tree_Is_Company extends QuestHandler
 					}
 					break;
 				}
-				case 802427:
-				{ // Caetess.
+				case 802427: // Caetess.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -119,8 +119,8 @@ public class _13809Tree_Is_Company extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802427)
-			{ // Caetess.
+			if (targetId == 802427) // Caetess.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

@@ -53,8 +53,8 @@ public class _3732General_Mania extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 800518)
-			{ // Brunto.
+			if (targetId == 800518) // Brunto.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -64,8 +64,8 @@ public class _3732General_Mania extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 800518)
-			{ // Brunto.
+			if (targetId == 800518) // Brunto.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

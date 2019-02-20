@@ -40,8 +40,8 @@ public class MotlieAI2 extends GeneralNpcAI2
 		switch (getNpcId())
 		{
 			case 832963: // Motlie E.
-			case 832974:
-			{ // Motlie A.
+			case 832974: // Motlie A.
+			{
 				super.handleDialogStart(player);
 				break;
 			}

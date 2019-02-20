@@ -55,8 +55,8 @@ public class _28623Kaliga_Collection_Mace extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(env.getQuestId());
 		final int targetId = env.getTargetId();
-		if (targetId == 730331)
-		{ // Kaliga's Mace Rack.
+		if (targetId == 730331) // Kaliga's Mace Rack.
+		{
 			if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 			{
 				return true;
@@ -75,8 +75,8 @@ public class _28623Kaliga_Collection_Mace extends QuestHandler
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (targetId == 730331)
-		{ // Kaliga's Mace Rack.
+		if (targetId == 730331) // Kaliga's Mace Rack.
+		{
 			final PlayerClass playerClass = player.getCommonData().getPlayerClass();
 			if (((playerClass == PlayerClass.WARRIOR) || (playerClass == PlayerClass.PRIEST) || (playerClass == PlayerClass.GLADIATOR) || (playerClass == PlayerClass.TEMPLAR) || (playerClass == PlayerClass.CHANTER) || (playerClass == PlayerClass.CLERIC)) && (player.getCommonData().getRace() == Race.ASMODIANS))
 			{

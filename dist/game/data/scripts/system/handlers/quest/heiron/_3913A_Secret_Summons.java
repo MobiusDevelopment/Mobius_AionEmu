@@ -62,8 +62,8 @@ public class _3913A_Secret_Summons extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 204504)
-			{ // Sofne.
+			if (targetId == 204504) // Sofne.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -71,8 +71,8 @@ public class _3913A_Secret_Summons extends QuestHandler
 				return sendQuestStartDialog(env);
 			}
 		}
-		else if (targetId == 204505)
-		{ // Sulates.
+		else if (targetId == 204505) // Sulates.
+		{
 			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
@@ -92,8 +92,8 @@ public class _3913A_Secret_Summons extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 204656)
-		{ // Maloren.
+		else if (targetId == 204656) // Maloren.
+		{
 			if (qs != null)
 			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (qs.getStatus() == QuestStatus.START))

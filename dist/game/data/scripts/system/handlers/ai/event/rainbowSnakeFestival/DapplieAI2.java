@@ -40,8 +40,8 @@ public class DapplieAI2 extends GeneralNpcAI2
 		switch (getNpcId())
 		{
 			case 832964: // Dapplie E.
-			case 832975:
-			{ // Dapplie A.
+			case 832975: // Dapplie A.
+			{
 				super.handleDialogStart(player);
 				break;
 			}

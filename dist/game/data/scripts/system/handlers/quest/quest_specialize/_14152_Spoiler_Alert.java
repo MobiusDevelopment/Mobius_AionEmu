@@ -155,8 +155,8 @@ public class _14152_Spoiler_Alert extends QuestHandler
 		{
 			targetId = ((Npc) env.getVisibleObject()).getNpcId();
 		}
-		if ((targetId == 212151) && (var == 0))
-		{ // Chairman Garnis.
+		if ((targetId == 212151) && (var == 0)) // Chairman Garnis.
+		{
 			qs.setQuestVarById(0, 1);
 			qs.setStatus(QuestStatus.REWARD);
 			updateQuestStatus(env);

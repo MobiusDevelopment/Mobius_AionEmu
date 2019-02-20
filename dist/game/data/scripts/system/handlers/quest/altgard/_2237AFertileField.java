@@ -54,8 +54,8 @@ public class _2237AFertileField extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203629)
-			{ // Daike
+			if (targetId == 203629) // Daike
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -67,16 +67,16 @@ public class _2237AFertileField extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 700145:
-				{ // Fertilizer Sack
+				case 700145: // Fertilizer Sack
+				{
 					if (dialog == QuestDialog.USE_OBJECT)
 					{
 						return true; // loot
 					}
 					break;
 				}
-				case 203629:
-				{ // Daike
+				case 203629: // Daike
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -97,8 +97,8 @@ public class _2237AFertileField extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203629)
-			{ // Daike
+			if (targetId == 203629) // Daike
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

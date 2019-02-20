@@ -55,8 +55,8 @@ public class _23815A_Spirit_Released extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 804594)
-			{ // Commander Anoha.
+			if (targetId == 804594) // Commander Anoha.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					giveQuestItem(env, 182215545, 1);
@@ -78,8 +78,8 @@ public class _23815A_Spirit_Released extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804591)
-			{ // Salonte.
+			if (targetId == 804591) // Salonte.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}
@@ -97,8 +97,8 @@ public class _23815A_Spirit_Released extends QuestHandler
 			if (var == 0)
 			{
 				final int targetId = env.getTargetId();
-				if (targetId == 855263)
-				{ // Berserk Anoha.
+				if (targetId == 855263) // Berserk Anoha.
+				{
 					final Npc npc = (Npc) env.getVisibleObject();
 					QuestService.addNewSpawn(600090000, player.getInstanceId(), 804594, npc.getX(), npc.getY(), npc.getZ(), (byte) 0); // Commander Anoha.
 					return defaultOnKillEvent(env, 855263, 1, true); // Berserk Anoha.

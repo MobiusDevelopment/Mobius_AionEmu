@@ -114,8 +114,8 @@ public class _4033ABloominBrusthonin extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 700379:
-				{ // Portaro's Tomb
+				case 700379: // Portaro's Tomb
+				{
 					if ((qs.getQuestVarById(0) == 2) && (env.getDialog() == QuestDialog.USE_OBJECT))
 					{
 						return useQuestObject(env, 2, 2, true, false); // reward

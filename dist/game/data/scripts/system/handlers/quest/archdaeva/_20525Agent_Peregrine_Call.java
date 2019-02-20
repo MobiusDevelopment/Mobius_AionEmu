@@ -90,8 +90,8 @@ public class _20525Agent_Peregrine_Call extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -115,8 +115,8 @@ public class _20525Agent_Peregrine_Call extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806135)
-			{ // Conrto.
+			if (targetId == 806135) // Conrto.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -175,8 +175,8 @@ public class _20525Agent_Peregrine_Call extends QuestHandler
 			if ((targetId == 806228) || // Bastok.
 				(targetId == 806229) || // Duisys.
 				(targetId == 806230) || // Sieden.
-				(targetId == 806231))
-			{ // Norte.
+				(targetId == 806231)) // Norte.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -189,8 +189,8 @@ public class _20525Agent_Peregrine_Call extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

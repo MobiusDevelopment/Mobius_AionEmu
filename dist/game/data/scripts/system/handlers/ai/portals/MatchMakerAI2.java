@@ -60,8 +60,8 @@ public class MatchMakerAI2 extends GeneralNpcAI2
 		{
 			return true;
 		}
-		if (dialogId == DialogAction.MATCH_MAKER.id())
-		{ // Infiltrate the Dredgion.
+		if (dialogId == DialogAction.MATCH_MAKER.id()) // Infiltrate the Dredgion.
+		{
 			if (DredgionService2.getInstance().isDredgionAvailable())
 			{
 				final AutoGroupType agt = AutoGroupType.getAutoGroup(player.getLevel(), getNpcId());

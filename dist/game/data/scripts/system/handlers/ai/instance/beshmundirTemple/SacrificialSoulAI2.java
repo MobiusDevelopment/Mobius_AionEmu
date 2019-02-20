@@ -52,8 +52,8 @@ public class SacrificialSoulAI2 extends AggressiveNpcAI2
 	protected void handleAttack(Creature creature)
 	{
 		super.handleAttack(creature);
-		if (creature.getEffectController().hasAbnormalEffect(18959))
-		{ // Sixth Sense.
+		if (creature.getEffectController().hasAbnormalEffect(18959)) // Sixth Sense.
+		{
 			getMoveController().abortMove();
 			AI2Actions.deleteOwner(this);
 		}

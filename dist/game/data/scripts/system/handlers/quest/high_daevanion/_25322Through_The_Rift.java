@@ -131,8 +131,8 @@ public class _25322Through_The_Rift extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805342)
-			{ // Hikait.
+			if (targetId == 805342) // Hikait.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

@@ -65,8 +65,8 @@ public class _18917Dont_Wait_Infiltrate extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 801026)
-			{ // Tribunus Pippus.
+			if (targetId == 801026) // Tribunus Pippus.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -82,8 +82,8 @@ public class _18917Dont_Wait_Infiltrate extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 802350:
-				{ // Eljer.
+				case 802350: // Eljer.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -99,8 +99,8 @@ public class _18917Dont_Wait_Infiltrate extends QuestHandler
 						}
 					}
 				}
-				case 801945:
-				{ // Kanix.
+				case 801945: // Kanix.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -124,8 +124,8 @@ public class _18917Dont_Wait_Infiltrate extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801945)
-			{ // Kanix.
+			if (targetId == 801945) // Kanix.
+			{
 				switch (env.getDialog())
 				{
 					case SELECT_REWARD:

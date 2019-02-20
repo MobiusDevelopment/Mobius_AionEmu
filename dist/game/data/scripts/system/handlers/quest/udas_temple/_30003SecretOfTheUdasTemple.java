@@ -53,8 +53,8 @@ public class _30003SecretOfTheUdasTemple extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 799029)
-			{ // Honeus
+			if (targetId == 799029) // Honeus
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					playQuestMovie(env, 511);
@@ -66,8 +66,8 @@ public class _30003SecretOfTheUdasTemple extends QuestHandler
 		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
-			if (targetId == 799029)
-			{ // Honeus
+			if (targetId == 799029) // Honeus
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					if (var == 1)
@@ -84,8 +84,8 @@ public class _30003SecretOfTheUdasTemple extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799029)
-			{ // Honeus
+			if (targetId == 799029) // Honeus
+			{
 				removeQuestItem(env, 182209161, 1);
 				return sendQuestEndDialog(env);
 			}

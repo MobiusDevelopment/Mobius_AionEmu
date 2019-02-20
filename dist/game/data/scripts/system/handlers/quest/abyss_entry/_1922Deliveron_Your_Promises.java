@@ -91,8 +91,8 @@ public class _1922Deliveron_Your_Promises extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 203830:
-				{ // Fuchsia.
+				case 203830: // Fuchsia.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -118,8 +118,8 @@ public class _1922Deliveron_Your_Promises extends QuestHandler
 					}
 					break;
 				}
-				case 203901:
-				{ // Telemachus.
+				case 203901: // Telemachus.
+				{
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
@@ -141,8 +141,8 @@ public class _1922Deliveron_Your_Promises extends QuestHandler
 					}
 					break;
 				}
-				case 203764:
-				{ // Epeios.
+				case 203764: // Epeios.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -176,8 +176,8 @@ public class _1922Deliveron_Your_Promises extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203901)
-			{ // Telemachus.
+			if (targetId == 203901) // Telemachus.
+			{
 				return sendQuestEndDialog(env, choice);
 			}
 		}
@@ -259,8 +259,8 @@ public class _1922Deliveron_Your_Promises extends QuestHandler
 			final int var4 = qs.getQuestVars().getVarById(4);
 			if ((var == 5) && (var4 != 10))
 			{
-				if (player.getWorldId() != 310080000)
-				{ // Sanctum Underground Arena.
+				if (player.getWorldId() != 310080000) // Sanctum Underground Arena.
+				{
 					QuestService.questTimerEnd(env);
 					qs.setQuestVar(4);
 					updateQuestStatus(env);

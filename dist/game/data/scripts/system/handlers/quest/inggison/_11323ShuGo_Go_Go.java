@@ -63,8 +63,8 @@ public class _11323ShuGo_Go_Go extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798928)
-			{ // Yulia.
+			if (targetId == 798928) // Yulia.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -87,8 +87,8 @@ public class _11323ShuGo_Go_Go extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 702725:
-				{ // Gadarunerk.
+				case 702725: // Gadarunerk.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -104,8 +104,8 @@ public class _11323ShuGo_Go_Go extends QuestHandler
 						}
 					}
 				}
-				case 702727:
-				{ // Izzyrunerk.
+				case 702727: // Izzyrunerk.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -121,8 +121,8 @@ public class _11323ShuGo_Go_Go extends QuestHandler
 						}
 					}
 				}
-				case 702743:
-				{ // Zeirunerk.
+				case 702743: // Zeirunerk.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -138,8 +138,8 @@ public class _11323ShuGo_Go_Go extends QuestHandler
 						}
 					}
 				}
-				case 702744:
-				{ // Chubarunerk.
+				case 702744: // Chubarunerk.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -155,8 +155,8 @@ public class _11323ShuGo_Go_Go extends QuestHandler
 						}
 					}
 				}
-				case 702745:
-				{ // Danirunerk.
+				case 702745: // Danirunerk.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -177,8 +177,8 @@ public class _11323ShuGo_Go_Go extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798928)
-			{ // Yulia.
+			if (targetId == 798928) // Yulia.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

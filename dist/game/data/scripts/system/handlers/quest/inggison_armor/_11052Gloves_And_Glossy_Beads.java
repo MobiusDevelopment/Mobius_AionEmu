@@ -48,8 +48,8 @@ public class _11052Gloves_And_Glossy_Beads extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || qs.canRepeat())
 		{
-			if (targetId == 798984)
-			{ // Meininerk
+			if (targetId == 798984) // Meininerk
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -59,8 +59,8 @@ public class _11052Gloves_And_Glossy_Beads extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 798984)
-			{ // Meininerk
+			if (targetId == 798984) // Meininerk
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2375);

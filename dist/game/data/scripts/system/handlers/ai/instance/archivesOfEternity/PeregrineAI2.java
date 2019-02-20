@@ -38,8 +38,8 @@ public class PeregrineAI2 extends GeneralNpcAI2
 	{
 		switch (getNpcId())
 		{
-			case 806149:
-			{ // Peregrine.
+			case 806149: // Peregrine.
+			{
 				super.handleDialogStart(player);
 				break;
 			}

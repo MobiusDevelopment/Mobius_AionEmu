@@ -68,8 +68,8 @@ public class _25400Pontekane_Plight extends QuestHandler
 	public boolean onEnterWorldEvent(QuestEnv env)
 	{
 		final Player player = env.getPlayer();
-		if (player.getWorldId() == 400010000)
-		{ // Reshanta.
+		if (player.getWorldId() == 400010000) // Reshanta.
+		{
 			final QuestState qs = player.getQuestStateList().getQuestState(questId);
 			if (qs == null)
 			{
@@ -100,8 +100,8 @@ public class _25400Pontekane_Plight extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 805356)
-			{ // Pontekane.
+			if (targetId == 805356) // Pontekane.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -118,8 +118,8 @@ public class _25400Pontekane_Plight extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 805357)
-			{ // Darmian.
+			if (targetId == 805357) // Darmian.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -143,8 +143,8 @@ public class _25400Pontekane_Plight extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 805358)
-			{ // Batai.
+			if (targetId == 805358) // Batai.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -161,8 +161,8 @@ public class _25400Pontekane_Plight extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 702830)
-			{ // Beritra Supply Unit Box.
+			if (targetId == 702830) // Beritra Supply Unit Box.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -179,8 +179,8 @@ public class _25400Pontekane_Plight extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 702831)
-			{ // Destroyed Gate Reinforcer.
+			if (targetId == 702831) // Destroyed Gate Reinforcer.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -197,8 +197,8 @@ public class _25400Pontekane_Plight extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 702832)
-			{ // Heavy Bomb Box.
+			if (targetId == 702832) // Heavy Bomb Box.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -215,8 +215,8 @@ public class _25400Pontekane_Plight extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 805359)
-			{ // Dukas.
+			if (targetId == 805359) // Dukas.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -242,8 +242,8 @@ public class _25400Pontekane_Plight extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 805360)
-			{ // Lanpaz.
+			if (targetId == 805360) // Lanpaz.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -264,8 +264,8 @@ public class _25400Pontekane_Plight extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 805356)
-			{ // Pontekane.
+			if (targetId == 805356) // Pontekane.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

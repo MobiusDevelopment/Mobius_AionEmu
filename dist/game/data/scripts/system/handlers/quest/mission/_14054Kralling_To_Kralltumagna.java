@@ -241,8 +241,8 @@ public class _14054Kralling_To_Kralltumagna extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 700220)
-		{ // [702040 Baranath Crusher]
+		else if (targetId == 700220) // [702040 Baranath Crusher]
+		{
 			switch (qs.getQuestVarById(2))
 			{
 				case 0:
@@ -260,8 +260,8 @@ public class _14054Kralling_To_Kralltumagna extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 233861)
-		{ // Officer Vitusa.
+		else if (targetId == 233861) // Officer Vitusa.
+		{
 			if (var == 3)
 			{
 				qs.setQuestVarById(0, var + 1);

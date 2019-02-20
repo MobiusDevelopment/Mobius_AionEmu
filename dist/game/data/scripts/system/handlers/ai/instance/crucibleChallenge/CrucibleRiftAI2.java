@@ -72,8 +72,8 @@ public class CrucibleRiftAI2 extends ActionItemNpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 10000) && (getNpcId() == 730459))
-		{ // Crucible Rift.
+		if ((dialogId == 10000) && (getNpcId() == 730459)) // Crucible Rift.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));
 			TeleportService2.teleportTo(player, 300320000, getPosition().getInstanceId(), 1807.0531f, 306.2831f, 469.25f, (byte) 54);
 			switch (player.getRace())

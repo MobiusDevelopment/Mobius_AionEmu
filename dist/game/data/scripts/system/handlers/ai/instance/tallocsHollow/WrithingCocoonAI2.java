@@ -34,8 +34,8 @@ public class WrithingCocoonAI2 extends NpcAI2
 	@Override
 	public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex)
 	{
-		if ((dialogId == 1012) && player.getInventory().decreaseByItemId(185000088, 1))
-		{ // Shishir's Corrosive Fluid.
+		if ((dialogId == 1012) && player.getInventory().decreaseByItemId(185000088, 1)) // Shishir's Corrosive Fluid.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));
 			switch (getNpcId())
 			{

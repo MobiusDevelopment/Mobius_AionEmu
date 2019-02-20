@@ -60,8 +60,8 @@ public class _3963GrowthFlorasThirdCharm extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 798384)
-			{ // Flora
+			if (targetId == 798384) // Flora
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -74,8 +74,8 @@ public class _3963GrowthFlorasThirdCharm extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 203740:
-				{ // Erdos
+				case 203740: // Erdos
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -127,8 +127,8 @@ public class _3963GrowthFlorasThirdCharm extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798384)
-			{ // Flora
+			if (targetId == 798384) // Flora
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

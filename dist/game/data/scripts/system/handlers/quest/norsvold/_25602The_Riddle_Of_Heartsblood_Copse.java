@@ -132,8 +132,8 @@ public class _25602The_Riddle_Of_Heartsblood_Copse extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806171)
-			{ // Phyndar.
+			if (targetId == 806171) // Phyndar.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -164,8 +164,8 @@ public class _25602The_Riddle_Of_Heartsblood_Copse extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 241200:
-					{ // 우르갈.
+					case 241200: // 우르갈.
+					{
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 						return true;

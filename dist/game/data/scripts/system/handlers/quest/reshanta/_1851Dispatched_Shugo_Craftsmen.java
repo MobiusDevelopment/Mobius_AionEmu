@@ -56,8 +56,8 @@ public class _1851Dispatched_Shugo_Craftsmen extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 278533)
-			{ // Rentia
+			if (targetId == 278533) // Rentia
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -83,8 +83,8 @@ public class _1851Dispatched_Shugo_Craftsmen extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 279025:
-				{ // Guuminerk
+				case 279025: // Guuminerk
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -99,8 +99,8 @@ public class _1851Dispatched_Shugo_Craftsmen extends QuestHandler
 						}
 					}
 				}
-				case 279036:
-				{ // Muirunerk
+				case 279036: // Muirunerk
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -120,8 +120,8 @@ public class _1851Dispatched_Shugo_Craftsmen extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (targetId == 278533)
-			{ // Rentia
+			if (targetId == 278533) // Rentia
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:

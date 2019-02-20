@@ -312,8 +312,8 @@ public class SysMail extends AdminCommand
 				}
 				shouldExpress = true;
 			}
-			else
-			{ // Black cloud
+			else // Black cloud
+			{
 				shouldExpress = World.getInstance().findPlayer(recipient) != null;
 			}
 		}

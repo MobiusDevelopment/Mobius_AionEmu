@@ -125,8 +125,8 @@ public class _10501Research_The_Ruins extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731536)
-			{ // Collapsed Ruins.
+			if (targetId == 731536) // Collapsed Ruins.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -144,8 +144,8 @@ public class _10501Research_The_Ruins extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731535)
-			{ // Ancient Balaur Corpse.
+			if (targetId == 731535) // Ancient Balaur Corpse.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:

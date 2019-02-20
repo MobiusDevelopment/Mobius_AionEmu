@@ -56,8 +56,8 @@ public class _13812An_Unlikely_Alliance extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802428)
-			{ // Milda.
+			if (targetId == 802428) // Milda.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

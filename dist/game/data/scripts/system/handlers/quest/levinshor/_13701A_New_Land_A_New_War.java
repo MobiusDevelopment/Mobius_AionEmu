@@ -59,8 +59,8 @@ public class _13701A_New_Land_A_New_War extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802350)
-			{ // Eljer.
+			if (targetId == 802350) // Eljer.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _13701A_New_Land_A_New_War extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 802350:
-				{ // Eljer.
+				case 802350: // Eljer.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _13701A_New_Land_A_New_War extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802350)
-			{ // Eljer.
+			if (targetId == 802350) // Eljer.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

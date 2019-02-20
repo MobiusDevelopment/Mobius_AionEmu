@@ -52,8 +52,8 @@ public class _2151Swallowing_Pride extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 801035)
-			{ // Nowlan.
+			if (targetId == 801035) // Nowlan.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -72,8 +72,8 @@ public class _2151Swallowing_Pride extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 801034:
-				{ // Rian.
+				case 801034: // Rian.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -91,8 +91,8 @@ public class _2151Swallowing_Pride extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801034)
-			{ // Rian.
+			if (targetId == 801034) // Rian.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

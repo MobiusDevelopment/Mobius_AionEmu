@@ -59,8 +59,8 @@ public class _49700Meet_The_Merry_And_Green extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 800948)
-			{ // Sununnerk.
+			if (targetId == 800948) // Sununnerk.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _49700Meet_The_Merry_And_Green extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 800948:
-				{ // Sununnerk.
+				case 800948: // Sununnerk.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _49700Meet_The_Merry_And_Green extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 800948)
-			{ // Sununnerk.
+			if (targetId == 800948) // Sununnerk.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

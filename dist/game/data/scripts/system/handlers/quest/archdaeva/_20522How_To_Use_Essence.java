@@ -71,8 +71,8 @@ public class _20522How_To_Use_Essence extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

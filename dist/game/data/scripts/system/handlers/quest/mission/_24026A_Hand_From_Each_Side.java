@@ -123,8 +123,8 @@ public class _24026A_Hand_From_Each_Side extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 204301:
-				{ // Aegir.
+				case 204301: // Aegir.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -143,8 +143,8 @@ public class _24026A_Hand_From_Each_Side extends QuestHandler
 					}
 					break;
 				}
-				case 204403:
-				{ // Taisan.
+				case 204403: // Taisan.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -163,8 +163,8 @@ public class _24026A_Hand_From_Each_Side extends QuestHandler
 					}
 					break;
 				}
-				case 204432:
-				{ // Kargate.
+				case 204432: // Kargate.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -205,8 +205,8 @@ public class _24026A_Hand_From_Each_Side extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204301)
-			{ // Aegir.
+			if (targetId == 204301) // Aegir.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 2375);
@@ -246,26 +246,26 @@ public class _24026A_Hand_From_Each_Side extends QuestHandler
 		final float z = 217.48f;
 		switch (mobToSpawn)
 		{
-			case 213576:
-			{ // Draconute Scout.
+			case 213576: // Draconute Scout.
+			{
 				x = 254.74f;
 				y = 236.72f;
 				break;
 			}
-			case 213577:
-			{ // Chandala Mage.
+			case 213577: // Chandala Mage.
+			{
 				x = 257.92f;
 				y = 237.39f;
 				break;
 			}
-			case 213578:
-			{ // Chandala Scaleguard.
+			case 213578: // Chandala Scaleguard.
+			{
 				x = 261.86f;
 				y = 237.5f;
 				break;
 			}
-			case 213579:
-			{ // Chandala Fangblade.
+			case 213579: // Chandala Fangblade.
+			{
 				x = 268.86f;
 				y = 243.5f;
 				break;
@@ -276,8 +276,8 @@ public class _24026A_Hand_From_Each_Side extends QuestHandler
 		Npc target = null;
 		for (Npc npc : allNpcs)
 		{
-			if (npc.getNpcId() == 204432)
-			{ // Kargate.
+			if (npc.getNpcId() == 204432) // Kargate.
+			{
 				target = npc;
 			}
 		}

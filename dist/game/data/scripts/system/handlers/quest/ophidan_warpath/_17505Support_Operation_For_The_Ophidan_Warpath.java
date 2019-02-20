@@ -113,8 +113,8 @@ public class _17505Support_Operation_For_The_Ophidan_Warpath extends QuestHandle
 					}
 				}
 			}
-			else if (targetId == 806267)
-			{ // 테루아.
+			else if (targetId == 806267) // 테루아.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:

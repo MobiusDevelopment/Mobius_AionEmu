@@ -48,8 +48,8 @@ public class _11054Accounts_About_The_Armor extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || qs.canRepeat())
 		{
-			if (targetId == 799017)
-			{ // Sulinia
+			if (targetId == 799017) // Sulinia
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -59,8 +59,8 @@ public class _11054Accounts_About_The_Armor extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 799017)
-			{ // Sulinia
+			if (targetId == 799017) // Sulinia
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2375);

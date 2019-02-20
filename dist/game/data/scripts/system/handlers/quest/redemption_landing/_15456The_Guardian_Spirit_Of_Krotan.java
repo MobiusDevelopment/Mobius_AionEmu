@@ -89,8 +89,8 @@ public class _15456The_Guardian_Spirit_Of_Krotan extends QuestHandler
 			if (var == 0)
 			{
 				final int targetId = env.getTargetId();
-				if (targetId == 883323)
-				{ // Spirit Of Krotan.
+				if (targetId == 883323) // Spirit Of Krotan.
+				{
 					return defaultOnKillEvent(env, 883323, 1, true); // Spirit Of Krotan.
 				}
 			}

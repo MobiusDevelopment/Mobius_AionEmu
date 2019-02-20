@@ -53,8 +53,8 @@ public class CursedRelicsAI2 extends ActionItemNpcAI2
 			if ((npcId != 701174) && // Cursed Relics.
 				(npcId != 701188) && // Cursed Relics.
 				(npcId != 701202) && // Cursed Relics.
-				(npcId != 701835))
-			{ // Cursed Relics.
+				(npcId != 701835)) // Cursed Relics.
+			{
 				AI2Actions.scheduleRespawn(this);
 			}
 			AI2Actions.deleteOwner(this);

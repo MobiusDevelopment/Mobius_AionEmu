@@ -59,8 +59,8 @@ public class Mastarius_Aether_ConcentratorAI2 extends ActionItemNpcAI2
 			// Mastarius's Aether Concentrator I
 			case 296913:
 			{
-				if (player.getInventory().decreaseByItemId(164000103, 1))
-				{ // Blessing Of Concentration.
+				if (player.getInventory().decreaseByItemId(164000103, 1)) // Blessing Of Concentration.
+				{
 					announceMastariusI();
 					AI2Actions.targetCreature(Mastarius_Aether_ConcentratorAI2.this, getPosition().getWorldMapInstance().getNpc(258220)); // Enraged Mastarius.
 					AI2Actions.targetCreature(Mastarius_Aether_ConcentratorAI2.this, getPosition().getWorldMapInstance().getNpc(235065)); // Empowered Mastarius.
@@ -76,8 +76,8 @@ public class Mastarius_Aether_ConcentratorAI2 extends ActionItemNpcAI2
 			// Mastarius's Aether Concentrator II
 			case 296914:
 			{
-				if (player.getInventory().decreaseByItemId(164000103, 1))
-				{ // Blessing Of Concentration.
+				if (player.getInventory().decreaseByItemId(164000103, 1)) // Blessing Of Concentration.
+				{
 					announceMastariusII();
 					AI2Actions.targetCreature(Mastarius_Aether_ConcentratorAI2.this, getPosition().getWorldMapInstance().getNpc(258220)); // Enraged Mastarius.
 					AI2Actions.targetCreature(Mastarius_Aether_ConcentratorAI2.this, getPosition().getWorldMapInstance().getNpc(235065)); // Empowered Mastarius.
@@ -93,8 +93,8 @@ public class Mastarius_Aether_ConcentratorAI2 extends ActionItemNpcAI2
 			// Mastarius's Aether Concentrator III
 			case 296915:
 			{
-				if (player.getInventory().decreaseByItemId(164000103, 1))
-				{ // Blessing Of Concentration.
+				if (player.getInventory().decreaseByItemId(164000103, 1)) // Blessing Of Concentration.
+				{
 					announceMastariusII();
 					AI2Actions.targetCreature(Mastarius_Aether_ConcentratorAI2.this, getPosition().getWorldMapInstance().getNpc(258220)); // Enraged Mastarius.
 					AI2Actions.targetCreature(Mastarius_Aether_ConcentratorAI2.this, getPosition().getWorldMapInstance().getNpc(235065)); // Empowered Mastarius.

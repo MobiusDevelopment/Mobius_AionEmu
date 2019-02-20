@@ -117,8 +117,8 @@ public class _1006Ascension extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 790001:
-				{ // Pernos.
+				case 790001: // Pernos.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -235,8 +235,8 @@ public class _1006Ascension extends QuestHandler
 					}
 					break;
 				}
-				case 730008:
-				{ // Daminu.
+				case 730008: // Daminu.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -257,8 +257,8 @@ public class _1006Ascension extends QuestHandler
 					}
 					break;
 				}
-				case 205000:
-				{ // Belpartan.
+				case 205000: // Belpartan.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -296,8 +296,8 @@ public class _1006Ascension extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 790001)
-			{ // Pernos.
+			if (targetId == 790001) // Pernos.
+			{
 				player.getCommonData().setExp(74058, false);
 				return sendQuestEndDialog(env);
 			}

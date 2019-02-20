@@ -55,8 +55,8 @@ public class _4722New_Weapon_Test extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 799403)
-			{ // Yorgen.
+			if (targetId == 799403) // Yorgen.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -66,8 +66,8 @@ public class _4722New_Weapon_Test extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799403)
-			{ // Yorgen.
+			if (targetId == 799403) // Yorgen.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

@@ -85,7 +85,8 @@ public class CM_SILENCE_REPORT extends AionClientPacket
 			PacketSendUtility.sendPacket(activePlayer, new SM_QUESTION_WINDOW(SM_QUESTION_WINDOW.STR_MSG_REPORT_CHAT_CONFIRM, 0, 0, targetPlayer.getName()));
 			PacketSendUtility.sendMessage(activePlayer, "Silence report to " + targetPlayer.getName() + " count " + report);
 			if (targetPlayer.getSilenceReportCount() >= 2)
-			{ // TODO: dont know in Official set how much count of reporter for started silencing.
+			{
+				// TODO: dont know in Official set how much count of reporter for started silencing.
 				targetPlayer.setGagged(true);
 				PacketSendUtility.sendMessage(targetPlayer, "You got silence punish, because some players were reported you spamming.");
 				final Future<?> task = targetPlayer.getController().getTask(TaskId.GAG);

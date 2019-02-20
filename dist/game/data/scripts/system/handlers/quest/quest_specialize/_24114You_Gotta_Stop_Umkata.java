@@ -112,8 +112,8 @@ public class _24114You_Gotta_Stop_Umkata extends QuestHandler
 					return false;
 				}
 			}
-			else if (targetId == 700098)
-			{ // Umkata's Grave
+			else if (targetId == 700098) // Umkata's Grave
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -129,8 +129,8 @@ public class _24114You_Gotta_Stop_Umkata extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203649)
-			{ // Gulkalla
+			if (targetId == 203649) // Gulkalla
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:

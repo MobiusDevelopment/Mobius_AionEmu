@@ -70,7 +70,8 @@ public class EventCaller extends AdminCommand
 		else if (params[0].equals("start"))
 		{
 			if (params.length == 1)
-			{ // eventcaller start
+			{
+				// eventcaller start
 				player.setEventStarted(true);
 				player.setCountPlayers(500);
 				final Iterator<Player> iter = World.getInstance().getPlayersIterator();

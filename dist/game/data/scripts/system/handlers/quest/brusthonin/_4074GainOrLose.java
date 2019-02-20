@@ -57,8 +57,8 @@ public class _4074GainOrLose extends QuestHandler
 		
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 205181)
-			{ // Bonarunerk
+			if (targetId == 205181) // Bonarunerk
+			{
 				if (dialog == QuestDialog.EXCHANGE_COIN)
 				{
 					if (QuestService.startQuest(env))
@@ -71,8 +71,8 @@ public class _4074GainOrLose extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 205181)
-			{ // Bonarunerk
+			if (targetId == 205181) // Bonarunerk
+			{
 				final long kinahAmount = player.getInventory().getKinah();
 				final long demonsEye = player.getInventory().getItemCountByItemId(186000038);
 				switch (dialog)
@@ -120,8 +120,8 @@ public class _4074GainOrLose extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 205181)
-			{ // Bonarunerk
+			if (targetId == 205181) // Bonarunerk
+			{
 				if (dialog == QuestDialog.SELECT_NO_REWARD)
 				{
 					switch (reward)

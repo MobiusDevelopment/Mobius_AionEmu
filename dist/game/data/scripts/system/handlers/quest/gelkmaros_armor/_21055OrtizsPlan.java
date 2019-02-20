@@ -48,8 +48,8 @@ public class _21055OrtizsPlan extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 799295)
-			{ // Ortiz
+			if (targetId == 799295) // Ortiz
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -77,8 +77,8 @@ public class _21055OrtizsPlan extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 799295)
-			{ // Ortiz
+			if (targetId == 799295) // Ortiz
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -94,8 +94,8 @@ public class _21055OrtizsPlan extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799295)
-			{ // Ortiz
+			if (targetId == 799295) // Ortiz
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

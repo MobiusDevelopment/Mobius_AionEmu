@@ -107,8 +107,8 @@ public class _1099An_Important_Choice extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 790001:
-				{ // Pernos.
+				case 790001: // Pernos.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -131,8 +131,8 @@ public class _1099An_Important_Choice extends QuestHandler
 					}
 					break;
 				}
-				case 700551:
-				{ // Fissure Of Destiny.
+				case 700551: // Fissure Of Destiny.
+				{
 					if ((env.getDialog() == QuestDialog.USE_OBJECT) && (var == 1))
 					{
 						final WorldMapInstance AtaxiarA = InstanceService.getNextAvailableInstance(310120000);
@@ -142,8 +142,8 @@ public class _1099An_Important_Choice extends QuestHandler
 					}
 					break;
 				}
-				case 205119:
-				{ // Hermione.
+				case 205119: // Hermione.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -176,8 +176,8 @@ public class _1099An_Important_Choice extends QuestHandler
 					}
 					break;
 				}
-				case 700552:
-				{ // Artifact Of Memory.
+				case 700552: // Artifact Of Memory.
+				{
 					if ((env.getDialog() == QuestDialog.USE_OBJECT) && (var == 53))
 					{
 						playQuestMovie(env, 429);
@@ -185,8 +185,8 @@ public class _1099An_Important_Choice extends QuestHandler
 					}
 					break;
 				}
-				case 205118:
-				{ // Lephar.
+				case 205118: // Lephar.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -207,8 +207,8 @@ public class _1099An_Important_Choice extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203700)
-			{ // Fasimedes.
+			if (targetId == 203700) // Fasimedes.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

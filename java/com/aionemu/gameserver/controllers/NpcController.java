@@ -191,7 +191,8 @@ public class NpcController extends CreatureController<Npc>
 			owner.getAi2().onGeneralEvent(AIEventType.DIED);
 		}
 		finally
-		{ // always make sure npc is schedulled to respawn
+		{
+			// always make sure npc is schedulled to respawn
 			if (owner.getAi2().poll(AIQuestion.SHOULD_DECAY))
 			{
 				addTask(TaskId.DECAY, RespawnService.scheduleDecayTask(owner));

@@ -100,8 +100,8 @@ public class _23800A_Full_New_World extends QuestHandler
 						}
 					}
 				}
-				case 802433:
-				{ // Feroz.
+				case 802433: // Feroz.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -125,8 +125,8 @@ public class _23800A_Full_New_World extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802433)
-			{ // Feroz.
+			if (targetId == 802433) // Feroz.
+			{
 				switch (env.getDialog())
 				{
 					case SELECT_REWARD:

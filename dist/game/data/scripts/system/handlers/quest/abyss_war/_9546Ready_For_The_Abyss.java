@@ -83,8 +83,8 @@ public class _9546Ready_For_The_Abyss extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 798129:
-				{ // Special Administration Officer.
+				case 798129: // Special Administration Officer.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -102,8 +102,8 @@ public class _9546Ready_For_The_Abyss extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 798129)
-			{ // Special Administration Officer.
+			if (targetId == 798129) // Special Administration Officer.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

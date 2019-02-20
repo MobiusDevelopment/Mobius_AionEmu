@@ -114,8 +114,8 @@ public class BeshmundirsWalkAI2 extends ActionItemNpcAI2
 		{
 			for (Player member : player.getPlayerGroup2().getMembers())
 			{
-				if (member.getWorldId() == 300170000)
-				{ // Beshmundir Temple.
+				if (member.getWorldId() == 300170000) // Beshmundir Temple.
+				{
 					return true;
 				}
 			}

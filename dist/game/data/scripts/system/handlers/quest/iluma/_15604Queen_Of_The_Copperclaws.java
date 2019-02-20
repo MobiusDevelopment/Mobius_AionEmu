@@ -113,8 +113,8 @@ public class _15604Queen_Of_The_Copperclaws extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806161)
-			{ // Cyclon.
+			if (targetId == 806161) // Cyclon.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -159,8 +159,8 @@ public class _15604Queen_Of_The_Copperclaws extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 241160:
-					{ // 그림자 쉴롭.
+					case 241160: // 그림자 쉴롭.
+					{
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);
 						return true;

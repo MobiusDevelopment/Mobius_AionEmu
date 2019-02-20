@@ -79,8 +79,8 @@ public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 		final int var = qs.getQuestVarById(0);
 		if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (targetId == 799017)
-			{ // Sulinia.
+			if (targetId == 799017) // Sulinia.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -102,8 +102,8 @@ public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 700624:
-				{ // Eastern Star.
+				case 700624: // Eastern Star.
+				{
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
@@ -116,8 +116,8 @@ public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 					}
 					break;
 				}
-				case 700625:
-				{ // Western Star.
+				case 700625: // Western Star.
+				{
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
@@ -130,8 +130,8 @@ public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 							break;
 					}
 				}
-				case 700626:
-				{ // Southern Star.
+				case 700626: // Southern Star.
+				{
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
@@ -144,8 +144,8 @@ public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 							break;
 					}
 				}
-				case 700627:
-				{ // Northern Star.
+				case 700627: // Northern Star.
+				{
 					switch (env.getDialog())
 					{
 						case USE_OBJECT:
@@ -158,8 +158,8 @@ public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 							break;
 					}
 				}
-				case 799017:
-				{ // Sulinia.
+				case 799017: // Sulinia.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:

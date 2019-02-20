@@ -51,8 +51,8 @@ public class _80881Unknown_Creatures extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 834463)
-			{ // Underground Medic Officer.
+			if (targetId == 834463) // Underground Medic Officer.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -73,8 +73,8 @@ public class _80881Unknown_Creatures extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 834463)
-			{ // Underground Medic Officer.
+			if (targetId == 834463) // Underground Medic Officer.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -100,8 +100,8 @@ public class _80881Unknown_Creatures extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 834463)
-			{ // Underground Medic Officer.
+			if (targetId == 834463) // Underground Medic Officer.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

@@ -141,28 +141,28 @@ public class _3123The_Sealed_Lord extends QuestHandler
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
 			final int var = qs.getQuestVarById(0);
-			if (var == 0)
-			{ // Fiery Sealing Stone.
+			if (var == 0) // Fiery Sealing Stone.
+			{
 				return defaultOnKillEvent(env, 237253, 0, 1);
 			}
-			else if (var == 1)
-			{ // Watcher Queen Arachne.
+			else if (var == 1) // Watcher Queen Arachne.
+			{
 				return defaultOnKillEvent(env, 237246, 1, 2);
 			}
-			else if (var == 2)
-			{ // Watcher Silikor Of Memory.
+			else if (var == 2) // Watcher Silikor Of Memory.
+			{
 				return defaultOnKillEvent(env, 237248, 2, 3);
 			}
-			else if (var == 3)
-			{ // Watcher Jilitia.
+			else if (var == 3) // Watcher Jilitia.
+			{
 				return defaultOnKillEvent(env, 237249, 3, 4);
 			}
-			else if (var == 4)
-			{ // Sealed Unstable Triroan.
+			else if (var == 4) // Sealed Unstable Triroan.
+			{
 				return defaultOnKillEvent(env, 237250, 4, 5);
 			}
-			else if (var == 5)
-			{ // Corrupted Ifrit.
+			else if (var == 5) // Corrupted Ifrit.
+			{
 				return defaultOnKillEvent(env, 237251, 5, true);
 			}
 		}

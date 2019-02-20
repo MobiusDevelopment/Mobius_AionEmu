@@ -67,8 +67,8 @@ public class _80351The_First_Drink_Is_Free extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 831797)
-			{ // Callubriz.
+			if (targetId == 831797) // Callubriz.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -87,8 +87,8 @@ public class _80351The_First_Drink_Is_Free extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 831797:
-				{ // Callubriz.
+				case 831797: // Callubriz.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -106,8 +106,8 @@ public class _80351The_First_Drink_Is_Free extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 831797)
-			{ // Callubriz.
+			if (targetId == 831797) // Callubriz.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

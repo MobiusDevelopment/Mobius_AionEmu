@@ -168,8 +168,8 @@ public class _1990A_Sages_Gift extends QuestHandler
 			{
 				switch (env.getTargetId())
 				{
-					case 256617:
-					{ // Strange Lake Spirit.
+					case 256617: // Strange Lake Spirit.
+					{
 						if ((A >= 0) && (A < 30))
 						{
 							++A;
@@ -186,8 +186,8 @@ public class _1990A_Sages_Gift extends QuestHandler
 						break;
 					}
 					case 253720: // Lava Hoverstone.
-					case 253721:
-					{ // Lava Hoverstone.
+					case 253721: // Lava Hoverstone.
+					{
 						if ((B >= 0) && (B < 30))
 						{
 							++B;
@@ -204,8 +204,8 @@ public class _1990A_Sages_Gift extends QuestHandler
 						break;
 					}
 					case 254513: // Disturbed Resident.
-					case 254514:
-					{ // Disturbed Resident.
+					case 254514: // Disturbed Resident.
+					{
 						if ((C >= 0) && (C < 30))
 						{
 							++C;

@@ -52,8 +52,8 @@ public class _80545A_Gracious_Thought extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 831999)
-			{ // Florarinerk.
+			if (targetId == 831999) // Florarinerk.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -72,8 +72,8 @@ public class _80545A_Gracious_Thought extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 831999:
-				{ // Florarinerk.
+				case 831999: // Florarinerk.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -91,8 +91,8 @@ public class _80545A_Gracious_Thought extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 831999)
-			{ // Florarinerk.
+			if (targetId == 831999) // Florarinerk.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

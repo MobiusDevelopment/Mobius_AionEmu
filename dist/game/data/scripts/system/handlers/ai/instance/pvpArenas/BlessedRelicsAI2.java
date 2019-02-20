@@ -53,8 +53,8 @@ public class BlessedRelicsAI2 extends ActionItemNpcAI2
 			if ((npcId != 701173) && // Blessed Relics.
 				(npcId != 701187) && // Blessed Relics.
 				(npcId != 701201) && // Blessed Relics.
-				(npcId != 701834))
-			{ // Blessed Relics.
+				(npcId != 701834)) // Blessed Relics.
+			{
 				AI2Actions.scheduleRespawn(this);
 			}
 			AI2Actions.deleteOwner(this);

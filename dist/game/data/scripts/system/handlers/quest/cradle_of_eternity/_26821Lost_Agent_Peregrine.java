@@ -140,8 +140,8 @@ public class _26821Lost_Agent_Peregrine extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (player.getWorldId() == 301550000)
-		{ // 지식의 정원.
+		if (player.getWorldId() == 301550000) // 지식의 정원.
+		{
 			if (qs == null)
 			{
 				env.setQuestId(questId);
@@ -181,8 +181,8 @@ public class _26821Lost_Agent_Peregrine extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 220526:
-					{ // 심안의 눈동자.
+					case 220526: // 심안의 눈동자.
+					{
 						qs.setQuestVar(6);
 						qs.setStatus(QuestStatus.REWARD);
 						updateQuestStatus(env);

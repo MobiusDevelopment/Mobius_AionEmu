@@ -86,8 +86,8 @@ public class _1414OperationWindmill extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 700175:
-				{ // Old Gear
+				case 700175: // Old Gear
+				{
 					if ((qs.getQuestVarById(0) == 0) && (env.getDialog() == QuestDialog.USE_OBJECT))
 					{
 						qs.setQuestVar(1);

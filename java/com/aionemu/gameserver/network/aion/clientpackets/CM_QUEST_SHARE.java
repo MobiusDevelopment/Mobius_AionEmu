@@ -80,8 +80,8 @@ public class CM_QUEST_SHARE extends AionClientPacket
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1100000, member.getName()));
 					continue;
 				}
-				if (questTemplate.getTargetType().equals(QuestTargetType.FORCE))
-				{ // Alliance.
+				if (questTemplate.getTargetType().equals(QuestTargetType.FORCE)) // Alliance.
+				{
 					PacketSendUtility.sendPacket(member, new SM_SYSTEM_MESSAGE(1100005, player.getName()));
 					continue;
 				}
@@ -132,8 +132,8 @@ public class CM_QUEST_SHARE extends AionClientPacket
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1100000, member.getName()));
 					continue;
 				}
-				if (questTemplate.getTargetType().equals(QuestTargetType.UNION))
-				{ // League.
+				if (questTemplate.getTargetType().equals(QuestTargetType.UNION)) // League.
+				{
 					PacketSendUtility.sendPacket(member, new SM_SYSTEM_MESSAGE(1100005, player.getName()));
 					continue;
 				}

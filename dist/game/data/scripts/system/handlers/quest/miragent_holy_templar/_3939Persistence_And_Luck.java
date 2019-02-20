@@ -69,8 +69,8 @@ public class _3939Persistence_And_Luck extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203701)
-			{ // Lavirintos.
+			if (targetId == 203701) // Lavirintos.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -87,8 +87,8 @@ public class _3939Persistence_And_Luck extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 203780:
-				{ // Cornelius.
+				case 203780: // Cornelius.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -117,8 +117,8 @@ public class _3939Persistence_And_Luck extends QuestHandler
 					}
 					break;
 				}
-				case 203781:
-				{ // Sabotes.
+				case 203781: // Sabotes.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -151,8 +151,8 @@ public class _3939Persistence_And_Luck extends QuestHandler
 					}
 					break;
 				}
-				case 203752:
-				{ // Jucleas.
+				case 203752: // Jucleas.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -186,8 +186,8 @@ public class _3939Persistence_And_Luck extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203701)
-			{ // Lavirintos.
+			if (targetId == 203701) // Lavirintos.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

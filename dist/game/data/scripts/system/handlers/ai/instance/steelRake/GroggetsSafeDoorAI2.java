@@ -40,8 +40,8 @@ public class GroggetsSafeDoorAI2 extends ActionItemNpcAI2
 				{
 					case 300100000: // Steel Rake.
 					{
-						if (player.getInventory().decreaseByItemId(185000046, 1))
-						{ // Grogget's Safe Key.
+						if (player.getInventory().decreaseByItemId(185000046, 1)) // Grogget's Safe Key.
+						{
 							PacketSendUtility.sendMessage(player, "you enter <Inside Steel Rake>");
 							TeleportService2.teleportTo(player, 300100000, 702.11993f, 500.80948f, 939.60675f, (byte) 0);
 						}

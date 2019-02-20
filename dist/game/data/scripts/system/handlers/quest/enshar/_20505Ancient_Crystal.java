@@ -197,8 +197,8 @@ public class _20505Ancient_Crystal extends QuestHandler
 		{
 			return false;
 		}
-		if (targetId == 219953)
-		{ // Beritra Research Corps Warmage.
+		if (targetId == 219953) // Beritra Research Corps Warmage.
+		{
 			if (var == 4)
 			{
 				playQuestMovie(env, 863);

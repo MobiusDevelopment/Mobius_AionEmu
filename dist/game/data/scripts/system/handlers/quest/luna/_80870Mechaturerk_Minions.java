@@ -54,8 +54,8 @@ public class _80870Mechaturerk_Minions extends QuestHandler
 		final QuestDialog dialog = env.getDialog();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 833825)
-			{ // Jay.
+			if (targetId == 833825) // Jay.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -74,16 +74,16 @@ public class _80870Mechaturerk_Minions extends QuestHandler
 				}
 			}
 		}
-		else if (targetId == 703375)
-		{ // Armored Soldier’s Footlocker.
+		else if (targetId == 703375) // Armored Soldier’s Footlocker.
+		{
 			if (dialog == QuestDialog.USE_OBJECT)
 			{
 				closeDialogWindow(env);
 				return true;
 			}
 		}
-		else if (targetId == 703376)
-		{ // Maintenance Soldier’s Footlocker.
+		else if (targetId == 703376) // Maintenance Soldier’s Footlocker.
+		{
 			if (dialog == QuestDialog.USE_OBJECT)
 			{
 				closeDialogWindow(env);
@@ -92,8 +92,8 @@ public class _80870Mechaturerk_Minions extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 834167)
-			{ // Jay.
+			if (targetId == 834167) // Jay.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -119,8 +119,8 @@ public class _80870Mechaturerk_Minions extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 834167)
-			{ // Jay.
+			if (targetId == 834167) // Jay.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

@@ -52,8 +52,8 @@ public class _26979Defend_The_Advance_Route_To_The_Last_Soldier extends QuestHan
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 802026)
-			{ // Moireste.
+			if (targetId == 802026) // Moireste.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -72,8 +72,8 @@ public class _26979Defend_The_Advance_Route_To_The_Last_Soldier extends QuestHan
 		{
 			switch (targetId)
 			{
-				case 801764:
-				{ // Undgankt.
+				case 801764: // Undgankt.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -91,8 +91,8 @@ public class _26979Defend_The_Advance_Route_To_The_Last_Soldier extends QuestHan
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801764)
-			{ // Undgankt.
+			if (targetId == 801764) // Undgankt.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

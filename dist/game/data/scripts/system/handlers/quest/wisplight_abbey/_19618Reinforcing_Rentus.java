@@ -67,8 +67,8 @@ public class _19618Reinforcing_Rentus extends QuestHandler
 				{
 					case START_DIALOG:
 					{
-						if (player.getInventory().getItemCountByItemId(164000335) >= 1)
-						{ // Abbey Return Stone.
+						if (player.getInventory().getItemCountByItemId(164000335) >= 1) // Abbey Return Stone.
+						{
 							return sendQuestDialog(env, 4762);
 						}
 						PacketSendUtility.broadcastPacket(player, new SM_MESSAGE(player, "You must have <Abbey Return Stone>", ChatType.BRIGHT_YELLOW_CENTER), true);
@@ -94,8 +94,8 @@ public class _19618Reinforcing_Rentus extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 804879:
-				{ // LF5 Garnon.
+				case 804879: // LF5 Garnon.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -116,8 +116,8 @@ public class _19618Reinforcing_Rentus extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804879)
-			{ // LF5 Garnon.
+			if (targetId == 804879) // LF5 Garnon.
+			{
 				switch (dialog)
 				{
 					case SELECT_REWARD:

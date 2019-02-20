@@ -38,8 +38,8 @@ public class Mighty_HeroAI2 extends GeneralNpcAI2
 		switch (getNpcId())
 		{
 			case 832884: // Mighty Lovely.
-			case 832885:
-			{ // Mighty Mister.
+			case 832885: // Mighty Mister.
+			{
 				super.handleDialogStart(player);
 				break;
 			}

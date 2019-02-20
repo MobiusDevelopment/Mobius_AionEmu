@@ -32,8 +32,8 @@ public class TheCharnelEntranceAI2 extends NpcAI2
 	@Override
 	protected void handleDialogStart(Player player)
 	{
-		if (player.getInventory().getFirstItemByItemId(185000183) != null)
-		{ // The Charnels Key.
+		if (player.getInventory().getFirstItemByItemId(185000183) != null) // The Charnels Key.
+		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 1011));
 		}
 		else
@@ -54,8 +54,8 @@ public class TheCharnelEntranceAI2 extends NpcAI2
 				{
 					case 301140000: // Seized Danuar Sanctuary 4.8
 					{
-						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000183, 1))
-						{ // The Charnels Key.
+						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000183, 1)) // The Charnels Key.
+						{
 							TeleportService2.teleportTo(player, 301140000, instanceId, 1005.93787f, 1366.8308f, 337.25f, (byte) 113);
 						}
 						break;
@@ -65,8 +65,8 @@ public class TheCharnelEntranceAI2 extends NpcAI2
 				{
 					case 301380000: // Danuar Sanctuary 4.8
 					{
-						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000183, 1))
-						{ // The Charnels Key.
+						if ((dialogId == 10000) && player.getInventory().decreaseByItemId(185000183, 1)) // The Charnels Key.
+						{
 							TeleportService2.teleportTo(player, 301380000, instanceId, 1005.93787f, 1366.8308f, 337.25f, (byte) 113);
 						}
 						break;

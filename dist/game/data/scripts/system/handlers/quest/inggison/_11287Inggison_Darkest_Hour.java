@@ -57,8 +57,8 @@ public class _11287Inggison_Darkest_Hour extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE) || qs.canRepeat())
 		{
-			if (targetId == 799038)
-			{ // Laestrygos.
+			if (targetId == 799038) // Laestrygos.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -80,8 +80,8 @@ public class _11287Inggison_Darkest_Hour extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 799094)
-			{ // Yushin.
+			if (targetId == 799094) // Yushin.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -102,8 +102,8 @@ public class _11287Inggison_Darkest_Hour extends QuestHandler
 			final int itemId = item.getItemId();
 			final int var = qs.getQuestVarById(0);
 			final int var1 = qs.getQuestVarById(1);
-			if (itemId == 164000103)
-			{ // Blessing Of Concentration.
+			if (itemId == 164000103) // Blessing Of Concentration.
+			{
 				if (var == 0)
 				{
 					if ((var1 >= 0) && (var1 < 9) && player.isInsideZone(ZoneName.get("INGGISON_OUTPOST_210050000")))

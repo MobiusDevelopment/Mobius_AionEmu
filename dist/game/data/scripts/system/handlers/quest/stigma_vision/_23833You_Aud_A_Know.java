@@ -89,8 +89,8 @@ public class _23833You_Aud_A_Know extends QuestHandler
 		final int targetId = env.getTargetId();
 		if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 204061)
-			{ // Aud.
+			if (targetId == 204061) // Aud.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

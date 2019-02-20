@@ -59,8 +59,8 @@ public class _23038To_The_Land_Of_The_Shugos extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 804599)
-			{ // Gartner.
+			if (targetId == 804599) // Gartner.
+			{
 				switch (dialog)
 				{
 					case START_DIALOG:
@@ -79,8 +79,8 @@ public class _23038To_The_Land_Of_The_Shugos extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 804599:
-				{ // Gartner.
+				case 804599: // Gartner.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -98,8 +98,8 @@ public class _23038To_The_Land_Of_The_Shugos extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 804599)
-			{ // Gartner.
+			if (targetId == 804599) // Gartner.
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

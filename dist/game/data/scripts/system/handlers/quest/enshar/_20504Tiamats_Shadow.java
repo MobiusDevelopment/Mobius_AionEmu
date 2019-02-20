@@ -209,8 +209,8 @@ public class _20504Tiamats_Shadow extends QuestHandler
 				{
 					case 219943: // Beritra Defense Scaleblade.
 					case 219944: // Beritra Defense Talonscout.
-					case 219945:
-					{ // Beritra Defense Wyrmtongue.
+					case 219945: // Beritra Defense Wyrmtongue.
+					{
 						if ((var1 >= 0) && (var1 < 4))
 						{
 							return defaultOnKillEvent(env, mobs1, var1, var1 + 1, 1);
@@ -237,8 +237,8 @@ public class _20504Tiamats_Shadow extends QuestHandler
 				{
 					case 219946: // Vengeful Aetheric Guard Dominator.
 					case 219947: // Vengeful Aetheric Guard Swiftshank.
-					case 219948:
-					{ // Vengeful Aetheric Guard Seersage.
+					case 219948: // Vengeful Aetheric Guard Seersage.
+					{
 						if ((var2 >= 0) && (var2 < 4))
 						{
 							return defaultOnKillEvent(env, mobs2, var2, var2 + 1, 2);
@@ -257,8 +257,8 @@ public class _20504Tiamats_Shadow extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 219949:
-					{ // Cursed Gilgamesh.
+					case 219949: // Cursed Gilgamesh.
+					{
 						QuestService.addNewSpawn(220080000, 1, 804742, npc.getX(), npc.getY(), npc.getZ(), (byte) 0);
 						qs.setQuestVar(5);
 						updateQuestStatus(env);

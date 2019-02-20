@@ -65,8 +65,8 @@ public class _28917When_One_Door_Closes extends QuestHandler
 		}
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 801007)
-			{ // Captain Faun.
+			if (targetId == 801007) // Captain Faun.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -82,8 +82,8 @@ public class _28917When_One_Door_Closes extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 802353:
-				{ // Yasan.
+				case 802353: // Yasan.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -99,8 +99,8 @@ public class _28917When_One_Door_Closes extends QuestHandler
 						}
 					}
 				}
-				case 801947:
-				{ // Giriltia.
+				case 801947: // Giriltia.
+				{
 					switch (env.getDialog())
 					{
 						case START_DIALOG:
@@ -124,8 +124,8 @@ public class _28917When_One_Door_Closes extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 801947)
-			{ // Giriltia.
+			if (targetId == 801947) // Giriltia.
+			{
 				switch (env.getDialog())
 				{
 					case SELECT_REWARD:

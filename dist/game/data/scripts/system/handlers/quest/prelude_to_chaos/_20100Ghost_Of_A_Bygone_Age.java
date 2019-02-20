@@ -80,8 +80,8 @@ public class _20100Ghost_Of_A_Bygone_Age extends QuestHandler
 		{
 			switch (targetId)
 			{
-				case 804719:
-				{ // Haldor.
+				case 804719: // Haldor.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -100,8 +100,8 @@ public class _20100Ghost_Of_A_Bygone_Age extends QuestHandler
 					}
 					break;
 				}
-				case 802363:
-				{ // Girtan.
+				case 802363: // Girtan.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -118,8 +118,8 @@ public class _20100Ghost_Of_A_Bygone_Age extends QuestHandler
 					}
 					break;
 				}
-				case 802463:
-				{ // Kahrun.
+				case 802463: // Kahrun.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -139,8 +139,8 @@ public class _20100Ghost_Of_A_Bygone_Age extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 802463)
-			{ // Kahrun.
+			if (targetId == 802463) // Kahrun.
+			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

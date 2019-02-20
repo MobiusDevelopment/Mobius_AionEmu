@@ -90,8 +90,8 @@ public class _18500Illegal_Odium extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203106)
-			{ // Alisdair.
+			if (targetId == 203106) // Alisdair.
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 4762);
@@ -104,8 +104,8 @@ public class _18500Illegal_Odium extends QuestHandler
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
-				case 203166:
-				{ // Zephyros.
+				case 203166: // Zephyros.
+				{
 					switch (dialog)
 					{
 						case START_DIALOG:
@@ -122,8 +122,8 @@ public class _18500Illegal_Odium extends QuestHandler
 					}
 					break;
 				}
-				case 730304:
-				{ // Suspicious Odium Piece.
+				case 730304: // Suspicious Odium Piece.
+				{
 					switch (dialog)
 					{
 						case USE_OBJECT:
@@ -140,8 +140,8 @@ public class _18500Illegal_Odium extends QuestHandler
 					}
 					break;
 				}
-				case 730305:
-				{ // Suspicious Odium Pile.
+				case 730305: // Suspicious Odium Pile.
+				{
 					switch (dialog)
 					{
 						case USE_OBJECT:
@@ -162,8 +162,8 @@ public class _18500Illegal_Odium extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (targetId == 799522)
-			{ // Moorilerk.
+			if (targetId == 799522) // Moorilerk.
+			{
 				if (dialog == QuestDialog.USE_OBJECT)
 				{
 					return sendQuestDialog(env, 10002);

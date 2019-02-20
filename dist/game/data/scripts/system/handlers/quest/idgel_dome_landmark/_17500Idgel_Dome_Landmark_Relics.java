@@ -54,8 +54,8 @@ public class _17500Idgel_Dome_Landmark_Relics extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 806262)
-			{ // 모리세.
+			if (targetId == 806262) // 모리세.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -80,8 +80,8 @@ public class _17500Idgel_Dome_Landmark_Relics extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806263)
-			{ // 넬레우스.
+			if (targetId == 806263) // 넬레우스.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -98,8 +98,8 @@ public class _17500Idgel_Dome_Landmark_Relics extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806262)
-			{ // 모리세.
+			if (targetId == 806262) // 모리세.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);

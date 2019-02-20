@@ -324,7 +324,8 @@ public class AttackUtil
 		}
 		
 		if (attacked instanceof Player)
-		{ // Strike Fortitude lowers the crit multiplier
+		{
+			// Strike Fortitude lowers the crit multiplier
 			final Player player = (Player) attacked;
 			int fortitude = 0;
 			switch (stat)

@@ -53,8 +53,8 @@ public class _14122Oasis_Wasted extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || (qs.getStatus() == QuestStatus.NONE))
 		{
-			if (targetId == 203917)
-			{ // Gaia
+			if (targetId == 203917) // Gaia
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -64,8 +64,8 @@ public class _14122Oasis_Wasted extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 203992)
-			{ // Ophelos
+			if (targetId == 203992) // Ophelos
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1352);
@@ -75,8 +75,8 @@ public class _14122Oasis_Wasted extends QuestHandler
 					return defaultCloseDialog(env, 0, 1);
 				}
 			}
-			else if (targetId == 203987)
-			{ // Heratos
+			else if (targetId == 203987) // Heratos
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1693);
@@ -86,8 +86,8 @@ public class _14122Oasis_Wasted extends QuestHandler
 					return defaultCloseDialog(env, 1, 2);
 				}
 			}
-			else if (targetId == 203934)
-			{ // Sirink
+			else if (targetId == 203934) // Sirink
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2375);
@@ -104,8 +104,8 @@ public class _14122Oasis_Wasted extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 203934)
-			{ // Sirink
+			if (targetId == 203934) // Sirink
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

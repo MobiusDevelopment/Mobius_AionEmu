@@ -89,8 +89,8 @@ public class FountainRewards extends QuestHandler
 							(targetId == 804759) || // Enshar Coin Fountain.
 							(targetId == 804788) || // Cygnea Coin Fountain.
 							(targetId == 805778) || // Iluma Coin Fountain.
-							(targetId == 805753))
-						{ // Norsvold Coin Fountain.
+							(targetId == 805753)) // Norsvold Coin Fountain.
+						{
 							return sendQuestDialog(env, 1011);
 						}
 						return sendQuestSelectionDialog(env);

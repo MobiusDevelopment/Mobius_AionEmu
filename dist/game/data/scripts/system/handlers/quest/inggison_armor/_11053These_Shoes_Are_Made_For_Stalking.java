@@ -48,8 +48,8 @@ public class _11053These_Shoes_Are_Made_For_Stalking extends QuestHandler
 		final int targetId = env.getTargetId();
 		if ((qs == null) || qs.canRepeat())
 		{
-			if (targetId == 799015)
-			{ // Siaqua
+			if (targetId == 799015) // Siaqua
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 1011);
@@ -59,8 +59,8 @@ public class _11053These_Shoes_Are_Made_For_Stalking extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 799015)
-			{ // Siaqua
+			if (targetId == 799015) // Siaqua
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 2375);

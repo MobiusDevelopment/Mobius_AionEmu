@@ -115,8 +115,8 @@ public class _20529Building_A_Protection_Artifact_2 extends QuestHandler
 	{
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (player.getWorldId() == 301690000)
-		{ // 오드광산.
+		if (player.getWorldId() == 301690000) // 오드광산.
+		{
 			if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 			{
 				final int var = qs.getQuestVars().getQuestVars();
@@ -146,8 +146,8 @@ public class _20529Building_A_Protection_Artifact_2 extends QuestHandler
 		}
 		if (qs.getStatus() == QuestStatus.START)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -181,8 +181,8 @@ public class _20529Building_A_Protection_Artifact_2 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806300)
-			{ // 뷔스테.
+			if (targetId == 806300) // 뷔스테.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -199,8 +199,8 @@ public class _20529Building_A_Protection_Artifact_2 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 731716)
-			{ // 부서진 마족 회랑 장치.
+			if (targetId == 731716) // 부서진 마족 회랑 장치.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -242,8 +242,8 @@ public class _20529Building_A_Protection_Artifact_2 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806298)
-			{ // 데자보보.
+			if (targetId == 806298) // 데자보보.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -260,8 +260,8 @@ public class _20529Building_A_Protection_Artifact_2 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 703325)
-			{ // 천족 차원의 소용돌이.
+			if (targetId == 703325) // 천족 차원의 소용돌이.
+			{
 				switch (env.getDialog())
 				{
 					case USE_OBJECT:
@@ -284,8 +284,8 @@ public class _20529Building_A_Protection_Artifact_2 extends QuestHandler
 					}
 				}
 			}
-			if (targetId == 806299)
-			{ // 쓰러진 위자보보.
+			if (targetId == 806299) // 쓰러진 위자보보.
+			{
 				switch (env.getDialog())
 				{
 					case START_DIALOG:
@@ -315,8 +315,8 @@ public class _20529Building_A_Protection_Artifact_2 extends QuestHandler
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
-			if (targetId == 806079)
-			{ // Feregran.
+			if (targetId == 806079) // Feregran.
+			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -355,12 +355,12 @@ public class _20529Building_A_Protection_Artifact_2 extends QuestHandler
 				}; // 서광의 가디언 마법병.
 				switch (targetId)
 				{
-					case 244127:
-					{ // 서광의 가디언 전투병.
+					case 244127: // 서광의 가디언 전투병.
+					{
 						return defaultOnKillEvent(env, DF6MissionLightFi75An, 0, 7, 1);
 					}
-					case 244128:
-					{ // 서광의 가디언 마법병.
+					case 244128: // 서광의 가디언 마법병.
+					{
 						qs.setQuestVar(7);
 						updateQuestStatus(env);
 						return defaultOnKillEvent(env, DF6MissionLightWi75An, 0, 3, 2);
@@ -371,8 +371,8 @@ public class _20529Building_A_Protection_Artifact_2 extends QuestHandler
 			{
 				switch (targetId)
 				{
-					case 244129:
-					{ // 유니우스.
+					case 244129: // 유니우스.
+					{
 						qs.setQuestVar(9);
 						updateQuestStatus(env);
 						return true;

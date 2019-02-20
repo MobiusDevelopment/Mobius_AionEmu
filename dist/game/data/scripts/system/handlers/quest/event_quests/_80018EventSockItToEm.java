@@ -152,8 +152,8 @@ public class _80018EventSockItToEm extends QuestHandler
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (qs.getCompleteCount() == 9)
-			{ // [Event] Hat Box
+			if (qs.getCompleteCount() == 9) // [Event] Hat Box
+			{
 				rewardItems.add(new QuestItems(188051106, 1));
 			}
 			// randomize movie

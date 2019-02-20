@@ -65,8 +65,8 @@ public class _38000CallOfTheAlabasterOrder extends QuestHandler
 		
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
-			if (targetId == 799803)
-			{ // Typhon
+			if (targetId == 799803) // Typhon
+			{
 				if (dialog == QuestDialog.START_DIALOG)
 				{
 					return sendQuestDialog(env, 10002);
@@ -80,8 +80,8 @@ public class _38000CallOfTheAlabasterOrder extends QuestHandler
 		}
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
 		{
-			if (targetId == 799803)
-			{ // Typhon
+			if (targetId == 799803) // Typhon
+			{
 				return sendQuestEndDialog(env);
 			}
 		}

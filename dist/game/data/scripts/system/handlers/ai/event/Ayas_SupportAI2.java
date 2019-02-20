@@ -45,8 +45,8 @@ public class Ayas_SupportAI2 extends GeneralNpcAI2
 				// Asmodians.
 			}
 			case 833673: // Helpful Ayas.
-			case 833674:
-			{ // Friendly Ayas.
+			case 833674: // Friendly Ayas.
+			{
 				super.handleDialogStart(player);
 				break;
 			}
