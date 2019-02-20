@@ -21,10 +21,10 @@ Changes:
 -Addition of eclipse launcher files.
 -Fixed fly and teleport issues.
 -Updated libraries to latest revisions.
+-Fixed all code warnings.
 
 TODO:
--Fix all code warnings.
--Siege boss listeners initialization.
+-Siege boss listeners initialization?
 
 Credits:
 -Project was based on Aion-Unique 5.1 free release. https://www.facebook.com/aionuniqueofficial/
