@@ -73,7 +73,7 @@ public class _3913A_Secret_Summons extends QuestHandler
 		}
 		else if (targetId == 204505) // Sulates.
 		{
-			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
+			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -94,23 +94,20 @@ public class _3913A_Secret_Summons extends QuestHandler
 		}
 		else if (targetId == 204656) // Maloren.
 		{
-			if (qs != null)
+			if ((env.getDialog() == QuestDialog.START_DIALOG) && (qs.getStatus() == QuestStatus.START))
 			{
-				if ((env.getDialog() == QuestDialog.START_DIALOG) && (qs.getStatus() == QuestStatus.START))
-				{
-					return sendQuestDialog(env, 2375);
-				}
-				else if ((env.getDialogId() == 1009) && (qs.getStatus() != QuestStatus.COMPLETE) && (qs.getStatus() != QuestStatus.NONE))
-				{
-					qs.setQuestVar(2);
-					qs.setStatus(QuestStatus.REWARD);
-					updateQuestStatus(env);
-					return sendQuestEndDialog(env);
-				}
-				else
-				{
-					return sendQuestEndDialog(env);
-				}
+				return sendQuestDialog(env, 2375);
+			}
+			else if ((env.getDialogId() == 1009) && (qs.getStatus() != QuestStatus.COMPLETE) && (qs.getStatus() != QuestStatus.NONE))
+			{
+				qs.setQuestVar(2);
+				qs.setStatus(QuestStatus.REWARD);
+				updateQuestStatus(env);
+				return sendQuestEndDialog(env);
+			}
+			else
+			{
+				return sendQuestEndDialog(env);
 			}
 		}
 		return false;

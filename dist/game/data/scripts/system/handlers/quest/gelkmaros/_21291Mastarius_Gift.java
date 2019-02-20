@@ -59,7 +59,7 @@ public class _21291Mastarius_Gift extends QuestHandler
 			}
 			return sendQuestStartDialog(env);
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			if (targetId == 799340) // Athana.
 			{
@@ -73,7 +73,7 @@ public class _21291Mastarius_Gift extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (targetId == 799340) // Athana.
 			{

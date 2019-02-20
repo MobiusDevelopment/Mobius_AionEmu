@@ -72,7 +72,7 @@ public class _41049Upset_The_Threat extends QuestHandler
 				}
 				return sendQuestStartDialog(env);
 			}
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{

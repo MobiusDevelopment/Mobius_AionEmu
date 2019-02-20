@@ -60,7 +60,7 @@ public class _18407Drakan_Journalism extends QuestHandler
 				}
 				return sendQuestStartDialog(env);
 			}
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
+			else if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
 			{
 				if (env.getDialogId() == 31)
 				{

@@ -72,7 +72,7 @@ public class _41034Public_Enemy extends QuestHandler
 				}
 				return sendQuestStartDialog(env);
 			}
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{

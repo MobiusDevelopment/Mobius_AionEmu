@@ -56,7 +56,7 @@ public class _28837Sprout_Of_Joy extends QuestHandler
 		{
 			return false;
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			if (targetId == 830656)
 			{
@@ -75,7 +75,7 @@ public class _28837Sprout_Of_Joy extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (targetId == 830656)
 			{

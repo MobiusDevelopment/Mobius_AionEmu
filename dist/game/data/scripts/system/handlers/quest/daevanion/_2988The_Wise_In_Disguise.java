@@ -78,7 +78,7 @@ public class _2988The_Wise_In_Disguise extends QuestHandler
 		}
 		else if (targetId == 204338)
 		{
-			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
+			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -99,7 +99,7 @@ public class _2988The_Wise_In_Disguise extends QuestHandler
 		}
 		else if (targetId == 204213)
 		{
-			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
+			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -120,7 +120,7 @@ public class _2988The_Wise_In_Disguise extends QuestHandler
 		}
 		else if (targetId == 204146)
 		{
-			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 2))
+			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 2))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -147,7 +147,7 @@ public class _2988The_Wise_In_Disguise extends QuestHandler
 					return sendQuestStartDialog(env);
 				}
 			}
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{

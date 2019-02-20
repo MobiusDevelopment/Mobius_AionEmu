@@ -119,7 +119,7 @@ public class _2993Another_Beginning extends QuestHandler
 				return sendQuestStartDialog(env);
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			if (targetId == 204076)
 			{
@@ -185,7 +185,7 @@ public class _2993Another_Beginning extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (targetId == 204076)
 			{

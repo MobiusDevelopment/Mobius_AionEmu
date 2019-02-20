@@ -75,7 +75,7 @@ public class _19020MasterTailorsPotential extends QuestHandler
 			return false;
 		}
 		
-		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		if (qs.getStatus() == QuestStatus.START)
 		{
 			switch (targetId)
 			{

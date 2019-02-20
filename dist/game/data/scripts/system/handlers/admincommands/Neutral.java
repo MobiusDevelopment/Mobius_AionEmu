@@ -52,7 +52,6 @@ public class Neutral extends AdminCommand
 			admin.setAdminNeutral(3);
 			admin.setAdminEnmity(0);
 		}
-		
 		else if (params[0].equals("players"))
 		{
 			admin.setAdminNeutral(2);
@@ -61,7 +60,6 @@ public class Neutral extends AdminCommand
 				admin.setAdminEnmity(0);
 			}
 		}
-		
 		else if (params[0].equals("npcs"))
 		{
 			admin.setAdminNeutral(1);
@@ -70,13 +68,11 @@ public class Neutral extends AdminCommand
 				admin.setAdminEnmity(0);
 			}
 		}
-		
 		else if (params[0].equals("cancel"))
 		{
 			admin.setAdminNeutral(0);
 			output = "You appear regular to both Players and Npcs.";
 		}
-		
 		else if (params[0].equals("help"))
 		{
 			PacketSendUtility.sendMessage(admin, help);

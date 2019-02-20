@@ -90,7 +90,7 @@ public class _1098PearlofProtection extends QuestHandler
 		}
 		final int var = qs.getQuestVarById(0);
 		
-		if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD)) // Reward
+		if (qs.getStatus() == QuestStatus.REWARD) // Reward
 		{
 			if (targetId == 790001) // Pernos
 			{

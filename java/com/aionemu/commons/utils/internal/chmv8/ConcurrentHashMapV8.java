@@ -695,7 +695,7 @@ public class ConcurrentHashMapV8<K, V> implements ConcurrentMap<K, V>, Serializa
 					p.right = x;
 				}
 				x.red = true;
-				while ((x != null) && ((xp = x.parent) != null) && xp.red && ((xpp = xp.parent) != null))
+				while (((xp = x.parent) != null) && xp.red && ((xpp = xp.parent) != null))
 				{
 					final TreeNode<V> xppl = xpp.left;
 					if (xp == xppl)

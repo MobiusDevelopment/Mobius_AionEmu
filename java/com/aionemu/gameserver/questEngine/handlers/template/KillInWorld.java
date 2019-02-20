@@ -126,7 +126,7 @@ public class KillInWorld extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (endNpcs.contains(targetId))
 			{

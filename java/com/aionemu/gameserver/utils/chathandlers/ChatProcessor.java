@@ -174,14 +174,11 @@ public class ChatProcessor implements GameEngine
 			throw new GameServerError("Can't reload chat handlers.", e);
 		}
 		
-		if ((tmpSM != null) && (adminCP != null))
-		{
-			backupCommands.clear();
-			sm.shutdown();
-			sm = null;
-			sm = tmpSM;
-			instance = adminCP;
-		}
+		backupCommands.clear();
+		sm.shutdown();
+		sm = null;
+		sm = tmpSM;
+		instance = adminCP;
 	}
 	
 	private void loadLevels()

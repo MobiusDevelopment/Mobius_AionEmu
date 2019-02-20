@@ -60,7 +60,7 @@ public class _28213The_Coliseum_Secret extends QuestHandler
 				return sendQuestStartDialog(env);
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)

@@ -66,13 +66,11 @@ public class _4051BukmirsWorry extends QuestHandler
 				}
 				return sendQuestStartDialog(env);
 			}
-			
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				return sendQuestEndDialog(env);
 			}
 		}
-		
 		else if (targetId == 205202) // BuBu Chi
 		{
 			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))

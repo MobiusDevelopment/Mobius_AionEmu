@@ -77,7 +77,7 @@ public class _1988A_Meeting_With_A_Sage extends QuestHandler
 		}
 		else if (targetId == 203989)
 		{
-			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
+			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -98,7 +98,7 @@ public class _1988A_Meeting_With_A_Sage extends QuestHandler
 		}
 		else if (targetId == 798018)
 		{
-			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
+			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -119,7 +119,7 @@ public class _1988A_Meeting_With_A_Sage extends QuestHandler
 		}
 		else if (targetId == 203771)
 		{
-			if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 2))
+			if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 2))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -138,7 +138,7 @@ public class _1988A_Meeting_With_A_Sage extends QuestHandler
 					return sendQuestStartDialog(env);
 				}
 			}
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{

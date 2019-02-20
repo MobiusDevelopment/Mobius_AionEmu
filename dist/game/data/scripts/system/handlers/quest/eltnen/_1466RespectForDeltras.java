@@ -114,7 +114,6 @@ public class _1466RespectForDeltras extends QuestHandler
 				}
 			}
 		}
-		
 		else if (targetId == 203903)
 		{
 			if (qs != null)

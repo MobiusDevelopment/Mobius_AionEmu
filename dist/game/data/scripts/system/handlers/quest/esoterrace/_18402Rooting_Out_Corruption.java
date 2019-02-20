@@ -59,7 +59,7 @@ public class _18402Rooting_Out_Corruption extends QuestHandler
 				}
 				return sendQuestStartDialog(env);
 			}
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{

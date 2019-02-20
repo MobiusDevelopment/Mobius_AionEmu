@@ -67,7 +67,7 @@ public class _30310RankandBile extends QuestHandler
 			return false;
 		}
 		
-		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
 			if (targetId == 204225)

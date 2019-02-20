@@ -84,7 +84,7 @@ public class _18600Scoring_Some_Bad_Stigma extends QuestHandler
 					return sendQuestStartDialog(env);
 				}
 			}
-			if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+			if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				if (env.getDialog() == QuestDialog.USE_OBJECT)
 				{

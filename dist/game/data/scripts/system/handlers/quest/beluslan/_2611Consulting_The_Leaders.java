@@ -65,7 +65,7 @@ public class _2611Consulting_The_Leaders extends QuestHandler
 				}
 				return sendQuestStartDialog(env);
 			}
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+			else if (qs.getStatus() == QuestStatus.START)
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -83,7 +83,7 @@ public class _2611Consulting_The_Leaders extends QuestHandler
 					return sendQuestEndDialog(env);
 				}
 			}
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				return sendQuestEndDialog(env);
 			}

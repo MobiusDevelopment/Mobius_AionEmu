@@ -72,12 +72,13 @@ public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 				}
 			}
 		}
+		
 		if (qs == null)
 		{
 			return false;
 		}
-		final int var = qs.getQuestVarById(0);
-		if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		
+		if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (targetId == 799017) // Sulinia.
 			{
@@ -164,6 +165,7 @@ public class _11216How_Many_Draks_Does_It_Take_To_Map extends QuestHandler
 					{
 						case START_DIALOG:
 						{
+							final int var = qs.getQuestVarById(0);
 							if (var == 0)
 							{
 								return sendQuestDialog(env, 1011);

@@ -66,7 +66,7 @@ public class _4004TheSeedsOfHope extends QuestHandler
 				return sendQuestStartDialog(env);
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (targetId == 205128)
 			{
@@ -77,14 +77,14 @@ public class _4004TheSeedsOfHope extends QuestHandler
 				return sendQuestEndDialog(env);
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
 			{
 				case 700340: // Earth Mound
 				{
-					if ((qs != null) && (env.getDialog() == QuestDialog.USE_OBJECT))
+					if (env.getDialog() == QuestDialog.USE_OBJECT)
 					{
 						if (var < 4)
 						{

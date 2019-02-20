@@ -65,7 +65,7 @@ public class _2332MeatyTreats extends QuestHandler
 				return sendQuestStartDialog(env);
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			if (targetId == 798084)
 			{

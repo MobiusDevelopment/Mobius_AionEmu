@@ -66,7 +66,7 @@ public class _3547Enemy_Harassing_The_Elim extends QuestHandler
 		{
 			return false;
 		}
-		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
 			if (targetId == 204647)

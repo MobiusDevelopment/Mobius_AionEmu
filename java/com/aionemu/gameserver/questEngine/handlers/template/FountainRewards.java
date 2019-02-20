@@ -121,7 +121,7 @@ public class FountainRewards extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (startNpcs.contains(targetId))
 			{

@@ -94,7 +94,7 @@ public class _15042Calling_Kaisinel_Butterfly extends QuestHandler
 		{
 			return HandlerResult.UNKNOWN;
 		}
-		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
 			final int var1 = qs.getQuestVarById(1);

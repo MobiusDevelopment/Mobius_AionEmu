@@ -43,7 +43,7 @@ public class SteamTachysphereAI2 extends NpcAI2
 		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 27));
 		}
-		else if ((qs != null) && (qs.getStatus() != QuestStatus.COMPLETE))
+		else if (qs.getStatus() != QuestStatus.COMPLETE)
 		{
 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 10));
 		}

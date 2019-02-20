@@ -1144,10 +1144,7 @@ public abstract class QuestHandler extends AbstractQuestHandler
 		{
 			if (!startCondition.check(player, false))
 			{
-				if (qs == null)
-				{
-					QuestService.startMission(env, QuestStatus.LOCKED);
-				}
+				QuestService.startMission(env, QuestStatus.LOCKED);
 				return false;
 			}
 			

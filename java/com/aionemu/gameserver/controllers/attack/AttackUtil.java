@@ -907,17 +907,14 @@ public class AttackUtil
 		{
 			return AttackStatus.RESIST;
 		}
-		
 		else if (StatFunctions.calculatePhysicalDodgeRate(attacker, attacked, 0))
 		{
 			return AttackStatus.DODGE;
 		}
-		
 		else if (StatFunctions.calculatePhysicalParryRate(attacker, attacked))
 		{
 			return AttackStatus.PARRY;
 		}
-		
 		else if (StatFunctions.calculatePhysicalBlockRate(attacker, attacked))
 		{
 			return AttackStatus.BLOCK;

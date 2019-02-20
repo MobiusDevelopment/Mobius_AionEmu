@@ -66,11 +66,7 @@ public class SM_HOUSE_REGISTRY extends AionServerPacket
 				{
 					writeD(0);
 				}
-				Integer color = null;
-				if (obj != null)
-				{
-					color = obj.getColor();
-				}
+				Integer color = obj.getColor();
 				if ((color != null) && (color > 0))
 				{
 					writeC(1);

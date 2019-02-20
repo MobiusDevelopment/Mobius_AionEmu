@@ -108,7 +108,7 @@ public class _4082GatheringtheHerbPouches extends QuestHandler
 				}
 			}
 			
-			if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+			if (qs.getStatus() == QuestStatus.START)
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -130,13 +130,11 @@ public class _4082GatheringtheHerbPouches extends QuestHandler
 					return sendQuestEndDialog(env);
 				}
 			}
-			
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				return sendQuestEndDialog(env);
 			}
 		}
-		
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
 			switch (targetId)

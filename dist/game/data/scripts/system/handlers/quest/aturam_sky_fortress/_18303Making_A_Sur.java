@@ -70,7 +70,7 @@ public class _18303Making_A_Sur extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			if (targetId == 730390)
 			{
@@ -99,7 +99,7 @@ public class _18303Making_A_Sur extends QuestHandler
 				return useQuestObject(env, 2, 3, true, true);
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (targetId == 804820)
 			{

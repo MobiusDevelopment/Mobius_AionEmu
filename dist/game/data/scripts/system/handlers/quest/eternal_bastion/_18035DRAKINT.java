@@ -65,7 +65,7 @@ public class _18035DRAKINT extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			switch (targetId)
 			{

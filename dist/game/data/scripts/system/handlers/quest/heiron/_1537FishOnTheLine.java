@@ -99,7 +99,6 @@ public class _1537FishOnTheLine extends QuestHandler
 				}
 			}
 		}
-		
 		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (targetId == 204588)

@@ -1523,10 +1523,7 @@ public class Effect implements StatOwner
 					if (!useEquipmentConditionsCheck())
 					{
 						endEffect();
-						if (this != null)
-						{
-							effected.getObserveController().removeObserver(this);
-						}
+						effected.getObserveController().removeObserver(this);
 					}
 				}
 			};

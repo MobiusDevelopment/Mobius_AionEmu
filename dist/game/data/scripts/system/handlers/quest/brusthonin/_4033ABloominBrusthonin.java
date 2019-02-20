@@ -67,8 +67,7 @@ public class _4033ABloominBrusthonin extends QuestHandler
 				}
 				return sendQuestStartDialog(env);
 			}
-			
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
+			else if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -90,8 +89,7 @@ public class _4033ABloominBrusthonin extends QuestHandler
 					return sendQuestStartDialog(env);
 				}
 			}
-			
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -109,7 +107,6 @@ public class _4033ABloominBrusthonin extends QuestHandler
 				}
 			}
 		}
-		
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
 			switch (targetId)

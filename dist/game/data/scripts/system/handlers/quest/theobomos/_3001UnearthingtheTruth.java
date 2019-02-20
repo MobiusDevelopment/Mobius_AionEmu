@@ -68,7 +68,7 @@ public class _3001UnearthingtheTruth extends QuestHandler
 				}
 				return sendQuestStartDialog(env);
 			}
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+			else if (qs.getStatus() == QuestStatus.START)
 			{
 				if (env.getDialog() == QuestDialog.START_DIALOG)
 				{
@@ -87,7 +87,7 @@ public class _3001UnearthingtheTruth extends QuestHandler
 					return sendQuestEndDialog(env);
 				}
 			}
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				return sendQuestEndDialog(env);
 			}

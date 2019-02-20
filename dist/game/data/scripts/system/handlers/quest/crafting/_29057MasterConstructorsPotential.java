@@ -87,7 +87,7 @@ public class _29057MasterConstructorsPotential extends QuestHandler
 			return false;
 		}
 		
-		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)

@@ -113,7 +113,6 @@ public class _2393TheLoveOfAFather extends QuestHandler
 					return sendQuestStartDialog(env);
 				}
 			}
-			
 			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				if ((env.getDialog() == QuestDialog.START_DIALOG) && (qs.getStatus() == QuestStatus.REWARD))

@@ -67,8 +67,7 @@ public class _2307IrresistibleSoup extends QuestHandler
 				}
 				return sendQuestStartDialog(env);
 			}
-			
-			else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+			else if (qs.getStatus() == QuestStatus.REWARD)
 			{
 				return sendQuestEndDialog(env);
 			}
@@ -114,7 +113,6 @@ public class _2307IrresistibleSoup extends QuestHandler
 				}
 			}
 		}
-		
 		else if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
 		{
 			switch (targetId)

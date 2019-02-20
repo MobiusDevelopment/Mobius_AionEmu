@@ -80,22 +80,13 @@ public class _29001ExpertEssencetappingExpert extends QuestHandler
 		{
 			return false;
 		}
-		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		if (qs.getStatus() == QuestStatus.START)
 		{
-			switch (targetId)
+			if ((targetId == 204052) && (env.getDialog() == QuestDialog.START_DIALOG))
 			{
-				case 204052:
-				{
-					switch (env.getDialog())
-					{
-						case START_DIALOG:
-						{
-							qs.setStatus(QuestStatus.REWARD);
-							updateQuestStatus(env);
-							return sendQuestDialog(env, 2375);
-						}
-					}
-				}
+				qs.setStatus(QuestStatus.REWARD);
+				updateQuestStatus(env);
+				return sendQuestDialog(env, 2375);
 			}
 		}
 		else if (qs.getStatus() == QuestStatus.REWARD)

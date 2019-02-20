@@ -88,7 +88,7 @@ public class _28645Kaliga_Collection_Harp extends QuestHandler
 					}
 					return sendQuestStartDialog(env);
 				}
-				else if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
+				else if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
 				{
 					if (env.getDialog() == QuestDialog.USE_OBJECT)
 					{
@@ -108,7 +108,7 @@ public class _28645Kaliga_Collection_Harp extends QuestHandler
 						return sendQuestDialog(env, 2716);
 					}
 				}
-				else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+				else if (qs.getStatus() == QuestStatus.REWARD)
 				{
 					final int var = qs.getQuestVarById(0);
 					switch (env.getDialog())

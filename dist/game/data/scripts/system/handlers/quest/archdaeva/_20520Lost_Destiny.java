@@ -222,12 +222,9 @@ public class _20520Lost_Destiny extends QuestHandler
 					changeQuestStep(env, 3, 4, false);
 					ThreadPoolManager.getInstance().schedule(() ->
 					{
-						if (player != null)
-						{
-							final WorldMapInstance SanctuaryDungeon = InstanceService.getNextAvailableInstance(301580000);
-							InstanceService.registerPlayerWithInstance(SanctuaryDungeon, player);
-							TeleportService2.teleportTo(player, 301580000, SanctuaryDungeon.getInstanceId(), 431, 491, 99);
-						}
+						final WorldMapInstance SanctuaryDungeon = InstanceService.getNextAvailableInstance(301580000);
+						InstanceService.registerPlayerWithInstance(SanctuaryDungeon, player);
+						TeleportService2.teleportTo(player, 301580000, SanctuaryDungeon.getInstanceId(), 431, 491, 99);
 					}, 43000);
 					return true;
 				}

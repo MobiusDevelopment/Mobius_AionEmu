@@ -115,7 +115,7 @@ public class _1361FindingDrinkingWater extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD)) // Reward
+		else if (qs.getStatus() == QuestStatus.REWARD) // Reward
 		{
 			if (env.getDialog() == QuestDialog.START_DIALOG)
 			{
@@ -133,8 +133,7 @@ public class _1361FindingDrinkingWater extends QuestHandler
 				return sendQuestEndDialog(env);
 			}
 		}
-		
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
+		else if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 1))
 		{
 			switch (targetId)
 			{

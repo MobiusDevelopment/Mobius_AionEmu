@@ -65,7 +65,7 @@ public class _28035Trust_In_None_But_Verify extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			switch (targetId)
 			{

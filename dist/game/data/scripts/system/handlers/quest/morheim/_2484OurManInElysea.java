@@ -77,7 +77,7 @@ public class _2484OurManInElysea extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			switch (targetId)
 			{
@@ -112,7 +112,7 @@ public class _2484OurManInElysea extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (targetId == 203331)
 			{

@@ -59,7 +59,7 @@ public class _11289Veille_Gift extends QuestHandler
 			}
 			return sendQuestStartDialog(env);
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			if (targetId == 799038) // Laestrygos.
 			{
@@ -73,7 +73,7 @@ public class _11289Veille_Gift extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (targetId == 799038) // Laestrygos.
 			{

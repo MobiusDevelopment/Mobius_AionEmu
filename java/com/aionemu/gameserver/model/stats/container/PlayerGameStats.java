@@ -352,7 +352,7 @@ public class PlayerGameStats extends CreatureGameStats<Player>
 		if (mainHandWeapon != null)
 		{
 			base = mainHandWeapon.getItemTemplate().getWeaponStats().getAttackRange();
-			if (!mainHandWeapon.getItemTemplate().isTwoHandWeapon() && (mainHandWeapon != null) && (offHandWeapon != null) && (offHandWeapon.getItemTemplate().getArmorType() != ArmorType.SHIELD))
+			if (!mainHandWeapon.getItemTemplate().isTwoHandWeapon() && (offHandWeapon != null) && (offHandWeapon.getItemTemplate().getArmorType() != ArmorType.SHIELD))
 			{
 				if (mainHandWeapon.getItemTemplate().getWeaponStats().getAttackRange() != offHandWeapon.getItemTemplate().getWeaponStats().getAttackRange())
 				{
@@ -390,7 +390,7 @@ public class PlayerGameStats extends CreatureGameStats<Player>
 					}
 					else
 					{
-						if ((mainHandWeapon != null) && (offHandWeapon != null) && (offHandWeapon.getItemTemplate().getArmorType() != ArmorType.SHIELD))
+						if (offHandWeapon.getItemTemplate().getArmorType() != ArmorType.SHIELD)
 						{
 							base = mainHandWeapon.getItemTemplate().getWeaponStats().getAttackRange();
 							log.info("[Error] PlayerGameStats] mainHandWeapon [" + mainHandWeapon.getItemTemplate().getItemType() + "] offHandWeapon [" + offHandWeapon.getItemTemplate().getItemType() + "]");

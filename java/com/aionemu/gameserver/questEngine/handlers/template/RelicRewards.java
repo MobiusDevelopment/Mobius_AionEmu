@@ -101,7 +101,7 @@ public class RelicRewards extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
+		else if ((qs.getStatus() == QuestStatus.START) && (qs.getQuestVarById(0) == 0))
 		{
 			if (startNpcs.contains(targetId))
 			{
@@ -170,7 +170,7 @@ public class RelicRewards extends QuestHandler
 				}
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.REWARD))
+		else if (qs.getStatus() == QuestStatus.REWARD)
 		{
 			if (startNpcs.contains(targetId))
 			{

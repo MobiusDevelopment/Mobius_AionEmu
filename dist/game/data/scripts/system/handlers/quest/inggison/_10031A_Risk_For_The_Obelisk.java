@@ -321,9 +321,6 @@ public class _10031A_Risk_For_The_Obelisk extends QuestHandler
 		final Player player = env.getPlayer();
 		final QuestState qs = player.getQuestStateList().getQuestState(questId);
 		final int targetId = env.getTargetId();
-		final int var = qs.getQuestVarById(0);
-		final int var1 = qs.getQuestVarById(1);
-		final int var2 = qs.getQuestVarById(2);
 		final int[] armoredSpaller =
 		{
 			215508
@@ -342,6 +339,9 @@ public class _10031A_Risk_For_The_Obelisk extends QuestHandler
 		};
 		if ((qs != null) && (qs.getStatus() == QuestStatus.START))
 		{
+			final int var = qs.getQuestVarById(0);
+			final int var1 = qs.getQuestVarById(1);
+			final int var2 = qs.getQuestVarById(2);
 			if (var == 9)
 			{
 				if ((var1 + var2) < 11)

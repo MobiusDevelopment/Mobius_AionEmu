@@ -74,7 +74,6 @@ public class Sys extends AdminCommand
 				PacketSendUtility.sendMessage(player, line);
 			}
 		}
-		
 		else if (params[0].equals("memory"))
 		{
 			// Memory Infos
@@ -83,7 +82,6 @@ public class Sys extends AdminCommand
 				PacketSendUtility.sendMessage(player, line);
 			}
 		}
-		
 		else if (params[0].equals("gc"))
 		{
 			final long time = System.currentTimeMillis();

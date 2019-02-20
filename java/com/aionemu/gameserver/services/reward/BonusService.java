@@ -133,19 +133,16 @@ public class BonusService
 		}
 		
 		BonusItemGroup chosenGroup = null;
-		if (groups != null)
+		int percent = 100;
+		for (BonusItemGroup gr : groups)
 		{
-			int percent = 100;
-			for (BonusItemGroup gr : groups)
+			final float chance = getNormalizedChance(gr.getChance(), total);
+			if (Rnd.get(0, percent) <= chance)
 			{
-				final float chance = getNormalizedChance(gr.getChance(), total);
-				if (Rnd.get(0, percent) <= chance)
-				{
-					chosenGroup = gr;
-					break;
-				}
-				percent -= chance;
+				chosenGroup = gr;
+				break;
 			}
+			percent -= chance;
 		}
 		return chosenGroup;
 	}

@@ -75,7 +75,7 @@ public class _18510Fire_And_Flame extends QuestHandler
 				return sendQuestStartDialog(env, 182212009, 1);
 			}
 		}
-		else if ((qs != null) && (qs.getStatus() == QuestStatus.START))
+		else if (qs.getStatus() == QuestStatus.START)
 		{
 			final int var = qs.getQuestVarById(0);
 			switch (targetId)
