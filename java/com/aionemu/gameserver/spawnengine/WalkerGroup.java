@@ -72,7 +72,11 @@ public class WalkerGroup
 			{
 				// Line formation: distance 2 meters from each other (divide by 2 and multiple by 2)
 				// negative at left hand and positive at the right hand
-				final float bounds = sum(members, on(ClusteredNpc.class).getNpc().getObjectTemplate().getBoundRadius().getSide());
+				float bounds = 0;
+				for (ClusteredNpc member : members)
+				{
+					bounds += member.getNpc().getObjectTemplate().getBoundRadius().getSide();
+				}
 				float distance = ((1 - members.size()) / 2f) * (WalkerGroupShift.DISTANCE + bounds);
 				final Point2D origin = new Point2D(walkerXpos, walkerYpos);
 				final Point2D destination = new Point2D(members.get(0).getWalkTemplate().getRouteStep(2).getX(), members.get(0).getWalkTemplate().getRouteStep(2).getY());
