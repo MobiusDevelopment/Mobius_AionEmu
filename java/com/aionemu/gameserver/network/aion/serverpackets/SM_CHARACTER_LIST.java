@@ -17,7 +17,6 @@
 package com.aionemu.gameserver.network.aion.serverpackets;
 
 import com.aionemu.commons.database.dao.DAOManager;
-import com.aionemu.gameserver.configs.main.GSConfig;
 import com.aionemu.gameserver.dao.MailDAO;
 import com.aionemu.gameserver.model.account.Account;
 import com.aionemu.gameserver.model.account.PlayerAccountData;
@@ -81,10 +80,9 @@ public class SM_CHARACTER_LIST extends PlayerInfo
 				writeD(0); // unk
 				writeQ(BrokerService.getInstance().getCollectedMoney(pcd)); // collected money from broker
 				writeD(0);
-				if (GSConfig.SERVER_COUNTRY_CODE == 1)
-				{
-					writeB(new byte[122 + 24]); // 5.1 protocol
-				}
+				
+				// if (GSConfig.SERVER_COUNTRY_CODE == 1)
+				writeB(new byte[122 + 24]); // 5.1 protocol
 			}
 		}
 	}
