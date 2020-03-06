@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -32,48 +32,48 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-@XmlRootElement(name = "instance_schedule")
+@XmlRootElement(name = "conquest_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class InstanceSchedule
+public class ConquestSchedule
 {
-	@XmlElement(name = "instance", required = true)
-	private List<Instance> instancesList;
+	@XmlElement(name = "conquest", required = true)
+	private List<Conquest> conquestsList;
 	
-	public List<Instance> getInstancesList()
+	public List<Conquest> getConquestsList()
 	{
-		return instancesList;
+		return conquestsList;
 	}
 	
-	public void setInstancesList(List<Instance> instanceList)
+	public void setOfferingList(List<Conquest> conquestList)
 	{
-		instancesList = instanceList;
+		conquestsList = conquestList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static InstanceSchedule load()
+	public static ConquestSchedule load()
 	{
-		InstanceSchedule is;
+		ConquestSchedule cs;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/instance_schedule.xml"));
-			is = JAXBUtil.deserialize(xml, InstanceSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/conquest_schedule.xml"));
+			cs = JAXBUtil.deserialize(xml, ConquestSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize instance", e);
+			throw new RuntimeException("Failed to initialize conquest", e);
 		}
-		return is;
+		return cs;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "instance")
-	public static class Instance
+	@XmlRootElement(name = "conquest")
+	public static class Conquest
 	{
 		@XmlAttribute(required = true)
 		private int id;
 		
-		@XmlElement(name = "instanceTime", required = true)
-		private List<String> instanceTimes;
+		@XmlElement(name = "offeringTime", required = true)
+		private List<String> offeringTimes;
 		
 		public int getId()
 		{
@@ -85,14 +85,14 @@ public class InstanceSchedule
 			this.id = id;
 		}
 		
-		public List<String> getInstanceTimes()
+		public List<String> getOfferingTimes()
 		{
-			return instanceTimes;
+			return offeringTimes;
 		}
 		
-		public void setInstanceTimes(List<String> instanceTimes)
+		public void setOfferingTimes(List<String> offeringTimes)
 		{
-			this.instanceTimes = instanceTimes;
+			this.offeringTimes = offeringTimes;
 		}
 	}
 }

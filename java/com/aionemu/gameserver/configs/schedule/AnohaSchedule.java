@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -32,48 +32,48 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-@XmlRootElement(name = "vortex_schedule")
+@XmlRootElement(name = "anoha_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class VortexSchedule
+public class AnohaSchedule
 {
-	@XmlElement(name = "vortex", required = true)
-	private List<Vortex> vortexsList;
+	@XmlElement(name = "anoha", required = true)
+	private List<Anoha> anohasList;
 	
-	public List<Vortex> getVortexsList()
+	public List<Anoha> getAnohasList()
 	{
-		return vortexsList;
+		return anohasList;
 	}
 	
-	public void setInvasionsList(List<Vortex> vortexList)
+	public void setBerserksList(List<Anoha> anohaList)
 	{
-		vortexsList = vortexList;
+		anohasList = anohaList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static VortexSchedule load()
+	public static AnohaSchedule load()
 	{
-		VortexSchedule vs;
+		AnohaSchedule as;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/vortex_schedule.xml"));
-			vs = JAXBUtil.deserialize(xml, VortexSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/anoha_schedule.xml"));
+			as = JAXBUtil.deserialize(xml, AnohaSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize vortex", e);
+			throw new RuntimeException("Failed to initialize anoha", e);
 		}
-		return vs;
+		return as;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "vortex")
-	public static class Vortex
+	@XmlRootElement(name = "anoha")
+	public static class Anoha
 	{
 		@XmlAttribute(required = true)
 		private int id;
 		
-		@XmlElement(name = "invasionTime", required = true)
-		private List<String> invasionTimes;
+		@XmlElement(name = "berserkTime", required = true)
+		private List<String> berserkTimes;
 		
 		public int getId()
 		{
@@ -85,14 +85,14 @@ public class VortexSchedule
 			this.id = id;
 		}
 		
-		public List<String> getInvasionTimes()
+		public List<String> getBerserkTimes()
 		{
-			return invasionTimes;
+			return berserkTimes;
 		}
 		
-		public void setInvasionTimes(List<String> invasionTimes)
+		public void setBerserkTimes(List<String> berserkTimes)
 		{
-			this.invasionTimes = invasionTimes;
+			this.berserkTimes = berserkTimes;
 		}
 	}
 }

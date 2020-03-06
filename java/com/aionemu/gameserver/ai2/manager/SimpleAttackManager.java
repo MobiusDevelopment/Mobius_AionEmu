@@ -46,7 +46,7 @@ public class SimpleAttackManager
 		{
 			if (npcAI.isLogging())
 			{
-				AI2Logger.info(npcAI, "Attack already sheduled");
+				AI2Logger.info(npcAI, "Attack already scheduled");
 			}
 			scheduleCheckedAttackAction(npcAI, delay);
 			return;

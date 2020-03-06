@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -29,51 +29,49 @@ import org.apache.commons.io.FileUtils;
 
 import com.aionemu.commons.utils.xml.JAXBUtil;
 
-/**
- * @author Rinzler (Encom)
- */
-@XmlRootElement(name = "conquest_schedule")
+@XmlRootElement(name = "siege_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ConquestSchedule
+public class SiegeSchedule
 {
-	@XmlElement(name = "conquest", required = true)
-	private List<Conquest> conquestsList;
+	@XmlElement(name = "fortress", required = true)
+	private List<Fortress> fortressesList;
 	
-	public List<Conquest> getConquestsList()
+	public List<Fortress> getFortressesList()
 	{
-		return conquestsList;
+		return fortressesList;
 	}
 	
-	public void setOfferingList(List<Conquest> conquestList)
+	public void setFortressesList(List<Fortress> fortressList)
 	{
-		conquestsList = conquestList;
+		fortressesList = fortressList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static ConquestSchedule load()
+	public static SiegeSchedule load()
 	{
-		ConquestSchedule cs;
+		SiegeSchedule ss;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/conquest_schedule.xml"));
-			cs = JAXBUtil.deserialize(xml, ConquestSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/siege_schedule.xml"));
+			ss = JAXBUtil.deserialize(xml, SiegeSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize conquest", e);
+			throw new RuntimeException("Failed to initialize sieges", e);
 		}
-		return cs;
+		return ss;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "conquest")
-	public static class Conquest
+	@XmlRootElement(name = "fortress")
+	public static class Fortress
 	{
+		
 		@XmlAttribute(required = true)
 		private int id;
 		
-		@XmlElement(name = "offeringTime", required = true)
-		private List<String> offeringTimes;
+		@XmlElement(name = "siegeTime", required = true)
+		private List<String> siegeTimes;
 		
 		public int getId()
 		{
@@ -85,14 +83,14 @@ public class ConquestSchedule
 			this.id = id;
 		}
 		
-		public List<String> getOfferingTimes()
+		public List<String> getSiegeTimes()
 		{
-			return offeringTimes;
+			return siegeTimes;
 		}
 		
-		public void setOfferingTimes(List<String> offeringTimes)
+		public void setSiegeTimes(List<String> siegeTimes)
 		{
-			this.offeringTimes = offeringTimes;
+			this.siegeTimes = siegeTimes;
 		}
 	}
 }

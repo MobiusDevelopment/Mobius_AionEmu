@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -29,49 +29,51 @@ import org.apache.commons.io.FileUtils;
 
 import com.aionemu.commons.utils.xml.JAXBUtil;
 
-@XmlRootElement(name = "siege_schedule")
+/**
+ * @author Rinzler (Encom)
+ */
+@XmlRootElement(name = "circus_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class SiegeSchedule
+public class CircusSchedule
 {
-	@XmlElement(name = "fortress", required = true)
-	private List<Fortress> fortressesList;
+	@XmlElement(name = "circus", required = true)
+	private List<Circus> circussList;
 	
-	public List<Fortress> getFortressesList()
+	public List<Circus> getCircussList()
 	{
-		return fortressesList;
+		return circussList;
 	}
 	
-	public void setFortressesList(List<Fortress> fortressList)
+	public void setCircussList(List<Circus> circusList)
 	{
-		fortressesList = fortressList;
+		circussList = circusList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static SiegeSchedule load()
+	public static CircusSchedule load()
 	{
-		SiegeSchedule ss;
+		CircusSchedule cs;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/siege_schedule.xml"));
-			ss = JAXBUtil.deserialize(xml, SiegeSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/circus_schedule.xml"));
+			cs = JAXBUtil.deserialize(xml, CircusSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize sieges", e);
+			throw new RuntimeException("Failed to initialize circus", e);
 		}
-		return ss;
+		return cs;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "fortress")
-	public static class Fortress
+	@XmlRootElement(name = "circus")
+	public static class Circus
 	{
-		
 		@XmlAttribute(required = true)
 		private int id;
 		
-		@XmlElement(name = "siegeTime", required = true)
-		private List<String> siegeTimes;
+		@XmlElement(name = "circusTime", required = true)
+		private List<String> circusTimes;
 		
 		public int getId()
 		{
@@ -83,14 +85,14 @@ public class SiegeSchedule
 			this.id = id;
 		}
 		
-		public List<String> getSiegeTimes()
+		public List<String> getCircusTimes()
 		{
-			return siegeTimes;
+			return circusTimes;
 		}
 		
-		public void setSiegeTimes(List<String> siegeTimes)
+		public void setCircusTimes(List<String> circusTimes)
 		{
-			this.siegeTimes = siegeTimes;
+			this.circusTimes = circusTimes;
 		}
 	}
 }

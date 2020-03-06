@@ -22,8 +22,8 @@ import java.util.Map;
 
 import com.aionemu.commons.services.CronService;
 import com.aionemu.gameserver.configs.main.CustomConfig;
-import com.aionemu.gameserver.configs.shedule.VortexSchedule;
-import com.aionemu.gameserver.configs.shedule.VortexSchedule.Vortex;
+import com.aionemu.gameserver.configs.schedule.VortexSchedule;
+import com.aionemu.gameserver.configs.schedule.VortexSchedule.Vortex;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.TaskId;

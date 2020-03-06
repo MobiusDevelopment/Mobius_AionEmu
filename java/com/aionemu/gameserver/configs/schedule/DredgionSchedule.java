@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -32,48 +32,48 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-@XmlRootElement(name = "svs_schedule")
+@XmlRootElement(name = "dredgion_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class SvsSchedule
+public class DredgionSchedule
 {
-	@XmlElement(name = "svs", required = true)
-	private List<Svs> svssList;
+	@XmlElement(name = "dredgion", required = true)
+	private List<Dredgion> dredgionsList;
 	
-	public List<Svs> getSvssList()
+	public List<Dredgion> getDredgionsList()
 	{
-		return svssList;
+		return dredgionsList;
 	}
 	
-	public void setSvssList(List<Svs> svsList)
+	public void setZorshivsList(List<Dredgion> dredgionList)
 	{
-		svssList = svsList;
+		dredgionsList = dredgionList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static SvsSchedule load()
+	public static DredgionSchedule load()
 	{
-		SvsSchedule ss;
+		DredgionSchedule ds;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/svs_schedule.xml"));
-			ss = JAXBUtil.deserialize(xml, SvsSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/dredgion_schedule.xml"));
+			ds = JAXBUtil.deserialize(xml, DredgionSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize svs", e);
+			throw new RuntimeException("Failed to initialize dredgion", e);
 		}
-		return ss;
+		return ds;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "svs")
-	public static class Svs
+	@XmlRootElement(name = "dredgion")
+	public static class Dredgion
 	{
 		@XmlAttribute(required = true)
 		private int id;
 		
-		@XmlElement(name = "svsTime", required = true)
-		private List<String> svsTimes;
+		@XmlElement(name = "zorshivTime", required = true)
+		private List<String> zorshivTimes;
 		
 		public int getId()
 		{
@@ -85,14 +85,14 @@ public class SvsSchedule
 			this.id = id;
 		}
 		
-		public List<String> getSvsTimes()
+		public List<String> getZorshivTimes()
 		{
-			return svsTimes;
+			return zorshivTimes;
 		}
 		
-		public void setSvsTimes(List<String> svsTimes)
+		public void setZorshivTimes(List<String> zorshivTimes)
 		{
-			this.svsTimes = svsTimes;
+			this.zorshivTimes = zorshivTimes;
 		}
 	}
 }

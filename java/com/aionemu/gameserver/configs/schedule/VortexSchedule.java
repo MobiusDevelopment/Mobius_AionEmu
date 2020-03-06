@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -32,48 +32,48 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-@XmlRootElement(name = "rvr_schedule")
+@XmlRootElement(name = "vortex_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class RvrSchedule
+public class VortexSchedule
 {
-	@XmlElement(name = "rvr", required = true)
-	private List<Rvr> rvrsList;
+	@XmlElement(name = "vortex", required = true)
+	private List<Vortex> vortexsList;
 	
-	public List<Rvr> getRvrsList()
+	public List<Vortex> getVortexsList()
 	{
-		return rvrsList;
+		return vortexsList;
 	}
 	
-	public void setRvrsList(List<Rvr> rvrList)
+	public void setInvasionsList(List<Vortex> vortexList)
 	{
-		rvrsList = rvrList;
+		vortexsList = vortexList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static RvrSchedule load()
+	public static VortexSchedule load()
 	{
-		RvrSchedule rs;
+		VortexSchedule vs;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/rvr_schedule.xml"));
-			rs = JAXBUtil.deserialize(xml, RvrSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/vortex_schedule.xml"));
+			vs = JAXBUtil.deserialize(xml, VortexSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize rvr", e);
+			throw new RuntimeException("Failed to initialize vortex", e);
 		}
-		return rs;
+		return vs;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "rvr")
-	public static class Rvr
+	@XmlRootElement(name = "vortex")
+	public static class Vortex
 	{
 		@XmlAttribute(required = true)
 		private int id;
 		
-		@XmlElement(name = "rvrTime", required = true)
-		private List<String> rvrTimes;
+		@XmlElement(name = "invasionTime", required = true)
+		private List<String> invasionTimes;
 		
 		public int getId()
 		{
@@ -85,14 +85,14 @@ public class RvrSchedule
 			this.id = id;
 		}
 		
-		public List<String> getRvrTimes()
+		public List<String> getInvasionTimes()
 		{
-			return rvrTimes;
+			return invasionTimes;
 		}
 		
-		public void setRvrTimes(List<String> rvrTimes)
+		public void setInvasionTimes(List<String> invasionTimes)
 		{
-			this.rvrTimes = rvrTimes;
+			this.invasionTimes = invasionTimes;
 		}
 	}
 }

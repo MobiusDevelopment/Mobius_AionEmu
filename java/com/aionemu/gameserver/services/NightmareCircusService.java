@@ -22,8 +22,8 @@ import java.util.Map;
 
 import com.aionemu.commons.services.CronService;
 import com.aionemu.gameserver.configs.main.CustomConfig;
-import com.aionemu.gameserver.configs.shedule.CircusSchedule;
-import com.aionemu.gameserver.configs.shedule.CircusSchedule.Circus;
+import com.aionemu.gameserver.configs.schedule.CircusSchedule;
+import com.aionemu.gameserver.configs.schedule.CircusSchedule.Circus;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Npc;

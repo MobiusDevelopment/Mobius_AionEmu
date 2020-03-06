@@ -22,8 +22,8 @@ import java.util.Map;
 
 import com.aionemu.commons.services.CronService;
 import com.aionemu.gameserver.configs.main.CustomConfig;
-import com.aionemu.gameserver.configs.shedule.AgentSchedule;
-import com.aionemu.gameserver.configs.shedule.AgentSchedule.Agent;
+import com.aionemu.gameserver.configs.schedule.AgentSchedule;
+import com.aionemu.gameserver.configs.schedule.AgentSchedule.Agent;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.agent.AgentLocation;

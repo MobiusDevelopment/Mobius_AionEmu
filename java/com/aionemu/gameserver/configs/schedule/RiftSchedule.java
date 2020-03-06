@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -32,67 +32,62 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-@XmlRootElement(name = "circus_schedule")
+@XmlRootElement(name = "rift_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CircusSchedule
+public class RiftSchedule
 {
-	@XmlElement(name = "circus", required = true)
-	private List<Circus> circussList;
+	@XmlElement(name = "rift", required = true)
+	private List<Rift> riftsList;
 	
-	public List<Circus> getCircussList()
+	public List<Rift> getRiftsList()
 	{
-		return circussList;
+		return riftsList;
 	}
 	
-	public void setCircussList(List<Circus> circusList)
+	public void setRiftsList(List<Rift> riftList)
 	{
-		circussList = circusList;
+		riftsList = riftList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static CircusSchedule load()
+	public static RiftSchedule load()
 	{
-		CircusSchedule cs;
+		RiftSchedule rs;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/circus_schedule.xml"));
-			cs = JAXBUtil.deserialize(xml, CircusSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/rift_schedule.xml"));
+			rs = JAXBUtil.deserialize(xml, RiftSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize circus", e);
+			throw new RuntimeException("Failed to initialize rifts", e);
 		}
-		return cs;
+		return rs;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "circus")
-	public static class Circus
+	@XmlRootElement(name = "rift")
+	public static class Rift
 	{
 		@XmlAttribute(required = true)
 		private int id;
 		
-		@XmlElement(name = "circusTime", required = true)
-		private List<String> circusTimes;
+		@XmlElement(name = "openTime", required = true)
+		private List<String> openTimes;
 		
-		public int getId()
+		public int getWorldId()
 		{
 			return id;
 		}
 		
-		public void setId(int id)
+		public List<String> getOpenTime()
 		{
-			this.id = id;
+			return openTimes;
 		}
 		
-		public List<String> getCircusTimes()
+		public void setOpenTimes(List<String> openTimes)
 		{
-			return circusTimes;
-		}
-		
-		public void setCircusTimes(List<String> circusTimes)
-		{
-			this.circusTimes = circusTimes;
+			this.openTimes = openTimes;
 		}
 	}
 }

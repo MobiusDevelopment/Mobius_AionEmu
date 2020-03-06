@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -32,48 +32,48 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-@XmlRootElement(name = "dredgion_schedule")
+@XmlRootElement(name = "instance_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class DredgionSchedule
+public class InstanceSchedule
 {
-	@XmlElement(name = "dredgion", required = true)
-	private List<Dredgion> dredgionsList;
+	@XmlElement(name = "instance", required = true)
+	private List<Instance> instancesList;
 	
-	public List<Dredgion> getDredgionsList()
+	public List<Instance> getInstancesList()
 	{
-		return dredgionsList;
+		return instancesList;
 	}
 	
-	public void setZorshivsList(List<Dredgion> dredgionList)
+	public void setInstancesList(List<Instance> instanceList)
 	{
-		dredgionsList = dredgionList;
+		instancesList = instanceList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static DredgionSchedule load()
+	public static InstanceSchedule load()
 	{
-		DredgionSchedule ds;
+		InstanceSchedule is;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/dredgion_schedule.xml"));
-			ds = JAXBUtil.deserialize(xml, DredgionSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/instance_schedule.xml"));
+			is = JAXBUtil.deserialize(xml, InstanceSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize dredgion", e);
+			throw new RuntimeException("Failed to initialize instance", e);
 		}
-		return ds;
+		return is;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "dredgion")
-	public static class Dredgion
+	@XmlRootElement(name = "instance")
+	public static class Instance
 	{
 		@XmlAttribute(required = true)
 		private int id;
 		
-		@XmlElement(name = "zorshivTime", required = true)
-		private List<String> zorshivTimes;
+		@XmlElement(name = "instanceTime", required = true)
+		private List<String> instanceTimes;
 		
 		public int getId()
 		{
@@ -85,14 +85,14 @@ public class DredgionSchedule
 			this.id = id;
 		}
 		
-		public List<String> getZorshivTimes()
+		public List<String> getInstanceTimes()
 		{
-			return zorshivTimes;
+			return instanceTimes;
 		}
 		
-		public void setZorshivTimes(List<String> zorshivTimes)
+		public void setInstanceTimes(List<String> instanceTimes)
 		{
-			this.zorshivTimes = zorshivTimes;
+			this.instanceTimes = instanceTimes;
 		}
 	}
 }

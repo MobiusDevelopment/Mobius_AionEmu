@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -32,48 +32,48 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-@XmlRootElement(name = "anoha_schedule")
+@XmlRootElement(name = "beritra_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class AnohaSchedule
+public class BeritraSchedule
 {
-	@XmlElement(name = "anoha", required = true)
-	private List<Anoha> anohasList;
+	@XmlElement(name = "beritra", required = true)
+	private List<Beritra> beritrasList;
 	
-	public List<Anoha> getAnohasList()
+	public List<Beritra> getBeritrasList()
 	{
-		return anohasList;
+		return beritrasList;
 	}
 	
-	public void setBerserksList(List<Anoha> anohaList)
+	public void setInvasionsList(List<Beritra> beritraList)
 	{
-		anohasList = anohaList;
+		beritrasList = beritraList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static AnohaSchedule load()
+	public static BeritraSchedule load()
 	{
-		AnohaSchedule as;
+		BeritraSchedule bs;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/anoha_schedule.xml"));
-			as = JAXBUtil.deserialize(xml, AnohaSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/beritra_schedule.xml"));
+			bs = JAXBUtil.deserialize(xml, BeritraSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize anoha", e);
+			throw new RuntimeException("Failed to initialize beritra", e);
 		}
-		return as;
+		return bs;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "anoha")
-	public static class Anoha
+	@XmlRootElement(name = "beritra")
+	public static class Beritra
 	{
 		@XmlAttribute(required = true)
 		private int id;
 		
-		@XmlElement(name = "berserkTime", required = true)
-		private List<String> berserkTimes;
+		@XmlElement(name = "invasionTime", required = true)
+		private List<String> invasionTimes;
 		
 		public int getId()
 		{
@@ -85,14 +85,14 @@ public class AnohaSchedule
 			this.id = id;
 		}
 		
-		public List<String> getBerserkTimes()
+		public List<String> getInvasionTimes()
 		{
-			return berserkTimes;
+			return invasionTimes;
 		}
 		
-		public void setBerserkTimes(List<String> berserkTimes)
+		public void setInvasionTimes(List<String> invasionTimes)
 		{
-			this.berserkTimes = berserkTimes;
+			this.invasionTimes = invasionTimes;
 		}
 	}
 }

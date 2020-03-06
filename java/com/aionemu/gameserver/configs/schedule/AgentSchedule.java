@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -32,42 +32,42 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-@XmlRootElement(name = "moltenus_schedule")
+@XmlRootElement(name = "agent_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class MoltenusSchedule
+public class AgentSchedule
 {
-	@XmlElement(name = "moltenus", required = true)
-	private List<Moltenus> moltenussList;
+	@XmlElement(name = "agent", required = true)
+	private List<Agent> agentsList;
 	
-	public List<Moltenus> getMoltenussList()
+	public List<Agent> getAgentsList()
 	{
-		return moltenussList;
+		return agentsList;
 	}
 	
-	public void setFightsList(List<Moltenus> moltenusList)
+	public void setFightsList(List<Agent> agentList)
 	{
-		moltenussList = moltenusList;
+		agentsList = agentList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static MoltenusSchedule load()
+	public static AgentSchedule load()
 	{
-		MoltenusSchedule ms;
+		AgentSchedule as;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/moltenus_schedule.xml"));
-			ms = JAXBUtil.deserialize(xml, MoltenusSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/agent_schedule.xml"));
+			as = JAXBUtil.deserialize(xml, AgentSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize moltenus", e);
+			throw new RuntimeException("Failed to initialize agent", e);
 		}
-		return ms;
+		return as;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "moltenus")
-	public static class Moltenus
+	@XmlRootElement(name = "agent")
+	public static class Agent
 	{
 		@XmlAttribute(required = true)
 		private int id;

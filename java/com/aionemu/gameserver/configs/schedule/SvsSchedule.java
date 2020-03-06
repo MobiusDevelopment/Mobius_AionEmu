@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -32,62 +32,67 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-@XmlRootElement(name = "rift_schedule")
+@XmlRootElement(name = "svs_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class RiftSchedule
+public class SvsSchedule
 {
-	@XmlElement(name = "rift", required = true)
-	private List<Rift> riftsList;
+	@XmlElement(name = "svs", required = true)
+	private List<Svs> svssList;
 	
-	public List<Rift> getRiftsList()
+	public List<Svs> getSvssList()
 	{
-		return riftsList;
+		return svssList;
 	}
 	
-	public void setRiftsList(List<Rift> riftList)
+	public void setSvssList(List<Svs> svsList)
 	{
-		riftsList = riftList;
+		svssList = svsList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static RiftSchedule load()
+	public static SvsSchedule load()
 	{
-		RiftSchedule rs;
+		SvsSchedule ss;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/rift_schedule.xml"));
-			rs = JAXBUtil.deserialize(xml, RiftSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/svs_schedule.xml"));
+			ss = JAXBUtil.deserialize(xml, SvsSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize rifts", e);
+			throw new RuntimeException("Failed to initialize svs", e);
 		}
-		return rs;
+		return ss;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "rift")
-	public static class Rift
+	@XmlRootElement(name = "svs")
+	public static class Svs
 	{
 		@XmlAttribute(required = true)
 		private int id;
 		
-		@XmlElement(name = "openTime", required = true)
-		private List<String> openTimes;
+		@XmlElement(name = "svsTime", required = true)
+		private List<String> svsTimes;
 		
-		public int getWorldId()
+		public int getId()
 		{
 			return id;
 		}
 		
-		public List<String> getOpenTime()
+		public void setId(int id)
 		{
-			return openTimes;
+			this.id = id;
 		}
 		
-		public void setOpenTimes(List<String> openTimes)
+		public List<String> getSvsTimes()
 		{
-			this.openTimes = openTimes;
+			return svsTimes;
+		}
+		
+		public void setSvsTimes(List<String> svsTimes)
+		{
+			this.svsTimes = svsTimes;
 		}
 	}
 }

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -32,48 +32,48 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-@XmlRootElement(name = "agent_schedule")
+@XmlRootElement(name = "rvr_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class AgentSchedule
+public class RvrSchedule
 {
-	@XmlElement(name = "agent", required = true)
-	private List<Agent> agentsList;
+	@XmlElement(name = "rvr", required = true)
+	private List<Rvr> rvrsList;
 	
-	public List<Agent> getAgentsList()
+	public List<Rvr> getRvrsList()
 	{
-		return agentsList;
+		return rvrsList;
 	}
 	
-	public void setFightsList(List<Agent> agentList)
+	public void setRvrsList(List<Rvr> rvrList)
 	{
-		agentsList = agentList;
+		rvrsList = rvrList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static AgentSchedule load()
+	public static RvrSchedule load()
 	{
-		AgentSchedule as;
+		RvrSchedule rs;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/agent_schedule.xml"));
-			as = JAXBUtil.deserialize(xml, AgentSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/rvr_schedule.xml"));
+			rs = JAXBUtil.deserialize(xml, RvrSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize agent", e);
+			throw new RuntimeException("Failed to initialize rvr", e);
 		}
-		return as;
+		return rs;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "agent")
-	public static class Agent
+	@XmlRootElement(name = "rvr")
+	public static class Rvr
 	{
 		@XmlAttribute(required = true)
 		private int id;
 		
-		@XmlElement(name = "fightTime", required = true)
-		private List<String> fightTimes;
+		@XmlElement(name = "rvrTime", required = true)
+		private List<String> rvrTimes;
 		
 		public int getId()
 		{
@@ -85,14 +85,14 @@ public class AgentSchedule
 			this.id = id;
 		}
 		
-		public List<String> getFightTimes()
+		public List<String> getRvrTimes()
 		{
-			return fightTimes;
+			return rvrTimes;
 		}
 		
-		public void setFightTimes(List<String> fightTimes)
+		public void setRvrTimes(List<String> rvrTimes)
 		{
-			this.fightTimes = fightTimes;
+			this.rvrTimes = rvrTimes;
 		}
 	}
 }

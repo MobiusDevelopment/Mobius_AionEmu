@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.configs.shedule;
+package com.aionemu.gameserver.configs.schedule;
 
 import java.io.File;
 import java.util.List;
@@ -32,48 +32,48 @@ import com.aionemu.commons.utils.xml.JAXBUtil;
 /**
  * @author Rinzler (Encom)
  */
-@XmlRootElement(name = "beritra_schedule")
+@XmlRootElement(name = "moltenus_schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class BeritraSchedule
+public class MoltenusSchedule
 {
-	@XmlElement(name = "beritra", required = true)
-	private List<Beritra> beritrasList;
+	@XmlElement(name = "moltenus", required = true)
+	private List<Moltenus> moltenussList;
 	
-	public List<Beritra> getBeritrasList()
+	public List<Moltenus> getMoltenussList()
 	{
-		return beritrasList;
+		return moltenussList;
 	}
 	
-	public void setInvasionsList(List<Beritra> beritraList)
+	public void setFightsList(List<Moltenus> moltenusList)
 	{
-		beritrasList = beritraList;
+		moltenussList = moltenusList;
 	}
 	
 	@SuppressWarnings("deprecation")
-	public static BeritraSchedule load()
+	public static MoltenusSchedule load()
 	{
-		BeritraSchedule bs;
+		MoltenusSchedule ms;
 		try
 		{
-			final String xml = FileUtils.readFileToString(new File("./config/shedule/beritra_schedule.xml"));
-			bs = JAXBUtil.deserialize(xml, BeritraSchedule.class);
+			final String xml = FileUtils.readFileToString(new File("./config/schedule/moltenus_schedule.xml"));
+			ms = JAXBUtil.deserialize(xml, MoltenusSchedule.class);
 		}
 		catch (Exception e)
 		{
-			throw new RuntimeException("Failed to initialize beritra", e);
+			throw new RuntimeException("Failed to initialize moltenus", e);
 		}
-		return bs;
+		return ms;
 	}
 	
 	@XmlAccessorType(XmlAccessType.FIELD)
-	@XmlRootElement(name = "beritra")
-	public static class Beritra
+	@XmlRootElement(name = "moltenus")
+	public static class Moltenus
 	{
 		@XmlAttribute(required = true)
 		private int id;
 		
-		@XmlElement(name = "invasionTime", required = true)
-		private List<String> invasionTimes;
+		@XmlElement(name = "fightTime", required = true)
+		private List<String> fightTimes;
 		
 		public int getId()
 		{
@@ -85,14 +85,14 @@ public class BeritraSchedule
 			this.id = id;
 		}
 		
-		public List<String> getInvasionTimes()
+		public List<String> getFightTimes()
 		{
-			return invasionTimes;
+			return fightTimes;
 		}
 		
-		public void setInvasionTimes(List<String> invasionTimes)
+		public void setFightTimes(List<String> fightTimes)
 		{
-			this.invasionTimes = invasionTimes;
+			this.fightTimes = fightTimes;
 		}
 	}
 }

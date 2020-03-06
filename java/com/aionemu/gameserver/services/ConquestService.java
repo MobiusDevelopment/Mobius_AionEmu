@@ -22,8 +22,8 @@ import java.util.Map;
 
 import com.aionemu.commons.services.CronService;
 import com.aionemu.gameserver.configs.main.CustomConfig;
-import com.aionemu.gameserver.configs.shedule.ConquestSchedule;
-import com.aionemu.gameserver.configs.shedule.ConquestSchedule.Conquest;
+import com.aionemu.gameserver.configs.schedule.ConquestSchedule;
+import com.aionemu.gameserver.configs.schedule.ConquestSchedule.Conquest;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.conquest.ConquestLocation;
