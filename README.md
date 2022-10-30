@@ -1,8 +1,15 @@
 # Mobius AionEmu
 
-Client (5.1): https://drive.google.com/drive/folders/0Bxuw91EoqaKPYU1JN2x5RjQzbTg<br>
-Launcher: https://github.com/MobiusDevelopment/AionLauncher/releases/tag/1.0<br>
-Geodata: http://www.mediafire.com/file/qifx1tdcp309l0k/geo_aion_5.1.zip<br>
+Client (password Mobius_AionEmu)<br>
+Part 1: https://drive.google.com/file/d/1BWq7KpvGzc_b7QUUCJyXpcbDwCoQcN2G/view?usp=share_link<br>
+Part 2: https://drive.google.com/file/d/1z14G3htvfH739XtyrCpDP2JXMQmq9U8f/view?usp=share_link<br>
+Part 3: https://drive.google.com/file/d/1yaJMB1z5fmmxUoQCXpapcUFzuQdryQKv/view?usp=share_link<br>
+Part 4: https://drive.google.com/file/d/1a6J8y42rixAf60q6LHO8gcul25s-J8xB/view?usp=share_link<br>
+Part 5: https://drive.google.com/file/d/19YxmVZ5alttkK57WBLxV17TERR3mAWnl/view?usp=share_link<br>
+Part 6: https://drive.google.com/file/d/1GM5anw_1f1mDR-UT4Ma4Icd7zK9aH2LG/view?usp=share_link<br>
+
+Geodata (password Mobius_AionEmu)<br>
+https://drive.google.com/file/d/12pk18JjN8qH3CetTqUnc_qeFLOzZmafm/view?usp=share_link<br>
 
 ![AION Logo](https://i.ibb.co/GkcskBp/image.png)
 
